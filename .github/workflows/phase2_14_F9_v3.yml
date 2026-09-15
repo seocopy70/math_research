@@ -16,13 +16,43 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install numpy
+      - name: F9 field sanity check
+        run: |
+          python - <<'PY'
+          from itertools import product
+          F9=[(a,b) for a in range(3) for b in range(3)]
+          def mul(x,y): return ((x[0]*y[0]+2*x[1]*y[1])%3,(x[0]*y[1]+x[1]*y[0])%3)
+          def pow9(x,n):
+              r=(1,0)
+              while n:
+                  if n&1: r=mul(r,x)
+                  x=mul(x,x); n//=2
+              return r
+          star=[x for x in F9 if x!=(0,0)]
+          assert len(F9)==9 and len(star)==8
+          assert all(pow9(x,8)==(1,0) for x in star)
+          assert len({pow9(x,1) for x in star})==8
+          for x in star:
+              assert any(mul(x,y)==(1,0) for y in star)
+          print('F9 FIELD SANITY PASSED: 9 elements, 8 nonzero, multiplicative group order 8.')
+          PY
       - run: |
           python - <<'PY'
           p='research/phase2_14_F9_algebraic_extension_v3_2026-09-16.py'
           s=open(p,encoding='utf-8').read()
-          s=s.replace("def ext(A): return np.array([[(int(x)%3,0) for x in row] for row in np.asarray(A)],dtype=object)", "def ext(A): return np.frompyfunc(lambda x:(int(x)%3,0),1,1)(np.asarray(A))")
-          s=s.replace("Rcols=[np.array([(int(x)%3,0) for x in col],dtype=object) for col in R4_ind.T]", "Rcols=[np.frompyfunc(lambda x:(int(x)%3,0),1,1)(col) for col in R4_ind.T]")
+          old="def add(x,y): return ((x[0]+y[0])%3,(x[1]+y[1])%3)"
+          new="def _f9(x):\n    if isinstance(x,tuple): return (int(x[0])%3,int(x[1])%3)\n    if isinstance(x,np.ndarray):\n        if x.ndim==0: return _f9(x.item())\n        if x.shape==(2,): return (int(x[0])%3,int(x[1])%3)\n    return (int(x)%3,0)\ndef add(x,y):\n    x=_f9(x); y=_f9(y); return ((x[0]+y[0])%3,(x[1]+y[1])%3)"
+          assert old in s
+          s=s.replace(old,new)
+          old="def mul(x,y): return ((x[0]*y[0]+2*x[1]*y[1])%3,(x[0]*y[1]+x[1]*y[0])%3)"
+          new="def mul(x,y):\n    x=_f9(x); y=_f9(y); return ((x[0]*y[0]+2*x[1]*y[1])%3,(x[0]*y[1]+x[1]*y[0])%3)"
+          assert old in s
+          s=s.replace(old,new)
+          old="def neg(x): return ((-x[0])%3,(-x[1])%3)"
+          new="def neg(x):\n    x=_f9(x); return ((-x[0])%3,(-x[1])%3)"
+          assert old in s
+          s=s.replace(old,new)
           open(p,'w',encoding='utf-8').write(s)
           PY
       - run: python research/phase2_14_F9_algebraic_extension_v3_2026-09-16.py
-      - run: echo "phase2-14-v3-trigger=2"
+      - run: echo "phase2-14-v3-trigger=3"
