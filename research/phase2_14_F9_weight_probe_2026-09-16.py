@@ -10,74 +10,71 @@ def fmul(x,y): return ((x[0]*y[0]+2*x[1]*y[1])%3,(x[0]*y[1]+x[1]*y[0])%3)
 def fzero(x): return x==(0,0)
 def finv(x):
     if fzero(x): raise ZeroDivisionError
-    d=(x[0]*x[0]+x[1]*x[1])%3; di=1 if d==1 else 2
-    return ((x[0]*di)%3,(-x[1]*di)%3)
+    d=(x[0]*x[0]+x[1]*x[1])%3;di=1 if d==1 else 2;return ((x[0]*di)%3,(-x[1]*di)%3)
 def fdiv(x,y): return fmul(x,finv(y))
 def fpow(x,n):
-    out=(1,0); a=x
+    out=(1,0);a=x
     while n:
-        if n&1: out=fmul(out,a)
-        a=fmul(a,a); n//=2
+        if n&1:out=fmul(out,a)
+        a=fmul(a,a);n//=2
     return out
-F9=[(a,b) for a in range(3) for b in range(3)]; F9star=[x for x in F9 if not fzero(x)]
+F9=[(a,b) for a in range(3) for b in range(3)];F9star=[x for x in F9 if not fzero(x)]
 assert len(F9star)==8 and all(fpow(x,8)==(1,0) for x in F9star)
 def I9(n):
     A=np.empty((n,n),dtype=object)
     for i in range(n):
-        for j in range(n): A[i,j]=(1,0) if i==j else (0,0)
+        for j in range(n):A[i,j]=(1,0) if i==j else (0,0)
     return A
 def m9(A):
     B=np.empty(np.shape(A),dtype=object)
     for i in range(B.shape[0]):
-        for j in range(B.shape[1]): B[i,j]=f9(A[i,j])
+        for j in range(B.shape[1]):B[i,j]=f9(A[i,j])
     return B
-def mm(A,B):
-    C=np.empty((A.shape[0],B.shape[1]),dtype=object)
-    for i in range(A.shape[0]):
-        for j in range(B.shape[1]): C[i,j]=sum_f9(fmul(A[i,q],B[q,j]) for q in range(A.shape[1]))
-    return C
-def msub(A,B): return np.array([[fsub(A[i,j],B[i,j]) for j in range(A.shape[1])] for i in range(A.shape[0])],dtype=object)
 def sum_f9(it):
     s=(0,0)
     for x in it:s=fadd(s,x)
     return s
-def mv(A,v): return np.array([sum_f9(fmul(A[i,j],v[j]) for j in range(A.shape[1])) for i in range(A.shape[0])],dtype=object)
+def mm(A,B):
+    C=np.empty((A.shape[0],B.shape[1]),dtype=object)
+    for i in range(A.shape[0]):
+        for j in range(B.shape[1]):C[i,j]=sum_f9(fmul(A[i,q],B[q,j]) for q in range(A.shape[1]))
+    return C
+def msub(A,B):return np.array([[fsub(A[i,j],B[i,j]) for j in range(A.shape[1])] for i in range(A.shape[0])],dtype=object)
+def mv(A,v):return np.array([sum_f9(fmul(A[i,j],v[j]) for j in range(A.shape[1])) for i in range(A.shape[0])],dtype=object)
 def inv9(A):
-    A=np.array(A,dtype=object,copy=True); n=A.shape[0]; aug=np.empty((n,2*n),dtype=object)
-    aug[:,:n]=A; aug[:,n:]=I9(n)
+    A=np.array(A,dtype=object,copy=True);n=A.shape[0];assert A.shape==(n,n);aug=np.empty((n,2*n),dtype=object);aug[:,:n]=A;aug[:,n:]=I9(n)
     for c in range(n):
-        q=next(i for i in range(c,n) if not fzero(aug[i,c])); aug[[c,q]]=aug[[q,c]]
-        z=finv(aug[c,c]); aug[c]=[fmul(z,x) for x in aug[c]]
+        q=next(i for i in range(c,n) if not fzero(aug[i,c]));aug[[c,q]]=aug[[q,c]];z=finv(aug[c,c]);aug[c]=[fmul(z,x) for x in aug[c]]
         for i in range(n):
             if i!=c and not fzero(aug[i,c]):
-                z=aug[i,c]; aug[i]=[fsub(aug[i,j],fmul(z,aug[c,j])) for j in range(2*n)]
+                z=aug[i,c];aug[i]=[fsub(aug[i,j],fmul(z,aug[c,j])) for j in range(2*n)]
     return aug[:,n:]
 def null_basis9(A):
-    A=np.array(A,dtype=object,copy=True); m,n=A.shape; piv=[]; r=0
+    A=np.array(A,dtype=object,copy=True);m,n=A.shape;piv=[];r=0
     for c in range(n):
         q=next((i for i in range(r,m) if not fzero(A[i,c])),None)
-        if q is None: continue
-        A[[r,q]]=A[[q,r]]; z=finv(A[r,c]); A[r]=[fmul(z,x) for x in A[r]]
+        if q is None:continue
+        A[[r,q]]=A[[q,r]];z=finv(A[r,c]);A[r]=[fmul(z,x) for x in A[r]]
         for i in range(m):
             if i!=r and not fzero(A[i,c]):
-                z=A[i,c]; A[i]=[fsub(A[i,j],fmul(z,A[r,j])) for j in range(n)]
-        piv.append(c); r+=1
+                z=A[i,c];A[i]=[fsub(A[i,j],fmul(z,A[r,j])) for j in range(n)]
+        piv.append(c);r+=1
     out=[]
     for f in [j for j in range(n) if j not in piv]:
         x=np.array([(1,0) if j==f else (0,0) for j in range(n)],dtype=object)
-        for rr,c in enumerate(piv): x[c]=fneg(A[rr,f])
+        for rr,c in enumerate(piv):x[c]=fneg(A[rr,f])
         out.append(x)
     return out
-ns1=runpy.run_path(str(ROOT/'research'/'phase2_1_invariant_space_verification_2026-09-15.py')); basis=ns1['basis']; R4_ind=ns1['R4_ind']; selected_rows=ns1['selected_rows']
-ns3=runpy.run_path(str(ROOT/'research'/'phase2_3_endH_optimized_2026-09-15.py')); N3=np.array(ns3['N'],dtype=int)%3
-words4=list(itertools.product(range(1,5),repeat=4)); index4={w:i for i,w in enumerate(words4)}
+ns1=runpy.run_path(str(ROOT/'research'/'phase2_1_invariant_space_verification_2026-09-15.py'));basis=list(ns1['basis'])[:45];R4_ind=np.asarray(ns1['R4_ind'])[:,:5];selected_rows=ns1['selected_rows']
+assert len(basis)==45 and R4_ind.shape==(256,5) and len(selected_rows)==50
+ns3=runpy.run_path(str(ROOT/'research'/'phase2_3_endH_optimized_2026-09-15.py'));N3=np.array(ns3['N'],dtype=int)%3
+words4=list(itertools.product(range(1,5),repeat=4));index4={w:i for i,w in enumerate(words4)}
 def vec9(A):
-    v=np.empty(256,dtype=object); v[:]=[(0,0)]*256
+    v=np.empty(256,dtype=object);v[:]=[(0,0)]*256
     for w,c in A.items():v[index4[w]]=f9(c)
     return v
-R4cols=[np.array([f9(x) for x in col],dtype=object) for col in np.asarray(R4_ind).T]; Wcols=[vec9(a) for a in basis]
-B9=np.column_stack(R4cols+Wcols); Binv9=inv9(B9[selected_rows,:])
-def coords9(v): return mv(Binv9,v[selected_rows])
+R4cols=[np.array([f9(x) for x in col],dtype=object) for col in R4_ind.T];Wcols=[vec9(a) for a in basis];B9=np.column_stack(R4cols+Wcols);assert B9.shape==(256,50);Binv9=inv9(B9[selected_rows,:])
+def coords9(v):return mv(Binv9,v[selected_rows])
 def apply_map_f9(A,g):
     images=[]
     for j in range(4):
@@ -138,8 +135,7 @@ def root(kind,t=(1,0)):
     elif kind=='a12':A[0,3]=t;A[1,2]=t
     elif kind=='a112':A[0,2]=t
     return mm(m9(Pmat),mm(A,m9(Pinv)))
-roots=[root(k) for k in ['a1','a2','a12','a112']]
-EU=[quotient_action9(g) for g in roots];fixed=null_basis9(np.vstack([msub(g,I9(35)) for g in EU]));assert len(fixed)==1;v=fixed[0]
+roots=[root(k) for k in ['a1','a2','a12','a112']];EU=[quotient_action9(g) for g in roots];fixed=null_basis9(np.vstack([msub(g,I9(35)) for g in EU]));assert len(fixed)==1;v=fixed[0]
 def torus(a,b):
     d=I9(4);d[0,0]=a;d[1,1]=b;d[2,2]=finv(a);d[3,3]=finv(b);return mm(m9(Pmat),mm(d,m9(Pinv)))
 def scalar_on_line(A,v):
