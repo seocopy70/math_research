@@ -1,8 +1,7 @@
 """Phase 2-13C: torus character of the unique U^+(F3)-fixed line.
 
-Debugged version: first verifies torus normalization of U^+, then verifies
-preservation of the fixed line before extracting the scalar character.
-No full algebraic highest-weight identification is claimed.
+Uses exact finite-field matrix inversion. No full algebraic highest-weight
+identification is claimed.
 """
 from pathlib import Path
 import runpy
@@ -58,14 +57,30 @@ while frontier:
             Uplus[k]=b; frontier.append(b)
 assert len(Uplus)==81
 
+# Exact inverse over F_3. Do not use floating-point np.linalg.inv here.
+def inverse3(A):
+    A=np.array(A,dtype=np.int64,copy=True)%P
+    n=A.shape[0]
+    aug=np.column_stack([A,np.eye(n,dtype=np.int64)])%P
+    for c in range(n):
+        q=next((i for i in range(c,n) if aug[i,c]),None)
+        if q is None: raise ValueError('singular matrix over F3')
+        aug[[c,q]]=aug[[q,c]]
+        if aug[c,c]==2: aug[c]=(2*aug[c])%P
+        for i in range(n):
+            if i!=c and aug[i,c]:
+                aug[i]=(aug[i]-aug[i,c]*aug[c])%P
+    return aug[:,n:]%P
+
 rows=[]
 for a in [1,2]:
     for b in [1,2]:
         g=torus(a,b)
         symp=np.array_equal((g.T@J@g)%P,J)
-        # Verify normalization by direct conjugation of every element of U+.
+        gi=inverse3(g)
+        assert np.array_equal((g@gi)%P,np.eye(4,dtype=np.int64))
+        assert np.array_equal((gi@g)%P,np.eye(4,dtype=np.int64))
         normalizes=True
-        gi=np.array(np.linalg.inv(g)).round().astype(np.int64)%P
         for u in Uplus.values():
             c=(g@u@gi)%P
             if key(c) not in Uplus:
