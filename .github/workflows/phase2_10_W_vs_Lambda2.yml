@@ -1,0 +1,19 @@
+name: Phase 2-10 W vs Lambda2(Sym2 V)
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/phase2_10_W_vs_Lambda2_Sym2_2026-09-15.py'
+      - '.github/workflows/phase2_10_W_vs_Lambda2.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy
+      - run: python research/phase2_10_W_vs_Lambda2_Sym2_2026-09-15.py
