@@ -5,6 +5,9 @@ chi(1,1)=2 and multiplicativity failed. This audit checks the representation
 law first, then extracts the 1-dimensional character, and finally verifies
 that the character is one of the four and only four characters of
 T(F_3) ~= (F_3^*)^2 ~= (Z/2)^2.
+
+Audit record: strengthened exhaustive character classification retained in
+PHASE2_13C_CURRENT_STATUS_2026-09-16.md.
 """
 
 from pathlib import Path
@@ -35,13 +38,11 @@ def eq3(A, B):
 
 print("PHASE 2-13C / TORUS CHARACTER SANITY CHECK")
 
-# Exact 4x4 torus elements.
 Ts = {ab: np.asarray(ns["torus"](*ab), dtype=np.int64) % P for ab in T}
 I4 = np.eye(4, dtype=np.int64) % P
 assert eq3(Ts[(1,1)], I4), "FAIL: t(1,1) is not I4"
 print("PASS: t(1,1) = I4")
 
-# The finite torus law itself: t(a,b)t(c,d)=t(ac,bd).
 for a in T:
     for b in T:
         ab = ((a[0] * b[0]) % P, (a[1] * b[1]) % P)
@@ -49,7 +50,6 @@ for a in T:
             f"FAIL: torus multiplication for {a},{b}"
 print("PASS: torus multiplication law on all 16 pairs")
 
-# Exact quotient representation matrices.
 As = {ab: np.asarray(ns["quotient_action_single"](Ts[ab]), dtype=np.int64) % P
       for ab in T}
 for ab, A in As.items():
@@ -59,7 +59,6 @@ I35 = np.eye(35, dtype=np.int64) % P
 assert eq3(As[(1,1)], I35), "FAIL: rho(1,1) is not I35"
 print("PASS: rho(1,1) = I35")
 
-# Representation law on all 16 torus pairs.
 for a in T:
     for b in T:
         ab = ((a[0] * b[0]) % P, (a[1] * b[1]) % P)
@@ -67,15 +66,12 @@ for a in T:
             f"FAIL: rho({a})rho({b}) != rho({ab})"
 print("PASS: rho(t1*t2) = rho(t1)rho(t2) for all torus pairs")
 
-# Phase 2-13B exposes the unique U^+(F_3)-fixed vector as fixed[0].
 fixed = ns["fixed"]
 assert len(fixed) == 1, f"FAIL: expected one fixed-line basis vector, got {len(fixed)}"
 v = np.asarray(fixed[0], dtype=np.int64) % P
 assert v.shape == (35,), f"FAIL: unexpected fixed vector shape {v.shape}"
 assert np.any(v), "FAIL: fixed-line vector is zero"
 
-# Exact scalar extraction. First verify Av lies on the same line, then use
-# one nonzero coordinate to read the scalar.
 def rank3(A):
     A = np.array(A, dtype=np.int64, copy=True) % P
     m, n = A.shape
@@ -119,7 +115,6 @@ for a in T:
 print("PASS: chi(1,1) = 1")
 print("PASS: chi is multiplicative on all 16 torus pairs")
 
-# Exhaustive classification of Hom((Z/2)^2, Z/2): exactly four patterns.
 expected_patterns = {
     "trivial": (1,1,1,1),
     "first_coordinate": (1,1,2,2),
