@@ -6,6 +6,7 @@ on:
       - 'research/phase2_11_A_Hom_Sym2_to_E_2026-09-15.py'
       - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
       - 'research/phase2_3_endH_optimized_2026-09-15.py'
+      - 'research/PHASE2_11_A_TRIGGER_2026-09-15.md'
       - '.github/workflows/phase2_11_A.yml'
   workflow_dispatch:
 
