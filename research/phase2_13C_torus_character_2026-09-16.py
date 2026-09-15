@@ -1,51 +1,95 @@
-"""Phase 2-13C: torus character of the unique U^+(F3)-fixed line."""
+"""Phase 2-13C: torus character of the unique U^+(F3)-fixed line.
+
+Debugged version: first verifies torus normalization of U^+, then verifies
+preservation of the fixed line before extracting the scalar character.
+No full algebraic highest-weight identification is claimed.
+"""
 from pathlib import Path
 import runpy
 import numpy as np
 
 P=3
 ROOT=Path(__file__).resolve().parents[1]
-
-# Reuse the authoritative corrected quotient construction from Phase 2-13B.
 ns=runpy.run_path(str(ROOT/'research'/'phase2_13B_positive_unipotent_2026-09-15.py'))
 quotient_action_single=ns['quotient_action_single']
 fixed=ns['fixed']
 Pmat=ns['Pmat']; Pinv=ns['Pinv']; J=ns['J']
+roots=ns['roots']
 
 assert len(fixed)==1
 v=np.array(fixed[0],dtype=np.int64)%P
 
-# Standard C2 split torus: diag(a,b,a^{-1},b^{-1}).
-# Over F3, a,b are 1 or 2=-1, so there are four elements.
 def torus(a,b):
     ai=pow(int(a),-1,P); bi=pow(int(b),-1,P)
     d=np.diag([a,b,ai,bi]).astype(np.int64)%P
     return (Pmat@d@Pinv)%P
 
+def rank3(A):
+    A=np.array(A,dtype=np.int64,copy=True)%P
+    m,n=A.shape; r=0
+    for c in range(n):
+        q=next((i for i in range(r,m) if A[i,c]),None)
+        if q is None: continue
+        A[[r,q]]=A[[q,r]]
+        if A[r,c]==2: A[r]=(2*A[r])%P
+        for i in range(m):
+            if i!=r and A[i,c]: A[i]=(A[i]-A[i,c]*A[r])%P
+        r+=1
+        if r==m: break
+    return r
+
 def scalar_on_line(A,v):
     Av=(A@v)%P
-    nz=np.flatnonzero(v)
-    assert len(nz)>0
-    i=int(nz[0])
-    lam=int(Av[i])
-    assert np.all((Av-lam*v)%P==0)
-    return lam
+    if rank3(np.column_stack([v,Av]))>1:
+        return None, Av
+    i=int(np.flatnonzero(v)[0])
+    return int(Av[i]), Av
+
+def key(A): return tuple(np.array(A,dtype=np.int64).flatten().tolist())
+
+# Explicit positive-unipotent subgroup.
+Uplus={key(np.eye(4,dtype=np.int64)):np.eye(4,dtype=np.int64)}
+frontier=list(Uplus.values())
+while frontier:
+    a=frontier.pop()
+    for g in roots:
+        b=(a@g)%P; k=key(b)
+        if k not in Uplus:
+            Uplus[k]=b; frontier.append(b)
+assert len(Uplus)==81
 
 rows=[]
 for a in [1,2]:
     for b in [1,2]:
         g=torus(a,b)
         symp=np.array_equal((g.T@J@g)%P,J)
+        # Verify normalization by direct conjugation of every element of U+.
+        normalizes=True
+        gi=np.array(np.linalg.inv(g)).round().astype(np.int64)%P
+        for u in Uplus.values():
+            c=(g@u@gi)%P
+            if key(c) not in Uplus:
+                normalizes=False
+                break
         A=quotient_action_single(g)
-        lam=scalar_on_line(A,v)
-        rows.append((a,b,lam,symp,A.shape))
+        lam,Av=scalar_on_line(A,v)
+        rows.append((a,b,lam,symp,normalizes,A.shape,Av))
+        print('CHECK a,b =',a,b,'symplectic =',symp,
+              'normalizes U+ =',normalizes,
+              'fixed-line preserved =',lam is not None,'A shape =',A.shape)
+        if lam is None:
+            print('  witness v =',v.tolist())
+            print('  Av =',Av.tolist())
+
+assert all(r[3] for r in rows)
+assert all(r[4] for r in rows)
+assert all(r[2] is not None for r in rows)
 
 print('PHASE 2-13C / TORUS CHARACTER OF U+-FIXED LINE')
 print('fixed-line dimension =',len(fixed))
 print('standard C2 split torus elements = 4')
-for r in rows:
-    print('a,b =',r[0],r[1],'lambda =',r[2],'symplectic =',r[3],'shape =',r[4])
-assert all(r[3] for r in rows)
-print('TORUS_CHARACTER_TABLE =',[(a,b,lam) for a,b,lam,_,_ in rows])
+for a,b,lam,symp,norm,shape,_ in rows:
+    print('a,b =',a,b,'lambda =',lam,'symplectic =',symp,'normalizes U+ =',norm,'shape =',shape)
+print('TORUS_CHARACTER_TABLE =',[(a,b,lam) for a,b,lam,_,_,_,_ in rows])
 print('CERTIFICATE: unique U^+(F3)-fixed line is preserved by the split torus.')
-print('INTERPRETATION: this is a finite-field torus character only; no full algebraic highest weight is claimed.')
+print('INTERPRETATION: finite-field torus character only; no full algebraic highest weight is claimed.')
