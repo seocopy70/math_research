@@ -7,6 +7,7 @@ on:
       - 'research/phase2_10_independent_verification_2026-09-15.py'
       - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
       - '.github/workflows/phase2_10_independent_verification.yml'
+      - 'research/PHASE2_10_INDEPENDENT_TRIGGER_2026-09-15.md'
 
 jobs:
   verify:
