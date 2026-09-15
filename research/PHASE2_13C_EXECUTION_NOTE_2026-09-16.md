@@ -1,0 +1,1 @@
+Phase 2-13C files are committed on main. GitHub Actions workflow `phase2_13C.yml` is configured to execute the torus-character calculation in a clean Python 3.12 + NumPy environment. The mathematical result is intentionally not recorded until the clean run succeeds.
