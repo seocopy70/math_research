@@ -1,0 +1,26 @@
+name: Phase 2-4C — irreducibility of middle quotient M
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/phase2_4C.yml'
+      - 'research/phase2_4C_irreducibility_2026-09-15.py'
+      - 'research/phase2_4B_middle_quotient_2026-09-15.py'
+      - 'research/phase2_3_endH_optimized_2026-09-15.py'
+
+jobs:
+  analyze-middle-quotient:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip numpy
+      - name: Run Phase 2-4C
+        run: python research/phase2_4C_irreducibility_2026-09-15.py
