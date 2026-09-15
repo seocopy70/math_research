@@ -17,4 +17,5 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install numpy
+      # Exhaustive character classification is part of the hard audit.
       - run: python research/phase2_13C_sanity_check_2026-09-16.py
