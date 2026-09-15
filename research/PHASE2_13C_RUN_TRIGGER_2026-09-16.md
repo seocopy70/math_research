@@ -1,0 +1,1 @@
+Implementation is on main. Verification is delegated to GitHub Actions; the result is not to be inferred from source code alone.
