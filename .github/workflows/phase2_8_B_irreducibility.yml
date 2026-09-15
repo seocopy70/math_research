@@ -1,0 +1,43 @@
+name: Phase 2-8B M irreducibility certificate
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/phase2_8_B_M_irreducibility_2026-09-15.py'
+      - 'research/phase2_7_M_quotient_2026-09-15.py'
+      - 'research/phase2_3_endH_optimized_2026-09-15.py'
+      - '.github/workflows/phase2_8_B_irreducibility.yml'
+
+jobs:
+  verify-M-irreducible:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP
+        run: sudo apt-get update && sudo apt-get install -y gap
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependency
+        run: python -m pip install --upgrade pip numpy
+      - name: Run exact irreducibility certificate
+        run: |
+          mkdir -p artifacts/phase2_8_B_irreducibility
+          python research/phase2_8_B_M_irreducibility_2026-09-15.py | tee artifacts/phase2_8_B_irreducibility/result.txt
+      - name: Publish result summary
+        run: |
+          {
+            echo '# Phase 2-8B M irreducibility certificate'
+            echo
+            echo "Commit: $GITHUB_SHA"
+            echo
+            echo '```text'
+            cat artifacts/phase2_8_B_irreducibility/result.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload numerical certificate
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-8B-M-irreducibility-${{ github.sha }}
+          path: artifacts/phase2_8_B_irreducibility/result.txt
