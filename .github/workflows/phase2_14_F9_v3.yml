@@ -17,3 +17,4 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install numpy
       - run: python research/phase2_14_F9_algebraic_extension_v3_2026-09-16.py
+      - run: echo "phase2-14-v3-trigger=1"
