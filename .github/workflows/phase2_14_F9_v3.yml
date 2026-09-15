@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'research/phase2_14_F9_algebraic_extension_v3_2026-09-16.py'
+      - 'research/phase2_14_F9_minor_diagnostic_2026-09-16.py'
       - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
       - 'research/phase2_3_endH_optimized_2026-09-15.py'
       - '.github/workflows/phase2_14_F9_v3.yml'
@@ -21,7 +22,11 @@ jobs:
           python - <<'PY'
           from itertools import product
           F9=[(a,b) for a in range(3) for b in range(3)]
+          def add(x,y): return ((x[0]+y[0])%3,(x[1]+y[1])%3)
           def mul(x,y): return ((x[0]*y[0]+2*x[1]*y[1])%3,(x[0]*y[1]+x[1]*y[0])%3)
+          def inv(x):
+              d=(x[0]*x[0]+x[1]*x[1])%3; di=1 if d==1 else 2
+              return ((x[0]*di)%3,(-x[1]*di)%3)
           def pow9(x,n):
               r=(1,0)
               while n:
@@ -29,13 +34,16 @@ jobs:
                   x=mul(x,x); n//=2
               return r
           star=[x for x in F9 if x!=(0,0)]
+          emb=lambda a:(a%3,0)
           assert len(F9)==9 and len(star)==8
-          assert all(pow9(x,8)==(1,0) for x in star)
-          assert len({pow9(x,1) for x in star})==8
-          for x in star:
-              assert any(mul(x,y)==(1,0) for y in star)
-          print('F9 FIELD SANITY PASSED: 9 elements, 8 nonzero, multiplicative group order 8.')
+          assert all(pow9(x,8)==(1,0) and mul(x,inv(x))==(1,0) for x in star)
+          assert all(mul(emb(a),emb(b))==emb((a*b)%3) for a,b in product(range(3),repeat=2))
+          assert all(add(emb(a),emb(b))==emb((a+b)%3) for a,b in product(range(3),repeat=2))
+          assert add(add(emb(1),emb(1)),emb(1))==(0,0)
+          print('F9 FIELD SANITY PASSED: field order 9, |F9*|=8, characteristic 3, F3 inclusion compatible.')
           PY
+      - name: Diagnose F9 scalar-extension minor
+        run: python research/phase2_14_F9_minor_diagnostic_2026-09-16.py
       - name: Patch runtime F9 coercion defensively
         run: |
           python - <<'PY'
@@ -62,4 +70,4 @@ jobs:
           PY
       - name: Run Phase 2-14 v3
         run: python research/phase2_14_F9_algebraic_extension_v3_2026-09-16.py
-      - run: echo "phase2-14-v3-trigger=4"
+      - run: echo "phase2-14-v3-trigger=5"
