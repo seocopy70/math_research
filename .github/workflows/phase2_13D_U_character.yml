@@ -6,7 +6,7 @@ on:
     paths:
       - 'research/phase2_13D_U_torus_character_2026-09-16.py'
       - 'research/phase2_13B_positive_unipotent_2026-09-15.py'
-      - 'research/phase2_13D_U_torus_character.yml'
+      - '.github/workflows/phase2_13D_U_character.yml'
 
 jobs:
   verify:
