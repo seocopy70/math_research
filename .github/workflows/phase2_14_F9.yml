@@ -6,7 +6,7 @@ on:
     paths:
       - 'research/phase2_14_F9_weight_probe_2026-09-16.py'
       - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
-      - 'research/phase2_3_endH_optimized_2026-09-15.py'
+      - 'research/phase2_3_endH_optimized_2026-09-16.py'
       - '.github/workflows/phase2_14_F9.yml'
 
 jobs:
