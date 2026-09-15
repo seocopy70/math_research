@@ -2,6 +2,10 @@ name: Phase 2-4B — middle quotient M=ker(N)/im(N)
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/phase2_4B.yml'
+      - 'research/phase2_4B_middle_quotient_2026-09-15.py'
 
 jobs:
   analyze-middle-quotient:
