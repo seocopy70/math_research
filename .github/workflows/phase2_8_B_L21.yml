@@ -1,0 +1,36 @@
+name: Phase 2-8 B L(2,1) intertwiner verification
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/phase2_3_endH_optimized_2026-09-15.py'
+      - 'research/phase2_7_M_quotient_2026-09-15.py'
+      - 'research/phase2_8_B_L21_atlas_intertwiner_2026-09-15.py'
+      - '.github/workflows/phase2_8_B_L21.yml'
+
+jobs:
+  verify-L21:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and AtlasRep
+        run: sudo apt-get update && sudo apt-get install -y gap gap-atlasrep
+      - name: Install Python dependency
+        run: python3 -m pip install --upgrade pip numpy
+      - name: Run Phase 2-8
+        run: |
+          mkdir -p artifacts/phase2_8_B_L21
+          python3 research/phase2_8_B_L21_atlas_intertwiner_2026-09-15.py | tee artifacts/phase2_8_B_L21/result.txt
+      - name: Publish result summary
+        run: |
+          echo '# Phase 2-8 B L(2,1) intertwiner verification' >> "$GITHUB_STEP_SUMMARY"
+          echo >> "$GITHUB_STEP_SUMMARY"
+          echo '```text' >> "$GITHUB_STEP_SUMMARY"
+          cat artifacts/phase2_8_B_L21/result.txt >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload numerical certificate
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-8-B-L21-result-${{ github.sha }}
+          path: artifacts/phase2_8_B_L21
