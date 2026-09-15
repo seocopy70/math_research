@@ -1,0 +1,16 @@
+name: Phase 2-10 fixed W vs Lambda2(Sym2)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/phase2_10_W_vs_Lambda2_Sym2_fixed_2026-09-15.py'
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy
+      - run: python research/phase2_10_W_vs_Lambda2_Sym2_fixed_2026-09-15.py
