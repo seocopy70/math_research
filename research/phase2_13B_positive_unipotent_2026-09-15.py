@@ -1,14 +1,13 @@
 """Phase 2-13B: positive-unipotent fixed space of E=W/U.
 
-Purpose: move from the baseline E^H=0 test to a genuine C2 Borel probe.
-The natural symplectic basis is reordered by P=(e1,e3,e2,e4), giving
-J_std = [[0,I],[-I,0]].  In this standard basis we use the four positive
-root subgroups of type C2:
-  alpha1=e1-e2, alpha2=2e2, alpha1+alpha2, 2alpha1+alpha2.
+Corrected quotient construction.
+
+We compute E=W/U with dim(E)=35 directly from the authoritative W-action
+and N from Phase 2-3.  In a basis B=(U, complement) of W, the action matrix
+has block form [[*,*],[0,E_g]], and E_g is the lower-right 35x35 block.
 
 This is a finite-field discovery certificate: E^{U^+(F3)} is computed.
-It is NOT yet a full algebraic-group highest-weight classification over
-an algebraic closure.  Weight identification is deliberately deferred.
+It is NOT yet a full algebraic-group highest-weight classification.
 """
 from pathlib import Path
 import runpy
@@ -16,12 +15,70 @@ import numpy as np
 
 P=3
 ROOT=Path(__file__).resolve().parents[1]
-ns=runpy.run_path(str(ROOT/'research'/'phase2_13_E_highest_weight_2026-09-15.py'))
-E=[np.array(x,dtype=np.int64)%P for x in ns['E']]
-r3=ns['r3']; null_basis=ns['null_basis']
 
-# Original basis is (e1,e2,e3,e4).  Reorder to (e1,e3,e2,e4), which turns
-# the repository's J into the standard C2 matrix [[0,I],[-I,0]].
+def r3(A):
+    A=np.array(A,dtype=np.int64,copy=True)%P
+    m,n=A.shape; r=0
+    for c in range(n):
+        q=next((i for i in range(r,m) if A[i,c]),None)
+        if q is None: continue
+        A[[r,q]]=A[[q,r]]
+        if A[r,c]==2: A[r]=(2*A[r])%P
+        for i in range(m):
+            if i!=r and A[i,c]: A[i]=(A[i]-A[i,c]*A[r])%P
+        r+=1
+        if r==m: break
+    return r
+
+def null_basis(A):
+    A=np.array(A,dtype=np.int64,copy=True)%P
+    m,n=A.shape; R=A.copy(); piv=[]; row=0
+    for c in range(n):
+        q=next((i for i in range(row,m) if R[i,c]),None)
+        if q is None: continue
+        R[[row,q]]=R[[q,row]]
+        if R[row,c]==2: R[row]=(2*R[row])%P
+        for i in range(m):
+            if i!=row and R[i,c]: R[i]=(R[i]-R[i,c]*R[row])%P
+        piv.append(c); row+=1
+        if row==m: break
+    free=[c for c in range(n) if c not in piv]
+    out=[]
+    for f in free:
+        x=np.zeros(n,dtype=np.int64); x[f]=1
+        for rr,c in enumerate(piv): x[c]=(-R[rr,f])%P
+        out.append(x)
+    return out
+
+# Authoritative Phase 2-1 data: W basis and generator action machinery.
+ns1=runpy.run_path(str(ROOT/'research'/'phase2_1_invariant_space_verification_2026-09-15.py'))
+apply_linear_map=ns1['apply_linear_map']; vec4=ns1['vec4']; basis=ns1['basis']
+R4_ind=ns1['R4_ind']; inverse3=ns1['inverse3']; rank3=ns1['rank3']
+
+# Authoritative N from Phase 2-3.
+ns3=runpy.run_path(str(ROOT/'research'/'phase2_3_endH_optimized_2026-09-15.py'))
+N=np.array(ns3['N'],dtype=np.int64)%P
+
+# Rebuild the 50-coordinate certificate used to recover W coordinates.
+B=np.column_stack([R4_ind]+[vec4(a) for a in basis])
+selected_rows=[]; row_matrix=np.empty((0,50),dtype=np.int64); rr=0
+for i in range(256):
+    C=np.vstack([row_matrix,B[i:i+1]])
+    q=rank3(C)
+    if q>rr:
+        selected_rows.append(i); row_matrix=C; rr=q
+        if rr==50: break
+assert rr==50
+Binv=inverse3(B[selected_rows,:])
+
+def coords(v):
+    return (Binv@(v[selected_rows]%P))%P
+
+def W_action(g):
+    C=np.column_stack([coords(vec4(apply_linear_map(a,g))) for a in basis])
+    return C[5:,:]
+
+# Build standard C2 basis (e1,e2,f1,f2) from repository basis (e1,e2,e3,e4).
 Pmat=np.eye(4,dtype=np.int64)[:,[0,2,1,3]]
 Pinv=np.linalg.inv(Pmat).round().astype(np.int64)
 J=np.array([[0,1,0,0],[-1,0,0,0],[0,0,0,1],[0,0,-1,0]])%3
@@ -41,7 +98,6 @@ def root_matrix(kind,t=1):
         A[0,2]=t
     else: raise ValueError(kind)
     gs=(np.eye(4,dtype=np.int64)+A)%P
-    # Return to repository's original basis.
     return (Pmat@gs@Pinv)%P
 
 root_names=["alpha1","alpha2","alpha1+alpha2","2alpha1+alpha2"]
@@ -49,88 +105,81 @@ roots=[root_matrix(k) for k in ["a1","a2","a12","a112"]]
 for g in roots:
     assert np.array_equal((g.T@J@g)%P,J)
 
-# Reconstruct the action of an arbitrary symplectic matrix on E by applying
-# it to W through the same coordinate machinery used in Phase 2-13.
-# We reproduce quotient_action's construction from its imported namespace.
-A45=ns['A']; N=ns['N']
-# phase2_13's quotient_action accepts a list of 45x45 W-actions, so roots
-# must first be expressed in the W basis.  Instead, use the authoritative
-# Phase 2-1 polynomial action machinery and coordinate construction.
-ns1=runpy.run_path(str(ROOT/'research'/'phase2_1_invariant_space_verification_2026-09-15.py'))
-apply_linear_map=ns1['apply_linear_map']; vec4=ns1['vec4']; basis=ns1['basis']
-R4_ind=ns1['R4_ind']; inverse3=ns1['inverse3']; rank3=ns1['rank3']
-B=np.column_stack([R4_ind]+[vec4(a) for a in basis])
-selected_rows=[]; row_matrix=np.empty((0,50),dtype=np.int64); rr=0
-for i in range(256):
-    C=np.vstack([row_matrix,B[i:i+1]])
+# Extend U=im(N) to a basis Q=(U, complement) of W.
+Q=np.zeros((45,0),dtype=np.int64); rk=0
+for j in range(45):
+    C=np.column_stack([Q,N[:,j]])
     q=rank3(C)
-    if q>rr:
-        selected_rows.append(i); row_matrix=C; rr=q
-        if rr==50: break
-Binv=inverse3(B[selected_rows,:]); Br=B[selected_rows]
+    if q>rk: Q=C; rk=q
+    if rk==10: break
+assert rk==10
+for j in range(45):
+    C=np.column_stack([Q,np.eye(45,dtype=np.int64)[:,j]])
+    q=rank3(C)
+    if q>rk: Q=C; rk=q
+    if rk==45: break
+assert rk==45
 
-def coords(v): return (Binv@(v[selected_rows]%P))%P
+# Select 45 rows giving an invertible coordinate minor for Q.
+rows=[]; R=np.empty((0,45),dtype=np.int64); rr=0
+for i in range(45):
+    C=np.vstack([R,Q[i:i+1]])
+    q=rank3(C)
+    if q>rr: R=C; rows.append(i); rr=q
+    if rr==45: break
+assert rr==45
+QB=Q[rows]
 
-def W_action(g):
-    C=np.column_stack([coords(vec4(apply_linear_map(a,g))) for a in basis])
-    return C[5:,:]
-
-root_actions=[W_action(g) for g in roots]
-# U=im(N) is the first 10-dimensional part of the quotient construction.
-def quotient_action_single(A):
-    Ucols=[]; Q=np.zeros((45,0),dtype=np.int64); rk=0
-    for j in range(45):
-        C=np.column_stack([Q,N[:,j]])
-        q=rank3(C)
-        if q>rk: Q=C; rk=q
-        if rk==10: break
-    for j in range(45):
-        C=np.column_stack([Q,np.eye(45,dtype=np.int64)[:,j]])
-        q=rank3(C)
-        if q>rk: Q=C; rk=q
-        if rk==45: break
-    rows=[]; R=np.empty((0,45),dtype=np.int64); rr=0
-    for i in range(45):
-        C=np.vstack([R,Q[i:i+1]])
-        q=rank3(C)
-        if q>rr: R=C; rows.append(i); rr=q
-        if rr==45: break
-    QB=Q[rows]
-    # Solve QB * X = (A Q)[rows].
-    aug=np.column_stack([QB,(A@Q)[rows]])%P
+# Exact coordinate solver over F3.
+def solve_coords(rhs):
+    aug=np.column_stack([QB,rhs])%P
     for c in range(45):
         q=next(i for i in range(c,45) if aug[i,c])
         aug[[c,q]]=aug[[q,c]]
         if aug[c,c]==2: aug[c]=(2*aug[c])%P
         for i in range(45):
             if i!=c and aug[i,c]: aug[i]=(aug[i]-aug[i,c]*aug[c])%P
-    return aug[10:,:]
+    return aug[:,45:]%P
 
-EU=[quotient_action_single(A) for A in root_actions]
+def quotient_action_single(g4):
+    A=W_action(g4)
+    coords_AQ=solve_coords((A@Q)%P)
+    # Since U is H-stable, the first 10 basis vectors span U and the
+    # quotient action is exactly the lower-right 35x35 block.
+    Eg=coords_AQ[10:,10:]
+    assert Eg.shape==(35,35)
+    return Eg
+
+EU=[quotient_action_single(g) for g in roots]
 stack=np.vstack([((g-np.eye(35,dtype=np.int64))%P) for g in EU])
 fixed=null_basis(stack)
 
-# Check the subgroup generated by the four root elements has order 81.
+# Check the finite positive-unipotent subgroup generated by the four roots.
 def key(A): return tuple(A.flatten().tolist())
-group={key(np.eye(4,dtype=np.int64)):np.eye(4,dtype=np.int64)}; frontier=list(group.values())
+group={key(np.eye(4,dtype=np.int64)):np.eye(4,dtype=np.int64)}
+frontier=list(group.values())
 while frontier:
     a=frontier.pop()
     for g in roots:
         b=(a@g)%P; k=key(b)
-        if k not in group: group[k]=b; frontier.append(b)
+        if k not in group:
+            group[k]=b; frontier.append(b)
 assert len(group)==81
 
-print('PHASE 2-13B / C2 POSITIVE-UNIPOTENT PROBE')
+print('PHASE 2-13B / C2 POSITIVE-UNIPOTENT PROBE / CORRECTED QUOTIENT')
 print('J standard after basis permutation =', np.array_equal(Jstd,Jstd_expected))
 print('positive root generators =', root_names)
 print('each root generator symplectic =', all(np.array_equal((g.T@J@g)%P,J) for g in roots))
 print('|U^+(F_3)| =', len(group))
+print('dim W = 45')
+print('dim U = 10')
 print('dim E = 35')
+print('quotient action shapes =', [g.shape for g in EU])
 print('dim E^{U^+(F_3)} =', len(fixed))
 print('fixed space is zero =', len(fixed)==0)
 if fixed:
-    print('maximal-vector candidate basis size =',len(fixed))
+    print('positive-unipotent fixed-space basis size =',len(fixed))
 
-assert len(fixed)>0
-print('CERTIFICATE: E has nonzero positive-unipotent fixed space.')
-print('NEXT: identify torus weights of this fixed space over the C2 algebraic-group convention.')
+# No assertion about nonzero fixed space: zero is a valid mathematical outcome.
+print('CERTIFICATE: finite-field positive-unipotent fixed-space computation completed.')
+print('NEXT: if nonzero, identify torus weights; if zero, inspect Borel/root convention before interpreting.')
