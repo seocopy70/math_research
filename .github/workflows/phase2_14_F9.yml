@@ -1,0 +1,21 @@
+name: Phase 2-14 Exact F9 Weight Probe
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/phase2_14_F9_weight_probe_2026-09-16.py'
+      - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
+      - 'research/phase2_3_endH_optimized_2026-09-15.py'
+      - '.github/workflows/phase2_14_F9.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy
+      - run: python research/phase2_14_F9_weight_probe_2026-09-16.py
