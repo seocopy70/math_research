@@ -1,0 +1,19 @@
+name: Phase 2-9 Center Check
+
+on:
+  push:
+    paths:
+      - 'research/phase2_9_center_and_25d_identification_2026-09-15.py'
+      - '.github/workflows/phase2_9_center.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run center certificate
+        run: python research/phase2_9_center_and_25d_identification_2026-09-15.py
