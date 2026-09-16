@@ -1,0 +1,22 @@
+name: A3-4-11 Relation Span Corrected Rerun
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/a3-4-11-relation-span-corrected-rerun.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install numpy
+      - name: Run corrected A3-4-11 relation span
+        run: python research/phase2_25_A3_4_11_L5_relation_span_2026-09-16.py
