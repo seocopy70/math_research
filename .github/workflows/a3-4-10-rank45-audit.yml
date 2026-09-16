@@ -1,0 +1,21 @@
+name: A3-4-10 Rank45 Dimensional Audit
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install numpy
+      - name: Run dimensional audit
+        run: python research/A3-4-10_RANK45_AUDIT_2026-09-16.py
