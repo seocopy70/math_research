@@ -2,8 +2,8 @@
 Independent sanity check for A3-4-9.
 
 The primary certificate proves rank([W45|S])=60 in the 256-dimensional
-associative word coordinates.  Here we add two genuinely explicit checks:
-1. select 60 independent ambient coordinate rows, form the resulting 60x60
+associative word coordinates.  Here we add two explicit checks:
+1. select 60 independent ambient coordinate rows, form a 60x60 maximal
    minor of M=[W45|S], and compute its determinant directly over F_3;
 2. solve that minor for a nontrivial L4 Lie element and reconstruct the full
    256-coordinate vector exactly from its W45 and S components.
@@ -28,7 +28,6 @@ vec4 = BASE["vec4"]
 
 
 def row_rank_mod3(A):
-    """Independent sparse row-oriented rank over F_3."""
     rows = []
     for raw in A:
         row = {i: int(v) % MOD for i, v in enumerate(raw) if int(v) % MOD}
@@ -63,7 +62,6 @@ def independent_row_indices(A, target):
     rank = 0
     for idx, raw in enumerate(A):
         row = {i: int(v) % MOD for i, v in enumerate(raw) if int(v) % MOD}
-        original = dict(row)
         while row:
             p = min(row)
             if p not in basis:
@@ -89,13 +87,12 @@ def independent_row_indices(A, target):
 
 def det_mod3(A):
     """Direct determinant via pivot elimination, separate from rank routine."""
-    A = np.array(A, dtype=np.int64) % MOD
-    n, m = A.shape
-    assert n == m
+    A = np.asarray(A, dtype=np.int64) % MOD
+    assert A.shape == (60, 60), f"expected 60x60 minor, got {A.shape}"
     A = A.copy()
     det = 1
-    for c in range(n):
-        piv = next((i for i in range(c, n) if A[i, c] % MOD), None)
+    for c in range(60):
+        piv = next((i for i in range(c, 60) if A[i, c] % MOD), None)
         if piv is None:
             return 0
         if piv != c:
@@ -105,7 +102,7 @@ def det_mod3(A):
         det = (det * pivot) % MOD
         inv = 1 if pivot == 1 else 2
         A[c, c:] = (A[c, c:] * inv) % MOD
-        for i in range(c + 1, n):
+        for i in range(c + 1, 60):
             factor = int(A[i, c]) % MOD
             if factor:
                 A[i, c:] = (A[i, c:] - factor * A[c, c:]) % MOD
@@ -113,18 +110,18 @@ def det_mod3(A):
 
 
 def solve_mod3(A, b):
-    """Gauss-Jordan solve over F_3 for an invertible square matrix."""
-    A = np.array(A, dtype=np.int64) % MOD
-    b = np.array(b, dtype=np.int64) % MOD
-    n = A.shape[0]
-    aug = np.concatenate([A, b.reshape(n, 1)], axis=1)
-    for c in range(n):
-        piv = next(i for i in range(c, n) if aug[i, c] % MOD)
+    """Gauss-Jordan solve over F_3 for an invertible 60x60 matrix."""
+    A = np.asarray(A, dtype=np.int64) % MOD
+    b = np.asarray(b, dtype=np.int64) % MOD
+    assert A.shape == (60, 60)
+    aug = np.concatenate([A, b.reshape(60, 1)], axis=1)
+    for c in range(60):
+        piv = next(i for i in range(c, 60) if aug[i, c] % MOD)
         if piv != c:
             aug[[c, piv]] = aug[[piv, c]]
         inv = 1 if aug[c, c] == 1 else 2
         aug[c, :] = (aug[c, :] * inv) % MOD
-        for i in range(n):
+        for i in range(60):
             if i != c and aug[i, c] % MOD:
                 factor = aug[i, c]
                 aug[i, :] = (aug[i, :] - factor * aug[c, :]) % MOD
@@ -143,9 +140,11 @@ intersection = rank_W + rank_S - rank_M
 inclusion = rank_S_old == rank_S
 
 # M has 256 ambient rows, so the literal 60x60 object is a maximal minor.
-# Select 60 independent ambient coordinate rows without using numpy rank.
 row_indices = independent_row_indices(M, 60)
+assert len(row_indices) == 60
+row_indices = np.asarray(row_indices, dtype=np.int64)
 minor = M[row_indices, :]
+assert minor.shape == (60, 60), f"minor shape = {minor.shape}"
 det_minor = det_mod3(minor)
 
 # Nontrivial Lie element in L4: [[X1,X2],[X3,X4]].
@@ -156,8 +155,8 @@ s_coeff = coeff[45:]
 w = (W @ w_coeff) % MOD
 s = (Sm @ s_coeff) % MOD
 reconstructed = (w + s) % MOD
-reconstruction_ok = np.array_equal(reconstructed, v)
 residual = (reconstructed - v) % MOD
+reconstruction_ok = np.array_equal(reconstructed, v)
 
 print("A3-4-9 INDEPENDENT DETERMINANT + RECONSTRUCTION CHECK")
 print("=======================================================")
