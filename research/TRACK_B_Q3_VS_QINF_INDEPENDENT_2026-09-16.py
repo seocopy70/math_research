@@ -1,7 +1,7 @@
 """Independent exact truncated-Magnus check of q=3 vs q=infinity.
 
 Purpose: reproduce the degree-3 separation without importing any earlier
-research script.  Arithmetic is in F_3 and uses the Magnus substitutions
+research script. Arithmetic is in F_3 and uses Magnus substitutions
 x_i = 1 + X_i, truncated to total degree <= 3.
 """
 
@@ -43,8 +43,6 @@ def power(A, k):
         for _ in range(k):
             R = mul(R, A)
         return R
-    # A has constant term 1.  Write A=1+U and use
-    # (1+U)^(-1)=1-U+U^2-U^3 modulo degree > N.
     U = add(A, {(): -1 % P})
     R = {(): 1}
     term = {(): 1}
@@ -96,19 +94,20 @@ diff = homogeneous(add(s3, neg(sinf)), 3)
 power_part = monomial_word(1, (1, 1, 1))
 
 print("TRACK B / INDEPENDENT q=3 VS q=infinity")
-print("degree-3 s_3      =", fmt(h3))
-print("degree-3 s_infty  =", fmt(hinf))
-print("degree-3 difference=", fmt(diff))
-print("expected X1^[3]    =", fmt(power_part))
+print("degree-3 s_3        =", fmt(h3))
+print("degree-3 s_infty    =", fmt(hinf))
+print("degree-3 difference =", fmt(diff))
+print("expected X1^[3]      =", fmt(power_part))
 
 assert diff == power_part
 assert homogeneous(add(h3, neg(hinf)), 3) == power_part
 print("CERTIFICATE: in_3(s_3) - in_3(s_infty) = X1^[3].")
 
-# The next A3 probe brackets this difference with X1.  In the tensor
-# realization X1^[3]=X1^3, so [X1^3,X1]=0 identically.
-power_bracket = add(mul(power_part, {(1,): 1}), neg(mul({(1,): 1}, power_part)))
+# In the tensor realization X1^[3]=X1^3, so [X1^3,X1]=0 identically.
+power_bracket = add(
+    mul(power_part, {(1,): 1}),
+    neg(mul({(1,): 1}, power_part)),
+)
 assert power_bracket == {}
 print("CERTIFICATE: [X1^[3], X1] = 0 in F_3.")
-print("Therefore the previously studied degree-4 A3 bracket cannot carry
-q-separation, even though degree 3 does.")
+print("Conclusion: the previously studied degree-4 A3 bracket cannot carry q-separation; degree 3 does.")
