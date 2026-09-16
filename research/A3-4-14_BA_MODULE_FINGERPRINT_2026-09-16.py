@@ -26,17 +26,21 @@ def solve(A,b):
     for rr,c in enumerate(piv):x[c]=R[rr,n]
     return x%P
 
-# H action on W in ambient degree-4 coordinates and its 45D coordinate action.
-A_W=[]
+# H action on W in ambient degree-4 coordinates.  Each transformed W-basis
+# vector is solved directly in the W basis; do not solve W*x=e_j for ambient
+# standard basis vectors, since most e_j are outside Im(W).
+A_W_coord=[]
 for g in gens:
     G=np.zeros((256,256),dtype=np.int64)
     for j,w in enumerate(words4):
         out=apply_linear_map({w:1},g)
         for ww,c in out.items():G[index4[ww],j]=(G[index4[ww],j]+c)%P
-    A_W.append(G)
-W_coord=np.column_stack([solve(W,np.eye(256,dtype=np.int64)[:,j]) for j in range(256)])%P
-assert np.array_equal((W_coord@W)%P,np.eye(45,dtype=np.int64))
-A_W_coord=[(W_coord@G@W)%P for G in A_W]
+    cols=[]
+    for j in range(45):
+        z=solve(W,(G@W[:,j])%P); assert z is not None
+        cols.append(z)
+    A_W_coord.append(np.array(cols,dtype=np.int64).T%P)
+assert all(np.array_equal((A@np.eye(45,dtype=np.int64))%P,A) for A in A_W_coord)
 
 # A=Im Delta_u; complete it by Delta_tau columns to C=[A|Q].
 D_u=np.vstack([((np.array(B,dtype=np.int64)@N)%P) for B in B_W]); assert rank3(D_u)==10
@@ -133,7 +137,7 @@ for i,(Tb,Tk) in enumerate(zip(BA,K),1):
     print('  B/A trace =',fb['trace'],' K trace =',fk['trace'])
     print('  B/A order =',fb['order'],' K order =',fk['order'])
     print('  B/A fixed_dim =',fb['fixed_dim'],' K fixed_dim =',fk['fixed_dim'])
-    print('  B/A rank(T-I) =',fb['rank(T-I'] if False else fb['rank(T-I)'],' K rank(T-I) =',fk['rank(T-I)'])
+    print('  B/A rank(T-I) =',fb['rank(T-I)'],' K rank(T-I) =',fk['rank(T-I)'])
     print('  B/A ranks((T-I)^k) =',fb['ranks_powers'])
     print('  K   ranks((T-I)^k) =',fk['ranks_powers'])
     print('  B/A minpoly degree =',fb['minpoly_degree'],' K minpoly degree =',fk['minpoly_degree'])
