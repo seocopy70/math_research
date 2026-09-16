@@ -1,0 +1,25 @@
+name: Phase 2-24 A3-4-9 Independent Sanity
+
+on:
+  push:
+    paths:
+      - 'research/A3-4-9_independent_sanity_2026-09-16.py'
+      - 'research/phase2_22_A3_4_9_W45_true_relation_intersection_2026-09-16.py'
+      - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
+      - '.github/workflows/phase2-24-A3-4-9-sanity.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install numpy
+      - name: Run independent A3-4-9 sanity check
+        run: python research/A3-4-9_independent_sanity_2026-09-16.py
