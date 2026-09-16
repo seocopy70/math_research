@@ -1,0 +1,27 @@
+name: A3-4-19 Explicit Simple Factor Match
+
+on:
+  push:
+    paths:
+      - 'research/A3-4-19_SIMPLE_FACTOR_MATCH_2026-09-17.py'
+      - 'research/A3-4-16_STRONG_MODULAR_FINGERPRINT_2026-09-16.py'
+  workflow_dispatch:
+
+concurrency:
+  group: a3-4-19-simple-factor-match
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Python dependencies
+        run: pip install numpy sympy
+      - name: Install GAP
+        run: sudo apt-get update && sudo apt-get install -y gap
+      - name: Run exact simple-factor matching
+        run: python research/A3-4-19_SIMPLE_FACTOR_MATCH_2026-09-17.py
