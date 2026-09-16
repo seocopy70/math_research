@@ -25,6 +25,7 @@ The decisive survival test is
 """
 
 import runpy
+from itertools import product
 import numpy as np
 
 MOD = 3
@@ -35,7 +36,6 @@ BASE = runpy.run_path("research/phase2_1_invariant_space_verification_2026-09-15
 X = BASE["X"]
 bracket = BASE["bracket"]
 vec4 = BASE["vec4"]
-rank3 = BASE["rank3"]
 # Phase 2-1 exposes the W45 basis as `basis` (not `W`).
 W = np.column_stack([vec4(a) for a in BASE["basis"]]) % MOD
 
@@ -44,11 +44,22 @@ L1 = [X[i] for i in range(4)]
 L2 = BASE["L2"]
 R = BASE["R"]
 
-# (R)_3 = [L1,R].
-R3 = [bracket(x, R) for x in L1]
-R3m = np.stack([vec4(z) for z in R3], axis=1) % MOD
+# Degree-3 associative word coordinates, used only to certify dim (R)_3.
+words3 = list(product(range(1, 5), repeat=3))
+index3 = {w: i for i, w in enumerate(words3)}
 
-# S = [L1,(R)_3].
+def vec3(A):
+    v = np.zeros(64, dtype=int)
+    for w, coeff in A.items():
+        v[index3[w]] = coeff % MOD
+    return v
+
+# (R)_3 = [L1,R].  Keep these as degree-3 Lie elements; do not pass them
+# through the degree-4 coordinate map.
+R3 = [bracket(x, R) for x in L1]
+R3m = np.stack([vec3(z) for z in R3], axis=1) % MOD
+
+# S = [L1,(R)_3], now genuinely degree 4.
 S = []
 for x in L1:
     for r3 in R3:
