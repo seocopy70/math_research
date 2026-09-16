@@ -1,0 +1,29 @@
+name: A3-4-17 same-setting Hom recheck
+
+on:
+  push:
+    paths:
+      - 'research/A3-4-17_SAME_FINGERPRINT_SETTING_HOM_RECHECK_2026-09-16.py'
+      - 'research/A3-4-16_STRONG_MODULAR_FINGERPRINT_2026-09-16.py'
+      - 'research/A3-4-14_BA_MODULE_FINGERPRINT_2026-09-16.py'
+      - 'research/phase2_23_A3_4_10_ambient_bracket_compatibility_2026-09-16.py'
+      - 'research/phase2_3_endH_optimized_2026-09-15.py'
+      - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
+  workflow_dispatch:
+
+concurrency:
+  group: a3-4-17-same-setting-hom-recheck
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install numpy sympy
+      - name: Run A3-4-17 same-setting Hom recheck
+        run: python research/A3-4-17_SAME_FINGERPRINT_SETTING_HOM_RECHECK_2026-09-16.py
