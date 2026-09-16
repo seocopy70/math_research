@@ -8,10 +8,8 @@ ROOT = 'research/'
 
 def rank3(A):
     A = np.array(A, dtype=np.int64, copy=True) % P
-    if A.ndim == 1:
-        A = A[:, None]
-    m, n = A.shape
-    r = 0
+    if A.ndim == 1: A = A[:, None]
+    m, n = A.shape; r = 0
     for c in range(n):
         q = next((i for i in range(r, m) if A[i, c]), None)
         if q is None: continue
@@ -83,8 +81,30 @@ def intertwiner_data(A_src, A_tgt):
 ns = runpy.run_path(ROOT + 'phase2_18_A3_4_5_intersection_K_and_Sym2_2026-09-16.py')
 W, Wd_basis, I_W = ns['W'], ns['Wd_basis'], ns['I_W']
 A_W, A_WI, A_Sym2 = ns['A_W'], ns['A_WI'], ns['A_Sym2']
+gens, apply_linear_map, index4 = ns['gens'], ns['apply_linear_map'], ns['index4']
 assert W.shape == (256,45) and Wd_basis.shape == (256,45) and I_W.shape == (45,35)
 assert rank3(W) == rank3(Wd_basis) == 45 and rank3(I_W) == 35
+
+# The imported A_W are 45x45 restricted actions on W45, not 256x256
+# ambient actions. Build the ambient generator action on Wd_basis explicitly.
+word_by_index = [None] * 256
+for w, i in index4.items(): word_by_index[i] = w
+
+def vec_to_dict(v):
+    return {word_by_index[i]: int(c) % P for i, c in enumerate(v) if int(c) % P}
+
+def dict_to_vec(A):
+    v = np.zeros(256, dtype=np.int64)
+    for w, c in A.items(): v[index4[w]] = c % P
+    return v
+
+A_Wd_ambient = []
+for g in gens:
+    cols = []
+    for j in range(45):
+        cols.append(dict_to_vec(apply_linear_map(vec_to_dict(Wd_basis[:, j]), g)))
+    A_Wd_ambient.append(np.column_stack(cols))
+    assert A_Wd_ambient[-1].shape == (256,45)
 
 # Express I inside Wd, then choose a complementary 10-space.
 I_ambient = (W @ I_W) % P
@@ -102,13 +122,17 @@ S = np.column_stack([I_in_Wd, Q]); assert rank3(S) == 45
 
 # Full Wd action and induced action on Wd/I.
 A_Wd = []
-for A in A_W:
-    X = (A @ Wd_basis) % P; C = coords(Wd_basis, X)
-    assert np.array_equal((Wd_basis @ C) % P, X); A_Wd.append(C)
+for A in A_Wd_ambient:
+    C = coords(Wd_basis, A)
+    assert np.array_equal((Wd_basis @ C) % P, A)
+    A_Wd.append(C)
+
 rows, Linv = left_inverse(S); A_WdI = []
 for A in A_Wd:
-    AQ = (A @ Q) % P; C = (Linv @ AQ[rows]) % P
-    assert np.array_equal((S @ C) % P, AQ); A_WdI.append(C[35:, :])
+    AQ = (A @ Q) % P
+    C = (Linv @ AQ[rows]) % P
+    assert np.array_equal((S @ C) % P, AQ)
+    A_WdI.append(C[35:, :])
 assert all(rank3(a) == 10 for a in A_WdI)
 
 hom_d, maxrank_d, P_d = intertwiner_data(A_WdI, A_Sym2)
