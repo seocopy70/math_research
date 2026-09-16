@@ -21,8 +21,17 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          probe=$(printf 'F := GF(3);; A := IdentityMat(1,F);; M := GModuleByMats([A],F);; Print(MTX.IsIrreducible(M),"\n");; QUIT;\n' | gap -q)
-          printf '%s\n' "$probe"
-          printf '%s\n' "$probe" | grep -Fx 'true'
+          cat > /tmp/gap_probe.g <<'EOF'
+          F := GF(3);;
+          A := IdentityMat(1,F);;
+          M := GModuleByMats([A],F);;
+          Print(MTX.IsIrreducible(M), "\n");;
+          QUIT;
+          EOF
+          gap -q < /tmp/gap_probe.g | tee /tmp/gap_probe.out
+          grep -Fx 'true' /tmp/gap_probe.out
       - name: Run B1-1-2
-        run: python research/B1-1-2_UNIQUE_35D_SUBMODULE_2026-09-17.py
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/B1-1-2_UNIQUE_35D_SUBMODULE_2026-09-17.py
