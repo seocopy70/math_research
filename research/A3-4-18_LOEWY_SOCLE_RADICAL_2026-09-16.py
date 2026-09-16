@@ -7,8 +7,7 @@ import numpy as np
 P = 3
 ROOT = 'research/'
 
-# A3-4-18 exact pass 2: same matrices, now with sympy available in CI.
-# Reuse the exact A3-4-16/A3-4-17 representation setting.
+# A3-4-18 exact pass 3: coerce all entries into GF(3) before MeatAxe.
 ns = runpy.run_path(ROOT + 'A3-4-16_STRONG_MODULAR_FINGERPRINT_2026-09-16.py')
 BA = [np.array(x, dtype=np.int64) % P for x in ns['BA_gens']]
 K = [np.array(x, dtype=np.int64) % P for x in ns['K_gens']]
@@ -30,8 +29,11 @@ k_literal = gap_matrix_list(K)
 gap_code = r'''F := GF(3);;
 BAraw := %s;;
 Kraw := %s;;
-BAgens := List(BAraw, m -> ImmutableMatrix(F,m));;
-Kgens := List(Kraw, m -> ImmutableMatrix(F,m));;
+ToField := function(m)
+  return ImmutableMatrix(F,List(m,r->List(r,x->One(F)*x)));
+end;;
+BAgens := List(BAraw,ToField);;
+Kgens := List(Kraw,ToField);;
 MBA := GModuleByMats(BAgens,F);;
 MK := GModuleByMats(Kgens,F);;
 Print("A3-4-18 / EXACT MEATAXE LOEWY ANALYSIS\n");
@@ -102,8 +104,8 @@ print(proc.stdout, end='')
 if proc.stderr:
     print('--- GAP STDERR ---')
     print(proc.stderr, end='')
-if proc.returncode != 0:
-    raise SystemExit(proc.returncode)
+if proc.returncode != 0 or 'Error,' in proc.stderr or 'Error,' in proc.stdout:
+    raise SystemExit('GAP MeatAxe execution failed')
 print('PYTHON_DRIVER_RETURN_CODE =', proc.returncode)
 print('ACTION_MATRICES_SOURCE = A3-4-16')
 print('RESULT: exact socle/radical/Loewy computation delegated to GAP MeatAxe.')
