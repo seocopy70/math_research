@@ -3,12 +3,13 @@ import numpy as np
 
 P = 3
 
-def add(A, B):
-    C = dict(A)
-    for w in B:
-        C[w] = (C.get(w, 0) + B[w]) % P
-        if C[w] == 0:
-            del C[w]
+def add(*As):
+    C = {}
+    for A in As:
+        for w, a in A.items():
+            C[w] = (C.get(w, 0) + a) % P
+            if C[w] == 0:
+                del C[w]
     return C
 
 def neg(A):
@@ -56,7 +57,6 @@ def rank3(A):
         r += 1
     return r
 
-# Reuse the authoritative Phase 2-1 construction.
 ns = runpy.run_path('research/phase2_1_invariant_space_verification_2026-09-15.py')
 R4_matrix = ns['R4_matrix']
 R4_ind = ns['R4_ind']
@@ -71,22 +71,20 @@ X4 = {(4,): 1}
 c = bracket(X3, X4)
 d1 = bracket(c, X1)
 d2 = bracket(c, X2)
-# A3-2 restricted/Zassenhaus class representative:
-s3 = add({(1,1,1): 1}, scalar := scalar if False else {})
+
+# A3-2 restricted/Zassenhaus class representative.
 s3 = add({(1,1,1): 1}, {w: (2*a) % 3 for w,a in d1.items()}, {w: (2*a) % 3 for w,a in d2.items()})
 
-# Degree-4 correction induced by commutating the degree-3 class with X1.
+# A3-3: bracket the degree-3 class with X1 to expose the degree-4 correction.
 d4 = bracket(s3, X1)
 v_d4 = vec4(d4, index4)
 
-# Test its class in Q4 and its position relative to W.
 rank_R = rank3(R4_matrix)
-rank_RW = rank3(np.column_stack([R4_ind] + [vec4(a,index4) for a in basis]))
-rank_RW_d4 = rank3(np.column_stack([R4_ind] + [vec4(a,index4) for a in basis] + [v_d4]))
+RW = np.column_stack([R4_ind] + [vec4(a,index4) for a in basis])
+rank_RW = rank3(RW)
+rank_RW_d4 = rank3(np.column_stack([RW, v_d4]))
 rank_R_d4 = rank3(np.column_stack([R4_matrix, v_d4]))
 
-# The X1^[3] part contributes [X1^[3],X1]=0, so d4 should equal the
-# correction part. Verify this directly.
 power_part = {(1,1,1): 1}
 comm_power = bracket(power_part, X1)
 correction = add(s3, neg(power_part))
@@ -103,11 +101,8 @@ print('d4_in_W =', rank_RW_d4 == rank_RW)
 print('d4_nonzero_in_Q4 =', rank_R_d4 == rank_R + 1)
 print('[X1^[3], X1] = 0 =', comm_power == {})
 print('d4_equals_correction_commutator =', d4 == comm_correction)
-
-# Display the compact Lie expression rather than raw monomials.
 print('A3-2 class = X1^[3] + 2[[X3,X4],X1] + 2[[X3,X4],X2]')
-print('A3-3 induced degree-4 class =')
-print('  2[[[X3,X4],X1],X1] + 2[[[X3,X4],X2],X1]')
+print('A3-3 induced degree-4 class = 2[[[X3,X4],X1],X1] + 2[[[X3,X4],X2],X1]')
 
 assert rank_R == 5
 assert rank_RW == 50
