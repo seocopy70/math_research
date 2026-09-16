@@ -6,7 +6,6 @@ import numpy as np
 P = 3
 ROOT = Path('research')
 
-
 def add(A, B):
     C = dict(A)
     for w, c in B.items():
@@ -110,7 +109,7 @@ assert rank3(np.column_stack([R5_local_m, mid5m])) == dim_R5_local
 assert rank3(np.column_stack([R5_local_m, last5m])) == dim_R5_local
 
 # Degree-6 local recursion check.
-R6_local = [bracket(x, r5) for r5 in R5_local]
+R6_local = [bracket(x, r5) for x in X for r5 in R5_local]
 R6_local_m = np.column_stack([vec(a, 6) for a in R6_local])
 dim_R6_local = rank3(R6_local_m)
 
