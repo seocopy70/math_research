@@ -72,10 +72,14 @@ def row_pivot_indices(A):
     return piv
 
 def gap_rows(A):
-    # Candidate columns in our column-action convention become GAP row vectors.
-    return '[' + ','.join('[' + ','.join(str(int(x) % P) for x in row) + ']' for row in A.T.tolist()) + ']'
+    # A has basis vectors as columns for the column-action convention.
+    # GAP GModuleByMats uses row vectors on the right, so the same linear
+    # action is represented by A.T and the basis columns become basis rows.
+    return '[' + ','.join('[' + ','.join(str(int(x) % P) for x in row) + ']' for row in A.tolist()) + ']'
 
 def gap_matrix_list(mats):
+    # Convert our column-action generators G to the equivalent GAP
+    # row-action generators G.T.  This matches A3-4-20R exactly.
     return '[' + ','.join(gap_rows(A.T) for A in mats) + ']'
 
 # Recover the same unique intertwiner Q from A3-4-17.
