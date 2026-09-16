@@ -1,0 +1,17 @@
+name: A3-4-13.8 Corrected Independent B-A vs K
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/A3-4-13_8_CORRECTED_BA_K_CHECK_2026-09-16.py'
+      - '.github/workflows/a3-4-13-8-corrected-ba-k.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy
+      - run: python research/A3-4-13_8_CORRECTED_BA_K_CHECK_2026-09-16.py
