@@ -88,13 +88,7 @@ J=
 \end{pmatrix}.
 \]
 
-The symplectic pairing is
-
-\[
-\omega(x,y)=x^TJy.
-\]
-
-All matrix products are modulo 3.
+The symplectic pairing is \(\omega(x,y)=x^TJy\). All matrix products are modulo 3.
 
 This J is the authoritative convention for the current repository.
 
@@ -112,43 +106,23 @@ Acting on a column vector x,
 t_vx=x+v(Jv)^Tx.
 \]
 
-Since
-
-\[
-(Jv)^Tx=v^TJ^Tx=-v^TJx
-\]
-
-for alternating J, this differs by a sign from some common textbook transvection conventions depending on whether the pairing is written as \(x^TJy\) or \(y^TJx\). The repository's matrix formula above is the authoritative convention.
-
 Replacing v by -v gives the same matrix over \(\mathbb F_3\), so the 40 nonzero projective directions produce 40 distinct transvections.
 
-Every generated transvection is checked directly by
-
-\[
-t_v^TJt_v=J.
-\]
+Every generated transvection is checked directly by \(t_v^TJt_v=J\).
 
 ## 8. Five generators used in Phase 2-1
 
 The generating vectors are
 
 \[
-(1,0,0,0),
-(0,1,0,0),
-(0,0,1,0),
-(0,0,0,1),
-(1,0,1,0).
+(1,0,0,0),\n(0,1,0,0),\n(0,0,1,0),\n(0,0,0,1),\n(1,0,1,0).
 \]
 
-Their associated transvections are constructed by the formula above.
-
-The code verifies that they are symplectic and that the subgroup they generate has order
+Their associated transvections are constructed by the formula above. The code verifies that they are symplectic and that the subgroup they generate has order
 
 \[
 51840=|Sp_4(\mathbb F_3)|.
 \]
-
-Thus the five matrices generate the full intended symplectic group.
 
 ## 9. Action on Lie words
 
@@ -168,13 +142,49 @@ Q_4=L_4/(R)_4,
 
 The implementation embeds Lie elements into the 256-dimensional degree-4 associative word space, selects independent columns for \((R)_4\), and then represents the quotient orbit module relative to a complementary basis.
 
-## 11. Important historical correction
+## 11. Coordinate consistency protocol
+
+The authoritative Python representation uses column action \(v\mapsto Av\). GAP `GModuleByMats` uses row vectors with right action. Therefore Python action matrices, endomorphisms, and subspace bases must all be transposed when converted to GAP. This applies equally to generators and to objects such as \(N\), kernels, images, and socle bases.
+
+Equality of subspaces must be checked in one common ambient coordinate system by span/rank, never from dimensions alone.
+
+A structural contradiction caused by a coordinate conversion mismatch is classified as **INVALID TEST**, not as a mathematical failure.
+
+## 12. Finite-field rank protocol
+
+All rank, kernel, image, independence, and span calculations involving \(\mathbb F_3\)-data must use exact finite-field arithmetic.
+
+The repository's authoritative Phase 2-1 routine `rank3()` is the verified reference rank function and should be reused rather than reimplemented in new experiments whenever possible.
+
+The following real/numerical linear-algebra calls are forbidden for the finite-field track:
+
+- `numpy.linalg.matrix_rank`
+- `numpy.linalg.det`
+
+They compute over the real/numerical field and can produce values that are mathematically irrelevant to \(\mathbb F_3\) rank questions. Future `np.linalg` usage is surfaced by the repository-wide audit for explicit review.
+
+The CI audit `FINITE_FIELD_RANK_AUDIT_2026-09-17.py` scans all tracked research Python files and fails on forbidden `matrix_rank` or `det` calls.
+
+## 13. Sanity invariants
+
+Before accepting a finite-field result, check relevant necessary identities such as:
+
+- \(N^2=0\Rightarrow\operatorname{im}N\subseteq\ker N\);
+- rank-nullity;
+- nonzero finite-dimensional modules have nonzero socle;
+- any nonzero submodule meets the socle nontrivially;
+- \(\dim U+\dim V>\dim M\Rightarrow U\cap V\neq0\);
+- intertwiner identities such as \(Q\rho_M(g)=\rho_N(g)Q\).
+
+If a necessary condition fails, stop and classify the calculation as **INVALID TEST** until coordinate and field conventions have been reconciled.
+
+## 14. Important historical correction
 
 An earlier exploratory calculation used an incorrect symplectic pairing matrix. That calculation was not retained as a valid result.
 
-The authoritative matrix is the J displayed in Section 6, and every current Phase 2 result must use it.
+An earlier B1-1 diagnostic also used `numpy.linalg.matrix_rank` on \(\mathbb F_3\)-data and printed a spurious real-field rank. That number is not a valid mathematical result and is not retained. The corrected calculation reuses `rank3()` and independently checks the GAP \(\mathbb F_3\) rank.
 
-## 12. Reproduction principle
+## 15. Reproduction principle
 
 A reader should be able to reproduce each claim from:
 
