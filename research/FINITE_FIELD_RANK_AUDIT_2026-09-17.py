@@ -1,37 +1,43 @@
-from pathlib import Path
-import re
+import ast
 import subprocess
+from pathlib import Path
 
-ROOT = Path('research')
-PATTERNS = {
-    'np.linalg.matrix_rank': re.compile(r'\b(?:np|numpy)\.linalg\.matrix_rank\b'),
-    'np.linalg.det': re.compile(r'\b(?:np|numpy)\.linalg\.det\b'),
-    'np.linalg family': re.compile(r'\b(?:np|numpy)\.linalg\.[A-Za-z_][A-Za-z0-9_]*\b'),
-}
+FORBIDDEN = {'np.linalg.matrix_rank', 'numpy.linalg.matrix_rank',
+             'np.linalg.det', 'numpy.linalg.det'}
+
+
+def dotted_name(node):
+    parts = []
+    while isinstance(node, ast.Attribute):
+        parts.append(node.attr)
+        node = node.value
+    if isinstance(node, ast.Name):
+        parts.append(node.id)
+        return '.'.join(reversed(parts))
+    return None
 
 tracked = subprocess.check_output(['git', 'ls-files', 'research'], text=True).splitlines()
+files = [Path(x) for x in tracked if Path(x).suffix in {'.py', '.pyw'}]
 hits = []
-for rel in tracked:
-    path = Path(rel)
-    if path.suffix not in {'.py', '.pyw'}:
-        continue
-    text = path.read_text(encoding='utf-8', errors='replace')
-    for lineno, line in enumerate(text.splitlines(), 1):
-        for label, pattern in PATTERNS.items():
-            if pattern.search(line):
-                hits.append((rel, lineno, label, line.strip()))
+
+for path in files:
+    tree = ast.parse(path.read_text(encoding='utf-8', errors='replace'), filename=str(path))
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Call):
+            name = dotted_name(node.func)
+            if name and name.startswith(('np.linalg.', 'numpy.linalg.')):
+                hits.append((str(path), node.lineno, name))
 
 print('FINITE-FIELD RANK AUDIT')
-print('tracked research Python files =', sum(Path(x).suffix in {'.py', '.pyw'} for x in tracked))
-print('np.linalg occurrences =', len(hits))
-for rel, lineno, label, line in hits:
-    print(f'{rel}:{lineno}: [{label}] {line}')
+print('tracked research Python files =', len(files))
+print('np.linalg call sites =', len(hits))
+for path, lineno, name in hits:
+    print(f'{path}:{lineno}: {name}(...)')
 
-# matrix_rank and det are categorically forbidden for the finite-field track.
-forbidden = [h for h in hits if h[2] in {'np.linalg.matrix_rank', 'np.linalg.det'}]
+forbidden = [h for h in hits if h[2] in FORBIDDEN]
 if forbidden:
-    raise SystemExit('FORBIDDEN REAL-FIELD LINEAR ALGEBRA FOUND')
+    raise SystemExit('FORBIDDEN REAL-FIELD LINEAR ALGEBRA CALL FOUND')
 
 print('AUDIT STATUS = PASS')
-print('No np.linalg.matrix_rank or np.linalg.det calls found in tracked research Python files.')
-print('Any future np.linalg use is surfaced above for explicit review.')
+print('No numpy.linalg.matrix_rank or numpy.linalg.det calls found.')
+print('Any other np.linalg call is surfaced above for explicit review.')
