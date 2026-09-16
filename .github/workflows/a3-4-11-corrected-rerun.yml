@@ -1,10 +1,7 @@
 name: A3-4-11 Corrected Main Rerun
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/a3-4-11-corrected-rerun.yml'
+  workflow_dispatch:
 
 jobs:
   verify:
