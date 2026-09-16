@@ -64,7 +64,7 @@ def gap_rows(A):
     return '[' + ','.join('[' + ','.join(str(int(x) % P) for x in row) + ']' for row in A.tolist()) + ']'
 
 def gap_matrix_list(mats):
-    # GAP GModuleByMats uses row vectors on the right.  Our matrices act on
+    # GAP GModuleByMats uses row vectors on the right. Our matrices act on
     # column vectors, so pass the transposed generators.
     return '[' + ','.join(gap_rows(A.T) for A in mats) + ']'
 
@@ -94,9 +94,8 @@ assert imQ.shape == (35, 10)
 ba_literal = gap_matrix_list(BA)
 k_literal = gap_matrix_list(K)
 
-# GAP returns module bases as ROWS in its row-action convention.  Therefore
-# the Python column-bases must be transposed before comparison.  This puts
-# Soc(B/A), Soc(K), ker(Q), and im(Q) in the same 35-coordinate row space.
+# GAP returns module bases as ROWS in its row-action convention. Therefore
+# the Python column-bases must be transposed before comparison.
 ker_literal = gap_rows(kerQ.T)
 im_literal = gap_rows(imQ.T)
 
@@ -112,31 +111,32 @@ BAgens := List(BAraw,ToField);;
 Kgens := List(Kraw,ToField);;
 MBA := GModuleByMats(BAgens,F);;
 MK := GModuleByMats(Kgens,F);;
-Ker := ImmutableMatrix(F,KerRaw);;
-Im := ImmutableMatrix(F,ImRaw);;
+Ker := ToField(KerRaw);;
+Im := ToField(ImRaw);;
 SB := MTX.BasisSocle(MBA);;
 SK := MTX.BasisSocle(MK);;
-SocB := ImmutableMatrix(F,SB);;
-SocK := ImmutableMatrix(F,SK);;
-RankJoin := function(A,B)
-  return RankMat(Concatenation(A,B));
+SocB := ToField(SB);;
+SocK := ToField(SK);;
+JoinRank := function(A,B)
+  return RankMat(ImmutableMatrix(F,Concatenation(List(A,r->List(r)),List(B,r->List(r)))));
 end;;
 EqualSpan := function(A,B)
-  return Length(A) = Length(B) and RankJoin(A,B) = Length(A);
+  return NumberRows(A) = NumberRows(B) and
+         JoinRank(A,B) = NumberRows(A);
 end;;
 Print("A3-4-20S / DIRECT MEATAXE SOCLE VS Q ALIGNMENT\n");
-Print("SOCLE_DIM_BA = ",Length(SB),"\n");
-Print("SOCLE_DIM_K = ",Length(SK),"\n");
-Print("KER_Q_DIM = ",Length(Ker),"\n");
-Print("IMAGE_Q_DIM = ",Length(Im),"\n");
+Print("SOCLE_DIM_BA = ",NumberRows(SocB),"\n");
+Print("SOCLE_DIM_K = ",NumberRows(SocK),"\n");
+Print("KER_Q_DIM = ",NumberRows(Ker),"\n");
+Print("IMAGE_Q_DIM = ",NumberRows(Im),"\n");
 Print("SOCLE_BA_EQUALS_KER_Q = ",EqualSpan(SocB,Ker),"\n");
 Print("SOCLE_K_EQUALS_IMAGE_Q = ",EqualSpan(SocK,Im),"\n");
 Print("CROSS_SOCLE_BA_EQUALS_IMAGE_Q = ",EqualSpan(SocB,Im),"\n");
 Print("CROSS_SOCLE_K_EQUALS_KER_Q = ",EqualSpan(SocK,Ker),"\n");
-Print("SOCLE_BA_PROPER = ",(Length(SB) < MTX.Dimension(MBA)),"\n");
-Print("SOCLE_K_PROPER = ",(Length(SK) < MTX.Dimension(MK)),"\n");
-Print("A3-4-20S_CROSS_MATCH = ",(Length(SB)=10 and Length(SK)=25 and Length(Ker)=25 and Length(Im)=10 and EqualSpan(SocB,Im) and EqualSpan(SocK,Ker)),"\n");
-Print("A3-4-20S_PASS = ",(Length(SB)=25 and Length(SK)=10 and Length(Ker)=25 and Length(Im)=10 and EqualSpan(SocB,Ker) and EqualSpan(SocK,Im)),"\n");
+Print("SOCLE_BA_PROPER = ",(NumberRows(SB) < 35),"\n");
+Print("SOCLE_K_PROPER = ",(NumberRows(SK) < 35),"\n");
+Print("A3-4-20S_CROSS_MATCH = ",(NumberRows(SB)=10 and NumberRows(SK)=25 and NumberRows(Ker)=25 and NumberRows(Im)=10 and EqualSpan(SocB,Im) and EqualSpan(SocK,Ker)),"\n");
+Print("A3-4-20S_PASS = ",(NumberRows(SB)=25 and NumberRows(SK)=10 and NumberRows(Ker)=25 and NumberRows(Im)=10 and EqualSpan(SocB,Ker) and EqualSpan(SocK,Im)),"\n");
 QUIT;
 ''' % (ba_literal, k_literal, ker_literal, im_literal)
 
