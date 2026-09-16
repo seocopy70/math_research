@@ -1,0 +1,25 @@
+name: A3-4-20 Intertwiner Loewy Alignment
+
+on:
+  push:
+    paths:
+      - 'research/A3-4-20_INTERTWINER_LOEWY_ALIGNMENT_2026-09-17.py'
+      - 'research/A3-4-16_STRONG_MODULAR_FINGERPRINT_2026-09-16.py'
+  workflow_dispatch:
+
+concurrency:
+  group: a3-4-20-intertwiner-loewy-alignment
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Python dependencies
+        run: pip install numpy sympy
+      - name: Run exact A3-4-20 verification
+        run: python research/A3-4-20_INTERTWINER_LOEWY_ALIGNMENT_2026-09-17.py
