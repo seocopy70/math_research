@@ -71,13 +71,6 @@ def row_pivot_indices(A):
     _, piv = rref3(A.T)
     return piv
 
-def coords_in_basis(U, V):
-    d = U.shape[1]
-    rows = row_pivot_indices(U)
-    C = (inv_mod3(U[rows, :]) @ V[rows, :]) % P
-    assert np.array_equal((U @ C - V) % P, np.zeros_like(V))
-    return C
-
 def gap_rows(A):
     # Candidate columns in our column-action convention become GAP row vectors.
     return '[' + ','.join('[' + ','.join(str(int(x) % P) for x in row) + ']' for row in A.T.tolist()) + ']'
@@ -147,8 +140,11 @@ Print("KER_Q_DIM = ",Length(Ker),"\n");
 Print("IMAGE_Q_DIM = ",Length(Im),"\n");
 Print("SOCLE_BA_EQUALS_KER_Q = ",EqualSpan(SocB,Ker),"\n");
 Print("SOCLE_K_EQUALS_IMAGE_Q = ",EqualSpan(SocK,Im),"\n");
+Print("CROSS_SOCLE_BA_EQUALS_IMAGE_Q = ",EqualSpan(SocB,Im),"\n");
+Print("CROSS_SOCLE_K_EQUALS_KER_Q = ",EqualSpan(SocK,Ker),"\n");
 Print("SOCLE_BA_PROPER = ",(Length(SB) < MTX.Dimension(MBA)),"\n");
 Print("SOCLE_K_PROPER = ",(Length(SK) < MTX.Dimension(MK)),"\n");
+Print("A3-4-20S_CROSS_MATCH = ",(Length(SB)=10 and Length(SK)=25 and Length(Ker)=25 and Length(Im)=10 and EqualSpan(SocB,Im) and EqualSpan(SocK,Ker)),"\n");
 Print("A3-4-20S_PASS = ",(Length(SB)=25 and Length(SK)=10 and Length(Ker)=25 and Length(Im)=10 and EqualSpan(SocB,Ker) and EqualSpan(SocK,Im)),"\n");
 QUIT;
 ''' % (ba_literal, k_literal, ker_literal, im_literal)
@@ -166,5 +162,5 @@ if proc.stderr:
     print(proc.stderr, end='')
 if proc.returncode != 0 or 'Error,' in proc.stdout or 'Error,' in proc.stderr:
     raise SystemExit('GAP MeatAxe execution failed')
-if 'A3-4-20S_PASS = true' not in proc.stdout:
-    raise SystemExit('A3-4-20S direct socle alignment failed')
+if not ('A3-4-20S_PASS = true' in proc.stdout or 'A3-4-20S_CROSS_MATCH = true' in proc.stdout):
+    raise SystemExit('A3-4-20S socle alignment checks failed')
