@@ -18,10 +18,18 @@ def gap_rows(M):
     return '[' + ','.join('[' + ','.join(str(int(x)%P) for x in row) + ']' for row in M.tolist()) + ']'
 
 def gap_matrix_list(mats):
+    # GAP GModuleByMats uses row vectors on the right. The authoritative
+    # Python action matrices act on columns, so transpose generators.
     return '[' + ','.join(gap_rows(M.T) for M in mats) + ']'
 
 literal = gap_matrix_list(A)
-n_literal = gap_rows(N)
+# N is an endomorphism for the authoritative column-action representation:
+# N A = A N. After passing to GAP's row-action representation, the
+# corresponding endomorphism is N^T, and im(N) must therefore be compared
+# as the ROW SPAN of N^T. This is exactly the same conversion used for
+# submodule bases in A3-4-20S.
+n_literal = gap_rows(N.T)
+
 gap_code = r'''F := GF(3);;
 Raw := %s;;
 Nraw := %s;;
@@ -31,7 +39,7 @@ end;;
 Gens := List(Raw,ToField);;
 N := ToField(Nraw);;
 M := GModuleByMats(Gens,F);;
-Print("B1-1 / W45 SOCLE VS im(N)\n");
+Print("B1-1 / W45 SOCLE VS im(N) -- TRANSPOSE-CORRECTED\n");
 Print("DIM_W_FROM_EXACT_PYTHON = %s\n");
 Print("RANK_N_FROM_EXACT_PYTHON = %s\n");
 SB := MTX.BasisSocle(M);;
