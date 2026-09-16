@@ -1,6 +1,11 @@
 name: A3-4-10 Canonical Tau Revalidation
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'research/A3-4-10_CANONICAL_TAU_REVALIDATION_2026-09-16.py'
+      - 'research/A3-4-REVALIDATION_I_AND_K_TRUE_Wd_2026-09-16.py'
+      - '.github/workflows/a3-4-10-canonical-tau-revalidation.yml'
 jobs:
   verify:
     runs-on: ubuntu-latest
