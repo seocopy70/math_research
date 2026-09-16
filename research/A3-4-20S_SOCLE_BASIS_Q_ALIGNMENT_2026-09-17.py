@@ -60,26 +60,12 @@ def col_basis(A):
 def rank(A):
     return len(rref3(A)[1])
 
-def inv_mod3(A):
-    n = A.shape[0]
-    aug = np.column_stack([A % P, np.eye(n, dtype=np.int64)])
-    R, piv = rref3(aug)
-    assert len(piv) == n and piv == list(range(n))
-    return R[:, n:] % P
-
-def row_pivot_indices(A):
-    _, piv = rref3(A.T)
-    return piv
-
 def gap_rows(A):
-    # A has basis vectors as columns for the column-action convention.
-    # GAP GModuleByMats uses row vectors on the right, so the same linear
-    # action is represented by A.T and the basis columns become basis rows.
     return '[' + ','.join('[' + ','.join(str(int(x) % P) for x in row) + ']' for row in A.tolist()) + ']'
 
 def gap_matrix_list(mats):
-    # Convert our column-action generators G to the equivalent GAP
-    # row-action generators G.T.  This matches A3-4-20R exactly.
+    # GAP GModuleByMats uses row vectors on the right.  Our matrices act on
+    # column vectors, so pass the transposed generators.
     return '[' + ','.join(gap_rows(A.T) for A in mats) + ']'
 
 # Recover the same unique intertwiner Q from A3-4-17.
@@ -100,15 +86,19 @@ for A, G in zip(BA, K):
     assert np.array_equal((Q @ A - G @ Q) % P, np.zeros((35, 35), dtype=np.int64))
 assert rank3(Q) == 10
 
-kerQ = nullspace_basis(Q)
-imQ = col_basis(Q)
+kerQ = nullspace_basis(Q)       # 35 x 25: basis vectors as columns
+imQ = col_basis(Q)              # 35 x 10: basis vectors as columns
 assert kerQ.shape == (35, 25)
 assert imQ.shape == (35, 10)
 
 ba_literal = gap_matrix_list(BA)
 k_literal = gap_matrix_list(K)
-ker_literal = gap_rows(kerQ)
-im_literal = gap_rows(imQ)
+
+# GAP returns module bases as ROWS in its row-action convention.  Therefore
+# the Python column-bases must be transposed before comparison.  This puts
+# Soc(B/A), Soc(K), ker(Q), and im(Q) in the same 35-coordinate row space.
+ker_literal = gap_rows(kerQ.T)
+im_literal = gap_rows(imQ.T)
 
 gap_code = r'''F := GF(3);;
 BAraw := %s;;
@@ -122,20 +112,17 @@ BAgens := List(BAraw,ToField);;
 Kgens := List(Kraw,ToField);;
 MBA := GModuleByMats(BAgens,F);;
 MK := GModuleByMats(Kgens,F);;
-Ker := ImmutableMatrix(F,List(KerRaw,r->List(r,x->One(F)*x)));;
-Im := ImmutableMatrix(F,List(ImRaw,r->List(r,x->One(F)*x)));;
+Ker := ImmutableMatrix(F,KerRaw);;
+Im := ImmutableMatrix(F,ImRaw);;
 SB := MTX.BasisSocle(MBA);;
 SK := MTX.BasisSocle(MK);;
 SocB := ImmutableMatrix(F,SB);;
 SocK := ImmutableMatrix(F,SK);;
 RankJoin := function(A,B)
-  local rowsA, rowsB;
-  rowsA := List([1..Length(A)],i->List([1..Length(A[i])],j->A[i][j]));
-  rowsB := List([1..Length(B)],i->List([1..Length(B[i])],j->B[i][j]));
-  return RankMat(Concatenation(rowsA,rowsB));
+  return RankMat(Concatenation(A,B));
 end;;
 EqualSpan := function(A,B)
-  return RankJoin(A,B) = Length(A) and Length(A) = Length(B);
+  return Length(A) = Length(B) and RankJoin(A,B) = Length(A);
 end;;
 Print("A3-4-20S / DIRECT MEATAXE SOCLE VS Q ALIGNMENT\n");
 Print("SOCLE_DIM_BA = ",Length(SB),"\n");
@@ -166,5 +153,5 @@ if proc.stderr:
     print(proc.stderr, end='')
 if proc.returncode != 0 or 'Error,' in proc.stdout or 'Error,' in proc.stderr:
     raise SystemExit('GAP MeatAxe execution failed')
-if not ('A3-4-20S_PASS = true' in proc.stdout or 'A3-4-20S_CROSS_MATCH = true' in proc.stdout):
+if 'A3-4-20S_PASS = true' not in proc.stdout:
     raise SystemExit('A3-4-20S socle alignment checks failed')
