@@ -2,11 +2,6 @@ name: Relation recursion audit
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'research/**/*.py'
-      - 'research/RELATION_RECURSION_AUDIT_2026-09-16.py'
-      - '.github/workflows/relation-recursion-audit.yml'
 
 jobs:
   audit:

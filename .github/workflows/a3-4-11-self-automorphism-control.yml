@@ -1,8 +1,6 @@
 name: A3-4-11 self-automorphism control
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -11,8 +9,7 @@ jobs:
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Install dependencies

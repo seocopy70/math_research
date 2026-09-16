@@ -1,8 +1,6 @@
 name: R5 directional injectivity check
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 jobs:
