@@ -113,6 +113,43 @@ B1-1의 GAP sanity step은 `printf ... | gap -q` 형태였는데 Bash의 기본 
 
 ---
 
+## AP-010 — Inline GAP probe quoting / newline fragility
+
+**상태:** SETUP / CI RELIABILITY FAILURE
+
+B1-1-2의 GAP probe 수정 과정에서 `printf '... Print(...,"\\n") ...' | gap -q`처럼 Bash 문자열 안에 GAP 코드와 newline escape를 함께 넣는 방식이 다시 문제를 일으켰습니다. `\\n`의 해석 층위가 Bash/GAP 사이에서 어긋나면서 GAP에 실제 줄바꿈이 들어가 `Syntax error: String must not include <newline>`가 발생했습니다. run `35162932916`에서 확인되었고, 실제 B1-1-2 수학 계산은 실행되지 않았습니다.
+
+**핵심:** 이것은 일회성 오타라기보다 **외부 인터프리터(GAP) 코드를 shell inline string으로 주입하는 구조 자체가 재발 가능한 CI 패턴**입니다.
+
+**정정:** GAP sanity probe는 shell 문자열/`printf`/command substitution으로 작성하지 않습니다. 반드시 다음 형태를 사용합니다.
+
+```bash
+set -euo pipefail
+cat > /tmp/gap_probe.g <<'GAP'
+F := GF(3);;
+A := IdentityMat(1,F);;
+M := GModuleByMats([A],F);;
+if not MTX.IsIrreducible(M) then
+  Error("GAP MeatAxe sanity probe failed");
+fi;
+Print("GAP_PROBE_OK\n");
+QUIT;
+GAP
+gap -q /tmp/gap_probe.g
+```
+
+또는 저장소의 `.g` 파일을 직접 실행합니다. **Bash → GAP 다중 해석층을 제거**하고 GAP 코드 자체를 heredoc/file로 검증합니다.
+
+**재발 방지 프로토콜:**
+1. CI에서 GAP 코드를 inline `printf`/`echo`/`$()` 문자열로 전달하지 않는다.
+2. `GModuleByMats`를 사용하는 probe는 반드시 field를 명시한다: `GModuleByMats([...],F)`.
+3. probe는 성공 조건을 명시적으로 출력하고, 실패 시 GAP가 nonzero exit를 내도록 `Error(...)`를 사용한다.
+4. shell step에는 `set -euo pipefail`을 유지한다.
+5. GAP probe를 새로 만들거나 수정하면 **probe 자체 실행을 먼저 확인한 뒤** 본 계산을 실행한다.
+6. workflow audit에서 GAP sanity probe의 inline-string 패턴을 금지 대상으로 추가한다.
+
+---
+
 ## 운영 원칙
 
 새로운 오류가 발견되면 삭제하지 않고 이 문서에 추가합니다.
