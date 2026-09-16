@@ -1,0 +1,36 @@
+name: A3-4-20S Socle vs Q Alignment
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/A3-4-20S_SOCLE_BASIS_Q_ALIGNMENT_2026-09-17.py'
+      - 'research/A3-4-20S_SOCLE_BASIS_Q_ALIGNMENT_2026-09-17.md'
+      - '.github/workflows/a3-4-20s-socle-q-alignment.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: python -m pip install numpy
+
+      - name: Install GAP
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap
+          gap -q <<'EOF'
+          Print("GAP_OK\n");
+          QUIT;
+          EOF
+
+      - name: Run A3-4-20S
+        run: python research/A3-4-20S_SOCLE_BASIS_Q_ALIGNMENT_2026-09-17.py
