@@ -33,9 +33,8 @@ assert W.shape == (256, 45)
 assert Wd.shape == (256, 45)
 assert len(A_W) == len(A4_ambient) == 5
 
-# Existing degree-4 words are tuples of generator labels.  The A3-4-5
-# construction is authoritative, so preserve that exact word convention.
-# Degree-5 associative words are represented by tuples as well.
+# Degree-4 words are tuples of generator labels. Degree-5 associative words
+# are represented by tuples as well.
 words5 = list(product((1, 2, 3, 4), repeat=5))
 index5 = {w: i for i, w in enumerate(words5)}
 
@@ -63,10 +62,12 @@ for g in range(1, 5):
         column_bracket_with_generator(Wd[:, j], g) for j in range(45)
     ]) % P)
 
-# Reconstruct the A3-4-9 intertwiner X: W45 -> Wd, fixing K pointwise.
+# Reconstruct exactly the affine A3-4-9 intertwiner X: W45 -> Wd,
+# satisfying A_Wd X = X A_W and X I_W = K_Wd.
 n = 45
 Nvar = n * n
 rows = []
+rhs = []
 
 def vi(r, c):
     return r * n + c
@@ -91,20 +92,25 @@ for A, Ad in zip(A_W, A_Wd):
                 row[vi(k, c)] = (row[vi(k, c)] + Ad[r, k]) % P
                 row[vi(r, k)] = (row[vi(r, k)] - A[k, c]) % P
             rows.append(row)
+            rhs.append(0)
 
-# X|K = identity, expressed as X I_W = K_Wd.
+# X|K = identity, expressed as X I_W = K_Wd. This is an AFFINE
+# constraint, so the right-hand side must be K_Wd (not zero).
 for r in range(n):
     for c in range(35):
         row = np.zeros(Nvar, dtype=np.int64)
         for k in range(n):
             row[vi(r, k)] = (row[vi(r, k)] + I_W[k, c]) % P
         rows.append(row)
+        rhs.append(int(K_Wd[r, c]))
 
 M = np.array(rows, dtype=np.int64) % P
+b = np.array(rhs, dtype=np.int64) % P
 
-def rref_nullspace(A):
-    R = A.copy() % P
-    m, n = R.shape
+def rref_solve(A, b):
+    R = np.column_stack([A.copy() % P, b.reshape(-1, 1) % P])
+    m, naug = R.shape
+    n = naug - 1
     r = 0
     piv = []
     for c in range(n):
@@ -121,19 +127,17 @@ def rref_nullspace(A):
         r += 1
         if r == m:
             break
-    free = [c for c in range(n) if c not in piv]
-    basis = []
-    for f in free:
-        z = np.zeros(n, dtype=np.int64)
-        z[f] = 1
-        for rr, c in enumerate(piv):
-            z[c] = (-R[rr, f]) % P
-        basis.append(z)
-    return len(piv), basis
+    bad = any(np.all(R[i, :n] % P == 0) and R[i, n] % P != 0 for i in range(r, m))
+    if bad:
+        return len(piv), None, n - len(piv)
+    x = np.zeros(n, dtype=np.int64)
+    for rr, c in enumerate(piv):
+        x[c] = R[rr, n]
+    return len(piv), x, n - len(piv)
 
-rank_system, null_basis = rref_nullspace(M)
-assert len(null_basis) == 1
-X_intertwiner = null_basis[0].reshape((45, 45)) % P
+rank_system, sol, nullity_system = rref_solve(M, b)
+assert sol is not None
+X_intertwiner = sol.reshape((n, n)) % P
 assert rank3(X_intertwiner) == 45
 assert np.array_equal((X_intertwiner @ I_W) % P, K_Wd % P)
 assert all(
@@ -143,7 +147,7 @@ assert all(
 
 # IMPORTANT: B_W[g] maps W45 -> degree-5 ambient space, while B_Wd[g]
 # maps Wd -> degree-5 ambient space. Therefore the correct compatibility
-# equation is B_Wd[g] @ X = B_W[g].
+# equation is B_Wd[g] X = B_W[g].
 diffs = [((B_Wd[g] @ X_intertwiner) - B_W[g]) % P for g in range(4)]
 D = np.vstack(diffs)
 BRACKET_COMPATIBLE = all(np.count_nonzero(D[g * 1024:(g + 1) * 1024, :]) == 0 for g in range(4))
@@ -153,6 +157,10 @@ print('PHASE 2-23 / A3-4-10 AMBIENT BRACKET COMPATIBILITY')
 print('dim W45 =', rank3(W))
 print('dim Wd =', rank3(Wd))
 print('dim common K =', rank3(K_ambient))
+print('system rows =', M.shape[0])
+print('system unknowns =', M.shape[1])
+print('rank of constrained system =', rank_system)
+print('solution nullity =', nullity_system)
 print('A3-4-9 intertwiner rank =', rank3(X_intertwiner))
 print('A3-4-9 intertwiner fixes K =', np.array_equal((X_intertwiner @ I_W) % P, K_Wd % P))
 print('degree-5 ambient associative word dimension =', 1024)
