@@ -1,0 +1,22 @@
+name: Relation recursion audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/**/*.py'
+      - 'research/RELATION_RECURSION_AUDIT_2026-09-16.py'
+      - '.github/workflows/relation-recursion-audit.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Run recursive relation audit
+        run: python research/RELATION_RECURSION_AUDIT_2026-09-16.py
