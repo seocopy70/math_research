@@ -1,0 +1,21 @@
+name: A3-4-11 self-automorphism control
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install numpy
+      - name: Run exact self-automorphism control
+        run: python research/A3-4-11_SELF_AUTOMORPHISM_CONTROL_2026-09-16.py
