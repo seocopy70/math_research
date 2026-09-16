@@ -1,8 +1,10 @@
 import runpy
+import time
 import numpy as np
 
 P = 3
 ROOT = 'research/'
+T0 = time.perf_counter()
 
 
 def rank3(A):
@@ -28,14 +30,7 @@ def rank3(A):
 
 
 def left_inverse(B):
-    """Return row indices and a true left inverse over F_3.
-
-    The previous implementation assumed that the selected independent rows
-    already had pivots on the diagonal. That is not generally true and could
-    cause a false coordinate-reconstruction assertion. We now perform full
-    pivot search on the selected 204x204 square matrix before Gauss-Jordan
-    elimination.
-    """
+    """Return row indices and a true left inverse over F_3."""
     B = np.array(B, dtype=np.int64) % P
     k = B.shape[1]
     rows = []
@@ -65,15 +60,6 @@ def left_inverse(B):
 
     assert np.array_equal(E[:, :k] % P, np.eye(k, dtype=np.int64))
     return rows, E[:, k:]
-
-
-def coords(B, V):
-    B = np.array(B, dtype=np.int64) % P
-    V = np.array(V, dtype=np.int64) % P
-    rows, L = left_inverse(B)
-    C = (L @ V[rows]) % P
-    assert np.array_equal((B @ C) % P, V)
-    return C
 
 
 # A3-4-10 already contains the independently verified affine intertwiner X
@@ -109,6 +95,7 @@ from itertools import product
 words5 = list(product((1, 2, 3, 4), repeat=5))
 index5 = {w: i for i, w in enumerate(words5)}
 
+
 def bracket_col(v_col, gen):
     out = np.zeros(1024, dtype=np.int64)
     for j, coeff in enumerate(v_col):
@@ -139,12 +126,32 @@ for j in range(L5_matrix.shape[1]):
         if r == dim_L5:
             break
 assert rank3(L5_basis) == 204
+print('CHECKPOINT: L5 basis constructed; dim L5 =', dim_L5, 'elapsed =', round(time.perf_counter() - T0, 3), 's')
+
+# IMPORTANT PERFORMANCE FIX:
+# Build the L5 coordinate extractor exactly once. The previous version
+# recomputed a 204x204 Gauss-Jordan inverse for every obstruction column,
+# which made A3-4-11 unnecessarily slow.
+INV_T0 = time.perf_counter()
+L5_rows, L5_left_inv = left_inverse(L5_basis)
+print('CHECKPOINT: L5 left inverse built once; elapsed =', round(time.perf_counter() - INV_T0, 3), 's')
+
+
+def coords_many(V):
+    """Convert one or many ambient vectors to L5 coordinates using cached inverse."""
+    V = np.array(V, dtype=np.int64) % P
+    if V.ndim == 1:
+        V = V[:, None]
+    C = (L5_left_inv @ V[L5_rows, :]) % P
+    assert np.array_equal((L5_basis @ C) % P, V)
+    return C
+
 
 # -------------------------------------------------------------------------
 # 2. Project each A3-4-10 discrepancy component to actual L_5 coordinates.
 # -------------------------------------------------------------------------
 D_components = [D[g * 1024:(g + 1) * 1024, :] for g in range(4)]
-D_L5 = np.vstack([coords(L5_basis, C) for C in D_components])
+D_L5 = np.vstack([coords_many(C) for C in D_components])
 assert D_L5.shape == (816, 45)
 rank_D_associative = rank3(D)
 rank_D_L5 = rank3(D_L5)
@@ -155,6 +162,7 @@ RECONSTRUCTION_OK = all(
     for g in range(4)
 )
 assert RECONSTRUCTION_OK
+print('CHECKPOINT: obstruction compressed to L5; rank =', rank_D_L5, 'elapsed =', round(time.perf_counter() - T0, 3), 's')
 
 # -------------------------------------------------------------------------
 # 3. Verify that the obstruction map is H-equivariant as a map
@@ -162,6 +170,7 @@ assert RECONSTRUCTION_OK
 # -------------------------------------------------------------------------
 def dict_from_vec5(v):
     return {w: int(c) % P for w, c in zip(words5, v) if int(c) % P}
+
 
 def vec5_from_dict(a):
     v = np.zeros(1024, dtype=np.int64)
@@ -171,13 +180,16 @@ def vec5_from_dict(a):
 
 A_L5 = []
 for gmat in gens:
-    cols = []
+    transformed = []
     for j in range(dim_L5):
         v = L5_basis[:, j] % P
         out = apply_linear_map(dict_from_vec5(v), gmat)
-        cols.append(coords(L5_basis, vec5_from_dict(out)))
-    A_L5.append(np.column_stack(cols) % P)
+        transformed.append(vec5_from_dict(out))
+    transformed_matrix = np.column_stack(transformed) % P
+    A_L5.append(coords_many(transformed_matrix))
 assert all(a.shape == (204, 204) and rank3(a) == 204 for a in A_L5)
+print('CHECKPOINT: L5 action matrices built for', len(A_L5), 'generators; elapsed =', round(time.perf_counter() - T0, 3), 's')
+
 
 def transform_D(Dcoords, A5, h):
     blocks = [Dcoords[g * 204:(g + 1) * 204, :] for g in range(4)]
@@ -200,6 +212,7 @@ def transform_D(Dcoords, A5, h):
         out.append(C)
     return np.vstack(out) % P
 
+
 A_W = [np.array(a, dtype=np.int64) % P for a in ns10['A_W']]
 EQUIVARIANT = True
 EQUIVARIANCE_RANKS = []
@@ -221,15 +234,12 @@ assert IMAGE_IS_W45
 R4_ind = R4_matrix
 assert R4_ind.shape[0] == 60 and rank3(R4_ind) == 5
 
-# Embed the degree-4 relation vectors into the associative degree-4 space,
-# then bracket with each generator.
 R5_candidates = []
 for j in range(R4_ind.shape[1]):
-    # R4_matrix is stored in the degree-4 associative word coordinates.
     v = R4_ind[:, j]
     R5_candidates.extend(bracket_col(v, g) for g in range(1, 5))
 R5_matrix = np.column_stack(R5_candidates) % P
-R5_L5 = np.column_stack([coords(L5_basis, R5_matrix[:, j]) for j in range(R5_matrix.shape[1])])
+R5_L5 = coords_many(R5_matrix)
 dim_R5_local = rank3(R5_L5)
 
 combined_rank = rank3(np.column_stack([D_L5, R5_L5]))
@@ -247,6 +257,7 @@ print('OBSTRUCTION_MAP_H_EQUIVARIANT =', EQUIVARIANT)
 print('OBSTRUCTION_IMAGE_ISOMORPHIC_TO_W45_BY_INJECTIVITY =', IMAGE_IS_W45)
 print('intersection dim(obstruction image, local relation span) =', intersection_dim)
 print('rank(obstruction + local relation span) =', combined_rank)
+print('TOTAL_ELAPSED_SECONDS =', round(time.perf_counter() - T0, 3))
 print('RESULT: the degree-5 obstruction is already an actual L5-valued obstruction; compression to L5 loses no rank.')
 print('RESULT: the obstruction map is H-equivariant and injective, so its image is an H-module isomorphic to W45.')
 print('CAUTION: the relation-span test uses only [ (R)_4, X_i ]; it is not claimed to be the full degree-5 relation ideal.')
