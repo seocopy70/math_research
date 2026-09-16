@@ -21,7 +21,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          probe=$(printf 'F := GF(3);; A := IdentityMat(1,F);; M := GModuleByMats([A]);; Print(MTX.IsIrreducible(M),"\\n");; QUIT;\n' | gap -q)
+          probe=$(printf 'F := GF(3);; A := IdentityMat(1,F);; M := GModuleByMats([A],F);; Print(MTX.IsIrreducible(M),"\n");; QUIT;\n' | gap -q)
           printf '%s\n' "$probe"
           printf '%s\n' "$probe" | grep -Fx 'true'
       - name: Run B1-1-2
