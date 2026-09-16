@@ -1,0 +1,17 @@
+name: Finite-field rank audit
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  rank-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run repository-wide finite-field rank audit
+        run: python research/FINITE_FIELD_RANK_AUDIT_2026-09-17.py
