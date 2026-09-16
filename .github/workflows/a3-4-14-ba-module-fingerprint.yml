@@ -1,0 +1,24 @@
+name: A3-4-14 B/A module fingerprint
+
+on:
+  push:
+    paths:
+      - 'research/A3-4-14_BA_MODULE_FINGERPRINT_2026-09-16.py'
+      - 'research/phase2_23_A3_4_10_ambient_bracket_compatibility_2026-09-16.py'
+      - 'research/A3-4-12_IMAGE_INTERSECTION_DELTA_U_DELTA_TAU_2026-09-16.py'
+      - 'research/phase2_3_endH_optimized_2026-09-15.py'
+      - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install numpy
+      - name: Run B/A module fingerprint check
+        run: python research/A3-4-14_BA_MODULE_FINGERPRINT_2026-09-16.py
