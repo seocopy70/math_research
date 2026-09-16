@@ -9,6 +9,7 @@ ROOT = 'research/'
 ns = runpy.run_path(ROOT + 'phase2_1_invariant_space_verification_2026-09-15.py')
 A = [np.array(x, dtype=np.int64) % P for x in ns['action_matrices']]
 assert len(A) == 5 and all(x.shape == (45,45) for x in A)
+DIM_W = A[0].shape[0]
 
 def gap_rows(M):
     return '[' + ','.join('[' + ','.join(str(int(x)%P) for x in row) + ']' for row in M.tolist()) + ']'
@@ -25,26 +26,24 @@ end;;
 Gens := List(Raw,ToField);;
 M := GModuleByMats(Gens,F);;
 Print("B1-1 / W45 SUBMODULE STRUCTURE\n");
-Print("DIM_W = ",Dimension(M),"\n");
+Print("DIM_W_FROM_EXACT_PYTHON = %s\n");
 SB := MTX.BasisSocle(M);;
 Print("SOCLE_DIM = ",Length(SB),"\n");
 Print("SOCLE_BASIS_ROWS = ",Length(SB),"\n");
-# Probe standard GAP/MeatAxe maximal-submodule operation if installed.
 if IsBound(MTX.MaximalSubmodules) then
   MM := MTX.MaximalSubmodules(M);;
   Print("MAXIMAL_SUBMODULE_COUNT = ",Length(MM),"\n");
-  Print("MAXIMAL_SUBMODULE_DIMS = ",[Length(x):x in MM],"\n");
+  Print("MAXIMAL_SUBMODULE_OBJECTS_AVAILABLE = true\n");
 else
   Print("MAXIMAL_SUBMODULES_API = NOT_AVAILABLE\n");
 fi;
-# Also probe all submodule lattice APIs without assuming their presence.
 if IsBound(SubmoduleLattice) then
   Print("SUBMODULE_LATTICE_API = AVAILABLE\n");
 else
   Print("SUBMODULE_LATTICE_API = NOT_AVAILABLE\n");
 fi;
 QUIT;
-''' % literal
+''' % (literal, DIM_W)
 with tempfile.NamedTemporaryFile('w', suffix='.g', delete=False, encoding='utf-8') as f:
     f.write(gap_code); path=f.name
 try:
