@@ -235,13 +235,27 @@ assert rank3(R4_ind) == 5
 R5_candidates = []
 for j in range(R4_ind.shape[1]):
     v = R4_ind[:, j]
-    R5_candidates.extend(bracket_col(v, g) for g in range(1, 5))
+    for g in range(1, 5):
+        R5_candidates.append(bracket_col(v, g))
 R5_matrix = np.column_stack(R5_candidates) % P
 R5_L5 = coords_many(R5_matrix)
 dim_R5_local = rank3(R5_L5)
 
-combined_rank = rank3(np.column_stack([D_L5, R5_L5]))
+# R5_L5 is a 204 x 20 coordinate matrix in L5.  The obstruction
+# D_L5 lives in L5^4, i.e. four stacked 204-dimensional blocks.
+# Embed each local relation [r, X_g] into the corresponding g-th block.
+R5_L5_4 = np.zeros((4 * dim_L5, R5_L5.shape[1]), dtype=np.int64)
+col = 0
+for j in range(len(r4_indices)):
+    for g in range(4):
+        R5_L5_4[g * dim_L5:(g + 1) * dim_L5, col] = R5_L5[:, col]
+        col += 1
+assert col == R5_L5.shape[1]
+assert R5_L5_4.shape == (816, 20)
+
+combined_rank = rank3(np.column_stack([D_L5, R5_L5_4]))
 intersection_dim = rank_D_L5 + dim_R5_local - combined_rank
+assert 0 <= intersection_dim <= min(rank_D_L5, dim_R5_local)
 
 print('PHASE 2-24 / A3-4-11 DEGREE-5 LIE OBSTRUCTION COMPRESSION')
 print('dim L5 =', dim_L5)
