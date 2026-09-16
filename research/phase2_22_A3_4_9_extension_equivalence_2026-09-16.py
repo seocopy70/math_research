@@ -13,11 +13,22 @@ I_W = np.array(ns['I_W'], dtype=np.int64) % P
 K_coord = np.array(ns['K_coord'], dtype=np.int64) % P
 A_W = [np.array(a, dtype=np.int64) % P for a in ns['A_W']]
 
-# A3-4-5 exposes the five generator actions on W45 as A_W.
-# For Wd, reconstruct the same generator action from the canonical
-# 256-dimensional word-space action matrices.
+# Reconstruct the ambient 256-dimensional generator actions directly from
+# the authoritative word-space action routine. This avoids assuming that
+# phase2_1 exports an undocumented ambient matrix variable.
 ns1 = runpy.run_path(ROOT + 'phase2_1_invariant_space_verification_2026-09-15.py')
-A_ambient = [np.array(a, dtype=np.int64) % P for a in ns1['ambient_action_matrices']]
+index4 = ns1['index4']
+gens = ns1['gens']
+apply_linear_map = ns1['apply_linear_map']
+words = list(index4.keys())
+A_ambient = []
+for g in gens:
+    G = np.zeros((256,256), dtype=np.int64)
+    for j,w in enumerate(words):
+        out = apply_linear_map({w:1}, g)
+        for ww,c in out.items():
+            G[index4[ww],j] = (G[index4[ww],j] + c) % P
+    A_ambient.append(G)
 
 assert W.shape == (256,45)
 assert Wd.shape == (256,45)
@@ -32,16 +43,16 @@ for G in A_ambient:
     assert np.array_equal((Wd @ C) % P, X)
     A_Wd.append(C)
 
-# A3-4-8 established that the common ambient subspace I=K.
+# A3-4-8 established I=K as actual ambient subspaces.
 K_ambient = (W @ K_coord) % P
 K_Wd = coords(Wd, K_ambient)
 assert np.array_equal((Wd @ K_Wd) % P, K_ambient)
 assert rank3(K_Wd) == 35
 
-# Seek an H-isomorphism X: W45 -> Wd that fixes the common K pointwise:
+# Test whether the two exact sequences are equivalent with the common K fixed
+# pointwise. Seek X: W45 -> Wd satisfying
 #   A_Wd[i] X = X A_W[i]
 #   X I_W = K_Wd.
-# Existence is exactly the relevant extension-equivalence test.
 n = 45
 Nvar = n*n
 rows=[]; rhs=[]
