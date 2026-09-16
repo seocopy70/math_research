@@ -53,7 +53,15 @@ def rep_word(w,mats):
     R=I35.copy()
     for gi in w:R=(R@mats[gi])%P
     return R
-def order(T,max_order=5000):
+
+def order4(T,max_order=5000):
+    R=I4.copy()
+    for k in range(1,max_order+1):
+        R=(R@T)%P
+        if np.array_equal(R,I4): return k
+    return None
+
+def order35(T,max_order=5000):
     R=I35.copy()
     for k in range(1,max_order+1):
         R=(R@T)%P
@@ -74,12 +82,12 @@ def jordan1(T):
     ge=[null[k]-null[k-1] for k in range(1,len(null))]
     return tuple(ge[k]-(ge[k+1] if k+1<len(ge) else 0) for k in range(len(ge)))
 
-def fp(T): return {'order':order(T),'charpoly':charpoly_F3(T),'rank_profile':rank_profile(T),'jordan1':jordan1(T)}
+def fp(T): return {'order':order35(T),'charpoly':charpoly_F3(T),'rank_profile':rank_profile(T),'jordan1':jordan1(T)}
 
 rows=[]
 for ci,cls in enumerate(classes,1):
     idx=min(cls); w=word_for(idx); Tb=rep_word(w,BA_gens); Tk=rep_word(w,K_gens)
-    fb,fk=fp(Tb),fp(Tk); rows.append((ci,len(cls),order(group[idx]),fb,fk))
+    fb,fk=fp(Tb),fp(Tk); rows.append((ci,len(cls),order4(group[idx]),fb,fk))
 
 char_diff=[r[0] for r in rows if r[3]['charpoly']!=r[4]['charpoly']]
 rank_diff=[r[0] for r in rows if r[3]['rank_profile']!=r[4]['rank_profile']]
