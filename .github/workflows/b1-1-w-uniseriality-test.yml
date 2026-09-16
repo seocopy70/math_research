@@ -1,21 +1,24 @@
 name: B1-1 W45 uniseriality test
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
 jobs:
   b1-1:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.11'
       - name: Install Python dependencies
-        run: python -m pip install --upgrade pip numpy sympy
+        run: pip install numpy sympy
       - name: Install GAP
+        run: sudo apt-get update && sudo apt-get install -y gap
+      - name: Verify GAP MeatAxe interface
         run: |
-          sudo apt-get update
-          sudo apt-get install -y gap
+          printf 'F := GF(3);; Print(MTX.IsIrreducible(GModuleByMats([IdentityMat(1)],F)),"\\n");; QUIT;\n' | gap -q
       - name: Run B1-1 probe
         run: python research/B1-1_W_UNISERIALITY_TEST_2026-09-17.py
