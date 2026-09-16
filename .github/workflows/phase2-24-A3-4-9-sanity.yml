@@ -21,6 +21,6 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: python -m pip install numpy
-      # Independent determinant + explicit reconstruction verification.
+      # Independent determinant + explicit reconstruction verification (final coordinate fix).
       - name: Run independent A3-4-9 sanity check
         run: python research/A3-4-9_independent_sanity_2026-09-16.py
