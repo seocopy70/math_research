@@ -102,11 +102,15 @@ assert len(ker) == 35
 KERNEL = np.column_stack(ker)
 I_ambient = (W @ KERNEL[:45, :]) % P
 assert rank3(I_ambient) == 35
-I_coord = np.column_stack([coordinates(I_ambient[:, j]) for j in range(35)])
+# phase2-1 coordinates() returns all 60 coordinates in L4=(R)_4+W45;
+# the final 45 entries are the TRUE-Q4 coordinates.
+I_coord_full = np.column_stack([coordinates(I_ambient[:, j]) for j in range(35)]) % P
+assert I_coord_full.shape == (60, 35) and rank3(I_coord_full) == 35
+I_coord = I_coord_full[15:, :]
 assert I_coord.shape == (45, 35) and rank3(I_coord) == 35
 
 # The authoritative phase2-1 coordinates are coordinates in
-# L4 = (R)_4 + W45.  Hence the final 45 coordinates are Q4 coordinates.
+# L4 = (R)_4 + W = L4. Hence the final 45 coordinates are Q4 coordinates.
 Q_W45 = np.column_stack([coordinates(W[:, j])[15:] for j in range(45)]) % P
 Q_Wd = np.column_stack([coordinates(Wd[:, j])[15:] for j in range(45)]) % P
 assert rank3(Q_W45) == 45
@@ -130,6 +134,7 @@ def inv3(A):
 
 # Canonical quotient-induced tau: pi(tau(w)) = pi(w).
 tau_coord = (inv3(Q_Wd) @ Q_W45) % P
+action_Wd = []
 T_ambient = (Wd @ tau_coord) % P
 E = (T_ambient - W) % P
 
@@ -148,7 +153,7 @@ def br(v, g):
         c = int(c) % P
         if c:
             w = words4[j]
-            out[tuple_index[w + (g,)]] = (out[tuple_index[w + (g,)]] + c) % P
+            out[tuple_index[w + (g,)]] = (out[tuple_index[w + (g,)] ] + c) % P
             out[tuple_index[(g,) + w]] = (out[tuple_index[(g,) + w]] - c) % P
     return out
 
