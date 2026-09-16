@@ -1,0 +1,21 @@
+name: A3-4 fast I=K true-Wd revalidation
+
+on:
+  push:
+    paths:
+      - 'research/A3-4-REVALIDATION_I_EQUALS_K_FAST_2026-09-16.py'
+      - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
+      - 'research/phase2_3_endH_optimized_2026-09-15.py'
+      - '.github/workflows/a3-4-i-k-fast.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy
+      - run: python research/A3-4-REVALIDATION_I_EQUALS_K_FAST_2026-09-16.py
