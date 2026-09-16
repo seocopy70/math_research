@@ -1,10 +1,10 @@
 import runpy
 import numpy as np
+from itertools import product
 
 P = 3
 ROOT = 'research/'
 
-# Authoritative data from the verified A3-4-5 construction.
 ns = runpy.run_path(ROOT + 'phase2_18_A3_4_5_intersection_K_and_Sym2_2026-09-16.py')
 rank3 = ns['rank3']
 coords = ns['coords']
@@ -14,12 +14,12 @@ I_W = np.array(ns['I_W'], dtype=np.int64) % P
 K_coord = np.array(ns['K_coord'], dtype=np.int64) % P
 A_W = [np.array(a, dtype=np.int64) % P for a in ns['A_W']]
 
-# Reconstruct the authoritative degree-4 word basis and group action.
 ns1 = runpy.run_path(ROOT + 'phase2_1_invariant_space_verification_2026-09-15.py')
 index4 = ns1['index4']
 gens = ns1['gens']
 apply_linear_map = ns1['apply_linear_map']
 words4 = list(index4.keys())
+
 A4_ambient = []
 for g in gens:
     G = np.zeros((256, 256), dtype=np.int64)
@@ -33,66 +33,37 @@ assert W.shape == (256, 45)
 assert Wd.shape == (256, 45)
 assert len(A_W) == len(A4_ambient) == 5
 
-# Build degree-5 free Lie word space using the same multilinear expansion
-# convention as the degree-4 computation, then quotient by Jacobi/antisymmetry
-# via an explicit Lie-expression coordinate representation.
-# A Lie monomial is represented recursively as a sparse associative-word dict.
-def add_dict(a, b):
-    out = dict(a)
-    for w, c in b.items():
-        out[w] = (out.get(w, 0) + c) % P
-        if out[w] == 0:
-            del out[w]
-    return out
-
-def scale_dict(a, s):
-    s %= P
-    return {w: (c * s) % P for w, c in a.items() if c * s % P}
-
-def bracket_dict(a, b):
-    out = {}
-    for wa, ca in a.items():
-        for wb, cb in b.items():
-            coeff = ca * cb % P
-            out[wa + wb] = (out.get(wa + wb, 0) + coeff) % P
-            out[wb + wa] = (out.get(wb + wa, 0) - coeff) % P
-    return {w: c % P for w, c in out.items() if c % P}
-
-# Degree-4 Lie basis is obtained by extracting all Hall-style brackets from
-# the degree-4 source script, and its columns W/Wd are associative expansions.
-# For bracket compatibility it is enough to compare associative expansions in
-# degree 5: equality there is equality in the free Lie algebra.
-
-# Generate degree-5 ambient associative words and their indices.
-from itertools import product
-words5 = [''.join(t) for t in product('1234', repeat=5)]
+# Existing degree-4 words are tuples of generator labels.  The A3-4-5
+# construction is authoritative, so preserve that exact word convention.
+# Degree-5 associative words are represented by tuples as well.
+words5 = list(product((1, 2, 3, 4), repeat=5))
 index5 = {w: i for i, w in enumerate(words5)}
 
-# Degree-1 generator expansions.
-X = {str(i): {str(i): 1} for i in range(1, 5)}
-
 def column_bracket_with_generator(v_col, gen):
-    # v_col is a degree-4 associative coordinate vector.
+    """Associative expansion of [v, X_gen] = v X_gen - X_gen v."""
     out = np.zeros(1024, dtype=np.int64)
-    # [v, X_g] = v X_g - X_g v.
     for j, coeff in enumerate(v_col):
-        if coeff:
-            w = words4[j]
-            out[index5[w + str(gen)]] = (out[index5[w + str(gen)]] + coeff) % P
-            out[index5[str(gen) + w]] = (out[index5[str(gen) + w]] - coeff) % P
+        coeff = int(coeff) % P
+        if coeff == 0:
+            continue
+        w = words4[j]
+        wg = w + (gen,)
+        gw = (gen,) + w
+        out[index5[wg]] = (out[index5[wg]] + coeff) % P
+        out[index5[gw]] = (out[index5[gw]] - coeff) % P
     return out
 
-# Ambient degree-5 bracket maps for all four generators.
 B_W = []
 B_Wd = []
 for g in range(1, 5):
-    BW = np.column_stack([column_bracket_with_generator(W[:, j], g) for j in range(45)])
-    BWd = np.column_stack([column_bracket_with_generator(Wd[:, j], g) for j in range(45)])
-    B_W.append(BW % P)
-    B_Wd.append(BWd % P)
+    B_W.append(np.column_stack([
+        column_bracket_with_generator(W[:, j], g) for j in range(45)
+    ]) % P)
+    B_Wd.append(np.column_stack([
+        column_bracket_with_generator(Wd[:, j], g) for j in range(45)
+    ]) % P)
 
-# Recompute the A3-4-9 intertwiner constraints, but do not assume a stored
-# solution. The solution is used only after it has been verified.
+# Reconstruct the A3-4-9 intertwiner X: W45 -> Wd, fixing K pointwise.
 n = 45
 Nvar = n * n
 rows = []
@@ -100,7 +71,6 @@ rows = []
 def vi(r, c):
     return r * n + c
 
-# Ambient degree-4 generator action restricted to W/Wd.
 A_Wd = []
 for G in A4_ambient:
     Y = (G @ Wd) % P
@@ -122,6 +92,7 @@ for A, Ad in zip(A_W, A_Wd):
                 row[vi(r, k)] = (row[vi(r, k)] - A[k, c]) % P
             rows.append(row)
 
+# X|K = identity, expressed as X I_W = K_Wd.
 for r in range(n):
     for c in range(35):
         row = np.zeros(Nvar, dtype=np.int64)
@@ -165,24 +136,17 @@ assert len(null_basis) == 1
 X_intertwiner = null_basis[0].reshape((45, 45)) % P
 assert rank3(X_intertwiner) == 45
 assert np.array_equal((X_intertwiner @ I_W) % P, K_Wd % P)
-assert all(np.array_equal((Ad @ X_intertwiner) % P, (X_intertwiner @ A) % P)
-           for A, Ad in zip(A_W, A_Wd))
-
-# Compare the actual ambient brackets. The degree-5 associative expansion
-# makes this a literal equality test in the free Lie algebra:
-#   [w, X_g] mapped through X should equal [X(w), X_g].
-# If X is bracket-compatible, then for every g,
-#   B_Wd[g] X = B_W[g].
-BRACKET_COMPATIBLE = all(
-    np.array_equal((B_Wd[g] @ X_intertwiner) % P, B_W[g] % P)
-    for g in range(4)
+assert all(
+    np.array_equal((Ad @ X_intertwiner) % P, (X_intertwiner @ A) % P)
+    for A, Ad in zip(A_W, A_Wd)
 )
 
-# Also measure the first obstruction exactly: rank of the stacked difference.
-diffs = []
-for g in range(4):
-    diffs.append(((B_Wd[g] @ X_intertwiner) - B_W[g]) % P)
+# IMPORTANT: B_W[g] maps W45 -> degree-5 ambient space, while B_Wd[g]
+# maps Wd -> degree-5 ambient space. Therefore the correct compatibility
+# equation is B_Wd[g] @ X = B_W[g].
+diffs = [((B_Wd[g] @ X_intertwiner) - B_W[g]) % P for g in range(4)]
 D = np.vstack(diffs)
+BRACKET_COMPATIBLE = all(np.count_nonzero(D[g * 1024:(g + 1) * 1024, :]) == 0 for g in range(4))
 OBSTRUCTION_RANK = rank3(D)
 
 print('PHASE 2-23 / A3-4-10 AMBIENT BRACKET COMPATIBILITY')
@@ -191,7 +155,7 @@ print('dim Wd =', rank3(Wd))
 print('dim common K =', rank3(K_ambient))
 print('A3-4-9 intertwiner rank =', rank3(X_intertwiner))
 print('A3-4-9 intertwiner fixes K =', np.array_equal((X_intertwiner @ I_W) % P, K_Wd % P))
-print('degree-5 ambient word dimension =', 1024)
+print('degree-5 ambient associative word dimension =', 1024)
 print('BRACKET_COMPATIBLE_FOR_ALL_4_GENERATORS =', BRACKET_COMPATIBLE)
 print('STACKED_BRACKET_OBSTRUCTION_RANK =', OBSTRUCTION_RANK)
 
