@@ -1,0 +1,22 @@
+name: Phase 2-16 A3-4-3 X1 power X2 module membership
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/phase2_16_A3_4_3_X1_power_X2_module_membership_2026-09-16.py'
+      - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
+      - '.github/workflows/phase2-16-A3-4-3.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install numpy
+      - name: Run A3-4-3 certificate
+        run: python research/phase2_16_A3_4_3_X1_power_X2_module_membership_2026-09-16.py
