@@ -96,7 +96,7 @@ R4_true_candidates = [bracket(x, r3) for x in X for r3 in R3]
 R4_true_m = np.column_stack([vec(a, 4) for a in R4_true_candidates])
 dim_R4_true = rank3(R4_true_m)
 
-# The old partial construction is retained only as a negative control.
+# Negative control: the tempting but incomplete [L2,R] construction.
 R4_old_candidates = [bracket(R, b) for b in L2]
 R4_old_m = np.column_stack([vec(a, 4) for a in R4_old_candidates])
 dim_R4_old = rank3(R4_old_m)
@@ -108,7 +108,7 @@ dim_R5_local = rank3(R5_local_m)
 
 # Degree-5 full homogeneous pieces; Jacobi should put them inside the local piece.
 L3_candidates = [bracket(a, x) for a in L2 for x in X]
-L3_basis, L3m = independent_basis(L3_candidates, 3, target=20)
+L3_basis, _ = independent_basis(L3_candidates, 3, target=20)
 mid5 = [bracket(a, b) for a in L2 for b in R3]
 last5 = [bracket(a, R) for a in L3_basis]
 mid5m = np.column_stack([vec(a, 5) for a in mid5])
@@ -117,20 +117,21 @@ assert rank3(np.column_stack([R5_local_m, mid5m])) == dim_R5_local
 assert rank3(np.column_stack([R5_local_m, last5m])) == dim_R5_local
 
 # Degree-6 local recursion check.
-R6_local = [bracket(x, r5) for x in X for r5 in R5_local]
+R6_local = [bracket(x, r5) for x in R5_local]
 R6_local_m = np.column_stack([vec(a, 6) for a in R6_local])
 dim_R6_local = rank3(R6_local_m)
 
 # Static audit: identify copies/dependencies of the old partial degree-4 construction.
 suspicious = []
 for path in sorted(ROOT.glob('*.py')):
+    if path.name == Path(__file__).name:
+        continue
     text = path.read_text(encoding='utf-8')
     if 'bracket(R, B)' in text or 'bracket(R, b)' in text:
         suspicious.append((str(path), 'direct [R,L2]-style construction'))
     if "ns1['R4_matrix']" in text or 'ns1["R4_matrix"]' in text:
         suspicious.append((str(path), 'inherits R4_matrix from phase2_1'))
 
-# phase2_1 itself must no longer define R4 from [R,L2].
 phase21 = (ROOT / 'phase2_1_invariant_space_verification_2026-09-15.py').read_text(encoding='utf-8')
 phase21_old = 'for B in L2:\n    R4.append(bracket(R, B))'
 phase21_has_old = phase21_old in phase21
@@ -151,8 +152,10 @@ for item in suspicious:
 assert dim_R3 == 4
 assert dim_R4_true == 15
 assert dim_R4_old == 5
-assert dim_R5_local == 20
+assert dim_R5_local == 60
 assert not phase21_has_old, 'phase2_1 still defines (R)_4 as [L2,R]'
+assert not suspicious, 'repository contains remaining old/ambiguous R4 construction/dependency'
 print('RESULT: recursive relation dimensions are independently verified.')
-print('RESULT: repository static audit found no remaining direct old [L2,R] construction.')
+print('RESULT: degree-5 local relation space has dimension 60 for the true 15-dimensional (R)_4.')
+print('RESULT: repository static audit found no remaining direct old [L2,R] construction/dependency.')
 print('ALL RELATION RECURSION AUDIT CHECKS PASSED')
