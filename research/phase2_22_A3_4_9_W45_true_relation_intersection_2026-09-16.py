@@ -36,7 +36,8 @@ X = BASE["X"]
 bracket = BASE["bracket"]
 vec4 = BASE["vec4"]
 rank3 = BASE["rank3"]
-W = np.array(BASE["W"], dtype=np.int64) % MOD
+# Phase 2-1 exposes the W45 basis as `basis` (not `W`).
+W = np.column_stack([vec4(a) for a in BASE["basis"]]) % MOD
 
 # Degree-1 and degree-2 Lie basis used for the relation layers.
 L1 = [X[i] for i in range(4)]
