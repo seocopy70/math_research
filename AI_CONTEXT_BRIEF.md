@@ -76,8 +76,7 @@ Sp\(_4(\mathbb F_3)\) 기준:
 
 \[
 \operatorname{rank}((R)_4)=5,
-\quad
-\operatorname{rank}((R)_4+[X_1^{[3]},X_2])=6.
+\quad\operatorname{rank}((R)_4+[X_1^{[3]},X_2])=6.
 \]
 
 따라서 현재까지는 degree 3에서 finite/infinite \(q\)를 구별하고, degree 4에서 구조가 증폭되며, 정확한 \(q\) 크기 판별은 degree 9가 필요한 계층으로 이해합니다.
@@ -121,7 +120,21 @@ M\cap W=I',\quad \dim I'=35,
 
 현재 B1-1의 직접적인 socle 비교에서는 GAP row-action에 맞는 \(N^T\)를 사용해야 합니다. 과거 Python `numpy.linalg.matrix_rank(N)`의 출력 24는 실수체 rank라서 무효입니다. 올바른 \(\mathbb F_3\) rank는 10이며, 이후 계산은 `rank3()`와 GAP \(GF(3)\) 계산을 기준으로 합니다.
 
-## 7. 연구 절차
+## 7. CI 신뢰성 상태
+
+2026-09-17에 저장소 전체의 GitHub Actions workflow 73개를 대상으로 shell pipeline audit를 수행했습니다.
+
+- `| gap`, `| python`, `| bash`, `| sh` 계열 위험 pipeline: **2건**
+- 대상: A3-4-20R, B1-1 GAP sanity probe
+- 두 건 모두 현재는 `set -euo pipefail`로 보호됨
+- 다른 workflow에서 같은 패턴은 발견되지 않음
+- audit run: **35160653591**, job **105010389018**, 결과 **PASS**
+
+따라서 AP-009의 저장소 전체 감사 결과는 **PASS**입니다. 다만 과거 fail-open 구조로 실행된 A3-4-20R/B1-1의 오래된 sanity-probe 증거는 `success` 표시만으로 충분한 인증으로 간주하지 않습니다. 해당 계산 자체를 자동으로 무효화하는 것은 아니며, 실제 수학 계산이 그 probe의 성공에 의존했는지를 따로 판단합니다.
+
+새로운 pipeline은 `.github/workflows/workflow-pipeline-audit.yml`이 차단합니다.
+
+## 8. 연구 절차
 
 항상 다음 순서를 지킵니다.
 
@@ -136,7 +149,7 @@ M\cap W=I',\quad \dim I'=35,
 
 실행 로그가 없는 결과는 공식 PASS로 부르지 않습니다.
 
-## 8. 결과 분류
+## 9. 결과 분류
 
 모든 실험은 다음 중 하나로 분류합니다.
 
@@ -146,7 +159,7 @@ M\cap W=I',\quad \dim I'=35,
 
 단, 이는 순차적 진행을 뜻하는 것이 아니라 실패 원인의 종류를 구분하는 공통 분류 체계입니다.
 
-## 9. 새 세션에서 반드시 확인할 것
+## 10. 새 세션에서 반드시 확인할 것
 
 - 현재 `main`의 최신 commit
 - 해당 실험의 정확한 script/workflow/commit
@@ -155,5 +168,6 @@ M\cap W=I',\quad \dim I'=35,
 - \(\mathbb F_3\) rank 사용 여부
 - sanity invariant 통과 여부
 - 이전의 INVALID 결과를 재사용하고 있지 않은지
+- workflow pipeline audit가 PASS인지
 
 **핵심 원칙:** AI가 계산을 대신하는 것이 아니라, 사람이 통제하는 재현 가능한 수학 연구 인프라 위에서 AI를 연구 보조자로 사용합니다.
