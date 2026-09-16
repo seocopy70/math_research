@@ -15,10 +15,8 @@ def add(A, B):
             del C[w]
     return C
 
-
 def neg(A):
     return {w: (-c) % P for w, c in A.items() if c % P}
-
 
 def mul(A, B):
     C = {}
@@ -30,10 +28,8 @@ def mul(A, B):
                 del C[w]
     return C
 
-
 def bracket(A, B):
     return add(mul(A, B), neg(mul(B, A)))
-
 
 def rank3(A):
     A = np.array(A, dtype=np.int64, copy=True) % P
@@ -56,7 +52,6 @@ def rank3(A):
             break
     return r
 
-
 def vec(A, degree):
     words = list(product((1, 2, 3, 4), repeat=degree))
     index = {w: i for i, w in enumerate(words)}
@@ -64,7 +59,6 @@ def vec(A, degree):
     for w, c in A.items():
         v[index[w]] = c % P
     return v
-
 
 def independent_basis(candidates, degree, target=None):
     cols = []
@@ -86,7 +80,6 @@ X = [{(i + 1,): 1} for i in range(4)]
 L2 = [bracket(X[i], X[j]) for i in range(4) for j in range(i + 1, 4)]
 R = add(L2[0], L2[5])
 
-# Independent recursive relation computation.
 R3 = [bracket(R, x) for x in X]
 R3m = np.column_stack([vec(a, 3) for a in R3])
 dim_R3 = rank3(R3m)
@@ -117,7 +110,7 @@ assert rank3(np.column_stack([R5_local_m, mid5m])) == dim_R5_local
 assert rank3(np.column_stack([R5_local_m, last5m])) == dim_R5_local
 
 # Degree-6 local recursion check.
-R6_local = [bracket(x, r5) for x in R5_local]
+R6_local = [bracket(x, r5) for r5 in R5_local]
 R6_local_m = np.column_stack([vec(a, 6) for a in R6_local])
 dim_R6_local = rank3(R6_local_m)
 
