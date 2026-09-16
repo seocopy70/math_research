@@ -1,0 +1,24 @@
+name: A3-4-18 Exact Loewy MeatAxe
+
+on:
+  push:
+    paths:
+      - 'research/A3-4-18_LOEWY_SOCLE_RADICAL_2026-09-16.py'
+      - 'research/A3-4-16_STRONG_MODULAR_FINGERPRINT_2026-09-16.py'
+      - 'research/A3-4-14_BA_MODULE_FINGERPRINT_2026-09-16.py'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Python dependency
+        run: pip install numpy
+      - name: Install GAP
+        run: sudo apt-get update && sudo apt-get install -y gap
+      - name: Run exact MeatAxe Loewy analysis
+        run: python research/A3-4-18_LOEWY_SOCLE_RADICAL_2026-09-16.py
