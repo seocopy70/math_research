@@ -1,0 +1,23 @@
+name: Workflow shell pipeline audit
+
+on:
+  push:
+    paths:
+      - '.github/workflows/**'
+      - 'research/WORKFLOW_PIPELINE_AUDIT_2026-09-17.py'
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+      - 'research/WORKFLOW_PIPELINE_AUDIT_2026-09-17.py'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit shell pipelines
+        run: python research/WORKFLOW_PIPELINE_AUDIT_2026-09-17.py
