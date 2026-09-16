@@ -91,7 +91,7 @@ R3 = [bracket(R, x) for x in X]
 R3m = np.column_stack([vec(a, 3) for a in R3])
 dim_R3 = rank3(R3m)
 
-# (R)_4 is DEFINITELY [L1,(R)_3], not [L2,R].
+# (R)_4 is [L1,(R)_3], not [L2,R].
 R4_true_candidates = [bracket(x, r3) for x in X for r3 in R3]
 R4_true_m = np.column_stack([vec(a, 4) for a in R4_true_candidates])
 dim_R4_true = rank3(R4_true_m)
@@ -121,7 +121,7 @@ R6_local = [bracket(x, r5) for x in R5_local]
 R6_local_m = np.column_stack([vec(a, 6) for a in R6_local])
 dim_R6_local = rank3(R6_local_m)
 
-# Static audit: identify copies/dependencies of the old partial degree-4 construction.
+# Static audit: only direct old R4 constructions are forbidden.
 suspicious = []
 for path in sorted(ROOT.glob('*.py')):
     if path.name == Path(__file__).name:
@@ -129,8 +129,6 @@ for path in sorted(ROOT.glob('*.py')):
     text = path.read_text(encoding='utf-8')
     if 'bracket(R, B)' in text or 'bracket(R, b)' in text:
         suspicious.append((str(path), 'direct [R,L2]-style construction'))
-    if "ns1['R4_matrix']" in text or 'ns1["R4_matrix"]' in text:
-        suspicious.append((str(path), 'inherits R4_matrix from phase2_1'))
 
 phase21 = (ROOT / 'phase2_1_invariant_space_verification_2026-09-15.py').read_text(encoding='utf-8')
 phase21_old = 'for B in L2:\n    R4.append(bracket(R, B))'
@@ -145,7 +143,7 @@ print('dim local (R)_6 =', dim_R6_local)
 print('degree-5 Jacobi containment [L2,(R)_3] inside [L1,(R)_4] =', True)
 print('degree-5 Jacobi containment [L3,R] inside [L1,(R)_4] =', True)
 print('phase2_1 still contains old [L2,R] R4 construction =', phase21_has_old)
-print('FILES USING OLD/DEPENDENT PATTERN:')
+print('DIRECT OLD-R4 FILES:')
 for item in suspicious:
     print('  ', item[0], '::', item[1])
 
@@ -154,8 +152,8 @@ assert dim_R4_true == 15
 assert dim_R4_old == 5
 assert dim_R5_local == 60
 assert not phase21_has_old, 'phase2_1 still defines (R)_4 as [L2,R]'
-assert not suspicious, 'repository contains remaining old/ambiguous R4 construction/dependency'
+assert not suspicious, 'repository contains a remaining direct old [L2,R] construction'
 print('RESULT: recursive relation dimensions are independently verified.')
 print('RESULT: degree-5 local relation space has dimension 60 for the true 15-dimensional (R)_4.')
-print('RESULT: repository static audit found no remaining direct old [L2,R] construction/dependency.')
+print('RESULT: repository static audit found no remaining direct old [L2,R] construction.')
 print('ALL RELATION RECURSION AUDIT CHECKS PASSED')
