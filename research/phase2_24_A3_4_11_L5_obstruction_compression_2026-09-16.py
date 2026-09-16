@@ -28,6 +28,14 @@ def rank3(A):
 
 
 def left_inverse(B):
+    """Return row indices and a true left inverse over F_3.
+
+    The previous implementation assumed that the selected independent rows
+    already had pivots on the diagonal. That is not generally true and could
+    cause a false coordinate-reconstruction assertion. We now perform full
+    pivot search on the selected 204x204 square matrix before Gauss-Jordan
+    elimination.
+    """
     B = np.array(B, dtype=np.int64) % P
     k = B.shape[1]
     rows = []
@@ -42,23 +50,29 @@ def left_inverse(B):
             r = q
             if r == k:
                 break
-    assert r == k
-    E = np.column_stack([R, np.eye(k, dtype=np.int64)])
+    assert r == k, f'B does not have full column rank: {r} < {k}'
+
+    E = np.concatenate([R.copy(), np.eye(k, dtype=np.int64)], axis=1) % P
     for c in range(k):
-        q = next(i for i in range(k) if E[i, c])
+        q = next((i for i in range(c, k) if E[i, c]), None)
+        assert q is not None, f'no pivot in column {c}'
         E[[c, q]] = E[[q, c]]
         if E[c, c] == 2:
             E[c] = (2 * E[c]) % P
         for i in range(k):
             if i != c and E[i, c]:
                 E[i] = (E[i] - E[i, c] * E[c]) % P
+
+    assert np.array_equal(E[:, :k] % P, np.eye(k, dtype=np.int64))
     return rows, E[:, k:]
 
 
 def coords(B, V):
+    B = np.array(B, dtype=np.int64) % P
+    V = np.array(V, dtype=np.int64) % P
     rows, L = left_inverse(B)
-    C = (L @ np.array(V, dtype=np.int64)[rows]) % P
-    assert np.array_equal((B @ C) % P, np.array(V, dtype=np.int64) % P)
+    C = (L @ V[rows]) % P
+    assert np.array_equal((B @ C) % P, V)
     return C
 
 
@@ -91,20 +105,6 @@ assert D.shape == (4 * 1024, 45)
 # 1. Construct the actual free Lie space L_5 inside the degree-5 tensor
 #    algebra. Brackets [L_4, X_i] span L_5.
 # -------------------------------------------------------------------------
-
-def bracket_column_with_generator(v_col, gen):
-    out = np.zeros(1024, dtype=np.int64)
-    for j, coeff in enumerate(v_col):
-        coeff = int(coeff) % P
-        if coeff == 0:
-            continue
-        w = words4[j]
-        out[sum((4 ** k) * (a - 1) for k, a in enumerate(w + (gen,)))] = 0
-        # The direct index expression above is only a placeholder; use the
-        # canonical tuple dictionary below for correctness.
-    return out
-
-# Canonical tuple-indexed degree-5 associative coordinates.
 from itertools import product
 words5 = list(product((1, 2, 3, 4), repeat=5))
 index5 = {w: i for i, w in enumerate(words5)}
@@ -119,7 +119,6 @@ def bracket_col(v_col, gen):
             out[index5[(gen,) + w]] = (out[index5[(gen,) + w]] - coeff) % P
     return out
 
-# vec4(L4 element) columns -> [L4, X_i] candidates.
 L5_candidates = []
 for a in L4_candidates:
     va = vec4(a)
@@ -145,14 +144,12 @@ assert rank3(L5_basis) == 204
 # 2. Project each A3-4-10 discrepancy component to actual L_5 coordinates.
 # -------------------------------------------------------------------------
 D_components = [D[g * 1024:(g + 1) * 1024, :] for g in range(4)]
-D_L5 = np.column_stack([coords(L5_basis, C) for C in D_components])
-# D_L5 has 204*4 rows and 45 columns.
+D_L5 = np.vstack([coords(L5_basis, C) for C in D_components])
 assert D_L5.shape == (816, 45)
 rank_D_associative = rank3(D)
 rank_D_L5 = rank3(D_L5)
 assert rank_D_associative == rank_D_L5
 
-# The projection is lossless here: every discrepancy is already a Lie element.
 RECONSTRUCTION_OK = all(
     np.array_equal((L5_basis @ D_L5[g * 204:(g + 1) * 204, :]) % P, D_components[g])
     for g in range(4)
@@ -161,16 +158,8 @@ assert RECONSTRUCTION_OK
 
 # -------------------------------------------------------------------------
 # 3. Verify that the obstruction map is H-equivariant as a map
-#       W45 -> Hom(V, L5),
-#    where H acts on Hom(V,L5) by h.F = h o F o h^{-1}.
-#    This is the natural representation-theoretic packaging of the four
-#    bracket discrepancy components.
+#       W45 -> Hom(V, L5).
 # -------------------------------------------------------------------------
-
-# Build action of each symplectic generator on L5 coordinates by applying
-# the generator substitution to each L5 basis vector in the tensor algebra.
-# Convert an associative vector to a word dictionary, apply the existing
-# substitution routine, then return its degree-5 vector.
 def dict_from_vec5(v):
     return {w: int(c) % P for w, c in zip(words5, v) if int(c) % P}
 
@@ -184,20 +173,14 @@ A_L5 = []
 for gmat in gens:
     cols = []
     for j in range(dim_L5):
-        v = (L5_basis[:, j]) % P
+        v = L5_basis[:, j] % P
         out = apply_linear_map(dict_from_vec5(v), gmat)
         cols.append(coords(L5_basis, vec5_from_dict(out)))
     A_L5.append(np.column_stack(cols) % P)
 assert all(a.shape == (204, 204) and rank3(a) == 204 for a in A_L5)
 
-# D as a 204 x 4 x 45 tensor: D[w][input]. Under h,
-# (h.D)(e_i) = h(D(h^{-1} e_i)).
-# The generator matrix has columns h(e_i).
-# Hence output component i is sum_j (h^{-1})[j,i] * h(D_j).
 def transform_D(Dcoords, A5, h):
-    # Dcoords shape (816,45), split into 4 L5 blocks.
     blocks = [Dcoords[g * 204:(g + 1) * 204, :] for g in range(4)]
-    hinv = None
     aug = np.concatenate([h.copy() % P, np.eye(4, dtype=np.int64)], axis=1)
     for c in range(4):
         q = next(i for i in range(c, 4) if aug[i, c])
@@ -217,51 +200,38 @@ def transform_D(Dcoords, A5, h):
         out.append(C)
     return np.vstack(out) % P
 
-A_W = ns10['A_W']
-A_W = [np.array(a, dtype=np.int64) % P for a in A_W]
+A_W = [np.array(a, dtype=np.int64) % P for a in ns10['A_W']]
 EQUIVARIANT = True
 EQUIVARIANCE_RANKS = []
 for A5, h, A in zip(A_L5, gens, A_W):
     lhs = transform_D(D_L5, A5, h)
     rhs = (D_L5 @ A) % P
-    diff = (lhs - rhs) % P
-    rr = rank3(diff)
+    rr = rank3((lhs - rhs) % P)
     EQUIVARIANCE_RANKS.append(rr)
     if rr != 0:
         EQUIVARIANT = False
 assert EQUIVARIANT
 
-# Since rank(D)=45 and D is H-equivariant, the obstruction image is an
-# H-module isomorphic to W45. We verify this directly by rank/injectivity.
 IMAGE_IS_W45 = (rank_D_L5 == 45)
 assert IMAGE_IS_W45
 
 # -------------------------------------------------------------------------
-# 4. Degree-5 relation span generated by the verified degree-4 relation
-#    ideal: [ (R)_4, X_i ]. This is a conservative local test only; it does
-#    not assert that this span is the full degree-5 ideal in every graded
-#    presentation.
+# 4. Local degree-5 relation span generated by [ (R)_4, X_i ].
 # -------------------------------------------------------------------------
-R4_ind = L5_matrix[:, :0]
-r = 0
-for j in range(R4_matrix.shape[1]):
-    C = np.column_stack([R4_ind, R4_matrix[:, j]])
-    q = rank3(C)
-    if q > r:
-        R4_ind = C
-        r = q
-assert r == 5
+R4_ind = R4_matrix
+assert R4_ind.shape[0] == 60 and rank3(R4_ind) == 5
 
+# Embed the degree-4 relation vectors into the associative degree-4 space,
+# then bracket with each generator.
 R5_candidates = []
 for j in range(R4_ind.shape[1]):
-    for g in range(1, 5):
-        R5_candidates.append(bracket_col(R4_ind[:, j], g))
+    # R4_matrix is stored in the degree-4 associative word coordinates.
+    v = R4_ind[:, j]
+    R5_candidates.extend(bracket_col(v, g) for g in range(1, 5))
 R5_matrix = np.column_stack(R5_candidates) % P
 R5_L5 = np.column_stack([coords(L5_basis, R5_matrix[:, j]) for j in range(R5_matrix.shape[1])])
 dim_R5_local = rank3(R5_L5)
 
-# Intersections of obstruction image with the local degree-5 relation span.
-# The image is represented by columns of D_L5; relation span by R5_L5.
 combined_rank = rank3(np.column_stack([D_L5, R5_L5]))
 intersection_dim = rank_D_L5 + dim_R5_local - combined_rank
 
