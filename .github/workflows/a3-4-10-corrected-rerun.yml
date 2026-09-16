@@ -1,0 +1,21 @@
+name: A3-4-10 Corrected Rerun
+
+on:
+  push:
+    branches:
+      - verify-a3-4-10-corrected-20260916
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout corrected branch
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install numpy
+      - name: Run corrected A3-4-10
+        run: python research/phase2_23_A3_4_10_ambient_bracket_compatibility_2026-09-16.py
