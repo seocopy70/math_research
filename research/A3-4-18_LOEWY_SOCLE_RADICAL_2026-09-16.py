@@ -7,6 +7,7 @@ import numpy as np
 P = 3
 ROOT = 'research/'
 
+# A3-4-18: exact socle/radical/Loewy analysis using GAP MeatAxe.
 # Reuse the exact A3-4-16/A3-4-17 representation setting.
 ns = runpy.run_path(ROOT + 'A3-4-16_STRONG_MODULAR_FINGERPRINT_2026-09-16.py')
 BA = [np.array(x, dtype=np.int64) % P for x in ns['BA_gens']]
@@ -44,7 +45,7 @@ Print("GENERATOR_COUNT = ",Length(MTX.Generators(MBA)),"\n");
 
 AnalyzeModule := function(name,M)
   local soc,rad,nsoc,nrad,cur,b,nb,curdim,rad_dims,soc_dims,
-        comp,collected,indecomp;
+        comp,collected;
 
   Print("MODULE = ",name,"\n");
   Print("INDECOMPOSABLE = ",MTX.IsIndecomposable(M),"\n");
