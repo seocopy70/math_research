@@ -6,6 +6,7 @@ on:
     paths:
       - 'research/A3-4-20R_LOEWY_LAYER_ALIGNMENT_2026-09-17.py'
       - 'research/A3-4-16_STRONG_MODULAR_FINGERPRINT_2026-09-16.py'
+      - '.github/workflows/a3-4-20r-loewy-layer-alignment.yml'
 
 jobs:
   verify:
@@ -19,7 +20,10 @@ jobs:
           python-version: '3.11'
       - name: Install Python dependencies
         run: pip install numpy sympy
-      - name: Install GAP and GAP MeatAxe
-        run: sudo apt-get update && sudo apt-get install -y gap gap-meataxe
+      - name: Install GAP
+        run: sudo apt-get update && sudo apt-get install -y gap
+      - name: Verify GAP MeatAxe interface
+        run: |
+          printf 'F := GF(3);; Print(MTX.IsIrreducible(GModuleByMats([IdentityMat(1)],F)),"\\n");; QUIT;\n' | gap -q
       - name: Run A3-4-20R
         run: python research/A3-4-20R_LOEWY_LAYER_ALIGNMENT_2026-09-17.py
