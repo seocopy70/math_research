@@ -1,0 +1,32 @@
+name: True relation chain verification
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
+      - 'research/phase2_22_A3_4_9_W45_true_relation_intersection_2026-09-16.py'
+      - 'research/phase2_23_A3_4_10_ambient_bracket_compatibility_2026-09-16.py'
+      - 'research/phase2_24_A3_4_11_L5_obstruction_compression_2026-09-16.py'
+      - 'research/phase2_25_A3_4_11_full_degree5_relation_2026-09-16.py'
+      - '.github/workflows/true-relation-chain-verification.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy
+      - name: Phase 2-1 true Q4
+        run: python research/phase2_1_invariant_space_verification_2026-09-15.py
+      - name: A3-4-9 true relation intersection
+        run: python research/phase2_22_A3_4_9_W45_true_relation_intersection_2026-09-16.py
+      - name: A3-4-10 ambient bracket compatibility
+        run: python research/phase2_23_A3_4_10_ambient_bracket_compatibility_2026-09-16.py
+      - name: A3-4-11 L5 compression
+        run: python research/phase2_24_A3_4_11_L5_obstruction_compression_2026-09-16.py
+      - name: A3-4-11 full degree-5 relation
+        run: python research/phase2_25_A3_4_11_full_degree5_relation_2026-09-16.py
