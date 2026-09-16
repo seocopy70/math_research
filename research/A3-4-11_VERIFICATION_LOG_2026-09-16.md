@@ -1,67 +1,77 @@
 # A3-4-11 검증 기록 — 2026-09-16
 
-## 1. GitHub Actions 확인
+## 1. 최초 실패 실행
 
-2026-09-16에 GitHub Actions 실행 `35059808169` 및 `35060090291`을 직접 확인했다.
+GitHub Actions 실행 `35059808169` 및 `35060090291`을 확인했다.
 
-두 실행 모두 실제 checkout 후 실행된 파일은
+두 실행 모두 `research/phase2_24_A3_4_11_L5_obstruction_compression_2026-09-16.py`를 실행했고 실패했다.
 
-`research/phase2_24_A3_4_11_L5_obstruction_compression_2026-09-16.py`
-
-이며 둘 다 `failure`로 종료되었다.
-
-특히 run `35060090291`은 commit `cbad01e8f586272955de87c27924ed615719d91e`를 checkout했다.
-
-## 2. 실패 원인
-
-실행 로그에서 다음 차원 오류가 발생했다.
-
-- `D_L5`: 816 rows = `L5^4`의 4개 204차원 block
-- `R5_L5`: 204 rows = `L5` 하나의 공간
-
-기존 코드가
+`35060090291`은 commit `cbad01e8f586272955de87c27924ed615719d91e`를 checkout했으며, 기존 코드가
 
 `np.column_stack([D_L5, R5_L5])`
 
-를 수행하면서 `816 != 204`로 `ValueError`가 발생했다.
+를 직접 수행하면서 `D_L5 = 816 x 45`, `R5_L5 = 204 x 20`의 row dimension 불일치로 `ValueError`가 발생했다.
 
-따라서 이 실행은 A3-4-11의 최종 수학적 판정을 내릴 수 있는 실행이 아니다. 이는 수학적 반례가 아니라 검증 코드의 차원 embedding 오류이다.
+이는 수학적 반례가 아니라 `L5^4` 안으로 관계 벡터를 embedding하지 않은 구현 오류였다.
 
-## 3. 실행에서 확인된 선행 결과
+## 2. 수정 내용
 
-실패 전까지 다음은 정상적으로 계산되었다.
+수정된 구현에서는 각 `[(R)_4, X_i]` 벡터를 `L5^4`의 해당 generator block에 삽입한다.
+
+생성된 행렬은
+
+`R5_L5_4.shape = (816, 20)`
+
+이며, 이것을 `D_L5 (816 x 45)`와 결합하도록 수정했다.
+
+또한 `(R)_4`의 표시된 6개 column 중 실제 독립 basis 5개를 먼저 선택하도록 했다.
+
+## 3. 수정 코드의 독립 실행 성공
+
+GitHub Actions run `35060519753` (`TEMP A3-4-11 verify`, run number 6)을 확인했다.
+
+- event: push
+- head SHA: `6def50834f8f50770db3e4d0074fca1eb335e1b3`
+- conclusion: **success**
+- 실제 실행 step: `python research/phase2_24_A3_4_11_L5_obstruction_compression_2026-09-16.py`
+- 실행 시간: 약 64초
+
+즉 수정된 `816 x 20` embedding 코드는 실제 GitHub Actions에서 오류 없이 끝까지 실행되었다.
+
+코드 자체에서 다음 assertion들이 통과했다.
 
 - `dim L5 = 204`
-- obstruction의 L5 압축 rank = 45
-- L5 basis construction 완료
-- L5 left inverse construction 완료
-- L5 action matrices construction 완료
+- `D_L5.shape = (816,45)`
+- `rank_D_associative == rank_D_L5`
+- L5 projection의 lossless reconstruction
+- 5개 generator에 대한 H-equivariance
+- obstruction image rank = 45
+- 독립적인 `(R)_4` basis 5개 선택
+- `R5_L5_4.shape = (816,20)`
+- obstruction image와 local degree-5 relation span의 intersection dimension이 허용 범위 안에 있음
 
-또한 이전 단계의 검증 로그에서 `dim W = 45`, `W^{Sp4(F3)} = 0`, `dim End_H(W)=2` 및 A3-4-10의 ambient bracket compatibility 결과가 계산되었으나, 이번 A3-4-11 최종 검증과는 별도로 취급한다.
+따라서 **A3-4-11 L5 compression 구현 오류는 해결되었고, 수정된 계산 자체는 재현 가능한 성공 상태**이다.
 
-## 4. 중요한 상태 차이
+## 4. 그러나 아직 확정하지 않은 것
 
-현재 GitHub main의 `phase2_24_A3_4_11_L5_obstruction_compression_2026-09-16.py`에는 이미 수정된 embedding 코드가 존재한다.
+이번 성공 실행은 A3-4-11의 'L5 obstruction compression 및 local relation span' 검증이다.
 
-수정 내용은 각 `[(R)_4, X_i]` 관계 벡터를 `L5^4`의 해당 generator block에 삽입하여 `R5_L5_4`라는 `(4*dim_L5) x 20 = 816 x 20` 행렬을 구성한 뒤 `D_L5`와 결합하는 것이다.
+다음 명제들은 별도 계산이 필요하며 아직 이 로그로 확정하지 않는다.
 
-하지만 실패한 Actions 실행은 수정 이전 commit을 checkout했기 때문에 이 수정 코드를 실행하지 않았다.
+1. `[L2,(R)_3] ⊂ [L1,(R)_4]`
+2. `[L3,R] ⊂ [L1,(R)_4]`
+3. 세 공간을 합친 rank가 정확히 `20`
+4. `(R)_4`의 두 다른 독립 basis 선택 `[0,1,2,3,4]`, `[1,2,3,4,5]`에서도 동일하게 rank `20`
+5. `(R)_5 = [L1,(R)_4]`의 정확한 차원/동일성 확인
+6. `Im Phi ∩ (R)_5^4 = 0`
 
-## 5. 다음 검증 절차
+특히 현재 성공한 run의 `ALL A3-4-11 CHECKS COMPLETED`는 위 1~6 전체를 의미하는 것이 아니라, **해당 phase2_24 스크립트에 구현된 체크들이 모두 통과했다는 뜻**으로 제한해서 해석한다.
 
-1. 수정된 코드를 명시적으로 phase2_25 검증 실행으로 고정한다.
-2. GitHub Actions에서 phase2_25가 실제 checkout되어 실행되는지 먼저 확인한다.
-3. 다음을 순서대로 확인한다.
-   - `[L2,(R)_3] subset [L1,(R)_4]`
-   - `[L3,R] subset [L1,(R)_4]`
-   - 세 공간의 합 rank = 20
-   - 두 independent `(R)_4` basis 선택에서도 rank = 20
-   - `(R)_5 = [L1,(R)_4]`
-   - `Im Phi intersect (R)_5^4 = 0`
-4. 각 결과를 로그와 함께 연구 마스터 기록에 반영한다.
+## 5. 현재 연구 상태
 
-## 6. 현재 결론
+- 코드 차원 오류: **해결**
+- L5 compression: **검증 성공**
+- obstruction image의 rank 45 및 H-equivariance: **검증 성공**
+- 사용자가 지정한 rank-20 / 두 basis / `(R)_5` / intersection-zero 최종 묶음: **다음 단계**
 
-**A3-4-11의 최종 수학적 결론은 아직 보류한다.**
-
-현재까지 확정된 것은 '이전 Actions 실행은 코드 차원 오류로 최종 검증에 도달하지 못했다'는 사실과, 수정 코드가 이미 main에 존재한다는 사실이다.
+따라서 다음 단계는 이 성공한 기반 위에서 위 1~6을 직접 계산하는 `phase2_25`를 실행하고, 그 로그에서 각 조건을 개별적으로 판정하는 것이다.
