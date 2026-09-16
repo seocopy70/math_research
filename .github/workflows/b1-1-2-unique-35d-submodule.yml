@@ -1,0 +1,28 @@
+name: B1-1-2 unique 35D submodule
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  b1-1-2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Python dependencies
+        run: pip install numpy sympy
+      - name: Install GAP
+        run: sudo apt-get update && sudo apt-get install -y gap
+      - name: Verify GAP MeatAxe interface
+        shell: bash
+        run: |
+          set -euo pipefail
+          probe=$(printf 'F := GF(3);; A := IdentityMat(1,F);; M := GModuleByMats([A]);; Print(MTX.IsIrreducible(M),"\\n");; QUIT;\n' | gap -q)
+          printf '%s\n' "$probe"
+          printf '%s\n' "$probe" | grep -Fx 'true'
+      - name: Run B1-1-2
+        run: python research/B1-1-2_UNIQUE_35D_SUBMODULE_2026-09-17.py
