@@ -4,7 +4,7 @@
 
 GitHub Actions 실행 `35059808169` 및 `35060090291`을 확인했다.
 
-두 실행 모두 `research/phase2_24_A3_4_11_L5_obstruction_compression_2026-09-16.py`를 실행했고 실패했다.
+두 실행 모두 `research/phase2_24_A3-4-11_L5_obstruction_compression_2026-09-16.py`를 실행했고 실패했다.
 
 `35060090291`은 commit `cbad01e8f586272955de87c27924ed615719d91e`를 checkout했으며, 기존 코드가 `np.column_stack([D_L5, R5_L5])`를 직접 수행하면서 `D_L5 = 816 x 45`, `R5_L5 = 204 x 20`의 row dimension 불일치로 `ValueError`가 발생했다.
 
@@ -25,7 +25,7 @@ GitHub Actions run `35060519753` (`TEMP A3-4-11 verify`, run number 6)을 확인
 - event: push
 - head SHA: `6def50834f8f50770db3e4d0074fca1eb335e1b3`
 - conclusion: **success**
-- 실제 실행 step: `python research/phase2_24_A3_4_11_L5_obstruction_compression_2026-09-16.py`
+- 실제 실행 step: `python research/phase2_24_A3-4-11_L5_obstruction_compression_2026-09-16.py`
 - 실행 시간: 약 64초
 
 즉 수정된 `816 x 20` embedding 코드는 실제 GitHub Actions에서 오류 없이 끝까지 실행되었다.
@@ -36,7 +36,7 @@ GitHub Actions run `35060519753` (`TEMP A3-4-11 verify`, run number 6)을 확인
 
 ## 4. Phase 2-25A 첫 시도와 실패 원인
 
-새 파일 `research/phase2_25_A3_4_11_L5_relation_span_2026-09-16.py`의 첫 설계에서는 다음 포함관계를 assertion으로 강제했다.
+새 파일 `research/phase2_25_A3-4-11_L5_relation_span_2026-09-16.py`의 첫 설계에서는 다음 포함관계를 assertion으로 강제했다.
 
 - `[L2,(R)_3] ⊂ [L1,(R)_4]`
 - `[L3,R] ⊂ [L1,(R)_4]`
@@ -80,36 +80,91 @@ GitHub Actions run `35060519753` (`TEMP A3-4-11 verify`, run number 6)을 확인
 
 를 직접 산출한다.
 
-## 6. 현재 코드 상태
+## 6. 최종 교정 검증 — true recursive R5
 
-재설계된 파일:
+GitHub Actions run `35071437950`, job `104713654784`가 **success**로 완료되었다. checkout된 head SHA는 `2b0a80b7d8484c863d206cb85bd16ab59c836606`이다.
 
-`research/phase2_25_A3_4_11_L5_relation_span_2026-09-16.py`
+실제 실행에서 true recursive relation을 처음부터 재구성했고 다음을 확인했다.
 
-새 commit:
+- `dim L4 = 60`
+- `dim (R)_3 = 4`
+- `dim (R)_4 = 15`
+- `dim Q4 = 45`
+- `rank(R4) = 15`
+- `rank([R4 | gT-T]) = 16`
+- `dim L5 = 204`
+- `dim TRUE (R)_5 = 60`
 
-`91e95052290b2383f077bc0b956874fd36a7bfce`
+A3-4-10 obstruction은 corrected calculation에서 다시 생성되었으며:
 
-변경 핵심:
+- `A3-4-10 obstruction rank in L5^4 = 45`
+- `dim Hom(V,(R)_5) = 240`
+- `rank(obstruction + Hom(V,R5)) = 285`
+- `dim(Im(Delta) intersect Hom(V,R5)) = 0`
 
-1. `[L2,(R)_3]` 및 `[L3,R]`에 대한 inclusion assertion 제거.
-2. 세 조각을 독립적으로 계산.
-3. 세 행렬을 concatenate하여 `DIM_R5_FROM_GENERATORS`를 직접 계산.
-4. 그 값이 무엇이든 사전 목표값과 비교하여 실패시키지 않음.
-5. combined basis를 이용해 `(R)_5^4`를 구성.
-6. `Im(Phi)`와의 교집합 차원을 계산.
-7. 두 명시적 `(R)_4` basis 후보 `[0,1,2,3,4]`, `[1,2,3,4,5]`는 독립성 및 생성 rank를 별도로 보고하되 canonical 계산을 변경하지 않음.
+이다.
 
-## 7. 다음 검증
+따라서
 
-다음은 수정된 commit에 대한 GitHub Actions 실제 실행이다. 특히 다음 수치를 그대로 기록해야 한다.
+`45 + 240 - 285 = 0`
 
-- `dim [L1,(R)_4]`
-- `dim [L2,(R)_3]`
-- `dim [L3,R]`
-- 세 조각의 combined rank = 계산된 `dim (R)_5`
-- `(R)_5^4` rank
-- `rank(ImPhi + (R)_5^4)`
-- `dim(ImPhi intersection (R)_5^4)`
+으로도 교집합 차원이 독립적으로 확인된다.
 
-**중요:** combined rank가 20/40/기타 값으로 나오더라도, 그 자체를 버그의 증거로 간주하지 않는다. 먼저 실제 선형대수 결과를 확정하고, 그 다음 수학적 의미를 분석한다.
+또한 `(R)_5`의 H-stability defects는 `[0, 0, 0, 0, 0]`으로, 사용한 5개 `Sp_4(F_3)` 생성자에 대해 H-stability가 확인되었다.
+
+최종 출력:
+
+`SANITY CHECK PASSED: intersection dimension is compatible with the known W45 submodule dimensions.`
+
+`ALL A3-4-11 TRUE-R5 CHECKS PASSED`
+
+## 7. 최종 수학적 결론
+
+이번 검증에서 확정된 것은 다음이다.
+
+\[
+\boxed{\dim\bigl(\operatorname{Im}\Delta\cap\operatorname{Hom}(V,(R)_5)\bigr)=0.}
+\]
+
+즉 degree-5로 올라간 ambient bracket obstruction의 45차원 부분은 true relation space `(R)_5`에 의해 하나도 소거되지 않는다.
+
+이는 단순한 associative word-space 계산이 아니다. degree-5 Lie space `L5`를 실제로 구성하여 204차원으로 압축한 뒤, true recursive relation `(R)_5`의 60차원 공간과 비교한 결과이다.
+
+또한 A3-4-10에서 확인된
+
+\[
+\operatorname{Im}\Delta\cong W_{45}
+\]
+
+는 `Sp_4(F_3)`-module 관점의 사실이고, 이번 A3-4-11은 그 image가 degree-5 relation space에 묻히는지를 검사한다. 결과는 그렇지 않음(교집합 0)이다.
+
+따라서 현재 단계의 정확한 표현은:
+
+> degree 4에서 `W45`와 `Wd`는 추상적인 `Sp_4(F_3)`-module로 동형이지만, 그 동형을 ambient Lie bracket과 호환시키려 할 때 생기는 45차원 degree-5 obstruction은 true relation space `(R)_5` 안으로 하나도 들어가지 않는다.
+
+이 결과만으로 곧바로 “q가 검출된다” 또는 “canonical orientation이 복원된다”고 결론내리지 않는다. 다음 단계에서는 이 45차원 obstruction이 `L5/(R)_5` 안에서 어떤 `Sp_4(F_3)`-module 구조와 위치를 갖는지 분석해야 한다.
+
+## 8. 다음 단계
+
+다음 계산의 목표는
+
+\[
+\operatorname{Im}\Delta\subset L_5^4
+\]
+
+를 relation quotient 관점에서 분석하는 것이다. 특히 다음을 확인한다.
+
+1. `Im(Delta)`가 H-stable한 45차원 module이라는 사실의 독립 확인.
+2. `(R)_5`를 quotient하여 얻는 `L5/(R)_5`에서 obstruction image의 module 구조 확인.
+3. obstruction의 composition factors 또는 자연스러운 filtration 위치 확인.
+4. 가능하면 degree-5 obstruction이 `q`에 의해 어떻게 달라지는지 직접 비교.
+
+### 해석상의 주의
+
+이전 단계에서 얻은
+
+`0 ⊂ im(N) ⊂ ker(N) ⊂ W45`
+
+의 차원 `0,10,35,45`만으로 W45의 모든 H-submodule이 이 네 차원뿐이라고 단정하지 않는다. `End_H(W45) ≅ F_3[epsilon]/(epsilon^2)` 역시 endomorphism algebra에 관한 결과이지 전체 submodule lattice를 자동으로 결정하지 않는다.
+
+따라서 이번 교집합 차원 0은 실제 계산 결과로 기록하되, 그 결과를 submodule-lattice에 관한 선험적 가정으로 정당화하지 않는다.
