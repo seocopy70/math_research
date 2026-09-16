@@ -1,12 +1,10 @@
-name: A3-4-12.5 sanity check I vs Delta_tau
+name: A3-4-12.5b ambient I vs K
 
 on:
   push:
     paths:
-      - 'research/A3-4-12_5_SANITY_I_DELTA_TAU_2026-09-16.py'
-      - 'research/phase2_23_A3_4_10_ambient_bracket_compatibility_2026-09-16.py'
-      - 'research/phase2_18_A3_4_5_intersection_K_and_Sym2_2026-09-16.py'
-      - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
+      - 'research/A3-4-12_5b_AMBIENT_I_EQUALS_K_CHECK_2026-09-16.py'
+      - 'research/phase2_18_A3-4-5_intersection_K_and_Sym2_2026-09-16.py'
   workflow_dispatch:
 
 jobs:
@@ -19,5 +17,5 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: pip install numpy
-      - name: Run A3-4-12.5 sanity check
-        run: python research/A3-4-12_5_SANITY_I_DELTA_TAU_2026-09-16.py
+      - name: Run A3-4-12.5b ambient I vs K check
+        run: python research/A3-4-12_5b_AMBIENT_I_EQUALS_K_CHECK_2026-09-16.py
