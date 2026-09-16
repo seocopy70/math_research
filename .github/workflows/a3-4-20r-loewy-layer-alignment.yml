@@ -1,0 +1,25 @@
+name: A3-4-20R Loewy Layer Alignment
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/A3-4-20R_LOEWY_LAYER_ALIGNMENT_2026-09-17.py'
+      - 'research/A3-4-16_STRONG_MODULAR_FINGERPRINT_2026-09-16.py'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Python dependencies
+        run: pip install numpy sympy
+      - name: Install GAP and GAP MeatAxe
+        run: sudo apt-get update && sudo apt-get install -y gap gap-meataxe
+      - name: Run A3-4-20R
+        run: python research/A3-4-20R_LOEWY_LAYER_ALIGNMENT_2026-09-17.py
