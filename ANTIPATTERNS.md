@@ -101,6 +101,18 @@ N^2=0\Rightarrow im(N)\subseteq ker(N)
 
 ---
 
+## AP-009 — CI sanity probe allowed to fail open through a pipeline
+
+**상태:** IMPLEMENTATION FAILURE / CI GAP
+
+B1-1의 GAP sanity step은 `printf ... | gap -q` 형태였는데 Bash의 기본 pipeline 상태가 마지막 명령의 exit code만 반영하는 환경에서는 GAP 내부 오류가 있어도 `printf`가 성공하면 step이 통과할 수 있습니다. 실제 run 35158243308에서 `GModuleByMats`의 field mismatch 오류가 출력되었지만 workflow step 자체는 success로 남았습니다.
+
+**정정:** `set -euo pipefail`을 사용하고, `IdentityMat(1,F)`처럼 명시적으로 \(GF(3)\) field를 붙인 행렬을 `GModuleByMats`에 전달하도록 수정했습니다.
+
+**재발 방지:** 외부 프로그램 sanity probe는 반드시 실패가 CI status에 전달되는지 확인하고, probe 자체의 성공 조건도 명시합니다.
+
+---
+
 ## 운영 원칙
 
 새로운 오류가 발견되면 삭제하지 않고 이 문서에 추가합니다.
