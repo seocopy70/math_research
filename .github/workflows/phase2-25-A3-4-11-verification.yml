@@ -1,10 +1,11 @@
-name: Phase 2-25 / A3-4-11 corrected verification
+name: Phase 2-25 / A3-4-11 pure L5 verification
 
 on:
   workflow_dispatch:
   push:
     paths:
       - 'research/phase2_25_A3_4_11_verification_2026-09-16.py'
+      - 'research/phase2_25_A3_4_11_L5_relation_span_2026-09-16.py'
       - 'research/phase2_24_A3_4_11_L5_obstruction_compression_2026-09-16.py'
       - '.github/workflows/phase2-25-A3-4-11-verification.yml'
 
@@ -20,5 +21,5 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: pip install numpy
-      - name: Run corrected A3-4-11 verification
+      - name: Run pure L5 relation-span verification
         run: python research/phase2_25_A3_4_11_verification_2026-09-16.py
