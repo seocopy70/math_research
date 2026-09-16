@@ -13,9 +13,9 @@ jobs:
           python-version: '3.12'
       - name: Install Python dependencies
         run: python -m pip install --upgrade pip numpy sympy
-      - name: Install GAP and MeatAxe
+      - name: Install GAP
         run: |
           sudo apt-get update
-          sudo apt-get install -y gap gap-meataxe
+          sudo apt-get install -y gap
       - name: Run B1-1 probe
         run: python research/B1-1_W_UNISERIALITY_TEST_2026-09-17.py
