@@ -104,6 +104,23 @@ def coords(B, V):
     return (L @ V[rows]) % P
 
 
+def inv3(A):
+    A = np.array(A, dtype=np.int64, copy=True) % P
+    n = A.shape[0]
+    assert A.shape == (n, n)
+    E = np.column_stack([A, np.eye(n, dtype=np.int64)]) % P
+    for c in range(n):
+        q = next((i for i in range(c, n) if E[i, c]), None)
+        assert q is not None
+        E[[c, q]] = E[[q, c]]
+        if E[c, c] == 2:
+            E[c] = (2 * E[c]) % P
+        for i in range(n):
+            if i != c and E[i, c]:
+                E[i] = (E[i] - E[i, c] * E[c]) % P
+    return E[:, n:]
+
+
 def intertwiner_data(A_src, A_tgt):
     n = A_src[0].shape[0]
     cols = []
@@ -211,6 +228,34 @@ assert rank3(K_ambient) == 35
 actual_combined_rank = rank3(np.column_stack([I_ambient, K_ambient]))
 actual_equal = actual_combined_rank == 35
 
+# Quotient-level tau: pi|W45 and pi|Wd are isomorphisms onto Q4_true.
+# Build an arbitrary but fixed quotient coordinate map by extending the 15D R4 basis
+# to a 60D basis of L4.  The last 45 coordinates then give Q4 coordinates.
+R3 = [bracket({(i,): 1}, {(1, 2): 1, (2, 1): 2, (3, 4): 1, (4, 3): 2}) for i in range(1, 5)]
+R4_raw = [bracket({(i,): 1}, r) for i in range(1, 5) for r in R3]
+R4 = basis_columns(np.column_stack([vec4(a) for a in R4_raw]), 15)
+L4_std = np.eye(256, dtype=np.int64)
+ambient_basis = basis_columns(np.column_stack([R4, L4_std]), 60)
+assert ambient_basis.shape == (256, 60) and rank3(ambient_basis) == 60
+rows60, L60 = left_inverse(ambient_basis)
+# In these coordinates, the first 15 are R4 and the final 45 are quotient coordinates.
+C_W45 = (L60 @ W45[rows60]) % P
+C_Wd = (L60 @ Wd[rows60]) % P
+Q_W45 = C_W45[15:, :]
+Q_Wd = C_Wd[15:, :]
+assert rank3(Q_W45) == 45
+assert rank3(Q_Wd) == 45
+
+tau_coord = (inv3(Q_Wd) @ Q_W45) % P
+I_in_W45 = I_coord
+I_image_in_Wd = (tau_coord @ I_in_W45) % P
+I_fixed_residual = (Wd @ I_image_in_Wd - I_ambient) % P
+
+tau_fixed = np.array_equal(I_fixed_residual, np.zeros_like(I_fixed_residual))
+print('tau: Q4 coordinate matrix ranks =', rank3(Q_W45), rank3(Q_Wd))
+print('tau|I identity residual rank =', rank3(I_fixed_residual))
+print('TAU_RESTRICTED_TO_I_IS_IDENTITY =', tau_fixed)
+
 # Second test: H-module isomorphism I ~= K, allowing different embeddings.
 def restricted_actions(Bcoord):
     acts = []
@@ -243,8 +288,10 @@ assert rank3(np.column_stack([W45, Wd])) == 55
 assert rank3(I_ambient) == 35
 assert rank3(K_ambient) == 35
 assert actual_equal
+assert tau_fixed
 assert full_intertwiner is not None
 
 print('RESULT: I = K as actual 35-dimensional ambient subspaces.')
 print('RESULT: I is also H-module isomorphic to K under the reconstructed TRUE Wd.')
-print('ALL I/K TRUE-Wd REVALIDATION CHECKS PASSED')
+print('RESULT: tau|_I = id_I for the quotient-induced canonical correspondence.')
+print('ALL I/K TRUE-Wd + TAU REVALIDATION CHECKS PASSED')
