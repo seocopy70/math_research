@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'research/B1-2_UNIQUE_45D_LIFT_2026-09-17.py'
+      - 'research/B1-2-Q_STRUCTURE_PREFLIGHT_2026-09-17.py'
       - '.github/workflows/b1-2-unique-45d-lift.yml'
 
 jobs:
@@ -49,6 +50,12 @@ jobs:
           QUIT;
           EOF
           gap -q /tmp/probe.g
+
+      - name: Run B1-2 quotient structure preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/B1-2-Q_STRUCTURE_PREFLIGHT_2026-09-17.py
 
       - name: Run B1-2
         shell: bash
