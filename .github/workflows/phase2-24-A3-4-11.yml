@@ -1,0 +1,19 @@
+name: Phase 2-24 / A3-4-11
+
+on:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install numpy
+      - name: Run A3-4-11
+        run: python research/phase2_24_A3_4_11_L5_obstruction_compression_2026-09-16.py
