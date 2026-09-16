@@ -18,7 +18,9 @@ jobs:
       - name: Install GAP
         run: sudo apt-get update && sudo apt-get install -y gap
       - name: Verify GAP MeatAxe interface
+        shell: bash
         run: |
-          printf 'F := GF(3);; Print(MTX.IsIrreducible(GModuleByMats([IdentityMat(1)],F)),"\\n");; QUIT;\n' | gap -q
+          set -euo pipefail
+          printf 'F := GF(3);; A := IdentityMat(1,F);; M := GModuleByMats([A]);; Print(MTX.IsIrreducible(M),"\\n");; QUIT;\n' | gap -q
       - name: Run B1-1 probe
         run: python research/B1-1_W_UNISERIALITY_TEST_2026-09-17.py
