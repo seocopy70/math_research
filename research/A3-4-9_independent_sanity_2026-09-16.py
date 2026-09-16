@@ -1,10 +1,12 @@
 """
 Independent sanity check for A3-4-9.
 
-Two checks are deliberately separated from the primary rank certificate:
-1. A direct determinant computation of the 60x60 matrix M=[W45|S] over F_3.
-2. An explicit reconstruction of a nontrivial L4 Lie element from the
-   W45-part and S-part using M^{-1}.
+The primary certificate proves rank([W45|S])=60 in the 256-dimensional
+associative word coordinates.  Here we add two genuinely explicit checks:
+1. select 60 independent ambient coordinate rows, form the resulting 60x60
+   minor of M=[W45|S], and compute its determinant directly over F_3;
+2. solve that minor for a nontrivial L4 Lie element and reconstruct the full
+   256-coordinate vector exactly from its W45 and S components.
 
 A separate sparse row-rank computation is retained as an additional check.
 """
@@ -54,8 +56,39 @@ def row_rank_mod3(A):
     return rank
 
 
+def independent_row_indices(A, target):
+    """Select target independent rows of A over F_3."""
+    selected = []
+    basis = {}
+    rank = 0
+    for idx, raw in enumerate(A):
+        row = {i: int(v) % MOD for i, v in enumerate(raw) if int(v) % MOD}
+        original = dict(row)
+        while row:
+            p = min(row)
+            if p not in basis:
+                coeff = row[p]
+                if coeff == 2:
+                    row = {j: (v * 2) % MOD for j, v in row.items()}
+                basis[p] = row
+                rank += 1
+                selected.append(idx)
+                break
+            factor = row[p]
+            pivot = basis[p]
+            for j, v in pivot.items():
+                nv = (row.get(j, 0) - factor * v) % MOD
+                if nv:
+                    row[j] = nv
+                else:
+                    row.pop(j, None)
+        if rank == target:
+            return selected
+    raise AssertionError(f"could not select {target} independent rows")
+
+
 def det_mod3(A):
-    """Direct determinant via pivot elimination, independent of row_rank_mod3."""
+    """Direct determinant via pivot elimination, separate from rank routine."""
     A = np.array(A, dtype=np.int64) % MOD
     n, m = A.shape
     assert n == m
@@ -100,7 +133,6 @@ def solve_mod3(A, b):
 
 M = np.concatenate([W, Sm], axis=1) % MOD
 
-# Retain the independent rank check as a separate diagnostic.
 rank_W = row_rank_mod3(W.T)
 rank_S = row_rank_mod3(Sm.T)
 rank_old = row_rank_mod3(oldm.T)
@@ -110,18 +142,22 @@ rank_S_old = row_rank_mod3(np.concatenate([Sm, oldm], axis=1).T)
 intersection = rank_W + rank_S - rank_M
 inclusion = rank_S_old == rank_S
 
-det_M = det_mod3(M)
+# M has 256 ambient rows, so the literal 60x60 object is a maximal minor.
+# Select 60 independent ambient coordinate rows without using numpy rank.
+row_indices = independent_row_indices(M, 60)
+minor = M[row_indices, :]
+det_minor = det_mod3(minor)
 
 # Nontrivial Lie element in L4: [[X1,X2],[X3,X4]].
-# This is constructed independently from the columns of M.
 v = vec4(bracket(bracket(X[0], X[1]), bracket(X[2], X[3]))) % MOD
-coeff = solve_mod3(M, v)
+coeff = solve_mod3(minor, v[row_indices])
 w_coeff = coeff[:45]
 s_coeff = coeff[45:]
 w = (W @ w_coeff) % MOD
 s = (Sm @ s_coeff) % MOD
 reconstructed = (w + s) % MOD
 reconstruction_ok = np.array_equal(reconstructed, v)
+residual = (reconstructed - v) % MOD
 
 print("A3-4-9 INDEPENDENT DETERMINANT + RECONSTRUCTION CHECK")
 print("=======================================================")
@@ -131,10 +167,11 @@ print(f"independent rank([W45 | S]) = {rank_M}")
 print(f"independent dim(W45 intersection S) = {intersection}")
 print(f"independent rank([S | [L2,R]]) = {rank_S_old}")
 print(f"independent [L2,R] subset S = {inclusion}")
-print(f"det([W45 | S]) mod 3 = {det_M}")
+print(f"selected independent ambient rows = {len(row_indices)}")
+print(f"det(60x60 maximal minor of [W45 | S]) mod 3 = {det_minor}")
 print("test vector = [[X1,X2],[X3,X4]]")
 print(f"reconstruction exact over F_3 = {reconstruction_ok}")
-print(f"reconstruction residual nonzero entries = {int(np.count_nonzero((reconstructed - v) % MOD))}")
+print(f"reconstruction residual nonzero entries = {int(np.count_nonzero(residual))}")
 
 assert rank_W == 45
 assert rank_S == 15
@@ -143,8 +180,9 @@ assert rank_M == 60
 assert intersection == 0
 assert rank_S_old == 15
 assert inclusion
-assert det_M != 0
+assert len(row_indices) == 60
+assert det_minor != 0
 assert reconstruction_ok
-assert np.array_equal(reconstructed, v)
+assert np.count_nonzero(residual) == 0
 
 print("INDEPENDENT DETERMINANT + RECONSTRUCTION CHECK PASSED")
