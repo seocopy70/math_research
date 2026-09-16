@@ -1,0 +1,25 @@
+name: A3-4-11 True R5 Intersection
+
+on:
+  push:
+    paths:
+      - 'research/A3-4-11_TRUE_R5_INTERSECTION_2026-09-16.py'
+      - 'research/phase2_23_A3_4_10_ambient_bracket_compatibility_2026-09-16.py'
+      - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
+      - '.github/workflows/a3-4-11-true-r5-intersection.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install numpy
+      - name: Run corrected A3-4-11
+        run: python research/A3-4-11_TRUE_R5_INTERSECTION_2026-09-16.py
