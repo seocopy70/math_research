@@ -1,0 +1,21 @@
+name: Track B q3 vs qinf independent verification
+
+on:
+  push:
+    paths:
+      - 'research/TRACK_B_Q3_VS_QINF_INDEPENDENT_2026-09-16.py'
+      - '.github/workflows/track-b-q3-qinf-independent.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run independent exact verification
+        run: python research/TRACK_B_Q3_VS_QINF_INDEPENDENT_2026-09-16.py
