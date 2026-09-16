@@ -1,0 +1,19 @@
+name: Phase 2-25 / A3-4-11 corrected verification
+
+on:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install numpy
+      - name: Run corrected A3-4-11 verification
+        run: python research/phase2_25_A3_4_11_verification_2026-09-16.py
