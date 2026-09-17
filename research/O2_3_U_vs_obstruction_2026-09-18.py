@@ -2,7 +2,6 @@ import runpy
 import numpy as np
 
 P = 3
-N45 = 45
 
 
 def rank3(A):
@@ -44,23 +43,27 @@ def inverse3(A):
 
 
 def left_inverse(B):
+    """Return L with L B = I for a full-column-rank matrix B."""
     B = np.array(B, dtype=np.int64) % P
     m, k = B.shape
-    rows = []
+    selected_rows = []
     R = np.empty((0, k), dtype=np.int64)
     r = 0
     for i in range(m):
         C = np.vstack([R, B[i:i+1]])
         q = rank3(C)
         if q > r:
-            rows.append(i)
+            selected_rows.append(i)
             R = C
             r = q
             if r == k:
                 break
     assert r == k
-    E = np.concatenate([R.copy(), np.eye(k, dtype=np.int64)], axis=1) % P
-    return inverse3(E[:, :k]) @ E[:, k:] % P
+    R_inv = inverse3(R)
+    L = np.zeros((k, m), dtype=np.int64)
+    L[:, selected_rows] = R_inv
+    assert np.array_equal((L @ B) % P, np.eye(k, dtype=np.int64))
+    return L
 
 
 def independent_columns(M):
@@ -126,14 +129,11 @@ ns_N = runpy.run_path('research/phase2_3_endH_optimized_2026-09-15.py')
 
 D = np.array(ns_D['D'], dtype=np.int64) % P
 A_W = [np.array(A, dtype=np.int64) % P for A in ns_D['A_W']]
-W = np.array(ns_D['W'], dtype=np.int64) % P
 I_W = np.array(ns_D['I_W'], dtype=np.int64) % P
 gens = [np.array(g, dtype=np.int64) % P for g in ns_D['gens']]
-X_intertwiner = np.array(ns_D['X_intertwiner'], dtype=np.int64) % P
 N = np.array(ns_N['N'], dtype=np.int64) % P
 
 assert D.shape[1] == 45
-assert W.shape == (256, 45)
 assert I_W.shape == (45, 35)
 assert N.shape == (45, 45)
 assert all(A.shape == (45, 45) for A in A_W)
@@ -155,9 +155,8 @@ kernel_equals_I = kernel_contains_I and ker_dim == 35
 # Build O and U bases with exact left inverses.
 # ------------------------------------------------------------
 _, O_basis = independent_columns(D)
-assert O_basis.shape == (D.shape[0], 10) if rank_D == 10 else True
-if rank_D == 10:
-    O_left = left_inverse(O_basis)
+assert O_basis.shape[1] == rank_D
+O_left = left_inverse(O_basis) if rank_D else None
 
 _, U_basis = independent_columns(N)
 assert U_basis.shape == (45, 10)
@@ -167,8 +166,8 @@ U_left = left_inverse(U_basis)
 # O2-3B: character/trace precheck.
 # ------------------------------------------------------------
 # O is an image of the stacked obstruction. Its H-action is the verified
-# rho_T(g) tensor A5(g), with T_g = g^{-T}, applied blockwise.
-# Construct A5 using the same corrected apply_linear_map used by O2-2.
+# rho_T(g) tensor A5(g), with T_g = g^{-T}, applied blockwise to the four
+# degree-5 discrepancy blocks.
 apply_linear_map = ns_D['apply_linear_map']
 WORDS5 = ns_D['WORDS5']
 INDEX5 = ns_D['INDEX5']
@@ -181,44 +180,43 @@ trace_O = []
 for g, AW in zip(gens, A_W):
     AU = (U_left @ AW @ U_basis) % P
     A_U.append(AU)
-
-    A5 = degree_action_matrix(g, WORDS5, INDEX5)
-    Ginv = inverse3(g)
-    T_g = Ginv.T % P
-    rho = np.kron(T_g, A5) % P
-    rho_stack = np.kron(np.eye(4, dtype=np.int64), rho) % P
-    AO = (O_left @ rho_stack @ O_basis) % P
-    A_O.append(AO)
     trace_U.append(int(np.trace(AU) % P))
-    trace_O.append(int(np.trace(AO) % P))
 
-trace_match = trace_U == trace_O
+    if rank_D == 10:
+        A5 = degree_action_matrix(g, WORDS5, INDEX5)
+        Ginv = inverse3(g)
+        T_g = Ginv.T % P
+        rho = np.kron(T_g, A5) % P
+        rho_stack = np.kron(np.eye(4, dtype=np.int64), rho) % P
+        AO = (O_left @ rho_stack @ O_basis) % P
+        A_O.append(AO)
+        trace_O.append(int(np.trace(AO) % P))
+
+trace_match = rank_D == 10 and trace_U == trace_O
 
 # ------------------------------------------------------------
 # O2-3C: induced W/I -> O and comparison with U = im(N).
 # ------------------------------------------------------------
-# Choose a complement C to I_W inside W.  Then [I_W | C] is a basis of W.
+# All matrices below use W-coordinates.  I_W is a 45x35 matrix of quotient
+# kernel coordinates, D is 4096x45, and N is 45x45.
 Ccols = []
 current = I_W.copy()
 r = rank3(current)
 for j in range(45):
-    c = W[:, j:j+1]
-    q = rank3(np.column_stack([current, c]))
+    e = np.eye(45, dtype=np.int64)[:, j:j+1]
+    q = rank3(np.column_stack([current, e]))
     if q > r:
         Ccols.append(j)
-        current = np.column_stack([current, c])
+        current = np.column_stack([current, e])
         r = q
         if r == 45:
             break
 assert len(Ccols) == 10
-C = W[:, Ccols] % P
+C = np.eye(45, dtype=np.int64)[:, Ccols]
 
-# The quotient basis is represented by C.  Its image under D is a basis of O
-# exactly when ker(D)=I.
 Dbar_coords = (O_left @ D @ C) % P if rank_D == 10 else None
 Dbar_rank = rank3(Dbar_coords) if rank_D == 10 else None
 
-# N maps W/I isomorphically onto U.  Express N(C) in the fixed U basis.
 NC = (N @ C) % P
 NC_coords = (U_left @ NC) % P
 NC_rank = rank3(NC_coords)
@@ -228,10 +226,8 @@ induced_intertwiner_residuals = []
 if kernel_equals_I and rank_D == 10:
     assert Dbar_rank == 10
     assert NC_rank == 10
-    # If u = N(c) and o = D(c), this matrix sends U-coordinates to O-coordinates.
     induced_U_to_O = (Dbar_coords @ inverse3(NC_coords)) % P
     assert rank3(induced_U_to_O) == 10
-
     for AU, AO in zip(A_U, A_O):
         lhs = (AO @ induced_U_to_O) % P
         rhs = (induced_U_to_O @ AU) % P
@@ -241,16 +237,13 @@ induced_equivariant = induced_U_to_O is not None and not any(induced_intertwiner
 
 # ------------------------------------------------------------
 # Optional O2-3D: independent 10x10 intertwiner solve if the direct induced
-# map is not already equivariant. This is deliberately diagnostic, not a
-# substitute for the canonical induced-map calculation above.
+# map is not already equivariant. This is diagnostic only.
 # ------------------------------------------------------------
 solve_intertwiner = trace_match and not induced_equivariant
-intertwiner_rank = None
 intertwiner_found = False
 if solve_intertwiner:
     rows = []
     for AU, AO in zip(A_U, A_O):
-        # AO X - X AU = 0, row-major unknowns x[r,c].
         for r in range(10):
             for c in range(10):
                 row = np.zeros(100, dtype=np.int64)
@@ -259,11 +252,9 @@ if solve_intertwiner:
                     row[r * 10 + k] = (row[r * 10 + k] - AU[k, c]) % P
                 rows.append(row)
     Z = np.array(rows, dtype=np.int64) % P
-    basis = nullspace3(Z)
-    for v in basis:
+    for v in nullspace3(Z):
         X = v.reshape((10, 10)) % P
         if rank3(X) == 10:
-            intertwiner_rank = 10
             intertwiner_found = True
             break
 
