@@ -110,44 +110,16 @@ O=orbit_vec(d); Wd=basis(O,r3(O))
 assert Wd.shape==(256,45)
 assert r3(Wd)==45
 
-# Coordinates of quotient projection: qinf_basis spans Q4 in ambient coordinates.
-# Find a left inverse L so quotient coordinates of an ambient vector are L*v.
-# Since qinf_basis is an independent basis, choose pivot rows.
-def left_inverse(B):
-    # Find 45 independent rows of B; invert the resulting 45x45 matrix.
-    BT=B.T
-    rows=basis(BT,45).T
-    # basis(B.T) selects columns = rows of B; recover indices by greedy scan.
-    inds=[]; C=np.empty((0,45),dtype=np.int64); rr=0
-    for i in range(B.shape[0]):
-        T=np.vstack([C,B[i]])
-        q=r3(T)
-        if q>rr: inds.append(i); C=T; rr=q
-        if rr==45:break
-    M=B[inds,:]
-    # inverse over F3 via solve columns
-    inv=[]
-    for j in range(45):
-        rhs=np.zeros(45,dtype=np.int64);rhs[j]=1
-        aug=np.column_stack([M,rhs]);
-        rrw=0
-        for c in range(45):
-            p=next(i for i in range(rrw,45) if aug[i,c])
-            aug[[rrw,p]]=aug[[p,rrw]]
-            if aug[rrw,c]==2:aug[rrw]=(2*aug[rrw])%P
-            for i in range(45):
-                if i!=rrw and aug[i,c]:aug[i]=(aug[i]-aug[i,c]*aug[rrw])%P
-            rrw+=1
-        inv.append(aug[:,45])
-    Minv=np.column_stack(inv)
-    L=np.zeros((45,256),dtype=np.int64); L[:,inds]=Minv
-    assert np.array_equal((L@B)%P,np.eye(45,dtype=np.int64))
-    return L
-L=left_inverse(qinf_basis)
-
-# Express Wd ambient basis in qinf quotient coordinates. Because Wd=Q4,
-# this should have rank 45.
-WdQ=(L@Wd)%P
+# Quotient coordinates must be obtained from the full L4 basis used by
+# Gate0A, not by applying a left inverse to an arbitrary ambient vector.
+# The last 45 coordinates are the chosen Q4 complement coordinates.
+qinf_coordinates=ns['qinf']['coordinates']
+qinf_full_basis=np.array(ns['qinf']['full_basis'],dtype=np.int64)%P
+WdQ=np.column_stack([
+    np.array(qinf_coordinates(Wd[:,j]),dtype=np.int64)%P
+    for j in range(Wd.shape[1])
+])[15:,:]
+assert WdQ.shape==(45,45)
 assert r3(WdQ)==45
 
 # qinf generator matrices in quotient coordinates are already supplied.
