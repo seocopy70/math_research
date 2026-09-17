@@ -1,0 +1,16 @@
+name: Gate 0-B q3 qinf constructibility
+on:
+  push:
+    paths:
+      - 'research/GATE0B_Q3_QINF_CONSTRUCTIBILITY_2026-09-17.py'
+      - '.github/workflows/gate0b-constructibility.yml'
+jobs:
+  gate0b:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Gate 0-B constructibility test
+        run: python research/GATE0B_Q3_QINF_CONSTRUCTIBILITY_2026-09-17.py
