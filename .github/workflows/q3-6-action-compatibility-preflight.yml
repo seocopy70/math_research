@@ -2,6 +2,10 @@ name: Q3-6 Action Compatibility Preflight
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'research/Q3_6_ACTION_COMPATIBILITY_PREFLIGHT_2026-09-17.py'
+      - '.github/workflows/q3-6-action-compatibility-preflight.yml'
 
 jobs:
   preflight:
@@ -12,4 +16,4 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install numpy
-      - run: python research/Q3_6_ACTION_COMPATIBILITY_PREFLIGHT_2026-09-17.py
+      - run: PYTHONUNBUFFERED=1 python research/Q3_6_ACTION_COMPATIBILITY_PREFLIGHT_2026-09-17.py
