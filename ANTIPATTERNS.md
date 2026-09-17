@@ -121,21 +121,20 @@ B1-1-2의 GAP probe 수정 과정에서 `printf '... Print(...,"\\n") ...' | gap
 
 **핵심:** 이것은 일회성 오타라기보다 **외부 인터프리터(GAP) 코드를 shell inline string으로 주입하는 구조 자체가 재발 가능한 CI 패턴**입니다.
 
-**정정:** GAP sanity probe는 shell 문자열/`printf`/command substitution으로 작성하지 않습니다. 반드시 다음 형태를 사용합니다.
+**정정:** GAP sanity probe는 shell 문자열/`printf`/command substitution으로 작성하지 않습니다. 반드시 heredoc/file 형태를 사용합니다.
 
 ```bash
 set -euo pipefail
-cat > /tmp/gap_probe.g <<'GAP'
-F := GF(3);;
-A := IdentityMat(1,F);;
-M := GModuleByMats([A],F);;
+gap -q <<'GAP'
+F := GF(3);
+A := IdentityMat(1,F);
+M := GModuleByMats([A],F);
 if not MTX.IsIrreducible(M) then
   Error("GAP MeatAxe sanity probe failed");
 fi;
 Print("GAP_PROBE_OK\n");
 QUIT;
 GAP
-gap -q /tmp/gap_probe.g
 ```
 
 또는 저장소의 `.g` 파일을 직접 실행합니다. **Bash → GAP 다중 해석층을 제거**하고 GAP 코드 자체를 heredoc/file로 검증합니다.
@@ -143,10 +142,36 @@ gap -q /tmp/gap_probe.g
 **재발 방지 프로토콜:**
 1. CI에서 GAP 코드를 inline `printf`/`echo`/`$()` 문자열로 전달하지 않는다.
 2. `GModuleByMats`를 사용하는 probe는 반드시 field를 명시한다: `GModuleByMats([...],F)`.
-3. probe는 성공 조건을 명시적으로 출력하고, 실패 시 GAP가 nonzero exit를 내도록 `Error(...)`를 사용한다.
+3. probe는 성공 조건을 명시적으로 검사하고, 실패 시 GAP가 nonzero exit를 내도록 `Error(...)`를 사용한다.
 4. shell step에는 `set -euo pipefail`을 유지한다.
 5. GAP probe를 새로 만들거나 수정하면 **probe 자체 실행을 먼저 확인한 뒤** 본 계산을 실행한다.
 6. workflow audit에서 GAP sanity probe의 inline-string 패턴을 금지 대상으로 추가한다.
+
+---
+
+## AP-011 — GAP MeatAxe API signature not independently preflighted
+
+**상태:** SETUP / API VERIFICATION FAILURE
+
+A3-4-20R의 수학 계산은 PASS했지만, 같은 workflow의 GAP MeatAxe sanity probe에서 `GModuleByMats([A])`가 현재 설치된 GAP/MeatAxe 인터페이스의 요구 형식과 맞지 않아 오류가 발생했습니다. 이는 본 계산의 실패가 아니라 **preflight API 사용법을 충분히 독립 검증하지 않은 CI 문제**입니다.
+
+이번 사례는 프로젝트에서 이미 발생했던 `Dimension(M)` 대 `MTX.Dimension(M)` 오류, `GModuleByMats` field mismatch, 그리고 inline GAP quoting 문제와 같은 계열입니다. 반복을 막기 위해 API 호출 규약을 antipattern 문서에 명시적으로 보존합니다.
+
+**정정:** 현재 A3-4-20R 환경에서 `GModuleByMats`는 field를 명시하는 형태를 사용합니다:
+
+```gap
+F := GF(3);
+A := IdentityMat(1,F);
+M := GModuleByMats([A],F);
+```
+
+module dimension은 `MTX.Dimension(M)`을 사용합니다. Python의 column-action matrix를 GAP에 전달할 때는 프로젝트의 row/right-action convention에 따라 transpose 규칙을 적용합니다.
+
+**재발 방지:**
+1. GAP/MeatAxe API probe는 본 계산과 분리해 최소 독립 테스트로 먼저 검증합니다.
+2. 새 GAP API를 workflow에 넣을 때는 설치된 버전에서 실제 실행 가능한 호출을 확인한 뒤 사용합니다.
+3. 검증된 호출 규약은 이 문서에 누적합니다.
+4. 같은 API 오류가 반복되면 수학 결과와 별도로 `SETUP/API` 기술부채로 기록하고, 수학적 PASS를 무효화하지 않습니다.
 
 ---
 
