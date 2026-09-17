@@ -159,9 +159,9 @@ print("q3_restricted_power_shadow_dims =", q3_dims)
 print("q3_restricted_power_vectors_in_W =", q3_embedded)
 
 assert d_shadow_dim == 10
-assert len(random_W_shadow_dims) == 12
+assert len(random_shadow_dims) == 12
 assert len(random_U_dims) == 12
 assert len(column_dims) > 0
-assert all(x in (9,10) for x in random_W_shadow_dims)
-assert all(x in (9,10) for x in random_U_dims)
+assert all(x == 10 for x in random_shadow_dims)
+assert all(x == 10 for x in random_U_dims)
 print("O2-8 PRECHECK RESULT = PASS")
