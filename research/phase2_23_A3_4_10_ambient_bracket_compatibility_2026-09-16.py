@@ -1,88 +1,114 @@
-import runpy
+import importlib.util
 import numpy as np
-from itertools import product
 
 P = 3
-ROOT = 'research/'
+SANITY_PATH = 'research/A3_4_10_BRACKET_PIPELINE_SANITY_2026-09-17.py'
 
-ns = runpy.run_path(ROOT + 'phase2_18_A3_4_5_intersection_K_and_Sym2_2026-09-16.py')
-rank3 = ns['rank3']
-coords = ns['coords']
-W = np.array(ns['W'], dtype=np.int64) % P
-Wd = np.array(ns['Wd_basis'], dtype=np.int64) % P
-I_W = np.array(ns['I_W'], dtype=np.int64) % P
-K_coord = np.array(ns['K_coord'], dtype=np.int64) % P
-A_W = [np.array(a, dtype=np.int64) % P for a in ns['A_W']]
+# Reuse ONLY the verified standalone ambient/bracket pipeline.
+# No Gate-0-A or any phase script is imported.
+spec = importlib.util.spec_from_file_location('a3410_sanity', SANITY_PATH)
+mod = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(mod)
 
-ns1 = runpy.run_path(ROOT + 'phase2_1_invariant_space_verification_2026-09-15.py')
-index4 = ns1['index4']
-gens = ns1['gens']
-apply_linear_map = ns1['apply_linear_map']
-words4 = list(index4.keys())
+rank3 = mod.rank3
+WORDS4 = mod.WORDS4
+WORDS5 = mod.WORDS5
+INDEX4 = mod.INDEX4
+INDEX5 = mod.INDEX5
+W = mod.W
+Wd = mod.Wd
+gens = mod.gens
+apply_linear_map = mod.apply_linear_map
 
-A4_ambient = []
-for g in gens:
-    G = np.zeros((256, 256), dtype=np.int64)
-    for j, w in enumerate(words4):
-        out = apply_linear_map({w: 1}, g)
-        for ww, c in out.items():
-            G[index4[ww], j] = (G[index4[ww], j] + c) % P
-    A4_ambient.append(G)
 
-assert W.shape == (256, 45)
-assert Wd.shape == (256, 45)
-assert len(A_W) == len(A4_ambient) == 5
-
-# Degree-4 words are tuples of generator labels. Degree-5 associative words
-# are represented by tuples as well.
-words5 = list(product((1, 2, 3, 4), repeat=5))
-index5 = {w: i for i, w in enumerate(words5)}
-
-def column_bracket_with_generator(v_col, gen):
-    """Associative expansion of [v, X_gen] = v X_gen - X_gen v."""
-    out = np.zeros(1024, dtype=np.int64)
-    for j, coeff in enumerate(v_col):
-        coeff = int(coeff) % P
-        if coeff == 0:
-            continue
-        w = words4[j]
-        wg = w + (gen,)
-        gw = (gen,) + w
-        out[index5[wg]] = (out[index5[wg]] + coeff) % P
-        out[index5[gw]] = (out[index5[gw]] - coeff) % P
+def coords(B, Y):
+    B = np.array(B, dtype=np.int64) % P
+    Y = np.array(Y, dtype=np.int64) % P
+    out = np.zeros((B.shape[1], Y.shape[1]), dtype=np.int64)
+    for j in range(Y.shape[1]):
+        A = np.column_stack([B, Y[:, j]]) % P
+        m, naug = A.shape
+        r = 0
+        piv = []
+        for c in range(naug - 1):
+            q = next((i for i in range(r, m) if A[i, c]), None)
+            if q is None:
+                continue
+            A[[r, q]] = A[[q, r]]
+            if A[r, c] == 2:
+                A[r] = (2 * A[r]) % P
+            for i in range(m):
+                if i != r and A[i, c]:
+                    A[i] = (A[i] - A[i, c] * A[r]) % P
+            piv.append(c)
+            r += 1
+        assert len(piv) == B.shape[1]
+        for rr, c in enumerate(piv):
+            out[c, j] = A[rr, -1]
     return out
 
-B_W = []
-B_Wd = []
-for g in range(1, 5):
-    B_W.append(np.column_stack([
-        column_bracket_with_generator(W[:, j], g) for j in range(45)
-    ]) % P)
-    B_Wd.append(np.column_stack([
-        column_bracket_with_generator(Wd[:, j], g) for j in range(45)
-    ]) % P)
 
-# Reconstruct exactly the affine A3-4-9 intertwiner X: W45 -> Wd,
-# satisfying A_Wd X = X A_W and X I_W = K_Wd.
+def nullspace3(A):
+    A = np.array(A, dtype=np.int64, copy=True) % P
+    m, n = A.shape
+    r = 0
+    piv = []
+    for c in range(n):
+        q = next((i for i in range(r, m) if A[i, c]), None)
+        if q is None:
+            continue
+        A[[r, q]] = A[[q, r]]
+        if A[r, c] == 2:
+            A[r] = (2 * A[r]) % P
+        for i in range(m):
+            if i != r and A[i, c]:
+                A[i] = (A[i] - A[i, c] * A[r]) % P
+        piv.append(c)
+        r += 1
+        if r == m:
+            break
+    free = [c for c in range(n) if c not in piv]
+    Z = np.zeros((n, len(free)), dtype=np.int64)
+    for j, f in enumerate(free):
+        Z[f, j] = 1
+        for rr, c in enumerate(piv):
+            Z[c, j] = (-A[rr, f]) % P
+    return Z
+
+
+def degree_action_matrix(g, words, index):
+    dim = len(words)
+    G = np.zeros((dim, dim), dtype=np.int64)
+    for j, w in enumerate(words):
+        out = apply_linear_map({w: 1}, g)
+        for ww, c in out.items():
+            G[index[ww], j] = (G[index[ww], j] + int(c)) % P
+    return G
+
+
+A4_ambient = [degree_action_matrix(g, WORDS4, INDEX4) for g in gens]
+A_W = [coords(W, (G @ W) % P) for G in A4_ambient]
+A_Wd = [coords(Wd, (G @ Wd) % P) for G in A4_ambient]
+
+# Recover W45 ∩ Wd independently.
+Z = nullspace3(np.column_stack([W, (-Wd) % P]))
+assert Z.shape[1] == 35
+I_W = Z[:45, :] % P
+K_Wd = Z[45:, :] % P
+K_ambient = (W @ I_W) % P
+assert rank3(K_ambient) == 35
+assert np.array_equal(K_ambient, (Wd @ K_Wd) % P)
+
+# Reconstruct the unique A3-4-9 intertwiner fixed by K.
 n = 45
 Nvar = n * n
 rows = []
 rhs = []
 
+
 def vi(r, c):
     return r * n + c
 
-A_Wd = []
-for G in A4_ambient:
-    Y = (G @ Wd) % P
-    C = coords(Wd, Y)
-    assert np.array_equal((Wd @ C) % P, Y)
-    A_Wd.append(C)
-
-K_ambient = (W @ K_coord) % P
-K_Wd = coords(Wd, K_ambient)
-assert np.array_equal((Wd @ K_Wd) % P, K_ambient)
-assert rank3(K_Wd) == 35
 
 for A, Ad in zip(A_W, A_Wd):
     for r in range(n):
@@ -94,8 +120,6 @@ for A, Ad in zip(A_W, A_Wd):
             rows.append(row)
             rhs.append(0)
 
-# X|K = identity, expressed as X I_W = K_Wd. This is an AFFINE
-# constraint, so the right-hand side must be K_Wd (not zero).
 for r in range(n):
     for c in range(35):
         row = np.zeros(Nvar, dtype=np.int64)
@@ -106,6 +130,7 @@ for r in range(n):
 
 M = np.array(rows, dtype=np.int64) % P
 b = np.array(rhs, dtype=np.int64) % P
+
 
 def rref_solve(A, b):
     R = np.column_stack([A.copy() % P, b.reshape(-1, 1) % P])
@@ -135,25 +160,40 @@ def rref_solve(A, b):
         x[c] = R[rr, n]
     return len(piv), x, n - len(piv)
 
+
 rank_system, sol, nullity_system = rref_solve(M, b)
 assert sol is not None
 X_intertwiner = sol.reshape((n, n)) % P
 assert rank3(X_intertwiner) == 45
 assert np.array_equal((X_intertwiner @ I_W) % P, K_Wd % P)
-assert all(
-    np.array_equal((Ad @ X_intertwiner) % P, (X_intertwiner @ A) % P)
-    for A, Ad in zip(A_W, A_Wd)
-)
+assert all(np.array_equal((Ad @ X_intertwiner) % P, (X_intertwiner @ A) % P)
+           for A, Ad in zip(A_W, A_Wd))
 
-# IMPORTANT: B_W[g] maps W45 -> degree-5 ambient space, while B_Wd[g]
-# maps Wd -> degree-5 ambient space. Therefore the correct compatibility
-# equation is B_Wd[g] X = B_W[g].
+
+def column_bracket_with_generator(v_col, gen):
+    out = np.zeros(1024, dtype=np.int64)
+    for j, coeff in enumerate(v_col):
+        c = int(coeff) % P
+        if not c:
+            continue
+        w = WORDS4[j]
+        out[INDEX5[w + (gen,)]] = (out[INDEX5[w + (gen,)]] + c) % P
+        out[INDEX5[(gen,) + w]] = (out[INDEX5[(gen,) + w]] - c) % P
+    return out
+
+
+B_W = [np.column_stack([column_bracket_with_generator(W[:, j], g) for j in range(45)]) % P
+       for g in range(1, 5)]
+B_Wd = [np.column_stack([column_bracket_with_generator(Wd[:, j], g) for j in range(45)]) % P
+        for g in range(1, 5)]
+
 diffs = [((B_Wd[g] @ X_intertwiner) - B_W[g]) % P for g in range(4)]
 D = np.vstack(diffs)
-BRACKET_COMPATIBLE = all(np.count_nonzero(D[g * 1024:(g + 1) * 1024, :]) == 0 for g in range(4))
+BRACKET_COMPATIBLE = rank3(D) == 0
 OBSTRUCTION_RANK = rank3(D)
 
-print('PHASE 2-23 / A3-4-10 AMBIENT BRACKET COMPATIBILITY')
+print('PHASE 2-23 / A3-4-10 AMBIENT BRACKET COMPATIBILITY (CORRECTED)')
+print('Gate-0-A imported/executed = NO')
 print('dim W45 =', rank3(W))
 print('dim Wd =', rank3(Wd))
 print('dim common K =', rank3(K_ambient))
@@ -166,10 +206,5 @@ print('A3-4-9 intertwiner fixes K =', np.array_equal((X_intertwiner @ I_W) % P, 
 print('degree-5 ambient associative word dimension =', 1024)
 print('BRACKET_COMPATIBLE_FOR_ALL_4_GENERATORS =', BRACKET_COMPATIBLE)
 print('STACKED_BRACKET_OBSTRUCTION_RANK =', OBSTRUCTION_RANK)
-
-if BRACKET_COMPATIBLE:
-    print('RESULT: the verified W45~Wd intertwiner is compatible with the ambient degree-5 Lie bracket against every generator.')
-else:
-    print('RESULT: the verified module/extension intertwiner is NOT compatible with the ambient degree-5 Lie bracket.')
-
+print('RESULT =', 'PASS' if BRACKET_COMPATIBLE else 'FAIL')
 print('ALL A3-4-10 CHECKS COMPLETED')
