@@ -327,6 +327,19 @@ Therefore
 oxed{dimDelta O=10,qquad Delta O	ext{ is an }H	ext{-submodule}.}
 ]
 
+### O2-6 — basepoint-independence test: PLANNED / OPEN
+
+A new checkpoint research/O2_6_basepoint_independence_2026-09-18.py and workflow .github/workflows/o2-6-basepoint-independence.yml have been added.
+
+Purpose: within the **already frozen B1 admissible family** \\(\\tau_b=\\tau(I+bN)\\), test whether changing the basepoint changes the variation direction. The test is deliberately stronger than equality of dimensions: it compares the actual finite-difference maps
+\\[
+D_1-D_0,\\qquad D_2-D_1,\\qquad D_0-D_2.
+\\]
+
+Expected algebra over \\(\\mathbb F_3\\): these should coincide if the affine family is genuinely one-dimensional and the variation direction is basepoint-independent. A PASS would establish basepoint-independence **within the frozen B1 family**; it would not by itself prove a filtration-only characterization beyond that family.
+
+**Do not mark this PASS until the GitHub Actions run completes successfully.**
+
 ### Critical logical boundary
 
 O2-5 does **not** prove that (Delta O) is canonical under a change of base transport, nor that it is determined by filtration data alone. It establishes a 10-dimensional H-stable **transport-variation module** within the fixed B1 affine family.
