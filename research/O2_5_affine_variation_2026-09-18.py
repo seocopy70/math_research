@@ -117,7 +117,9 @@ for b in range(3):
     assert np.array_equal((S@S_inv)%P,I45)
     assert all(np.array_equal((S@A)%P,(A@S)%P) for A in A_W)
     tau_b=(tau@S)%P
-    assert np.array_equal((tau_b@ns_tau["I_W"])%P,ns_tau["I_Wd"]%P)
+    # A3-4-10 exports the authoritative common intersection basis I_coord.
+    # Since canonical tau fixes I pointwise, every admissible tau_b must fix it pointwise too.
+    assert np.array_equal((tau_b@ns_tau["I_coord"])%P,ns_tau["I_coord"]%P)
     E,D=obstruction_for(tau_b)
     assert rank3(tau_b)==45
     assert rank3(D)==10
