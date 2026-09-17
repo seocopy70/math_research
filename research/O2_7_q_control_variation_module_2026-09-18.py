@@ -14,6 +14,7 @@ ns_tau = runpy.run_path(str(ROOT / "A3-4-10_CANONICAL_TAU_REVALIDATION_2026-09-1
 W = np.array(ns_tau["W"], dtype=np.int64) % P
 tau = np.array(ns_tau["tau_coord"], dtype=np.int64) % P
 A_W = [np.array(A, dtype=np.int64) % P for A in ns_tau["A_W"]]
+coordinates = ns_tau["coordinates"]
 
 ns_N = runpy.run_path(str(ROOT / "phase2_3_endH_optimized_2026-09-15.py"))
 N = np.array(ns_N["N"], dtype=np.int64) % P
@@ -86,8 +87,12 @@ d = degree4_ad1112()
 assert rank3(d.reshape(-1,1)) == 1
 
 # A3-4-3 certified that d lies in W. Recover its W-coordinates exactly.
-d_W = solve_full_column(W, d)
-assert np.array_equal((W @ d_W) % P, d)
+# A3-4-3 certifies d in W only after quotienting by the relation ideal.
+# Use the authoritative TRUE-Q4 coordinates, not literal 256D equality.
+d_Q = np.array(coordinates(d)[15:], dtype=np.int64) % P
+Q_W45 = np.array(ns_tau["Q_W45"], dtype=np.int64) % P
+d_W = solve_full_column(Q_W45, d_Q)
+assert np.array_equal((Q_W45 @ d_W) % P, d_Q)
 
 # H-orbit of d inside W coordinates.
 orbit = [d_W]
@@ -119,6 +124,7 @@ assert rank3(d_inf.reshape(-1,1)) == 0
 
 print("O2-7 Q-CONTROL OF TRANSPORT-VARIATION MODULE")
 print("rank(d_q3) =", rank3(d.reshape(-1,1)))
+print("rank(d_q3 in Q4) =", rank3(d_Q.reshape(-1,1)))
 print("rank(P=<H.d_q3>) =", P_dim)
 print("rank(U=im(N)) =", U_dim)
 print("rank(P+U) =", join_dim)
