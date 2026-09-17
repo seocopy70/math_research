@@ -7,6 +7,8 @@ on:
       - 'research/A3_4_BUILD_DATA_2026-09-17.py'
       - 'research/A3_4_K_AUDIT_FROM_ARTIFACT_2026-09-17.py'
       - 'research/A3_4_TAU_AUDIT_FROM_ARTIFACT_2026-09-17.py'
+      - 'research/A3_4_BRACKET_COMPATIBILITY_FROM_ARTIFACT_2026-09-17.py'
+      - 'research/A3_4_BRACKET_COMPATIBILITY_REVIEW_2026-09-17.py'
       - '.github/workflows/a3-4-artifact-pipeline.yml'
 
 jobs:
@@ -86,3 +88,66 @@ jobs:
           path: artifacts
       - name: Run artifact-only tau audit
         run: python research/A3_4_TAU_AUDIT_FROM_ARTIFACT_2026-09-17.py
+
+  bracket-compatibility:
+    name: bracket-compatibility
+    needs: tau-audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Print commit SHA
+        run: echo "BRACKET GITHUB_SHA=${GITHUB_SHA}"
+      - name: Download upstream A3-4 data artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: a3-4-data-v1
+          path: artifacts
+      - name: Run artifact-only bracket compatibility calculation
+        run: python research/A3_4_BRACKET_COMPATIBILITY_FROM_ARTIFACT_2026-09-17.py
+      - name: Upload bracket calculation result
+        uses: actions/upload-artifact@v4
+        with:
+          name: a3-4-bracket-result
+          path: |
+            artifacts/a3_4_bracket_result.json
+            artifacts/a3_4_tau.npy
+          if-no-files-found: error
+
+  bracket-independent-review:
+    name: bracket-independent-review
+    needs: bracket-compatibility
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Print commit SHA
+        run: echo "REVIEW GITHUB_SHA=${GITHUB_SHA}"
+      - name: Download upstream A3-4 data artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: a3-4-data-v1
+          path: artifacts
+      - name: Download primary bracket result
+        uses: actions/download-artifact@v4
+        with:
+          name: a3-4-bracket-result
+          path: artifacts
+      - name: Run independent direct-matrix review
+        run: python research/A3_4_BRACKET_COMPATIBILITY_REVIEW_2026-09-17.py
