@@ -1,6 +1,6 @@
 # Research Map — Rank-4 pro-3 Demuškin Group / Intrinsic Orientation Recovery
 
-> **Purpose of this file:** This is the state/map document for the whole research. It is intentionally concise and different from the chronological research log. A new chat/session should read this file first to recover the global goal, frozen results, current gate, and next experiment without reconstructing the history from scratch.
+> **Purpose:** Current state/map document for the whole research. Read this first in a new session. Chronology belongs in `research/00_RESEARCH_LOG.md`.
 
 ## 0. One-sentence research question
 
@@ -8,19 +8,15 @@
 \boxed{\text{Can the canonical orientation character }\chi:G\to\mathbb Z_3^\times\text{ be recovered intrinsically from filtered/graded data?}}
 \]
 
-The present strategy is not to read the orientation directly from a single degree-4 object, but to determine whether intrinsic filtration information survives in a symmetry-compatible structure strongly enough to distinguish the relevant cases and eventually recover \(\chi\).
+The strategy is to determine whether intrinsic filtration information survives in a symmetry-compatible structure strongly enough to distinguish the relevant cases and eventually recover \(\chi\).
 
 ---
 
 ## 1. Mathematical setting
 
-Group:
 \[
-G=\langle x_1,x_2,x_3,x_4\mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle.
-\]
-
-Quadratic initial relation:
-\[
+G=\langle x_1,x_2,x_3,x_4\mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle,
+\qquad
 R=[X_1,X_2]+[X_3,X_4].
 \]
 
@@ -29,7 +25,7 @@ Degree-4 probe:
 T=[[[X_3,X_4],X_1],X_1].
 \]
 
-The symplectic symmetry group used in the mod-3 degree-4 analysis is
+Symmetry group:
 \[
 H=Sp_4(\mathbb F_3).
 \]
@@ -37,18 +33,6 @@ H=Sp_4(\mathbb F_3).
 ---
 
 ## 2. Global research chain
-
-\[
-\boxed{\chi\text{ recovery}}
-\rightarrow
-\boxed{\text{intrinsic filtration information}}
-\rightarrow
-\boxed{q=3\text{ vs }q=\infty\text{ distinguishability}}
-\rightarrow
-\boxed{\text{degree-4/degree-5 bracket-filtration interaction}}.
-\]
-
-Operationally:
 
 ```text
 Demuškin group
@@ -71,7 +55,9 @@ bracket compatibility test
   ↓
 obstruction rank 10
   ↓
-CURRENT: interpret the rank-10 obstruction
+O2: identify the mathematical structure of the rank-10 obstruction
+  ↓
+O2-3: compare obstruction module O with U = im(N)
   ↓
 ask whether it gives intrinsic information distinguishing q=3 from q=∞
   ↓
@@ -90,10 +76,7 @@ connect any successful invariant back to χ
 ### Phase 2 — orbit module
 
 - \(W=\langle H\cdot T\rangle\) has dimension **45**.
-- Earlier filtration/module structure:
-  \[
-  0\subset U_{10}\subset K_{35}\subset W_{45}.
-  \]
+- \(0\subset U_{10}\subset K_{35}\subset W_{45}\).
 - \(U\cong\operatorname{Sym}^2(V)\), and \(K/U\) has dimension 25.
 - \(W\cong\Lambda^2(\operatorname{Sym}^2(V))\).
 - \(E=W/U\) is the non-split extension
@@ -101,17 +84,12 @@ connect any successful invariant back to χ
   0\to M_{25}\to E_{35}\to\operatorname{Sym}^2(V)_{10}\to0.
   \]
 - Candidate \(E\cong\operatorname{Sym}^4(V)\): **REJECTED**.
-- Track B A2:
-  \[
-  HP_4((uv)^{-3})=-T=2T\neq0.
-  \]
+- Track B A2: \(HP_4((uv)^{-3})=-T=2T\ne0\).
 
 ### Phase 2-3 — endomorphism algebra
 
-Authoritative historical script:
-`research/phase2_3_endH_optimized_2026-09-15.py`
+Authoritative script: `research/phase2_3_endH_optimized_2026-09-15.py`.
 
-Frozen result:
 \[
 \dim\operatorname{End}_H(W)=2.
 \]
@@ -123,72 +101,34 @@ Hence
 \[
 \operatorname{End}_H(W)\cong\mathbb F_3[\varepsilon]/(\varepsilon^2).
 \]
-This says the 45-dimensional module has nontrivial internal nilpotent structure; it is not a direct sum of irreducibles in the naive way.
+
+Thus
+\[
+0\subset U=\operatorname{im}N\subset K=\ker N\subset W,
+\qquad \dim U=10,\dim K=35,\dim W=45.
+\]
 
 ### A3-4 — filtration intersection
 
 \[
-I=W\cap W_d,\qquad \dim I=35.
+I=W\cap W_d,\qquad \dim I=35,
 \]
-Independent A3-4-8 verification established
+and independent A3-4-8 verification established
 \[
 \boxed{I=\ker N}.
 \]
 This is frozen.
 
-### A3-4 — intertwiner
+### A3-4 — provenance/repair audit
 
-A rank-45 intertwiner \(\tau\) was constructed between the relevant symmetry actions, with
-\[
-\tau(I)=I_d.
-\]
-The target bracket compatibility test is
-\[
-\boxed{\tau([v,X_h])=[\tau(v),X_h]}
-\]
-for the four fixed generators \(h\).
+Audit branch: `audit/a3-4-action-provenance`  
+Audit run: `35242896521`  
+Corrected commit: `62886877f97e58e87d59b0075d45e38be6176410`  
+Corrected run: `35245280405`
 
----
+The audit established exact equality of the selected \(W\) basis in ambient degree-4 coordinates, all five generator action matrices, \(B=A_2+A_3+A_4+A_5\), and Krylov rank. The earlier Krylov-rank-2 result came from an incorrect old `action_matrix()` extraction that treated \(W\) as an invariant ambient complement; the correct quotient action works in \((R)_4\mid W\).
 
-## 4. A3-4 audit/repair status — COMPLETE
-
-A provenance audit compared the historical Phase 2-1 representation with the current A3-4 representation.
-
-Audit branch:
-`audit/a3-4-action-provenance`
-
-Audit run:
-`35242896521`
-
-The audit established exact equality of:
-
-- selected \(W\) basis in ambient degree-4 coordinates;
-- all five generator action matrices \(A_1,\ldots,A_5\);
-- \(B=A_2+A_3+A_4+A_5\);
-- Krylov rank.
-
-Reported values:
-\[
-\operatorname{rank}(B_{hist})=\operatorname{rank}(B_{curr})=44,
-\]
-\[
-\operatorname{KrylovRank}_{hist}=\operatorname{KrylovRank}_{curr}=45.
-\]
-
-The earlier apparent Krylov rank 2 was traced to an implementation error in the old A3-4 `action_matrix()` extraction. It treated \(W\) as if it were an invariant ambient complement. The correct quotient action must work in
-\[
-(R_4\mid W),
-\]
-not in \(W\) alone, because ambient representatives can acquire an \((R)_4\) component.
-
-Corrected commit:
-`62886877f97e58e87d59b0075d45e38be6176410`
-
-Corrected run:
-`35245280405`
-
-The repaired computation reproduced the frozen structural results:
-
+The repaired computation reproduced:
 - \(\dim W=45\)
 - \(\dim W_d=45\)
 - \(\dim I=35\)
@@ -198,82 +138,126 @@ The repaired computation reproduced the frozen structural results:
 - \(\dim\ker N=35\)
 - \(\ker N=I\)
 
-Downstream independent bracket review also matched the primary result.
+**A3-4 computational/provenance audit is CLOSED.** Do not reopen without a genuine contradiction.
 
-**Therefore the A3-4 computational/provenance audit is CLOSED.** Do not reopen it unless a new genuine mathematical contradiction appears.
+---
+
+## 4. O2-2 — transported obstruction action: COMPLETE / VERIFIED
+
+Verification record: `research/O2-2_RESULT_2026-09-18.md`  
+GitHub Actions run: `35278644641`  
+Job: `105395199074`  
+Working verification commit: `5a447946e9bb7087078e22eccc9bd304a7170494`
+
+### O2-2R/S/T
+
+- **O2-2R — generator-level obstruction equivariance: PASS.**
+- **O2-2S — group consistency of \(T_g\): PASS.**
+- **O2-2T — exact identification: PASS.**
+
+For all five generators, the independently solved 16-parameter action satisfies exactly
+\[
+\boxed{T_g=g^{-T}}\qquad(\text{over }\mathbb F_3).
+\]
+Generator-pair multiplicativity also passes.
+
+Therefore
+\[
+D_{\rm stack}A_W(g)
+=(T_g\otimes A_5(g))D_{\rm stack}
+=(g^{-T}\otimes A_5(g))D_{\rm stack}
+\]
+for the generators and hence all \(g\in H\). Consequently
+\[
+\boxed{O=\operatorname{Im}D_{\rm stack}\text{ is an }H\text{-submodule}.}
+\]
+
+### Final pre-O2-3 identity check — PASS
+
+The \(A_W(g)\) used in O2-2 is the same mathematical \(W\)-action used to define \(N\):
+
+- `phase2_3_endH_optimized_2026-09-15.py` loads `action_matrices` from `phase2_1_invariant_space_verification_2026-09-15.py`.
+- Phase 2-1 constructs these matrices from `apply_linear_map(a, g)` with the column convention
+  \[
+  e_j\mapsto\sum_i g_{ij}e_i.
+  \]
+- The corrected A3-4/O2 pipeline uses the same `apply_linear_map` definition and the same five `gens` construction.
+- O2-2 constructs `A_W` from those corrected ambient actions.
+
+Thus there is **no coordinate/convention mismatch between the \(A_W\) defining \(N\) and the \(A_W\) in O2-2**.
+
+### Legacy convention archaeology
+
+Status: **⚪ NOT YET DETERMINED**.
+
+A hard-coded matrix numerically equal to \(g^{-T}\) was found historically, but it was a separate sanity-check object, not evidence that a legacy tuple-action implementation used that convention. The historical provenance question remains open.
+
+This does **not** block O2-3: O2-2 solved \(T_g\) directly from current data and verified exact \(g^{-T}\), independent of any assumed legacy convention.
 
 ---
 
 ## 5. Current mathematical gate — OPEN
 
-### Verified input
-
-The bracket-compatibility computation gives, for each of the four generators,
+The bracket-compatibility computation is verified:
 
 \[
-\operatorname{DIRECT\_DISCREPANCY\_RANK}=10,
+\operatorname{DIRECT\_DISCREPANCY\_RANK}=10
 \]
-
-and the stacked obstruction has rank
-
+for each of the four tested generators, and
 \[
-\boxed{\operatorname{obstruction\ rank}=10}.
+\boxed{\operatorname{rank}D_{\rm stack}=10}.
 \]
 
-The independent review reproduced the same result.
+This establishes a rank-10 obstruction, but **does not yet establish** that the obstruction distinguishes \(q=3\) from \(q=\infty\), or that it directly determines \(\chi\).
 
-### Correct interpretation of the status
-
-The computation is **verified**, but its mathematical meaning is **OPEN**.
-
-The statement currently established is:
-
-> The transported degree-4 structure fails the tested bracket-compatibility condition, and the resulting obstruction space has rank 10.
-
-It is **not yet established** that this rank-10 obstruction distinguishes \(q=3\) from \(q=\infty\), nor that it directly determines the orientation character.
-
-### Current research question
-
+Current question:
 \[
-\boxed{\text{What is the mathematical structure of this 10-dimensional obstruction?}}
+\boxed{\text{What is the mathematical structure of the 10-dimensional obstruction }O?}
 \]
-
-The first task is to identify its position relative to the already known 10-dimensional object
-\[
-U\cong\operatorname{Sym}^2(V),
-\]
-and relative to \(N\), \(I=\ker N\), and the filtration-derived subspaces.
-
-Only after that should we test whether the obstruction is an intrinsic filtration invariant and whether it differs between \(q=3\) and \(q=\infty\).
 
 ---
 
-## 6. Next research stage — obstruction analysis
+## 6. O2-3 — CURRENT FRONTIER
 
 ### Goal
 
-Determine whether the rank-10 obstruction is merely a defect of the chosen transport \(\tau\), or whether it carries a canonical/intrinsic piece of filtration information.
+Determine whether
+\[
+U=\operatorname{im}N\cong W/\ker N=W/I
+\]
+is naturally identified with
+\[
+O=\operatorname{im}D_{\rm stack}.
+\]
 
 ### Required order
 
-1. **Consume the corrected A3-4 artifacts.** Prefer the verified objects from commit `62886877f97e58e87d59b0075d45e38be6176410` over rebuilding frozen objects.
-2. Identify exactly which 10-dimensional subspace is the obstruction (image/kernel/cokernel, depending on the stored certificate).
-3. Compare it with the known 10-dimensional \(U\cong\operatorname{Sym}^2(V)\).
-4. Test its relationship with \(\ker N=I\), the quotient \(W/I\), and the relevant filtration-derived spaces.
-5. Determine whether the obstruction is stable under the relevant symmetry and independent of arbitrary basis/transport choices.
-6. Only then design the first explicit \(q=3\) versus \(q=\infty\) comparison.
+1. **Trace/character precheck.** Compare the generator traces/characters of the known 10-dimensional \(U\) and the obstruction image \(O\).
+2. **Kernel check:** verify
+   \[
+   \boxed{\ker D_{\rm stack}=I=\ker N}.
+   \]
+3. **Dimension check:** verify
+   \[
+   \boxed{\dim O=10}.
+   \]
+4. If 2–3 pass, form the induced map
+   \[
+   \bar D_{\rm stack}:W/I\to O
+   \]
+   and verify it is an isomorphism.
+5. Use \(W/I\cong U\) to obtain the induced 10-dimensional comparison.
+6. Verify \(H\)-equivariance of the induced map.
+7. Only if the structural comparison is not already decisive, solve an explicit **10×10 intertwiner**.
 
-### What would count as meaningful progress
+### Dependency
 
-A successful result would be something like:
+O2-3 consumes the corrected A3-4 artifacts from commit `62886877f97e58e87d59b0075d45e38be6176410` and the verified O2-2 obstruction relation. It does **not** depend on resolving the legacy tuple-action archaeology.
 
-\[
-\boxed{\text{obstruction space = a canonical module/subquotient already determined by filtered data}}
-\]
+### Pass/fail consequence
 
-or a precise structural relation that forces a difference between the two \(q\)-cases.
-
-A failure to find such structure is not a proof that no intrinsic invariant exists; it only rejects that particular obstruction route.
+- **PASS:** \(\ker D=I\), \(\dim O=10\), and the induced map \(W/I\to O\) is an \(H\)-equivariant isomorphism. Then the obstruction is identified with the already-known 10-dimensional module \(U\) up to the induced canonical map, and the next task is to determine whether this identification is filtration-intrinsic.
+- **FAIL:** any kernel/dimension/equivariance mismatch. Then do not claim \(O\cong U\); inspect the exact source of the mismatch before proceeding.
 
 ---
 
@@ -281,28 +265,27 @@ A failure to find such structure is not a proof that no intrinsic invariant exis
 
 - Do **not** redo the A3-4 provenance audit.
 - Do **not** rebuild the historical Phase 2 representation merely to reconfirm it.
-- Do **not** treat the rank-10 obstruction as already proving \(q=3\) versus \(q=\infty\).
+- Do **not** treat rank 10 as already proving \(q=3\) versus \(q=\infty\).
 - Do **not** claim orientation recovery yet.
 - Do **not** change frozen mathematical objects unless a new contradiction is demonstrated.
+- Do **not** block O2-3 on the unresolved historical tuple-action question.
 
 ---
 
 ## 8. New-chat / new-window protocol
 
-When opening a new chat, the first message can simply be:
+When opening a new chat:
 
-> **수학증명 프로젝트 이어가기. 먼저 `RESEARCH_MAP.md`를 기준으로 현재 상태를 복원해줘. A3-4 audit는 완료·동결되어 있고, 현재 본 연구 단계는 obstruction rank 10의 구조 분석이다. 새 계산 전에 global position / purpose / dependency / pass-fail consequence를 먼저 정리하고, 기존 artifact를 우선 사용해 설계하자.**
-
-Then provide the relevant GitHub Actions run or artifact only if a concrete calculation needs to be inspected.
+> **수학증명 프로젝트 이어가기. 먼저 `RESEARCH_MAP.md`를 기준으로 현재 상태를 복원해줘. A3-4 audit는 완료·동결되어 있고, O2-2는 PASS이며, 현재 본 연구 단계는 O2-3: \(U=\operatorname{im}N\)과 rank-10 obstruction \(O=\operatorname{im}D_{\rm stack}\)의 구조 비교다. 새 계산 전에 global position / purpose / dependency / pass-fail consequence를 먼저 정리하고, corrected artifact를 우선 사용하자.**
 
 ### Session safety rules
 
-- **Map first:** recover global state from this file before relying on conversational memory.
-- **Frozen means frozen:** do not recompute a frozen result just because a new chat cannot see the old calculation.
-- **Artifact first:** downstream experiments should consume verified artifacts whenever possible.
-- **Contradiction first:** only reopen provenance/audit if a genuinely incompatible result appears.
-- **Experiment gate:** before code/execution, state purpose, dependency, expected interpretation, and pass/fail consequence.
-- **Separate history from state:** `research/00_RESEARCH_LOG.md` preserves chronology; this file preserves the current map.
+- **Map first:** recover global state from this file.
+- **Frozen means frozen:** do not recompute frozen results without contradiction.
+- **Artifact first:** downstream experiments consume verified artifacts.
+- **Contradiction first:** reopen provenance only for a genuine incompatible result.
+- **Experiment gate:** before execution, state purpose, dependency, expected interpretation, and pass/fail consequence.
+- **Separate history from state:** chronology stays in `research/00_RESEARCH_LOG.md`.
 
 ---
 
@@ -311,14 +294,12 @@ Then provide the relevant GitHub Actions run or artifact only if a concrete calc
 ### History / process
 `research/00_RESEARCH_LOG.md`
 
-Preserves detailed chronology, including failed experiments, implementation mistakes, corrections, and provenance investigations.
+Preserves chronology, failed experiments, implementation mistakes, corrections, and provenance investigations.
 
 ### State / map
-`RESEARCH_MAP.md` (this file)
+`RESEARCH_MAP.md`
 
-Preserves only the current research state, frozen results, open questions, and next path.
-
-The two documents serve different purposes and should not be merged into one giant record.
+Preserves current research state, frozen results, open questions, and next path.
 
 ---
 
@@ -327,9 +308,9 @@ The two documents serve different purposes and should not be merged into one gia
 - 🟢 **FROZEN / VERIFIED** — may be used downstream without routine recomputation.
 - 🟡 **OPEN** — mathematically meaningful but not settled.
 - 🔴 **REJECTED** — strategy/result ruled out for the stated purpose.
-- ⚪ **BACKGROUND** — context, not a current research gate.
+- ⚪ **BACKGROUND / NOT YET DETERMINED** — contextual or unresolved historical issue, not a current mathematical gate.
 
-### Current state at last update
+### Current state
 
 | Item | Status |
 |---|---|
@@ -342,7 +323,14 @@ The two documents serve different purposes and should not be merged into one gia
 | rank-45 intertwiner \(\tau\) | 🟢 Verified |
 | A3-4 provenance audit | 🟢 Closed |
 | bracket discrepancy rank 10 | 🟢 Computed + independently verified |
-| meaning of rank-10 obstruction | 🟡 Open |
+| O2-2R/S/T | 🟢 PASS |
+| \(T_g=g^{-T}\) | 🟢 Exact / verified |
+| \(O=\operatorname{Im}D_{\rm stack}\) is an \(H\)-submodule | 🟢 Verified |
+| \(A_W\) identity with action defining \(N\) | 🟢 Verified |
+| legacy tuple-action convention archaeology | ⚪ Not yet determined |
+| O2-3 \(\ker D=I\) | 🟡 Open |
+| O2-3 \(\dim O=10\) | 🟡 Open |
+| O2-3 induced \(W/I\to O\) isomorphism | 🟡 Open |
 | q=3 vs q=∞ distinction via obstruction | 🟡 Open |
 | intrinsic recovery of \(\chi\) | 🟡 Open |
 
@@ -350,28 +338,23 @@ The two documents serve different purposes and should not be merged into one gia
 
 ## 11. Immediate next checkpoint
 
-**Do not start by asking whether rank 10 is "good" or "bad".**
-
-Start by asking:
+Do not ask whether rank 10 is "good" or "bad". Ask first:
 
 \[
-\boxed{\text{What exactly is the 10-dimensional obstruction as a mathematical subspace/module?}}
+\boxed{\ker D_{\rm stack}\stackrel{?}{=}I=\ker N}
 \]
 
-Then ask:
+and
 
 \[
-\boxed{\text{Is that object canonical under the relevant symmetry and filtration data?}}
+\boxed{\dim\operatorname{Im}D_{\rm stack}\stackrel{?}{=}10.}
 \]
 
-Then, and only then:
-
+If both pass, the decisive next object is
 \[
-\boxed{\text{Does it distinguish }q=3\text{ from }q=\infty\text{?}}
+\boxed{\bar D_{\rm stack}:W/I\longrightarrow O}
 \]
-
-Finally:
-
+and the question is whether it identifies \(O\) with the known module
 \[
-\boxed{\text{Can that distinction contribute to intrinsic recovery of }\chi\text{?}}
+\boxed{U=\operatorname{im}N\cong W/I.}
 \]
