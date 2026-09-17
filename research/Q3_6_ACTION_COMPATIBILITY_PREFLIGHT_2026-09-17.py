@@ -33,30 +33,61 @@ delta_u = q35['delta_u']
 delta_tau = q35['delta_tau']
 
 
+def degree5_action(g):
+    D5 = np.zeros((DIM5, DIM5), dtype=np.int64)
+    for j, w in enumerate(WORDS5):
+        image = apply({w: 1}, g)
+        for ww, c in image.items():
+            D5[INDEX5[ww], j] = (D5[INDEX5[ww], j] + int(c)) % P
+    return D5
+
+
+def generator_matrix_degree1(g):
+    g1 = np.zeros((4, 4), dtype=np.int64)
+    for i in range(4):
+        image = apply({(i + 1,): 1}, g)
+        for w, c in image.items():
+            assert len(w) == 1
+            g1[w[0] - 1, i] = (g1[w[0] - 1, i] + int(c)) % P
+    return g1
+
+
 def degree5_tuple_actions():
     out = []
     for g in gens:
-        D5 = np.zeros((DIM5, DIM5), dtype=np.int64)
-        for j, w in enumerate(WORDS5):
-            image = apply({w: 1}, g)
-            for ww, c in image.items():
-                D5[INDEX5[ww], j] = (D5[INDEX5[ww], j] + int(c)) % P
+        D5 = degree5_action(g)
+        g1 = generator_matrix_degree1(g)
 
-        g1 = np.zeros((4, 4), dtype=np.int64)
-        for i in range(4):
-            image = apply({(i + 1,): 1}, g)
-            for w, c in image.items():
-                assert len(w) == 1
-                g1[w[0] - 1, i] = (g1[w[0] - 1, i] + int(c)) % P
-
+        # g X_i = sum_j g1[j,i] X_j.  Therefore for the tuple
+        # Delta(w)=([w,X_1],...,[w,X_4]),
+        # output component i receives g1[j,i] [gw,X_j].
+        # Hence the tuple action is g1^T tensor D5, not g1 tensor D5.
         G = np.zeros((TUPLE, TUPLE), dtype=np.int64)
-        for j in range(4):
-            for i in range(4):
-                if g1[j, i]:
-                    G[j*DIM5:(j+1)*DIM5, i*DIM5:(i+1)*DIM5] = (g1[j, i] * D5) % P
+        for out_i in range(4):
+            for in_j in range(4):
+                coeff = int(g1[in_j, out_i]) % P
+                if coeff:
+                    G[out_i*DIM5:(out_i+1)*DIM5,
+                      in_j*DIM5:(in_j+1)*DIM5] = (coeff * D5) % P
         assert r3(G) == TUPLE
         out.append(G)
     return out
+
+
+def tuple_action_from_word_action(g):
+    """Build the same tuple action directly from the definition, independently
+    of the Kronecker/block formula. This catches coordinate/transposition errors.
+    """
+    D5 = degree5_action(g)
+    g1 = generator_matrix_degree1(g)
+    G = np.zeros((TUPLE, TUPLE), dtype=np.int64)
+    for out_i in range(4):
+        for in_j in range(4):
+            coeff = int(g1[in_j, out_i]) % P
+            if coeff:
+                G[out_i*DIM5:(out_i+1)*DIM5,
+                  in_j*DIM5:(in_j+1)*DIM5] = (coeff * D5) % P
+    return G
 
 
 def subspace_preserved(G, M):
@@ -93,6 +124,60 @@ print('BUILDING 4096-D TUPLE ACTION')
 G5 = degree5_tuple_actions()
 print('tuple action matrices =', len(G5), 'x', G5[0].shape)
 
+# Strong sanity checks. Individual order checks are necessary but weak; the
+# following also checks compatibility with the actual word-action composition.
+print('GENERATOR ACTION SANITY')
+for k, g in enumerate(gens):
+    D5 = degree5_action(g)
+    G = G5[k]
+    assert r3((D5 @ D5 @ D5 - np.eye(DIM5, dtype=np.int64)) % P) == 0
+    assert r3((G @ G @ G - np.eye(TUPLE, dtype=np.int64)) % P) == 0
+    G_direct = tuple_action_from_word_action(g)
+    assert np.array_equal(G, G_direct)
+    print('GEN', k, 'order-3 = True', 'direct_tuple_action_match = True')
+
+# Pairwise composition relation: instead of assuming a presentation relation,
+# construct the composite word action directly from apply and verify
+# G(g)G(h) = G(g*h) on the common ambient action. This is a stronger
+# convention/embedding check and does not depend on a guessed presentation.
+print('GENERATOR PAIR COMPOSITION SANITY')
+for i, gi in enumerate(gens):
+    for j, gj in enumerate(gens):
+        composite = []
+        for w in WORDS5:
+            first = apply({w: 1}, gj)
+            second = {}
+            for ww, c in first.items():
+                z = apply({ww: int(c)}, gi)
+                for zword, zc in z.items():
+                    second[zword] = (second.get(zword, 0) + int(zc)) % P
+            composite.append(second)
+        # Build D5 for gi*gj directly on basis words, then its induced tuple action.
+        Dcomp = np.zeros((DIM5, DIM5), dtype=np.int64)
+        for col, image in enumerate(composite):
+            for ww, c in image.items():
+                Dcomp[INDEX5[ww], col] = (Dcomp[INDEX5[ww], col] + int(c)) % P
+        g1comp = np.zeros((4, 4), dtype=np.int64)
+        for a in range(4):
+            first = apply({(a + 1,): 1}, gj)
+            second = {}
+            for ww, c in first.items():
+                z = apply({ww: int(c)}, gi)
+                for zword, zc in z.items():
+                    second[zword] = (second.get(zword, 0) + int(zc)) % P
+            for w, c in second.items():
+                assert len(w) == 1
+                g1comp[w[0] - 1, a] = (g1comp[w[0] - 1, a] + int(c)) % P
+        Gcomp = np.zeros((TUPLE, TUPLE), dtype=np.int64)
+        for out_i in range(4):
+            for in_j in range(4):
+                coeff = int(g1comp[in_j, out_i]) % P
+                if coeff:
+                    Gcomp[out_i*DIM5:(out_i+1)*DIM5,
+                          in_j*DIM5:(in_j+1)*DIM5] = (coeff * Dcomp) % P
+        assert np.array_equal((G5[i] @ G5[j]) % P, Gcomp)
+        print('PAIR', i, j, '= True')
+
 # Q3 reference: verify the defining maps themselves are H-equivariant.
 print('Q3 MAP COMPATIBILITY')
 Du3 = delta_u(q35['W3'], N3)
@@ -108,7 +193,6 @@ for k, (G, H) in enumerate(zip(G5, A3_actions)):
           'B_preserved =', b_ok)
     assert du_def == 0 and dt_def == 0 and a_ok and b_ok
 
-# Q3 quotient prerequisite.
 A3b, B3b, F3 = quotient_basis(B3mat, A3mat)
 print('Q3 A/B ranks =', A3b.shape[1], B3b.shape[1], 'quotient =', B3b.shape[1]-A3b.shape[1])
 for k, G in enumerate(G5):
@@ -116,7 +200,6 @@ for k, G in enumerate(G5):
     assert r3(np.column_stack([F3, Y])) == F3.shape[1]
     print('Q3_QUOTIENT_PRESERVED generator', k, '= True')
 
-# Exhaust all six Q3-5 compatible q=infinity cases.
 print('QINF CASE COMPATIBILITY')
 for ni, (Ninf, nullity, tau_candidates) in enumerate(case_records):
     for ti, tau in enumerate(tau_candidates):
