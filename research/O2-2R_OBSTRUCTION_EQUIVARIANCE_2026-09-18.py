@@ -1,3 +1,4 @@
+# O2-2R verification artifact: actual obstruction tuple equivariance law.
 import runpy
 import numpy as np
 
@@ -117,8 +118,6 @@ def solve_block_matrix(D, A_domain, A_target):
 
     M = np.column_stack(columns) % P
     b = np.concatenate([B.reshape(-1) for B in target_blocks]) % P
-    # The concatenation above orders blocks by h; columns use the same
-    # flattening convention through candidate.reshape(-1).
     rank_system, sol, nullity = rref_solve(M, b)
     if sol is None:
         return None, rank_system, nullity, False
