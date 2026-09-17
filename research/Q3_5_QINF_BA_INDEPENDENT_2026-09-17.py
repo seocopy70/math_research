@@ -88,13 +88,21 @@ assert r3(qinf_basis)==45
 # Coordinates: X1^[3] is word 111, bracket with X2 gives 1112-2111.
 d=np.zeros(256,dtype=np.int64); d[ns['index4'][(1,1,1,2)]]=1; d[ns['index4'][(2,1,1,1)]]=2
 
-# Build H-orbit using the same ambient generator action.
+# Build H-orbit in the ambient word space. apply_linear_map consumes
+# sparse word dictionaries, so convert each dense vector explicitly.
+def dense_to_word_dict(v):
+    v=np.array(v,dtype=np.int64)%P
+    return {ns['index4'][w]: int(c) for w,c in zip(ns['words4'],v) if int(c)%P}
 def orbit_vec(v):
     out=[v.copy()]; seen={tuple(v.tolist())}; q=[v.copy()]
     while q:
         a=q.pop()
+        a_dict={w:int(c) for w,c in zip(ns['words4'],a) if int(c)%P}
         for g in ns['gens']:
-            b=np.array(ns['apply_linear_map'](a,g),dtype=np.int64)%P
+            b_dict=ns['apply_linear_map'](a_dict,g)
+            b=np.zeros(256,dtype=np.int64)
+            for w,c in b_dict.items():
+                b[ns['index4'][w]]=int(c)%P
             key=tuple(b.tolist())
             if key not in seen:seen.add(key);out.append(b);q.append(b)
     return np.column_stack(out)
