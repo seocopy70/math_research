@@ -327,18 +327,18 @@ Therefore
 oxed{dimDelta O=10,qquad Delta O	ext{ is an }H	ext{-submodule}.}
 ]
 
-### O2-6 — basepoint-independence test: PLANNED / OPEN
+### O2-6 — basepoint-independence: PASS / COMPLETE
 
-A new checkpoint research/O2_6_basepoint_independence_2026-09-18.py and workflow .github/workflows/o2-6-basepoint-independence.yml have been added.
+Record: research/O2-6_RESULT_2026-09-18.md  
+Run 35284130822, job 105412565419.
 
-Purpose: within the **already frozen B1 admissible family** \\(\\tau_b=\\tau(I+bN)\\), test whether changing the basepoint changes the variation direction. The test is deliberately stronger than equality of dimensions: it compares the actual finite-difference maps
+The complete frozen B1 family was tested by comparing the actual finite-difference maps:
 \\[
 D_1-D_0,\\qquad D_2-D_1,\\qquad D_0-D_2.
 \\]
+All three maps have rank 10 and are exactly equal. Hence the affine variation direction, and therefore \\(\\Delta O=\\operatorname{Im}\\Delta D\\), is independent of the basepoint within the complete verified B1 admissible family.
 
-Expected algebra over \\(\\mathbb F_3\\): these should coincide if the affine family is genuinely one-dimensional and the variation direction is basepoint-independent. A PASS would establish basepoint-independence **within the frozen B1 family**; it would not by itself prove a filtration-only characterization beyond that family.
-
-**Do not mark this PASS until the GitHub Actions run completes successfully.**
+This closes the basepoint-dependence loophole left by O2-5. It still does not provide a transport-free formula solely in filtered/graded terms, nor does it establish \\(\\Delta O\\cong U\\) canonically, q=3 versus q=infinity, or recovery of \\(\\chi\\).
 
 ### Critical logical boundary
 
@@ -412,7 +412,7 @@ Only after this gate should the project move to the explicit (q=3) versus (q=inf
 | \(\ker D_{\rm stack}=I\) | 🟢 PASS |
 | \(\dim O=10\) | 🟢 PASS |
 | \(U\cong O\) as \(H\)-modules | 🟢 PASS |
-| transport-independence / filtration-intrinsic status | 🟡 Current gate |
+| absolute transport-independence of O_tau | 🔴 Failed in O2-4 |\n| variation-module basepoint independence within B1 family | 🟢 O2-6 PASS |\n| full filtration-intrinsic characterization of Delta O | 🟡 Open |
 | legacy tuple-action archaeology | ⚪ Not yet determined |
 | q=3 vs q=∞ distinction | 🟡 Open |
 | intrinsic recovery of \(\chi\) | 🟡 Open |
