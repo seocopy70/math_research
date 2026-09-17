@@ -10,7 +10,7 @@ ns = runpy.run_path(ROOT + 'phase2_1_invariant_space_verification_2026-09-15.py'
 ns3 = runpy.run_path(ROOT + 'phase2_3_endH_optimized_2026-09-15.py')
 A = [np.array(x, dtype=np.int64) % P for x in ns['action_matrices']]
 N = np.array(ns3['N'], dtype=np.int64) % P
-rank3 = ns['rank3']
+rank3 = ns3['rank3']
 B = np.array(ns['B'], dtype=np.int64) % P
 R4_ind = np.array(ns['R4_ind'], dtype=np.int64) % P
 basisW = [dict(x) for x in ns['basis']]
@@ -164,7 +164,7 @@ Gens := List(Raw,m->ImmutableMatrix(F,List(m,r->List(r,x->One(F)*x))));;
 M := GModuleByMats(Gens,F);;
 mins := MTX.BasesMinimalSubmodules(M);;
 Print("B1-2 UNIQUE 45D LIFT TEST\n");
-Print("QUOTIENT_DIM = ",Dimension(M),"\n");
+Print("QUOTIENT_DIM = ",MTX.Dimension(M),"\n");
 Print("MINIMAL_SUBMODULE_COUNT = ",Length(mins),"\n");
 Print("MINIMAL_SUBMODULE_DIMS = ",List(mins,Length),"\n");
 QUIT;
