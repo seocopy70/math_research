@@ -1,0 +1,17 @@
+name: Gate 0-A independent q3 qinf W45
+
+on:
+  workflow_dispatch:
+
+jobs:
+  gate0a-independent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Run independent Gate 0-A
+        run: python research/GATE0A_Q3_QINF_INDEPENDENT_W45_2026-09-17.py
