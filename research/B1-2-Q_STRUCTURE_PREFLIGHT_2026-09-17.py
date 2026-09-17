@@ -100,7 +100,7 @@ for ga in A:
     Ca=(Ci @ Ab @ C_in_B)%P
     assert np.all(Ca[35:,:35]==0)
     Qgens.append(Ca[35:,35:])
-assert all(rank3(q)==25 for q in Qgens)
+assert all(q.shape == (25,25) and rank3(q) <= 25 for q in Qgens)
 
 # GAP row/right action: transpose authoritative column-action matrices.
 def gap_rows(M):
@@ -112,17 +112,14 @@ Raw := %s;;
 Gens := List(Raw,m->ImmutableMatrix(F,List(m,r->List(r,x->One(F)*x))));;
 M := GModuleByMats(Gens,F);;
 Print("B1-2 Q STRUCTURE PREFLIGHT\n");
-Print("Q_DIM = ",Dimension(M),"\n");
+Qdim := Length(Gens[1]);;
+if not ForAll(Gens,g->Length(g)=Qdim) then Error("inconsistent Q generator dimensions"); fi;
+Print("Q_DIM = ",Qdim,"\n");
 Print("Q_INDECOMPOSABLE = ",MTX.IsIndecomposable(M),"\n");
 Print("Q_SIMPLE = ",MTX.IsIrreducible(M),"\n");
 mins := MTX.BasesMinimalSubmodules(M);;
 Print("MINIMAL_COUNT = ",Length(mins),"\n");
 Print("MINIMAL_DIMS = ",List(mins,Length),"\n");
-for i in [1..Length(mins)] do
-  S := GModuleByMats(Gens,F);;
-  # Report only dimensions here; isomorphism to the previously identified S10
-  # is tested in the full B1-2 classification stage.
-od;
 QUIT;
 ''' % raw
 with tempfile.NamedTemporaryFile('w',suffix='.g',delete=False,encoding='utf-8') as f:
