@@ -1,0 +1,57 @@
+name: B1-2 Q structure preflight
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/B1-2-Q_STRUCTURE_PREFLIGHT_2026-09-17.py'
+      - '.github/workflows/b1-2-q-structure-preflight.yml'
+
+jobs:
+  q-structure-preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up job shell
+        run: |
+          set -euo pipefail
+          echo 'CI shell hardened'
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install numpy sympy
+
+      - name: Install GAP
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y gap
+
+      - name: Verify GAP MeatAxe interface
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > /tmp/probe.g <<'EOF'
+          F := GF(3);;
+          A := IdentityMat(1,F);;
+          M := GModuleByMats([A],F);;
+          if not MTX.IsIrreducible(M) then Error("MeatAxe probe failed"); fi;
+          Print("GAP_MEATAXE_PROBE = PASS\n");
+          QUIT;
+          EOF
+          gap -q /tmp/probe.g
+
+      - name: Run Q structure preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/B1-2-Q_STRUCTURE_PREFLIGHT_2026-09-17.py
