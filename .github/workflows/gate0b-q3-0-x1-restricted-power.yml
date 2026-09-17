@@ -1,0 +1,20 @@
+name: Gate 0-B Q3-0 X1 restricted power
+
+on:
+  workflow_dispatch:
+
+jobs:
+  q3-0:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Q3-0
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/GATE0B_Q3_0_QINF_X1_RESTRICTED_POWER_2026-09-17.py
