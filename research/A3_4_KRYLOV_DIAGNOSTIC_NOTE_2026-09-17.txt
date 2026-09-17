@@ -1,0 +1,1 @@
+Diagnostic marker for the A3-4 Krylov-rank investigation. No research calculation is changed by this file.
