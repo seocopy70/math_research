@@ -15,10 +15,12 @@ C) Im(Delta D) is stable under the same H-action rho_T used for D_stack.
 Coordinate audit:
 - tau and N are matrices on the 45-dimensional W/Wd coefficient bases.
 - I_coord is the fixed intersection basis in authoritative TRUE-Q4 coordinates.
-- Therefore the B1 pointwise condition must be tested after lifting the
-  coefficient transport to TRUE-Q4 coordinates:
-      T_b^amb = Wd @ tau @ S_b @ Q_W45^{-1}
-  and checking (T_b^amb - I) @ I_coord = 0.
+- Q_W45 maps W-basis coefficients to TRUE-Q4 coordinates.
+- Therefore the B1 pointwise condition is checked by first expressing I_coord
+  in W-basis coefficients, then applying the ambient lift:
+      I_Wcoeff = Q_W45^{-1} I_coord
+      T_b^amb = Wd @ tau_b @ Q_W45^{-1}
+  and checking (T_b^amb - W @ Q_W45^{-1}) @ I_coord = 0.
 """
 from pathlib import Path
 import runpy
@@ -136,9 +138,13 @@ for b in range(3):
     T_b_ambient=(Wd@tau_b@Q_W45_inv)%P
     E,D=obstruction_for(tau_b)
 
-    # B1 pointwise identification, now in the same TRUE-Q4 coordinates as
-    # A3-4-10: T_b_ambient fixes every vector of I pointwise.
-    B1_defect=(T_b_ambient@I_coord-I_coord)%P
+    # B1 pointwise identification: I_coord contains TRUE-Q4 coordinates,
+    # so first convert those vectors to W-basis coefficients.  Compare the
+    # transported ambient vector with the original ambient W vector.
+    I_Wcoeff=(Q_W45_inv@I_coord)%P
+    I_ambient_from_W=(W@I_Wcoeff)%P
+    I_ambient_transported=(T_b_ambient@I_Wcoeff)%P
+    B1_defect=(I_ambient_transported-I_ambient_from_W)%P
     B1_ranks.append(rank3(B1_defect))
     assert B1_ranks[-1]==0
 
