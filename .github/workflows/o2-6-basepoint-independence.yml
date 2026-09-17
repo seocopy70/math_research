@@ -7,6 +7,7 @@ on:
       - 'research/O2_6_basepoint_independence_2026-09-18.py'
       - 'research/O2_5_affine_variation_2026-09-18.py'
       - '.github/workflows/o2-6-basepoint-independence.yml'
+      - 'RESEARCH_MAP.md'
       - 'research/A3-4-10_CANONICAL_TAU_REVALIDATION_2026-09-16.py'
       - 'research/phase2_3_endH_optimized_2026-09-15.py'
 
