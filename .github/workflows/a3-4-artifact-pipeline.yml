@@ -1,0 +1,72 @@
+name: A3-4 Artifact Pipeline
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/A3_4_BUILD_DATA_2026-09-17.py'
+      - 'research/A3_4_K_AUDIT_FROM_ARTIFACT_2026-09-17.py'
+      - '.github/workflows/a3-4-artifact-pipeline.yml'
+
+jobs:
+  build-data:
+    name: build-data
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install numpy
+        run: python -m pip install numpy
+
+      - name: Print commit SHA
+        run: echo "BUILD GITHUB_SHA=${GITHUB_SHA}"
+
+      - name: Build A3-4 data artifact
+        run: python research/A3_4_BUILD_DATA_2026-09-17.py
+
+      - name: Upload A3-4 data artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: a3-4-data-v1
+          path: |
+            artifacts/a3_4_data.npz
+            artifacts/a3_4_data_meta.json
+          if-no-files-found: error
+
+  k-audit:
+    name: k-audit
+    needs: build-data
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install numpy
+        run: python -m pip install numpy
+
+      - name: Print commit SHA
+        run: echo "AUDIT GITHUB_SHA=${GITHUB_SHA}"
+
+      - name: Download upstream artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: a3-4-data-v1
+          path: artifacts
+
+      - name: Run read-only K audit
+        run: python research/A3_4_K_AUDIT_FROM_ARTIFACT_2026-09-17.py
