@@ -28,7 +28,6 @@ def rank3(A):
 
 
 def solve_coords(B, Y):
-    """Coordinates of Y in the full-column-rank basis B over F_3."""
     B = np.array(B, dtype=np.int64) % P
     Y = np.array(Y, dtype=np.int64) % P
     assert B.ndim == 2 and Y.ndim == 2
@@ -65,8 +64,21 @@ O_basis = np.array(o2_1['O_basis'], dtype=np.int64) % P
 assert O_basis.shape == (816, 10)
 assert rank3(O_basis) == 10
 
-# IMPORTANT: reuse the exact corrected degree-5 action machinery from the
-# standalone A3-4-10 sanity artifact.  We do not reconstruct D5 here.
+# O1-0 contains the authoritative 204-dimensional Lie degree-5 basis and
+# coordinate map. Reuse these exact coordinates; do not treat the 1024-word
+# associative space as L5.
+o1_0 = runpy.run_path(ROOT + 'O1-0_OBSTRUCTION_ANNIHILATES_I_2026-09-18.py')
+L5_basis = np.array(o1_0['L5_basis'], dtype=np.int64) % P
+L5_left = np.array(o1_0['L5_left'], dtype=np.int64) % P
+rows = list(o1_0['rows'])
+assert L5_basis.shape == (1024, 204)
+assert L5_left.shape == (204, 204)
+assert len(rows) == 204
+assert rank3(L5_basis) == 204
+assert np.array_equal((L5_left @ L5_basis[rows, :]) % P, np.eye(204, dtype=np.int64))
+
+# The sanity artifact supplies the already verified D1/D4/D5 associative
+# substitution machinery and the five Sp4(F3) presentation generators.
 san = runpy.run_path(ROOT + 'A3_4_10_BRACKET_PIPELINE_SANITY_2026-09-17.py')
 gens = san['gens']
 WORDS5 = san['WORDS5']
@@ -77,27 +89,28 @@ assert len(gens) == 5
 assert len(WORDS5) == 1024
 assert len(INDEX5) == 1024
 
-# The ambient obstruction target is L5^4 = four 204-dimensional blocks.
-# Its H-action is the direct-sum action of the SAME corrected D5(g) on each
-# block.  D5(g) itself is obtained by calling the verified sanity artifact's
-# degree_action_matrix(g, 5, WORDS5, INDEX5), not by rebuilding an alternative
-# Kronecker/transpose convention here.
-D5_actions = [
-    degree_action_matrix(g, 5, WORDS5, INDEX5) % P
-    for g in gens
-]
-assert all(A.shape == (1024, 1024) for A in D5_actions)
+# Convert each verified associative D5 action to its induced action on the
+# actual Lie subspace L5. This gives the unique 204 x 204 matrix A5_lie with
+# A5_assoc * L5_basis = L5_basis * A5_lie.
+D5_actions = []
+for g in gens:
+    A5_assoc = degree_action_matrix(g, 5, WORDS5, INDEX5) % P
+    transformed_basis = (A5_assoc @ L5_basis) % P
+    A5_lie = (L5_left @ transformed_basis[rows, :]) % P
+    assert A5_lie.shape == (204, 204)
+    assert np.array_equal((L5_basis @ A5_lie) % P, transformed_basis)
+    D5_actions.append(A5_lie)
 
-# A3-4-10 stores each obstruction block in L5 coordinates and O2-1 stacks
-# four blocks.  Since each block is the same L5 representation, the ambient
-# tuple action is block diagonal with the verified D5(g) repeated four times.
-def tuple_action(A5, X):
+assert all(A.shape == (204, 204) for A in D5_actions)
+
+# The ambient obstruction target is L5^4 = four 204-dimensional blocks.
+def tuple_action(A5_lie, X):
     X = np.array(X, dtype=np.int64) % P
     assert X.shape[0] == 816
     out = np.zeros_like(X)
     for b in range(4):
         sl = slice(204 * b, 204 * (b + 1))
-        out[sl, :] = (A5 @ X[sl, :]) % P
+        out[sl, :] = (A5_lie @ X[sl, :]) % P
     return out
 
 
@@ -107,21 +120,21 @@ print('dim O =', rank3(O_basis))
 print('number of H generators =', len(gens))
 print('generator convention = the 5 Sp4(F3) presentation generators from the sanity artifact')
 print('tuple target = L5^4 = 4 x 204 coordinates')
-print('degree-5 action source = A3_4_10_BRACKET_PIPELINE_SANITY_2026-09-17.py:degree_action_matrix')
-print('tuple action = direct sum of the SAME verified D5(g) on all four obstruction blocks')
+print('degree-5 associative source = sanity degree_action_matrix (1024 x 1024)')
+print('induced Lie degree-5 action = 204 x 204 via authoritative L5_basis/L5_left')
+print('tuple action = direct sum of the SAME induced D5^Lie(g) on all four obstruction blocks')
 
 all_stable = True
 induced_actions = []
-for gi, (g, A5) in enumerate(zip(gens, D5_actions)):
-    transformed = tuple_action(A5, O_basis)
+for gi, (g, A5_lie) in enumerate(zip(gens, D5_actions)):
+    transformed = tuple_action(A5_lie, O_basis)
     augmented_rank = rank3(np.column_stack([O_basis, transformed]))
     stable = augmented_rank == 10
-    print('GENERATOR', gi, 'D5 shape =', A5.shape)
+    print('GENERATOR', gi, 'D5^Lie shape =', A5_lie.shape)
     print('GENERATOR', gi, 'rank([O | gO]) =', augmented_rank)
     print('GENERATOR', gi, 'O_STABLE =', stable)
     if not stable:
         all_stable = False
-        # No induced 10x10 action is defined when stability fails.
         continue
     induced = solve_coords(O_basis, transformed)
     assert induced.shape == (10, 10)
