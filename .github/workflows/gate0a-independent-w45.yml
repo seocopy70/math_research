@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
+    paths:
+      - 'research/GATE0A_Q3_QINF_INDEPENDENT_W45_2026-09-17.py'
+      - '.github/workflows/gate0a-independent-w45.yml'
 
 jobs:
   gate0a-independent:
