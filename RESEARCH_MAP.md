@@ -260,6 +260,86 @@ The next stage consumes the corrected A3-4 artifacts from commit `62886877f97e58
 
 ---
 
+
+---
+
+## 6A. O2-4 — absolute transport-independence: FAIL / COMPLETE
+
+Record: `research/O2-4_RESULT_2026-09-18.md`  
+Run `35281594800`.
+
+For the exact B1-admissible normalized family
+[
+	au_b=	au(I+bN),qquad b=0,1,2,
+]
+each obstruction image has rank 10, but the three images are distinct. Their pairwise join ranks are 20:
+[
+operatorname{rank}(O_b+O_c)=20quad(b
+e c).
+]
+Hence
+[
+oxed{O_0,O_1,O_2	ext{ are not equal}.}
+]
+
+**Interpretation:** the absolute obstruction image (O_	au=operatorname{Im}D_	au) is transport-dependent. This is a localized failure of canonicality, not a failure of the fixed-(	au) O2-3 module calculation.
+
+The earlier scalar rescaling idea (a	au) is **not an admissible transport freedom** under the B1 pointwise condition (	au|_I=I_{W_d}); it must not be used as an O2-4/O2-5 test.
+
+---
+
+## 6B. O2-5 — affine transport variation: PASS / COMPLETE
+
+Record: `research/O2-5_RESULT_2026-09-18.md`  
+Run `35283099072`, job `105409292646`  
+Final code commit: `5ab1e41befeb2c425ec0ad478de9665e78e3af9f`.
+
+The corrected implementation first resolved a coordinate-system issue: the 256-dimensional vectors are degree-4 ambient coordinates, not 45-dimensional (W)-coordinates. The final B1 audit compares both sides in the same 256-dimensional ambient coordinate system via
+[
+I_{W,mathrm{coeff}}=Q_{W45}^{-1}I_{mathrm{coord}},
+qquad
+T_b^{mathrm{amb}}=W_d	au_bQ_{W45}^{-1}.
+]
+
+All final workflow assertions passed.
+
+### Verified checkpoints
+
+- B1 admissibility of the exact (b=0,1,2) family: **PASS**.
+- Affine obstruction identity
+[
+D_b=D_0+bDelta D,qquad Delta D=D_1-D_0
+]
+: **PASS**.
+- Variation rank:
+[
+oxed{operatorname{rank}Delta D=10}
+]
+: **PASS**.
+- H-stability of
+[
+Delta O=operatorname{Im}Delta D
+]
+under the same transported target action used in O2-2: **PASS**.
+
+Therefore
+[
+oxed{dimDelta O=10,qquad Delta O	ext{ is an }H	ext{-submodule}.}
+]
+
+### Critical logical boundary
+
+O2-5 does **not** prove that (Delta O) is canonical under a change of base transport, nor that it is determined by filtration data alone. It establishes a 10-dimensional H-stable **transport-variation module** within the fixed B1 affine family.
+
+It also does not prove a canonical isomorphism (Delta Ocong U), distinguish (q=3) from (q=infty), or recover (chi).
+
+The next gate is therefore:
+[
+oxed{	ext{Is the variation module }Delta O	ext{ itself independent of the remaining admissible choices?}}
+]
+
+Only after this gate should the project move to the explicit (q=3) versus (q=infty) comparison.
+
 ## 7. What is NOT the current task
 
 - Do **not** redo the A3-4 provenance audit.
