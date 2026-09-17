@@ -2,6 +2,8 @@ name: Gate 0-A independent q3 qinf W45
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
 
 jobs:
   gate0a-independent:
