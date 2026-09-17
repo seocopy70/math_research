@@ -1,0 +1,29 @@
+name: Gate 0-B Q3 main D structure
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/GATE0B_Q3_MAIN_QINF_D_STRUCTURE_2026-09-17.py'
+      - '.github/workflows/gate0b-q3-main.yml'
+
+jobs:
+  q3-main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install numpy
+      - name: Run Q3 main
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/GATE0B_Q3_MAIN_QINF_D_STRUCTURE_2026-09-17.py
