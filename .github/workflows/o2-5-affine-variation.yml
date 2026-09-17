@@ -2,6 +2,12 @@ name: O2-5 Affine Variation
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'research/O2_5_affine_variation_2026-09-18.py'
+      - '.github/workflows/o2-5-affine-variation.yml'
+      - 'research/A3-4-10_CANONICAL_TAU_REVALIDATION_2026-09-16.py'
+      - 'research/phase2_3_endH_optimized_2026-09-15.py'
 
 jobs:
   o2-5:
