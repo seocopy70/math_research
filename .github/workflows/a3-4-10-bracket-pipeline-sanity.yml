@@ -2,6 +2,10 @@ name: A3-4-10 bracket pipeline sanity
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'research/A3_4_10_BRACKET_PIPELINE_SANITY_2026-09-17.py'
+      - '.github/workflows/a3-4-10-bracket-pipeline-sanity.yml'
 
 jobs:
   sanity:
