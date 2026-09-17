@@ -1,0 +1,28 @@
+name: O1-0 obstruction annihilates I
+
+on:
+  push:
+    paths:
+      - 'research/O1-0_OBSTRUCTION_ANNIHILATES_I_2026-09-18.py'
+      - 'research/A3-4-11_TRUE_R5_INTERSECTION_2026-09-16.py'
+      - 'research/phase2_3_endH_optimized_2026-09-15.py'
+      - 'research/phase2_23_A3_4_10_ambient_bracket_compatibility_2026-09-16.py'
+      - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
+      - 'research/phase2_18_A3-4-5_intersection_K_and_Sym2_2026-09-16.py'
+      - '.github/workflows/o1-0-obstruction-annihilates-i.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install numpy
+      - name: Run O1-0 direct annihilation test
+        run: python research/O1-0_OBSTRUCTION_ANNIHILATES_I_2026-09-18.py
