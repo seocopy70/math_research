@@ -1,4 +1,5 @@
 name: O2-8 precheck specialness of 9D shadow
+# O2-8 rerun after complete H-orbit-closure audit
 
 on:
   push:
