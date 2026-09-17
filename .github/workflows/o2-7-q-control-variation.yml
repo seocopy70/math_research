@@ -1,0 +1,22 @@
+name: O2-7 q-control variation module
+
+on:
+  push:
+    paths:
+      - 'research/O2_7_q_control_variation_module_2026-09-18.py'
+      - 'research/O2-7_Q_CONTROL_VARIATION_MODULE_DESIGN_2026-09-18.md'
+      - '.github/workflows/o2-7-q-control-variation.yml'
+  workflow_dispatch:
+
+jobs:
+  q-control:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install numpy
+      - name: Run O2-7
+        run: python research/O2_7_q_control_variation_module_2026-09-18.py
