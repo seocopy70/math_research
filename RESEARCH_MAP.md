@@ -353,6 +353,39 @@ The next gate is therefore:
 
 Only after this gate should the project move to the explicit (q=3) versus (q=infty) comparison.
 
+
+## 6C. O2-7 — q-control of transport variation: INFORMATIVE FAIL / COMPLETE
+
+Record: `research/O2-7_RESULT_2026-09-18.md`  
+Run: `35284838948`, final code commit `988f61c04f3c659db2b4bff285f8f0809d4e7f4f`.
+
+The first proposed identification
+[
+langle Hcdot [X_1^{[3]},X_2]angle = U
+]
+is false.
+
+Verified:
+- (dimlangle Hcdot dangle=45), so the q=3 p-power class (d=[X_1^{[3]},X_2]) generates all of (W).
+- (dim N(d)=1).
+- (dimlangle Hcdot N(d)angle=9).
+- (dim U=10), with (langle Hcdot N(d)anglesubset U).
+- (operatorname{im}(	au N)=	au(U)) at the tested subspace level.
+- The q=(infty) p-power control has (d_infty=0).
+
+Thus O2-7 is an **informative FAIL of the naive identification**, not a failure of the O2-3/O2-6 results. The q-sensitive class has a nontrivial 9-dimensional shadow inside (U), but (U) contains one additional dimension.
+
+### Next gate
+
+Characterize the exact extension
+[
+0	o langle Hcdot N(d)angle	o U	o U/langle Hcdot N(d)angle	o0
+]
+and determine whether the remaining 1-dimensional quotient/direction is related to (Delta D) or carries the q=3-specific information.
+
+The q=(infty) control used in O2-7 is local: it suppresses the p-power contribution and does not yet constitute a full recomputation of the q=(infty) filtered structure.
+
+
 ## 7. What is NOT the current task
 
 - Do **not** redo the A3-4 provenance audit.
@@ -412,7 +445,9 @@ Only after this gate should the project move to the explicit (q=3) versus (q=inf
 | \(\ker D_{\rm stack}=I\) | 🟢 PASS |
 | \(\dim O=10\) | 🟢 PASS |
 | \(U\cong O\) as \(H\)-modules | 🟢 PASS |
-| absolute transport-independence of O_tau | 🔴 Failed in O2-4 |\n| variation-module basepoint independence within B1 family | 🟢 O2-6 PASS |\n| full filtration-intrinsic characterization of Delta O | 🟡 Open |
+| absolute transport-independence of O_tau | 🔴 Failed in O2-4 |\n| variation-module basepoint independence within B1 family | 🟢 O2-6 PASS |\n| O2-7 raw p-power orbit = U | 🔴 False (orbit dimension 45) |
+| O2-7 H.N(d) inside U, dim 9 | 🟢 Verified |
+| full filtration-intrinsic characterization of Delta O | 🟡 Open |
 | legacy tuple-action archaeology | ⚪ Not yet determined |
 | q=3 vs q=∞ distinction | 🟡 Open |
 | intrinsic recovery of \(\chi\) | 🟡 Open |
