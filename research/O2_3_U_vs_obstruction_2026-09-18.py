@@ -165,9 +165,9 @@ U_left = left_inverse(U_basis)
 # ------------------------------------------------------------
 # O2-3B: character/trace precheck.
 # ------------------------------------------------------------
-# O is an image of the stacked obstruction. Its H-action is the verified
-# rho_T(g) tensor A5(g), with T_g = g^{-T}, applied blockwise to the four
-# degree-5 discrepancy blocks.
+# O is the image of the stacked obstruction. Its H-action is the verified
+# rho_T(g) tensor A5(g), with T_g = g^{-T}; this is already 4*1024 = 4096
+# dimensional because T_g acts on the four stacked discrepancy blocks.
 apply_linear_map = ns_D['apply_linear_map']
 WORDS5 = ns_D['WORDS5']
 INDEX5 = ns_D['INDEX5']
@@ -186,8 +186,8 @@ for g, AW in zip(gens, A_W):
         A5 = degree_action_matrix(g, WORDS5, INDEX5)
         Ginv = inverse3(g)
         T_g = Ginv.T % P
-        rho = np.kron(T_g, A5) % P
-        rho_stack = np.kron(np.eye(4, dtype=np.int64), rho) % P
+        rho_stack = np.kron(T_g, A5) % P
+        assert rho_stack.shape == (4096, 4096)
         AO = (O_left @ rho_stack @ O_basis) % P
         A_O.append(AO)
         trace_O.append(int(np.trace(AO) % P))
@@ -197,8 +197,8 @@ trace_match = rank_D == 10 and trace_U == trace_O
 # ------------------------------------------------------------
 # O2-3C: induced W/I -> O and comparison with U = im(N).
 # ------------------------------------------------------------
-# All matrices below use W-coordinates.  I_W is a 45x35 matrix of quotient
-# kernel coordinates, D is 4096x45, and N is 45x45.
+# All matrices below use W-coordinates. I_W is 45x35, D is 4096x45, and N
+# is 45x45.
 Ccols = []
 current = I_W.copy()
 r = rank3(current)
