@@ -29,8 +29,11 @@ jobs:
           gap -q <<'GAP'
           F := GF(3);
           A := IdentityMat(1,F);
-          M := GModuleByMats([A]);
-          Print(MTX.IsIrreducible(M),"\n");
+          M := GModuleByMats([A],F);
+          if not MTX.IsIrreducible(M) then
+            Error("GAP MeatAxe sanity probe failed");
+          fi;
+          Print("GAP_PROBE_OK\n");
           QUIT;
           GAP
       - name: Run A3-4-20R
