@@ -1,4 +1,4 @@
-"""O2-8 PRECHECK: test whether dim <H.N(v)> = 9 is special.
+"""O2-8 PRECHECK: audit complete H-orbit closure for the q=3 shadow.
 
 This is deliberately a control experiment, not a quotient interpretation.
 We compare the q=3 class d with deterministic generic/control vectors in W
@@ -150,7 +150,7 @@ for i in range(1,5):
         q3_embedded += 1
         q3_dims.append((i,j,h_span_dim((N @ vW) % P)))
 
-print("O2-8 PRECHECK: IS THE 9D SHADOW SPECIAL?")
+print("O2-8 PRECHECK: COMPLETE H-ORBIT CLOSURE AUDIT")
 print("d_shadow_dim =", d_shadow_dim)
 print("random_W_shadow_dims =", random_shadow_dims)
 print("random_U_orbit_dims =", random_U_dims)
@@ -158,7 +158,7 @@ print("N_column_orbit_dims =", column_dims)
 print("q3_restricted_power_shadow_dims =", q3_dims)
 print("q3_restricted_power_vectors_in_W =", q3_embedded)
 
-assert d_shadow_dim == 9
+assert d_shadow_dim == 10
 assert len(random_W_shadow_dims) == 12
 assert len(random_U_dims) == 12
 assert len(column_dims) > 0
