@@ -1,0 +1,22 @@
+name: A3-4 Action Provenance Audit
+
+on:
+  push:
+    branches:
+      - audit/a3-4-action-provenance
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Run focused audit
+        run: python research/A3_4_ACTION_PROVENANCE_AUDIT_2026-09-18.py
