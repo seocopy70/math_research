@@ -1,0 +1,22 @@
+name: O2-5 Affine Variation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  o2-5:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install numpy
+        run: python -m pip install numpy
+
+      - name: Run O2-5 affine variation
+        run: python research/O2_5_affine_variation_2026-09-18.py
