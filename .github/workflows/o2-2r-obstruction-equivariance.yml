@@ -1,0 +1,26 @@
+name: O2-2R Obstruction Equivariance
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - research/O2-2R_OBSTRUCTION_EQUIVARIANCE_2026-09-18.py
+      - .github/workflows/o2-2r-obstruction-equivariance.yml
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip numpy
+
+      - name: Run O2-2R actual obstruction equivariance test
+        run: python research/O2-2R_OBSTRUCTION_EQUIVARIANCE_2026-09-18.py
