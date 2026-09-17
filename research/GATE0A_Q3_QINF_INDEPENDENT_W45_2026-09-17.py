@@ -275,6 +275,8 @@ def build_q_path(label, relation):
         'R4': R4_matrix,
         'basis': basis,
         'actions': action_matrices,
+        # Export the independent 45D complement basis as ambient degree-4 columns.
+        'ambient_basis': np.column_stack([vec(a, 4) for a in basis]),
     }
 
 
