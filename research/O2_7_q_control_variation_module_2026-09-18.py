@@ -107,11 +107,28 @@ while changed:
             changed = True
 P_basis = np.column_stack(orbit)
 
+# The raw q-sensitive class generates all of W. Test instead whether the
+# nilpotent shadow N(d) generates the rank-10 module U.
+Nd = (N @ d_W) % P
+Nd_orbit = [Nd]
+changed = True
+while changed:
+    changed = False
+    for A in A_W:
+        v = (A @ Nd_orbit[-1]) % P
+        trial = np.column_stack(Nd_orbit + [v])
+        if rank3(trial) > rank3(np.column_stack(Nd_orbit)):
+            Nd_orbit.append(v)
+            changed = True
+Nd_basis = np.column_stack(Nd_orbit)
+
 # U = im(N). Equality is tested as actual subspace equality in W coordinates.
 U_basis = N
 P_dim = rank3(P_basis)
+Nd_dim = rank3(Nd.reshape(-1,1))
+Nd_orbit_dim = rank3(Nd_basis)
 U_dim = rank3(U_basis)
-join_dim = rank3(np.column_stack([P_basis, U_basis]))
+join_dim = rank3(np.column_stack([Nd_basis, U_basis]))
 
 # Source-side transport variation: im(tau N) equals tau(U).
 tauU = (tau @ U_basis) % P
@@ -126,9 +143,11 @@ print("O2-7 Q-CONTROL OF TRANSPORT-VARIATION MODULE")
 print("rank(d_q3) =", rank3(d.reshape(-1,1)))
 print("rank(d_q3 in Q4) =", rank3(d_Q.reshape(-1,1)))
 print("rank(P=<H.d_q3>) =", P_dim)
+print("rank(N(d_q3)) =", Nd_dim)
+print("rank(<H.N(d_q3)>) =", Nd_orbit_dim)
 print("rank(U=im(N)) =", U_dim)
-print("rank(P+U) =", join_dim)
-print("P_EQUALS_U =", P_dim == 10 and U_dim == 10 and join_dim == 10)
+print("rank(<H.N(d_q3)> + U) =", join_dim)
+print("N_D_GENERATES_U =", Nd_dim > 0 and Nd_orbit_dim == 10 and U_dim == 10 and join_dim == 10)
 print("rank(im(tau N)) =", rank3(tauN))
 print("rank(tau(U)+im(tau N)) =", transport_join)
 print("TAU_U_EQUALS_TAU_N =", transport_join == 10)
@@ -136,7 +155,9 @@ print("rank(d_qinf) =", rank3(d_inf.reshape(-1,1)))
 print("QINF_P_POWER_COLLAPSE =", rank3(d_inf.reshape(-1,1)) == 0)
 
 assert rank3(d.reshape(-1,1)) == 1
-assert P_dim == 10
+assert P_dim == 45
+assert Nd_dim > 0
+assert Nd_orbit_dim == 10
 assert U_dim == 10
 assert join_dim == 10
 assert transport_join == 10
