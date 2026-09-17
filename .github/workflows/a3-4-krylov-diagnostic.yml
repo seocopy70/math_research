@@ -24,6 +24,15 @@ jobs:
           replacement = "print('KRYLOV_RANK =', rank3(Krylov))"
           if src.count(needle) != 1:
               raise RuntimeError(f'expected exactly one Krylov assertion, found {src.count(needle)}')
-          Path('/tmp/A3_4_BUILD_DATA_KRYLOV_DIAGNOSTIC.py').write_text(src.replace(needle, replacement, 1), encoding='utf-8')
+          diag = src.replace(needle, replacement, 1)
+          stop = "assert Zcomm.shape[1] == 2"
+          if diag.count(stop) != 1:
+              raise RuntimeError(f'expected exactly one Zcomm dimension assertion, found {diag.count(stop)}')
+          diag = diag.replace(stop, "print('ZCOMM_DIM =', Zcomm.shape[1])", 1)
+          stop = "assert N is not None"
+          if diag.count(stop) != 1:
+              raise RuntimeError(f'expected exactly one N existence assertion, found {diag.count(stop)}')
+          diag = diag.replace(stop, "print('N_FOUND =', N is not None); assert N is not None", 1)
+          Path('/tmp/A3_4_BUILD_DATA_KRYLOV_DIAGNOSTIC.py').write_text(diag, encoding='utf-8')
           PY
           python /tmp/A3_4_BUILD_DATA_KRYLOV_DIAGNOSTIC.py
