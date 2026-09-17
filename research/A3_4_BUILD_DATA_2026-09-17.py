@@ -165,6 +165,37 @@ def orbit_basis(seed, gens, target, modulo=None):
     return basis
 
 
+def independent_columns(M, target):
+    B = np.empty((M.shape[0], 0), dtype=np.int64)
+    r = 0
+    for j in range(M.shape[1]):
+        C = np.column_stack([B, M[:, j]])
+        q = rank3(C)
+        if q > r:
+            B = C
+            r = q
+            if r == target:
+                break
+    assert r == target
+    return B
+
+
+def inverse3(A):
+    A = np.array(A, dtype=np.int64) % P
+    n = A.shape[0]
+    M = np.concatenate([A, np.eye(n, dtype=np.int64)], axis=1)
+    for c in range(n):
+        q = next((i for i in range(c, n) if M[i, c]), None)
+        assert q is not None
+        M[[c, q]] = M[[q, c]]
+        if M[c, c] == 2:
+            M[c] = (2 * M[c]) % P
+        for i in range(n):
+            if i != c and M[i, c]:
+                M[i] = (M[i] - M[i, c] * M[c]) % P
+    return M[:, n:]
+
+
 # Ambient degree-4 construction. No phase script is imported or executed.
 X = [{(1,): 1}, {(2,): 1}, {(3,): 1}, {(4,): 1}]
 L2 = [bracket(X[i], X[j]) for i in range(4) for j in range(i + 1, 4)]
@@ -201,42 +232,65 @@ assert len(orbit) == 360
 Wd = basis_columns(np.column_stack([vec4(a) for a in orbit]), 45)
 assert rank3(Wd) == 45
 
-# Coordinate action matrices on the stored W/Wd bases.
+# Correct quotient action: W lives in Q4 = L4/(R4), so gW is only
+# determined modulo R4. Use [R4 | W] coordinates and project away R4.
+R4_ind = independent_columns(R4_matrix, 15)
+Qbasis = np.column_stack([R4_ind, W])
+assert rank3(Qbasis) == 60
+rows = []
+RM = np.empty((0, 60), dtype=np.int64)
+rr = 0
+for i in range(D4):
+    cand = np.vstack([RM, Qbasis[i:i+1, :]])
+    nr = rank3(cand)
+    if nr > rr:
+        rows.append(i)
+        RM = cand
+        rr = nr
+        if rr == 60:
+            break
+assert len(rows) == 60
+Qinv = inverse3(Qbasis[rows, :])
+
+def qcoords(v):
+    return (Qinv @ (v[rows] % P)) % P
+
+
 def action_matrix(B, g):
-    Y = np.column_stack([vec4(apply_linear_map(
-        {w: int(c) for w, c in zip(WORDS4, B[:, j]) if int(c) % P}, g))
-        for j in range(B.shape[1])]) % P
-    A = np.column_stack([B, Y]) % P
-    m = B.shape[0]
-    out = np.zeros((B.shape[1], B.shape[1]), dtype=np.int64)
+    # B is a 45-column representative matrix in ambient L4 coordinates.
+    # The first 15 quotient coordinates are R4; the last 45 are W.
+    Qbasis_local = Qbasis if B is W else np.column_stack([R4_ind, B])
+    rows_local = rows if B is W else None
+    if B is W:
+        inv_local = Qinv
+    else:
+        rows2 = []
+        RM2 = np.empty((0, 60), dtype=np.int64)
+        rr2 = 0
+        for i in range(D4):
+            cand2 = np.vstack([RM2, Qbasis_local[i:i+1, :]])
+            nr2 = rank3(cand2)
+            if nr2 > rr2:
+                rows2.append(i)
+                RM2 = cand2
+                rr2 = nr2
+                if rr2 == 60:
+                    break
+        assert len(rows2) == 60
+        inv_local = inverse3(Qbasis_local[rows2, :])
+        rows_local = rows2
+    cols = []
     for j in range(B.shape[1]):
-        M = A.copy()
-        r = 0
-        piv = []
-        for c in range(B.shape[1]):
-            q = next((i for i in range(r, m) if M[i, c]), None)
-            if q is None:
-                continue
-            M[[r, q]] = M[[q, r]]
-            if M[r, c] == 2:
-                M[r] = (2 * M[r]) % P
-            for i in range(m):
-                if i != r and M[i, c]:
-                    M[i] = (M[i] - M[i, c] * M[r]) % P
-            piv.append(c)
-            r += 1
-            if r == m:
-                break
-        assert len(piv) == B.shape[1]
-        out[:, j] = M[:B.shape[1], -1]
-    return out % P
+        v = vec4(apply_linear_map(
+            {w: int(c) for w, c in zip(WORDS4, B[:, j]) if int(c) % P}, g))
+        full = (inv_local @ (v[rows_local] % P)) % P
+        cols.append(full[15:])
+    return np.column_stack(cols) % P
 
 AW = np.stack([action_matrix(W, g) for g in gens]).astype(np.int64)
 AWd = np.stack([action_matrix(Wd, g) for g in gens]).astype(np.int64)
 
-# Historical Phase-2-3 N construction, reproduced independently:
-# B = A2+A3+A4+A5 is cyclic, so End(B) consists of polynomials in B.
-# Impose commutation with all five generators and recover End_H(W).
+# Historical Phase-2-3 N construction, reproduced independently.
 Bcomm = (AW[1] + AW[2] + AW[3] + AW[4]) % P
 powers = []
 cur = np.eye(45, dtype=np.int64)
@@ -262,8 +316,6 @@ for j in range(2):
 I45 = np.eye(45, dtype=np.int64) % P
 assert any(np.array_equal(Xj, I45) for Xj in end_basis)
 
-# Identify the rank-10 square-zero nilpotent direction. Replacing N by 2N
-# leaves its kernel unchanged.
 N = None
 for a in range(3):
     for b in range(3):
@@ -292,8 +344,6 @@ I_W = Z[:45, :] % P
 I_Wd = Z[45:, :] % P
 I_ambient = (W @ I_W) % P
 assert rank3(I_ambient) == 35
-
-# Equality of the 35-dimensional coordinate subspaces.
 K_I_rank = rank3(np.column_stack([K_N, I_W]))
 K_EQUALS_I = (K_I_rank == 35)
 
@@ -327,6 +377,7 @@ meta = {
     'K_N_equals_I': bool(K_EQUALS_I),
     'source': 'research/A3_4_BUILD_DATA_2026-09-17.py',
     'policy': 'downstream jobs must read this artifact and must not import/execute phase scripts',
+    'action_coordinate_method': 'quotient projection from [R4_ind | W] in ambient degree-4 coordinates',
 }
 META.write_text(json.dumps(meta, indent=2) + '\n', encoding='utf-8')
 print('A3-4 BUILD DATA v2')
@@ -341,5 +392,6 @@ print('rank N =', rank3(N))
 print('dim ker N =', K_N.shape[1])
 print('rank [K_N | I] =', K_I_rank)
 print('K_N = I =', K_EQUALS_I)
+print('action coordinate method = quotient projection [R4 | W]')
 print('artifact =', OUT)
 print('schema =', meta['schema'])
