@@ -3,6 +3,11 @@ name: B1-1 W45 uniseriality test
 on:
   push:
     branches: [main]
+    paths:
+      - 'research/B1-1_W_UNISERIALITY_TEST_2026-09-17.py'
+      - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
+      - 'research/phase2_3_endH_optimized_2026-09-15.py'
+      - '.github/workflows/b1-1-w-uniseriality-test.yml'
   workflow_dispatch:
 
 jobs:
@@ -21,6 +26,17 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          printf 'F := GF(3);; A := IdentityMat(1,F);; M := GModuleByMats([A]);; Print(MTX.IsIrreducible(M),"\\n");; QUIT;\n' | gap -q
+          cat > /tmp/gap_probe.g <<'EOF'
+          F := GF(3);;
+          A := IdentityMat(1,F);;
+          M := GModuleByMats([A],F);;
+          Print(MTX.IsIrreducible(M), "\n");;
+          QUIT;
+          EOF
+          gap -q < /tmp/gap_probe.g | tee /tmp/gap_probe.out
+          grep -Fx 'true' /tmp/gap_probe.out
       - name: Run B1-1 probe
-        run: python research/B1-1_W_UNISERIALITY_TEST_2026-09-17.py
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/B1-1_W_UNISERIALITY_TEST_2026-09-17.py
