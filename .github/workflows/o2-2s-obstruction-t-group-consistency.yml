@@ -1,0 +1,25 @@
+name: O2-2S obstruction T group consistency
+
+on:
+  push:
+    paths:
+      - 'research/O2-2S_OBSTRUCTION_T_GROUP_CONSISTENCY_2026-09-18.py'
+      - 'research/O2-2R_OBSTRUCTION_EQUIVARIANCE_2026-09-18.py'
+      - 'research/A3_4_10_BRACKET_PIPELINE_SANITY_2026-09-17.py'
+      - '.github/workflows/o2-2s-obstruction-t-group-consistency.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip numpy
+      - name: Run O2-2S
+        run: python research/O2-2S_OBSTRUCTION_T_GROUP_CONSISTENCY_2026-09-18.py
