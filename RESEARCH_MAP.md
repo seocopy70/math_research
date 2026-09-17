@@ -1,6 +1,6 @@
 # Research Map — Rank-4 pro-3 Demuškin Group / Intrinsic Orientation Recovery
 
-> **Purpose:** Current state/map document for the whole research. Read this first in a new session. Chronology belongs in `research/00_RESEARCH_LOG.md`.
+> **Purpose:** Current state/map document. Read this first in a new session. Chronology belongs in `research/00_RESEARCH_LOG.md`.
 
 ## 0. One-sentence research question
 
@@ -17,18 +17,14 @@ The strategy is to determine whether intrinsic filtration information survives i
 \[
 G=\langle x_1,x_2,x_3,x_4\mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle,
 \qquad
-R=[X_1,X_2]+[X_3,X_4].
+R=[X_1,X_2]+[X_3,X_4],
 \]
 
-Degree-4 probe:
+with degree-4 probe
 \[
-T=[[[X_3,X_4],X_1],X_1].
+T=[[[X_3,X_4],X_1],X_1],
 \]
-
-Symmetry group:
-\[
-H=Sp_4(\mathbb F_3).
-\]
+and \(H=Sp_4(\mathbb F_3)\).
 
 ---
 
@@ -53,264 +49,257 @@ canonical intertwiner τ
   ↓
 bracket compatibility test
   ↓
-obstruction rank 10
+rank-10 stacked obstruction O
   ↓
-O2: identify the mathematical structure of the rank-10 obstruction
+O2-3: O ≅ W/I ≅ U = im(N)
   ↓
-O2-3: compare obstruction module O with U = im(N)
+CURRENT: determine whether this 10-dim module is filtration-intrinsic
   ↓
-ask whether it gives intrinsic information distinguishing q=3 from q=∞
+then test q=3 vs q=∞
   ↓
 connect any successful invariant back to χ
 ```
 
 ---
 
-## 3. Frozen results — do not recompute without a contradiction
+## 3. Frozen structural results
 
 ### Phase 1 — single probe
 
-- The single degree-4 probe \(T\) is **not canonical** under the relevant symplectic action.
+- Single degree-4 probe \(T\) is not canonical under the relevant symplectic action.
 - Single-probe strategy: **REJECTED / FROZEN**.
 
-### Phase 2 — orbit module
+### Phase 2 — orbit/module structure
 
-- \(W=\langle H\cdot T\rangle\) has dimension **45**.
-- \(0\subset U_{10}\subset K_{35}\subset W_{45}\).
-- \(U\cong\operatorname{Sym}^2(V)\), and \(K/U\) has dimension 25.
-- \(W\cong\Lambda^2(\operatorname{Sym}^2(V))\).
-- \(E=W/U\) is the non-split extension
-  \[
-  0\to M_{25}\to E_{35}\to\operatorname{Sym}^2(V)_{10}\to0.
-  \]
-- Candidate \(E\cong\operatorname{Sym}^4(V)\): **REJECTED**.
-- Track B A2: \(HP_4((uv)^{-3})=-T=2T\ne0\).
+\[
+\dim W=45,
+\qquad
+0\subset U_{10}\subset K_{35}\subset W_{45}.
+\]
+
+\[
+U\cong\operatorname{Sym}^2(V),
+\qquad
+\dim(K/U)=25,
+\qquad
+W\cong\Lambda^2(\operatorname{Sym}^2(V)).
+\]
+
+\[
+0\to M_{25}\to E_{35}=W/U\to\operatorname{Sym}^2(V)_{10}\to0
+\]
+is the non-split extension; the candidate \(E\cong\operatorname{Sym}^4(V)\) was rejected.
+
+Track B A2:
+\[
+HP_4((uv)^{-3})=-T=2T\ne0.
+\]
 
 ### Phase 2-3 — endomorphism algebra
 
 Authoritative script: `research/phase2_3_endH_optimized_2026-09-15.py`.
 
 \[
-\dim\operatorname{End}_H(W)=2.
+\dim\operatorname{End}_H(W)=2,
+\quad
+N^2=0,
+\quad
+\operatorname{rank}N=10,
+\quad
+\dim\ker N=35.
 \]
-There is a non-scalar nilpotent \(N\) with
-\[
-N^2=0,\qquad \operatorname{rank}N=10,\qquad \dim\ker N=35.
-\]
+
 Hence
 \[
 \operatorname{End}_H(W)\cong\mathbb F_3[\varepsilon]/(\varepsilon^2).
 \]
 
-Thus
-\[
-0\subset U=\operatorname{im}N\subset K=\ker N\subset W,
-\qquad \dim U=10,\dim K=35,\dim W=45.
-\]
-
 ### A3-4 — filtration intersection
 
 \[
-I=W\cap W_d,\qquad \dim I=35,
-\]
-and independent A3-4-8 verification established
-\[
+I=W\cap W_d,
+\qquad
+\dim I=35,
+\qquad
 \boxed{I=\ker N}.
 \]
 This is frozen.
 
-### A3-4 — provenance/repair audit
+### A3-4 provenance/repair audit
 
-Audit branch: `audit/a3-4-action-provenance`  
-Audit run: `35242896521`  
-Corrected commit: `62886877f97e58e87d59b0075d45e38be6176410`  
-Corrected run: `35245280405`
+Audit run `35242896521`; corrected commit `62886877f97e58e87d59b0075d45e38be6176410`; corrected run `35245280405`.
 
-The audit established exact equality of the selected \(W\) basis in ambient degree-4 coordinates, all five generator action matrices, \(B=A_2+A_3+A_4+A_5\), and Krylov rank. The earlier Krylov-rank-2 result came from an incorrect old `action_matrix()` extraction that treated \(W\) as an invariant ambient complement; the correct quotient action works in \((R)_4\mid W\).
+The audit established exact equality of the selected \(W\) basis, all five generator action matrices, \(B=A_2+A_3+A_4+A_5\), and Krylov rank. The earlier apparent Krylov-rank-2 result came from an incorrect old quotient-action extraction. The repaired computation reproduced all frozen structural results.
 
-The repaired computation reproduced:
-- \(\dim W=45\)
-- \(\dim W_d=45\)
-- \(\dim I=35\)
-- \(\dim\operatorname{End}_H(W)=2\)
-- \(N^2=0\)
-- \(\operatorname{rank}N=10\)
-- \(\dim\ker N=35\)
-- \(\ker N=I\)
-
-**A3-4 computational/provenance audit is CLOSED.** Do not reopen without a genuine contradiction.
+**A3-4 computational/provenance audit is CLOSED.**
 
 ---
 
 ## 4. O2-2 — transported obstruction action: COMPLETE / VERIFIED
 
-Verification record: `research/O2-2_RESULT_2026-09-18.md`  
-GitHub Actions run: `35278644641`  
-Job: `105395199074`  
-Working verification commit: `5a447946e9bb7087078e22eccc9bd304a7170494`
+Record: `research/O2-2_RESULT_2026-09-18.md`  
+Run `35278644641`, job `105395199074`.
 
-### O2-2R/S/T
-
-- **O2-2R — generator-level obstruction equivariance: PASS.**
-- **O2-2S — group consistency of \(T_g\): PASS.**
-- **O2-2T — exact identification: PASS.**
+- O2-2R: **PASS**
+- O2-2S: **PASS**
+- O2-2T: **PASS**
 
 For all five generators, the independently solved 16-parameter action satisfies exactly
 \[
-\boxed{T_g=g^{-T}}\qquad(\text{over }\mathbb F_3).
+\boxed{T_g=g^{-T}}
 \]
-Generator-pair multiplicativity also passes.
+over \(\mathbb F_3\), with generator-pair multiplicativity also verified.
 
 Therefore
 \[
 D_{\rm stack}A_W(g)
-=(T_g\otimes A_5(g))D_{\rm stack}
-=(g^{-T}\otimes A_5(g))D_{\rm stack}
+=(g^{-T}\otimes A_5(g))D_{\rm stack},
 \]
-for the generators and hence all \(g\in H\). Consequently
+so
 \[
-\boxed{O=\operatorname{Im}D_{\rm stack}\text{ is an }H\text{-submodule}.}
+\boxed{O=\operatorname{im}D_{\rm stack}\text{ is an }H\text{-submodule}.}
 \]
 
-### Final pre-O2-3 identity check — PASS
+### Final pre-O2-3 action identity check
 
-The \(A_W(g)\) used in O2-2 is the same mathematical \(W\)-action used to define \(N\):
-
-- `phase2_3_endH_optimized_2026-09-15.py` loads `action_matrices` from `phase2_1_invariant_space_verification_2026-09-15.py`.
-- Phase 2-1 constructs these matrices from `apply_linear_map(a, g)` with the column convention
-  \[
-  e_j\mapsto\sum_i g_{ij}e_i.
-  \]
-- The corrected A3-4/O2 pipeline uses the same `apply_linear_map` definition and the same five `gens` construction.
-- O2-2 constructs `A_W` from those corrected ambient actions.
-
-Thus there is **no coordinate/convention mismatch between the \(A_W\) defining \(N\) and the \(A_W\) in O2-2**.
+**PASS:** the \(A_W(g)\) used in O2-2 is the same mathematical action used to define \(N\). The authoritative Phase 2-3 script loads `action_matrices` from Phase 2-1; Phase 2-1 and the corrected A3-4 pipeline use the same `apply_linear_map` and the same five `gens` construction, with column convention
+\[
+e_j\mapsto\sum_i g_{ij}e_i.
+\]
+Thus there is no coordinate/convention mismatch between the representation defining \(N\) and the \(A_W\) used in O2-2.
 
 ### Legacy convention archaeology
 
-Status: **⚪ NOT YET DETERMINED**.
-
-A hard-coded matrix numerically equal to \(g^{-T}\) was found historically, but it was a separate sanity-check object, not evidence that a legacy tuple-action implementation used that convention. The historical provenance question remains open.
-
-This does **not** block O2-3: O2-2 solved \(T_g\) directly from current data and verified exact \(g^{-T}\), independent of any assumed legacy convention.
+**⚪ NOT YET DETERMINED.** A historical hard-coded matrix numerically equal to \(g^{-T}\) was found, but it was a separate sanity-check object, not evidence that a legacy tuple-action implementation used that convention. This does not block the mathematical pipeline.
 
 ---
 
-## 5. Current mathematical gate — OPEN
+## 5. O2-3 — rank-10 obstruction identified: PASS / COMPLETE
 
-The bracket-compatibility computation is verified:
+Record: `research/O2-3_RESULT_2026-09-18.md`  
+Run `35279936962`, job `105399291836`  
+Final code commit: `3cf1608e26f0ef15ee6610ab8ae25a7f9237b951`
+
+### Verified facts
 
 \[
-\operatorname{DIRECT\_DISCREPANCY\_RANK}=10
-\]
-for each of the four tested generators, and
-\[
-\boxed{\operatorname{rank}D_{\rm stack}=10}.
+D_{\rm stack}\in\operatorname{Hom}(W,\mathbb F_3^{4096}),
+\qquad
+\operatorname{rank}D_{\rm stack}=10,
+\qquad
+\dim\ker D_{\rm stack}=35.
 \]
 
-This establishes a rank-10 obstruction, but **does not yet establish** that the obstruction distinguishes \(q=3\) from \(q=\infty\), or that it directly determines \(\chi\).
-
-Current question:
+Directly verified:
 \[
-\boxed{\text{What is the mathematical structure of the 10-dimensional obstruction }O?}
+D_{\rm stack}|_I=0,
+\qquad
+\boxed{\ker D_{\rm stack}=I=\ker N}.
 \]
+
+Therefore
+\[
+\bar D_{\rm stack}:W/I\xrightarrow{\sim}O
+\]
+is an isomorphism.
+
+The nilpotent map gives
+\[
+N:W/I\xrightarrow{\sim}U=\operatorname{im}N.
+\]
+Combining them yields
+\[
+\boxed{U\xrightarrow{\sim}O}
+\]
+with rank 10.
+
+The generator traces are identical:
+\[
+\operatorname{tr}(U)=[1,1,1,1,1],
+\qquad
+\operatorname{tr}(O)=[1,1,1,1,1],
+\]
+and the induced \(U\to O\) map was directly verified to be \(H\)-equivariant for all five generators. No independent 10x10 solve was needed.
+
+### Mathematical interpretation
+
+The rank-10 obstruction is **not merely a dimension coincidence** within the verified pipeline:
+\[
+\boxed{O\cong W/I\cong U=\operatorname{im}N}
+\]
+as an \(H\)-module via the induced map coming from \(D_{\rm stack}\) and \(N\).
+
+This does **not yet** prove that the module is filtration-intrinsic, does not distinguish \(q=3\) from \(q=\infty\), and does not recover \(\chi\).
+
+### Important distinction
+
+The older A3-4-11 `OBSTRUCTION_MODULE` calculation concerns a different obstruction in `Hom(V,L_5/(R)_5)` and has a 45-dimensional image. It must not be conflated with the present O2-2/O2-3 stacked obstruction, whose image is the 10-dimensional \(O\).
 
 ---
 
-## 6. O2-3 — CURRENT FRONTIER
+## 6. CURRENT MATHEMATICAL GATE — OPEN
 
-### Goal
+The next question is no longer whether the rank-10 obstruction is a 10-dimensional \(H\)-module. That has been settled.
 
-Determine whether
+The current question is:
+
 \[
-U=\operatorname{im}N\cong W/\ker N=W/I
-\]
-is naturally identified with
-\[
-O=\operatorname{im}D_{\rm stack}.
+\boxed{\text{Is }U\cong O\text{ canonically determined by the filtration data, independently of the chosen transport }\tau?}
 \]
 
-### Required order
-
-1. **Trace/character precheck.** Compare the generator traces/characters of the known 10-dimensional \(U\) and the obstruction image \(O\).
-2. **Kernel check:** verify
-   \[
-   \boxed{\ker D_{\rm stack}=I=\ker N}.
-   \]
-3. **Dimension check:** verify
-   \[
-   \boxed{\dim O=10}.
-   \]
-4. If 2–3 pass, form the induced map
-   \[
-   \bar D_{\rm stack}:W/I\to O
-   \]
-   and verify it is an isomorphism.
-5. Use \(W/I\cong U\) to obtain the induced 10-dimensional comparison.
-6. Verify \(H\)-equivariance of the induced map.
-7. Only if the structural comparison is not already decisive, solve an explicit **10×10 intertwiner**.
+Only after this is addressed should the project design the explicit \(q=3\) versus \(q=\infty\) comparison.
 
 ### Dependency
 
-O2-3 consumes the corrected A3-4 artifacts from commit `62886877f97e58e87d59b0075d45e38be6176410` and the verified O2-2 obstruction relation. It does **not** depend on resolving the legacy tuple-action archaeology.
+The next stage consumes the corrected A3-4 artifacts from commit `62886877f97e58e87d59b0075d45e38be6176410` and the verified O2-2/O2-3 records. It does not depend on resolving legacy tuple-action archaeology.
 
 ### Pass/fail consequence
 
-- **PASS:** \(\ker D=I\), \(\dim O=10\), and the induced map \(W/I\to O\) is an \(H\)-equivariant isomorphism. Then the obstruction is identified with the already-known 10-dimensional module \(U\) up to the induced canonical map, and the next task is to determine whether this identification is filtration-intrinsic.
-- **FAIL:** any kernel/dimension/equivariance mismatch. Then do not claim \(O\cong U\); inspect the exact source of the mismatch before proceeding.
+- **PASS:** show that the identified 10-dimensional module/map is forced by filtered data or by a canonical construction, not by the arbitrary choice of \(\tau\).
+- **FAIL:** if the identification changes under admissible choices of transport or basis, then the current obstruction route does not yet provide an intrinsic invariant; do not infer a \(q\)-distinction.
 
 ---
 
 ## 7. What is NOT the current task
 
 - Do **not** redo the A3-4 provenance audit.
-- Do **not** rebuild the historical Phase 2 representation merely to reconfirm it.
-- Do **not** treat rank 10 as already proving \(q=3\) versus \(q=\infty\).
+- Do **not** rebuild the historical Phase 2 representation without contradiction.
+- Do **not** treat \(O\cong U\) as already proving \(q=3\) versus \(q=\infty\).
 - Do **not** claim orientation recovery yet.
-- Do **not** change frozen mathematical objects unless a new contradiction is demonstrated.
-- Do **not** block O2-3 on the unresolved historical tuple-action question.
+- Do **not** block progress on unresolved historical tuple-action archaeology.
 
 ---
 
 ## 8. New-chat / new-window protocol
 
-When opening a new chat:
-
-> **수학증명 프로젝트 이어가기. 먼저 `RESEARCH_MAP.md`를 기준으로 현재 상태를 복원해줘. A3-4 audit는 완료·동결되어 있고, O2-2는 PASS이며, 현재 본 연구 단계는 O2-3: \(U=\operatorname{im}N\)과 rank-10 obstruction \(O=\operatorname{im}D_{\rm stack}\)의 구조 비교다. 새 계산 전에 global position / purpose / dependency / pass-fail consequence를 먼저 정리하고, corrected artifact를 우선 사용하자.**
+> **수학증명 프로젝트 이어가기. 먼저 `RESEARCH_MAP.md`를 기준으로 현재 상태를 복원해줘. A3-4 audit는 완료·동결, O2-2는 PASS, O2-3도 PASS이며 현재 본 연구 단계는 `U = im(N) ≅ O = im(D_stack)`라는 식별이 transport-독립적이고 filtration-intrinsic인지 확인하는 것이다. 새 계산 전에 global position / purpose / dependency / pass-fail consequence를 먼저 정리하고 corrected artifact를 우선 사용하자.**
 
 ### Session safety rules
 
-- **Map first:** recover global state from this file.
-- **Frozen means frozen:** do not recompute frozen results without contradiction.
-- **Artifact first:** downstream experiments consume verified artifacts.
-- **Contradiction first:** reopen provenance only for a genuine incompatible result.
-- **Experiment gate:** before execution, state purpose, dependency, expected interpretation, and pass/fail consequence.
-- **Separate history from state:** chronology stays in `research/00_RESEARCH_LOG.md`.
+- **Map first.**
+- **Frozen means frozen.**
+- **Artifact first.**
+- **Contradiction first.**
+- **Experiment gate:** before execution state purpose, dependency, expected interpretation, and pass/fail consequence.
+- **History/state separation:** chronology in `research/00_RESEARCH_LOG.md`; current state here.
 
 ---
 
 ## 9. Research-record architecture
 
-### History / process
-`research/00_RESEARCH_LOG.md`
-
-Preserves chronology, failed experiments, implementation mistakes, corrections, and provenance investigations.
-
-### State / map
-`RESEARCH_MAP.md`
-
-Preserves current research state, frozen results, open questions, and next path.
+- History/process: `research/00_RESEARCH_LOG.md`
+- State/map: `RESEARCH_MAP.md`
+- O2-2 record: `research/O2-2_RESULT_2026-09-18.md`
+- O2-3 record: `research/O2-3_RESULT_2026-09-18.md`
 
 ---
 
 ## 10. Status legend
 
-- 🟢 **FROZEN / VERIFIED** — may be used downstream without routine recomputation.
-- 🟡 **OPEN** — mathematically meaningful but not settled.
-- 🔴 **REJECTED** — strategy/result ruled out for the stated purpose.
-- ⚪ **BACKGROUND / NOT YET DETERMINED** — contextual or unresolved historical issue, not a current mathematical gate.
-
-### Current state
+- 🟢 **FROZEN / VERIFIED** — safe downstream input.
+- 🟡 **OPEN** — mathematically meaningful but unsettled.
+- 🔴 **REJECTED** — ruled out for the stated purpose.
+- ⚪ **BACKGROUND / NOT YET DETERMINED** — unresolved historical/contextual issue, not a current mathematical gate.
 
 | Item | Status |
 |---|---|
@@ -322,39 +311,38 @@ Preserves current research state, frozen results, open questions, and next path.
 | \(I=\ker N\) | 🟢 Frozen |
 | rank-45 intertwiner \(\tau\) | 🟢 Verified |
 | A3-4 provenance audit | 🟢 Closed |
-| bracket discrepancy rank 10 | 🟢 Computed + independently verified |
+| bracket discrepancy rank 10 | 🟢 Verified |
 | O2-2R/S/T | 🟢 PASS |
 | \(T_g=g^{-T}\) | 🟢 Exact / verified |
-| \(O=\operatorname{Im}D_{\rm stack}\) is an \(H\)-submodule | 🟢 Verified |
+| \(O=\operatorname{im}D_{\rm stack}\) is an \(H\)-submodule | 🟢 Verified |
 | \(A_W\) identity with action defining \(N\) | 🟢 Verified |
-| legacy tuple-action convention archaeology | ⚪ Not yet determined |
-| O2-3 \(\ker D=I\) | 🟡 Open |
-| O2-3 \(\dim O=10\) | 🟡 Open |
-| O2-3 induced \(W/I\to O\) isomorphism | 🟡 Open |
-| q=3 vs q=∞ distinction via obstruction | 🟡 Open |
+| \(\ker D_{\rm stack}=I\) | 🟢 PASS |
+| \(\dim O=10\) | 🟢 PASS |
+| \(U\cong O\) as \(H\)-modules | 🟢 PASS |
+| transport-independence / filtration-intrinsic status | 🟡 Current gate |
+| legacy tuple-action archaeology | ⚪ Not yet determined |
+| q=3 vs q=∞ distinction | 🟡 Open |
 | intrinsic recovery of \(\chi\) | 🟡 Open |
 
 ---
 
 ## 11. Immediate next checkpoint
 
-Do not ask whether rank 10 is "good" or "bad". Ask first:
+Do not ask whether O2-3 is "good" or "bad". It has passed.
+
+Ask instead:
 
 \[
-\boxed{\ker D_{\rm stack}\stackrel{?}{=}I=\ker N}
+\boxed{\text{What makes the 10-dimensional module }U\cong O\text{ canonical?}}
 \]
 
-and
+The critical issue is **transport dependence**: the current \(O\) was produced from the specific canonical intertwiner \(\tau\) already fixed by the A3-4 construction. We must determine whether the resulting 10-dimensional module/map is forced by the filtered structure, or merely an artifact of that transport choice.
 
+Only after this gate:
 \[
-\boxed{\dim\operatorname{Im}D_{\rm stack}\stackrel{?}{=}10.}
+\boxed{q=3\;\text{vs}\;q=\infty}
 \]
-
-If both pass, the decisive next object is
+and eventually
 \[
-\boxed{\bar D_{\rm stack}:W/I\longrightarrow O}
-\]
-and the question is whether it identifies \(O\) with the known module
-\[
-\boxed{U=\operatorname{im}N\cong W/I.}
+\boxed{\chi\text{ recovery}}.
 \]
