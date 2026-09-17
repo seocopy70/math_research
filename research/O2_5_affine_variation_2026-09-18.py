@@ -25,6 +25,8 @@ tau=np.array(ns_tau["tau_coord"],dtype=np.int64)%P
 A_W=[np.array(A,dtype=np.int64)%P for A in ns_tau["A_W"]]
 gens=[np.array(g,dtype=np.int64)%P for g in ns_tau["gens"]]
 words4=ns_tau["words4"]
+I_coord=np.array(ns_tau["I_coord"],dtype=np.int64)%P
+Q_W45=np.array(ns_tau["Q_W45"],dtype=np.int64)%P
 ns_N=runpy.run_path(str(ROOT/"phase2_3_endH_optimized_2026-09-15.py"))
 N=np.array(ns_N["N"],dtype=np.int64)%P
 
@@ -109,6 +111,14 @@ def rho_T_apply(D,g):
             if T[i,j]:Y[i]=(Y[i]+T[i,j]*(A5@X[j]))%P
     return Y.reshape(4096,-1)%P
 
+# tau_coord and N are both expressed in the 45-dimensional W/Wd basis.
+# I_coord, however, is exported in TRUE-Q4 coordinates. Convert the fixed
+# intersection basis back to W-coordinates before testing the B1 pointwise
+# identification. This avoids mixing the two coordinate systems.
+I_W_basis=(inverse3(Q_W45)@I_coord)%P
+assert rank3(I_W_basis)==35
+assert np.array_equal((Q_W45@I_W_basis)%P,I_coord)
+
 I45=np.eye(45,dtype=np.int64)
 Ds=[]
 for b in range(3):
@@ -117,9 +127,8 @@ for b in range(3):
     assert np.array_equal((S@S_inv)%P,I45)
     assert all(np.array_equal((S@A)%P,(A@S)%P) for A in A_W)
     tau_b=(tau@S)%P
-    # A3-4-10 exports the authoritative common intersection basis I_coord.
-    # Since canonical tau fixes I pointwise, every admissible tau_b must fix it pointwise too.
-    assert np.array_equal((tau_b@ns_tau["I_coord"])%P,ns_tau["I_coord"]%P)
+    # B1 freezes the pointwise identification in W-coordinates.
+    assert np.array_equal((tau_b@I_W_basis)%P,I_W_basis%P)
     E,D=obstruction_for(tau_b)
     assert rank3(tau_b)==45
     assert rank3(D)==10
@@ -143,6 +152,7 @@ print("O2-5 AFFINE VARIATION OF ADMISSIBLE TRANSPORT FAMILY")
 print("B1 constraint = tau|I_W is pointwise fixed identification")
 print("Admissible family = tau o(I+bN), b=0,1,2")
 print("Scalar a=2 transport = NOT TESTED (inadmissible under B1 constraint)")
+print("I_W_BASIS_RANK =",rank3(I_W_basis))
 print("rank(D_0),rank(D_1),rank(D_2) =",[rank3(D) for D in Ds])
 print("AFFINE_IDENTITY_D1_MINUS_D0_EQUALS_D2_MINUS_D1 =",affine_step)
 print("AFFINE_IDENTITY_D2_MINUS_D0_EQUALS_2_DELTA =",affine_span)
