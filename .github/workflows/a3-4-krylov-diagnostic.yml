@@ -15,5 +15,15 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install numpy
-      - name: Diagnostic marker
-        run: echo "A3-4 Krylov diagnostic workflow reached commit ${GITHUB_SHA}"
+      - name: Run minimal Krylov rank diagnostic
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          src = Path('research/A3_4_BUILD_DATA_2026-09-17.py').read_text(encoding='utf-8')
+          needle = 'assert rank3(Krylov) == 45'
+          replacement = "print('KRYLOV_RANK =', rank3(Krylov)); raise SystemExit(0)"
+          if src.count(needle) != 1:
+              raise RuntimeError(f'expected exactly one Krylov assertion, found {src.count(needle)}')
+          Path('/tmp/A3_4_BUILD_DATA_KRYLOV_DIAGNOSTIC.py').write_text(src.replace(needle, replacement, 1), encoding='utf-8')
+          PY
+          python /tmp/A3_4_BUILD_DATA_KRYLOV_DIAGNOSTIC.py
