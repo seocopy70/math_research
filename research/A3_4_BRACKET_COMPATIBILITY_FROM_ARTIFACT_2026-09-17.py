@@ -9,6 +9,7 @@ import numpy as np
 P = 3
 ART = Path('artifacts/a3_4_data.npz')
 OUT = Path('artifacts/a3_4_bracket_result.json')
+TAU_OUT = Path('artifacts/a3_4_tau.npy')
 
 # Self-guard: this consumer is artifact-only. It may not import/execute
 # research phase modules or use dynamic imports.
@@ -195,14 +196,12 @@ def bracket_with_fixed_generator(v, h):
 # Here X_h is fixed; it is NOT transformed by any generator.
 per_generator = []
 diff_blocks = []
-for gi, h in enumerate(range(1, 5)):
+for h in range(1, 5):
     lhs = np.column_stack([
-        bracket_with_fixed_generator((W @ np.eye(45, dtype=np.int64)[:, j]) % P, h)
-        for j in range(45)
+        bracket_with_fixed_generator(W[:, j] % P, h) for j in range(45)
     ])
     rhs = np.column_stack([
-        bracket_with_fixed_generator((Wd @ tau[:, j]) % P, h)
-        for j in range(45)
+        bracket_with_fixed_generator((Wd @ tau[:, j]) % P, h) for j in range(45)
     ])
     D = (rhs - lhs) % P
     rank = rank3(D)
@@ -237,6 +236,7 @@ result = {
     'result': 'PASS' if compatible else 'FAIL',
 }
 OUT.parent.mkdir(parents=True, exist_ok=True)
+np.save(TAU_OUT, tau.astype(np.int8))
 OUT.write_text(json.dumps(result, indent=2) + '\n', encoding='utf-8')
 
 print('A3-4 BRACKET COMPATIBILITY — ARTIFACT-ONLY')
@@ -256,3 +256,4 @@ print('BRACKET_COMPATIBLE_FOR_ALL_4_GENERATORS =', compatible)
 print('IDENTITY = tau([v,X_h]) = [tau(v),X_h]')
 print('RESULT =', result['result'])
 print('RESULT_JSON =', OUT)
+print('TAU_MATRIX =', TAU_OUT)
