@@ -15,13 +15,13 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install numpy
-      - name: Run minimal Krylov rank diagnostic
+      - name: Run diagnostic copy of BUILD_DATA
         run: |
           python - <<'PY'
           from pathlib import Path
           src = Path('research/A3_4_BUILD_DATA_2026-09-17.py').read_text(encoding='utf-8')
           needle = 'assert rank3(Krylov) == 45'
-          replacement = "print('KRYLOV_RANK =', rank3(Krylov)); raise SystemExit(0)"
+          replacement = "print('KRYLOV_RANK =', rank3(Krylov))"
           if src.count(needle) != 1:
               raise RuntimeError(f'expected exactly one Krylov assertion, found {src.count(needle)}')
           Path('/tmp/A3_4_BUILD_DATA_KRYLOV_DIAGNOSTIC.py').write_text(src.replace(needle, replacement, 1), encoding='utf-8')
