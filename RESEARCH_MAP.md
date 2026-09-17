@@ -354,37 +354,42 @@ The next gate is therefore:
 Only after this gate should the project move to the explicit (q=3) versus (q=infty) comparison.
 
 
-## 6C. O2-7 — q-control of transport variation: INFORMATIVE FAIL / COMPLETE
+## 6C. O2-7 — q-control of transport variation: CORRECTED / PASS FOR ORBIT CLOSURE
 
 Record: `research/O2-7_RESULT_2026-09-18.md`  
-Run: `35284838948`, final code commit `988f61c04f3c659db2b4bff285f8f0809d4e7f4f`.
+Original run: `35284838948`; original final code commit `988f61c04f3c659db2b4bff285f8f0809d4e7f4f`.
 
-The first proposed identification
-[
-langle Hcdot [X_1^{[3]},X_2]angle = U
-]
-is false.
+### Critical correction
 
-Verified:
-- (dimlangle Hcdot dangle=45), so the q=3 p-power class (d=[X_1^{[3]},X_2]) generates all of (W).
-- (dim N(d)=1).
-- (dimlangle Hcdot N(d)angle=9).
-- (dim U=10), with (langle Hcdot N(d)anglesubset U).
-- (operatorname{im}(	au N)=	au(U)) at the tested subspace level.
-- The q=(infty) p-power control has (d_infty=0).
+The earlier claim
+\[
+\dim\langle HN(d)\rangle=9
+\]
+was an **implementation artifact**. The original O2-7 H-span routine propagated only the most recently appended orbit vector, rather than closing the span under every accumulated basis vector.
 
-Thus O2-7 is an **informative FAIL of the naive identification**, not a failure of the O2-3/O2-6 results. The q-sensitive class has a nontrivial 9-dimensional shadow inside (U), but (U) contains one additional dimension.
+O2-8 used a complete closure routine and exposed this discrepancy. The 9D claim, the proposed 1D quotient, and all interpretations based on them are deprecated.
 
-### Next gate
+### Corrected result
 
-Characterize the exact extension
-[
-0	o langle Hcdot N(d)angle	o U	o U/langle Hcdot N(d)angle	o0
-]
-and determine whether the remaining 1-dimensional quotient/direction is related to (Delta D) or carries the q=3-specific information.
+For \(d=[X_1^{[3]},X_2]\):
 
-The q=(infty) control used in O2-7 is local: it suppresses the p-power contribution and does not yet constitute a full recomputation of the q=(infty) filtered structure.
+- \(\dim\langle H\cdot d\rangle=45=\dim W\).
+- \(\operatorname{rank}N(d)=1\).
+- Complete orbit closure gives \(\boxed{\dim\langle HN(d)\rangle=10}\).
+- Since \(\langle HN(d)\rangle\subseteq U=\operatorname{im}N\) and \(\dim U=10\), \(\boxed{\langle HN(d)\rangle=U}\).
 
+Thus
+\[
+d\in W,\quad \langle Hd\rangle=W,\quad N(d)\in U,\quad \langle HN(d)\rangle=U.
+\]
+
+### Consequence
+
+The previously proposed quotient \(U/\langle HN(d)\rangle\) is zero, not one-dimensional. The local q=∞ control \(d_\infty=0\) remains only a local suppression of the p-power contribution; it is not a full q=∞ recomputation.
+
+### Current status
+
+O2-7 supports the exact statement that the q=3 p-power class has a full 10-dimensional nilpotent shadow equal to U. It does **not** yet prove that this equality is filtration-intrinsic, does not provide a full q=3 versus q=∞ comparison, and does not recover \(\chi\).
 
 ## 7. What is NOT the current task
 
@@ -446,7 +451,7 @@ The q=(infty) control used in O2-7 is local: it suppresses the p-power contribut
 | \(\dim O=10\) | 🟢 PASS |
 | \(U\cong O\) as \(H\)-modules | 🟢 PASS |
 | absolute transport-independence of O_tau | 🔴 Failed in O2-4 |\n| variation-module basepoint independence within B1 family | 🟢 O2-6 PASS |\n| O2-7 raw p-power orbit = U | 🔴 False (orbit dimension 45) |
-| O2-7 H.N(d) inside U, dim 9 | 🟢 Verified |
+| O2-7 H.N(d) inside U, dim 10 and equals U | 🟢 Corrected / verified |
 | full filtration-intrinsic characterization of Delta O | 🟡 Open |
 | legacy tuple-action archaeology | ⚪ Not yet determined |
 | q=3 vs q=∞ distinction | 🟡 Open |
