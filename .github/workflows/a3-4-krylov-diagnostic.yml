@@ -1,0 +1,19 @@
+name: A3-4 Krylov Rank Diagnostic
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/a3-4-krylov-diagnostic.yml'
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy
+      - name: Diagnostic marker
+        run: echo "A3-4 Krylov diagnostic workflow reached commit ${GITHUB_SHA}"
