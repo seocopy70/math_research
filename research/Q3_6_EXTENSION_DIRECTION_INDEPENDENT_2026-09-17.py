@@ -24,7 +24,9 @@ r3 = q35['r3']; null3 = q35['null3']; coords_from = q35['coords_from']; col_basi
 Ai = q35['Ai']; A3_actions = q35['A3']; Wi = q35['Wi']; W3 = q35['W3']; Wd = q35['Wd']
 case_records = q35['case_records']
 delta_u = q35['delta_u']; delta_tau = q35['delta_tau']
-apply_linear_map = q35['apply_linear_map']; gens = q35['gens']
+# Q3-5 exports the Gate-0A word-action function as `apply`; the previous
+# Q3-6 version incorrectly expected a non-existent `apply_linear_map` key.
+apply_linear_map = q35['apply']; gens = q35['gens']
 WORDS5 = q35['WORDS5']; INDEX5 = q35['INDEX5']
 
 
@@ -64,7 +66,6 @@ def quotient_action(Bmat, Amat, Gambient):
     da, db = A.shape[1], B.shape[1]
     assert da == 10 and db == 45
 
-    # Extend A to a basis of B: F=[A | C].
     F = A.copy(); rankF = da
     for j in range(db):
         C = np.column_stack([F, B[:, j]])
@@ -80,7 +81,6 @@ def quotient_action(Bmat, Amat, Gambient):
         Y = (G @ F) % P
         C = coords_from(F, Y)
         assert np.array_equal((F @ C) % P, Y)
-        # Because A is H-stable, the quotient action is the lower-right block.
         assert r3(C[da:, :da]) == 0
         M = C[da:, da:]
         assert M.shape == (35, 35)
@@ -117,8 +117,6 @@ def fingerprint(W_actions, N, Bmat, Amat, G5):
     h_m_s10 = hom_basis_rect(GM, GS10)
     h_s10_k = hom_basis_rect(GS10, GK)
     h_k_s10 = hom_basis_rect(GK, GS10)
-
-    # End dimensions are square special cases, retained as diagnostics.
     end_m = hom_basis_rect(GM, GM)
     end_k = hom_basis_rect(GK, GK)
 
@@ -141,15 +139,12 @@ G5 = degree5_generator_matrices()
 assert len(G5) == 5 and all(G.shape == (1024, 1024) for G in G5)
 print('degree-5 action matrices =', len(G5), 'x', G5[0].shape)
 
-# q=3 reference: use q3's internally constructed A/B/N from Q3-5, but do not
-# compare any q=infinity subspace to q=3 via Gate-0A T.
 N3 = q35['N3']
 A3mat = q35['A3mat']
 B3mat = q35['B3mat']
 fp3 = fingerprint(A3_actions, N3, B3mat, A3mat, G5)
 print('Q3_REFERENCE', fp3)
 
-# Intrinsic q=infinity checks for all six Q3-5 compatible cases.
 all_qinf = []
 for ni, (Ninf, nullity, tau_candidates) in enumerate(case_records):
     assert len(tau_candidates) == 3, (ni, nullity, len(tau_candidates))
@@ -164,7 +159,6 @@ for ni, (Ninf, nullity, tau_candidates) in enumerate(case_records):
         all_qinf.append(rec)
         print('QINF_CASE', rec)
 
-# The directional test is deliberately based only on intrinsic module fingerprints.
 changed = []
 for rec in all_qinf:
     keys = ('Hom_S10_to_M', 'Hom_S10_to_K', 'Hom_M_to_S10', 'Hom_K_to_S10')
