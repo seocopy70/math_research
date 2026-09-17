@@ -1,0 +1,20 @@
+name: A3-4 N-K-I diagnostic
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/A3_4_N_K_I_DIAGNOSTIC_2026-09-17.py'
+      - '.github/workflows/a3-4-n-k-i-diagnostic.yml'
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy
+      - run: echo "DIAGNOSTIC GITHUB_SHA=${GITHUB_SHA}"
+      - run: python research/A3_4_N_K_I_DIAGNOSTIC_2026-09-17.py
