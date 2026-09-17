@@ -2,6 +2,10 @@ name: O2-2 Obstruction Image H-Stability
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - research/O2-2_OBSTRUCTION_IMAGE_H_STABILITY_2026-09-18.py
+      - .github/workflows/o2-2-obstruction-image-h-stability.yml
 
 jobs:
   verify:
