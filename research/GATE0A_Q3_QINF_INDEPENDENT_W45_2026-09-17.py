@@ -277,6 +277,10 @@ def build_q_path(label, relation):
         'actions': action_matrices,
         # Export the independent 45D complement basis as ambient degree-4 columns.
         'ambient_basis': np.column_stack([vec(a, 4) for a in basis]),
+        # Export the full 60D L4 basis and its coordinate map so downstream
+        # probes can distinguish quotient coordinates from arbitrary ambient vectors.
+        'full_basis': B,
+        'coordinates': coordinates,
     }
 
 
