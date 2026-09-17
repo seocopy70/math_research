@@ -1,7 +1,7 @@
-# O2-8 PRECHECK — Is the 9D shadow special?
+# O2-8 PRECHECK — audit of complete H-orbit closure
 
 ## Position
-O2-7A rejected the naive claim <H.d>=U. O2-7B found dim <H.N(d)>=9 inside U, while dim U=10.
+O2-7A correctly rejected the naive claim <H.d>=U: the raw q=3 p-power class generates all of W. O2-7B then reported dim <H.N(d)>=9, but that was caused by incomplete orbit closure.
 
 ## Purpose
 Before interpreting the missing 1D quotient, determine whether the 9D orbit dimension is actually special to the q=3 class d.
@@ -26,8 +26,12 @@ Is dim <H.N(d)>=9 unusually constrained relative to generic/control vectors?
 
 ## Pass/fail consequence
 This is a diagnostic precheck, not a theorem test.
-PASS means the control matrix is internally consistent and the result separates the specialness question.
+PASS means complete orbit closure is verified and the corrected q=3 shadow has dimension 10.
 FAIL means the experiment is invalid or its coordinate/action assumptions break; do not interpret the numerical pattern.
+
+## Required implementation invariant
+
+The H-span routine must close under every currently accumulated basis vector and every generator until no new independent vector appears.
 
 ## Critical boundary
 Even a positive specialness signal does not prove q=3 vs q=infinity or filtration-intrinsic orientation recovery.
