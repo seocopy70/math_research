@@ -3,6 +3,11 @@ name: B1-1-2 unique 35D submodule
 on:
   push:
     branches: [main]
+    paths:
+      - 'research/B1-1-2_UNIQUE_35D_SUBMODULE_2026-09-17.py'
+      - 'research/phase2_1_invariant_space_verification_2026-09-15.py'
+      - 'research/phase2_3_endH_optimized_2026-09-15.py'
+      - '.github/workflows/b1-1-2-unique-35d-submodule.yml'
   workflow_dispatch:
 
 jobs:
