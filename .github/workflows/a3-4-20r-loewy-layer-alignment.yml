@@ -26,6 +26,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          printf 'F := GF(3);; A := IdentityMat(1,F);; M := GModuleByMats([A]);; Print(MTX.IsIrreducible(M),"\\n");; QUIT;\n' | gap -q
+          gap -q <<'GAP'
+          F := GF(3);
+          A := IdentityMat(1,F);
+          M := GModuleByMats([A]);
+          Print(MTX.IsIrreducible(M),"\n");
+          QUIT;
+          GAP
       - name: Run A3-4-20R
         run: python research/A3-4-20R_LOEWY_LAYER_ALIGNMENT_2026-09-17.py
