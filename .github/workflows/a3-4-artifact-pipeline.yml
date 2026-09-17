@@ -6,6 +6,7 @@ on:
     paths:
       - 'research/A3_4_BUILD_DATA_2026-09-17.py'
       - 'research/A3_4_K_AUDIT_FROM_ARTIFACT_2026-09-17.py'
+      - 'research/A3_4_TAU_AUDIT_FROM_ARTIFACT_2026-09-17.py'
       - '.github/workflows/a3-4-artifact-pipeline.yml'
 
 jobs:
@@ -17,21 +18,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
       - name: Install numpy
         run: python -m pip install numpy
-
       - name: Print commit SHA
         run: echo "BUILD GITHUB_SHA=${GITHUB_SHA}"
-
       - name: Build A3-4 data artifact
         run: python research/A3_4_BUILD_DATA_2026-09-17.py
-
       - name: Upload A3-4 data artifact
         uses: actions/upload-artifact@v4
         with:
@@ -50,23 +46,43 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
       - name: Install numpy
         run: python -m pip install numpy
-
       - name: Print commit SHA
         run: echo "AUDIT GITHUB_SHA=${GITHUB_SHA}"
-
       - name: Download upstream artifact
         uses: actions/download-artifact@v4
         with:
           name: a3-4-data-v1
           path: artifacts
-
       - name: Run read-only K audit
         run: python research/A3_4_K_AUDIT_FROM_ARTIFACT_2026-09-17.py
+
+  tau-audit:
+    name: tau-audit
+    needs: k-audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Print commit SHA
+        run: echo "TAU GITHUB_SHA=${GITHUB_SHA}"
+      - name: Download upstream artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: a3-4-data-v1
+          path: artifacts
+      - name: Run artifact-only tau audit
+        run: python research/A3_4_TAU_AUDIT_FROM_ARTIFACT_2026-09-17.py
