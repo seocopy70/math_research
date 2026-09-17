@@ -4,14 +4,15 @@ Goal: compare the extension-direction fingerprints intrinsically, without using
 Gate-0A's intertwiner T to identify q=3 and q=infinity subspaces.
 
 For each of the six Q3-5 compatible (N,tau) choices, this script constructs
-H-actions on the actual degree-5 ambient space, descends the H-action to
+H-actions on the actual degree-5 ambient tuple space, descends the H-action to
 M=B/A, constructs S10=im(N) and K=ker(N) inside W, and computes rectangular
-Hom spaces:
-    Hom_H(S10,M), Hom_H(M,S10),
-    Hom_H(S10,K), Hom_H(K,S10).
+Hom spaces.
 
-The previous draft incorrectly treated rectangular Hom maps as square maps and
-also applied a 45x45 action to degree-5 data. Those errors are fixed here.
+The previous draft incorrectly treated rectangular Hom maps as square maps,
+used a 45x45 action on degree-5 data, and then used a 1024x1024 action for a
+4-component bracket tuple. The last error is fixed here: A and B live in
+( L_5^assoc )^{\oplus 4}, of dimension 4*4^5=4096, with the generator action
+including both the degree-5 word action and the generator-index mixing.
 """
 import runpy
 import numpy as np
@@ -24,14 +25,11 @@ r3 = q35['r3']; null3 = q35['null3']; coords_from = q35['coords_from']; col_basi
 Ai = q35['Ai']; A3_actions = q35['A3']; Wi = q35['Wi']; W3 = q35['W3']; Wd = q35['Wd']
 case_records = q35['case_records']
 delta_u = q35['delta_u']; delta_tau = q35['delta_tau']
-# Q3-5 exports the Gate-0A word-action function as `apply`; the previous
-# Q3-6 version incorrectly expected a non-existent `apply_linear_map` key.
 apply_linear_map = q35['apply']; gens = q35['gens']
 WORDS5 = q35['WORDS5']; INDEX5 = q35['INDEX5']
 
 
 def hom_basis_rect(Gsrc, Gtgt):
-    """Return a basis of Hom_H(Vsrc,Vtgt) over F_3 for rectangular maps."""
     ns = Gsrc[0].shape[0]
     nt = Gtgt[0].shape[0]
     cols = []
@@ -47,7 +45,6 @@ def hom_basis_rect(Gsrc, Gtgt):
 
 
 def induced_action_from_subspace(Gambient, basis):
-    """Return generator matrices on a subspace with independent columns."""
     out = []
     d = basis.shape[1]
     for G in Gambient:
@@ -60,7 +57,6 @@ def induced_action_from_subspace(Gambient, basis):
 
 
 def quotient_action(Bmat, Amat, Gambient):
-    """Induce H-action on B/A from the actual ambient degree-5 action."""
     A = col_basis(Amat, r3(Amat))
     B = col_basis(Bmat, r3(Bmat))
     da, db = A.shape[1], B.shape[1]
@@ -89,21 +85,41 @@ def quotient_action(Bmat, Amat, Gambient):
 
 
 def degree5_generator_matrices():
-    """Build the five 4^5 x 4^5 generator matrices directly on words."""
+    """Build the H-action on the 4-component degree-5 bracket tuple space.
+
+    Each bracket component is a 4^5=1024-dimensional word space, so the
+    concatenated Delta_u/Delta_tau target has dimension 4096.  If gX_i =
+    sum_j g1[j,i] X_j, then
+        g([w,X_i]) = sum_j g1[j,i] [g w, X_j].
+    Thus the tuple action has block (j,i) equal to g1[j,i] * D5.
+    """
     out = []
     for g in gens:
-        G = np.zeros((1024, 1024), dtype=np.int64)
+        D5 = np.zeros((1024, 1024), dtype=np.int64)
         for j, w in enumerate(WORDS5):
             a = {w: 1}
             image = apply_linear_map(a, g)
             for ww, c in image.items():
-                G[INDEX5[ww], j] = (G[INDEX5[ww], j] + int(c)) % P
+                D5[INDEX5[ww], j] = (D5[INDEX5[ww], j] + int(c)) % P
+
+        g1 = np.zeros((4, 4), dtype=np.int64)
+        for i in range(4):
+            image = apply_linear_map({(i + 1,): 1}, g)
+            for w, c in image.items():
+                assert len(w) == 1
+                g1[w[0] - 1, i] = (g1[w[0] - 1, i] + int(c)) % P
+
+        G = np.zeros((4096, 4096), dtype=np.int64)
+        for j in range(4):
+            for i in range(4):
+                if g1[j, i]:
+                    G[j*1024:(j+1)*1024, i*1024:(i+1)*1024] = (g1[j, i] * D5) % P
+        assert r3(G) == 4096
         out.append(G)
     return out
 
 
 def fingerprint(W_actions, N, Bmat, Amat, G5):
-    """Intrinsic H-module fingerprint for one N,tau choice."""
     S10 = col_basis(N, r3(N))
     K = np.column_stack(null3(N))
     assert S10.shape[1] == 10
@@ -134,10 +150,10 @@ def fingerprint(W_actions, N, Bmat, Amat, G5):
 
 
 print('Q3-6 INTRINSIC EXTENSION-DIRECTION TEST — CORRECTED')
-print('BUILDING DEGREE-5 H ACTION')
+print('BUILDING DEGREE-5 H ACTION ON 4096-D TUPLE SPACE')
 G5 = degree5_generator_matrices()
-assert len(G5) == 5 and all(G.shape == (1024, 1024) for G in G5)
-print('degree-5 action matrices =', len(G5), 'x', G5[0].shape)
+assert len(G5) == 5 and all(G.shape == (4096, 4096) for G in G5)
+print('degree-5 tuple action matrices =', len(G5), 'x', G5[0].shape)
 
 N3 = q35['N3']
 A3mat = q35['A3mat']
