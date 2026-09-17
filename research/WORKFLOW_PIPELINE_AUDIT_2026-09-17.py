@@ -28,7 +28,7 @@ INLINE_GAP_RE = re.compile(
     r"\$\([^\n]*gap\s+-q"
 )
 GAP_REF_RE = re.compile(r"\bGModuleByMats\s*\(")
-HEREDOC_RE = re.compile(r"<<[-']?[A-Za-z_][A-Za-z0-9_]*['"]?")
+HEREDOC_RE = re.compile(r'''<<[-']?[A-Za-z_][A-Za-z0-9_]*['"]?''')
 
 workflows = sorted(WF_DIR.glob("*.yml")) + sorted(WF_DIR.glob("*.yaml"))
 findings = []
