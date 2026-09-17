@@ -134,7 +134,8 @@ for k, (D5, g1) in enumerate(zip(D5s, g1s)):
     for t in range(4):
         probes[t*DIM5 + t, 0] = 1
         probes[(3-t)*DIM5 + (DIM5-1-t), 1] = 1
-        probes[(t+1)*DIM5 + 2*t, 2] = 2
+        # Correct tuple block offset: blocks are indexed 0..3, so use t*DIM5.
+        probes[t*DIM5 + 2*t, 2] = 2
         probes[t*DIM5 + 100+t, 3] = 1
     out1 = tuple_apply(probes, D5, g1)
     out2 = np.zeros_like(out1)
