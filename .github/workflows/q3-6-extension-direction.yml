@@ -1,0 +1,19 @@
+name: Q3-6 extension direction
+
+on:
+  workflow_dispatch:
+
+jobs:
+  extension:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Run Q3-6
+        run: python research/Q3_6_EXTENSION_DIRECTION_INDEPENDENT_2026-09-17.py
