@@ -33,7 +33,7 @@ jobs:
       - name: Upload A3-4 data artifact
         uses: actions/upload-artifact@v4
         with:
-          name: a3-4-data-v1
+          name: a3-4-data-v2
           path: |
             artifacts/a3_4_data.npz
             artifacts/a3_4_data_meta.json
@@ -59,7 +59,7 @@ jobs:
       - name: Download upstream artifact
         uses: actions/download-artifact@v4
         with:
-          name: a3-4-data-v1
+          name: a3-4-data-v2
           path: artifacts
       - name: Run read-only K audit
         run: python research/A3_4_K_AUDIT_FROM_ARTIFACT_2026-09-17.py
@@ -84,7 +84,7 @@ jobs:
       - name: Download upstream artifact
         uses: actions/download-artifact@v4
         with:
-          name: a3-4-data-v1
+          name: a3-4-data-v2
           path: artifacts
       - name: Run artifact-only tau audit
         run: python research/A3_4_TAU_AUDIT_FROM_ARTIFACT_2026-09-17.py
@@ -109,7 +109,7 @@ jobs:
       - name: Download upstream A3-4 data artifact
         uses: actions/download-artifact@v4
         with:
-          name: a3-4-data-v1
+          name: a3-4-data-v2
           path: artifacts
       - name: Run artifact-only bracket compatibility calculation
         run: python research/A3_4_BRACKET_COMPATIBILITY_FROM_ARTIFACT_2026-09-17.py
@@ -142,7 +142,7 @@ jobs:
       - name: Download upstream A3-4 data artifact
         uses: actions/download-artifact@v4
         with:
-          name: a3-4-data-v1
+          name: a3-4-data-v2
           path: artifacts
       - name: Download primary bracket result
         uses: actions/download-artifact@v4
