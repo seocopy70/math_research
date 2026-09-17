@@ -1,9 +1,15 @@
-import importlib.util
 import numpy as np
 P=3
-p='research/A3_4_10_BRACKET_PIPELINE_SANITY_2026-09-17.py'
-s=importlib.util.spec_from_file_location('a',p); m=importlib.util.module_from_spec(s); s.loader.exec_module(m)
-rank3=m.rank3; W,Wd,gens=m.W,m.Wd,m.gens; words4,index4=m.WORDS4,m.INDEX4; words5,index5=m.WORDS5,m.INDEX5; apply=m.apply_linear_map
+# Load only the definition/construction portion of the standalone ambient module.
+# Do NOT execute its top-level sanity-test block.
+with open('research/A3_4_10_BRACKET_PIPELINE_SANITY_2026-09-17.py', encoding='utf-8') as f:
+    src=f.read()
+_marker="print('A3-4-10 BRACKET PIPELINE SANITY CHECK (STANDALONE)')"
+assert _marker in src
+_defs=src.split(_marker,1)[0]
+ns={}
+exec(compile(_defs,'<ambient-definitions>','exec'),ns)
+rank3=ns['rank3']; W=ns['W']; Wd=ns['Wd']; gens=ns['gens']; words4=ns['WORDS4']; index4=ns['INDEX4']; apply=ns['apply_linear_map']
 
 def null3(A):
  A=np.array(A,dtype=np.int64,copy=True)%P;m0,n=A.shape;r=0;piv=[]
@@ -43,7 +49,7 @@ def degmat(g):
  for j,w in enumerate(words4):
   for ww,c in apply({w:1},g).items():G[index4[ww],j]=(G[index4[ww],j]+int(c))%P
  return G
-A4=[degmat(g) for g in gens];AW=[coords(W,(G@W)%P) for G in A4];AWd=[coords(Wd,(G@Wd)%P) for G in A4]
+A4=[degmat(g) for g in gens];AW=[coords(W,(G@W)%P) for G in A4]
 I45=np.eye(45,dtype=np.int64);Bgen=(AW[1]+AW[2]+AW[3]+AW[4])%P;powers=[];cur=I45.copy()
 for _ in range(45):powers.append(cur.copy());cur=(cur@Bgen)%P
 E=np.column_stack([np.concatenate([((Q@A-A@Q)%P).reshape(-1) for A in AW]) for Q in powers])
@@ -53,6 +59,7 @@ for z in ends:
  for c,Q in zip(z,powers):X=(X+int(c)*Q)%P
  mats.append(X)
 print('A3-4-10 N-SELECTION AUDIT')
+print('No phase script and no ambient sanity-test block executed.')
 print('dim End_H(W) =',len(mats))
 for i,X in enumerate(mats):print('basis',i,'rank=',rank3(X),'square_zero=',np.array_equal((X@X)%P,np.zeros_like(X)),'is_identity=',np.array_equal(X,I45))
 print('ALL NONZERO LINEAR COMBINATIONS (a,b)')
