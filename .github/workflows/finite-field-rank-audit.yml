@@ -1,8 +1,6 @@
 name: Finite-field rank audit
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 jobs:
