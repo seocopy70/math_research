@@ -2,6 +2,11 @@ name: Gate 0-B Q3-0 X1 restricted power
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/GATE0B_Q3_0_QINF_X1_RESTRICTED_POWER_2026-09-17.py'
+      - '.github/workflows/gate0b-q3-0-x1-restricted-power.yml'
 
 jobs:
   q3-0:
