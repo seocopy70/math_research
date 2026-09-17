@@ -1,0 +1,17 @@
+name: Gate 0-B Q1 q-infinity degree-4
+on:
+  push:
+    paths:
+      - 'research/GATE0B_Q1_QINF_DEGREE4_2026-09-17.py'
+      - '.github/workflows/gate0b-q1.yml'
+  workflow_dispatch:
+jobs:
+  q1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Gate 0-B Q1
+        run: python research/GATE0B_Q1_QINF_DEGREE4_2026-09-17.py
