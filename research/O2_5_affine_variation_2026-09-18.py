@@ -11,6 +11,14 @@ Checks:
 A) D_1-D_0 = D_2-D_1 and D_2-D_0 = 2(D_1-D_0).
 B) Delta D = D_1-D_0 has rank 10.
 C) Im(Delta D) is stable under the same H-action rho_T used for D_stack.
+
+Coordinate audit:
+- tau and N are matrices on the 45-dimensional W/Wd coefficient bases.
+- I_coord is the fixed intersection basis in authoritative TRUE-Q4 coordinates.
+- Therefore the B1 pointwise condition must be tested after lifting the
+  coefficient transport to TRUE-Q4 coordinates:
+      T_b^amb = Wd @ tau @ S_b @ Q_W45^{-1}
+  and checking (T_b^amb - I) @ I_coord = 0.
 """
 from pathlib import Path
 import runpy
@@ -111,25 +119,29 @@ def rho_T_apply(D,g):
             if T[i,j]:Y[i]=(Y[i]+T[i,j]*(A5@X[j]))%P
     return Y.reshape(4096,-1)%P
 
-# tau_coord and N are both expressed in the 45-dimensional W/Wd basis.
-# I_coord, however, is exported in TRUE-Q4 coordinates. Convert the fixed
-# intersection basis back to W-coordinates before testing the B1 pointwise
-# identification. This avoids mixing the two coordinate systems.
-I_W_basis=(inverse3(Q_W45)@I_coord)%P
-assert rank3(I_W_basis)==35
-assert np.array_equal((Q_W45@I_W_basis)%P,I_coord)
-
+Q_W45_inv=inverse3(Q_W45)
+assert rank3(Q_W45_inv)==45
 I45=np.eye(45,dtype=np.int64)
 Ds=[]
+B1_ranks=[]
 for b in range(3):
     S=(I45+b*N)%P
     S_inv=(I45-b*N)%P
     assert np.array_equal((S@S_inv)%P,I45)
     assert all(np.array_equal((S@A)%P,(A@S)%P) for A in A_W)
+
+    # tau_b is a W/Wd coefficient transport. Lift it to the authoritative
+    # TRUE-Q4 ambient coordinates before applying the B1 pointwise check.
     tau_b=(tau@S)%P
-    # B1 freezes the pointwise identification in W-coordinates.
-    assert np.array_equal((tau_b@I_W_basis)%P,I_W_basis%P)
+    T_b_ambient=(Wd@tau_b@Q_W45_inv)%P
     E,D=obstruction_for(tau_b)
+
+    # B1 pointwise identification, now in the same TRUE-Q4 coordinates as
+    # A3-4-10: T_b_ambient fixes every vector of I pointwise.
+    B1_defect=(T_b_ambient@I_coord-I_coord)%P
+    B1_ranks.append(rank3(B1_defect))
+    assert B1_ranks[-1]==0
+
     assert rank3(tau_b)==45
     assert rank3(D)==10
     Ds.append(D)
@@ -152,7 +164,8 @@ print("O2-5 AFFINE VARIATION OF ADMISSIBLE TRANSPORT FAMILY")
 print("B1 constraint = tau|I_W is pointwise fixed identification")
 print("Admissible family = tau o(I+bN), b=0,1,2")
 print("Scalar a=2 transport = NOT TESTED (inadmissible under B1 constraint)")
-print("I_W_BASIS_RANK =",rank3(I_W_basis))
+print("Q_W45 inverse rank =",rank3(Q_W45_inv))
+print("B1_DEFECT_RANKS_b0_b1_b2 =",B1_ranks)
 print("rank(D_0),rank(D_1),rank(D_2) =",[rank3(D) for D in Ds])
 print("AFFINE_IDENTITY_D1_MINUS_D0_EQUALS_D2_MINUS_D1 =",affine_step)
 print("AFFINE_IDENTITY_D2_MINUS_D0_EQUALS_2_DELTA =",affine_span)
