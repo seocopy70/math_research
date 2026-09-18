@@ -287,3 +287,66 @@ A reader should be able to reproduce each claim from:
 5. an independent implementation or certificate for strong identification claims.
 
 No numerical output is treated as a proof without an explicit mathematical interpretation.
+
+
+## 11A.2 Orbit/stabilizer audit template for finite-group invariants
+
+The Q3/Q∞-J audit establishes the following standard verification pattern for any future finite-group orbit-cardinality computation, including higher-q probes.
+
+For a vector v under the image action
+\[
+H_U=\operatorname{im}(H\to GL(U)),
+\]
+do **not** infer the image-group stabilizer by simply counting stabilizers in the abstract group H when the action has a nontrivial kernel.
+
+The audit must distinguish:
+\[
+\operatorname{Stab}_H(v)
+=
+\{h\in H:hv=v\},
+\qquad
+\operatorname{Stab}_{H_U}(v)
+=
+\{\bar h\in H_U:\bar h v=v\}.
+\]
+If K=ker(H\to H_U), then
+\[
+|\operatorname{Stab}_H(v)|
+=
+|K|\,|\operatorname{Stab}_{H_U}(v)|.
+\]
+
+### Required two cross-checks
+
+After the exploratory computation has produced raw cardinalities, perform both exact checks before assigning a substantive status:
+
+1. **First-isomorphism check**
+\[
+|H_U|=|H|/|K|.
+\]
+
+2. **Orbit-stabilizer check**
+\[
+|H_U\cdot v|
+=
+\frac{|H_U|}{|\operatorname{Stab}_{H_U}(v)|}.
+\]
+
+The implementation should first expose the raw values without a blocking assertion, so that an H-versus-H_U counting mismatch is diagnosable rather than hidden behind an early failure. Only after the raw diagnostics are visible should the exact assertions be enabled.
+
+For the present Q3/Q∞-J audit the corrected values were
+\[
+|H|=51840,\quad |K|=2,\quad |H_U|=25920,
+\]
+\[
+|\operatorname{Stab}_H(N(d_3))|=1296,
+\quad
+|\operatorname{Stab}_{H_U}(N(d_3))|=648,
+\]
+and
+\[
+40=\frac{25920}{648}.
+\]
+This concrete case is retained as the validated template, not as a universal prediction for later q.
+
+A mismatch in either identity is first classified as a diagnostic/implementation issue to investigate. It is not immediately interpreted as a mathematical failure.
