@@ -147,6 +147,24 @@ assert len(group_seen) == 51840
 kernel_size = sum(np.array_equal(m, I10) for _, m in group_queue)
 H_U_order = len(group_seen) // kernel_size
 stab_size = sum(np.array_equal((m @ Nd_U) % P, Nd_U) for _, m in group_queue)
+
+# Diagnostic audit of the kernel: in particular test the central element -I4.
+minus_I4 = (-I4) % P
+minus_I4_matches = [
+    m for g, m in group_queue if np.array_equal(g, minus_I4)
+]
+assert len(minus_I4_matches) == 1
+minus_I4_U_action_is_identity = np.array_equal(minus_I4_matches[0], I10)
+
+print("KERNEL_DIAGNOSTICS")
+print("|ker(H -> GL(U))| =", kernel_size)
+print("|H_U| =", H_U_order)
+print("|Stab_HU(N(d_q3))| =", stab_size)
+print("-I4_IN_H =", True)
+print("-I4_U_ACTION_IS_IDENTITY =", minus_I4_U_action_is_identity)
+print("ORBIT_STABILIZER_LHS =", H_U_order)
+print("ORBIT_STABILIZER_RHS =", J_q3 * stab_size)
+
 assert H_U_order == J_q3 * stab_size
 
 artifact = {
@@ -163,6 +181,8 @@ artifact = {
     "kernel_H_to_GL_U": kernel_size,
     "H_U_order": H_U_order,
     "stabilizer_Nd_q3": stab_size,
+    "minus_I4_in_H": True,
+    "minus_I4_U_action_is_identity": minus_I4_U_action_is_identity,
     "orbit_stabilizer_check": H_U_order == J_q3 * stab_size,
     "qinf_status": "IMPLEMENTATION-LEVEL CONSISTENCY / SANITY CHECK",
     "substantive_criterion": "J(N(d3)) != 1",
