@@ -105,7 +105,7 @@ assert np.array_equal((N@N)%P,np.zeros((45,45),dtype=np.int64))
 
 # End_H(W) is already directly solved in Phase 2-3.
 nsN=runpy.run_path(str(ROOT/"phase2_3_endH_optimized_2026-09-15.py"))
-End_dim=int(nsN["nullity"])
+End_dim=int(nsN["nullity_E"])
 N_authority=np.array(nsN["N"],dtype=np.int64)%P
 assert End_dim==2 and np.array_equal(N_authority,N)
 
