@@ -234,3 +234,24 @@ A full finite quotient \\(G/D_n\\) must not automatically be called “weak data
 Complete the definition audit of the provisional lifting observable \\(A_n(q)\\), then implement the rank-2 control at the smallest nontrivial filtration level. The control is a validation experiment, not evidence for a rank-4 theorem.
 
 Protocol: `plans/PLAN-RANK2-CONTROL-AND-LIFTING.md`.
+
+
+## 2026-09-19 — rank-2 lifting definition audit
+
+The first definition audit for the new rank-2 control was completed before implementation.
+
+Under the standard p-Zassenhaus convention, degree-3 information is visible in the quotient by \\(D_4\\). In the rank-2 model
+\\[
+G_q^{(2)}=\\langle x_1,x_2\\mid x_1^q[x_1,x_2]=1\\rangle,
+\\]
+the commutator term begins in degree 2, while the q=3 power term \\(x_1^3\\) begins in degree 3. Thus the first filtration quotient that can see the q=3 power contribution is expected to be \\(G_3^{(2)}/D_4\\), not \\(G_3^{(2)}/D_3\\).
+
+For rank 2 the natural mod-3 symplectic group is \\(Sp_2(\\mathbf F_3)=SL_2(\\mathbf F_3)\\), of order 24. The distinguished torsion direction is \\(\\ell=\\langle\\bar x_1\\rangle\\); its line stabilizer has order 6.
+
+The provisional lift test is therefore fixed as follows: a lift of \\(g\\in SL_2(\\mathbf F_3)\\) is an explicitly specified free pro-3 automorphism inducing g on \\(F/\\Phi(F)\\), and admissibility is preservation of the defining relator's normal closure modulo \\(D_4(F)\\), subject to an implementation-level check of the exact equivalence used by the quotient construction.
+
+A critical restriction is frozen: the full abstract quotient \\(G_q/D_4\\) must not be supplied as “weak data”, because q could then be visible directly through group-theoretic invariants such as abelianization. The first control will instead test representative linear symmetries and their relator-preservation/lift behavior.
+
+The rank-2 control is therefore ready for implementation at n=4. It remains a validation experiment, not a rank-4 theorem.
+
+Literature context: Pál–Quick's 2026 odd-prime Demuškin result distinguishes q=3 from q\\ne3 via A_3-formality, but that result concerns higher DGA/Hochschild structure and does not establish the present lifting observable. citeturn0academia23
