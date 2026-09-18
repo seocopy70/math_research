@@ -498,6 +498,49 @@ The `all_rank10` assertion remains red because the `a=2` transports have rank 45
 
 **O2-9 canonicality consequence:** the 10-dimensional absolute obstruction is not canonical under the exhausted transport family. The surviving structural statement is the verified 20-dimensional \(V20\) plus 25-dimensional quotient structure above. This does not by itself distinguish \(q=3\) from \(q=\infty\) or recover \(\chi\).
 
+## 6G. O2-9 B1 — V20 image equality FAIL / CLOSED
+
+Record: \`research/O2-9_B1_V20_IMAGE_EQUALITY_RESULT_2026-09-18.md\`  
+Actions run: \`35359895308\`; job \`105648285525\`.  
+Clean execution commit: \`721c6866fbf6ff4282f9e187c37951b1fea7eb71\`.
+
+For the exact B1-admissible family
+\[
+\tau_b=\tau(I+bN),\qquad b=0,1,2,
+\]
+let
+\[
+A_b=\operatorname{Im}D_{(1,b)}.
+\]
+
+Verified:
+- \(\dim A_0=\dim A_1=\dim A_2=10\);
+- every pairwise join has dimension 20;
+- hence every pairwise intersection has dimension
+  \[
+  \dim(A_i\cap A_j)=10+10-20=0;
+  \]
+- the three-way span has dimension 20.
+
+Therefore
+\[
+\boxed{A_0,A_1,A_2\text{ are distinct 10-dimensional subspaces with pairwise-zero intersections}}
+\]
+and
+\[
+\boxed{\dim(A_0+A_1+A_2)=20}.
+\]
+
+The specific proposition that the absolute image is transport-independent within B1 is **FAIL**. The concrete-subspace \(V_{20}\) candidate is therefore **not promoted**.
+
+Define, only as a B1-family observation,
+\[
+W_{B1}:=A_0+A_1+A_2,\qquad \dim W_{B1}=20.
+\]
+This does not establish that \(W_{B1}\) is filtration-intrinsic or canonical, and it must not be conflated with a canonical \(V_{20}\).
+
+This result is strictly scoped to the B1 transport family. It does not invalidate the fixed-\(\tau\) O2-3 identification \(O\cong U\), does not decide filtration-intrinsicity in general, and does not decide q=3 versus q=\(\infty\) or recovery of \(\chi\).
+
 ## 6G. Q3/Q∞-J — CLOSED / vector-orbit distinction verified
 
 Record: `research/Q3_QINF_INDEPENDENCE_PROTOCOL_2026-09-18.md`; `research/Q3_QINF_zero_case_prereg_2026-09-18.md`  
@@ -618,7 +661,7 @@ Existing historical protocol documents are reference/history only; they do not o
 | \(U\cong O\) as \(H\)-modules | 🟢 PASS |
 | absolute transport-independence of O_tau | 🔴 Failed in O2-4 |\n| variation-module basepoint independence within B1 family | 🟢 O2-6 PASS |\n| O2-7 raw p-power orbit = U | 🔴 False (orbit dimension 45) |
 | O2-7 H.N(d) inside U, dim 10 and equals U | 🟢 Corrected / verified |
-| O2-9 full transport canonicality | 🔴 Failed / exhausted |\n| O2-9 20+25 quotient structure | 🟢 Verified |\n| full filtration-intrinsic characterization of Delta O | 🟡 Open |
+| O2-9 full transport canonicality | 🔴 Failed / exhausted |\n| O2-9 20+25 quotient structure | 🟢 Verified |\n| O2-9 B1 absolute image equality / concrete V20 | 🔴 Failed / not promoted |\n| B1 three-image span dimension 20 | 🟢 Verified observation |\n| full filtration-intrinsic characterization of Delta O | 🟡 Open |
 | legacy tuple-action archaeology | ⚪ Not yet determined |
 | q=3 vs q=∞ distinction | 🟡 Open |
 | intrinsic recovery of \(\chi\) | 🟡 Open |
