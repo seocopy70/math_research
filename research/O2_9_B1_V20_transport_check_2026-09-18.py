@@ -562,10 +562,37 @@ for i,k1 in enumerate(keys_b1):
             ranks_b1[k1] + ranks_b1[k2] - join_rank
         )
 three_way_intersection_b1_upper_bound = min(pairwise_intersection_b1.values())
+
+# Because every pairwise intersection is already zero, the triple
+# intersection is mathematically forced to be zero. Record it explicitly.
+three_way_intersection_b1_dim = 0 if three_way_intersection_b1_upper_bound == 0 else None
+
+# Each pairwise join is a candidate for the same B1-generated ambient space.
+# Equality of the pairwise joins is checked by their ranks after joining all
+# three pairwise bases; rank 20 means the corresponding 20D spans coincide.
+pairwise_join_bases = {}
+for i,k1 in enumerate(keys_b1):
+    for k2 in keys_b1[i+1:]:
+        pairwise_join_bases[f"{k1}+{k2}"] = column_basis(
+            np.column_stack([images[k1], images[k2]])
+        )
+pairwise_join_keys = list(pairwise_join_bases)
+pairwise_join_equality = {}
+for i,k1 in enumerate(pairwise_join_keys):
+    for k2 in pairwise_join_keys[i+1:]:
+        jr = int(rank3(np.column_stack([
+            pairwise_join_bases[k1], pairwise_join_bases[k2]
+        ])))
+        pairwise_join_equality[f"{k1}={k2}"] = {
+            "join_of_pairwise_joins_rank": jr,
+            "equal_20D_spaces": jr == 20
+        }
+
 print("pairwise B1 intersection dimensions =", pairwise_intersection_b1)
-print("three-way B1 intersection dimension upper bound =", three_way_intersection_b1_upper_bound)
+print("three-way B1 intersection dimension =", three_way_intersection_b1_dim)
 print("B1 image-family span rank =", all_three_b1)
 print("B1 image-family span is 20D =", all_three_b1 == 20)
+print("pairwise-join 20D space equality =", pairwise_join_equality)
 
 print("V20 transport-independent within B1 =", same_b1)
 print("INTERPRETATION =", "PASS" if same_b1 else "FAIL")
