@@ -115,6 +115,54 @@ Q_4=L_4/(R)_4,\qquad (R)_4=[R,L_2].
 
 The implementation embeds Lie elements into the 256-dimensional degree-4 associative word space, selects independent columns for \((R)_4\), and then represents quotient orbit modules relative to a complementary basis.
 
+## 10A. q=3 / q=∞ baseline-relative degree-3 source
+
+For the q=3 versus q=∞ comparison track, the reference baseline is fixed to the pure-commutator q=∞ presentation
+
+\[
+G_\infty=\langle x_1,x_2,x_3,x_4\mid [x_1,x_2][x_3,x_4]=1\rangle,
+\]
+
+while the q=3 case is
+
+\[
+G_3=\langle x_1,x_2,x_3,x_4\mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle.
+\]
+
+The comparison object is defined **relatively to this fixed baseline**, not as an absolute degree-3 term. Let \(s_q\) denote the relation-derived element used in the q=3/q=∞ comparison, and define
+
+\[
+\boxed{\Delta_3(q):=\operatorname{in}_3(s_q)-\operatorname{in}_3(s_\infty).}
+\]
+
+The corresponding bracketed q-sensitive object is
+
+\[
+\boxed{d_q:=[\Delta_3(q),X_2].}
+\]
+
+The independent truncated Magnus verification recorded that
+
+\[
+\Delta_3(3)=X_1^{[3]},
+\qquad
+\Delta_3(\infty)=0,
+\]
+
+so in particular
+
+\[
+d_3=[X_1^{[3]},X_2],
+\qquad
+\boxed{d_\infty=[0,X_2]=0}.
+\]
+
+Thus \(d_\infty=0\) is not an independently selected target value: it follows tautologically from the baseline-relative definition once the baseline is fixed. The convention that q=∞ is the baseline is itself a mathematical/conventional choice made at the presentation level; it must not be confused with a posteriori selection based on an observed orbit or invariant.
+
+This definition also makes explicit that the common Lie/conjugation contribution in \(\operatorname{in}_3(s_3)\) is not being discarded by the downstream construction. It cancels in the baseline-relative difference \(\Delta_3(3)\) by definition. Consequently the downstream objects \(d_q\), \(W_d\), \(N\), \(\tau\), and the associated \(J\)-comparison are understood to operate on this q-sensitive difference source, not on \(\operatorname{in}_3(s_3)\) as an absolute object.
+
+**Scope note.** This section fixes the definition of the q-sensitive comparison object. It does not by itself assert that \(d_\infty\) is a canonical whole degree-3 q=∞ analogue of \(d_3\), nor does it establish any q-detection result. Those claims require the separate Q3/Q∞ definition and invariant audit.
+
 ## 11. Coordinate consistency protocol
 
 The authoritative Python representation uses **column action** \(v\mapsto Av\). GAP `GModuleByMats` uses **row vectors with right action**. Therefore Python action matrices, endomorphisms, and subspace bases must all be transposed when converted to GAP. This applies equally to generators and to objects such as \(N\), kernels, images, and socle bases.
