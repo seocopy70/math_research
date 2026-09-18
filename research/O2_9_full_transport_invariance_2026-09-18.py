@@ -272,6 +272,16 @@ print("G-1 dim(DeltaO intersection Im G) =",dim_DeltaO_inter_G)
 print("G-1 DeltaO subset Im G =",deltaO_in_G)
 assert deltaO_in_G
 
+# G-1.5: before constructing any quotient map, test whether the new G-directions
+# stay inside the already constructed V55 = V20 + Im(C). This is deliberately
+# separate from the quotient construction: rank([V55,G])=55 means Im(G) is
+# contained in V55, while rank > 55 means G contributes directions outside the
+# C-generated residual extension.
+rank_V55_G=rank3(np.column_stack([V55 if 'V55' in globals() else column_basis(np.column_stack([base20,C])),G]))
+G_in_V55=(rank_V55_G==55)
+print("G-1.5 rank([V55, Im G]) =",rank_V55_G)
+print("G-1.5 Im G subset V55 =",G_in_V55)
+
 # H-stability test for the 55-dimensional extension V55.
 # This is the quotient-level statement: V20 is already H-stable from O2-6,
 # so V55/V20 is an H-module iff V55 itself is H-stable.
