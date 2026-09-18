@@ -128,3 +128,43 @@ This control does not attempt to:
 Before implementation, complete the definition audit of A_n(q) and choose the smallest filtration level for which the lift condition is nontrivial.
 
 Only then write/run the rank-2 computation.
+
+## 10. Preliminary definition audit — 2026-09-19
+
+The standard p-Zassenhaus convention gives
+\[
+D_n(G)=\prod_{ip^h\ge n}\gamma_i(G)^{p^h},
+\]
+so the graded contribution of degree 3 is visible in the quotient by \(D_4\), not by \(D_3\). In the rank-2 q=3 model, the commutator term has initial degree 2 while the p-power term \(x_1^3\) has degree 3. Therefore the first quotient that can see the q=3 power contribution is expected to be
+\[
+G_3^{(2)}/D_4,
+\]
+with the q=∞ baseline having no corresponding degree-3 power contribution.
+
+This is a **filtration-indexing fact**, not yet a lift computation.
+
+For the linear symmetry group of the rank-2 mod-3 generator space, the natural ambient group is
+\[
+Sp_2(\mathbf F_3)=SL_2(\mathbf F_3),
+\]
+which has order 24. The distinguished finite-q torsion direction is the line
+\[
+\ell=\langle\bar x_1\rangle.
+\]
+Its line stabilizer has index equal to the number of projective lines in \(\mathbf F_3^2\), namely 4, hence has order 6. This gives a concrete small-group control for the proposed line-stabilizer idea.
+
+### Definition to use for the first control
+
+For \(g\in SL_2(\mathbf F_3)\), a **lift at level n** will mean a specified automorphism \(\tilde g\) of the free pro-3 group on \(x_1,x_2\) whose induced action on \(F/\Phi(F)\cong\mathbf F_3^2\) is g. The admissibility condition is that \(\tilde g\) preserve the normal closure of the defining relator modulo \(D_n(F)\) (equivalently, the relator images agree in the relevant quotient), with the exact equivalence to be checked in the implementation.
+
+The first computational level should therefore be **n=4**, because n=3 cannot see the degree-3 q-sensitive term under the standard descending-filtration convention.
+
+### Weak-data restriction
+
+The experiment must not take the entire abstract finite quotient \(G_q/D_4\) as an input object and then read q from its abelianization. The intended observable is the lift/admissibility behavior of prescribed linear symmetries relative to the fixed presentation/graded data.
+
+The first run should therefore test representative elements in the line stabilizer and representative elements moving \(\ell\), rather than attempt to enumerate all of \(SL_2(\mathbf F_3)\).
+
+### Literature boundary
+
+Recent work of Pál–Quick independently establishes that, for odd-prime Demuškin groups, q=3 is distinguished from q\ne3 by \(A_3\)-formality of the continuous-cochain DGA. This confirms that q=3 can survive in higher structure, but it does not validate the present lifting observable or make the present filtered/graded route redundant. The current project therefore continues to target the weaker-data question. See arXiv:2601.07551. 
