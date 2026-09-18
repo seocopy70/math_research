@@ -94,33 +94,30 @@ Q_W45 = np.array(ns_tau["Q_W45"], dtype=np.int64) % P
 d_W = solve_full_column(Q_W45, d_Q)
 assert np.array_equal((Q_W45 @ d_W) % P, d_Q)
 
-# H-orbit of d inside W coordinates.
-orbit = [d_W]
-changed = True
-while changed:
-    changed = False
-    for A in A_W:
-        v = (A @ orbit[-1]) % P
-        trial = np.column_stack(orbit + [v])
-        if rank3(trial) > rank3(np.column_stack(orbit)):
-            orbit.append(v)
-            changed = True
-P_basis = np.column_stack(orbit)
+# Complete H-orbit closure: every newly obtained basis vector is acted on
+# by every generator until the span stabilizes. Do not propagate only the
+# most recently appended vector; that can stop at a non-closed subspace.
+def h_orbit_closure(v0):
+    basis = [np.array(v0, dtype=np.int64) % P]
+    while True:
+        current = np.column_stack(basis)
+        current_rank = rank3(current)
+        additions = []
+        for v0 in list(basis):
+            for A in A_W:
+                v = (A @ v0) % P
+                if rank3(np.column_stack([current] + additions + [v])) > current_rank + len(additions):
+                    additions.append(v)
+        if not additions:
+            return np.column_stack(basis)
+        basis.extend(additions)
+
+P_basis = h_orbit_closure(d_W)
 
 # The raw q-sensitive class generates all of W. Test instead whether the
 # nilpotent shadow N(d) generates the rank-10 module U.
 Nd = (N @ d_W) % P
-Nd_orbit = [Nd]
-changed = True
-while changed:
-    changed = False
-    for A in A_W:
-        v = (A @ Nd_orbit[-1]) % P
-        trial = np.column_stack(Nd_orbit + [v])
-        if rank3(trial) > rank3(np.column_stack(Nd_orbit)):
-            Nd_orbit.append(v)
-            changed = True
-Nd_basis = np.column_stack(Nd_orbit)
+Nd_basis = h_orbit_closure(Nd)
 
 # U = im(N). Equality is tested as actual subspace equality in W coordinates.
 U_basis = N
