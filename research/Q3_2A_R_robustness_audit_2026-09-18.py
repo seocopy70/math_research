@@ -25,8 +25,18 @@ ART = ROOT / "artifacts"
 ns = runpy.run_path(str(ROOT / "O2_7_q_control_variation_module_2026-09-18.py"))
 N = np.array(ns["N"], dtype=np.int64) % P
 A_W = [np.array(A, dtype=np.int64) % P for A in ns["A_W"]]
-gens_4 = [np.array(g, dtype=np.int64) % P for g in ns["gens"]]
 d_W = np.array(ns["d_W"], dtype=np.int64) % P
+
+# Reconstruct the exact five authoritative 4x4 generators explicitly.
+# Do not depend on runpy namespace names for generator provenance.
+J = np.array([[0,1,0,0],[-1,0,0,0],[0,0,0,1],[0,0,-1,0]], dtype=np.int64) % P
+generating_vectors = [
+    (1,0,0,0), (0,1,0,0), (0,0,1,0), (0,0,0,1), (1,0,1,0)
+]
+def transvection(v):
+    v = np.array(v, dtype=np.int64).reshape(4,1) % P
+    return (np.eye(4, dtype=np.int64) + v @ ((J @ v).T)) % P
+gens_4 = [transvection(v) for v in generating_vectors]
 
 def rank3(A):
     A = np.array(A, dtype=np.int64, copy=True) % P
