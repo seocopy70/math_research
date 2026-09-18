@@ -3,21 +3,63 @@
 
 ## Global position
 
-Q3-2A-R structural census is complete for the authoritative q=3 object d3 and its H-orbit. The observed size-40 vector/projective orbit is not promoted to a q-detector. The zero-case convention J(0)=1 is pre-registered, but its mathematical status is explicitly treated as a convention to be audited, not as evidence for q-distinction.
+Q3-2A-R structural census is complete for the authoritative q=3 object d3 and its H-orbit. The observed size-40 vector/projective orbit is not promoted to a q-detector.
 
-The next task is therefore **definition before computation**:
+The q=∞ side is now defined by the project's fixed q=∞ baseline-relative construction, rather than by an observed orbit value:
 
 \[
-\boxed{\text{define }d_\infty\text{ independently, then derive }N(d_\infty).}
+\Delta_3(q):=\operatorname{in}_3(s_q)-\operatorname{in}_3(s_\infty),
+\qquad
+d_q:=[\Delta_3(q),X_2].
 \]
 
-No Q3/Q∞ comparison is permitted before this gate is frozen.
+The independent exact Magnus verification gives
+
+\[
+\Delta_3(3)=X_1^{[3]},\qquad \Delta_3(\infty)=0.
+\]
+
+Therefore
+
+\[
+d_3=[X_1^{[3]},X_2],\qquad d_\infty=[0,X_2]=0.
+\]
+
+This is a derivation from the fixed q=∞ baseline, not a value selected to force separation.
+
+## Analytic zero-case consequence
+
+Because N is linear,
+
+\[
+N(d_\infty)=N(0)=0.
+\]
+
+Because the preregistered invariant is the vector-orbit invariant
+
+\[
+J(v):=|H_U\cdot v|,
+\]
+
+and 0 is fixed by every linear element of H_U,
+
+\[
+J(N(d_\infty))=J(0)=1.
+\]
+
+Thus the q=∞ value 1 is **analytically determined before execution**. A later computation of the q=∞ side is therefore an **IMPLEMENTATION-LEVEL CONSISTENCY / SANITY CHECK**, not a new MATHEMATICAL PASS.
+
+The substantive q=3 question is the single decision criterion
+
+\[
+\boxed{J(N(d_3))\stackrel{?}{\ne}1}.
+\]
+
+If \(J(N(d_3))=1\), this particular N/J probe does not distinguish the q-sensitive source from the q=∞ baseline. If \(J(N(d_3))\ne1\), this invariant distinguishes the two cases. Neither outcome establishes or refutes orientation survival in the whole Zassenhaus filtration; the claim is restricted to this specific source, N, H-action, and invariant.
 
 ## Purpose
 
-Construct a mathematically justified q=∞ input object without choosing it to force separation from q=3, and specify exactly how the existing map N is applied afterward.
-
-The goal is not yet to compare orbit sizes. The goal is to establish that the two sides of the later comparison are independently and reproducibly defined.
+The purpose of the next computation is consequently narrower than the original Q3/Q∞ comparison: verify the fixed implementation against the analytically determined zero case, and compute the q=3 invariant without changing N, coordinates, normalization, or H-action.
 
 ## Dependencies
 
@@ -27,95 +69,52 @@ Frozen inputs:
 - Mathematical/computational conventions: `research/03_CONVENTIONS_AND_IMPLEMENTATION.md`.
 - Q3 zero-case pre-registration: `research/Q3_QINF_zero_case_prereg_2026-09-18.md`.
 - Q3-2A-R robustness audit: Actions run `35345371915`, head `ded57a8dd0605f48db2b04f7b7718fff40ffdc6f`.
-- The q=3 local object and N construction must be taken from the already-authoritative pipeline, not reconstructed ad hoc for the comparison.
+- The q=3 local object and N construction are taken from the already-authoritative pipeline.
+- The q-sensitive d definition is recorded in `research/03_CONVENTIONS_AND_IMPLEMENTATION.md`, commit `996fefbf8603375db427d44260cb763557620c09`.
 
-## Independence criteria for d∞
+## Independence criteria
 
-Before any numerical calculation, the q=∞ definition must satisfy all of the following.
+The q=∞ definition satisfies the following audit conditions:
 
-1. **Mathematical source is fixed first.**
-   The definition must come from the q=∞ group/presentation or the corresponding local graded construction, not from the observed value of J(N(d3)).
+1. **Mathematical source fixed first.** The q=∞ baseline is the pure-commutator presentation/control obtained by deleting the finite-q power term.
+2. **No target-value selection.** The definition does not refer to J(N(d3)) or any observed orbit size.
+3. **No representative cloning.** d∞ is the baseline-relative difference object derived from \(\Delta_3(\infty)\), not a copied or deformed d3.
+4. **Local data explicit.** The source is degree 3, followed by the fixed bracket with X2; for q=3, \(\Delta_3(3)=X_1^{[3]}\), so d3 has the corresponding degree-4 multidegree.
+5. **N fixed before evaluation.** The authoritative N is applied unchanged.
+6. **Zero is derived.** d∞=0 and N(d∞)=0 follow analytically.
+7. **Same invariant.** J is applied to both sides.
+8. **Zero convention audited.** J(0)=1 is a direct consequence of the vector-orbit definition under a linear group action; it is not an ad hoc projective-zero assignment.
 
-2. **No target-value selection.**
-   The choice of representative, normalization, basis, or local model may not depend on whether it makes N(d∞) equal to 0, nonzero, or a desired orbit size.
+## Execution gate
 
-3. **No Q3 representative cloning.**
-   A q=∞ object may not be defined merely by taking d3 and deleting/changing a term because that produces the desired comparison. Any relation between the two objects must be derived from the underlying mathematical definitions.
+The definition gate is now **ACCEPTED**.
 
-4. **Local data are explicit.**
-   The protocol must state exactly which local/graded input determines d∞, including the presentation/relation and the degree/multidegree in which the object lives.
+The smallest admissible computation is:
 
-5. **N is fixed before evaluation.**
-   Once d∞ is defined, apply the already-authoritative N without modifying its formula, basis convention, H-action, or normalization for the q=∞ case.
+1. compute the fixed q=3 value J(N(d3));
+2. compute the q=∞ implementation path and verify it returns N(d∞)=0 and J=1;
+3. classify the q=∞ result as an implementation sanity check;
+4. classify the q=3 result against the single substantive criterion J(N(d3)) != 1.
 
-6. **Zero is a derived outcome, not an input.**
-   If the independent construction gives d∞=0 or N(d∞)=0, record that as a mathematical consequence. It must not be imposed to obtain separation.
+No threshold, ranking, post-hoc exception, or altered q=∞ normalization may be introduced.
 
-7. **Same invariant on both sides.**
-   After N(d∞) is derived, use the pre-registered vector-orbit invariant
-   \[
-   J(v)=|H_U\cdot v|
-   \]
-   for both q=3 and q=∞, with J(0)=1 only as the already-fixed vector-orbit convention.
+## Invalid-test guards
 
-8. **Convention audit.**
-   Before interpreting a zero/nonzero result, explicitly check whether J(0)=1 is a natural consequence of the linear H-action or merely an auxiliary convention. If it is merely conventional, the final interpretation must say so and must not claim that the numerical value itself is a canonical extension of the projective invariant.
+Any result is **INVALID TEST** if it:
 
-## Required mathematical derivation
-
-The first deliverable is a short derivation of:
-
-\[
-d_\infty := \text{(independently defined q=∞ local/graded object)}
-\]
-
-followed by
-
-\[
-N(d_\infty)
-\]
-
-using the fixed N.
-
-The derivation must identify:
-
-- the underlying q=∞ presentation/local model;
-- the exact degree and multidegree of d∞;
-- why that object is the appropriate q=∞ counterpart of d3;
-- whether d∞ is zero before N is applied;
-- if nonzero, its explicit coordinates;
-- the exact route from the mathematical definition to the computed vector.
-
-## No execution gate
-
-Do **not** create or run Q3/Q∞-2 yet.
-
-Execution becomes admissible only after this document is amended or superseded by a mathematically explicit d∞ definition satisfying the independence criteria above.
-
-## Decision consequences
-
-### DEFINITION ACCEPTED
-
-The q=∞ object is mathematically specified independently, its derivation is reproducible, and no post-hoc target selection is involved.
-
-Then proceed to the smallest possible computation:
-
-\[
-N(d_\infty)\quad\text{and}\quad J(N(d_3)),J(N(d_\infty)).
-\]
-
-### DEFINITION REJECTED / INSUFFICIENT
-
-If d∞ is selected by reference to the observed q=3 orbit/invariant, or if its mathematical source cannot be stated unambiguously, do not run the comparison. Repair the definition first.
-
-### INVALID TEST
-
-If a later computation mixes coordinate systems, uses a stale N/action, changes normalization between q=3 and q=∞, or silently substitutes a zero case, discard the computation as invalid rather than interpreting it mathematically.
+- mixes row/right and column/left coordinate conventions;
+- uses a stale or modified N;
+- changes H-action or normalization between q=3 and q=∞;
+- silently substitutes zero instead of deriving it;
+- computes an incomplete H-closure;
+- uses non-exact finite-field arithmetic.
 
 ## Current status
 
-The q=3 size-40 stability observation is recorded as:
+Definition gate: **ACCEPTED**.
+
+Substantive q-detection result: **OPEN**.
+
+The earlier size-40 observation remains:
 
 > **H-EQUIVALENT STABILITY OBSERVED (inside H·d3; no q-claim).**
-
-The q=∞ object remains **OPEN**. No q=3 versus q=∞ conclusion has been drawn.
