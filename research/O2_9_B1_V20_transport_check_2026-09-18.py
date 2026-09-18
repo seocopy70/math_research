@@ -550,6 +550,23 @@ print("pairwise equality =", pairwise_b1)
 all_three_b1 = int(rank3(column_basis(np.column_stack([images[k] for k in keys_b1]))))
 same_b1 = all(r == 10 for r in ranks_b1.values()) and all(v["equal"] for v in pairwise_b1.values()) and all_three_b1 == 10
 print("three-way span rank =", all_three_b1)
+
+# Explicit B1 intersection dimensions. These are already implied by the
+# pairwise join ranks via dim(A∩B)=dim A+dim B-dim(A+B); compute them
+# directly as a recorded diagnostic without changing the canonicality test.
+pairwise_intersection_b1 = {}
+for i,k1 in enumerate(keys_b1):
+    for k2 in keys_b1[i+1:]:
+        join_rank = pairwise_b1[f"{k1}={k2}"]["join_rank"]
+        pairwise_intersection_b1[f"{k1}∩{k2}"] = int(
+            ranks_b1[k1] + ranks_b1[k2] - join_rank
+        )
+three_way_intersection_b1_upper_bound = min(pairwise_intersection_b1.values())
+print("pairwise B1 intersection dimensions =", pairwise_intersection_b1)
+print("three-way B1 intersection dimension upper bound =", three_way_intersection_b1_upper_bound)
+print("B1 image-family span rank =", all_three_b1)
+print("B1 image-family span is 20D =", all_three_b1 == 20)
+
 print("V20 transport-independent within B1 =", same_b1)
 print("INTERPRETATION =", "PASS" if same_b1 else "FAIL")
 print("SCOPE = B1 transport family only; NOT filtration-intrinsicity")
