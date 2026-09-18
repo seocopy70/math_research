@@ -1,3 +1,5 @@
+> **Historical/reference only (2026-09-18).** This document is preserved as research history. It is not an authority for current mathematical state or the active research plan. Current state: `RESEARCH_MAP.md`; conventions/process: `research/03_CONVENTIONS_AND_IMPLEMENTATION.md`; active O2 plan: `plans/PLAN-O2-TRANSPORT-INTRINSIC.md`.
+
 # 수학연구 검증·정확성 원칙 — 2026-09-17
 
 ## 배경
