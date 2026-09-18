@@ -107,3 +107,26 @@ The next question, if this route is pursued, is narrower:
 3. do not introduce a new canonical \(V_{20}\) candidate before such a definition is available.
 
 The q=3/q=\infty and \(\chi\)-recovery claims remain outside the scope of this result.
+
+
+## 6. Diagnostic closure after the initial FAIL
+
+A follow-up diagnostic (Actions run `35360525459`, job `105650375170`) checked the relative position of the three B1 images more explicitly.
+
+Verified:
+- all three pairwise intersections have dimension 0;
+- the triple intersection has dimension 0 (forced already by the pairwise-zero intersections);
+- the B1 image-family span has dimension 20;
+- the three pairwise 20-dimensional joins coincide as the same 20-dimensional subspace.
+
+Thus the B1 data are more precisely:
+\[
+\dim A_b=10,\qquad
+\dim(A_i\cap A_j)=0\ (i\ne j),\qquad
+\dim(A_0+A_1+A_2)=20,
+\]
+with each pairwise join equal to the same 20-dimensional span.
+
+This is a **relative-position statement about the tested B1 images**. It does not supply a transport-free definition of that 20-dimensional span.
+
+The next step is therefore not to name or promote a new (V_{20}), but to compare this observed span only against already frozen intrinsic data and maps. If no such characterization is obtained, the result will be recorded as an observed B1-family construction with no current transport-free definition.
