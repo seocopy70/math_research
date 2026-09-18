@@ -1,0 +1,25 @@
+name: Q3/Q9 Gate C-1a degree-9 Magnus sanity
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "research/Q3_Q9_GATE_C1a_magnus_degree9_sanity_2026-09-19.py"
+      - ".github/workflows/q3-q9-gate-c1a-magnus-degree9-sanity.yml"
+
+jobs:
+  gate-c1a:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run C-1a
+        run: |
+          python research/Q3_Q9_GATE_C1a_magnus_degree9_sanity_2026-09-19.py
