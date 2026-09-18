@@ -254,4 +254,4 @@ A critical restriction is frozen: the full abstract quotient \\(G_q/D_4\\) must 
 
 The rank-2 control is therefore ready for implementation at n=4. It remains a validation experiment, not a rank-4 theorem.
 
-Literature context: Pál–Quick's 2026 odd-prime Demuškin result distinguishes q=3 from q\\ne3 via A_3-formality, but that result concerns higher DGA/Hochschild structure and does not establish the present lifting observable. citeturn0academia23
+Literature context: Pál–Quick's 2026 odd-prime Demuškin result distinguishes q=3 from q\\ne3 via A_3-formality, but that result concerns higher DGA/Hochschild structure and does not establish the present lifting observable. Reference: arXiv:2601.07551.
