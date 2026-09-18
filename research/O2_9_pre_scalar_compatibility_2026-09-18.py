@@ -96,13 +96,14 @@ def restrict_coordinate_map(B, Y):
     assert np.array_equal((B @ C) % P, Y % P)
     return C, rows
 
-# F maps ImN-coordinate vectors to DeltaO. Recover its coordinate matrix C_F:
-# F = Delta_O * C_F.
+# F maps ImN-coordinate vectors to DeltaO. Recover F's 10x10
+# coordinate matrix C_F from F = Delta_O * C_F.
 C_F, delta_rows = restrict_coordinate_map(Delta_O, F)
 
-# Phi_0 maps DeltaO coordinates to U coordinates by I_10.
-# Therefore Psi = Phi_0 o F has ambient matrix U*C_F.
-Psi = (U @ C_F) % P
+# Phi_0 is the identity on the chosen DeltaO/U basis coordinates.
+# Therefore Psi = Phi_0 o F is represented by C_F itself.
+# The previous version incorrectly formed the ambient 45x10 matrix U*C_F.
+Psi = C_F % P
 
 I10 = np.eye(10, dtype=np.int64)
 scalar_checks = {}
@@ -131,7 +132,7 @@ artifact = {
     "Phi0_definition": "identity on the chosen DeltaO/U basis coordinates",
     "F_definition": "O2-8 F = D_linear o tau restricted to Im(N)",
     "Psi_definition": "Phi0 o F",
-    "Psi_shape": list(Psi.shape),
+    "Psi_coordinate_space": "10x10 coordinates on the Im(N) basis",
     "Psi_matrix": Psi.tolist(),
     "diagonal": diag,
     "offdiagonal_nonzero_entries": offdiag_nonzero,
