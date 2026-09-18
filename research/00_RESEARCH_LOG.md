@@ -181,3 +181,30 @@ The two light-weight tau checks requested as the first gate both PASS: tau is an
 The bracket test was also executed in the same run and gives obstruction rank 10, not the earlier rank 45. Thus the earlier rank-45 value must not be carried forward. At this checkpoint, the negative bracket-compatibility result is an independently reproduced computation on the isolated pipeline, but it is **not yet promoted to a final mathematical obstruction** until the rank-10 result is audited against the prior rank-45 computation and the action/convention issue is fully reconciled.
 
 The key methodological point is retained: PASS of the tau intertwining/K conditions validates the construction of tau; FAIL of bracket compatibility is a separate layer and requires its own audit.
+
+
+## 2026-09-18 — O2-9(pre) compatibility checkpoint
+
+O2-9(pre) was rerun after correcting the coordinate-space bug in the first attempt. Actions run `35320678550` completed successfully.
+
+The final (Psi=Phi_0circ F) was computed as a (10\times10) coordinate endomorphism of (U=\operatorname{Im}N), not as an ambient (45\times10) matrix. The full exact comparison gave
+[
+\Psi=I_{10},
+]
+with diagonal ([1,1,1,1,1,1,1,1,1,1]) and zero off-diagonal entries. Thus O2-9(pre) is PASS. This confirms exact compatibility of the O2-7 and O2-8 identifications in the chosen coordinates.
+
+## 2026-09-18 — O2-9 full transport coverage designed and committed
+
+The next canonicality experiment is now defined against the complete unit group of
+[
+\operatorname{End}_H(W)=\mathbb F_3[I,N].
+]
+Because (N^2=0), the six units are (aI+bN) with (a\in\{1,2\}), (b\in\{0,1,2\}). The previous O2-4/O2-5 family covered only the three (a=1) elements.
+
+The new workflow/script:
+- script: `research/O2_9_full_transport_invariance_2026-09-18.py`
+- workflow: `.github/workflows/o2-9-full-transport-invariance.yml`
+- script commit: `022ce6f35771246d846c09aea8f58623c3461b71`
+- workflow commit: `8e0ac0cda83d6b5809c48d13115e62a1538fca06`
+
+The experiment also explicitly checks (dim\operatorname{Hom}_H(W,W_d)=2) by transport to (operatorname{End}_H(W)), and records the exact affine correction term for (a=2). Execution result is pending.
