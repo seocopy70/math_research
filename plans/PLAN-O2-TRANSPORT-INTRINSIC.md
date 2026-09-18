@@ -152,3 +152,47 @@ The simplified relation (D_{a,b}=aD_0+b\Delta D) is therefore treated as a testa
 **FAIL:** an additional admissible transport outside the six-element family is found, or the candidate structure changes under one of the six and no transport-independent replacement is identified.
 
 **INVALID TEST:** any failure of coordinate/action conventions, Hom-space construction, unit parameterization, or affine identity verification.
+
+
+## 10. O2-9 B1 IMAGE-EQUALITY CHECK — COMPLETE / FAIL
+
+### Purpose
+
+Test the concrete proposition that the absolute obstruction image
+\[
+A_b=\operatorname{Im}D_{(1,b)}
+\]
+is independent of \(b\in\{0,1,2\}\) within the exact B1-admissible family.
+
+### Evidence
+
+Actions run \`35359895308\`, job \`105648285525\`.
+
+\[
+\dim A_0=\dim A_1=\dim A_2=10,
+\]
+while every pairwise join has dimension 20. Hence
+\[
+\dim(A_i\cap A_j)=0.
+\]
+The three-way span has dimension 20.
+
+### Decision
+
+\[
+\boxed{\text{B1 absolute-image transport-independence = FAIL}}
+\]
+
+The concrete \(V_{20}\) interpretation is not promoted.
+
+The retained observation is the B1-family span
+\[
+W_{B1}=A_0+A_1+A_2,\qquad \dim W_{B1}=20.
+\]
+This is not yet a transport-free or filtration-intrinsic construction.
+
+### Next minimal checkpoint
+
+Do not search for another named \(V_{20}\) candidate yet. First ask only whether \(W_{B1}\) admits a transport-free definition from already frozen filtered/graded data. If no such definition is available, record the obstruction route as failing to produce a concrete intrinsic subspace under the tested choices and move to a weaker invariant.
+
+The q=3 versus q=\(\infty\) comparison must remain logically separate from this failed concrete-subspace route.
