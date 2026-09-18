@@ -1,4 +1,4 @@
-""""O2-9 small follow-up: compare the B1-admissible V20 images.
+"""O2-9 small follow-up: compare the B1-admissible V20 images.
 
 Only (a,b)=(1,0),(1,1),(1,2) are B1-admissible.
 The existing full O2-9 computation is reused unchanged except that its
@@ -14,7 +14,6 @@ It does NOT mean filtration-intrinsicity.
 
 from pathlib import Path
 import runpy
-import tempfile
 import numpy as np
 
 ROOT = Path(__file__).parent
@@ -24,10 +23,8 @@ src = src.replace(
     'if not all_rank10: print("O2-9 full-family rank diagnostic: a=2 transports are rank 45; continuing for B1-only comparison.")'
 )
 
-with tempfile.TemporaryDirectory() as td:
-    p = Path(td) / "o2_9_full_transport_diagnostic.py"
-    p.write_text(src)
-    ns = runpy.run_path(str(p))
+ns = {"__file__": str(ROOT / "O2_9_full_transport_invariance_2026-09-18.py"), "__name__": "__main__"}
+exec(compile(src, str(ROOT / "O2_9_full_transport_invariance_2026-09-18.py"), "exec"), ns)
 
 images = ns["images"]
 rank3 = ns["rank3"]
