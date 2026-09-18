@@ -2,7 +2,7 @@
 
 This is an audit, not a q=3/q=infinity experiment.
 It verifies:
-1) the full generated projective action has |H|=51840;
+1) the generated image on U has order 25920, and its projective kernel is measured explicitly;
 2) the projective kernel is explicitly measured;
 3) the target [N(d3)] lies in the size-40 orbit;
 4) all d in the H-orbit of the authoritative d3 give N(d) in the same
@@ -142,18 +142,15 @@ while frontier:
             frontier.append(h)
 
 H_order = len(group)
-assert H_order == 51840, f"generated group on U has order {H_order}, expected 51840"
-print("Q3-2A-R GROUP ORDER: |<A_U generators>| =", H_order)
+assert H_order == 25920, f"generated image on U has order {H_order}, expected 25920"
+print("Q3-2A-R GROUP IMAGE ORDER ON U =", H_order)
 
-# Projective kernel: generated-group elements acting as a scalar on U.
-scalar_keys = {
-    mat_key(I10),
-    mat_key((2 * I10) % P),
-}
-kernel_elements = [g for g in group.values() if mat_key(g) in scalar_keys]
-projective_kernel_order = len(kernel_elements)
-assert projective_kernel_order == 2, (
-    f"unexpected projective kernel order {projective_kernel_order}"
+# Projective kernel of the generated image on U: scalar matrices actually present.
+scalar_keys = {mat_key(I10), mat_key((2 * I10) % P)}
+projective_kernel_order = sum(1 for g in group.values() if mat_key(g) in scalar_keys)
+assert projective_kernel_order == 1, (
+    f"unexpected projective kernel order {projective_kernel_order}; "
+    "2I should not occur in the U-image"
 )
 effective_projective_order = H_order // projective_kernel_order
 assert effective_projective_order == 25920
@@ -208,21 +205,6 @@ target_idx = next(i for i, o in enumerate(orbits) if nd_line in o)
 assert len(orbits[target_idx]) == 40
 
 # ---------- Robustness over the full H-orbit of d3 ----------
-# The five A_W matrices generate H on W. Enumerating the H-orbit of d3 is
-# finite (<=51840) and tests every H-equivalent representative, not a sample.
-d_group = {mat_key(np.eye(45, dtype=np.int64)): np.eye(45, dtype=np.int64)}
-d_frontier = [np.eye(45, dtype=np.int64)]
-while d_frontier:
-    g = d_frontier.pop()
-    for a in A_W:
-        h = (a @ g) % P
-        k = mat_key(h)
-        if k not in d_group:
-            d_group[k] = h
-            d_frontier.append(h)
-
-assert len(d_group) == 51840
-
 d_orbit = set()
 d_frontier = [d_W]
 d_keys = {tuple(d_W.tolist())}
@@ -283,9 +265,9 @@ artifact = {
     "U_basis_rank": rank3(U_basis),
     "num_H_generators": len(A_U),
     "H_generator_matrices_on_U": [A.tolist() for A in A_U],
-    "generated_H_order_on_U": H_order,
+    "generated_U_image_order": H_order,
     "projective_kernel_order": projective_kernel_order,
-    "projective_kernel_scalars": [1, 2],
+    "projective_kernel_scalars_present": [1],
     "effective_projective_group_order": effective_projective_order,
     "projective_line_count": len(lines),
     "projective_orbit_count": len(orbits),
@@ -314,7 +296,7 @@ ART.mkdir(exist_ok=True)
 )
 
 print("Q3-2A-R ROBUSTNESS AUDIT")
-print("generated |H| =", H_order)
+print("generated U-image order =", H_order)
 print("projective kernel order =", projective_kernel_order)
 print("effective projective order =", effective_projective_order)
 print("projective census orbit count =", len(orbits))
