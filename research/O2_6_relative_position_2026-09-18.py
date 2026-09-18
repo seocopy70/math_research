@@ -112,7 +112,6 @@ def br(v, g):
         c = int(c) % P
         if c:
             w = words4[j]
-            out[tuple4[w + (g,)] if False else 0] = out[0]
             out[idx5[w + (g,)]] = (out[idx5[w + (g,)]] + c) % P
             out[idx5[(g,) + w]] = (out[idx5[(g,) + w]] - c) % P
     return out
