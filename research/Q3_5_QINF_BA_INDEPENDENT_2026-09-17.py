@@ -68,8 +68,10 @@ def solve_intertwiner(G,H):
             for c in range(n):
                 eq=r*n+c
                 for k in range(n):
-                    M[eq,k*n+c]=(M[eq,k*n+c]+A[k,c])%P
-                    M[eq,r*n+k]=(M[eq,r*n+k]-B[r,k])%P
+                    # T[r,k] is stored at row-major index r*n+k.
+                    # B[r,k] T[k,c] is stored at k*n+c.
+                    M[eq,r*n+k]=(M[eq,r*n+k]+A[k,c])%P
+                    M[eq,k*n+c]=(M[eq,k*n+c]-B[r,k])%P
         blocks.append(M)
     return nullspace(np.vstack(blocks))
 
