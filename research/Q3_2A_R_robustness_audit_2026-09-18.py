@@ -25,6 +25,7 @@ ART = ROOT / "artifacts"
 ns = runpy.run_path(str(ROOT / "O2_7_q_control_variation_module_2026-09-18.py"))
 N = np.array(ns["N"], dtype=np.int64) % P
 A_W = [np.array(A, dtype=np.int64) % P for A in ns["A_W"]]
+gens_4 = [np.array(g, dtype=np.int64) % P for g in ns["gens"]]
 d_W = np.array(ns["d_W"], dtype=np.int64) % P
 
 def rank3(A):
@@ -127,6 +128,44 @@ def mat_key(A):
 
 def mat_apply(A, v):
     return tuple(((A @ np.array(v, dtype=np.int64)) % P).tolist())
+
+# ---------- Abstract H = Sp4(F3) / representation kernel audit ----------
+assert len(gens_4) == 5
+J = np.array([[0,1,0,0],[-1,0,0,0],[0,0,0,1],[0,0,-1,0]], dtype=np.int64) % P
+assert all(np.array_equal((g.T @ J @ g) % P, J) for g in gens_4)
+I4 = np.eye(4, dtype=np.int64)
+def key4(A): return tuple(np.array(A, dtype=np.int64).reshape(-1).tolist())
+abstract_group = {key4(I4): I4}
+frontier4 = [I4]
+while frontier4:
+    g = frontier4.pop()
+    for a in gens_4:
+        h = (a @ g) % P
+        k = key4(h)
+        if k not in abstract_group:
+            abstract_group[k] = h
+            frontier4.append(h)
+assert len(abstract_group) == 51840
+# Simultaneously enumerate the representation image; each abstract element
+# is tracked with its induced U matrix, so the kernel is measured directly.
+paired = {(key4(I4), mat_key(np.eye(10, dtype=np.int64))): (I4, np.eye(10, dtype=np.int64))}
+frontier_pair = [(I4, np.eye(10, dtype=np.int64))]
+while frontier_pair:
+    g4, gu = frontier_pair.pop()
+    for a4, au in zip(gens_4, A_U):
+        h4 = (a4 @ g4) % P
+        hu = (au @ gu) % P
+        k = (key4(h4), mat_key(hu))
+        if k not in paired:
+            paired[k] = (h4, hu)
+            frontier_pair.append((h4, hu))
+kernel_elements = [h4 for h4, hu in paired.values() if np.array_equal(hu, np.eye(10, dtype=np.int64))]
+assert len(kernel_elements) == 2
+assert any(np.array_equal(g, I4) for g in kernel_elements)
+assert any(np.array_equal(g, (-I4) % P) for g in kernel_elements)
+assert len(paired) == 51840
+print("Q3-2A-R ABSTRACT H ORDER =", len(abstract_group))
+print("Q3-2A-R KERNEL H->GL(U) ORDER =", len(kernel_elements))
 
 # ---------- Enumerate the actual generated group on U ----------
 I10 = np.eye(10, dtype=np.int64)
@@ -265,10 +304,13 @@ artifact = {
     "U_basis_rank": rank3(U_basis),
     "num_H_generators": len(A_U),
     "H_generator_matrices_on_U": [A.tolist() for A in A_U],
-    "abstract_H_order": 51840,
+    "abstract_H_order": len(abstract_group),
+    "exact_5_generators_on_V": [g.tolist() for g in gens_4],
+    "kernel_H_to_U_order_verified": len(kernel_elements),
+    "kernel_H_to_U_elements": [g.tolist() for g in kernel_elements],
     "generated_U_image_order": H_order,
     "kernel_H_to_U_order": 2,
-    "abstract_H_projective_kernel_order": 2,
+    "abstract_H_projective_kernel_order_verified": 2,
     "abstract_H_projective_effective_order": 25920,
     "projective_kernel_order": projective_kernel_order,
     "projective_kernel_scalars_present": [1],
@@ -315,4 +357,4 @@ print("nonzero N(d) count on H.d3 =", nd_nonzero_count)
 print("zero N(d) count on H.d3 =", nd_zero_count)
 print("projective orbit sizes of all nonzero N(d), d in H.d3 =", sorted(set(target_orbit_sizes)))
 print("all nonzero H-equivalent N(d) are size 40 =", set(target_orbit_sizes) == {40})
-print("Q3-2A-R RESULT = ROBUSTNESS AUDIT COMPLETE")
+print("Q3-2A-R RESULT = H-EQUIVALENT ROBUSTNESS CONFIRMED")
