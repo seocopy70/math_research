@@ -661,14 +661,14 @@ Existing historical protocol documents are reference/history only; they do not o
 | \(U\cong O\) as \(H\)-modules | 🟢 PASS |
 | absolute transport-independence of O_tau | 🔴 Failed in O2-4 |\n| variation-module basepoint independence within B1 family | 🟢 O2-6 PASS |\n| O2-7 raw p-power orbit = U | 🔴 False (orbit dimension 45) |
 | O2-7 H.N(d) inside U, dim 10 and equals U | 🟢 Corrected / verified |
-| O2-9 full transport canonicality | 🔴 Failed / exhausted |\n| O2-9 20+25 quotient structure | 🟢 Verified |\n| O2-9 B1 absolute image equality / concrete V20 | 🔴 Failed / not promoted |\n| B1 three-image span dimension 20 | 🟢 Verified observation |\n| full filtration-intrinsic characterization of Delta O | 🟡 Open |
+| O2-9 full transport canonicality | 🔴 Failed / exhausted |\n| O2-9 20+25 quotient structure | 🟢 Verified |\n| O2-9 B1 absolute image equality / concrete V20 | 🔴 Failed / not promoted |\n| B1 three-image span dimension 20 | 🟢 Verified observation |\n| B1 concrete 20D span transport-free characterization from frozen data | 🔴 Not obtained / current route closed |\n| full filtration-intrinsic characterization of Delta O | 🟡 Open |\n| concrete target-side 20D-space route | 🔴 Closed at current frozen-data level |
 | legacy tuple-action archaeology | ⚪ Not yet determined |
 | q=3 vs q=∞ distinction | 🟡 Open |
 | intrinsic recovery of \(\chi\) | 🟡 Open |
 
 ---
 
-## 11. Immediate next checkpoint
+## 11. O2 concrete 20D route — CLOSED at current frozen-data level\n\nThe B1 family gives three distinct 10D images with pairwise-zero intersections and a common 20D span. Existing affine identities identify this span with \\(\\operatorname{Im}D_0+\\Delta O\\), but \\(D_0\\) remains transport-dependent. Existing relations involving \\(G=D_{\\rm linear}\\circ\\tau|_{\\ker N}\\) likewise use the chosen transport. Therefore the current frozen data provide relations/identifications, not a transport-free definition of the observed 20D target-side span.\n\nThis closes the concrete 20D-space route for the present construction. It does not prove that no intrinsic 20D object can exist. No new \\(V_{20}\\), quotient, or invariant should be introduced merely to rescue this route.\n\nThe next O2 question must be stated more weakly: identify the strongest **already verified transport-independent information** that survives the failed concrete-subspace route. Q3/Q\\(\\infty\\) remains logically separate.\n\n## 12. Immediate next checkpoint
 
 Do not ask whether O2-3 is "good" or "bad". It has passed.
 
