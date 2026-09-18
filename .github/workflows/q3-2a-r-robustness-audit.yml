@@ -1,0 +1,28 @@
+name: Q3-2A-R robustness audit
+
+on:
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependency
+        run: python -m pip install --upgrade pip numpy
+
+      - name: Run Q3-2A-R
+        run: python research/Q3_2A_R_robustness_audit_2026-09-18.py
+
+      - name: Upload audit artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: q3-2a-r-robustness-audit
+          path: research/artifacts/q3_2a_r_robustness_audit.json
