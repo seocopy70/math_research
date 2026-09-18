@@ -146,7 +146,9 @@ assert len(group_seen) == 51840
 
 kernel_size = sum(np.array_equal(m, I10) for _, m in group_queue)
 H_U_order = len(group_seen) // kernel_size
-stab_size = sum(np.array_equal((m @ Nd_U) % P, Nd_U) for _, m in group_queue)
+stab_H_size = sum(np.array_equal((m @ Nd_U) % P, Nd_U) for _, m in group_queue)
+stab_size = stab_H_size // kernel_size
+assert stab_H_size % kernel_size == 0
 
 # Diagnostic audit of the kernel: in particular test the central element -I4.
 minus_I4 = (-I4) % P
@@ -159,6 +161,8 @@ minus_I4_U_action_is_identity = (len(minus_I4_matches) == 1 and np.array_equal(m
 print("KERNEL_DIAGNOSTICS")
 print("|ker(H -> GL(U))| =", kernel_size)
 print("|H_U| =", H_U_order)
+print("|Stab_H(N(d_q3))| =", stab_H_size)
+print("|Stab_H(N(d_q3))| =", stab_H_size)
 print("|Stab_HU(N(d_q3))| =", stab_size)
 print("-I4_IN_H =", minus_I4_in_H)
 print("-I4_U_ACTION_IS_IDENTITY =", minus_I4_U_action_is_identity)
@@ -181,7 +185,8 @@ artifact = {
     "Sp4_order": len(group_seen),
     "kernel_H_to_GL_U": kernel_size,
     "H_U_order": H_U_order,
-    "stabilizer_Nd_q3": stab_size,
+    "stabilizer_H_Nd_q3": stab_H_size,
+    "stabilizer_HU_Nd_q3": stab_size,
     "minus_I4_in_H": minus_I4_in_H,
     "minus_I4_U_action_is_identity": minus_I4_U_action_is_identity,
     "first_isomorphism_check": kernel_size * H_U_order == len(group_seen),
