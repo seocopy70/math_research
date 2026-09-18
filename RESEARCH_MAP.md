@@ -498,31 +498,48 @@ The `all_rank10` assertion remains red because the `a=2` transports have rank 45
 
 **O2-9 canonicality consequence:** the 10-dimensional absolute obstruction is not canonical under the exhausted transport family. The surviving structural statement is the verified 20-dimensional \(V20\) plus 25-dimensional quotient structure above. This does not by itself distinguish \(q=3\) from \(q=\infty\) or recover \(\chi\).
 
-## 6G. Q3-2A-R — H-equivalent stability observed / q∞ definition gate OPEN
+## 6G. Q3/Q∞-J — CLOSED / vector-orbit distinction verified
 
-Record: `research/Q3_QINF_zero_case_prereg_2026-09-18.md`, `research/Q3_QINF_INDEPENDENCE_PROTOCOL_2026-09-18.md`  
-Actions run: `35345371915`; head `ded57a8dd0605f48db2b04f7b7718fff40ffdc6f`.
+Record: `research/Q3_QINF_INDEPENDENCE_PROTOCOL_2026-09-18.md`; `research/Q3_QINF_zero_case_prereg_2026-09-18.md`  
+Actions run: `35350310816`; head commit: `88c90e2a05dab34ef6bac2d9f5545731263850b9`.
 
-The latest Q3-2A-R audit completed successfully. Its head is one commit after `b7f0f4eb1290dcd36966909fd4c8cddab0caf149`; the intervening commit only added the zero-case pre-registration document.
+The preregistered vector-orbit invariant
+\[
+J(v)=|H_U\cdot v|
+\]
+was computed with the fixed N, U, H-action and exact F3 arithmetic.
 
-The artifact verifies the structural census **inside H·d3**: |H|=51840; kernel of H→GL(U) is {+I,-I}; image order 25920; projective kernel 1; 16 projective orbits with minimum size 40; [N(d3)] has size 40; and all 360 d∈H·d3 give N(d)≠0 with size-40 output orbit.
+Verified:
+- \(J(N(d_3))=40\);
+- \(d_\infty=0\), \(N(d_\infty)=0\), and \(J(N(d_\infty))=1\) as the analytically determined zero-case sanity check;
+- \(|\ker(H\to GL(U))|=2\);
+- \(|H_U|=25920\);
+- \(|\operatorname{Stab}_H(N(d_3))|=1296\);
+- \(|\operatorname{Stab}_{H_U}(N(d_3))|=648\);
+- first-isomorphism and orbit-stabilizer checks both PASS.
 
-The current wording is deliberately:
+Therefore the substantive local criterion
+\[
+\boxed{J(N(d_3))\ne J(N(d_\infty))}
+\]
+passes: this specified N/J probe distinguishes q=3 from the fixed q=∞ baseline.
 
-> **H-EQUIVALENT STABILITY OBSERVED (inside H·d3; no q-claim).**
+**Scope boundary:** this does not establish that the canonical 3-adic orientation \(\chi\) is recovered, nor that the distinction is intrinsic to the entire Zassenhaus filtration.
 
-This is not global local-model independence and is not q-distinguishability.
+The Q3/Q∞ gate is now **CLOSED**.
 
-### Residual audit items
+## 6H. Q3/Q9 — d9 definition gate OPEN
 
-1. J(0)=1 follows from the linear vector action, but its use as an extension of the nonzero projective invariant is a convention and must not be confused with a canonical projective invariant.
-2. The recorded identification of the image group with PSp4(F3) needs an explicit verification method; order 25920 alone is insufficient for an isomorphism claim.
-3. d∞ must be independently defined before Q3/Q∞ comparison.
-4. The independence criteria for d∞ are frozen in `research/Q3_QINF_INDEPENDENCE_PROTOCOL_2026-09-18.md`.
+Protocol: `research/Q3_Q9_PROTOCOL_2026-09-18.md`; protocol commit `b7ec4aa93aa62e76ac505ad472d3fcfbd2f848d2`.
 
-### Next gate
+The next stage begins with an independent derivation of the q=9 degree-3 source from
+\[
+G_9=\langle x_1,x_2,x_3,x_4\mid x_1^9[x_1,x_2][x_3,x_4]=1\rangle.
+\]
 
-Do **not** execute Q3/Q∞-2 yet. First give a mathematical, reproducible definition of d∞ and derive N(d∞) using the already fixed N. Only then may the common invariant J be computed on both cases.
+No value for \(d_9\), \(N(d_9)\), or \(J(N(d_9))\) is assumed. In particular, the possibility that the degree-9 power term is invisible at degree 3 is a hypothesis to derive, not a result to presuppose.
+
+Q3/Q9 Gate B (N/J comparison) is blocked until Gate A is passed.
 
 ## 7. What is NOT the current task
 
