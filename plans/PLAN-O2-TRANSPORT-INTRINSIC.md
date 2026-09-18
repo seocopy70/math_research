@@ -196,3 +196,37 @@ This is not yet a transport-free or filtration-intrinsic construction.
 Do not search for another named \(V_{20}\) candidate yet. First ask only whether \(W_{B1}\) admits a transport-free definition from already frozen filtered/graded data. If no such definition is available, record the obstruction route as failing to produce a concrete intrinsic subspace under the tested choices and move to a weaker invariant.
 
 The q=3 versus q=\(\infty\) comparison must remain logically separate from this failed concrete-subspace route.
+
+
+## 11. O2-9 B1 RELATIVE-POSITION CLOSURE — COMPLETE
+
+The follow-up diagnostic (Actions run `35360525459`, job `105650375170`) closes the B1 relative-position checkpoint.
+
+Verified:
+- every pairwise B1 image intersection has dimension 0;
+- the triple intersection is 0;
+- the total B1 image-family span has dimension 20;
+- all three pairwise 20D joins coincide.
+
+Therefore the retained B1 observation is precisely a relative-position configuration
+\[
+\dim A_b=10,\qquad
+\dim(A_i\cap A_j)=0,\qquad
+\dim(A_0+A_1+A_2)=20.
+\]
+The common 20D span is independent of the choice of basepoint **within the already exhausted B1 family**, because replacing the basepoint by (τ_c=τ(I+cN)) merely permutes the same three transports (τ(I+bN)), using (N^2=0).
+
+This does **not** establish filtration-intrinsicity of the 20D span.
+
+### Next checkpoint — frozen-data relation audit
+
+Do not introduce a new (V_{20}), quotient, or invariant.
+
+Use only already frozen objects/maps to ask:
+1. whether the observed B1 span can be characterized from (U=\operatorname{im}N), (\ker N), and existing filtration pieces;
+2. whether the existing maps (F), (D_{\mathrm{linear}}\circ\tau), or already verified H-stable spaces give a transport-free characterization;
+3. whether any such relation can be restated in filtration/graded terms.
+
+If no transport-free characterization is obtained, record exactly that the current O2 obstruction computations produce a B1-family 20D span but do not yet define it intrinsically, and then pivot to the weakest surviving transport-independent information. Do not infer nonexistence of every possible intrinsic construction.
+
+The q=3 versus q=\(\infty\) track remains logically separate.
