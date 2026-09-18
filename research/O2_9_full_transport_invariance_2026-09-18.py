@@ -365,6 +365,7 @@ print("G-2 side check rank D_linear(tau) =",rank_D_tau_linear)
 print("G-2 side check rank([V45, Im D_linear(tau)]) =",rank_V45_D_tau)
 print("G-2 side check Im D_linear(tau) = V45 =",D_tau_linear_image_equals_V45)
 
+
 # G-1.6 target-side precheck: V45 = V20 + Im(G).
 V45=column_basis(np.column_stack([base20,G]))
 V45_dim=rank3(V45)
