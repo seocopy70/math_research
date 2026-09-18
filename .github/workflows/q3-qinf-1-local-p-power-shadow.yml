@@ -1,0 +1,26 @@
+name: Q3/Qinf-1 local p-power shadow
+
+on:
+  push:
+    paths:
+      - "research/Q3_QINF_1_local_p_power_shadow_2026-09-18.py"
+      - "research/O2_7_q_control_variation_module_2026-09-18.py"
+      - "research/A3-4-10_CANONICAL_TAU_REVALIDATION_2026-09-16.py"
+      - "research/phase2_3_endH_optimized_2026-09-15.py"
+      - ".github/workflows/q3-qinf-1-local-p-power-shadow.yml"
+  workflow_dispatch:
+
+jobs:
+  q3-qinf-1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install numpy
+      - run: python research/Q3_QINF_1_local_p_power_shadow_2026-09-18.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q3-qinf-1-local-p-power-shadow
+          path: research/artifacts/q3_qinf_1_local_p_power_shadow.json
