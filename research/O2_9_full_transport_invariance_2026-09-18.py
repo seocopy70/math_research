@@ -11,7 +11,7 @@ Purpose:
 Important algebraic correction:
 For the affine obstruction D(S)=D_linear(S)-D_linear(I),
 the general identity is
-  D_{a,b}=a D_0+b DeltaD+(a-1)D_linear(I),
+  D_{a,b}=a D_0+b DeltaD+(a+b-1)D_linear(I),
 not automatically aD_0+bDeltaD.
 The latter is tested explicitly as a conjectured simplification, but is not
 assumed. The intrinsic object under this gate is the span of the six images.
@@ -157,6 +157,15 @@ assert all(v for _,v in h_equiv)
 D0=D_affine(transports[(1,0)])
 DeltaD=(D_affine(transports[(1,1)])-D0)%P
 DlinI=D_linear(I45)
+print("rank D_linear(I) [precheck] =",rank3(DlinI))
+assert np.array_equal(DlinI,np.zeros_like(DlinI))
+
+# Independent scalar-linearity audit of D_linear itself.
+Dlin_tau=D_linear(tau)
+Dlin_2tau=D_linear((2*tau)%P)
+scalar_linearity_2tau=np.array_equal(Dlin_2tau,(2*Dlin_tau)%P)
+print("D_linear(2*tau) = 2 D_linear(tau) =",scalar_linearity_2tau)
+assert scalar_linearity_2tau
 
 images={}
 ranks={}
@@ -171,7 +180,7 @@ user_linear_identity={}
 for a in (1,2):
     for b in (0,1,2):
         D=D_affine(transports[(a,b)])
-        rhs=(a*D0+b*DeltaD+(a-1)*DlinI)%P
+        rhs=(a*D0+b*DeltaD+(a+b-1)*DlinI)%P
         rhs_user=(a*D0+b*DeltaD)%P
         general_identity[(a,b)]=np.array_equal(D,rhs)
         user_linear_identity[(a,b)]=np.array_equal(D,rhs_user)
@@ -208,6 +217,8 @@ artifact={
     "general_affine_identity":{"%d,%d"%k:v for k,v in general_identity.items()},
     "simplified_aD0_plus_bDeltaD":{"%d,%d"%k:v for k,v in user_linear_identity.items()},
     "rank_D_linear_I":rank3(DlinI),
+    "D_linear_I_is_zero":bool(np.array_equal(DlinI,np.zeros_like(DlinI))),
+    "D_linear_2tau_equals_2D_linear_tau":bool(scalar_linearity_2tau),
     "span_O0_DeltaO_dimension":span20_dim,
     "span_all_six_images_dimension":total6_dim,
     "all_six_images_in_O0_plus_DeltaO":all_in_base20,
@@ -228,6 +239,8 @@ print("all six H-equivariant =",all(v for _,v in h_equiv))
 print("B1 pointwise admissible subset =",[k for k,v in b1_fix if v])
 print("obstruction ranks =",ranks)
 print("general affine identity all six =",all(general_identity.values()))
+print("general affine identity by (a,b) =",general_identity)
+print("simplified identity by (a,b) =",user_linear_identity)
 print("simplified D_ab = a D0 + b DeltaD =",user_linear_identity)
 print("rank D_linear(I) =",rank3(DlinI))
 print("dim span(O0,DeltaO) =",span20_dim)
