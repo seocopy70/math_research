@@ -498,6 +498,32 @@ The `all_rank10` assertion remains red because the `a=2` transports have rank 45
 
 **O2-9 canonicality consequence:** the 10-dimensional absolute obstruction is not canonical under the exhausted transport family. The surviving structural statement is the verified 20-dimensional \(V20\) plus 25-dimensional quotient structure above. This does not by itself distinguish \(q=3\) from \(q=\infty\) or recover \(\chi\).
 
+## 6G. Q3-2A-R — H-equivalent stability observed / q∞ definition gate OPEN
+
+Record: `research/Q3_QINF_zero_case_prereg_2026-09-18.md`, `research/Q3_QINF_INDEPENDENCE_PROTOCOL_2026-09-18.md`  
+Actions run: `35345371915`; head `ded57a8dd0605f48db2b04f7b7718fff40ffdc6f`.
+
+The latest Q3-2A-R audit completed successfully. Its head is one commit after `b7f0f4eb1290dcd36966909fd4c8cddab0caf149`; the intervening commit only added the zero-case pre-registration document.
+
+The artifact verifies the structural census **inside H·d3**: |H|=51840; kernel of H→GL(U) is {+I,-I}; image order 25920; projective kernel 1; 16 projective orbits with minimum size 40; [N(d3)] has size 40; and all 360 d∈H·d3 give N(d)≠0 with size-40 output orbit.
+
+The current wording is deliberately:
+
+> **H-EQUIVALENT STABILITY OBSERVED (inside H·d3; no q-claim).**
+
+This is not global local-model independence and is not q-distinguishability.
+
+### Residual audit items
+
+1. J(0)=1 follows from the linear vector action, but its use as an extension of the nonzero projective invariant is a convention and must not be confused with a canonical projective invariant.
+2. The recorded identification of the image group with PSp4(F3) needs an explicit verification method; order 25920 alone is insufficient for an isomorphism claim.
+3. d∞ must be independently defined before Q3/Q∞ comparison.
+4. The independence criteria for d∞ are frozen in `research/Q3_QINF_INDEPENDENCE_PROTOCOL_2026-09-18.md`.
+
+### Next gate
+
+Do **not** execute Q3/Q∞-2 yet. First give a mathematical, reproducible definition of d∞ and derive N(d∞) using the already fixed N. Only then may the common invariant J be computed on both cases.
+
 ## 7. What is NOT the current task
 
 - Do **not** redo the A3-4 provenance audit.
