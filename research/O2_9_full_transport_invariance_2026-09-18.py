@@ -78,6 +78,32 @@ def column_basis(A):
             B=C; r=q
     return B
 
+def kernel_basis(A):
+    """Return a basis matrix for ker(A) over F3 as columns."""
+    A=np.array(A,dtype=np.int64)%P
+    m,n=A.shape
+    R=A.copy()
+    piv=[]
+    r=0
+    for col in range(n):
+        p=next((i for i in range(r,m) if R[i,col]),None)
+        if p is None: continue
+        if p!=r: R[[r,p]]=R[[p,r]]
+        if R[r,col]==2: R[r]=(2*R[r])%P
+        for i in range(m):
+            if i!=r and R[i,col]:
+                R[i]=(R[i]-R[i,col]*R[r])%P
+        piv.append(col)
+        r+=1
+        if r==m: break
+    free=[j for j in range(n) if j not in piv]
+    K=np.zeros((n,len(free)),dtype=np.int64)
+    for q,fc in enumerate(free):
+        K[fc,q]=1
+        for i,pc in enumerate(piv):
+            K[pc,q]=(-R[i,fc])%P
+    return K
+
 def br(v,g):
     out=np.zeros(1024,dtype=np.int64)
     for j,c in enumerate(v):
@@ -223,6 +249,29 @@ print("intersection type =",
       "DeltaO" if I_equals_DeltaO else
       "mixed/other")
 
+# G-1: first structural measurement for G = D_linear o tau restricted to ker(N).
+# This deliberately precedes any quotient construction. The key sanity check is
+# that DeltaO, which is the image of Im(N) under the verified O2-8 map F,
+# is contained in Im(G) because Im(N) subset ker(N).
+KerN=kernel_basis(N)
+assert rank3(KerN)==35
+G=D_linear((tau@KerN)%P)
+rank_G=rank3(G)
+rank_V20_G=rank3(np.column_stack([base20,G]))
+dim_V20_inter_G=span20_dim+rank_G-rank_V20_G
+rank_O0_G=rank3(np.column_stack([O0,G]))
+rank_DeltaO_G=rank3(np.column_stack([DeltaO,G]))
+dim_O0_inter_G=10+rank_G-rank_O0_G
+dim_DeltaO_inter_G=10+rank_G-rank_DeltaO_G
+rank_G_DeltaO=rank3(np.column_stack([G,DeltaO]))
+deltaO_in_G=(rank_G_DeltaO==rank_G)
+print("G-1 rank(G) =",rank_G)
+print("G-1 dim(V20 intersection Im G) =",dim_V20_inter_G)
+print("G-1 dim(O_tau intersection Im G) =",dim_O0_inter_G)
+print("G-1 dim(DeltaO intersection Im G) =",dim_DeltaO_inter_G)
+print("G-1 DeltaO subset Im G =",deltaO_in_G)
+assert deltaO_in_G
+
 # H-stability test for the 55-dimensional extension V55.
 # This is the quotient-level statement: V20 is already H-stable from O2-6,
 # so V55/V20 is an H-module iff V55 itself is H-stable.
@@ -313,6 +362,12 @@ artifact={
     "span_O_tau_DeltaO_dimension":span20_dim,
     "rank_O_tau_DeltaO_C":C_aug_rank,
     "C_in_O_tau_plus_DeltaO":bool(C_in_base20),
+    "KerN_dimension":int(rank3(KerN)),
+    "G_rank":int(rank_G),
+    "G_V20_intersection_dimension":int(dim_V20_inter_G),
+    "G_O_tau_intersection_dimension":int(dim_O0_inter_G),
+    "G_DeltaO_intersection_dimension":int(dim_DeltaO_inter_G),
+    "DeltaO_subset_ImG":bool(deltaO_in_G),
     "V55_dimension":int(rank3(V55)),
     "V55_H_stable_per_generator":[bool(x) for x in V55_stable],
     "V55_H_stable_all_5":bool(all(V55_stable)),
@@ -351,6 +406,13 @@ print("V20 intersection Im C = DeltaO =",I_equals_DeltaO)
 print("rank([O_tau,DeltaO,C]) =",C_aug_rank)
 print("C in O_tau + DeltaO =",C_in_base20)
 print("V55 H-stable all 5 =",all(V55_stable))
+print("KerN dimension =",rank3(KerN))
+print("G rank =",rank_G)
+print("G: dim(V20 intersection Im G) =",dim_V20_inter_G)
+print("G: dim(O_tau intersection Im G) =",dim_O0_inter_G)
+print("G: dim(DeltaO intersection Im G) =",dim_DeltaO_inter_G)
+print("G: DeltaO subset Im G =",deltaO_in_G)
+
 print("all six obstruction ranks = 10 =",all_rank10)
 print("dim span(all six images) =",total6_dim)
 print("all six images in O_tau+DeltaO =",all_in_base20)
