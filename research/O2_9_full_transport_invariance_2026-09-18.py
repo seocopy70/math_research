@@ -13,10 +13,9 @@ D_affine(S) is defined by E = Wd@S - W, followed by the linear bracket map.
 Thus D_affine(S) = D_linear(S) - C, where C is the fixed obstruction
 C = bracket(W), independent of S.
 For tau_{a,b}=a tau+b tau N,
-  D_{a,b}=(a+b)D_0+b DeltaD+(a+b-1)C.
-O2-5 gives an exact matrix identity for the a=1 family, so its b=1,2
-relations force C = -D_0. O2-9 checks this directly before the six-transport
-canonicality computation.
+  D_{a,b}=a D_0+b DeltaD+(a-1)C.
+This is an algebraic regression identity, not the substantive canonicality
+claim. The substantive test is C in O_tau + Delta O.
 """
 
 from pathlib import Path
@@ -155,19 +154,13 @@ for (a,b),T in transports.items():
         b1_fix.append(((a,b),False))
 assert all(v for _,v in h_equiv)
 
-# Compute the fixed affine constant C = bracket(W), then the O2-5-derived
-# compatibility prediction C = -D0.  This is an exact 4096x45 matrix test.
+# Compute the fixed affine constant C = bracket(W).
 D0=D_affine(transports[(1,0)])
 D1=D_affine(transports[(1,1)])
 D2=D_affine(transports[(1,2)])
 DeltaD=(D1-D0)%P
 C=np.vstack([np.column_stack([br(W[:,j],g) for j in range(45)])
              for g in range(1,5)])%P
-C_plus_D0=(C+D0)%P
-C_equals_minus_D0=np.array_equal(C_plus_D0,np.zeros_like(C_plus_D0))
-print("C = bracket(W) shape =",C.shape)
-print("C + D0 = 0 EXACT =",C_equals_minus_D0)
-assert C_equals_minus_D0
 
 # The O2-5 affine identities are reproduced here as an exact cross-check.
 o25_step=np.array_equal((D1-D0)%P,(D2-D1)%P)
@@ -189,26 +182,34 @@ user_linear_identity={}
 for a in (1,2):
     for b in (0,1,2):
         D=D_affine(transports[(a,b)])
-        rhs=(a*D0+b*DeltaD+(a+b-1)*C)%P
+        rhs=(a*D0+b*DeltaD+(a-1)*C)%P
         rhs_user=(a*D0+b*DeltaD)%P
         general_identity[(a,b)]=np.array_equal(D,rhs)
         user_linear_identity[(a,b)]=np.array_equal(D,rhs_user)
 
 assert all(general_identity.values())
 
-# Determine whether all six images lie in one 20D span and whether their total
-# span is exactly span(O_tau, DeltaO).
+# Core canonicality test: C is a full 4096x45 image matrix.
+# rank([basis(O_tau), basis(DeltaO), C])=20 tests C subset O_tau+DeltaO.
 O0=images[(1,0)]
 DeltaO=column_basis(DeltaD)
 base20=column_basis(np.column_stack([O0,DeltaO]))
-total6=column_basis(np.column_stack([images[k] for k in sorted(images)]))
 span20_dim=rank3(base20)
-total6_dim=rank3(total6)
-all_in_base20=all(rank3(np.column_stack([base20,images[k]]))==span20_dim
-                  for k in sorted(images))
+C_aug_rank=rank3(np.column_stack([base20,C]))
+C_in_base20=(span20_dim==20 and C_aug_rank==20)
+assert span20_dim==20
+assert C_in_base20
 
-# For the actual six images, also test equality with the 20D base span.
-all_images_span_same=(span20_dim==20 and total6_dim==20 and all_in_base20)
+all_rank10=all(r==10 for r in ranks.values())
+assert all_rank10
+
+all_in_base20=all(rank3(np.column_stack([base20,images[k]]))==20
+                  for k in sorted(images))
+assert all_in_base20
+
+total6=column_basis(np.column_stack([images[k] for k in sorted(images)]))
+total6_dim=rank3(total6)
+all_images_span_same=(total6_dim==20)
 
 artifact={
     "field":"F_3",
@@ -226,13 +227,15 @@ artifact={
     "general_affine_identity":{"%d,%d"%k:v for k,v in general_identity.items()},
     "simplified_aD0_plus_bDeltaD":{"%d,%d"%k:v for k,v in user_linear_identity.items()},
     "C_shape":list(C.shape),
-    "C_equals_minus_D0":bool(C_equals_minus_D0),
-    "O2_5_exact_step_identity":bool(o25_step),
+        "O2_5_exact_step_identity":bool(o25_step),
     "O2_5_exact_span_identity":bool(o25_span),
-    "span_O0_DeltaO_dimension":span20_dim,
+    "span_O_tau_DeltaO_dimension":span20_dim,
+    "rank_O_tau_DeltaO_C":C_aug_rank,
+    "C_in_O_tau_plus_DeltaO":bool(C_in_base20),
+    "all_six_obstruction_ranks_10":bool(all_rank10),
+    "all_six_images_in_O_tau_plus_DeltaO":bool(all_in_base20),
     "span_all_six_images_dimension":total6_dim,
-    "all_six_images_in_O0_plus_DeltaO":all_in_base20,
-    "all_six_images_span_same_20D":all_images_span_same,
+    "all_six_images_span_same_20D":bool(all_images_span_same),
 }
 
 artifact_path=ROOT/"artifacts"/"o2_9_full_transport_invariance.json"
@@ -252,12 +255,14 @@ print("general affine identity all six =",all(general_identity.values()))
 print("general affine identity by (a,b) =",general_identity)
 print("simplified identity by (a,b) =",user_linear_identity)
 print("simplified D_ab = a D0 + b DeltaD =",user_linear_identity)
-print("C = bracket(W), C = -D0 EXACT =",C_equals_minus_D0)
 print("O2-5 exact step identity =",o25_step)
 print("O2-5 exact span identity =",o25_span)
-print("dim span(O0,DeltaO) =",span20_dim)
+print("dim span(O_tau,DeltaO) =",span20_dim)
+print("rank([O_tau,DeltaO,C]) =",C_aug_rank)
+print("C in O_tau + DeltaO =",C_in_base20)
+print("all six obstruction ranks = 10 =",all_rank10)
 print("dim span(all six images) =",total6_dim)
-print("all six images in O0+DeltaO =",all_in_base20)
+print("all six images in O_tau+DeltaO =",all_in_base20)
 print("all six images span same 20D =",all_images_span_same)
 print("ARTIFACT =",artifact_path)
 
@@ -268,7 +273,9 @@ print("ARTIFACT =",artifact_path)
 assert hom_dim_via_transport==2
 assert len(transports)==6
 assert all(v for _,v in h_equiv)
-assert C_equals_minus_D0
+assert C_in_base20
+assert all_rank10
+assert all_in_base20
 assert o25_step and o25_span
 assert all(general_identity.values())
 print("O2-9 COMPUTATION = PASS")
