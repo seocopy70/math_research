@@ -95,3 +95,60 @@ The O2 track is complete only when either:
 - the obstruction route is shown not to yield such an invariant under the exhausted admissible choices, with the failure recorded precisely.
 
 Only then should the project choose the next mathematical route toward q-distinction and \(\chi\).
+
+
+## 8. O2-9(pre) — COMPLETE
+
+O2-9(pre) confirmed
+[
+\Phi_0\circ F=I_U
+]
+exactly as a full (10\times10) matrix (Actions run `35320678550`). This closes the compatibility pre-check between O2-7 and O2-8.
+
+## 9. O2-9 — FULL AUT_H(W) TRANSPORT COVERAGE
+
+### Global position
+
+O2-4 showed that (O_\tau) is not invariant over the three previously tested (a=1) B1-admissible transports. O2-5/O2-6 isolated the 10D variation module. O2-7/O2-8/O2-9(pre) identify that variation with (U=\operatorname{im}N) in a mutually compatible way.
+
+### Purpose
+
+Exhaust the entire admissible (H)-equivariant transport torsor, rather than only (\tau(I+bN)) for (b=0,1,2).
+
+### Exact coverage
+
+Since
+[
+\operatorname{End}_H(W)=\mathbb F_3[I,N],quad N^2=0,
+]
+the unit group is exactly
+[
+\{aI+bN:a\in\mathbb F_3^\times,b\in\mathbb F_3\},
+]
+with six elements. Because (\tau:W\to W_d) is an (H)-isomorphism, composition with (\tau^{-1}) identifies (\operatorname{Hom}_H(W,W_d)) with (\operatorname{End}_H(W)), so
+[
+\dim\operatorname{Hom}_H(W,W_d)=2.
+]
+The experiment records this explicitly and constructs the two independent Hom maps (\tau) and (\tau N).
+
+### Affine formula protocol
+
+For the actual affine obstruction definition,
+[
+D(S)=D_{\mathrm{linear}}(S)-D_{\mathrm{linear}}(I),
+]
+the exact formula is
+[
+D_{a,b}=aD_0+b\Delta D+(a-1)D_{\mathrm{linear}}(I).
+]
+The simplified relation (D_{a,b}=aD_0+b\Delta D) is therefore treated as a testable special case, not as an assumption.
+
+### Decision criteria
+
+**PASS for exhaustive coverage:** all six unit transports are verified H-equivariant, and the six-element parameterization is confirmed complete.
+
+**Canonicality outcome:** inspect whether the six obstruction images collapse to an invariant 20D structure or whether additional variation appears. Equality of the six absolute images is not expected and is not the criterion, because O2-4 already established absolute transport dependence.
+
+**FAIL:** an additional admissible transport outside the six-element family is found, or the candidate structure changes under one of the six and no transport-independent replacement is identified.
+
+**INVALID TEST:** any failure of coordinate/action conventions, Hom-space construction, unit parameterization, or affine identity verification.
