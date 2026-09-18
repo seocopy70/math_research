@@ -571,18 +571,24 @@ passes: this specified N/J probe distinguishes q=3 from the fixed q=∞ baseline
 
 The Q3/Q∞ gate is now **CLOSED**.
 
-## 6H. Q3/Q9 — d9 definition gate OPEN
+## 6H. Q3/Q9 — Gate A d9 definition PASS / CLOSED
 
-Protocol: `research/Q3_Q9_PROTOCOL_2026-09-18.md`; protocol commit `b7ec4aa93aa62e76ac505ad472d3fcfbd2f848d2`.
+Protocol: `research/Q3_Q9_PROTOCOL_2026-09-18.md`; independent derivation commit `392e6134b11308b8219538d4b38fd241c98817fc`; CI workflow commit `5ed9ca9a9280344fa3340a22122a815d5551b320`.
 
-The next stage begins with an independent derivation of the q=9 degree-3 source from
+The q=9 source was independently derived from
 \[
 G_9=\langle x_1,x_2,x_3,x_4\mid x_1^9[x_1,x_2][x_3,x_4]=1\rangle.
 \]
 
-No value for \(d_9\), \(N(d_9)\), or \(J(N(d_9))\) is assumed. In particular, the possibility that the degree-9 power term is invisible at degree 3 is a hypothesis to derive, not a result to presuppose.
+Actions run `35352242909` verified:
+- \(\operatorname{in}_3(x_1^9)=0\);
+- \(\operatorname{in}_3(s_9)=\operatorname{in}_3(s_\infty)\);
+- \(\Delta_3(9)=0\);
+- \(\boxed{d_9=0}\).
 
-Q3/Q9 Gate B (N/J comparison) is blocked until Gate A is passed.
+The Gate-A computation is self-contained and does not import the q=3 research script or downstream N/J computation. Gate A is therefore **PASS / CLOSED**.
+
+Q3/Q9 Gate B (N/J comparison) remains **BLOCKED / NOT OPENED**. The fact that \(d_9=0\) is now a verified definition result; it does not by itself authorize a downstream N/J interpretation or imply any q-distinction/conclusion.
 
 ## 7. What is NOT the current task
 
