@@ -1,0 +1,21 @@
+name: Q3-QINF-2 Full U Shadow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  q3-qinf-2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run Q3/QINF-2
+        run: python research/Q3_QINF_2_full_U_shadow_2026-09-18.py
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: q3-qinf-2-full-U-shadow
+          path: research/artifacts/q3_qinf_2_full_U_shadow.json
