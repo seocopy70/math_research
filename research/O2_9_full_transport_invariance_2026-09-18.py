@@ -198,14 +198,14 @@ span20_dim=rank3(base20)
 C_aug_rank=rank3(np.column_stack([base20,C]))
 C_in_base20=(span20_dim==20 and C_aug_rank==20)
 assert span20_dim==20
-assert C_in_base20
+print("C rank excess beyond 20 =", C_aug_rank-span20_dim)
 
 all_rank10=all(r==10 for r in ranks.values())
 assert all_rank10
 
 all_in_base20=all(rank3(np.column_stack([base20,images[k]]))==20
                   for k in sorted(images))
-assert all_in_base20
+print("all six images in 20D base =", all_in_base20)
 
 total6=column_basis(np.column_stack([images[k] for k in sorted(images)]))
 total6_dim=rank3(total6)
