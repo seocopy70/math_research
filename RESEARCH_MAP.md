@@ -408,6 +408,9 @@ O2-7 supports the exact statement that the q=3 p-power class has a full 10-dimen
 ### Session safety rules
 
 - **Map first.**
+- **Authority hierarchy:** Map → Conventions → active Plan → Result/Run evidence.
+- **One fact, one authority:** do not create parallel current-state/protocol documents.
+
 - **Frozen means frozen.**
 - **Artifact first.**
 - **Contradiction first.**
@@ -416,10 +419,23 @@ O2-7 supports the exact statement that the q=3 p-power class has a full 10-dimen
 
 ---
 
-## 9. Research-record architecture
+## 9. Research-record architecture and authority hierarchy
 
-- History/process: `research/00_RESEARCH_LOG.md`
-- State/map: `RESEARCH_MAP.md`
+Use one authority for each kind of fact:
+
+| Role | Authority |
+|---|---|
+| Current mathematical state | `RESEARCH_MAP.md` |
+| Mathematical/computational conventions and operating rules | `research/03_CONVENTIONS_AND_IMPLEMENTATION.md` |
+| Current O2 research question and experiment sequence | `plans/PLAN-O2-TRANSPORT-INTRINSIC.md` |
+| Evidence for a specific result | `research/*_RESULT_*.md` + exact Actions run/job |
+| Chronology and historical context | `research/00_RESEARCH_LOG.md` |
+| Failure history / recurrence prevention | `ANTIPATTERNS.md` |
+
+`AI_CONTEXT_BRIEF.md` is a bootstrap document for new sessions, not an independent authority for current mathematical status. Parallel q=3/q=∞ work remains separate from the O2 plan unless explicitly promoted into the map.
+
+Existing historical protocol documents are reference/history only; they do not override the three current authorities above.
+
 - O2-2 record: `research/O2-2_RESULT_2026-09-18.md`
 - O2-3 record: `research/O2-3_RESULT_2026-09-18.md`
 
