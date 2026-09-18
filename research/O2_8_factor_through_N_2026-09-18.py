@@ -160,8 +160,9 @@ def br(v, g):
 def D_linear(S):
     """Linear part S -> bracket(Wd*S), target dimension 4096 x 45."""
     E = (Wd @ S) % P
+    k = E.shape[1]
     return np.vstack([
-        np.column_stack([br(E[:, j], g) for j in range(45)])
+        np.column_stack([br(E[:, j], g) for j in range(k)])
         for g in range(1, 5)
     ]) % P
 
