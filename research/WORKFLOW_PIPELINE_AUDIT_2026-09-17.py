@@ -5,7 +5,7 @@ Detects risky shell pipelines in GitHub Actions workflows, especially
 
 Also forbids fragile inline GAP probes where shell quoting/escape layers
 feed GAP through printf/echo/command substitution. GAP probes must use a
-heredoc or a checked-in .g file so GAP parses its own source directly.
+heredoc or a checked-in .g source file so GAP parses its own source directly.
 
 This is a CI reliability check, not a mathematical computation.
 """
@@ -16,12 +16,13 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 WF_DIR = ROOT / ".github" / "workflows"
 
-PIPE_RE = re.compile(r"\|\s*(?:gap(?:\s|$)|python(?:\d*)?(?:\s|$)|bash(?:\s|$)|sh(?:\s|$))")
+# Restrict whitespace after "|" to horizontal whitespace. Otherwise YAML's
+# block-scalar "run: |" can accidentally consume the following "python ..."
+# line and look like a shell pipeline.
+PIPE_RE = re.compile(r"\|[ \t]*(?:gap(?:[ \t]|$)|python(?:\d*)?(?:[ \t]|$)|bash(?:[ \t]|$)|sh(?:[ \t]|$))")
 PIPEFAIL_RE = re.compile(r"set\s+-[A-Za-z]*o?\s*pipefail|set\s+-[A-Za-z]*e[A-Za-z]*u[A-Za-z]*o[A-Za-z]*\s+pipefail|pipefail")
 CANONICAL_PIPEFAIL_RE = re.compile(r"set\s+-euo\s+pipefail|set\s+-o\s+pipefail")
 
-# Shell -> GAP inline strings are deliberately forbidden. These are fragile
-# because Bash and GAP each interpret quotes/backslashes/newlines.
 INLINE_GAP_RE = re.compile(
     r"(?:printf|echo)\s+[^\n]*\|\s*gap(?:\s+-q)?|"
     r"(?:printf|echo)\s+[^\n]*gap\s+-q|"
@@ -44,9 +45,6 @@ for path in workflows:
             snippet = text.splitlines()[line - 1].strip()
             findings.append((path.relative_to(ROOT).as_posix(), line, snippet, has_pipefail))
 
-    # Only workflows containing a GAP module probe are checked here. A probe
-    # may use a heredoc or a checked-in .g source file; inline shell strings
-    # are forbidden regardless of pipefail.
     if GAP_REF_RE.search(text) and not HEREDOC_RE.search(text):
         for i, line_text in enumerate(text.splitlines(), 1):
             if re.search(r"(?:printf|echo).*gap\s+-q|gap\s+-q.*(?:printf|echo)|\$\(.*gap\s+-q", line_text):
