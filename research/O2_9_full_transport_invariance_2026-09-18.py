@@ -333,6 +333,38 @@ def rho_T_apply(D,g):
                 Y[i]=(Y[i]+T[i,j]*(A5@X[j]))%P
     return Y.reshape(4096,-1)%P
 
+# G-2: exact H-equivariance of G = D_linear o tau|ker(N).
+A_K_list=[]
+G_exact_equiv=[]
+for A,g in zip(A_W,gens):
+    M=(A@KerN)%P
+    piv_rows=[]; rr=0
+    for col in range(KerN.shape[1]):
+        p=next((i for i in range(rr,KerN.shape[0]) if KerN[i,col]),None)
+        if p is not None:
+            piv_rows.append(p); rr+=1
+        if rr==KerN.shape[1]: break
+    if len(piv_rows)!=35:
+        raise RuntimeError("failed to choose 35 pivot rows for KerN coordinates")
+    Kp=KerN[piv_rows,:]
+    A_K=(inverse3(Kp)@M[piv_rows,:])%P
+    assert np.array_equal((KerN@A_K)%P,M)
+    A_K_list.append(A_K)
+    exact=np.array_equal(rho_T_apply(G,g),(G@A_K)%P)
+    G_exact_equiv.append(exact)
+    print("G-2 exact H-equivariance generator =",exact)
+print("G-2 G exact H-equivariant per generator =",G_exact_equiv)
+print("G-2 G exact H-equivariant all 5 =",all(G_exact_equiv))
+
+# Side check: compare V45 = V20 + Im(G) with Im(D_linear(tau)).
+D_tau_linear=D_linear(tau)
+rank_D_tau_linear=rank3(D_tau_linear)
+rank_V45_D_tau=rank3(np.column_stack([V45,D_tau_linear]))
+D_tau_linear_image_equals_V45=(rank_V45_D_tau==V45_dim==rank_D_tau_linear)
+print("G-2 side check rank D_linear(tau) =",rank_D_tau_linear)
+print("G-2 side check rank([V45, Im D_linear(tau)]) =",rank_V45_D_tau)
+print("G-2 side check Im D_linear(tau) = V45 =",D_tau_linear_image_equals_V45)
+
 # G-1.6 target-side precheck: V45 = V20 + Im(G).
 V45=column_basis(np.column_stack([base20,G]))
 V45_dim=rank3(V45)
@@ -410,7 +442,7 @@ artifact={
     "KerN_H_stable_all_5":bool(all(KerN_H_stable)),
     "ImN_H_stable_per_generator":[bool(x) for x in ImN_H_stable],
     "ImN_H_stable_all_5":bool(all(ImN_H_stable)),
-    "V45_dimension":int(V45_dim),
+    "V45_dimension":int(V45_dim),\n    "G_exact_H_equivariant_per_generator":[bool(x) for x in G_exact_equiv],\n    "G_exact_H_equivariant_all_5":bool(all(G_exact_equiv)),\n    "rank_D_linear_tau":int(rank_D_tau_linear),\n    "rank_V45_plus_D_linear_tau":int(rank_V45_D_tau),\n    "Im_D_linear_tau_equals_V45":bool(D_tau_linear_image_equals_V45),
     "V45_H_stable_per_generator":[bool(x) for x in V45_H_stable],
     "V45_H_stable_all_5":bool(all(V45_H_stable)),
     "V55_dimension":int(rank3(V55)),
@@ -460,7 +492,7 @@ print("G: DeltaO subset Im G =",deltaO_in_G)
 print("N H-equivariant all 5 =",all(N_H_equiv))
 print("ker(N) H-stable all 5 =",all(KerN_H_stable))
 print("Im(N) H-stable all 5 =",all(ImN_H_stable))
-print("dim(V20 + Im G) =",V45_dim)
+print("dim(V20 + Im G) =",V45_dim)\nprint("G exact H-equivariant all 5 =",all(G_exact_equiv))\nprint("rank D_linear(tau) =",rank_D_tau_linear)\nprint("Im D_linear(tau) = V45 =",D_tau_linear_image_equals_V45)
 print("(V20 + Im G) H-stable all 5 =",all(V45_H_stable))
 
 print("all six obstruction ranks = 10 =",all_rank10)
