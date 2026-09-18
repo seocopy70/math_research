@@ -12,7 +12,7 @@ It verifies:
 
 The robustness test is intentionally restricted to the H-orbit of d3.
 Therefore it tests H-equivalent choices, not arbitrary alternative local
-representatives. No q-information is inferred.
+representatives. The size-40 orbit remains a candidate invariant only within the current local model and H-action. No q-information is inferred.
 """
 from pathlib import Path
 import runpy, json
@@ -173,9 +173,11 @@ kernel_elements = [h4 for h4, hu in paired.values() if np.array_equal(hu, np.eye
 assert len(kernel_elements) == 2
 assert any(np.array_equal(g, I4) for g in kernel_elements)
 assert any(np.array_equal(g, (-I4) % P) for g in kernel_elements)
+assert all(np.array_equal(g, I4) or np.array_equal(g, (-I4) % P) for g in kernel_elements)
 assert len(paired) == 51840
 print("Q3-2A-R ABSTRACT H ORDER =", len(abstract_group))
 print("Q3-2A-R KERNEL H->GL(U) ORDER =", len(kernel_elements))
+print("Q3-2A-R U-IMAGE IDENTIFICATION = PSp4(F3) = Sp4(F3)/{+I,-I}")
 
 # ---------- Enumerate the actual generated group on U ----------
 I10 = np.eye(10, dtype=np.int64)
@@ -317,6 +319,7 @@ artifact = {
     "abstract_H_order": len(abstract_group),
     "exact_5_generators_on_V": [g.tolist() for g in gens_4],
     "kernel_H_to_U_order_verified": len(kernel_elements),
+    "U_image_identification": "PSp4(F3) = Sp4(F3)/{+I,-I}",
     "kernel_H_to_U_elements": [g.tolist() for g in kernel_elements],
     "generated_U_image_order": H_order,
     "kernel_H_to_U_order": 2,
@@ -367,4 +370,7 @@ print("nonzero N(d) count on H.d3 =", nd_nonzero_count)
 print("zero N(d) count on H.d3 =", nd_zero_count)
 print("projective orbit sizes of all nonzero N(d), d in H.d3 =", sorted(set(target_orbit_sizes)))
 print("all nonzero H-equivalent N(d) are size 40 =", set(target_orbit_sizes) == {40})
-print("Q3-2A-R RESULT = H-EQUIVALENT ROBUSTNESS CONFIRMED")
+print("Q3-2A-R RESULT = STRUCTURAL CENSUS COMPLETE")
+print("Q3-2A-R RESULT = H-EQUIVALENT STABILITY OBSERVED")
+print("Q3-2A-R SCOPE = size-40 orbit stable inside H.d3 only; arbitrary non-H-equivalent local representatives remain untested")
+print("Q3-2A-R STATUS = candidate invariant only; current local-model/H-action dependence remains possible")
