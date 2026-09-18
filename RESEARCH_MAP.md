@@ -454,6 +454,50 @@ The experiment explicitly verifies:
 
 The canonicality decision is based on the exhausted six-element transport family, not merely on the three previously tested (a=1) transports.
 
+## 6F. O2-9 — full transport / extension structure: COMPLETE / VERIFIED
+
+Record: Actions run `35328765416`; final G-2 implementation commit `45256230c0fc7a866bc246cf13280df946bd3036`.
+
+The six-element transport family was exhausted. The absolute 10-dimensional obstruction is **not** transport-independent: the `a=1` family has rank-10 images, while the `a=2` family has rank 45. Thus the original claim that all admissible transports preserve the same 20-dimensional obstruction space is **REJECTED**.
+
+Nevertheless, the O2-9 structural investigation produced the following verified facts:
+
+- `rank(C)=45`, where `C=D_linear(I)`.
+- `dim(V20 intersection Im(C))=10`, with
+  \[
+  V20\cap\operatorname{Im}C=\Delta O,
+  \qquad
+  \operatorname{Im}C\cap O_\tau=0.
+  \]
+- `dim V55=55` for \(V55=V20+\operatorname{Im}C\), and \(V55\) is H-stable under all five generators.
+- For \(G=D_{\rm linear}\circ\tau|_{\ker N}\):
+  \[
+  \operatorname{rank}G=35,
+  \qquad
+  V20\cap\operatorname{Im}G=\Delta O,
+  \qquad
+  \operatorname{Im}G\subseteq V55.
+  \]
+- `dim(V20 + Im G)=45`, and this 45-dimensional space is H-stable.
+- Exact matrix-level H-equivariance of \(G\) was verified for all five generators.
+- Therefore the induced quotient map is an H-module isomorphism:
+  \[
+  \boxed{\ker N/\operatorname{Im}N\cong_H (V20+\operatorname{Im}G)/V20},
+  \]
+  both sides having dimension 25. The injectivity follows from `rank(G)=35` and \(V20\cap\operatorname{Im}G=G(\operatorname{Im}N)=\Delta O\); surjectivity follows by the dimension count.
+
+The optional side check also found
+\[
+\dim\operatorname{Im}D_{\rm linear}(\tau)=45,
+\qquad
+\dim(V45+\operatorname{Im}D_{\rm linear}(\tau))=55,
+\]
+so \(V45\neq\operatorname{Im}D_{\rm linear}(\tau)\), with a 35-dimensional intersection. This is recorded as an optional structural observation, not as part of the O2-9 gate.
+
+The `all_rank10` assertion remains red because the `a=2` transports have rank 45. This is an outcome of the full transport experiment, not an implementation failure.
+
+**O2-9 canonicality consequence:** the 10-dimensional absolute obstruction is not canonical under the exhausted transport family. The surviving structural statement is the verified 20-dimensional \(V20\) plus 25-dimensional quotient structure above. This does not by itself distinguish \(q=3\) from \(q=\infty\) or recover \(\chi\).
+
 ## 7. What is NOT the current task
 
 - Do **not** redo the A3-4 provenance audit.
@@ -531,7 +575,7 @@ Existing historical protocol documents are reference/history only; they do not o
 | \(U\cong O\) as \(H\)-modules | 🟢 PASS |
 | absolute transport-independence of O_tau | 🔴 Failed in O2-4 |\n| variation-module basepoint independence within B1 family | 🟢 O2-6 PASS |\n| O2-7 raw p-power orbit = U | 🔴 False (orbit dimension 45) |
 | O2-7 H.N(d) inside U, dim 10 and equals U | 🟢 Corrected / verified |
-| full filtration-intrinsic characterization of Delta O | 🟡 Open |
+| O2-9 full transport canonicality | 🔴 Failed / exhausted |\n| O2-9 20+25 quotient structure | 🟢 Verified |\n| full filtration-intrinsic characterization of Delta O | 🟡 Open |
 | legacy tuple-action archaeology | ⚪ Not yet determined |
 | q=3 vs q=∞ distinction | 🟡 Open |
 | intrinsic recovery of \(\chi\) | 🟡 Open |
