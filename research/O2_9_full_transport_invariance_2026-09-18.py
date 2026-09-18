@@ -246,7 +246,13 @@ print("dim V55 =",rank3(V55))
 print("V55_H_STABLE_PER_GENERATOR =",V55_stable)
 print("V55_H_STABLE_ALL_5 =",all(V55_stable))
 
+print("SIX TRANSPORT OBSTRUCTION RANK DIAGNOSTIC")
+for a in (1,2):
+    for b in (0,1,2):
+        print(f"rank D_(a,b) ({a},{b}) = {ranks[(a,b)]}")
 all_rank10=all(r==10 for r in ranks.values())
+print("all six obstruction ranks = 10 =", all_rank10)
+# Do not hide the individual rank outcome behind the aggregate assertion.
 assert all_rank10
 
 all_in_base20=all(rank3(np.column_stack([base20,images[k]]))==20
