@@ -8,13 +8,15 @@ Purpose:
 - verify each is an H-isomorphism and B1 admissible when a=1;
 - test the exact affine obstruction maps D_{a,b}.
 
-Important algebraic correction:
-For the affine obstruction D(S)=D_linear(S)-D_linear(I),
-the general identity is
-  D_{a,b}=a D_0+b DeltaD+(a+b-1)D_linear(I),
-not automatically aD_0+bDeltaD.
-The latter is tested explicitly as a conjectured simplification, but is not
-assumed. The intrinsic object under this gate is the span of the six images.
+Important algebraic structure:
+D_affine(S) is defined by E = Wd@S - W, followed by the linear bracket map.
+Thus D_affine(S) = D_linear(S) - C, where C is the fixed obstruction
+C = bracket(W), independent of S.
+For tau_{a,b}=a tau+b tau N,
+  D_{a,b}=(a+b)D_0+b DeltaD+(a+b-1)C.
+O2-5 gives an exact matrix identity for the a=1 family, so its b=1,2
+relations force C = -D_0. O2-9 checks this directly before the six-transport
+canonicality computation.
 """
 
 from pathlib import Path
@@ -153,19 +155,26 @@ for (a,b),T in transports.items():
         b1_fix.append(((a,b),False))
 assert all(v for _,v in h_equiv)
 
-# Compute all six affine obstruction maps and their images.
+# Compute the fixed affine constant C = bracket(W), then the O2-5-derived
+# compatibility prediction C = -D0.  This is an exact 4096x45 matrix test.
 D0=D_affine(transports[(1,0)])
-DeltaD=(D_affine(transports[(1,1)])-D0)%P
-DlinI=D_linear(I45)
-print("rank D_linear(I) [precheck] =",rank3(DlinI))
-assert np.array_equal(DlinI,np.zeros_like(DlinI))
+D1=D_affine(transports[(1,1)])
+D2=D_affine(transports[(1,2)])
+DeltaD=(D1-D0)%P
+C=np.vstack([np.column_stack([br(W[:,j],g) for j in range(45)])
+             for g in range(1,5)])%P
+C_plus_D0=(C+D0)%P
+C_equals_minus_D0=np.array_equal(C_plus_D0,np.zeros_like(C_plus_D0))
+print("C = bracket(W) shape =",C.shape)
+print("C + D0 = 0 EXACT =",C_equals_minus_D0)
+assert C_equals_minus_D0
 
-# Independent scalar-linearity audit of D_linear itself.
-Dlin_tau=D_linear(tau)
-Dlin_2tau=D_linear((2*tau)%P)
-scalar_linearity_2tau=np.array_equal(Dlin_2tau,(2*Dlin_tau)%P)
-print("D_linear(2*tau) = 2 D_linear(tau) =",scalar_linearity_2tau)
-assert scalar_linearity_2tau
+# The O2-5 affine identities are reproduced here as an exact cross-check.
+o25_step=np.array_equal((D1-D0)%P,(D2-D1)%P)
+o25_span=np.array_equal((D2-D0)%P,(2*DeltaD)%P)
+print("O2-5 exact D1-D0 = D2-D1 =",o25_step)
+print("O2-5 exact D2-D0 = 2 DeltaD =",o25_span)
+assert o25_step and o25_span
 
 images={}
 ranks={}
@@ -180,7 +189,7 @@ user_linear_identity={}
 for a in (1,2):
     for b in (0,1,2):
         D=D_affine(transports[(a,b)])
-        rhs=(a*D0+b*DeltaD+(a+b-1)*DlinI)%P
+        rhs=(a*D0+b*DeltaD+(a+b-1)*C)%P
         rhs_user=(a*D0+b*DeltaD)%P
         general_identity[(a,b)]=np.array_equal(D,rhs)
         user_linear_identity[(a,b)]=np.array_equal(D,rhs_user)
@@ -216,9 +225,10 @@ artifact={
     "general_affine_identity_all6":all(general_identity.values()),
     "general_affine_identity":{"%d,%d"%k:v for k,v in general_identity.items()},
     "simplified_aD0_plus_bDeltaD":{"%d,%d"%k:v for k,v in user_linear_identity.items()},
-    "rank_D_linear_I":rank3(DlinI),
-    "D_linear_I_is_zero":bool(np.array_equal(DlinI,np.zeros_like(DlinI))),
-    "D_linear_2tau_equals_2D_linear_tau":bool(scalar_linearity_2tau),
+    "C_shape":list(C.shape),
+    "C_equals_minus_D0":bool(C_equals_minus_D0),
+    "O2_5_exact_step_identity":bool(o25_step),
+    "O2_5_exact_span_identity":bool(o25_span),
     "span_O0_DeltaO_dimension":span20_dim,
     "span_all_six_images_dimension":total6_dim,
     "all_six_images_in_O0_plus_DeltaO":all_in_base20,
@@ -242,7 +252,9 @@ print("general affine identity all six =",all(general_identity.values()))
 print("general affine identity by (a,b) =",general_identity)
 print("simplified identity by (a,b) =",user_linear_identity)
 print("simplified D_ab = a D0 + b DeltaD =",user_linear_identity)
-print("rank D_linear(I) =",rank3(DlinI))
+print("C = bracket(W), C = -D0 EXACT =",C_equals_minus_D0)
+print("O2-5 exact step identity =",o25_step)
+print("O2-5 exact span identity =",o25_span)
 print("dim span(O0,DeltaO) =",span20_dim)
 print("dim span(all six images) =",total6_dim)
 print("all six images in O0+DeltaO =",all_in_base20)
@@ -256,5 +268,7 @@ print("ARTIFACT =",artifact_path)
 assert hom_dim_via_transport==2
 assert len(transports)==6
 assert all(v for _,v in h_equiv)
+assert C_equals_minus_D0
+assert o25_step and o25_span
 assert all(general_identity.values())
 print("O2-9 COMPUTATION = PASS")
