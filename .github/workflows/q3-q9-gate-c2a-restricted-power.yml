@@ -1,0 +1,22 @@
+name: Q3/Q9 Gate C-2a restricted-power identification
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "research/Q3_Q9_GATE_C2a_restricted_power_2026-09-19.py"
+      - ".github/workflows/q3-q9-gate-c2a-restricted-power.yml"
+
+jobs:
+  gate-c2a:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run C-2a
+        run: |
+          python research/Q3_Q9_GATE_C2a_restricted_power_2026-09-19.py
