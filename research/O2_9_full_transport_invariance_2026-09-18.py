@@ -357,14 +357,6 @@ for A,g in zip(A_W,gens):
 print("G-2 G exact H-equivariant per generator =",G_exact_equiv)
 print("G-2 G exact H-equivariant all 5 =",all(G_exact_equiv))
 
-# Side check: compare V45 = V20 + Im(G) with Im(D_linear(tau)).
-D_tau_linear=D_linear(tau)
-rank_D_tau_linear=rank3(D_tau_linear)
-rank_V45_D_tau=rank3(np.column_stack([V45,D_tau_linear]))
-D_tau_linear_image_equals_V45=(rank_V45_D_tau==V45_dim==rank_D_tau_linear)
-print("G-2 side check rank D_linear(tau) =",rank_D_tau_linear)
-print("G-2 side check rank([V45, Im D_linear(tau)]) =",rank_V45_D_tau)
-print("G-2 side check Im D_linear(tau) = V45 =",D_tau_linear_image_equals_V45)
 
 
 # G-1.6 target-side precheck: V45 = V20 + Im(G).
@@ -377,6 +369,18 @@ for g in gens:
 print("G-1.6 dim(V20 + Im G) =",V45_dim)
 print("G-1.6 (V20 + Im G) H-stable per generator =",V45_H_stable)
 print("G-1.6 (V20 + Im G) H-stable all 5 =",all(V45_H_stable))
+
+
+# Side check: compare V45 = V20 + Im(G) with Im(D_linear(tau)).
+D_tau_linear=D_linear(tau)
+rank_D_tau_linear=rank3(D_tau_linear)
+rank_V45_D_tau=rank3(np.column_stack([V45,D_tau_linear]))
+D_tau_linear_image_equals_V45=(rank_V45_D_tau==V45_dim==rank_D_tau_linear)
+print("G-2 side check rank D_linear(tau) =",rank_D_tau_linear)
+print("G-2 side check rank([V45, Im D_linear(tau)]) =",rank_V45_D_tau)
+print("G-2 side check Im D_linear(tau) = V45 =",D_tau_linear_image_equals_V45)
+
+
 
 
 V55_stable=[]
