@@ -76,7 +76,7 @@ def solve_intertwiner(G,H):
 # Rebuild q=infinity degree-4 quotient independently using the Gate-0A path.
 ns=runpy.run_path(ROOT+'GATE0A_Q3_QINF_INDEPENDENT_W45_2026-09-17.py')
 qinf_basis=np.array(ns['qinf']['ambient_basis'],dtype=np.int64)%P
-qinf_gens=[np.array(g,dtype=np.int64)%P for g in ns['gens']]
+qinf_gens=[np.array(g,dtype=np.int64)%P for g in ns['qinf']['actions']]
 assert qinf_basis.shape==(256,45)
 assert r3(qinf_basis)==45
 
