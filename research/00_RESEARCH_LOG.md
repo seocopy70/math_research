@@ -255,3 +255,60 @@ A critical restriction is frozen: the full abstract quotient \\(G_q/D_4\\) must 
 The rank-2 control is therefore ready for implementation at n=4. It remains a validation experiment, not a rank-4 theorem.
 
 Literature context: Pál–Quick's 2026 odd-prime Demuškin result distinguishes q=3 from q\\ne3 via A_3-formality, but that result concerns higher DGA/Hochschild structure and does not establish the present lifting observable. Reference: arXiv:2601.07551.
+
+
+## 2026-09-19 — A_n^rel definition audit and revised target
+
+The proposed correction was incorporated before implementation.
+
+### 1. Finite-quotient shortcut is explicitly excluded
+
+For q=3^s, the image of D_n in the abelianization is controlled by the least power 3^h with 3^h >= n. Consequently q=3^s becomes directly visible in the abelianization of G_q/D_n once n > q, giving the tautological threshold n_0(q)=q+1.
+
+This is mathematically useful as a baseline but cannot count as a weak-data detection result.
+
+### 2. Exact relator preservation is rejected
+
+The earlier provisional condition “g~(r) = r modulo D_n” is too restrictive for an orientation-sensitive observable. The definition is revised to allow relator-unit preservation:
+
+  g~(r_q) belongs to the closed normal closure of r_q times D_n(F),
+
+with a scalar/unit refinement, when well-defined,
+
+  g~(r_q) is congruent to r_q^{u(g)}
+
+in the relevant quotient/relator module, where u(g) is a 3-adic unit.
+
+The scalar is not assumed unique at an arbitrary finite level. It must be extracted only when the relevant relator class is one-dimensional and the quotient makes the action well-defined.
+
+### 3. GSp/Sp convention is frozen
+
+The natural ambient group for the orientation-sensitive observable is GSp(V), not automatically Sp(V).
+
+For rank 4:
+- ambient group: GSp_4(F_3);
+- multiplier-1 subgroup: Sp_4(F_3).
+
+For rank 2:
+- ambient group: GSp_2(F_3)=GL_2(F_3);
+- multiplier-1 subgroup: Sp_2(F_3)=SL_2(F_3).
+
+The project must state which ambient group is used in every experiment. It must not silently replace GSp by Sp.
+
+### 4. Line-stabilizer statement remains a hypothesis
+
+The finite-q torsion line ell=<x-bar_1> remains a candidate source of symmetry breaking. Neither A_n^rel(q) subseteq Stab(ell) nor equality with the stabilizer is assumed. The first question is whether the admissible lift set is actually smaller than the ambient group.
+
+### 5. Rank-2 scope is narrowed
+
+Rank 2 is retained as a pipeline control only. It is not a model for the rank-4 W_45 or degree-4 obstruction geometry. It is specifically for checking restricted-power handling, filtration indexing, S_9/degree bookkeeping where used, action conventions, and relator-unit preservation.
+
+### 6. Primary novelty target is revised
+
+The main target is now:
+
+> Determine the smallest filtered/graded level, within the prescribed weak-data observable, at which q=3^s for s>=2 can be distinguished from q=infinity.
+
+q=3 remains a control case because it is already known to be exceptional in higher A_3-formality. Orientation recovery remains downstream and is not identified with q-detection.
+
+Definition document: plans/PLAN-A-N-REL-DEFINITION.md.
