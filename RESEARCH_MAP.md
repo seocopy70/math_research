@@ -736,3 +736,36 @@ Before implementing \\(A_n(q)\\), perform a definition audit:
 Then run the rank-2 control specified in `plans/PLAN-RANK2-CONTROL-AND-LIFTING.md`.
 
 This is a **new validation/diagnostic track**, not a replacement for the existing O2 or Q3/Q9 tracks. The O2 transport-independentity question remains closed at the current concrete 20D level, and the Q3/Q9 Gate C status is unchanged.
+
+
+## 14. 2026-09-19 — C-2c-1 restricted ambient certificate
+
+Record: `research/C-2C-1_RESULT_2026-09-19.md`  
+Implementation: `research/C-2C-1_restricted_ambient_certificate_2026-09-19.py`  
+Implementation commit: `0feb39f511569b799231d8d67259ece7a39af666`  
+Result-record commit: `025570350fe5f19a4e67c64b8b1aa94ae3f1b9f5`
+
+The rank-2 tensor-algebra control was independently constructed over \(\mathbf F_3\) using exact Gaussian elimination. It gives
+\[
+\operatorname{rank}L_9=56,
+\qquad
+\operatorname{rank}L_3^{[3]}=2,
+\qquad
+\operatorname{rank}L_1^{[9]}=2,
+\]
+and
+\[
+\boxed{\operatorname{rank}(L_9+L_3^{[3]}+L_1^{[9]})=60=56+2+2.}
+\]
+
+This closes the **small-rank ambient restricted-structure check**: in the 2-generator tensor realization, the degree-9 free-Lie part and the two restricted p-power layers are independent.
+
+For four generators the corresponding dimension count is
+\[
+29120+20+4=29144,
+\]
+but this remains a formal dimension prediction, not a full rank-4 degree-9 tensor certificate.
+
+**Scope:** this does not define or validate \(R_9\), \(\mathrm{gr}_9(G)\), H-stability, \(S_9=X_1^{[9]}\), or any degree-9 q-invariant. No downstream degree-9 computation is authorized from this result alone.
+
+**Next gate:** audit the repository's existing lower-degree relation-space convention and define the degree-9 restricted relation space \(R_9\) before any H-stability computation.
