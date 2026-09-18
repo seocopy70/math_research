@@ -1,0 +1,22 @@
+name: Q3/Q9 Gate A d9 independent derivation
+
+on:
+  push:
+    paths:
+      - "research/Q3_Q9_GATE_A_d9_INDEPENDENT_2026-09-18.py"
+      - ".github/workflows/q3-q9-gate-a-d9-independent.yml"
+  workflow_dispatch:
+
+jobs:
+  gate-a:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python research/Q3_Q9_GATE_A_d9_INDEPENDENT_2026-09-18.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q3-q9-gate-a-d9-independent
+          path: research/artifacts/q3_q9_gate_a_d9_independent.json
