@@ -182,24 +182,31 @@ I=(Xi@K)%P
 assert r3(I)==35
 assert r3((Xtau@I)%P)==35
 
-# We now compute Delta maps from the common ambient bracket representation.
-# Recover X_i degree-1 vectors and B_i(w)=[w,X_i] in tensor degree 5.
-# Use the q3 construction's verified B_W matrices because these are universal
-# ambient bracket maps, not q-dependent data.
-nsB=runpy.run_path(ROOT+'phase2_23_A3_4_10_ambient_bracket_compatibility_2026-09-16.py')
-B_W=[np.array(B,dtype=np.int64)%P for B in nsB['B_W']]
-# These maps act on W45 coordinates in the q3 implementation. For qinf,
-# reproduce them from the same ambient basis by applying them to qinf_basis.
-# The B matrices are universal word-bracket maps, so conjugate through L.
-D_base=[]
-for B in B_W:
-    D_base.append((B@qinf_basis)%P)
-D_base=np.vstack(D_base)
+# Compute the two q=infinity bracket-variation maps directly from the
+# independently reconstructed q=infinity ambient bases. Do NOT import q=3
+# B_W matrices here: their domain basis is the q=3 W basis, so multiplying
+# them by qinf_basis would mix coordinate systems.
+def bracket_column(v_col, gen):
+    return np.array(ns['column_bracket_with_generator'](v_col, gen),dtype=np.int64)%P
 
-D_u=np.vstack([(D_base@Ninf)%P])
-# Delta_tau(w)=([Xtau(w)-w,X_i])_i; here Xtau is the coordinate map
-# W45->Wd, with Wd represented in the same quotient coordinates.
-D_tau=D_base@((Xtau-np.eye(45,dtype=np.int64))%P)
+def stacked_bracket(Basis):
+    blocks=[]
+    for gen in ns['gens']:
+        blocks.append(np.column_stack([
+            bracket_column(Basis[:,j],gen) for j in range(Basis.shape[1])
+        ]))
+    return np.vstack(blocks)
+
+# Delta_u(w) = bracket(N_inf(w), X_i).
+Nu_ambient=(qinf_basis@Ninf)%P
+D_u=stacked_bracket(Nu_ambient)
+
+# Delta_tau(w) = bracket((tau_inf - id)(w), X_i).
+# Xtau(w) is represented in the Wd_inf basis, hence first convert it
+# back to the common 256D ambient word space using Wd.
+tau_ambient=(Wd@Xtau)%P
+D_tau=stacked_bracket((tau_ambient-qinf_basis)%P)
+
 A_rank=r3(D_u); B_rank=r3(D_tau)
 rank_sum=r3(np.column_stack([D_tau,D_u])); inter=A_rank+B_rank-rank_sum
 
