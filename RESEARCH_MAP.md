@@ -391,6 +391,69 @@ The previously proposed quotient \(U/\langle HN(d)\rangle\) is zero, not one-dim
 
 O2-7 supports the exact statement that the q=3 p-power class has a full 10-dimensional nilpotent shadow equal to U. It does **not** yet prove that this equality is filtration-intrinsic, does not provide a full q=3 versus q=∞ comparison, and does not recover \(\chi\).
 
+
+## 6D. O2-9(pre) — Phi0/F compatibility: PASS / COMPLETE
+
+Record: Actions run `35320678550`; corrected script commit `bcdfa2ebeeaee8a12d6e3c7e9e9db7421959d5`.
+
+The coordinate-representation bug in the first O2-9(pre) attempt was repaired. The final computation used the 10-dimensional coordinate matrix of
+[
+\Psi=\Phi_0\circ F:\operatorname{Im}N\to U.
+]
+
+Verified:
+- (dim\operatorname{Hom}_H(\Delta O,U)=1).
+- (Psi) is exactly (10\times10).
+- Full matrix comparison gives (Psi=I_{10}) exactly.
+- All ten diagonal entries are 1.
+- Every off-diagonal entry is zero.
+- (Psi=2I_{10}) is false.
+
+Hence
+[
+\boxed{\Phi_0\circ F=I_U}.
+]
+
+This is a coordinate-level compatibility check between the O2-7 and O2-8 identifications. It does not by itself prove transport-free canonicality.
+
+## 6E. O2-9 — full (operatorname{Aut}_H(W)) transport coverage: OPEN / RUN PENDING
+
+The remaining transport family must be exhausted before claiming canonicality.
+
+Since
+[
+\operatorname{End}_H(W)=\mathbb F_3[I,N],qquad N^2=0,
+]
+its units are exactly
+[
+aI+bN,qquad a\in\mathbb F_3^\times=\{1,2\},quad b\in\mathbb F_3,
+]
+so there are exactly six units.
+
+The experiment `research/O2_9_full_transport_invariance_2026-09-18.py` therefore enumerates all six
+[
+\tau_{a,b}=\tau\circ(aI+bN).
+]
+
+A subtle algebraic correction is frozen in the experiment protocol: for the affine obstruction
+[
+D(S)=D_{\rm linear}(S)-D_{\rm linear}(I),
+]
+the exact general identity is
+[
+D_{a,b}=aD_0+b\Delta D+(a-1)D_{\rm linear}(I).
+]
+Thus (D_{a,b}=aD_0+b\Delta D) is an additional simplification to be tested, not an identity to assume. In particular, the (a=2) case cannot be interpreted using the (a=1) affine formula without checking the extra term.
+
+The experiment explicitly verifies:
+1. (dim\operatorname{Hom}_H(W,W_d)=2) via composition with the verified (H)-isomorphism (	au), matching (dim\operatorname{End}_H(W)=2);
+2. all six units and the corresponding six transports;
+3. H-equivariance of all six transports;
+4. the exact affine identity above;
+5. the six resulting obstruction images and their total span relative to (O_0+\Delta O).
+
+The canonicality decision is based on the exhausted six-element transport family, not merely on the three previously tested (a=1) transports.
+
 ## 7. What is NOT the current task
 
 - Do **not** redo the A3-4 provenance audit.
