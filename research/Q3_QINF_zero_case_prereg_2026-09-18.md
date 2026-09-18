@@ -55,3 +55,34 @@ Before Q3/Q∞ comparison:
 ## Current status
 
 The size-40 projective orbit is a **candidate invariant observed stably inside (H\cdot d_3)**. Its dependence on the present local model and H-action remains an open possibility.
+
+
+## Analytic status of the q=∞ side
+
+The baseline-relative definition recorded in `research/03_CONVENTIONS_AND_IMPLEMENTATION.md` gives
+
+\[
+\Delta_3(\infty)=0,\qquad d_\infty=[0,X_2]=0.
+\]
+
+Since the authoritative N is linear,
+
+\[
+N(d_\infty)=0.
+\]
+
+Therefore, from the definition of the preregistered vector-orbit invariant,
+
+\[
+J(N(d_\infty))=J(0)=1
+\]
+
+is analytically determined before execution. The q=∞ computation is consequently an **IMPLEMENTATION-LEVEL CONSISTENCY / SANITY CHECK**, not a substantive mathematical test.
+
+The substantive decision criterion for the q-sensitive probe is
+
+\[
+\boxed{J(N(d_3))\ne1}.
+\]
+
+A value of 1 means this particular N/J probe does not distinguish q=3 from the q=∞ baseline; a value different from 1 means that this invariant distinguishes the two cases. This remains a local statement about the specified source, N, H-action, and invariant, not a claim about orientation survival in the entire Zassenhaus filtration.
