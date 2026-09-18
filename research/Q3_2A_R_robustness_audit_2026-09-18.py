@@ -265,7 +265,11 @@ artifact = {
     "U_basis_rank": rank3(U_basis),
     "num_H_generators": len(A_U),
     "H_generator_matrices_on_U": [A.tolist() for A in A_U],
+    "abstract_H_order": 51840,
     "generated_U_image_order": H_order,
+    "kernel_H_to_U_order": 2,
+    "abstract_H_projective_kernel_order": 2,
+    "abstract_H_projective_effective_order": 25920,
     "projective_kernel_order": projective_kernel_order,
     "projective_kernel_scalars_present": [1],
     "effective_projective_group_order": effective_projective_order,
@@ -277,7 +281,8 @@ artifact = {
     "Nd3_rank": rank3(Nd),
     "Nd3_orbit_size": len(orbits[target_idx]),
     "Nd3_orbit_index": target_idx,
-    "Nd3_stabilizer_order_in_H": H_order // len(orbits[target_idx]),
+    "Nd3_stabilizer_order_in_abstract_H": 51840 // len(orbits[target_idx]),
+    "Nd3_stabilizer_order_in_U_image": H_order // len(orbits[target_idx]),
     "d3_H_orbit_size": len(d_orbit),
     "N_d_nonzero_count": nd_nonzero_count,
     "N_d_zero_count": nd_zero_count,
@@ -303,7 +308,8 @@ print("projective census orbit count =", len(orbits))
 print("minimum orbit size =", min(sizes))
 print("maximum orbit size =", max(sizes))
 print("[N(d3)] orbit size =", len(orbits[target_idx]))
-print("[N(d3)] stabilizer order in H =", H_order // len(orbits[target_idx]))
+print("[N(d3)] stabilizer order in abstract H =", 51840 // len(orbits[target_idx]))
+print("[N(d3)] stabilizer order in U-image =", H_order // len(orbits[target_idx]))
 print("d3 H-orbit size =", len(d_orbit))
 print("nonzero N(d) count on H.d3 =", nd_nonzero_count)
 print("zero N(d) count on H.d3 =", nd_zero_count)
