@@ -694,3 +694,12 @@ and eventually
 \[
 \boxed{\chi\text{ recovery}}.
 \]
+
+
+## 6I. Q3/Q9 — degree-3 probe degenerate; Gate C OPEN
+
+Gate A is CLOSED with independently verified d9=0 (Actions run 35352242909). Consequently the frozen degree-3 N/J probe has only N(0)=0, J(0)=1; it is recorded as a degenerate probe, not as a mathematical failure and not as evidence that q=3 and q=9 filtrations coincide.
+
+The next controlled question is Gate C: determine the first filtration degree at which the q=9 power term can contribute to the baseline-relative source. Over F_3, (1+X_1)^9 has no terms in degrees 1–8, so degree 9 is the first possible contribution from the power term. The degree-9 leading term of the full baseline-relative control remains to be derived independently; no Delta_9(9), source, or new invariant is assumed.
+
+Gate C must be completed before any new q=9 probe is designed. O2 and Q3/Q9 remain logically separate tracks.
