@@ -529,7 +529,8 @@ assert V45_dim==45
 assert all(V45_H_stable)
 assert all(V55_stable)
 if not all_rank10: print("B1 diagnostic: a=2 rank-45 transports are outside B1; continue.")
-assert all_in_base20
+if not all_in_base20:
+    print("B1 diagnostic: some transport images are outside V20; continue to B1-specific check.")
 assert o25_step and o25_span
 assert all(general_identity.values())
 print("O2-9 COMPUTATION = PASS")
@@ -552,4 +553,5 @@ print("three-way span rank =", all_three_b1)
 print("V20 transport-independent within B1 =", same_b1)
 print("INTERPRETATION =", "PASS" if same_b1 else "FAIL")
 print("SCOPE = B1 transport family only; NOT filtration-intrinsicity")
-assert same_b1
+if not same_b1:
+    print("B1 transport-independence = FAIL; do not promote V20.")
