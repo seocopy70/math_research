@@ -1,7 +1,9 @@
 """Q3-2A: projective H-orbit census on U = im(N).
 
 Structural investigation only. No q=3/q=infinity decision is made here.
-The target invariant candidate is the H-orbit type of the projective line [N(d_3)] in P(U).
+PRE-REGISTERED SINGLE INVARIANT: I([v]) = |H.[v]|, the projective H-orbit size in P(U).
+
+PRE-REGISTERED INTERPRETATION: [N(d3)] is non-generic iff its orbit size is strictly smaller than the maximum projective orbit size in P(U). No threshold, median, stabilizer dimension, or coordinate statistic is introduced after seeing the result. The stabilizer order is recorded only as the equivalent orbit-stabilizer quantity.
 """
 from pathlib import Path
 import runpy, json, itertools
@@ -100,7 +102,7 @@ def act_line(key,A):
     v=np.array(key,dtype=np.int64)
     return line_key((A@v)%P)
 
-# Full projective orbit census.
+# Full projective orbit census. 29,524 lines and five generator edges per line make an explicit finite census; no sampling is used.
 unseen=set(line_set)
 orbits=[]
 while unseen:
@@ -137,6 +139,13 @@ artifact={
     "target_orbit_index":target_idx,
     "target_orbit_size":len(orbits[target_idx]),
     "target_orbit_stabilizer_order_if_H_order_51840":51840//len(orbits[target_idx]),
+    "max_orbit_size":max(sizes),
+    "target_is_non_generic":len(orbits[target_idx]) < max(sizes),
+    "orbit_size_values":sorted(set(sizes)),
+    "H_generator_matrices":[A.tolist() for A in A_U],
+    "U_basis_shape":list(U_basis.shape),
+    "U_basis_rank":rank3(U_basis),
+    "N_rank":rank3(N),
     "scope":"structural census only; no q=3 vs q=infinity claim",
 }
 ART.mkdir(exist_ok=True)
@@ -149,5 +158,8 @@ print("number of H-orbits =",len(orbits))
 print("orbit sizes =",sizes)
 print("[N(d3)] orbit index =",target_idx)
 print("[N(d3)] orbit size =",len(orbits[target_idx]))
+print("max orbit size =", max(sizes))
+print("target non-generic =", len(orbits[target_idx]) < max(sizes))
+print("orbit-size values =", sorted(set(sizes)))
 print("stabilizer order (using |Sp4(F3)|=51840) =",51840//len(orbits[target_idx]))
 print("Q3-2A RESULT = STRUCTURAL CENSUS COMPLETE")
