@@ -1,0 +1,26 @@
+name: O2-9 full Aut_H(W) transport invariance
+
+on:
+  push:
+    paths:
+      - "research/O2_9_full_transport_invariance_2026-09-18.py"
+      - "research/O2_8_factor_through_N_2026-09-18.py"
+      - "research/A3-4-10_CANONICAL_TAU_REVALIDATION_2026-09-16.py"
+      - "research/phase2_3_endH_optimized_2026-09-15.py"
+      - ".github/workflows/o2-9-full-transport-invariance.yml"
+  workflow_dispatch:
+
+jobs:
+  o2-9-full:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install numpy
+      - run: python research/O2_9_full_transport_invariance_2026-09-18.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: o2-9-full-transport-invariance
+          path: research/artifacts/o2_9_full_transport_invariance.json
