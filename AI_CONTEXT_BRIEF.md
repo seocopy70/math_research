@@ -100,7 +100,24 @@ Sp\(_4(\mathbb F_3)\) 기준:
 \]
 각각 non-split임만 기록되어 있습니다. Ext 차원이나 유일성은 아직 주장하지 않습니다.
 
-## 6. 현재 연구 위치: B1-1
+## 6. 현재 연구 위치: O2 transport-intrinsic track
+
+현재 본 연구의 핵심 질문은
+[
+oxed{	ext{(U=operatorname{im}Ncong O=operatorname{im}D_{m stack}) 식별이 transport-독립적이고 filtration-intrinsic인가?}}
+]
+
+A3-4 audit는 완료·동결, O2-2와 O2-3은 PASS입니다. O2-4에서는 절대 obstruction image가 admissible transport에 따라 달라짐을 확인했고, O2-5/O2-6에서는 그 변화 방향 (Delta O)가 10차원 H-submodule이며 B1 admissible family 안에서 basepoint-independent임을 확인했습니다. 현재는 이 variation module 자체의 filtration-intrinsic 성격을 검증하는 단계입니다.
+
+O2 이후에야 독립적인 q=3 대 q=∞ 비교와 최종적인 (chi) recovery를 판단합니다.
+
+### 병렬 track: q=3 / q=∞ reconstruction
+
+Q3-5/Gate0A는 O2와 별도의 병렬 track입니다. q=∞ degree-4 module과 compatible transport를 독립적으로 재구성하는 작업이며, O2의 현재 결론을 대신하지 않습니다.
+
+### 현재 B1-1 기록은 역사적 맥락
+
+B1-1은 현재 active research position이 아닙니다. 아래의 B1-1 내용은 과거 구조 검증의 맥락과 재현 규약을 보존하기 위해 남겨둡니다.
 
 목표는
 \[
