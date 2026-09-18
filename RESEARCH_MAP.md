@@ -703,3 +703,36 @@ Gate A is CLOSED with independently verified d9=0 (Actions run 35352242909). Con
 The next controlled question is Gate C: determine the first filtration degree at which the q=9 power term can contribute to the baseline-relative source. Over F_3, (1+X_1)^9 has no terms in degrees 1–8, so degree 9 is the first possible contribution from the power term. The degree-9 leading term of the full baseline-relative control remains to be derived independently; no Delta_9(9), source, or new invariant is assumed.
 
 Gate C must be completed before any new q=9 probe is designed. O2 and Q3/Q9 remain logically separate tracks.
+
+## 13. 2026-09-19 — methodological decision after O2 transport failure
+
+The proposed alternative route was critically reviewed against the frozen O2/Q3/Q9 state.
+
+### Adopted
+
+- The research target is narrowed from the broad phrase “recover q/orientation from the Zassenhaus graded object” to the more precise question of whether a **prescribed weak filtered/graded structure** can canonically distinguish q=3 from q=∞.
+- Orientation recovery \\(\\chi\\) remains a downstream goal and is not identified with q-distinction.
+- A **rank-2 control track** is adopted as a low-cost validation layer for relator-preservation/lifting machinery before any large degree-9 rank-4 computation.
+- The proposed lifting observable \\(A_n(q)\\) is retained only as a **provisional diagnostic** until its definition is audited.
+- GAP/ANUPQ remains a possible independent verification layer, not a replacement for the current mathematical route.
+
+### Deferred / rejected for now
+
+- Do not replace the current Zassenhaus track by the p-descending central series merely for dimension reduction.
+- Do not open a new Massey/A∞ main track at this stage.
+- Do not introduce a new canonical 20-dimensional target-space object to rescue the failed O2 concrete-subspace route.
+- Do not treat the full finite quotient \\(G/D_n\\) as automatically “weak data”: its abstract group structure may already expose q through abelianization.
+
+### New immediate task
+
+Before implementing \\(A_n(q)\\), perform a definition audit:
+
+1. specify exactly what a lift of \\(g\\in Sp(V)\\) means;
+2. specify whether relator preservation is equality or preservation of the normal closure modulo \\(D_n\\);
+3. specify the filtration and the induced action;
+4. separate information explicitly allowed to the invariant from information that would trivially reveal q;
+5. choose the smallest nontrivial filtration level.
+
+Then run the rank-2 control specified in `plans/PLAN-RANK2-CONTROL-AND-LIFTING.md`.
+
+This is a **new validation/diagnostic track**, not a replacement for the existing O2 or Q3/Q9 tracks. The O2 transport-independentity question remains closed at the current concrete 20D level, and the Q3/Q9 Gate C status is unchanged.
