@@ -339,13 +339,14 @@ G_exact_equiv=[]
 for A,g in zip(A_W,gens):
     M=(A@KerN)%P
     piv_rows=[]; rr=0
-    for col in range(KerN.shape[1]):
-        p=next((i for i in range(rr,KerN.shape[0]) if KerN[i,col]),None)
-        if p is not None:
-            piv_rows.append(p); rr+=1
+    for row in range(KerN.shape[0]):
+        cand=piv_rows+[row]
+        q=rank3(KerN[cand,:])
+        if q>rr:
+            piv_rows.append(row); rr=q
         if rr==KerN.shape[1]: break
     if len(piv_rows)!=35:
-        raise RuntimeError("failed to choose 35 pivot rows for KerN coordinates")
+        raise RuntimeError("failed to choose 35 independent pivot rows for KerN coordinates")
     Kp=KerN[piv_rows,:]
     A_K=(inverse3(Kp)@M[piv_rows,:])%P
     assert np.array_equal((KerN@A_K)%P,M)
