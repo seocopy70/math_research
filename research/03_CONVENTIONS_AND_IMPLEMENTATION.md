@@ -188,6 +188,26 @@ Applying generators only to the most recently discovered vector is not an H-span
 
 For a claimed orbit/submodule equality, record the closure dimension and, when relevant, verify it against an independent construction or known ambient dimension.
 
+### 11A.1 Vector-orbit invariant (J) versus H-span dimension
+
+The q=3/q=∞ probe uses the **vector-orbit cardinality**
+\[
+J(v)=|H_U\cdot v|,
+\]
+not the dimension of the linear span \(\langle H\cdot v\rangle\).
+
+Here
+\[
+H_U:=\operatorname{im}(H\to GL(U))
+\]
+is the **image group acting on U**, not the abstract group H counted with multiplicity. Thus orbit elements are distinct vectors in U; kernel elements do not create additional orbit elements.
+
+The implementation must enumerate the orbit as a set of vectors under the five fixed generating transformations. Since those generators are invertible and generate H, repeated forward application is sufficient to enumerate the same orbit as including explicit inverses.
+
+The orbit cardinality J is conceptually independent of \(\dim\langle H\cdot v\rangle\). For \(\dim U=10\) over \(\mathbb F_3\), direct enumeration has the bound \(|U|=3^{10}=59049\).
+
+A valid J computation must record the actual orbit cardinality, use exact \(\mathbb F_3\) arithmetic, and operate in the fixed U-coordinate representation.
+
 ## 12. Finite-field rank protocol
 
 All rank, kernel, image, independence, and span calculations involving \(\mathbb F_3\)-data must use exact finite-field arithmetic.
