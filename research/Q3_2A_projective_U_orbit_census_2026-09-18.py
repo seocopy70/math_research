@@ -3,7 +3,11 @@
 Structural investigation only. No q=3/q=infinity decision is made here.
 PRE-REGISTERED SINGLE INVARIANT: I([v]) = |H.[v]|, the projective H-orbit size in P(U).
 
-PRE-REGISTERED INTERPRETATION: [N(d3)] is non-generic iff its orbit size is strictly smaller than the maximum projective orbit size in P(U). No threshold, median, stabilizer dimension, or coordinate statistic is introduced after seeing the result. The stabilizer order is recorded only as the equivalent orbit-stabilizer quantity.
+PRE-REGISTERED INTERPRETATION: [N(d3)] is non-generic iff its orbit size is
+strictly smaller than the maximum projective orbit size in P(U). No threshold,
+median, stabilizer dimension, or coordinate statistic is introduced after seeing
+the result. The stabilizer order is recorded only as the equivalent
+orbit-stabilizer quantity.
 """
 from pathlib import Path
 import runpy, json, itertools
@@ -34,25 +38,25 @@ def rank3(A):
         if r == m: break
     return r
 
-def rref_basis(A):
+def column_basis(A):
+    """Return a column basis of im(A), preserving the ambient coordinates."""
     A = np.array(A, dtype=np.int64, copy=True) % P
-    if A.ndim == 1: A=A.reshape(-1,1)
-    m,n=A.shape; row=0; piv=[]
-    for c in range(n):
-        p=next((i for i in range(row,m) if A[i,c]),None)
-        if p is None: continue
-        if p!=row: A[[row,p]]=A[[p,row]]
-        if A[row,c]==2: A[row]=(2*A[row])%P
-        for i in range(m):
-            if i!=row and A[i,c]:
-                A[i]=(A[i]-A[i,c]*A[row])%P
-        piv.append(c); row+=1
-        if row==m: break
-    return A[:row], piv
+    pivots = []
+    current = np.zeros((A.shape[0], 0), dtype=np.int64)
+    current_rank = 0
+    for j in range(A.shape[1]):
+        candidate = np.column_stack([current, A[:,j]]) if current.size else A[:,j:j+1]
+        r = rank3(candidate)
+        if r > current_rank:
+            pivots.append(j)
+            current = candidate
+            current_rank = r
+    return A[:, pivots]
 
-U_rref, piv = rref_basis(N)
-U_basis = U_rref.T  # 45 x 10; columns span im(N)
+U_basis = column_basis(N)  # 45 x 10; columns are an actual basis of im(N)
+assert U_basis.shape == (45, 10)
 assert rank3(U_basis) == 10
+assert rank3(np.column_stack([U_basis, N])) == 10
 
 def solve_full_column(A,b):
     A=np.array(A,dtype=np.int64)%P; b=np.array(b,dtype=np.int64)%P
@@ -74,6 +78,15 @@ def solve_full_column(A,b):
     for i,c in enumerate(ps): x[c]=aug[i,n]
     assert np.array_equal((A@x)%P,b)
     return x
+
+# Mandatory submodule preflight: verify U=im(N) is preserved by every H generator
+# before attempting to construct induced coordinate actions.
+for gi, A in enumerate(A_W):
+    image = (A @ U_basis) % P
+    assert rank3(np.column_stack([U_basis, image])) == 10, (
+        f"U is not H-stable under generator {gi}"
+    )
+print("Q3-2A PREFLIGHT: U=im(N) is rank-10 and H-stable under all 5 generators")
 
 # Induced H-action on U coordinates.
 A_U=[]
@@ -102,7 +115,8 @@ def act_line(key,A):
     v=np.array(key,dtype=np.int64)
     return line_key((A@v)%P)
 
-# Full projective orbit census. 29,524 lines and five generator edges per line make an explicit finite census; no sampling is used.
+# Full projective orbit census. 29,524 lines and five generator edges per line
+# make an explicit finite census; no sampling is used.
 unseen=set(line_set)
 orbits=[]
 while unseen:
