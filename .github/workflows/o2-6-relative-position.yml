@@ -1,0 +1,36 @@
+name: O2-6 Relative Position
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/O2_6_relative_position_2026-09-18.py'
+      - '.github/workflows/o2-6-relative-position.yml'
+      - 'research/A3-4-10_CANONICAL_TAU_REVALIDATION_2026-09-16.py'
+      - 'research/phase2_3_endH_optimized_2026-09-15.py'
+
+jobs:
+  o2-6:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install numpy
+        run: python -m pip install numpy
+
+      - name: Run O2-6 relative-position audit
+        run: python research/O2_6_relative_position_2026-09-18.py
+
+      - name: Upload O2-6 reusable artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: o2-6-relative-position
+          path: research/artifacts/o2_6_relative_position.json
+          if-no-files-found: warn
