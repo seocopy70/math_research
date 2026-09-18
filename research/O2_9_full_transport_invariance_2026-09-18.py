@@ -295,16 +295,6 @@ G_in_V55=(rank_V55_G==55)
 print("G-1.5 rank([V55, Im G]) =",rank_V55_G)
 print("G-1.5 Im G subset V55 =",G_in_V55)
 
-# G-1.6 target-side precheck: V45 = V20 + Im(G).
-V45=column_basis(np.column_stack([base20,G]))
-V45_dim=rank3(V45)
-V45_H_stable=[]
-for g in gens:
-    moved=rho_T_apply(V45,g)
-    V45_H_stable.append(rank3(np.column_stack([V45,moved]))==V45_dim)
-print("G-1.6 dim(V20 + Im G) =",V45_dim)
-print("G-1.6 (V20 + Im G) H-stable per generator =",V45_H_stable)
-print("G-1.6 (V20 + Im G) H-stable all 5 =",all(V45_H_stable))
 
 # H-stability test for the 55-dimensional extension V55.
 # This is the quotient-level statement: V20 is already H-stable from O2-6,
@@ -342,6 +332,18 @@ def rho_T_apply(D,g):
             if T[i,j]:
                 Y[i]=(Y[i]+T[i,j]*(A5@X[j]))%P
     return Y.reshape(4096,-1)%P
+
+# G-1.6 target-side precheck: V45 = V20 + Im(G).
+V45=column_basis(np.column_stack([base20,G]))
+V45_dim=rank3(V45)
+V45_H_stable=[]
+for g in gens:
+    moved=rho_T_apply(V45,g)
+    V45_H_stable.append(rank3(np.column_stack([V45,moved]))==V45_dim)
+print("G-1.6 dim(V20 + Im G) =",V45_dim)
+print("G-1.6 (V20 + Im G) H-stable per generator =",V45_H_stable)
+print("G-1.6 (V20 + Im G) H-stable all 5 =",all(V45_H_stable))
+
 
 V55_stable=[]
 for g in gens:
