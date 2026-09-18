@@ -153,19 +153,20 @@ minus_I4 = (-I4) % P
 minus_I4_matches = [
     m for g, m in group_queue if np.array_equal(g, minus_I4)
 ]
-assert len(minus_I4_matches) == 1
-minus_I4_U_action_is_identity = np.array_equal(minus_I4_matches[0], I10)
+minus_I4_in_H = (len(minus_I4_matches) == 1)
+minus_I4_U_action_is_identity = (len(minus_I4_matches) == 1 and np.array_equal(minus_I4_matches[0], I10))
 
 print("KERNEL_DIAGNOSTICS")
 print("|ker(H -> GL(U))| =", kernel_size)
 print("|H_U| =", H_U_order)
 print("|Stab_HU(N(d_q3))| =", stab_size)
-print("-I4_IN_H =", True)
+print("-I4_IN_H =", minus_I4_in_H)
 print("-I4_U_ACTION_IS_IDENTITY =", minus_I4_U_action_is_identity)
 print("ORBIT_STABILIZER_LHS =", H_U_order)
 print("ORBIT_STABILIZER_RHS =", J_q3 * stab_size)
 
-assert H_U_order == J_q3 * stab_size
+print("FIRST_ISOMORPHISM_CHECK =", kernel_size * H_U_order == len(group_seen))
+print("ORBIT_STABILIZER_EXACT_CHECK =", H_U_order == J_q3 * stab_size)
 
 artifact = {
     "experiment": "Q3/QINF-J",
@@ -181,8 +182,9 @@ artifact = {
     "kernel_H_to_GL_U": kernel_size,
     "H_U_order": H_U_order,
     "stabilizer_Nd_q3": stab_size,
-    "minus_I4_in_H": True,
+    "minus_I4_in_H": minus_I4_in_H,
     "minus_I4_U_action_is_identity": minus_I4_U_action_is_identity,
+    "first_isomorphism_check": kernel_size * H_U_order == len(group_seen),
     "orbit_stabilizer_check": H_U_order == J_q3 * stab_size,
     "qinf_status": "IMPLEMENTATION-LEVEL CONSISTENCY / SANITY CHECK",
     "substantive_criterion": "J(N(d3)) != 1",
@@ -207,6 +209,7 @@ print("SUBSTANTIVE_CRITERION_J_Q3_NE_1 =", J_q3 != 1)
 
 assert J_qinf == 1
 assert len(group_seen) == 51840
+assert kernel_size * H_U_order == len(group_seen)
 assert H_U_order == J_q3 * stab_size
 print("Q3/QINF-J IMPLEMENTATION SANITY = PASS")
 print("Q3/QINF-J SUBSTANTIVE RESULT =", "DISTINGUISHES" if J_q3 != 1 else "DOES_NOT_DISTINGUISH")
