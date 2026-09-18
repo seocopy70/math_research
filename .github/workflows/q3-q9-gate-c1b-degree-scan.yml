@@ -1,0 +1,22 @@
+name: Q3/Q9 Gate C-1b degree scan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "research/Q3_Q9_GATE_C1b_degree_scan_2026-09-19.py"
+      - ".github/workflows/q3-q9-gate-c1b-degree-scan.yml"
+
+jobs:
+  gate-c1b:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run C-1b
+        run: |
+          python research/Q3_Q9_GATE_C1b_degree_scan_2026-09-19.py
