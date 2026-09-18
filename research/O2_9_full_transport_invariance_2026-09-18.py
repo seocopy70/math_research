@@ -272,6 +272,19 @@ print("G-1 dim(DeltaO intersection Im G) =",dim_DeltaO_inter_G)
 print("G-1 DeltaO subset Im G =",deltaO_in_G)
 assert deltaO_in_G
 
+# G-1.6: independently verify the filtration stability needed before quotient H-action.
+N_H_equiv=[]
+KerN_H_stable=[]
+ImN=column_basis(N)
+ImN_H_stable=[]
+for A in A_W:
+    N_H_equiv.append(np.array_equal((N@A)%P,(A@N)%P))
+    KerN_H_stable.append(rank3(np.column_stack([KerN,(A@KerN)%P]))==35)
+    ImN_H_stable.append(rank3(np.column_stack([ImN,(A@ImN)%P]))==10)
+print("G-1.6 N H-equivariant per generator =",N_H_equiv)
+print("G-1.6 ker(N) H-stable per generator =",KerN_H_stable)
+print("G-1.6 Im(N) H-stable per generator =",ImN_H_stable)
+
 # G-1.5: before constructing any quotient map, test whether the new G-directions
 # stay inside the already constructed V55 = V20 + Im(C). This is deliberately
 # separate from the quotient construction: rank([V55,G])=55 means Im(G) is
@@ -281,6 +294,17 @@ rank_V55_G=rank3(np.column_stack([V55 if 'V55' in globals() else column_basis(np
 G_in_V55=(rank_V55_G==55)
 print("G-1.5 rank([V55, Im G]) =",rank_V55_G)
 print("G-1.5 Im G subset V55 =",G_in_V55)
+
+# G-1.6 target-side precheck: V45 = V20 + Im(G).
+V45=column_basis(np.column_stack([base20,G]))
+V45_dim=rank3(V45)
+V45_H_stable=[]
+for g in gens:
+    moved=rho_T_apply(V45,g)
+    V45_H_stable.append(rank3(np.column_stack([V45,moved]))==V45_dim)
+print("G-1.6 dim(V20 + Im G) =",V45_dim)
+print("G-1.6 (V20 + Im G) H-stable per generator =",V45_H_stable)
+print("G-1.6 (V20 + Im G) H-stable all 5 =",all(V45_H_stable))
 
 # H-stability test for the 55-dimensional extension V55.
 # This is the quotient-level statement: V20 is already H-stable from O2-6,
@@ -378,6 +402,15 @@ artifact={
     "G_O_tau_intersection_dimension":int(dim_O0_inter_G),
     "G_DeltaO_intersection_dimension":int(dim_DeltaO_inter_G),
     "DeltaO_subset_ImG":bool(deltaO_in_G),
+    "N_H_equivariant_per_generator":[bool(x) for x in N_H_equiv],
+    "N_H_equivariant_all_5":bool(all(N_H_equiv)),
+    "KerN_H_stable_per_generator":[bool(x) for x in KerN_H_stable],
+    "KerN_H_stable_all_5":bool(all(KerN_H_stable)),
+    "ImN_H_stable_per_generator":[bool(x) for x in ImN_H_stable],
+    "ImN_H_stable_all_5":bool(all(ImN_H_stable)),
+    "V45_dimension":int(V45_dim),
+    "V45_H_stable_per_generator":[bool(x) for x in V45_H_stable],
+    "V45_H_stable_all_5":bool(all(V45_H_stable)),
     "V55_dimension":int(rank3(V55)),
     "V55_H_stable_per_generator":[bool(x) for x in V55_stable],
     "V55_H_stable_all_5":bool(all(V55_stable)),
@@ -422,6 +455,11 @@ print("G: dim(V20 intersection Im G) =",dim_V20_inter_G)
 print("G: dim(O_tau intersection Im G) =",dim_O0_inter_G)
 print("G: dim(DeltaO intersection Im G) =",dim_DeltaO_inter_G)
 print("G: DeltaO subset Im G =",deltaO_in_G)
+print("N H-equivariant all 5 =",all(N_H_equiv))
+print("ker(N) H-stable all 5 =",all(KerN_H_stable))
+print("Im(N) H-stable all 5 =",all(ImN_H_stable))
+print("dim(V20 + Im G) =",V45_dim)
+print("(V20 + Im G) H-stable all 5 =",all(V45_H_stable))
 
 print("all six obstruction ranks = 10 =",all_rank10)
 print("dim span(all six images) =",total6_dim)
@@ -436,6 +474,11 @@ print("ARTIFACT =",artifact_path)
 assert hom_dim_via_transport==2
 assert len(transports)==6
 assert all(v for _,v in h_equiv)
+assert all(N_H_equiv)
+assert all(KerN_H_stable)
+assert all(ImN_H_stable)
+assert V45_dim==45
+assert all(V45_H_stable)
 assert all(V55_stable)
 assert all_rank10
 assert all_in_base20
