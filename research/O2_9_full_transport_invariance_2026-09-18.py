@@ -196,8 +196,13 @@ DeltaO=column_basis(DeltaD)
 base20=column_basis(np.column_stack([O0,DeltaO]))
 span20_dim=rank3(base20)
 C_aug_rank=rank3(np.column_stack([base20,C]))
+rank_C=rank3(C)
+intersection_V20_C=span20_dim+rank_C-C_aug_rank
 C_in_base20=(span20_dim==20 and C_aug_rank==20)
 assert span20_dim==20
+assert rank_C >= 35
+print("rank(C) =", rank_C)
+print("dim(V20 intersection Im C) =", intersection_V20_C)
 print("C rank excess beyond 20 =", C_aug_rank-span20_dim)
 
 # H-stability test for the 55-dimensional extension V55.
@@ -279,6 +284,8 @@ artifact={
     "general_affine_identity":{"%d,%d"%k:v for k,v in general_identity.items()},
     "simplified_aD0_plus_bDeltaD":{"%d,%d"%k:v for k,v in user_linear_identity.items()},
     "C_shape":list(C.shape),
+    "rank_C":int(rank_C),
+    "intersection_V20_ImC_dimension":int(intersection_V20_C),
         "O2_5_exact_step_identity":bool(o25_step),
     "O2_5_exact_span_identity":bool(o25_span),
     "span_O_tau_DeltaO_dimension":span20_dim,
@@ -313,6 +320,8 @@ print("simplified D_ab = a D0 + b DeltaD =",user_linear_identity)
 print("O2-5 exact step identity =",o25_step)
 print("O2-5 exact span identity =",o25_span)
 print("dim span(O_tau,DeltaO) =",span20_dim)
+print("rank(C) =",rank_C)
+print("dim(V20 intersection Im C) =",intersection_V20_C)
 print("rank([O_tau,DeltaO,C]) =",C_aug_rank)
 print("C in O_tau + DeltaO =",C_in_base20)
 print("V55 H-stable all 5 =",all(V55_stable))
