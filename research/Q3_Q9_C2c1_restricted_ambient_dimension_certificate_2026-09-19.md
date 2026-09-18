@@ -153,8 +153,36 @@ Meaning:
 
 This PASS does not establish quotient-level admissibility, H-stability, nonzero survival of S9 in gr9(G), or existence of D9.
 
-## 10. Next gate
+## 10. Relation-layer definition warning for the next gate
 
-The next mathematical object to define independently is the **degree-9 relation ideal R9 inside L9^res**, followed by a separate H-stability audit.
+The degree-9 relation layer must follow the repository's corrected recursive relation convention, not a shortcut generated only from the degree-2 initial relator.
 
-No D9 calculation should be performed before those definitions are fixed.
+The repository's independently audited recursion is
+
+\[
+(R)_3=[L_1,(R)_2],\qquad
+(R)_4=[L_1,(R)_3],
+\]
+
+and, more generally, the homogeneous relation pieces are formed recursively from the preceding relation piece. The audit explicitly found that the tempting degree-4 shortcut
+
+\[
+[L_2,R]
+\]
+
+has the wrong dimension (5 instead of the corrected 15-dimensional \((R)_4\)).
+
+For degree 9, therefore, the next definition must distinguish at least:
+
+- the full initial forms of the normal-closure relation elements at degree 9;
+- the recursively generated ordinary-Lie part;
+- the restricted-ideal closure required by the free restricted Lie ambient;
+- any additional q-dependent degree-9 source such as \(S_9\).
+
+A degree-9 computation must **not** assume that the degree-2 initial relator alone generates all of \(R_9\), and it must not silently identify a recursive ordinary-Lie bracket ideal with the full restricted relation ideal.
+
+This is precisely the point at which the q-dependent restricted-power contribution can enter. The degree-3 example \(X_1^{[3]}\) shows why the distinction is necessary.
+
+The next mathematical object to define independently is therefore the **degree-9 relation ideal \(R_9\) inside \(L_9^{res}\)**, with its ordinary recursive part and restricted closure explicitly separated before any rank or H-stability computation.
+
+No \(D_9\) calculation should be performed before those definitions are fixed.
