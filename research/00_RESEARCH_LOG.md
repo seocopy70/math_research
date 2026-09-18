@@ -208,3 +208,29 @@ The new workflow/script:
 - workflow commit: `8e0ac0cda83d6b5809c48d13115e62a1538fca06`
 
 The experiment also explicitly checks (dim\operatorname{Hom}_H(W,W_d)=2) by transport to (operatorname{End}_H(W)), and records the exact affine correction term for (a=2). Execution result is pending.
+
+
+## 2026-09-19 — alternative-route review and rank-2 control decision
+
+The proposed alternative research route was critically reviewed against the frozen O2 and Q3/Q9 state.
+
+### Decision
+
+The proposal is **not adopted wholesale**. The following distinctions are now frozen:
+
+1. The broad goal “recover q/orientation from the Zassenhaus graded object” is too strong as the immediate research statement. The working question is narrowed to whether a **prescribed weak filtered/graded structure** can canonically distinguish q=3 from q=∞. Recovery of the canonical orientation \\(\\chi\\) remains a downstream objective.
+2. The line-stabilizer/lifting idea is retained as a promising diagnostic, but the proposed \\(A_n(q)\\) is provisional until its input data and lift notion are formally audited.
+3. The rank-2 model \\(G_q^{(2)}=\\langle x_1,x_2\\mid x_1^q[x_1,x_2]=1\\rangle\\) is adopted as the next low-cost control for the lifting/relator-preservation pipeline.
+4. p-descending filtration is deferred; it is not a replacement for the current Zassenhaus track merely because some layers are smaller.
+5. Massey/A∞ is deferred as a separate literature-informed route, not opened as a new main track.
+6. GAP/ANUPQ is retained as an independent verification option.
+
+### Critical definition warning
+
+A full finite quotient \\(G/D_n\\) must not automatically be called “weak data”. If its abstract group structure is supplied, q may already be visible from abelianization. Therefore any proposed intrinsic observable must explicitly state what information is allowed and what information is excluded.
+
+### Immediate next task
+
+Complete the definition audit of the provisional lifting observable \\(A_n(q)\\), then implement the rank-2 control at the smallest nontrivial filtration level. The control is a validation experiment, not evidence for a rank-4 theorem.
+
+Protocol: `plans/PLAN-RANK2-CONTROL-AND-LIFTING.md`.
