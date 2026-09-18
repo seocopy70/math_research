@@ -205,6 +205,24 @@ print("rank(C) =", rank_C)
 print("dim(V20 intersection Im C) =", intersection_V20_C)
 print("C rank excess beyond 20 =", C_aug_rank-span20_dim)
 
+# Cheap structural split of I = V20 intersection Im(C), before introducing G.
+# Since dim(I)=10 is already known, equality I=O_tau is equivalent to
+# dim(O_tau intersection Im(C))=10, and similarly for DeltaO.
+rank_O0_C=rank3(np.column_stack([O0,C]))
+rank_DeltaO_C=rank3(np.column_stack([DeltaO,C]))
+dim_O0_inter_C=10+rank_C-rank_O0_C
+dim_DeltaO_inter_C=10+rank_C-rank_DeltaO_C
+I_equals_O_tau=(dim_O0_inter_C==10)
+I_equals_DeltaO=(dim_DeltaO_inter_C==10)
+print("dim(O_tau intersection Im C) =", dim_O0_inter_C)
+print("dim(DeltaO intersection Im C) =", dim_DeltaO_inter_C)
+print("V20 intersection Im C = O_tau =", I_equals_O_tau)
+print("V20 intersection Im C = DeltaO =", I_equals_DeltaO)
+print("intersection type =",
+      "O_tau" if I_equals_O_tau else
+      "DeltaO" if I_equals_DeltaO else
+      "mixed/other")
+
 # H-stability test for the 55-dimensional extension V55.
 # This is the quotient-level statement: V20 is already H-stable from O2-6,
 # so V55/V20 is an H-module iff V55 itself is H-stable.
@@ -286,6 +304,10 @@ artifact={
     "C_shape":list(C.shape),
     "rank_C":int(rank_C),
     "intersection_V20_ImC_dimension":int(intersection_V20_C),
+    "dim_O_tau_intersection_ImC":int(dim_O0_inter_C),
+    "dim_DeltaO_intersection_ImC":int(dim_DeltaO_inter_C),
+    "V20_intersection_ImC_equals_O_tau":bool(I_equals_O_tau),
+    "V20_intersection_ImC_equals_DeltaO":bool(I_equals_DeltaO),
         "O2_5_exact_step_identity":bool(o25_step),
     "O2_5_exact_span_identity":bool(o25_span),
     "span_O_tau_DeltaO_dimension":span20_dim,
@@ -322,6 +344,10 @@ print("O2-5 exact span identity =",o25_span)
 print("dim span(O_tau,DeltaO) =",span20_dim)
 print("rank(C) =",rank_C)
 print("dim(V20 intersection Im C) =",intersection_V20_C)
+print("dim(O_tau intersection Im C) =",dim_O0_inter_C)
+print("dim(DeltaO intersection Im C) =",dim_DeltaO_inter_C)
+print("V20 intersection Im C = O_tau =",I_equals_O_tau)
+print("V20 intersection Im C = DeltaO =",I_equals_DeltaO)
 print("rank([O_tau,DeltaO,C]) =",C_aug_rank)
 print("C in O_tau + DeltaO =",C_in_base20)
 print("V55 H-stable all 5 =",all(V55_stable))
