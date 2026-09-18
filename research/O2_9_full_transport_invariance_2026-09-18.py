@@ -200,6 +200,52 @@ C_in_base20=(span20_dim==20 and C_aug_rank==20)
 assert span20_dim==20
 print("C rank excess beyond 20 =", C_aug_rank-span20_dim)
 
+# H-stability test for the 55-dimensional extension V55.
+# This is the quotient-level statement: V20 is already H-stable from O2-6,
+# so V55/V20 is an H-module iff V55 itself is H-stable.
+V55=column_basis(np.column_stack([base20,C]))
+assert rank3(V55)==55
+
+def degree5_action(g):
+    A=np.zeros((1024,1024),dtype=np.int64)
+    for j,w in enumerate(words5):
+        cur={():1}
+        for letter in w:
+            image={}
+            for i in range(4):
+                coeff=int(g[i,letter-1])%P
+                if coeff:
+                    image[(i+1,)]=coeff
+            nxt={}
+            for u,cu in cur.items():
+                for v,cv in image.items():
+                    ww=u+v
+                    nxt[ww]=(nxt.get(ww,0)+cu*cv)%P
+            cur={ww:q for ww,q in nxt.items() if q}
+        for ww,q in cur.items():
+            A[idx5[ww],j]=(A[idx5[ww],j]+q)%P
+    return A
+
+def rho_T_apply(D,g):
+    A5=degree5_action(g)
+    T=inverse3(g).T%P
+    X=D.reshape(4,1024,-1)
+    Y=np.zeros_like(X)
+    for i in range(4):
+        for j in range(4):
+            if T[i,j]:
+                Y[i]=(Y[i]+T[i,j]*(A5@X[j]))%P
+    return Y.reshape(4096,-1)%P
+
+V55_stable=[]
+for g in gens:
+    moved=rho_T_apply(V55,g)
+    V55_stable.append(rank3(np.column_stack([V55,moved]))==55)
+
+print("dim V55 =",rank3(V55))
+print("V55_H_STABLE_PER_GENERATOR =",V55_stable)
+print("V55_H_STABLE_ALL_5 =",all(V55_stable))
+
 all_rank10=all(r==10 for r in ranks.values())
 assert all_rank10
 
@@ -232,6 +278,9 @@ artifact={
     "span_O_tau_DeltaO_dimension":span20_dim,
     "rank_O_tau_DeltaO_C":C_aug_rank,
     "C_in_O_tau_plus_DeltaO":bool(C_in_base20),
+    "V55_dimension":int(rank3(V55)),
+    "V55_H_stable_per_generator":[bool(x) for x in V55_stable],
+    "V55_H_stable_all_5":bool(all(V55_stable)),
     "all_six_obstruction_ranks_10":bool(all_rank10),
     "all_six_images_in_O_tau_plus_DeltaO":bool(all_in_base20),
     "span_all_six_images_dimension":total6_dim,
@@ -260,6 +309,7 @@ print("O2-5 exact span identity =",o25_span)
 print("dim span(O_tau,DeltaO) =",span20_dim)
 print("rank([O_tau,DeltaO,C]) =",C_aug_rank)
 print("C in O_tau + DeltaO =",C_in_base20)
+print("V55 H-stable all 5 =",all(V55_stable))
 print("all six obstruction ranks = 10 =",all_rank10)
 print("dim span(all six images) =",total6_dim)
 print("all six images in O_tau+DeltaO =",all_in_base20)
@@ -273,7 +323,7 @@ print("ARTIFACT =",artifact_path)
 assert hom_dim_via_transport==2
 assert len(transports)==6
 assert all(v for _,v in h_equiv)
-assert C_in_base20
+assert all(V55_stable)
 assert all_rank10
 assert all_in_base20
 assert o25_step and o25_span
