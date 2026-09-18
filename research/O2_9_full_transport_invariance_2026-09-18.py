@@ -444,7 +444,12 @@ artifact={
     "KerN_H_stable_all_5":bool(all(KerN_H_stable)),
     "ImN_H_stable_per_generator":[bool(x) for x in ImN_H_stable],
     "ImN_H_stable_all_5":bool(all(ImN_H_stable)),
-    "V45_dimension":int(V45_dim),\n    "G_exact_H_equivariant_per_generator":[bool(x) for x in G_exact_equiv],\n    "G_exact_H_equivariant_all_5":bool(all(G_exact_equiv)),\n    "rank_D_linear_tau":int(rank_D_tau_linear),\n    "rank_V45_plus_D_linear_tau":int(rank_V45_D_tau),\n    "Im_D_linear_tau_equals_V45":bool(D_tau_linear_image_equals_V45),
+    "V45_dimension":int(V45_dim),
+"G_exact_H_equivariant_per_generator":[bool(x) for x in G_exact_equiv],
+"G_exact_H_equivariant_all_5":bool(all(G_exact_equiv)),
+"rank_D_linear_tau":int(rank_D_tau_linear),
+"rank_V45_plus_D_linear_tau":int(rank_V45_D_tau),
+"Im_D_linear_tau_equals_V45":bool(D_tau_linear_image_equals_V45),
     "V45_H_stable_per_generator":[bool(x) for x in V45_H_stable],
     "V45_H_stable_all_5":bool(all(V45_H_stable)),
     "V55_dimension":int(rank3(V55)),
@@ -494,7 +499,10 @@ print("G: DeltaO subset Im G =",deltaO_in_G)
 print("N H-equivariant all 5 =",all(N_H_equiv))
 print("ker(N) H-stable all 5 =",all(KerN_H_stable))
 print("Im(N) H-stable all 5 =",all(ImN_H_stable))
-print("dim(V20 + Im G) =",V45_dim)\nprint("G exact H-equivariant all 5 =",all(G_exact_equiv))\nprint("rank D_linear(tau) =",rank_D_tau_linear)\nprint("Im D_linear(tau) = V45 =",D_tau_linear_image_equals_V45)
+print("dim(V20 + Im G) =",V45_dim)
+print("G exact H-equivariant all 5 =",all(G_exact_equiv))
+print("rank D_linear(tau) =",rank_D_tau_linear)
+print("Im D_linear(tau) = V45 =",D_tau_linear_image_equals_V45)
 print("(V20 + Im G) H-stable all 5 =",all(V45_H_stable))
 
 print("all six obstruction ranks = 10 =",all_rank10)
