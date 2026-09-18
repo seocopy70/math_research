@@ -15,5 +15,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Install authoritative-action dependency
+        run: python -m pip install numpy
       - name: Run C-2b authoritative action audit
         run: python research/Q3_Q9_GATE_C2b_authoritative_action_audit_2026-09-19.py
