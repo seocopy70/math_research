@@ -460,3 +460,15 @@ Decision:
 
 Detailed audit: research/ORIENTATION_MOD9_FILTERED_FACTOR_F5_STRUCTURAL_2026-09-19.md.
 No finite scan is authorized.
+
+## 2026-09-19 — Critical review of F5 structural PASS
+
+The previous F5 PASS is narrowed. The formula Theta_{R,P}(lambda)(f)=f(P)+(lambda wedge f)(R) is correct once the marked degree-3 relation jet J_3=< (R,P) > is supplied, but this makes the factorization through the enriched carrier partly formal. Presentation/lift independence and naturality were stated too quickly for the unmarked problem, and minimality of D_3 was not proved.
+
+Correct status:
+- F1-F4: PASS at canonical finite-filtered-quotient level.
+- F5-A: PASS for q-sensitive degree-3 carrier existence.
+- F5-marked: PASS, conditional on the enriched relation jet J_3 being part of the datum.
+- **F5-bare: OPEN.** The remaining substantive problem is whether the originally allowed bare filtered/graded datum canonically determines the distinguished relation jet J_3, or admits an equivalent unmarked reconstruction.
+
+No finite scan is authorized.
