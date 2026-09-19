@@ -465,3 +465,38 @@ and therefore
 This is a structural exact membership certificate, not a numerical 29144-dimensional rank run.
 
 The next authorized step is the separate construction of the q=9 degree-9 restricted relation space containing (R_2) and the now-surviving (S_9). H-stability and any (D_9) interpretation remain downstream gates.
+
+
+## 2026-09-19 — S9-B PASS retracted on structural-lemma audit
+
+Critical review found that the previous S9-B PASS was one logical step too strong.
+
+C-2c-2 establishes
+[
+\dim I_{\infty,9}=13524,qquad
+\dim I^{\mathrm{ord}}_9=13520,qquad
+\dim I_3^{[3]}=4,
+]
+and a degree-9 restricted increment of (+4), together with the ambient layers
+[
+L_9\oplus L_3^{[3]}\oplus L_1^{[9]}.
+]
+
+But dimension equality does not prove the subspace identity
+[
+(I_{\infty})_9\cap(L_3^{[3]}\oplus L_1^{[9]})
+=
+I_3^{[3]}\oplus0.
+]
+
+Therefore S9-B is now **NOT YET CLOSED**. The baseline (13524) remains frozen and S9 is not inserted anywhere downstream.
+
+The required next lemma is
+[
+(I_{\infty})_9=(I^{\mathrm{ord}})_9\oplus I_3^{[3]},
+]
+equivalently
+[
+(I_{\infty})_9\cap L_1^{[9]}=0.
+]
+This must be established from restricted-ideal generation and explicit degree-9 p-power source tracking, not from dimensions alone. No large q=9 computation is authorized until this lemma closes.
