@@ -1,0 +1,20 @@
+name: rank4-d4-ia-small-representative
+
+on:
+  push:
+    paths:
+      - "research/rank4_D4_ia_small_representative_audit_2026-09-19.py"
+      - ".github/workflows/rank4-d4-ia-small-representative.yml"
+      - "research/rank4_D4_actual_lift_fibre_audit_2026-09-19.py"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run small exact F3 representative audit
+        run: python research/rank4_D4_ia_small_representative_audit_2026-09-19.py
