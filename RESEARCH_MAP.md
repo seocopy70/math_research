@@ -2216,3 +2216,25 @@ Decision:
 - a new mod-27 carrier with additional rigidifying structure: **OPEN.**
 
 This supersedes HARD ATTACK 17. No further numerical scan of the same Bockstein package is authorized.
+
+
+## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 19: CATEGORICAL CORRECTION / REALIZABILITY GATE
+
+Hard Attack 18's unconditional Bockstein no-go is superseded. Its symmetry
+\[
+S(a_1,a_2,a_3,a_4)=(a_1,4a_2,a_3,a_4)
+\]
+is an automorphism of the abstract declared carrier, but admissibility as a morphism induced by the group-level input was not proved. An abstract carrier automorphism only yields a naturality obstruction if the bridge is required to be natural for that morphism.
+
+The next gate therefore separates:
+
+1. \(\mathcal C_{27}^{\mathrm{abs}}\): abstract structured carriers and all structure-preserving isomorphisms;
+2. \(\mathcal C_{27}^{\mathrm{real}}\): carriers with morphisms actually induced by admissible group isomorphisms/gauges of the declared filtered/relation input.
+
+Decision:
+- Hard Attack 18 absolute no-go: **HISTORICAL / SUPERSEDED**;
+- S as abstract-carrier symmetry: **PASS / LOCAL**;
+- Bockstein q-layer detector: **PASS / LOCAL**;
+- Bockstein mod-27 orientation carrier: **CONDITIONAL / OPEN**.
+
+Hard Attack 19 target: determine whether S is realizable. If realizable, test its action against the intrinsic orientation and close the carrier. If not realizable, identify the precise q-blind datum preventing realization; reject it as a new rigidifier if it is equivalent to hidden q/chi/classification/Fox information. No further numerical scan is authorized before this gate is resolved.
