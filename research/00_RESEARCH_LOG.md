@@ -1,3 +1,48 @@
+## 2026-09-20 — HARD ATTACK 14: no nontrivial quotient of the exact local Fox carrier
+
+The remaining quotient-based loophole was attacked directly.
+
+For the frozen (q=3) relation, write
+[
+A=1+u_1,quad B=1+u_2,quad C=1+u_3,quad D=1+u_4.
+]
+The exact Fox equations are
+[
+F_1=B(1+A)+A^2,quad F_2=A-1,quad F_3=D-1,quad F_4=C-1.
+]
+Thus
+[
+F_2=u_1,quad F_3=u_4,quad F_4=u_3,
+]
+and after quotienting by these,
+[
+F_1=2u_2+3.
+]
+Therefore
+[
+mathcal A_{mathrm{Fox}}
+=
+mathbf Z_3[[u_1,u_2,u_3,u_4]]/(u_1,u_3,u_4,2u_2+3)
+congmathbf Z_3.
+]
+
+The exact local Fox obstruction scheme is already a reduced characteristic-zero point:
+[
+(A,B,C,D)=(1,-1/2,1,1).
+]
+
+Hence a proper unital quotient of this local coefficient algebra either has finite (3)-power characteristic and loses higher (3)-adic digits, or collapses the point. There is no proper quotient-based compression preserving the full orientation.
+
+This closes a specific class of “compress the Fox scheme itself” proposals. It does **not** prove that no different, non-quotient intrinsic exact extension object can exist. Such an object would have to be defined independently of Fox and then factor naturally into the exact Fox carrier.
+
+Decision:
+- **quotient-of-local-Fox-scheme compression: FAIL / CLOSED;**
+- **exact local Fox carrier minimal under full-(3)-adic-preserving quotients: PASS / CLOSED;**
+- **independent intrinsic non-quotient exact compression: OPEN.**
+
+Record:
+research/ORIENTATION_FOX_LOCAL_QUOTIENT_MINIMALITY_HARD_ATTACK_2026-09-20.md
+
 ## 2026-09-20 — HARD ATTACK 13: full associated-graded no-go and minimal extension lower bound
 
 The previous attack only established that bounded associated-graded windows cannot recover the full orientation. A stronger question was attacked: perhaps the entire infinite mod-3 Zassenhaus graded object could still encode (q) and hence (chi).
