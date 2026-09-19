@@ -747,3 +747,61 @@ This is a target-side orbit module only. It does not repair the q=9 H-stability 
 Result record: research/Q3_Q9_S9_TARGET_ORBIT_SPAN_RESULT_2026-09-19.md
 
 Next gate: determine whether this 4D target-side module yields a legitimate comparison observable, rather than merely the natural p-layer shadow.
+
+
+## 2026-09-19 — S9 target H-stability action bridge strengthened / CLOSED
+
+The preceding S9 source-map target-action audit had verified
+\[
+g^T Jg=J
+\]
+for all 80 nonzero-vector symplectic transvections and used the frozen
+coefficient-matrix convention to infer (g(R_2)=R_2). Because the implementation
+audit did not itself execute that middle implication with the authoritative action,
+the evidentiary wording was deliberately downgraded to a structural PASS.
+
+A dedicated bridge audit was then added. It imports the authoritative five
+generators and authoritative associative substitution action from the repository,
+constructs
+\[
+R_2=X_1X_2-X_2X_1+X_3X_4-X_4X_3,
+\]
+and directly checks
+\[
+\boxed{g\cdot R_2=R_2}
+\]
+for every authoritative generator. The same action passes multiplicativity and
+first restricted-power compatibility checks.
+
+Therefore the implementation-level chain is now explicitly closed:
+\[
+g^T Jg=J
+\Rightarrow gR_2=R_2
+\Rightarrow h(I_\infty)=I_\infty
+\Rightarrow Q_9^\infty\text{ has an induced H-action}.
+\]
+
+The first CI attempt failed only because NumPy was not installed in the minimal
+runner; this was classified as SETUP FAILURE. After adding the dependency, the
+corrected run **35414448355**, job **105820186019**, completed successfully.
+
+Decision:
+\[
+\boxed{\text{baseline target H-stability / action bridge = PASS / CLOSED}.}
+\]
+
+This does not change the earlier mathematical failure of the naive q=9
+degree-9 relation-space H-stability, nor the C3.2 provenance failure.
+
+### Research interpretation correction
+
+The target-side orbit result
+\[
+\mathcal O_9\cong L_1^{[9]},\qquad \dim\mathcal O_9=4
+\]
+is retained. Its dimension is not promoted to a q-dependent invariant.
+
+The next authorized gate is now a **definition/legitimacy gate** for a possible
+q-dependent observable derived from \(\mathcal O_9\). No new orbit computation,
+D9 construction, or orientation claim is authorized before that definition is
+fixed.
