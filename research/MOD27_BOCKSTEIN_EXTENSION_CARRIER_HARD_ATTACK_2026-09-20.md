@@ -250,3 +250,38 @@ An even sharper test is to enlarge the frozen family to all admissible Demuškin
 The coefficient-extension package itself remains **PASS / LOCAL as an intrinsic q-information detector**, but its proposed orientation bridge is downgraded from OPEN/STRONG CANDIDATE to **CONDITIONAL** because the current evidence is compatible with forbidden classification repackaging.
 
 The next authorized attack is therefore not another numerical q-scan. It is a factorization test: determine whether a presentation-free universal identity produces the logarithmic orientation digit directly from \(\mathcal B_{27}\), or whether every such map necessarily factors through the q/classification invariant. If only the latter is available, close this carrier as a new orientation carrier while retaining its detector result.
+
+
+## HARD ATTACK 18 — INTERNAL AUTOMORPHISM OBSTRUCTION TO THE MOD-27 ORIENTATION LIFT — 2026-09-20
+
+A stronger obstruction appears at the level of the proposed carrier itself.
+
+For the frozen \(q=3\) object, write \(H^1(G,\mathbf Z/9)\) by generator values \(a_i\). The relation forces \(a_1\in3\mathbf Z/9\), while \(a_2,a_3,a_4\) are unrestricted. The declared carrier structure consists of reduction, \(\iota(f)=3f\), the mod-3 cup product, \(\beta_1\), and \(\beta_9\).
+
+Consider
+\[
+S(a_1,a_2,a_3,a_4)=(a_1,4a_2,a_3,a_4).
+\]
+This is \(\mathbf Z/9\)-linear. Since \(4\equiv1\pmod3\) and \(4\cdot3\equiv3\pmod9\), it fixes reduction and the image of \(\iota\). It leaves the mod-3 cup product unchanged and preserves \(\beta_9\), whose relation-level formula depends only on the \(a_1\)-component. Thus \(S\) is an automorphism of the declared coefficient-extension carrier while inducing the identity on \(H^1(G,\mathbf F_3)\).
+
+For \(q=3\), the desired logarithmic digit is
+\[
+\lambda_{27}=\frac13\log\chi\equiv e_2\pmod9.
+\]
+But the carrier has no invariant characteristic-zero lift of the nonzero mod-3 direction \(e_2\): the coefficient-extension symmetry changes such a lift by the unit \(4\), while fixing every declared structural datum. Hence the proposed carrier cannot canonically rigidify the \(3\)-adic unit needed for the mod-27 orientation.
+
+This is stronger than the previous q-repackaging objection. It is an internal-symmetry obstruction, not merely a criticism of one proof of the bridge.
+
+### Decision
+
+\[
+\boxed{\mathcal B_{27}\text{ as a natural mod-27 orientation carrier: FAIL / CLOSED.}}
+\]
+
+Surviving results:
+- \(\mathcal B_{27}\) as an intrinsic detector of the first finite \(3\)-adic valuation layers: **PASS / LOCAL**;
+- separation of \(q=3,9,\ge27\) at the coefficient-extension level: **PASS / LOCAL**;
+- recovery of \(\chi\bmod27\) from the declared carrier: **FAIL / CLOSED**;
+- a different mod-27 carrier with additional rigidifying structure remains **OPEN**.
+
+No further numerical scan of this Bockstein package is authorized. Any successor must contain genuinely new rigidifying structure or a different universal property.
