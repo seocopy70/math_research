@@ -54,6 +54,45 @@ The existing rank-2 D4 lifting control is retained as a low-cost implementation 
 
 No rank-2 finite scan and no rank-4 scan is currently authorized by this gate.
 
+## 0C. ORIENTATION RECONSTRUCTION CURRENT GATE — 2026-09-19
+
+The finite-level factorization/inverse-limit theorem is now closed at the stated information level.
+
+For the compatible projective filtered relation-jet tower \(J_n\),
+\[
+J_n\mapsto\chi_n:G\to(\mathbf Z/3^n)^\times
+\]
+is uniquely determined by the finite-level crossed-derivation equations. For the frozen q=3 relation,
+\[
+\chi_n(x_1)=\chi_n(x_3)=\chi_n(x_4)=1,
+\qquad
+\chi_n(x_2)=(-2)^{-1}\pmod{3^n}.
+\]
+The reductions are compatible and
+\[
+\mathbf Z_3^\times\cong\varprojlim_n(\mathbf Z/3^n)^\times
+\]
+gives the unique full \(\chi\).
+
+Record:
+\`research/ORIENTATION_FINITE_LEVEL_FACTORISATION_THEOREM_2026-09-19.md\`
+
+Decision: **finite-level factorization / inverse-limit theorem PASS / CLOSED**.
+
+The next minimality audit then established a relative lower bound: any quotient carrier through which mod-9 recovery factors must preserve enough information to distinguish different \(\Theta\)-zero sets. Hence the bare graded forgetful factor is impossible. Absolute categorical minimality of \(J_3\) remains OPEN because the admissible carrier category, morphisms, and quotient/factorization notion are not yet fixed.
+
+Record:
+\`research/ORIENTATION_MOD9_RELATIVE_MINIMALITY_AUDIT_2026-09-19.md\`
+
+### Current authorized orientation work
+
+1. Define the smallest defensible category of projective degree-(2,3) relation carriers and test whether \(J_3\) has a genuine universal/minimal property.
+2. Determine whether any finite bounded-degree carrier can recover the full 3-adic \(\chi\); if not, seek an obstruction theorem.
+
+No broad finite scan is authorized.
+
+---
+
 ## 1. Mathematical setting
 
 \[
