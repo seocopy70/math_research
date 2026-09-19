@@ -1290,3 +1290,16 @@ Under the repository’s generator-side GSp convention, if \(ge_1=a e_1\) and \(
 Critical boundary: this does not identify \(\mu\) with \(\chi\). Their domains differ, and q=3 has \(\chi(G)\subset1+3\mathbf Z_3\), so \(\chi\bmod3\) is trivial whereas \(\mu\) may be 2 in \(\mathbf F_3^\times\).
 
 Decision: **PASS — conditional intrinsic interpretation of \(\mu\); OPEN — any genuine recovery bridge to \(\chi\).** No finite scan authorized.
+
+
+## 2026-09-19 — MU-CHI bridge definition gate: manual proof
+
+The \(q=3\) manual proof establishes that the degree-one \(e_1\)-line is intrinsic: it is the Frattini image of the characteristic torsion subgroup \(\operatorname{Tor}(G^{ab})\cong\mathbf Z/3\). Hence every actual automorphism preserves it and induces an intrinsic scalar character
+\[
+\mu_{\mathrm{int}}:\operatorname{Aut}(G)\to\mathbf F_3^\times.
+\]
+Under the frozen GSp convention, canonical orientation invariance forces the \(e_2\)-coefficient of the image of \(x_2\) to be \(1\) modulo \(3\), and the symplectic pairing then gives equality between the GSp multiplier and \(\mu_{\mathrm{int}}\).
+
+The proof does not identify \(\mu_{\mathrm{int}}\) with the Demushkin orientation \(\chi\). Their domains and coefficient groups differ, and \(\chi(G)\subset1+3\mathbf Z_3\), so \(\chi\bmod3\) is trivial. Thus direct equality and mod-3 reduction are both **FAIL**.
+
+The only remaining question is whether a separate canonical dualizing-module construction can relate \(\chi\), with additional structure, to \(\mu_{\mathrm{int}}\). This remains **OPEN**. No finite scan is authorized.
