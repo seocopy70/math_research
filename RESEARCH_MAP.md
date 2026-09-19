@@ -952,3 +952,35 @@ Do not proceed to \\(gr_9\\) or \\(D_9\\) using either the naive q=9 space or th
 ### Next authorized Q3/Q9 checkpoint
 
 Return to the already-open **Gate C**: independently derive the first nonzero baseline-relative degree-9 contribution of the full q=9 presentation from the presentation/Magnus expansion, without assuming H-stability. No new H-closed q=9 relation object is to be introduced merely to rescue the failed route.
+
+
+## 6M. Q3/Q9 — Gate C: first nonzero degree-9 source CLOSED
+
+Record: `research/Q3_Q9_GATE_C_DEGREE9_SOURCE_RESULT_2026-09-19.md`  
+
+The frozen Gate-C Magnus conventions were applied to the full q=9 control and the q=infinity baseline, independently of the previous q=3 source. Through degree 9,
+
+\\[
+\\Delta_d(9)=0\\quad(1\\le d\\le8),
+\\]
+
+while the exact degree-9 component is
+
+\\[
+\\boxed{\\Delta_9(9)=X_1^9}.
+\\]
+
+The characteristic-3 power identity gives
+\\[
+(1+X_1)^9=1+X_1^9,
+\\]
+consistent with the computation. Together with the already closed S9-A ambient identity, this identifies the source in the one-generator restricted realization as
+\\[
+\\boxed{\\Delta_9(9)=X_1^{[9]}=S_9}.
+\\]
+
+This closes only the **source-location/derivation** part of Gate C. It does not define a degree-9 quotient invariant, prove H-stability, or authorize D9. The previous H-stability FAIL and the C3 H-closure provenance FAIL remain in force.
+
+### Next authorized gate
+
+Define and audit a **degree-9 source map** from this presentation-derived source. Do not reuse the frozen degree-3 N/J map by analogy, and do not treat S9 as an H-submodule. The map's target, quotient conventions, and H-action must be derived before any new invariant is computed.
