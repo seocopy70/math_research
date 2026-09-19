@@ -2221,3 +2221,10 @@ The next proof targets are exactly the two missing lemmas; no broad scan is auth
 A category-relative distinction is now recorded. The projective degree-(2,3) carrier is minimal if the carrier is required to preserve the entire twisted obstruction family Theta, because the map (R,p) -> Theta is injective. It is not claimed minimal for recovering only the final orientation digit, since the Theta-zero set is a strictly smaller observable. This replaces the vague phrase “coarsest carrier” with two precise notions and prevents a tautological minimality claim.
 
 Next genuinely new question: construct an intrinsic higher filtered obstruction that can recover chi mod 27 and beyond. No tower is assumed.
+
+
+### 2026-09-19 — E1 residual-gauge re-audit: closure withdrawn
+
+The apparent closure of the residual-gauge lemma was too strong. The proof controlled the degree-2 correction but incorrectly treated the restricted cubic as an ordinary homogeneous degree-3 Lie polynomial. Cross terms from (X+Q)^[3], with deg X=1 and deg Q=2, can occur in degree 3. The exact P_3 transformation must therefore be calculated before naturality is claimed.
+
+Next target: explicit degree-3 restricted-cube cross-term calculation and its evaluation under Theta.

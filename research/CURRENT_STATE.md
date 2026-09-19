@@ -628,3 +628,8 @@ Literature context: one-relator pro-p relation modules are known to have strong 
 The categorical ambiguity around “coarsest carrier” is now frozen. The projective degree-(2,3) carrier is minimal for retaining the **full twisted obstruction family** Theta, because (R,p) -> Theta is injective up to the existing projective/gauge equivalence. This does **not** make it minimal for the single recovered output chi mod 9: the zero-set itself is a smaller observable. Therefore absolute minimality remains OPEN, while full-obstruction minimality is the strongest defensible category-relative statement.
 
 The next genuinely new program is higher-order recovery (mod 27 and beyond); no automatic tower is assumed.
+
+
+## 2026-09-19 — E1 residual-gauge re-audit: closure withdrawn
+
+Critical re-audit found a genuine proof gap. The degree-2 lift correction Q_i=c_iR_2 and the induced bracket change of R_2 are sound, but the previous claim that substituting a degree-2 correction into the degree-3 restricted-power component necessarily raises degree to >=4 is false in general: restricted cubes have cross terms. Therefore the induced P_3 change must be computed explicitly. Projective degree-(2,3) cover-change naturality is OPEN again until that cross-term is shown to be [v,R_2] or otherwise invisible to Theta. Frozen-coordinate mod-9 recovery remains PASS/CLOSED. No finite scan.
