@@ -1802,3 +1802,18 @@ Modulo 3^n this gives the complete tower rho_n(x_2)=(-2)^{-1} mod 3^n; e.g. 4 mo
 The key distinction is now fixed: the degree-(2,3) projective relation jet recovers the first nontrivial digit mod 9, while the compatible full filtered relation-jet tower recovers the entire 3-adic character. No new independent higher obstruction is needed for this q=3 normal form. The bare associated graded object remains insufficient, and finite-jet minimality remains open.
 
 The exact hand derivation uses the standard intrinsic crossed-derivation characterization of the canonical Demushkin orientation. External classification/orientation references confirm the standard formula chi(x_2)=(1-q)^(-1) for the q-power normal form. Detailed audit: research/ORIENTATION_FULL_3ADIC_HAND_DERIVATION_2026-09-19.md. No finite scan was used.
+
+
+## Carrier-category endpoint — 2026-09-19
+
+The categorical minimality branch has been resolved at the natural quotient level. Degree-(2,3) relation carriers are taken modulo projective/gauge equivalence, with the full degree-one evaluation family Theta required to factor. The canonical quotient
+\[
+L^{res}_3(V)/[V,L_2(V)]\cong V^{(1)}
+\]
+removes exactly the degree-3 information invisible to Theta. The compressed carrier
+\[
+\overline J_3=[(R,p(P))]
+\]
+is terminal/coarsest among functorial quotient carriers preserving all Theta observables. Therefore the raw J_3 is not minimal in this category. Absolute minimality among arbitrary non-quotient carriers remains undefined without additional independent category axioms.
+
+Record: research/ORIENTATION_MOD9_CARRIER_CATEGORY_COARSEST_QUOTIENT_2026-09-19.md
