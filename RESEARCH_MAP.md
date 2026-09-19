@@ -1,3 +1,24 @@
+## 0C.2. EXACT Z_3 DEGREE-3 FULL-CHI CLOSURE — 2026-09-19
+
+For the fixed q=3 normal form, the projective degree-(2,3) relation jet can be retained over exact Z_3-coefficients. The exact crossed-derivation equations are
+[
+ho(x_1)=ho(x_3)=ho(x_4)=1,qquad 1+2ho(x_2)=0,
+]
+so one bounded-degree exact filtered carrier determines
+[
+chi(x_2)=-1/2=(1-3)^{-1}inmathbf Z_3^	imes.
+]
+
+The degree-<=3 presentation/gauge change has
+[
+(R,P)mapsto(uR,uP+[v,R]),
+]
+and the recovery zero set is unchanged because degree-one functionals kill [v,R].
+
+Record: research/ORIENTATION_EXACT_PROJECTIVE_DEGREE3_FULL_CHI_CLOSURE_2026-09-19.md
+
+Boundary: this is fixed q=3 and exact filtered data. It is not a universal bounded-degree theorem over q=3^s, and it is not the bare F_3 associated graded object.
+
 # Research Map — Rank-4 pro-3 Demuškin Group / Intrinsic Orientation Recovery
 
 > **Purpose:** Current state/map document. Read this first in a new session. Chronology belongs in `research/00_RESEARCH_LOG.md`.
