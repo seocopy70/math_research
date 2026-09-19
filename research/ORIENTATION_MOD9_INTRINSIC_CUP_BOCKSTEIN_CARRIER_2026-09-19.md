@@ -2,7 +2,7 @@
 
 ## Status
 
-**PASS / CLOSED at the mod-9 carrier level.**
+**CONDITIONAL → PASS / CLOSED after the Bockstein–relation-jet audit, with the projective identification relying on the standard transgression/Bockstein formula.**
 
 The previously closed statement that the ordinary Bockstein does not by itself recover chi mod 9 is retained. The new result is stronger and different:
 
@@ -196,3 +196,17 @@ The intrinsic carrier can be defined directly from canonical cohomological data:
 The standalone Bockstein candidate remains **FAIL / CLOSED**.
 
 The next structural target is therefore M3: compare this intrinsic \((\smile,\beta)\)-carrier with the independent Pál–Quick A3/Hochschild canonical class, or prove a structural obstruction to a natural factorization. No broad computational scan is authorized.
+
+
+## AUTHORITATIVE CORRECTION — Bockstein–relation-jet audit — 2026-09-19
+
+The earlier wording “standard transgression/Bockstein calculation gives” was too compressed. The project now records the missing identification explicitly in `research/BOCKSTEIN_RELATION_JET_IDENTIFICATION_AUDIT_2026-09-19.md`.
+
+The corrected status is:
+- intrinsic cup+Bockstein projective pair: **PASS**;
+- projective identification \(\beta\leftrightarrow p(P_3)\): **PASS / CLOSED under the standard one-relator transgression/Bockstein formula**;
+- absolute sign/normalization of \(p\): **CONDITIONAL / gauge-dependent**;
+- projective pair \(\to\chi\bmod9\): **PASS / CLOSED**;
+- no higher-digit or exact-carrier conclusion follows from this audit.
+
+The key conceptual distinction remains: Bockstein supplies the power direction; the cup-product pairing converts that direction into the orientation covector and hence the scalar 4 mod 9.
