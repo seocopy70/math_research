@@ -167,7 +167,7 @@ for a in names:
         e1=[(x-y)%P for x,y in zip(lhs,rhs1)]
         e2=[(x-y)%P for x,y in zip(lhs,rhs2)]
         law1_fail_raw += bool(any(e1)); law2_fail_raw += bool(any(e2))
-        if a=="identity" and b=="transvection": print("DBG4",gab==gb,delta_q(gab)==delta_q(gb),linear_matrix(ga),[i for i,(u,v) in enumerate(zip(lhs,rhs1)) if u!=v][:20])
+        if a=="identity" and b=="transvection": print("DBG5",sum(da),sum(db),sum(lhs),sum(rhs1),[(i,da[i],db[i],rhs1[i],lhs[i]) for i in range(64) if lhs[i]!=rhs1[i]][:10])
 
         law1_fail += not modzero(e1); law2_fail += not modzero(e2)
         if survives(lhs): nonzero_pairs += 1
