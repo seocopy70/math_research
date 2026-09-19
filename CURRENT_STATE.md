@@ -808,3 +808,21 @@ Modulo 3^n this gives the complete tower rho_n(x_2)=(-2)^{-1} mod 3^n; e.g. 4 mo
 The key distinction is now fixed: the degree-(2,3) projective relation jet recovers the first nontrivial digit mod 9, while the compatible full filtered relation-jet tower recovers the entire 3-adic character. No new independent higher obstruction is needed for this q=3 normal form. The bare associated graded object remains insufficient, and finite-jet minimality remains open.
 
 The exact hand derivation uses the standard intrinsic crossed-derivation characterization of the canonical Demushkin orientation. External classification/orientation references confirm the standard formula chi(x_2)=(1-q)^(-1) for the q-power normal form. Detailed audit: research/ORIENTATION_FULL_3ADIC_HAND_DERIVATION_2026-09-19.md. No finite scan was used.
+
+
+## 2026-09-19 — Carrier category result: raw J_3 is not minimal; coarsest natural quotient identified
+
+The categorical branch was pushed without literature or finite scan. A natural degree-(2,3) carrier category was fixed using filtered relation jets and the full degree-one evaluation family Theta. The canonical quotient
+\[
+L^{res}_3(V)\twoheadrightarrow L^{res}_3(V)/[V,L_2(V)]\cong V^{(1)}
+\]
+removes exactly the degree-3 bracket/gauge part invisible to degree-one evaluation. Writing p(P) for the image of P gives the compressed projective carrier
+\[
+\overline J_3=[(R,p(P))].
+\]
+Any functorial quotient of J_3 preserving all degree-one Theta observables must retain [R] and p(P), hence factors uniquely through \overline J_3. Thus \overline J_3 is terminal/coarsest in the natural quotient category.
+
+Important correction: the raw projective jet J_3 is NOT minimal in this natural category. The unrestricted claim of minimality among arbitrary alternative carriers remains ill-posed without an independently fixed larger category. The recovery-only zero-set carrier can be compressed further to the recovered covector, but that is tautological rather than an independent relation carrier.
+
+Record: research/ORIENTATION_MOD9_CARRIER_CATEGORY_COARSEST_QUOTIENT_2026-09-19.md
+Decision: carrier-category/coarsest-quotient branch PASS; raw J_3 minimality FAIL/CLOSED within the natural quotient category; unrestricted absolute minimality OPEN/ill-posed.
