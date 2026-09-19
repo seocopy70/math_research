@@ -984,3 +984,48 @@ This closes only the **source-location/derivation** part of Gate C. It does not 
 ### Next authorized gate
 
 Define and audit a **degree-9 source map** from this presentation-derived source. Do not reuse the frozen degree-3 N/J map by analogy, and do not treat S9 as an H-submodule. The map's target, quotient conventions, and H-action must be derived before any new invariant is computed.
+
+
+## 6N. Q3/Q9 — S9 degree-9 source-map definition gate OPEN
+
+Plan: `plans/Q3_Q9_S9_SOURCE_MAP_GATE.md`  
+Plan commit: `181b508fbb7dd6e37cac6288dbb6bef170a9be5a`
+
+Gate C has established the presentation-derived source
+\[
+S_9=\Delta_9(9)=X_1^{[9]}.
+\]
+
+The next gate is now explicitly typed as a **source-map definition audit**, not an invariant computation.
+
+The proposed frozen target is the baseline quotient
+\[
+Q_9^{\infty}=L_9^{res}/(I_\infty)_9,
+\]
+with source line
+\[
+E_9=\langle S_9\rangle
+\]
+and map
+\[
+\phi_9:E_9\to Q_9^{\infty},\qquad S_9\mapsto[S_9].
+\]
+
+The source line is **not** treated as an H-module. If the quotient action is independently verified to be well-defined, the first target-side H-stable derived object permitted by this gate is
+\[
+\mathcal O_9=\langle H\cdot[S_9]\rangle\subseteq Q_9^{\infty}.
+\]
+
+This is a target-side orbit span and is not a replacement for the fixed q=9 relation space.
+
+### Current status
+
+- Source $S_9$: verified / frozen.
+- Baseline quotient target: **definition proposed; H-action audit pending**.
+- Source map $\phi_9$: **definition proposed; well-definedness audit pending**.
+- $\mathcal O_9$: **not yet computed**.
+- No q=3/q=∞ distinction or orientation conclusion is authorized.
+
+### Immediate next checkpoint
+
+Audit the target quotient and induced H-action first. Then audit $\phi_9$. Only a PASS opens computation of $\mathcal O_9$.
