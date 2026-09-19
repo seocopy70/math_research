@@ -2065,3 +2065,10 @@ The protocol freezes the restoration order (RESEARCH_MAP -> CURRENT_STATE -> RES
 This is a methodological control, not a new mathematical result. It exists to ensure that future sessions cannot silently change definitions, revive closed branches, confuse validation with novelty, or lose the stage-specific PASS/FAIL consequences.
 
 The current principal program remains D0 definition -> D1 intrinsicity -> D2 orientation bridge -> D3 carrier/coarseness -> D4 independent comparison. No broad scan is authorized merely by opening a new chat.
+
+
+## AUTHORITATIVE UPDATE — 2026-09-20 — HIGHER BOCKSTEIN / P-ADIC DIGIT TOWER HARD ATTACK
+
+The next proposed cohomological lift was attacked before computation. Higher Bocksteins are retained as a possible obstruction language, but their existence does not by itself provide a q-blind character-valued factorization. Candidate-twisted coefficient systems already contain the unknown orientation and therefore cannot be used as the sought filtered input. For the frozen q=3 case, exact Fox lifting shows the higher digits are recursively forced by the same unit equation after the first mod-9 digit; this does not identify an intrinsic filtered source of those digits.
+
+Current target remains: prove or disprove a non-circular functorial reconstruction from full filtered relation extension data to the exact Fox obstruction tower. If the input is only associated-graded data, an extension-data obstruction is expected and must be tested explicitly. Detailed audit: `research/ORIENTATION_HIGHER_BOCKSTEIN_HARD_ATTACK_2026-09-20.md`.
