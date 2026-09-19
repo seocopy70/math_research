@@ -197,3 +197,20 @@ Accordingly:
 The lift-independence FAIL therefore remains, and indeed becomes cleaner: the proposed scalar attached to a chosen stabilizing free lift does not descend to Aut(G_3). No mod-9/IA scan is authorized for this construction.
 
 This correction supersedes the immediately preceding “non-rank-one relation module” discussion, but does not reopen the failed lift-independent scalar route.
+
+
+## 2026-09-19 — Orientation bridge hand audit: mu versus chi
+
+A new hand-derivation checkpoint was completed in \`research/ORIENTATION_MU_BRIDGE_HAND_AUDIT_2026-09-19.md\`.
+
+Established:
+- \(\chi:G\to\mathbf Z_3^\times\) and \(\mu\) on the degree-one automorphism side have different domains and coefficient groups.
+- For q=3, \(G^{ab}\cong\mathbf Z_3^3\oplus\mathbf Z/3\), and the torsion subgroup gives a canonical one-dimensional line whose Frattini image is the project’s \(e_1\)-line under the frozen identification.
+- Canonical orientation is automorphism-invariant: \(\chi\circ\phi=\chi\). In the standard presentation this forces the x2 coefficient of \(\phi(x_2)\) to be 1 mod 3.
+- Therefore, for an actual automorphism whose degree-one matrix satisfies \(ge_1=a e_1\) and \(g^T Jg=\nu(g)J\), the frozen generator-side convention gives \(\nu(g)=a\) mod 3.
+
+Not established:
+- \(\mu=\chi\) or any direct recovery of \(\chi\) from \(\mu\).
+- \(\mu\) is not the mod-3 reduction of \(\chi\): for q=3, \(\chi(G)\subset1+3\mathbf Z_3\), while \(\mu\) may be nontrivial in \(\mathbf F_3^\times\).
+
+Gate consequence: **PASS for type/domain separation and the conditional intrinsic interpretation of \(\mu\); OPEN for any actual recovery bridge to \(\chi\).** No finite scan yet.
