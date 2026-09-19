@@ -260,31 +260,13 @@ The older A3-4-11 `OBSTRUCTION_MODULE` calculation concerns a different obstruct
 
 ---
 
-## 6. CURRENT MATHEMATICAL GATE — OPEN
+## 6. O2 transport branch — HISTORICAL / CLOSED
 
-The next question is no longer whether the rank-10 obstruction is a 10-dimensional \(H\)-module. That has been settled.
+The O2 transport branch is retained as chronology. It is not the current mathematical gate.
 
-The current question is:
+The concrete 20D transport-independent route was closed after the transport dependence could not be removed without introducing an unsupported new object. The subsequent q=3 versus q=infinity p-layer routes were also closed as universal p-layer shadows.
 
-\[
-\boxed{\text{Is }U\cong O\text{ canonically determined by the filtration data, independently of the chosen transport }\tau?}
-\]
-
-Only after this is addressed should the project design the explicit \(q=3\) versus \(q=\infty\) comparison.
-
-### Dependency
-
-The next stage consumes the corrected A3-4 artifacts from commit `62886877f97e58e87d59b0075d45e38be6176410` and the verified O2-2/O2-3 records. It does not depend on resolving legacy tuple-action archaeology.
-
-### Pass/fail consequence
-
-- **PASS:** show that the identified 10-dimensional module/map is forced by filtered data or by a canonical construction, not by the arbitrary choice of \(\tau\).
-- **FAIL:** if the identification changes under admissible choices of transport or basis, then the current obstruction route does not yet provide an intrinsic invariant; do not infer a \(q\)-distinction.
-
----
-
-
----
+**Do not restore this section's historical OPEN labels as current state. The canonical current state is §0A and CURRENT_STATE.md.**
 
 ## 6A. O2-4 — absolute transport-independence: FAIL / COMPLETE
 
@@ -439,7 +421,7 @@ Hence
 
 This is a coordinate-level compatibility check between the O2-7 and O2-8 identifications. It does not by itself prove transport-free canonicality.
 
-## 6E. O2-9 — full (operatorname{Aut}_H(W)) transport coverage: OPEN / RUN PENDING
+## 6E. O2-9 — full (operatorname{Aut}_H(W)) transport coverage: HISTORICAL / SUPERSEDED
 
 The remaining transport family must be exhausted before claiming canonicality.
 
