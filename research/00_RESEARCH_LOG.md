@@ -1,3 +1,47 @@
+## 2026-09-20 — HARD ATTACK 10: degree-3 Fox truncation FAIL / CLOSED under Nielsen change
+
+A concrete Nielsen-equivalent presentation was used to attack the remaining idea that the fixed q=3 degree-3 Fox compression might itself be intrinsic.
+
+Take
+\[
+x_1=y_1y_2,\quad x_2=y_2,\quad x_3=y_3,\quad x_4=y_4.
+\]
+The exact transformed Fox row is
+\[
+J'_1=Y_1^2Y_2+Y_1Y_2+1,
+\]
+\[
+J'_2=Y_1(Y_1^2Y_2^2+Y_1^2Y_2+1),
+\]
+with the remaining rows rational in \(Y_3,Y_4\).
+
+The transported canonical point is
+\[
+(Y_1,Y_2,Y_3,Y_4)=(-2,-1/2,1,1),
+\]
+which lies in the same \(1+3\mathbf Z_3\) neighborhood.
+
+After writing \(Y_i=1+v_i\) and truncating to total degree \(\le3\), the second row evaluates at
+\[
+(v_1,v_2,v_3,v_4)=(-3,-3/2,0,0)
+\]
+to
+\[
+-243/2\neq0,
+\]
+although the full exact Fox row vanishes there.
+
+Decision:
+- full Fox scheme Nielsen covariance: PASS/CLOSED;
+- fixed-normal-form degree-3 Fox compression: PASS/CLOSED;
+- presentation-independent degree-3 Fox truncation: **FAIL/CLOSED**;
+- intrinsic exact degree-(2,3) filtered carrier by another construction: **OPEN**.
+
+This is a concrete counterexample to using the local degree bound of the frozen normal form as an intrinsic exact truncation theorem.
+
+Record:
+research/ORIENTATION_FOX_DEGREE3_NIELSEN_HARD_ATTACK_2026-09-20.md
+
 ## 2026-09-20 — HARD ATTACK 9: naive integral augmentation jet FAIL / CLOSED
 
 The proposed next object \(\langle r-1\rangle\subset I^2/I^4\) in \(\mathbf Z_3[[F]]\), with ordinary augmentation ideal \(I\), was attacked before any computation.
