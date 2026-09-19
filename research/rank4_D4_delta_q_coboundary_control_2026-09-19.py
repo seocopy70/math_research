@@ -1,23 +1,18 @@
 #!/usr/bin/env python3
-"""Broader structured representative audit for the corrected quotient q-defect cocycle.
+"""A-1 control audit for the structured Delta_q coboundary claim.
 
-Frozen convention:
-  delta_g = [F_g(R3) - mu(g) R3]_deg3
-  Delta_q(g) = [delta_3(g) - delta_infinity(g)]_deg3
-  Q3 = A3 / (C3 + Delta_IA)
+Frozen object:
+  Delta_q(g) = [F_g(X1^3) - X1^3]_deg3
 
-For F_(gh)=F_g o F_h, test
-  Delta_q(gh) = mu(h) Delta_q(g) + g . Delta_q(h)
-in Q3.
+Pre-registered tests:
+  T1: direct equality Delta_q(g) = g·X1^3 - X1^3.
+  T2: q-blind control words/tensor obey the same degree-3 identity.
+  T3: for every ordered representative pair, compare the composed
+      Delta_q(gh) vector directly with (gh)·X1^3 - X1^3.
 
-This is a structured-family gate, not a full rank-4 scan.
-The family contains:
-  - identity and -I;
-  - two powers of the first hyperbolic-pair shear;
-  - two powers of the second hyperbolic-pair shear;
-  - a symplectic pair-swap;
-  - two multiplier-2 diagonal GSp representatives.
-All matrices are independently checked against g^T J g = mu J.
+This is a control experiment, not a broader rank-4 scan.
+Setup assertions are allowed; mathematical test outcomes are reported,
+not asserted, so a non-coboundary result cannot disappear via an exception.
 """
 
 from itertools import combinations, product
@@ -264,18 +259,32 @@ def tensor_action(v, M):
 # Since F_g(X1)=g.X1 + terms of degree >=2, only (g.X1)^3 contributes
 # to degree 3, so Delta_q(g)=g.x-x. This is checked independently here.
 x = [1 if w == (0,0,0) else 0 for w in WORDS3]
+T1_FAILURES = {}
 for name, (g, m) in CASES.items():
     M = linear_matrix(g)
     expected = [(a - b) % P for a, b in zip(tensor_action(x, M), x)]
-    assert delta_q(g) == expected, (name, "Delta_q != coboundary(g.x-x)")
+    actual = delta_q(g)
+    if actual != expected:
+        T1_FAILURES[name] = {
+            "max_coordinate_difference": max((a - b) % P for a, b in zip(actual, expected)),
+            "actual_nonzero": sum(a % P != 0 for a in actual),
+            "expected_nonzero": sum(a % P != 0 for a in expected),
+        }
+T1_pass = not T1_FAILURES
 
 # T2 controls: for any fixed homogeneous degree-3 associative word w,
 # Delta_w(g)=[F_g(w)-w]_3 must equal g.w-w. These controls are q-blind.
 def word_vec(w):
     return [1 if u == tuple(w) else 0 for u in WORDS3]
 
+def word_image(w, L):
+    # F_g acts on each generator x_i by the algebra element L[i].
+    # A tuple such as (0,1,0) denotes the associative word X1 X2 X1.
+    return ev([(i, 1) for i in w], L)
+
 def delta_word(w, g):
-    fg = vec(ev([(tuple(w), 1)], g), 3)
+    L = [ev(v, GEN) for v in g]
+    fg = vec(word_image(w, L), 3)
     return [(a - b) % P for a, b in zip(fg, word_vec(w))]
 
 CONTROL_WORDS = {
@@ -300,10 +309,11 @@ for w, c in [((0,0,0), 1), ((1,1,1), 2), ((0,1,0), 1)]:
     ARBITRARY_TENSOR[WORDS3.index(w)] = c
 
 def delta_tensor(v, g):
+    L = [ev(w, GEN) for w in g]
     out = [0] * 64
     for w, c in zip(WORDS3, v):
         if c:
-            ew = vec(ev([(w, 1)], g), 3)
+            ew = vec(word_image(w, L), 3)
             for i, a in enumerate(ew):
                 out[i] = (out[i] + c * a) % P
     return [(a - b) % P for a, b in zip(out, v)]
@@ -317,14 +327,14 @@ for name, (g, _) in CASES.items():
     if delta_tensor(ARBITRARY_TENSOR, g) != expected:
         CONTROL_T2_FAILURES["arbitrary_tensor"] += 1
 
-if any(CONTROL_T2_FAILURES.values()):
-    raise AssertionError(("T2_CONTROL_FAILURE", CONTROL_T2_FAILURES))
+T2_pass = not any(CONTROL_T2_FAILURES.values())
 
 
 names = list(CASES)
 law_fail = law_raw_fail = reversed_fail = reversed_raw_fail = 0
 nonzero = 0
 expected_nonzero = 0
+t3_direct_failures = 0
 matrix_checks = 0
 
 for name, (g, m) in CASES.items():
@@ -376,14 +386,23 @@ for a in names:
         x_image = tensor_action(x, linear_matrix(gab))
         expected_class = [(u - v) % P for u, v in zip(x_image, x)]
         expected_nonzero += survives(expected_class)
-        results.append((a, b, raw, qbad, rawr, qbadr))
+        direct_t3_fail = lhs != expected_class
+        if direct_t3_fail:
+            t3_direct_failures += 1
+        results.append((a, b, raw, qbad, rawr, qbadr, direct_t3_fail))
 
-assert law_fail == 0
-assert nonzero == expected_nonzero
-
+T3_pass = (t3_direct_failures == 0 and nonzero == expected_nonzero)
+if not T1_pass:
+    status = "PASS-NONTRIVIAL"
+elif not T2_pass:
+    status = "IMPLEMENTATION-FAILURE"
+elif not T3_pass:
+    status = "T3-FAIL"
+else:
+    status = "PASS-TRIVIAL"
 
 print({
-    "status": "PASS_TRIVIAL_COBOUNDARY_CONTROL",
+    "status": status,
     "family_size": len(names),
     "pairs_tested": len(results),
     "gauge_rank": rank(GAUGE),
@@ -395,15 +414,20 @@ print({
     "reversed_diagnostic_failures_mod_Q3": reversed_fail,
     "reversed_diagnostic_raw_failures": reversed_raw_fail,
     "nonzero_composed_defect_classes": nonzero,
-    "T1_coboundary_identity_all_9": True,
+    "T1_coboundary_failures": T1_FAILURES,
+    "T1_pass": T1_pass,
     "T2_control_failures": CONTROL_T2_FAILURES,
+    "T2_pass": T2_pass,
     "T3_expected_nonzero_composed_classes": expected_nonzero,
     "T3_nonzero_count_matches": nonzero == expected_nonzero,
+    "T3_direct_vector_failures": t3_direct_failures,
+    "T3_pass": T3_pass,
     "cases": names,
     "multipliers": {k: v[1] for k, v in CASES.items()},
     "interpretation": (
-        "Structured-family audit only. A zero candidate failure count "
-        "supports the frozen raw q-defect action/order law on this family; it does not "
-        "establish full GSp4 covariance or canonicality."
+        "A-1 control only. PASS-TRIVIAL closes this Delta_q track as a coboundary; "
+        "PASS-NONTRIVIAL requires isolating the non-coboundary component; "
+        "IMPLEMENTATION-FAILURE means the q-blind controls failed. "
+        "This does not establish full GSp4 covariance or canonicality."
     ),
 })
