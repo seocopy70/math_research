@@ -561,3 +561,35 @@ Status: full relation-module cover-independence FAIL; projective-jet cover-indep
 A no-scan degree-(2,3) derivation closes the remaining residual-gauge question relevant to Theta. For a free automorphism inducing id_G, minimality and the one-relator initial relation imply alpha(X_i)=X_i+c_i R_2+O(3). Applying alpha to R_2 gives the degree-3 correction [R_2,v], where v=c_1X_2-c_2X_1+c_3X_4-c_4X_3. The relation-module class may additionally acquire a common unit factor u, so the jet transforms as (R,P) -> (uR,uP+[v,R]). Since f([v,R])=0 for f in V*, Theta scales by u and its zero set is unchanged.
 
 Decision: E1 residual-gauge lemma PASS at the degree-(2,3) level relevant to Theta. Full relation-module generator invariance remains FAIL, but projective degree-(2,3) jet invariance relevant to Theta is PASS, conditional on the standard minimal one-relator facts and frozen filtered convention. Detailed proof: research/ORIENTATION_MOD9_E1_RESIDUAL_GAUGE_LEMMA_2026-09-19.md. No finite scan authorized.
+
+
+## 2026-09-19 — E1–E5 closure: intrinsic mod-9 recovery PASS
+
+A full no-scan hand audit was completed after the residual-gauge lemma. The remaining presentation issue was separated from the false generator-level relation-module invariance.
+
+For a minimal free pro-3 presentation, the degree-(2,3) relation jet transforms under a change of minimal cover by
+\\[
+(R,P)\\mapsto(uR,uP+[v,R]),
+\\]
+with common unit scaling u and the residual conjugation gauge [v,R]. Degree-one functionals annihilate the bracket term, so the recovery functional
+\\[
+\\Theta_J(\\lambda)(f)=f(P)+(\\lambda\\wedge f)(R)
+\\]
+is multiplied only by u. Its zero set is therefore intrinsic under presentation, lift, relator-gauge, and normalization changes, conditional on the standard minimal one-relator pro-3 presentation facts and frozen filtered convention.
+
+Automorphism naturality follows from functoriality of evaluation/exterior powers and the same gauge cancellation. For q=3 the unique zero is \\(\\lambda=e_2^*\\); for q=infinity it is \\(\\lambda=0\\). Thus the enriched carrier separates the two cases and recovers
+\\[
+\\boxed{\\chi\\pmod 9}
+\\]
+without inserting q into the definition.
+
+Decision:
+- E1 Definition: PASS (at the recovery-functional/projective-gauge level).
+- E2 Presentation/lift independence: PASS at degree (2,3), conditional on standard minimal one-relator facts.
+- E3 Functoriality: PASS at the same level.
+- E4 q=3 versus q=infinity separation: PASS.
+- E5 recovery of \\(\\chi\\bmod9\\): PASS.
+
+The raw relation-module generator remains non-invariant; this is not a defect for the zero-set construction. Mathematical minimality of the projective jet is not proved. The bare associated graded restricted Lie object remains FAIL/CLOSED. Full \\(\\mathbb Z_3^\\times\\)-valued \\(\\chi\\) and higher mod-\\(3^n\\) reconstruction remain open.
+
+Detailed audit: research/ORIENTATION_MOD9_E1_E5_CLOSURE_HAND_AUDIT_2026-09-19.md. No finite scan was used or authorized.
