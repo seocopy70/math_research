@@ -2,6 +2,43 @@
 
 > **Authoritative update:** this header supersedes stale branch labels later in this file. Detailed chronology remains in `research/00_RESEARCH_LOG.md`; the consolidated midterm assessment is `MIDTERM_RESEARCH_ASSESSMENT_2026-09-19.md`.
 
+## Latest theorem closure — 2026-09-19
+
+The finite-level factorization / inverse-limit gap has now been written explicitly in
+\`research/ORIENTATION_FINITE_LEVEL_FACTORISATION_THEOREM_2026-09-19.md\`.
+
+For the compatible projective filtered relation-jet tower \(J_n\), the theorem-level map is
+\[
+J_n\longmapsto\chi_n:G\to(\mathbf Z/3^n)^\times,
+\]
+where \(\chi_n\) is the unique zero of the finite-level crossed-derivation coefficient condition. The frozen q=3 calculation gives
+\[
+\chi_n(x_1)=\chi_n(x_3)=\chi_n(x_4)=1,\qquad
+\chi_n(x_2)=(-2)^{-1}\pmod{3^n}.
+\]
+Reduction modulo \(3^n\) makes the finite-level solutions compatible, and
+\[
+\mathbf Z_3^\times\cong\varprojlim_n(\mathbf Z/3^n)^\times
+\]
+gives the unique inverse-limit character \(\chi\).
+
+Decision: **finite-level factorization / inverse-limit theorem PASS / CLOSED at the stated information level**.
+
+Important boundary: this closes only
+\[
+\text{full compatible tower}\Rightarrow\{\chi_n\}_n\Rightarrow\chi.
+\]
+It does not prove that \(J_3\) alone determines all higher digits, nor categorical minimality, nor existence of a bounded-degree carrier for the full character.
+
+### Next authorized work
+
+1. **Categorical minimality of the projective degree-(2,3) jet.**
+2. **Finite bounded-degree jet \(\Rightarrow\) full \(\chi\)** — determine whether possible; if not, prove an obstruction.
+
+No broad finite scan is authorized.
+
+---
+
 ## Current research question
 Can the canonical orientation character
 \[
