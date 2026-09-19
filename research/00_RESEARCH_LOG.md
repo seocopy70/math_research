@@ -2035,3 +2035,46 @@ The protocol freezes the restoration order (RESEARCH_MAP -> CURRENT_STATE -> RES
 This is a methodological control, not a new mathematical result. It exists to ensure that future sessions cannot silently change definitions, revive closed branches, confuse validation with novelty, or lose the stage-specific PASS/FAIL consequences.
 
 The current principal program remains D0 definition -> D1 intrinsicity -> D2 orientation bridge -> D3 carrier/coarseness -> D4 independent comparison. No broad scan is authorized merely by opening a new chat.
+
+
+## 2026-09-19 — Critical μ–χ bridge correction and intrinsic mod-9 carrier closure
+
+A critical review narrowed the earlier μ–χ conclusion.
+
+What is closed:
+- the intrinsic torsion-Frattini line and the resulting μ_int: Aut(G) → F_3^× are genuine intrinsic data;
+- μ_int agrees with the frozen GSp multiplier (and with the corresponding top-duality-line character, up to the inverse convention which is invisible over F_3^×);
+- μ is not the same type of object as χ:G→Z_3^×;
+- μ mod 3 cannot recover the nontrivial 1+3Z_3 orientation layer;
+- a homomorphic lift C_2→1+3Z_3 is impossible because 1+3Z_3 has no nontrivial element of order 2.
+
+Critical logical correction:
+the last obstruction applies only to a μ-alone homomorphic lift. It does not rule out a relation between μ and χ after adjoining additional canonical filtered/cohomological data. Therefore the deeper “μ + new canonical datum” bridge remains conceptually open, but no further μ-only calculation is authorized.
+
+The next step was the first-lift/mod-9 information source. The standalone Bockstein candidate had already been closed:
+β:H^1(G,F_3)→H^2(G,F_3)
+is intrinsic and detects the q=3 power direction, but alone does not canonically retain the scalar 4 mod 9.
+
+A new structural result closes the missing mod-9 intrinsic-carrier gap. Combining the canonical cup-product pairing with the canonical Bockstein, choose temporarily ω∈H^2(G,F_3)^× and write
+f∪g=(f∧g)(R)ω,
+β(f)=f(p)ω.
+Changing ω to uω rescales (R,p) by the same factor u^{-1}, so the projective pair
+overline J_3(G)=[(R,p)]
+is intrinsic. In the minimal one-relator model, R is the quadratic relation and p is the restricted-cubic/power component of the degree-3 relation jet.
+
+For q=3,
+(R,p)=([X_1,X_2]+[X_3,X_4],X_1^(1)),
+while for q=infinity, p=0. The same recovery functional
+overline Theta(λ)(f)=f(p)+(λ∧f)(R)
+has unique zero e_2^* for q=3 and zero for q=infinity, giving χ mod 9 intrinsically.
+
+Decision:
+- standalone Bockstein as orientation carrier: FAIL / CLOSED;
+- cup product + Bockstein intrinsic carrier G↦[(R,p)]: PASS / CLOSED at mod-9 level;
+- this supplies M1 (intrinsic carrier functor) at the mod-9 level;
+- it does not yet establish full 3-adic recovery from ordinary mod-3 data, exact Z_3 compression, or equivalence with the Pál–Quick A3/Hochschild class.
+
+Detailed record:
+research/ORIENTATION_MOD9_INTRINSIC_CUP_BOCKSTEIN_CARRIER_2026-09-19.md
+
+The next authorized structural target is M3: compare this intrinsic cup/Bockstein carrier with the independent Pál–Quick A3/Hochschild canonical class, or prove a structural obstruction to a natural factorization. No broad computational scan is authorized.
