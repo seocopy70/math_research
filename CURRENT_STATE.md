@@ -1033,3 +1033,31 @@ Decision:
 - exact Fox carrier → intrinsic mod-9/projective relation jet comparison: NEXT TARGET.
 
 Detailed record: research/ORIENTATION_FOX_ROW_IDENTIFICATION_THEOREM_2026-09-19.md
+
+
+## AUTHORITATIVE UPDATE — 2026-09-19 — FOX → MOD-9 COMPATIBILITY GATE
+
+The exact Fox carrier was compared directly with the independently constructed intrinsic degree-(2,3) mod-9 relation-jet carrier.
+
+Write
+A=1+3a, B=1+3b, C=1+3c, D=1+3d.
+For the exact Fox zero ideal,
+F1=B(1+A)+A^2, F2=A-1, F3=D-1, F4=C-1.
+Then
+F1/3 = 1+2b mod 3,
+F2/3=a, F3/3=d, F4/3=c.
+Hence the exact Fox condition modulo 9 is
+a1=a3=a4=0 and a2=1 mod 3,
+i.e. chi ≡ (1,4,1,1) mod 9.
+
+Independently, the intrinsic projective relation-jet carrier [(R,p(P3))] with
+R=[X1,X2]+[X3,X4], p(P3)=X1^(1)
+has the unique recovery covector lambda=e2*, which gives exactly the same first character digit.
+
+Decision:
+- exact Fox row = canonical orientation: PASS / CLOSED;
+- first normalized Fox obstruction mod 9 = intrinsic relation-jet recovery: PASS / CLOSED for the frozen q=3 carrier and tested coordinate changes;
+- general natural identification of the full exact Fox coefficient tower with the intrinsic filtered tower: OPEN;
+- full filtered-to-Fox factorization at every 3-adic level: NEXT TARGET.
+
+Detailed record: research/ORIENTATION_FOX_TO_MOD9_CARRIER_COMPATIBILITY_2026-09-19.md
