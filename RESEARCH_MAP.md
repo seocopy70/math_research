@@ -1817,3 +1817,12 @@ removes exactly the degree-3 information invisible to Theta. The compressed carr
 is terminal/coarsest among functorial quotient carriers preserving all Theta observables. Therefore the raw J_3 is not minimal in this category. Absolute minimality among arbitrary non-quotient carriers remains undefined without additional independent category axioms.
 
 Record: research/ORIENTATION_MOD9_CARRIER_CATEGORY_COARSEST_QUOTIENT_2026-09-19.md
+
+
+## Exact Z_3 carrier boundary — 2026-09-19
+
+The fixed-q=3 exact branch was audited for a direct analogue of the mod-3 coarsest carrier. The characteristic-3 restricted-Lie quotient cannot be naively transported to Z_3. The exact natural object is instead the filtered relation carrier together with its coefficient-level crossed-derivation evaluation family. Exact projective/gauge invariance remains valid, and full chi recovery remains closed.
+
+The remaining exact categorical question is whether that coefficient-evaluation quotient has a concrete non-tautological finite description analogous to the mod-3 pair ([R],p(P)).
+
+Record: research/ORIENTATION_EXACT_Z3_COMPRESSED_CARRIER_AUDIT_2026-09-19.md
