@@ -308,92 +308,71 @@ injective on this p-layer.
 This is a target-side H-module only. It is not the q=9 relation space and
 does not repair the q=9 H-stability FAIL.
 
-## 13. CURRENT LIVE GATE — D9-OBS definition gate
+## 13. CURRENT LIVE GATE — Rank-2 lifting control follow-up
 
-Do **not** run another orbit calculation merely to reconfirm the 4-dimensional
-object.
+The Q3/Q9 S9 target-orbit route is **CLOSED at definition level** after D9-OBS natural p-layer shadow failure and the post-D9 structure census.
 
-The next authorized question is:
+The next authorized continuation is the already-audited low-cost rank-2 lifting/relator-preservation control.
 
-> Does the target-side object (mathcal O_9) contain, or naturally induce,
-> a q-dependent comparison observable between q=3 and q=∞?
+### Rank-2 D4 control — PASS / CLOSED
 
-Current assessment: **not yet defined; no q-dependent information has been
-established by (dimmathcal O_9=4) alone.**
+For
+[
+G_q^{(2)}=langle x_1,x_2mid x_1^q[x_1,x_2]=1angle
+]
+at the first q-sensitive Zassenhaus level (D_4), the selected representative lift tests passed the frozen expectations:
 
-The next gate must be a **definition/legitimacy gate**, not a numerical
-comparison. Any candidate observable must be derived functorially from the
-presentation-derived source and the frozen target construction. Do not import
-the degree-3 N/J construction by analogy.
+- q=3: identity and the selected vector-fixing unipotent are admissible.
+- q=3: (-I) fails although it stabilizes the line (ell=langlear x_1angle); it reverses the degree-3 restricted-power contribution.
+- q=3: the selected transvection moving (ell) fails.
+- q=(infty): all four selected representatives pass.
+- exact F3 arithmetic and the degree-3 conjugation-span rank-2 audit passed.
+- CI run 35415080640 / job 105822020636 = SUCCESS.
 
-### Pass/fail consequence
+Detailed result:
+research/RANK2_D4_LIFTING_CONTROL_RESULT_2026-09-19.md
 
-- **PASS:** a natural, presentation-derived target-side quantity is defined
-  before computation, with its q=3 and q=∞ instantiations specified.
-- **FAIL:** the 4D orbit is shown to be only the natural (p)-layer shadow and
-  supplies no legitimate q-sensitive observable. Close this route and do not
-  manufacture a q-dependent statistic from the dimension 4.
-- **INCONCLUSIVE:** the proposed quantity depends on an arbitrary choice of
-  presentation, transport, coordinates, or noncanonical identification.
+### Interpretation boundary
+
+This validates only the **rank-2 n=4 control pipeline**. It does not establish the full (A_4(q)), does not prove equality with a line stabilizer, and does not constitute a rank-4 theorem.
+
+### Next authorized step
+
+If continuing this route, define the **rank-4 lifting observable** before computation. Freeze:
+
+1. the exact filtration level;
+2. the allowed free pro-3 lift class;
+3. the relator-normal-closure / relator-unit criterion;
+4. the allowed weak-data input;
+5. the ambient group convention (GSp versus Sp).
+
+Only after that definition gate passes should a small rank-4 lifting experiment be executed.
 
 ## 14. Frozen downstream boundaries
 
 - naive ((I_9)_9) H-stability: **FAIL / CLOSED**.
 - C3.2 H-closure provenance: **FAIL / CLOSED**.
-- ((I_9)_9) dimension 13525 remains valid as a fixed-presentation degree-9
-  relation-space calculation, but must not be treated as an H-module.
-- (\mathcal O_9\) is target-side only.
-- no q=3/q=∞ distinction has been established by the 4D orbit.
+- ((I_9)_9) dimension 13525 remains valid as a fixed-presentation degree-9 relation-space calculation, but must not be treated as an H-module.
+- (mathcal O_9) is target-side only.
+- D9-OBS via natural p-layer shadow: **FAIL / CLOSED**.
+- post-D9 presentation-derived structure census: **CLOSED**.
+- no q=3/q=9 distinction has been established by the 4D orbit.
 - no D9.
 - no orientation recovery.
 
-## LIVE
+## 15. Research-wide continuation boundary
 
-현재 LIVE 질문:
+The original research question remains OPEN:
+[
+	ext{Can prescribed weak filtered/graded or higher structure recover information about }chi_G?
+]
 
-> **Q3/Q9 route — after the D9-OBS failure, is there any already-authorized presentation-derived structure beyond the universal p-layer shadow?**
+The Q3/Q9 S9 orbit branch is closed, but the following research directions remain authorized in the roadmap:
 
-2026-09-19 structure census result:
-`research/Q3_Q9_S9_D9_OBS_STRUCTURE_CENSUS_2026-09-19.md`
+- degree-4 module structure;
+- Track B group/filtration calculations;
+- higher-operation / extension structure;
+- primary-source literature verification;
+- the newly validated rank-2 lifting control followed by a separately gated rank-4 lifting experiment.
 
-결론:
-**CENSUS CLOSED — current authoritative Q3/Q9 route contains no already-defined q-sensitive structure beyond the universal p-layer shadow.**
-
-따라서 새 D9/statistic 계산은 중단한다. 향후 계속하려면 full Magnus/filtered group data, rigorously defined higher operation/extension datum, 또는 q=3/q=9 양쪽에 대해 먼저 정의되는 Track-B group-level construction 중 하나에서 새 object를 독립적으로 정의해야 한다.
-
-
-## 15. 2026-09-19 — D9-OBS definition gate critical review correction
-
-기존 §13의 LIVE 표시는 D9-OBS 결과 문서와 불일치하여 stale 상태였다. 상세 정본
-`research/Q3_Q9_S9_D9_OBS_DEFINITION_RESULT_2026-09-19.md`에 따라 현재 상태를 정정한다.
-
-검증된 자연스러운 후보는
-\[
-\Delta_3(3)=X_1^{[3]}
-\quad\xrightarrow{[3]}\quad
-(\Delta_3(3))^{[3]}=X_1^{[9]}=S_9=\Delta_9(9)
-\]
-이다. 따라서 frozen baseline quotient에서
-\[
-[(\Delta_3(3))^{[3]}]=[S_9]
-\]
-이고 두 H-orbit span은 동일하다:
-\[
-\langle H\cdot[(\Delta_3(3))^{[3]}]\rangle
-=
-\langle H\cdot[S_9]\rangle
-=
-\mathcal O_9\cong L_1^{[9]}.
-\]
-
-따라서 `dim O_9=4`는 q=3/q=9 discriminator가 아니라 자연스러운 p-layer shadow이다.
-
-**D9-OBS via natural p-layer shadow = FAIL / CLOSED.**
-
-중요한 범위:
-- 이는 q=3/q=9 전체 presentation이 동일하다는 주장 아님.
-- 이는 전체 relation ideal의 동일성 주장 아님.
-- 이는 q=3/q=∞의 기존 degree-3 N/J 결과를 무효화하지 않음.
-- 새로운 observable은 단지 구별된다는 이유만으로 만들지 않는다.
-- 다음 연구 질문은 p-map에서 소실되는 정보를 보존하는 presentation/Magnus/filtration-derived structure가 실제로 정의되어 있는지 확인하는 것이다.
-
+The rank-2 result is a **control validation**, not a proof of the rank-4 claim.
