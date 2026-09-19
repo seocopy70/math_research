@@ -1452,3 +1452,12 @@ Accordingly:
 The lift-independence FAIL therefore remains, and indeed becomes cleaner: the proposed scalar attached to a chosen stabilizing free lift does not descend to Aut(G_3). No mod-9/IA scan is authorized for this construction.
 
 This correction supersedes the immediately preceding “non-rank-one relation module” discussion, but does not reopen the failed lift-independent scalar route.
+
+
+## 0D. Orientation bridge audit — 2026-09-19
+
+A hand derivation now separates the project’s \(\mu\) condition from the canonical orientation \(\chi\). For q=3, the torsion subgroup of \(G^{ab}\cong\mathbf Z_3^3\oplus\mathbf Z/3\) gives a canonical line whose Frattini image is the frozen \(e_1\)-line. For actual automorphisms, functoriality of \(\chi\) forces the x2 diagonal coefficient to be 1 mod 3. Under the frozen generator-side GSp convention this makes the GSp multiplier equal to the scalar on the torsion line.
+
+This gives a conditional intrinsic interpretation of \(\mu\) on the actual automorphism image, but **does not identify \(\mu\) with \(\chi\)**. The domains differ, and q=3 has \(\chi(G)\subset1+3\mathbf Z_3\), hence trivial reduction mod 3.
+
+Status: **PASS for the type/domain separation and conditional intrinsic interpretation; OPEN for the recovery bridge \(\mu\to\chi\).** No finite scan yet.
