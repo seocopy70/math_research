@@ -33,6 +33,20 @@ requires the Bockstein-derived \(p\) to agree with \(p(P_3)\), up to the common 
 
 ## 1. Transgression calculation
 
+### 1.1 Convention synchronization: cup product and Bockstein
+
+A crucial normalization point is that the cup-product coefficient and the Bockstein coefficient must be read in the **same transgression/fundamental-class convention**. It is not sufficient to say that the Bockstein is defined only up to an independent projective sign.
+
+If the degree-2 and p-power coefficients of the relator are written as (a_{ij}) and (a_i), then in one fixed standard trace/transgression convention the corresponding formulas have the same global sign:
+\[
+\operatorname{tr}(\chi_i\cup\chi_j)=-a_{ij},
+\qquad
+\operatorname{tr}(\beta\chi_i)=-a_i.
+\]
+Changing the generator of the one-dimensional (H^2) line rescales both tensors simultaneously. Thus the projective pair ([(R,p)]) is unaffected, while an isolated replacement (p\mapsto-p) with (R) fixed is **not** an allowed gauge transformation.
+
+The literature formula supplies the general identification; the frozen relator is independently checked below by a direct (mathbf Z/9)-lifting obstruction calculation.
+
 For a minimal one-relator pro-p presentation, the standard five-term/transgression sequence gives
 \[
 0\to H^1(G,\mathbf F_p)\to H^1(F,\mathbf F_p)
@@ -61,6 +75,38 @@ after identifying the one-dimensional relation-dual line with \(H^2\). The sign 
 
 This is the precise point at which the restricted-cube/Frobenius twist enters: the coefficient vector is naturally in \(V^{(1)}\), not an untwisted copy of \(V\).
 
+### 1.2 Direct (mathbf Z/9) check for the frozen relator
+
+For
+\[
+r_3=x_1^3[x_1,x_2][x_3,x_4],
+\]
+let (widetilde f_i:F\tomathbf Z/9) be the lift of the mod-3 generator (f_i). The Bockstein obstruction is represented by the relator value divided by (3).
+
+For (f_1),
+\[
+widetilde f_1(x_1^3)=3,
+\]
+while each commutator has zero exponent sum under an abelian target:
+\[
+widetilde f_1([x_1,x_2])=
+widetilde f_1([x_3,x_4])=0.
+\]
+Hence
+\[
+\frac{widetilde f_1(r_3)}3\equiv1\pmod3.
+\]
+For (i=2,3,4), the power term contributes zero and the commutators again have zero exponent sum, so
+\[
+\frac{widetilde f_i(r_3)}3\equiv0\pmod3.
+\]
+This independently verifies, for the frozen presentation,
+\[
+\beta(f_1)=\pm\omega,qquad
+\beta(f_2)=\beta(f_3)=\beta(f_4)=0,
+\]
+with the sign fixed only after the same transgression/fundamental-class convention is chosen. Therefore the Bockstein coefficient vector agrees with (p(P_3)=X_1^{(1)}) projectively, without relying on the general formula alone.
+
 ## 2. Application to the frozen q=3 relation
 
 For
@@ -84,7 +130,7 @@ p_\beta\sim X_1^{(1)}.
 
 For the q=\infty control relation
 \[
-r_\infty=[x_1,x_2][x_3,x_4],
+r_0=[x_1,x_2][x_3,x_4],
 \]
 there is no degree-3 power term, so
 \[
@@ -133,7 +179,7 @@ The standard Demushkin/one-relator literature confirms two ingredients used here
 
 The Bockstein is the standard operator detecting the p-power coefficients of a one-relator presentation. This agrees with the present identification of the power direction.
 
-The literature check is a methodological validation, not a substitute for the convention/sign calculation above.
+The literature check is a methodological validation, not a substitute for the convention/sign synchronization and the direct (mathbf Z/9) calculation above. The final manuscript should cite the precise one-relator transgression/Bockstein source rather than hide the identification behind “standard calculation”.
 
 ## 5. Critical boundary
 
@@ -143,16 +189,16 @@ It does **not** provide a canonical absolute representative \(p\) without choosi
 
 ## Decision
 
-**PASS / CLOSED for the projective mod-9 identification, conditional on the standard one-relator transgression/relation–Bockstein formula.**
+**PASS / CLOSED for the projective mod-9 identification, under the standard one-relator transgression/relation–Bockstein formula, with the cup/Bockstein convention synchronization explicitly stated and independently checked for the frozen relator.**
 
 More precisely:
 
 - intrinsic pair \((\smile,\beta)\): **PASS**;
-- \(\beta\leftrightarrow p(P_3)\) projectively: **PASS / CLOSED** under the standard transgression formula and fixed convention;
+- \(\beta\leftrightarrow p(P_3)\) projectively: **PASS / CLOSED** under the standard transgression formula, with the same global sign convention as the cup-product coefficient and an independent frozen-relator \(\mathbf Z/9\) check;
 - absolute sign/normalization of \(p\): **CONDITIONAL / gauge-dependent**;
 - \((\smile,\beta)\to\chi\bmod9\): **PASS / CLOSED** at the stated projective degree-(2,3) level;
 - no broad scan is authorized.
 
 ## Literature anchors
 
-The relation–cup correspondence and transgression for one-relator pro-p groups are documented in the standard Demushkin literature; see the cited sources recorded in the research session. The Bockstein/power-coefficient formula is the classical Serre/NSW transgression calculation and should be cited explicitly in the final manuscript rather than described merely as a “standard calculation”.
+The relation–cup correspondence and transgression for one-relator pro-p groups are documented in the standard Demushkin literature; see the cited sources recorded in the research session. The Bockstein/power-coefficient formula is the classical one-relator transgression calculation and should be cited explicitly in the final manuscript. The present audit should be described as “standard formula + direct frozen-relator lift check”, not as a new general cochain proof.
