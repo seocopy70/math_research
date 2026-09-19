@@ -527,3 +527,12 @@ Decision:
 The next task is to identify the canonical relation-module quotient containing all legitimate relator changes. In particular, [V,R] is a necessary gauge quotient but is not yet proved to be the complete gauge group. The projective relation jet remains a candidate sufficient carrier, not an intrinsic invariant yet. No finite scan is authorized.
 
 Detailed audit: research/ORIENTATION_MOD9_E1_RELATOR_GAUGE_AUDIT_2026-09-19.md.
+
+
+## 2026-09-19 — E1 relation-module candidate
+
+The next structural step is to replace the chosen-relator jet by a relation-module container. For a minimal free presentation 1 -> R -> F -> G -> 1, the natural candidate is R/[F,R], which kills relator conjugation automatically. The desired degree-(2,3) jet should be extracted from its Zassenhaus-filtered image into L_2(F) direct-sum L_3^res(F).
+
+This is only a candidate: R/[F,R] is relative to a chosen free presentation, and the degree-(2,3) jet map plus independence under changing minimal free presentation remain OPEN. Therefore E1 full intrinsicness is not PASS. No finite scan is authorized.
+
+Detailed candidate audit: research/ORIENTATION_MOD9_E1_RELATION_MODULE_CANDIDATE_2026-09-19.md.
