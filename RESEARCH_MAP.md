@@ -1709,3 +1709,16 @@ Under minimal-cover/lift changes the jet changes only by common unit scaling and
 This is a substantive endpoint: the projective degree-(2,3) enriched carrier recovers \\(\\chi\\bmod9\\) without putting q into the datum definition. The bare associated graded restricted Lie object remains impossible for this task. Full chi and higher mod-3^n reconstruction remain OPEN; no finite scan is authorized.
 
 Detailed audit: research/ORIENTATION_MOD9_E1_E5_CLOSURE_HAND_AUDIT_2026-09-19.md.
+
+
+## 2026-09-19 — Full 3-adic orientation: hand derivation PASS
+
+The mod-9 result was pushed further by a no-scan exact crossed-derivation calculation using the standard commutator convention [x,y]=x^{-1}y^{-1}xy. For rho:G->1+3Z_3, evaluating a rho-crossed derivation on r=x_1^3[x_1,x_2][x_3,x_4] forces r_1=r_3=r_4=1 and then 1+2r_2=0. Hence
+\\[
+\\boxed{\\chi(x_2)=(1-3)^{-1},\\quad \\chi(x_i)=1\;(i\\ne2).}
+\\]
+Modulo 3^n this gives the complete tower rho_n(x_2)=(-2)^{-1} mod 3^n; e.g. 4 mod 9, 13 mod 27, 40 mod 81, 121 mod 243.
+
+The key distinction is now fixed: the degree-(2,3) projective relation jet recovers the first nontrivial digit mod 9, while the compatible full filtered relation-jet tower recovers the entire 3-adic character. No new independent higher obstruction is needed for this q=3 normal form. The bare associated graded object remains insufficient, and finite-jet minimality remains open.
+
+The exact hand derivation uses the standard intrinsic crossed-derivation characterization of the canonical Demushkin orientation. External classification/orientation references confirm the standard formula chi(x_2)=(1-q)^(-1) for the q-power normal form. Detailed audit: research/ORIENTATION_FULL_3ADIC_HAND_DERIVATION_2026-09-19.md. No finite scan was used.
