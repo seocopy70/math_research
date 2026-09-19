@@ -81,7 +81,7 @@ end{aligned}
 Multiplying by the harmless units (B,C,D) where convenient gives polynomial equations equivalent on the torus:
 [
 egin{aligned}
-B J_1&=B(1+A+A^2),\\
+B J_1&=B(1+A)+A^2,\\
 B J_2&=A^2(A-1),\\
 CD J_3&=A^3(1-D),\\
 CD J_4&=A^3(C-1).
