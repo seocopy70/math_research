@@ -1538,3 +1538,33 @@ This is a **PASS for intrinsic twisted-coefficient recovery of \(\chi\bmod9\)**.
 It is **not yet a PASS for recovery from filtered/graded data**. The new gate is whether the twisted-surjectivity object factors through the prescribed weak filtered/graded datum without importing the full presentation/group structure.
 
 No finite scan is authorized.
+
+## 0D. 2026-09-19 — Twisted orientation factorization gate OPEN
+
+The first successful orientation carrier is the twisted H^1 surjectivity criterion, which uniquely recovers
+\[
+\chi(x_2)\equiv4\pmod9.
+\]
+
+The remaining task is not another numerical computation. It is a factorization/intrinsicity problem.
+
+Write
+\[
+\rho=1+3\lambda\pmod9,
+\qquad \lambda\in H^1(G,\mathbf F_3).
+\]
+The frozen cocycle calculation gives the first-order obstruction
+\[
+B_\lambda(f)=(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4.
+\]
+The canonical \(\lambda\) is the unique zero.
+
+The candidate filtered carrier is the first restricted/Zassenhaus layer containing:
+- degree-one \(V\);
+- the degree-two Demuškin pairing;
+- the q=3 degree-three power contribution;
+- the induced first-order twisted derivation obstruction.
+
+Gate requirements F1–F5: intrinsic definition, presentation/lift independence, automorphism naturality, uniqueness, and factorization through the allowed filtered/graded datum.
+
+No finite scan is authorized until F1–F5 are hand-proved.
