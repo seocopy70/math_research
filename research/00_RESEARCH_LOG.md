@@ -287,3 +287,22 @@ J_{27}(G)\Rightarrow\chi\bmod27.
 The candidate must be independent of the unknown chi, presentation/Nielsen/relator-gauge invariant, separating at mod 27, naturally reduce to the established mod-9 carrier, and not be a relabeled Fox-equation modulo 27. Any failure at definition/invariance/separation closes that branch immediately.
 
 This is the current authoritative continuation point.
+
+ 
+## 2026-09-20 — CRITICAL REVIEW: FORMALIZE INTRINSIC CARRIER BEFORE MOD-27
+
+The consolidated synthesis was attacked again. The main surviving weakness was not a mathematical counterexample but a methodological ambiguity: "intrinsic", "non-tautological", and "strictly smaller" were not yet operational enough to serve as hard Gate conditions.
+
+Binding correction:
+- formalize the admissible category, morphisms, gauge transformations, coefficient/target category, and functoriality before any mod-27 computation;
+- define q-blindness at construction time, excluding chi/q from the input;
+- require an explicit natural orientation bridge and a commuting reduction J_27 -> J_9;
+- replace the informal non-tautology condition by the operational criteria in research/INTRINSIC_CARRIER_FORMAL_GATE_PRE_MOD27_2026-09-20.md;
+- treat "smaller" only relative to an explicitly declared comparison category/invariant;
+- do not require compression to prove existence of a legitimate J_27; an intrinsic separating candidate with unresolved compression is PASS / LOCAL or OPEN;
+- treat the full filtered inverse-limit route as formal sufficiency, not as substantive compression evidence;
+- keep M3 literature comparison parallel to any novelty claim.
+
+This correction prevents a self-imposed overstrong Gate from turning failure of a chosen definition into a false mathematical no-go result.
+
+The mod-27 branch remains the next substantive target, but only after this formal gate is accepted.
