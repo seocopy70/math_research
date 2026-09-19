@@ -1169,3 +1169,18 @@ New authorized work:
 3. only then design a new small computation.
 
 The map and CURRENT_STATE were updated so this conclusion is authoritative for new-session restoration.
+
+
+## 2026-09-19 — A-1 Delta_q coboundary control registered
+
+The pre-registered A-1 control experiment was added before any broader rank-4 scan.
+
+Plan: `plans/RANK4_D4_DELTA_Q_COBOUNDARY_CONTROL_2026-09-19.md`
+Script: `research/rank4_D4_delta_q_coboundary_control_2026-09-19.py`
+Workflow: `.github/workflows/rank4-d4-delta-q-coboundary-control.yml`
+
+T1 checks the exact coboundary identity for all 9 structured representatives. T2 checks q-blind degree-3 controls X2^3, X1X2X1, and a fixed non-monomial tensor. T3 checks the 81-pair nonzero-class count against the direct coboundary prediction.
+
+The historical H_adm=1296 enumeration is deliberately not reconstructed in this gate because a separately reusable authoritative implementation was not available in the frozen structured script; no new enumeration is invented.
+
+Status: EXECUTION PENDING. No mathematical PASS/FAIL is recorded until CI output is independently verified.
