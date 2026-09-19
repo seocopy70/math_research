@@ -547,3 +547,33 @@ commit `840de39202657d284ee216da937f8afd27ef9d5c`.
 - baseline (13524): **FROZEN**
 - S9 not inserted into baseline
 - q=9 construction is now authorized as the next separate gate
+
+## 2026-09-19 — q=9 degree-9 relation-space construction
+
+S9-A and S9-B were closed, so the separate q=9 restricted ideal
+\[
+I_9=\langle R_2,S_9\rangle_{res}
+\]
+was authorized.
+
+Because (S_9) has degree 9, no bracket descendant or restricted power of S9 can return to degree 9. The S9-B structural lemma gives
+\[
+(I_\infty)_9\cap L_1^{[9]}=0,
+\]
+while (S_9\in L_1^{[9]}) is nonzero. Therefore
+\[
+(I_9)_9=(I_\infty)_9\oplus\langle S_9\rangle
+\]
+and
+\[
+\boxed{\dim(I_9)_9=13525},
+\qquad
+\dim(I_9)_9-\dim(I_\infty)_9=+1.
+\]
+
+An exact small F3 Gaussian-elimination check verifies rank 1 for the new S9 direction. The frozen baseline 13524 is unchanged.
+
+Result record:
+`research/Q3_Q9_S9_q9_degree9_relation_space_RESULT_2026-09-19.md`.
+
+The next gate is H-stability of the q=9 degree-9 relation space. No D9 or gr9 quotient interpretation is promoted yet.
