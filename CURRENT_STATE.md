@@ -214,3 +214,17 @@ Not established:
 - \(\mu\) is not the mod-3 reduction of \(\chi\): for q=3, \(\chi(G)\subset1+3\mathbf Z_3\), while \(\mu\) may be nontrivial in \(\mathbf F_3^\times\).
 
 Gate consequence: **PASS for type/domain separation and the conditional intrinsic interpretation of \(\mu\); OPEN for any actual recovery bridge to \(\chi\).** No finite scan yet.
+
+
+## 2026-09-19 — MU-CHI bridge definition gate: manual proof
+
+The manual proof is now recorded in \`plans/MU_CHI_BRIDGE_DEFINITION_GATE_2026-09-19.md\`.
+
+Results:
+- **PASS:** the frozen \(e_1\)-line is intrinsic: it is the Frattini image of \(\operatorname{Tor}(G^{ab})\cong\mathbf Z/3\).
+- **PASS:** actual automorphisms preserve this line, giving a genuine character \(\mu_{\mathrm{int}}:\operatorname{Aut}(G)\to\mathbf F_3^\times\).
+- **PASS:** under the frozen matrix/pairing convention, \(\mu_{\mathrm{int}}\) equals the degree-one GSp multiplier on the actual automorphism image.
+- **FAIL:** \(\mu\) is not \(\chi\), and is not \(\chi\bmod3\); for \(q=3\), \(\chi(G)\subset1+3\mathbf Z_3\), so its mod-3 reduction is trivial.
+- **OPEN:** a deeper dualizing-module construction might relate \(\chi\) plus additional canonical structure to \(\mu_{\mathrm{int}}\). No such construction is currently established.
+
+No finite scan is authorized or needed.
