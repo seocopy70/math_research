@@ -116,7 +116,7 @@ assert len(sp_stab)==648
 
 # Multiplier-2 similitude fixing e1; the two cosets give the full
 # GSp line-multiplier stabilizer.
-M2=[[1,0,0,0],[0,2,0,0],[0,0,1,0],[0,0,0,2]]
+M2=[[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]]
 assert mm(mm(mt(M2),J),M2)==[[2*x%P for x in row] for row in J]
 admissible=list(sp_stab.values())+[mm(M2,A) for A in sp_stab.values()]
 assert len({key(A) for A in admissible})==1296
