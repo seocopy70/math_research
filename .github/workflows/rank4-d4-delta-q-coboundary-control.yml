@@ -1,0 +1,19 @@
+name: rank4-d4-delta-q-coboundary-control
+
+on:
+  push:
+    paths:
+      - "research/rank4_D4_delta_q_coboundary_control_2026-09-19.py"
+      - ".github/workflows/rank4-d4-delta-q-coboundary-control.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run Delta_q coboundary control
+        run: python research/rank4_D4_delta_q_coboundary_control_2026-09-19.py
