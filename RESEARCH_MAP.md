@@ -1352,3 +1352,27 @@ Script: research/rank4_D4_ia_structured_defect_composition_audit_2026-09-19.py
 Workflow: .github/workflows/rank4-d4-ia-structured-defect-composition.yml
 
 Status: PREPARED / EXECUTION PENDING. This is not a PASS and does not authorize a full scan yet.
+
+
+## 19. Broader structured quotient-defect audit — PASS / STRUCTURED CI VERIFIED
+
+CI run 35418319144, run #3, head commit dc28f6756c74ea57ae97735bcc96ec3cd1c74a35, workflow .github/workflows/rank4-d4-ia-structured-defect-composition.yml.
+
+The 9-representative structured family was executed over all 9^2=81 ordered pairs. The audit independently checked the stated GSp multipliers and lift degree-1 matrices.
+
+Exact output:
+- family size = 9;
+- pairs tested = 81;
+- matrix GSp checks = 9;
+- gauge rank = 20;
+- dim Q3 = 44;
+- candidate law: Delta_q(gh)=Delta_q(g)+g·Delta_q(h);
+- candidate-law failures modulo Q3 = 0;
+- candidate-law raw failures = 0;
+- reversed diagnostic failures modulo Q3 = 18 (raw = 18);
+- nonzero composed defect classes = 60;
+- multiplier-2 representatives included and reported with multiplier 2.
+
+Therefore the structured-family gate PASSES / CI VERIFIED for the frozen action/order convention. The reversed diagnostic is nonzero on 18 pairs, providing additional evidence that the chosen convention is not merely coincidentally reproduced by the tested family.
+
+Scope remains explicit: this does not establish full GSp4 covariance, arbitrary free-group coordinate naturality, or canonicality of the quotient datum. It authorizes consideration of a still-broader rank-4 scan only after critical review of the implementation and conventions. The unrestricted full scan is not itself recorded as completed here.
