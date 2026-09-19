@@ -1,3 +1,53 @@
+## 2026-09-20 — HARD ATTACK 13: full associated-graded no-go and minimal extension lower bound
+
+The previous attack only established that bounded associated-graded windows cannot recover the full orientation. A stronger question was attacked: perhaps the entire infinite mod-3 Zassenhaus graded object could still encode (q) and hence (chi).
+
+The literature boundary closes this loophole for the present odd-prime Demuškin setting. Mináč–Pasini–Quadrelli–Tân identify, for Demuškin groups, the complete graded group algebra
+[
+\operatorname{gr}\mathbf F_p[[G]]\cong U(L(G))
+]
+with the quadratic/PBW Demuškin graded algebra. For odd (p), its defining relation is the quadratic symplectic relation
+[
+[X_1,X_2]+[X_3,X_4]+\cdots,
+]
+independent of the Demuškin (q)-invariant. Thus the full mod-3 associated-graded object is (q)-blind, not merely finite truncations.
+
+Consequently the rank-four family
+[
+G_{3^s}=\langle x_i\mid x_1^{3^s}[x_1,x_2][x_3,x_4]\rangle,
+qquad
+G_\infty=\langle x_i\mid [x_1,x_2][x_3,x_4]\rangle
+]
+has the same mod-3 graded Demuškin object while
+[
+\chi_{3^s}(x_2)=(1-3^s)^{-1}
+]
+varies with (s), and (\chi_\infty(x_2)=1).
+
+This is a genuine project-specific lower bound:
+
+[
+\boxed{
+\text{full mod-3 associated graded data}
+\not\Rightarrow
+q
+\not\Rightarrow
+\chi.
+}
+]
+
+Therefore any successful q-blind carrier must add non-graded filtered/characteristic-zero extension information. At the first nontrivial level, the projective degree-3 power component (P_3) coupled to the quadratic relation (R_2) supplies such information and recovers (chi\bmod9).
+
+A further precision was added: it would be false to infer that every higher (3)-adic digit requires a new independent extension class. For fixed (q=3), the exact equation (1+2B=0) compresses all digits into one exact (\mathbf Z_3)-coefficient equation. Thus the remaining question is not “how many digits/classes?” but whether this exact extension information admits a canonical intrinsic representation strictly smaller than the universal projective Fox obstruction scheme.
+
+Decision:
+- **full mod-3 associated-graded (	o q,chi): FAIL / CLOSED;**
+- **minimal non-graded extension lower bound for mod-9: PASS / LOCAL;**
+- **intrinsic exact intermediate carrier: OPEN.**
+
+Record:
+research/ORIENTATION_FULL_GRADED_NO_GO_MINIMAL_EXTENSION_2026-09-20.md
+
 ## 2026-09-20 — HARD ATTACK 10: degree-3 Fox truncation FAIL / CLOSED under Nielsen change
 
 A concrete Nielsen-equivalent presentation was used to attack the remaining idea that the fixed q=3 degree-3 Fox compression might itself be intrinsic.
