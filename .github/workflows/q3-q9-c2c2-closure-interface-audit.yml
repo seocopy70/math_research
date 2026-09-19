@@ -1,0 +1,22 @@
+name: Q3/Q9 C-2c-2 closure-interface audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "research/Q3_Q9_C2c2_closure_interface_audit_2026-09-19.py"
+      - ".github/workflows/q3-q9-c2c2-closure-interface-audit.yml"
+
+jobs:
+  closure-interface-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run closure-interface audit
+        run: |
+          python research/Q3_Q9_C2c2_closure_interface_audit_2026-09-19.py
