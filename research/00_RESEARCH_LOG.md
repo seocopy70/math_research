@@ -1235,3 +1235,14 @@ H_2(G,\mathbf Z_3)\to R/[R,F]\to F_{ab}\to G_{ab}\to0
 shows a rank-one abelianized-relation contribution for (G_{3,ab}\cong\mathbf Z_3\oplus\mathbf Z/3), while (H_2(G,\mathbf Z_3)\cong\mathbf Z_3) for the infinite Demushkin group. Hence the proposed scalar action on a single relator line is not intrinsically defined for q=3 without an additional canonical quotient/projection.
 
 The prior D1/D3 claims are therefore withdrawn. This is a definition-level obstruction, not a computational failure. No mod-9, IA, or lift scan is authorized. The next authorized task is to analyze possible canonical quotients of (R/[R,F]); if none survives the intrinsicity gate, the relator-unit digit route will be closed.
+
+
+## 2026-09-19 — Rank-2 relator-unit route CLOSED by explicit lift-kernel witness
+
+The remaining definition-level question was resolved without computation. For q=3, the five-term/Hopf sequence gives 0 -> H2(G3,Z3) -> M=R/[R,F] -> F_ab -> G3_ab -> 0, with F_ab=Z3^2 and G3_ab=Z3 ⊕ Z/3. Hence the natural rank-one quotient is Q=M/H2(G3,Z3) ≅ 3Z3 e1.
+
+This quotient is not lift-independent. For any r in R, alpha_r:x1 -> x1 r, x2 -> x2 induces the identity on F/Phi(F), hence is an automorphism of the free pro-3 group, and induces id on G3. Taking r=r3 gives [r3]_ab=3e1 and alpha_r3 acts by e1 -> 4e1, hence by 4 on Q. Thus id_G3 has two stabilizing free lifts with different mod-9 scalar actions.
+
+Decision: **Rank-2 relator-unit digit route = FAIL / CLOSED.** This is a definition-level obstruction, not a computational failure. No mod-9, IA, K3, or q-comparison scan is authorized. The q=infinity determinant calculation remains a control only.
+
+Next authorized branch: independently analyze the relation between the rank-4 condition g e1=mu(g)e1 and the canonical orientation character chi.
