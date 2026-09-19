@@ -1418,3 +1418,23 @@ The pre-scan audit verified 9/9 GSp identities, every matrix_to_lift degree-1 ma
 Temporary multiplier-factor and normalized-cocycle variants failed and were rejected. The frozen raw law remains authoritative.
 
 Decision: critical implementation/convention audit PASS / CLOSED. This does not establish full GSp4 covariance or canonicality. A broader scan may now be considered only with explicit scope and PASS/FAIL consequence.
+
+
+## 0C. Rank-2 relator-unit closure scope correction — 2026-09-19
+
+The previous Rank-2 closure wording is narrowed by critical review. The explicit lift-kernel witness proves failure of the **specific proposed relator-unit scalar construction** on the natural canonical abelianized rank-one quotient
+\[
+Q=(R/[R,F])/H_2(G_3,\mathbf Z_3)\cong3\mathbf Z_3e_1.
+\]
+It does **not** prove that every possible construction from the full relation module \(R/[R,F]\), or every other filtered relation-module quotient, is impossible.
+
+Authoritative scope:
+- proposed scalar construction: **FAIL / CLOSED**;
+- natural quotient repair: **FAIL / CLOSED**;
+- broader relation-module strategy: **NOT DISPROVED**, and may be reconsidered only through a fresh intrinsic definition gate.
+
+No finite scan is authorized for the failed scalar construction. The next authorized branch is the independent bridge audit between
+\[
+ge_1=\mu(g)e_1
+\]
+and the canonical orientation character \(\chi\). No equality or recovery statement is assumed.
