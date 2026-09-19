@@ -93,7 +93,7 @@ def defect(L,m):
     return vec(add(ev(R3,L),sc(B3,m)),3)
 
 # Build first-layer gauge generators and Q3 gauge space.
-IDENT=GEN
+IDENT=[[(i,1)] for i in range(N)]
 def gauge_variation(g):
     base=defect(g,1)
     V=[]
