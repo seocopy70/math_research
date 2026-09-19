@@ -2078,3 +2078,28 @@ Detailed record:
 research/ORIENTATION_MOD9_INTRINSIC_CUP_BOCKSTEIN_CARRIER_2026-09-19.md
 
 The next authorized structural target is M3: compare this intrinsic cup/Bockstein carrier with the independent Pál–Quick A3/Hochschild canonical class, or prove a structural obstruction to a natural factorization. No broad computational scan is authorized.
+
+
+## 2026-09-19 — M3 comparison boundary: cup+Bockstein carrier vs Pál–Quick
+
+The intrinsic mod-9 carrier was compared structurally with Pál–Quick's A_3/Hochschild canonical class using the full literature audit and the current arXiv source.
+
+The comparison yields a real detection-level compatibility for the standard p=3 Demushkin family:
+- q=3 gives nonzero Bockstein/power direction and nonzero Pál–Quick A_3 canonical class;
+- q=3^f with f≥2 gives zero first Bockstein layer and vanishing Pál–Quick A_3 obstruction in the theorem's range.
+
+Thus the two invariants detect the same first q=3 power phenomenon at the level of vanishing/nonvanishing.
+
+However, their mathematical types differ:
+- our carrier is the projective cohomological pair [(R,p)] obtained from cup product and Bockstein;
+- Pál–Quick's invariant is a canonical Hochschild/cochain class whose explicit computation uses a degree-three tensor and Dwyer U_4 lifting.
+
+No natural map/factorization [(R,p)] → γ_A3 has been constructed. Detection agreement alone does not prove equality or factorization.
+
+Decision:
+- M3 detection-level comparison: **PASS / LOCAL**;
+- natural factorization to the full Pál–Quick class: **OPEN**;
+- no U_4/Hochschild computation is authorized merely to search for a map. A future attempt must first define a target map at the cochain/Hochschild level and prove functoriality/gauge compatibility.
+
+Detailed record:
+research/M3_CUP_BOCKSTEIN_TO_PAL_QUICK_COMPARISON_AUDIT_2026-09-19.md
