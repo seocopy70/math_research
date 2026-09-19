@@ -1376,3 +1376,14 @@ Exact output:
 Therefore the structured-family gate PASSES / CI VERIFIED for the frozen action/order convention. The reversed diagnostic is nonzero on 18 pairs, providing additional evidence that the chosen convention is not merely coincidentally reproduced by the tested family.
 
 Scope remains explicit: this does not establish full GSp4 covariance, arbitrary free-group coordinate naturality, or canonicality of the quotient datum. It authorizes consideration of a still-broader rank-4 scan only after critical review of the implementation and conventions. The unrestricted full scan is not itself recorded as completed here.
+
+
+## 20. Critical implementation/convention audit — PASS / CLOSED
+
+Final CI run 35418900971, head 0c4a3d7e454ad9d5b04df2e9b3650872b90d943b.
+
+The pre-scan audit verified 9/9 GSp identities, every matrix_to_lift degree-1 matrix, and all 81 ordered pairs under the frozen column composition convention. Gauge rank 20, Q3 dimension 44, frozen raw Delta_q cocycle failures 0 raw / 0 modulo Q3, reversed diagnostic failures 18, and 60 surviving composed classes were confirmed.
+
+Temporary multiplier-factor and normalized-cocycle variants failed and were rejected. The frozen raw law remains authoritative.
+
+Decision: critical implementation/convention audit PASS / CLOSED. This does not establish full GSp4 covariance or canonicality. A broader scan may now be considered only with explicit scope and PASS/FAIL consequence.
