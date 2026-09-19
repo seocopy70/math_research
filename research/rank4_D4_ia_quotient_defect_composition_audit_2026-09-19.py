@@ -95,7 +95,7 @@ def defect(L,m):
 # Build first-layer gauge generators and Q3 gauge space.
 IDENT=[[(i,1)] for i in range(N)]
 def gauge_variation(g):
-    base=defect(g,1)
+    base=defect([ev(w,GEN) for w in g],1)
     V=[]
     for s in SPECS:
         p=ia(coeff(s))
