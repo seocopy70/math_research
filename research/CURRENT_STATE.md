@@ -691,3 +691,20 @@ No future document may call the full-tower route PASS merely by defining \\(J_n\
 5. compatibility under \\(n\\mapsto n-1\\).
 
 Detailed attack record: `research/ORIENTATION_FULL_TOWER_TAUTOLOGY_AUDIT_2026-09-19.md`.
+
+## 2026-09-19 — HARD ATTACK 2: exact Z_3 degree-(2,3) carrier identification reopened
+
+A second weak link was found. The fixed q=3 exact crossed-derivation value is sound, but the later claim that a concrete “projective degree-(2,3) relation jet with exact Z_3 coefficients” is itself a mathematically defined carrier is too strong.
+
+The mod-3 restricted Lie object uses characteristic-3 p-operation. It cannot simply be scalar-extended to Z_3 as the same restricted-Lie structure. Therefore the notation J_ex=< (R,P_3) > over Z_3 is not, by itself, an established exact carrier.
+
+Correct boundary:
+- fixed defining relation + exact crossed derivation => full chi: PASS/CLOSED;
+- intrinsic mod-9 projective degree-(2,3) carrier => chi mod 9: PASS/CLOSED;
+- concrete exact two-component degree-(2,3) carrier => full chi: OPEN;
+- exact coefficient-evaluation quotient => conditional on independently supplied evaluation family;
+- naive Z_3 restricted-Lie scalar extension => FAIL/CLOSED.
+
+Detailed attack: research/ORIENTATION_EXACT_Z3_CARRIER_HARD_AUDIT_2026-09-19.md.
+
+No claim that the recovered value -1/2 is wrong; the weakness is solely the identification of an intrinsic finite-degree exact carrier with the exact evaluation mechanism.
