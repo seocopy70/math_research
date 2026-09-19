@@ -1448,3 +1448,29 @@ Important distinction:
 No finite scan is authorized.
 
 Literature support: the canonical Demuškin orientation is induced by the dualizing-module action, and a standard characterization uses surjectivity of the reduction maps on twisted H^1 for the orientation coefficient modules. See the literature references recorded in the accompanying gate document.
+
+## 2026-09-19 — Twisted orientation factorization gate opened
+
+The twisted mod-9 H^1 surjectivity calculation is a genuine group-level PASS:
+\[
+\rho(x_1,x_2,x_3,x_4)=(1,4,1,1)\pmod9
+\]
+is the unique character for which
+\[
+H^1(G,I_2(\rho))\to H^1(G,I_1(\rho))
+\]
+is surjective.
+
+The next problem is isolated as a factorization question. Put
+\[
+\rho=1+3\lambda\pmod9.
+\]
+The cocycle lifting obstruction is
+\[
+B_\lambda(f)=(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4.
+\]
+The research hypothesis is that this is the first-order twisted derivation obstruction attached to the degree-2 Demuškin pairing plus the q=3 restricted/power layer.
+
+This hypothesis is **not yet proved** to be intrinsic to the allowed filtered/graded object. The next hand task is F1–F5: construct the obstruction without a preferred free lift, prove presentation/lift independence and automorphism naturality, establish uniqueness, then prove factorization through the prescribed filtered/graded data.
+
+No finite scan is authorized.
