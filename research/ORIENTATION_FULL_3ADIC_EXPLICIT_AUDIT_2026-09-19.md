@@ -66,10 +66,7 @@ so
 d=r_4=1.
 \]
 
-Finally, with \(a=c=d=1\), the coefficient of \(f_1\) is
-\[
-C_1=(1+1+1)+(b^{-1}-1)=2+b^{-1}+1=2+b^{-1}?\]
-More directly,
+Finally, with \(a=c=d=1\), the coefficient of \(f_1\) is obtained directly from
 \[
 D(x_1^3)=3f_1,
 \qquad
