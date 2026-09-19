@@ -286,3 +286,52 @@ This is a **local covariance PASS under the frozen tensor/action convention**. I
 
 Implementation: research/rank4_D4_ia_admissible_category_covariance_audit_2026-09-19.py
 Workflow: .github/workflows/rank4-d4-ia-admissible-category-covariance.yml
+
+
+## 16. Small rank-4 representative audit — PASS / LOCAL
+
+The repository CI verification of the admissible-category covariance audit completed successfully:
+- covariance workflow run: 35416804953, **SUCCESS**;
+- commit: c620ce5a962031cfff90d49aa8500ea39cc16dc1;
+- exact admissible category size: 1296;
+- ranks: C3=4, Delta_IA=20, G3=20, Q3=44;
+- all covariance bad-counts: 0.
+
+The next authorized small representative control was then executed without a full GSp4 scan.
+
+CI run 35416952791, commit 12805fe1a2486a4ba234b2607bf197468cd48a7a: **SUCCESS**.
+
+Representatives:
+1. identity;
+2. -I;
+3. the line-fixing transvection e1 -> e1+e2;
+4. multiplier-2 diagonal representative diag(2,1,2,1).
+
+For each representative, both natural first-layer fibre parameterizations L_c = phi_c o g and L_c = g o phi_c were tested.
+
+Verified for every representative and both sides:
+- IA variation rank = 20;
+- q=3 and q=infinity variation maps agree exactly;
+- all 276 first-layer composition pairs have zero defect modulo C3;
+- gauge rank remains 20, hence Q3 has dimension 44;
+- for every non-identity representative tested, the q=3 versus q=infinity base defect is nonzero and survives Q3.
+
+### Consequence
+
+The degree-3 quotient datum now has:
+- full finite admissible-category covariance audit: **PASS**;
+- explicit small rank-4 representative fibre control: **PASS**.
+
+This authorizes a **definition-level promotion to a local filtered quotient datum**, but not yet a theorem that it is coordinate-free under arbitrary free-group coordinate changes. The frozen claim remains scoped to the admissible linear-action category and the audited first-layer IA quotient.
+
+### Next authorized gate
+
+Do not perform a full rank-4 representative scan yet.
+
+First define the actual quotient-valued defect transformation law on the admissible category:
+[
+[g]mapsto [delta_3(g)]in Q_3,
+]
+and audit the cocycle/composition law (including the GSp multiplier convention). The target is a coordinate-independent quotient/torsor/extension formulation, not merely a list of representative successes.
+
+Only after that law is established may a broader representative scan be authorized.
