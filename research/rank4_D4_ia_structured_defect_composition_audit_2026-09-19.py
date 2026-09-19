@@ -322,14 +322,6 @@ for a in names:
         nonzero += survives(lhs)
         results.append((a, b, raw, qbad, rawr, qbadr))
 
-print({
-    "PREASSERT_DIAGNOSTIC": True,
-    "candidate_fail_count": law_fail,
-    "candidate_raw_fail_count": law_raw_fail,
-    "reversed_fail_count": reversed_fail,
-    "reversed_raw_fail_count": reversed_raw_fail,
-    "failing_candidate_pairs": [(a,b) for a,b,raw,qbad,rawr,qbadr in results if qbad],
-})
 assert law_fail == 0
 
 
@@ -350,7 +342,7 @@ print({
     "multipliers": {k: v[1] for k, v in CASES.items()},
     "interpretation": (
         "Structured-family audit only. A zero candidate failure count "
-        "supports the frozen normalized multiplier/action/order law on this family; it does not "
+        "supports the frozen raw q-defect action/order law on this family; it does not "
         "establish full GSp4 covariance or canonicality."
     ),
 })
