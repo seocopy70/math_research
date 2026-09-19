@@ -147,6 +147,7 @@ def delta_q(g):
     di=vec(add(ev(RI,L),sc(BI,-1)),3)
     return [(x-y)%P for x,y in zip(d3,di)]
 
+print("IDENT_DEF",ev(R3,GEN)==B3,ev(RI,GEN)==BI,sum(defect([ev(w,GEN) for w in CASES["identity"][0]],1)))
 names=list(CASES)
 results=[]
 law1_fail=law2_fail=0
