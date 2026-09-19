@@ -81,3 +81,18 @@ Structured cocycle audit with explicit coboundary check:
 - conclusion: SUCCESS
 
 This verifies the hand derivation against the script; it does not create a new invariant.
+
+
+## A-1 coboundary control — REGISTERED / EXECUTION PENDING
+
+The pre-registered A-1 control has been added before any broader scan.
+
+Plan: plans/RANK4_D4_DELTA_Q_COBOUNDARY_CONTROL_2026-09-19.md
+Script: research/rank4_D4_delta_q_coboundary_control_2026-09-19.py
+Workflow: .github/workflows/rank4-d4-delta-q-coboundary-control.yml
+
+T1 directly checks Delta_q(g)=g.[X1^3]-[X1^3] for all 9 structured representatives. T2 uses q-blind controls X2^3, X1X2X1, and a fixed non-monomial degree-3 tensor. T3 compares the 81-pair nonzero quotient-class count with the direct coboundary prediction.
+
+The historical H_adm=1296 enumeration is not reconstructed in this gate because no separately reusable authoritative implementation was found in the frozen structured script; no new enumeration is invented.
+
+No mathematical PASS/FAIL is recorded until CI execution is independently checked.
