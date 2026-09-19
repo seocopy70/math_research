@@ -428,3 +428,40 @@ Next gate: **S9-B — quotient survival**, with the explicit membership question
 S_9in I_{infty,9} ? 
 ]
 to be tested only now that S9-A is closed.
+
+
+## 2026-09-19 — S9-B quotient survival CLOSED
+
+After S9-A was formally closed, the quotient-survival question was evaluated against the frozen exact C-2c-2 baseline certificate.
+
+The degree-9 restricted ambient separates into
+[
+L_9\oplus L_3^{[3]}\oplus L_1^{[9]}.
+]
+The exact baseline calculation gives
+[
+\dim I_{\infty,9}=13524,qquad
+\dim I^{\mathrm{ord}}_9=13520,
+]
+so the four new restricted relation directions at degree 9 are exactly the (I_3^{[3]}) contribution. They lie in the (L_3^{[3]}) layer.
+
+By S9-A,
+[
+S_9=X_1^{[9]}\in L_1^{[9]},
+]
+which is a distinct restricted p-layer. The baseline ideal has zero projection to this (L_1^{[9]}) layer, while (S_9) has nonzero projection.
+
+Hence
+[
+oxed{S_9\notin I_{\infty,9}}
+]
+and therefore
+[
+oxed{[S_9]\ne0\text{ in }L_9^{\mathrm{res}}/I_{\infty,9}}.
+]
+
+**S9-B: PASS / CLOSED.**
+
+This is a structural exact membership certificate, not a numerical 29144-dimensional rank run.
+
+The next authorized step is the separate construction of the q=9 degree-9 restricted relation space containing (R_2) and the now-surviving (S_9). H-stability and any (D_9) interpretation remain downstream gates.
