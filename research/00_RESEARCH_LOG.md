@@ -679,3 +679,23 @@ This does **not** establish a degree-9 quotient invariant, H-stability, or D9. I
 
 ### Next step
 A new **degree-9 source-map definition gate** is required. The old degree-3 N/J map must not be silently reused. The target module, quotient convention, source map, and H-action must be independently defined and audited before any downstream invariant computation.
+
+
+## 2026-09-19 — S9 degree-9 source-map definition gate opened
+
+Following Gate C, the next step was narrowed to a typed source-map audit before any new invariant calculation.
+
+The proposed target is the frozen q=infinity baseline quotient
+\[
+Q_9^{\infty}=L_9^{res}/(I_\infty)_9,
+\]
+with source line \(E_9=\langle S_9\rangle\) and
+\[
+\phi_9(S_9)=[S_9].
+\]
+
+The source line is not declared an H-module. If the induced H-action on the baseline quotient is independently verified, the first target-side H-stable derived object is the orbit span \(\langle H\cdot[S_9]\rangle\).
+
+This is a definition gate only. No q=9 relation enlargement, no reuse of the degree-3 N/J map, and no invariant computation is authorized before the target/action and source-map audits pass.
+
+Plan: `plans/Q3_Q9_S9_SOURCE_MAP_GATE.md`; commit `181b508fbb7dd6e37cac6288dbb6bef170a9be5a`.
