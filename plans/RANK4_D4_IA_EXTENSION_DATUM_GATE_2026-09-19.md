@@ -126,3 +126,53 @@ The next authorized implementation is a **small IA defect-action audit**, not a 
 The output must include exact \(\mathbf F_3\) ranks and explicit basis/provenance, with the existing ordinary correction space \(C_3\) kept separate.
 
 Only after this gate is closed may a new rank-4 observable be defined.
+
+
+## 9. First IA defect-action audit — sub-gate result
+
+The first authorized small audit has now been executed.
+
+Frozen target:
+[
+A_3cong mathbf F_3^{4otimes3},qquad dim A_3=64,
+]
+with
+[
+dim C_3=4.
+]
+
+The first IA layer is
+[
+operatorname{Hom}(V,L_2),qquad dim=24.
+]
+
+For identity, (-I), and one standard transvection (e_1mapsto e_1+e_2):
+
+- the degree-3 IA variation has rank 20 for both q=3 and q=infinity;
+- the q=3 and q=infinity variation maps agree exactly;
+- pairwise additivity of the 24 IA directions was verified;
+- (C_3+Delta_{mathrm{IA}}) has rank 20;
+- the resulting candidate quotient has dimension 44;
+- for (-I) and the transvection, the q=3 versus q=infinity defect is nonzero and survives this quotient.
+
+Thus the mandatory nontriviality test is **PASS for the tested representatives**.
+
+This does **not** close the main gate. It establishes only that a first-layer IA gauge quotient is viable as a candidate and does not automatically erase the q-sensitive signal.
+
+Result:
+`research/RANK4_D4_IA_DEFECT_ACTION_AUDIT_RESULT_2026-09-19.md`
+
+Script:
+`research/rank4_D4_ia_extension_audit_2026-09-19.py`
+
+## 10. Next authorized gate
+
+The next task is **quotient-legitimacy / equivariance**, not a full rank-4 scan.
+
+It must establish:
+1. canonicality of the IA variation subspace;
+2. compatibility under change of linear representative;
+3. the induced action on the candidate 44-dimensional quotient;
+4. whether the construction can be assembled into an intrinsic filtered/extension observable.
+
+Until these pass, no full rank-4 representative scan is authorized.
