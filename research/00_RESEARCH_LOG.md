@@ -1,3 +1,28 @@
+
+
+## 2026-09-20 — FIRST-STAGE LOWER 3-CENTRAL INFORMATION BOUNDARY
+
+A theorem draft was completed comparing the Zassenhaus filtration D_n and lower 3-central series P_n for the standard family G_{3^s} and power-free control G_∞.
+
+Using Jennings' formula for D_n and the standard product formula P_n=∏_{i+j≥n}γ_i^{3^j}, the power term x_1^{3^s} has D-weight 3^s but P-weight s+1. Hence
+G_{3^s}/D_N ≅ G_∞/D_N iff N≤3^s,
+and
+G_{3^s}/P_n ≅ G_∞/P_n iff n≤s+1,
+with sharpness at the next levels detected already after abelianization. The same sharpness mechanism was checked conceptually in the rank-two analogue <x,y | x^{3^s}[x,y]>.
+
+Consequently, within the standard family and using the known orientation formula χ_{3^s}(x_2)=(1-3^s)^{-1}, the information boundary for χ mod 3^k is D_{3^{k-1}+1} on the Zassenhaus scale versus P_{k+1} on the lower-3-central scale; mod 27 gives D_10 versus P_4.
+
+Logical boundary: this is an isomorphism-class information-boundary result, dependent on the standard-family classification/orientation formula. It is not a pointed naturality theorem and does not yet prove a q-blind intrinsic Kummer recognition criterion on G/P_{k+1}.
+
+Status:
+- Zassenhaus threshold: PASS / LOCAL.
+- Lower 3-central threshold: PASS / LOCAL, subject to the standard P_n product formula.
+- Sharpness by abelianization: PASS / LOCAL.
+- Rank-two sanity check: PASS / LOCAL.
+- Linear information boundary for χ mod 3^k: PASS / LOCAL, standard-family/classification dependent.
+- Kummer recognition from G/P_{k+1}: OPEN.
+
+Detailed note: research/LOWER_3_CENTRAL_INFORMATION_BOUNDARY_2026-09-20.md
 ## 2026-09-20 — CRITICAL CORRECTION: Zassenhaus threshold wording + mixed m-adic reopening
 
 A review correction was independently checked.
