@@ -1696,3 +1696,16 @@ Status: E1-local gauge compatibility PASS; E1-full intrinsic definition OPEN. Th
 To absorb all relator-conjugation gauge at the source, the next candidate carrier is the filtered relation module R/[F,R] for a minimal free presentation 1 -> R -> F -> G -> 1. The degree-(2,3) relation jet should be obtained from its filtered image in L_2(F) direct-sum L_3^res(F).
 
 Status remains OPEN: this is not yet an abstract-group invariant because presentation-independence has not been proved. E2/E3 are therefore not closed.
+
+
+## 2026-09-19 — CURRENT GATE UPDATE: E1–E5 mod-9 recovery CLOSED / PASS
+
+The degree-(2,3) enriched relation-jet route has now been closed by a no-scan hand audit. The invariant needed for recovery is the projective/gauge class as seen by
+\\[
+\\Theta_J(\\lambda)(f)=f(P)+(\\lambda\\wedge f)(R).
+\\]
+Under minimal-cover/lift changes the jet changes only by common unit scaling and the gauge [v,R], which is annihilated by degree-one evaluation. Thus the zero set is intrinsic, conditional on standard minimal one-relator pro-3 presentation facts and the frozen filtered convention. Automorphism naturality, q=3/q=infinity separation, and recovery of chi mod 9 are all PASS.
+
+This is a substantive endpoint: the projective degree-(2,3) enriched carrier recovers \\(\\chi\\bmod9\\) without putting q into the datum definition. The bare associated graded restricted Lie object remains impossible for this task. Full chi and higher mod-3^n reconstruction remain OPEN; no finite scan is authorized.
+
+Detailed audit: research/ORIENTATION_MOD9_E1_E5_CLOSURE_HAND_AUDIT_2026-09-19.md.
