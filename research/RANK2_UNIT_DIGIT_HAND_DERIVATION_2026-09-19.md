@@ -171,3 +171,14 @@ is not an automatic scalar-action statement. An additional (H_2)-component can o
 For q=infinity, (G=\mathbf Z_3^2), the abelianization map has zero kernel and (H_2(G,\mathbf Z_3)\cong\mathbf Z_3), so the rank-one control is compatible there. Thus the q=3/q=infinity relation-module structures already differ before any mod-9 digit is defined.
 
 **Consequence:** the current relator-unit scalar definition is structurally unclosed for q=3. The prior D1/D3 statements must not be used. No mod-9, IA, or lift scan is authorized. The next task is definition-level analysis of the exact sequence and any canonical quotient that could support a scalar.
+
+
+## 9. Final structural closure — explicit kernel witness (2026-09-19)
+
+The natural rank-one quotient for q=3 is Q=(R/[R,F])/H2(G3,Z3) ≅ 3 Z3 e1. It still fails lift-independence.
+
+For r in R define alpha_r(x1)=x1 r and alpha_r(x2)=x2. Because R is contained in the Frattini subgroup Phi(F), alpha_r induces the identity on F/Phi(F), hence is an automorphism of F. It induces id on G3 because r is trivial in G3.
+
+For r=r3=x1^3[x1,x2], its abelianized class is 3e1. Therefore alpha_r3 sends e1 to 4e1 and the quotient generator 3e1 to 4(3e1). Hence id_G3 has two stabilizing free lifts with different actions on Q modulo 9.
+
+**Decision: FAIL / CLOSED.** The proposed relator-unit scalar cannot descend to Aut(G3), even after passing to the natural rank-one quotient. No finite computation is warranted. The q=infinity determinant calculation remains a control only.
