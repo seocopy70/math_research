@@ -536,3 +536,12 @@ The next structural step is to replace the chosen-relator jet by a relation-modu
 This is only a candidate: R/[F,R] is relative to a chosen free presentation, and the degree-(2,3) jet map plus independence under changing minimal free presentation remain OPEN. Therefore E1 full intrinsicness is not PASS. No finite scan is authorized.
 
 Detailed candidate audit: research/ORIENTATION_MOD9_E1_RELATION_MODULE_CANDIDATE_2026-09-19.md.
+
+
+## 2026-09-19 — E1 relation-module structural lemma
+
+A no-scan structural audit sharpened the relation-module candidate. For a minimal free pro-3 presentation 1 -> R -> F -> G -> 1, the quotient R/[F,R] is a valid fixed-cover container for the defining relation and kills relator conjugation. The continuous homology five-term sequence gives H2(G,Z3) -> R/[F,R] -> F_ab -> G_ab -> 0; minimality makes F_ab -> G_ab an isomorphism, so the middle map is zero. This does NOT justify identifying R/[F,R] with H2(G,Z3), and no such identification is claimed.
+
+The remaining E1 problem is therefore sharply separated: internal relator-conjugation gauge is handled, but change of minimal free cover and the induced degree-(2,3) jet remain unproved. See research/ORIENTATION_MOD9_E1_RELATION_MODULE_LEMMA_2026-09-19.md.
+
+Status: E1-local conjugation gauge PASS; R/[F,R] fixed-cover container PASS / structurally justified; degree-(2,3) jet extraction OPEN; change of minimal free cover OPEN; E1 full intrinsicness OPEN. No finite scan authorized.
