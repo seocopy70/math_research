@@ -420,3 +420,85 @@ Therefore the correct logical status is not “carrier disproved”, but:
 
 ### Stop consequence
 No further numerical scan of the same q-family is useful. The next attack must be categorical/universal: prove that the full structured carrier is classified by the q-valuation quotient, or produce two admissible objects with isomorphic \(\mathcal B_{27}\) but different \(\chi\bmod27\). The latter would be a genuine no-go and would close the carrier cleanly.
+
+
+## HARD ATTACK 21 — FULL STRUCTURED-CARRIER CLASSIFICATION ON THE STANDARD DEMUSHKIN FAMILY — 2026-09-20
+
+The next categorical attack is now carried out at the level that Hard Attack 20 was missing: not merely the visible values of the Bockstein maps, but the full structured object
+\[
+\mathcal B_{27}(G)=(H^1(G,\mathbf F_3),H^1(G,\mathbf Z/9),\mathrm{red},\iota,\smile,\beta_1,\beta_9).
+\]
+
+### 1. Exact calculation of the coefficient module
+
+For
+\[
+G_q=\langle x_1,x_2,x_3,x_4\mid x_1^q[x_1,x_2][x_3,x_4]\rangle,
+\qquad q=3^s,
+\]
+and trivial coefficients \(A=\mathbf Z/9\),
+\[
+H^1(G_q,A)=\operatorname{Hom}_{\mathrm{cont}}(G_q,A).
+\]
+After abelianization the commutator factors disappear, so a homomorphism is represented by \((a_1,a_2,a_3,a_4)\in A^4\) subject only to \(q a_1=0\). Hence
+\[
+W_q:=H^1(G_q,\mathbf Z/9)=
+\begin{cases}3A\times A^3,&s=1,\\A^4,&s\ge2.\end{cases}
+\]
+This is an exact structural statement, not a numerical scan.
+
+### 2. Exact Bockstein normal forms
+
+With the same transgression convention used in the audited mod-9 calculation,
+\[
+\beta_1(f)=\frac q3 f(x_1)\,\omega,
+\qquad
+\beta_9(a)=\frac q9 a_1\,\omega
+\]
+where the second expression is interpreted through the relation-imposed divisibility.
+Thus, after canonical normal-form identifications,
+\[
+\begin{array}{c|c|c|c}
+v_3(q)&W_q&\beta_1&\beta_9\\ \hline
+1&3A\times A^3&f\mapsto f_1\omega&(3b,a_2,a_3,a_4)\mapsto b\omega\\
+2&A^4&0&(a_1,a_2,a_3,a_4)\mapsto \bar a_1\omega\\
+\ge3&A^4&0&0.
+\end{array}
+\]
+Also \(\beta_9\circ\iota=\beta_1\). The mod-3 cup pairing is the same nondegenerate symplectic pairing in the standard family; the q-dependence is entirely in the displayed coefficient-extension data.
+
+### 3. Full carrier classification on the standard family
+
+For any two q-values in the same valuation class, the displayed normal forms give an explicit structure-preserving carrier isomorphism: identity on the normalized \(H^1\)-coordinates, compatible with reduction, \(\iota\), cup pairing, and both Bocksteins. Therefore
+\[
+\boxed{\mathcal B_{27}(G_q)\cong\mathcal C_{\nu_{27}(q)}}
+\]
+on the standard rank-four family, where \(\nu_{27}(q)=1,2,\ge3\).
+
+This repairs Gap 1 of Hard Attack 20: the claim of “three carrier types” is now supported at the level of the entire declared structure, not inferred from only the Bockstein ranks.
+
+### 4. Critical limitation
+
+This still does **not** prove a universal no-go. It proves classification only on the standard family. In particular it does not prove that every natural transformation
+\[
+\mathcal B_{27}\to O_{27}
+\]
+on the full admissible filtered/relation category factors through q/classification.
+
+The correct current conclusions are therefore:
+- full structured-carrier classification on the standard family: **PASS / CLOSED**;
+- q-valuation factorization on that family: **PASS / CLOSED**;
+- intrinsic finite q-layer detection: **PASS / LOCAL**;
+- universal factorization/no-go: **OPEN**;
+- independent presentation-free orientation bridge: **OPEN**;
+- Bockstein orientation carrier: **CONDITIONAL / OPEN**.
+
+### 5. Stop consequence
+
+No further \(\beta_1/\beta_9\) numerical scan on the same q-family is authorized. The next decisive attack must be universal/categorical: either prove that every admissible natural bridge factors through the q/classification quotient, or construct an independent chain-level/cohomological identity producing
+\[
+\lambda_{27}=\frac13\log\chi\pmod9
+\]
+without passing through q, the dualizing action, or the known classification formula.
+
+This is the binding status after Hard Attack 21.
