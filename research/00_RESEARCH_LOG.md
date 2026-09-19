@@ -2012,3 +2012,14 @@ Priority is shifted toward:
 The W/U/O representation branch and broad rank-4 scans are not to be expanded merely because they contain higher-order structure; a rigorous bridge to the orientation-recovery functional is required.
 
 No existing closed Gate is reopened by the literature.
+
+
+## 2026-09-19 — Methodology sufficiency / missing-tool audit
+
+A critical methodological audit was added as `research/METHODOLOGY_SUFFICIENCY_AND_MISSING_TOOLS_AUDIT_2026-09-19.md`.
+
+Conclusion: the relation-jet branch is now methodologically sufficient for a bounded theorem program, but the stronger intrinsic-minimal-carrier objective still lacks three structural bridges: (M1) an intrinsic carrier functor from filtered/augmentation data; (M2) a non-tautological natural factorization from that carrier to the finite-level crossed-derivation/orientation functional; and (M3) an independent comparison map/factorization (or obstruction) to the Pál–Quick A3/Hochschild invariant.
+
+The literature exposes an important process difference: Pál–Quick construct a canonical higher object first and then compute an obstruction, whereas our risky branches can proceed from a computed object toward a hoped-for interpretation. Therefore every new branch must pass object/input/functoriality/gauge/orientation/q-blindness/separation/novelty/stop tests before substantial computation.
+
+The IA and W/U/O branches are now explicitly subordinate to this rule: local computational PASS results do not justify expansion unless a natural bridge to M1/M2/M3 is produced. No broad scan is authorized merely because higher-order structure exists.
