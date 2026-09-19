@@ -1682,3 +1682,10 @@ Important boundary: sufficiency is established conditional on J_3 being supplied
 
 Detailed plan: research/ORIENTATION_MOD9_MINIMAL_ENRICHED_CARRIER_2026-09-19.md.
 No finite scan is authorized.
+
+
+## 2026-09-19 — E1 relator-gauge audit: local PASS / full intrinsicness OPEN
+
+A no-scan structural audit exposed a necessary correction to the projective relation-jet proposal. Relator conjugation changes the degree-3 component by P -> P+[V,R], so projectivization alone does not establish presentation independence. However the twisted recovery functional is insensitive to this change because degree-one f annihilates ordinary brackets: f([v,R])=0. Thus Theta and its zero set survive conjugation.
+
+Status: E1-local gauge compatibility PASS; E1-full intrinsic definition OPEN. The projective jet must be replaced, if necessary, by its complete relation-gauge class. The next gate is to identify the canonical relation-module object that captures all legitimate relator changes.
