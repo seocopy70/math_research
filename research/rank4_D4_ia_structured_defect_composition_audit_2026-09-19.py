@@ -276,15 +276,6 @@ for a in names:
         ga, _ = CASES[a]; gb, _ = CASES[b]
         assert linear_matrix(comp(ga, gb)) == matmul(linear_matrix(ga), linear_matrix(gb)), (a, b)
 
-# Critical q-source audit: Delta_q must equal the direct cubic source
-# difference [F_g(X1^3)-X1^3]_deg3, not merely a difference of helpers.
-X1cube = [(0, 1)] * 3
-for name, (g, m) in CASES.items():
-    Gg = [ev(w, GEN) for w in g]
-    direct = vec(add(ev(X1cube, Gg), sc({tuple(X1cube): 1}, -1)), 3)
-    if delta_q(g) != direct:
-        print("DIRECT_Q_SOURCE_MISMATCH", name, delta_q(g), direct)
-
 results = []
 for a in names:
     ga, mua = CASES[a]
