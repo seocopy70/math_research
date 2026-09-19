@@ -251,3 +251,43 @@ The first formulation overstated what mod-9 cup data could prove. The corrected 
 - **Gate remains OPEN:** test an explicit Bockstein/finite-coefficient invariant. If it retains only q=3 and loses the value 4, close the route.
 
 No finite scan.
+
+
+## 2026-09-19 — Explicit Bockstein audit: candidate FAIL / CLOSED
+
+The authorized hand task was completed in `research/ORIENTATION_MOD9_BOCKSTEIN_AUDIT_2026-09-19.md`.
+
+For
+\[
+0\to\mathbf F_3\xrightarrow{3}\mathbf Z/9\to\mathbf F_3\to0
+\]
+the intrinsic connecting map
+\[
+\beta:H^1(G,\mathbf F_3)\to H^2(G,\mathbf F_3)
+\]
+was analyzed for
+\[
+r=x_1^3[x_1,x_2][x_3,x_4].
+\]
+
+The Bockstein detects the power-term direction: up to the fixed top-class/sign convention,
+\[
+\beta(\gamma_1)\neq0,\qquad
+\beta(\gamma_2)=\beta(\gamma_3)=\beta(\gamma_4)=0.
+\]
+Classical Demushkin formulas identify this Bockstein with the power coefficients of the defining relation. This independently confirms that the finite-coefficient operation sees the q=3 power contribution.
+
+Critical result: the intrinsic object is the map \(\beta\), not a canonically normalized scalar in \(\mathbf F_3\). Changing the generator of the one-dimensional \(H^2\) target rescales any displayed scalar. More importantly, \(\beta\) retains only the q=3 power/torsion shadow and does not retain the required first 3-adic orientation value
+\[
+\chi(x_2)\equiv4\pmod9.
+\]
+
+Gate decision:
+- **M9-A PASS:** canonical Bockstein object defined.
+- **M9-B PASS:** intrinsic as a cohomological connecting map; no preferred free lift.
+- **M9-C FAIL:** no canonical recovery of the value 4 from this object.
+- **M9-D CLOSED for this Bockstein candidate.**
+
+This is a candidate-level closure, not a proof that every possible finite-coefficient construction is impossible. No finite scan is authorized.
+
+Next route, if opened, must retain additional \(1+3\mathbf Z_3\)-valued/twisted-dualizing information rather than reinterpreting the Bockstein's q=3 signal as orientation.
