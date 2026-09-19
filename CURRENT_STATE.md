@@ -1129,3 +1129,14 @@ Decision:
 - full filtered-to-Fox factorization at every 3-adic level: NEXT TARGET.
 
 Detailed record: research/ORIENTATION_FOX_TO_MOD9_CARRIER_COMPATIBILITY_2026-09-19.md
+
+
+## AUTHORITATIVE UPDATE — 2026-09-20 — HIGHER BOCKSTEIN / P-ADIC DIGIT TOWER HARD ATTACK
+
+The proposed next bridge was attacked at the definition level. Candidate-dependent twisted coefficient/Bockstein criteria are exact orientation tests but cannot serve as the desired filtered input without importing the unknown character. Higher Bocksteins may detect q-adic depth, but no character-valued, presentation-natural reconstruction map follows from their existence alone. For the frozen q=3 Fox equations, once the mod-9 digit is fixed, all higher digits are recursively forced by the exact unit equation 1+2B=0; no independent higher geometric obstruction was found. Therefore the substantive unresolved map remains
+\[
+\text{intrinsic filtered relation extension}\to\text{exact Fox coefficient tower},
+\]
+without defining the former from the latter.
+
+Decision: **HIGHER BOCKSTEIN BRIDGE OPEN / STRUCTURAL**. Stronger no-go: “higher Bocksteins recover q, therefore full chi” is not an established implication. Detailed audit: `research/ORIENTATION_HIGHER_BOCKSTEIN_HARD_ATTACK_2026-09-20.md`.
