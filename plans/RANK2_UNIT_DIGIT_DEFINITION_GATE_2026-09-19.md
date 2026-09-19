@@ -238,3 +238,12 @@ Then repair the definition; no computation.
 4. Only then decide whether a rank-2 finite computation is warranted.
 
 No CI computation is part of this gate.
+
+
+## 14. Closure result — 2026-09-19
+
+**DECISION: FAIL / CLOSED.**
+
+The natural rank-one quotient Q=(R/[R,F])/H2(G3,Z3) ≅ ker(F_ab -> G3_ab)=3 Z3 e1 fails lift-independence. For r=r3, the free pro-3 automorphism alpha_r defined by x1 -> x1 r and x2 -> x2 induces id on G3 but sends e1 -> 4e1, hence 3e1 -> 4(3e1). Therefore two stabilizing lifts of the same group automorphism differ by the unit 4 modulo 9 on the natural quotient.
+
+This is a definition-level FAIL, not a computational failure. D1 fails; later gates are not reached. No CI, mod-9, IA, K3, or q-comparison scan is authorized. The route is closed unless a genuinely different object is proposed that does not use this relator-module scalar construction.
