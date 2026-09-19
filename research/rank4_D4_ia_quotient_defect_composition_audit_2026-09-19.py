@@ -167,7 +167,6 @@ for a in names:
         e1=[(x-y)%P for x,y in zip(lhs,rhs1)]
         e2=[(x-y)%P for x,y in zip(lhs,rhs2)]
         law1_fail_raw += bool(any(e1)); law2_fail_raw += bool(any(e2))
-        law1_fail += not modzero(e1); law2_fail += not modzero(e2)\n        if a=="identity" and b=="identity": print("ID_ID",sum(lhs),sum(rhs1),sum(e1),e1[:10])
         if survives(lhs): nonzero_pairs += 1
         results.append((a,b,any(e1),modzero(e1),any(e2),modzero(e2)))
 print({"diagnostic_law1_failures":law1_fail,"diagnostic_law2_failures":law2_fail,"diagnostic_raw_law1_failures":law1_fail_raw,"diagnostic_raw_law2_failures":law2_fail_raw})
