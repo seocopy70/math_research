@@ -107,3 +107,5 @@ for z in out.values():
 print(json.dumps({"status":"PASS_BASEPOINT_LOCAL",
 "interpretation":"For every tested first-layer IA basepoint and direction, the actual degree-3 defect change agrees with the canonical-base change modulo C3, for both q=3 and q=infinity and for both left/right fibre parameterizations. This closes the basepoint-independence question at the tested graded level.",
 "scope":"identity, -I, one transvection; 24x24 fibre comparisons per side; exact F3; Magnus degree <=3","cases":out},indent=2))
+
+# trigger CI after workflow registration
