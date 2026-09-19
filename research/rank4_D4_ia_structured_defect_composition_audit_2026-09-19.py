@@ -260,6 +260,15 @@ def tensor_action(v, M):
             out[idx] = (out[idx] + cc) % P
     return out
 
+# Algebraic sanity check: the degree-3 q-defect is the coboundary of x=X1^3.
+# Since F_g(X1)=g.X1 + terms of degree >=2, only (g.X1)^3 contributes
+# to degree 3, so Delta_q(g)=g.x-x. This is checked independently here.
+x = [1 if w == (0,0,0) else 0 for w in WORDS3]
+for name, (g, m) in CASES.items():
+    M = linear_matrix(g)
+    expected = [(a - b) % P for a, b in zip(tensor_action(x, M), x)]
+    assert delta_q(g) == expected, (name, "Delta_q != coboundary(g.x-x)")
+
 names = list(CASES)
 law_fail = law_raw_fail = reversed_fail = reversed_raw_fail = 0
 nonzero = 0
