@@ -39,14 +39,18 @@ def eval_word(word,gens):
     z=dict(ONE)
     for i,s in word: z=mul(z,gens[i] if s==1 else inv(gens[i]))
     return z
-def apply_image(word,images):
+def apply_word(word,images):
     z=dict(ONE)
     for i,s in word: z=mul(z,images[i] if s==1 else inv(images[i]))
     return z
+def apply_poly(poly,images):
+    z={}
+    for w,v in poly.items():
+        z=add(z,scale(apply_word(w,images),v))
+    return z
 def compose(A,B):
-    # A o B: apply A to each generator image of B.
-    return [apply_image_word(Bi,A) for Bi in B]
-def apply_image_word(w,A): return apply_image(w,A)
+    # A o B: apply A to each polynomial generator image of B.
+    return [apply_poly(Bi,A) for Bi in B]
 
 def vec(a,d):
     return [a.get(w,0) for w in product(range(N),repeat=d)]
