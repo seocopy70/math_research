@@ -1,3 +1,45 @@
+## 2026-09-20 — CRITICAL CORRECTION: Zassenhaus threshold wording + mixed m-adic reopening
+
+A review correction was independently checked.
+
+The threshold claim was never that (G/D_N(G)) itself is abelian. The correct calculation is
+[
+(G/D_NG)^{ab}=G/(D_NG').
+]
+For (G_{3^s}), Jennings' formula shows that at (N=3^s+1)
+[
+(G_{3^s}/D_N)^{ab}cong mathbf Z/3^s	imes(mathbf Z/3^{s+1})^3,
+]
+whereas the power-free control has ((mathbf Z/3^{s+1})^4). For (Nle3^s), (x_1^{3^s}in D_N(F)), so the relator (x_1^{3^s}c) reduces to (c) modulo (D_N(F)), yielding
+[
+G_{3^s}/D_Ncong G_infty/D_N.
+]
+Thus (D_{3^{n-1}+1}) is sufficient and (D_{3^{n-1}}) insufficient to distinguish the standard-family cases relevant to (chimod3^n), with classification/orientation formula dependence explicitly retained. For (n=2,3), the thresholds are D_4 and D_10.
+
+The second correction concerns HARD ATTACK 10. Its negative result is specifically the failure of the ordinary presentation-independent local degree-(le3) Fox truncation. It does not establish a no-go for finite mixed ((3,I))-adic carriers.
+
+A new definitional branch is therefore authorized:
+[
+mathfrak m=(3,I),qquad J_n^{mix}=I_{mathrm{Fox}}+mathfrak m^n,
+]
+subject first to definition, Nielsen covariance, relator gauge/unit/conjugation invariance, finite-level well-definedness, and an orientation bridge. No numerical scan is authorized before these gates pass.
+
+The existence gate and the non-tautology/compression gate are now explicitly separated: Fox-derived finite objects are not excluded from existence, while any claim of genuine compression/independence is tested later.
+
+Load-bearing warning: for (r'=grg^{-1}), Fox differentiation contains an additional term
+[
+g,partial r+(1-grg^{-1})partial g,
+]
+so the relation/augmentation ideal must be defined to control this term. This is the first naturality obstacle.
+
+Decision:
+- Zassenhaus threshold on standard family: **PASS / LOCAL**;
+- ordinary degree-3 Fox truncation no-go: **PASS / CLOSED**;
+- mixed m-adic carrier: **OPEN / REAUTHORIZED FOR DEFINITIONAL ATTACK ONLY**;
+- relator-gauge naturality: **OPEN / LOAD-BEARING**.
+
+Record: `research/CRITICAL_CORRECTION_MIXED_MADIC_AND_ZASSENHAUSZ_THRESHOLD_2026-09-20.md`
+
 ## 2026-09-20 — HARD ATTACK 14: no nontrivial quotient of the exact local Fox carrier
 
 The remaining quotient-based loophole was attacked directly.
