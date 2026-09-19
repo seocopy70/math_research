@@ -554,3 +554,10 @@ The change-of-cover problem was reduced to free isomorphisms/lifts lying over id
 The relevant weaker target is projective-jet invariance. Conditional on the standard cyclic one-relator relation-module structure and a residual degree-(2,3) gauge lemma, a cover change would act by (R,P) -> (uR,uP+[v,R]); then Theta scales by u and its zero set is unchanged. This residual-gauge lemma is not yet proved.
 
 Status: full relation-module cover-independence FAIL; projective-jet cover-independence OPEN; Theta invariance under common scaling/conjugation gauge PASS. No finite scan authorized. Detailed audit: research/ORIENTATION_MOD9_E1_COVER_CHANGE_AUDIT_2026-09-19.md.
+
+
+## 2026-09-19 — E1 residual-gauge lemma PASS
+
+A no-scan degree-(2,3) derivation closes the remaining residual-gauge question relevant to Theta. For a free automorphism inducing id_G, minimality and the one-relator initial relation imply alpha(X_i)=X_i+c_i R_2+O(3). Applying alpha to R_2 gives the degree-3 correction [R_2,v], where v=c_1X_2-c_2X_1+c_3X_4-c_4X_3. The relation-module class may additionally acquire a common unit factor u, so the jet transforms as (R,P) -> (uR,uP+[v,R]). Since f([v,R])=0 for f in V*, Theta scales by u and its zero set is unchanged.
+
+Decision: E1 residual-gauge lemma PASS at the degree-(2,3) level relevant to Theta. Full relation-module generator invariance remains FAIL, but projective degree-(2,3) jet invariance relevant to Theta is PASS, conditional on the standard minimal one-relator facts and frozen filtered convention. Detailed proof: research/ORIENTATION_MOD9_E1_RESIDUAL_GAUGE_LEMMA_2026-09-19.md. No finite scan authorized.
