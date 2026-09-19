@@ -64,9 +64,9 @@ For q=3, p=e_1^{(1)} and the unique zero is λ=e_2^*, giving (1,4,1,1) mod 9. Fo
 
 Decision:
 - standalone Bockstein: FAIL/CLOSED;
-- cup + Bockstein intrinsic carrier: PASS/CLOSED at mod-9 level;
-- M1 intrinsic carrier functor: PASS/CLOSED at mod-9 level;
-- M2 orientation factorization: PASS/CLOSED for the stated degree-(2,3) mod-9 functional;
+- cup + Bockstein intrinsic carrier: PASS/CLOSED at mod-9 level, under the stated standard transgression/Bockstein identification;
+- M1 intrinsic carrier functor: PASS/CLOSED at mod-9 level, under the standard transgression/Bockstein identification, under the stated standard transgression/Bockstein identification;
+- M2 orientation factorization: PASS/CLOSED for the stated projective degree-(2,3) mod-9 functional, with beta ↔ p(P3) supplied by the standard transgression/Bockstein formula;
 - M3 independent comparison with Pál–Quick A3/Hochschild class: NEXT AUTHORIZED TARGET;
 - no broad computational scan is authorized.
 
