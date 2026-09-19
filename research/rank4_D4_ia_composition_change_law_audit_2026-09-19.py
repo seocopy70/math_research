@@ -39,52 +39,30 @@ def eval_word(word,gens):
     z=dict(ONE)
     for i,s in word: z=mul(z,gens[i] if s==1 else inv(gens[i]))
     return z
-def apply_word(word,images):
-    z=dict(ONE)
-    for i in word: z=mul(z,images[i])
-    return z
-def apply_poly(poly,images):
-    z={}
-    for w,v in poly.items():
-        z=add(z,scale(apply_word(w,images),v))
-    return z
-def compose(A,B):
-    # A o B: apply A to each polynomial generator image of B.
-    return [apply_poly(Bi,A) for Bi in B]
-
-def vec(a,d):
-    return [a.get(w,0) for w in product(range(N),repeat=d)]
-def rank(rows):
-    if not rows:return 0
-    a=[r[:] for r in rows]; m,n=len(a),len(a[0]); rr=0
-    for c in range(n):
-        p=next((i for i in range(rr,m) if a[i][c]%P),None)
-        if p is None: continue
-        a[rr],a[p]=a[p],a[rr]
-        ip=pow(a[rr][c],-1,P); a[rr]=[(x*ip)%P for x in a[rr]]
-        for i in range(m):
-            if i!=rr and a[i][c]:
-                f=a[i][c]; a[i]=[(a[i][j]-f*a[rr][j])%P for j in range(n)]
-        rr+=1
-    return rr
-
-def basis_coeff(spec):
-    c=[[0]*6 for _ in range(N)]
-    i,j,k=spec; c[i][PAIRS.index((j,k))]=1
-    return c
-def add_coeff(a,b): return [[(x+y)%P for x,y in zip(ai,bi)] for ai,bi in zip(a,b)]
-def coeff_sum(specs):
-    c=[[0]*6 for _ in range(N)]
-    for s in specs:c=add_coeff(c,basis_coeff(s))
-    return c
-def ia_map(coeff):
+def ia_word_map(coeff):
     out=[]
     for i in range(N):
-        ci=dict(ONE)
+        w=[(i,1)]
         for a,(j,k) in zip(coeff[i],PAIRS):
-            for _ in range(a%P): ci=mul(ci,eval_word(comm_word(j,k),GEN))
-        out.append(mul(GEN[i],ci))
+            for _ in range(a%P): w += comm_word(j,k)
+        out.append(w)
     return out
+
+def substitute_word(word,images):
+    out=[]
+    for i,s in word:
+        img=images[i]
+        if s==1: out += img
+        else:
+            invimg=[]
+            for j,t in reversed(img):
+                invimg.append((j,-t))
+            out += invimg
+    return out
+
+def compose_words(A,B):
+    # A o B, as exact free-group words.
+    return [substitute_word(Bi,A) for Bi in B]
 
 # Frozen relators.
 R3=[(0,1)]*3+comm_word(0,1)+comm_word(2,3)
@@ -106,7 +84,7 @@ def defect(relator,base_relator,lift):
     return vec(add(eval_word(relator,lift),scale(base_relator,-1)),3)
 def compose_case_with_ia(base,coeff):
     # IA acts on the target after the fixed base lift.
-    return compose(ia_map(coeff),base)
+    return [eval_word(w,base) for w in ia_word_map(coeff)]
 
 results={}
 for name,base in CASES.items():
@@ -114,13 +92,14 @@ for name,base in CASES.items():
     # Associated-graded torsor test: every first-layer coordinate has a unique
     # degree-2 image, and composition adds those coordinates.
     for a,b in combinations(IA_SPECS,2):
-        pa,pb=ia_map(basis_coeff(a)),ia_map(basis_coeff(b))
-        pc=compose(pa,pb)
-        pab=ia_map(add_coeff(basis_coeff(a),basis_coeff(b)))
-        # Compare degree <=2 only; degree-3 differences are the extension defect.
+        pa,pb=ia_word_map(basis_coeff(a)),ia_word_map(basis_coeff(b))
+        pc=compose_words(pa,pb)
+        pab=ia_word_map(add_coeff(basis_coeff(a),basis_coeff(b)))
+        pc_eval=[eval_word(w,GEN) for w in pc]
+        pab_eval=[eval_word(w,GEN) for w in pab]
         for i in range(N):
-            assert vec(pc[i],1)==vec(pab[i],1)
-            assert vec(pc[i],2)==vec(pab[i],2)
+            assert vec(pc_eval[i],1)==vec(pab_eval[i],1)
+            assert vec(pc_eval[i],2)==vec(pab_eval[i],2)
 
     d0_3=defect(R3,BASE3,base); d0_i=defect(RINF,BASEINF,base)
     variations3={}; variationsI={}
@@ -137,7 +116,8 @@ for name,base in CASES.items():
         cab=add_coeff(ca,cb)
         hab=compose_case_with_ia(base,cab)
         # compose the actual IA-target actions, not the coordinate sum.
-        hab_comp=compose(ia_map(ca),compose_case_with_ia(base,cb))
+        hab_comp_words=compose_words(ia_word_map(ca),ia_word_map(cb))
+        hab_comp=[eval_word(w,base) for w in hab_comp_words]
         lhs3=defect(R3,BASE3,hab_comp)
         rhs3=defect(R3,BASE3,hab)
         diff=[(x-y)%P for x,y in zip(lhs3,rhs3)]
