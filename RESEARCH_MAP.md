@@ -1305,3 +1305,29 @@ The next authorized gate is the quotient-valued defect transformation/compositio
 Do not perform a full rank-4 scan before that law is defined and audited.
 
 The failed linear-only observable, the artificial q=9 H-closure, and preferred-lift repairs remain permanently excluded.
+
+
+## 12. Quotient-valued q-defect composition law — LOCAL PASS
+
+The absolute normalized relator defect [F_g(R3)-mu(g)R3]_deg3 failed the tested composition law on all 16 controlled ordered pairs and is not promoted.
+
+The q-sensitive object is
+Delta_q(g) = [delta_3(g)-delta_infinity(g)] = [F_g(X1^3)-X1^3]_deg3.
+
+For F_(gh)=F_g o F_h, the candidate quotient law is
+Delta_q(gh)=Delta_q(g)+g·Delta_q(h)
+in Q3=A3/(C3+Delta_IA).
+
+CI run 35417325110: PASS.
+- gauge rank 20;
+- dim Q3=44;
+- 16 ordered pairs tested across identity, -I, standard transvection, and multiplier-2 diagonal;
+- candidate-law failures modulo Q3 = 0;
+- raw candidate-law failures = 16;
+- all 16 composed q-defect classes nonzero.
+
+The reversed action/order diagnostic also passes modulo Q3 on this four-representative set, so uniqueness of the action/order convention is not established by this control.
+
+Current status: the q-sensitive quotient-valued cocycle law is a **local PASS**, not a theorem-level canonicality result.
+
+Next gate: independently fix the action/order convention, extend to a broader structured representative family, verify multiplier-2 GSp compatibility, then consider broad rank-4 coverage. No full rank-4 scan yet.
