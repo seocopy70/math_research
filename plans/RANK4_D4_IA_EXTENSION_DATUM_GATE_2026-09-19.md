@@ -255,3 +255,34 @@ No full rank-4 q-comparison is authorized yet.
 ### 14.4 Next authorized step
 
 Audit the remaining covariance requirement for the quotient defect class, with the frozen q=3 relator data and multiplier convention explicit. The goal is to determine whether the 44-dimensional quotient class is an intrinsic filtered datum for the admissible linear-action category, without choosing a preferred lift.
+
+
+## 15. Admissible-category covariance audit — EXECUTED / LOCAL PASS, CI VERIFICATION PENDING
+
+The frozen q=3 degree-3 reduction already fixes the relevant coordinate-change category by
+\[
+g e_1=\mu(g)e_1.
+\]
+This must not be confused with the failed claim that this condition defines an intrinsic observable on all of GSp_4(F3). Here it is used only to define the admissible linear-action category in which the frozen q=3 relator data is preserved at D4.
+
+The exact finite category
+\[
+H_{\mathrm{adm}}=\{g\in GSp_4(F_3):g e_1=\mu(g)e_1\}
+\]
+was enumerated from the line stabilizer:
+- |H_adm cap Sp_4(F3)| = 648;
+- the multiplier-2 coset has 648 elements;
+- total |H_adm| = 1296.
+
+Independent exact-F3 execution verified for all 1296 elements:
+- C3 is invariant, rank 4;
+- Delta_IA is invariant, rank 20;
+- G3=C3+Delta_IA is invariant, rank 20;
+- the induced candidate quotient remains 44-dimensional;
+- X1^[3] transforms by the multiplier, exactly as required;
+- for the admissible representative -I, the q=3 versus q=infinity defect is exactly X1^3, hence nonzero in the candidate quotient.
+
+This is a **local covariance PASS under the frozen tensor/action convention**. It does not yet close the main definition gate: the repository CI verification is still pending, and the result does not by itself prove arbitrary free-group coordinate naturality beyond the audited first-layer IA quotient and the admissible linear-action category.
+
+Implementation: research/rank4_D4_ia_admissible_category_covariance_audit_2026-09-19.py
+Workflow: .github/workflows/rank4-d4-ia-admissible-category-covariance.yml
