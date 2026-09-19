@@ -1,3 +1,21 @@
+## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 14: FOX LOCAL QUOTIENT MINIMALITY
+
+A second structural boundary is now closed. In the frozen (q=3) model, the exact local Fox obstruction algebra is
+[
+mathbf Z_3[[u_1,u_2,u_3,u_4]]/(u_1,u_3,u_4,2u_2+3)congmathbf Z_3.
+]
+Hence the local exact Fox scheme is already a reduced characteristic-zero point. No proper unital quotient can preserve the full (3)-adic point: finite-characteristic quotients lose higher digits, while the zero quotient loses the point.
+
+Therefore there is no nontrivial quotient-based compression of the local Fox carrier preserving the full orientation.
+
+Decision:
+- quotient-of-local-Fox-scheme compression: **FAIL / CLOSED**;
+- exact local Fox carrier minimal under full-(3)-adic-preserving quotients: **PASS / CLOSED**;
+- independent intrinsic non-quotient exact compression: **OPEN**.
+
+Record:
+research/ORIENTATION_FOX_LOCAL_QUOTIENT_MINIMALITY_HARD_ATTACK_2026-09-20.md
+
 ## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 13: FULL ASSOCIATED-GRADED NO-GO / EXTENSION LOWER BOUND
 
 A literature-backed structural strengthening has been established. For infinite Demuškin pro-(3) groups of fixed rank, the full graded group algebra associated to the complete (3)-Zassenhaus filtration is the quadratic/PBW Demuškin graded algebra determined by the quadratic symplectic relation, independently of the Demuškin (q)-invariant. Hence the full mod-3 associated-graded object is (q)-blind, not merely every bounded graded window.
