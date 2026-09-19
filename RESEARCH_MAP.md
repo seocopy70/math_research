@@ -1,21 +1,59 @@
 ## AUTHORITATIVE UPDATE — 2026-09-19 — BOCKSTEIN–RELATION-JET IDENTIFICATION GATE CLOSED
 
-The load-bearing identification
-\[
-\beta\longleftrightarrow p(P_3)
-\]
-has been audited. A direct cochain/transgression calculation shows that the Bockstein of a mod-3 generator is obtained by lifting it to \(\mathbf Z/9\), evaluating the lift on the relator, and dividing the resulting obstruction by 3. Commutator terms contribute no exponent sum; the restricted-cubic power term \(X_i^{[3]}\) contributes exactly its coefficient. Thus the Bockstein vector is projectively the same power-direction vector \(p(P_3)\), with only the common transgression/fundamental-class sign/unit left as gauge.
+A critical audit tightened the load-bearing identification
+\\[
+\\beta\\longleftrightarrow p(P_3)
+\\]
+The previous wording “direct cochain/transgression calculation proves the identification” was too strong. The defensible statement is:
 
-For q=3, \(P_3=X_1^{[3]}\), so \(p\sim X_1^{(1)}\). For q=∞, \(p=0\). Therefore the previously established projective recovery functional applies intrinsically and gives \(\chi\bmod9=(1,4,1,1)\) for q=3.
+- the **standard one-relator transgression/relation–Bockstein formula** gives the general identification of the Bockstein with the restricted p-power coefficient vector, up to the convention-dependent global sign/unit of the chosen H² generator;
+- for the frozen relator, this is **independently checked by a direct \\(\\mathbf Z/9\\)-lifting obstruction calculation**;
+- the cup-product and Bockstein signs must be synchronized in the **same transgression/fundamental-class convention**. In that convention both carry the same global sign, so
+\\[
+\\operatorname{tr}(\\chi_i\\cup\\chi_j)=-a_{ij},
+\\qquad
+\\operatorname{tr}(\\beta\\chi_i)=-a_i,
+\\]
+rather than treating the Bockstein sign as an independent projective gauge.
+
+For the frozen relator
+\\[
+r_3=x_1^3[x_1,x_2][x_3,x_4],
+\\]
+the direct lift gives
+\\[
+\\frac{\\widetilde f_1(r_3)}3\\equiv1\\pmod3,
+\\qquad
+\\frac{\\widetilde f_i(r_3)}3\\equiv0\\pmod3\\ (i=2,3,4),
+\\]
+because the commutator factors have zero exponent sum. Hence the Bockstein power vector is \\(p\\sim X_1^{(1)}\\), independently checking the standard formula in this presentation.
+
+The restricted-cube coefficient naturally lies in \\(V^{(1)}\\); over \\(\\mathbf F_3\\), Frobenius is the identity, so \\(V^{(1)}\\cong V\\) canonically for the present calculation.
+
+For the control relation, do not use “q=∞” as a literal group parameter in the final manuscript: the precise object is the **power-free control**
+\\[
+r_0=[x_1,x_2][x_3,x_4],
+\\]
+for which the first Bockstein/power component is zero. Thus \\((R,p)=(R,0)\\), distinct from the q=3 carrier.
+
+With
+\\[
+R=[X_1,X_2]+[X_3,X_4],\\qquad p=X_1^{(1)},
+\\]
+the already audited recovery functional has unique zero \\(\\lambda=e_2^*\\), yielding
+\\[
+\\chi\\bmod9=(1,4,1,1).
+\\]
 
 Decision:
-- Bockstein–relation-jet projective identification: **PASS / CLOSED** under the standard one-relator transgression convention;
-- absolute sign/normalization of the H² generator: **CONDITIONAL / gauge-dependent**, irrelevant to the projective carrier;
-- intrinsic cup+Bockstein carrier → \(\chi\bmod9\): **PASS / CLOSED**;
-- no higher-digit conclusion and no broad scan.
+- intrinsic cup+Bockstein projective carrier: **PASS / CLOSED**;
+- \\(\\beta\\leftrightarrow p(P_3)\\): **PASS / CLOSED**, under the standard one-relator transgression/Bockstein formula, with the common sign convention explicitly synchronized and independently checked for the frozen relator;
+- absolute H² normalization: **CONDITIONAL / gauge-dependent**;
+- projective carrier → \\(\\chi\\bmod9\\): **PASS / CLOSED** at the stated degree-(2,3) level;
+- higher 3-adic digits and equality with the Pál–Quick A3/Hochschild invariant remain outside this Gate;
+- no broad scan authorized.
 
 Record: research/BOCKSTEIN_RELATION_JET_IDENTIFICATION_AUDIT_2026-09-19.md
-
 ## AUTHORITATIVE UPDATE — 2026-09-19 — M3 LITERATURE COMPARISON BOUNDARY
 
 The intrinsic cup+Bockstein carrier has now been compared structurally with Pál–Quick's A_3/Hochschild canonical class.
