@@ -1,128 +1,83 @@
 # CURRENT STATE — 2026-09-19
 
-## Research question
+## Authoritative current question
 Can the canonical orientation character chi:G -> Z_3^times be recovered intrinsically from filtered/graded data?
 
-## Authoritative current branch
-Rank-4 D4 IA / filtered extension datum.
+## Authoritative branch
+**Rank-4 D4 IA / filtered extension datum.**
 
-## Frozen negative results
-- The original linear-only rank-4 D4 lifting observable is FAIL/CLOSED: lift-independence fails.
-- The naive q=9 degree-9 relation space is not H-stable.
-- The artificial H-closure of S9 is not a valid fixed-presentation relation space.
-- The Q3/Q9 S9 orbit route is CLOSED at the definition level.
-- Preferred Nielsen lifts are prohibited as a repair.
+## Latest mathematical conclusion — 2026-09-19
 
-## Current degree-3 IA quotient datum
-A3 is the frozen degree-3 associative target, dim(A3)=64.
-C3 is the ordinary correction space, rank 4.
-First-layer IA variation Delta_IA has rank 20.
-G3=C3+Delta_IA has rank 20.
+The quotient-valued object
+Delta_q(g) = [F_g(X_1^3)-X_1^3]_3
+is **not a new q-sensitive invariant**.
+
+Indeed, with the frozen convention F_(gh)=F_g o F_h and
+F_g(X_1)=g.X_1 + terms of degree >=2,
+the degree-3 part satisfies
+Delta_q(g) = g.(X_1^3) - X_1^3.
+
+This was independently verified in the structured CI on all 9 representatives after adding the explicit coboundary check:
+CI run 35420266538, head bd53311cf45dfc930599c3c24b60df8572c155cc, job 105836490226 — SUCCESS.
+
 Therefore
-Q3=A3/G3 has dimension 44.
+Delta_q(gh)=Delta_q(g)+g.Delta_q(h)
+is the ordinary coboundary identity. Modulo Q3 it represents the zero H^1 class whenever [X_1^3] is viewed as a fixed Q3 vector:
+Delta_q(g)=g.[X_1^3]-[X_1^3].
 
-Higher IA layers were exhaustively checked at degree 3 and are invisible there.
-First-layer fibre composition/change-law and basepoint-independence were locally verified.
+### Consequence
 
-## Covariance status
-The admissible category
-H_adm={g in GSp4(F3): g e1 = mu(g)e1}
-has 1296 elements.
+The earlier structured cocycle passes remain valid as **implementation/convention checks only**. They do not constitute evidence for a new q-observable, canonical cocycle, or nontrivial H^1 class.
 
-CI run 35416804953: PASS.
-Across all 1296 elements, C3, Delta_IA, and G3 are invariant; ranks 4,20,20. The q-sensitive source transforms by the multiplier.
+The broader rank-4 scan proposed after the structured audit is **CANCELLED**. No scan whose only purpose is to re-test this cocycle law is authorized.
 
-## Representative control
-CI run 35416952791: PASS.
-Tested identity, -I, e1 -> e1+e2, and diag(2,1,2,1), with both left/right first-layer fibre parameterizations.
+## Frozen negative / closed routes
 
-For all cases:
-- IA variation rank 20;
-- q=3/q=infinity change laws agree;
-- 276 composition pairs have zero failure modulo C3;
-- Q3 dimension 44;
-- every non-identity tested representative has q-sensitive defect surviving Q3.
+- Original linear-only rank-4 D4 lifting observable: FAIL/CLOSED due to lift-independence failure.
+- Preferred Nielsen lifts: permanently prohibited as repair.
+- Naive q=9 degree-9 relation space: not H-stable.
+- Artificial H-closure of the q=9 relation space: invalid as a presentation relation object.
+- Q3/Q9 S9 orbit route: CLOSED at definition level.
+- D9-OBS natural p-layer candidate: FAIL/CLOSED as a universal p-layer shadow.
+- Quotient-valued Delta_q cocycle: CLOSED as **coboundary / no new information**.
 
-## Current gate
-OPEN: define and audit the quotient-valued defect transformation/composition law on the admissible category, including the GSp multiplier convention.
+## What remains genuinely open
 
-No full rank-4 representative scan is authorized before that law is established.
+### Gate A — non-coboundary q-sensitive datum definition
 
-## Key current commits
-- covariance audit: c620ce5a962031cfff90d49aa8500ea39cc16dc1
-- representative audit: 12805fe1a2486a4ba234b2607bf197468cd48a7a
-- latest research-record commit: 109fcfec009cf0e30ac6102bc7052e40dc0b0dab
+A new candidate must satisfy all of the following before computation:
 
+1. **Definition boundary:** its input may not already contain q=3 versus q=infinity as an explicit label or subtraction.
+2. **Non-coboundary test:** it must not reduce to g.v-v for a fixed v in a pre-existing representation.
+3. **Intrinsicity:** it must survive allowed IA/lift changes without choosing a preferred lift.
+4. **Presentation/coordinate legitimacy:** its definition must be independent of arbitrary free-group coordinates, or the precise quotient/torsor mechanism must be proved.
+5. **Nontriviality:** there must be a concrete witness showing the datum is not identically zero or a universal p-layer shadow.
+6. **q-separation:** only after the datum is defined from admissible weak data may q=3 and q=infinity be compared.
 
-## Latest quotient-defect composition control — 2026-09-19
+A candidate failing (1) or (2) is closed immediately; no broad scan is warranted.
 
-CI run 35417325110, commit 1ee1680f071c77ee3b6042eb1436dfd9f3406.
+### Gate B — relation to the orientation character
 
-The absolute normalized relator defect [F_g(R3)-mu(g)R3]_deg3 failed the tested composition law on all 16 ordered pairs and is not promoted.
+The rank-4 D4 condition
+g e_1 = mu(g)e_1
+was previously used as a candidate admissibility condition, but its connection to the target orientation character chi has not been independently established.
 
-The q-sensitive difference
-Delta_q(g) = [delta_3(g)-delta_infinity(g)] = [F_g(X1^3)-X1^3]_deg3
-satisfies the candidate cocycle law
-Delta_q(gh)=Delta_q(g)+g·Delta_q(h)
-in Q3=A3/(C3+Delta_IA), for all 16 ordered pairs of the four controlled representatives (identity, -I, standard transvection, multiplier-2 diagonal).
+This must be tested as a separate mathematical statement. In particular, do not assume that the line/eigenvector condition recovers chi merely because mu is visible in the ambient GSp action.
 
-Exact CI:
-- gauge rank 20;
-- Q3 dimension 44;
-- candidate-law failures modulo Q3 = 0;
-- raw candidate-law failures = 16;
-- all 16 composed q-defect classes nonzero.
+## Current authorized work
 
-Important qualification: the reversed action/order diagnostic also has zero failures modulo Q3 on this small set, so the action/order convention is not uniquely fixed by this control alone.
+1. Audit/define a genuinely non-coboundary datum, preferably using the retained filtered/extension structure rather than Delta_q.
+2. Independently analyze the exact relation between g e1 = mu(g)e1 and chi.
+3. Only after a definition gate passes may a new small CI control be designed.
 
-Current gate remains LOCAL, not theorem-level:
-- fix the precise action/order convention;
-- extend the cocycle audit to a broader structured representative family;
-- explicitly verify multiplier-2 GSp compatibility;
-- only then authorize a broad rank-4 scan.
+No unrestricted rank-4 scan is currently authorized.
 
-The failed absolute defect law and all previous excluded routes remain closed.
+## Latest implementation result
 
+Structured cocycle audit with explicit coboundary check:
+- run: 35420266538
+- commit: bd53311cf45dfc930599c3c24b60df8572c155cc
+- job: 105836490226
+- conclusion: SUCCESS
 
-## 2026-09-19 correction: quotient cocycle audit
-
-The earlier run 35417325110 is INVALIDATED because the defect helper used the reference relator with the wrong sign. It is not evidence.
-
-Corrected run 35418122079, commit bb39ed1a7191aeae0da07813e40abe47695d292a. With delta_g = [F_g(R3)-mu(g)R3]_deg3, the q-sensitive Delta_q(g) satisfies Delta_q(gh)=Delta_q(g)+g·Delta_q(h) in Q3 for all 16 ordered pairs of the four controlled representatives.
-
-Corrected results: gauge rank 20; Q3 dimension 44; candidate-law failures modulo Q3 0; raw failures 0; reversed diagnostic failures modulo Q3 2; reversed raw failures 2; 11 composed q-defect classes survive Q3.
-
-Status: valid LOCAL PASS. The candidate action/order convention is distinguished on this control set. Next gate is a broader structured representative-family audit with explicit multiplier behavior. No unrestricted full rank-4 scan yet.
-
-
-## 2026-09-19 — broader structured representative-family gate prepared
-
-The corrected quotient-defect law was extended to a structured family before any unrestricted rank-4 scan.
-
-Family (9 representatives): identity, -I, two first-hyperbolic-pair shears, two second-hyperbolic-pair shears, symplectic pair-swap, and two independent multiplier-2 diagonal GSp representatives. The script independently checks g^T J g = mu(g)J and verifies that the free lifts induce the intended degree-1 matrices.
-
-The audit tests all 9^2=81 ordered pairs under the frozen convention F_(gh)=F_g o F_h, with the same Q3=A3/(C3+Delta_IA) and corrected Delta_q. It also retains the reversed action/order formula as a diagnostic only.
-
-Implementation commits: script dc28f6756c74ea57ae97735bcc96ec3cd1c74a35; workflow 117af503ec606aeb862ceb89bf631717a05d2ece.
-
-Status: EXECUTION PENDING / NO MATHEMATICAL RESULT YET. The gate remains open. No full rank-4 scan is authorized until this structured audit is executed and critically reviewed.
-
-
-## 2026-09-19 — broader structured representative-family gate PASS
-
-CI run 35418319144, workflow rank4-d4-ia-structured-defect-composition, head commit dc28f6756c74ea57ae97735bcc96ec3cd1c74a35.
-
-The prepared 9-representative family was actually executed: all 81 ordered pairs were tested. Results: gauge rank 20, Q3 dimension 44, 9/9 GSp matrix checks, candidate-law failures modulo Q3 = 0, raw candidate-law failures = 0, reversed diagnostic failures modulo Q3 = 18 (raw 18), and 60 nonzero composed q-defect classes. Both multiplier-2 representatives were included and checked.
-
-Status: PASS / STRUCTURED CI VERIFIED for the frozen action/order convention. This clears the specific structured-family gate. It does not prove full GSp4 covariance or arbitrary-coordinate canonicality. Before any unrestricted scan, the script's lift construction and action/composition conventions must receive a critical implementation audit. No full scan has yet been executed.
-
-
-## Latest critical implementation/convention audit — PASS / CLOSED
-
-Final CI run 35418900971, head 0c4a3d7e454ad9d5b04df2e9b3650872b90d943b.
-
-Verified: 9/9 GSp checks; every matrix_to_lift reproduces its declared degree-1 matrix; all 81 ordered pairs satisfy the frozen free-word/matrix composition convention; gauge rank 20; Q3 dimension 44; frozen raw q-defect law has 0 raw and 0 Q3 failures; reversed diagnostic has 18 failures; 60 composed classes survive Q3.
-
-Temporary multiplier-factor and normalized-cocycle variants failed and were not promoted. The frozen raw law remains authoritative.
-
-Status: critical implementation/convention audit PASS / CLOSED. This clears the pre-scan implementation gate but does not establish full GSp4 covariance or canonicality. The next gate may consider a broader rank-4 representative scan only with explicit scope and PASS/FAIL consequence.
+This verifies the hand derivation against the script; it does not create a new invariant.
