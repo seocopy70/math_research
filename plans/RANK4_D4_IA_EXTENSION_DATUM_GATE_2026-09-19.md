@@ -335,3 +335,50 @@ First define the actual quotient-valued defect transformation law on the admissi
 and audit the cocycle/composition law (including the GSp multiplier convention). The target is a coordinate-independent quotient/torsor/extension formulation, not merely a list of representative successes.
 
 Only after that law is established may a broader representative scan be authorized.
+
+## 16. Quotient-valued q-defect composition law — PASS / LOCAL
+
+The transformation/composition audit was executed in CI.
+
+### 16.1 Negative diagnostic: absolute normalized relator defect
+
+The initially proposed absolute defect [F_g(R3) - mu(g) R3]_deg3 fails the tested composition law on all 16 ordered pairs, both raw and modulo Q3. This object is not promoted to the quotient cocycle.
+
+### 16.2 Correct q-sensitive object
+
+The q-sensitive difference is Delta_q(g) = [delta_3(g) - delta_infinity(g)] = [F_g(X1^3) - X1^3]_deg3.
+
+For admissible g, g e1 = mu(g)e1, so the source X1^3 transforms by the multiplier mu(g) in the frozen degree-3 tensor convention.
+
+For F_(gh) = F_g o F_h, the candidate law is
+Delta_q(gh) = Delta_q(g) + g . Delta_q(h)
+in Q3 = A3/(C3 + Delta_IA).
+
+### 16.3 CI result
+
+Run 35417325110, commit 1ee1680f071c77ee3b6042eb1436dfd9f3406.
+
+For identity, -I, the standard transvection, and the multiplier-2 diagonal, all 16 ordered pairs were checked.
+
+Exact results:
+- gauge rank = 20;
+- dim Q3 = 44;
+- candidate-law failures modulo Q3 = 0;
+- raw candidate-law failures = 16;
+- all 16 composed q-defect classes were nonzero.
+
+The reversed diagnostic formula also has zero failures modulo Q3 on this small set. Hence the candidate law is a local PASS, but this control does not uniquely determine the action/order convention.
+
+Result: research/RANK4_D4_IA_QUOTIENT_DEFECT_COMPOSITION_RESULT_2026-09-19.md
+
+### 16.4 Consequence
+
+The transformation/composition-law gate is now partially closed locally: a concrete q-sensitive quotient-valued cocycle law exists on the tested controls.
+
+The remaining gate is:
+1. fix the precise action/order convention independently of the small finite coincidence;
+2. verify the law on a broader but still structured representative family;
+3. verify compatibility with the multiplier-2 GSp convention;
+4. only then consider a broad rank-4 scan.
+
+No full rank-4 scan is authorized yet.
