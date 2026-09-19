@@ -280,7 +280,8 @@ for a in names:
 # difference [F_g(X1^3)-X1^3]_deg3, not merely a difference of helpers.
 X1cube = [(0, 1)] * 3
 for name, (g, m) in CASES.items():
-    direct = vec(add(ev(X1cube, g), sc({X1cube: 1}, -1)), 3)
+    Gg = [ev(w, GEN) for w in g]
+    direct = vec(add(ev(X1cube, Gg), sc({X1cube: 1}, -1)), 3)
     assert delta_q(g) == direct, name
 
 results = []
