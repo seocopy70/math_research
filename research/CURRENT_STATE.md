@@ -486,3 +486,19 @@ These results close the **first-layer basepoint/change-law sub-questions locally
 Accordingly the main gate remains **OPEN**, and no full rank-4 representative scan is authorized yet.
 
 Next authorized task: formulate and test the **graded-to-fibre extension step**: identify the exact quotient/torsor datum represented by the 44-dimensional candidate and prove that the first-layer construction is intrinsic under the frozen coordinate/action conventions, including the effect of the linear action on IA parameters.
+
+## 19. Graded-to-fibre extension step — PASS / LOCAL
+
+A new exact audit was added: research/rank4_D4_ia_graded_to_fibre_extension_audit_2026-09-19.py.
+
+The audit exhausts the first possible higher-IA contribution at degree 3: for each of the 4 generators and all 64 homogeneous degree-3 associative monomials, both q=3 and q=infinity relator defects were checked. All 512 checks show zero degree-3 defect change. Thus, under the frozen Magnus truncation, IA corrections beginning in degree >=3 cannot affect the degree-3 object; degree-3 lift dependence is exhausted by the first IA layer.
+
+For identity, -I, and the standard transvection, the independently recomputed first-layer gauge has rank 20, C3+Delta_IA has rank 20, and the quotient Q3=A3/(C3+Delta_IA) has dimension 44. All 24 first-layer base lifts give the same defect class in Q3. The q=3 versus q=infinity class remains nonzero for -I and the transvection.
+
+The result is PASS / LOCAL, not yet a full main-gate PASS: the audit settles the higher-IA-at-degree-3 loophole and gives a concrete quotient datum, but it does not by itself establish all-GSp representative covariance of the defect class.
+
+CI workflow: .github/workflows/rank4-d4-ia-graded-to-fibre-extension.yml.
+
+### Current interpretation
+
+The surviving candidate is no longer an arbitrary preferred lift. It is the degree-3 defect class in the 44-dimensional quotient Q3, relative to the frozen relator/action convention. The next decision point is whether the remaining covariance requirement can be closed without introducing a new arbitrary choice. No full rank-4 q-comparison is authorized yet.
