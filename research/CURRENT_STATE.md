@@ -308,7 +308,20 @@ injective on this p-layer.
 This is a target-side H-module only. It is not the q=9 relation space and
 does not repair the q=9 H-stability FAIL.
 
-## 13. CURRENT LIVE GATE — Rank-2 lifting control follow-up
+## 13. Rank-4 D4 lifting definition gate — FAIL / CLOSED
+
+The rank-2 D4 control passed, but the proposed rank-4 observable failed the required lift-independence audit before any rank-4 q-comparison.
+
+Two free-group lifts of the same identity linear action on V were tested: the identity lift and the IA-modified lift x1 -> x1[x1,x2]. The first is admissible; the second is not. Its degree-3 difference lies outside the ordinary conjugation correction span.
+
+Therefore the candidate A_4^rel(q) is not intrinsic to g in GSp_4(F3) under the current allowed-lift definition.
+
+Result: research/RANK4_D4_LIFT_INDEPENDENCE_AUDIT_RESULT_2026-09-19.md
+CI: run 35415237341 / job 105822474022 = SUCCESS.
+
+Consequence: no rank-4 q-comparison is authorized from this candidate. The failure shows that IA/lift data is active at degree 3 and cannot be discarded if the object is to be intrinsic to the linear map.
+
+## 13A. CURRENT LIVE GATE — post-lifting failure direction
 
 The Q3/Q9 S9 target-orbit route is **CLOSED at definition level** after D9-OBS natural p-layer shadow failure and the post-D9 structure census.
 
@@ -338,15 +351,7 @@ This validates only the **rank-2 n=4 control pipeline**. It does not establish t
 
 ### Next authorized step
 
-The rank-4 lifting definition gate is now drafted in `plans/RANK4_D4_LIFTING_DEFINITION_GATE_2026-09-19.md`. Before computation, audit and freeze:
-
-1. the exact filtration level;
-2. the allowed free pro-3 lift class;
-3. the relator-normal-closure / relator-unit criterion;
-4. the allowed weak-data input;
-5. the ambient group convention (GSp versus Sp).
-
-Only after that definition/legitimacy gate passes should a small rank-4 lifting experiment be executed.
+The rank-4 D4 lifting candidate is closed as FAIL. The next continuation must explicitly retain or canonically quotient the IA/lift data; do not select a hand-picked lift convention and call it intrinsic.
 
 ## 14. Frozen downstream boundaries
 
