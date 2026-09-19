@@ -879,3 +879,18 @@ The exact coefficient condition is nonlinear in the orientation values, so the s
 
 Record: research/ORIENTATION_EXACT_Z3_COMPRESSED_CARRIER_AUDIT_2026-09-19.md
 Decision: exact full-chi recovery PASS/CLOSED; naive Z_3 restricted-Lie compression FAIL/CLOSED; exact concrete compression OPEN.
+
+
+## 2026-09-19 — Methodology sufficiency gate
+
+A dedicated methodology audit was completed after comparison with the process used in Pál–Quick and Blumer–Quadrelli. The relation-jet branch has enough machinery for a bounded theorem program, but the intrinsic-minimality objective still requires three structural bridges:
+
+1. **M1 — intrinsic carrier functor:** define the degree-(2,3) carrier directly from filtered/augmentation-relation data, independent of chosen lifts and without inserting q.
+2. **M2 — orientation factorization:** prove a natural, non-tautological map from the carrier to the finite-level crossed-derivation coefficient data whose unique solution is the canonical orientation.
+3. **M3 — independent comparison:** obtain a natural map/factorization, or a rigorous obstruction to one, between the carrier and Pál–Quick's A3/Hochschild canonical class.
+
+Methodological warning: Pál–Quick's process is canonical object -> obstruction -> explicit computation; our failed/risky branches can invert this into computed object -> hoped-for interpretation. New computation must therefore pass object/input/functoriality/gauge/orientation/q-blindness/separation/novelty tests first.
+
+The IA/filtered-extension and W/U/O branches are subordinate to this gate. Local computational PASS results do not authorize expansion unless they produce a bridge to M1, M2, or M3. No broad scan is authorized merely because higher-order structure exists.
+
+Record: research/METHODOLOGY_SUFFICIENCY_AND_MISSING_TOOLS_AUDIT_2026-09-19.md
