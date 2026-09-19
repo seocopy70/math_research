@@ -1144,3 +1144,53 @@ reuse the degree-3 N/J construction by analogy.
   presentation, or noncanonical identification.
 
 No D9 or orientation conclusion is authorized at this stage.
+
+
+## 6R. Q3/Q9 S9 — D9-OBS natural p-layer candidate: FAIL / CLOSED
+
+Record:
+research/Q3_Q9_S9_D9_OBS_DEFINITION_RESULT_2026-09-19.md
+
+The natural candidate was to compare the degree-9 target-side p-layer shadow
+of the already verified q=3 source with the q=9 source.
+
+The frozen q=3 source is
+\\[
+\\Delta_3(3)=X_1^{[3]}.
+\\]
+Applying the natural restricted p-map gives
+\\[
+(\\Delta_3(3))^{[3]}=X_1^{[9]}.
+\\]
+Gate C gives
+\\[
+\\Delta_9(9)=S_9=X_1^{[9]}.
+\\]
+Therefore in the common baseline target,
+\\[
+\\boxed{
+[(\\Delta_3(3))^{[3]}]=[S_9]
+}
+\\]
+and hence their H-orbit spans are identical:
+\\[
+\\boxed{
+\\langle H\\cdot[(\\Delta_3(3))^{[3]}]\\rangle
+=
+\\langle H\\cdot[S_9]\\rangle
+=
+\\mathcal O_9.
+}
+\\]
+
+Thus the 4-dimensional orbit is a universal p-layer shadow, not a q=3/q=9
+observable. The candidate is closed as **FAIL / CLOSED**.
+
+### Next authorized question
+
+Do not invent another statistic from the same 4D module.
+
+The next search must identify a presentation-derived structure that retains
+information lost by the universal p-layer map, while respecting the frozen
+boundary that the naive q=9 relation space is not H-stable and its artificial
+H-closure is not a valid presentation object.
