@@ -2180,3 +2180,22 @@ Decision:
 - higher 3-adic digits remain open.
 
 Detailed record: research/ORIENTATION_MOD9_TWISTED_RECOVERY_CARRIER_FACTORIZATION_AUDIT_2026-09-19.md.
+
+
+## 2026-09-19 — Twisted degree-(2,3) lifting-obstruction theorem closed
+
+The authorized proof continuation was completed. The exact crossed-word formula modulo 9 shows that the first-order twisted coefficient deformation is controlled by the degree-2 Magnus component (R). The Zassenhaus product formula for (D_4) shows that a (D_4)-error contributes exponent sums divisible by 9, hence vanishes after division by 3 modulo 3. The degree-3 restricted component contributes only through its power projection (p(P)), because the bracket component has zero abelian exponent sum.
+
+Thus, with (r=(R,P)+O(D_4)),
+[
+delta_ho(f)=igl[f(p(P))+(lambdawedge f)(R)igr]omega.
+]
+The coefficient exact sequence makes (delta_ho) the complete obstruction to lifting (H^1(G,F_3)) to twisted (H^1(G,Z/9(ho))).
+
+The remaining naturality issue is also closed at mod-9 level: the connecting maps are intrinsic, and the family ((lambda,f)mapsto f(p)+(lambdawedge f)(R)) determines (p) and (R) injectively, so presentation/gauge changes cannot alter the projective carrier except for the common (H^2)-generator scalar. No preferred IA lift is used.
+
+For the frozen relation, the unique first digit is (chimod9=(1,4,1,1)). External literature now checked: Quadrelli's 2024 paper defines the Kummerian/1-cyclotomic lifting condition and states that every infinite Demushkin group has a unique canonical orientation satisfying it; Example 2.6 gives (chi(x_2)=(1-p^f)^{-1}), matching (-1/2) for (p=3,f=1). citeturn1search0
+
+Decision: twisted obstruction, degree-(2,3) truncation, (Pmapsto p(P)), and projective mod-9 naturality are **PASS / CLOSED**. Bare graded recovery and higher 3-adic digits remain **OPEN**.
+
+Proof record: research/TWISTED_DEGREE3_LIFTING_OBSTRUCTION_THEOREM_2026-09-19.md.
