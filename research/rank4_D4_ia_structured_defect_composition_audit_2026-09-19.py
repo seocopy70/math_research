@@ -286,6 +286,7 @@ for a in names:
 
 assert law_fail == 0
 
+
 print({
     "status": "PASS_STRUCTURED_QUOTIENT_DEFECT_COMPOSITION_LOCAL",
     "family_size": len(names),
