@@ -2,7 +2,7 @@
 
 ## Status
 
-**PLANNED / NOT YET EXECUTED**
+**PASS / CONTROL CLOSED**
 
 This is a low-cost control track added after the O2 transport-canonicality route failed to produce a transport-free 20-dimensional object.
 
@@ -168,3 +168,23 @@ The first run should therefore test representative elements in the line stabiliz
 ### Literature boundary
 
 Recent work of Pál–Quick independently establishes that, for odd-prime Demuškin groups, q=3 is distinguished from q\ne3 by \(A_3\)-formality of the continuous-cochain DGA. This confirms that q=3 can survive in higher structure, but it does not validate the present lifting observable or make the present filtered/graded route redundant. The current project therefore continues to target the weaker-data question. See arXiv:2601.07551. 
+
+
+## 11. First execution result — 2026-09-19
+
+The n=4 rank-2 control was executed with exact F3 Magnus arithmetic and selected representative lifts.
+
+Result: **PASS / CONTROL CLOSED**.
+
+- q=3: identity and the selected vector-fixing unipotent are admissible; -I and a line-moving transvection are not.
+- q=infinity: all four tested representatives are admissible.
+- The tested q=3 behavior is finer than mere line stabilization: -I preserves the line but fails because it reverses the degree-3 restricted-power contribution.
+- This is a selected-representative control only; it does not define the full A_4(q) and does not constitute a rank-4 theorem.
+
+Detailed result: research/RANK2_D4_LIFTING_CONTROL_RESULT_2026-09-19.md
+Script: research/rank2_lifting_D4_control_2026-09-19.py
+CI: run 35415080640 / job 105822020636 = SUCCESS.
+
+### Consequence
+
+The lifting/relator-preservation pipeline is sufficiently validated to consider a small rank-4 lifting experiment, but the rank-4 observable A_n^rel remains provisional. Before any rank-4 execution, its input data, allowed lift class, relator-unit convention, and ambient GSp/Sp convention must be frozen explicitly for the chosen filtration level.
