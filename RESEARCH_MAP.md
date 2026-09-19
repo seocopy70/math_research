@@ -1474,3 +1474,9 @@ Manual proof completed.
 - **OPEN:** existence of a deeper dualizing-module construction relating \(\chi\) plus additional canonical data to \(\mu_{\mathrm{int}}\).
 
 No finite scan is authorized at this stage. Next hand task: inspect the dualizing module for a canonical finite quotient carrying \(\mu_{\mathrm{int}}\), or prove that no such canonical quotient arises from \(\chi\) alone.
+
+
+## 2026-09-19 — Dualizing top-line convention audit
+
+Frozen (g) is on the generator/(H_1) side. Hence the induced (H^1) action is (g^{-T}), and the induced (H^2) scalar is (
+u(g)^{-1}). For (p=3), (mathbf F_3^	imes={pm1}), so inversion is identical: (mu_{H^2}=mu_{m int}) as (mathbf F_3^	imes)-valued characters, although conceptually the cohomological action is inverse. This does **not** identify (mu) with the full orientation (chi:G	omathbf Z_3^	imes); (chimod3) is trivial. The MU-CHI bridge is therefore conceptually resolved: (mu) is a canonical automorphism-of-duality-line shadow, not the orientation character. No finite scan is authorized. Next work should target filtered/graded data retaining the (1+3mathbf Z_3) orientation layer.
