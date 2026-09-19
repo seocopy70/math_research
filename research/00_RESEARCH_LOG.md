@@ -1846,3 +1846,38 @@ A necessary distinction is now frozen. If exact (mathbf Z_3)-coefficients are al
 
 Detailed record:
 `research/ORIENTATION_BOUNDED_DEGREE_FINITE_INFORMATION_OBSTRUCTION_2026-09-19.md`
+
+## 2026-09-19 — Fixed-q=3 exact bounded-degree full-orientation closure
+
+The stronger B branch reached its fixed-group endpoint.
+
+For the standard q=3 Demuškin presentation, retain the projective degree-(2,3) relation jet with exact Z_3-coefficients rather than reducing the degree-3 layer to F_3:
+[
+mathbb J^{ex}_3=langle(R_2,P_3)angle^{proj}_{mathbf Z_3},
+qquad
+R_2=[X_1,X_2]+[X_3,X_4],quad P_3=X_1^{[3]}.
+]
+The exact crossed-derivation equations give
+[
+ho(x_1)=ho(x_3)=ho(x_4)=1,qquad1+2ho(x_2)=0,
+]
+hence
+[
+chi(x_2)=-1/2=(1-3)^{-1}.
+]
+Thus the single bounded-degree exact filtered carrier determines every 3-adic digit.
+
+The degree-<=3 gauge transformation is
+[
+(R,P)mapsto(uR,uP+[v,R]),
+]
+and degree-one functionals annihilate [v,R], so the recovery zero set is invariant under the same presentation/lift gauge used in the mod-9 closure.
+
+Decision: PASS / CLOSED for fixed q=3 exact projective bounded-degree recovery, at the stated standard minimal one-relator pro-3 assumptions.
+
+Boundary:
+- universal fixed-degree recovery across q=3^s remains FAIL / CLOSED;
+- bare F_3 associated graded remains FAIL / CLOSED for full chi;
+- full filtered tower remains a separate sufficient mechanism.
+
+Detailed record: research/ORIENTATION_EXACT_PROJECTIVE_DEGREE3_FULL_CHI_CLOSURE_2026-09-19.md
