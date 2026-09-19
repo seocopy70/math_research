@@ -1,0 +1,19 @@
+name: rank4-d4-ia-structured-defect-composition
+
+on:
+  push:
+    paths:
+      - "research/rank4_D4_ia_structured_defect_composition_audit_2026-09-19.py"
+      - ".github/workflows/rank4-d4-ia-structured-defect-composition.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run structured quotient-valued defect composition audit
+        run: python research/rank4_D4_ia_structured_defect_composition_audit_2026-09-19.py
