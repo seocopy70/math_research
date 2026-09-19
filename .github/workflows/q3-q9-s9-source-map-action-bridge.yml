@@ -16,5 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install authoritative audit dependency
+        run: python -m pip install numpy
       - name: Run explicit R2 action bridge audit
         run: python research/Q3_Q9_S9_SOURCE_MAP_H_STABILITY_ACTION_BRIDGE_AUDIT_2026-09-19.py
