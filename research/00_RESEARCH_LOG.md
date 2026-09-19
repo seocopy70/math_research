@@ -1897,3 +1897,15 @@ Critical consequence: the raw projective jet J_3 is not minimal in this natural 
 
 Record: research/ORIENTATION_MOD9_CARRIER_CATEGORY_COARSEST_QUOTIENT_2026-09-19.md
 Decision: PASS / CLOSED for the natural quotient-category endpoint; J_3 minimality FAIL/CLOSED within that category; unrestricted absolute minimality OPEN/ill-posed.
+
+
+## 2026-09-19 — Exact Z_3 compressed-carrier audit
+
+We pushed the exact analogue of the mod-3 coarsest carrier. The first issue is structural: restricted Lie algebras are characteristic-p objects, so the mod-3 restricted quotient cannot simply be promoted to an exact Z_3 module. Therefore the exact carrier must live in the filtered relation module / augmentation framework.
+
+The fixed q=3 crossed-derivation calculation remains exact and gives chi(x_2)=-1/2. Projective/gauge invariance remains the same mechanism. But the exact coefficient-level functional is nonlinear in the orientation, so the mod-3 linear Theta is not an exact Z_3 formula.
+
+A canonical exact evaluation quotient can be defined using the common kernel of the natural coefficient evaluations C_n, but that definition risks tautology unless the evaluation family is fixed independently. The only genuine OPEN point left in this branch is whether that exact quotient admits a concrete non-tautological finite description analogous to the mod-3 pair ([R],p(P)).
+
+Record: research/ORIENTATION_EXACT_Z3_COMPRESSED_CARRIER_AUDIT_2026-09-19.md
+Decision: PASS/CLOSED for exact full-chi recovery; FAIL/CLOSED for naive Z_3 restricted-Lie compression; OPEN for concrete exact compression.
