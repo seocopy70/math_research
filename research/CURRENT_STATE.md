@@ -425,3 +425,17 @@ Script: research/rank4_D4_ia_extension_audit_2026-09-19.py
 ### Next authorized step
 
 Perform quotient-legitimacy / equivariance audit: prove that the IA variation subspace is canonically defined, determine its transformation law under change of linear representative, and test whether the 44-dimensional quotient can carry the required compatible filtered/extension structure. No full rank-4 representative scan is authorized yet.
+
+
+## 18. IA quotient equivariance sub-gate — PASS locally, main gate OPEN
+
+The candidate gauge space G_3 = C_3 + Delta_IA was tested under the frozen degree-3 tensor action. All 80 nonzero-vector Sp_4(F_3) transvections preserve C_3, Delta_IA, and G_3. A multiplier-2 GSp_4(F_3) representative diag(1,2,1,2) also preserves the corresponding ranks 4, 20, and 20.
+
+Thus the 44-dimensional candidate quotient A_3/G_3 is equivariant for the tested complete transvection family and tested GSp multiplier direction. This is a local structural PASS, not a proof of coordinate-free canonicity.
+
+Result: research/RANK4_D4_IA_EQUIVARIANCE_AUDIT_RESULT_2026-09-19.md
+Script: research/rank4_D4_ia_equivariance_audit_2026-09-19.py
+
+### Next authorized step
+
+Verify the graded lift-fibre composition/change law and determine whether the q-sensitive defect descends independently of a chosen base lift to an intrinsic orbit/torsor/extension class. No full rank-4 scan is authorized yet.
