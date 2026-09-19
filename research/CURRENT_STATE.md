@@ -708,3 +708,25 @@ Correct boundary:
 Detailed attack: research/ORIENTATION_EXACT_Z3_CARRIER_HARD_AUDIT_2026-09-19.md.
 
 No claim that the recovered value -1/2 is wrong; the weakness is solely the identification of an intrinsic finite-degree exact carrier with the exact evaluation mechanism.
+
+
+## 2026-09-19 — HARD ATTACK 3: universal exact Fox obstruction carrier
+
+A genuinely different characteristic-zero carrier has been constructed for the fixed finite one-relator presentation:
+mathfrak F_r=(Z_3[T_1^{±1},...,T_d^{±1}],J_r), where J_r is the universal twisted Fox-Jacobian row obtained from the ordinary Fox derivatives of the relator before any orientation is chosen.
+
+For r=x_1^3[x_1,x_2][x_3,x_4], with A=T_1,B=T_2,C=T_3,D=T_4, the exact coefficient row is J_1=1+A+A^2B^{-1}, J_2=A^2(A-1)B^{-1}, J_3=A^3C^{-1}(D^{-1}-1), J_4=A^3D^{-1}(1-C^{-1}). Hence on 1+3Z_3, J_r=0 forces A=C=D=1 and B=-1/2=(1-3)^(-1).
+
+This is not the previous tautological tower: the carrier is defined first by universal Fox calculus with formal coefficient variables, and only then evaluated at candidate characters. It is also not a nonexistent Z_3-restricted-Lie scalar extension.
+
+Status:
+- fixed-presentation universal Fox carrier: PASS / CLOSED;
+- input-definition non-circularity: PASS / CLOSED;
+- fixed q=3 exact orientation recovery: PASS / CLOSED;
+- finitely generated exact characteristic-zero algebraic data: PASS / CLOSED (not finite information);
+- arbitrary minimal-presentation intrinsicity: OPEN;
+- reduction to a two-component degree-(2,3) carrier: OPEN / NOT SHOWN.
+
+Detailed audit: research/ORIENTATION_EXACT_UNIVERSAL_FOX_CARRIER_AUDIT_2026-09-19.md.
+
+Immediate next gate: prove covariance of the universal Fox obstruction ideal under relator conjugation, relation-generator units, and minimal free-basis/Nielsen changes via the Fox chain rule. No representation scan is authorized.
