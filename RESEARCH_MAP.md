@@ -1,3 +1,27 @@
+## AUTHORITATIVE UPDATE — 2026-09-20 — DEGREE-3 FOX TRUNCATION FAILS UNDER NIELSEN CHANGE
+
+A concrete Nielsen-equivalent presentation
+\[
+x_1=y_1y_2,\quad x_2=y_2,\quad x_3=y_3,\quad x_4=y_4
+\]
+was used to test whether the fixed-normal-form degree-3 Fox compression is intrinsic.
+
+The transformed exact Fox row contains higher local degrees. After truncation to degree \(\le3\) around \(Y_i=1\), the second row evaluates at the transported canonical point \((-2,-1/2,1,1)\) to
+\[
+-243/2\neq0,
+\]
+while the full row vanishes exactly.
+
+Decision:
+\[
+\boxed{\text{presentation-independent degree-3 Fox truncation = FAIL / CLOSED}.}
+\]
+
+This does not rule out a different intrinsic exact filtered carrier; it rules out the naive identification of that carrier with the degree-3 truncation of the universal Fox row.
+
+Record:
+research/ORIENTATION_FOX_DEGREE3_NIELSEN_HARD_ATTACK_2026-09-20.md
+
 ## AUTHORITATIVE UPDATE — 2026-09-20 — INTEGRAL AUGMENTATION JET DEFINITION GATE CLOSED
 
 The proposed next branch \(\langle r-1\rangle\subset I^2/I^4\) over ordinary \(\mathbf Z_3[[F]]\) has been falsified at the definition level:
