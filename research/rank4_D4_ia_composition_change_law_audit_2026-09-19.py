@@ -181,3 +181,5 @@ print(json.dumps({
  "interpretation":"The first-layer IA fibre is an associated-graded torsor: actual IA composition agrees with addition of Hom(V,L2) parameters through degree 2, and its degree-3 discrepancy is absorbed by the ordinary C3 correction. The induced defect-change law is q-independent in the tested representatives, while the q=3 restricted-power signal survives the candidate quotient.",
  "cases":results
 },indent=2))
+
+# trigger audit after workflow registration
