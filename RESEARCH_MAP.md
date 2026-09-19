@@ -1,3 +1,32 @@
+## AUTHORITATIVE UPDATE — 2026-09-20 — INTEGRAL AUGMENTATION JET DEFINITION GATE CLOSED
+
+The proposed next branch \(\langle r-1\rangle\subset I^2/I^4\) over ordinary \(\mathbf Z_3[[F]]\) has been falsified at the definition level:
+\[
+x_1^3-1=3X_1+3X_1^2+X_1^3
+\]
+implies
+\[
+r-1=3X_1+R+O(I^3),
+\qquad
+R=[X_1,X_2]+[X_3,X_4],
+\]
+so \(r-1\notin I^2\).
+
+Decision: **FAIL / CLOSED** for the plain integral augmentation carrier.
+
+This sharpens the exact-carrier boundary: the mod-3 Zassenhaus jet is genuinely characteristic-3, while exact \(\mathbf Z_3\)-coefficient recovery lives naturally in the Fox/crossed-derivation side or requires a new mixed filtered construction. A mixed p-adic/Zassenhaus weighted filtration is the only remaining nearby filtered direction, but its finite graded pieces do not automatically contain the full 3-adic digits.
+
+Next authorized structural target:
+\[
+\text{intrinsic filtered tower}
+\to
+\text{exact Fox orientation locus},
+\]
+with the source of the infinitely many 3-adic digits explicitly identified.
+
+Record:
+research/ORIENTATION_INTEGRAL_AUGMENTATION_JET_HARD_ATTACK_2026-09-20.md
+
 ## AUTHORITATIVE UPDATE — 2026-09-19 — TWISTED DEGREE-(2,3) LIFTING-OBSTRUCTION THEOREM CLOSED
 
 The previously open twisted degree-(2,3) structural bridge is now closed at the first mod-9 level.
