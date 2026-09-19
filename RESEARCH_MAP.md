@@ -1340,3 +1340,15 @@ The earlier run 35417325110 is INVALIDATED because its defect helper had the ref
 Corrected run 35418122079, commit bb39ed1a7191aeae0da07813e40abe47695d292a: candidate Delta_q(gh)=Delta_q(g)+g·Delta_q(h) passes for all 16 ordered pairs of the four controlled representatives in Q3. Gauge rank 20, Q3 dimension 44, candidate failures modulo Q3 0, raw failures 0. The reversed diagnostic has 2 failures modulo Q3, so the action/order convention is distinguished on this control set. 11 composed q-defect classes survive Q3.
 
 Current gate: broader structured representative-family audit of the fixed convention and multiplier behavior. No unrestricted full rank-4 scan yet.
+
+
+## 18. Broader structured quotient-defect audit — PREPARED / EXECUTION PENDING
+
+Following the corrected local PASS, a broader but still structured representative family was defined before any unrestricted scan. The family has 9 representatives: identity, -I, two powers of the first hyperbolic-pair shear, two powers of the second hyperbolic-pair shear, a symplectic pair-swap, and two multiplier-2 diagonal GSp representatives. Each matrix is independently checked against g^T J g = mu(g), and the free lift is checked against the intended degree-1 matrix.
+
+The planned audit covers all 81 ordered pairs for the corrected law Delta_q(gh)=Delta_q(g)+g·Delta_q(h) in Q3, plus the reversed convention as a diagnostic.
+
+Script: research/rank4_D4_ia_structured_defect_composition_audit_2026-09-19.py
+Workflow: .github/workflows/rank4-d4-ia-structured-defect-composition.yml
+
+Status: PREPARED / EXECUTION PENDING. This is not a PASS and does not authorize a full scan yet.
