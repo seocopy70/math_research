@@ -122,19 +122,22 @@ The gate is **OPEN / DEFINITION ONLY**. No computation is authorized yet. The ne
 
 ## Rank-2 unit-digit hand derivation checkpoint — 2026-09-19
 
-A definition-only hand derivation was completed and recorded in research/RANK2_UNIT_DIGIT_HAND_DERIVATION_2026-09-19.md (commit 7b4c603b0d50b17d567fa7f0f738d545646a3169).
+A critical review of the earlier hand derivation found that lift-independence of the relator scalar was asserted too strongly. The prior statement is withdrawn.
 
-Established:
-- with the fixed generator convention on R/[R,F], the relator scalar u(phi) is well-defined for actual automorphisms and is multiplicative;
-- for q=infinity, the natural integral presentation gives u=det(A);
-- for q=3, the canonical orientation constraint gives chi(x1)=1, chi(x2)=(-2)^(-1), and forces the abelianized action of an actual automorphism to have the form [[a,b],[0,1]], with mod-3 determinant 1, hence mod-3 image of the form [[1,b],[0,1]].
+Corrected status:
+- (R/[R,F]) and the scalar action for a **chosen stabilizing free lift** remain the object under study, subject to the relation-module normalization.
+- Multiplicativity is valid at the lift level, but does not yet descend to \\(\\operatorname{Aut}(G_q)\\) until lift-independence is proved.
+- q=infinity: the determinant calculation remains a control derivation, not a closure of D1.
+- q=3: the orientation/abelianization constraint remains auxiliary support only; it does not determine (u\\bmod9).
+- The previously suggested formal IA substitution (x_1\\mapsto x_1[x_1,x_2]) is **not** admissible as a free lift witness until its status as a free-group automorphism is proved.
 
-Not established:
-- u(phi) mod 9 for q=3;
-- whether u varies inside K_3;
-- filtration observability of the mod-9 digit;
-- identification of u with the canonical orientation.
+The key missing lemma is now explicit: determine the action on (R/[R,F]) of
+\\[
+\\ker(\\operatorname{Stab}(R)\\to\\operatorname{Aut}(G_q)).
+\\]
+If this kernel acts trivially, D1 can be closed; if not, the lift-independent (u(\\phi)) definition fails and the gate must be redesigned.
 
-Therefore the Rank-2 unit-digit gate remains OPEN / INCONCLUSIVE / HAND-DERIVATION CONTINUING. No finite scan is authorized.
+Therefore the Rank-2 unit-digit gate remains **OPEN / INCONCLUSIVE / HAND-DERIVATION CONTINUING**. No finite scan is authorized.
 
-Next exact task: compute the relation-module scalar for a generic first IA automorphism directly modulo [R,F], at the lowest filtration level capable of detecting a possible 1+3c (mod 9) change. If all first-IA generators give u=1 mod 9, the D8 lift-dependent route fails at this level; otherwise a small exact computation may be authorized.
+Next exact task: analyze the stabilizer-to-(\\operatorname{Aut}(G_q)) kernel before any (K_3) scan or mod-9 computation.
+
