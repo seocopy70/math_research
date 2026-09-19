@@ -90,9 +90,22 @@ graded closure에서 degree n piece는 bracket closure와 p-map closure를 모�
 - q=9가 특정 invariant로 검출된다고 예상 결과를 넣지 않음.
 - orientation recovery/canonicity를 주장하지 않음.
 
-## 5. 다음 실제 작업
+## 5. C-2c-2 closure-interface preflight — PASS
 
-**다음 한 단계:** exact F3 restricted-closure audit를 구현하기 전에, 위 definition draft의 closure recursion이 repo의 기존 ordinary relation recursion과 정확히 접합되는지 검증한다.
+2026-09-19 exact F3 audit에서 definition draft의 restricted closure recursion이 기존 ordinary relation recursion과 정확히 접합됨을 확인했다.
+
+- dim L1..L6 = 4, 6, 20, 60, 204, 670.
+- dim L3^res = 24, dim L6^res = 676.
+- dim I2 = 1, I3 = 4, I4 = 15, I5 = 60.
+- degree 3–5에서 restricted closure와 locked ordinary relation layer가 동일 span.
+- degree 6 ordinary bracket closure rank = 230.
+- degree 6 restricted bracket closure rank = 230.
+- rank(I2^[3]) = 1, combined rank = 231: 첫 genuinely new p-closure가 degree 6에서 발생.
+- [Xi^[3],R2] = ad(Xi)^3(R2) 확인.
+
+상세 정본: `research/Q3_Q9_C2c2_closure_interface_audit_result_2026-09-19.md`
+
+**다음 한 단계:** 이제 exact F3 restricted-closure audit를 degree 9까지 확장한다.
 
 그 다음:
 1. lower-degree ordinary relation layers 재현;
