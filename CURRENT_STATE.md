@@ -1310,3 +1310,22 @@ Binding correction:
 This correction prevents a self-imposed overstrong Gate from turning failure of a chosen definition into a false mathematical no-go result.
 
 The mod-27 branch remains the next substantive target, but only after this formal gate is accepted.
+
+
+## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 18: MOD-27 BOCKSTEIN CARRIER SYMMETRY NO-GO
+
+The proposed coefficient-extension carrier was attacked at the level of its own automorphism group. In the frozen \(q=3\) case,
+\[
+S(a_1,a_2,a_3,a_4)=(a_1,4a_2,a_3,a_4)
+\]
+preserves reduction, the inclusion \(\iota\), cup product, and \(\beta_9\), while acting nontrivially on the missing \(\mathbf Z/9\)-lift of the mod-3 \(e_2\) direction. Therefore the declared carrier cannot canonically select
+\[
+\lambda_{27}=\frac13\log\chi\equiv e_2\pmod9.
+\]
+
+Decision:
+- **\(\mathcal B_{27}\) as a mod-27 orientation carrier: FAIL / CLOSED;**
+- coefficient-extension package as intrinsic q/valuation-layer detector: **PASS / LOCAL;**
+- a different mod-27 carrier with genuinely additional rigidifying structure: **OPEN.**
+
+This supersedes HARD ATTACK 17. No further numerical Bockstein-only scan is authorized.
