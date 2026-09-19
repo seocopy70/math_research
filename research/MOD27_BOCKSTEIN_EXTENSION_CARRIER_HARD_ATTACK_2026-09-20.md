@@ -213,3 +213,40 @@ No claim of full mod-27 reconstruction is made yet.
 ## Next authorized attack
 
 Prove or disprove the orientation bridge intrinsically, without choosing the standard presentation as part of the definition. The cleanest test is a natural algebraic statement expressing the mod-27 logarithmic orientation digit through the coefficient-extension/cup-pairing data above. If that theorem fails under a Nielsen/gauge transformation, close this candidate. If it survives, the result is the first serious intrinsic J_27 candidate.
+
+
+## HARD ATTACK 17 — IS THE “BRIDGE” JUST q-VALUATION REPACKAGED? — 2026-09-20
+
+The previous candidate must now be attacked at the non-tautology level. The coefficient-extension data \(\beta_1,\overline\beta_9\) separate the standard family precisely by the 3-adic valuation class of q:
+\[
+v_3(q)=1,\quad v_3(q)=2,\quad v_3(q)\ge3.
+\]
+But the proposed orientation values
+\[
+\frac13\log((1-q)^{-1})\equiv 1,3,0\pmod9
+\]
+are themselves a known function of this q-valuation class. Therefore the implication
+\[
+\mathcal B_{27}\Rightarrow \lambda_{27}
+\]
+can be obtained by the two-step route
+\[
+\mathcal B_{27}\Rightarrow v_3(q)\text{-class}\Rightarrow q\text{-class}\Rightarrow\chi\text{-class},
+\]
+using the known Demuškin orientation formula. That is exactly the kind of classification/repackaging route excluded by the tightened PRE-MOD27 gate.
+
+This does not show that \(\mathcal B_{27}\) is useless: it is a genuine intrinsic obstruction package and may be a natural detector of the first finite q-information layers. It does show that the currently proposed orientation bridge has not yet established a new obstruction-theoretic factorization. The direct standard-relator calculation cannot by itself distinguish a structural bridge from a disguised recovery of q followed by the known formula.
+
+### Stronger counter-test
+
+To certify non-tautology, one must produce a natural chain-level/coefficient-extension identity whose output is \(\frac13\log\chi\) without first identifying the q-class, or prove an independent universal property characterizing that logarithmic orientation functional. Merely observing the same three values on \(q=3,9,27\) is insufficient.
+
+An even sharper test is to enlarge the frozen family to all admissible Demuškin orientations/automorphisms while holding the abstract coefficient-extension carrier fixed up to its natural isomorphism class. If the carrier only records the valuation/classification datum and loses the actual character action, then it cannot supply a genuinely new orientation bridge.
+
+### Decision
+
+**MOD-27 BOCKSTEIN-EXTENSION CARRIER AS AN ORIENTATION CARRIER: CONDITIONAL / NOT YET ADMISSIBLE.**
+
+The coefficient-extension package itself remains **PASS / LOCAL as an intrinsic q-information detector**, but its proposed orientation bridge is downgraded from OPEN/STRONG CANDIDATE to **CONDITIONAL** because the current evidence is compatible with forbidden classification repackaging.
+
+The next authorized attack is therefore not another numerical q-scan. It is a factorization test: determine whether a presentation-free universal identity produces the logarithmic orientation digit directly from \(\mathcal B_{27}\), or whether every such map necessarily factors through the q/classification invariant. If only the latter is available, close this carrier as a new orientation carrier while retaining its detector result.
