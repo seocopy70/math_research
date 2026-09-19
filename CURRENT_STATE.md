@@ -96,3 +96,15 @@ T1 directly checks Delta_q(g)=g.[X1^3]-[X1^3] for all 9 structured representativ
 The historical H_adm=1296 enumeration is not reconstructed in this gate because no separately reusable authoritative implementation was found in the frozen structured script; no new enumeration is invented.
 
 No mathematical PASS/FAIL is recorded until CI execution is independently checked.
+
+
+## A-1 execution result — T1 PASS / T2 CONTROL INVALID / T3 PASS
+
+CI run 35420831517, diagnostic commit c1ac93d673af3aefb9d1c4e3df139e31f6ab56ec, job 105838085431: workflow SUCCESS.
+
+T1: zero failures on all 9 representatives for Delta_q(g)=g.[X1^3]-[X1^3].
+T3: zero direct vector failures on all 81 ordered pairs; observed and predicted nonzero class count both 60.
+
+T2 produced 0 failures for X1^3 and X2^3 but 5 failures for X1X2X1 and 5 for the arbitrary tensor. This is classified as a control-model/implementation failure, not a non-coboundary result: the frozen evaluator is a truncated free-group/group-algebra evaluator, not a direct homogeneous Magnus/Lie substitution evaluator. X1^3 is exceptional in characteristic 3 because (1+X1)^3=1+X1^3.
+
+Therefore A-1 is NOT yet closed as a three-test experiment. No broader scan is authorized. Next step is either a legitimate pure Magnus/Lie control definition or closure by the algebraic proof plus T1/T3, with the invalid T2 explicitly removed.
