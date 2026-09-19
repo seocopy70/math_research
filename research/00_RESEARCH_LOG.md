@@ -1132,3 +1132,14 @@ Exact output: gauge rank 20; Q3 dimension 44; candidate-law failures modulo Q3 =
 Decision: structured representative-family gate = PASS / CI VERIFIED for the frozen action/order convention. The multiplier-2 behavior is covered by the actual 81-pair run.
 
 Critical boundary: this remains a structured-family result. It does not establish full GSp4 covariance, arbitrary free-group coordinate naturality, or theorem-level canonicality. Before authorizing an unrestricted scan, the exact lift construction (matrix_to_lift) and its compatibility with the corrected local convention must be independently audited. No unrestricted full rank-4 scan is recorded as completed.
+
+
+## 2026-09-19 — critical implementation/convention audit — PASS / CLOSED
+
+Before authorizing an unrestricted rank-4 scan, the structured cocycle implementation was audited. Final CI run 35418900971, head 0c4a3d7e454ad9d5b04df2e9b3650872b90d943b.
+
+Verified: 9/9 GSp checks; every matrix_to_lift reproduces its declared degree-1 matrix; all 81 ordered pairs satisfy the frozen free-word/matrix composition convention; gauge rank 20; Q3 dimension 44; frozen raw Delta_q law has 0 raw and 0 Q3 failures; reversed diagnostic has 18 failures; 60 composed classes survive Q3.
+
+An explicit multiplier factor and a normalized-cocycle variant were tested and failed, so they were rejected. The frozen raw law remains authoritative because the multiplier contribution is already contained in the q-sensitive difference.
+
+Decision: PASS / CLOSED for the specific implementation/convention gate. This does not prove full GSp4 covariance or canonicality. A broader rank-4 scan is now the next authorized stage, subject to an explicit scope and PASS/FAIL consequence.
