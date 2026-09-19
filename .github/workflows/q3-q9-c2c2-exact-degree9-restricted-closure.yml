@@ -1,0 +1,21 @@
+name: Q3/Q9 C-2c-2 exact degree-9 restricted closure audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "research/Q3_Q9_C2c2_exact_degree9_restricted_closure_2026-09-19.py"
+      - ".github/workflows/q3-q9-c2c2-exact-degree9-restricted-closure.yml"
+
+jobs:
+  exact-degree9:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install sympy
+        run: python -m pip install sympy
+      - name: Run exact degree-9 certificate
+        run: python research/Q3_Q9_C2c2_exact_degree9_restricted_closure_2026-09-19.py
