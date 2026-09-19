@@ -1780,3 +1780,26 @@ this proves only
 It does not prove that the degree-(2,3) jet alone contains all higher digits, nor categorical minimality, nor any bounded-degree full-\(\chi\) theorem.
 
 The next authorized branch is therefore categorical minimality, followed by the finite bounded-degree question.
+
+
+## 2026-09-19 — Relative minimality lower bound CLOSED; absolute categorical minimality remains OPEN
+
+A no-scan audit pushed the minimality question to its current mathematical boundary:
+\`research/ORIENTATION_MOD9_RELATIVE_MINIMALITY_AUDIT_2026-09-19.md\`.
+
+For any admissible quotient/forgetful carrier of the degree-(2,3) relation jet through which mod-9 recovery factors, two jets with different \(\Theta\)-zero sets cannot be identified. Therefore the carrier must retain enough information to distinguish
+\[
+Z(\Theta_{J_3(3)})=\{e_2^*\}
+\quad\text{from}\quad
+Z(\Theta_{J_3(\infty)})=\{0\}.
+\]
+In particular, the bare graded/quadratic forgetful factor cannot recover \(\chi\bmod9\).
+
+Decision:
+- relative lower bound: **PASS / CLOSED**;
+- bare graded forgetful factor: **FAIL / CLOSED**;
+- absolute categorical minimality of \(J_3\): **OPEN**.
+
+Critical finding: “minimality” is not yet a well-posed absolute claim. A category of admissible relation carriers, morphisms, and quotient/factorization notions must be fixed before an initial/terminal/minimal theorem can be stated non-tautologically.
+
+Next authorized task: define the smallest defensible carrier category and test whether \(J_3\) has a genuine universal/minimal property. No finite scan.
