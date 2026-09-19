@@ -1,3 +1,24 @@
+## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 13: FULL ASSOCIATED-GRADED NO-GO / EXTENSION LOWER BOUND
+
+A literature-backed structural strengthening has been established. For infinite Demuškin pro-(3) groups of fixed rank, the full graded group algebra associated to the complete (3)-Zassenhaus filtration is the quadratic/PBW Demuškin graded algebra determined by the quadratic symplectic relation, independently of the Demuškin (q)-invariant. Hence the full mod-3 associated-graded object is (q)-blind, not merely every bounded graded window.
+
+Therefore, in the rank-four family (G_{3^s}) and (G_infty), the full mod-3 associated-graded object cannot recover (q), and hence cannot recover the canonical (mathbf Z_3^	imes)-valued orientation (chi), even though
+[
+chi_{3^s}(x_2)=(1-3^s)^{-1},qquad chi_infty(x_2)=1.
+]
+
+This yields a genuine lower bound: any successful carrier must contain information not present in the full mod-3 graded object. At mod 9 the projective degree-3 power component (P_3) coupled to (R_2) is a sufficient first extension datum.
+
+The lower bound is not an absolute category-independent minimality theorem. Also, the infinitely many higher (3)-adic digits need not correspond to infinitely many independent extension classes: for fixed (q=3), the exact relation (1+2B=0) compresses all digits into one exact characteristic-zero coefficient equation.
+
+Decision:
+- full mod-3 associated graded (Rightarrow q,chi): **FAIL / CLOSED**;
+- first non-graded extension datum for mod-9 recovery: **PASS / LOCAL**;
+- intrinsic exact intermediate compression below universal Fox: **OPEN**.
+
+Detailed audit:
+research/ORIENTATION_FULL_GRADED_NO_GO_MINIMAL_EXTENSION_2026-09-20.md
+
 ## AUTHORITATIVE UPDATE — 2026-09-20 — DEGREE-3 FOX TRUNCATION FAILS UNDER NIELSEN CHANGE
 
 A concrete Nielsen-equivalent presentation
