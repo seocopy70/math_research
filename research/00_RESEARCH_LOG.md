@@ -1576,3 +1576,25 @@ Correct status:
 - **F5-bare: OPEN.** The remaining substantive problem is whether the originally allowed bare filtered/graded datum canonically determines the distinguished relation jet J_3, or admits an equivalent unmarked reconstruction.
 
 No finite scan is authorized.
+
+## 2026-09-19 — F5-bare structural obstruction: FAIL / CLOSED
+
+The final structural audit of the twisted mod-9 branch is now recorded. No finite scan was used.
+
+For G_3=<x_1,x_2,x_3,x_4 | x_1^3[x_1,x_2][x_3,x_4]> and G_infinity=<x_1,x_2,x_3,x_4 | [x_1,x_2][x_3,x_4]>, the p=3 Zassenhaus initial form is the same quadratic relation R_2=[X_1,X_2]+[X_3,X_4], since the power term has degree 3 and the commutators degree 2. Standard Demushkin graded-presentation results identify the bare associated graded restricted Lie object from this initial form, so the two cases have the same bare graded object.
+
+Their canonical orientations nevertheless differ modulo 9:
+chi_3(x_2)=4, while chi_infinity(x_2)=1.
+Thus the bare associated graded restricted Lie object cannot determine chi mod 9.
+
+The q-sensitive class P_3=X_1^[3] remains present in the ambient degree-3 restricted layer, but the bare graded object does not canonically retain the coupling saying that this class is the degree-3 component of the same filtered relation whose quadratic component is R_2. That coupling is exactly what the marked jet J_3=< (R_2,P_3) > adds.
+
+Decision:
+- F1-F4: PASS at canonical finite-filtered-quotient level.
+- F5-A: PASS only as ambient q-sensitive carrier existence.
+- F5-marked: PASS.
+- F5-bare: FAIL / CLOSED.
+
+This is a structural information obstruction, not an implementation failure. Reopening would require a materially richer input datum than the bare associated graded restricted Lie object. No finite scan is authorized.
+
+Detailed audit: research/ORIENTATION_MOD9_FILTERED_FACTOR_F5_BARE_OBSTRUCTION_2026-09-19.md.
