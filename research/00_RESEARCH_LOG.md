@@ -718,3 +718,32 @@ Next authorized step: compute only
 \\mathcal O_9=\\langle H\\cdot[S_9]\\rangle\\subseteq Q_9^\\infty.
 \]
 No q=3/q=\\infty distinction, canonicality, or orientation conclusion is implied.
+
+
+## 2026-09-19 — S9 target-side orbit span PASS
+
+After the source-map target/action gate passed, the authorized orbit object was computed:
+\[
+\\mathcal O_9=\\langle H\\cdot[S_9]\\rangle\\subseteq Q_9^\\infty.
+\]
+
+S9-B gives
+\[
+(I_\\infty)_9\\cap L_1^{[9]}=0,
+\]
+so the quotient map is injective on \(L_1^{[9]}\). C3.1 gives
+\[
+\\langle H\\cdot S_9\\rangle=L_1^{[9]},
+\qquad \\dim L_1^{[9]}=4.
+\]
+Hence
+\[
+\\boxed{\\dim\\mathcal O_9=4,\\qquad
+\\mathcal O_9\\cong L_1^{[9]}.}
+\]
+
+This is a target-side orbit module only. It does not repair the q=9 H-stability failure and does not yet distinguish q=3 from q=\\infty.
+
+Result record: research/Q3_Q9_S9_TARGET_ORBIT_SPAN_RESULT_2026-09-19.md
+
+Next gate: determine whether this 4D target-side module yields a legitimate comparison observable, rather than merely the natural p-layer shadow.
