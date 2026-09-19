@@ -1633,3 +1633,8 @@ The relation-module candidate was audited against the continuous homology five-t
 The E1 gate is narrowed to the actual unresolved issue: whether a change of minimal free cover induces a canonical identification of the degree-(2,3) filtered relation jet, up to the gauge invisible to Theta. Detailed result: research/ORIENTATION_MOD9_E1_RELATION_MODULE_LEMMA_2026-09-19.md.
 
 Decision: fixed-cover relation-module container PASS; full E1 intrinsicness remains OPEN. No finite scan authorized.
+
+
+## 2026-09-19 — E1 cover-change audit
+
+A no-scan audit reduced comparison of minimal free covers to free isomorphisms over id_G. The earlier stabilizing lift witness proves that the relation-module generator is not invariant across such lifts: it can acquire the unit 4 mod 9. Thus full relation-module cover-independence FAILS. The relevant surviving target is the projective degree-(2,3) jet, for which common scaling is harmless to the zero set of Theta and relator-conjugation gauge is also harmless. A residual-gauge lemma asserting that every cover change has only common scaling plus P -> P+[v,R] remains OPEN. Detailed record: research/ORIENTATION_MOD9_E1_COVER_CHANGE_AUDIT_2026-09-19.md. No finite scan authorized.
