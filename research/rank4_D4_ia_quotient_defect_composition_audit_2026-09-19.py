@@ -182,3 +182,5 @@ print({
  "cases":names,
  "interpretation":"The quotient-valued defect satisfies the twisted composition law for all 16 ordered pairs of the four controlled admissible lifts. The law is checked in Q3; raw equality need not hold because C3/IA gauge terms remain. The reversed formula is diagnostic only."
 })
+
+# CI trigger: execute after workflow registration.
