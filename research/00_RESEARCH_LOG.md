@@ -881,3 +881,25 @@ CI: run 35415080640 / job 105822020636 = SUCCESS.
 ### Next step
 
 The next authorized action is a **rank-4 lifting-definition gate**, not an immediate rank-4 computation. The filtration level, allowed lift class, relator-unit criterion, weak-data input, and GSp/Sp convention must be frozen first.
+
+
+## 2026-09-19 — rank-4 D4 lifting definition gate drafted
+
+Following the PASS of the rank-2 D4 control, the next rank-4 object was defined at the level of a formal candidate, without executing the rank-4 computation.
+
+The proposed ambient group is GSp_4(F3), with multiplier mu(g) defined by g^T J g = mu(g)J. The q=3 relator is r_3=x1^3[x1,x2][x3,x4], while the q=infinity baseline is r_inf=[x1,x2][x3,x4].
+
+At D4, the candidate relator-unit condition uses a unit u in F3^times. The degree-2 relation forces u=mu(g). The remaining degree-3 q=3 contribution is the restricted p-layer X1^[3]; after separating the ordinary conjugation span, the candidate reduction is
+g e1 = mu(g)e1.
+
+This reduction is explicitly marked as a **candidate structural lemma**, not a PASS. The next gate is an independent audit of:
+- D4/Magnus equivalence;
+- degree-2 unit extraction;
+- degree-3 normal-closure correction span;
+- restricted p-layer separation;
+- lift-independence;
+- GSp versus Sp convention.
+
+Definition record: plans/RANK4_D4_LIFTING_DEFINITION_GATE_2026-09-19.md
+
+No rank-4 q-comparison is authorized until this definition/legitimacy gate passes.
