@@ -342,3 +342,35 @@ Actions run: 35409348744 (success).
 ### Next step
 
 Extend the exact F_3 restricted-closure audit through degree 9, keeping ordinary Lie and restricted p-power layers distinct and checking all bracket/p-power paths before any S_9 insertion.
+
+
+## 2026-09-19 — C-2c-2 baseline restricted closure through degree 9 PASS
+
+The pure q=infinity baseline restricted ideal I_∞ = <R_2>_res is now closed through degree 9 by an exact Hilbert/PBW certificate, without inserting S_9.
+
+### Exact dimensions
+
+- dim L_9 = 29120; dim L_9^res = 29144.
+- restricted quotient dimensions g_1..g_9 = 4, 5, 20, 45, 144, 445, 1440, 4680, 15620.
+- restricted relation dimensions I_2..I_9 = 1, 4, 15, 60, 231, 900, 3480, 13524.
+- ordinary relation dimensions I_2^ord..I_9^ord = 1, 4, 15, 60, 230, 900, 3480, 13520.
+
+The restricted increment is +1 at degree 6 and +4 at degree 9, and zero at all other degrees through 9. Degree <=5 has zero new restricted-ideal contribution explicitly recorded.
+
+### Exact certificate method
+
+The quotient restricted enveloping algebra is T(X)/(R_2), with R_2 = X1X2-X2X1+X3X4-X4X3. Under a degree-lex order with X1>X2>X3>X4, the leading word X1X2 has no self-overlap, so the single relation has no critical overlap and Hilbert series 1/(1-4t+t^2). Restricted PBW then gives the exact graded Hilbert product and coefficient inversion used to recover g_n and hence I_n.
+
+At degree 9, the ambient p-layers have dimensions 20+4 = 24, while the restricted quotient gains 20 over the ordinary quotient. Thus exactly 4 p-directions are absorbed by the relation ideal. Since I_1=0, the only possible new degree-9 relation p-source is I_3^[3]. Descendants of I_2^[3] under brackets are already ordinary-ideal elements via [x^[3],y]=ad(x)^3(y). Hence the degree-9 restricted increment is exactly +4 from I_3^[3].
+
+### Scope
+
+This closes the **baseline restricted closure** part of C-2c-2. It does not establish S_9 = X1^9 as a restricted-Lie element, does not test whether S_9 is already in I_∞,9, does not define the q=9 ideal I_9, and does not test H-stability or D_9.
+
+Detailed result: research/Q3_Q9_C2c2_exact_degree9_restricted_closure_result_2026-09-19.md.
+
+Actions run: 35409723512 (success).
+
+### Next step
+
+Independently resolve the quotient-level admissibility of S_9 before inserting it into the restricted ideal.
