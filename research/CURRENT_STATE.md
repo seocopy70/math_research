@@ -633,3 +633,10 @@ The next genuinely new program is higher-order recovery (mod 27 and beyond); no 
 ## 2026-09-19 — E1 residual-gauge re-audit: closure withdrawn
 
 Critical re-audit found a genuine proof gap. The degree-2 lift correction Q_i=c_iR_2 and the induced bracket change of R_2 are sound, but the previous claim that substituting a degree-2 correction into the degree-3 restricted-power component necessarily raises degree to >=4 is false in general: restricted cubes have cross terms. Therefore the induced P_3 change must be computed explicitly. Projective degree-(2,3) cover-change naturality is OPEN again until that cross-term is shown to be [v,R_2] or otherwise invisible to Theta. Frozen-coordinate mod-9 recovery remains PASS/CLOSED. No finite scan.
+
+
+## 2026-09-19 — E1 reopened briefly, then CLOSED after explicit restricted-cube degree check
+
+The temporary reopening of E1 was resolved. For a degree-1 term X and degree-2 correction Q, every mixed term in the cubic restricted operation (X+Q)^[3] has filtered degree at least 1+1+2=4; Q^[3] has degree 6. Therefore the degree-3 restricted-power component is unchanged. The earlier conclusion was correct, but its justification is now made explicit and degree-theoretic.
+
+Hence, conditional on the standard minimal one-relator presentation input, the degree-(2,3) residual-gauge lemma is PASS/CLOSED and the recovery zero-set is natural. Full relation-module generator canonicity remains false and is not claimed.

@@ -2228,3 +2228,8 @@ Next genuinely new question: construct an intrinsic higher filtered obstruction 
 The apparent closure of the residual-gauge lemma was too strong. The proof controlled the degree-2 correction but incorrectly treated the restricted cubic as an ordinary homogeneous degree-3 Lie polynomial. Cross terms from (X+Q)^[3], with deg X=1 and deg Q=2, can occur in degree 3. The exact P_3 transformation must therefore be calculated before naturality is claimed.
 
 Next target: explicit degree-3 restricted-cube cross-term calculation and its evaluation under Theta.
+
+
+### 2026-09-19 — E1 reopened briefly, then CLOSED after explicit restricted-cube degree check
+
+The suspected restricted-cube obstruction is not real: mixed cubic terms involving a degree-2 correction begin in degree 4. The exact degree count closes the missing step. E1 projective-jet naturality is therefore PASS/CLOSED under the stated standard one-relator hypotheses; full relation-module canonicity remains FAIL.
