@@ -397,8 +397,7 @@ is uniquely determined by the finite-level crossed-derivation equations. For the
 \qquad
 \chi_n(x_2)=(-2)^{-1}\pmod{3^n}.
 \]
-The reductions are compatible and\[
-\mathbf Z_3^\times\cong\varprojlim_n(\mathbf Z/3^n)^\times
+The reductions are compatible and\[\mathbf Z_3^\times\cong\varprojlim_n(\mathbf Z/3^n)^\times
 \]
 gives the unique full \(\chi\).
 
@@ -798,7 +797,6 @@ Verified:
 - Full matrix comparison gives (Psi=I_{10}) exactly.
 - All ten diagonal entries are 1.- Every off-diagonal entry is zero.
 - (Psi=2I_{10}) is false.
-
 Hence
 [
 \boxed{\Phi_0\circ F=I_U}.
@@ -1197,8 +1195,7 @@ The frozen baseline remains
 and no (S_9) contribution has been inserted into that baseline.
 ### Next gate
 
-The next controlled computation is **S9-B — quotient survival**:
-[
+The next controlled computation is **S9-B — quotient survival**:[
 oxed{[S_9]
 eq0	ext{ in }L_9^{mathrm{res}}/I_{infty,9}}
 ]
@@ -1597,7 +1594,6 @@ H-closure is not a valid presentation object.
 Record: `research/Q3_Q9_S9_D9_OBS_STRUCTURE_CENSUS_2026-09-19.md`
 
 After closing the natural p-layer observable, the authoritative Q3/Q9 records and the relevant earlier q-control/roadmap records were audited for an already-defined presentation-derived structure that survives beyond (L_1^{[9]}).
-
 No such already-authorized q-sensitive object was found.
 
 In particular:
@@ -1997,8 +1993,7 @@ No finite scan is authorized.
 
 The open structural reconstruction is resolved at the exact carrier level. Let
 \[
-J_3=\langle(R_2,P_3)\rangle\subset L_2\oplus L_3^{res}
-\]
+J_3=\langle(R_2,P_3)\rangle\subset L_2\oplus L_3^{res}\]
 be the degree-3 relation jet, with common scalar ambiguity retained. The intrinsic obstruction is
 \[
 \Theta_{R_2,P_3}(\lambda)(f)=f(P_3)+(\lambda\wedge f)(R_2).
@@ -2333,3 +2328,24 @@ Before further calculation:
 - Bockstein orientation carrier: **CONDITIONAL / OPEN**.
 
 No further same-family Bockstein scan is authorized.
+
+## AUTHORITATIVE UPDATE — HARD ATTACK 22 — 2026-09-20
+
+The mod-27 target is now formalized basis-free:
+\[
+\lambda_{27}(G)=\frac13\log\chi_G\pmod9\in H^1(G,\mathbf Z/9),
+\]
+and \(O_{27}(G)\) is the distinguished-orientation singleton/subfunctor selecting this class. This removes the previous ambiguity in the target notation.
+
+The abstract carrier category has a genuine symmetry \(S\) preventing a natural selector of \(\lambda_{27}\), but \(S\) is not an admissible group/gauge morphism; indeed canonical orientation naturality itself blocks such a realization. Thus the abstract no-go is valid only in \(\mathcal C_{27}^{abs}\), not in the project's admissible category.
+
+The decisive admissible counterexample pair
+\[
+\mathcal B_{27}(G)\cong\mathcal B_{27}(G'),\qquad
+O_{27}(G)\not\cong O_{27}(G')
+\]
+has not been found. The standard Demushkin family cannot supply one because its full carrier types already separate the valuation classes.
+
+**Binding status:** target formalization PASS/CLOSED; abstract-carrier no-go PASS/CLOSED; admissible counterexample OPEN/NOT FOUND; universal factorization OPEN; independent bridge OPEN; Bockstein orientation carrier CONDITIONAL/OPEN.
+
+No further same-family Bockstein computation is authorized. The next branch must add genuinely new q-blind rigidifying structure or prove a universal factorization theorem. A cohomological Mackey/transfer enrichment across open subgroups is recorded as a candidate, not yet accepted.
