@@ -1256,3 +1256,23 @@ This is not yet a theorem or PASS. The next gate is an independent definition/im
 Definition record: plans/RANK4_D4_LIFTING_DEFINITION_GATE_2026-09-19.md
 
 No rank-4 computation is authorized before this gate closes.
+## 9. Rank-4 D4 lifting definition gate — FAIL / CLOSED
+
+The candidate rank-4 relator-lifting observable was audited for lift-independence before any rank-4 q-comparison.
+
+Two lifts inducing the same identity action on V were tested:
+- identity lift;
+- x1 -> x1[x1,x2], with the other generators fixed.
+
+The first is admissible; the second is not. Its degree-3 difference lies outside the ordinary conjugation correction span.
+
+Therefore the candidate A_4^rel(q) subset GSp_4(F3) is not intrinsic to the linear map under the current lift definition.
+
+Decision: rank-4 D4 lifting definition = FAIL / CLOSED.
+
+This is a genuine mathematical negative result, not a setup failure. No rank-4 q-comparison is authorized from this candidate.
+
+The failure identifies IA/lift data as active degree-3 information. A future lifting route must retain that finer filtered/extension data or provide a canonical invariance/quotient mechanism. A hand-picked lift convention must not be treated as intrinsic.
+
+Result: research/RANK4_D4_LIFT_INDEPENDENCE_AUDIT_RESULT_2026-09-19.md
+CI: run 35415237341, job 105822474022.
