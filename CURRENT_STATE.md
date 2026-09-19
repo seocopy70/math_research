@@ -82,3 +82,14 @@ Current gate remains LOCAL, not theorem-level:
 - only then authorize a broad rank-4 scan.
 
 The failed absolute defect law and all previous excluded routes remain closed.
+
+
+## 2026-09-19 correction: quotient cocycle audit
+
+The earlier run 35417325110 is INVALIDATED because the defect helper used the reference relator with the wrong sign. It is not evidence.
+
+Corrected run 35418122079, commit bb39ed1a7191aeae0da07813e40abe47695d292a. With delta_g = [F_g(R3)-mu(g)R3]_deg3, the q-sensitive Delta_q(g) satisfies Delta_q(gh)=Delta_q(g)+g·Delta_q(h) in Q3 for all 16 ordered pairs of the four controlled representatives.
+
+Corrected results: gauge rank 20; Q3 dimension 44; candidate-law failures modulo Q3 0; raw failures 0; reversed diagnostic failures modulo Q3 2; reversed raw failures 2; 11 composed q-defect classes survive Q3.
+
+Status: valid LOCAL PASS. The candidate action/order convention is distinguished on this control set. Next gate is a broader structured representative-family audit with explicit multiplier behavior. No unrestricted full rank-4 scan yet.
