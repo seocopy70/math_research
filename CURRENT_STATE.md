@@ -165,3 +165,21 @@ This quotient nevertheless fails lift-independence. For any r in R, alpha_r(x1)=
 Decision: Rank-2 relator-unit digit route = FAIL / CLOSED. This is a definition-level lift-independence failure, not a computational failure. The full R/[R,F] also contains the H2 component, so there is no canonical single relator line to rescue the scalar construction. No mod-9, K3, IA, or q-comparison scan is authorized for this route.
 
 The next authorized task returns to the independent bridge between g e1=mu(g)e1 and the canonical orientation chi; no implication is assumed.
+
+
+## 2026-09-19 — Rank-2 route scope correction after critical review
+
+The prior wording “Rank-2 relator-unit digit route = FAIL / CLOSED” was too broad. The explicit witness proves a narrower statement:
+
+- **FAIL:** the proposed relator-unit scalar construction on the natural canonical abelianized rank-one quotient
+  \(Q=M/H_2(G_3,\mathbf Z_3)\cong3\mathbf Z_3e_1\) is not lift-independent.
+- **FAIL:** therefore that specific scalar cannot descend to \(\operatorname{Aut}(G_3)\), even modulo 9.
+- **NOT PROVED:** every possible construction using the full relation module \(R/[R,F]\), or every possible filtered relation-module quotient, is impossible.
+
+Accordingly, the broader “entire relator-module strategy is closed” claim is withdrawn. Any genuinely different intrinsic construction would require its own definition gate and independent proof of lift-independence/naturality.
+
+The next authorized branch remains the independent bridge audit:
+\[
+ge_1=\mu(g)e_1\quad\text{versus}\quad\chi.
+\]
+No implication between \(\mu\) and \(\chi\) is assumed.
