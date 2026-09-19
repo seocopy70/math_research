@@ -1213,3 +1213,40 @@ Decision: **HIGHER BOCKSTEIN BRIDGE OPEN / STRUCTURAL**. Stronger no-go: “high
 A further structural distinction is now closed. A fixed or finite associated-graded Zassenhaus window cannot recover full $3$-adic orientation; the family $q=3^s$ moves the power term beyond any prescribed finite degree while changing $\chi$. By contrast, an actual compatible inverse system of filtered relation residues determines the completed relator by completeness, and continuity of completed Fox calculus then gives the exact obstruction. This is PASS / LOCAL, not yet a new compression theorem: such a tower is essentially the completed filtered relation itself. The only remaining substantive carrier problem is an intermediate q-blind intrinsic object that retains extension data sufficient for all digits while being genuinely smaller than the full completed Fox/presentation object.
 
 Detailed audit: `research/ORIENTATION_FILTERED_EXTENSION_VS_GRADED_HARD_ATTACK_2026-09-20.md`.
+
+
+## AUTHORITATIVE UPDATE — 2026-09-20 — RESEARCH PROGRAM SYNTHESIS / MOD-27 GATE
+
+A consolidated research map has been frozen in research/RESEARCH_PROGRAM_SYNTHESIS_2026-09-20.md.
+
+### Refined central question
+The project is not merely to compute the canonical orientation. The target is to determine **how much filtered/relation information is necessary and sufficient** to recover
+\[
+\chi:G\to\mathbf Z_3^\times,
+\]
+and whether the required non-graded extension information admits a presentation-natural, q-blind, non-tautological carrier strictly smaller than the completed characteristic-zero Fox/presentation object.
+
+### Established boundary
+- full mod-3 Zassenhaus associated graded: **FAIL / CLOSED** for q and full chi; the complete graded Demuškin object is q-blind in the present odd-prime fixed-rank setting;
+- projective degree-(2,3) carrier overline J_3=[(R,p)]: **PASS / CLOSED** for chi mod 9 under the audited standard transgression/Bockstein convention;
+- compatible full filtered extension tower -> full chi: **PASS / LOCAL**, by inverse-limit reconstruction of the completed relation followed by continuous Fox calculus, but this is not a compression theorem;
+- exact universal Fox carrier: **PASS / CLOSED** for full chi under the audited hypotheses;
+- exact local Fox algebra is already Z_3, so quotienting it cannot produce a smaller full-3-adic-preserving carrier: **PASS / CLOSED** for quotient compression;
+- independent intrinsic non-quotient exact compression: **OPEN**.
+
+### Explicitly ruled out
+Naive Z_3 augmentation jet; naive Z_3 scalar extension of the characteristic-3 restricted-Lie carrier; intrinsic fixed degree-3 Fox truncation; higher-Bockstein-alone reconstruction; full associated-graded tower reconstruction; universal bounded-degree + bounded-precision recovery; quotient compression of the exact local Fox algebra.
+
+### Still OPEN
+Information-theoretic minimality of P_3; absolute minimality of overline J_3 outside the defined quotient-observable category; existence of an intrinsic finite-level J_27; compatibility J_(3^{n+1}) -> J_(3^n); an intrinsic inverse-limit carrier strictly smaller than full Fox; and a non-tautological natural factorization from intrinsic filtered extension data to the exact Fox coefficient tower.
+
+### NEXT AUTHORIZED GATE: intrinsic mod-27 carrier
+The first decisive next question is
+\[
+\boxed{J_{27}(G)\Rightarrow\chi\bmod27?}
+\]
+with all six requirements: (1) q-blind input independent of unknown chi; (2) presentation/Nielsen/relator-gauge intrinsicity; (3) separation of chi mod 27; (4) natural reduction to the established mod-9 carrier; (5) non-tautology—not merely Fox equations modulo 27 under a new name; (6) genuine structural compression if compression is claimed.
+
+Stop rule: definition failure -> FAIL/CLOSED; invariance failure -> FAIL/CLOSED; failure to separate mod 27 -> FAIL/CLOSED. Only a surviving candidate advances to higher levels.
+
+The full program is summarized in research/RESEARCH_PROGRAM_SYNTHESIS_2026-09-20.md.
