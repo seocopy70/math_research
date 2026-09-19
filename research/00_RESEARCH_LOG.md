@@ -1736,3 +1736,47 @@ It records the authoritative current boundary established by the 2026-09-19 audi
 - categorical absolute minimality of the projective jet: **OPEN**.
 
 The assessment also fixes the logical boundary that the crossed-derivation hand calculation proves the character from the full defining relation, while a formal tower-to-inverse-limit theorem should explicitly construct \(J_n\mapsto\chi_n\) and prove compatibility. `CURRENT_STATE.md` was updated with this consolidated state.
+
+## 2026-09-19 — Finite-level factorization / inverse-limit theorem CLOSED
+
+The theorem-level gap identified in the full 3-adic hand derivation was addressed without a finite scan.
+
+New record:
+\`research/ORIENTATION_FINITE_LEVEL_FACTORISATION_THEOREM_2026-09-19.md\`
+
+For the compatible **projective filtered relation-jet tower** \(J_n\), define the finite-level crossed-derivation coefficient functional
+\[
+\mathcal C_n(J_n,\rho).
+\]
+For the frozen q=3 relation, the exact coefficient equations force
+\[
+\rho_n(x_1)=\rho_n(x_3)=\rho_n(x_4)=1,
+\qquad
+1+2\rho_n(x_2)=0\pmod{3^n}.
+\]
+Since \(2\) is a unit modulo \(3^n\), the solution is unique:
+\[
+\rho_n(x_2)=(-2)^{-1}=(1-3)^{-1}\pmod{3^n}.
+\]
+
+Reduction modulo \(3^n\) sends the level \(n+1\) equations to the level \(n\) equations, so
+\[
+\chi_{n+1}\equiv\chi_n\pmod{3^n}.
+\]
+Finally
+\[
+\mathbf Z_3^\times\cong\varprojlim_n(\mathbf Z/3^n)^\times
+\]
+gives a unique inverse-limit character \(\chi\).
+
+Decision:
+**PASS / CLOSED at the stated information level.**
+
+Critical boundary retained:
+this proves only
+\[
+\text{compatible full tower}\Rightarrow\{\chi_n\}_n\Rightarrow\chi.
+\]
+It does not prove that the degree-(2,3) jet alone contains all higher digits, nor categorical minimality, nor any bounded-degree full-\(\chi\) theorem.
+
+The next authorized branch is therefore categorical minimality, followed by the finite bounded-degree question.
