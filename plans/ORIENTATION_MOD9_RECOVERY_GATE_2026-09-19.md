@@ -79,3 +79,40 @@ What is established is only that mod-9 finite-coefficient cohomology detects the
 Next hand task: derive the Bockstein/finite-coefficient invariant explicitly and test whether it is invariant under change of (H^2)-generator and admissible basis/presentation changes. If it collapses to the q=3 torsion invariant without retaining the value 4, this route must be marked FAIL/CLOSED rather than upgraded by interpretation.
 
 Next hand task: derive the mod-9 cup/Bockstein structure of the frozen \(q=3\) Demushkin presentation and test whether its first \(3\)-adic coefficient canonically determines \(\chi\bmod9\).
+
+
+## 2026-09-19 — Bockstein audit result
+
+The explicit next hand task was completed in `research/ORIENTATION_MOD9_BOCKSTEIN_AUDIT_2026-09-19.md`.
+
+Using
+\[
+0\to\mathbf F_3\xrightarrow{3}\mathbf Z/9\to\mathbf F_3\to0,
+\]
+the intrinsic Bockstein
+\[
+\beta:H^1(G,\mathbf F_3)\to H^2(G,\mathbf F_3)
+\]
+was derived for the frozen relation. It detects the unique q=3 power-term direction:
+\[
+\beta(\gamma_1)\neq0,qquad
+\beta(\gamma_2)=\beta(\gamma_3)=\beta(\gamma_4)=0
+\]
+up to the fixed top-class/sign convention.
+
+The candidate passes canonicality/intrinsicity but fails the recovery requirement. Its invariant content is the q=3 power/torsion shadow; it does not canonically retain
+\[
+\chi(x_2)\equiv4\pmod9.
+\]
+A scalar coordinate also depends on a generator choice for the one-dimensional (H^2) target.
+
+### Gate decision
+
+- **M9-A: PASS**
+- **M9-B: PASS**
+- **M9-C: FAIL**
+- **M9-D: CLOSED for the ordinary mod-9 Bockstein candidate**
+
+This does not establish impossibility of all finite-coefficient or twisted constructions. It closes only this candidate. No finite scan is authorized.
+
+The next route, if opened, must retain additional (1+3\mathbf Z_3)-valued/twisted-dualizing information rather than reinterpreting the Bockstein's q=3 signal as the orientation value.
