@@ -1354,3 +1354,20 @@ A new ORIENTATION_MOD9_RECOVERY_GATE is opened. The target is the first nontrivi
 Literature confirms that Demushkin groups have canonical orientation from the dualizing module, and that higher-modulus cup-product data for standard one-relator presentations is controlled by defining-relation coefficients. A PD2 criterion also characterizes orientation via twisted top cohomology across p^m-levels.
 
 No finite scan is authorized. Next hand task: derive the mod-9 cup/Bockstein structure of the frozen q=3 presentation and determine whether its first 3-adic coefficient canonically determines chi mod 9.
+
+## 2026-09-19 — Critical review of orientation mod-9 gate
+
+The initial mod-9 gate wording was too optimistic and has been corrected.
+
+What the literature supports is that finite-coefficient cup-product matrices of standard one-relator Demushkin presentations are controlled by relation coefficients, including the power-term diagonal contribution. For the frozen relation \(x_1^3[x_1,x_2][x_3,x_4]\), the standard mod-9 matrix is, up to the frozen commutator/sign convention,
+\[
+C_9=
+\begin{pmatrix}6&1\\-1&0\end{pmatrix}
+\oplus
+\begin{pmatrix}0&1\\-1&0\end{pmatrix}.
+\]
+This shows that mod-9 cohomology sees the \(q=3\) power contribution.
+
+However, **this does not establish recovery of \(\chi(x_2)\equiv4\pmod9\)**. The number 4 is not a matrix entry. Moreover, the cup product is naturally \(H^2\)-valued, so extracting a scalar requires a choice/trivialization of the one-dimensional \(H^2\) line; independence from that choice and from admissible basis/presentation changes must be proved.
+
+Therefore the candidate is weakened from “first-lift recovery mechanism” to “finite-coefficient carrier worth testing.” The next hand task is an explicit Bockstein/finite-coefficient invariant and its invariance audit. If it reduces merely to the q=3 torsion/power invariant and loses the 3-adic value 4, the route must be FAIL/CLOSED.
