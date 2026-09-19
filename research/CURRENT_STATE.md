@@ -258,12 +258,57 @@ The next separate gate is **H-stability of the q=9 relation space**. No H-stabil
 
 After H-stability, only then consider the precise gr9(G9) quotient interpretation and a D9 candidate.
 
+## 11. q=9 degree-9 H-stability — FAIL / CLOSED
+
+The q=9 degree-9 relation space remains
+\[
+(I_9)_9=(I_\infty)_9\oplus\langle S_9\rangle,
+\qquad \dim(I_9)_9=13525.
+\]
+
+However, with the fixed symplectic convention and generator \(t_{e_2}\),
+\[
+t_{e_2}(e_1)=e_1+e_2,
+\]
+so
+\[
+t_{e_2}(S_9)=S_9+X_2^{[9]}.
+\]
+
+Since
+\[
+(I_\infty)_9\cap L_1^{[9]}=0
+\]
+and the q=9 space has L1^[9] projection \(\langle S_9\rangle\), the transformed vector is outside \((I_9)_9\).
+
+Exact F3 ranks:
+\[
+\operatorname{rank}\{S_9\}=1,
+\qquad
+\operatorname{rank}\{S_9,t_{e_2}S_9\}=2.
+\]
+
+Therefore
+\[
+\boxed{(I_9)_9\text{ is not H-stable}.}
+\]
+
+The first audit draft contained a sign error in the transvection witness; this was caught and corrected before accepting the mathematical result. Corrected script commit:
+836c3ce4d1382d35545c2998af2addf4a42c7a89.
+
+Result record:
+research/Q3_Q9_S9_H_STABILITY_RESULT_2026-09-19.md
+
+This closes the H-stability gate as **FAIL / mathematical failure**. The q=9 degree-9 space itself remains valid, but the planned H-module/gr9/D9 route is blocked.
+
+## 12. NEXT GATE
+
+Do not proceed to D9 as though the current \((I_9)_9\) were an H-stable relation module.
+
+The next task is a **critical redesign gate**: determine whether the q=9 construction must be H-closed (for example by replacing \(\langle S_9\rangle\) with its H-orbit closure) and, if so, whether that revised object has a mathematically legitimate connection to the original q=9 relation.
+
 ## LIVE
 
 현재 LIVE 질문:
 
-> q=9 restricted relation space I_9,9 is now defined and differs from the frozen q=∞ baseline by +1. Is I_9,9 H-stable under the fixed H=Sp_4(F_3) action?
-
-현재 답:
-
-> **q=9 degree-9 relation-space gate PASS/CLOSED: dim = 13525. H-stability is now the next gate and remains untested.**
+> The naive q=9 degree-9 relation space has dimension 13525 but is not H-stable. Is there a legitimate H-closed replacement compatible with the group presentation and the research question?
