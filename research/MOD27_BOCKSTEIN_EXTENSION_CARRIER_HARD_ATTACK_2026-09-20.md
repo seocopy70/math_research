@@ -387,3 +387,36 @@ No further calculation of \(\beta_1,\beta_9\) on the same Demuškin q-family can
 - Hard Attack 18 unconditional symmetry no-go: **HISTORICAL / SUPERSEDED**;
 - Bockstein package as a **new non-tautological mod-27 orientation carrier**: **FAIL / CLOSED** under the declared PRE-MOD27 gate;
 - a different carrier with genuinely new rigidifying information: **OPEN**.
+
+
+## CRITICAL REVIEW OF HARD ATTACK 20 — 2026-09-20
+
+Hard Attack 20 is materially stronger than Hard Attack 18, but its final **FAIL / CLOSED** is still too strong. Two logical gaps remain.
+
+### Gap 1 — “exactly three carrier types” has not been proved
+The statement that the full structured object \(\mathcal B_{27}\) has exactly three isomorphism types on the Demuškin family does not follow merely from the three values of \(\beta_1,\overline\beta_9\). The carrier also contains \(H^1(G,\mathbf Z/9)\), reduction, \(\iota\), cup product, and both Bockstein maps. One must explicitly construct the carrier isomorphisms for any two q-values in the same valuation class, or prove a classification theorem for these structured objects.
+
+A detector having three visible Bockstein cases is not equivalent to the entire carrier factoring through the three-class quotient.
+
+### Gap 2 — extensional factorization on the test family does not prove universal non-tautology failure
+Even if the carrier's isomorphism type on the tested family factors through \(v_3(q)\)-class, that only proves a statement about this family. It does not prove that every admissible natural bridge
+\[
+\mathcal B_{27}\to O_{27}
+\]
+necessarily factors through the q/classification invariant on the full admissible category.
+
+The PRE-MOD27 gate rejects a bridge that is *constructed* by first recovering q and applying the known classification formula. It does not say that a candidate carrier is invalid merely because its restriction to one test family has the same partition as q. A genuinely independent chain-level identity could still exist and agree extensionally with the classification formula on that family.
+
+Therefore the correct logical status is not “carrier disproved”, but:
+
+> the current q-family calculation does not establish the required independent orientation bridge, and it provides strong evidence that the present package may be only a finite q-layer detector; however, a universal factorization/no-go theorem has not been proved.
+
+### Corrected status
+- Bockstein package as intrinsic finite q-layer detector: **PASS / LOCAL**;
+- Hard Attack 18 absolute symmetry no-go: **HISTORICAL / SUPERSEDED**;
+- Hard Attack 20 q-factorization on the tested family: **PASS / LOCAL**;
+- Bockstein package as a new non-tautological mod-27 orientation carrier: **CONDITIONAL / OPEN**, not FAIL/CLOSED;
+- next decisive test: either prove a universal factorization theorem through q/classification, or construct an independent natural bridge; before that, no final closure is justified.
+
+### Stop consequence
+No further numerical scan of the same q-family is useful. The next attack must be categorical/universal: prove that the full structured carrier is classified by the q-valuation quotient, or produce two admissible objects with isomorphic \(\mathcal B_{27}\) but different \(\chi\bmod27\). The latter would be a genuine no-go and would close the carrier cleanly.
