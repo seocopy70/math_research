@@ -7,7 +7,7 @@ Frozen convention:
   Q3 = A3 / (C3 + Delta_IA)
 
 For F_(gh)=F_g o F_h, test
-  Delta_q(gh) = Delta_q(g) + g . Delta_q(h)
+  Delta_q(gh) = mu(h) Delta_q(g) + g . Delta_q(h)
 in Q3.
 
 This is a structured-family gate, not a full rank-4 scan.
@@ -280,9 +280,13 @@ for a in names:
         db = delta_q(gb)
 
         # Frozen convention: F_(gh) = F_g o F_h.
-        rhs = [(x + y) % P for x, y in zip(
-            da, tensor_action(db, linear_matrix(ga))
-        )]
+        # Because Delta_q(h) is the degree-3 difference of the cubic
+        # p-power source, composition contributes mu(h) Delta_q(g).
+        rhs = [
+            (mub * x + y) % P for x, y in zip(
+                da, tensor_action(db, linear_matrix(ga))
+            )
+        ]
         # Diagnostic only: reverse the action/order.
         rhs_rev = [(x + y) % P for x, y in zip(
             db, tensor_action(da, linear_matrix(gb))
@@ -313,7 +317,7 @@ print({
     "gauge_rank": rank(GAUGE),
     "Q3_dimension": 64 - rank(GAUGE),
     "matrix_gsp_checks": matrix_checks,
-    "candidate_law": "Delta_q(gh)=Delta_q(g)+g·Delta_q(h)",
+    "candidate_law": "Delta_q(gh)=mu(h)Delta_q(g)+g·Delta_q(h)",
     "candidate_law_failures_mod_Q3": law_fail,
     "candidate_law_raw_failures": law_raw_fail,
     "reversed_diagnostic_failures_mod_Q3": reversed_fail,
@@ -323,7 +327,7 @@ print({
     "multipliers": {k: v[1] for k, v in CASES.items()},
     "interpretation": (
         "Structured-family audit only. A zero candidate failure count "
-        "supports the frozen action/order law on this family; it does not "
+        "supports the frozen multiplier/action/order law on this family; it does not "
         "establish full GSp4 covariance or canonicality."
     ),
 })
