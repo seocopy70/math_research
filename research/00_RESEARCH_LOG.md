@@ -1881,3 +1881,19 @@ Boundary:
 - full filtered tower remains a separate sufficient mechanism.
 
 Detailed record: research/ORIENTATION_EXACT_PROJECTIVE_DEGREE3_FULL_CHI_CLOSURE_2026-09-19.md
+
+
+## 2026-09-19 — Carrier category / coarsest quotient audit
+
+The remaining categorical-minimality question was pushed without literature search and without finite computation. A natural category of degree-(2,3) relation carriers was defined by projective/gauge classes of (R,P), with factorization constrained to preserve the full degree-one evaluation family Theta. The canonical quotient
+\[
+L^{res}_3(V)\to L^{res}_3(V)/[V,L_2(V)]\cong V^{(1)}
+\]
+shows that only the restricted-cubic component p(P) is visible to f(P); the bracket part is annihilated by every degree-one functional and contains the previously identified [v,R] gauge.
+
+The compressed carrier \overline J_3=[(R,p(P))] therefore carries exactly the quadratic relation line and the degree-3 restricted-cubic vector relevant to all natural Theta observables. Any functorial quotient of J_3 through which all Theta observables factor must distinguish different [R] and different p(P), hence factors uniquely through \overline J_3. In the quotient-carrier category, \overline J_3 is terminal/coarsest.
+
+Critical consequence: the raw projective jet J_3 is not minimal in this natural category. The earlier OPEN absolute-minimality question is narrowed: a genuine universal property exists, but for the compressed carrier, not for J_3. Minimality among arbitrary alternative carriers remains ill-posed; compressing directly to the recovered zero-set/covector would make the notion tautological.
+
+Record: research/ORIENTATION_MOD9_CARRIER_CATEGORY_COARSEST_QUOTIENT_2026-09-19.md
+Decision: PASS / CLOSED for the natural quotient-category endpoint; J_3 minimality FAIL/CLOSED within that category; unrestricted absolute minimality OPEN/ill-posed.
