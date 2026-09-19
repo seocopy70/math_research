@@ -1596,3 +1596,32 @@ Status:
 Critical boundary: this construction uses filtered extension/multiplication data of (G/G_4), not merely the associated graded vector spaces and initial quadratic relation. The q=3 power term lies in the first non-quadratic filtered layer, so discarding extension data can erase the information needed for (chimod9).
 
 Therefore the project must not yet claim recovery from the associated graded restricted Lie object alone. The next task is to formalize exactly what counts as the allowed filtered/graded datum and determine whether it contains (G/G_4), or an equivalent extension class. No finite scan is authorized.
+
+
+## 2026-09-19 — F5-A restricted graded carrier audit: PASS / F5 OPEN
+
+The next F5 hand audit is recorded in `research/ORIENTATION_MOD9_FILTERED_FACTOR_F5_AUDIT_2026-09-19.md`.
+
+A key correction was established from the repository's independent q=3 versus q=infinity degree-3 calculation:
+[
+operatorname{in}_3(s_3)-operatorname{in}_3(s_\infty)=X_1^{[3]}.
+]
+Hence the q=3 power information is already present in restricted/Zassenhaus degree 3. The earlier claim that it necessarily disappears upon passing to the associated graded restricted object is withdrawn/narrowed.
+
+The minimal plausible carrier is
+[
+D_3=(V,R_2,P_3),
+]
+where (V) is degree one, (R_2=[X_1,X_2]+[X_3,X_4]) is the degree-two Demuškin relation, and (P_3) is the degree-three restricted-power contribution.
+
+Decision:
+- **F5-A carrier existence: PASS.**
+- **F5 canonical obstruction reconstruction: OPEN.**
+
+The remaining issue is genuinely structural: construct (operatorname{Defect}(P_3)) and (operatorname{Twist}_\lambda(R_2)) intrinsically on (D_3), prove their sum is the verified
+[
+B_\lambda(f)=(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4,
+]
+and establish presentation/isomorphism naturality and uniqueness.
+
+No finite scan is authorized.
