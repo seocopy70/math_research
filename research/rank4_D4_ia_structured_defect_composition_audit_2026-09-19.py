@@ -280,10 +280,12 @@ for a in names:
         db = delta_q(gb)
 
         # Frozen convention: F_(gh) = F_g o F_h.
-        # Because Delta_q(h) is the degree-3 difference of the cubic
-        # p-power source, composition contributes mu(h) Delta_q(g).
+        # The raw defect obeys a multiplier-twisted law. Normalize first:
+        # c(g)=mu(g)^(-1) Delta_q(g). Then
+        # c(gh)=c(g)+mu(g)^(-1) g.c(h).
+        inv_mua = pow(mua, -1, P)
         rhs = [
-            (mub * x + y) % P for x, y in zip(
+            (x + inv_mua * y) % P for x, y in zip(
                 da, tensor_action(db, linear_matrix(ga))
             )
         ]
@@ -325,7 +327,7 @@ print({
     "gauge_rank": rank(GAUGE),
     "Q3_dimension": 64 - rank(GAUGE),
     "matrix_gsp_checks": matrix_checks,
-    "candidate_law": "Delta_q(gh)=mu(h)Delta_q(g)+g·Delta_q(h)",
+    "candidate_law": "c(gh)=c(g)+mu(g)^(-1) g·c(h), c=mu^(-1)Delta_q",
     "candidate_law_failures_mod_Q3": law_fail,
     "candidate_law_raw_failures": law_raw_fail,
     "reversed_diagnostic_failures_mod_Q3": reversed_fail,
@@ -335,7 +337,7 @@ print({
     "multipliers": {k: v[1] for k, v in CASES.items()},
     "interpretation": (
         "Structured-family audit only. A zero candidate failure count "
-        "supports the frozen multiplier/action/order law on this family; it does not "
+        "supports the frozen normalized multiplier/action/order law on this family; it does not "
         "establish full GSp4 covariance or canonicality."
     ),
 })
