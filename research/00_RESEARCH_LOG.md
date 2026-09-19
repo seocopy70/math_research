@@ -312,3 +312,33 @@ The main target is now:
 q=3 remains a control case because it is already known to be exceptional in higher A_3-formality. Orientation recovery remains downstream and is not identified with q-detection.
 
 Definition document: plans/PLAN-A-N-REL-DEFINITION.md.
+
+
+## 2026-09-19 — C-2c-2 restricted closure-interface preflight PASS
+
+The first C-2c-2 implementation checkpoint was completed before any degree-9 quotient calculation.
+
+### Verified
+
+An exact F_3 audit using the standard Lyndon bracketing basis verified that the proposed graded restricted-ideal recursion agrees with the locked ordinary relation recursion through degree 5:
+
+- dim I_2 = 1
+- dim I_3 = 4
+- dim I_4 = 15
+- dim I_5 = 60
+
+The restricted ambient dimensions used in the audit are dim L_3^res = 24 and dim L_6^res = 676. The additional degree-3 restricted generators X_i^[3] introduce no new relation dimension through degree 5; the identity [X_i^[3],R_2] = ad(X_i)^3(R_2) was checked in the associative realization.
+
+At degree 6, the ordinary bracket closure has rank 230 and the restricted bracket closure also has rank 230. The p-closure term (I_2)^[3] has rank 1 and raises the combined rank to 231. Thus the first genuinely new restricted contribution occurs at degree 6 and is non-redundant.
+
+### Scope
+
+This is a **closure-interface PASS only**. It does not close C-2c-2 as a whole. Degree-9 restricted closure, all degree-9 path redundancies, S_9 admissibility, H-stability, and D_9 remain open.
+
+Detailed result: research/Q3_Q9_C2c2_closure_interface_audit_result_2026-09-19.md.
+
+Actions run: 35409348744 (success).
+
+### Next step
+
+Extend the exact F_3 restricted-closure audit through degree 9, keeping ordinary Lie and restricted p-power layers distinct and checking all bracket/p-power paths before any S_9 insertion.
