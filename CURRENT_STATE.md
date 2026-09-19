@@ -1,3 +1,24 @@
+## LATEST AUTHORITATIVE UPDATE — 2026-09-19 — EXACT Z_3 CARRIER BRANCH ENDPOINT
+
+The remaining exact-carrier branch has now been pushed to its structural boundary and closed.
+
+New record:
+`research/ORIENTATION_EXACT_Z3_CARRIER_BRANCH_ENDPOINT_2026-09-19.md`
+
+The target was a non-tautological finite/concrete exact \\(\\mathbf Z_3\\)-carrier analogous to the mod-3 compressed carrier \\(([R],p(P))\\).
+
+Final status:
+- fixed q=3 exact filtered relation/evaluation data -> full \\(\\chi\\): **PASS / CLOSED**;
+- compatible full filtered tower -> full \\(\\chi\\): **PASS / CLOSED**;
+- naive characteristic-zero “restricted Lie” lift of the mod-3 quotient: **FAIL / CLOSED**;
+- canonical quotient by the independently fixed crossed-derivation evaluation family: **PASS as a universal quotient**, but this is not yet a non-tautological finite compression;
+- non-tautological finite/concrete exact compression analogous to \\(([R],p(P))\\): **OPEN / NOT PROVED**, and no further scan is warranted;
+- universal bounded-degree + finite-precision carrier across q=3^s: **FAIL / CLOSED**.
+
+Critical correction: an exact finite augmentation truncation is a legitimate object, but no proof was obtained that it alone factors the full exact crossed-derivation coefficient law under the frozen convention. Do not silently promote this to a theorem.
+
+This closes the current exact-carrier search at the structural boundary. A future continuation would require a genuinely new characteristic-zero invariant or a new factorization theorem, not another scan of the already audited candidates.
+
 ## Latest exact-Z_3 bounded-degree result — 2026-09-19
 
 The fixed-q=3 branch has reached its natural endpoint.
