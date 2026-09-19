@@ -679,9 +679,14 @@ Existing historical protocol documents are reference/history only; they do not o
 
 ---
 
-## 11. O2 concrete 20D route — CLOSED at current frozen-data level
+## 11. O2 concrete 20D route — HISTORICAL / CLOSED
 
-The B1 family gives three distinct 10D images with pairwise-zero intersections and a common 20D span. Existing affine identities identify this span with \\(\\operatorname{Im}D_0+\\Delta O\\), but \\(D_0\\) remains transport-dependent. Existing relations involving \\(G=D_{\\rm linear}\\circ\\tau|_{\\ker N}\\) likewise use the chosen transport. Therefore the current frozen data provide relations/identifications, not a transport-free definition of the observed 20D target-side span.\n\nThis closes the concrete 20D-space route for the present construction. It does not prove that no intrinsic 20D object can exist. No new \\(V_{20}\\), quotient, or invariant should be introduced merely to rescue this route.\n\nThe next O2 question must be stated more weakly: identify the strongest **already verified transport-independent information** that survives the failed concrete-subspace route. Q3/Q\\(\\infty\\) remains logically separate.\n\n## 12. Immediate next checkpoint
+The B1 family gives three distinct 10D images with pairwise-zero intersections and a common 20D span. Existing affine identities identify this span with Im(D0) + Delta O, but D0 remains transport-dependent. Existing relations involving G = D_linear o tau|ker(N) likewise use the chosen transport.
+
+This closes the concrete 20D-space route for the present construction. It does not prove that no intrinsic 20D object can ever exist. No new V20, quotient, or invariant should be introduced merely to rescue this route.
+
+Q3/Q-infinity remains logically separate.
+## 12. Immediate next checkpoint
 
 Do not ask whether O2-3 is "good" or "bad". It has passed.
 
