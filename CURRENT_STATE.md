@@ -1,3 +1,42 @@
+## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 13: FULL ASSOCIATED-GRADED NO-GO
+
+A stronger negative boundary has now been established.
+
+For infinite Demuškin pro-(3) groups of fixed rank, the full graded group algebra
+[
+operatorname{gr}mathbf F_3[[G]]cong U(L(G))
+]
+coming from the complete (3)-Zassenhaus filtration is the quadratic/PBW Demuškin graded algebra determined by
+[
+[X_1,X_2]+[X_3,X_4]+cdots,
+]
+independently of the Demuškin (q)-invariant. Thus the full mod-3 associated-graded object is (q)-blind, not merely every bounded truncation.
+
+In the rank-four family
+[
+G_{3^s}=langle x_imid x_1^{3^s}[x_1,x_2][x_3,x_4]angle,
+qquad
+G_infty=langle x_imid [x_1,x_2][x_3,x_4]angle,
+]
+the graded object is therefore unable to distinguish the groups at the mod-3 graded level, while
+[
+chi_{3^s}(x_2)=(1-3^s)^{-1}
+]
+varies with (s), and (chi_infty(x_2)=1).
+
+This upgrades the previous finite-window obstruction to a full associated-graded no-go.
+
+Decision:
+- **full mod-3 associated graded (Rightarrow q) or full (chi): FAIL / CLOSED;**
+- any successful carrier must contain non-graded filtered/characteristic-zero extension information;
+- the first sufficient extension datum at mod-9 is the degree-3 power component (P_3) coupled to (R_2);
+- this is a genuine lower bound, but not an absolute category-independent minimality theorem.
+
+Important precision: the full (3)-adic digits do not necessarily require infinitely many independent extension classes. For fixed (q=3), the exact equation (1+2B=0) compresses all digits into one exact (mathbf Z_3)-coefficient relation. Hence the remaining question is specifically whether such exact extension information admits a canonical intrinsic compression smaller than the universal Fox obstruction scheme.
+
+Record:
+research/ORIENTATION_FULL_GRADED_NO_GO_MINIMAL_EXTENSION_2026-09-20.md
+
 ## AUTHORITATIVE UPDATE — 2026-09-20 — DEGREE-3 FOX TRUNCATION FAILS UNDER NIELSEN CHANGE
 
 A concrete Nielsen-equivalent presentation
