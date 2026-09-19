@@ -1,3 +1,38 @@
+## 2026-09-20 — HARD ATTACK 9: naive integral augmentation jet FAIL / CLOSED
+
+The proposed next object \(\langle r-1\rangle\subset I^2/I^4\) in \(\mathbf Z_3[[F]]\), with ordinary augmentation ideal \(I\), was attacked before any computation.
+
+For \(r=x_1^3[x_1,x_2][x_3,x_4]\) and \(X_i=x_i-1\),
+\[
+x_1^3-1=3X_1+3X_1^2+X_1^3.
+\]
+The commutator product begins in degree 2, so
+\[
+r-1=3X_1+[X_1,X_2]+[X_3,X_4]+O(I^3),
+\]
+and therefore \(r-1\notin I^2\).
+
+This kills the proposed plain \(\mathbf Z_3\)-augmentation jet at the definition level. It is not a matter of missing gauge proof.
+
+The correct distinction is:
+- standard mod-3 Zassenhaus filtration: uses the completed \(\mathbf F_3[[F]]\) augmentation ideal and yields the degree-(2,3) restricted-Lie relation jet;
+- ordinary \(\mathbf Z_3[[F]]\) augmentation filtration: is different and does not place the Demushkin relator in \(I^2\);
+- mixed p-adic/Zassenhaus weighted filtrations: a legitimate possible direction, but finite associated graded pieces are residue-layer objects and do not automatically carry the full exact scalar \(-1/2\in\mathbf Z_3^\times\).
+
+This is an independent structural confirmation of the previously closed “naive \(\mathbf Z_3\) restricted-Lie scalar extension” route.
+
+Decision:
+- plain \(\mathbf Z_3\)-augmentation \(I^2/I^4\) carrier: **FAIL / CLOSED**;
+- mod-3 Zassenhaus degree-(2,3) carrier: **PASS / CLOSED**;
+- mixed integral weighted jet: **OPEN**, but cannot be assumed to contain full 3-adic information;
+- exact universal Fox scheme: **PASS / CLOSED** under the stated standard hypotheses;
+- intrinsic exact two-component filtered compression: **OPEN**.
+
+Literature check: standard Zassenhaus definitions use the augmentation ideal of \(\mathbf F_p[[G]]\), consistent with Jennings/Lazard and modern Demushkin/Koszul references.
+
+Record:
+research/ORIENTATION_INTEGRAL_AUGMENTATION_JET_HARD_ATTACK_2026-09-20.md
+
 
 
 ## 2026-09-19 — HARD ATTACK 2: exact Z_3 carrier identification reopened
