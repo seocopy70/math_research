@@ -1095,3 +1095,14 @@ research/RANK4_D4_IA_QUOTIENT_DEFECT_COMPOSITION_RESULT_2026-09-19.md
 
 Next gate:
 fix the precise action/order convention independently of the small coincidence, extend the audit to a broader structured representative family, and explicitly verify the multiplier-2 GSp convention. No full rank-4 scan is authorized yet.
+
+
+## 2026-09-19 — quotient cocycle sign correction and valid local PASS
+
+The previously logged run 35417325110 was invalidated after detecting that the audit helper added, rather than subtracted, the reference relator in the normalized defect. That earlier PASS is not evidence.
+
+Corrected run 35418122079, commit bb39ed1a7191aeae0da07813e40abe47695d292a. The corrected defect delta_g=[F_g(R3)-mu(g)R3]_deg3 yields Delta_q(g)=[delta_3-delta_infinity]=[F_g(X1^3)-X1^3]_deg3. For all 16 ordered pairs of identity, -I, the standard transvection, and the multiplier-2 diagonal, Delta_q(gh)=Delta_q(g)+g·Delta_q(h) holds in Q3.
+
+Exact: gauge rank 20; Q3 dimension 44; candidate failures modulo Q3 0; raw failures 0; reversed diagnostic failures modulo Q3 2; reversed raw failures 2; 11 composed q-defect classes survive Q3.
+
+Conclusion: valid LOCAL PASS, with the candidate action/order convention distinguished on this control set. Next gate is a broader structured representative-family audit with explicit multiplier behavior. No unrestricted full rank-4 scan yet.
