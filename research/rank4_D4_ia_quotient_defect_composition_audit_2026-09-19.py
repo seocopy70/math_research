@@ -142,7 +142,7 @@ def modzero(v):
 
 # Normalized defect uses mu(g)R3. This is the transformation law candidate.
 def delta(g,m):
-    return defect(g,m)
+    return defect([ev(w,GEN) for w in g],m)
 
 names=list(CASES)
 results=[]
