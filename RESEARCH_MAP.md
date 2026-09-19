@@ -1034,3 +1034,39 @@ The next authorized computation is the target-side orbit span
 \]
 
 This remains only a target-side H-module construction. It is not the fixed q=9 relation space, and no q=3/q=\\infty distinction or orientation conclusion is yet authorized.
+
+
+## 6O. Q3/Q9 S9 — target-side orbit span PASS
+
+Record: research/Q3_Q9_S9_TARGET_ORBIT_SPAN_RESULT_2026-09-19.md
+
+The source-map target is
+\[
+Q_9^\\infty=L_9^{res}/(I_\\infty)_9.
+\]
+S9-B gives
+\[
+(I_\\infty)_9\\cap L_1^{[9]}=0,
+\]
+so the quotient map is injective on the p-layer \(L_1^{[9]}\).
+
+C3.1 already established
+\[
+\\langle H\\cdot S_9\\rangle=L_1^{[9]},
+\qquad \\dim L_1^{[9]}=4.
+\]
+Therefore the target-side orbit satisfies
+\[
+\\boxed{\\mathcal O_9=\\langle H\\cdot[S_9]\\rangle
+\\cong L_1^{[9]},\\qquad \\dim\\mathcal O_9=4.}
+\]
+
+This is a quotient-side H-module, not the q=9 relation space and not an H-closed replacement for it.
+
+### Boundary
+
+No q=3/q=\\infty distinction, canonical q-invariant, or orientation conclusion is established by this 4-dimensional orbit alone.
+
+### Next gate
+
+Determine whether the 4-dimensional target-side module gives a legitimate comparison observable between the q=3 and q=\\infty presentations, rather than merely reproducing the natural p-layer representation.
