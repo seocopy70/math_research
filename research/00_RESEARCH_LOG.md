@@ -500,3 +500,50 @@ equivalently
 (I_{\infty})_9\cap L_1^{[9]}=0.
 ]
 This must be established from restricted-ideal generation and explicit degree-9 p-power source tracking, not from dimensions alone. No large q=9 computation is authorized until this lemma closes.
+
+
+## 2026-09-19 — S9-B structural lemma closed
+
+The previously retracted S9-B PASS has now been legitimately restored.
+
+A structural proof established
+[
+(I_infty)_9=(I^{ord})_9oplus I_3^{[3]},
+]
+inside the frozen restricted-layer decomposition
+[
+L_9^{res}=L_9oplus L_3^{[3]}oplus L_1^{[9]}.
+]
+
+Reason:
+- bracket-generated descendants of ideal elements remain in the ordinary ideal;
+- a degree-9 restricted p-power can only come from degree 3;
+- ((I_infty)_3=I_3subset L_3), so its p-powers lie in (L_3^{[3]});
+- ((I_infty)_1=0), so there is no source for (L_1^{[9]}).
+
+Therefore
+[
+(I_infty)_9cap L_1^{[9]}=0.
+]
+With S9-A,
+[
+S_9=X_1^{[9]}in L_1^{[9]},quad S_9
+e0,
+]
+hence
+[
+S_9
+otin I_{infty,9}.
+]
+
+Structural lemma record:
+`research/Q3_Q9_S9_B_STRUCTURAL_LEMMA_RESULT_2026-09-19.md`
+commit `840de39202657d284ee216da937f8afd27ef9d5c`.
+
+### Gate status
+
+- S9-A: **PASS / CLOSED**
+- S9-B: **PASS / CLOSED**
+- baseline (13524): **FROZEN**
+- S9 not inserted into baseline
+- q=9 construction is now authorized as the next separate gate
