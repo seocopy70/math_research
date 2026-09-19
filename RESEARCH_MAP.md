@@ -125,9 +125,11 @@ The previously open twisted degree-(2,3) structural bridge is now closed at the 
 
 A proof-level calculation establishes:
 [
-delta_ho(f)=igl[f(p(P))+(lambdawedge f)(R)igr]omega
+delta_
+ho(f)=igl[f(p(P))+(lambdawedge f)(R)igr]omega
 ]
-for a minimal one-relator pro-3 presentation with relation jet (r=(R,P)+O(D_4)), where (ho=1+3lambdapmod9).
+for a minimal one-relator pro-3 presentation with relation jet (r=(R,P)+O(D_4)), where (
+ho=1+3lambdapmod9).
 
 The proof has four load-bearing parts:
 1. the coefficient exact sequence (0	o3A_2	o A_2	o A_1	o0) identifies the cohomological lifting obstruction;
@@ -135,7 +137,8 @@ The proof has four load-bearing parts:
 3. the Zassenhaus formula (D_4=prod_{3^jige4}gamma_i^{3^j}) shows the divided trivial-action term is unchanged modulo 3 by a (D_4)-error;
 4. the degree-one evaluation kills the bracket component of (P), leaving only (p(P)in V^{(1)}).
 
-Presentation/gauge naturality is then obtained intrinsically from the connecting maps (delta_ho): the family in ((lambda,f)) is presentation-independent, and the map ((R,p)mapsto[f(p)+(lambdawedge f)(R)]) is injective. Thus the projective carrier ([(R,p)]) is forced by the intrinsic first twisted obstruction family, without selecting a preferred IA lift.
+Presentation/gauge naturality is then obtained intrinsically from the connecting maps (delta_
+ho): the family in ((lambda,f)) is presentation-independent, and the map ((R,p)mapsto[f(p)+(lambdawedge f)(R)]) is injective. Thus the projective carrier ([(R,p)]) is forced by the intrinsic first twisted obstruction family, without selecting a preferred IA lift.
 
 For the frozen relation (x_1^3[x_1,x_2][x_3,x_4]), this gives uniquely
 [
@@ -282,7 +285,11 @@ No further computational scan is authorized for this branch. Any continuation re
 
 For the fixed q=3 normal form, the projective degree-(2,3) relation jet can be retained over exact Z_3-coefficients. The exact crossed-derivation equations are
 [
-ho(x_1)=ho(x_3)=ho(x_4)=1,qquad 1+2ho(x_2)=0,
+
+ho(x_1)=
+ho(x_3)=
+ho(x_4)=1,qquad 1+2
+ho(x_2)=0,
 ]
 so one bounded-degree exact filtered carrier determines
 [
@@ -361,7 +368,8 @@ The stronger question has been split by information model.
 
 **Closed:** no universal carrier with fixed finite Zassenhaus-degree bound and finite 3-adic coefficient precision can recover the full (chi). For
 [
-G_{3^s}=langle x_imid x_1^{3^s}[x_1,x_2][x_3,x_4]angle
+G_{3^s}=langle x_imid x_1^{3^s}[x_1,x_2][x_3,x_4]
+angle
 ]
 the q-power term first appears in degree (3^s), while
 [
@@ -389,8 +397,7 @@ is uniquely determined by the finite-level crossed-derivation equations. For the
 \qquad
 \chi_n(x_2)=(-2)^{-1}\pmod{3^n}.
 \]
-The reductions are compatible and
-\[
+The reductions are compatible and\[
 \mathbf Z_3^\times\cong\varprojlim_n(\mathbf Z/3^n)^\times
 \]
 gives the unique full \(\chi\).
@@ -789,8 +796,7 @@ Verified:
 - (dim\operatorname{Hom}_H(\Delta O,U)=1).
 - (Psi) is exactly (10\times10).
 - Full matrix comparison gives (Psi=I_{10}) exactly.
-- All ten diagonal entries are 1.
-- Every off-diagonal entry is zero.
+- All ten diagonal entries are 1.- Every off-diagonal entry is zero.
 - (Psi=2I_{10}) is false.
 
 Hence
@@ -1189,7 +1195,6 @@ The frozen baseline remains
 oxed{dim I_{infty,9}=13524},
 ]
 and no (S_9) contribution has been inserted into that baseline.
-
 ### Next gate
 
 The next controlled computation is **S9-B — quotient survival**:
@@ -1240,7 +1245,8 @@ otin I_{infty,9}}.
 - S9-B quotient survival: **PASS / CLOSED**.
 - Baseline (dim I_{infty,9}=13524): **FROZEN**.
 - S9 is excluded from the baseline.
-- The next authorized step is the separate q=9 relation-space construction (I_9=langle R_2,S_9angle_{res}).
+- The next authorized step is the separate q=9 relation-space construction (I_9=langle R_2,S_9
+angle_{res}).
 - H-stability and (D_9) remain downstream gates.
 
 ## 6H. Q3/Q9 S9 — q=9 degree-9 relation-space gate: PASS / CLOSED
@@ -1588,7 +1594,6 @@ H-closure is not a valid presentation object.
 
 
 ## 6S. Q3/Q9 S9 — post-D9 presentation-derived structure census: CLOSED
-
 Record: `research/Q3_Q9_S9_D9_OBS_STRUCTURE_CENSUS_2026-09-19.md`
 
 After closing the natural p-layer observable, the authoritative Q3/Q9 records and the relevant earlier q-control/roadmap records were audited for an already-defined presentation-derived structure that survives beyond (L_1^{[9]}).
@@ -1839,7 +1844,8 @@ No finite scan is authorized at this stage. Next hand task: inspect the dualizin
 ## 2026-09-19 — Dualizing top-line convention audit
 
 Frozen (g) is on the generator/(H_1) side. Hence the induced (H^1) action is (g^{-T}), and the induced (H^2) scalar is (
-u(g)^{-1}). For (p=3), (mathbf F_3^	imes={pm1}), so inversion is identical: (mu_{H^2}=mu_{m int}) as (mathbf F_3^	imes)-valued characters, although conceptually the cohomological action is inverse. This does **not** identify (mu) with the full orientation (chi:G	omathbf Z_3^	imes); (chimod3) is trivial. The MU-CHI bridge is therefore conceptually resolved: (mu) is a canonical automorphism-of-duality-line shadow, not the orientation character. No finite scan is authorized. Next work should target filtered/graded data retaining the (1+3mathbf Z_3) orientation layer.
+u(g)^{-1}). For (p=3), (mathbf F_3^	imes={pm1}), so inversion is identical: (mu_{H^2}=mu_{
+m int}) as (mathbf F_3^	imes)-valued characters, although conceptually the cohomological action is inverse. This does **not** identify (mu) with the full orientation (chi:G	omathbf Z_3^	imes); (chimod3) is trivial. The MU-CHI bridge is therefore conceptually resolved: (mu) is a canonical automorphism-of-duality-line shadow, not the orientation character. No finite scan is authorized. Next work should target filtered/graded data retaining the (1+3mathbf Z_3) orientation layer.
 
 ## 0B. 2026-09-19 — Mod-9 Bockstein candidate: FAIL / CLOSED
 
@@ -1939,7 +1945,8 @@ C_3=G/G_4
 ]
 of the frozen Zassenhaus/p-central filtration. The coefficient action is through
 [
-ho=1+3lambdapmod9,qquad lambdain H^1(G,mathbf F_3).
+
+ho=1+3lambdapmod9,qquad lambdain H^1(G,mathbf F_3).
 ]
 In frozen coordinates, evaluation of this intrinsic lifting problem reproduces
 [
@@ -1985,7 +1992,6 @@ B_\lambda(f)=(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4,
 and establish presentation/isomorphism naturality and uniqueness.
 
 No finite scan is authorized.
-
 
 ## 0E. 2026-09-19 — F5 structural reconstruction: PASS for enriched relation jet
 
@@ -2281,3 +2287,49 @@ This is **PASS / CLOSED** for full structured-carrier classification on the stan
 It is deliberately NOT promoted to a universal no-go: this does not prove that every natural bridge on the full admissible filtered/relation category factors through q/classification. The B27 orientation-carrier status therefore remains **CONDITIONAL / OPEN**.
 
 Stop: no further same-family beta_1/beta_9 scans. Next attack must be universal/categorical: prove universal factorization/no-go, or construct an independent chain-level orientation bridge.
+
+## CRITICAL REVIEW OF HARD ATTACK 21 — 2026-09-20
+
+Hard Attack 21 correctly repairs the principal Gap 1 from Hard Attack 20 on the standard rank-four family, but the record still contains three precision issues that must be fixed before the next universal attack.
+
+### 1. What is actually proved
+For (G_q=\langle x_1,x_2,x_3,x_4\mid x_1^q[x_1,x_2][x_3,x_4]\rangle), the calculation
+\[
+H^1(G_q,\mathbf Z/9)=\{(a_1,a_2,a_3,a_4)\in(\mathbf Z/9)^4:q a_1=0\}
+\]
+gives (3A\times A^3) for (q=3) and (A^4) for (q\ge9). Together with the displayed Bockstein normal forms this does establish the three structured-carrier isomorphism types on this standard family: class (v_3(q)=1), class (v_3(q)=2), and class (v_3(q)\ge3). The converse distinctions are also structural: the underlying (W_q) differs between (q=3) and (q\ge9), while (\beta_9\) distinguishes (q=9) from (q\ge27).
+
+### 2. Terminology correction
+The phrase “canonical normal-form identifications” is too strong. The coordinates (a_i) and the displayed models depend on a chosen standard presentation. The proved statement is: **explicit structure-preserving model isomorphisms exist in a chosen standard presentation, and the resulting abstract structured carrier has exactly three isomorphism types on this family.** No canonical basis or canonical coordinate identification is claimed.
+
+### 3. Target formalization remains load-bearing
+The notation (O_{27}) must now be fixed before any bridge theorem is claimed. It should not be treated informally as “the character”. The natural target should be defined basis-free as the appropriate orientation torsor/object together with its mod-27 logarithmic datum, so that a statement
+\[
+\Phi_{27}:\mathcal B_{27}\to O_{27}
+\]
+means an actual natural transformation in the declared category. In particular, the quantity (\lambda_{27}=\frac13\log\chi\pmod9) is an additive coordinate only after the target object and its natural action are specified; it is not itself a basis-free vector without that structure.
+
+### 4. Universal no-go is still not proved
+The standard-family classification does **not** imply
+\[
+\text{every natural }\mathcal B_{27}\to O_{27}\text{ factors through }q\text{-classification}.
+\]
+Nor does it produce the desired independent bridge. Thus the carrier remains **CONDITIONAL / OPEN**. The next decisive attacks are categorical, not numerical.
+
+### 5. Binding next gate
+Before further calculation:
+- define (O_{27}) intrinsically and basis-free;
+- formalize the induced action of admissible morphisms on (O_{27});
+- test whether there exist admissible objects (G,G') with isomorphic full (\mathcal B_{27}) but non-isomorphic (O_{27}). Such a pair is a genuine no-go and closes the carrier;
+- if no such pair can be produced, attack the universal factorization statement or construct an independent chain-level identity for (\lambda_{27}) without extracting (q), the dualizing action, or the known classification formula.
+
+**Status after this review:**
+- full structured-carrier classification on the standard family: **PASS / CLOSED**;
+- q-valuation factorization on that family: **PASS / CLOSED**;
+- Bockstein finite q-layer detector: **PASS / LOCAL**;
+- Hard Attack 18 unconditional symmetry no-go: **HISTORICAL / SUPERSEDED**;
+- universal factorization/no-go: **OPEN**;
+- independent orientation bridge: **OPEN**;
+- Bockstein orientation carrier: **CONDITIONAL / OPEN**.
+
+No further same-family Bockstein scan is authorized.
