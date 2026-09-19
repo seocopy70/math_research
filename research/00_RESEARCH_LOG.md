@@ -1061,3 +1061,37 @@ The result is a local filtered quotient datum control, not a full rank-4 theorem
 ### Consequence / next gate
 
 The next authorized computation is to define and audit the quotient-valued defect transformation/composition law on the admissible category, with the GSp multiplier convention explicit. No full rank-4 representative scan is authorized before that law is established.
+
+
+## 2026-09-19 — quotient-valued q-defect composition law local PASS
+
+The next authorized gate was to formulate and audit a quotient-valued defect transformation/composition law before any broad rank-4 scan.
+
+A first candidate based on the absolute normalized relator defect [F_g(R3)-mu(g)R3]_deg3 was tested and failed on all 16 ordered pairs. It is therefore not promoted.
+
+The q-sensitive difference was then isolated:
+Delta_q(g) = [delta_3(g)-delta_infinity(g)] = [F_g(X1^3)-X1^3]_deg3.
+
+For F_(gh)=F_g o F_h, the candidate law
+Delta_q(gh)=Delta_q(g)+g·Delta_q(h)
+was checked in Q3=A3/(C3+Delta_IA).
+
+CI run 35417325110, commit 1ee1680f071c77ee3b6042eb1436dfd9f3406, completed successfully.
+
+Exact results:
+- gauge rank 20;
+- Q3 dimension 44;
+- 16/16 ordered representative pairs checked;
+- candidate-law failures modulo Q3: 0;
+- raw candidate-law failures: 16;
+- all 16 composed q-defect classes nonzero.
+
+Representatives: identity, -I, standard transvection e1 -> e1+e2, multiplier-2 diagonal diag(2,1,2,1).
+
+The reversed action/order diagnostic also has zero failures modulo Q3 on this small set. Therefore this result is a local existence/compatibility PASS for the candidate cocycle law, but not a uniqueness proof for the action/order convention.
+
+Result record:
+research/RANK4_D4_IA_QUOTIENT_DEFECT_COMPOSITION_RESULT_2026-09-19.md
+
+Next gate:
+fix the precise action/order convention independently of the small coincidence, extend the audit to a broader structured representative family, and explicitly verify the multiplier-2 GSp convention. No full rank-4 scan is authorized yet.
