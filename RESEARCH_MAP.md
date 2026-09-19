@@ -1,3 +1,19 @@
+## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 16: MOD-27 BOCKSTEIN-EXTENSION CARRIER
+
+A first serious intrinsic mod-27 candidate now survives the definition gate:
+\[
+\mathcal B_{27}=(H^1(G,\mathbf F_3),H^1(G,\mathbf Z/9),\mathrm{red},\iota,\smile,\beta_1,\beta_9).
+\]
+It uses only functorial coefficient-extension/cohomological data, contains the established mod-9 carrier, and is independent of Fox coordinates.
+
+The correct additive orientation target is \(\lambda_{27}=\frac13\log\chi\pmod9\), not \((\chi-1)/3\). On the standard family the two Bockstein layers give \(e_2\) for q=3, \(3e_2\) for q=9, and 0 for q divisible by 27, yielding the correct residues 13, 10, 1 mod 27.
+
+The candidate remains OPEN because the orientation bridge must still be proved naturally, independently of the standard presentation and without inserting q or the known orientation formula.
+
+Decision: **MOD-27 BOCKSTEIN-EXTENSION CARRIER: OPEN / STRONG CANDIDATE.**
+
+Record: research/MOD27_BOCKSTEIN_EXTENSION_CARRIER_HARD_ATTACK_2026-09-20.md
+
 ## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 15: MOD-27 CATEGORY ADEQUACY
 
 A category-level loophole was closed before any higher mod-27 computation. If unrestricted full-group constructions are admitted, the dualizing module/action already contains the canonical orientation, and the Demuškin classification supplies q as an intrinsic invariant from which the standard orientation formula recovers chi. That is a known group-intrinsic reconstruction, not the intended filtered-carrier result.
