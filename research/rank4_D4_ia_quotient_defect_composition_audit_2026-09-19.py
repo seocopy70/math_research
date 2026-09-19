@@ -168,6 +168,7 @@ for a in names:
         e2=[(x-y)%P for x,y in zip(lhs,rhs2)]
         law1_fail_raw += bool(any(e1)); law2_fail_raw += bool(any(e2))
         law1_fail += not modzero(e1); law2_fail += not modzero(e2)
+        if a=="identity" and b=="transvection": print("CHECK", lhs[:12], rhs1[:12], e1[:12])
         if survives(lhs): nonzero_pairs += 1
         results.append((a,b,any(e1),modzero(e1),any(e2),modzero(e2)))
 print({"diagnostic_law1_failures":law1_fail,"diagnostic_law2_failures":law2_fail,"diagnostic_raw_law1_failures":law1_fail_raw,"diagnostic_raw_law2_failures":law2_fail_raw})
