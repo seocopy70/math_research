@@ -653,3 +653,29 @@ C3.3 = **PASS**.
 The H-closure rescue route is **CLOSED / NOT PROMOTED**. The number 13528 (=13524+4) is only the dimension of a different H-closed relation enlargement and is not the degree-9 relation dimension of the fixed q=9 group.
 
 The naive q=9 space and the artificial H-closed enlargement are both excluded from downstream \\(gr_9\\)/D9 use. The Q3/Q9 track returns to its independently defined **Gate C**: derive the first nonzero baseline-relative degree-9 source of the full q=9 presentation from the presentation/Magnus expansion, without assuming H-stability.
+
+
+## 2026-09-19 — Q3/Q9 Gate C: degree-9 source derivation CLOSED
+
+The next authorized question after the S9 H-stability/provenance failure was to locate the first nonzero baseline-relative degree of the full q=9 presentation, without assuming H-stability or reusing the q=3 source.
+
+Using the frozen Magnus conventions over F3 and the repository's existing control construction, the exact truncated computation through degree 9 gives
+\\[
+\\Delta_d(9)=0\\quad(1\\le d\\le8),
+\\qquad
+\\boxed{\\Delta_9(9)=X_1^9}.
+\\]
+The independent characteristic-3 power check gives \\( (1+X_1)^9=1+X_1^9 \\), consistent with the result.
+
+Together with the already closed S9-A ambient identity, the one-generator restricted realization identifies this source as
+\\[
+\\boxed{\\Delta_9(9)=X_1^{[9]}=S_9}.
+\\]
+
+### Gate consequence
+Gate C source-location/derivation = **PASS / CLOSED**.
+
+This does **not** establish a degree-9 quotient invariant, H-stability, or D9. In particular, the earlier H-stability FAIL and C3.2 provenance FAIL remain unchanged.
+
+### Next step
+A new **degree-9 source-map definition gate** is required. The old degree-3 N/J map must not be silently reused. The target module, quotient convention, source map, and H-action must be independently defined and audited before any downstream invariant computation.
