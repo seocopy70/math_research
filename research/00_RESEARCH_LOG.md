@@ -577,3 +577,36 @@ Result record:
 `research/Q3_Q9_S9_q9_degree9_relation_space_RESULT_2026-09-19.md`.
 
 The next gate is H-stability of the q=9 degree-9 relation space. No D9 or gr9 quotient interpretation is promoted yet.
+
+## 2026-09-19 — q=9 H-stability gate FAIL / CLOSED
+
+The q=9 degree-9 relation space was tested under the fixed H=Sp_4(F_3) action.
+
+With the authoritative symplectic convention,
+\[
+t_{e_2}(e_1)=e_1+e_2,
+\]
+and therefore
+\[
+t_{e_2}(S_9)=S_9+X_2^{[9]}.
+\]
+Since S9-B gives zero intersection of the baseline with L1^[9], while the q=9 space has only the line <S9> in that p-layer, the transformed vector lies outside (I_9)_9.
+
+Exact F3 rank:
+\[
+rank\langle S_9\rangle=1,
+\qquad
+rank\langle S_9,t_{e_2}S_9\rangle=2.
+\]
+
+Hence
+\[
+\boxed{(I_9)_9\text{ is not H-stable}.}
+\]
+
+An initial implementation draft contained a sign error in the witness; independent exact checking caught it and the script was corrected before accepting the mathematical result. This is recorded as an INVALID TEST correction, not as evidence against the proposition.
+
+Result record:
+research/Q3_Q9_S9_H_STABILITY_RESULT_2026-09-19.md
+
+The next step is not D9. It is a redesign gate: determine whether taking an H-closure is mathematically legitimate for the q=9 relation, and what object—if any—can support a valid downstream comparison.
