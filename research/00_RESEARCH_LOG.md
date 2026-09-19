@@ -831,3 +831,19 @@ Decision:
 비판적 검토 중 `research/CURRENT_STATE.md`가 이 결과 이후에도 이전 LIVE gate(D9-OBS definition gate)를 유지하고 있음을 발견하여 stale-state 문제를 수정했다. CURRENT_STATE는 이제 D9-OBS FAIL/CLOSED를 반영한다.
 
 다음 단계에서는 새로운 4D orbit 계산을 반복하지 않고, p-map으로 소실되는 정보를 보존하는 presentation/Magnus/filtration-derived 구조가 기존 문서에 이미 정의되어 있는지 먼저 확인한다. 그러한 구조가 없다면 이 Q3/Q9 orbit route를 추가 추측 없이 종료할 수 있다.
+
+
+## 2026-09-19 — Post-D9 presentation-derived structure census CLOSED
+
+D9-OBS의 natural p-layer shadow가 FAIL/CLOSED된 후, 현재 authoritative Q3/Q9 문서와 관련 q-control/roadmap 기록을 다시 점검했다.
+
+확인:
+- Gate-C의 \(\Delta_9(9)=X_1^{[9]}\)는 이미 universal p-layer shadow와 동일하다.
+- fixed \((I_9)_9\)는 H-stable하지 않으며, H-closure는 presentation relation provenance를 잃는다.
+- 기존 O2-7 transport-variation module은 degree-4 q=3/q=∞ construction이며 자체 boundary가 q=3/q=9 degree-9 사용을 허가하지 않는다.
+- 현재 roadmap/Track B에는 더 미세한 group-level 또는 higher-operation 구조가 open으로 남아 있지만, Q3/Q9 degree-9에 대해 이미 정의된 canonical observable은 없다.
+
+따라서 현재 S9 target-orbit route는 **definition level에서 CLOSED**한다.
+
+범위 제한:
+이것은 미래의 모든 q=9 invariant가 불가능하다는 정리가 아니다. 향후 continuation은 full filtered/Magnus data, rigorously defined higher operation/extension datum, 또는 양쪽 q에 대해 먼저 정의되는 Track-B construction 중 하나에서 새로운 object를 독립적으로 정의하고 자체 legitimacy gate를 통과해야 한다.
