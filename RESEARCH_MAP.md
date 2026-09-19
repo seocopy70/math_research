@@ -1,3 +1,15 @@
+## AUTHORITATIVE UPDATE — 2026-09-19 — EXACT CARRIER BRANCH CLOSED AT STRUCTURAL BOUNDARY
+
+The exact q=3 branch is now separated into:
+1. exact filtered relation/evaluation carrier -> full \\(\\chi\\): PASS/CLOSED;
+2. mod-3 compressed relation carrier -> \\(\\chi\\bmod9\\): PASS/CLOSED, with coarsest quotient \\(([R],p(P))\\) in the defined linear-evaluation category;
+3. exact characteristic-zero concrete compression analogous to \\(([R],p(P))\\): NOT PROVED;
+4. naive Z_3 restricted-Lie scalar extension: FAIL/CLOSED.
+
+The canonical exact evaluation quotient is valid only as the coarsest quotient for the independently prescribed coefficient-evaluation family; treating it as “whatever is needed to recover chi” would be tautological.
+
+No further computational scan is authorized for this branch. Any continuation requires a new structural theorem/invariant.
+
 ## 0C.2. EXACT Z_3 DEGREE-3 FULL-CHI CLOSURE — 2026-09-19
 
 For the fixed q=3 normal form, the projective degree-(2,3) relation jet can be retained over exact Z_3-coefficients. The exact crossed-derivation equations are
