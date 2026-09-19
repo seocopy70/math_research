@@ -240,3 +240,14 @@ u(g)^{-1}). For (p=3), (mathbf F_3^	imes={pm1}), so inversion is identical: (mu_
 The MU-CHI branch is now conceptually closed: mu is the canonical F3^times character on the torsion/top-duality line, while chi is the Z3^times-valued group orientation. They are not the same object and mu carries no higher 3-adic information.
 
 Next target is the first nontrivial orientation layer chi mod 9. A new gate requires a canonical mod-9 cohomological/Bockstein/first-lift construction and explicitly forbids reuse of the failed lift-dependent relator-unit scalar. No finite scan is authorized until the mod-9 object is hand-defined and its ambiguity is proved harmless.
+
+## 2026-09-19 — Critical correction to mod-9 orientation gate
+
+The first formulation overstated what mod-9 cup data could prove. The corrected status is:
+
+- **Established:** finite-coefficient cup-product data sees the \(q=3\) power contribution; for the frozen relation its mod-9 matrix is, up to convention, \(\begin{pmatrix}6&1\\-1&0\end{pmatrix}\oplus\begin{pmatrix}0&1\\-1&0\end{pmatrix}\).
+- **Not established:** this matrix recovers \(\chi(x_2)\equiv4\pmod9\).
+- **Critical ambiguity:** \(H^2\)-valued pairing needs a generator/trivialization before a scalar can be extracted; basis/presentation invariance must also be proved.
+- **Gate remains OPEN:** test an explicit Bockstein/finite-coefficient invariant. If it retains only q=3 and loses the value 4, close the route.
+
+No finite scan.
