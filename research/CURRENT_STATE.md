@@ -7,10 +7,10 @@ Last updated: 2026-09-19 (S9 preflight)
 ## 0. 현재 위치
 
 - 전체 지도: RESEARCH_MAP.md
-- 현재 작업: Q3/Q9 — C-2c-2, degree-9 restricted relation ideal definition audit
-- 상태: **C-2c-2 baseline closure certificate PASS / S9 admission still OPEN**
+- 현재 작업: Q3/Q9 — S9 degree-9 source-map route의 D9-OBS definition gate 후속 정리
+- 상태: **D9-OBS natural p-layer shadow = FAIL / CLOSED**
 - 연구 원칙: **정의 → 검증 → 계산 → 해석**
-- 지금은 D9, H-stability, q=9 검출 계산으로 넘어가지 않는다.
+- 현재는 새로운 4D orbit 계산이나 인위적 observable 발명을 하지 않는다. presentation-derived structure가 p-layer shadow 밖에서 남는지 먼저 검토한다.
 
 ## 1. STABLE — 이미 닫힌 결과
 
@@ -354,3 +354,40 @@ the degree-3 N/J construction by analogy.
 > **D9-OBS — can a mathematically natural q-dependent observable be derived
 > from the target-side (mathcal O_9), or is (mathcal O_9) merely the
 > natural 4-dimensional (p)-layer shadow of (S_9)?**
+
+
+## 15. 2026-09-19 — D9-OBS definition gate critical review correction
+
+기존 §13의 LIVE 표시는 D9-OBS 결과 문서와 불일치하여 stale 상태였다. 상세 정본
+`research/Q3_Q9_S9_D9_OBS_DEFINITION_RESULT_2026-09-19.md`에 따라 현재 상태를 정정한다.
+
+검증된 자연스러운 후보는
+\[
+\Delta_3(3)=X_1^{[3]}
+\quad\xrightarrow{[3]}\quad
+(\Delta_3(3))^{[3]}=X_1^{[9]}=S_9=\Delta_9(9)
+\]
+이다. 따라서 frozen baseline quotient에서
+\[
+[(\Delta_3(3))^{[3]}]=[S_9]
+\]
+이고 두 H-orbit span은 동일하다:
+\[
+\langle H\cdot[(\Delta_3(3))^{[3]}]\rangle
+=
+\langle H\cdot[S_9]\rangle
+=
+\mathcal O_9\cong L_1^{[9]}.
+\]
+
+따라서 `dim O_9=4`는 q=3/q=9 discriminator가 아니라 자연스러운 p-layer shadow이다.
+
+**D9-OBS via natural p-layer shadow = FAIL / CLOSED.**
+
+중요한 범위:
+- 이는 q=3/q=9 전체 presentation이 동일하다는 주장 아님.
+- 이는 전체 relation ideal의 동일성 주장 아님.
+- 이는 q=3/q=∞의 기존 degree-3 N/J 결과를 무효화하지 않음.
+- 새로운 observable은 단지 구별된다는 이유만으로 만들지 않는다.
+- 다음 연구 질문은 p-map에서 소실되는 정보를 보존하는 presentation/Magnus/filtration-derived structure가 실제로 정의되어 있는지 확인하는 것이다.
+
