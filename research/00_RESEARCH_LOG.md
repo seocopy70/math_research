@@ -610,3 +610,46 @@ Result record:
 research/Q3_Q9_S9_H_STABILITY_RESULT_2026-09-19.md
 
 The next step is not D9. It is a redesign gate: determine whether taking an H-closure is mathematically legitimate for the q=9 relation, and what object—if any—can support a valid downstream comparison.
+
+
+## 2026-09-19 — S9 H-closure redesign gate C3.1–C3.3
+
+After the q=9 degree-9 relation space failed the H-stability gate, the proposed rescue route was tested explicitly rather than assumed.
+
+### C3.1 — complete H-orbit closure
+Using exact F3 arithmetic and the complete set of nonzero-vector symplectic transvections, the orbit closure of \\(S_9=X_1^{[9]}\\) in \\(L_1^{[9]}\\) has
+\\[
+\\dim\\langle H\\cdot S_9\\rangle=4,
+\\qquad
+\\langle H\\cdot S_9\\rangle=L_1^{[9]}.
+\\]
+C3.1 = **PASS**.
+
+### C3.2 — provenance of the orbit directions
+The fixed q=9 degree-9 relation space remains
+\\[
+(I_9)_9=(I_\\infty)_9\\oplus\\langle S_9\\rangle.
+\\]
+The verified witness
+\\[
+t_{e_2}(S_9)=S_9+X_2^{[9]}
+\\]
+shows that the H-closure contains \\(X_2^{[9]}\\), while the frozen S9-B structural lemma gives
+\\[
+(I_\\infty)_9\\cap L_1^{[9]}=0.
+\\]
+Hence \\(X_2^{[9]}\\) is not a relation of the fixed q=9 presentation. Promotion of the H-closure as the q=9 relation contribution therefore fails.
+
+C3.2 = **FAIL (mathematical provenance failure, not implementation failure)**.
+
+### C3.3 — baseline intersection
+The same structural lemma gives
+\\[
+\\langle H\\cdot S_9\\rangle\\cap(I_\\infty)_9=0.
+\\]
+C3.3 = **PASS**.
+
+### Decision
+The H-closure rescue route is **CLOSED / NOT PROMOTED**. The number 13528 (=13524+4) is only the dimension of a different H-closed relation enlargement and is not the degree-9 relation dimension of the fixed q=9 group.
+
+The naive q=9 space and the artificial H-closed enlargement are both excluded from downstream \\(gr_9\\)/D9 use. The Q3/Q9 track returns to its independently defined **Gate C**: derive the first nonzero baseline-relative degree-9 source of the full q=9 presentation from the presentation/Magnus expansion, without assuming H-stability.
