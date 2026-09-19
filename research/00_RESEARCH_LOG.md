@@ -1956,3 +1956,23 @@ A canonical exact evaluation quotient can be defined using the common kernel of 
 
 Record: research/ORIENTATION_EXACT_Z3_COMPRESSED_CARRIER_AUDIT_2026-09-19.md
 Decision: PASS/CLOSED for exact full-chi recovery; FAIL/CLOSED for naive Z_3 restricted-Lie compression; OPEN for concrete exact compression.
+
+
+## 2026-09-19 — Literature audit: arXiv:2601.07551v2 (Pál–Quick)
+
+Full source archive was read. The paper *A_3-formality for Demushkin groups at odd primes* proves a sharp mod-p higher-order distinction: q=3 Demushkin groups are not A_3-formal, while q=0 or q>=5 (and q=3^f, f>=2) are A_3-formal. The proof uses the Benson–Krause–Schwede canonical class and Dwyer U_4 lifting.
+
+Relevance to the current orientation project:
+- independent confirmation that higher-order data beyond the common quadratic Demushkin relation can detect q-sensitive structure;
+- explicit higher relation -> unipotent lifting obstruction -> cohomological invariant pattern is adjacent to our filtered relation-jet approach;
+- q=3 is detected through the x_1^3 relation and a U_4(F_3) lifting obstruction.
+
+Critical boundary:
+- the paper does NOT reconstruct the cyclotomic orientation character chi:G->Z_3^times;
+- it does NOT prove that its canonical class is intrinsic to the Zassenhaus filtered/graded group alone;
+- it does NOT provide a universal finite bounded-degree full-chi reconstruction;
+- its invariant is mod-p cochain/Hochschild data, not our exact Z_3 relation-jet carrier.
+
+Decision: **RELEVANT LITERATURE / SUPPORTING EVIDENCE; no current Gate reopened.** The paper reinforces the already established separation between q-sensitive higher-order structure and actual intrinsic reconstruction of full chi.
+
+Detailed record: research/LITERATURE_ARXIV_2601_07551_A3_FORMALITY_2026-09-19.md
