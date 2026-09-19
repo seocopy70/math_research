@@ -1242,3 +1242,17 @@ Before any rank-4 lifting computation, freeze a rank-4 A_n^rel-type definition:
 5. GSp versus Sp ambient convention.
 
 Only then execute a small rank-4 control.
+## 8. Rank-4 D4 lifting definition gate — OPEN
+
+The rank-2 control passed, so a rank-4 candidate was formally drafted at D4.
+
+Candidate:
+A_4^rel(q) = {g in GSp_4(F3): an allowed lift preserves the relator up to a unit modulo D4}.
+
+For q=3, the degree-2 relation fixes the unit to the GSp multiplier mu(g). After the required degree-3 normal-closure separation, the candidate q=3 condition is g e1 = mu(g)e1.
+
+This is not yet a theorem or PASS. The next gate is an independent definition/implementation audit of the D4 equivalence, degree-3 correction span, restricted p-layer separation, lift-independence, and GSp/Sp convention.
+
+Definition record: plans/RANK4_D4_LIFTING_DEFINITION_GATE_2026-09-19.md
+
+No rank-4 computation is authorized before this gate closes.
