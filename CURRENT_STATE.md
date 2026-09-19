@@ -115,3 +115,14 @@ CI run 35418319144, workflow rank4-d4-ia-structured-defect-composition, head com
 The prepared 9-representative family was actually executed: all 81 ordered pairs were tested. Results: gauge rank 20, Q3 dimension 44, 9/9 GSp matrix checks, candidate-law failures modulo Q3 = 0, raw candidate-law failures = 0, reversed diagnostic failures modulo Q3 = 18 (raw 18), and 60 nonzero composed q-defect classes. Both multiplier-2 representatives were included and checked.
 
 Status: PASS / STRUCTURED CI VERIFIED for the frozen action/order convention. This clears the specific structured-family gate. It does not prove full GSp4 covariance or arbitrary-coordinate canonicality. Before any unrestricted scan, the script's lift construction and action/composition conventions must receive a critical implementation audit. No full scan has yet been executed.
+
+
+## Latest critical implementation/convention audit — PASS / CLOSED
+
+Final CI run 35418900971, head 0c4a3d7e454ad9d5b04df2e9b3650872b90d943b.
+
+Verified: 9/9 GSp checks; every matrix_to_lift reproduces its declared degree-1 matrix; all 81 ordered pairs satisfy the frozen free-word/matrix composition convention; gauge rank 20; Q3 dimension 44; frozen raw q-defect law has 0 raw and 0 Q3 failures; reversed diagnostic has 18 failures; 60 composed classes survive Q3.
+
+Temporary multiplier-factor and normalized-cocycle variants failed and were not promoted. The frozen raw law remains authoritative.
+
+Status: critical implementation/convention audit PASS / CLOSED. This clears the pre-scan implementation gate but does not establish full GSp4 covariance or canonicality. The next gate may consider a broader rank-4 representative scan only with explicit scope and PASS/FAIL consequence.
