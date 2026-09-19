@@ -1718,3 +1718,21 @@ The substantive endpoint is retained:
 - categorical absolute minimality: OPEN.
 
 No new scan is authorized by this review.
+
+
+## 2026-09-19 — Midterm research assessment consolidated
+
+A consolidated midterm assessment was added at the repository root:
+
+`MIDTERM_RESEARCH_ASSESSMENT_2026-09-19.md`.
+
+It records the authoritative current boundary established by the 2026-09-19 audits:
+
+- bare associated graded restricted Lie object: **FAIL / CLOSED** for \(\chi\bmod9\);
+- projective degree-(2,3) relation jet: **PASS / CLOSED** for \(\chi\bmod9\);
+- compatible full filtered relation-jet tower: **PASS** as a reconstruction mechanism for full \(\chi\);
+- explicit finite-level factorization/inverse-limit theorem: **OPEN** as a theorem-level formulation;
+- finite bounded-degree jet \(\Rightarrow\) full \(\chi\): **OPEN**;
+- categorical absolute minimality of the projective jet: **OPEN**.
+
+The assessment also fixes the logical boundary that the crossed-derivation hand calculation proves the character from the full defining relation, while a formal tower-to-inverse-limit theorem should explicitly construct \(J_n\mapsto\chi_n\) and prove compatibility. `CURRENT_STATE.md` was updated with this consolidated state.
