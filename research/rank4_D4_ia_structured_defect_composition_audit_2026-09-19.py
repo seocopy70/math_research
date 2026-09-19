@@ -307,6 +307,14 @@ for a in names:
         nonzero += survives(lhs)
         results.append((a, b, raw, qbad, rawr, qbadr))
 
+print({
+    "PREASSERT_DIAGNOSTIC": True,
+    "candidate_fail_count": law_fail,
+    "candidate_raw_fail_count": law_raw_fail,
+    "reversed_fail_count": reversed_fail,
+    "reversed_raw_fail_count": reversed_raw_fail,
+    "failing_candidate_pairs": [(a,b) for a,b,raw,qbad,rawr,qbadr in results if qbad],
+})
 assert law_fail == 0
 
 
