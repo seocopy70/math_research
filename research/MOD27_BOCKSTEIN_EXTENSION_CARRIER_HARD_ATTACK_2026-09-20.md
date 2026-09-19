@@ -285,3 +285,55 @@ Surviving results:
 - a different mod-27 carrier with additional rigidifying structure remains **OPEN**.
 
 No further numerical scan of this Bockstein package is authorized. Any successor must contain genuinely new rigidifying structure or a different universal property.
+
+
+## CORRECTION / HARD ATTACK 19 — FORMAL MORPHISM CATEGORY AND REALIZABILITY TEST — 2026-09-20
+
+The previous Hard Attack 18 contained a genuine logical overreach. The map
+\[
+S(a_1,a_2,a_3,a_4)=(a_1,4a_2,a_3,a_4)
+\]
+was shown to be an automorphism of the **abstract declared carrier**, but not to be an admissible morphism in the project's formal input category. Therefore its existence alone cannot imply failure of a natural bridge from the group-level input.
+
+The correct question is now categorical, not numerical.
+
+### 1. Carrier category
+Define \(\mathcal C_{27}^{\mathrm{abs}}\) to have objects
+\[
+(V,W,\mathrm{red},\iota,\smile,\beta_1,\beta_9)
+\]
+with the stated algebraic structure, and all structure-preserving isomorphisms as morphisms. Define \(\mathcal C_{27}^{\mathrm{real}}\) to be the subcategory consisting of the same carriers together with morphisms induced by admissible continuous group isomorphisms and declared gauge transformations of the filtered/relation input.
+
+A factorization through the carrier is only required to be natural for the morphisms actually belonging to the declared input category.
+
+### 2. Status of S
+For the frozen q=3 carrier, S is a morphism of \(\mathcal C_{27}^{\mathrm{abs}}\): it preserves reduction, \(\iota\), the mod-3 cup pairing, and the displayed \(\beta_9\) structure. This establishes an **abstract-carrier symmetry**.
+
+But S has not been shown to lie in \(\mathcal C_{27}^{\mathrm{real}}\). In particular, an admissible group automorphism inducing S would have to preserve the canonical orientation of the group. At mod 27 this is a stringent realizability condition, not implied by the mod-9 action on \(H^1(G,\mathbf Z/9)\).
+
+Thus Hard Attack 18's statement “S proves a no-go” is superseded by the sharper statement:
+
+> **S gives a conditional no-go: if the bridge is required to be natural for all abstract structure-preserving carrier isomorphisms, then the bridge cannot select the logarithmic orientation lift. Under the project's present group-induced morphism convention, realizability of S must be proved before that no-go is valid.**
+
+### 3. Realizability attack
+Assume an admissible group automorphism \(\alpha\) induced S on the coefficient carrier. Since the canonical orientation is intrinsic to the group, naturality gives
+\[
+\chi\circ\alpha=\chi.
+\]
+For q=3, the desired mod-27 logarithmic direction is the \(x_2\)-direction. If S acts by multiplication by 4 on that coefficient direction, then at the mod-27 level it would force compatibility with the multiplicative character action. This can be tested directly on the abelianized coefficient action.
+
+The key point is that a mod-9 coincidence is not enough: \(4\equiv1\pmod3\), and even powers can appear invisible at lower precision, while the mod-27 character detects the lift. Therefore any attempted realization must be checked at the actual target precision, not merely on the carrier's mod-3 shadow.
+
+### 4. Consequence of the two outcomes
+- If S is realizable by an admissible group/gauge morphism, and the induced target action is nontrivial on the orientation lift, then the Bockstein carrier is **FAIL / CLOSED** as a mod-27 orientation carrier.
+- If S is not realizable, the obstruction is itself informative: determine exactly which q-blind group-level/filtered datum forbids S. If that datum is merely the hidden canonical orientation, q, or an equivalent classification invariant, then it is not admissible as a new rigidifier. If it is a genuinely q-blind extension datum, it becomes the candidate missing structure.
+- If the obstruction uses only higher characteristic-zero information already equivalent to the Fox orientation locus, the Bockstein carrier still fails the intended compression criterion.
+
+### 5. Current classification after correction
+- Abstract carrier symmetry S: **PASS / LOCAL**.
+- Hard Attack 18 “absolute no-go”: **HISTORICAL / SUPERSEDED**.
+- Bockstein package as finite q-layer detector: **PASS / LOCAL**.
+- Bockstein package as mod-27 orientation carrier: **CONDITIONAL / OPEN**.
+- Next stop: resolve realizability of S before any further numerical scan.
+
+This correction is binding for subsequent work.
