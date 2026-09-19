@@ -1,3 +1,9 @@
+## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 17: BOCKSTEIN NON-TAUTOLOGY
+
+The apparent mod-27 orientation bridge was attacked more strongly. The coefficient-extension carrier \(\mathcal B_{27}\) separates the standard family exactly by the q 3-adic valuation class, while the proposed logarithmic orientation digit has the corresponding values as a known function of q. Therefore the present evidence is compatible with forbidden classification repackaging: \(\mathcal B_{27}\to v_3(q)\text{-class}\to q\text{-class}\to\chi\).
+
+Decision: the coefficient-extension package remains **PASS / LOCAL as an intrinsic q-information detector**, but as a new orientation carrier it is **CONDITIONAL / NOT YET ADMISSIBLE**. A genuine carrier requires a presentation-free universal identity or independent universal property producing \(\frac13\log\chi\) directly, not by first recovering q/classification data.
+
 ## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 16: MOD-27 BOCKSTEIN-EXTENSION CARRIER
 
 A new intrinsic finite-level candidate survives the definition gate:
