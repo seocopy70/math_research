@@ -1,3 +1,21 @@
+## 2026-09-19 — Exact Z_3 carrier branch endpoint
+
+The remaining exact-carrier question was pushed to the structural boundary.
+
+Target: a non-tautological finite/concrete exact \\(\\mathbf Z_3\\)-carrier analogous to the mod-3 coarsest quotient \\(([R],p(P))\\).
+
+Results:
+- naive characteristic-zero restricted-Lie analogue: **FAIL/CLOSED**; the mod-3 restricted quotient cannot be scalar-extended to \\(\\mathbf Z_3\\);
+- finite exact augmentation/filter truncation: legitimate as an object, but **not proved sufficient** to factor the complete frozen crossed-derivation coefficient law;
+- exact quotient by the independently specified coefficient-evaluation family: **PASS as a universal quotient**, but not a non-tautological finite compression;
+- fixed q=3 exact relation/evaluation carrier -> full \\(\\chi\\): **PASS/CLOSED**;
+- full compatible filtered tower -> full \\(\\chi\\): **PASS/CLOSED**.
+
+Therefore the desired non-tautological finite exact compression remains **NOT PROVED**. This is a structural endpoint, not evidence that such a compression is impossible. No further scan is warranted; a continuation requires a new characteristic-zero structural ingredient or factorization theorem.
+
+Record:
+`research/ORIENTATION_EXACT_Z3_CARRIER_BRANCH_ENDPOINT_2026-09-19.md`
+
 # Research Log
 
 ## 2026-09-15 — Literature verification checkpoint
