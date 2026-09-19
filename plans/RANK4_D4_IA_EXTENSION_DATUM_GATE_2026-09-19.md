@@ -395,3 +395,26 @@ For F_(gh)=F_g o F_h, the law Delta_q(gh)=Delta_q(g)+g·Delta_q(h) passes in Q3 
 Exact: gauge rank 20; Q3 dimension 44; candidate failures modulo Q3 0; raw failures 0; reversed diagnostic failures modulo Q3 2; reversed raw failures 2; 11 composed q-defect classes survive Q3.
 
 Consequence: the candidate action/order convention is now distinguished on this controlled set. The next authorized gate is a broader structured representative-family audit, explicitly including multiplier behavior. No unrestricted full rank-4 scan yet.
+
+
+## 18. Broader structured representative-family gate — PREPARED
+
+The corrected local cocycle PASS authorizes a broader structured audit, but not an unrestricted scan.
+
+### Frozen test family
+
+Nine representatives are included: identity; -I; first hyperbolic-pair shear with coefficients 1 and 2; second hyperbolic-pair shear with coefficients 1 and 2; a symplectic pair-swap; and two distinct multiplier-2 diagonal GSp representatives. The implementation checks the GSp relation directly and verifies the degree-1 matrix of every free lift.
+
+### Test
+
+All 81 ordered pairs are tested for Delta_q(gh)=Delta_q(g)+g·Delta_q(h) in Q3. The reversed action/order expression is diagnostic only.
+
+### Gate consequence
+
+- PASS: zero candidate-law failures across the structured family, with multiplier-2 cases included; then a still-broader scan may be considered after critical review.
+- FAIL: any genuine mathematical failure closes the current cocycle formulation for further promotion; implementation/setup failures must be repaired before interpretation.
+
+Implementation: research/rank4_D4_ia_structured_defect_composition_audit_2026-09-19.py
+Workflow: .github/workflows/rank4-d4-ia-structured-defect-composition.yml
+
+Current status: PREPARED / EXECUTION PENDING.
