@@ -2116,3 +2116,35 @@ Current target remains: prove or disprove a non-circular functorial reconstructi
 ## AUTHORITATIVE UPDATE — 2026-09-20 — FILTERED EXTENSION VS ASSOCIATED GRADED BOUNDARY
 
 The phrase “full filtered tower” is now split into two non-equivalent notions. The associated-graded tower loses extension/gluing data and cannot be claimed to recover the exact Fox coefficients. An actual compatible filtered-quotient tower can reconstruct the completed relation by inverse limit, after which Fox reconstruction is formal/continuous; this is not yet a nontrivial compression result. The research target is therefore an intermediate q-blind, presentation-natural carrier retaining enough extension data for all $3$-adic digits but strictly less than the full completed Fox/presentation object.
+
+
+## AUTHORITATIVE UPDATE — 2026-09-20 — CONSOLIDATED PROGRAM / CURRENT GATE
+
+The complete refined research map is frozen in research/RESEARCH_PROGRAM_SYNTHESIS_2026-09-20.md.
+
+The logical spine is now explicitly:
+\[
+\operatorname{gr}_3G\;\text{(q-blind)}\;\Rightarrow\;\text{FAIL},
+\]
+\[
+\overline J_3=[(R,p)]\Rightarrow\chi\bmod9\;\text{PASS},
+\]
+\[
+J_{27}\Rightarrow\chi\bmod27\;\text{OPEN / NEXT},
+\]
+\[
+\{J_{3^n}\}_{n\ge2}\Rightarrow\chi\;\text{OPEN},
+\]
+while the literal full filtered extension tower recovers chi by inverse limit only in a formal/non-compression sense, and the exact Fox carrier recovers chi directly.
+
+The target is therefore an intermediate intrinsic extension carrier: q-blind, presentation-natural, non-circular, sufficient for the relevant finite 3-adic digit, and genuinely smaller than the completed Fox/presentation object if it is claimed as a compression.
+
+Important negative boundaries already closed: naive Z_3 augmentation jet; naive Z_3 restricted-Lie scalar extension; intrinsic degree-3 Fox truncation; higher-Bockstein-alone reconstruction; full associated-graded reconstruction; bounded-degree + bounded-precision universal recovery; quotient compression of the exact local Fox algebra.
+
+Important claims NOT made: P_3 is information-theoretically minimal; full Fox is categorically/absolutely minimal; full orientation universally requires characteristic-zero data in every possible carrier category.
+
+### NEXT GATE — MOD 27
+
+Construct or rule out an intrinsic J_27 satisfying: q-blind independent input; presentation/Nielsen/relator-gauge invariance; separation of chi mod 27; natural reduction to J_9; non-tautological definition; and genuine compression if advertised.
+
+No broad scan is authorized before these object-level gates are passed.
