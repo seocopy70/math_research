@@ -973,3 +973,50 @@ This does not prove coordinate-free canonicity or the full lift-fibre compositio
 
 Result: research/RANK4_D4_IA_EQUIVARIANCE_AUDIT_RESULT_2026-09-19.md
 Script: research/rank4_D4_ia_equivariance_audit_2026-09-19.py
+
+
+## 2026-09-19 — IA graded lift-fibre and basepoint audits
+
+The earlier composition audit was strengthened because its first formulation acted on a fixed Magnus target and did not explicitly model both natural lift-fibre parameterizations. Two exact F3 audits were therefore added.
+
+### Actual lift-fibre audit — PASS / LOCAL
+Commit: `252a456353106b16b1973df1f9991c4d4c718489`  
+CI: `35416053303` — success.
+
+For identity, -I, and one standard transvection, both actual first-layer lift fibres
+\[
+L_c=\phi_c\circ g,\qquad L_c=g\circ\phi_c
+\]
+were tested. For both parameterizations and all 276 unordered IA direction pairs:
+- IA variation rank = 20;
+- q=3 and q=∞ defect-change maps agree;
+- raw composition failures = 0;
+- composition failures modulo C3 = 0;
+- for -I and the transvection the q-sensitive defect survives C3+IA.
+
+This establishes a genuine **graded lift-fibre local PASS**, stronger than the preceding target-side composition check, but only for the tested representatives and first IA layer.
+
+### Basepoint-independence audit — PASS / LOCAL
+Commit: `397052e83bbee06d05270d611474358c051078dd`  
+CI: `35416084903` — success.
+
+For each of the three representatives, each side (left/right), all 24 first-layer IA basepoints and all 24 perturbation directions were compared: 576 fibre comparisons per side, 3456 total. In every case:
+\[
+\text{raw basepoint dependence}=0,
+\qquad
+\text{basepoint dependence mod }C_3=0,
+\qquad
+\operatorname{rank}(\Delta_{IA})=20.
+\]
+The q=3 and q=∞ change laws agree exactly.
+
+### Gate consequence
+These results close the **first-layer basepoint/change-law sub-questions locally**, but do not close the main IA/filtered-extension definition gate. They do not yet prove:
+1. full IA transitivity/torsor structure beyond the first graded layer;
+2. coordinate-free canonicity under arbitrary free-group coordinate changes;
+3. compatibility with all relevant GSp_4 representatives/actions;
+4. that higher IA layers cannot contribute to the degree-3 object under the frozen filtration convention.
+
+Accordingly the main gate remains **OPEN**, and no full rank-4 representative scan is authorized yet.
+
+Next authorized task: formulate and test the **graded-to-fibre extension step**: identify the exact quotient/torsor datum represented by the 44-dimensional candidate and prove that the first-layer construction is intrinsic under the frozen coordinate/action conventions, including the effect of the linear action on IA parameters.
