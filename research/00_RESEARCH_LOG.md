@@ -1196,3 +1196,14 @@ T3 passed directly on all 81 ordered pairs: 0 vector failures; observed and pred
 T2 gave 0 failures for X1^3 and X2^3, but 5 failures each for X1X2X1 and the arbitrary tensor. This is not treated as mathematical evidence. Diagnosis: the frozen ev routine evaluates free-group words in the truncated group algebra; it does not directly evaluate arbitrary homogeneous degree-3 tensors under a pure Magnus/Lie substitution. The special X1^3 case is exceptional in characteristic 3 because (1+X1)^3=1+X1^3.
 
 Decision: A-1 remains open at the control-definition level; no broader scan. A legitimate homogeneous control or an explicit proof-based closure is required.
+
+
+## 2026-09-19 — Rank-2 unit-digit definition gate opened
+
+Following the A-1 Delta_q control and the closure of the Delta_q cocycle as a coboundary, a new definition-only gate was registered: `plans/RANK2_UNIT_DIGIT_DEFINITION_GATE_2026-09-19.md` (commit `30c2e3e5444650e2ce3bccd3f496d89d9bb52b12`).
+
+The proposed target is the first mod-9 digit of the relator unit u(phi) in Z_3^times for actual Aut(G_q^(2)) lifts, restricted to the kernel of the induced GL_2(F_3) action. This is explicitly a hypothesis-driven route: the exact relation-module definition, multiplicativity, filtration observability, and any identification with the canonical orientation must be derived or externally verified before computation.
+
+The existing rank-2 D4 lifting control remains the implementation control and is not being reinterpreted as a theorem about the full automorphism image. No finite scan is authorized by this gate yet.
+
+Immediate next step: hand-derive the q=infinity and q=3 cases, especially whether u mod 9 contains information not determined by the induced g in GL_2(F_3). H-1/H-2 orientation/unit identifications remain EXTERNAL / TO VERIFY.
