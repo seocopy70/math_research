@@ -12,6 +12,29 @@ The strategy is to determine whether intrinsic filtration information survives i
 
 ---
 
+## 0A. CANONICAL CURRENT STATUS — 2026-09-19
+
+**This block is authoritative for new-session restoration. Later sections are historical chronology; stale OPEN/PENDING labels below do not override this block.**
+
+### Latest conclusion
+The structured quotient defect Delta_q(g) = [F_g(X1^3)-X1^3]_3 is algebraically the coboundary g.(X1^3)-X1^3.
+
+The script now checks this identity independently for all 9 structured representatives. CI run 35420266538, commit bd53311cf45dfc930599c3c24b60df8572c155cc, job 105836490226: SUCCESS.
+
+Therefore the previously verified cocycle law is an automatic coboundary identity. The structured-family and implementation PASS results are retained as implementation/convention verification only. They are not evidence for a new q-sensitive invariant or nontrivial H1 class.
+
+### Decision
+Delta_q coboundary track: CLOSED / NO NEW INFORMATION.
+
+The proposed broader rank-4 scan for this same cocycle is CANCELLED.
+
+### Current authorized gates
+1. Non-coboundary q-sensitive datum definition gate: define an object without pre-inserting q=3 versus q=infinity, prove lift/IA and coordinate legitimacy, and establish it is not a universal p-layer shadow or a coboundary.
+2. Orientation-character bridge audit: independently test what, if anything, the condition g e1 = mu(g)e1 says about the target orientation character chi. No implication is assumed without proof.
+
+### Existing closed routes
+Original linear-only rank-4 lift observable, preferred-lift repair, naive q=9 relation-space route, artificial H-closure, Q3/Q9 S9 orbit route, and D9-OBS universal p-layer candidate remain closed.
+
 ## 1. Mathematical setting
 
 \[
@@ -674,7 +697,9 @@ Existing historical protocol documents are reference/history only; they do not o
 
 ---
 
-## 11. O2 concrete 20D route — CLOSED at current frozen-data level\n\nThe B1 family gives three distinct 10D images with pairwise-zero intersections and a common 20D span. Existing affine identities identify this span with \\(\\operatorname{Im}D_0+\\Delta O\\), but \\(D_0\\) remains transport-dependent. Existing relations involving \\(G=D_{\\rm linear}\\circ\\tau|_{\\ker N}\\) likewise use the chosen transport. Therefore the current frozen data provide relations/identifications, not a transport-free definition of the observed 20D target-side span.\n\nThis closes the concrete 20D-space route for the present construction. It does not prove that no intrinsic 20D object can exist. No new \\(V_{20}\\), quotient, or invariant should be introduced merely to rescue this route.\n\nThe next O2 question must be stated more weakly: identify the strongest **already verified transport-independent information** that survives the failed concrete-subspace route. Q3/Q\\(\\infty\\) remains logically separate.\n\n## 12. Immediate next checkpoint
+## 11. O2 concrete 20D route — CLOSED at current frozen-data level
+
+The B1 family gives three distinct 10D images with pairwise-zero intersections and a common 20D span. Existing affine identities identify this span with \\(\\operatorname{Im}D_0+\\Delta O\\), but \\(D_0\\) remains transport-dependent. Existing relations involving \\(G=D_{\\rm linear}\\circ\\tau|_{\\ker N}\\) likewise use the chosen transport. Therefore the current frozen data provide relations/identifications, not a transport-free definition of the observed 20D target-side span.\n\nThis closes the concrete 20D-space route for the present construction. It does not prove that no intrinsic 20D object can exist. No new \\(V_{20}\\), quotient, or invariant should be introduced merely to rescue this route.\n\nThe next O2 question must be stated more weakly: identify the strongest **already verified transport-independent information** that survives the failed concrete-subspace route. Q3/Q\\(\\infty\\) remains logically separate.\n\n## 12. Immediate next checkpoint
 
 Do not ask whether O2-3 is "good" or "bad". It has passed.
 
@@ -1342,7 +1367,7 @@ Corrected run 35418122079, commit bb39ed1a7191aeae0da07813e40abe47695d292a: cand
 Current gate: broader structured representative-family audit of the fixed convention and multiplier behavior. No unrestricted full rank-4 scan yet.
 
 
-## 18. Broader structured quotient-defect audit — PREPARED / EXECUTION PENDING
+## 18A. Broader structured quotient-defect audit — HISTORICAL / EXECUTED
 
 Following the corrected local PASS, a broader but still structured representative family was defined before any unrestricted scan. The family has 9 representatives: identity, -I, two powers of the first hyperbolic-pair shear, two powers of the second hyperbolic-pair shear, a symplectic pair-swap, and two multiplier-2 diagonal GSp representatives. Each matrix is independently checked against g^T J g = mu(g), and the free lift is checked against the intended degree-1 matrix.
 
@@ -1354,7 +1379,7 @@ Workflow: .github/workflows/rank4-d4-ia-structured-defect-composition.yml
 Status: PREPARED / EXECUTION PENDING. This is not a PASS and does not authorize a full scan yet.
 
 
-## 19. Broader structured quotient-defect audit — PASS / STRUCTURED CI VERIFIED
+## 18B. Broader structured quotient-defect audit — HISTORICAL / PASS AS IMPLEMENTATION CHECK
 
 CI run 35418319144, run #3, head commit dc28f6756c74ea57ae97735bcc96ec3cd1c74a35, workflow .github/workflows/rank4-d4-ia-structured-defect-composition.yml.
 
@@ -1378,7 +1403,7 @@ Therefore the structured-family gate PASSES / CI VERIFIED for the frozen action/
 Scope remains explicit: this does not establish full GSp4 covariance, arbitrary free-group coordinate naturality, or canonicality of the quotient datum. It authorizes consideration of a still-broader rank-4 scan only after critical review of the implementation and conventions. The unrestricted full scan is not itself recorded as completed here.
 
 
-## 20. Critical implementation/convention audit — PASS / CLOSED
+## 18C. Critical implementation/convention audit — HISTORICAL / CLOSED AS IMPLEMENTATION CHECK
 
 Final CI run 35418900971, head 0c4a3d7e454ad9d5b04df2e9b3650872b90d943b.
 
