@@ -1407,3 +1407,44 @@ This is a candidate-level failure only. It does not prove that every finite-coef
 Detailed audit: `research/ORIENTATION_MOD9_BOCKSTEIN_AUDIT_2026-09-19.md`.
 
 External verification used in the audit: a classical Demushkin proposition explicitly states that the Bockstein on the dual basis gives the power coefficients; a modern classification source confirms the one-dimensional top cohomology/cup-product framework.
+
+## 2026-09-19 — Twisted mod-9 orientation recovery gate: PASS
+
+After the ordinary Bockstein candidate was closed, the authorized next step was to test the canonical twisted-coefficient characterization of the Demuškin orientation.
+
+Let
+\[
+\rho:G\to1+3\mathbf Z/9,
+\qquad
+\rho(x_i)=1+3a_i.
+\]
+Using \(A_2=\mathbf Z/9\) with G-action through \(\rho\), a 1-cocycle with generator values \(f_i\) satisfies the relator condition, modulo 9,
+\[
+3\bigl((1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4\bigr)=0.
+\]
+Modulo 3, every generator-value vector is a cocycle. Therefore
+\[
+H^1(G,A_2)\to H^1(G,\mathbf F_3)
+\]
+is surjective iff all four coefficients vanish, giving uniquely
+\[
+(a_1,a_2,a_3,a_4)=(0,1,0,0).
+\]
+Consequently
+\[
+\rho(x_2)=4\pmod9,
+\]
+which matches
+\[
+\chi(x_2)=(1-3)^{-1}\equiv4\pmod9.
+\]
+
+This is the first candidate in the current branch that actually recovers the missing first 3-adic orientation digit rather than merely detecting q=3.
+
+Important distinction:
+- **PASS:** intrinsic twisted-cohomology recovery of \(\chi\bmod9\).
+- **OPEN:** whether the twisted-surjectivity object is itself determined by the prescribed filtered/graded data.
+
+No finite scan is authorized.
+
+Literature support: the canonical Demuškin orientation is induced by the dualizing-module action, and a standard characterization uses surjectivity of the reduction maps on twisted H^1 for the orientation coefficient modules. See the literature references recorded in the accompanying gate document.
