@@ -418,3 +418,23 @@ Implementation: research/rank4_D4_ia_structured_defect_composition_audit_2026-09
 Workflow: .github/workflows/rank4-d4-ia-structured-defect-composition.yml
 
 Current status: PREPARED / EXECUTION PENDING.
+
+
+## 19. Broader structured representative-family audit — PASS / CI VERIFIED
+
+The gate prepared in §18 was executed by CI run 35418319144, head commit dc28f6756c74ea57ae97735bcc96ec3cd1c74a35.
+
+All 81 ordered pairs from the 9-representative family were executed. The run reports:
+- 9/9 GSp matrix checks;
+- gauge rank 20;
+- dim Q3 = 44;
+- candidate-law failures modulo Q3 = 0;
+- raw candidate-law failures = 0;
+- reversed diagnostic failures modulo Q3 = 18, raw = 18;
+- 60 nonzero composed defect classes;
+- both multiplier-2 representatives included.
+
+Gate decision: PASS / STRUCTURED CI VERIFIED. The candidate quotient cocycle law survives the broadened structured family under the frozen convention.
+
+### Consequence
+The specific structured-family gate is closed positively. This does not authorize treating the result as full GSp4 covariance or coordinate-free canonicality. Before an unrestricted rank-4 scan, perform a critical implementation/convention audit, especially of matrix_to_lift, composition order, and agreement with the corrected local run 35418122079. If that audit passes, a broader scan may be considered.
