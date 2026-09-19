@@ -1331,3 +1331,12 @@ The reversed action/order diagnostic also passes modulo Q3 on this four-represen
 Current status: the q-sensitive quotient-valued cocycle law is a **local PASS**, not a theorem-level canonicality result.
 
 Next gate: independently fix the action/order convention, extend to a broader structured representative family, verify multiplier-2 GSp compatibility, then consider broad rank-4 coverage. No full rank-4 scan yet.
+
+
+## 13. Corrected quotient-valued q-defect cocycle audit
+
+The earlier run 35417325110 is INVALIDATED because its defect helper had the reference-relator sign reversed. It must not be cited as evidence.
+
+Corrected run 35418122079, commit bb39ed1a7191aeae0da07813e40abe47695d292a: candidate Delta_q(gh)=Delta_q(g)+g·Delta_q(h) passes for all 16 ordered pairs of the four controlled representatives in Q3. Gauge rank 20, Q3 dimension 44, candidate failures modulo Q3 0, raw failures 0. The reversed diagnostic has 2 failures modulo Q3, so the action/order convention is distinguished on this control set. 11 composed q-defect classes survive Q3.
+
+Current gate: broader structured representative-family audit of the fixed convention and multiplier behavior. No unrestricted full rank-4 scan yet.
