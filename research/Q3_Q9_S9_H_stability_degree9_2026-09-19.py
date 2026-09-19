@@ -14,10 +14,10 @@ projection makes this an exact 4-dimensional natural-module test.
 
 The script checks this with the authoritative symplectic convention
 J and the fixed first generator t_{e2}. Under column action:
-  t_{e2}(e1) = e1 + 2 e2.
+  t_{e2}(e1) = e1 + e2.
 Since S9 is the restricted 9th power of e1 and coefficients are in F3,
 the induced p-layer action is identical on coefficient vectors:
-  S9 -> S9 + 2 X2^[9].
+  S9 -> S9 + X2^[9].
 This is not in <S9>, hence I_9,9 is not H-stable.
 """
 
@@ -67,7 +67,7 @@ def main():
     assert TJT==J
 
     image=matvec(t,e1)
-    assert image==[1,2,0,0]
+    assert image==[1,1,0,0]
 
     # In L1^[9], restricted 9th power is coefficient-linear over F3.
     # Thus the p-layer coordinate changes from e1 to e1+2e2.
@@ -87,7 +87,7 @@ def main():
     # The baseline cannot absorb the difference because its L1^[9]
     # projection is zero.
     difference=[(s9_image[i]-s9[i])%P for i in range(4)]
-    assert difference==[0,2,0,0]
+    assert difference==[0,1,0,0]
     assert difference != [0,0,0,0]
 
     print("Q3/Q9 S9 H-STABILITY DEGREE-9 AUDIT — 2026-09-19")
@@ -99,7 +99,7 @@ def main():
     print("rank(<S9>) =", rank3(span_before))
     print("rank(<S9>, h.S9>) =", rank3([s9,s9_image]))
     print()
-    print("RESULT: h.S9 = S9 + 2 X2^[9], with nonzero X2^[9] component.")
+    print("RESULT: h.S9 = S9 + X2^[9], with nonzero X2^[9] component.")
     print("RESULT: h.S9 is not in I_9,9.")
     print("RESULT: I_9,9 is NOT H-stable.")
     print("DECISION: H-STABILITY = FAIL (mathematical failure, validated computation).")
