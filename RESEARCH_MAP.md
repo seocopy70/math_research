@@ -1,3 +1,43 @@
+## AUTHORITATIVE UPDATE — 2026-09-19 — MOD-9 INTRINSIC CARRIER IDENTIFIED
+
+The μ–χ bridge is narrowed, not fully identified: μ is an intrinsic mod-3 automorphism/duality-line shadow, μ alone cannot recover χ mod 9, and a μ-alone homomorphic lift to 1+3Z_3 is impossible. Additional-data relations remain open, with μ-only scans stopped.
+
+The standalone Bockstein route is closed, but the combined intrinsic pair
+\[
+(\text{cup product},\beta)
+\]
+now supplies the missing mod-9 carrier.
+
+With V=H^1(G,F_3)^* and dim H^2=1, temporarily choose ω∈H^2\setminus{0} and write
+\[
+f\smile g=(f\wedge g)(R)\omega,
+\qquad
+\beta(f)=f(p)\omega.
+\]
+Changing ω rescales R and p by the same inverse unit, so
+\[
+\boxed{\overline J_3(G)=[(R,p)]}
+\]
+is intrinsic. This agrees with the coarsest filtered degree-(2,3) relation carrier: R is the quadratic relation and p is the restricted-cubic/power component.
+
+The resulting natural functional
+\[
+\overline\Theta(\lambda)(f)=f(p)+(\lambda\wedge f)(R)
+\]
+has unique zero λ=e_2^* for q=3 and λ=0 for q=∞. Hence it recovers χ mod 9 and separates the two cases without inserting q.
+
+Decision:
+- standalone Bockstein: FAIL/CLOSED;
+- cup + Bockstein intrinsic carrier: PASS/CLOSED at mod-9 level;
+- M1 intrinsic carrier functor: PASS/CLOSED at mod-9 level;
+- M2 mod-9 orientation factorization: PASS/CLOSED at the stated degree-(2,3) level;
+- next authorized structural target: M3 comparison/obstruction relative to the Pál–Quick A3/Hochschild canonical class.
+
+Record:
+research/ORIENTATION_MOD9_INTRINSIC_CUP_BOCKSTEIN_CARRIER_2026-09-19.md
+
+No broad scan is authorized.
+ 
 ## AUTHORITATIVE UPDATE — 2026-09-19 — EXACT CARRIER BRANCH CLOSED AT STRUCTURAL BOUNDARY
 
 The exact q=3 branch is now separated into:
