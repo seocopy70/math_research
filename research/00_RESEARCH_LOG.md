@@ -959,3 +959,17 @@ This result does not establish canonicality or equivariance. The next authorized
 
 Result: research/RANK4_D4_IA_DEFECT_ACTION_AUDIT_RESULT_2026-09-19.md
 Script: research/rank4_D4_ia_extension_audit_2026-09-19.py
+
+
+## 2026-09-19 — IA quotient-legitimacy / equivariance sub-gate PASS
+
+The candidate gauge space G_3 = C_3 + Delta_IA was audited under the frozen tensor action. All 80 nonzero-vector Sp_4(F_3) transvections preserve C_3, Delta_IA, and G_3. The exact bad-count for each space is zero. A multiplier-2 GSp_4(F_3) representative diag(1,2,1,2) was also checked and preserves ranks 4, 20, and 20.
+
+Therefore the 44-dimensional candidate quotient A_3/G_3 is equivariant for the complete tested Sp transvection family and the tested GSp multiplier direction.
+
+Decision: **quotient-legitimacy/equivariance sub-gate PASS; main IA/extension definition gate remains OPEN**.
+
+This does not prove coordinate-free canonicity or the full lift-fibre composition law. The next authorized task is to verify the graded lift-fibre change/composition law and whether the q-sensitive defect descends independently of a base lift to an intrinsic orbit/torsor/extension class. No full rank-4 scan is authorized yet.
+
+Result: research/RANK4_D4_IA_EQUIVARIANCE_AUDIT_RESULT_2026-09-19.md
+Script: research/rank4_D4_ia_equivariance_audit_2026-09-19.py
