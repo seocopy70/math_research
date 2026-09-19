@@ -769,3 +769,47 @@ but this remains a formal dimension prediction, not a full rank-4 degree-9 tenso
 **Scope:** this does not define or validate \(R_9\), \(\mathrm{gr}_9(G)\), H-stability, \(S_9=X_1^{[9]}\), or any degree-9 q-invariant. No downstream degree-9 computation is authorized from this result alone.
 
 **Next gate:** audit the repository's existing lower-degree relation-space convention and define the degree-9 restricted relation space \(R_9\) before any H-stability computation.
+
+
+## 6J. S9-A — ambient admissibility: PASS / CLOSED
+
+Record: `research/Q3_Q9_S9_A_AMBIENT_ADMISSIBILITY_RESULT_2026-09-19.md`  
+Gate record commit: `f8bc39c03eec6a9ba88116c5b46f29eefe3276f2`.
+
+The ambient gate is now formally closed.
+
+Using the already verified C-2a restricted-power identification,
+[
+X_1^{[3]}=X_1^3,qquad (X_1^{[3]})^{[3]}=X_1^9,
+]
+the Magnus source
+[
+S_9=Delta_9(9)=X_1^9
+]
+may now be represented in the restricted degree-9 ambient as
+[
+oxed{S_9=X_1^{[9]}}.
+]
+
+This is only an **ambient** admissibility result. It does not assert quotient survival and does not test (S_9in I_{infty,9}).
+
+The frozen baseline remains
+[
+oxed{dim I_{infty,9}=13524},
+]
+and no (S_9) contribution has been inserted into that baseline.
+
+### Next gate
+
+The next controlled computation is **S9-B — quotient survival**:
+[
+oxed{[S_9]
+eq0	ext{ in }L_9^{mathrm{res}}/I_{infty,9}}
+]
+equivalently
+[
+oxed{S_9
+otin I_{infty,9}}.
+]
+
+Only after S9-B is resolved may (S_9) be used in any (q=9) ideal construction. H-stability and (D_9) remain blocked.
