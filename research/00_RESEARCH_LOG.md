@@ -1020,3 +1020,17 @@ These results close the **first-layer basepoint/change-law sub-questions locally
 Accordingly the main gate remains **OPEN**, and no full rank-4 representative scan is authorized yet.
 
 Next authorized task: formulate and test the **graded-to-fibre extension step**: identify the exact quotient/torsor datum represented by the 44-dimensional candidate and prove that the first-layer construction is intrinsic under the frozen coordinate/action conventions, including the effect of the linear action on IA parameters.
+
+## 2026-09-19 — graded-to-fibre extension audit: higher IA eliminated at degree 3
+
+The authorized graded-to-fibre extension step was implemented as research/rank4_D4_ia_graded_to_fibre_extension_audit_2026-09-19.py, with CI workflow .github/workflows/rank4-d4-ia-graded-to-fibre-extension.yml.
+
+The audit exhausts the first possible higher-IA layer: for each generator and each of the 64 homogeneous degree-3 associative monomials, both q=3 and q=infinity defects were checked. All 512 checks pass with zero degree-3 defect change. Therefore, under the frozen Magnus degree-3 convention, higher IA corrections cannot contribute to the degree-3 defect; all degree-3 lift dependence is exhausted by the first IA layer.
+
+For identity, -I, and the standard transvection, the first-layer calculation gives rank(Delta_IA)=20 and rank(C3+Delta_IA)=20, hence the quotient Q3=A3/(C3+Delta_IA) has dimension 44. The 24 first-layer base lifts all define the same class in Q3. The q=3 versus q=infinity class survives for -I and the transvection.
+
+Decision: graded-to-fibre extension sub-gate = PASS / LOCAL.
+
+This materially strengthens the candidate datum: it is a quotient class, not a preferred-lift convention, and the higher-IA loophole is closed at degree 3. It does not yet prove full GSp covariance of the defect class, so the main IA/filtered-extension definition gate remains OPEN and no full rank-4 q-comparison is authorized.
+
+Commit carrying audit + CI trigger: af0ab6818fbb905a558a7bb37f5a7552480a467b.
