@@ -1140,3 +1140,10 @@ The proposed next bridge was attacked at the definition level. Candidate-depende
 without defining the former from the latter.
 
 Decision: **HIGHER BOCKSTEIN BRIDGE OPEN / STRUCTURAL**. Stronger no-go: “higher Bocksteins recover q, therefore full chi” is not an established implication. Detailed audit: `research/ORIENTATION_HIGHER_BOCKSTEIN_HARD_ATTACK_2026-09-20.md`.
+
+
+## AUTHORITATIVE UPDATE — 2026-09-20 — FILTERED EXTENSION VS ASSOCIATED GRADED BOUNDARY
+
+A further structural distinction is now closed. A fixed or finite associated-graded Zassenhaus window cannot recover full $3$-adic orientation; the family $q=3^s$ moves the power term beyond any prescribed finite degree while changing $\chi$. By contrast, an actual compatible inverse system of filtered relation residues determines the completed relator by completeness, and continuity of completed Fox calculus then gives the exact obstruction. This is PASS / LOCAL, not yet a new compression theorem: such a tower is essentially the completed filtered relation itself. The only remaining substantive carrier problem is an intermediate q-blind intrinsic object that retains extension data sufficient for all digits while being genuinely smaller than the full completed Fox/presentation object.
+
+Detailed audit: `research/ORIENTATION_FILTERED_EXTENSION_VS_GRADED_HARD_ATTACK_2026-09-20.md`.
