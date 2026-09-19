@@ -1070,3 +1070,77 @@ No q=3/q=\\infty distinction, canonical q-invariant, or orientation conclusion i
 ### Next gate
 
 Determine whether the 4-dimensional target-side module gives a legitimate comparison observable between the q=3 and q=\\infty presentations, rather than merely reproducing the natural p-layer representation.
+
+
+## 6P. Q3/Q9 S9 — explicit baseline H-stability action bridge: PASS / CLOSED
+
+Record:
+research/Q3_Q9_S9_SOURCE_MAP_H_STABILITY_ACTION_BRIDGE_RESULT_2026-09-19.md
+
+The previous target-action audit verified \\(g^T Jg=J\\) for all 80 nonzero-vector
+symplectic transvections and used the frozen coefficient-matrix convention to
+infer \\(g(R_2)=R_2\\). A dedicated implementation bridge audit was added because
+the latter implication had not itself been executed by the authoritative action.
+
+Using the repository's authoritative five generators and authoritative
+associative substitution action, the audit directly checked
+
+\\[
+\\boxed{g\\cdot R_2=R_2}
+\\]
+
+for every generator. It also passed multiplicativity and first restricted-power
+compatibility on the same action.
+
+Therefore the target-action chain is now explicitly closed:
+
+\\[
+g^T Jg=J
+\\Rightarrow gR_2=R_2
+\\Rightarrow h(I_\\infty)=I_\\infty
+\\Rightarrow Q_9^\\infty\\text{ carries an induced H-action}.
+\\]
+
+CI run 35414448355, job 105820186019: **SUCCESS**.
+
+This strengthens the source-map target-action status to **structural + explicit
+implementation-bridge PASS**. It does not change any downstream q=9 H-stability
+failure.
+
+## 6Q. Q3/Q9 S9 — D9-OBS definition gate: OPEN
+
+The target-side orbit remains
+
+\\[
+\\boxed{
+\\mathcal O_9=\\langle H\\cdot[S_9]\\rangle
+\\cong L_1^{[9]},
+\\qquad
+\\dim\\mathcal O_9=4.
+}
+\\]
+
+This 4-dimensional object is now considered structurally closed, but its
+dimension is not treated as a q-dependent invariant.
+
+The next authorized task is **definition before computation**:
+
+\\[
+\\boxed{
+\\text{Can a natural q-dependent observable be derived from }\\mathcal O_9?
+}
+\\]
+
+A candidate must arise from the presentation-derived source and frozen target
+construction. Do not manufacture a statistic from the number 4, and do not
+reuse the degree-3 N/J construction by analogy.
+
+### Consequence
+
+- PASS: define a natural target-side q-comparison observable before computing it.
+- FAIL: establish that \\(\\mathcal O_9\\) is only the natural p-layer shadow and
+  close this route without inventing a q-invariant.
+- INCONCLUSIVE: the observable depends on an arbitrary transport, coordinate,
+  presentation, or noncanonical identification.
+
+No D9 or orientation conclusion is authorized at this stage.
