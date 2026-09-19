@@ -45,3 +45,22 @@ For the frozen q=3 relation the unique point in 1+3Z_3 is (1,-1/2,1,1). Therefor
 The research question is now sharpened: can the universal Fox obstruction scheme be compressed intrinsically to a smaller filtered object, ideally degree (2,3), without reintroducing the earlier circularity?
 
 Detailed records: research/ORIENTATION_EXACT_UNIVERSAL_FOX_CARRIER_AUDIT_2026-09-19.md and research/ORIENTATION_EXACT_UNIVERSAL_FOX_COVARIANCE_AUDIT_2026-09-19.md.
+
+
+## 2026-09-19 — HARD ATTACK 5: exact Fox degree-3 compression
+
+A further structural reduction was found. In local coordinates T_i=1+u_i, the fixed q=3 universal Fox obstruction ideal is exactly equivalent on the 1+3Z_3 neighbourhood to
+F_1=3+3u_1+u_1^2+u_1u_2+2u_2,
+F_2=u_1,
+F_3=u_4,
+F_4=u_3.
+Hence the zero locus is u_1=u_3=u_4=0 and 2u_2+3=0, giving chi(x_2)=-1/2. The unreduced second Fox coefficient has degree 3, so the full fixed-normal-form row has local degree at most 3.
+
+The power-free control has projective ideal equivalent to (B-1,A-1,D-1,C-1), giving the trivial 1+3Z_3 character locus. Thus the exact carrier separates q=3 from the power-free control without using q as an input label.
+
+Decision:
+- fixed-normal-form degree-3 polynomial compression: PASS/CLOSED;
+- intrinsic degree-3 truncation under arbitrary presentation change: OPEN;
+- exact two-component (R,p)-type compression: OPEN.
+
+Detailed record: research/ORIENTATION_EXACT_FOX_DEGREE3_COMPRESSION_AUDIT_2026-09-19.md.
