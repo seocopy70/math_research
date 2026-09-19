@@ -313,3 +313,23 @@ The theorem closes only the previously identified logical gap: **full compatible
 **PASS / THEOREM CLOSED at the stated information level.**
 
 The finite-level factorization and inverse-limit step is now explicit. The remaining substantive questions are minimality and whether a bounded-degree finite carrier can already determine the entire 3-adic character.
+
+
+---
+## STATUS CORRECTION — 2026-09-19 hostile audit
+
+The earlier Decision “PASS / THEOREM CLOSED” is retracted.
+
+**Correct status: CONDITIONAL / TAUTOLOGICAL-AS-WRITTEN.**
+
+The finite-level coefficient equations and inverse-limit step are correct once an independently supplied exact finite-level evaluation datum is given. However, the proposed J_n was defined using the information “required for the crossed-derivation calculation”, and the extraction map was then defined from that same information. This does not prove the non-tautological existence or canonicity of J_n as an intrinsic filtered relation object.
+
+The missing substantive bridge is
+
+\[
+\text{canonical filtered relation data}
+\Longrightarrow
+\text{exact coefficient-evaluation data}.
+\]
+
+That bridge is OPEN. The inverse-limit argument itself remains CLOSED. See research/ORIENTATION_FULL_TOWER_TAUTOLOGY_AUDIT_2026-09-19.md.
