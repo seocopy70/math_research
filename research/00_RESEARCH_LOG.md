@@ -1673,3 +1673,48 @@ Modulo 3^n this gives the complete tower rho_n(x_2)=(-2)^{-1} mod 3^n; e.g. 4 mo
 The key distinction is now fixed: the degree-(2,3) projective relation jet recovers the first nontrivial digit mod 9, while the compatible full filtered relation-jet tower recovers the entire 3-adic character. No new independent higher obstruction is needed for this q=3 normal form. The bare associated graded object remains insufficient, and finite-jet minimality remains open.
 
 The exact hand derivation uses the standard intrinsic crossed-derivation characterization of the canonical Demushkin orientation. External classification/orientation references confirm the standard formula chi(x_2)=(1-q)^(-1) for the q-power normal form. Detailed audit: research/ORIENTATION_FULL_3ADIC_HAND_DERIVATION_2026-09-19.md. No finite scan was used.
+
+
+## 2026-09-19 — Critical review of full 3-adic orientation reconstruction
+
+The full 3-adic hand result was independently checked at the logical and algebraic level.
+
+### Algebraic check
+For a crossed derivation D with character rho and [x,y]=x^{-1}y^{-1}xy,
+\[
+D([x,y])=\rho(x)^{-1}(\rho(y)^{-1}-1)D(x)+\rho(x)^{-1}\rho(y)^{-1}(\rho(x)-1)D(y).
+\]
+For
+\[
+r=x_1^3[x_1,x_2][x_3,x_4],
+\]
+the requirement that arbitrary generator values extend to a derivation is equivalent to the vanishing of the four coefficients of D(r). These coefficients give, successively,
+\[
+\rho(x_3)=\rho(x_4)=1,\qquad \rho(x_1)=1,
+\]
+and then
+\[
+2+\rho(x_2)^{-1}=0,
+\]
+equivalently
+\[
+1+2\rho(x_2)=0.
+\]
+Thus the stated value \(\rho(x_2)=(1-3)^{-1}=-1/2\) is algebraically consistent, and the residues 4,13,40,121 modulo 9,27,81,243 are correct.
+
+### Logical boundary
+The calculation proves the character from the **full defining relation** using the standard intrinsic crossed-derivation characterization of the Demuškin orientation. To state the research theorem as “compatible full filtered relation-jet tower \(\Rightarrow\) full \(\chi\)” without overclaiming, two factorization facts must remain explicit:
+1. the tower is defined independently of \(\chi\) and retains the relation-jet data used by the derivation calculation;
+2. the finite-level jet determines the corresponding reduction \(\chi\bmod 3^n\), and the chosen reductions are compatible, so their inverse limit is \(\chi\).
+
+The present hand derivation establishes the global value directly and makes the second point strongly plausible, but it should not be described as a separate proof of a finite-level factorization theorem unless those finite-level maps are explicitly constructed.
+
+### Consequence
+The substantive endpoint is retained:
+- bare associated graded object: FAIL/CLOSED for \(\chi\bmod9\);
+- projective degree-(2,3) relation jet: PASS for \(\chi\bmod9\);
+- compatible full filtered relation-jet tower: PASS as a reconstruction mechanism for the canonical orientation, subject to the explicit inverse-limit/factorization wording above;
+- finite low-degree jet alone recovering the full 3-adic character: OPEN;
+- categorical absolute minimality: OPEN.
+
+No new scan is authorized by this review.
