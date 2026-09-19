@@ -37,6 +37,8 @@ It does not prove that \(J_3\) alone determines all higher digits, nor categoric
 
 No broad finite scan is authorized.
 
+A relative minimality lower bound has been closed; absolute categorical minimality remains OPEN pending an explicit carrier category. See `research/ORIENTATION_MOD9_RELATIVE_MINIMALITY_AUDIT_2026-09-19.md`.
+
 ---
 
 ## Current research question
