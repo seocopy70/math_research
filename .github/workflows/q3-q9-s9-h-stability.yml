@@ -1,0 +1,18 @@
+name: Q3 Q9 S9 H-stability degree-9 audit
+
+on:
+  push:
+    paths:
+      - "research/Q3_Q9_S9_H_stability_degree9_2026-09-19.py"
+      - ".github/workflows/q3-q9-s9-h-stability.yml"
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run exact F3 H-stability audit
+        run: python research/Q3_Q9_S9_H_stability_degree9_2026-09-19.py
