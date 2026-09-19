@@ -398,3 +398,18 @@ Decision:
 - successor carrier with genuinely new q-blind rigidification: **OPEN**.
 
 Stop consequence: no further beta_1/beta_9 scans on the same family are authorized. A successor must add genuinely new structure or an independent universal property, and must first pass the same object/category/q-blindness gate.
+
+
+## 2026-09-20 — CRITICAL REVIEW OF HARD ATTACK 20
+
+Hard Attack 20's closure of the mod-27 Bockstein carrier was overstrong. The argument established only that the **observed Bockstein layers** on the tested Demuškin family form three q-valuation cases. It did not prove that the full structured carrier \((H^1(F_3),H^1(Z/9),red,iota,cup,beta_1,beta_9)\) has exactly three isomorphism types, nor that every natural bridge on the full admissible category factors through q/classification.
+
+This distinction is load-bearing: agreement with the known q->chi formula on a test family is evidence against novelty, but not a universal no-go theorem. The candidate therefore returns to **CONDITIONAL / OPEN** as an orientation carrier.
+
+Decision:
+- q-layer detection: **PASS / LOCAL**;
+- q-factorization on tested family: **PASS / LOCAL**;
+- Bockstein orientation carrier: **CONDITIONAL / OPEN**;
+- same-family numerical scans: STOP.
+
+Next authorized attack: prove the structured-carrier classification/factorization universally, or produce an admissible same-carrier/different-orientation counterexample.
