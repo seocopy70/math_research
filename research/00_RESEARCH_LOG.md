@@ -1119,3 +1119,16 @@ The corrected quotient-valued law is tested over all 81 ordered pairs, with Q3 d
 Implementation: script commit dc28f6756c74ea57ae97735bcc96ec3cd1c74a35; workflow commit 117af503ec606aeb862ceb89bf631717a05d2ece.
 
 STATUS: EXECUTION PENDING. No PASS/FAIL is recorded until the audit actually executes and its output is independently checked.
+
+
+## 2026-09-19 — broader structured quotient-defect audit — PASS / CI VERIFIED
+
+The previously prepared structured-family gate was executed in CI at run 35418319144 (workflow rank4-d4-ia-structured-defect-composition, head commit dc28f6756c74ea57ae97735bcc96ec3cd1c74a35).
+
+The exact 9 representatives were tested over all 81 ordered pairs: identity, -I, two powers of each of the two hyperbolic-pair shears, a symplectic pair-swap, and two multiplier-2 diagonal GSp representatives. The script independently verified 9 GSp matrix identities and the lift degree-1 matrices.
+
+Exact output: gauge rank 20; Q3 dimension 44; candidate-law failures modulo Q3 = 0; raw candidate-law failures = 0; reversed diagnostic failures modulo Q3 = 18 and raw = 18; 60 composed q-defect classes nonzero.
+
+Decision: structured representative-family gate = PASS / CI VERIFIED for the frozen action/order convention. The multiplier-2 behavior is covered by the actual 81-pair run.
+
+Critical boundary: this remains a structured-family result. It does not establish full GSp4 covariance, arbitrary free-group coordinate naturality, or theorem-level canonicality. Before authorizing an unrestricted scan, the exact lift construction (matrix_to_lift) and its compatibility with the corrected local convention must be independently audited. No unrestricted full rank-4 scan is recorded as completed.
