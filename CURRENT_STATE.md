@@ -336,3 +336,41 @@ Gate status:
 Critical limitation: this proves intrinsic recovery from twisted cohomology/full group data, not yet from the Zassenhaus graded object alone. No finite scan is authorized until that factorization question is formally defined and audited.
 
 Detailed derivation: `research/ORIENTATION_MOD9_TWISTED_SURJECTIVITY_GATE_2026-09-19.md`.
+
+## 2026-09-19 — New filtered-factorization gate for twisted orientation
+
+The twisted mod-9 calculation gives a genuine PASS for intrinsic group-level recovery:
+\[
+\rho:G\to1+3\mathbf Z/9
+\]
+is uniquely selected by surjectivity of
+\[
+H^1(G,I_2(\rho))\to H^1(G,I_1(\rho)),
+\]
+and the frozen presentation yields
+\[
+\rho(x_2)=4\pmod9.
+\]
+
+The remaining question is now sharply isolated. Writing
+\[
+\rho=1+3\lambda\pmod9,
+\qquad \lambda\in H^1(G,\mathbf F_3),
+\]
+the explicit lift obstruction is
+\[
+B_\lambda(f)=(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4.
+\]
+The canonical \(\lambda\) is the unique zero of this obstruction.
+
+A new gate asks whether \(B_\lambda\) and its zero set can be defined intrinsically from the prescribed first restricted/Zassenhaus layers, rather than from a full presentation or preferred free lift.
+
+Status:
+- F0 candidate carrier: **PASS / strong candidate**
+- F1 definition: **OPEN**
+- F2 presentation/lift independence: **OPEN**
+- F3 automorphism naturality: **OPEN**
+- F4 uniqueness: **OPEN** at the intrinsic-object level
+- F5 filtered/graded factorization: **OPEN**
+
+No finite scan is authorized. Detailed gate: `plans/ORIENTATION_MOD9_FILTERED_FACTOR_GATE_2026-09-19.md`.
