@@ -404,3 +404,24 @@ Perform only a small IA defect-action audit:
 No rank-4 representative scan or new q-comparison is authorized before this gate closes.
 
 Frozen boundaries: no hand-picked Nielsen lift as an intrinsic invariant; no reuse of the failed condition g e1 = mu(g)e1; no degree-3 N/J reuse; no q=9 H-closure rescue.
+
+
+## 17. IA / filtered extension gate — first defect-action sub-gate result
+
+The first authorized IA defect-action audit has been executed without a rank-4 group scan.
+
+Frozen degree-3 associative target:
+A_3 ≅ F_3^{4⊗3}, dim A_3=64, with ordinary conjugation correction space C_3 of rank 4. The first IA layer has dimension dim Hom(V,L_2)=24.
+
+For identity, -I, and one standard transvection e_1 -> e_1+e_2, the IA defect-change map has rank 20 for both q=3 and q=infinity and the two variation maps agree exactly. Pairwise additivity over the 24 IA directions was checked. Hence the first-layer change law is linear in the tested degree-2 IA parameters.
+
+The combined span C_3 + Delta_IA has rank 20, giving a 44-dimensional candidate quotient. For -I and the transvection, the q=3 versus q=infinity defect is nonzero and survives this quotient. Thus the mandatory nontriviality test passes locally: quotienting by the tested first-layer IA gauge does not automatically erase the q-sensitive restricted-power signal.
+
+This is NOT a main-gate PASS. Canonicality/equivariance remains open.
+
+Result: research/RANK4_D4_IA_DEFECT_ACTION_AUDIT_RESULT_2026-09-19.md
+Script: research/rank4_D4_ia_extension_audit_2026-09-19.py
+
+### Next authorized step
+
+Perform quotient-legitimacy / equivariance audit: prove that the IA variation subspace is canonically defined, determine its transformation law under change of linear representative, and test whether the 44-dimensional quotient can carry the required compatible filtered/extension structure. No full rank-4 representative scan is authorized yet.
