@@ -382,3 +382,16 @@ The remaining gate is:
 4. only then consider a broad rank-4 scan.
 
 No full rank-4 scan is authorized yet.
+
+
+## 17. Corrected quotient q-defect cocycle audit — PASS / LOCAL
+
+Important correction: run 35417325110 was INVALIDATED because the defect helper used the reference-relator term with the wrong sign. Its PASS result is not evidence.
+
+Corrected CI run 35418122079, commit bb39ed1a7191aeae0da07813e40abe47695d292a. The corrected normalized defect is delta_g=[F_g(R3)-mu(g)R3]_deg3. The q-sensitive difference Delta_q(g)=[delta_3-delta_infinity]=[F_g(X1^3)-X1^3]_deg3.
+
+For F_(gh)=F_g o F_h, the law Delta_q(gh)=Delta_q(g)+g·Delta_q(h) passes in Q3 for all 16 ordered pairs of identity, -I, the standard transvection, and diag(2,1,2,1).
+
+Exact: gauge rank 20; Q3 dimension 44; candidate failures modulo Q3 0; raw failures 0; reversed diagnostic failures modulo Q3 2; reversed raw failures 2; 11 composed q-defect classes survive Q3.
+
+Consequence: the candidate action/order convention is now distinguished on this controlled set. The next authorized gate is a broader structured representative-family audit, explicitly including multiplier behavior. No unrestricted full rank-4 scan yet.
