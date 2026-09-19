@@ -2130,3 +2130,28 @@ Decision:
 - no broad scan authorized.
 
 Record: research/BOCKSTEIN_RELATION_JET_IDENTIFICATION_AUDIT_2026-09-19.md.
+
+
+## 2026-09-19 — Critical normalization correction: Bockstein/cup sign synchronization and direct Z/9 verification
+
+A critical review found that the earlier wording “direct cochain/transgression calculation” overstated what had been established. The general identification \\(\\beta\\leftrightarrow p(P_3)\\) is now explicitly attributed to the standard one-relator transgression/relation–Bockstein formula. The frozen relator is independently checked by a direct \\(\\mathbf Z/9\\)-lifting obstruction calculation.
+
+The key normalization correction is frozen: cup-product and Bockstein coefficients must be read in the same transgression/fundamental-class convention. In that convention
+\\[
+\\operatorname{tr}(\\chi_i\\cup\\chi_j)=-a_{ij},\\qquad
+\\operatorname{tr}(\\beta\\chi_i)=-a_i,
+\\]
+so the ambiguity is a common H²-generator scaling, not an independent sign change of p relative to R.
+
+For \\(r_3=x_1^3[x_1,x_2][x_3,x_4]\\), direct \\(\\mathbf Z/9\\) lifting gives
+\\[
+\\widetilde f_1(r_3)/3\\equiv1\\pmod3,\\qquad
+\\widetilde f_i(r_3)/3\\equiv0\\pmod3\\ (i=2,3,4),
+\\]
+because commutators have zero exponent sum. This independently confirms the Bockstein power vector \\(p\\sim X_1^{(1)}\\) for the frozen presentation.
+
+The restricted-cubic coefficient is naturally in \\(V^{(1)}\\); over \\(\\mathbf F_3\\) the Frobenius is the identity, so the present \\(V^{(1)}\\cong V\\) identification is canonical. The control previously denoted “q=∞” is to be called the **power-free control** \\(r_0=[x_1,x_2][x_3,x_4]\\) in the final manuscript; its first Bockstein/power component is zero.
+
+Decision unchanged but tightened: Bockstein–relation-jet projective identification **PASS / CLOSED** under the standard transgression/Bockstein formula plus independent frozen-relator lift verification; absolute H² normalization remains **CONDITIONAL / gauge-dependent**; \\(\\chi\\bmod9=(1,4,1,1)\\) remains **PASS / CLOSED** at the stated projective degree-(2,3) level. No higher-digit conclusion and no broad scan are authorized.
+
+Record: research/BOCKSTEIN_RELATION_JET_IDENTIFICATION_AUDIT_2026-09-19.md.
