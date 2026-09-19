@@ -93,3 +93,16 @@ Corrected run 35418122079, commit bb39ed1a7191aeae0da07813e40abe47695d292a. With
 Corrected results: gauge rank 20; Q3 dimension 44; candidate-law failures modulo Q3 0; raw failures 0; reversed diagnostic failures modulo Q3 2; reversed raw failures 2; 11 composed q-defect classes survive Q3.
 
 Status: valid LOCAL PASS. The candidate action/order convention is distinguished on this control set. Next gate is a broader structured representative-family audit with explicit multiplier behavior. No unrestricted full rank-4 scan yet.
+
+
+## 2026-09-19 — broader structured representative-family gate prepared
+
+The corrected quotient-defect law was extended to a structured family before any unrestricted rank-4 scan.
+
+Family (9 representatives): identity, -I, two first-hyperbolic-pair shears, two second-hyperbolic-pair shears, symplectic pair-swap, and two independent multiplier-2 diagonal GSp representatives. The script independently checks g^T J g = mu(g)J and verifies that the free lifts induce the intended degree-1 matrices.
+
+The audit tests all 9^2=81 ordered pairs under the frozen convention F_(gh)=F_g o F_h, with the same Q3=A3/(C3+Delta_IA) and corrected Delta_q. It also retains the reversed action/order formula as a diagnostic only.
+
+Implementation commits: script dc28f6756c74ea57ae97735bcc96ec3cd1c74a35; workflow 117af503ec606aeb862ceb89bf631717a05d2ece.
+
+Status: EXECUTION PENDING / NO MATHEMATICAL RESULT YET. The gate remains open. No full rank-4 scan is authorized until this structured audit is executed and critically reviewed.
