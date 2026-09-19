@@ -569,3 +569,26 @@ The load-bearing identification \\(\\beta\\leftrightarrow p(P_3)\\) has been tig
 Decision: **PASS / CLOSED**, with the general formula explicitly cited and the frozen-relator lift check recorded as an independent verification. Absolute H² normalization remains CONDITIONAL / gauge-dependent; no higher-digit conclusion follows.
 
 Detailed record: research/BOCKSTEIN_RELATION_JET_IDENTIFICATION_AUDIT_2026-09-19.md.
+
+## 2026-09-19 — Independent twisted mod-9 recovery / carrier factorization
+
+The canonical twisted-surjectivity criterion was independently evaluated without using the trivial-coefficient Bockstein as the recovery criterion. For \(\rho(x_i)=1+3a_i\pmod9\), the frozen relator obstruction is
+\[
+(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4.
+\]
+Surjectivity has the unique solution \((a_1,a_2,a_3,a_4)=(0,1,0,0)\), hence \(\rho=(1,4,1,1)\pmod9\).
+
+Crucially, this obstruction is exactly
+\[
+\Theta_{(R,p)}(\lambda)(f)=f(p)+(\lambda\wedge f)(R),
+\quad R=[X_1,X_2]+[X_3,X_4],\ p=X_1^{(1)}.
+\]
+Therefore the independent twisted orientation criterion factors through the same projective degree-(2,3) carrier, rather than merely agreeing with it on the frozen coordinates.
+
+Decision:
+- independent twisted-surjectivity recovery: **PASS / CLOSED**;
+- carrier-to-twisted criterion factorization: **PASS / CLOSED**;
+- recovery from bare associated graded alone: **NOT ESTABLISHED**;
+- higher 3-adic digits: **OPEN**.
+
+Detailed record: research/ORIENTATION_MOD9_TWISTED_RECOVERY_CARRIER_FACTORIZATION_AUDIT_2026-09-19.md.
