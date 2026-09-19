@@ -1303,3 +1303,36 @@ Under the frozen GSp convention, canonical orientation invariance forces the \(e
 The proof does not identify \(\mu_{\mathrm{int}}\) with the Demushkin orientation \(\chi\). Their domains and coefficient groups differ, and \(\chi(G)\subset1+3\mathbf Z_3\), so \(\chi\bmod3\) is trivial. Thus direct equality and mod-3 reduction are both **FAIL**.
 
 The only remaining question is whether a separate canonical dualizing-module construction can relate \(\chi\), with additional structure, to \(\mu_{\mathrm{int}}\). This remains **OPEN**. No finite scan is authorized.
+
+
+## 2026-09-19 — Dualizing-module manual bridge audit
+
+The next hand step gives a more precise picture.
+
+For a Demushkin group, the dualizing module \(I\) is rank-one over \(\mathbf Z_3\) as an underlying module, with \(G\)-action through the canonical orientation \(\chi\). Equivalently, the distinguished orientation is the character describing the \(G\)-action on the dualizing module. This is standard Poincare-duality structure. citeturn0search0turn0search3
+
+For the \(q=3\) group, however,
+\[
+I/3I
+\]
+has trivial \(G\)-action because \(\chi\equiv1\pmod3\). Thus the reduction of the **G-action** on the dualizing module cannot itself produce \(\mu_{\rm int}\).
+
+There is nevertheless a second, different action: an automorphism \(\phi\in\operatorname{Aut}(G)\) acts functorially on the one-dimensional top-cohomology/dualizing object. Since
+\[
+H^2(G,\mathbf F_3)\cong\mathbf F_3
+\]
+and the cup product
+\[
+H^1(G,\mathbf F_3)\times H^1(G,\mathbf F_3)\to H^2(G,\mathbf F_3)
+\]
+is perfect for a Demushkin group, the induced scalar on \(H^2\) is exactly the similitude scalar of the induced degree-one pairing action, up to the fixed cohomological contravariance convention. citeturn0search0
+
+Therefore the dualizing/top-cohomology object does carry an intrinsic \(\operatorname{Aut}(G)\)-character whose mod-3 scalar is the same invariant already identified as the torsion-line/GSp multiplier, after the repository's frozen convention is fixed.
+
+This is important but does **not** recover \(\chi\) from \(\mu\). It shows instead that the same canonical duality package has two distinct layers:
+- \(G\)-action on the dualizing module: \(\chi:G\to\mathbf Z_3^\times\);
+- \(\operatorname{Aut}(G)\)-action on the top duality line: \(\mu_{\rm int}\) (up to the convention/inversion check).
+
+Thus the remaining exact issue is only the convention check (whether the repository's \(g\) is the primal \(H_1\) action or the contragredient \(H^1\) action, which decides \(\mu\) versus \(\mu^{-1}\)). This is a hand-definition issue, not a finite scan.
+
+**Current consequence:** the hypothesis "there may be no canonical dualizing-module realization of \(\mu\)" is too pessimistic and is replaced by a narrower statement: there is a canonical top-duality-line realization of the automorphism character, but it still does not identify that automorphism character with the group orientation \(\chi\).
