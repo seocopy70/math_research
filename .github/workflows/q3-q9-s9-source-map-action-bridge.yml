@@ -1,0 +1,20 @@
+name: q3-q9-s9-source-map-action-bridge
+
+on:
+  push:
+    paths:
+      - "research/Q3_Q9_S9_SOURCE_MAP_H_STABILITY_ACTION_BRIDGE_AUDIT_2026-09-19.py"
+      - "research/phase2_1_invariant_space_verification_2026-09-15.py"
+      - ".github/workflows/q3-q9-s9-source-map-action-bridge.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run explicit R2 action bridge audit
+        run: python research/Q3_Q9_S9_SOURCE_MAP_H_STABILITY_ACTION_BRIDGE_AUDIT_2026-09-19.py
