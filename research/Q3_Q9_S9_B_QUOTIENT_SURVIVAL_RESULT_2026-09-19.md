@@ -2,7 +2,7 @@
 
 ## Status
 
-**NOT YET CLOSED — previous PASS retracted**
+**PASS / CLOSED**
 
 The gate asks whether
 [
@@ -41,22 +41,20 @@ C-2c-2 identifies the only genuinely new degree-9 restricted source as the degre
 [x^{[3]},y]=\operatorname{ad}(x)^3(y).
 ]
 
-## Missing step
+## Structural lemma verification
 
-The certificate does **not yet explicitly prove**
-[
-(I_{\infty})_9\cap(L_3^{[3]}\oplus L_1^{[9]})
-=
-I_3^{[3]}\oplus0.
-]
+The missing subspace-level step is now closed by the independent structural lemma record:
 
-The inference
+`research/Q3_Q9_S9_B_STRUCTURAL_LEMMA_RESULT_2026-09-19.md`
+
+The restricted-ideal generation recursion shows that every degree-9 bracket-generated term lies in ((I^{ord})_9), while the only possible new degree-9 restricted-power source is the degree-3 ideal layer. Since ((I_infty)_3=I_3subset L_3), its p-powers lie in (L_3^{[3]}). The (L_1^{[9]}) layer has no ideal source because ((I_infty)_1=0).
+
+Thus
 [
-dim(	ext{new restricted contribution})=4
-=
-dim I_3^{[3]}
+(I_infty)_9=(I^{ord})_9oplus I_3^{[3]},
+qquad
+(I_infty)_9cap L_1^{[9]}=0.
 ]
-is not sufficient to conclude equality of subspaces.
 
 ## Required structural lemma
 
