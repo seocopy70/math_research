@@ -1,3 +1,30 @@
+## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 14: FOX LOCAL QUOTIENT COMPRESSION CLOSED
+
+The frozen (q=3) exact local Fox obstruction algebra was reduced explicitly:
+[
+mathcal A_{mathrm{Fox}}
+=
+mathbf Z_3[[u_1,u_2,u_3,u_4]]
+/
+(u_1,u_3,u_4,2u_2+3)
+congmathbf Z_3.
+]
+
+Thus the local Fox obstruction scheme on (1+3mathbf Z_3) is already a reduced characteristic-zero point,
+[
+(1,-1/2,1,1).
+]
+
+Consequently, any proper unital quotient of this local coefficient algebra either loses characteristic-zero (3)-adic information or collapses the point. Therefore there is no strictly smaller quotient of the exact local Fox carrier that still retains the full (3)-adic orientation.
+
+Decision:
+- quotient-of-local-Fox-scheme compression: **FAIL / CLOSED**;
+- exact local Fox carrier minimal under full-(3)-adic-preserving quotients: **PASS / CLOSED**;
+- independently defined intrinsic non-quotient exact compression: **OPEN**.
+
+Record:
+research/ORIENTATION_FOX_LOCAL_QUOTIENT_MINIMALITY_HARD_ATTACK_2026-09-20.md
+
 ## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 13: FULL ASSOCIATED-GRADED NO-GO
 
 A stronger negative boundary has now been established.
