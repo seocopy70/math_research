@@ -1,3 +1,24 @@
+## AUTHORITATIVE UPDATE — 2026-09-19 — M3 COMPARISON BOUNDARY
+
+The intrinsic mod-9 carrier [(R,p)] was compared with Pál–Quick's A_3/Hochschild canonical class.
+
+A genuine **PASS / LOCAL** detection-level compatibility is established for the standard p=3 Demushkin family:
+- q=3: first Bockstein/power direction is nonzero and Pál–Quick's canonical A_3 class is nonzero;
+- q=3^f, f≥2: first Bockstein layer vanishes and the Pál–Quick A_3 obstruction vanishes in their theorem range.
+
+This is a common q=3 power-layer detection, not an equality theorem.
+
+The stronger map/factorization
+\[
+[(R,p)]\longrightarrow\gamma_{A_3}
+\]
+remains **OPEN** because the two objects have different targets and constructions: the former is the cup/Bockstein carrier, while the latter is a Hochschild/cochain obstruction computed via higher tensor data and Dwyer U_4 lifting.
+
+No U_4/Hochschild scan is authorized. A future M3 continuation must first define a natural target map and prove its functoriality and gauge compatibility.
+
+Detailed record:
+research/M3_CUP_BOCKSTEIN_TO_PAL_QUICK_COMPARISON_AUDIT_2026-09-19.md
+
 ## AUTHORITATIVE UPDATE — 2026-09-19 — INTRINSIC MOD-9 CARRIER VIA CUP + BOCKSTEIN
 
 The μ–χ bridge was critically narrowed: μ is an intrinsic mod-3 automorphism/duality-line shadow, but μ alone does not determine χ mod 9 and admits no simple homomorphic lift into 1+3Z_3. A deeper μ + additional-data bridge remains conceptually open; no μ-only scan is authorized.
