@@ -374,3 +374,27 @@ Actions run: 35409723512 (success).
 ### Next step
 
 Independently resolve the quotient-level admissibility of S_9 before inserting it into the restricted ideal.
+
+
+## 2026-09-19 — S9 admissibility prerequisite audit
+
+Before inserting S9 into any degree-9 relation ideal, the implementation and convention prerequisites were audited against the authoritative repository records.
+
+### Verified prerequisites
+
+1. **Baseline frozen:** dim I_infty,9 = 13524 and dim I_3^[3] = 4 remain unchanged.
+2. **Restricted-power identification:** the existing Gate C-2a artifact establishes X_1^[3] = X_1^3 and (X_1^[3])^[3] = X_1^9 in the one-generator enveloping realization over F_3. The exact word calculation was independently reproduced.
+3. **Ambient degree-9 layer control:** C-2c-1 establishes in rank 2, with exact F_3 elimination, rank(L_9)=56, rank(L_3^[3])=2, rank(L_1^[9])=2, and combined rank 60.
+4. **Implementation invariants:** the authoritative conventions require complete closure, coordinate-system consistency, exact F_3 rank, and sanity/rank-nullity checks. These are frozen as mandatory conditions for the actual S9 experiment.
+
+### Consequence
+
+This audit does **not** promote S9 admissibility to PASS. It separates the already-supported ambient identity X_1^9 = X_1^[9] from the still-open question of whether the Magnus-derived S9 is admissible as a quotient-level restricted-Lie source under the frozen degree-9 convention.
+
+Accordingly:
+
+- S9 is still not inserted into I_infty,9.
+- S9 in I_infty,9 remains untested.
+- q=9 ideal construction, H-stability, and D9 remain downstream and blocked.
+
+Detailed record: research/Q3_Q9_S9_admissibility_preflight_2026-09-19.md
