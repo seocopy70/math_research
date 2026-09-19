@@ -269,6 +269,20 @@ for name, (g, m) in CASES.items():
     assert linear_matrix(g) == MATS[name][0]
     matrix_checks += 1
 
+# Critical convention audit: free-word composition must agree with
+# ordinary column-matrix multiplication, independently of the cocycle test.
+for a in names:
+    for b in names:
+        ga, _ = CASES[a]; gb, _ = CASES[b]
+        assert linear_matrix(comp(ga, gb)) == matmul(linear_matrix(ga), linear_matrix(gb)), (a, b)
+
+# Critical q-source audit: Delta_q must equal the direct cubic source
+# difference [F_g(X1^3)-X1^3]_deg3, not merely a difference of helpers.
+X1cube = [(0, 1)] * 3
+for name, (g, m) in CASES.items():
+    direct = vec(add(ev(X1cube, g), sc({X1cube: 1}, -1)), 3)
+    assert delta_q(g) == direct, name
+
 results = []
 for a in names:
     ga, mua = CASES[a]
@@ -280,15 +294,12 @@ for a in names:
         db = delta_q(gb)
 
         # Frozen convention: F_(gh) = F_g o F_h.
-        # The raw defect obeys a multiplier-twisted law. Normalize first:
-        # c(g)=mu(g)^(-1) Delta_q(g). Then
-        # c(gh)=c(g)+mu(g)^(-1) g.c(h).
-        inv_mua = pow(mua, -1, P)
-        rhs = [
-            (x + inv_mua * y) % P for x, y in zip(
-                da, tensor_action(db, linear_matrix(ga))
-            )
-        ]
+        # Delta_q = F_g(X1^3)-X1^3. Since delta_q(h) already contains
+        # the multiplier contribution to F_h(X1^3), composition gives
+        # Delta_q(gh)=Delta_q(g)+g.Delta_q(h), with no extra mu(h) factor.
+        rhs = [(x + y) % P for x, y in zip(
+            da, tensor_action(db, linear_matrix(ga))
+        )]
         # Diagnostic only: reverse the action/order.
         rhs_rev = [(x + y) % P for x, y in zip(
             db, tensor_action(da, linear_matrix(gb))
@@ -327,7 +338,7 @@ print({
     "gauge_rank": rank(GAUGE),
     "Q3_dimension": 64 - rank(GAUGE),
     "matrix_gsp_checks": matrix_checks,
-    "candidate_law": "c(gh)=c(g)+mu(g)^(-1) g·c(h), c=mu^(-1)Delta_q",
+    "candidate_law": "Delta_q(gh)=Delta_q(g)+g·Delta_q(h)",
     "candidate_law_failures_mod_Q3": law_fail,
     "candidate_law_raw_failures": law_raw_fail,
     "reversed_diagnostic_failures_mod_Q3": reversed_fail,
