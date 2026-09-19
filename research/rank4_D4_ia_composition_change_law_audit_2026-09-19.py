@@ -39,6 +39,15 @@ def eval_word(word,gens):
     z=dict(ONE)
     for i,s in word: z=mul(z,gens[i] if s==1 else inv(gens[i]))
     return z
+def basis_coeff(spec):
+    c=[[0]*6 for _ in range(N)]
+    i,j,k=spec
+    c[i][PAIRS.index((j,k))]=1
+    return c
+
+def add_coeff(a,b):
+    return [[(x+y)%P for x,y in zip(ai,bi)] for ai,bi in zip(a,b)]
+
 def ia_word_map(coeff):
     out=[]
     for i in range(N):
