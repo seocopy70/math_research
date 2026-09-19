@@ -1638,3 +1638,10 @@ Decision: fixed-cover relation-module container PASS; full E1 intrinsicness rema
 ## 2026-09-19 — E1 cover-change audit
 
 A no-scan audit reduced comparison of minimal free covers to free isomorphisms over id_G. The earlier stabilizing lift witness proves that the relation-module generator is not invariant across such lifts: it can acquire the unit 4 mod 9. Thus full relation-module cover-independence FAILS. The relevant surviving target is the projective degree-(2,3) jet, for which common scaling is harmless to the zero set of Theta and relator-conjugation gauge is also harmless. A residual-gauge lemma asserting that every cover change has only common scaling plus P -> P+[v,R] remains OPEN. Detailed record: research/ORIENTATION_MOD9_E1_COVER_CHANGE_AUDIT_2026-09-19.md. No finite scan authorized.
+
+
+## 2026-09-19 — E1 residual-gauge lemma PASS
+
+The remaining degree-(2,3) cover-change ambiguity relevant to Theta was derived directly. For an identity-on-G free lift, the degree-2 corrections to generators lie in the one-dimensional initial relation line: Q_i=c_i R_2. Therefore the induced degree-3 change of R_2 is [R_2,v] with v=c_1X_2-c_2X_1+c_3X_4-c_4X_3. A possible common relation-module unit factor gives (R,P) -> (uR,uP+[v,R]). Degree-one functionals annihilate [v,R], so Theta is multiplied only by u and its zero set is invariant.
+
+Decision: residual-gauge lemma PASS for the degree-(2,3) problem relevant to Theta, conditional on the standard minimal one-relator presentation facts and frozen convention. Full relation-module generator invariance remains false. Projective jet invariance relevant to recovery is therefore PASS at this level. Detailed proof: research/ORIENTATION_MOD9_E1_RESIDUAL_GAUGE_LEMMA_2026-09-19.md. No finite scan authorized.
