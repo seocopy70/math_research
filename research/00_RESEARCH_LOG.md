@@ -398,7 +398,6 @@ Decision:
 - successor carrier with genuinely new q-blind rigidification: **OPEN**.
 
 Stop consequence: no further beta_1/beta_9 scans on the same family are authorized. A successor must add genuinely new structure or an independent universal property, and must first pass the same object/category/q-blindness gate.
-
 ## 2026-09-20 — CRITICAL REVIEW OF HARD ATTACK 20
 
 Hard Attack 20's closure of the mod-27 Bockstein carrier was overstrong. The argument established only that the **observed Bockstein layers** on the tested Demuškin family form three q-valuation cases. It did not prove that the full structured carrier \((H^1(F_3),H^1(Z/9),red,iota,cup,beta_1,beta_9)\) has exactly three isomorphism types, nor that every natural bridge on the full admissible category factors through q/classification.
@@ -473,3 +472,24 @@ Before further calculation:
 - Bockstein orientation carrier: **CONDITIONAL / OPEN**.
 
 No further same-family Bockstein scan is authorized.
+
+## AUTHORITATIVE UPDATE — HARD ATTACK 22 — 2026-09-20
+
+The mod-27 target is now formalized basis-free:
+\[
+\lambda_{27}(G)=\frac13\log\chi_G\pmod9\in H^1(G,\mathbf Z/9),
+\]
+and \(O_{27}(G)\) is the distinguished-orientation singleton/subfunctor selecting this class. This removes the previous ambiguity in the target notation.
+
+The abstract carrier category has a genuine symmetry \(S\) preventing a natural selector of \(\lambda_{27}\), but \(S\) is not an admissible group/gauge morphism; indeed canonical orientation naturality itself blocks such a realization. Thus the abstract no-go is valid only in \(\mathcal C_{27}^{abs}\), not in the project's admissible category.
+
+The decisive admissible counterexample pair
+\[
+\mathcal B_{27}(G)\cong\mathcal B_{27}(G'),\qquad
+O_{27}(G)\not\cong O_{27}(G')
+\]
+has not been found. The standard Demushkin family cannot supply one because its full carrier types already separate the valuation classes.
+
+**Binding status:** target formalization PASS/CLOSED; abstract-carrier no-go PASS/CLOSED; admissible counterexample OPEN/NOT FOUND; universal factorization OPEN; independent bridge OPEN; Bockstein orientation carrier CONDITIONAL/OPEN.
+
+No further same-family Bockstein computation is authorized. The next branch must add genuinely new q-blind rigidifying structure or prove a universal factorization theorem. A cohomological Mackey/transfer enrichment across open subgroups is recorded as a candidate, not yet accepted.
