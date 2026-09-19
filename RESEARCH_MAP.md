@@ -397,8 +397,7 @@ is uniquely determined by the finite-level crossed-derivation equations. For the
 \qquad
 \chi_n(x_2)=(-2)^{-1}\pmod{3^n}.
 \]
-The reductions are compatible and\[\mathbf Z_3^\times\cong\varprojlim_n(\mathbf Z/3^n)^\times
-\]
+The reductions are compatible and\[\mathbf Z_3^\times\cong\varprojlim_n(\mathbf Z/3^n)^\times\]
 gives the unique full \(\chi\).
 
 Record:
@@ -797,8 +796,7 @@ Verified:
 - Full matrix comparison gives (Psi=I_{10}) exactly.
 - All ten diagonal entries are 1.- Every off-diagonal entry is zero.
 - (Psi=2I_{10}) is false.
-Hence
-[
+Hence[
 \boxed{\Phi_0\circ F=I_U}.
 ]
 
@@ -1197,8 +1195,7 @@ and no (S_9) contribution has been inserted into that baseline.
 
 The next controlled computation is **S9-B — quotient survival**:[
 oxed{[S_9]
-eq0	ext{ in }L_9^{mathrm{res}}/I_{infty,9}}
-]
+eq0	ext{ in }L_9^{mathrm{res}}/I_{infty,9}}]
 equivalently
 [
 oxed{S_9
@@ -1597,8 +1594,7 @@ After closing the natural p-layer observable, the authoritative Q3/Q9 records an
 No such already-authorized q-sensitive object was found.
 
 In particular:
-- Gate-C's (Delta_9(9)=X_1^{[9]}) is exactly the universal p-layer shadow.
-- The fixed q=9 degree-9 relation space is not H-stable.
+- Gate-C's (Delta_9(9)=X_1^{[9]}) is exactly the universal p-layer shadow.- The fixed q=9 degree-9 relation space is not H-stable.
 - Its artificial H-closure is not a valid presentation relation object.
 - The existing O2-7 transport-variation module is a degree-4 q=3/q=infty construction and its own boundary excludes using it as a q=3/q=9 degree-9 object.
 - The roadmap currently points to broader Track-B/group-level or higher-operation structures, but none is already defined as a Q3/Q9 D9 object.
@@ -1997,8 +1993,7 @@ J_3=\langle(R_2,P_3)\rangle\subset L_2\oplus L_3^{res}\]
 be the degree-3 relation jet, with common scalar ambiguity retained. The intrinsic obstruction is
 \[
 \Theta_{R_2,P_3}(\lambda)(f)=f(P_3)+(\lambda\wedge f)(R_2).
-\]
-This is exactly the verified B_\lambda in frozen coordinates. Common rescaling changes only the scalar representative, not the zero set. Automorphism/isomorphism naturality follows from evaluation and exterior-power functoriality. Since R_2 is nondegenerate, the zero is unique and equals \(\lambda_\chi=(0,1,0,0)\), hence \(\rho=(1,4,1,1)\bmod9\).
+\]This is exactly the verified B_\lambda in frozen coordinates. Common rescaling changes only the scalar representative, not the zero set. Automorphism/isomorphism naturality follows from evaluation and exterior-power functoriality. Since R_2 is nondegenerate, the zero is unique and equals \(\lambda_\chi=(0,1,0,0)\), hence \(\rho=(1,4,1,1)\bmod9\).
 
 Decision:
 - **F5 structural factorization through enriched relation jet \(D_3=(V,J_3)\): PASS.**
@@ -2349,3 +2344,17 @@ has not been found. The standard Demushkin family cannot supply one because its 
 **Binding status:** target formalization PASS/CLOSED; abstract-carrier no-go PASS/CLOSED; admissible counterexample OPEN/NOT FOUND; universal factorization OPEN; independent bridge OPEN; Bockstein orientation carrier CONDITIONAL/OPEN.
 
 No further same-family Bockstein computation is authorized. The next branch must add genuinely new q-blind rigidifying structure or prove a universal factorization theorem. A cohomological Mackey/transfer enrichment across open subgroups is recorded as a candidate, not yet accepted.
+
+## AUTHORITATIVE UPDATE — HARD ATTACK 23 — 2026-09-20
+
+A proposed successor based on restriction/corestriction/conjugation over open subgroups was attacked. The entire Mackey/transfer-enriched trivial-coefficient Bockstein system retains a global coefficient symmetry
+\[
+T_c:a\mapsto ca,\qquad c\equiv1\pmod3,
+\]
+which commutes with reduction, \(\iota\), both Bocksteins, cup product, restriction, corestriction, and conjugation. It moves the desired logarithmic orientation lift \(\lambda_{27}\).
+
+Therefore Mackey/transfer enrichment alone does not remove the missing lift ambiguity.
+
+This is not a group-level universal no-go because \(T_c\) is a coefficient-system automorphism, not an admissible group automorphism. It is nevertheless a decisive stop for this successor: more bookkeeping of the same trivial-coefficient Bockstein data cannot supply the missing characteristic-zero rigidification.
+
+**Status:** Mackey/transfer enrichment as abstract coefficient-functor carrier **FAIL / CLOSED**; global group-level no-go **OPEN**; independent orientation bridge **OPEN**. The next meaningful branch must add genuinely group-sensitive filtered extension information.
