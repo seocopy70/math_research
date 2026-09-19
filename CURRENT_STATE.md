@@ -1,3 +1,47 @@
+## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 9: NAIVE INTEGRAL AUGMENTATION JET CLOSED
+
+The proposed next object
+\[
+\mathcal R_3^{\mathbf Z_3}=\langle r-1\rangle\subset I^2/I^4,
+\qquad I=\ker(\mathbf Z_3[[F]]\to\mathbf Z_3),
+\]
+is **not defined as stated** for the frozen relation
+\[
+r=x_1^3[x_1,x_2][x_3,x_4].
+\]
+
+Writing \(X_i=x_i-1\),
+\[
+x_1^3-1=3X_1+3X_1^2+X_1^3,
+\]
+while the commutator product begins in ordinary augmentation degree 2. Hence
+\[
+r-1=3X_1+[X_1,X_2]+[X_3,X_4]+O(I^3),
+\]
+so
+\[
+\boxed{r-1\notin I^2}.
+\]
+
+Therefore the plain \(\mathbf Z_3\)-augmentation quotient \(I^2/I^4\) cannot be the sought integral analogue of the mod-3 Zassenhaus degree-(2,3) jet. This is a **FAIL / CLOSED** definition-level result.
+
+The structural reason is that the Zassenhaus filtration is naturally obtained from the completed \(\mathbf F_3[[F]]\) augmentation ideal; replacing \(\mathbf F_3\) by \(\mathbf Z_3\) changes the filtration and retains the mixed p-adic terms \(3X_1\), \(3X_1^2\). The earlier rejection of naive \(\mathbf Z_3\)-scalar extension of the restricted-Lie carrier is independently confirmed.
+
+A mixed p-adic/Zassenhaus weighted filtration remains **OPEN**, but its finite associated graded pieces retain residue-layer information rather than an unrestricted exact 3-adic scalar. Thus it does not by itself evade the already closed bounded-degree + finite-precision obstruction.
+
+The exact universal Fox obstruction scheme remains the correct characteristic-zero comparison object. The remaining structural target is now:
+\[
+\boxed{
+\text{intrinsic filtered jet tower}
+\;\stackrel{?}{\longrightarrow}\;
+\text{exact Fox orientation locus}
+}
+\]
+with an explicit account of where the infinitely many 3-adic digits enter. No further plain \(I^2/I^4\) computation is authorized.
+
+Detailed audit:
+research/ORIENTATION_INTEGRAL_AUGMENTATION_JET_HARD_ATTACK_2026-09-20.md
+
 ## AUTHORITATIVE UPDATE — 2026-09-19 — BOCKSTEIN–RELATION-JET IDENTIFICATION GATE CLOSED
 
 The load-bearing identification
