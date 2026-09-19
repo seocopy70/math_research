@@ -241,6 +241,25 @@ def delta_q(g):
     di = vec(add(ev(RI, L), sc(BI, -1)), 3)
     return [(x - y) % P for x, y in zip(d3, di)]
 
+def tensor_action(v, M):
+    out = [0] * 64
+    for pos, w in enumerate(WORDS3):
+        c = v[pos]
+        if not c:
+            continue
+        choices = [
+            [(j, M[j][i]) for j in range(N) if M[j][i] % P]
+            for i in w
+        ]
+        for js in product(*choices):
+            ww = tuple(x[0] for x in js)
+            cc = c
+            for _, a in js:
+                cc = cc * a % P
+            idx = WORDS3.index(ww)
+            out[idx] = (out[idx] + cc) % P
+    return out
+
 names = list(CASES)
 law_fail = law_raw_fail = reversed_fail = reversed_raw_fail = 0
 nonzero = 0
@@ -308,22 +327,3 @@ print({
         "establish full GSp4 covariance or canonicality."
     ),
 })
-
-def tensor_action(v, M):
-    out = [0] * 64
-    for pos, w in enumerate(WORDS3):
-        c = v[pos]
-        if not c:
-            continue
-        choices = [
-            [(j, M[j][i]) for j in range(N) if M[j][i] % P]
-            for i in w
-        ]
-        for js in product(*choices):
-            ww = tuple(x[0] for x in js)
-            cc = c
-            for _, a in js:
-                cc = cc * a % P
-            idx = WORDS3.index(ww)
-            out[idx] = (out[idx] + cc) % P
-    return out
