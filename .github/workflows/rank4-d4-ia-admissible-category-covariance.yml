@@ -1,0 +1,19 @@
+name: rank4-d4-ia-admissible-category-covariance
+
+on:
+  push:
+    paths:
+      - "research/rank4_D4_ia_admissible_category_covariance_audit_2026-09-19.py"
+      - ".github/workflows/rank4-d4-ia-admissible-category-covariance.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run exact F3 covariance audit
+        run: python research/rank4_D4_ia_admissible_category_covariance_audit_2026-09-19.py
