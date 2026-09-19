@@ -17,16 +17,22 @@ At minimum the admissible input category must specify:
 
 A proposed J_27 is admissible only if it is a functor (or pseudofunctor, if unavoidable and explicitly controlled) on this category.
 
-## 2. q-blindness
+## 2. q-blindness and category adequacy
 
-q-blindness is a definition-level condition, not a test performed after construction.
+q-blindness is a definition-level condition, not a test performed after construction. The admissible input must be the declared filtered/relation-information functor, not the unrestricted full group together with arbitrary intrinsic constructions.
 
-The construction of J_27 may use only the declared input object and universal structural operations. It may not use:
+The construction of J_27 may use only the declared filtered/relation input and universal structural operations. It may not use:
 
-- the unknown canonical character chi;
-- its digits;
-- q as a parameter;
-- an equation obtained by first solving for chi and then encoding the answer.
+- the unknown canonical character chi or its finite reductions;
+- q as a supplied parameter;
+- the dualizing-module action when that action is the target orientation;
+- an equivalent complete Demuškin classification invariant used only to reconstruct chi by the known classification formula;
+- an equation obtained by first solving for chi and then encoding the answer;
+- any factorization through an already-known canonical-orientation object without an independent obstruction construction.
+
+A group-only construction is therefore not automatically admissible merely because it is functorial. If it first extracts q, the dualizing action, or an equivalent complete orientation invariant and then repackages it, it is classified as a tautological/classification reconstruction rather than a new filtered carrier.
+
+This restriction is necessary because infinite Demuškin groups already possess a canonical dualizing module/action and a canonical orientation; allowing arbitrary group-intrinsic constructions would make J_27 exist trivially and would collapse the intended information-boundary problem.
 
 A q=3 example may be used for verification, but not for definition.
 
