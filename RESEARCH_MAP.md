@@ -2196,3 +2196,23 @@ Binding correction:
 This correction prevents a self-imposed overstrong Gate from turning failure of a chosen definition into a false mathematical no-go result.
 
 The mod-27 branch remains the next substantive target, but only after this formal gate is accepted.
+
+
+## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 18: MOD-27 BOCKSTEIN CARRIER CLOSED BY INTERNAL SYMMETRY
+
+The coefficient-extension candidate
+\[
+\mathcal B_{27}=(H^1(G,\mathbf F_3),H^1(G,\mathbf Z/9),\mathrm{red},\iota,\smile,\beta_1,\beta_9)
+\]
+fails the carrier-level automorphism test. For the frozen \(q=3\) object,
+\[
+(a_1,a_2,a_3,a_4)\mapsto(a_1,4a_2,a_3,a_4)
+\]
+preserves all declared structure but changes the characteristic-zero lift of the mod-3 \(e_2\) direction. Since the desired logarithmic digit is \(e_2\pmod9\), the carrier lacks the rigidification required for a natural mod-27 bridge.
+
+Decision:
+- **MOD-27 Bockstein-extension carrier as orientation carrier: FAIL / CLOSED;**
+- intrinsic coefficient-extension/q-layer detector: **PASS / LOCAL;**
+- a new mod-27 carrier with additional rigidifying structure: **OPEN.**
+
+This supersedes HARD ATTACK 17. No further numerical scan of the same Bockstein package is authorized.
