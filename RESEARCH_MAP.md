@@ -1838,3 +1838,18 @@ The fixed-q=3 exact branch was audited for a direct analogue of the mod-3 coarse
 The remaining exact categorical question is whether that coefficient-evaluation quotient has a concrete non-tautological finite description analogous to the mod-3 pair ([R],p(P)).
 
 Record: research/ORIENTATION_EXACT_Z3_COMPRESSED_CARRIER_AUDIT_2026-09-19.md
+
+
+## AUTHORITATIVE UPDATE — 2026-09-19 — METHODOLOGY SUFFICIENCY / MISSING-TOOL GATE
+
+The current methodology is sufficient for a bounded theorem program, but not yet sufficient for the stronger intrinsic-minimal-carrier objective without three structural bridges:
+
+- **M1:** intrinsic carrier functor from filtered/augmentation-relation data;
+- **M2:** non-tautological natural factorization from that carrier to finite-level crossed-derivation/orientation data;
+- **M3:** independent comparison map/factorization, or obstruction, relating the carrier to the Pál–Quick A3/Hochschild invariant.
+
+This is now an explicit gate against blind computation. Pál–Quick's process demonstrates the safer order canonical object -> obstruction -> computation; branches in this project must not reverse this into computation -> hoped-for interpretation.
+
+The IA/filtered-extension and W/U/O branches are subordinate: local PASS results do not authorize further scans unless they produce a bridge to M1/M2/M3. The required pre-computation tests are object, input, functoriality, gauge, orientation, q-blindness, separation, novelty, and stop-on-failure.
+
+Record: `research/METHODOLOGY_SUFFICIENCY_AND_MISSING_TOOLS_AUDIT_2026-09-19.md`.
