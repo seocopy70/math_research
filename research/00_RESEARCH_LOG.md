@@ -1,3 +1,32 @@
+## 2026-09-19 — Unified manuscript consolidation
+
+The completed branches were reorganized into one manuscript:
+`research/ORIENTATION_RECONSTRUCTION_MANUSCRIPT_DRAFT_2026-09-19.md`
+(commit `44d4c7f65213b514c7dc38949b456ec0d5234753`).
+
+The manuscript spine is:
+[
+	ext{graded information loss}
+	o
+	ext{degree-(2,3) relation jet}
+	o
+	ext{coarsest observable carrier}
+	o
+	ext{finite-level tower}
+	o
+	ext{full }3	ext{-adic orientation},
+]
+with the universal bounded-degree/finite-precision obstruction as the sharp negative boundary.
+
+The paper deliberately does not claim:
+- absolute minimality among arbitrary carriers;
+- a single finite (mathbf F_3) jet recovering all (3)-adic digits;
+- a concrete non-tautological exact (mathbf Z_3) compression analogous to ([(R,p(P))]).
+
+This is the current unified research narrative for subsequent external-application work.
+
+---
+
 ## 2026-09-19 — Exact Z_3 carrier branch endpoint
 
 The remaining exact-carrier question was pushed to the structural boundary.
