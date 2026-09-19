@@ -108,3 +108,13 @@ T3: zero direct vector failures on all 81 ordered pairs; observed and predicted 
 T2 produced 0 failures for X1^3 and X2^3 but 5 failures for X1X2X1 and 5 for the arbitrary tensor. This is classified as a control-model/implementation failure, not a non-coboundary result: the frozen evaluator is a truncated free-group/group-algebra evaluator, not a direct homogeneous Magnus/Lie substitution evaluator. X1^3 is exceptional in characteristic 3 because (1+X1)^3=1+X1^3.
 
 Therefore A-1 is NOT yet closed as a three-test experiment. No broader scan is authorized. Next step is either a legitimate pure Magnus/Lie control definition or closure by the algebraic proof plus T1/T3, with the invalid T2 explicitly removed.
+
+
+## New gate — Rank-2 relator-unit digit (definition only)
+
+A new definition gate has been opened after the Delta_q coboundary closure:
+`plans/RANK2_UNIT_DIGIT_DEFINITION_GATE_2026-09-19.md`.
+
+Target: determine whether the first mod-9 digit of the relator unit u(phi) for actual automorphisms of the rank-2 Demushkin model can carry lift-dependent information invisible in the induced g in GL_2(F_3). The candidate is required to be q-blind at definition time and must not use a preferred lift.
+
+The gate is **OPEN / DEFINITION ONLY**. No computation is authorized yet. The next step is a hand derivation of the exact relator-unit normalization and composition law, followed by q=infinity and q=3 mod-9 constraints. The identification of this unit with the canonical orientation is explicitly not assumed; it is EXTERNAL / TO VERIFY.
