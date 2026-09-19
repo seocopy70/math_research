@@ -255,3 +255,5 @@ print(
         indent=2,
     )
 )
+
+# CI trigger: exact audit content above is frozen.
