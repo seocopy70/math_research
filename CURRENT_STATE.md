@@ -152,3 +152,16 @@ H_2(G,\mathbf Z_3)\to R/[R,F]\to F_{ab}\to G_{ab}\to0.
 For (G_3^{(2)}), (F_{ab}\cong\mathbf Z_3^2) and (G_{ab}\cong\mathbf Z_3\oplus\mathbf Z/3), so (R/[R,F]) has the rank-one abelianized-relation contribution; together with (H_2(G,\mathbf Z_3)\cong\mathbf Z_3) for the infinite Demushkin group, the module is not justified as a single relator line. Thus the scalar equation (	ilde\phi([r_3])=u[r_3]) is not intrinsically defined without an additional quotient/projection.
 
 The Rank-2 relator-unit gate is therefore **OPEN / INCONCLUSIVE at a deeper definition failure**, not merely awaiting lift-kernel analysis. No mod-9 or IA scan is authorized. Next task: determine whether a canonical quotient of (R/[R,F]) exists whose automorphism action supplies the intended scalar; otherwise close/redesign this route.
+
+
+## 2026-09-19 — Rank-2 relator-unit route CLOSED by explicit lift-kernel witness
+
+The definition-level analysis is now complete enough to close this route; no finite computation is warranted.
+
+For q=3, the five-term/Hopf sequence gives 0 -> H2(G3,Z3) -> M:=R/[R,F] -> F_ab -> G3_ab -> 0. Since F_ab is Z3^2 and G3_ab is Z3 ⊕ Z/3, the natural rank-one quotient is Q:=M/H2(G3,Z3) ≅ ker(F_ab -> G3_ab)=3 Z3 e1.
+
+This quotient nevertheless fails lift-independence. For any r in R, alpha_r(x1)=x1 r, alpha_r(x2)=x2 induces the identity on F/Phi(F), hence is an automorphism of the free pro-3 group; since r=1 in G3 it induces id_G3 and lies in the stabilizer-to-Aut(G3) kernel. Taking r=r3 gives [r3]_F_ab=3e1, so alpha_r3 sends e1 to 4e1 and 3e1 to 4(3e1). Thus the same group automorphism id_G3 has two stabilizing free lifts whose actions on Q differ by the unit 4, already nontrivially modulo 9.
+
+Decision: Rank-2 relator-unit digit route = FAIL / CLOSED. This is a definition-level lift-independence failure, not a computational failure. The full R/[R,F] also contains the H2 component, so there is no canonical single relator line to rescue the scalar construction. No mod-9, K3, IA, or q-comparison scan is authorized for this route.
+
+The next authorized task returns to the independent bridge between g e1=mu(g)e1 and the canonical orientation chi; no implication is assumed.
