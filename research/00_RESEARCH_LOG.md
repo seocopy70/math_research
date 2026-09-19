@@ -1803,3 +1803,46 @@ Decision:
 Critical finding: “minimality” is not yet a well-posed absolute claim. A category of admissible relation carriers, morphisms, and quotient/factorization notions must be fixed before an initial/terminal/minimal theorem can be stated non-tautologically.
 
 Next authorized task: define the smallest defensible carrier category and test whether \(J_3\) has a genuine universal/minimal property. No finite scan.
+
+
+## 2026-09-19 — Universal finite-information bounded-degree obstruction CLOSED
+
+The stronger branch asked whether a single finite bounded-degree carrier can determine the full 3-adic orientation.
+
+A no-scan obstruction was derived using the family
+[
+G_{3^s}=langle x_imid x_1^{3^s}[x_1,x_2][x_3,x_4]angle
+]
+and the limiting case
+[
+G_infty=langle x_imid [x_1,x_2][x_3,x_4]angle.
+]
+
+The quadratic initial relation is the same in every member:
+[
+R_2=[X_1,X_2]+[X_3,X_4].
+]
+For the standard orientation,
+[
+chi_{3^s}(x_2)=(1-3^s)^{-1},
+qquad
+chi_infty(x_2)=1.
+]
+
+For any fixed Zassenhaus degree bound (d), choose (s) with (3^s>d). The power term (x_1^{3^s}) first appears in degree (3^s), so the bounded-degree filtered carrier cannot distinguish (G_{3^s}) from (G_infty), although their full orientations differ.
+
+If the carrier is also restricted to finite coefficient precision modulo (3^N), choose (sge N). Then the q-dependent term is invisible at that precision as well and
+[
+(1-3^s)^{-1}equiv1pmod{3^N},
+]
+while the full 3-adic units remain unequal.
+
+Decision:
+- **Universal finite-information bounded-degree carrier (Rightarrow) full (chi): FAIL / CLOSED.**
+- This is an information obstruction, not a failed candidate or implementation.
+- No finite scan is needed.
+
+A necessary distinction is now frozen. If exact (mathbf Z_3)-coefficients are allowed at bounded filtration degree, the object contains infinitely many 3-adic digits and is not a finite-information carrier. For the fixed q=3 group, an exact coefficient-level bounded-degree carrier may therefore still recover full (chi). Its intrinsic/projective formulation remains OPEN.
+
+Detailed record:
+`research/ORIENTATION_BOUNDED_DEGREE_FINITE_INFORMATION_OBSTRUCTION_2026-09-19.md`
