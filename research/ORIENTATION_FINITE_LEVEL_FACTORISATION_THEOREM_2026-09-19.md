@@ -44,7 +44,9 @@ Because the q=3 Demuškin orientation has image in \(1+3\mathbf Z_3\), every \(\
 
 ## 2. Definition of the finite-level relation datum
 
-For each \(n\ge2\), let \(J_n(G)\) denote the intrinsic finite-level filtered relation datum obtained by truncating the defining filtered relation and its relation-module/jet structure to the precision needed modulo \(3^n\), with the presentation/lift gauge already quotiented in the same manner as the projective degree-(2,3) construction.
+For a minimal one-relator pro-3 presentation \(1\to R\to F\to G\to1\), let \(M=R/[F,R]\). The one-relator relation-module fact used in this branch identifies \(M\) with a free rank-one \(\mathbf Z_3\)-module. A change of relator generator multiplies its class by a unit, while relator conjugation is killed in \(M\). Thus the relevant intrinsic carrier is the **projective filtered relation line** rather than a chosen generator.
+
+For each \(n\ge2\), define \(J_n(G)\) to be the image, modulo the frozen filtration precision required for the crossed-derivation calculation modulo \(3^n\), of this projective relation line together with its filtered jet components through that precision. Equivalently, \(J_n\) remembers the filtered relation class up to the already-identified common unit/gauge action, but does not remember a preferred free lift or preferred relation generator.
 
 The tower comes with canonical reduction maps
 
@@ -54,7 +56,9 @@ The tower comes with canonical reduction maps
 
 The definition is deliberately stronger than the bare associated graded restricted Lie object and weaker than retaining a chosen free lift: \(J_n\) records the filtered relation information required to evaluate the universal crossed-derivation relation modulo \(3^n\), while forgetting the arbitrary choices killed by the established relation-jet gauge.
 
-**Important scope condition.** This theorem does not assert that an arbitrary finite filtered quotient or arbitrary finite graded carrier is such a \(J_n\). It applies to the compatible full filtered relation-jet tower defined with this information content.
+The earlier lift-independence failure of a **chosen scalar generator** is therefore not a contradiction: the unit \(4\) acts by projective rescaling and disappears at the projective-line level. This is the same mechanism by which common scaling does not change the degree-(2,3) recovery zero set.
+
+**Important scope condition.** This theorem does not assert that an arbitrary finite filtered quotient or arbitrary finite graded carrier is such a \(J_n\). It applies to the compatible projective filtered relation-jet tower with this information content.
 
 ---
 
