@@ -813,3 +813,59 @@ otin I_{infty,9}}.
 ]
 
 Only after S9-B is resolved may (S_9) be used in any (q=9) ideal construction. H-stability and (D_9) remain blocked.
+
+
+## 6K. S9-B — quotient survival: PASS / CLOSED
+
+Record: `research/Q3_Q9_S9_B_QUOTIENT_SURVIVAL_RESULT_2026-09-19.md`  
+Gate record commit: `9e7277f8709174dda8e310fa5e9f96092936b627`.
+
+With S9-A already closed,
+[
+S_9=X_1^{[9]}.
+]
+
+The exact C-2c-2 baseline certificate gives
+[
+\dim I_{\infty,9}=13524,qquad
+\dim I^{\mathrm{ord}}_9=13520,
+]
+so the new restricted degree-9 relation contribution has dimension exactly 4 and is identified as
+[
+I_3^{[3]}\subset L_3^{[3]}.
+]
+
+The degree-9 restricted ambient separates into
+[
+L_9\oplus L_3^{[3]}\oplus L_1^{[9]}.
+]
+The frozen baseline ideal has no (L_1^{[9]})-component, while
+[
+S_9=X_1^{[9]}\in L_1^{[9]},qquad S_9\ne0.
+]
+
+Therefore
+[
+oxed{S_9\notin I_{\infty,9}}
+]
+and
+[
+oxed{[S_9]\ne0\text{ in }L_9^{\mathrm{res}}/I_{\infty,9}}.
+]
+
+This closes the quotient-survival barrier **without** constructing the q=9 ideal.
+
+### Gate consequence
+
+The first two S9 gates are now both closed:
+
+- S9-A ambient admissibility: **PASS**
+- S9-B quotient survival: **PASS**
+
+Therefore (S_9) may now legitimately enter the **next** q=9 relation-space construction.
+
+Still blocked until separately tested:
+- (I_9=\langle R_2,S_9\rangle_{\mathrm{res}});
+- H-stability;
+- (D_9);
+- any q=9 invariant or q=3/q=9 conclusion.
