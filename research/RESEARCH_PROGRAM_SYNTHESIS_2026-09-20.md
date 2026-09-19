@@ -293,3 +293,29 @@ The project is not at a dead end and is not entitled to claim the stronger “fu
 > **The complete mod-3 associated graded loses the orientation; the first non-graded degree-(2,3) extension layer recovers the mod-9 orientation; the full compatible filtered extension tower is sufficient by inverse limit; exact Fox data recovers the full character; and the unresolved mathematical problem is whether the higher 3-adic extension information admits a genuinely intrinsic, presentation-natural, non-tautological compression.**
 
 The next move is therefore **mod 27 intrinsic-carrier existence/no-go**, not another broad scan and not another attempt to optimize the already closed Fox quotient.
+
+
+## CRITICAL REVIEW CORRECTION — 2026-09-20
+
+The synthesis was independently stress-tested before opening the mod-27 branch. The main correction is methodological: intrinsic, non-tautological, and strictly smaller were too informally specified to serve as hard Gate predicates.
+
+Accordingly, the mod-27 branch is now preceded by the formal admissible-category gate in research/INTRINSIC_CARRIER_FORMAL_GATE_PRE_MOD27_2026-09-20.md.
+
+### Corrections now binding
+
+1. Intrinsicity is categorical/functorial, not merely coordinate-invariance by examples. The admissible objects, morphisms, gauge transformations, and target category must be declared, and J_27 must carry canonical induced maps satisfying composition.
+
+2. Non-tautology is operationalized. A candidate cannot be accepted merely because Fox equations have been renamed or repackaged. It must arise independently from the declared filtered/relation/cohomological input, or satisfy an explicitly weaker factorization/universal-property criterion stated in the formal gate.
+
+3. "Smaller" is always relative to a declared comparison category. No absolute information-theoretic minimality claim is authorized.
+
+4. The mod-27 Gate is not required to prove absolute minimality. Its primary question is existence/no-go for a legitimate finite-level carrier. Compression is a separate claim that requires its own comparison invariant.
+
+5. The full filtered inverse-limit route is retained as PASS / LOCAL but downgraded in interpretive weight: it is formally sufficient and close to tautological once the completed relation is retained; it is not evidence of successful compression.
+
+6. M3 literature comparison is a parallel requirement for any novelty claim. It must distinguish transferred methodology from already-known Demuškin/cohomological/Hochschild/Pál–Quick constructions.
+
+### Revised strategic consequence
+
+Do not enter the mod-27 branch by trying to satisfy an artificially maximal "perfect carrier" definition. First construct or rule out a carrier under the declared admissible category. If a candidate is intrinsic and separating but its compression status is unresolved, classify it PASS / LOCAL or OPEN, not FAIL. If the category itself proves too restrictive, revise the category explicitly rather than interpreting the failure as a mathematical no-go theorem.
+
