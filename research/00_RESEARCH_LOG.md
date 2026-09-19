@@ -353,3 +353,31 @@ The apparent mod-27 orientation bridge was attacked at the non-tautology level. 
 Therefore the package remains an intrinsic q-information detector, but its status as a new orientation carrier is downgraded. Decision: **CONDITIONAL / NOT YET ADMISSIBLE**. To recover admissibility, one needs a presentation-free universal identity or independent universal property producing \(\frac13\log\chi\) directly, without first extracting q/classification data. If no such factorization exists, close the candidate as an orientation carrier while retaining the detector result.
 
 Record: research/MOD27_BOCKSTEIN_EXTENSION_CARRIER_HARD_ATTACK_2026-09-20.md
+
+
+## 2026-09-20 — HARD ATTACK 18: internal-automorphism no-go for the mod-27 Bockstein carrier
+
+The coefficient-extension candidate
+\[
+\mathcal B_{27}=(H^1(G,\mathbf F_3),H^1(G,\mathbf Z/9),\mathrm{red},\iota,\smile,\beta_1,\beta_9)
+\]
+was attacked by the automorphism group of the carrier itself.
+
+For the frozen \(q=3\) relation, \(a_1\in3\mathbf Z/9\) and \(a_2,a_3,a_4\) are unrestricted. The map
+\[
+S(a_1,a_2,a_3,a_4)=(a_1,4a_2,a_3,a_4)
+\]
+is \(\mathbf Z/9\)-linear, fixes reduction and \(\iota(H^1(G,\mathbf F_3))\), preserves the cup product, and preserves \(\beta_9\), since \(\beta_9\) sees only the \(a_1\)-component in the frozen relation.
+
+Thus the full declared carrier has an internal symmetry acting trivially on the mod-3 direction but nontrivially on its characteristic-zero lift. The required \(q=3\) logarithmic orientation digit
+\[
+\lambda_{27}=\frac13\log\chi\equiv e_2\pmod9
+\]
+therefore cannot be canonically selected from the declared carrier.
+
+Decision:
+- **\(\mathcal B_{27}\) as a mod-27 orientation carrier: FAIL / CLOSED;**
+- intrinsic coefficient-extension/q-layer detector: **PASS / LOCAL;**
+- a different mod-27 carrier with additional rigidifying structure: **OPEN.**
+
+This supersedes HARD ATTACK 17's CONDITIONAL status. No further Bockstein-only scan is authorized.
