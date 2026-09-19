@@ -1,3 +1,23 @@
+## AUTHORITATIVE UPDATE — 2026-09-20 — CRITICAL CORRECTION: ZASSENHAUSZ THRESHOLD + MIXED m-ADIC REOPENING
+
+The earlier review has been corrected at one precise point: the threshold argument concerns
+[
+(G/D_N(G))^{ab},
+]
+not an identification (G/D_N(G)=G^{ab}/3^{s+1}). Using Jennings' formula, the abelianized finite quotients separate (G_{3^s}) from the power-free control at (N=3^s+1), while for (Nle3^s) the relation (x_1^{3^s}) lies in (D_N(F)), so
+[
+G_{3^s}/D_Ncong G_infty/D_N.
+]
+Hence (D_{3^{n-1}+1}) versus (D_{3^{n-1}}) gives a **PASS / LOCAL** sharp information boundary for (chimod3^n) on the standard Demushkin family, with explicit classification dependence and without claiming a pointed natural carrier theorem.
+
+Separately, HARD ATTACK 10 remains correctly closed only for ordinary presentation-independent degree-(le3) Fox truncation. A mixed ((3,I))-adic finite carrier
+[
+J_n^{mix}=I_{mathrm{Fox}}+mathfrak m^n,qquad mathfrak m=(3,I),
+]
+is re-opened as an admissible candidate. The existence gate now permits Fox-derived finite constructions; compression/non-tautology is a separate later gate. The first load-bearing task is the precise definition and relator-gauge/naturality proof.
+
+Record: `research/CRITICAL_CORRECTION_MIXED_MADIC_AND_ZASSENHAUSZ_THRESHOLD_2026-09-20.md`
+
 ## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 16: MOD-27 BOCKSTEIN-EXTENSION CARRIER
 
 A first serious intrinsic mod-27 candidate now survives the definition gate:
