@@ -999,3 +999,37 @@ The protocol freezes the restoration order (RESEARCH_MAP -> CURRENT_STATE -> RES
 This is a methodological control, not a new mathematical result. It exists to ensure that future sessions cannot silently change definitions, revive closed branches, confuse validation with novelty, or lose the stage-specific PASS/FAIL consequences.
 
 The current principal program remains D0 definition -> D1 intrinsicity -> D2 orientation bridge -> D3 carrier/coarseness -> D4 independent comparison. No broad scan is authorized merely by opening a new chat.
+
+
+## AUTHORITATIVE UPDATE — 2026-09-19 — FOX ROW IDENTIFICATION GATE CLOSED
+
+The load-bearing Fox logical gap has been attacked directly rather than by further presentation scans.
+
+A standard characterization of the canonical Demuškin orientation (Labute/Serre) says that a character chi is the canonical orientation exactly when every chi-crossed derivation of the free pro-p presentation descends through the defining relator, i.e. kills the relator. Modern explicit Demuškin calculations use precisely this characterization: arbitrary generator values are assigned to the crossed derivation and the relator equation is expanded coefficient-by-coefficient. citeturn2search0turn2search3
+
+Fox calculus gives, for arbitrary generator values d_i,
+D(r)=J_r(chi)d,
+where J_r(chi) is the evaluated Fox row used throughout this branch (up to the fixed left/right convention, which does not affect the zero locus). Since the free-generator values d_i are arbitrary,
+D(r)=0 for all crossed derivations iff J_r(chi)=0.
+
+Therefore
+[canonical Demuškin orientation] iff [universal crossed-derivation descent] iff [J_r(chi)=0].
+
+For r=x_1^3[x_1,x_2][x_3,x_4], the exact row-zero equations on (1+3 Z_3)^4 give
+chi(x_1)=chi(x_3)=chi(x_4)=1,
+chi(x_2)=-1/2=(1-3)^(-1).
+
+This closes the previous A/B/C logical gap: ker J != 0 was too weak, but the canonical criterion quantifies over all crossed derivations, which is exactly row vanishing.
+
+The Nielsen stress test already established exact coordinate covariance for two nontrivial presentation changes; the general Fox chain rule supplies the mechanism.
+
+Decision:
+- Fox row = crossed-derivation coefficient row: PASS / CLOSED.
+- canonical orientation = universal crossed-derivation descent: PASS / CLOSED under the standard Demuškin orientation theorem.
+- canonical orientation = Fox row-zero: PASS / CLOSED.
+- Nielsen covariance: PASS / CLOSED.
+- exact fixed-q=3 Fox carrier: PASS / CLOSED.
+- intrinsic filtered realization of the exact Fox carrier: OPEN.
+- exact Fox carrier → intrinsic mod-9/projective relation jet comparison: NEXT TARGET.
+
+Detailed record: research/ORIENTATION_FOX_ROW_IDENTIFICATION_THEOREM_2026-09-19.md
