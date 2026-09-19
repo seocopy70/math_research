@@ -1,5 +1,112 @@
 # CURRENT STATE — 2026-09-19
 
+> **Authoritative update:** this header supersedes stale branch labels later in this file. Detailed chronology remains in `research/00_RESEARCH_LOG.md`; the consolidated midterm assessment is `MIDTERM_RESEARCH_ASSESSMENT_2026-09-19.md`.
+
+## Current research question
+Can the canonical orientation character
+\[
+\chi:G\to\mathbf Z_3^\times
+\]
+be recovered intrinsically from filtered/graded data?
+
+## Current mathematical position — 2026-09-19
+
+| Datum | Status |
+|---|---|
+| bare associated graded restricted Lie object | **FAIL / CLOSED** for \(\chi\bmod9\) |
+| projective degree-(2,3) relation jet | **PASS / CLOSED** for \(\chi\bmod9\) |
+| compatible full filtered relation-jet tower | **PASS** as a full-\(\chi\) reconstruction mechanism |
+| finite-level factorization \(J_n\to\chi\bmod3^n\) | **OPEN as an explicit theorem/lemma formulation** |
+| one finite bounded-degree jet \(\Rightarrow\) full \(\chi\) | **OPEN** |
+| categorical absolute minimality of projective jet | **OPEN** |
+
+### Latest substantive conclusion
+
+The 2026-09-19 hand derivation using
+\[
+[x,y]=x^{-1}y^{-1}xy
+\]
+gives, for the standard q=3 Demuškin relation,
+\[
+\rho(x_1)=\rho(x_3)=\rho(x_4)=1,
+\qquad
+1+2\rho(x_2)=0,
+\]
+hence
+\[
+\boxed{\chi(x_2)=(1-3)^{-1},\quad \chi(x_i)=1\;(i\ne2).}
+\]
+Thus
+\[
+\chi(x_2)=4\pmod9,\ 13\pmod{27},\ 40\pmod{81},\ 121\pmod{243},\ldots
+\]
+
+The same relation works at every 3-adic level. The projective degree-(2,3) relation jet recovers the first nontrivial digit \(\chi\bmod9\); the compatible full filtered relation-jet tower recovers the full character.
+
+### Critical logical boundary
+
+The hand derivation directly proves the character from the full defining relation via the intrinsic crossed-derivation characterization. To state a theorem specifically as
+\[
+\text{compatible full relation-jet tower}\Rightarrow\chi
+\]
+the finite-level maps
+\[
+J_n\mapsto\chi_n=\chi\bmod3^n
+\]
+and their compatibility
+\[
+\chi_{n+1}\equiv\chi_n\pmod{3^n}
+\]
+should be written explicitly, followed by
+\[
+\chi=\varprojlim_n\chi_n.
+\]
+Do not claim this finite-level factorization theorem is already separately proved.
+
+### Information boundary
+
+For
+\[
+G_3=\langle x_i\mid x_1^3[x_1,x_2][x_3,x_4]\rangle,
+\qquad
+G_\infty=\langle x_i\mid [x_1,x_2][x_3,x_4]\rangle,
+\]
+the bare graded restricted Lie object has the same initial quadratic relation, while
+\[
+\chi_3(x_2)=4\pmod9,\qquad \chi_\infty(x_2)=1\pmod9.
+\]
+Therefore bare graded data cannot recover \(\chi\bmod9\). The missing information is the coupling between the quadratic relation and its degree-3 filtered component.
+
+The projective jet
+\[
+J_3=\langle(R_2,P_3)\rangle
+\subset L_2\oplus L_3^{res}
+\]
+supplies this coupling. Its recovery functional
+\[
+\Theta_J(\lambda)(f)=f(P_3)+(\lambda\wedge f)(R_2)
+\]
+has the unique q=3 zero \(\lambda=e_2^*\), giving \(\chi\bmod9\).
+
+Presentation/lift/gauge analysis gives
+\[
+(R,P)\mapsto(uR,uP+[v,R]),
+\]
+and the bracket term is invisible to degree-one functionals. Hence the recovery zero set is invariant at the stated degree-(2,3) level, conditional on the standard minimal one-relator pro-3 facts and frozen convention.
+
+### Research decision
+
+The core reconstruction question is now **positively resolved at the enriched-data level**, but the stronger minimality question remains open. The next work should therefore focus on:
+
+1. explicit finite-level factorization/inverse-limit theorem;
+2. categorical minimality of the projective degree-(2,3) jet;
+3. whether any finite bounded-degree jet can determine the full 3-adic character.
+
+No new broad finite scan is authorized merely to revisit the already closed branches.
+
+---
+
+
 ## Authoritative current question
 Can the canonical orientation character chi:G -> Z_3^times be recovered intrinsically from filtered/graded data?
 
