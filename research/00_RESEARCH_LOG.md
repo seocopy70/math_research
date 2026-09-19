@@ -941,3 +941,21 @@ The rank-4 D4 lifting candidate was confirmed **FAIL / CLOSED** by the lift-inde
 A new definition gate is opened: `plans/RANK4_D4_IA_EXTENSION_DATUM_GATE_2026-09-19.md`.
 
 The immediate authorized task is deliberately smaller than another rank-4 scan: define the degree-3 lift defect, compute its IA change law, and determine whether the dependence admits a canonical quotient/orbit/torsor/extension formulation that preserves q-sensitive restricted-power information. If every canonical quotient erases the signal, this D4 lifting route will be closed at this level.
+
+
+## 2026-09-19 — IA defect-action sub-gate: local PASS, main gate OPEN
+
+The authorized small IA defect-action audit was executed before any rank-4 group scan.
+
+Using the frozen degree-3 associative Magnus target (dimension 64), ordinary correction space C_3 (rank 4), and first IA layer Hom(V,L_2) (dimension 24), the audit tested identity, -I, and one standard transvection.
+
+For all three representatives the degree-3 IA variation has rank 20 for both q=3 and q=infinity, the variation maps agree exactly, and pairwise additivity of the 24 IA directions was verified. Therefore the tested first-layer defect-change law is linear and q-independent.
+
+The combined gauge span C_3 + Delta_IA has rank 20, so the candidate quotient has dimension 44. For -I and the transvection, the q=3 versus q=infinity defect is nonzero and survives this quotient. The mandatory nontriviality test therefore passes locally: the first IA gauge does not automatically erase the restricted-power signal.
+
+Decision: **sub-gate PASS / main IA-extension definition gate OPEN**.
+
+This result does not establish canonicality or equivariance. The next authorized task is a quotient-legitimacy / equivariance audit. No full rank-4 representative scan is authorized yet.
+
+Result: research/RANK4_D4_IA_DEFECT_ACTION_AUDIT_RESULT_2026-09-19.md
+Script: research/rank4_D4_ia_extension_audit_2026-09-19.py
