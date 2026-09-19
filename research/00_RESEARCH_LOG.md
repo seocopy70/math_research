@@ -1336,3 +1336,9 @@ This is important but does **not** recover \(\chi\) from \(\mu\). It shows inste
 Thus the remaining exact issue is only the convention check (whether the repository's \(g\) is the primal \(H_1\) action or the contragredient \(H^1\) action, which decides \(\mu\) versus \(\mu^{-1}\)). This is a hand-definition issue, not a finite scan.
 
 **Current consequence:** the hypothesis "there may be no canonical dualizing-module realization of \(\mu\)" is too pessimistic and is replaced by a narrower statement: there is a canonical top-duality-line realization of the automorphism character, but it still does not identify that automorphism character with the group orientation \(\chi\).
+
+
+## 2026-09-19 — Dualizing top-line convention audit
+
+Frozen (g) is on the generator/(H_1) side. Hence the induced (H^1) action is (g^{-T}), and the induced (H^2) scalar is (
+u(g)^{-1}). For (p=3), (mathbf F_3^	imes={pm1}), so inversion is identical: (mu_{H^2}=mu_{m int}) as (mathbf F_3^	imes)-valued characters, although conceptually the cohomological action is inverse. This does **not** identify (mu) with the full orientation (chi:G	omathbf Z_3^	imes); (chimod3) is trivial. The MU-CHI bridge is therefore conceptually resolved: (mu) is a canonical automorphism-of-duality-line shadow, not the orientation character. No finite scan is authorized. Next work should target filtered/graded data retaining the (1+3mathbf Z_3) orientation layer.
