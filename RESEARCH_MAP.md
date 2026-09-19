@@ -1276,3 +1276,11 @@ The failure identifies IA/lift data as active degree-3 information. A future lif
 
 Result: research/RANK4_D4_LIFT_INDEPENDENCE_AUDIT_RESULT_2026-09-19.md
 CI: run 35415237341, job 105822474022.
+
+## 10. Rank-4 D4 — IA / filtered extension datum gate OPEN
+
+The rank-4 D4 lifting candidate is **FAIL / CLOSED** because admissibility is not determined by the induced linear action on V: identity and an IA-modified lift of the same identity map give different degree-3 outcomes.
+
+The failed object must not be repaired by choosing a preferred Nielsen lift. A new definition gate is opened in `plans/RANK4_D4_IA_EXTENSION_DATUM_GATE_2026-09-19.md`.
+
+The next authorized task is a small IA defect-action audit: define the degree-3 defect target, determine the lift-fibre/IA change law, and test whether a canonical quotient, orbit/torsor, or extension datum can retain q-sensitive information. No rank-4 q-comparison is authorized before this gate closes.
