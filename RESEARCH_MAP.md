@@ -852,3 +852,28 @@ otin I_{infty,9}}.
 - The next authorized step is the separate q=9 relation-space construction (I_9=langle R_2,S_9angle_{res}).
 - H-stability and (D_9) remain downstream gates.
 
+## 6H. Q3/Q9 S9 — q=9 degree-9 relation-space gate: PASS / CLOSED
+
+Record: `research/Q3_Q9_S9_q9_degree9_relation_space_RESULT_2026-09-19.md`.
+
+After S9-A and S9-B were closed, the q=9 restricted ideal was defined by
+\[
+I_9=\langle R_2,S_9\rangle_{res},\qquad S_9=X_1^{[9]}.
+\]
+
+Since S9 has degree 9, its brackets have degree at least 10 and its restricted powers degree 27. Hence
+\[
+(I_9)_9=(I_\infty)_9+\langle S_9\rangle.
+\]
+The S9-B structural lemma gives zero intersection of the baseline with (L_1^{[9]}), while S9 is nonzero in that layer. Therefore
+\[
+\boxed{(I_9)_9=(I_\infty)_9\oplus\langle S_9\rangle},
+\qquad
+\boxed{\dim (I_9)_9=13525}.
+\]
+
+The exact F3 audit verifies the new S9 direction has rank 1. The frozen q=∞ baseline remains 13524.
+
+This gate does **not** establish H-stability, gr9 quotient identification, D9, q=9 invariant detection, or orientation recovery.
+
+**Next gate:** H-stability of ((I_9)_9) under the fixed (H=Sp_4(\mathbb F_3)) action.
