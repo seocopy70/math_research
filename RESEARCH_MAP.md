@@ -1507,3 +1507,34 @@ Therefore:
 - M9-D (comparison with \(\chi\bmod9\)): **CLOSED for this candidate**
 
 This is not a universal impossibility result for all finite-coefficient constructions. It closes only the ordinary mod-9 Bockstein candidate as a recovery mechanism. No finite scan is authorized.
+
+## 0C. 2026-09-19 — Twisted mod-9 orientation carrier: PASS / factorization OPEN
+
+The first genuinely successful orientation carrier has now been identified.
+
+For \(\rho:G\to1+3\mathbf Z/9\), write
+\[
+\rho(x_i)=1+3a_i.
+\]
+The canonical finite-level condition is surjectivity of
+\[
+H^1(G,I_2(\rho))\to H^1(G,I_1(\rho)).
+\]
+For the frozen relation, the twisted cocycle calculation yields the necessary and sufficient condition
+\[
+(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4=0
+\]
+for every mod-3 cocycle vector. Thus surjectivity holds uniquely for
+\[
+(a_1,a_2,a_3,a_4)=(0,1,0,0),
+\]
+so
+\[
+\rho(x_2)=4\pmod9.
+\]
+
+This is a **PASS for intrinsic twisted-coefficient recovery of \(\chi\bmod9\)**.
+
+It is **not yet a PASS for recovery from filtered/graded data**. The new gate is whether the twisted-surjectivity object factors through the prescribed weak filtered/graded datum without importing the full presentation/group structure.
+
+No finite scan is authorized.
