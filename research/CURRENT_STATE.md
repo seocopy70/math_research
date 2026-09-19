@@ -214,12 +214,56 @@ Execution requirements:
 5. Verify the degree-9 consequence independently of the baseline dimension count.
 6. H-stability and D9 are downstream and remain closed/blocked until separately gated.
 
+## 10. q=9 degree-9 relation space — PASS / CLOSED
+
+The new restricted ideal is
+\[
+I_9:=\langle R_2,S_9\rangle_{res},
+\qquad S_9=X_1^{[9]}.
+\]
+
+Because S9 has degree 9, its brackets have degree at least 10 and its restricted powers have degree 27. Thus at degree 9,
+\[
+I_{9,9}=I_{\infty,9}+\langle S_9\rangle.
+\]
+
+S9-B gives
+\[
+(I_\infty)_9\cap L_1^{[9]}=0,
+\]
+while S9 is nonzero in L1^[9]. Therefore
+\[
+I_{9,9}=I_{\infty,9}\oplus\langle S_9\rangle,
+\]
+and
+\[
+\boxed{\dim I_{9,9}=13525}
+\]
+versus frozen baseline 13524.
+
+Exact F3 rank check of the new S9 direction: rank 1.
+
+Result record:
+research/Q3_Q9_S9_q9_degree9_relation_space_RESULT_2026-09-19.md
+
+Script:
+research/Q3_Q9_S9_q9_degree9_relation_space_2026-09-19.py
+
+Workflow:
+.github/workflows/q3-q9-s9-degree9-relation-space.yml
+
+## 11. NEXT GATE
+
+The next separate gate is **H-stability of the q=9 relation space**. No H-stability is assumed from the +1 degree-9 increment.
+
+After H-stability, only then consider the precise gr9(G9) quotient interpretation and a D9 candidate.
+
 ## LIVE
 
 현재 LIVE 질문:
 
-> q=9 source S9를 추가한 restricted ideal \(I_9=\langle R_2,S_9\rangle_{res}\)의 degree-9 relation space는 baseline과 어떻게 달라지는가?
+> q=9 restricted relation space I_9,9 is now defined and differs from the frozen q=∞ baseline by +1. Is I_9,9 H-stable under the fixed H=Sp_4(F_3) action?
 
 현재 답:
 
-> **구성 단계로 진입.** S9-A/S9-B가 닫혔으므로 q=9 degree-9 closure를 실행할 수 있다. baseline \(13524\)는 frozen이며, q=9 계산이 이를 소급 변경해서는 안 된다.
+> **q=9 degree-9 relation-space gate PASS/CLOSED: dim = 13525. H-stability is now the next gate and remains untested.**
