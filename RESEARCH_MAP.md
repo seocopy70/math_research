@@ -1284,3 +1284,24 @@ The rank-4 D4 lifting candidate is **FAIL / CLOSED** because admissibility is no
 The failed object must not be repaired by choosing a preferred Nielsen lift. A new definition gate is opened in `plans/RANK4_D4_IA_EXTENSION_DATUM_GATE_2026-09-19.md`.
 
 The next authorized task is a small IA defect-action audit: define the degree-3 defect target, determine the lift-fibre/IA change law, and test whether a canonical quotient, orbit/torsor, or extension datum can retain q-sensitive information. No rank-4 q-comparison is authorized before this gate closes.
+
+
+## 11. Rank-4 D4 IA extension datum — current continuation after covariance and representative control
+
+The admissible-category covariance audit is now CI-verified: run `35416804953`, commit `c620ce5a962031cfff90d49aa8500ea39cc16dc1`.
+
+Within the admissible category H_adm of size 1296, the spaces C3, Delta_IA, and G3=C3+Delta_IA are invariant, with ranks 4, 20, 20, and the candidate quotient has dimension 44. The q-sensitive source transforms by the multiplier and the -I q=3/q=infinity defect remains nonzero.
+
+A subsequent small representative audit was executed and CI-verified: run `35416952791`, commit `12805fe1a2486a4ba234b2607bf197468cd48a7a`.
+
+The representatives identity, -I, e1 -> e1+e2, and diag(2,1,2,1) were tested using both L_c=phi_c o g and L_c=g o phi_c. For all cases: first-layer IA variation rank = 20; q=3/q=infinity change laws agree exactly; all 276 first-layer composition pairs have zero defect modulo C3; the quotient remains 44-dimensional; every non-identity tested representative has a q-sensitive defect surviving Q3.
+
+This promotes the degree-3 object to a locally verified filtered quotient datum in the frozen convention. It does not yet establish arbitrary free-group coordinate naturality.
+
+### Current gate
+
+The next authorized gate is the quotient-valued defect transformation/composition law on the admissible category, with the GSp multiplier convention explicit.
+
+Do not perform a full rank-4 scan before that law is defined and audited.
+
+The failed linear-only observable, the artificial q=9 H-closure, and preferred-lift repairs remain permanently excluded.
