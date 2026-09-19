@@ -747,3 +747,16 @@ This upgrades the new object from a fixed-presentation carrier to an intrinsic u
 New record: research/ORIENTATION_EXACT_UNIVERSAL_FOX_COVARIANCE_AUDIT_2026-09-19.md.
 
 New boundary: a non-tautological exact characteristic-zero carrier now exists in natural scheme-theoretic form. The unresolved problem is compression to a smaller intrinsic filtered/degree-(2,3) object. No representation scan is authorized.
+
+
+## 2026-09-19 — HARD ATTACK 5: exact Fox scheme has degree-3 local compression
+
+For the frozen q=3 normal form, the intrinsic universal Fox obstruction scheme admits an exact local polynomial presentation with A=1+u_1, B=1+u_2, C=1+u_3, D=1+u_4:
+F_1=3+3u_1+u_1^2+u_1u_2+2u_2, F_2=u_1, F_3=u_4, F_4=u_3.
+Thus its zero locus is exactly u_1=u_3=u_4=0 and 2u_2+3=0, giving B=-1/2. The unreduced Fox row has degree at most 3 in the local variables.
+
+The power-free control has projective Fox ideal equivalent to (B-1,A-1,D-1,C-1), so the exact scheme separates q=3 from the power-free case without inserting q as a label.
+
+This is a PASS/CLOSED fixed-normal-form compression result. It is not yet an intrinsic degree-3 filtered carrier theorem because arbitrary formal coordinate changes can increase polynomial degree. Detailed record: research/ORIENTATION_EXACT_FOX_DEGREE3_COMPRESSION_AUDIT_2026-09-19.md.
+
+Immediate next gate: determine whether the degree-3 truncation/low-degree presentation is preserved intrinsically by the allowed filtered presentation changes, or prove a genuine obstruction. No representation scan is authorized.
