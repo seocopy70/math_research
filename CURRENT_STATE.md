@@ -106,3 +106,12 @@ The audit tests all 9^2=81 ordered pairs under the frozen convention F_(gh)=F_g 
 Implementation commits: script dc28f6756c74ea57ae97735bcc96ec3cd1c74a35; workflow 117af503ec606aeb862ceb89bf631717a05d2ece.
 
 Status: EXECUTION PENDING / NO MATHEMATICAL RESULT YET. The gate remains open. No full rank-4 scan is authorized until this structured audit is executed and critically reviewed.
+
+
+## 2026-09-19 — broader structured representative-family gate PASS
+
+CI run 35418319144, workflow rank4-d4-ia-structured-defect-composition, head commit dc28f6756c74ea57ae97735bcc96ec3cd1c74a35.
+
+The prepared 9-representative family was actually executed: all 81 ordered pairs were tested. Results: gauge rank 20, Q3 dimension 44, 9/9 GSp matrix checks, candidate-law failures modulo Q3 = 0, raw candidate-law failures = 0, reversed diagnostic failures modulo Q3 = 18 (raw 18), and 60 nonzero composed q-defect classes. Both multiplier-2 representatives were included and checked.
+
+Status: PASS / STRUCTURED CI VERIFIED for the frozen action/order convention. This clears the specific structured-family gate. It does not prove full GSp4 covariance or arbitrary-coordinate canonicality. Before any unrestricted scan, the script's lift construction and action/composition conventions must receive a critical implementation audit. No full scan has yet been executed.
