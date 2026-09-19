@@ -293,16 +293,26 @@ CONTROL_WORDS = {
     "X1X2X1": (0, 1, 0),
 }
 CONTROL_T2_FAILURES = {}
+CONTROL_T2_DIAGNOSTICS = {}
 for label, w in CONTROL_WORDS.items():
     failures = 0
+    first_failure = None
     for name, (g, _) in CASES.items():
         M = linear_matrix(g)
         expected = [(a - b) % P for a, b in zip(
             tensor_action(word_vec(w), M), word_vec(w)
         )]
-        if delta_word(w, g) != expected:
+        actual = delta_word(w, g)
+        if actual != expected:
             failures += 1
+            if first_failure is None:
+                first_failure = {
+                    "case": name,
+                    "actual": actual,
+                    "expected": expected,
+                }
     CONTROL_T2_FAILURES[label] = failures
+    CONTROL_T2_DIAGNOSTICS[label] = first_failure
 
 ARBITRARY_TENSOR = [0] * 64
 for w, c in [((0,0,0), 1), ((1,1,1), 2), ((0,1,0), 1)]:
@@ -319,13 +329,21 @@ def delta_tensor(v, g):
     return [(a - b) % P for a, b in zip(out, v)]
 
 CONTROL_T2_FAILURES["arbitrary_tensor"] = 0
+CONTROL_T2_DIAGNOSTICS["arbitrary_tensor"] = None
 for name, (g, _) in CASES.items():
     M = linear_matrix(g)
     expected = [(a - b) % P for a, b in zip(
         tensor_action(ARBITRARY_TENSOR, M), ARBITRARY_TENSOR
     )]
-    if delta_tensor(ARBITRARY_TENSOR, g) != expected:
+    actual = delta_tensor(ARBITRARY_TENSOR, g)
+    if actual != expected:
         CONTROL_T2_FAILURES["arbitrary_tensor"] += 1
+        if CONTROL_T2_DIAGNOSTICS["arbitrary_tensor"] is None:
+            CONTROL_T2_DIAGNOSTICS["arbitrary_tensor"] = {
+                "case": name,
+                "actual": actual,
+                "expected": expected,
+            }
 
 T2_pass = not any(CONTROL_T2_FAILURES.values())
 
@@ -417,6 +435,7 @@ print({
     "T1_coboundary_failures": T1_FAILURES,
     "T1_pass": T1_pass,
     "T2_control_failures": CONTROL_T2_FAILURES,
+    "T2_diagnostics_first_failure": CONTROL_T2_DIAGNOSTICS,
     "T2_pass": T2_pass,
     "T3_expected_nonzero_composed_classes": expected_nonzero,
     "T3_nonzero_count_matches": nonzero == expected_nonzero,
