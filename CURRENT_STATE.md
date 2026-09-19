@@ -1,3 +1,57 @@
+## AUTHORITATIVE UPDATE — 2026-09-19 — INTRINSIC MOD-9 CARRIER VIA CUP + BOCKSTEIN
+
+The μ–χ bridge was critically narrowed: μ is an intrinsic mod-3 automorphism/duality-line shadow, but μ alone does not determine χ mod 9 and admits no simple homomorphic lift into 1+3Z_3. A deeper μ + additional-data bridge remains conceptually open; no μ-only scan is authorized.
+
+The standalone Bockstein candidate is also CLOSED as an orientation carrier: β alone detects the q=3 power direction but not the scalar 4 mod 9.
+
+A new structural result now closes M1 at the mod-9 level.
+
+For
+\[
+V=H^1(G,\mathbf F_3)^*
+\]
+and the intrinsic maps
+\[
+\smile:H^1\times H^1\to H^2,
+\qquad
+\beta:H^1\to H^2
+\]
+with dim H^2=1, choose temporarily ω≠0 in H^2 and define
+\[
+f\smile g=(f\wedge g)(R)\omega,
+\qquad
+\beta(f)=f(p)\omega.
+\]
+Changing ω to uω rescales both R and p by u^{-1}; therefore
+\[
+\boxed{\overline J_3(G)=[(R,p)]}
+\]
+is canonical. In the minimal one-relator model, R is the quadratic relation and p is the restricted-cubic/power component of the degree-3 relation jet.
+
+The intrinsic carrier therefore has the factorization
+\[
+(H^1,H^2,\smile,\beta)
+\longmapsto
+[(R,p)]
+\longmapsto
+\overline\Theta(\lambda)(f)=f(p)+(\lambda\wedge f)(R)
+\longmapsto
+\chi\bmod9.
+\]
+
+For q=3, p=e_1^{(1)} and the unique zero is λ=e_2^*, giving (1,4,1,1) mod 9. For q=∞, p=0 and the zero is λ=0.
+
+Decision:
+- standalone Bockstein: FAIL/CLOSED;
+- cup + Bockstein intrinsic carrier: PASS/CLOSED at mod-9 level;
+- M1 intrinsic carrier functor: PASS/CLOSED at mod-9 level;
+- M2 orientation factorization: PASS/CLOSED for the stated degree-(2,3) mod-9 functional;
+- M3 independent comparison with Pál–Quick A3/Hochschild class: NEXT AUTHORIZED TARGET;
+- no broad computational scan is authorized.
+
+Detailed record:
+research/ORIENTATION_MOD9_INTRINSIC_CUP_BOCKSTEIN_CARRIER_2026-09-19.md
+
 ## LATEST MANUSCRIPT CONSOLIDATION — 2026-09-19
 
 A unified manuscript draft has been created:
