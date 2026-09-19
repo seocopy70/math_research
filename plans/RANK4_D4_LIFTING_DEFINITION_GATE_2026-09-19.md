@@ -1,7 +1,7 @@
 # Rank-4 D4 Relator-Lifting Definition Gate — 2026-09-19
 
 ## Status
-**DEFINITION DRAFT / NOT YET EXECUTED**
+**FAIL / CLOSED**
 
 This document defines the next candidate object after the PASS of the rank-2 D4 control. No rank-4 computation is authorized until this definition is independently audited.
 
@@ -67,3 +67,28 @@ INCONCLUSIVE: lift choice, unit extraction, or weak-data boundary remains unreso
 
 ## 10. Boundary
 This gate does not claim q-recovery, orientation recovery, or canonicity. It is a definition/legitimacy gate for a small rank-4 control only.
+
+## 11. Audit result — 2026-09-19
+
+The required lift-independence audit was executed before any rank-4 q-comparison.
+
+Two free-group lifts of the same identity linear map were tested:
+- identity lift;
+- x1 -> x1[x1,x2], with x2,x3,x4 fixed.
+
+They induce the same action on V=F3^4, but:
+- the identity lift is admissible;
+- the IA-modified lift is not admissible;
+- the degree-3 difference of the second lift lies outside the rank-4 ordinary conjugation correction span.
+
+Therefore the proposed A_4^rel(q) is not intrinsic to g in GSp_4(F3) under the current allowed-lift definition.
+
+Decision:
+**FAIL / CLOSED.**
+
+No rank-4 q-comparison is authorized from this candidate.
+
+Result: research/RANK4_D4_LIFT_INDEPENDENCE_AUDIT_RESULT_2026-09-19.md
+CI: run 35415237341 / job 105822474022 = SUCCESS.
+
+The failure does not rule out a finer filtered/extension object. It shows that the omitted IA/lift data is mathematically active at degree 3 and cannot be discarded while retaining an invariant of the linear map alone.
