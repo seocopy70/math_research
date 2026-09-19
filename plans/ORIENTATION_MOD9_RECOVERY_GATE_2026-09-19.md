@@ -22,7 +22,7 @@ The previous \(\mu\)-observable is now understood as a canonical \(\operatorname
 
 Therefore the next target is not another mod-3 automorphism scalar.
 
-## 2. Canonical candidate: first coefficient lift
+## 2. Candidate, but not yet canonical recovery: mod-9 cup/Bockstein
 
 A natural first candidate is the mod-9 cohomological lift of the Demushkin duality pairing. For a one-relator pro-\(p\) presentation, the cup-product matrix with coefficients \(\mathbf Z/p^m\) is controlled by the Magnus/Fox coefficients of the defining relation. Literature records, for a standard relation, that the coefficients of the relation determine the cup-product matrix over \(\mathbf Z/p^m\), including the diagonal contribution from the power \(x_1^q\). citeturn0search5turn1search4
 
@@ -51,7 +51,7 @@ Define the canonical first-lift object using only data already admitted by the p
 Prove that its mod-3 shadow is the known Demushkin pairing and that its first nontrivial \(3\)-adic coefficient is well-defined under all presentation/lift ambiguities already known to cause failures.
 
 ### M9-C
-Show that the coefficient distinguishes the orientation layer
+Show that a **canonical, basis/trivialization-independent** construction from the mod-9 data distinguishes the orientation layer
 \[
 \chi(x_2)\equiv4\pmod9
 \]
@@ -66,8 +66,16 @@ Do **not** reuse the failed rank-2 relator-unit scalar. That construction failed
 
 Do **not** infer that the mod-9 cup-product matrix automatically equals the orientation character. It only supplies a possible first-lift carrier.
 
-## Gate status
+## Critical-review status
 
-**OPEN. No finite scan authorized.**
+The gate remains **OPEN**, but the candidate has been weakened. The following stronger claim is **NOT established**:
+
+> mod-9 cup product automatically recovers \(\chi\bmod9\).
+
+What is established is only that mod-9 finite-coefficient cohomology detects the q=3 power-term contribution of the defining relation. The recovery of the specific orientation value 4 requires an additional canonical construction and an ambiguity proof.
+
+**No finite scan authorized.**
+
+Next hand task: derive the Bockstein/finite-coefficient invariant explicitly and test whether it is invariant under change of (H^2)-generator and admissible basis/presentation changes. If it collapses to the q=3 torsion invariant without retaining the value 4, this route must be marked FAIL/CLOSED rather than upgraded by interpretation.
 
 Next hand task: derive the mod-9 cup/Bockstein structure of the frozen \(q=3\) Demushkin presentation and test whether its first \(3\)-adic coefficient canonically determines \(\chi\bmod9\).
