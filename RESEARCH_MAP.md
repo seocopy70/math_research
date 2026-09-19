@@ -1217,3 +1217,28 @@ Decision:
 ]
 
 This is not a proof that no future q=9 invariant exists. Any continuation requires a genuinely new object with its own definition/legitimacy gate, preferably from full filtered/Magnus data, a rigorously defined higher operation/extension datum, or a q-common Track-B construction. No statistic is to be manufactured from (dimmathcal O_9=4).
+
+## 7. Rank-2 lifting control — PASS / CLOSED
+
+Following the closure of the Q3/Q9 S9 orbit branch, the provisional relator-preservation/lifting pipeline was validated on the rank-2 control G_q^(2)=<x1,x2 | x1^q[x1,x2]=1> at D4.
+
+Selected representative results:
+- q=3: identity and the vector-fixing unipotent pass;
+- q=3: -I and a selected line-moving transvection fail;
+- q=infinity: all four selected representatives pass.
+
+The result is control validation only. It does not establish the full A4(q), a line-stabilizer characterization, or any rank-4 theorem.
+
+Result: research/RANK2_D4_LIFTING_CONTROL_RESULT_2026-09-19.md
+CI: run 35415080640, job 105822020636.
+
+### Current continuation gate
+
+Before any rank-4 lifting computation, freeze a rank-4 A_n^rel-type definition:
+1. exact filtration level;
+2. allowed free pro-3 lift class;
+3. relator-normal-closure / relator-unit criterion;
+4. weak-data input boundary;
+5. GSp versus Sp ambient convention.
+
+Only then execute a small rank-4 control.
