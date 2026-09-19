@@ -847,3 +847,37 @@ D9-OBS의 natural p-layer shadow가 FAIL/CLOSED된 후, 현재 authoritative Q3/
 
 범위 제한:
 이것은 미래의 모든 q=9 invariant가 불가능하다는 정리가 아니다. 향후 continuation은 full filtered/Magnus data, rigorously defined higher operation/extension datum, 또는 양쪽 q에 대해 먼저 정의되는 Track-B construction 중 하나에서 새로운 object를 독립적으로 정의하고 자체 legitimacy gate를 통과해야 한다.
+
+
+## 2026-09-19 — rank-2 D4 lifting control PASS
+
+After the definition audit of the provisional lifting observable, the planned rank-2 control was executed at the first q-sensitive Zassenhaus level (D_4).
+
+The control used
+[
+G_q^{(2)}=langle x_1,x_2mid x_1^q[x_1,x_2]=1angle
+]
+over (mathbf F_3), with free-group lifts tested through the Magnus expansion modulo degree (ge4). The abstract finite quotient (G_q^{(2)}/D_4) was not supplied as input.
+
+For the selected representatives:
+- identity: admissible for q=3 and q=infty;
+- (egin{pmatrix}1&1\\0&1end{pmatrix}): admissible for q=3 and q=infty;
+- (-I): admissible for q=infty but not q=3;
+- (egin{pmatrix}1&0\\1&1end{pmatrix}): admissible for q=infty but not q=3.
+
+The q=3 failure of (-I), despite preservation of the distinguished line, is explained by reversal of the degree-3 restricted-power contribution (X_1^{[3]}). The moving transvection changes its direction. The degree-3 conjugation span has exact rank 2 and cannot absorb either failure.
+
+Gate:
+[
+oxed{	ext{Rank-2 D4 lifting control = PASS / CLOSED}.}
+]
+
+This validates only the selected rank-2 n=4 control pipeline. It does not define the full (A_4(q)), prove a line-stabilizer theorem, or establish any rank-4 result.
+
+Result: research/RANK2_D4_LIFTING_CONTROL_RESULT_2026-09-19.md  
+Script: research/rank2_lifting_D4_control_2026-09-19.py  
+CI: run 35415080640 / job 105822020636 = SUCCESS.
+
+### Next step
+
+The next authorized action is a **rank-4 lifting-definition gate**, not an immediate rank-4 computation. The filtration level, allowed lift class, relator-unit criterion, weak-data input, and GSp/Sp convention must be frozen first.
