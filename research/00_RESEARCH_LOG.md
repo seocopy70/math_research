@@ -1371,3 +1371,39 @@ This shows that mod-9 cohomology sees the \(q=3\) power contribution.
 However, **this does not establish recovery of \(\chi(x_2)\equiv4\pmod9\)**. The number 4 is not a matrix entry. Moreover, the cup product is naturally \(H^2\)-valued, so extracting a scalar requires a choice/trivialization of the one-dimensional \(H^2\) line; independence from that choice and from admissible basis/presentation changes must be proved.
 
 Therefore the candidate is weakened from “first-lift recovery mechanism” to “finite-coefficient carrier worth testing.” The next hand task is an explicit Bockstein/finite-coefficient invariant and its invariance audit. If it reduces merely to the q=3 torsion/power invariant and loses the 3-adic value 4, the route must be FAIL/CLOSED.
+
+
+## 2026-09-19 — Explicit mod-9 Bockstein audit and closure
+
+The authorized next task after the critical review of the mod-9 gate was completed.
+
+For the frozen presentation
+\[
+G=\langle x_1,x_2,x_3,x_4\mid x_1^3[x_1,x_2][x_3,x_4]\rangle,
+\]
+consider the canonical coefficient sequence
+\[
+0\to\mathbf F_3\xrightarrow{3}\mathbf Z/9\to\mathbf F_3\to0
+\]
+and its Bockstein
+\[
+\beta:H^1(G,\mathbf F_3)\to H^2(G,\mathbf F_3).
+\]
+
+The hand audit found:
+- \(\beta\) is genuinely intrinsic and uses no preferred free lift.
+- Classical Demushkin formulas identify the Bockstein with the power coefficients of the defining relation.
+- Hence the q=3 relation gives one distinguished nonzero Bockstein direction, represented in the frozen dual basis by \(\beta(\gamma_1)\neq0\), while \(\beta(\gamma_2)=\beta(\gamma_3)=\beta(\gamma_4)=0\), up to the fixed top-class/sign convention.
+- The invariant object is the map \(\beta\), not a canonically normalized scalar. Changing the generator of the one-dimensional \(H^2\) target rescales any scalar coordinate.
+- The Bockstein therefore retains the q=3 power/torsion shadow but does not retain the required first 3-adic orientation value \(\chi(x_2)\equiv4\pmod9\).
+
+Decision:
+\[
+\boxed{\text{ordinary mod-9 Bockstein recovery candidate = FAIL / CLOSED}}
+\]
+
+This is a candidate-level failure only. It does not prove that every finite-coefficient or twisted construction is impossible. No finite scan was performed or authorized.
+
+Detailed audit: `research/ORIENTATION_MOD9_BOCKSTEIN_AUDIT_2026-09-19.md`.
+
+External verification used in the audit: a classical Demushkin proposition explicitly states that the Bockstein on the dual basis gives the power coefficients; a modern classification source confirms the one-dimensional top cohomology/cup-product framework.
