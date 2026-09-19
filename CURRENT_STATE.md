@@ -1348,3 +1348,18 @@ Binding correction:
 Hard Attack 19 now freezes the missing issue as a category question. Define the abstract structure-preserving carrier category and the realizable group-induced subcategory separately. Test whether S is realizable by an admissible group automorphism/gauge. If yes, establish the true no-go. If not, identify exactly what q-blind filtered/extension structure blocks S and whether that structure is legitimate new rigidifying information or merely hidden orientation/classification/Fox data.
 
 No further numerical scan is authorized until this realizability test is resolved.
+
+
+## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 20: BOCKSTEIN NOVELTY CLOSED
+
+Hard Attack 19 established that the abstract carrier symmetry S is not automatically an admissible group morphism, so the previous unconditional symmetry no-go is superseded. A stronger factorization attack now closes the candidate under the project's operational non-tautology gate.
+
+On the rank-four Demuškin test family, the full declared Bockstein package has exactly three finite carrier types, determined by v_3(q)=1, 2, or >=3. The mod-27 orientation reduction on the same family has exactly the corresponding three classes. No finer q-blind invariant, independent chain-level identity, or universal property has been exhibited inside the package that distinguishes orientation lifts at fixed q-class.
+
+Therefore:
+- Bockstein package as finite q-layer detector: **PASS / LOCAL**;
+- Hard Attack 18 absolute symmetry no-go: **HISTORICAL / SUPERSEDED**;
+- Bockstein package as a **new non-tautological mod-27 orientation carrier: FAIL / CLOSED**;
+- genuinely different successor carrier: **OPEN**.
+
+No further beta_1/beta_9 scan on the same family is authorized. Any successor must add genuinely new q-blind rigidifying structure or an independently characterized universal property.
