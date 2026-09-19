@@ -1,5 +1,24 @@
 
 
+## 2026-09-20 — CRITICAL REVIEW OF LOWER 3-CENTRAL BOUNDARY / LOGICAL LIMIT
+
+The first-stage result was attacked before advancing to Kummer recognition.
+
+The algebraic threshold argument survives: for the lower 3-central series P_{n+1}=P_n^3[P_n,G], the standard product formula gives x_1^{3^s} weight s+1, and the abelianization at n=s+2 gives a sharp separation. The quotient-isomorphism statement therefore remains PASS / LOCAL.
+
+Three precision limits are binding:
+
+1. “χ mod 3^k is determined by G/P_{k+1}” is valid only as a standard-family/classification-level information statement. Pairwise separation of the finite q-layers follows from the first abelianized invariant, but this does not yet provide a canonical selector/natural transformation from an arbitrary quotient object to the pointed orientation.
+
+2. The lower-3-central filtration itself is functorial, but a twisted Kummer condition using coefficients Z/3^k(ρ) cannot simply be declared a predicate of G/P_{k+1}: the coefficient action is part of the unknown ρ. The next proof must define the recognition predicate without circularly supplying χ, or else prove that the relevant variable action/semidirect-product data factors through the finite quotient in the required sense.
+
+3. The linear threshold is an information-boundary comparison, not evidence that P_{k+1} is intrinsically “better” or a compressed orientation carrier. In particular, quotient-level automorphisms may still destroy pointedness even when the isomorphism class separates the standard q-layers.
+
+The rank-two computation is a sanity check, not an independent proof of the general theorem; the essential proof remains the lower p-central product formula plus functoriality and abelianization.
+
+Decision: first-stage threshold theorem remains PASS / LOCAL. No new gate is introduced. The single next theorem remains the finite Kummer-recognition/factorization statement, with circularity and pointedness treated inside its proof rather than as separate gates.
+
+
 ## 2026-09-20 — FIRST-STAGE LOWER 3-CENTRAL INFORMATION BOUNDARY
 
 A theorem draft was completed comparing the Zassenhaus filtration D_n and lower 3-central series P_n for the standard family G_{3^s} and power-free control G_∞.
