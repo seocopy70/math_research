@@ -64,6 +64,25 @@ def compose_words(A,B):
     # A o B, as exact free-group words.
     return [substitute_word(Bi,A) for Bi in B]
 
+def vec(a,d):
+    return [a.get(w,0) for w in product(range(N),repeat=d)]
+
+def rank(rows):
+    if not rows:return 0
+    a=[r[:] for r in rows]; m,n=len(a),len(a[0]); rr=0
+    for col in range(n):
+        p=next((i for i in range(rr,m) if a[i][col]%P),None)
+        if p is None: continue
+        a[rr],a[p]=a[p],a[rr]
+        ip=pow(a[rr][col],-1,P)
+        a[rr]=[(x*ip)%P for x in a[rr]]
+        for i in range(m):
+            if i!=rr and a[i][col]:
+                f=a[i][col]
+                a[i]=[(a[i][j]-f*a[rr][j])%P for j in range(n)]
+        rr+=1
+    return rr
+
 # Frozen relators.
 R3=[(0,1)]*3+comm_word(0,1)+comm_word(2,3)
 RINF=comm_word(0,1)+comm_word(2,3)
