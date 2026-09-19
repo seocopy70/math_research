@@ -167,7 +167,7 @@ for a in names:
         law1_fail += not modzero(e1); law2_fail += not modzero(e2)
         if survives(lhs): nonzero_pairs += 1
         results.append((a,b,any(e1),modzero(e1),any(e2),modzero(e2)))
-print({"diagnostic_law1_failures":law1_fail,"diagnostic_law2_failures":law2_fail,"diagnostic_raw_law1_failures":law1_fail_raw,"diagnostic_raw_law2_failures":law2_fail_raw})\nassert law1_fail==0)
+print({"diagnostic_law1_failures":law1_fail,"diagnostic_law2_failures":law2_fail,"diagnostic_raw_law1_failures":law1_fail_raw,"diagnostic_raw_law2_failures":law2_fail_raw})
 assert law1_fail==0
 print({
  "status":"PASS_QUOTIENT_DEFECT_COMPOSITION_LAW_LOCAL",
