@@ -1533,3 +1533,34 @@ Decision:
 - **F5 canonical reconstruction of (B_\lambda) from (D_3): OPEN.**
 
 The remaining task is not another scan. It is to define the two structural operations presentation-free and prove their functoriality and uniqueness. No finite scan is authorized.
+
+
+## 2026-09-19 — F5 structural reconstruction: PASS for enriched relation jet
+
+The authorized no-scan structural task was completed. The correct invariant carrier is the degree-3 relation jet
+\[
+J_3=\langle(R_2,P_3)\rangle\subset L_2\oplus L_3^{res},
+\]
+with common generator scaling, rather than two independently defined classes.
+
+For f,lambda in V*, define
+\[
+\operatorname{Defect}_{P_3}(f)=f(P_3),\qquad
+\operatorname{Twist}_{\lambda,R_2}(f)=(\lambda\wedge f)(R_2).
+\]
+Their sum
+\[
+\Theta_{R_2,P_3}(\lambda)(f)=f(P_3)+(\lambda\wedge f)(R_2)
+\]
+is intrinsic to the relation jet. In frozen coordinates it reproduces exactly
+\[
+B_\lambda(f)=(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4.
+\]
+Common rescaling preserves the zero set. Naturality follows from evaluation and exterior powers. Nondegeneracy of R_2 gives a unique zero; for P_3=X_1^{[3]} it is \(\lambda_\chi=(0,1,0,0)\), yielding \(\rho=(1,4,1,1)\bmod9\).
+
+Decision:
+- **F5 structural factorization through enriched relation jet \(D_3=(V,J_3)\): PASS.**
+- **Bare associated graded Lie object without distinguished relation jet:** remains a separate open identification question, not claimed closed.
+
+Detailed audit: research/ORIENTATION_MOD9_FILTERED_FACTOR_F5_STRUCTURAL_2026-09-19.md.
+No finite scan was used or authorized.
