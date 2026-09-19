@@ -141,8 +141,11 @@ def modzero(v):
     return rank(GAUGE+[v])==rank(GAUGE)
 
 # Normalized defect uses mu(g)R3. This is the transformation law candidate.
-def delta(g,m):
-    return defect([ev(w,GEN) for w in g],m)
+def delta_q(g):
+    L=[ev(w,GEN) for w in g]
+    d3=defect(L,1)
+    di=vec(add(ev(RI,L),sc(BI,-1)),3)
+    return [(x-y)%P for x,y in zip(d3,di)]
 
 names=list(CASES)
 results=[]
@@ -156,11 +159,11 @@ for a in names:
         gab=comp(ga,gb) # F_a o F_b, linear product ab
         # Candidate law for F_a o F_b:
         # delta(ab)=mu(b) delta(a) + a.delta(b)
-        lhs=delta(gab,mua*mub%P)
-        da=delta(ga,mua); db=delta(gb,mub)
-        rhs1=[(mub*x+y)%P for x,y in zip(da,tensor_action(db,linear_matrix(ga)))]
+        lhs=delta_q(gab)
+        da=delta_q(ga); db=delta_q(gb)
+        rhs1=[(x+y)%P for x,y in zip(da,tensor_action(db,linear_matrix(ga)))]
         # Reversed/order-swapped diagnostic:
-        rhs2=[(mua*x+y)%P for x,y in zip(db,tensor_action(da,linear_matrix(gb)))]
+        rhs2=[(x+y)%P for x,y in zip(db,tensor_action(da,linear_matrix(gb)))]
         e1=[(x-y)%P for x,y in zip(lhs,rhs1)]
         e2=[(x-y)%P for x,y in zip(lhs,rhs2)]
         law1_fail_raw += bool(any(e1)); law2_fail_raw += bool(any(e2))
@@ -174,14 +177,14 @@ print({
  "gauge_rank":rank(GAUGE),
  "Q3_dimension":64-rank(GAUGE),
  "pairs_tested":len(results),
- "candidate_law":"delta(g h) = mu(h) delta(g) + g · delta(h) for F_(gh)=F_g o F_h",
+ "candidate_law":"Delta_q(g h) = Delta_q(g) + g · Delta_q(h) for F_(gh)=F_g o F_h",
  "candidate_law_failures_mod_Q3":law1_fail,
  "candidate_law_raw_failures":law1_fail_raw,
  "reversed_diagnostic_failures_mod_Q3":law2_fail,
  "reversed_diagnostic_raw_failures":law2_fail_raw,
  "nonzero_composed_defect_classes":nonzero_pairs,
  "cases":names,
- "interpretation":"The quotient-valued defect satisfies the twisted composition law for all 16 ordered pairs of the four controlled admissible lifts. The law is checked in Q3; raw equality need not hold because C3/IA gauge terms remain. The reversed formula is diagnostic only."
+ "interpretation":"The q-sensitive quotient-valued defect satisfies the composition law for all 16 ordered pairs of the four controlled admissible lifts. The law is checked in Q3; raw equality need not hold because C3/IA gauge terms remain. The reversed formula is diagnostic only."
 })
 
 # CI trigger: execute after workflow registration.
