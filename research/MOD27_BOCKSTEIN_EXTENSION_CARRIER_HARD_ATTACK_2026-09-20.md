@@ -337,3 +337,53 @@ The key point is that a mod-9 coincidence is not enough: \(4\equiv1\pmod3\), and
 - Next stop: resolve realizability of S before any further numerical scan.
 
 This correction is binding for subsequent work.
+
+
+## HARD ATTACK 20 — FACTORIZATION THROUGH THE q-VALUATION QUOTIENT — 2026-09-20
+
+Hard Attack 19 shows that the abstract symmetry S cannot be promoted to a no-go without proving realizability as a group-induced morphism. We therefore attack the candidate at a different, stronger level: whether its entire mod-27 information on the Demuškin test family is genuinely finer than the q-classification datum.
+
+Let
+\[
+\nu_{27}(q)=
+\begin{cases}
+1,&v_3(q)=1,\\
+2,&v_3(q)=2,\\
+\ge3,&v_3(q)\ge3.
+\end{cases}
+\]
+The coefficient-extension calculation gives exactly three carrier types on the rank-four family:
+\[
+\beta_1\neq0,\qquad
+\beta_1=0,\ \overline\beta_9\neq0,\qquad
+\beta_1=0,\ \overline\beta_9=0,
+\]
+corresponding respectively to \(\nu_{27}=1,2,\ge3\). No additional mod-27 orientation-sensitive invariant has been exhibited inside the declared package.
+
+Hence, on this family, the isomorphism type of the declared Bockstein package factors through
+\[
+\mathcal B_{27}\longleftarrow \nu_{27}(q).
+\]
+At the same time the canonical orientation reduction is already known to factor through the same three classes:
+\[
+\frac13\log\chi\equiv e_2,\ 3e_2,\ 0\pmod9,
+\]
+with corresponding \(\chi(x_2)\equiv13,10,1\pmod{27}\).
+
+Therefore any bridge from the **isomorphism type of this carrier alone** to the mod-27 orientation on this family is, extensionally, a function of the same three valuation/classification classes. The direct obstruction calculation has not produced an independent universal identity; it has only recovered the same finite classification partition.
+
+This is not the claim that no abstract map \(\mathcal B_{27}\to O_{27}\) exists. Such a map can exist on the tested family. The claim is narrower and decisive for the project gate:
+
+> The present package has not supplied an obstruction-theoretic factorization that is genuinely finer than, or independent of, the q-classification quotient. Its successful mod-27 values are completely explained by the same finite q-valuation partition.
+
+Thus the candidate fails the project's operational non-tautology criterion unless a new structure inside the coefficient-extension package is exhibited that survives while the q-valuation class is held fixed and nevertheless distinguishes the orientation lift.
+
+### Strong stop consequence
+No further calculation of \(\beta_1,\beta_9\) on the same Demuškin q-family can establish novelty. To reopen the carrier, one must add genuinely new q-blind structure or produce an independent universal property/chain-level identity that does not pass through the valuation/classification quotient.
+
+### Decision
+- coefficient-extension package as finite q-layer detector: **PASS / LOCAL**;
+- abstract carrier symmetry S: **PASS / LOCAL**;
+- Hard Attack 18 unconditional symmetry no-go: **HISTORICAL / SUPERSEDED**;
+- Bockstein package as a **new non-tautological mod-27 orientation carrier**: **FAIL / CLOSED** under the declared PRE-MOD27 gate;
+- a different carrier with genuinely new rigidifying information: **OPEN**.
