@@ -1976,3 +1976,39 @@ Critical boundary:
 Decision: **RELEVANT LITERATURE / SUPPORTING EVIDENCE; no current Gate reopened.** The paper reinforces the already established separation between q-sensitive higher-order structure and actual intrinsic reconstruction of full chi.
 
 Detailed record: research/LITERATURE_ARXIV_2601_07551_A3_FORMALITY_2026-09-19.md
+
+
+## 2026-09-19 — Literature synthesis: Blumer–Quadrelli + Pál–Quick; research-center revision
+
+The full-paper audit of Blumer–Quadrelli (arXiv:2603.15464v2) was added as
+`research/LITERATURE_ARXIV_2603_15464_BLUMER_QUADRELLI_2026-09-19.md`.
+Together with the existing Pál–Quick audit, the literature review independently supports the project's information hierarchy:
+
+- quadratic/associated-graded data can erase q-sensitive information;
+- higher relation/cohomological structure can restore q-sensitive information;
+- this does not by itself identify the project's exact Z_3 relation-jet carrier or reconstruct (chi).
+
+The Blumer–Quadrelli canonical orientation
+[
+\theta_G(y_1)=(1-q)^{-1}
+]
+gives (-1/2) at q=3, independently matching the project's exact reconstruction (ho(x_2)=-1/2).
+
+A consolidated research plan was added:
+`research/RESEARCH_PLAN_LITERATURE_SYNTHESIS_2026-09-19.md`.
+
+Research-center revision:
+the main question is now explicitly framed as identifying the smallest defensible intrinsic enrichment of the quadratic filtered relation that recovers cyclotomic orientation. The current hierarchy is
+[
+\text{bare graded} < \text{projective degree-(2,3) carrier} \le \text{full compatible tower}.
+]
+
+Priority is shifted toward:
+1. theorem-level consolidation of the degree-(2,3) recovery result;
+2. concrete non-tautological characterization of the coarsest carrier;
+3. precise relative/universal minimality statements in a defined carrier category;
+4. only then comparison with Pál–Quick higher cohomological invariants.
+
+The W/U/O representation branch and broad rank-4 scans are not to be expanded merely because they contain higher-order structure; a rigorous bridge to the orientation-recovery functional is required.
+
+No existing closed Gate is reopened by the literature.
