@@ -805,3 +805,29 @@ The next authorized gate is now a **definition/legitimacy gate** for a possible
 q-dependent observable derived from \(\mathcal O_9\). No new orbit computation,
 D9 construction, or orientation claim is authorized before that definition is
 fixed.
+
+
+## 2026-09-19 — D9-OBS critical review / state consistency correction
+
+D9-OBS의 자연스러운 p-layer 후보를 비판적으로 재검토했다. q=3 source
+\[
+\Delta_3(3)=X_1^{[3]}
+\]
+의 restricted p-power가
+\[
+(\Delta_3(3))^{[3]}=X_1^{[9]}=S_9=\Delta_9(9)
+\]
+이므로 frozen baseline quotient에서 source class와 H-orbit span이 정확히 일치한다. 따라서
+\[
+\mathcal O_9\cong L_1^{[9]},\quad \dim\mathcal O_9=4
+\]
+는 q-dependent observable이 아니라 universal p-layer shadow이다.
+
+Decision:
+\[
+\boxed{\text{D9-OBS via natural p-layer shadow = FAIL / CLOSED}}
+\]
+
+비판적 검토 중 `research/CURRENT_STATE.md`가 이 결과 이후에도 이전 LIVE gate(D9-OBS definition gate)를 유지하고 있음을 발견하여 stale-state 문제를 수정했다. CURRENT_STATE는 이제 D9-OBS FAIL/CLOSED를 반영한다.
+
+다음 단계에서는 새로운 4D orbit 계산을 반복하지 않고, p-map으로 소실되는 정보를 보존하는 presentation/Magnus/filtration-derived 구조가 기존 문서에 이미 정의되어 있는지 먼저 확인한다. 그러한 구조가 없다면 이 Q3/Q9 orbit route를 추가 추측 없이 종료할 수 있다.
