@@ -2072,3 +2072,8 @@ The current principal program remains D0 definition -> D1 intrinsicity -> D2 ori
 The next proposed cohomological lift was attacked before computation. Higher Bocksteins are retained as a possible obstruction language, but their existence does not by itself provide a q-blind character-valued factorization. Candidate-twisted coefficient systems already contain the unknown orientation and therefore cannot be used as the sought filtered input. For the frozen q=3 case, exact Fox lifting shows the higher digits are recursively forced by the same unit equation after the first mod-9 digit; this does not identify an intrinsic filtered source of those digits.
 
 Current target remains: prove or disprove a non-circular functorial reconstruction from full filtered relation extension data to the exact Fox obstruction tower. If the input is only associated-graded data, an extension-data obstruction is expected and must be tested explicitly. Detailed audit: `research/ORIENTATION_HIGHER_BOCKSTEIN_HARD_ATTACK_2026-09-20.md`.
+
+
+## AUTHORITATIVE UPDATE — 2026-09-20 — FILTERED EXTENSION VS ASSOCIATED GRADED BOUNDARY
+
+The phrase “full filtered tower” is now split into two non-equivalent notions. The associated-graded tower loses extension/gluing data and cannot be claimed to recover the exact Fox coefficients. An actual compatible filtered-quotient tower can reconstruct the completed relation by inverse limit, after which Fox reconstruction is formal/continuous; this is not yet a nontrivial compression result. The research target is therefore an intermediate q-blind, presentation-natural carrier retaining enough extension data for all $3$-adic digits but strictly less than the full completed Fox/presentation object.
