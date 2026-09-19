@@ -1,3 +1,24 @@
+## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 16: MOD-27 BOCKSTEIN-EXTENSION CARRIER
+
+A new intrinsic finite-level candidate survives the definition gate:
+\[
+\mathcal B_{27}=(H^1(G,\mathbf F_3),H^1(G,\mathbf Z/9),\mathrm{red},\iota,\smile,\beta_1,\beta_9),
+\]
+where \(\beta_9\) comes from \(0\to\mathbf F_3\to\mathbf Z/27\to\mathbf Z/9\to0\). It is q-blind, functorial, independent of Fox coordinates, and naturally contains the established mod-9 carrier.
+
+For the standard Demuškin family, direct relator lifting gives the expected q=3/q=9/q≥27 separation. The correct additive target is the logarithmic orientation digit \(\lambda_{27}=\frac13\log\chi\pmod9\). The frozen-family values are \(e_2,3e_2,0\), which exponentiate to \(\chi(x_2)=13,10,1\pmod{27}\).
+
+Critical boundary: the intrinsic orientation bridge has not yet been proved independently of the standard presentation. In particular, it must be shown that the cup-dual of the relevant Bockstein layer is naturally the corresponding coefficient of \(\frac13\log\chi\), with no hidden use of q or the known orientation formula.
+
+Decision:
+- mod-27 Bockstein-extension candidate: **OPEN / STRONG CANDIDATE**;
+- definition/q-blindness/reduction: **PASS**;
+- separation: **PASS / LOCAL**;
+- orientation bridge: **OPEN / load-bearing**;
+- strict compression below Fox: **OPEN**.
+
+Record: research/MOD27_BOCKSTEIN_EXTENSION_CARRIER_HARD_ATTACK_2026-09-20.md
+
 ## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 15: MOD-27 CATEGORY ADEQUACY
 
 A definition-level loophole in the PRE-MOD27 gate has been closed. If the full group G is allowed as an unrestricted input with arbitrary intrinsic constructions, then the canonical dualizing module/action already contains chi, and the Demuškin classification identifies q as a group invariant from which the canonical orientation is recovered. Such a group-only J_27 is therefore known/tautological relative to the intended filtered-information problem, not a new carrier.
