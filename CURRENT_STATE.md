@@ -1363,3 +1363,16 @@ Therefore:
 - genuinely different successor carrier: **OPEN**.
 
 No further beta_1/beta_9 scan on the same family is authorized. Any successor must add genuinely new q-blind rigidifying structure or an independently characterized universal property.
+
+
+## AUTHORITATIVE UPDATE — 2026-09-20 — CRITICAL REVIEW OF HARD ATTACK 20
+
+Hard Attack 20 was re-audited and its final FAIL/CLOSED was found too strong. The three observed Bockstein cases do not by themselves prove that the **entire** structured carrier \(\mathcal B_{27}\) has exactly three isomorphism types; explicit carrier isomorphisms/classification are still missing. Moreover, factorization on the tested q-family does not prove that every natural bridge on the full admissible category factors through q/classification.
+
+Corrected status:
+- Bockstein q-layer detector: **PASS / LOCAL**;
+- q-factorization evidence on the tested family: **PASS / LOCAL**;
+- Hard Attack 18 unconditional symmetry no-go: **HISTORICAL / SUPERSEDED**;
+- Bockstein package as a non-tautological mod-27 orientation carrier: **CONDITIONAL / OPEN**.
+
+The next decisive attack is universal/categorical, not numerical: either prove classification of the full structured carrier by the q-valuation quotient and then prove all natural bridges factor through it, or construct two admissible objects with isomorphic \(\mathcal B_{27}\) but distinct \(\chi\bmod27\). No further same-family Bockstein scan is authorized.
