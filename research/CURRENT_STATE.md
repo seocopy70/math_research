@@ -1,6 +1,6 @@
 # CURRENT_STATE — 수학증명
 
-Last updated: 2026-09-19
+Last updated: 2026-09-19 (S9 preflight)
 
 > 목적: 새 창이 열려도 현재 연구의 작업 상태와 확정된 디테일을 즉시 복원하기 위한 live state. 상세 유도·계산은 별도 연구 문서가 정본이다.
 
@@ -170,6 +170,16 @@ graded closure에서 degree n piece는 bracket closure와 p-map closure를 모�
 이 파일에 없는 세부 계산은 추측으로 복원하지 않고 해당 상세 문서를 확인한다.
 
 ---
+
+## 9. S9 admissibility preflight — 2026-09-19
+
+- Prerequisite audit is complete; the S9 admissibility experiment itself has **not** been executed.
+- Gate C-2a independently supports the ambient restricted-power identity X_1^[9] = X_1^9 in the one-generator enveloping realization.
+- C-2c-1 independently validates the degree-9 ambient layer separation in rank 2 using exact F_3 rank.
+- The mandatory implementation invariants for the actual S9 run are frozen: complete H-closure, one common coordinate system, exact F_3 rank, and sanity/rank-nullity checks.
+- This does **not** authorize S9 insertion into I_infty,9.
+- Baseline remains frozen at dim I_infty,9 = 13524 and dim I_3^[3] = 4.
+- Detailed preflight record: research/Q3_Q9_S9_admissibility_preflight_2026-09-19.md
 
 ## LIVE
 
