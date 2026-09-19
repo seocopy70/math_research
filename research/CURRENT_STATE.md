@@ -592,3 +592,20 @@ Decision:
 - higher 3-adic digits: **OPEN**.
 
 Detailed record: research/ORIENTATION_MOD9_TWISTED_RECOVERY_CARRIER_FACTORIZATION_AUDIT_2026-09-19.md.
+
+
+## 2026-09-19 — TWISTED DEGREE-(2,3) LIFTING-OBSTRUCTION THEOREM CLOSED
+
+The proof-level target from the preceding twisted-lifting audit is now closed at first mod-9 level. For a minimal one-relator pro-3 presentation with relation jet (r=(R,P)+O(D_4)), an exact crossed-word calculation and the Zassenhaus (D_4) estimate give
+[
+delta_ho(f)=igl[f(p(P))+(lambdawedge f)(R)igr]omega.
+]
+The coefficient exact sequence supplies the complete cohomological obstruction; the twisted deformation term sees only the degree-2 Magnus component (R); the divided trivial-action term is unchanged by (D_4)-errors; and the bracket part of (P) has zero exponent-sum, so only (p(P)) survives.
+
+Naturality is closed at this level without a preferred IA lift: (delta_ho) is intrinsic, and the family in ((lambda,f)) determines ((R,p)) injectively up to the common (H^2)-generator scalar. Hence the projective carrier ([(R,p)]) is intrinsic as a first twisted mod-9 carrier.
+
+For (x_1^3[x_1,x_2][x_3,x_4]), the unique first-digit solution is (chimod9=(1,4,1,1)). Quadrelli's Kummerian/1-cyclotomic characterization supplies the external global uniqueness statement for the canonical Demuškin orientation; the present calculation is its explicit degree-(2,3) mod-9 obstruction for the frozen group.
+
+Decision: twisted obstruction, degree-(2,3) truncation, bracket-part elimination, and projective mod-9 naturality are **PASS / CLOSED**. Bare graded recovery and higher 3-adic digits remain separate OPEN problems.
+
+Proof record: `research/TWISTED_DEGREE3_LIFTING_OBSTRUCTION_THEOREM_2026-09-19.md`.
