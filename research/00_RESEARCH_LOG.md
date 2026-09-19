@@ -1502,3 +1502,34 @@ Status:
 Critical boundary: this construction uses filtered extension/multiplication data of (G/G_4), not merely the associated graded vector spaces and initial quadratic relation. The q=3 power term lies in the first non-quadratic filtered layer, so discarding extension data can erase the information needed for (chimod9).
 
 Therefore the project must not yet claim recovery from the associated graded restricted Lie object alone. The next task is to formalize exactly what counts as the allowed filtered/graded datum and determine whether it contains (G/G_4), or an equivalent extension class. No finite scan is authorized.
+
+
+## 2026-09-19 — F5-A restricted graded carrier audit: PASS / F5 remains OPEN
+
+The authorized next task was completed without a new finite scan.
+
+The repository's independent q=3 versus q=infinity degree-3 calculation establishes
+[
+operatorname{in}_3(s_3)-operatorname{in}_3(s_\infty)=X_1^{[3]}.
+]
+Therefore the q=3 power contribution is already visible in restricted/Zassenhaus degree 3. This corrects the earlier overly strong wording that the q=3 information necessarily requires filtered extension data beyond the associated graded restricted object.
+
+The smallest plausible carrier is now isolated as
+[
+D_3=(V,R_2,P_3),
+]
+with (V=L_1), the quadratic Demuškin relation (R_2), and the degree-3 restricted-power contribution (P_3).
+
+The verified twisted obstruction splits structurally as
+[
+B_\lambda=
+operatorname{Defect}(P_3)+
+operatorname{Twist}_\lambda(R_2),
+]
+in frozen coordinates. The first term supplies the q=3 constant contribution and the second records the first-order twisted response of the quadratic relation.
+
+Decision:
+- **F5-A carrier existence: PASS.**
+- **F5 canonical reconstruction of (B_\lambda) from (D_3): OPEN.**
+
+The remaining task is not another scan. It is to define the two structural operations presentation-free and prove their functoriality and uniqueness. No finite scan is authorized.
