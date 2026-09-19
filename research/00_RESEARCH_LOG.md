@@ -1143,3 +1143,29 @@ Verified: 9/9 GSp checks; every matrix_to_lift reproduces its declared degree-1 
 An explicit multiplier factor and a normalized-cocycle variant were tested and failed, so they were rejected. The frozen raw law remains authoritative because the multiplier contribution is already contained in the q-sensitive difference.
 
 Decision: PASS / CLOSED for the specific implementation/convention gate. This does not prove full GSp4 covariance or canonicality. A broader rank-4 scan is now the next authorized stage, subject to an explicit scope and PASS/FAIL consequence.
+
+
+## 2026-09-19 — Delta_q coboundary closure
+
+A critical mathematical simplification was identified and then checked directly against the authoritative structured-audit script.
+
+The frozen definition is Delta_q(g) = [F_g(X1^3)-X1^3]_3. Since F_g(X1) = g.X1 + terms of degree at least 2, its degree-3 cube contribution is exactly (g.X1)^3. Hence
+Delta_q(g) = g.(X1^3) - X1^3.
+
+Therefore the composition law Delta_q(gh)=Delta_q(g)+g.Delta_q(h) is the ordinary coboundary identity. In Q3, the class is the coboundary of the fixed vector [X1^3]. The prior raw-zero and modulo-Q3-zero results are consequently expected and do not establish a new H1 observable.
+
+An independent script assertion comparing Delta_q(g) with g.(X1^3)-X1^3 was added and passed for all 9 structured representatives.
+
+CI: run 35420266538; commit bd53311cf45dfc930599c3c24b60df8572c155cc; job 105836490226; SUCCESS.
+
+Decision:
+- Delta_q cocycle track = CLOSED / NO NEW INFORMATION.
+- Proposed broader rank-4 scan for this same cocycle = CANCELLED.
+- Earlier structured PASS and implementation/convention PASS remain valid only as implementation/convention checks.
+
+New authorized work:
+1. define a genuinely non-coboundary q-sensitive datum without pre-inserting q=3 versus q=infinity;
+2. audit the exact relation, if any, between g e1 = mu(g)e1 and the orientation character chi;
+3. only then design a new small computation.
+
+The map and CURRENT_STATE were updated so this conclusion is authoritative for new-session restoration.
