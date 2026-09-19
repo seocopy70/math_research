@@ -1246,3 +1246,20 @@ This quotient is not lift-independent. For any r in R, alpha_r:x1 -> x1 r, x2 ->
 Decision: **Rank-2 relator-unit digit route = FAIL / CLOSED.** This is a definition-level obstruction, not a computational failure. No mod-9, IA, K3, or q-comparison scan is authorized. The q=infinity determinant calculation remains a control only.
 
 Next authorized branch: independently analyze the relation between the rank-4 condition g e1=mu(g)e1 and the canonical orientation character chi.
+
+
+## 2026-09-19 — Scope correction to Rank-2 relator-unit closure
+
+A critical review found that the previous phrase “Rank-2 relator-unit route = FAIL / CLOSED” overstates the proven consequence. The explicit lift-kernel witness establishes failure of the **specific proposed scalar construction** on the natural quotient
+\[
+Q=(R/[R,F])/H_2(G_3,\mathbf Z_3)\cong3\mathbf Z_3e_1,
+\]
+not impossibility of every conceivable relation-module construction.
+
+Precise frozen status:
+
+1. Proposed relator-unit scalar on the natural canonical abelianized rank-one quotient: **FAIL / CLOSED** by lift dependence.
+2. Full \(R/[R,F]\) as a single scalar line: **not intrinsically defined** under the present construction because of the \(H_2\) component.
+3. Every other possible relation-module/filtered quotient construction: **NOT DISPROVED**; it would require a new definition gate and its own intrinsicity proof.
+
+This correction supersedes the broader wording in the immediately preceding closure entry. No finite scan is authorized for the failed scalar construction. The next authorized mathematical task is the independent analysis of whether the rank-4 condition \(ge_1=\mu(g)e_1\) has any intrinsic relation to the canonical orientation character \(\chi\).
