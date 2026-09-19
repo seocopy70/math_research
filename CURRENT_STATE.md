@@ -1,3 +1,25 @@
+## LATEST MANUSCRIPT CONSOLIDATION — 2026-09-19
+
+A unified manuscript draft has been created:
+`research/ORIENTATION_RECONSTRUCTION_MANUSCRIPT_DRAFT_2026-09-19.md`
+
+The paper is organized around one central question:
+[
+	ext{How much filtered relation information is necessary and sufficient to recover the canonical }3	ext{-adic orientation?}
+]
+
+The consolidated logical spine is:
+1. bare quadratic graded data loses (chimod9);
+2. the projective degree-(2,3) relation jet recovers (chimod9);
+3. its coarsest natural quotient is (overline J_3=[(R,p(P))]);
+4. a compatible finite-level filtered relation-jet tower recovers the full (chi) by inverse limit;
+5. bounded degree plus finite coefficient precision cannot universally recover full (chi);
+6. fixed (q=3) exact (mathbf Z_3)-coefficient relation/evaluation data does recover full (chi), but no non-tautological finite characteristic-zero compression analogous to (overline J_3) has been proved.
+
+This manuscript is a structural consolidation, not yet a publication-ready literature-complete paper. Claims are intentionally restricted to the audited hypotheses and boundaries.
+
+---
+
 ## LATEST AUTHORITATIVE UPDATE — 2026-09-19 — EXACT Z_3 CARRIER BRANCH ENDPOINT
 
 The remaining exact-carrier branch has now been pushed to its structural boundary and closed.
