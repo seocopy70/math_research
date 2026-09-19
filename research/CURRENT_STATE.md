@@ -621,3 +621,10 @@ The preceding “TWISTED DEGREE-(2,3) LIFTING-OBSTRUCTION THEOREM CLOSED” entr
 4. **Next authorized proof work:** close the explicit D4 truncation lemma and the residual cover-change lemma. Only after both are closed may the intrinsic theorem wording be promoted.
 
 Literature context: one-relator pro-p relation modules are known to have strong structural control, but the exact residual degree-(2,3) gauge statement used here is not supplied by that fact alone. See Mikhovich's discussion of one-relator pro-p relation modules and quasirationality. 
+
+
+## 2026-09-19 — Observable-minimality boundary fixed
+
+The categorical ambiguity around “coarsest carrier” is now frozen. The projective degree-(2,3) carrier is minimal for retaining the **full twisted obstruction family** Theta, because (R,p) -> Theta is injective up to the existing projective/gauge equivalence. This does **not** make it minimal for the single recovered output chi mod 9: the zero-set itself is a smaller observable. Therefore absolute minimality remains OPEN, while full-obstruction minimality is the strongest defensible category-relative statement.
+
+The next genuinely new program is higher-order recovery (mod 27 and beyond); no automatic tower is assumed.

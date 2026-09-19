@@ -2214,3 +2214,10 @@ A critical review identified two proof-level overstatements in the preceding clo
 This correction supersedes the previous “twisted obstruction, degree-(2,3) truncation, bracket-part elimination, and projective mod-9 naturality are PASS/CLOSED” wording wherever it conflicts with the narrower status above.
 
 The next proof targets are exactly the two missing lemmas; no broad scan is authorized.
+
+
+### 2026-09-19 — Observable-minimality boundary fixed
+
+A category-relative distinction is now recorded. The projective degree-(2,3) carrier is minimal if the carrier is required to preserve the entire twisted obstruction family Theta, because the map (R,p) -> Theta is injective. It is not claimed minimal for recovering only the final orientation digit, since the Theta-zero set is a strictly smaller observable. This replaces the vague phrase “coarsest carrier” with two precise notions and prevents a tautological minimality claim.
+
+Next genuinely new question: construct an intrinsic higher filtered obstruction that can recover chi mod 27 and beyond. No tower is assumed.
