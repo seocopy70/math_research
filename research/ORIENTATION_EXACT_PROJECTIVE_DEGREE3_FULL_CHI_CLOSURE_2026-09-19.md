@@ -1,4 +1,4 @@
-# ORIENTATION — EXACT PROJECTIVE DEGREE-3 CARRIER: CLOSURE AUDIT — 2026-09-19
+> **2026-09-19 supersession note.** The mathematical recovery result in this document remains valid: fixed q=3 exact filtered relation/evaluation data determine the full orientation. However, the notation \\(\mathbb J^{ex}_3=\\langle(R_2,P_3)\\rangle^{proj}_{\\mathbf Z_3}\\) should not be read as a literal characteristic-zero restricted-Lie scalar extension of the mod-3 carrier. The subsequent audit \`research/ORIENTATION_EXACT_Z3_CARRIER_BRANCH_ENDPOINT_2026-09-19.md\` establishes the correct boundary: the exact carrier must be understood through the filtered relation/evaluation framework; a concrete non-tautological finite pair analogous to \\(([R],p(P])\\) has not been proved. The PASS for full \\(\\chi\\) is retained; only the overly literal characteristic-zero carrier notation is superseded.\n\n# ORIENTATION — EXACT PROJECTIVE DEGREE-3 CARRIER: CLOSURE AUDIT — 2026-09-19
 
 ## Target
 
