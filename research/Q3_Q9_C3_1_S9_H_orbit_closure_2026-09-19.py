@@ -68,12 +68,10 @@ def closure(gens, seed):
     return basis
 
 def main():
-    # The four coordinate transvections are enough for the closure test.
-    # Use all four basis vectors as transvection parameters.
-    gens=[transvection([1,0,0,0]),
-          transvection([0,1,0,0]),
-          transvection([0,0,1,0]),
-          transvection([0,0,0,1])]
+    # Use all nonzero vectors as transvection parameters. This avoids
+    # importing an unverified smaller generating set; the closure is then
+    # an exact finite H-orbit-span computation inside the natural module.
+    gens=[transvection(list(v)) for v in __import__('itertools').product(range(P), repeat=4) if any(v)]
 
     # Symplectic sanity.
     for g in gens:
