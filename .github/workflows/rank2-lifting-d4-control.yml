@@ -1,0 +1,19 @@
+name: Rank-2 D4 lifting control
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "research/rank2_lifting_D4_control_2026-09-19.py"
+      - ".github/workflows/rank2-lifting-d4-control.yml"
+
+jobs:
+  control:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run exact F3 control
+        run: python research/rank2_lifting_D4_control_2026-09-19.py
