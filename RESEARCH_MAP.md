@@ -1625,3 +1625,23 @@ B_\lambda(f)=(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4,
 and establish presentation/isomorphism naturality and uniqueness.
 
 No finite scan is authorized.
+
+
+## 0E. 2026-09-19 — F5 structural reconstruction: PASS for enriched relation jet
+
+The open structural reconstruction is resolved at the exact carrier level. Let
+\[
+J_3=\langle(R_2,P_3)\rangle\subset L_2\oplus L_3^{res}
+\]
+be the degree-3 relation jet, with common scalar ambiguity retained. The intrinsic obstruction is
+\[
+\Theta_{R_2,P_3}(\lambda)(f)=f(P_3)+(\lambda\wedge f)(R_2).
+\]
+This is exactly the verified B_\lambda in frozen coordinates. Common rescaling changes only the scalar representative, not the zero set. Automorphism/isomorphism naturality follows from evaluation and exterior-power functoriality. Since R_2 is nondegenerate, the zero is unique and equals \(\lambda_\chi=(0,1,0,0)\), hence \(\rho=(1,4,1,1)\bmod9\).
+
+Decision:
+- **F5 structural factorization through enriched relation jet \(D_3=(V,J_3)\): PASS.**
+- **Bare unmarked associated graded object:** no claim yet that it canonically reconstructs the distinguished relation jet. This is now the only remaining structural boundary of this branch.
+
+Detailed audit: research/ORIENTATION_MOD9_FILTERED_FACTOR_F5_STRUCTURAL_2026-09-19.md.
+No finite scan is authorized.
