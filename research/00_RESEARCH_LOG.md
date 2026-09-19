@@ -2023,3 +2023,15 @@ Conclusion: the relation-jet branch is now methodologically sufficient for a bou
 The literature exposes an important process difference: Pál–Quick construct a canonical higher object first and then compute an obstruction, whereas our risky branches can proceed from a computed object toward a hoped-for interpretation. Therefore every new branch must pass object/input/functoriality/gauge/orientation/q-blindness/separation/novelty/stop tests before substantial computation.
 
 The IA and W/U/O branches are now explicitly subordinate to this rule: local computational PASS results do not justify expansion unless a natural bridge to M1/M2/M3 is produced. No broad scan is authorized merely because higher-order structure exists.
+
+
+## AUTHORITATIVE UPDATE — 2026-09-19 — RESEARCH CONTINUITY PROTOCOL
+
+The project now has an explicit cross-chat continuity contract:
+`research/RESEARCH_CONTINUITY_PROTOCOL.md`.
+
+The protocol freezes the restoration order (RESEARCH_MAP -> CURRENT_STATE -> RESEARCH_LOG -> relevant stage document), the pre-computation tests, theorem-quality thresholds, PASS/FAIL/OPEN/CONDITIONAL/HISTORICAL classification, publication-discipline test, and the rule that literature papers contribute reusable methodology only after object/input/invariance/verification/logical-boundary transfer is explicitly recorded.
+
+This is a methodological control, not a new mathematical result. It exists to ensure that future sessions cannot silently change definitions, revive closed branches, confuse validation with novelty, or lose the stage-specific PASS/FAIL consequences.
+
+The current principal program remains D0 definition -> D1 intrinsicity -> D2 orientation bridge -> D3 carrier/coarseness -> D4 independent comparison. No broad scan is authorized merely by opening a new chat.
