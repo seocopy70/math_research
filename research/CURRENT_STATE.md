@@ -8,7 +8,7 @@ Last updated: 2026-09-19
 
 - 전체 지도: RESEARCH_MAP.md
 - 현재 작업: Q3/Q9 — C-2c-2, degree-9 restricted relation ideal definition audit
-- 상태: **IN PROGRESS / DEFINITION DRAFT — NOT YET PASS**
+- 상태: **C-2c-2 baseline closure certificate PASS / S9 admission still OPEN**
 - 연구 원칙: **정의 → 검증 → 계산 → 해석**
 - 지금은 D9, H-stability, q=9 검출 계산으로 넘어가지 않는다.
 
@@ -90,31 +90,35 @@ graded closure에서 degree n piece는 bracket closure와 p-map closure를 모�
 - q=9가 특정 invariant로 검출된다고 예상 결과를 넣지 않음.
 - orientation recovery/canonicity를 주장하지 않음.
 
-## 5. C-2c-2 closure-interface preflight — PASS
+## 5. C-2c-2 exact baseline closure through degree 9 — PASS
 
-2026-09-19 exact F3 audit에서 definition draft의 restricted closure recursion이 기존 ordinary relation recursion과 정확히 접합됨을 확인했다.
+2026-09-19 exact closure certificate로 baseline restricted ideal I_∞의 degree 9까지를 닫았다.
 
-- dim L1..L6 = 4, 6, 20, 60, 204, 670.
-- dim L3^res = 24, dim L6^res = 676.
-- dim I2 = 1, I3 = 4, I4 = 15, I5 = 60.
-- degree 3–5에서 restricted closure와 locked ordinary relation layer가 동일 span.
-- degree 6 ordinary bracket closure rank = 230.
-- degree 6 restricted bracket closure rank = 230.
-- rank(I2^[3]) = 1, combined rank = 231: 첫 genuinely new p-closure가 degree 6에서 발생.
-- [Xi^[3],R2] = ad(Xi)^3(R2) 확인.
+- dim L1..L9 = 4, 6, 20, 60, 204, 670, 2340, 8160, 29120.
+- dim L3^res = 24, dim L6^res = 676, dim L9^res = 29144.
+- restricted quotient g_n dimensions = 4, 5, 20, 45, 144, 445, 1440, 4680, 15620.
+- baseline restricted ideal:
+  - I2=1, I3=4, I4=15, I5=60,
+  - I6=231, I7=900, I8=3480, I9=13524.
+- ordinary relation dimensions:
+  - I2^ord=1, I3^ord=4, I4^ord=15, I5^ord=60,
+  - I6^ord=230, I7^ord=900, I8^ord=3480, I9^ord=13520.
+- restricted increment: degree 6 = +1, degree 9 = +4; all other degrees ≤9 = 0.
+- degree ≤5의 restricted-ideal 신규 p contribution은 0을 명시적으로 확인.
+- degree 9의 +4는 유일한 신규 relation p-source인 I3^[3]에 해당. I2^[3]의 degree-9 bracket descendants는 ordinary ideal 안에 들어간다.
+- degree 9 certificate는 direct huge matrix 대신 u(g)=T(V)/(R2)의 Hilbert series 1/(1-4t+t^2)와 restricted PBW의 exact coefficient inversion으로 수행했다.
+- Actions run 35409723512 = SUCCESS.
 
-상세 정본: `research/Q3_Q9_C2c2_closure_interface_audit_result_2026-09-19.md`
+상세 정본: `research/Q3_Q9_C2c2_exact_degree9_restricted_closure_result_2026-09-19.md`
 
-**다음 한 단계:** 이제 exact F3 restricted-closure audit를 degree 9까지 확장한다.
+**현재 다음 단계:** baseline closure는 닫혔다. 이제 S9의 restricted-Lie admissibility를 독립적으로 다룬다. 아직 S9를 I_∞,9에 넣지 않는다.
 
 그 다음:
-1. lower-degree ordinary relation layers 재현;
-2. p-closure가 처음 나타나는 degree 6 확인;
-3. degree 9까지 모든 bracket/p-power 경로를 생성;
-4. exact rank/basis certificate;
-5. C-2c-2 definition gate 판정;
-6. 그 후에만 H-stability;
-7. 그 후에만 D9 후보 검토.
+1. S9 = X1^9의 quotient-level restricted-Lie admissibility 확인;
+2. S9가 I_∞,9에 이미 포함되는지 별도로 판정;
+3. admissible하면 q=9 restricted ideal I_9 정의 및 degree-9 변화 계산;
+4. 그 후 H-stability;
+5. 마지막으로 D9 후보 검토.
 
 ## 6. 핵심 참조 문서
 
@@ -171,8 +175,8 @@ graded closure에서 degree n piece는 bracket closure와 p-map closure를 모�
 
 현재 LIVE 질문:
 
-> C-2c-2: free restricted Lie degree-9 ambient 안에서 q=∞/finite-q relation으로부터 생성되는 degree-9 restricted ideal을 정확히 어떻게 정의할 것인가?
+> baseline restricted ideal I_∞의 degree-9 closure를 끝낸 상태에서, S9 = X1^9를 restricted-Lie source로 인정할 수 있는가?
 
 현재 답:
 
-> **정의 후보는 문서화했지만 아직 PASS하지 않았다.**
+> **I_∞,9 = 13524는 exact certificate로 닫혔다. S9 admissibility와 I_∞,9 내부 여부는 아직 미결이다.**
