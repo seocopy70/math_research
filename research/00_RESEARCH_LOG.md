@@ -903,3 +903,32 @@ This reduction is explicitly marked as a **candidate structural lemma**, not a P
 Definition record: plans/RANK4_D4_LIFTING_DEFINITION_GATE_2026-09-19.md
 
 No rank-4 q-comparison is authorized until this definition/legitimacy gate passes.
+
+
+## 2026-09-19 — Rank-4 D4 lifting definition FAIL / CLOSED
+
+The required lift-independence audit was executed before any rank-4 q-comparison.
+
+Two free-group lifts inducing the same identity linear action on V were compared:
+- identity lift;
+- IA-modified lift (x_1mapsto x_1[x_1,x_2]), with (x_2,x_3,x_4) fixed.
+
+Both have zero degree-2 relator difference. The ordinary degree-3 conjugation correction span has exact rank 4. The identity lift is admissible, but the IA-modified lift is not: its degree-3 difference is nonzero and lies outside that correction span.
+
+Therefore the candidate
+[
+A_4^{rel}(q)subset GSp_4(mathbf F_3)
+]
+is not intrinsic to the induced linear map under the current lift definition.
+
+Decision:
+[
+oxed{	ext{Rank-4 D4 lifting definition gate = FAIL / CLOSED}.}
+]
+
+This is not a setup failure; CI execution succeeded and the mathematical assertion is a genuine negative result.
+
+Consequence: no rank-4 q-comparison is authorized from this candidate. The failure identifies IA/lift data as mathematically active at degree 3. Any future lifting route must either retain that finer filtered/extension data or define a canonical quotient/invariance mechanism for it. A hand-picked lift convention must not be relabeled as an intrinsic weak-data invariant.
+
+Result: research/RANK4_D4_LIFT_INDEPENDENCE_AUDIT_RESULT_2026-09-19.md
+CI: run 35415237341 / job 105822474022 = SUCCESS.
