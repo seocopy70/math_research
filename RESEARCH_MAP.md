@@ -1657,3 +1657,16 @@ Correct status:
 - **F5-bare: OPEN.** The remaining substantive problem is whether the originally allowed bare filtered/graded datum canonically determines the distinguished relation jet J_3, or admits an equivalent unmarked reconstruction.
 
 No finite scan is authorized.
+
+## 2026-09-19 — F5-bare structural obstruction: FAIL / CLOSED
+
+The remaining bare-graded identification question is closed without computation. Compare the q=3 and q=infinity rank-4 Demushkin groups. Their defining relators have the same p-Zassenhaus initial form R_2=[X_1,X_2]+[X_3,X_4], because x_1^3 has degree 3 whereas the commutators have degree 2. Standard graded-presentation results therefore give the same bare associated graded restricted Lie object in the two cases.
+
+But chi_3(x_2)=4 mod 9 and chi_infinity(x_2)=1 mod 9. Hence no invariant of the bare associated graded restricted Lie object can recover chi mod 9 in this class. The marked degree-3 relation jet J_3=< (R_2,P_3) > contains extra coupling information that the bare graded object does not retain.
+
+This sharpens F5-A rather than contradicting it: P_3=X_1^[3] exists in the ambient degree-3 restricted layer, but the bare graded object does not canonically mark it as the higher component of the same defining relation as R_2.
+
+Final status of this branch: F5-marked PASS; F5-bare FAIL / CLOSED. The original recovery theorem is therefore false for the bare associated graded restricted Lie object. Recovery remains valid for a richer filtered/graded datum carrying the relation-jet coupling (or an equivalent extension invariant).
+
+Detailed audit: research/ORIENTATION_MOD9_FILTERED_FACTOR_F5_BARE_OBSTRUCTION_2026-09-19.md.
+No finite scan is authorized.
