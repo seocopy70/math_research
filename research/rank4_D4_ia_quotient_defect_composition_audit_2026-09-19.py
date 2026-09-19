@@ -90,7 +90,7 @@ def ia(c):
         out.append(w)
     return out
 def defect(L,m):
-    return vec(add(ev(R3,L),sc(B3,m)),3)
+    return vec(add(ev(R3,L),sc(B3,-m)),3)
 
 # Build first-layer gauge generators and Q3 gauge space.
 IDENT=[[(i,1)] for i in range(N)]
@@ -100,7 +100,7 @@ def gauge_variation(g):
     for s in SPECS:
         p=ia(coeff(s))
         L=[ev(w,GEN) for w in comp(p,g)]
-        d=defect(L,-1)
+        d=defect(L,1)
         V.append([(x-y)%P for x,y in zip(d,base)])
     return V
 V0=gauge_variation(IDENT)
@@ -209,3 +209,5 @@ print({
 # identity baseline trigger
 
 # corrected sign trigger
+
+# corrected defect definition trigger
