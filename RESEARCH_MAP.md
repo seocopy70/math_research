@@ -54,6 +54,26 @@ The existing rank-2 D4 lifting control is retained as a low-cost implementation 
 
 No rank-2 finite scan and no rank-4 scan is currently authorized by this gate.
 
+## 0C.1. BOUNDED-DEGREE FULL-χ OBSTRUCTION — 2026-09-19
+
+The stronger question has been split by information model.
+
+**Closed:** no universal carrier with fixed finite Zassenhaus-degree bound and finite 3-adic coefficient precision can recover the full (chi). For
+[
+G_{3^s}=langle x_imid x_1^{3^s}[x_1,x_2][x_3,x_4]angle
+]
+the q-power term first appears in degree (3^s), while
+[
+chi_{3^s}(x_2)=(1-3^s)^{-1}
+eq1=chi_infty(x_2).
+]
+Thus sufficiently large (s) defeats every fixed degree/precision bound.
+
+**Still open:** a bounded-filtration-degree carrier with exact (mathbf Z_3)-coefficients. Such an object is not finite-information because exact 3-adic coefficients contain infinitely many digits. For fixed q=3 it may recover the full character and requires a separate intrinsic/projective definition.
+
+Record:
+`research/ORIENTATION_BOUNDED_DEGREE_FINITE_INFORMATION_OBSTRUCTION_2026-09-19.md`
+
 ## 0C. ORIENTATION RECONSTRUCTION CURRENT GATE — 2026-09-19
 
 The finite-level factorization/inverse-limit theorem is now closed at the stated information level.
