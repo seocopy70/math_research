@@ -100,7 +100,7 @@ def gauge_variation(g):
     for s in SPECS:
         p=ia(coeff(s))
         L=[ev(w,GEN) for w in comp(p,g)]
-        d=defect(L,1)
+        d=defect(L,-1)
         V.append([(x-y)%P for x,y in zip(d,base)])
     return V
 V0=gauge_variation(IDENT)
@@ -147,7 +147,7 @@ def delta_q(g):
     di=vec(add(ev(RI,L),sc(BI,-1)),3)
     return [(x-y)%P for x,y in zip(d3,di)]
 
-print("IDENT_DEF",ev(R3,GEN)==B3,ev(RI,GEN)==BI,sum(defect([ev(w,GEN) for w in CASES["identity"][0]],1)))
+
 names=list(CASES)
 results=[]
 law1_fail=law2_fail=0
@@ -168,7 +168,7 @@ for a in names:
         e1=[(x-y)%P for x,y in zip(lhs,rhs1)]
         e2=[(x-y)%P for x,y in zip(lhs,rhs2)]
         law1_fail_raw += bool(any(e1)); law2_fail_raw += bool(any(e2))
-        if a=="identity" and b=="transvection": print("DBG5",sum(da),sum(db),sum(lhs),sum(rhs1),[(i,da[i],db[i],rhs1[i],lhs[i]) for i in range(64) if lhs[i]!=rhs1[i]][:10])
+
 
         law1_fail += not modzero(e1); law2_fail += not modzero(e2)
         if survives(lhs): nonzero_pairs += 1
