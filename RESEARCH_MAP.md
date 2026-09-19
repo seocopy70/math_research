@@ -1,3 +1,21 @@
+## AUTHORITATIVE UPDATE — 2026-09-19 — BOCKSTEIN–RELATION-JET IDENTIFICATION GATE CLOSED
+
+The load-bearing identification
+\[
+\beta\longleftrightarrow p(P_3)
+\]
+has been audited. A direct cochain/transgression calculation shows that the Bockstein of a mod-3 generator is obtained by lifting it to \(\mathbf Z/9\), evaluating the lift on the relator, and dividing the resulting obstruction by 3. Commutator terms contribute no exponent sum; the restricted-cubic power term \(X_i^{[3]}\) contributes exactly its coefficient. Thus the Bockstein vector is projectively the same power-direction vector \(p(P_3)\), with only the common transgression/fundamental-class sign/unit left as gauge.
+
+For q=3, \(P_3=X_1^{[3]}\), so \(p\sim X_1^{(1)}\). For q=∞, \(p=0\). Therefore the previously established projective recovery functional applies intrinsically and gives \(\chi\bmod9=(1,4,1,1)\) for q=3.
+
+Decision:
+- Bockstein–relation-jet projective identification: **PASS / CLOSED** under the standard one-relator transgression convention;
+- absolute sign/normalization of the H² generator: **CONDITIONAL / gauge-dependent**, irrelevant to the projective carrier;
+- intrinsic cup+Bockstein carrier → \(\chi\bmod9\): **PASS / CLOSED**;
+- no higher-digit conclusion and no broad scan.
+
+Record: research/BOCKSTEIN_RELATION_JET_IDENTIFICATION_AUDIT_2026-09-19.md
+
 ## AUTHORITATIVE UPDATE — 2026-09-19 — M3 LITERATURE COMPARISON BOUNDARY
 
 The intrinsic cup+Bockstein carrier has now been compared structurally with Pál–Quick's A_3/Hochschild canonical class.
