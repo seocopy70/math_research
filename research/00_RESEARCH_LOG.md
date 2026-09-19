@@ -398,3 +398,33 @@ Accordingly:
 - q=9 ideal construction, H-stability, and D9 remain downstream and blocked.
 
 Detailed record: research/Q3_Q9_S9_admissibility_preflight_2026-09-19.md
+
+
+## 2026-09-19 — S9-A ambient admissibility gate CLOSED
+
+The S9 prerequisite audit was converted into a formal ambient gate without performing any baseline ideal-membership test.
+
+Using the independently verified C-2a restricted-power calculation,
+[
+X_1^{[3]}=X_1^3,qquad (X_1^{[3]})^{[3]}=X_1^9,
+]
+the already-defined Magnus source
+[
+S_9=Delta_9(9)=X_1^9
+]
+is now admissible as the restricted ambient element (X_1^{[9]}).
+
+This closes **S9-A: ambient admissibility — PASS**.
+
+The distinction is frozen:
+- ambient identification (S_9=X_1^{[9]}): PASS;
+- quotient survival (S_9
+otin I_{infty,9}): still OPEN;
+- baseline (dim I_{infty,9}=13524): frozen;
+- no S9 term has been inserted into the baseline ideal.
+
+Next gate: **S9-B — quotient survival**, with the explicit membership question
+[
+S_9in I_{infty,9} ? 
+]
+to be tested only now that S9-A is closed.
