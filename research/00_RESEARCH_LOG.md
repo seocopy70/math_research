@@ -1224,3 +1224,14 @@ A second correction: the previously suggested formal substitution (x_1\mapsto x_
 The next authorized task is therefore narrower: determine the stabilizer-to-\(\operatorname{Aut}(G_q)\) kernel and its action on (R/[R,F]). If the action is trivial, D1 can be closed; if nontrivial, the lift-independent relator-unit route must be redesigned. No mod-9 scan or (K_3) scan is authorized before this decision.
 
 External background check: standard sources confirm the canonical orientation of Demuškin groups and the rank-2 presentation/orientation pattern, but they do not by themselves establish the required lift-independence of the proposed relator scalar. citeturn0search5
+
+
+## 2026-09-19 — Rank-2 relator-unit deeper structural correction
+
+The previously identified lift-independence issue is superseded by a deeper definition problem. The assumption (R/[R,F]\cong\mathbf Z_3) for the q=3 rank-2 Demushkin presentation is not valid as an automatic one-relator consequence. The five-term/Hopf sequence
+\[
+H_2(G,\mathbf Z_3)\to R/[R,F]\to F_{ab}\to G_{ab}\to0
+\]
+shows a rank-one abelianized-relation contribution for (G_{3,ab}\cong\mathbf Z_3\oplus\mathbf Z/3), while (H_2(G,\mathbf Z_3)\cong\mathbf Z_3) for the infinite Demushkin group. Hence the proposed scalar action on a single relator line is not intrinsically defined for q=3 without an additional canonical quotient/projection.
+
+The prior D1/D3 claims are therefore withdrawn. This is a definition-level obstruction, not a computational failure. No mod-9, IA, or lift scan is authorized. The next authorized task is to analyze possible canonical quotients of (R/[R,F]); if none survives the intrinsicity gate, the relator-unit digit route will be closed.
