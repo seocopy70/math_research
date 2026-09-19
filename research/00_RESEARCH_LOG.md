@@ -932,3 +932,12 @@ Consequence: no rank-4 q-comparison is authorized from this candidate. The failu
 
 Result: research/RANK4_D4_LIFT_INDEPENDENCE_AUDIT_RESULT_2026-09-19.md
 CI: run 35415237341 / job 105822474022 = SUCCESS.
+
+
+## 2026-09-19 — Rank-4 D4 post-failure IA/extension gate opened
+
+The rank-4 D4 lifting candidate was confirmed **FAIL / CLOSED** by the lift-independence audit: two lifts inducing the same identity on V produce different degree-3 admissibility, with the IA-modified lift outside the ordinary conjugation correction span. Therefore the linear-map observable cannot be made intrinsic by selecting a preferred lift.
+
+A new definition gate is opened: `plans/RANK4_D4_IA_EXTENSION_DATUM_GATE_2026-09-19.md`.
+
+The immediate authorized task is deliberately smaller than another rank-4 scan: define the degree-3 lift defect, compute its IA change law, and determine whether the dependence admits a canonical quotient/orbit/torsor/extension formulation that preserves q-sensitive restricted-power information. If every canonical quotient erases the signal, this D4 lifting route will be closed at this level.
