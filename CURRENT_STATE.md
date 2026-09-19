@@ -1,3 +1,31 @@
+## Latest bounded-degree obstruction — 2026-09-19
+
+The stronger branch was pushed without a scan.
+
+A new no-go result is recorded in
+`research/ORIENTATION_BOUNDED_DEGREE_FINITE_INFORMATION_OBSTRUCTION_2026-09-19.md`.
+
+For the family
+[
+G_{3^s}=langle x_imid x_1^{3^s}[x_1,x_2][x_3,x_4]angle
+]
+and (G_infty), the quadratic initial relation is identical, while
+[
+chi_{3^s}(x_2)=(1-3^s)^{-1}
+e1=chi_infty(x_2).
+]
+The power term (x_1^{3^s}) first appears in Zassenhaus degree (3^s). Hence every fixed degree bound (d) misses the q-dependent term for sufficiently large (s). If finite coefficient precision modulo (3^N) is also imposed, choosing (sge N) makes the same carrier indistinguishable modulo (3^N), while the full 3-adic characters remain different.
+
+Decision:
+**PASS / CLOSED:** no universal finite-information carrier with both bounded filtration degree and bounded 3-adic precision can recover the full (chi).
+
+Important loophole:
+a bounded-degree carrier with exact (mathbf Z_3)-coefficients has infinitely many 3-adic digits and is therefore not a finite-information carrier. For the fixed q=3 presentation, such an exact coefficient-level carrier may recover the full (chi); that separate intrinsic/projective formulation remains OPEN.
+
+This distinction now replaces the undifferentiated “finite bounded-degree jet” OPEN label.
+
+---
+
 # CURRENT STATE — 2026-09-19
 
 > **Authoritative update:** this header supersedes stale branch labels later in this file. Detailed chronology remains in `research/00_RESEARCH_LOG.md`; the consolidated midterm assessment is `MIDTERM_RESEARCH_ASSESSMENT_2026-09-19.md`.
