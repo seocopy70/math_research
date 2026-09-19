@@ -8,40 +8,33 @@ Last updated: 2026-09-19
 
 - 전체 지도: RESEARCH_MAP.md
 - 현재 작업: Q3/Q9 — C-2c-2, degree-9 restricted relation ideal definition audit
-- 상태: IN PROGRESS / DEFINITION GATE
-- 연구 원칙: 정의 → 검증 → 계산 → 해석
+- 상태: **IN PROGRESS / DEFINITION DRAFT — NOT YET PASS**
+- 연구 원칙: **정의 → 검증 → 계산 → 해석**
 - 지금은 D9, H-stability, q=9 검출 계산으로 넘어가지 않는다.
 
 ## 1. STABLE — 이미 닫힌 결과
 
 ### Q3/Q∞ baseline probe
 - Q3/Q∞-J: CLOSED.
-- 고정된 probe에서
-  - J(N(d3)) = 40
-  - J(N(d∞)) = 1
-  - |ker(H→GL(U))| = 2
-  - |H_U| = 25920
-  - |Stab_H(N(d3))| = 1296
-  - |Stab_HU(N(d3))| = 648
+- 고정된 probe에서 J(N(d3)) = 40, J(N(d∞)) = 1.
+- |ker(H→GL(U))| = 2, |H_U| = 25920.
+- |Stab_H(N(d3))| = 1296, |Stab_HU(N(d3))| = 648.
 - first-isomorphism / orbit-stabilizer checks PASS.
 - 해석 범위: 지정된 N/J probe가 q=3과 고정 q=∞ baseline을 구별한다는 것. canonical 3-adic orientation recovery는 주장하지 않는다.
 
 ### Q3/Q9 Gate A
 - degree-3 q=9 probe: PASS / CLOSED.
 - 독립 truncated-Magnus 검증에서 d9 = 0.
-- 따라서 기존 degree-3 N/J Gate B는 BLOCKED / NOT OPENED.
+- 기존 degree-3 N/J Gate B는 BLOCKED / NOT OPENED.
 - 다음은 degree-9에서 첫 비자명 q=9 source를 다루는 Gate C 계열이다.
 
 ### C-2a / C-2b / C-2c-1
 - C-2a restricted-power identification: PASS.
-  - X1^[3] ↔ X1^3 in the enveloping/tensor realization.
-  - (X1^[3])^[3] = X1^9.
-  - 이것은 restricted-power identification preflight일 뿐, D9/H-stability/NJ를 뜻하지 않는다.
 - C-2b implementation/action audit: PASS.
 - C-2c-1 restricted ambient certificate: PASS.
   - dim L9 = 29120.
   - dim L3 = 20, dim L1 = 4.
-  - 프로젝트 convention에서 dim L9^res = 29120 + 20 + 4 = 29144.
+  - dim L9^res = 29144 under the project's established F3 convention.
   - gr9(G)와 R9는 아직 미정.
 
 ## 2. C-2c-0에서 고정된 정의
@@ -61,51 +54,32 @@ Last updated: 2026-09-19
 - A9, L9, L9^res, gr9(G)는 서로 다른 층위다.
 - 아직 D9를 정의하지 않았다.
 
-## 3. C-2c-2의 핵심 문제
+## 3. C-2c-2에서 새로 정리된 정의 후보
 
-degree-9 restricted relation ideal R9를 먼저 정의해야 한다.
+- q=∞ baseline과 q=9를 하나의 R9로 뭉개지 않는다.
+- I_∞ := smallest graded restricted ideal containing R2 = [X1,X2]+[X3,X4].
+- I_∞,9 := degree-9 piece of I_∞.
+- q=9 source S9는 아직 associative Magnus word로만 확정.
+- S9를 restricted ambient의 원소로 별도 인정할 수 있을 때에만 조건부로 I_9 := <R2, s9^res>_res를 정의하고 I_9,9를 취한다.
+- 이것은 **definition draft**이며 아직 gate PASS가 아니다.
 
-현재 repo에는 degree-9 restricted ideal의 완결된 정의가 아직 없다. 따라서 다음을 먼저 확정한다.
+### Restricted closure candidate
+graded closure에서 degree n piece는 bracket closure와 p-map closure를 모두 포함해야 한다.
+- bracket: [L_i^res, I_{n-i}]
+- p-map: (I_{n/3})^[3] when 3 divides n
+- 모든 항은 exact F3 span에서 중복성을 확인한다.
+- 특히 R9를 ordinary relation layer 하나나 [Lk,R2] shortcut으로 정의하지 않는다.
 
-1. 기존 relation recursion의 정확한 의미 확인.
-2. ordinary Lie ideal layer와 restricted ideal closure를 분리.
-3. free restricted Lie ambient L9^res 안에서의 smallest restricted ideal의 degree-9 piece를 정의.
-4. 그 정의를 basis/rank certificate로 검증.
-5. 그 다음에만 H-stability를 검토.
-6. 그 다음에만 D9 후보를 검토.
-
-### 반드시 계승할 relation recursion
-repo의 역사적 오류 및 재검증으로 다음은 LOCKED:
+### 기존 relation recursion은 LOCKED
 - (R)_3 = [L1,(R)_2]
 - (R)_4 = [L1,(R)_3]
 - (R)_5 = [L1,(R)_4]
+- old [L2,R] full-R4 construction은 폐기.
+- old dim [L2,R] = 5.
+- corrected dim (R)_4 = 15.
+- corrected dim (R)_5 = 60.
 
-과거의 [L2,R]을 full (R)_4로 사용한 계산은 잘못되었고 폐기됨.
-- old dim [L2,R] = 5
-- corrected dim (R)_4 = 15
-- corrected dim (R)_5 = 60
-
-따라서 degree 9에서도 shortcut으로 [Lk,R] 하나만 잡아 R9라고 하지 않는다.
-
-## 4. Restricted ideal 정의에서 주의할 점
-
-char = 3.
-
-restricted ideal은 ordinary bracket closure만이 아니라 restricted p-map closure도 포함해야 한다.
-
-따라서 degree 9에는 적어도 다음 종류의 기여 가능성을 열어 두고 정의부터 검토한다.
-- ordinary recursive bracket closure;
-- degree-3 relation piece의 [3] closure;
-- degree-6에 생긴 restricted closure를 bracket으로 degree 9까지 올리는 경로;
-- 그 밖의 restricted-ideal closure에서 생기는 degree-9 항.
-
-특히 “R9 = ordinary (R)_9 + (R_3)^[3]” 같은 단순식을 아직 가정하지 않는다. 중복성/포함관계는 계산 또는 대수적 증명으로 확인한다.
-
-가장 안전한 정의 후보는 homogeneous free restricted Lie algebra에서 initial relation을 포함하고 bracket 및 p-map에 대해 닫힌 최소 graded restricted ideal의 degree-9 piece다. 단, repo의 relation convention과 정확히 접합되는지 확인 후 채택한다.
-
-## 5. 현재 금지된 해석
-
-다음은 아직 주장하지 않는다.
+## 4. 현재 금지된 해석
 
 - S9가 gr9(G)에서 nonzero라고 주장하지 않음.
 - S9 = X1^[9]를 자동 동일시하지 않음.
@@ -116,44 +90,47 @@ restricted ideal은 ordinary bracket closure만이 아니라 restricted p-map cl
 - q=9가 특정 invariant로 검출된다고 예상 결과를 넣지 않음.
 - orientation recovery/canonicity를 주장하지 않음.
 
-## 6. 다음 실제 작업
+## 5. 다음 실제 작업
 
-다음 한 단계: 기존 relation recursion과 restricted-power convention을 바탕으로, degree-9에서의 smallest restricted relation ideal 정의를 수학적으로 고정한다.
+**다음 한 단계:** exact F3 restricted-closure audit를 구현하기 전에, 위 definition draft의 closure recursion이 repo의 기존 ordinary relation recursion과 정확히 접합되는지 검증한다.
 
-검증 순서:
-1. repo convention 확인 완료 — 03_CONVENTIONS_AND_IMPLEMENTATION.md 및 relation audit 확인.
-2. ordinary recursive relation layers와 restricted closure의 관계를 명시.
-3. R9의 canonical recursive definition 작성.
-4. 필요한 lower-degree pieces를 계산/검증.
-5. degree-9 rank/basis certificate.
-6. definition gate PASS 여부 판정.
-7. 이후에만 H-stability.
+그 다음:
+1. lower-degree ordinary relation layers 재현;
+2. p-closure가 처음 나타나는 degree 6 확인;
+3. degree 9까지 모든 bracket/p-power 경로를 생성;
+4. exact rank/basis certificate;
+5. C-2c-2 definition gate 판정;
+6. 그 후에만 H-stability;
+7. 그 후에만 D9 후보 검토.
 
-## 7. 핵심 참조 문서
+## 6. 핵심 참조 문서
 
 - RESEARCH_MAP.md — 전체 연구 지도.
-- research/Q3_Q9_PROTOCOL_2026-09-18.md — Q3/Q9 전체 protocol.
-- research/Q3_Q9_C2c0_definition_gate_2026-09-19.md — C-2c-0 고정 정의.
-- research/Q3_Q9_C2c1_restricted_ambient_dimension_certificate_2026-09-19.md — L9^res = 29144 certificate.
-- research/03_CONVENTIONS_AND_IMPLEMENTATION.md — authoritative conventions.
-- research/RELATION_RECURSION_AUDIT_2026-09-16.py — corrected recursive relation audit.
-- research/RELATION_LAYER_ERROR_AND_REVALIDATION_2026-09-16.md — [L2,R] 오류 및 R3/R4/R5 재검증 기록.
-- research/Q3_Q9_GATE_C2a_restricted_power_2026-09-19.py — restricted-power identification preflight.
+- research/Q3_Q9_PROTOCOL_2026-09-18.md
+- research/Q3_Q9_C2c0_definition_gate_2026-09-19.md
+- research/Q3_Q9_C2c1_restricted_ambient_dimension_certificate_2026-09-19.md
+- research/Q3_Q9_C2c2_restricted_relation_ideal_definition_draft_2026-09-19.md
+- research/03_CONVENTIONS_AND_IMPLEMENTATION.md
+- research/RELATION_RECURSION_AUDIT_2026-09-16.py
+- research/RELATION_LAYER_ERROR_AND_REVALIDATION_2026-09-16.md
+- research/Q3_Q9_GATE_C2a_restricted_power_2026-09-19.py
 
-## 8. 새 창 복구 규칙
+## 7. 새 창 복구 규칙
 
-새 창에서는 이 파일을 먼저 읽고:
+새 창에서는 이 파일을 먼저 읽는다.
 
-STABLE은 재검토하지 말고 계승 → LIVE/현재 Gate만 이어서 작업 → 필요한 상세 문서만 추가 확인.
+**STABLE은 계승 → 현재 Gate/LIVE만 이어서 작업 → 필요한 상세 문서만 확인.**
 
-이 파일에 없는 세부 계산은 임의로 기억해서 복원하지 말고, 해당 참조 문서를 확인한다.
+이 파일에 없는 세부 계산은 추측으로 복원하지 않고 해당 상세 문서를 확인한다.
 
 ---
 
 ## LIVE
 
-현재 LIVE 질문은 하나다:
+현재 LIVE 질문:
 
-> C-2c-2: free restricted Lie degree-9 ambient 안에서 q=∞/finite-q relation으로부터 생성되는 degree-9 restricted ideal R9를 정확히 어떻게 정의할 것인가?
+> C-2c-2: free restricted Lie degree-9 ambient 안에서 q=∞/finite-q relation으로부터 생성되는 degree-9 restricted ideal을 정확히 어떻게 정의할 것인가?
 
-현재 답: 아직 정의 gate 미통과.
+현재 답:
+
+> **정의 후보는 문서화했지만 아직 PASS하지 않았다.**
