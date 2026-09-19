@@ -115,7 +115,36 @@ graded closure에서 degree n piece는 bracket closure와 p-map closure를 모�
 - research/RELATION_LAYER_ERROR_AND_REVALIDATION_2026-09-16.md
 - research/Q3_Q9_GATE_C2a_restricted_power_2026-09-19.py
 
-## 7. 새 창 복구 규칙
+## 7. 기록 구조 / 중복 방지 규칙
+
+현재 저장소에는 이미 **역사 기록 문서가 존재한다**: `research/00_RESEARCH_LOG.md`.
+따라서 별도의 `RESEARCH_LOG.md`를 새로 만들지 않는다.
+
+### 역할 분리
+
+- `RESEARCH_MAP.md` — 전체 연구 지도와 현재의 큰 수학적 상태. 현재 상태의 최상위 지도.
+- `research/CURRENT_STATE.md` — **새 창에서 즉시 재개하기 위한 live state**. 현재 Gate, 확정 입력, 금지된 해석, 바로 다음 작업만 유지한다.
+- `research/00_RESEARCH_LOG.md` — **연구의 시간적 역사**. 중요한 결정, 방향 전환, 정의 변경, 폐기된 가설, 주요 오류/수정만 누적한다. 이미 존재하므로 중복 로그를 만들지 않는다.
+- 개별 `research/*_RESULT_*.md`, 정의/계산 문서 — **수학적 증거와 세부 과정의 정본**. 계산·유도 자체를 다른 문서에 복사하지 않는다.
+- `ANTIPATTERNS.md` — **재발 방지용 실패 패턴**. 단순 실패 이력을 중복 기록하지 않고, 다시 발생하면 안 되는 일반 규칙만 둔다.
+
+### 기록 최소화 원칙
+
+모든 작업을 기록하지 않는다.
+
+다음 중 하나일 때만 `CURRENT_STATE` 또는 `00_RESEARCH_LOG`를 갱신한다.
+
+1. Gate의 PASS / FAIL / BLOCK 상태가 바뀜.
+2. 정의·가정·해석 범위가 확정 또는 변경됨.
+3. 중요한 가설을 폐기하거나 연구 방향을 바꿈.
+4. 오류가 발견되어 이후 계산의 기준이 바뀜.
+5. 다음 단계가 바뀔 정도의 중요한 결과가 나옴.
+
+그 밖의 실행 로그, 사소한 코드 수정, 중간 숫자는 해당 상세 문서/Actions artifact에만 남긴다.
+
+**원칙: 한 사실은 한 정본에만 상세히 기록하고, 다른 문서는 필요한 경우 한 줄 요약과 참조만 둔다.**
+
+## 8. 새 창 복구 규칙
 
 새 창에서는 이 파일을 먼저 읽는다.
 
