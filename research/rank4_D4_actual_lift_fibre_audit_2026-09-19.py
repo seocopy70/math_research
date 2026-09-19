@@ -106,3 +106,5 @@ for n in ("minus_I","transvection"):
 print(json.dumps({"status":"PASS_GRADED_FIBRE_LOCAL",
 "interpretation":"Actual left/right first-layer IA perturbations of a fixed linear lift were tested as genuine lift fibres. Their associated-graded parameter law agrees through degree 2; degree-3 composition discrepancy is absorbed by C3. The q=3 and q=infinity defect-change maps agree, have rank 20, and the q-sensitive base defect survives the C3+IA quotient for the nontrivial tested representatives.",
 "scope":"identity, -I, one transvection; first IA layer; exact F3; Magnus degree <=3","cases":out},indent=2))
+
+# trigger CI after workflow registration
