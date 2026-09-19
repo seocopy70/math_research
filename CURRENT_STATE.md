@@ -234,3 +234,9 @@ No finite scan is authorized or needed.
 
 Frozen (g) is on the generator/(H_1) side. Hence the induced (H^1) action is (g^{-T}), and the induced (H^2) scalar is (
 u(g)^{-1}). For (p=3), (mathbf F_3^	imes={pm1}), so inversion is identical: (mu_{H^2}=mu_{m int}) as (mathbf F_3^	imes)-valued characters, although conceptually the cohomological action is inverse. This does **not** identify (mu) with the full orientation (chi:G	omathbf Z_3^	imes); (chimod3) is trivial. The MU-CHI bridge is therefore conceptually resolved: (mu) is a canonical automorphism-of-duality-line shadow, not the orientation character. No finite scan is authorized. Next work should target filtered/graded data retaining the (1+3mathbf Z_3) orientation layer.
+
+## 2026-09-19 — Orientation mod-9 recovery gate OPEN
+
+The MU-CHI branch is now conceptually closed: mu is the canonical F3^times character on the torsion/top-duality line, while chi is the Z3^times-valued group orientation. They are not the same object and mu carries no higher 3-adic information.
+
+Next target is the first nontrivial orientation layer chi mod 9. A new gate requires a canonical mod-9 cohomological/Bockstein/first-lift construction and explicitly forbids reuse of the failed lift-dependent relator-unit scalar. No finite scan is authorized until the mod-9 object is hand-defined and its ambiguity is proved harmless.
