@@ -381,3 +381,26 @@ The Q3/Q9 S9 orbit branch is closed, but the following research directions remai
 - the newly validated rank-2 lifting control followed by a separately gated rank-4 lifting experiment.
 
 The rank-2 result is a **control validation**, not a proof of the rank-4 claim.
+
+
+## 16. CURRENT LIVE GATE — IA / filtered extension datum
+
+The rank-4 D4 linear-map lifting candidate is **FAIL / CLOSED** and is not to be revived by selecting a preferred lift.
+
+A new definition gate is opened:
+`plans/RANK4_D4_IA_EXTENSION_DATUM_GATE_2026-09-19.md`
+
+The next authorized object is the degree-3 defect carried by the lift fibre over a fixed linear action, modulo only the already verified ordinary conjugation correction space. The purpose is to determine whether the IA/lift dependence can be organized canonically as a quotient, orbit/torsor, or extension datum without destroying the q-sensitive restricted-power signal.
+
+### Immediate next step
+
+Perform only a small IA defect-action audit:
+1. identify the exact degree-3 defect target;
+2. compute the degree-1 IA action on that target;
+3. verify the lift-fibre torsor/change law;
+4. test canonical quotient/orbit/extension candidates;
+5. check whether q=3 information survives.
+
+No rank-4 representative scan or new q-comparison is authorized before this gate closes.
+
+Frozen boundaries: no hand-picked Nielsen lift as an intrinsic invariant; no reuse of the failed condition g e1 = mu(g)e1; no degree-3 N/J reuse; no q=9 H-closure rescue.
