@@ -196,3 +196,22 @@ Script: `research/rank4_D4_ia_equivariance_audit_2026-09-19.py`
 ### Next authorized step
 
 Audit the graded lift-fibre composition/change law and whether the q-sensitive defect descends independently of a chosen base lift. No full rank-4 scan is authorized yet.
+
+
+## 12. Graded lift-fibre audit — local PASS
+
+The first-layer composition/change-law audit was strengthened to operate on actual lift fibres rather than only on a fixed Magnus target. Both natural parameterizations
+\[
+L_c=\phi_c\circ g,\qquad L_c=g\circ\phi_c
+\]
+were tested for identity, -I, and one standard transvection. Exact F3/Magnus degree-3 computation gave 20-dimensional IA defect variation, q=3/q=∞ variation equality, and zero composition failures modulo C3 across all 276 IA pairs.
+
+CI: 35416053303.
+
+## 13. Graded basepoint-independence audit — local PASS
+
+For every tested representative and both left/right parameterizations, all 24 first-layer IA basepoints were crossed with all 24 perturbation directions. Thus 576 actual fibre comparisons were made per side per representative. Every comparison had zero raw and zero C3-modulo basepoint dependence; the reference variation rank remained 20 and the q=3/q=∞ change laws agreed.
+
+CI: 35416084903.
+
+These results close the first-layer basepoint/change-law questions **locally**. They do not yet establish the full IA torsor/extension datum, coordinate-free canonicity, or coverage of arbitrary GSp_4 representatives. The main definition gate remains OPEN.
