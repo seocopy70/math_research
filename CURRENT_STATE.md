@@ -545,3 +545,12 @@ A no-scan structural audit sharpened the relation-module candidate. For a minima
 The remaining E1 problem is therefore sharply separated: internal relator-conjugation gauge is handled, but change of minimal free cover and the induced degree-(2,3) jet remain unproved. See research/ORIENTATION_MOD9_E1_RELATION_MODULE_LEMMA_2026-09-19.md.
 
 Status: E1-local conjugation gauge PASS; R/[F,R] fixed-cover container PASS / structurally justified; degree-(2,3) jet extraction OPEN; change of minimal free cover OPEN; E1 full intrinsicness OPEN. No finite scan authorized.
+
+
+## 2026-09-19 — E1 cover-change audit
+
+The change-of-cover problem was reduced to free isomorphisms/lifts lying over id_G. The explicit stabilizing lift from the earlier rank-2 analysis shows that full relation-module cover-independence is false: the relation generator can be multiplied by 4 mod 9. Therefore R/[F,R] must not be declared an intrinsic generator-level object.
+
+The relevant weaker target is projective-jet invariance. Conditional on the standard cyclic one-relator relation-module structure and a residual degree-(2,3) gauge lemma, a cover change would act by (R,P) -> (uR,uP+[v,R]); then Theta scales by u and its zero set is unchanged. This residual-gauge lemma is not yet proved.
+
+Status: full relation-module cover-independence FAIL; projective-jet cover-independence OPEN; Theta invariance under common scaling/conjugation gauge PASS. No finite scan authorized. Detailed audit: research/ORIENTATION_MOD9_E1_COVER_CHANGE_AUDIT_2026-09-19.md.
