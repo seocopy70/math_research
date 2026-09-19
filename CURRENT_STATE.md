@@ -1,3 +1,31 @@
+## Latest exact-Z_3 bounded-degree result — 2026-09-19
+
+The fixed-q=3 branch has reached its natural endpoint.
+
+A single projective degree-(2,3) exact filtered relation jet over Z_3 determines the full orientation for the frozen q=3 normal form:
+[
+mathbb J^{ex}_3 Longrightarrow ho(x_1)=ho(x_3)=ho(x_4)=1,quad 1+2ho(x_2)=0,
+]
+hence
+[
+chi(x_2)=-1/2=(1-3)^{-1}inmathbf Z_3^	imes.
+]
+
+The presentation-change calculation has the same residual gauge
+[
+(R,P)mapsto(uR,uP+[v,R])
+]
+at degree <=3, and degree-one functionals annihilate [v,R], so the recovery zero set is unchanged. This closes the fixed-q=3 exact-carrier branch at the same conditional standard minimal one-relator pro-3 facts used by the mod-9 E1-E5 audit.
+
+This does NOT contradict the universal bounded-degree obstruction: that obstruction varies q=3^s, and for every fixed degree d one can choose 3^s>d. The exact q=3 carrier is therefore a fixed-group exact-filtered result, not a universal finite-information carrier.
+
+Record: research/ORIENTATION_EXACT_PROJECTIVE_DEGREE3_FULL_CHI_CLOSURE_2026-09-19.md
+
+Decision:
+- fixed q=3 exact projective bounded-degree carrier -> full chi: PASS / CLOSED
+- universal finite-information bounded-degree carrier -> full chi: FAIL / CLOSED
+- bare F_3 graded carrier -> full chi: FAIL / CLOSED
+
 ## Latest bounded-degree obstruction — 2026-09-19
 
 The stronger branch was pushed without a scan.
