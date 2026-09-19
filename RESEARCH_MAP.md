@@ -1,3 +1,40 @@
+## AUTHORITATIVE UPDATE — 2026-09-19 — TWISTED DEGREE-(2,3) LIFTING-OBSTRUCTION THEOREM CLOSED
+
+The previously open twisted degree-(2,3) structural bridge is now closed at the first mod-9 level.
+
+A proof-level calculation establishes:
+[
+delta_ho(f)=igl[f(p(P))+(lambdawedge f)(R)igr]omega
+]
+for a minimal one-relator pro-3 presentation with relation jet (r=(R,P)+O(D_4)), where (ho=1+3lambdapmod9).
+
+The proof has four load-bearing parts:
+1. the coefficient exact sequence (0	o3A_2	o A_2	o A_1	o0) identifies the cohomological lifting obstruction;
+2. the exact crossed-word formula modulo 9 shows the twisted deformation term sees only degree 2;
+3. the Zassenhaus formula (D_4=prod_{3^jige4}gamma_i^{3^j}) shows the divided trivial-action term is unchanged modulo 3 by a (D_4)-error;
+4. the degree-one evaluation kills the bracket component of (P), leaving only (p(P)in V^{(1)}).
+
+Presentation/gauge naturality is then obtained intrinsically from the connecting maps (delta_ho): the family in ((lambda,f)) is presentation-independent, and the map ((R,p)mapsto[f(p)+(lambdawedge f)(R)]) is injective. Thus the projective carrier ([(R,p)]) is forced by the intrinsic first twisted obstruction family, without selecting a preferred IA lift.
+
+For the frozen relation (x_1^3[x_1,x_2][x_3,x_4]), this gives uniquely
+[
+chimod9=(1,4,1,1).
+]
+
+Decision:
+- twisted cohomological obstruction: **PASS / CLOSED**;
+- degree-(2,3) truncation: **PASS / CLOSED**;
+- bracket-part elimination (Pmapsto p(P)): **PASS / CLOSED**;
+- projective presentation/gauge naturality at mod-9 level: **PASS / CLOSED**;
+- recovery (chimod9): **PASS / CLOSED**;
+- bare graded (Rightarrow) carrier: **OPEN**;
+- higher 3-adic digits: **OPEN / separate program**.
+
+Detailed proof:
+`research/TWISTED_DEGREE3_LIFTING_OBSTRUCTION_THEOREM_2026-09-19.md`.
+
+No broad scan is authorized.
+
 ## AUTHORITATIVE UPDATE — 2026-09-19 — BOCKSTEIN–RELATION-JET IDENTIFICATION GATE CLOSED
 
 A critical audit tightened the load-bearing identification
