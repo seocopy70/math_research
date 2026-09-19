@@ -1342,3 +1342,15 @@ Thus the remaining exact issue is only the convention check (whether the reposit
 
 Frozen (g) is on the generator/(H_1) side. Hence the induced (H^1) action is (g^{-T}), and the induced (H^2) scalar is (
 u(g)^{-1}). For (p=3), (mathbf F_3^	imes={pm1}), so inversion is identical: (mu_{H^2}=mu_{m int}) as (mathbf F_3^	imes)-valued characters, although conceptually the cohomological action is inverse. This does **not** identify (mu) with the full orientation (chi:G	omathbf Z_3^	imes); (chimod3) is trivial. The MU-CHI bridge is therefore conceptually resolved: (mu) is a canonical automorphism-of-duality-line shadow, not the orientation character. No finite scan is authorized. Next work should target filtered/graded data retaining the (1+3mathbf Z_3) orientation layer.
+
+## 2026-09-19 — MU-CHI bridge fully narrowed; orientation mod-9 gate opened
+
+The dualizing-module convention audit is closed. The frozen degree-one matrix is on the H1/generator side, so the induced H1 cohomological action is g^{-T} and the induced top-cohomology scalar is nu^{-1}. For p=3, inversion is trivial in F3^times, hence the top-duality character equals mu_int as an F3^times-valued character, although conceptually it arises by contravariant inversion.
+
+This does not recover the full orientation: chi:G -> Z3^times, with chi mod 3 = 1. The mu branch is therefore closed as an orientation-recovery route: mu is a canonical automorphism/top-duality shadow, not the 3-adic orientation itself.
+
+A new ORIENTATION_MOD9_RECOVERY_GATE is opened. The target is the first nontrivial layer chi mod 9, with chi(x2) congruent to 4 mod 9, using a canonical mod-9 cohomological/Bockstein or first-lift object rather than the failed lift-dependent relator-unit scalar.
+
+Literature confirms that Demushkin groups have canonical orientation from the dualizing module, and that higher-modulus cup-product data for standard one-relator presentations is controlled by defining-relation coefficients. A PD2 criterion also characterizes orientation via twisted top cohomology across p^m-levels.
+
+No finite scan is authorized. Next hand task: derive the mod-9 cup/Bockstein structure of the frozen q=3 presentation and determine whether its first 3-adic coefficient canonically determines chi mod 9.
