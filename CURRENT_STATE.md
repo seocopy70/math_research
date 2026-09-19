@@ -1,3 +1,52 @@
+## AUTHORITATIVE UPDATE — 2026-09-20 — CRITICAL CORRECTION: MIXED m-ADIC GATE + ZASSENHAUSZ THRESHOLD
+
+A review correction was audited and accepted.
+
+First, the previously discussed Zassenhaus threshold argument did **not** identify (G/D_N(G)) with its abelianization. The precise statement is
+[
+(G/D_N(G))^{ab}=G/(D_NG').
+]
+For (G_{3^s}) and (N=3^s+1), the Jennings formula gives
+[
+(G_{3^s}/D_N)^{ab}cong mathbf Z/3^s	imes(mathbf Z/3^{s+1})^3,
+]
+while the power-free control has
+[
+(G_infty/D_N)^{ab}cong(mathbf Z/3^{s+1})^4.
+]
+For (Nle3^s), (x_1^{3^s}in D_N(F)), so the defining relation becomes (c=[x_1,x_2][x_3,x_4]=1) modulo (D_N(F)), giving
+[
+G_{3^s}/D_Ncong G_infty/D_N.
+]
+Thus the threshold (D_{3^{n-1}+1}) versus (D_{3^{n-1}}) is a valid **PASS / LOCAL** information boundary for (chimod3^n) within the standard Demushkin family, with the classification/orientation formula explicitly identified as an external dependence. It is not a universal pointed naturality theorem.
+
+Second, HARD ATTACK 10 is confirmed to close only the ordinary presentation-independent local degree-(le3) Fox truncation. It does not close a mixed
+[
+mathfrak m=(3,I)
+]
+finite carrier. The candidate
+[
+J_n^{mix}=I_{mathrm{Fox}}+mathfrak m^n
+]
+is therefore **OPEN / reauthorized for definitional attack only**.
+
+The existence and non-tautology gates are separated: Fox-derived finite constructions are not excluded at the existence stage; genuine compression/independence is tested only after intrinsicity and the orientation bridge are established.
+
+The load-bearing new issue is relator-gauge naturality. For (r'=grg^{-1}), the Fox derivative acquires the additional term
+[
+g,partial r+(1-grg^{-1})partial g.
+]
+The mixed carrier definition must therefore specify the relation/augmentation ideal precisely before naturality can be claimed.
+
+Decision:
+- corrected Zassenhaus threshold: **PASS / LOCAL**;
+- ordinary degree-3 Fox truncation no-go: **PASS / CLOSED**;
+- mixed m-adic finite carrier: **OPEN / REAUTHORIZED FOR DEFINITIONAL ATTACK ONLY**;
+- mixed-carrier relator-gauge naturality: **OPEN / LOAD-BEARING**;
+- no numerical mixed-jet scan until definition + gauge naturality are passed.
+
+Record: `research/CRITICAL_CORRECTION_MIXED_MADIC_AND_ZASSENHAUSZ_THRESHOLD_2026-09-20.md`
+
 ## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 17: BOCKSTEIN NON-TAUTOLOGY
 
 The apparent mod-27 orientation bridge was attacked more strongly. The coefficient-extension carrier \(\mathcal B_{27}\) separates the standard family exactly by the q 3-adic valuation class, while the proposed logarithmic orientation digit has the corresponding values as a known function of q. Therefore the present evidence is compatible with forbidden classification repackaging: \(\mathcal B_{27}\to v_3(q)\text{-class}\to q\text{-class}\to\chi\).
