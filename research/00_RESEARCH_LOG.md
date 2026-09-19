@@ -1617,3 +1617,10 @@ No finite scan is authorized.
 Critical review found that the naive projective relation jet was not yet presentation-independent: conjugating a defining relator changes P by an ordinary bracket [V,R]. This is an additional gauge beyond common scaling. The key positive check is that Theta is invariant under this gauge because f([V,R])=0 for f in V*. Therefore the recovery mechanism survives conjugation, but full intrinsicness remains unproved.
 
 Correct status: E1-local gauge compatibility PASS; E1-full intrinsic definition OPEN. The next task is canonical relation-module identification; [V,R] is necessary gauge quotient, not yet claimed complete. No finite scan authorized.
+
+
+## 2026-09-19 — E1 relation-module candidate
+
+After the local gauge PASS, the structurally natural next container is R/[F,R] for a minimal free presentation. This quotient kills relator conjugation before taking the degree-(2,3) jet. However it is still presentation-relative; the jet map and change-of-free-presentation invariance remain open.
+
+Decision: E1 full intrinsicness remains OPEN. No finite scan authorized.
