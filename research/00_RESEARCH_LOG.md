@@ -1034,3 +1034,30 @@ Decision: graded-to-fibre extension sub-gate = PASS / LOCAL.
 This materially strengthens the candidate datum: it is a quotient class, not a preferred-lift convention, and the higher-IA loophole is closed at degree 3. It does not yet prove full GSp covariance of the defect class, so the main IA/filtered-extension definition gate remains OPEN and no full rank-4 q-comparison is authorized.
 
 Commit carrying audit + CI trigger: af0ab6818fbb905a558a7bb37f5a7552480a467b.
+
+
+## 2026-09-19 — admissible-category covariance CI closure and small representative control
+
+The rank-4 D4 IA/filtered-extension route advanced through two controlled computations.
+
+### Admissible-category covariance — PASS / CI VERIFIED
+
+CI run `35416804953`, commit `c620ce5a962031cfff90d49aa8500ea39cc16dc1`.
+
+The exact admissible category has 1296 elements. Across the full category, C3, Delta_IA, and G3=C3+Delta_IA are invariant with ranks 4, 20, and 20. The induced candidate quotient therefore has dimension 44. The restricted source X1^[3] transforms by the GSp multiplier, and the -I q=3/q=infinity defect is X1^3 and remains nonzero.
+
+This closes the repository-CI verification of the local covariance audit. It does not prove arbitrary free-group coordinate naturality.
+
+### Small rank-4 representative audit — PASS / LOCAL
+
+CI run `35416952791`, commit `12805fe1a2486a4ba234b2607bf197468cd48a7a`.
+
+Representatives: identity, -I, the line-fixing transvection e1 -> e1+e2, and diag(2,1,2,1). Both fibre parameterizations L_c=phi_c o g and L_c=g o phi_c were tested.
+
+For every representative and both sides: IA variation rank 20; q=3/q=infinity change laws agree exactly; all 276 first-layer composition pairs have zero failure modulo C3; gauge rank 20; Q3 dimension 44. Every non-identity tested representative has a q-sensitive defect that survives Q3.
+
+The result is a local filtered quotient datum control, not a full rank-4 theorem or arbitrary-coordinate canonicity result.
+
+### Consequence / next gate
+
+The next authorized computation is to define and audit the quotient-valued defect transformation/composition law on the admissible category, with the GSp multiplier convention explicit. No full rank-4 representative scan is authorized before that law is established.
