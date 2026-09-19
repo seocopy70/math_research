@@ -815,58 +815,40 @@ otin I_{infty,9}}.
 Only after S9-B is resolved may (S_9) be used in any (q=9) ideal construction. H-stability and (D_9) remain blocked.
 
 
-## 6K. S9-B — quotient survival: NOT YET CLOSED
+## 6K. S9-B — quotient survival: PASS / CLOSED
 
 Record: `research/Q3_Q9_S9_B_QUOTIENT_SURVIVAL_RESULT_2026-09-19.md`.
 
-The previous S9-B PASS was one logical step too strong and is retracted.
+The previous S9-B PASS was retracted during audit, and has now been legitimately restored after the missing structural lemma was independently verified.
 
-The frozen C-2c-2 certificate gives
+Record: `research/Q3_Q9_S9_B_STRUCTURAL_LEMMA_RESULT_2026-09-19.md`.
+
+The structural restricted-ideal recursion gives
 [
-\dim I_{\infty,9}=13524,qquad \dim I^{\mathrm{ord}}_9=13520,
+(I_infty)_9=(I^{ord})_9oplus I_3^{[3]},
 ]
-with restricted increment (+4), matching
+because all bracket descendants are in the ordinary ideal, the only degree-9 p-power source is degree 3, and ((I_infty)_1=0) eliminates any (L_1^{[9]}) source. Hence
 [
-\dim I_3^{[3]}=4.
-]
-It also gives the direct restricted ambient layers
-[
-L_9\oplus L_3^{[3]}\oplus L_1^{[9]}.
+(I_infty)_9cap L_1^{[9]}=0.
 ]
 
-However, the dimension/path certificate does **not yet explicitly prove** the required subspace identity
+Together with S9-A,
 [
-(I_{\infty})_9\cap(L_3^{[3]}\oplus L_1^{[9]})
-=
-I_3^{[3]}\oplus0.
+S_9=X_1^{[9]}in L_1^{[9]},quad S_9
+e0,
 ]
-In particular, equal dimensions do not by themselves identify the subspaces.
-
-### Required structural lemma
-
-Before using S9 in ideal membership, explicitly verify
+this proves
 [
-\boxed{
-(I_{\infty})_9=(I^{\mathrm{ord}})_9\oplus I_3^{[3]}
-}
+oxed{S_9
+otin I_{infty,9}}.
 ]
-inside the frozen restricted-layer convention, equivalently
-[
-\boxed{(I_{\infty})_9\cap L_1^{[9]}=0.}
-]
-
-The proof must use the restricted-ideal generation/closure structure: track the degree-9 p-power sources and explicitly account for bracket descendants. It must not infer subspace equality from the +4 dimension count.
-
-Only after this lemma is closed may
-[
-S_9=X_1^{[9]}\notin I_{\infty,9}
-]
-be promoted to PASS.
 
 ### Current consequence
 
 - S9-A ambient admissibility: **PASS / CLOSED**.
-- S9-B quotient survival: **OPEN**.
-- Baseline (dim I_{\infty,9}=13524): **FROZEN**.
-- S9 remains excluded from the baseline and from any q=9 ideal construction.
+- S9-B quotient survival: **PASS / CLOSED**.
+- Baseline (dim I_{infty,9}=13524): **FROZEN**.
+- S9 is excluded from the baseline.
+- The next authorized step is the separate q=9 relation-space construction (I_9=langle R_2,S_9angle_{res}).
+- H-stability and (D_9) remain downstream gates.
 
