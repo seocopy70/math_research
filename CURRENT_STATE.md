@@ -1,3 +1,10 @@
+
+
+## 2026-09-20 — FIRST-STAGE LOWER 3-CENTRAL INFORMATION BOUNDARY
+
+The first-stage theorem draft is recorded in research/LOWER_3_CENTRAL_INFORMATION_BOUNDARY_2026-09-20.md. For the standard family G_{3^s} versus G_∞, the sharp finite-quotient thresholds are D_N: N≤3^s and P_n: n≤s+1, with sharp separation at the next level by abelianization. Thus the q-information scale is exponential in Zassenhaus depth but linear in lower-3-central depth. With the known standard-family orientation formula, χ mod 3^k has information boundary D_{3^{k-1}+1} versus P_{k+1}; mod 27 gives D_10 versus P_4.
+
+Status: Zassenhaus threshold PASS / LOCAL; lower-3-central threshold PASS / LOCAL subject to the standard P_n product formula; linear χ-information boundary PASS / LOCAL under standard-family/classification dependence. This is not yet an intrinsic pointed Kummer-recognition theorem. Next substantive task is to test whether the relevant q-blind Kummer condition factors through G/P_{k+1}. No new gate is introduced.
 ## AUTHORITATIVE UPDATE — 2026-09-20 — CRITICAL CORRECTION: MIXED m-ADIC GATE + ZASSENHAUSZ THRESHOLD
 
 A review correction was audited and accepted.
