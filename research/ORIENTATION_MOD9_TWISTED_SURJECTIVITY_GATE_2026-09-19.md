@@ -185,3 +185,40 @@ whose surjectivity forces the first 3-adic orientation digit.
 Next authorized task: audit whether this twisted-surjectivity object is determined by the allowed filtered/graded data, or whether it imports extra group-level information not present in the prescribed observable.
 
 No finite scan is authorized until that filtered/graded factorization question is defined.
+
+
+## 7. Independent carrier-factorization audit — 2026-09-19
+
+A separate audit was performed without using the trivial-coefficient Bockstein as the recovery criterion. The canonical twisted-surjectivity condition was evaluated directly for
+\[
+\rho(x_i)=1+3a_i\pmod9.
+\]
+
+The frozen relator gives the obstruction
+\[
+(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4.
+\]
+Surjectivity therefore has the unique solution
+\[
+(a_1,a_2,a_3,a_4)=(0,1,0,0),
+\]
+hence \(\rho=(1,4,1,1)\pmod9\).
+
+More importantly, with
+\[
+R=[X_1,X_2]+[X_3,X_4],\qquad p=X_1^{(1)},
+\]
+the obstruction is exactly
+\[
+\Theta_{(R,p)}(\lambda)(f)=f(p)+(\lambda\wedge f)(R).
+\]
+Thus this is not merely an independent calculation with the same answer: the twisted criterion factors through the same projective degree-(2,3) carrier.
+
+### T9-D consequence
+
+**T9-D: PASS / CLOSED at the projective degree-(2,3) carrier level.**
+
+The remaining stronger question—whether this carrier itself is determined by the bare Zassenhaus restricted graded object—remains governed by the separate filtered/graded factorization gates.
+
+Detailed record:
+`research/ORIENTATION_MOD9_TWISTED_RECOVERY_CARRIER_FACTORIZATION_AUDIT_2026-09-19.md`.
