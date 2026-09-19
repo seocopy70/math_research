@@ -906,3 +906,49 @@ Therefore
 The first audit draft had a sign error in the witness; it was detected and corrected before accepting the result. The original attempt is classified INVALID TEST, not mathematical evidence.
 
 **Consequence:** do not proceed to gr9 quotient identification or D9 using the naive I_9,9 as an H-module. The next gate is a critical redesign: determine whether an H-closed replacement is mathematically legitimate and compatible with the presentation-derived q=9 relation.
+
+
+## 6L. Q3/Q9 S9 — H-closure redesign gate C3.1–C3.3: CLOSED
+
+Record: `research/Q3_Q9_S9_C3_H_closure_redesign_RESULT_2026-09-19.md`  
+Implementation commits: `df802e0cc3116a311a39dc8b764c46b5d6dc633d`, `fb328fb502616fd4c8475185fe2aa25a0b10adf3`, `551632894cdf6fce5e22c9dec10c1ece3bd7fb94`.
+
+The complete exact \\(H\\)-orbit closure of \\(S_9=X_1^{[9]}\\) was computed in the natural \\(L_1^{[9]}\\) layer:
+
+\\[
+\\boxed{\\dim\\langle H\\cdot S_9\\rangle=4},
+\\qquad
+\\boxed{\\langle H\\cdot S_9\\rangle=L_1^{[9]}}.
+\\]
+
+Thus **C3.1 = PASS**.
+
+However the fixed-presentation relation space has only the line \\(\\langle S_9\\rangle\\) in this layer. The already verified witness
+\\[
+t_{e_2}(S_9)=S_9+X_2^{[9]}
+\\]
+shows that the H-closure contains a direction which is not a relation of the fixed q=9 presentation. Therefore promotion of the H-closure as an equivalent q=9 relation space fails:
+
+\\[
+\\boxed{\\text{C3.2 = FAIL}}.
+\\]
+
+The frozen S9-B structural lemma also gives
+\\[
+\\boxed{\\langle H\\cdot S_9\\rangle\\cap(I_\\infty)_9=0},
+\\]
+so **C3.3 = PASS**.
+
+### Consequence
+
+The H-closure rescue route is **CLOSED / NOT PROMOTED**. The tempting dimension
+\\[
+13524+4=13528
+\\]
+is only the dimension of a different H-closed relation enlargement; it is **not** the degree-9 relation dimension of the fixed q=9 group and must not be used as such.
+
+Do not proceed to \\(gr_9\\) or \\(D_9\\) using either the naive q=9 space or this artificial H-closed enlargement.
+
+### Next authorized Q3/Q9 checkpoint
+
+Return to the already-open **Gate C**: independently derive the first nonzero baseline-relative degree-9 contribution of the full q=9 presentation from the presentation/Magnus expansion, without assuming H-stability. No new H-closed q=9 relation object is to be introduced merely to rescue the failed route.
