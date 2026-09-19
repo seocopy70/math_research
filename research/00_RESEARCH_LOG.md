@@ -1184,3 +1184,15 @@ T1 checks the exact coboundary identity for all 9 structured representatives. T2
 The historical H_adm=1296 enumeration is deliberately not reconstructed in this gate because a separately reusable authoritative implementation was not available in the frozen structured script; no new enumeration is invented.
 
 Status: EXECUTION PENDING. No mathematical PASS/FAIL is recorded until CI output is independently verified.
+
+
+## 2026-09-19 — A-1 execution: T1 PASS / T2 invalid control / T3 PASS
+
+Workflow run 35420831517, diagnostic commit c1ac93d673af3aefb9d1c4e3df139e31f6ab56ec, job 105838085431.
+
+T1 passed on all 9 structured representatives: Delta_q(g)=g.[X1^3]-[X1^3].
+T3 passed directly on all 81 ordered pairs: 0 vector failures; observed and predicted nonzero class counts both 60.
+
+T2 gave 0 failures for X1^3 and X2^3, but 5 failures each for X1X2X1 and the arbitrary tensor. This is not treated as mathematical evidence. Diagnosis: the frozen ev routine evaluates free-group words in the truncated group algebra; it does not directly evaluate arbitrary homogeneous degree-3 tensors under a pure Magnus/Lie substitution. The special X1^3 case is exceptional in characteristic 3 because (1+X1)^3=1+X1^3.
+
+Decision: A-1 remains open at the control-definition level; no broader scan. A legitimate homogeneous control or an explicit proof-based closure is required.
