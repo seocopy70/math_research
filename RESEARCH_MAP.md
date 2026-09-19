@@ -1689,3 +1689,10 @@ No finite scan is authorized.
 A no-scan structural audit exposed a necessary correction to the projective relation-jet proposal. Relator conjugation changes the degree-3 component by P -> P+[V,R], so projectivization alone does not establish presentation independence. However the twisted recovery functional is insensitive to this change because degree-one f annihilates ordinary brackets: f([v,R])=0. Thus Theta and its zero set survive conjugation.
 
 Status: E1-local gauge compatibility PASS; E1-full intrinsic definition OPEN. The projective jet must be replaced, if necessary, by its complete relation-gauge class. The next gate is to identify the canonical relation-module object that captures all legitimate relator changes.
+
+
+## 2026-09-19 — E1 relation-module candidate
+
+To absorb all relator-conjugation gauge at the source, the next candidate carrier is the filtered relation module R/[F,R] for a minimal free presentation 1 -> R -> F -> G -> 1. The degree-(2,3) relation jet should be obtained from its filtered image in L_2(F) direct-sum L_3^res(F).
+
+Status remains OPEN: this is not yet an abstract-group invariant because presentation-independence has not been proved. E2/E3 are therefore not closed.
