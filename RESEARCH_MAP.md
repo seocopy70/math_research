@@ -1,3 +1,16 @@
+## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 15: MOD-27 CATEGORY ADEQUACY
+
+A category-level loophole was closed before any higher mod-27 computation. If unrestricted full-group constructions are admitted, the dualizing module/action already contains the canonical orientation, and the Demuškin classification supplies q as an intrinsic invariant from which the standard orientation formula recovers chi. That is a known group-intrinsic reconstruction, not the intended filtered-carrier result.
+
+The PRE-MOD27 gate is therefore sharpened: q-blindness excludes first extracting q, the dualizing action, or an equivalent complete classification invariant and repackaging it. A genuine J_27 must be built directly from the declared filtered/relation-information input and must not factor through a pre-existing canonical-orientation object without an independent obstruction construction.
+
+Decision:
+- unrestricted group-only J_27 as a new carrier: **HISTORICAL / SUPERSEDED**;
+- category-adequacy correction: **PASS / CLOSED**;
+- genuine filtered/relation J_27: **OPEN**.
+
+Record: research/MOD27_CATEGORY_ADEQUACY_HARD_ATTACK_2026-09-20.md
+
 ## AUTHORITATIVE UPDATE — 2026-09-20 — HARD ATTACK 14: FOX LOCAL QUOTIENT MINIMALITY
 
 A second structural boundary is now closed. In the frozen (q=3) model, the exact local Fox obstruction algebra is
