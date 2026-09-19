@@ -338,7 +338,7 @@ This validates only the **rank-2 n=4 control pipeline**. It does not establish t
 
 ### Next authorized step
 
-If continuing this route, define the **rank-4 lifting observable** before computation. Freeze:
+The rank-4 lifting definition gate is now drafted in `plans/RANK4_D4_LIFTING_DEFINITION_GATE_2026-09-19.md`. Before computation, audit and freeze:
 
 1. the exact filtration level;
 2. the allowed free pro-3 lift class;
@@ -346,7 +346,7 @@ If continuing this route, define the **rank-4 lifting observable** before comput
 4. the allowed weak-data input;
 5. the ambient group convention (GSp versus Sp).
 
-Only after that definition gate passes should a small rank-4 lifting experiment be executed.
+Only after that definition/legitimacy gate passes should a small rank-4 lifting experiment be executed.
 
 ## 14. Frozen downstream boundaries
 
