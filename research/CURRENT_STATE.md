@@ -548,3 +548,24 @@ This literature update does **not** reopen any previously closed Gate and does n
 
 Detailed plan:
 `research/RESEARCH_PLAN_LITERATURE_SYNTHESIS_2026-09-19.md`.
+
+
+## 20. Bockstein–relation-jet sign/normalization audit — 2026-09-19
+
+The load-bearing identification \\(\\beta\\leftrightarrow p(P_3)\\) has been tightened after critical review.
+
+- The general identification is attributed to the **standard one-relator transgression/relation–Bockstein formula**, not presented as a new general cochain proof.
+- Cup-product and Bockstein coefficients must use the **same transgression/fundamental-class convention**. In that convention both acquire the same global sign:
+  \\[
+  \\operatorname{tr}(\\chi_i\\cup\\chi_j)=-a_{ij},\\qquad
+  \\operatorname{tr}(\\beta\\chi_i)=-a_i.
+  \\]
+  An isolated \\(p\\mapsto-p\\) with \\(R\\) fixed is not a gauge transformation; only the common H²-generator rescaling is.
+- For the frozen \\(r_3=x_1^3[x_1,x_2][x_3,x_4]\\), an independent \\(\\mathbf Z/9\\)-lifting calculation gives obstruction vector \\((1,0,0,0)\\), because commutator factors have zero exponent sum. Hence \\(p(P_3)\\sim X_1^{(1)}\\) is directly checked in this presentation.
+- The restricted-cubic coefficient is naturally in \\(V^{(1)}\\); over \\(\\mathbf F_3\\), Frobenius is the identity, so the present identification \\(V^{(1)}\\cong V\\) is canonical.
+- The control should be called the **power-free control** \\(r_0=[x_1,x_2][x_3,x_4]\\), not treated as a literal group parameter “q=∞” in the final manuscript; its first Bockstein/power component is zero.
+- Recovery remains \\(\\chi\\bmod9=(1,4,1,1)\\) at the stated projective degree-(2,3) level.
+
+Decision: **PASS / CLOSED**, with the general formula explicitly cited and the frozen-relator lift check recorded as an independent verification. Absolute H² normalization remains CONDITIONAL / gauge-dependent; no higher-digit conclusion follows.
+
+Detailed record: research/BOCKSTEIN_RELATION_JET_IDENTIFICATION_AUDIT_2026-09-19.md.
