@@ -397,8 +397,7 @@ Reduction modulo \(3^n\) makes the finite-level solutions compatible, and
 gives the unique inverse-limit character \(\chi\).
 
 Decision: **finite-level factorization / inverse-limit theorem PASS / CLOSED at the stated information level**.
-Important boundary: this closes only\[
-\text{full compatible tower}\Rightarrow\{\chi_n\}_n\Rightarrow\chi.
+Important boundary: this closes only\[\text{full compatible tower}\Rightarrow\{\chi_n\}_n\Rightarrow\chi.
 \]
 It does not prove that \(J_3\) alone determines all higher digits, nor categorical minimality, nor existence of a bounded-degree carrier for the full character.
 
@@ -798,7 +797,6 @@ Classical Demushkin formulas identify this Bockstein with the power coefficients
 Critical result: the intrinsic object is the map \(\beta\), not a canonically normalized scalar in \(\mathbf F_3\). Changing the generator of the one-dimensional \(H^2\) target rescales any displayed scalar. More importantly, \(\beta\) retains only the q=3 power/torsion shadow and does not retain the required first 3-adic orientation value
 \[\chi(x_2)\equiv4\pmod9.
 \]
-
 Gate decision:
 - **M9-A PASS:** canonical Bockstein object defined.
 - **M9-B PASS:** intrinsic as a cohomological connecting map; no preferred free lift.
@@ -1198,7 +1196,6 @@ For r=x_1^3[x_1,x_2][x_3,x_4], the exact row-zero equations on (1+3 Z_3)^4 give
 chi(x_1)=chi(x_3)=chi(x_4)=1,chi(x_2)=-1/2=(1-3)^(-1).
 
 This closes the previous A/B/C logical gap: ker J != 0 was too weak, but the canonical criterion quantifies over all crossed derivations, which is exactly row vanishing.
-
 The Nielsen stress test already established exact coordinate covariance for two nontrivial presentation changes; the general Fox chain rule supplies the mechanism.
 
 Decision:
@@ -1461,3 +1458,17 @@ has not been found. The standard Demushkin family cannot supply one because its 
 **Binding status:** target formalization PASS/CLOSED; abstract-carrier no-go PASS/CLOSED; admissible counterexample OPEN/NOT FOUND; universal factorization OPEN; independent bridge OPEN; Bockstein orientation carrier CONDITIONAL/OPEN.
 
 No further same-family Bockstein computation is authorized. The next branch must add genuinely new q-blind rigidifying structure or prove a universal factorization theorem. A cohomological Mackey/transfer enrichment across open subgroups is recorded as a candidate, not yet accepted.
+
+## AUTHORITATIVE UPDATE — HARD ATTACK 23 — 2026-09-20
+
+A proposed successor based on restriction/corestriction/conjugation over open subgroups was attacked. The entire Mackey/transfer-enriched trivial-coefficient Bockstein system retains a global coefficient symmetry
+\[
+T_c:a\mapsto ca,\qquad c\equiv1\pmod3,
+\]
+which commutes with reduction, \(\iota\), both Bocksteins, cup product, restriction, corestriction, and conjugation. It moves the desired logarithmic orientation lift \(\lambda_{27}\).
+
+Therefore Mackey/transfer enrichment alone does not remove the missing lift ambiguity.
+
+This is not a group-level universal no-go because \(T_c\) is a coefficient-system automorphism, not an admissible group automorphism. It is nevertheless a decisive stop for this successor: more bookkeeping of the same trivial-coefficient Bockstein data cannot supply the missing characteristic-zero rigidification.
+
+**Status:** Mackey/transfer enrichment as abstract coefficient-functor carrier **FAIL / CLOSED**; global group-level no-go **OPEN**; independent orientation bridge **OPEN**. The next meaningful branch must add genuinely group-sensitive filtered extension information.
