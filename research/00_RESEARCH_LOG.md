@@ -1106,3 +1106,16 @@ Corrected run 35418122079, commit bb39ed1a7191aeae0da07813e40abe47695d292a. The 
 Exact: gauge rank 20; Q3 dimension 44; candidate failures modulo Q3 0; raw failures 0; reversed diagnostic failures modulo Q3 2; reversed raw failures 2; 11 composed q-defect classes survive Q3.
 
 Conclusion: valid LOCAL PASS, with the candidate action/order convention distinguished on this control set. Next gate is a broader structured representative-family audit with explicit multiplier behavior. No unrestricted full rank-4 scan yet.
+
+
+## 2026-09-19 — broader structured quotient-defect gate prepared
+
+After the corrected local PASS, the next authorized step was implemented as a broader structured representative-family audit rather than an unrestricted rank-4 scan.
+
+The family contains 9 explicitly constructed GSp_4(F_3) representatives: identity, -I, two powers of the first hyperbolic-pair shear, two powers of the second hyperbolic-pair shear, a symplectic pair-swap, and two multiplier-2 diagonal representatives. Each matrix is independently checked for the stated multiplier, and each free lift is checked to induce the intended degree-1 matrix.
+
+The corrected quotient-valued law is tested over all 81 ordered pairs, with Q3 dimension 44 and gauge rank 20 recomputed from the frozen construction. The reversed action/order formula remains diagnostic only.
+
+Implementation: script commit dc28f6756c74ea57ae97735bcc96ec3cd1c74a35; workflow commit 117af503ec606aeb862ceb89bf631717a05d2ece.
+
+STATUS: EXECUTION PENDING. No PASS/FAIL is recorded until the audit actually executes and its output is independently checked.
