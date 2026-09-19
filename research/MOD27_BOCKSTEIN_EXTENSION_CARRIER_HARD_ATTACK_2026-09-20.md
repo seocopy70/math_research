@@ -397,7 +397,6 @@ Hard Attack 20 is materially stronger than Hard Attack 18, but its final **FAIL 
 The statement that the full structured object \(\mathcal B_{27}\) has exactly three isomorphism types on the Demuškin family does not follow merely from the three values of \(\beta_1,\overline\beta_9\). The carrier also contains \(H^1(G,\mathbf Z/9)\), reduction, \(\iota\), cup product, and both Bockstein maps. One must explicitly construct the carrier isomorphisms for any two q-values in the same valuation class, or prove a classification theorem for these structured objects.
 
 A detector having three visible Bockstein cases is not equivalent to the entire carrier factoring through the three-class quotient.
-
 ### Gap 2 — extensional factorization on the test family does not prove universal non-tautology failure
 Even if the carrier's isomorphism type on the tested family factors through \(v_3(q)\)-class, that only proves a statement about this family. It does not prove that every admissible natural bridge
 \[
@@ -502,3 +501,13 @@ No further \(\beta_1/\beta_9\) numerical scan on the same q-family is authorized
 without passing through q, the dualizing action, or the known classification formula.
 
 This is the binding status after Hard Attack 21.
+
+## CRITICAL REVIEW OF HARD ATTACK 21 — BINDING CORRECTION — 2026-09-20
+
+Hard Attack 21 repairs the missing full-carrier classification on the standard family, but it does not close the universal problem. The structured carrier has exactly three isomorphism types on that family; this is now a PASS/CLOSED family theorem, not merely a Bockstein-rank observation. The phrase “canonical normal-form identification” is nevertheless too strong: the explicit coordinates depend on the chosen standard presentation. The correct statement is existence of explicit structure-preserving model isomorphisms and an abstract three-type classification.
+
+The target (O_{27}) must also be formalized before any bridge theorem. It should be a basis-free orientation object/torsor carrying the mod-27 logarithmic datum, not an informal coordinate vector. Finally, family-level factorization still does not imply universal factorization on the admissible category.
+
+**Binding next gate:** define (O_{27}) intrinsically; then attack (i) a carrier-preserving counterexample pair with different orientation targets, and (ii) failing that, a universal factorization/no-go theorem or an independent chain-level bridge. No further same-family numerical Bockstein scan is authorized.
+
+Status: Bockstein detector **PASS / LOCAL**; standard-family full carrier classification **PASS / CLOSED**; universal no-go **OPEN**; independent bridge **OPEN**; Bockstein orientation carrier **CONDITIONAL / OPEN**.
