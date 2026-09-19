@@ -252,63 +252,105 @@ research/Q3_Q9_S9_q9_degree9_relation_space_2026-09-19.py
 Workflow:
 .github/workflows/q3-q9-s9-degree9-relation-space.yml
 
-## 11. NEXT GATE
+## 11. S9 source-map target-action audit — PASS / CLOSED
 
-The next separate gate is **H-stability of the q=9 relation space**. No H-stability is assumed from the +1 degree-9 increment.
-
-After H-stability, only then consider the precise gr9(G9) quotient interpretation and a D9 candidate.
-
-## 11. q=9 degree-9 H-stability — FAIL / CLOSED
-
-The q=9 degree-9 relation space remains
+The target-side source map is
 \[
-(I_9)_9=(I_\infty)_9\oplus\langle S_9\rangle,
-\qquad \dim(I_9)_9=13525.
-\]
-
-However, with the fixed symplectic convention and generator \(t_{e_2}\),
-\[
-t_{e_2}(e_1)=e_1+e_2,
-\]
-so
-\[
-t_{e_2}(S_9)=S_9+X_2^{[9]}.
-\]
-
-Since
-\[
-(I_\infty)_9\cap L_1^{[9]}=0
-\]
-and the q=9 space has L1^[9] projection \(\langle S_9\rangle\), the transformed vector is outside \((I_9)_9\).
-
-Exact F3 ranks:
-\[
-\operatorname{rank}\{S_9\}=1,
+Q_9^\infty=L_9^{res}/(I_\infty)_9,
 \qquad
-\operatorname{rank}\{S_9,t_{e_2}S_9\}=2.
+\phi_9(S_9)=[S_9].
 \]
 
-Therefore
+The earlier target-action audit checked all 80 nonzero-vector symplectic
+transvections and verified (g^T Jg=J), then used the frozen coefficient-matrix
+convention to infer (g(R_2)=R_2).
+
+A dedicated explicit implementation bridge audit has now closed that small gap:
+the repository's authoritative five generators and authoritative
+associative action were imported directly, (R_2) was constructed explicitly,
+and for every generator
 \[
-\boxed{(I_9)_9\text{ is not H-stable}.}
+\boxed{g\cdot R_2=R_2}
+\]
+was checked exactly over (\mathbf F_3).
+
+The same audit also passed multiplicativity and first restricted-power
+compatibility on the authoritative action. Together with the existing C-2b
+audit, this closes the implementation chain
+\[
+g^TJg=J\Rightarrow gR_2=R_2\Rightarrow h(I_\infty)=I_\infty.
 \]
 
-The first audit draft contained a sign error in the transvection witness; this was caught and corrected before accepting the mathematical result. Corrected script commit:
-836c3ce4d1382d35545c2998af2addf4a42c7a89.
+Therefore the baseline quotient (Q_9^\infty) has a well-defined induced
+H-action. This is now **structural + explicit implementation-bridge PASS**.
 
-Result record:
-research/Q3_Q9_S9_H_STABILITY_RESULT_2026-09-19.md
+Result:
+research/Q3_Q9_S9_SOURCE_MAP_H_STABILITY_ACTION_BRIDGE_RESULT_2026-09-19.md
 
-This closes the H-stability gate as **FAIL / mathematical failure**. The q=9 degree-9 space itself remains valid, but the planned H-module/gr9/D9 route is blocked.
+CI:
+run 35414448355 / job 105820186019 = SUCCESS.
 
-## 12. NEXT GATE
+## 12. S9 target-side orbit — PASS / CLOSED
 
-Do not proceed to D9 as though the current \((I_9)_9\) were an H-stable relation module.
+\[
+\boxed{
+\mathcal O_9=\langle H\cdot[S_9]\rangle
+\cong L_1^{[9]},
+\qquad
+\dim\mathcal O_9=4.
+}
+\]
 
-The next task is a **critical redesign gate**: determine whether the q=9 construction must be H-closed (for example by replacing \(\langle S_9\rangle\) with its H-orbit closure) and, if so, whether that revised object has a mathematically legitimate connection to the original q=9 relation.
+Reason: C3.1 gives (\langle H\cdot S_9\rangle=L_1^{[9]}), and
+S9-B gives ((I_\infty)_9\cap L_1^{[9]}=0), so the quotient map is
+injective on this p-layer.
+
+This is a target-side H-module only. It is not the q=9 relation space and
+does not repair the q=9 H-stability FAIL.
+
+## 13. CURRENT LIVE GATE — D9-OBS definition gate
+
+Do **not** run another orbit calculation merely to reconfirm the 4-dimensional
+object.
+
+The next authorized question is:
+
+> Does the target-side object (mathcal O_9) contain, or naturally induce,
+> a q-dependent comparison observable between q=3 and q=∞?
+
+Current assessment: **not yet defined; no q-dependent information has been
+established by (dimmathcal O_9=4) alone.**
+
+The next gate must be a **definition/legitimacy gate**, not a numerical
+comparison. Any candidate observable must be derived functorially from the
+presentation-derived source and the frozen target construction. Do not import
+the degree-3 N/J construction by analogy.
+
+### Pass/fail consequence
+
+- **PASS:** a natural, presentation-derived target-side quantity is defined
+  before computation, with its q=3 and q=∞ instantiations specified.
+- **FAIL:** the 4D orbit is shown to be only the natural (p)-layer shadow and
+  supplies no legitimate q-sensitive observable. Close this route and do not
+  manufacture a q-dependent statistic from the dimension 4.
+- **INCONCLUSIVE:** the proposed quantity depends on an arbitrary choice of
+  presentation, transport, coordinates, or noncanonical identification.
+
+## 14. Frozen downstream boundaries
+
+- naive ((I_9)_9) H-stability: **FAIL / CLOSED**.
+- C3.2 H-closure provenance: **FAIL / CLOSED**.
+- ((I_9)_9) dimension 13525 remains valid as a fixed-presentation degree-9
+  relation-space calculation, but must not be treated as an H-module.
+- (\mathcal O_9\) is target-side only.
+- no q=3/q=∞ distinction has been established by the 4D orbit.
+- no D9.
+- no orientation recovery.
 
 ## LIVE
 
 현재 LIVE 질문:
 
-> The naive q=9 degree-9 relation space has dimension 13525 but is not H-stable. Is there a legitimate H-closed replacement compatible with the group presentation and the research question?
+> **D9-OBS — can a mathematically natural q-dependent observable be derived
+> from the target-side (mathcal O_9), or is (mathcal O_9) merely the
+> natural 4-dimensional (p)-layer shadow of (S_9)?**
