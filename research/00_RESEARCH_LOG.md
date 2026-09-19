@@ -1624,3 +1624,12 @@ Correct status: E1-local gauge compatibility PASS; E1-full intrinsic definition 
 After the local gauge PASS, the structurally natural next container is R/[F,R] for a minimal free presentation. This quotient kills relator conjugation before taking the degree-(2,3) jet. However it is still presentation-relative; the jet map and change-of-free-presentation invariance remain open.
 
 Decision: E1 full intrinsicness remains OPEN. No finite scan authorized.
+
+
+## 2026-09-19 — E1 relation-module structural lemma
+
+The relation-module candidate was audited against the continuous homology five-term sequence. For a minimal free pro-3 presentation, R/[F,R] is a legitimate fixed-cover container and kills relator conjugation. Minimality makes F_ab -> G_ab an isomorphism, hence the map R/[F,R] -> F_ab in the five-term sequence is zero. This does not by itself identify R/[F,R] with H2(G,Z3); that identification is explicitly not claimed.
+
+The E1 gate is narrowed to the actual unresolved issue: whether a change of minimal free cover induces a canonical identification of the degree-(2,3) filtered relation jet, up to the gauge invisible to Theta. Detailed result: research/ORIENTATION_MOD9_E1_RELATION_MODULE_LEMMA_2026-09-19.md.
+
+Decision: fixed-cover relation-module container PASS; full E1 intrinsicness remains OPEN. No finite scan authorized.
