@@ -1,3 +1,8 @@
+
+
+## 2026-09-20 — LOWER 3-CENTRAL LINEAR INFORMATION BOUNDARY
+
+The program now records a parallel lower-3-central comparison. The standard family has sharp thresholds G_{3^s}/D_N ≅ G_∞/D_N iff N≤3^s and G_{3^s}/P_n ≅ G_∞/P_n iff n≤s+1. This supports a linear-vs-exponential information-scale comparison, not yet an orientation-carrier theorem. The next step is a single finite-recognition theorem attempt on G/P_{k+1}, without opening additional gates.
 ## AUTHORITATIVE UPDATE — 2026-09-20 — CRITICAL CORRECTION: ZASSENHAUSZ THRESHOLD + MIXED m-ADIC REOPENING
 
 The earlier review has been corrected at one precise point: the threshold argument concerns
