@@ -35,6 +35,25 @@ The proposed broader rank-4 scan for this same cocycle is CANCELLED.
 ### Existing closed routes
 Original linear-only rank-4 lift observable, preferred-lift repair, naive q=9 relation-space route, artificial H-closure, Q3/Q9 S9 orbit route, and D9-OBS universal p-layer candidate remain closed.
 
+## 0B. CURRENT AUTHORIZED FOLLOW-UP — 2026-09-19
+
+### Rank-2 relator-unit digit definition gate — OPEN / DEFINITION ONLY
+
+After the Delta_q coboundary closure, a new gate is registered: plans/RANK2_UNIT_DIGIT_DEFINITION_GATE_2026-09-19.md.
+
+The candidate datum is the first mod-9 digit of a relator unit u(phi) in Z_3^times attached to an actual automorphism phi in Aut(G_q^(2)), with the primary lift-dependence test restricted to the kernel of the induced GL_2(F_3) action.
+
+Required before computation:
+1. exact definition of u(phi) in R/[R,F];
+2. proof of multiplicativity/crossed law;
+3. smallest filtration level determining u mod 9;
+4. proof that the datum is not a function of g alone;
+5. q=3 versus q=infinity hand derivation with q absent from the datum definition.
+
+The existing rank-2 D4 lifting control is retained as a low-cost implementation control only. The connection between the relator unit and the canonical orientation character is EXTERNAL / TO VERIFY, not assumed.
+
+No rank-2 finite scan and no rank-4 scan is currently authorized by this gate.
+
 ## 1. Mathematical setting
 
 \[
