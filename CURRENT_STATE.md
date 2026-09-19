@@ -431,3 +431,32 @@ operatorname{Defect}(P_3),qquad operatorname{Twist}_\lambda(R_2)
 whose sum is exactly (B_\lambda), and prove functoriality and uniqueness on (D_3).
 
 Thus the project still must not claim full filtered/graded recovery. No finite scan is authorized.
+
+
+## 2026-09-19 — F5 structural reconstruction: PASS for enriched degree-3 relation jet
+
+The structural F5 task is closed at the precise enriched-carrier level. The correct carrier is the degree-3 relation jet
+\[
+J_3=\langle(R_2,P_3)\rangle\subset L_2\oplus L_3^{res},
+\]
+not two independently rescalable classes. Define, intrinsically,
+\[
+\operatorname{Defect}_{P_3}(f)=f(P_3),\qquad
+\operatorname{Twist}_{\lambda,R_2}(f)=(\lambda\wedge f)(R_2).
+\]
+Then
+\[
+\Theta_{R_2,P_3}(\lambda)(f)=f(P_3)+(\lambda\wedge f)(R_2).
+\]
+In frozen coordinates this is exactly
+\[
+(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4=B_\lambda(f).
+\]
+Common rescaling of the relation-jet generator rescales \(\Theta\) but leaves its zero set unchanged. Nondegeneracy of \(R_2\) makes the zero set a singleton; \(\lambda_\chi=(0,1,0,0)\), hence \(\rho=(1,4,1,1)\bmod9\).
+
+Decision:
+- **F5 structural factorization through enriched relation jet \(D_3=(V,J_3)\): PASS.**
+- **Bare associated-graded object with no distinguished relation jet:** not claimed; recovery of \(J_3\) itself is a separate structural gate.
+
+Detailed audit: research/ORIENTATION_MOD9_FILTERED_FACTOR_F5_STRUCTURAL_2026-09-19.md.
+No finite scan is authorized.
