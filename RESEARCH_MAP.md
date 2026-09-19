@@ -1480,3 +1480,30 @@ No finite scan is authorized at this stage. Next hand task: inspect the dualizin
 
 Frozen (g) is on the generator/(H_1) side. Hence the induced (H^1) action is (g^{-T}), and the induced (H^2) scalar is (
 u(g)^{-1}). For (p=3), (mathbf F_3^	imes={pm1}), so inversion is identical: (mu_{H^2}=mu_{m int}) as (mathbf F_3^	imes)-valued characters, although conceptually the cohomological action is inverse. This does **not** identify (mu) with the full orientation (chi:G	omathbf Z_3^	imes); (chimod3) is trivial. The MU-CHI bridge is therefore conceptually resolved: (mu) is a canonical automorphism-of-duality-line shadow, not the orientation character. No finite scan is authorized. Next work should target filtered/graded data retaining the (1+3mathbf Z_3) orientation layer.
+
+## 0B. 2026-09-19 — Mod-9 Bockstein candidate: FAIL / CLOSED
+
+The explicit hand audit is recorded in `research/ORIENTATION_MOD9_BOCKSTEIN_AUDIT_2026-09-19.md`.
+
+The canonical coefficient sequence
+\[
+0\to\mathbf F_3\xrightarrow{3}\mathbf Z/9\to\mathbf F_3\to0
+\]
+gives an intrinsic Bockstein
+\[
+\beta:H^1(G,\mathbf F_3)\to H^2(G,\mathbf F_3).
+\]
+For the frozen relation \(x_1^3[x_1,x_2][x_3,x_4]\), the Bockstein detects the unique power-term direction: \(\beta(\gamma_1)\neq0\) and \(\beta(\gamma_i)=0\) for \(i=2,3,4\), up to the fixed top-class convention.
+
+This passes intrinsicity: no preferred free lift is used, and the map itself is invariant under coefficient-coordinate choices. However, its invariant content is the q=3 power/torsion shadow. A scalar coordinate depends on the choice of generator of the one-dimensional \(H^2\) target, and the Bockstein contains no canonical value corresponding to
+\[
+\chi(x_2)\equiv4\pmod9.
+\]
+
+Therefore:
+- M9-A (canonical object): **PASS**
+- M9-B (intrinsicity): **PASS**
+- M9-C (canonical recovery of the first orientation digit): **FAIL**
+- M9-D (comparison with \(\chi\bmod9\)): **CLOSED for this candidate**
+
+This is not a universal impossibility result for all finite-coefficient constructions. It closes only the ordinary mod-9 Bockstein candidate as a recovery mechanism. No finite scan is authorized.
