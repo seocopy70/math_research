@@ -381,3 +381,20 @@ Decision:
 - a different mod-27 carrier with additional rigidifying structure: **OPEN.**
 
 This supersedes HARD ATTACK 17's CONDITIONAL status. No further Bockstein-only scan is authorized.
+
+
+## 2026-09-20 — HARD ATTACK 20: Bockstein package closes as a new non-tautological mod-27 carrier
+
+Hard Attack 19 corrected the logical gap in Hard Attack 18: the internal map S on H^1(G,Z/9) is an abstract carrier automorphism, not yet an admissible group-induced morphism. Therefore S alone cannot prove a naturality no-go in the project's real input category.
+
+A stronger independent attack was then made at the factorization level. On the rank-four Demuškin family, the entire declared package B_27 has exactly the three coefficient-extension types determined by v_3(q)=1,2,>=3: beta_1 nonzero; beta_1=0 with descended beta_9 nonzero; both zero. The known mod-27 orientation reduction has exactly the corresponding three classes 13,10,1. Thus the present package's successful orientation values are extensionally a function of the same finite q-valuation/classification partition.
+
+No independent chain-level identity, universal property, or finer invariant has been produced inside B_27 that distinguishes orientations while the q-class is held fixed. Therefore the package fails the PRE-MOD27 operational non-tautology criterion as a **new orientation carrier**, even though it remains a valid intrinsic finite q-layer detector.
+
+Decision:
+- B_27 q-layer detector: **PASS / LOCAL**;
+- B_27 as new non-tautological mod-27 orientation carrier: **FAIL / CLOSED**;
+- Hard Attack 18 absolute symmetry no-go: **HISTORICAL / SUPERSEDED**;
+- successor carrier with genuinely new q-blind rigidification: **OPEN**.
+
+Stop consequence: no further beta_1/beta_9 scans on the same family are authorized. A successor must add genuinely new structure or an independent universal property, and must first pass the same object/category/q-blindness gate.
