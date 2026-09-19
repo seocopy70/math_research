@@ -4,7 +4,7 @@ Date: 2026-09-19
 
 ## Status
 
-**PASS / CLOSED — target/action and source-map definition audit passed.**
+**PASS / CLOSED — target/action and source-map definition audit passed; explicit action-bridge audit added and passed.**
 
 This gate follows Gate C (first source degree 9) and the closed S9 H-stability / C3 provenance failures.
 
@@ -164,3 +164,40 @@ The next authorized object is
 \[
 \mathcal O_9=\langle H\cdot[S_9]\rangle\subseteq Q_9^\infty.
 \]
+
+
+## 11. Explicit action-bridge strengthening — PASS / CLOSED
+
+The earlier audit was intentionally structural: it checked \\(g^T Jg=J\\) and used the
+frozen coefficient-matrix convention to infer \\(g(R_2)=R_2\\), but did not directly
+execute the latter implication with the authoritative action implementation.
+
+A dedicated audit now imports the repository's authoritative five generators and
+apply_linear_map, constructs \\(R_2\\) explicitly, and checks for every generator
+
+\\[
+\\boxed{g\\cdot R_2=R_2}.
+\\]
+
+It also checks multiplicativity and first restricted-power compatibility on the
+same imported action. All checks PASS.
+
+Therefore the target-action chain is now closed at implementation level:
+
+\\[
+g^T Jg=J
+\\Rightarrow g\\cdot R_2=R_2
+\\Rightarrow h(I_\\infty)=I_\\infty
+\\Rightarrow Q_9^\\infty\\text{ has an induced H-action}.
+\\]
+
+Result record:
+research/Q3_Q9_S9_SOURCE_MAP_H_STABILITY_ACTION_BRIDGE_RESULT_2026-09-19.md
+
+Implementation:
+research/Q3_Q9_S9_SOURCE_MAP_H_STABILITY_ACTION_BRIDGE_AUDIT_2026-09-19.py
+
+CI run: 35414448355, job 105820186019, conclusion SUCCESS.
+
+This strengthens the evidentiary status of baseline H-stability; it does not alter
+the separate q=9 relation-space H-stability FAIL or the downstream q-comparison boundary.
