@@ -2233,3 +2233,8 @@ Next target: explicit degree-3 restricted-cube cross-term calculation and its ev
 ### 2026-09-19 — E1 reopened briefly, then CLOSED after explicit restricted-cube degree check
 
 The suspected restricted-cube obstruction is not real: mixed cubic terms involving a degree-2 correction begin in degree 4. The exact degree count closes the missing step. E1 projective-jet naturality is therefore PASS/CLOSED under the stated standard one-relator hypotheses; full relation-module canonicity remains FAIL.
+
+
+### 2026-09-19 — Full 3-adic crossed-derivation calculation explicitly audited
+
+Expanded the full \(\mathbf Z_3\) calculation into explicit commutator and cube formulas. The coefficient equations force \(r_1=r_3=r_4=1\) and \(r_2=(-2)^{-1}\) exactly. No independent new obstruction is needed at each 3-adic digit for the fixed q=3 normal form.

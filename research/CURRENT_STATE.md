@@ -640,3 +640,9 @@ Critical re-audit found a genuine proof gap. The degree-2 lift correction Q_i=c_
 The temporary reopening of E1 was resolved. For a degree-1 term X and degree-2 correction Q, every mixed term in the cubic restricted operation (X+Q)^[3] has filtered degree at least 1+1+2=4; Q^[3] has degree 6. Therefore the degree-3 restricted-power component is unchanged. The earlier conclusion was correct, but its justification is now made explicit and degree-theoretic.
 
 Hence, conditional on the standard minimal one-relator presentation input, the degree-(2,3) residual-gauge lemma is PASS/CLOSED and the recovery zero-set is natural. Full relation-module generator canonicity remains false and is not claimed.
+
+
+## 2026-09-19 — Full 3-adic crossed-derivation calculation explicitly audited
+
+The previously abbreviated hand derivation has now been expanded. For \([x,y]=x^{-1}y^{-1}xy\),
+D([x,y])=a^{-1}(b^{-1}-1)D(x)+b^{-1}(1-a^{-1})D(y), and D(x^3)=(1+a+a^2)D(x). Applying these to r=x1^3[x1,x2][x3,x4] gives successively r1=r3=r4=1 and then 2+r2^{-1}=0, hence r2=(-2)^{-1}=(1-3)^{-1} exactly in Z3. Therefore all finite reductions mod 3^n are fixed by the same equation. This closes the exact fixed-q=3 calculation, while retaining the distinction that canonical-orientation identification uses the standard intrinsic characterization and that J3 alone is not claimed to contain all higher digits.
