@@ -399,7 +399,6 @@ Decision:
 
 Stop consequence: no further beta_1/beta_9 scans on the same family are authorized. A successor must add genuinely new structure or an independent universal property, and must first pass the same object/category/q-blindness gate.
 
-
 ## 2026-09-20 — CRITICAL REVIEW OF HARD ATTACK 20
 
 Hard Attack 20's closure of the mod-27 Bockstein carrier was overstrong. The argument established only that the **observed Bockstein layers** on the tested Demuškin family form three q-valuation cases. It did not prove that the full structured carrier \((H^1(F_3),H^1(Z/9),red,iota,cup,beta_1,beta_9)\) has exactly three isomorphism types, nor that every natural bridge on the full admissible category factors through q/classification.
@@ -428,3 +427,49 @@ This is **PASS / CLOSED** for full structured-carrier classification on the stan
 It is deliberately NOT promoted to a universal no-go: this does not prove that every natural bridge on the full admissible filtered/relation category factors through q/classification. The B27 orientation-carrier status therefore remains **CONDITIONAL / OPEN**.
 
 Stop: no further same-family beta_1/beta_9 scans. Next attack must be universal/categorical: prove universal factorization/no-go, or construct an independent chain-level orientation bridge.
+
+## CRITICAL REVIEW OF HARD ATTACK 21 — 2026-09-20
+
+Hard Attack 21 correctly repairs the principal Gap 1 from Hard Attack 20 on the standard rank-four family, but the record still contains three precision issues that must be fixed before the next universal attack.
+
+### 1. What is actually proved
+For (G_q=\langle x_1,x_2,x_3,x_4\mid x_1^q[x_1,x_2][x_3,x_4]\rangle), the calculation
+\[
+H^1(G_q,\mathbf Z/9)=\{(a_1,a_2,a_3,a_4)\in(\mathbf Z/9)^4:q a_1=0\}
+\]
+gives (3A\times A^3) for (q=3) and (A^4) for (q\ge9). Together with the displayed Bockstein normal forms this does establish the three structured-carrier isomorphism types on this standard family: class (v_3(q)=1), class (v_3(q)=2), and class (v_3(q)\ge3). The converse distinctions are also structural: the underlying (W_q) differs between (q=3) and (q\ge9), while (\beta_9\) distinguishes (q=9) from (q\ge27).
+
+### 2. Terminology correction
+The phrase “canonical normal-form identifications” is too strong. The coordinates (a_i) and the displayed models depend on a chosen standard presentation. The proved statement is: **explicit structure-preserving model isomorphisms exist in a chosen standard presentation, and the resulting abstract structured carrier has exactly three isomorphism types on this family.** No canonical basis or canonical coordinate identification is claimed.
+
+### 3. Target formalization remains load-bearing
+The notation (O_{27}) must now be fixed before any bridge theorem is claimed. It should not be treated informally as “the character”. The natural target should be defined basis-free as the appropriate orientation torsor/object together with its mod-27 logarithmic datum, so that a statement
+\[
+\Phi_{27}:\mathcal B_{27}\to O_{27}
+\]
+means an actual natural transformation in the declared category. In particular, the quantity (\lambda_{27}=\frac13\log\chi\pmod9) is an additive coordinate only after the target object and its natural action are specified; it is not itself a basis-free vector without that structure.
+
+### 4. Universal no-go is still not proved
+The standard-family classification does **not** imply
+\[
+\text{every natural }\mathcal B_{27}\to O_{27}\text{ factors through }q\text{-classification}.
+\]
+Nor does it produce the desired independent bridge. Thus the carrier remains **CONDITIONAL / OPEN**. The next decisive attacks are categorical, not numerical.
+
+### 5. Binding next gate
+Before further calculation:
+- define (O_{27}) intrinsically and basis-free;
+- formalize the induced action of admissible morphisms on (O_{27});
+- test whether there exist admissible objects (G,G') with isomorphic full (\mathcal B_{27}) but non-isomorphic (O_{27}). Such a pair is a genuine no-go and closes the carrier;
+- if no such pair can be produced, attack the universal factorization statement or construct an independent chain-level identity for (\lambda_{27}) without extracting (q), the dualizing action, or the known classification formula.
+
+**Status after this review:**
+- full structured-carrier classification on the standard family: **PASS / CLOSED**;
+- q-valuation factorization on that family: **PASS / CLOSED**;
+- Bockstein finite q-layer detector: **PASS / LOCAL**;
+- Hard Attack 18 unconditional symmetry no-go: **HISTORICAL / SUPERSEDED**;
+- universal factorization/no-go: **OPEN**;
+- independent orientation bridge: **OPEN**;
+- Bockstein orientation carrier: **CONDITIONAL / OPEN**.
+
+No further same-family Bockstein scan is authorized.
