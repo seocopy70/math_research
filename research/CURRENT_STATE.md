@@ -609,3 +609,15 @@ For (x_1^3[x_1,x_2][x_3,x_4]), the unique first-digit solution is (chimod9=(1,4
 Decision: twisted obstruction, degree-(2,3) truncation, bracket-part elimination, and projective mod-9 naturality are **PASS / CLOSED**. Bare graded recovery and higher 3-adic digits remain separate OPEN problems.
 
 Proof record: `research/TWISTED_DEGREE3_LIFTING_OBSTRUCTION_THEOREM_2026-09-19.md`.
+
+
+## 2026-09-19 — CRITICAL STATUS CORRECTION: mod-9 twisted branch wording narrowed
+
+The preceding “TWISTED DEGREE-(2,3) LIFTING-OBSTRUCTION THEOREM CLOSED” entry was too strong in two places. This correction supersedes its PASS/CLOSED wording where noted.
+
+1. **D4 truncation:** the crossed-word mechanism is now understood precisely, but publication-grade closure requires the explicit lemma that the first-order twisted deformation term factors through degree <=2 Magnus data and therefore vanishes on D4; ordinary exponent-sum contribution of D4 is divisible by 9. The earlier one-line “exponent sums are divisible by 9” argument alone is insufficient.
+2. **Presentation naturality:** intrinsicity of the connecting map is established, and the injective family Theta determines (R,p) up to common H2 scaling. However, that alone does not prove the full presentation-change action on the jet. The residual cover-change lemma must explicitly derive (R,P) -> (uR,uP+[v,R]) (or identify any extra gauge). Therefore full presentation-change naturality is **OPEN / proof-level**, not CLOSED.
+3. **Established result retained:** frozen-coordinate twisted recovery and the projective degree-(2,3) factorization remain PASS; the relative lower bound against the bare quadratic/associated-graded carrier remains PASS/CLOSED. Absolute minimality remains OPEN.
+4. **Next authorized proof work:** close the explicit D4 truncation lemma and the residual cover-change lemma. Only after both are closed may the intrinsic theorem wording be promoted.
+
+Literature context: one-relator pro-p relation modules are known to have strong structural control, but the exact residual degree-(2,3) gauge statement used here is not supplied by that fact alone. See Mikhovich's discussion of one-relator pro-p relation modules and quasirationality. 

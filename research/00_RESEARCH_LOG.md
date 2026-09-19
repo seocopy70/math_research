@@ -2199,3 +2199,18 @@ For the frozen relation, the unique first digit is (chimod9=(1,4,1,1)). Externa
 Decision: twisted obstruction, degree-(2,3) truncation, (Pmapsto p(P)), and projective mod-9 naturality are **PASS / CLOSED**. Bare graded recovery and higher 3-adic digits remain **OPEN**.
 
 Proof record: research/TWISTED_DEGREE3_LIFTING_OBSTRUCTION_THEOREM_2026-09-19.md.
+
+
+### 2026-09-19 — Critical correction: retract overstrong closure of twisted mod-9 naturality
+
+A critical review identified two proof-level overstatements in the preceding closure entry. The frozen-coordinate twisted recovery remains valid, but the theorem-level status is narrowed as follows:
+
+- D4 truncation: **STRONG PROGRESS / OPEN**, until the first-order crossed-word deformation is explicitly shown to factor through degree <=2 Magnus data and hence vanish on D4 after division by 3.
+- Presentation-change naturality: **OPEN**, until the residual cover-change lemma is proved at the degree-(2,3) level. The intrinsic connecting map is not by itself a substitute for proving the induced jet transformation.
+- Projective degree-(2,3) carrier sufficiency in the frozen model: **PASS / CLOSED**.
+- Relative lower bound excluding the bare quadratic/associated-graded carrier: **PASS / CLOSED**.
+- Absolute minimality: **OPEN**.
+
+This correction supersedes the previous “twisted obstruction, degree-(2,3) truncation, bracket-part elimination, and projective mod-9 naturality are PASS/CLOSED” wording wherever it conflicts with the narrower status above.
+
+The next proof targets are exactly the two missing lemmas; no broad scan is authorized.
