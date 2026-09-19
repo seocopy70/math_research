@@ -190,3 +190,5 @@ print({
 # CI trigger: execute after workflow registration.
 
 # counter-correction CI trigger
+
+# direct-source trigger
