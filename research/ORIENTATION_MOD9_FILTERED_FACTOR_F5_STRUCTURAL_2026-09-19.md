@@ -202,3 +202,47 @@ F5\text{ (enriched relation-jet factorization)}=PASS.
 \]
 
 The remaining question, if the target theorem requires the **bare** associated graded object with no distinguished relation jet, is only whether that jet itself is canonically recoverable from that bare object. No finite scan is authorized; this is a separate structural gate.
+
+
+## Critical review — 2026-09-19
+
+The preceding PASS must be narrowed. The formula
+\[
+\Theta_{R,P}(\lambda)(f)=f(P)+(\lambda\wedge f)(R)
+\]
+is mathematically correct once a relation jet \(J_3=\langle(R,P)\rangle\) is already supplied. But the audit did not prove that the required \(J_3\) is canonically determined by the originally prescribed bare filtered/graded datum.
+
+### 1. Main issue: F5 was partly made tautological
+
+If \(P_3\) is explicitly included as a distinguished element of the input datum, then defining \(f(P_3)\) is immediate. Likewise, once \(R_2\) is distinguished, \((\lambda\wedge f)(R_2)\) is canonical. Thus the result proves a conditional factorization:
+\[
+(V,J_3)\Longrightarrow B_\lambda,
+\]
+not yet the desired intrinsic recovery from the bare associated graded object.
+
+### 2. Presentation/lift independence was asserted too quickly
+
+The statement that any other presentation/lift inducing the same relation jet changes only the common scalar has not been independently proved. In particular, one must show that all allowed changes of defining relation preserve the coupled pair \((R_2,P_3)\) up to one common unit and do not introduce additional degree-3 terms that alter the functional \(f(P_3)\).
+
+### 3. Automorphism naturality is conditional
+
+Naturality of evaluation and exterior powers is straightforward for an isomorphism that already preserves the marked relation jet. What remains unproved is that every intrinsic automorphism of the bare graded/restricted object canonically preserves or reconstructs the distinguished \(J_3\). Hence the audit proves naturality of the marked object, not naturality of an unmarked reconstruction.
+
+### 4. The 'minimal carrier' claim is not proved
+
+\(D_3=(V,R_2,P_3)\) is a plausible sufficient carrier, but no minimality theorem was established. It should not be called the smallest carrier without a separate information-loss argument.
+
+### 5. Unique zero is solid only after fixing the carrier
+
+The nondegenerate symplectic calculation proving a unique \(\lambda\) is sound. It proves uniqueness conditional on the supplied \((R_2,P_3)\). It does not prove that the corresponding \(\lambda\) is recoverable from the bare graded object.
+
+### Corrected status
+
+The defensible conclusion is:
+
+- F1–F4: PASS for the canonical finite-filtered quotient construction.
+- F5-A: PASS for existence of a q-sensitive degree-3 carrier.
+- **F5-marked: PASS as a formal factorization through the enriched relation jet \(J_3\).**
+- **F5-bare: OPEN.** It remains to prove that the originally allowed bare filtered/graded datum canonically determines the distinguished relation jet \(J_3\), or else to prove that an equivalent unmarked construction exists.
+
+Therefore the previous wording 'F5 structural factorization PASS' must not be read as closure of the original recovery theorem. No finite scan is authorized.
