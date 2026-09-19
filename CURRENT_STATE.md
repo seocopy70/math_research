@@ -291,3 +291,48 @@ Gate decision:
 This is a candidate-level closure, not a proof that every possible finite-coefficient construction is impossible. No finite scan is authorized.
 
 Next route, if opened, must retain additional \(1+3\mathbf Z_3\)-valued/twisted-dualizing information rather than reinterpreting the Bockstein's q=3 signal as orientation.
+
+## 2026-09-19 — Twisted mod-9 orientation recovery: PASS / filtered-graded factorization OPEN
+
+The ordinary Bockstein candidate was closed, so the next authorized route was the canonical twisted-coefficient surjectivity criterion.
+
+For a candidate
+\[
+\rho:G\to1+3\mathbf Z/9,\qquad \rho(x_i)=1+3a_i,
+\]
+the reduction
+\[
+H^1(G,I_2(\rho))\to H^1(G,I_1(\rho))
+\]
+is surjective exactly when every mod-3 cocycle lifts.
+
+Direct cocycle evaluation on
+\[
+r=x_1^3[x_1,x_2][x_3,x_4]
+\]
+gives the lift condition
+\[
+(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4=0
+\quad(\bmod 3).
+\]
+Since the four \(f_i\) are independent in \(H^1(G,\mathbf F_3)\), surjectivity is equivalent to
+\[
+(a_1,a_2,a_3,a_4)=(0,1,0,0).
+\]
+Hence
+\[
+\rho(x_2)=4\pmod9,
+\]
+exactly the frozen canonical orientation.
+
+This is a substantive PASS: unlike the trivial-coefficient Bockstein, the twisted action itself carries the missing first 3-adic digit.
+
+Gate status:
+- T9-A canonical twisted finite-level object: **PASS**
+- T9-B unique mod-9 recovery: **PASS**
+- T9-C explicit recovery of \(\chi\bmod9\): **PASS**
+- T9-D factorization through the prescribed filtered/graded data: **OPEN**
+
+Critical limitation: this proves intrinsic recovery from twisted cohomology/full group data, not yet from the Zassenhaus graded object alone. No finite scan is authorized until that factorization question is formally defined and audited.
+
+Detailed derivation: `research/ORIENTATION_MOD9_TWISTED_SURJECTIVITY_GATE_2026-09-19.md`.
