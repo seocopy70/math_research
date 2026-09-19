@@ -331,12 +331,14 @@ The next authorized continuation is the already-audited low-cost rank-2 lifting/
 
 For
 [
-G_q^{(2)}=langle x_1,x_2mid x_1^q[x_1,x_2]=1angle
+G_q^{(2)}=langle x_1,x_2mid x_1^q[x_1,x_2]=1
+angle
 ]
 at the first q-sensitive Zassenhaus level (D_4), the selected representative lift tests passed the frozen expectations:
 
 - q=3: identity and the selected vector-fixing unipotent are admissible.
-- q=3: (-I) fails although it stabilizes the line (ell=langlear x_1angle); it reverses the degree-3 restricted-power contribution.
+- q=3: (-I) fails although it stabilizes the line (ell=langlear x_1
+angle); it reverses the degree-3 restricted-power contribution.
 - q=3: the selected transvection moving (ell) fails.
 - q=(infty): all four selected representatives pass.
 - exact F3 arithmetic and the degree-3 conjugation-span rank-2 audit passed.
@@ -598,11 +600,13 @@ Detailed record: research/ORIENTATION_MOD9_TWISTED_RECOVERY_CARRIER_FACTORIZATIO
 
 The proof-level target from the preceding twisted-lifting audit is now closed at first mod-9 level. For a minimal one-relator pro-3 presentation with relation jet (r=(R,P)+O(D_4)), an exact crossed-word calculation and the Zassenhaus (D_4) estimate give
 [
-delta_ho(f)=igl[f(p(P))+(lambdawedge f)(R)igr]omega.
+delta_
+ho(f)=igl[f(p(P))+(lambdawedge f)(R)igr]omega.
 ]
 The coefficient exact sequence supplies the complete cohomological obstruction; the twisted deformation term sees only the degree-2 Magnus component (R); the divided trivial-action term is unchanged by (D_4)-errors; and the bracket part of (P) has zero exponent-sum, so only (p(P)) survives.
 
-Naturality is closed at this level without a preferred IA lift: (delta_ho) is intrinsic, and the family in ((lambda,f)) determines ((R,p)) injectively up to the common (H^2)-generator scalar. Hence the projective carrier ([(R,p)]) is intrinsic as a first twisted mod-9 carrier.
+Naturality is closed at this level without a preferred IA lift: (delta_
+ho) is intrinsic, and the family in ((lambda,f)) determines ((R,p)) injectively up to the common (H^2)-generator scalar. Hence the projective carrier ([(R,p)]) is intrinsic as a first twisted mod-9 carrier.
 
 For (x_1^3[x_1,x_2][x_3,x_4]), the unique first-digit solution is (chimod9=(1,4,1,1)). Quadrelli's Kummerian/1-cyclotomic characterization supplies the external global uniqueness statement for the canonical Demuškin orientation; the present calculation is its explicit degree-(2,3) mod-9 obstruction for the frozen group.
 
@@ -646,3 +650,44 @@ Hence, conditional on the standard minimal one-relator presentation input, the d
 
 The previously abbreviated hand derivation has now been expanded. For \([x,y]=x^{-1}y^{-1}xy\),
 D([x,y])=a^{-1}(b^{-1}-1)D(x)+b^{-1}(1-a^{-1})D(y), and D(x^3)=(1+a+a^2)D(x). Applying these to r=x1^3[x1,x2][x3,x4] gives successively r1=r3=r4=1 and then 2+r2^{-1}=0, hence r2=(-2)^{-1}=(1-3)^{-1} exactly in Z3. Therefore all finite reductions mod 3^n are fixed by the same equation. This closes the exact fixed-q=3 calculation, while retaining the distinction that canonical-orientation identification uses the standard intrinsic characterization and that J3 alone is not claimed to contain all higher digits.
+
+## 2026-09-19 — HARD ATTACK: full-tower theorem is downgraded
+
+A hostile theorem-audit found a genuine logical weakness in the earlier document `ORIENTATION_FINITE_LEVEL_FACTORISATION_THEOREM_2026-09-19.md`.
+
+### Finding
+The proposed object \\(J_n\\) was defined as “the filtered relation information required to evaluate the universal crossed-derivation relation modulo \\(3^n\\)”. The extraction functional \\(\\mathcal C_n(J_n,\\rho)\\) was then defined from precisely that evaluation data. Consequently the implication
+\\[
+(J_n)_{n\\ge2}\\Longrightarrow(\\chi_n)_n\\Longrightarrow\\chi
+\\]
+is mathematically correct **only conditionally on an independently specified, non-tautological tower \\(J_n\\)**. As written, the construction builds the needed observable into the definition of \\(J_n\\); it does not prove that such a canonical tower exists, nor that an independently defined filtered relation jet carries exactly that information.
+
+This is not a failure of the inverse-limit argument itself. The inverse-limit step is elementary and sound once the finite-level \\(\\chi_n\\) are independently determined and compatible. The weak link is the **existence/canonicity/non-tautological definition of the input tower**.
+
+### Consequence
+- “compatible full filtered relation-jet tower \\(\\Rightarrow\\chi\\)” is no longer **PASS/CLOSED as a substantive reconstruction theorem**.
+- Status: **CONDITIONAL / TAUTOLOGICAL-AS-WRITTEN**.
+- The fixed-presentation exact crossed-derivation calculation remains **PASS/CLOSED**.
+- The intrinsic mod-9 projective degree-(2,3) carrier remains **PASS/CLOSED** at its separately audited scope.
+- The exact full-\\(\\chi\\) carrier is **OPEN** unless a concrete, independently defined filtered object is shown to factor to the coefficient-evaluation data.
+
+### Strongest defensible statement
+\\[
+\\boxed{\\text{independently supplied exact finite-level relation-evaluation data}
+\\Longrightarrow \\chi_n\\Longrightarrow\\chi}
+\\]
+is proved. What is not proved is
+\\[
+\\boxed{\\text{canonical filtered relation-jet tower}
+\\Longrightarrow\\text{that evaluation data}.}
+\\]
+
+### New audit rule
+No future document may call the full-tower route PASS merely by defining \\(J_n\\) as “whatever is needed for the crossed-derivation evaluation”. A candidate tower must pass, separately:
+1. intrinsic definition;
+2. finite, non-tautological information content;
+3. canonical change-of-presentation/gauge behavior;
+4. factorization to the exact coefficient-evaluation maps;
+5. compatibility under \\(n\\mapsto n-1\\).
+
+Detailed attack record: `research/ORIENTATION_FULL_TOWER_TAUTOLOGY_AUDIT_2026-09-19.md`.
