@@ -176,3 +176,23 @@ It must establish:
 4. whether the construction can be assembled into an intrinsic filtered/extension observable.
 
 Until these pass, no full rank-4 representative scan is authorized.
+
+
+## 11. Quotient-legitimacy / equivariance sub-gate — local PASS
+
+The candidate gauge space G_3 = C_3 + Delta_IA was tested under the frozen tensor action.
+
+All 80 nonzero-vector Sp_4(F_3) transvections preserve C_3, Delta_IA, and G_3. Exact bad-counts are all zero. A multiplier-2 GSp_4(F_3) representative diag(1,2,1,2) was also checked and preserves the ranks 4, 20, and 20 respectively.
+
+Therefore the 44-dimensional candidate quotient A_3/G_3 is equivariant for the tested complete transvection family and the tested GSp multiplier direction.
+
+Decision: **quotient-legitimacy/equivariance sub-gate PASS**.
+
+This is still not a main definition-gate PASS: coordinate-free canonicity, full lift-fibre composition/change law, and descent of the q-sensitive defect to an intrinsic orbit/torsor/extension class remain to be established.
+
+Result: `research/RANK4_D4_IA_EQUIVARIANCE_AUDIT_RESULT_2026-09-19.md`
+Script: `research/rank4_D4_ia_equivariance_audit_2026-09-19.py`
+
+### Next authorized step
+
+Audit the graded lift-fibre composition/change law and whether the q-sensitive defect descends independently of a chosen base lift. No full rank-4 scan is authorized yet.
