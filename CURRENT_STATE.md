@@ -374,3 +374,31 @@ Status:
 - F5 filtered/graded factorization: **OPEN**
 
 No finite scan is authorized. Detailed gate: `plans/ORIENTATION_MOD9_FILTERED_FACTOR_GATE_2026-09-19.md`.
+
+## 2026-09-19 — F1-F4 filtered-quotient audit: PASS, F5 OPEN
+
+A new hand audit is recorded in `research/ORIENTATION_MOD9_FILTERED_FACTOR_F1_F4_AUDIT_2026-09-19.md`.
+
+The twisted mod-9 obstruction can be formulated without a chosen free presentation or preferred free lift as a canonical twisted cocycle-lifting obstruction on the finite filtered quotient
+[
+C_3=G/G_4
+]
+of the frozen Zassenhaus/p-central filtration. The coefficient action is through
+[
+ho=1+3lambdapmod9,qquad lambdain H^1(G,mathbf F_3).
+]
+In frozen coordinates, evaluation of this intrinsic lifting problem reproduces
+[
+B_lambda(f)=(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4.
+]
+
+Status:
+- **F1 definition:** PASS at the canonical finite-filtered-quotient level.
+- **F2 presentation/lift independence:** PASS at that level.
+- **F3 automorphism naturality:** PASS at that level.
+- **F4 uniqueness:** PASS; the zero set is the singleton ((0,1,0,0)).
+- **F5 factorization through the prescribed filtered/graded datum:** OPEN.
+
+Critical boundary: this construction uses filtered extension/multiplication data of (G/G_4), not merely the associated graded vector spaces and initial quadratic relation. The q=3 power term lies in the first non-quadratic filtered layer, so discarding extension data can erase the information needed for (chimod9).
+
+Therefore the project must not yet claim recovery from the associated graded restricted Lie object alone. The next task is to formalize exactly what counts as the allowed filtered/graded datum and determine whether it contains (G/G_4), or an equivalent extension class. No finite scan is authorized.
