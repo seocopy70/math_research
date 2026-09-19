@@ -42,8 +42,8 @@ has unique zero λ=e_2^* for q=3 and λ=0 for q=∞. Hence it recovers χ mod 9 
 
 Decision:
 - standalone Bockstein: FAIL/CLOSED;
-- cup + Bockstein intrinsic carrier: PASS/CLOSED at mod-9 level;
-- M1 intrinsic carrier functor: PASS/CLOSED at mod-9 level;
+- cup + Bockstein intrinsic carrier: PASS/CLOSED at mod-9 level, under the stated standard transgression/Bockstein identification;
+- M1 intrinsic carrier functor: PASS/CLOSED at mod-9 level, under the standard transgression/Bockstein identification, under the stated standard transgression/Bockstein identification;
 - M2 mod-9 orientation factorization: PASS/CLOSED at the stated degree-(2,3) level;
 - next authorized structural target: M3 comparison/obstruction relative to the Pál–Quick A3/Hochschild canonical class.
 
