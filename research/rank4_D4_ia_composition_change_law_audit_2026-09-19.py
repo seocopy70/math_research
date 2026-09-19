@@ -41,7 +41,7 @@ def eval_word(word,gens):
     return z
 def apply_word(word,images):
     z=dict(ONE)
-    for i,s in word: z=mul(z,images[i] if s==1 else inv(images[i]))
+    for i in word: z=mul(z,images[i])
     return z
 def apply_poly(poly,images):
     z={}
