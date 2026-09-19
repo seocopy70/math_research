@@ -215,3 +215,43 @@ For every tested representative and both left/right parameterizations, all 24 fi
 CI: 35416084903.
 
 These results close the first-layer basepoint/change-law questions **locally**. They do not yet establish the full IA torsor/extension datum, coordinate-free canonicity, or coverage of arbitrary GSp_4 representatives. The main definition gate remains OPEN.
+
+## 14. Graded-to-fibre extension step — PASS / LOCAL
+
+The authorized extension step has now been executed.
+
+### 14.1 Higher IA layers cannot enter the degree-3 object
+
+The first possible higher IA layer has generator correction of homogeneous degree 3. The audit exhaustively tested all
+4 x 4^3 x 2 = 512
+q=3/q=infinity cases. Every degree-3 defect change is zero. Higher IA layers begin even later and are automatically invisible under the degree-3 truncation.
+
+Therefore the degree-3 lift dependence is exhausted by the first IA layer:
+degree-3 lift dependence = Delta_IA modulo C3.
+
+### 14.2 Concrete quotient datum
+
+The resulting candidate is
+Q3=A3/(C3+Delta_IA), dim Q3=44.
+
+For identity, -I, and the standard transvection:
+- rank(Delta_IA)=20;
+- rank(C3+Delta_IA)=20;
+- all 24 first-layer base lifts give the same defect class in Q3;
+- the q=3 versus q=infinity class is nonzero and survives Q3 for -I and the transvection.
+
+Thus the construction is no longer a preferred-lift observable: within the frozen degree-3 convention it is a genuine quotient class.
+
+Result: research/rank4_D4_ia_graded_to_fibre_extension_audit_2026-09-19.py
+
+### 14.3 Gate consequence
+
+PASS / LOCAL sub-gate. The higher-IA loophole is closed at degree 3 and the 44-dimensional quotient datum is concretely realized.
+
+The main definition gate remains OPEN because full covariance of the defect class under all relevant GSp_4 representative changes has not been established. In particular, the audit must not be upgraded to a full coordinate-free canonicality claim merely from the three tested representatives.
+
+No full rank-4 q-comparison is authorized yet.
+
+### 14.4 Next authorized step
+
+Audit the remaining covariance requirement for the quotient defect class, with the frozen q=3 relator data and multiplier convention explicit. The goal is to determine whether the 44-dimensional quotient class is an intrinsic filtered datum for the admissible linear-action category, without choosing a preferred lift.
