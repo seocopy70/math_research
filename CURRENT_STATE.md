@@ -397,8 +397,7 @@ Reduction modulo \(3^n\) makes the finite-level solutions compatible, and
 gives the unique inverse-limit character \(\chi\).
 
 Decision: **finite-level factorization / inverse-limit theorem PASS / CLOSED at the stated information level**.
-Important boundary: this closes only
-\[
+Important boundary: this closes only\[
 \text{full compatible tower}\Rightarrow\{\chi_n\}_n\Rightarrow\chi.
 \]
 It does not prove that \(J_3\) alone determines all higher digits, nor categorical minimality, nor existence of a bounded-degree carrier for the full character.
@@ -797,8 +796,7 @@ The Bockstein detects the power-term direction: up to the fixed top-class/sign c
 \]
 Classical Demushkin formulas identify this Bockstein with the power coefficients of the defining relation. This independently confirms that the finite-coefficient operation sees the q=3 power contribution.
 Critical result: the intrinsic object is the map \(\beta\), not a canonically normalized scalar in \(\mathbf F_3\). Changing the generator of the one-dimensional \(H^2\) target rescales any displayed scalar. More importantly, \(\beta\) retains only the q=3 power/torsion shadow and does not retain the required first 3-adic orientation value
-\[
-\chi(x_2)\equiv4\pmod9.
+\[\chi(x_2)\equiv4\pmod9.
 \]
 
 Gate decision:
@@ -1197,8 +1195,7 @@ D(r)=0 for all crossed derivations iff J_r(chi)=0.
 Therefore
 [canonical Demuškin orientation] iff [universal crossed-derivation descent] iff [J_r(chi)=0].
 For r=x_1^3[x_1,x_2][x_3,x_4], the exact row-zero equations on (1+3 Z_3)^4 give
-chi(x_1)=chi(x_3)=chi(x_4)=1,
-chi(x_2)=-1/2=(1-3)^(-1).
+chi(x_1)=chi(x_3)=chi(x_4)=1,chi(x_2)=-1/2=(1-3)^(-1).
 
 This closes the previous A/B/C logical gap: ker J != 0 was too weak, but the canonical criterion quantifies over all crossed derivations, which is exactly row vanishing.
 
@@ -1443,3 +1440,24 @@ Before further calculation:
 - Bockstein orientation carrier: **CONDITIONAL / OPEN**.
 
 No further same-family Bockstein scan is authorized.
+
+## AUTHORITATIVE UPDATE — HARD ATTACK 22 — 2026-09-20
+
+The mod-27 target is now formalized basis-free:
+\[
+\lambda_{27}(G)=\frac13\log\chi_G\pmod9\in H^1(G,\mathbf Z/9),
+\]
+and \(O_{27}(G)\) is the distinguished-orientation singleton/subfunctor selecting this class. This removes the previous ambiguity in the target notation.
+
+The abstract carrier category has a genuine symmetry \(S\) preventing a natural selector of \(\lambda_{27}\), but \(S\) is not an admissible group/gauge morphism; indeed canonical orientation naturality itself blocks such a realization. Thus the abstract no-go is valid only in \(\mathcal C_{27}^{abs}\), not in the project's admissible category.
+
+The decisive admissible counterexample pair
+\[
+\mathcal B_{27}(G)\cong\mathcal B_{27}(G'),\qquad
+O_{27}(G)\not\cong O_{27}(G')
+\]
+has not been found. The standard Demushkin family cannot supply one because its full carrier types already separate the valuation classes.
+
+**Binding status:** target formalization PASS/CLOSED; abstract-carrier no-go PASS/CLOSED; admissible counterexample OPEN/NOT FOUND; universal factorization OPEN; independent bridge OPEN; Bockstein orientation carrier CONDITIONAL/OPEN.
+
+No further same-family Bockstein computation is authorized. The next branch must add genuinely new q-blind rigidifying structure or prove a universal factorization theorem. A cohomological Mackey/transfer enrichment across open subgroups is recorded as a candidate, not yet accepted.
