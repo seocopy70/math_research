@@ -730,3 +730,20 @@ Status:
 Detailed audit: research/ORIENTATION_EXACT_UNIVERSAL_FOX_CARRIER_AUDIT_2026-09-19.md.
 
 Immediate next gate: prove covariance of the universal Fox obstruction ideal under relator conjugation, relation-generator units, and minimal free-basis/Nielsen changes via the Fox chain rule. No representation scan is authorized.
+
+
+## 2026-09-19 — HARD ATTACK 4: universal Fox carrier covariance
+
+The universal Fox carrier was pushed through the presentation-change attack. The correct coefficient ring is the completed local ring A=Z_3[[U_1,...,U_d]] with T_i=1+U_i, and the Fox row is retained projectively up to units.
+
+Results:
+- relator conjugation r -> u r u^{-1}: Fox/crossed-derivation product rule gives J -> tau(u)J, so zero locus is unchanged: PASS/CLOSED;
+- relation-module generator change: projective row is unchanged up to a completed coefficient-ring unit, conditional on the standard cyclic one-relator relation-module statement: PASS/CLOSED;
+- free-basis/Nielsen change: Fox chain rule gives row transformation by induced coefficient-torus substitution and an invertible evaluated Fox Jacobian: PASS/CLOSED at the universal Fox-calculus level;
+- fixed q=3 zero locus remains unique: T_1=T_3=T_4=1, T_2=-1/2.
+
+This upgrades the new object from a fixed-presentation carrier to an intrinsic universal obstruction-scheme candidate, conditional only on the standard completed Fox/relation-module facts stated in the detailed audit.
+
+New record: research/ORIENTATION_EXACT_UNIVERSAL_FOX_COVARIANCE_AUDIT_2026-09-19.md.
+
+New boundary: a non-tautological exact characteristic-zero carrier now exists in natural scheme-theoretic form. The unresolved problem is compression to a smaller intrinsic filtered/degree-(2,3) object. No representation scan is authorized.
