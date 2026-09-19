@@ -2103,3 +2103,30 @@ Decision:
 
 Detailed record:
 research/M3_CUP_BOCKSTEIN_TO_PAL_QUICK_COMPARISON_AUDIT_2026-09-19.md
+
+
+## 2026-09-19 — Bockstein–relation-jet identification audit
+
+The previously stated intrinsic cup+Bockstein carrier was critically audited at its load-bearing step
+\[
+\beta\stackrel{?}{\longleftrightarrow}p(P_3).
+\]
+
+The audit separates the claim into the intrinsic construction and the transgression identification. For a minimal one-relator pro-3 presentation, the standard five-term/transgression sequence identifies the one-dimensional relation-dual line with \(H^2(G,\mathbf F_3)\). Under the standard relation–Bockstein formula, the Bockstein of the dual generator detects the coefficient of the restricted p-th-power terms in the relator, up to the global sign/unit determined by the chosen transgression generator. Therefore, for
+\[
+r=(R_2,P_3)+O(4),
+\]
+the Bockstein power vector is projectively the same \(p(P_3)\) that occurs in the degree-(2,3) relation jet.
+
+For the frozen q=3 relation, \(P_3=X_1^{[3]}\), hence \(p\sim X_1^{(1)}\). For the q=\infty control, the first Bockstein/power component is zero. The common scalar ambiguity is harmless after projectivization, and the already audited recovery functional then gives the unique orientation covector \(e_2^*\), hence \(\chi\bmod9=(1,4,1,1)\).
+
+Critical boundary: the audit does not canonically fix the absolute sign/normalization of \(p\) without choosing a generator of \(H^2\), and it does not provide higher 3-adic digits. The literature formula must be cited explicitly in the final manuscript rather than hidden behind “standard calculation”.
+
+Decision:
+- intrinsic cup+Bockstein projective carrier: **PASS**;
+- \(\beta\leftrightarrow p(P_3)\) projectively: **PASS / CLOSED under the standard one-relator transgression/Bockstein formula**;
+- absolute normalization: **CONDITIONAL / gauge-dependent**;
+- projective carrier \(\to\chi\bmod9\): **PASS / CLOSED**;
+- no broad scan authorized.
+
+Record: research/BOCKSTEIN_RELATION_JET_IDENTIFICATION_AUDIT_2026-09-19.md.
