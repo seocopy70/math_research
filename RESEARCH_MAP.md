@@ -1461,3 +1461,16 @@ A hand derivation now separates the project’s \(\mu\) condition from the canon
 This gives a conditional intrinsic interpretation of \(\mu\) on the actual automorphism image, but **does not identify \(\mu\) with \(\chi\)**. The domains differ, and q=3 has \(\chi(G)\subset1+3\mathbf Z_3\), hence trivial reduction mod 3.
 
 Status: **PASS for the type/domain separation and conditional intrinsic interpretation; OPEN for the recovery bridge \(\mu\to\chi\).** No finite scan yet.
+
+
+## 0E. MU-CHI bridge definition gate — 2026-09-19
+
+Manual proof completed.
+
+- **PASS:** the \(e_1\)-line is intrinsic as the Frattini image of \(\operatorname{Tor}(G^{ab})\cong\mathbf Z/3\).
+- **PASS:** actual automorphisms preserve the line and define \(\mu_{\mathrm{int}}:\operatorname{Aut}(G)\to\mathbf F_3^\times\).
+- **PASS:** under the frozen matrix/pairing convention, \(\mu_{\mathrm{int}}\) equals the degree-one GSp multiplier on the actual automorphism image.
+- **FAIL:** direct \(\mu=\chi\) and \(\mu=\chi\bmod3\).
+- **OPEN:** existence of a deeper dualizing-module construction relating \(\chi\) plus additional canonical data to \(\mu_{\mathrm{int}}\).
+
+No finite scan is authorized at this stage. Next hand task: inspect the dualizing module for a canonical finite quotient carrying \(\mu_{\mathrm{int}}\), or prove that no such canonical quotient arises from \(\chi\) alone.
