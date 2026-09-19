@@ -502,3 +502,49 @@ CI workflow: .github/workflows/rank4-d4-ia-graded-to-fibre-extension.yml.
 ### Current interpretation
 
 The surviving candidate is no longer an arbitrary preferred lift. It is the degree-3 defect class in the 44-dimensional quotient Q3, relative to the frozen relator/action convention. The next decision point is whether the remaining covariance requirement can be closed without introducing a new arbitrary choice. No full rank-4 q-comparison is authorized yet.
+
+
+## 2026-09-19 — Literature-synthesis strategic update
+
+Full-paper audits of Pál–Quick (arXiv:2601.07551v2) and Blumer–Quadrelli (arXiv:2603.15464v2) are now recorded in the literature files and research log.
+
+### What the literature independently supports
+
+1. Quadratic/associated-graded data can lose q-sensitive information.
+2. Higher relation/cohomological structure can recover q-sensitive information.
+3. Neither paper proves the project's exact projective degree-(2,3) relation-jet reconstruction theorem.
+4. Blumer–Quadrelli's canonical orientation gives
+   [
+   (1-q)^{-1},
+   ]
+   hence (-1/2) for q=3, independently matching the project's exact recovery.
+
+### Current theorem hierarchy
+
+[
+\text{bare graded}
+\not\Rightarrow\chi\bmod9,
+]
+while the projective degree-(2,3) relation carrier does recover (chi\bmod9), and with exact (mathbf Z_3) coefficients the fixed q=3 carrier recovers the full (chi). The compatible full tower remains a separate completion mechanism.
+
+### Strategic research priority
+
+The research question is sharpened to:
+
+> Which intrinsic enrichment of the quadratic filtered relation is exactly sufficient to recover cyclotomic orientation?
+
+Priority order:
+1. consolidate the degree-(2,3) recovery into a theorem chain;
+2. characterize the coarsest non-tautological carrier;
+3. state the strongest defensible relative/universal minimality theorem in a precisely defined carrier category;
+4. compare the resulting carrier with Pál–Quick's higher cohomological obstruction;
+5. use Blumer–Quadrelli as an independent structural comparison.
+
+The W/U/O representation branch is retained as structural work but is not to be expanded solely because it contains higher-order structure; a rigorous bridge to the orientation-recovery functional is required.
+
+### Gate discipline
+
+This literature update does **not** reopen any previously closed Gate and does not by itself cancel the existing IA/filtered-extension gate. Existing Gate-specific next actions remain governed by their own current records. No broad rank-4 scan is authorized merely from the literature comparison.
+
+Detailed plan:
+`research/RESEARCH_PLAN_LITERATURE_SYNTHESIS_2026-09-19.md`.
