@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Rank-4 D4 graded-to-fibre extension datum audit.
 
-Exact F3 Magnus degree <=3.  The audit asks whether higher IA layers can
-affect the degree-3 relator defect, and whether the first-layer quotient
-already gives a lift-independent defect class for the tested representatives.
+Exact F3 Magnus degree <=3.  This audit tests the graded-to-fibre extension
+step: higher IA layers are invisible at degree 3, while the first-layer gauge
+quotient gives a lift-independent defect class for the tested representatives.
 """
 from itertools import product
 
@@ -69,10 +69,8 @@ X=[{(i,):1} for i in range(N)]
 C3=[vec(add(mu(X[i],R2),sc(mu(R2,X[i]),-1)),3) for i in range(N)]
 assert rank(C3)==4
 
-# Universal degree-3 higher-IA test.  A higher IA automorphism has generator
-# correction starting in degree >=3; degree 3 is the first potentially visible
-# higher layer.  Exhaust all 4*4^3 homogeneous degree-3 corrections for both
-# relators.
+# First possible higher-IA layer: homogeneous degree-3 generator corrections.
+# Exhaust all 4*4^3 corrections, for both q=3 and q=infinity.
 higher_checks=0
 for i in range(N):
     for w in product(range(N),repeat=3):
