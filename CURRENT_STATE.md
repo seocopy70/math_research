@@ -512,3 +512,18 @@ Important boundary: sufficiency is established conditional on J_3 being supplied
 
 Detailed plan: research/ORIENTATION_MOD9_MINIMAL_ENRICHED_CARRIER_2026-09-19.md.
 No finite scan is authorized.
+
+
+## 2026-09-19 — E1 relator-gauge audit: local PASS / full intrinsicness OPEN
+
+A critical no-scan audit tested the candidate projective degree-3 relation jet against relator conjugation. If a filtered relator has degree-(2,3) terms (R,P), replacing it by u r u^{-1} with degree-one term v leaves R unchanged and changes the degree-3 ordinary Lie component by P -> P+[v,R] (up to convention/sign). Therefore common scaling alone is not a sufficient presentation-independence argument.
+
+The recovery functional nevertheless descends through this gauge: for f in V*=H^1(G,F_3), f([v,R])=0, so f(P+[v,R])=f(P), while (lambda wedge f)(R) is unchanged. Hence Theta_{R,P} and its zero set are invariant under relator conjugation.
+
+Decision:
+- **E1-local gauge compatibility: PASS.**
+- **E1-full intrinsic definition: OPEN.**
+
+The next task is to identify the canonical relation-module quotient containing all legitimate relator changes. In particular, [V,R] is a necessary gauge quotient but is not yet proved to be the complete gauge group. The projective relation jet remains a candidate sufficient carrier, not an intrinsic invariant yet. No finite scan is authorized.
+
+Detailed audit: research/ORIENTATION_MOD9_E1_RELATOR_GAUGE_AUDIT_2026-09-19.md.
