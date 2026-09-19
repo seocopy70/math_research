@@ -877,3 +877,32 @@ The exact F3 audit verifies the new S9 direction has rank 1. The frozen q=∞ ba
 This gate does **not** establish H-stability, gr9 quotient identification, D9, q=9 invariant detection, or orientation recovery.
 
 **Next gate:** H-stability of ((I_9)_9) under the fixed (H=Sp_4(\mathbb F_3)) action.
+
+## 6I. Q3/Q9 S9 — H-stability gate: FAIL / CLOSED
+
+Record: research/Q3_Q9_S9_H_STABILITY_RESULT_2026-09-19.md.
+
+For the naive q=9 degree-9 relation space
+\[
+(I_9)_9=(I_\infty)_9\oplus\langle S_9\rangle,
+\]
+the fixed transvection \(t_{e_2}\) satisfies
+\[
+t_{e_2}(e_1)=e_1+e_2,
+\qquad
+t_{e_2}(S_9)=S_9+X_2^{[9]}.
+\]
+Because the frozen S9-B structural lemma gives
+\[
+(I_\infty)_9\cap L_1^{[9]}=0,
+\]
+the transformed vector is outside the q=9 degree-9 space. Exact F3 ranks give rank(<S9>)=1 and rank(<S9,t_e2 S9>)=2.
+
+Therefore
+\[
+\boxed{(I_9)_9\text{ is not H-stable}.}
+\]
+
+The first audit draft had a sign error in the witness; it was detected and corrected before accepting the result. The original attempt is classified INVALID TEST, not mathematical evidence.
+
+**Consequence:** do not proceed to gr9 quotient identification or D9 using the naive I_9,9 as an H-module. The next gate is a critical redesign: determine whether an H-closed replacement is mathematically legitimate and compatible with the presentation-derived q=9 relation.
