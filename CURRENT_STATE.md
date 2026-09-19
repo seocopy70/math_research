@@ -52,3 +52,33 @@ No full rank-4 representative scan is authorized before that law is established.
 - covariance audit: c620ce5a962031cfff90d49aa8500ea39cc16dc1
 - representative audit: 12805fe1a2486a4ba234b2607bf197468cd48a7a
 - latest research-record commit: 109fcfec009cf0e30ac6102bc7052e40dc0b0dab
+
+
+## Latest quotient-defect composition control — 2026-09-19
+
+CI run 35417325110, commit 1ee1680f071c77ee3b6042eb1436dfd9f3406.
+
+The absolute normalized relator defect [F_g(R3)-mu(g)R3]_deg3 failed the tested composition law on all 16 ordered pairs and is not promoted.
+
+The q-sensitive difference
+Delta_q(g) = [delta_3(g)-delta_infinity(g)] = [F_g(X1^3)-X1^3]_deg3
+satisfies the candidate cocycle law
+Delta_q(gh)=Delta_q(g)+g·Delta_q(h)
+in Q3=A3/(C3+Delta_IA), for all 16 ordered pairs of the four controlled representatives (identity, -I, standard transvection, multiplier-2 diagonal).
+
+Exact CI:
+- gauge rank 20;
+- Q3 dimension 44;
+- candidate-law failures modulo Q3 = 0;
+- raw candidate-law failures = 16;
+- all 16 composed q-defect classes nonzero.
+
+Important qualification: the reversed action/order diagnostic also has zero failures modulo Q3 on this small set, so the action/order convention is not uniquely fixed by this control alone.
+
+Current gate remains LOCAL, not theorem-level:
+- fix the precise action/order convention;
+- extend the cocycle audit to a broader structured representative family;
+- explicitly verify multiplier-2 GSp compatibility;
+- only then authorize a broad rank-4 scan.
+
+The failed absolute defect law and all previous excluded routes remain closed.
