@@ -2155,3 +2155,28 @@ The restricted-cubic coefficient is naturally in \\(V^{(1)}\\); over \\(\\mathbf
 Decision unchanged but tightened: Bockstein–relation-jet projective identification **PASS / CLOSED** under the standard transgression/Bockstein formula plus independent frozen-relator lift verification; absolute H² normalization remains **CONDITIONAL / gauge-dependent**; \\(\\chi\\bmod9=(1,4,1,1)\\) remains **PASS / CLOSED** at the stated projective degree-(2,3) level. No higher-digit conclusion and no broad scan are authorized.
 
 Record: research/BOCKSTEIN_RELATION_JET_IDENTIFICATION_AUDIT_2026-09-19.md.
+
+## 2026-09-19 — Independent twisted mod-9 recovery / carrier factorization
+
+A genuinely independent recovery route was audited using the canonical twisted-surjectivity criterion
+\[
+H^1(G,\mathbf Z/9(\rho))\to H^1(G,\mathbf F_3).
+\]
+For \(\rho(x_i)=1+3a_i\), the frozen relator gives the obstruction
+\[
+(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4,
+\]
+so surjectivity uniquely forces \((a_1,a_2,a_3,a_4)=(0,1,0,0)\) and \(\rho\equiv(1,4,1,1)\pmod9\).
+
+The stronger bridge was then checked: with \(R=[X_1,X_2]+[X_3,X_4]\) and \(p=X_1^{(1)}\), the twisted lifting obstruction is exactly
+\[
+\Theta_{(R,p)}(\lambda)(f)=f(p)+(\lambda\wedge f)(R).
+\]
+Thus the independent twisted criterion factors through the same projective degree-(2,3) carrier.
+
+Decision:
+- T9-D: **PASS / CLOSED at the projective degree-(2,3) carrier level**;
+- bare associated-graded factorization remains **NOT ESTABLISHED**;
+- higher 3-adic digits remain open.
+
+Detailed record: research/ORIENTATION_MOD9_TWISTED_RECOVERY_CARRIER_FACTORIZATION_AUDIT_2026-09-19.md.
