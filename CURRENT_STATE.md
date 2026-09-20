@@ -1601,3 +1601,25 @@ Current binding status:
 This confirms the earlier distinction between information sufficiency for candidate data and actual canonical orientation recognition. No numerical scan is authorized until a concrete selector predicate or admissible counterexample is available.
 
 Record: `research/KUMMER_RECOGNITION_LOWER_3_CENTRAL_HARD_ATTACK_24_2026-09-20.md`.
+
+
+## AUTHORITATIVE UPDATE — HARD ATTACK 25 — 2026-09-20 — NONZERO KUMMER COCYCLE ROUTE CLOSED
+
+The nonzero-cocycle repair was closed structurally. For every candidate \(\rho:G\to U_k\) on the rank-four one-relator family, the four generator values of a crossed homomorphism satisfy only one additive relator obstruction \(A_k^4\to A_k\). Hence
+\[
+|Z^1(G,A_k(\rho))|\ge |A_k|^3,
+\]
+so nonzero crossed homomorphisms exist for every candidate \(\rho\).
+
+Therefore nonzero Kummer-cocycle existence cannot select the canonical orientation.
+
+Binding status:
+- \(\exists f\): **FAIL / CLOSED**;
+- \(\exists f\ne0\): **FAIL / CLOSED**;
+- Boolean nonvanishing of \(H^1(G,A_k(\rho))\): **FAIL / CLOSED** as a selector;
+- richer twisted cohomological interaction with additional group structure: **OPEN**;
+- genuinely group-sensitive finite selector: **OPEN**.
+
+This strengthens the factorization/recognition boundary: \(G/P_{k+1}\) carries candidate Kummer data, but the selector cannot come from Kummer existence alone. The next meaningful branch must combine the candidate coefficient action with additional intrinsic filtered extension structure, or produce an admissible same-carrier/different-orientation no-go.
+
+Record: `research/KUMMER_RECOGNITION_NONZERO_COCYCLE_HARD_ATTACK_25_2026-09-20.md`.
