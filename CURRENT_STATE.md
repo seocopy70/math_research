@@ -2718,3 +2718,11 @@ Record: research/HA61_B5_13_INTRINSIC_ZERO_SELECTOR_2026-09-20.md (commit 1c4ecb
 ## 2026-09-20 — B5-13 CRITICAL CORRECTION
 
 The proposed uniqueness argument for the intrinsic delta3 zero-selector was wrong. A nonzero linear functional nu -> nu cup f on the 4-dimensional H^1(G,F3) is not injective; its kernel has dimension 3. Therefore, if the variation formula holds and one zero exists, the full coefficient-lift torsor has an affine zero set of size 27, not a singleton. B5-13 zero-selector uniqueness is FAIL/CLOSED. The variation identity remains OPEN/DECISIVE. The next legitimate question is whether the filtered data canonically selects a one-dimensional affine lift direction (or another quotient/structure) before zero-selection. Such a restriction cannot be introduced without a fresh Object/Input/Functoriality/Gauge/Novelty audit.
+
+
+## 2026-09-20 — HA61-B5-14: GLOBAL ZERO-MAP QUANTIFIER CORRECTION
+
+The B5-13 fixed-(f) uniqueness/no-go interpretation is corrected. The intended selector is (delta_{3,ho_3}\equiv0) as a map on the full mod-9 cohomology domain. Conditional on the universal variation identity, surjectivity of (H^1(G,\mathbf Z/9(\rho_2))\to H^1(G,\mathbf F_3)), and nondegeneracy of the Demuškin cup pairing, two global zero maps force the lift difference (
+u) to vanish. Hence **global zero-map uniqueness: PASS / LOCAL (conditional)**. The fixed-(f) 27-point argument is **HISTORICAL / SUPERSEDED** as a no-go for the global selector. Existence, finite filtered/relation realization, (G/P_4\) / (D_{10}) factorization, and Serre/Kummer novelty remain **OPEN / DECISIVE**. (t_2) routes remain closed; HA61-C remains unopened.
+
+Record: research/HA61_B5_14_GLOBAL_ZERO_MAP_QUANTIFIER_CORRECTION_2026-09-20.md
