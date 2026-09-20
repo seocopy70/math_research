@@ -2688,3 +2688,17 @@ Decision:
 - unique coker maximizer without PD²: **OPEN / DECISIVE**.
 
 Record: research/KUMMER_HARD_ATTACK_49_BASE_TARGET_H4_KILLED_AT_D2_2026-09-20.md
+
+## 2026-09-20 — HARD ATTACK 50: DIMENSIONAL OBSTRUCTION FOR THE (2,1) SURVIVOR
+
+HA50 makes the next bottleneck strictly sharper. From HA49, dim E_2^{2,1}=90 and rank d_2^{2,1}=35, so dim ker d_2^{2,1}=55. Since W is F_3^9 elementary abelian, dim E_2^{0,2}=dim H^2(W,F_3)=C(9,2)+9=45. Therefore dim E_3^{2,1}=55-rank(d_2^{0,2}) >=10. Hence E_3^{2,1} is forced nonzero by dimension alone: incoming d_2 can never kill the entire (2,1) sector. The target is therefore no longer to test whether E_3^{2,1}=0, but to identify the forced survivor subquotient and its H-action. The decomposition H^2(W)=Lambda^2 W^* plus beta_W(W^*) must be retained.
+
+Decision:
+- dim E_3^{2,1} >= 10: PASS / CLOSED;
+- E_3^{2,1} != 0: PASS / CLOSED;
+- exact dimension/module structure: OPEN / LOAD-BEARING;
+- survival to E_infinity: OPEN;
+- full beta_rho^2: OPEN / LOAD-BEARING;
+- unique coker maximizer without PD^2: OPEN / DECISIVE.
+
+Record: KUMMER_HARD_ATTACK_50_21_SURVIVOR_DIMENSION_OBSTRUCTION_2026-09-20.md (commit a8617b69289d4cfa16922903b50639e8a6059ecf).
