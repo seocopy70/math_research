@@ -1864,3 +1864,18 @@ Separately, the selected outputs are compatible: the PD² finite-level maximalit
 The next structural question is no longer "can we force M_{k+1}->M_k?" but whether a universal property of the finite selector can make compatibility intrinsic without requiring a strict inverse system of the raw coker carriers.
 
 Detailed audit: research/KUMMER_HARD_ATTACK_35_INVERSE_SYSTEM_COMPATIBILITY_AUDIT_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 36: SELECTOR-ONLY COHERENCE ENDGAME
+
+A further attack shows that the practical reconstruction problem does not require a strict inverse system of the raw finite coker carriers. Define
+S_k(G) = {rho in Hom(G,U_k): |coker(delta_{k,rho})|=3^k}.
+The finite recognition theorem gives S_k(G)={chi mod 3^k}. Reduction of candidate characters therefore restricts to compatible maps S_{k+1}->S_k. The inverse-limit selector set
+S(G)={(rho_k): rho_k in S_k, rho_{k+1} mod 3^k=rho_k}
+is a singleton, canonically identified with chi_filt.
+
+This is PASS / LOCAL under the declared PD² verification framework. It is not a carrier-only naturality theorem: raw carrier maps remain OPEN, as does strict carrier-tower functoriality.
+
+The practical main branch therefore has a clean endpoint: finite recognition + selector coherence + inverse-limit reconstruction. Further work is justified only to remove external PD² dependence from coherence, prove minimality in a specified carrier category, establish strict carrier naturality, or broaden the admissible class.
+
+Detailed record: research/KUMMER_HARD_ATTACK_36_SELECTOR_COHERENCE_ENDGAME_2026-09-20.md.
