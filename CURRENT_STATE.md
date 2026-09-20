@@ -2210,3 +2210,21 @@ Decision:
 - unique coker maximizer without PD2: OPEN / DECISIVE.
 
 Record: KUMMER_HARD_ATTACK_52_BOCKSTEIN_SECTOR_D2_CLOSED_2026-09-20.md (commit 4407d8dfc1206ade4384462014b2146c215d558d).
+
+
+## 2026-09-20 — HARD ATTACK 53: THE 19-DIMENSIONAL (2,1) SURVIVOR IS PERMANENT
+
+HA53 observes a pure bidegree obstruction. Since d_r has bidegree (r,1-r), any outgoing d_r from E_r^{2,1} with r>=3 lands in negative second degree, and any incoming d_r would originate at negative first degree. Hence no higher differential can touch E_3^{2,1}. Combining with HA52 gives
+\[
+\boxed{E_3^{2,1}=E_\infty^{2,1},\quad \dim E_\infty^{2,1}=19.}
+\]
+Thus the 19-dimensional sector is a genuine permanent LHS filtration piece, not a transient page-3 artifact.
+
+Decision:
+- E_3^{2,1}=E_infinity^{2,1}: PASS / CLOSED;
+- dim E_infinity^{2,1}=19: PASS / CLOSED;
+- H-module structure: OPEN / LOAD-BEARING;
+- twisted beta_rho^2 on this sector: OPEN / LOAD-BEARING;
+- unique coker maximizer without PD2: OPEN / DECISIVE.
+
+Record: KUMMER_HARD_ATTACK_53_21_PERMANENT_SURVIVOR_2026-09-20.md (commit 20f4ba10bc744d5ae02e6c656cc6c55d8b216f5b).
