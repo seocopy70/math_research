@@ -2103,3 +2103,36 @@ Decision:
 - unique coker maximizer without PD^2: OPEN / DECISIVE.
 
 Record: research/KUMMER_HARD_ATTACK_47_BASE_ROW_BOCKSTEIN_NONZERO_2026-09-20.md (commit 69a0d208162531731ff3649d4e39a3e6fa56ea0f).
+
+
+## 2026-09-20 — HARD ATTACK 48: BASE H^3 TARGET IS KILLED ALREADY AT d_2
+
+HA48 corrected a load-bearing error in HA47. The claim that the only incoming differential to (3,0) after the d_2 stage was d_3:E_3^{0,2}->E_3^{3,0} was false: there is already d_2:E_2^{1,1}->E_2^{3,0}.
+
+Let K=im(d_2:W^*->H^2(V,F_3)). By HA45, K is the 9-dimensional hyperplane annihilating the relation-jet z_R=b_1+e_1e_2+e_3e_4. Since the LHS d_2 is a derivation,
+
+d_2:E_2^{1,1}=V^*\\otimes W^* -> E_2^{3,0}=H^3(V,F_3)
+
+has image V^*\\cup K. A direct basis argument shows
+
+V^*\\cup K = H^3(V,F_3),
+
+using b_2,b_3,b_4, e_{13},e_{14},e_{23},e_{24}, b_1-e_{12}, and b_1-e_{34} as generators of K. An independent finite-dimensional F_3 rank check gives rank 20, equal to dim H^3(V,F_3)=20.
+
+Therefore
+
+E_3^{3,0}=0,
+
+and hence E_infinity^{3,0}=0. The nonzero raw base-row class computed in HA47 is consequently killed at the d_2 target stage; no d_3^{0,2} calculation is needed for this target.
+
+This is a genuine negative refinement: the base-filtration output of beta_rho^2 has no surviving (3,0) component. The second Bockstein problem must move to the surviving filtration pieces (2,1), (1,2), (0,3) and their source-side counterparts.
+
+Decision:
+- HA47 target-differential correction: **PASS / CLOSED**;
+- V^*\\cup K=H^3(V,F_3): **PASS / CLOSED**;
+- E_infinity^{3,0}=0: **PASS / CLOSED**;
+- HA47 “first possible incoming differential is d_3^{0,2}”: **FAIL / CLOSED / SUPERSEDED**;
+- beta_rho^2 from (R,p): **OPEN / LOAD-BEARING**;
+- unique coker maximizer without PD²: **OPEN / DECISIVE**.
+
+Record: research/KUMMER_HARD_ATTACK_48_BASE_TARGET_KILLED_AT_D2_2026-09-20.md (commit 2a8e5ec4ec9b8fbed7b501387f5a0becdd5d6222).
