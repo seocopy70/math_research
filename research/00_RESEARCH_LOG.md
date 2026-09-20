@@ -983,3 +983,27 @@ Classification:
 Detailed record: research/KUMMER_HARD_ATTACK_38_EXTENSION_CLASS_TRANSGRESSION_2026-09-20.md.
 
 Next authorized attack: compare the known twisted Fox row with the intrinsic push-forward phi_*(e_k), then attack the finite coefficient-module dependence structurally. No broad numerical scan is authorized yet.
+
+
+## 2026-09-20 — HARD ATTACK 39: YONEDA / RESTRICTED COEFFICIENT-PROFILE COMPLETENESS
+
+Hard Attack 39 attacked the proposed equivalence between the extension class e_k and its transgression profile.
+
+For the full category of Q_k-modules, define T_e(A)(phi)=phi_*(e). The profile recovers e by taking A=M_k and phi=id_{M_k}; conversely e determines the entire profile. Hence full coefficient-category completeness is PASS / CLOSED, but only at a Yoneda-level information-theoretic level.
+
+For the actual Kummer family A_k(rho)=Z/3^k, define the restricted observation map Phi_k(e)=(phi_*(e))_{rho,phi} with kernel K_k=intersection ker(phi_*). The restricted family is information-complete iff K_k=0. No faithfulness theorem is available, and the full Yoneda argument does not establish it.
+
+The selector is weaker than full e_k-recovery: it only requires the finite observation function rho -> |coker[Hom_Q(M_k,A_k(rho)) -> H^2(Q_k,A_k(rho))]| for the specific Demushkin e_k to have a unique maximizer, equal to the canonical orientation residue. This remains OPEN / DECISIVE without PD².
+
+Coordinate comparison with the Fox row is now legitimate only as a secondary computation: one must construct a cocycle for e_k, push it out along phi, and identify the resulting H^2 class with the Fox/crossed-word obstruction, including section/presentation independence.
+
+Classification:
+- full coefficient-category profile completeness: PASS / CLOSED (Yoneda-complete, not a selector theorem);
+- restricted Kummer profile completeness: OPEN;
+- restricted profile -> unique orientation without PD²: OPEN / DECISIVE;
+- Fox row as coordinate realization: OPEN;
+- PD²-based finite selector: PASS / LOCAL;
+- carrier minimality: OPEN;
+- strict carrier-tower naturality: OPEN.
+
+Record: research/KUMMER_HARD_ATTACK_39_YONEDA_COEFFICIENT_PROFILE_2026-09-20.md.
