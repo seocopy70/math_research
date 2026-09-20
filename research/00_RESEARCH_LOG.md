@@ -1,3 +1,26 @@
+
+
+## 2026-09-21 — B2 / k=2 FINITE-WINDOW KUMMER TEST
+
+The first concrete B2 finite-window test was completed at k=2, Q_2=G/P_3 for the lower-3-central filtration. Define, for \(\rho:Q_2\to(\mathbf Z/9)^\times\) with \(\rho\equiv1\pmod3\), the finite predicate
+\[
+\mathsf K_2(\rho): H^1(Q_2,\mathbf Z/9(\rho))\to H^1(Q_2,\mathbf F_3)\text{ is surjective}.
+\]
+Using the already audited mod-9 obstruction \(\delta_{2,\rho}(f)=[f(p)+(\lambda\wedge f)(R)]\omega\), \(R=[X_1,X_2]+[X_3,X_4]\), \(p=X_1^{(1)}\), the universal-zero condition forces \(\lambda=e_2^*\), hence \(\rho=(1,4,1,1)=\chi\bmod9\).
+
+The finite-window existence gate was then checked directly: for the resulting A_2-valued lift z, reduction gives z(P_2)=0, so z(P_2)\subset3A_2; also \(\rho(P_2)=1\). Therefore z(g^3)=0 for g\in P_2, and the crossed-commutator formula gives z([g,h])=0 for g\in P_2, h\in G. Since P_3=P_2^3[P_2,G], z(P_3)=0. Thus the mod-9 lift factors through Q_2; existence is not being inferred merely from the full group G.
+
+For every other candidate \(\lambda\), the audited obstruction supplies an f with nonzero obstruction in H^2(G,F_3); by naturality of inflation this rules out vanishing of the corresponding Q_2 obstruction. Hence the finite predicate has the desired unique solution in this k=2 test.
+
+Decision:
+- B2 finite predicate definition: **PASS / CLOSED**;
+- q-blindness/predicate naturality at k=2: **PASS / CLOSED**;
+- Q_2 finite-window existence: **PASS / LOCAL**;
+- k=2 uniqueness: **PASS / LOCAL**;
+- uniform B2 theorem for all k: **OPEN / DECISIVE**;
+- next gate: k=3, Q_3=G/P_4; first prove P_4 annihilation of the mod-27 Kummer lift before any higher interpretation.
+
+Record: research/KUMMER_B2_K2_FINITE_WINDOW_MOD9_2026-09-21.md (commit 232f12ef8bf48c808b771739d19eaebd03ff0107).
 ## 2026-09-20 — HA61-B5-12: CANONICAL t2 NO-GO
 
 A same-group relator-conjugation witness now kills the proposed single presentation-independent vector t2. For q=3, p!=0 and lambda=e2*, while the audited conjugation law shifts the coordinate residual by lambda(v)p. Choosing v with lambda(v)=1 changes t2 by p, although all intrinsic input data and the exact connecting-obstruction family remain unchanged. Thus raw t2 is not an intrinsic natural transformation. The quotient t2/<p> is invariant but insufficient because f(t2) does not descend: primary-zero gives f(p)+(lambda wedge f)(R)=0, not f(p)=0. The diagonal (t2,mu) quotient was already rejected because it identifies distinct coefficient actions. Therefore the single-vector P4/t2 compression route is FAIL/CLOSED. The intrinsic delta3 family remains PASS/CLOSED; alternative richer secondary compression is OPEN/DECISIVE; HA61-C via t2 is not opened.
