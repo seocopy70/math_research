@@ -1918,3 +1918,24 @@ Classification:
 Detailed record: research/KUMMER_HARD_ATTACK_38_EXTENSION_CLASS_TRANSGRESSION_2026-09-20.md.
 
 Next authorized attack: compare the known twisted Fox row with the intrinsic push-forward phi_*(e_k), then attack the finite coefficient-module dependence structurally. No broad numerical scan is authorized yet.
+
+
+## 2026-09-20 — HARD ATTACK 39: YONEDA COMPLETENESS VS RESTRICTED KUMMER PROFILE
+
+Hard Attack 39 separates two statements that had been conflated by the notation e_k <-> T_{e_k}.
+
+For the full category of Q_k-modules A, the profile T_e(A): Hom_Q(M_k,A) -> H^2(Q_k,A), phi |-> phi_*(e), recovers e itself by evaluating at A=M_k and phi=id_{M_k}. Thus full coefficient-category profile completeness is PASS / CLOSED, but this is a Yoneda-level tautology, not a selector theorem.
+
+For the actual Kummer family A_k(rho)=Z/3^k with rank-one twisted Q_k-action, define K_k = intersection_{rho,phi} ker(phi_*), where phi ranges over Hom_Q(M_k,A_k(rho)). The restricted profile is faithful exactly when K_k=0. No such faithfulness theorem is currently proved, and it does not follow from the Yoneda identity because M_k is not part of the restricted coefficient family in general.
+
+Therefore the precise remaining gate is sharper:
+- e_k -> full coefficient profile: PASS / CLOSED (information-complete but tautological);
+- e_k -> restricted Kummer profile: OPEN;
+- restricted profile -> unique orientation without PD²: OPEN / DECISIVE;
+- Fox row as coordinate realization of phi_*(e_k): OPEN;
+- PD²-based finite selector: PASS / LOCAL;
+- carrier minimality and strict tower naturality: OPEN.
+
+The selector need not reconstruct all of e_k. It only needs the restricted observation function rho |-> |coker T_{e_k}(A_k(rho))| to have a unique maximizer. This is now the exact finite, q-blind theorem target. No broad numerical scan is authorized until a structural theorem about the restricted profile is established.
+
+Record: research/KUMMER_HARD_ATTACK_39_YONEDA_COEFFICIENT_PROFILE_2026-09-20.md.
