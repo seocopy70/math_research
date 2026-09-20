@@ -1840,3 +1840,16 @@ Decision:
 - universal category-independent minimality/no-go: **OPEN**.
 
 Detailed audit: research/KUMMER_HARD_ATTACK_34_COKER_DUALITY_AUDIT_2026-09-20.md
+
+
+## 2026-09-20 — DEFERRED IDEA BACKLOG RECORDED; MAIN LINE PRESERVED
+
+The creative proposal set from the latest review has been recorded in `research/NEXT_RESEARCH_IDEA_BACKLOG_2026-09-20.md`. These are explicitly deferred, not closed:
+- finite Fox-residue versus intrinsic extension-class comparison;
+- selector-theorem formulation;
+- maximality-selector interpretation;
+- mixed m-adic/bi-filtered direction;
+- information-transfer efficiency synthesis;
+- eventual minimality/admissible-category program.
+
+The immediate task remains the finite coker branch: independently strengthen the construction and attack the inverse-system compatibility/naturality (k\to k+1). No deferred branch should displace this without new evidence.
