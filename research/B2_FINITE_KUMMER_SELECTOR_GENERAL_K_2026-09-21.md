@@ -170,3 +170,16 @@ This gate remains **OPEN** pending a targeted literature comparison.
 - Hensel proof dependency: **WITHDRAWN**
 - representation-free intrinsic uniqueness independent of classification: **OPEN**
 - novelty of the finite-window formulation: **OPEN / DECISIVE**
+
+
+## 6. Kθ/P_{k+1} literature correction
+
+A later audit corrects the quotient-inheritance discussion. Existing Efrat–Quadrelli/Quadrelli–Weigel quotient results require conditions involving the already-given orientation, such as N⊆Kθ(G) or N⊆ker θ, but this does not prove that P_{k+1} fails those conditions. In particular, for the finite coefficient character θ mod 3^k one has P_{k+1}⊆ker(θ mod 3^k). Therefore the remaining novelty question is specifically whether a finite-coefficient/mod-p^n version, perhaps formulated with K_{θ mod p^n}, already gives the required quotient inheritance. No such theorem has yet been confirmed in the audited sources.
+
+**Correction:** any earlier wording that “excludes” the quotient-inheritance route is HISTORICAL / SUPERSEDED. The mathematical B2 gates remain PASS; novelty is now **OPEN / LOW-LIKELIHOOD — LITERATURE VERIFICATION REQUIRED**.
+
+## 7. One-relator scope stress test
+
+A fresh exhaustive Fox enumeration was run on several non-Demushkin one-relator pro-3 relations at k=2,3. The standard nondegenerate rank-4 Demushkin relation remains uniquely selectable. Degenerate quadratic relations such as [x1,x2][x1,x3] and [x1,x2][x2,x3] have 3 and 9 Kummer candidates at k=2 and k=3, respectively; x1^3[x1,x2][x2,x3] has no candidate at either level. This is a **PASS / LOCAL** scope boundary for the finite Kummer selector. It is not yet a calculation of the intrinsic higher obstruction δ̄4∘ι1. The next authorized test is that higher obstruction on r=[x1,x2][x1,x3] across its multiple Kummer characters.
+
+Detailed record: research/ONE_RELATOR_KUMMER_SELECTOR_STRESS_TEST_2026-09-21.md.
