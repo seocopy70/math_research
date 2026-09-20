@@ -760,3 +760,14 @@ Binding methodological correction:
 7. The next Kummer phase should therefore not be “more Kummer variants” blindly. It should run a structured discovery pass over candidate mechanisms such as twisted extension classes, transgression/fundamental-class pairings, Bockstein–Kummer compatibility, duality-type pairings, and finite nilpotent/central extensions, then submit each candidate to the existing hard gates.
 
 This is a process correction, not a mathematical result. It does not weaken any PASS/FAIL classification.
+
+
+## 2026-09-20 — HARD ATTACK 27: FINITE EXTENSION CARRIER DEFINITION AND SUFFICIENCY BOUNDARY
+
+After Hard Attack 26, the vague extension/2-cell candidate was made precise. With N=P_{k+1}(G), define M_k=N/(N^{3^k}[N,N]) and E_k=G/(N^{3^k}[N,N]); the subgroup is characteristic, N is open/finitely generated, and the resulting extension is finite. This is an intrinsic q-blind candidate J_k^ext=(Q_k,M_k,E_k), and H^1(N,A_k(rho)) is determined by M_k for every candidate rho.
+
+The hard attack then checked sufficiency rather than assuming it. The Hochschild-Serre total-degree-two structure contains H^0(Q_k,H^2(N,A_k(rho))), so the finite relation-module extension does not automatically determine H^2(G,A_k(rho)). Adding H^2(N,A_k(rho)) directly risks importing the Demushkin duality/orientation object and is therefore circular unless independently reconstructed from filtered extension data.
+
+Classification: definition PASS / LOCAL; automatic H^2 reconstruction FAIL / CLOSED as an inference; universal carrier OPEN; genuine finite 2-cell obstruction OPEN. No numerical scan authorized.
+
+Detailed record: research/KUMMER_FINITE_EXTENSION_CARRIER_HARD_ATTACK_27_2026-09-20.md
