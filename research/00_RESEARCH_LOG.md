@@ -669,3 +669,28 @@ Decision:
 Record: `research/KUMMER_RECOGNITION_LOWER_3_CENTRAL_HARD_ATTACK_24_2026-09-20.md`.
 
 No further numerical scan is authorized until a concrete selector predicate or admissible counterexample construction is available.
+
+
+## AUTHORITATIVE UPDATE — HARD ATTACK 25 — 2026-09-20 — NONZERO KUMMER COCYCLE SELECTOR CLOSED
+
+The obvious repair of the vacuous crossed-homomorphism criterion was attacked structurally.
+
+For a fixed candidate \(\rho:G\to U_k\), a crossed homomorphism on the rank-four free group is determined by four values in \(A_k\). Imposing the single Demuškin relator gives one additive obstruction
+\[
+\mathrm{Obs}_\rho:A_k^4\to A_k.
+\]
+Hence
+\[
+Z^1(G,A_k(\rho))=\ker(\mathrm{Obs}_\rho)
+\]
+has cardinality at least \(|A_k|^3\), for every candidate \(\rho\). In particular, nonzero crossed homomorphisms exist for every candidate action, not only for the canonical orientation.
+
+Thus:
+- \(\exists f\): **FAIL / CLOSED**;
+- \(\exists f\ne0\): **FAIL / CLOSED** on the standard one-relator family;
+- Boolean nonvanishing of \(H^1(G,A_k(\rho))\): **FAIL / CLOSED** as an orientation selector;
+- richer twisted-cohomological interaction with additional finite group structure: **OPEN**.
+
+The missing ingredient must therefore encode an interaction between the candidate coefficient action and additional intrinsic finite group/extension structure. Mere Kummer existence or nontriviality cannot provide the selector.
+
+Record: `research/KUMMER_RECOGNITION_NONZERO_COCYCLE_HARD_ATTACK_25_2026-09-20.md`.
