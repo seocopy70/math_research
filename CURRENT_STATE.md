@@ -1973,3 +1973,25 @@ Current classification:
 - strict tower naturality: OPEN.
 
 Record: research/HARD_ATTACK_40_CRITICAL_REVIEW_AND_NEXT_GATE_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 42: AMBIENT H^2 AUDIT — STRUCTURAL REDUCTION
+
+The ambient numerator in the finite coker selector was attacked without a rho-scan. For A_2(rho)=Z/9 with rho mod 3 trivial, the coefficient sequence
+0 -> F_3 -> A_2(rho) -> F_3 -> 0
+has twisted Bockstein connecting maps beta_rho^i. The long exact sequence gives the exact formula
+log_3 |H^2(Q_2,A_2(rho))| = 2 dim H^2(Q_2,F_3) - rank(beta_rho^1) - rank(beta_rho^2).
+
+The degree-one map beta_rho^1 is exactly the already closed mod-9 intrinsic obstruction Theta_(R,p), up to the synchronized H^2 normalization/sign convention. Thus the same relation-jet that is the scalar shadow of the finite extension class also controls one of the two ambient-cohomology terms.
+
+This separates the remaining rho-dependence into two sources: (A) ordinary finite-group coefficient cohomology through beta_rho^1,beta_rho^2, and (B) extension-class transgression visibility. No cancellation may be assumed.
+
+Decision:
+- coefficient-sequence reduction of ambient H^2: PASS / CLOSED;
+- beta_rho^1 = intrinsic mod-9 obstruction: PASS / CLOSED;
+- constancy/variation of |H^2(Q_2,A_2(rho))|: OPEN / LOAD-BEARING;
+- structural control of beta_rho^2: OPEN / LOAD-BEARING;
+- unique coker maximizer without PD^2: OPEN / DECISIVE;
+- no broad rho-scan authorized.
+
+Record: research/KUMMER_HARD_ATTACK_42_AMBIENT_H2_AUDIT_2026-09-20.md.
