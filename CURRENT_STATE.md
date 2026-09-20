@@ -1939,3 +1939,14 @@ Therefore the precise remaining gate is sharper:
 The selector need not reconstruct all of e_k. It only needs the restricted observation function rho |-> |coker T_{e_k}(A_k(rho))| to have a unique maximizer. This is now the exact finite, q-blind theorem target. No broad numerical scan is authorized until a structural theorem about the restricted profile is established.
 
 Record: research/KUMMER_HARD_ATTACK_39_YONEDA_COEFFICIENT_PROFILE_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 40: RANK-ONE COEFFICIENT / SPECTRAL-BLINDNESS AUDIT
+
+The restricted Kummer coefficient family A_k(rho)=Z/3^k only probes scalar-character specializations of the Q_k-module M_k. For fixed rho, equivariant maps satisfy phi(gm)=rho(g)phi(m), hence factor through M_{k,rho}=M_k/<gm-rho(g)m>. Thus the restricted push-forward profile of e_k is a scalar-character spectroscopy of the extension class.
+
+This is a structural factorization theorem, not yet a no-go: it does not prove that the actual Demushkin e_k has invisible components. Therefore scalar-character factorization is **PASS / CLOSED**; faithfulness on the actual e_k is **OPEN / DECISIVE**; unique scalar-character maximizer without PD² is **OPEN / DECISIVE**; Fox row as coordinate realization is **OPEN**; PD²-based selector is **PASS / LOCAL**; carrier minimality and strict tower naturality remain **OPEN**.
+
+No broad scan is authorized. The next attack must determine whether the Demushkin extension class has a special scalar-character visibility theorem strong enough to force a unique maximizer.
+
+Record: research/KUMMER_HARD_ATTACK_40_RANK_ONE_SPECTRAL_BLINDNESS_2026-09-20.md.
