@@ -1304,3 +1304,34 @@ The actual automorphism-image/lift branch remains OPEN/LOAD-BEARING but is subor
 Stop rule: no broad representation scan, no full 19D module computation, and no new spectral scan until Test I (digit-depth theorem) or Test II (tower reuse) produces a concrete structural target.
 
 Record: research/STRATEGIC_RESET_INFORMATION_LAYERS_2026-09-20.md (commit da2cd7ec3fae76106033580a1cc98e2cb2984316).
+
+## 2026-09-20 — HARD ATTACK 57: INFORMATION-DEPTH BOUNDARY + LAYER-B TOWER REUSE
+
+The Strategic Reset authorized two tests: a sharp finite-information-depth theorem and a test of whether the mod-9 Layer-B relation/power carrier can be reused for all higher 3-adic digits.
+
+### Test I — information-depth boundary
+
+For the standard family G_{3^s} versus the power-free control G_infty, the audited finite quotient thresholds are:
+G_{3^s}/D_N ≅ G_infty/D_N iff N≤3^s, with first separation at D_{3^s+1}, and
+G_{3^s}/P_n ≅ G_infty/P_n iff n≤s+1, with first separation at P_{s+2}.
+
+Because the worst case for distinguishing χ mod 3^n from the control is s=n−1, the resulting family-level information boundaries are D_{3^{n-1}+1} and P_{n+1}. Thus mod 27 gives D_10 versus P_4. This is a genuine information-depth result but remains PASS / LOCAL because it is tied to the standard comparison family and uses the known orientation formula only as comparison data.
+
+### Test II — Layer-B tower reuse
+
+The established projective carrier [(R,p)] remains PASS / CLOSED for χ mod 9. The question was whether a canonical recursive tower built from the same relation/power datum can directly generate all higher digits.
+
+The answer at the current theorem level is: not established. The mod-27 coefficient-extension package detects the valuation layers q=3,9,≥27 on the standard family, but the audited bridge is not an independent universal orientation identity. Test I simultaneously shows that deeper non-graded information becomes visible at increasing finite filtration depth.
+
+Therefore no claim is made that fixed Layer-B data generates all digits. The correct classification is:
+- fixed Layer-B tower reuse: OPEN / DECISIVE;
+- Bockstein package as finite q-layer detector: PASS / LOCAL;
+- Bockstein package as all-digit orientation carrier: CONDITIONAL / OPEN.
+
+### Strategic consequence
+
+The 19D permanent LHS sector is not promoted to “the first new orientation layer.” The next authorized attack is the mod-27 threshold residual:
+finite extension data at P_4 or D_10 modulo already established Layer-B information.
+If this residual vanishes, the evidence supports collapse/reuse. If it is nonzero and has a natural orientation bridge, it identifies the first genuinely new layer.
+
+Record: research/HARD_ATTACK_57_INFORMATION_DEPTH_AND_LAYER_B_TOWER_2026-09-20.md
