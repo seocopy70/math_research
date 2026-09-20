@@ -194,3 +194,27 @@ A proof of (1)+(2)+(3-free filtered factorization) would replace the dead (t_2) 
 - intrinsic (delta_3)-family: **PASS / CLOSED**.
 - intrinsic torsor zero-selector: **OPEN / DECISIVE**.
 - all-digit tower: **OPEN / DECISIVE** but not yet authorized.
+
+
+## CRITICAL CORRECTION — 2026-09-20
+
+The uniqueness claim in the initial B5-13 proposal is **incorrect** and is now explicitly withdrawn.
+
+If the intrinsic variation formula
+\[
+\delta_{3,\rho_3(1+9\nu)}(f)-\delta_{3,\rho_3}(f)=\pm(\nu\smile f)
+\]
+holds, then for fixed nonzero (f\), the map
+\[
+\nu\mapsto \nu\smile f
+\]
+is a nonzero linear functional
+\(H^1(G,\mathbf F_3)\to H^2(G,\mathbf F_3)\cong\mathbf F_3\), not an injective map. Since \(\dim H^1(G,\mathbf F_3)=4\) in the rank-four case, its kernel has dimension 3. Therefore, whenever one zero exists, the zero set is an affine hyperplane of size \(3^3=27\), not a singleton.
+
+Consequences:
+- the proposed intrinsic zero-selector is **FAIL / CLOSED as a uniqueness mechanism** in the full coefficient-lift torsor;
+- the variation formula itself remains **OPEN / DECISIVE** and is still mathematically valuable;
+- existence of a zero does not identify a unique \(\rho_3\) without an additional restriction of the lift torsor to a one-dimensional affine direction or equivalent extra structure;
+- introducing such a restriction would require a new object/input/functoriality/gauge/novelty audit and must not be smuggled in as a consequence of cup nondegeneracy.
+
+This is a genuine structural correction, not a cosmetic change. The next attack should therefore test whether the filtered data canonically determines a **one-dimensional lift direction or quotient of the coefficient-lift torsor**, or whether the surviving family fundamentally carries a higher-dimensional ambiguity.
