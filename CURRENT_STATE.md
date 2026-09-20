@@ -2010,3 +2010,18 @@ Decision: common twisted-Bockstein mechanism PASS/CLOSED; determination of beta_
 Next narrow attack: derive H^*(Q_2,F_3) through degree 3 from the class-2/central-extension structure of Q_2, then determine rank behavior of beta_rho^2. No broad rho-scan authorized.
 
 Record: research/KUMMER_HARD_ATTACK_43_SECOND_BOCKSTEIN_LAYER_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 44: Q_2 AS A CENTRAL EXTENSION — FIRST DEEP REDUCTION
+
+Hard Attack 44 pushed beyond the abstract warning and rewrote Q_2 through its lower-3-central central extension. Let V=G/P_2 ≅ F_3^4 and W=P_2/P_3. In the class-2 quotient Q_2, W is central. The degree-two extension data consists of the six commutator directions together with four cube directions, subject to the single frozen relation t_1+c_{12}+c_{34}=0; hence the natural presentation-level model has dim_F3 W=9. This gives |Q_2|=3^{4+9}=3^{13} at the frozen q=3 level.
+
+The LHS spectral sequence has E_2^{i,j}=H^i(V,H^j(W,F_3)), with trivial V-action because W is central. The transgression d_2:H^1(W,F_3)->H^2(V,F_3) is evaluation on the central extension class. Since dim H^1(W)=9 while dim H^2(V)=dim(Λ^2 V^*)+dim(V^*)=6+4=10, the extension class has at most a codimension-one obstruction space. The expected rank-nine statement is equivalent to linear independence of the nine commutator/cube components of the Q_2 extension class; this must still be proved from the actual finite presentation before being promoted to PASS.
+
+This is a substantially sharper target: the degree-(2,3) Demushkin relation jet appears as the unique potential surviving line in H^2(V) after the central extension transgression, but this identification is not yet proved at the Q_2 cohomology level. If rank d_2=9 is established, the LHS page isolates a one-dimensional E_3^{2,0} and gives a concrete place where the intrinsic (R,p) shadow may reappear.
+
+The twisted Bockstein is d_lambda=beta+lambda cup(-), with beta(lambda)=0 for admissible lambda and lambda cup lambda=0 at p=3, so d_lambda^2=0. The remaining problem is now localized: track this differential through the LHS spectral sequence and determine its action on the surviving degree-two and degree-three classes. This is the first genuinely promising route to beta_rho^2 without a rho-scan.
+
+Decision: central-extension reduction PASS; dim W=9 model / d_2 rank-nine identification OPEN pending direct proof; surviving H^2 line = (R,p) shadow OPEN; beta_rho^2 structural control OPEN/LOAD-BEARING. No selector claim and no broad rho-scan authorized.
+
+Record: research/KUMMER_HARD_ATTACK_44_Q2_LOW_DEGREE_COHOMOLOGY_2026-09-20.md.
