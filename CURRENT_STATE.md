@@ -1701,3 +1701,14 @@ Decision:
 - genuine finite 2-cell obstruction inside the extension data: OPEN / next target.
 
 Record: research/KUMMER_FINITE_EXTENSION_CARRIER_HARD_ATTACK_27_2026-09-20.md
+
+
+## 2026-09-20 — HARD ATTACK 28: CANONICAL FINITE 2-CELL EXTENSION CLASS
+
+The finite extension carrier from Hard Attack 27 has a canonical extension class e_k(G) in H^2(Q_k,M_k), Q_k=G/P_{k+1}, M_k=P_{k+1}/(P_{k+1}^{3^k}[P_{k+1},P_{k+1}]). For every candidate rho and A_k(rho), Q-equivariant maps M_k->A_k push e_k to a canonical transgression/connecting map Hom_Q(M_k,A_k(rho))->H^2(Q_k,A_k(rho)). This is a genuine finite q-blind 2-cell construction.
+
+Hard attack: e_k alone does not canonically reproduce the standard four-generator twisted obstruction row. Recovering that row requires a distinguished evaluation functional/basis or equivalent 2-cell rigidification, which is presentation-dependent unless independently reconstructed. Directly adding a Demushkin fundamental/duality class risks importing the desired orientation.
+
+Decision: extension class e_k PASS / LOCAL; transgression map PASS / LOCAL; automatic recovery of the one-relator obstruction row FAIL / CLOSED as an inference; zero-map annihilation selector FAIL / CLOSED; nonzero transgression selector OPEN; intrinsic recovery of the distinguished 2-cell evaluation OPEN / decisive.
+
+Record: research/KUMMER_2CELL_OBSTRUCTION_HARD_ATTACK_28_2026-09-20.md
