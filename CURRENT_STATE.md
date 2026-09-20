@@ -2071,3 +2071,35 @@ Decision:
 - next gate: minimal LHS calculation in total degrees 2 and 3, starting with (2,0)->(3,0) and first fiber-row correction.
 
 Record: research/KUMMER_HARD_ATTACK_46_TWISTED_BOCKSTEIN_LHS_COMPATIBILITY_2026-09-20.md (commit 519230a3c1ebf1a6c4db76904692d0a529351cf5).
+
+
+## 2026-09-20 — HARD ATTACK 47: BASE-ROW TWISTED BOCKSTEIN IS NONZERO
+
+HA47 carried the HA46 base-row calculation through explicitly. With the standard normalization
+H^*(V,F_3)=Lambda(e_1,e_2,e_3,e_4) tensor F_3[b_1,b_2,b_3,b_4], beta(e_i)=b_i, and relation-jet representative
+z_R=b_1+e_1e_2+e_3e_4,
+the filtration-(2,0) twisted Bockstein is
+
+d_lambda^V(z_R)=beta(z_R)+lambda cup z_R.
+
+For the already established q=3 mod-9 candidate lambda=e_2 this gives
+
+d_{e_2}^V(z_R)=2b_1e_2-e_1b_2+b_3e_4-e_3b_4+e_2e_3e_4,
+which is nonzero in H^3(V,F_3), since the displayed monomials occupy distinct basis directions.
+
+This is a genuine structural result, not a rho-scan: the raw (2,0)->(3,0) contribution does not vanish. Therefore any eventual cancellation relevant to beta_rho^2 must come from target-side LHS differentials and/or fiber/extension corrections.
+
+Critical boundary: this nonzero E_2 base-row value is NOT yet a nonzero E_infinity^{3,0} class. For the central extension, the decisive target quotient is
+E_infinity^{3,0}=E_3^{3,0}/im(d_3:E_3^{0,2}->E_3^{3,0}),
+after the already established d_2 stage. Hence the next attack is to compute d_3^{0,2} and determine whether it kills the displayed class.
+
+A precision correction is also recorded: HA45's phrase “unique one-dimensional LHS H^2 survivor” is henceforth interpreted strictly as the unique E_infinity^{2,0} base-filtration survivor, not total H^2(Q_2,F_3).
+
+Decision:
+- explicit base-row formula: PASS / CLOSED;
+- nonzero raw base-row value at lambda=e_2: PASS / CLOSED;
+- nonzero E_infinity^{3,0}: OPEN / LOAD-BEARING;
+- beta_rho^2 from (R,p): OPEN / LOAD-BEARING;
+- unique coker maximizer without PD^2: OPEN / DECISIVE.
+
+Record: research/KUMMER_HARD_ATTACK_47_BASE_ROW_BOCKSTEIN_NONZERO_2026-09-20.md (commit 69a0d208162531731ff3649d4e39a3e6fa56ea0f).
