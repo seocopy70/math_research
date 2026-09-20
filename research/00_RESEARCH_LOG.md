@@ -921,3 +921,22 @@ The recorded candidates are:
 - postpone P_{k+1} minimality until the admissible carrier category and inverse-limit theorem are settled.
 
 These are **OPEN / DEFERRED**, not closed. The active main line remains finite-coker strengthening followed by a hard attack on (k\to k+1) compatibility/naturality. No deferred branch is to be resurrected without a new structural reason or comparison map.
+
+
+## 2026-09-20 — HARD ATTACK 35: INVERSE-SYSTEM COMPATIBILITY AUDIT
+
+The next attack separated carrier-level naturality from output compatibility.
+
+For Q_{k+1}->Q_k and E_{k+1}->E_k, the relation modules nevertheless change kernels:
+M_{k+1} is built from P_{k+2}, whereas M_k is built from P_{k+1}. The natural inclusion-induced map lands only in a generally proper submodule of M_k. Consequently no automatic map of Hom sources, transgressions, or coker carriers exists. Direct strict inverse-system structure of the raw coker carriers is therefore FAIL / CLOSED as an inference.
+
+A weaker and sufficient statement survives: if rho_{k+1} is the unique level-(k+1) coker selector, then its reduction is the unique level-k selector. The PD² duality criterion identifies maximal top-cohomology size with triviality of chi*rho^{-1}; triviality modulo 3^{k+1} implies triviality modulo 3^k. Hence selected outputs form a compatible family.
+
+Classification:
+- carrier-level direct reduction: FAIL / CLOSED as an inference;
+- carrier tower naturality: OPEN / load-bearing;
+- selector compatibility: PASS / LOCAL under PD² verification;
+- practical inverse-limit reconstruction: PASS / LOCAL subject to the declared PD² framework;
+- carrier-only inverse-system functoriality: OPEN.
+
+Record: research/KUMMER_HARD_ATTACK_35_INVERSE_SYSTEM_COMPATIBILITY_AUDIT_2026-09-20.md.
