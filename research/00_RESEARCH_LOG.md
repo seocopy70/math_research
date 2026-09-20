@@ -1747,3 +1747,14 @@ u\smile v=0) for every (v\in H^1(G,\mathbf F_3)); Demuškin cup nondegeneracy fo
 u=0). Thus **global zero-map uniqueness is PASS / LOCAL conditional on the variation identity and reduction-surjectivity hypotheses**. The fixed-(f) 27-point argument is **HISTORICAL / SUPERSEDED as a no-go for the global selector**. Universal variation, existence from finite filtered/relation input, finite-window factorization through (G/P_4\) / (D_{10}), and Serre/Kummer novelty separation remain **OPEN / DECISIVE**. The (t_2) and diagonal quotient routes remain closed and are not revived.
 
 Record: research/HA61_B5_14_GLOBAL_ZERO_MAP_QUANTIFIER_CORRECTION_2026-09-20.md
+
+
+## 2026-09-21 — B2 FINITE KUMMER SELECTOR: GENERAL-k CLOSURE
+
+The previous load-bearing finite-window step is now closed by a direct induction. For A_k=Z/3^k, U_j=1+3^j Z/3^k and S_k=A_k⋊U_1, with T_j=3^{j-1}A_k⋊U_j, one proves P_j(S_k)=T_j for every j. Hence P_{k+1}(S_k)=1 and P_k(S_k)≠1. Any crossed cocycle z together with rho gives psi=(z,rho):G→S_k, and functoriality of the lower 3-central series gives psi(P_{k+1}(G))=1. Thus the crossed cochain problem factors through Q_k=G/P_{k+1}(G), yielding the finite-window H^1 identification. **1-A: PASS.**
+
+The Kummer lifting predicate is equivalent to the vanishing of the twisted Fox row. If I=(F_i(rho)) in R=Z/3^k, surjectivity of H^1(R(rho))→H^1(F_3) gives I⊂3I by lifting each basis vector; Nakayama then gives I=0. The converse is immediate. **Fox–Kummer equivalence: PASS.**
+
+For the standard odd-p Demushkin relation r=x_1^q[x_1,x_2]...[x_{2m-1},x_{2m}], the Fox equations directly force rho_{2i-1}=1, then rho_{2i}=1 for i>1, and finally rho_2=(1-q)^(-1). Thus existence/uniqueness is obtained by direct elimination; Hensel is no longer a proof dependency. Labute classification extends this from the standard presentation to arbitrary odd-p Demushkin groups. **PASS / LOCAL.**
+
+The novelty gate remains OPEN / DECISIVE. Existing literature already characterizes the canonical orientation/Kummerian orientation through surjectivity of H^1(G,Z_p(theta)/p^n)→H^1(G,F_p) for all n. The remaining question is specifically whether the finite-window factorization/recognition formulation on Q_k=G/P_{k+1}, with chi/q/dualizing action absent from the predicate input, is already known or is a genuinely new finite-group formulation. Record: research/B2_FINITE_KUMMER_SELECTOR_GENERAL_K_2026-09-21.md (commit 542b3d8b767a8c65500c92273a3de573112c1367).
