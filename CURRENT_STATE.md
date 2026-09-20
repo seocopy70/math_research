@@ -2353,3 +2353,38 @@ The actual automorphism-image/lift branch remains OPEN/LOAD-BEARING but is subor
 Stop rule: no broad representation scan, no full 19D module computation, and no new spectral scan until Test I (digit-depth theorem) or Test II (tower reuse) produces a concrete structural target.
 
 Record: research/STRATEGIC_RESET_INFORMATION_LAYERS_2026-09-20.md (commit da2cd7ec3fae76106033580a1cc98e2cb2984316).
+
+## 2026-09-20 — HARD ATTACK 57: INFORMATION-DEPTH BOUNDARY + LAYER-B TOWER REUSE
+
+HA57 executes the two tests authorized by the Strategic Reset.
+
+### Test I — sharp finite-information depth
+
+For the standard family G_{3^s} versus the power-free control G_infty, the audited thresholds give
+- Zassenhaus: G_{3^s}/D_N ≅ G_infty/D_N for N≤3^s, with separation at D_{3^s+1};
+- lower-3-central: G_{3^s}/P_n ≅ G_infty/P_n for n≤s+1, with separation at P_{s+2}.
+
+Since χ_{3^s} differs from the control modulo 3^n exactly in the worst case s=n−1, the corresponding family-level information boundaries are D_{3^{n−1}+1} and P_{n+1}. In particular mod 27 gives D_10 and P_4.
+
+This is an information-depth theorem only for the standard comparison family; it is not yet a universal pointed orientation-recognition theorem.
+
+Decision:
+- sharp Zassenhaus depth: PASS / LOCAL;
+- sharp lower-3-central depth: PASS / LOCAL.
+
+### Test II — reuse of the Layer-B carrier
+
+The mod-9 projective carrier [(R,p)] is already PASS / CLOSED for χ mod 9. HA57 tests whether the same relation/power mechanism canonically propagates all higher digits.
+
+The result is negative only in the sense of proof status: no all-digit tower-reuse theorem has been established. The mod-27 coefficient-extension package detects the next q-layers but, on the evidence audited so far, does not supply the missing presentation-free rigidifying orientation bridge. Test I also shows that deeper non-graded information enters at increasing filtration depth.
+
+Therefore:
+- fixed Layer-B carrier -> all digits: OPEN / DECISIVE;
+- Bockstein package as finite q-layer detector: PASS / LOCAL;
+- Bockstein package as all-digit orientation carrier: CONDITIONAL / OPEN.
+
+### Next authorized target
+
+Do not reopen the 19D representation branch yet. Construct the mod-27 threshold residual: finite extension data at P_4 or D_10 modulo the information already contained in Layer B, then test whether the residual is zero (collapse) or nonzero with a natural orientation bridge (first genuinely new layer).
+
+Record: research/HARD_ATTACK_57_INFORMATION_DEPTH_AND_LAYER_B_TOWER_2026-09-20.md
