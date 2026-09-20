@@ -2614,3 +2614,27 @@ The Kummer coefficient family does not probe arbitrary Q_k-module structure. Its
 This is a genuine structural boundary but not yet a no-go for the Demushkin extension: the special e_k might be completely visible to these scalar specializations. The active theorem target is therefore a Demushkin-specific scalar-visibility/unique-maximizer result, not generic representation-theoretic faithfulness.
 
 Record: research/KUMMER_HARD_ATTACK_40_RANK_ONE_SPECTRAL_BLINDNESS_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 40 CRITICAL REVIEW / SCALAR-VISIBILITY GATE
+
+The Hard Attack 40 reformulation has been critically audited. Its genuine content is the scalar-character factorization of the restricted Kummer profile through M_{k,rho}; it is not a new obstruction theorem. The Kummer coefficient is rank-one, but M_{k,rho} need not be one-dimensional.
+
+The proposed "maximality as complete filling" interpretation is rejected: C_k(rho)=H^2/im(delta), so larger coker means smaller transgression image (for fixed ambient H^2), and |C_k|=|H^2| means im(delta)=0.
+
+The active next gate is:
+intrinsic finite extension -> scalar-character push-forward -> visibility/vanishing criterion -> selector.
+At k=2, the first comparison target is the already closed cup+Bockstein degree-(2,3) obstruction. Fitting/determinant machinery remains deferred until it proves genuinely new basis-independent control.
+
+Classification:
+- scalar-character factorization: PASS / CLOSED;
+- Hard Attack 40 as novelty: HISTORICAL / SUPERSEDED;
+- scalar-character visibility of e_k: OPEN / DECISIVE;
+- unique scalar-character coker maximizer without PD^2: OPEN / DECISIVE;
+- restricted Kummer faithfulness: OPEN / AUXILIARY;
+- PD^2-based selector: PASS / LOCAL;
+- Fox coordinate realization: OPEN;
+- Fitting/determinant: OPEN / DEFERRED;
+- carrier minimality and strict tower naturality: OPEN.
+
+Record: research/HARD_ATTACK_40_CRITICAL_REVIEW_AND_NEXT_GATE_2026-09-20.md.
