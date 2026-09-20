@@ -1685,3 +1685,19 @@ In the current Kummer branch, the discovery question is: **what intrinsic finite
 Candidate mechanism families to investigate include twisted extension classes, transgression/fundamental-class pairings, Bockstein–Kummer compatibility, duality-type pairings, and finite nilpotent/central extensions. These are hypotheses only and must pass the existing hard gates.
 
 This is a methodological correction, not a change to any mathematical result.
+
+
+## 2026-09-20 — HARD ATTACK 27: FINITE EXTENSION CARRIER DEFINITION AND SUFFICIENCY BOUNDARY
+
+A precise finite candidate was defined after Hard Attack 26. For N=P_{k+1}(G), Q_k=G/N, set M_k=N/(N^{3^k}[N,N]) and E_k=G/(N^{3^k}[N,N]). Since N is characteristic and open in the finitely generated pro-3 group G, this gives a finite intrinsic extension 1->M_k->E_k->Q_k->1. The candidate carrier is J_k^ext=(Q_k,M_k,E_k). It is q-blind at construction level and contains the finite kernel data controlling H^1(N,A_k(rho)).
+
+Critical attack: J_k^ext does not automatically determine H^2(G,A_k(rho)). The total-degree-two Hochschild-Serre terms also contain H^0(Q_k,H^2(N,A_k(rho))), which is not determined by M_k. Thus the naive relation-module extension is a legitimate finite extension datum but not yet a top-cohomology carrier. This is a sufficiency failure of the proof route, not a counterexample to the carrier itself.
+
+Decision:
+- finite extension carrier definition: PASS / LOCAL;
+- automatic H^2 reconstruction from (Q_k,M_k,E_k): FAIL / CLOSED as an inference;
+- universal orientation carrier: OPEN;
+- direct addition of H^2(N,A_k(rho)): CONDITIONAL / circularity risk;
+- genuine finite 2-cell obstruction inside the extension data: OPEN / next target.
+
+Record: research/KUMMER_FINITE_EXTENSION_CARRIER_HARD_ATTACK_27_2026-09-20.md
