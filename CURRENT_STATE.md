@@ -2744,3 +2744,12 @@ Record: research/HA61_B5_14_GLOBAL_ZERO_MAP_QUANTIFIER_CORRECTION_2026-09-20.md
 **Current classification:** 1-A PASS; Fox–Kummer PASS; standard odd-p existence/uniqueness PASS / LOCAL; arbitrary odd-p extension via Labute classification PASS / LOCAL. Representation-free uniqueness independent of classification remains OPEN. **Novelty remains OPEN / DECISIVE.** The literature already contains the Kummerian/surjective H^1 characterization of the canonical orientation; the unresolved novelty question is the finite-window recognition/factorization statement on Q_k with chi/q/dualizing action excluded from the predicate input.
 
 Record: research/B2_FINITE_KUMMER_SELECTOR_GENERAL_K_2026-09-21.md (commit 542b3d8b767a8c65500c92273a3de573112c1367).
+
+
+## 2026-09-21 — B2 QUOTIENT CORRECTION + ONE-RELATOR STRESS TEST
+
+B2 quotient inheritance was corrected: do not claim P_{k+1}⊄Kθ or P_{k+1}⊄ker(θ mod 3^k). The finite coefficient inclusion P_{k+1}⊆ker(θ mod 3^k) is true. The unresolved literature question is whether Efrat–Quadrelli/Quadrelli–Weigel contain a finite-coefficient/mod-p^n quotient inheritance statement that subsumes the finite-window construction. Novelty therefore remains OPEN / LOW-LIKELIHOOD — LITERATURE VERIFICATION REQUIRED.
+
+A separate authorized stress test was executed on non-Demushkin one-relator pro-3 relations using a fresh independent Fox evaluator. Standard rank-4 Demushkin retains unique selectors mod 9/27; degenerate quadratic relations produce 3,9 candidate characters or, after adding a power term in one tested rank-4 case, no candidate. This is PASS / LOCAL as a scope boundary, not a theorem about the intrinsic δ̄4∘ι1 map. Next target: compute the actual higher coefficient-extension obstruction on r=[x1,x2][x1,x3] for its multiple Kummer characters.
+
+Record: research/ONE_RELATOR_KUMMER_SELECTOR_STRESS_TEST_2026-09-21.md (commit f61d879a6e11bf24a94ea34a0360530e36575224).
