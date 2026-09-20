@@ -780,3 +780,10 @@ The extension branch was sharpened from a finite quotient to its canonical exten
 Classification: e_k PASS / LOCAL; transgression PASS / LOCAL; automatic row recovery FAIL / CLOSED as an inference; zero-map selector FAIL / CLOSED; nonzero selector OPEN; intrinsic reconstruction of the missing 2-cell evaluation OPEN / decisive. No numerical scan authorized.
 
 Detailed record: research/KUMMER_2CELL_OBSTRUCTION_HARD_ATTACK_28_2026-09-20.md
+
+
+## 2026-09-20 — HARD ATTACK 29: PD2 TOP-CLASS RIGIDIFIER
+
+The obvious way to supply the missing 2-cell evaluation—adjoining H^2(P_{k+1}(G),F_3) or its Z/3^k lift—was attacked. Its quotient action is already the orientation-bearing duality action, so it is not an independently derived filtered carrier. This closes the direct top-class enrichment as a non-tautological solution, while leaving open a genuinely derived finite chain-level obstruction T_k.
+
+Classification: direct top-class enrichment FAIL / CLOSED for the stated objective; independent T_k OPEN / decisive. No further oriented-cohomology enrichment authorized.
