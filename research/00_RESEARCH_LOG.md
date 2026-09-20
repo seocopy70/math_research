@@ -1,4 +1,18 @@
 
+## 2026-09-20 — HA61-B3 GENERAL A2-LIFT GAUGE TEST
+
+The general representative-gauge question was settled at the cochain level. For the coefficient extension 0→F_3→A_3→A_2→0, if z is an A_2-valued 1-cocycle and z'=z+d_{A_2}φ, choose any lift φ~ to A_3 and the compatible lift z~=z~+d_{A_3}φ~. Since d^2=0,
+
+  d_{A_3}(z~+dφ~)=d_{A_3}z~.
+
+Thus the secondary connecting obstruction is unchanged already as a representative cocycle, not merely modulo H^2. Therefore an apparent B_{rho_2} variation under z→z+dφ cannot be an intrinsic secondary term.
+
+Important boundary: B3 proves representative-gauge invariance only. It does NOT prove independence of distinct A_2-valued cohomology lifts lying over the same primary-zero f. That remaining lift-class ambiguity is precisely the B4 target.
+
+Decision: HA61-B3 = PASS / CLOSED. HA61-B4 = OPEN / LOAD-BEARING. B5 remains unopened.
+
+Record: research/HARD_ATTACK_61_B3_GENERAL_A2_LIFT_GAUGE_2026-09-20.md (commit a2ad711596b5c44ade458c132b95fc82cbe6b8d1).
+
 
 ## 2026-09-20 — HARD ATTACK 54: PERMANENT 19-DIMENSIONAL QUOTIENT IS NOW FIXED
 
