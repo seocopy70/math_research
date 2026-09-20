@@ -1853,3 +1853,14 @@ The creative proposal set from the latest review has been recorded in `research/
 - eventual minimality/admissible-category program.
 
 The immediate task remains the finite coker branch: independently strengthen the construction and attack the inverse-system compatibility/naturality (k\to k+1). No deferred branch should displace this without new evidence.
+
+
+## 2026-09-20 — HARD ATTACK 35: CARRIER TOWER VS SELECTOR TOWER
+
+A hard compatibility audit was completed. The level-k coker selectors do not automatically define a strict inverse system of carriers because M_k changes with the kernel P_{k+1}; there is no canonical reduction M_{k+1}->M_k, only a natural map into a generally proper submodule. Therefore direct reduction of transgression cokernels is FAIL / CLOSED as an inference.
+
+Separately, the selected outputs are compatible: the PD² finite-level maximality criterion forces a level-(k+1) selector to reduce to the unique level-k selector. Thus the inverse-limit character exists as a compatible family of unique finite selectors, PASS / LOCAL under the declared PD² framework.
+
+The next structural question is no longer "can we force M_{k+1}->M_k?" but whether a universal property of the finite selector can make compatibility intrinsic without requiring a strict inverse system of the raw coker carriers.
+
+Detailed audit: research/KUMMER_HARD_ATTACK_35_INVERSE_SYSTEM_COMPATIBILITY_AUDIT_2026-09-20.md.
