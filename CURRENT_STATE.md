@@ -1995,3 +1995,18 @@ Decision:
 - no broad rho-scan authorized.
 
 Record: research/KUMMER_HARD_ATTACK_42_AMBIENT_H2_AUDIT_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 43: SECOND BOCKSTEIN LAYER BOUNDARY
+
+Hard Attack 43 tested whether the second connecting map beta_rho^2 is forced by the already closed degree-one map beta_rho^1 / intrinsic carrier (R,p).
+
+For 0 -> F_3 -> A_2(rho) -> F_3 -> F_3, both maps are instances of the same twisted coefficient-extension Bockstein beta_rho^i(z)=beta(z)+lambda cup z, up to the common convention, with lambda=(rho-1)/3 mod 3. Thus the same character parameter enters both layers.
+
+However, this does NOT give beta_rho^2=F(beta_rho^1). The maps act on different cohomological degrees and require the actual H^*(Q_2,F_3) algebra in degrees 2 and 3. The original pro-3 PD^2 property cannot be transferred to Q_2 to force the missing relation without reintroducing the external PD^2 input.
+
+Decision: common twisted-Bockstein mechanism PASS/CLOSED; determination of beta_rho^2 from beta_rho^1 OPEN/NOT ESTABLISHED; finite-quotient PD^2 shortcut FAIL/CLOSED as an inference; ambient H^2 constancy/variation OPEN/LOAD-BEARING; unique coker maximizer without PD^2 OPEN/DECISIVE.
+
+Next narrow attack: derive H^*(Q_2,F_3) through degree 3 from the class-2/central-extension structure of Q_2, then determine rank behavior of beta_rho^2. No broad rho-scan authorized.
+
+Record: research/KUMMER_HARD_ATTACK_43_SECOND_BOCKSTEIN_LAYER_2026-09-20.md.
