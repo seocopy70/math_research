@@ -1712,3 +1712,12 @@ Hard attack: e_k alone does not canonically reproduce the standard four-generato
 Decision: extension class e_k PASS / LOCAL; transgression map PASS / LOCAL; automatic recovery of the one-relator obstruction row FAIL / CLOSED as an inference; zero-map annihilation selector FAIL / CLOSED; nonzero transgression selector OPEN; intrinsic recovery of the distinguished 2-cell evaluation OPEN / decisive.
 
 Record: research/KUMMER_2CELL_OBSTRUCTION_HARD_ATTACK_28_2026-09-20.md
+
+
+## 2026-09-20 — HARD ATTACK 29: PD2 TOP-CLASS RIGIDIFIER
+
+The obvious missing 2-cell rigidifier was tested: add the top cohomology module of N=P_{k+1}(G). For the Demushkin/PD^2 setting, this top class carries the quotient action through the orientation character. Thus adding H^2(N,F_3), or its Z/3^k lift, does provide the desired character action, but only because it imports the duality/orientation-bearing object itself.
+
+Decision: top-class module as group object PASS / LOCAL; its use as a direct orientation carrier FAIL / CLOSED for the present non-tautological filtered objective; independently derived finite chain-level T_k OPEN / decisive; universal no-go OPEN. No further enrichment by already-oriented top cohomology is authorized.
+
+Record: research/KUMMER_PD2_TOP_CLASS_RIGIDIFIER_HARD_ATTACK_29_2026-09-20.md
