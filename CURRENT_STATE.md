@@ -1,3 +1,19 @@
+## 2026-09-20 — HARD ATTACK 26: TOP-COHOMOLOGY DOES NOT AUTOMATICALLY FACTOR THROUGH Q_k
+
+The next Kummer gate was attacked directly. If N=P_{k+1}(G) and Q_k=G/N, then A_k(rho) is N-trivial because rho factors through Q_k. However the Hochschild–Serre five-term sequence contains
+
+0 -> H^1(Q,A) -> H^1(G,A) -> H^1(N,A)^Q -> H^2(Q,A) -> H^2(G,A) -> H^1(Q,H^1(N,A)).
+
+Thus P_{k+1}(A_k⋊U_k)=1 proves factorization of candidate rho and Z^1 data, but does not imply factorization of H^2(G,A_k(rho)) through the abstract quotient Q_k. The missing datum is the extension/2-cell information carried by 1 -> P_{k+1}(G) -> G -> Q_k -> 1.
+
+Decision:
+- H^2-factorization through Q_k as an automatic inference: **FAIL / CLOSED**.
+- Q-only intrinsic Kummer selector: **OPEN**; not universally disproved inside the restricted Demushkin category.
+- finite extension/2-cell enriched carrier (Q_k,E_k): **OPEN / new principal candidate**.
+- no numerical scan authorized.
+
+Record: `research/KUMMER_TOP_COHOMOLOGY_HARD_ATTACK_26_2026-09-20.md`
+
 ## 2026-09-20 — DISCOVERY PASS: TWISTED KUMMER / TOP-COHOMOLOGY SELECTOR
 
 A new positive mechanism was identified after Hard Attacks 24–25 closed the shallow crossed-cocycle selectors.
