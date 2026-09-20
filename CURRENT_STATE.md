@@ -2595,3 +2595,10 @@ A hard attack shows that pure relator conjugation preserves the abstract group a
 Current classifications: formal diagonal compensator PASS / LOCAL; pure presentation -> diagonal action FAIL / CLOSED; gamma_2^3 independent scalar FAIL / CLOSED only as a separate functional, gauge role OPEN; combined presentation+coefficient gauge action OPEN / LOAD-BEARING; canonical affine quotient OPEN / LOAD-BEARING; HA61-B OPEN / LOAD-BEARING; HA61-C unopened.
 
 Record: research/HA61_B5_6_HARD_ATTACK_DIAGONAL_GAUGE_FALSIFICATION_2026-09-20.md.
+
+
+## 2026-09-20 — HA61-B5-7: simple affine quotient is a closed no-go as orientation carrier
+
+The diagonal quotient of (t2,mu) by (p,lambda) would identify distinct rho_3 coefficient characters and therefore cannot serve as the intrinsic next-digit orientation carrier. The correct target is an intrinsic function-valued secondary obstruction on the set/affine space of coefficient lifts, with representative-dependent t2 allowed only as a coordinate expression. HA61-B remains OPEN / LOAD-BEARING; HA61-C remains unopened.
+
+Record: research/HA61_B5_7_HARD_ATTACK_MU_QUOTIENT_DESTROYS_SELECTOR_2026-09-20.md.
