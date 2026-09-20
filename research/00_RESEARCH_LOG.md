@@ -1020,3 +1020,42 @@ The remaining selector theorem is that rho -> |coker[Hom_{Z/3^k}(M_{k,rho},A_k(r
 Classification: scalar-character factorization **PASS / CLOSED**; faithfulness on e_k **OPEN / DECISIVE**; unique scalar-character maximizer without PD² **OPEN / DECISIVE**; Fox row as coordinate realization **OPEN**; PD²-based selector **PASS / LOCAL**; carrier minimality and strict tower naturality **OPEN**.
 
 Record: research/KUMMER_HARD_ATTACK_40_RANK_ONE_SPECTRAL_BLINDNESS_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 40 CRITICAL REVIEW / REVISED GATE
+
+The self-critique of Hard Attack 40 was audited against the authoritative research state.
+
+Accepted corrections:
+- A_k(rho)=Z/3^k is rank-one, but M_{k,rho} need not be one-dimensional. The safe terminology is rank-one coefficient / scalar-character specialization.
+- Hom_{Q_k}(M_k,A_k(rho)) ≅ Hom_{Z/3^k}(M_{k,rho},Z/3^k) is a formal twisted-coinvariant reformulation, not a new obstruction theorem.
+- K_k=0 is auxiliary, not the decisive selector criterion. The decisive PD^2-independent target remains the unique maximizer of rho |-> |C_k(rho)|.
+- PD^2-based finite selection remains PASS / LOCAL; its removal is a separate theorem problem.
+
+Critical correction to a proposed new interpretation:
+calling maximal coker "complete filling" of H^2 is backwards. Since C_k(rho)=H^2/im(delta), larger coker means smaller transgression image when the ambient group is fixed; equality |C_k|=|H^2| means im(delta)=0. Therefore the useful qualitative notions are transgression invisibility, defect maximality, or vanishing, not filling.
+
+Additional audit:
+- "response curve/spectroscopy" is heuristic language until a precise invariant is defined.
+- the twisted coinvariant is safely described as a scalar specialization; no unproved induced/coinduced analogy is to be used.
+- Fitting/determinant machinery is only a candidate. It is initially a repackaging of a cokernel unless it yields a new basis-independent rho-dependent theorem.
+- information-theoretic analogies do not constitute novelty.
+
+Revised active gate:
+(A) prove a scalar-visibility/vanishing theorem for the specific Demushkin extension push-forward delta_{k,rho};
+(B) at k=2, compare delta_{2,rho} intrinsically with the already closed cup+Bockstein / degree-(2,3) obstruction;
+(C) if ambient H^2 size remains uncontrolled, stop and record the exact PD^2 boundary rather than claiming selector uniqueness.
+
+Classification:
+- Hard Attack 40 scalar-character factorization: PASS / CLOSED.
+- Hard Attack 40 as a new obstruction theorem: HISTORICAL / SUPERSEDED; reformulation only.
+- restricted Kummer faithfulness K_k=0: OPEN / AUXILIARY.
+- scalar-character visibility of e_k: OPEN / DECISIVE.
+- unique coker maximality without PD^2: OPEN / DECISIVE.
+- Fox row as coordinate realization: OPEN.
+- Fitting/determinant: OPEN / DEFERRED pending non-tautology.
+- PD^2 finite selector: PASS / LOCAL.
+- carrier minimality: OPEN.
+- strict tower naturality: OPEN.
+
+Detailed record: research/HARD_ATTACK_40_CRITICAL_REVIEW_AND_NEXT_GATE_2026-09-20.md.
