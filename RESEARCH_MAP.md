@@ -2702,3 +2702,24 @@ Decision:
 - unique coker maximizer without PD^2: OPEN / DECISIVE.
 
 Record: KUMMER_HARD_ATTACK_50_21_SURVIVOR_DIMENSION_OBSTRUCTION_2026-09-20.md (commit a8617b69289d4cfa16922903b50639e8a6059ecf).
+
+
+## 2026-09-20 — HARD ATTACK 51: EXTERIOR FIBER SECTOR RANK 36
+
+HA51 sharpens HA50. Writing c_i=d_2(w_i^*) for a basis of W^*, HA45 gives c_1,...,c_9 linearly independent. By the LHS Leibniz rule,
+d_2(w_i^*w_j^*)=c_i\otimes w_j^*-c_j\otimes w_i^*.
+Hence d_2 restricted to Lambda^2 W^* is injective, with rank 36. Since dim H^2(W)=45,
+36 <= rank(d_2^{0,2}) <=45,
+so
+10 <= dim E_3^{2,1} <=19.
+The remaining uncertainty is exactly the 9-dimensional fiber-Bockstein summand beta_W(W^*). The tempting statement d_2(beta_W(W^*))=0 is not yet promoted; it requires a direct transgression/Bockstein theorem or cochain proof.
+
+Decision:
+- d_2|_{Lambda^2 W^*} rank 36: PASS / CLOSED;
+- 10 <= dim E_3^{2,1} <= 19: PASS / CLOSED;
+- Bockstein-sector d_2: OPEN;
+- exact E_3^{2,1} and H-action: OPEN / LOAD-BEARING;
+- higher-differential survival: OPEN;
+- full beta_rho^2: OPEN / LOAD-BEARING.
+
+Record: KUMMER_HARD_ATTACK_51_EXTERIOR_SECTOR_RANK36_2026-09-20.md (commit 51454b5276e9120dabb8f52bbba4342c5437acd0).
