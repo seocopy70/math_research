@@ -1,3 +1,9 @@
+## 2026-09-20 — ACTIVE KUMMER BOTTLENECK AFTER HARD ATTACK 26
+
+The automatic implication
+P_{k+1}(A_k⋊U_k)=1 => H^2(G,A_k(rho)) factors through Q_k=G/P_{k+1}
+is closed. The missing information is the extension/2-cell data of the discarded deep kernel. The next principal candidate is therefore a finite extension-obstruction carrier (Q_k,E_k), not the bare quotient alone.
+
 ## 2026-09-20 — NEXT KUMMER BOTTLENECK: TWISTED TOP-COHOMOLOGY RECOGNITION
 
 Discovery Pass 1 identified the first concrete selector mechanism beyond shallow cocycle existence/nonvanishing:
