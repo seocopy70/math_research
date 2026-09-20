@@ -1704,3 +1704,9 @@ The full crossed-cocycle identity was independently checked: for r'=v r v^{-1}, 
 This is PASS / LOCAL for exact invariance and FAIL / CLOSED for treating [v,R] as the complete gauge contribution. The explicit cancellation partner remains OPEN / LOAD-BEARING and is now the immediate source-level target. HA61-B remains OPEN / LOAD-BEARING; HA61-C unopened.
 
 Record: research/HA61_B5_9_PURE_RELATOR_CONJUGATION_EXACT_CANCELLATION_2026-09-20.md.
+
+## 2026-09-20 — HA61-B5-13: INTRINSIC ZERO-SELECTOR ATTACK
+
+The single-vector t2 route is now closed. The surviving intrinsic family rho_3 -> delta_{3,rho_3} is being attacked directly as a zero-selector on the coefficient-lift torsor L(rho_2), rather than compressed to a presentation-independent vector. For a primary-zero class f, define Z_3(f)={rho_3: delta_{3,rho_3}(f)=0}. The decisive candidate theorem is that two lifts rho_3' = rho_3(1+9 nu) differ intrinsically by the cup-pairing term delta_{3,rho_3'}(f)-delta_{3,rho_3}(f)=nu cup f (up to the already-fixed common H^2 sign convention). If proved, Demushkin cup nondegeneracy gives uniqueness for nonzero f; existence must be proved separately from finite filtered/relation input and without importing the canonical orientation. This is a new OPEN / DECISIVE target, not a resurrection of t2. The novelty gate is explicit: Serre's classical orientation characterization already uses successive H^1 coefficient-lifting surjectivity, so the project must prove a genuine factorization from the declared filtered/relation input to this finite obstruction family rather than merely restating the known orientation definition.
+
+Record: research/HA61_B5_13_INTRINSIC_ZERO_SELECTOR_2026-09-20.md (commit 1c4ecb8c9b8336f9f9fb1e5ae87e156184f16bfb).
