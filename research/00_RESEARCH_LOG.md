@@ -1589,3 +1589,10 @@ Decision:
 - HA61-C remains unopened.
 
 Record: research/HA61_B5_6_HARD_ATTACK_DIAGONAL_GAUGE_FALSIFICATION_2026-09-20.md
+
+
+## 2026-09-20 — HA61-B5-7: mu-diagonal quotient ruled out as orientation carrier
+
+A stronger conceptual attack shows that quotienting (t2,mu) by the diagonal direction (p,lambda) would identify distinct coefficient characters rho_3=rho_2(1+9mu), precisely the alternatives the secondary obstruction must distinguish. Presentation/section gauge may change coordinate expressions, but cannot identify distinct intrinsic coefficient actions. Therefore the simple affine quotient is FAIL / CLOSED as the orientation carrier. The correct target is an intrinsic function-valued secondary obstruction on the affine space of coefficient lifts, with presentation-independent value; a representative-dependent t2 may appear only as a coordinate expression of that function.
+
+Record: research/HA61_B5_7_HARD_ATTACK_MU_QUOTIENT_DESTROYS_SELECTOR_2026-09-20.md
