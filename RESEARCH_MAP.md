@@ -2403,3 +2403,8 @@ This is not a group-level universal no-go because \(T_c\) is a coefficient-syste
 The extension-carrier branch is now precise. For N=P_{k+1}(G), Q_k=G/N, the first finite extension datum is M_k=N/(N^{3^k}[N,N]) together with E_k=G/(N^{3^k}[N,N]). This is q-blind and intrinsic and captures the kernel data relevant to H^1(N,A_k(rho)).
 
 Hard Attack 27 closes the naive inference that this finite extension already determines twisted H^2: the Hochschild-Serre degree-two terms include H^2(N,A_k(rho)). The next target is therefore not a larger arbitrary carrier, but a finite q-blind 2-cell obstruction T_k naturally extracted from the extension and capable of reproducing the one-relator twisted obstruction without importing the canonical dualizing action.
+
+
+## 2026-09-20 — ACTIVE: 2-CELL EVALUATION GATE
+
+The finite extension branch now has a canonical class e_k in H^2(Q_k,M_k) and an induced twisted transgression map. The remaining decisive problem is not more quotient depth but whether a distinguished 2-cell evaluation functional can be reconstructed from the finite filtered extension data without importing the Demushkin dualizing/orientation action. This is the current orientation-bridge gate.
