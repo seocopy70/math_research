@@ -1879,3 +1879,17 @@ This is PASS / LOCAL under the declared PD² verification framework. It is not a
 The practical main branch therefore has a clean endpoint: finite recognition + selector coherence + inverse-limit reconstruction. Further work is justified only to remove external PD² dependence from coherence, prove minimality in a specified carrier category, establish strict carrier naturality, or broaden the admissible class.
 
 Detailed record: research/KUMMER_HARD_ATTACK_36_SELECTOR_COHERENCE_ENDGAME_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 37: PD²-INDEPENDENT SELECTOR UNIQUENESS
+
+The strongest remaining finite-level question was attacked: whether the uniqueness of the coker selector |coker(delta_{k,rho})|=3^k can be proved from (Q_k,M_k,E_k,rho) without invoking the external PD² orientation criterion. The coker itself is intrinsic at fixed k, but a PD²-independent proof requires a finite-input reconstruction theorem identifying the transgression image with an intrinsically evaluable twisted 2-cell obstruction. Reusing the standard one-relator/Fox row would be presentation-dependent unless that identification is first derived from the finite extension itself.
+
+Result: no valid finite-input reconstruction proof and no admissible no-go were obtained. Therefore PD²-independent selector uniqueness remains OPEN. The PD²-based finite selector remains PASS / LOCAL; selector coherence remains PASS / LOCAL under the PD² framework; carrier-only coherence remains OPEN. Direct reuse of the known relator row as an intrinsic proof shortcut is FAIL / CLOSED.
+
+The exact remaining load-bearing theorem is:
+\[
+\boxed{\text{finite extension data}\Longrightarrow\text{intrinsic evaluation of its 2-cell transgression}.}
+\]
+
+Record: `research/KUMMER_HARD_ATTACK_37_PD2_INDEPENDENT_SELECTOR_2026-09-20.md`.
