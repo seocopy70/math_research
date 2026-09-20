@@ -3043,3 +3043,10 @@ Primary-zero \(\delta_2(f)=0\) is a **domain condition for the existence of an \
 - **HA61-C remains closed/not opened** until B4/B5 are resolved.
 
 This supersedes the stronger HA61-B wording that classified the independent \(B_{\rho_2}\) term as FAIL/CLOSED. The earlier claim is retained only as historical/superseded text; it must not control the current state.
+
+
+## 2026-09-20 — HA61-B5-14: GLOBAL ZERO-MAP QUANTIFIER CORRECTION
+
+The B5-13 fixed-(f) 27-point argument is superseded as a no-go for the actual selector problem. The target is a lift (ho_3) for which the entire connecting map (delta_{3,ho_3}) vanishes. Conditional on the universal variation identity and surjectivity of the mod-9-to-mod-3 (H^1) reduction, Demuškin cup nondegeneracy implies **global zero-map uniqueness: PASS / LOCAL (conditional)**. This does not prove existence or finite filtered factorization. The active decisive gates are universal variation, finite filtered/relation existence, factorization through (G/P_4\) / (D_{10}), and Serre/Kummer novelty separation. The (t_2), (t_2/\langle p\rangle), and diagonal ((t_2,\mu)) routes remain FAIL/CLOSED; HA61-C remains unopened.
+
+Record: research/HA61_B5_14_GLOBAL_ZERO_MAP_QUANTIFIER_CORRECTION_2026-09-20.md
