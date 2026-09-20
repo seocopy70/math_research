@@ -2525,3 +2525,18 @@ Decision:
 - universal category-independent minimality/no-go: **OPEN**.
 
 Detailed audit: research/KUMMER_HARD_ATTACK_34_COKER_DUALITY_AUDIT_2026-09-20.md
+
+
+## 2026-09-20 — DEFERRED RESEARCH IDEA BACKLOG AFTER COKER BREAKTHROUGH
+
+The recent proposal set was reviewed and recorded separately so that promising directions are preserved without displacing the active main line. Deferred candidates are:
+1. compare finite Fox relation residue with the intrinsic extension class/transgression data, first testing whether Fox residue is additional or merely a coordinate realization;
+2. formulate the positive result primarily as a finite-level unique-selector theorem, with chi as a PD² corollary;
+3. reinterpret coker cardinality as a finite maximality selector;
+4. revisit mixed m-adic/bi-filtered constructions only at the definition/naturality level;
+5. develop information-transfer efficiency as a higher-level synthesis;
+6. postpone minimality of P_{k+1} until an admissible carrier category and the main compatibility theorem are fixed.
+
+Detailed backlog: `research/NEXT_RESEARCH_IDEA_BACKLOG_2026-09-20.md`.
+
+**Immediate main line is unchanged:** strengthen the finite coker theorem and attack k→k+1 compatibility/naturality. Deferred ideas must not be reopened without a new structural reason.
