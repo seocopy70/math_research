@@ -68,3 +68,10 @@ No one of these outcomes is currently established.
 First search the repository for an existing proof that the filtered \(H\)-action lifts to \(Q_2\), \(W\), or the central extension class. If no such proof exists, attack extension-class invariance/lift directly. Only after this gate passes may the actual \(H\)-module structure of \(\mathcal S\) be computed.
 
 No dimension-based identification such as \(19=10+9\), and no orientation interpretation of \(\mathcal S\), is authorized.
+
+
+## Repository pre-check result
+
+A targeted repository search was run for an existing lift of the filtered \(H\)-action to \(Q_2\), \(W\), or the central extension class, using terms including \(H_U\), \(PSp_4(3)\), \(Q_2\), central extension, automorphism, lift, and extension class. No document explicitly establishing such a lift was found. Existing hits only establish the central-extension/LHS structure and the instruction to identify the permanent survivor as an \(H\)-module.
+
+Therefore the H-lift remains genuinely **OPEN / LOAD-BEARING** rather than an already-established fact. The next attack is authorized to prove or disprove extension-class invariance/lift directly.
