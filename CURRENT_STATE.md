@@ -2735,3 +2735,12 @@ The B5-13 fixed-(f) uniqueness/no-go interpretation is corrected. The intended s
 u) to vanish. Hence **global zero-map uniqueness: PASS / LOCAL (conditional)**. The fixed-(f) 27-point argument is **HISTORICAL / SUPERSEDED** as a no-go for the global selector. Existence, finite filtered/relation realization, (G/P_4\) / (D_{10}) factorization, and Serre/Kummer novelty remain **OPEN / DECISIVE**. (t_2) routes remain closed; HA61-C remains unopened.
 
 Record: research/HA61_B5_14_GLOBAL_ZERO_MAP_QUANTIFIER_CORRECTION_2026-09-20.md
+
+
+## 2026-09-21 — B2 GENERAL FINITE-WINDOW SELECTOR UPDATE
+
+**Closed mathematical gates:** (1) general k finite-window factorization through Q_k=G/P_{k+1} via P_j(S_k)=3^{j-1}A_k⋊(1+3^j Z/3^k), hence P_{k+1}(S_k)=1; (2) Kummer predicate iff all twisted Fox coefficients vanish, via basis-vector lifts and Nakayama; (3) direct standard odd-p Demushkin elimination gives the unique solution rho_2=(1-q)^(-1), all other rho_i=1. Hensel is withdrawn as a proof dependency.
+
+**Current classification:** 1-A PASS; Fox–Kummer PASS; standard odd-p existence/uniqueness PASS / LOCAL; arbitrary odd-p extension via Labute classification PASS / LOCAL. Representation-free uniqueness independent of classification remains OPEN. **Novelty remains OPEN / DECISIVE.** The literature already contains the Kummerian/surjective H^1 characterization of the canonical orientation; the unresolved novelty question is the finite-window recognition/factorization statement on Q_k with chi/q/dualizing action excluded from the predicate input.
+
+Record: research/B2_FINITE_KUMMER_SELECTOR_GENERAL_K_2026-09-21.md (commit 542b3d8b767a8c65500c92273a3de573112c1367).
