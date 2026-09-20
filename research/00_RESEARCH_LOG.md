@@ -630,3 +630,42 @@ Decision:
 - no numerical scan authorized until the recognition predicate is explicitly defined.
 
 Record: `research/KUMMER_RECOGNITION_LOWER_3_CENTRAL_HARD_ATTACK_2026-09-20.md`
+
+
+## AUTHORITATIVE UPDATE — HARD ATTACK 24 — 2026-09-20
+
+Hard Attack 24 tightened the lower-3-central Kummer factorization proof and separated the complete finite Kummer carrier from the recognition problem.
+
+For
+\[
+A_k=\mathbf Z/3^k,\quad U_k=1+3A_k,\quad H_k=A_k\rtimes U_k,
+\]
+a direct induction proves
+\[
+P_n(H_k)\subseteq 3^{n-1}A_k\rtimes(1+3^nA_k),
+\]
+hence
+\[
+P_{k+1}(H_k)=1.
+\]
+Therefore every candidate pair \((\rho,f)\), with \(\rho:G\to U_k\) and \(f\in Z^1(G,A_k(\rho))\), factors through \(Q_k=G/P_{k+1}(G)\).
+
+This is now a clean **PASS / LOCAL** factorization theorem.
+
+The correct complete finite bookkeeping object is
+\[
+\mathcal K_k(Q)=\coprod_{\rho\in\operatorname{Hom}(Q,U_k)} Z^1(Q,A_k(\rho)).
+\]
+The canonical-orientation problem is therefore a finite selection problem: one must construct a q-blind, functorial subobject/predicate selecting exactly \(\rho=\chi\bmod3^k\). The naive condition \(\exists f\) is vacuous because \(f=0\) always exists; \(\exists f\ne0\) is not known to be a unique orientation selector and risks merely restating duality if strengthened by known orientation data.
+
+Decision:
+- exact \(P_{k+1}(H_k)=1\): **PASS / LOCAL**;
+- candidate Kummer factorization through \(G/P_{k+1}\): **PASS / LOCAL**;
+- complete finite Kummer carrier \(\mathcal K_k\): **PASS / LOCAL** as the correct bookkeeping object;
+- naive crossed-homomorphism existence selector: **FAIL / CLOSED**;
+- canonical q-blind selector from \(Q_k\): **OPEN**;
+- universal same-carrier/different-orientation no-go: **OPEN**.
+
+Record: `research/KUMMER_RECOGNITION_LOWER_3_CENTRAL_HARD_ATTACK_24_2026-09-20.md`.
+
+No further numerical scan is authorized until a concrete selector predicate or admissible counterexample construction is available.
