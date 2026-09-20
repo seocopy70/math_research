@@ -771,3 +771,12 @@ The hard attack then checked sufficiency rather than assuming it. The Hochschild
 Classification: definition PASS / LOCAL; automatic H^2 reconstruction FAIL / CLOSED as an inference; universal carrier OPEN; genuine finite 2-cell obstruction OPEN. No numerical scan authorized.
 
 Detailed record: research/KUMMER_FINITE_EXTENSION_CARRIER_HARD_ATTACK_27_2026-09-20.md
+
+
+## 2026-09-20 — HARD ATTACK 28: CANONICAL FINITE 2-CELL EXTENSION CLASS
+
+The extension branch was sharpened from a finite quotient to its canonical extension class e_k in H^2(Q_k,M_k). This yields a functorial finite transgression map for every candidate twisted coefficient action. The attack found the next logical boundary: e_k alone has no distinguished four-generator/2-cell evaluation, so it does not automatically reproduce the standard twisted obstruction row. Adding a fundamental/duality class directly risks circularly importing orientation.
+
+Classification: e_k PASS / LOCAL; transgression PASS / LOCAL; automatic row recovery FAIL / CLOSED as an inference; zero-map selector FAIL / CLOSED; nonzero selector OPEN; intrinsic reconstruction of the missing 2-cell evaluation OPEN / decisive. No numerical scan authorized.
+
+Detailed record: research/KUMMER_2CELL_OBSTRUCTION_HARD_ATTACK_28_2026-09-20.md
