@@ -1,3 +1,11 @@
+## 2026-09-20 — HA61-B5-11: FINITE-DEPTH D4 SOURCE LEDGER
+
+The D4 Zassenhaus source list is exhausted at the required finite depth. Using the already established crossed-cocycle valuation z(gamma_2) in 3A3, z(gamma_3) in 9A3, and the finite next-step consequence z(gamma_4) in 27A3, together with rho=1 on commutator subgroups, the /9 mod-3 secondary evaluation has only two surviving source types: F^9 and gamma_2^3. gamma_3^3 and gamma_4 vanish. F^9 gives f(g), while gamma_2^3 gives the old (lambda wedge f) sector. Thus there is no hidden third D4 source, but canonical extraction of the F^9 residual as a filtered t2 remains open.
+
+Decision: D4 finite source classification PASS/LOCAL; gamma3^3/gamma4 zero PASS/LOCAL; intrinsic delta3 family PASS/CLOSED; filtered t2 extraction OPEN/LOAD-BEARING; HA61-B OPEN/LOAD-BEARING; HA61-C not opened.
+
+Record: research/HA61_B5_11_FINITE_DEPTH_SOURCE_LEDGER_2026-09-20.md
+
 # HA61-B5-10 — INTRINSIC SECONDARY FAMILY + PURE-CONJUGATION CANCELLATION — 2026-09-20
 
 ## Status
