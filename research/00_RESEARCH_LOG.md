@@ -1398,3 +1398,17 @@ Critical review accepted only in part. The q=3/q=9 calculations do establish a s
 Therefore HA61-B is corrected to **OPEN / LOAD-BEARING**. HA61-A remains **PASS / LOCAL**. The correct next order is B1 origin -> B2 primary-zero reduction -> B3 A_2-lift gauge test -> B4 test whether any survivor is canonically t_2-data -> B5 explicit filtration cutoff. Only then may HA61-C begin. No all-n induction.
 
 Record: research/HARD_ATTACK_61_B_CORRECTION_2026-09-20.md (commit e2d719c7f8e14f4d60a69bfd704dcc2d368e36ae).
+
+
+## 2026-09-20 — HA61-B2: PRIMARY-ZERO REDUCTION AUDIT
+
+HA61-B2 was executed on the two frozen standard branches with exact HA61-A crossed-word expansions. For q=3, with t=13+9a, the exact relation coefficient is 2+t^{-1}=-9a mod 27; hence the primary obstruction is zero mod 9 and the secondary value is -a f_1. For q=9, z(r)=9(1-a)z_1 mod 27, giving secondary value (1-a)f_1. In both branches, changing the tested A_2 lift by z_1 -> z_1+3c leaves the divided mod-3 obstruction unchanged. Thus primary-zero reduction and lift-representative independence are verified locally, and no independent B_{rho_2} survives in these frozen branches.
+
+This does NOT prove the general primary-zero theorem: arbitrary higher relation jets, arbitrary A_2-lift components, relator gauge, and the E_{>=4} filtration cutoff remain uncontrolled.
+
+Decision:
+- HA61-B2: **PASS / LOCAL**;
+- HA61-B: **OPEN / LOAD-BEARING**;
+- next authorized target: HA61-B3 general A_2-lift gauge test; no HA61-C yet.
+
+Record: research/HARD_ATTACK_61_B2_PRIMARY_ZERO_REDUCTION_2026-09-20.md (commit b82e275cc2621763ea735d878546ea661b3c6563).
