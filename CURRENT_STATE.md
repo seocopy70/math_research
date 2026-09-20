@@ -2048,3 +2048,26 @@ Decision:
 - unique coker maximizer without PD²: **OPEN / DECISIVE**.
 
 Record: research/KUMMER_HARD_ATTACK_45_W9_AND_D2_RANK9_2026-09-20.md (commit c8e22374a1a08840b011bc1ecc33f7e113fff90a).
+
+
+## 2026-09-20 — HARD ATTACK 46: TWISTED BOCKSTEIN / LHS COMPATIBILITY
+
+HA46 pushed the new bottleneck directly into the LHS spectral sequence. The coefficient extension 0 -> F3 -> A2(rho) -> F3 -> 0 is Q2-equivariant, so its Bockstein is filtration-compatible and induces a map of LHS spectral sequences.
+
+A critical structural correction follows: HA45's one-dimensional survivor is only the base-filtration piece E_infinity^{2,0}, not the total group H2(Q2,F3). The full degree-two source also has possible E_infinity^{1,1} and E_infinity^{0,2} pieces, while the target degree three has E_infinity^{3,0}, E_infinity^{2,1}, E_infinity^{1,2}, E_infinity^{0,3}.
+
+Moreover W=(F3)^9 has H*(W,F3)=Lambda(W*) tensor Sym(beta W*), so the fiber Bockstein is already nontrivial. Therefore beta_rho^2 is not automatically determined by the base relation line (R,p). This is a genuine obstruction to the naive collapse, not a numerical failure.
+
+What remains controlled is the filtration-(2,0) component: on the base row the differential is d_lambda^V=beta_V+lambda cup(-), so its action on the relation-jet line is a finite calculation depending only on (R,p,lambda), subject to survival in the target LHS page.
+
+The problem is now cleanly split into a base component and the first fiber/extension corrections. Three outcomes remain open: collapse to (R,p); controlled enrichment by a finite additional intrinsic shadow of e2; or an independent higher layer.
+
+Decision:
+- coefficient-Bockstein/LHS functoriality: PASS / CLOSED;
+- nontrivial fiber-Bockstein obstruction: PASS / CLOSED;
+- (2,0) graded component controlled by (R,p,lambda): PASS / STRUCTURAL;
+- full beta_rho^2 from (R,p): OPEN / LOAD-BEARING;
+- total H2(Q2,F3) one-dimensional: explicitly NOT CLAIMED;
+- next gate: minimal LHS calculation in total degrees 2 and 3, starting with (2,0)->(3,0) and first fiber-row correction.
+
+Record: research/KUMMER_HARD_ATTACK_46_TWISTED_BOCKSTEIN_LHS_COMPATIBILITY_2026-09-20.md (commit 519230a3c1ebf1a6c4db76904692d0a529351cf5).
