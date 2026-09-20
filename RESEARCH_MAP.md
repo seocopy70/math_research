@@ -1,3 +1,10 @@
+## 2026-09-20 — NEXT KUMMER BOTTLENECK: TWISTED TOP-COHOMOLOGY RECOGNITION
+
+Discovery Pass 1 identified the first concrete selector mechanism beyond shallow cocycle existence/nonvanishing:
+candidate rho + twisted top-degree obstruction / Kummer lifting.
+
+On the standard rank-4 family, the finite twisted obstruction row vanishes uniquely at rho=chi mod 3^k. The next gate is not another numerical scan: determine whether this obstruction can be reconstructed functorially from Q_k=G/P_{k+1}, with presentation/relator-gauge independence and without importing the canonical dualizing action.
+
 
 
 ## 2026-09-20 — LOWER 3-CENTRAL LINEAR INFORMATION BOUNDARY
