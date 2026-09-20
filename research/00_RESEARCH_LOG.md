@@ -1144,3 +1144,25 @@ Decision:
 - full beta_rho^2: OPEN / LOAD-BEARING.
 
 Record: KUMMER_HARD_ATTACK_51_EXTERIOR_SECTOR_RANK36_2026-09-20.md (commit 51454b5276e9120dabb8f52bbba4342c5437acd0).
+
+
+## 2026-09-20 — HARD ATTACK 52: BOCKSTEIN FIBER SECTOR IS d2-CLOSED
+
+HA52 resolves the nine-dimensional uncertainty left by HA51. For any linear functional phi:W->F3, push out the central extension along phi to a cyclic-kernel central extension 1->F3->E_phi->V->1. Naturality of the LHS spectral sequence sends the cyclic fiber Bockstein beta(u) to beta_W(phi). The standard odd-prime cyclic-kernel calculation has d2(beta(u))=0 (the Bockstein-of-extension-class phenomenon occurs one page later). Therefore d2(beta_W(phi))=0 for every phi, and hence d2 vanishes on the entire beta_W(W*) summand.
+
+Combining with HA51's rank-36 injection on Lambda^2 W*, rank d2^{0,2}=36 exactly. Since ker(d2^{2,1}) has dimension 55,
+\[
+\boxed{\dim E_3^{2,1}=55-36=19.}
+\]
+This is an exact E3 result, not merely a lower bound. The 19-dimensional survivor is not yet identified as an H-module and need not survive to E_infinity; the next load-bearing target is the first higher differential, especially the d3/Bockstein mechanism.
+
+Decision:
+- d2(beta_W(W*))=0: PASS / CLOSED under the standard cyclic-kernel LHS calculation plus pushout naturality;
+- rank d2^{0,2}=36: PASS / CLOSED;
+- dim E3^{2,1}=19: PASS / CLOSED;
+- H-module structure: OPEN / LOAD-BEARING;
+- higher d3/higher survival: OPEN / LOAD-BEARING;
+- full beta_rho^2: OPEN / LOAD-BEARING;
+- unique coker maximizer without PD2: OPEN / DECISIVE.
+
+Record: KUMMER_HARD_ATTACK_52_BOCKSTEIN_SECTOR_D2_CLOSED_2026-09-20.md (commit 4407d8dfc1206ade4384462014b2146c215d558d).
