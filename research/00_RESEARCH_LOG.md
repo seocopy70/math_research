@@ -694,3 +694,26 @@ Thus:
 The missing ingredient must therefore encode an interaction between the candidate coefficient action and additional intrinsic finite group/extension structure. Mere Kummer existence or nontriviality cannot provide the selector.
 
 Record: `research/KUMMER_RECOGNITION_NONZERO_COCYCLE_HARD_ATTACK_25_2026-09-20.md`.
+
+
+## METHODOLOGICAL UPDATE — 2026-09-20 — DISCOVERY/ATTACK DUAL TRACK
+
+The recent Kummer branch exposed a process-level risk: repeated hard attacks are excellent for preventing false claims but can become locally exhaustive without generating the conceptual construction needed to reach the target.
+
+Binding methodological correction:
+
+1. **Attack track** remains mandatory for definition, naturality, q-blindness, separation, non-tautology, and proof verification.
+2. **Discovery track** is now an equally explicit research phase. It is not a relaxation of rigor; it is where candidate mechanisms are generated before being attacked.
+3. Every OPEN bottleneck must therefore be accompanied by a finite **idea search matrix**, not only another obstruction test.
+4. Candidate mechanisms should be generated from the target's structural fingerprints:
+   - orientation is a coefficient action / character;
+   - mod-9 success required the degree-(2,3) relation jet;
+   - lower-3-central depth compresses q-information dramatically;
+   - Kummer data naturally couples a character with a twisted extension/cocycle;
+   - the missing selector must therefore plausibly arise from an interaction between the finite quotient's extension structure and the candidate coefficient action.
+5. Literature is to be mined by reusable mechanism, not by matching theorem names: object → input → invariance → obstruction → verification → logical boundary → possible factorization.
+6. Before closing an OPEN branch, ask separately:
+   **(a) What is false? (b) What structure is missing? (c) What known mathematical mechanism produces exactly that structure?**
+7. The next Kummer phase should therefore not be “more Kummer variants” blindly. It should run a structured discovery pass over candidate mechanisms such as twisted extension classes, transgression/fundamental-class pairings, Bockstein–Kummer compatibility, duality-type pairings, and finite nilpotent/central extensions, then submit each candidate to the existing hard gates.
+
+This is a process correction, not a mathematical result. It does not weaken any PASS/FAIL classification.
