@@ -2556,3 +2556,15 @@ Classification:
 - carrier-only inverse-system functoriality: OPEN.
 
 Detailed audit: research/KUMMER_HARD_ATTACK_35_INVERSE_SYSTEM_COMPATIBILITY_AUDIT_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 36: MAIN-BRANCH ENDGAME
+
+The main Kummer branch now has a clean theorem schema:
+1. At each finite k, the intrinsic finite extension/transgression coker predicate selects exactly one rho_k.
+2. The selected rho_k are compatible under coefficient reduction.
+3. Hence the inverse-limit selector set is a singleton, identified with chi_filt.
+
+The strict inverse-system structure of raw carriers is not required for this reconstruction and remains OPEN. Minimality and universal category-independent claims remain OPEN and are explicitly separated from the main theorem.
+
+Stop criterion: do not continue merely to force raw carrier functoriality. Continue only if a new attack can remove PD² dependence from coherence, prove minimality in a defined category, prove strict carrier naturality, or broaden the admissible class.
