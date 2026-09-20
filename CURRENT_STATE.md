@@ -1,3 +1,23 @@
+
+
+## 2026-09-20 — HARD ATTACK 54: HA53 SUPERCEDES THE HA52 d3 WARNING
+
+A critical review of HA52–53 was recorded. HA52 correctly established dim E_3^{2,1}=19 but left a generic warning that a later d3-Bockstein phenomenon might remove the sector. HA53 closes that concern completely: for (p,q)=(2,1), every r>=3 has zero outgoing target E_r^{2+r,2-r}, and every incoming source E_r^{2-r,r} has negative first index. Hence E_3^{2,1}=E_infinity^{2,1}, with dimension 19. The generic cyclic-kernel d3-Bockstein phenomenon remains valid elsewhere, but cannot act on this bidegree.
+
+The permanent piece is now treated as the canonical quotient S=ker(H^2(V) tensor K -> H^4(V))/im(d2:H^2(W)->H^2(V) tensor W^*), with dim S=19, rather than as an isolated dimension count.
+
+Decision:
+- HA52 d2 calculation: PASS / CLOSED;
+- HA53 permanence: PASS / CLOSED;
+- HA52 warning that d3 may remove the 19D sector: HISTORICAL / SUPERSEDED;
+- canonical 19D LHS filtration piece S: PASS / CLOSED;
+- H-module structure: OPEN / LOAD-BEARING;
+- twisted beta_rho^2 on S: OPEN / LOAD-BEARING;
+- orientation-selector interpretation: OPEN / DECISIVE.
+
+Record: research/KUMMER_HARD_ATTACK_54_CRITICAL_CORRECTION_AND_19_QUOTIENT_2026-09-20.md
+
+Next authorized attack: construct the induced H-action on S from the central extension functorially; no dimension-based module identification is permitted.
 ## 2026-09-20 — HARD ATTACK 26: TOP-COHOMOLOGY DOES NOT AUTOMATICALLY FACTOR THROUGH Q_k
 
 The next Kummer gate was attacked directly. If N=P_{k+1}(G) and Q_k=G/N, then A_k(rho) is N-trivial because rho factors through Q_k. However the Hochschild–Serre five-term sequence contains
