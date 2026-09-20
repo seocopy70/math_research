@@ -1,5 +1,17 @@
 
 
+## 2026-09-20 — HA61-B4 PASS/LOCAL; B5 OPEN
+
+HA61-B4 is **PASS / LOCAL**. Distinct A_2 lift classes over the same mod-3 class differ by 3c, and naturality of the coefficient-extension pullback gives
+\(\delta_3(z+3c)-\delta_3(z)=\delta_2(c)\). This exposes the exact obstruction to lift-class independence rather than assuming it.
+
+For both frozen standard branches q=3 and q=9, direct primary crossed-word evaluation gives \(\delta_2\equiv0\), so the secondary obstruction is independent of the A_2 lift class. This agrees with the direct mod-27 formulas.
+
+Boundary: the universal statement is still open. An arbitrary admissible input with nonzero \(\delta_2\) would produce a secondary obstruction on a lift torsor, not a function of f alone. Therefore the next attack is B5: filtration cutoff/source audit, not HA61-C.
+
+Record: research/HARD_ATTACK_61_B4_LIFT_CLASS_INDEPENDENCE_2026-09-20.md.
+
+
 ## 2026-09-20 — HA61-B3 CLOSED / B4 OPEN
 
 HA61-B3 is now **PASS / CLOSED**. The A_2 representative gauge z→z+dφ cannot change the secondary connecting obstruction: after lifting φ to A_3, the compatible lift changes by dφ~, and d^2=0 gives exact equality of the obstruction cocycles. Therefore no genuinely gauge-dependent B_{rho_2} can be an intrinsic secondary invariant.
