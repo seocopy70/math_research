@@ -2025,3 +2025,26 @@ The twisted Bockstein is d_lambda=beta+lambda cup(-), with beta(lambda)=0 for ad
 Decision: central-extension reduction PASS; dim W=9 model / d_2 rank-nine identification OPEN pending direct proof; surviving H^2 line = (R,p) shadow OPEN; beta_rho^2 structural control OPEN/LOAD-BEARING. No selector claim and no broad rho-scan authorized.
 
 Record: research/KUMMER_HARD_ATTACK_44_Q2_LOW_DEGREE_COHOMOLOGY_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 45: W=9 AND RANK d_2=9 CLOSED
+
+Hard Attack 45 completed the two hypotheses left open by HA44.
+
+For the free rank-4 pro-3 group, the degree-two lower 3-central quotient has the 10-dimensional basis consisting of 4 cube directions and 6 commutator directions. The defining relator has initial form \(\rho_2=t_1+c_{12}+c_{34}\), which is nonzero. Passing to the one-relator quotient removes exactly the one-dimensional initial-relation line at this degree, so \(W=P_2/P_3\cong L_2(F)/\langle\rho_2\rangle\) and \(\dim W=9\).
+
+For the central extension \(1\to W\to Q_2\to V\to1\), the LHS transgression \(d_2:W^*=H^1(W,\mathbf F_3)\to H^2(V,\mathbf F_3)\) is evaluation on the extension class. Since \(H^2(V,\mathbf F_3)\cong \beta(V^*)\oplus\Lambda^2V^*\) has dimension 10, and \(W^*\) identifies with the hyperplane of degree-two functionals annihilating \(\rho_2\), the transgression is the inclusion of a 9-dimensional hyperplane. Therefore \(\operatorname{rank}d_2=9\) and \(\dim\operatorname{coker}d_2=1\).
+
+The surviving line is canonically represented by the relation-jet \(\rho_2\), i.e. by the already established intrinsic pair \((R,p)\) after the common duality/H² normalization. Thus the HA44 picture of a unique degree-two survivor is now proved rather than hypothesized.
+
+Critical boundary: this is the base untwisted LHS transgression statement. It does not determine \(\beta_\rho^2\), nor the full twisted \(H^2(Q_2,\mathbf Z/9(\rho))\), nor the coker selector. The next gate is to propagate \(d_\lambda=\beta+\lambda\cup(-)\) through the LHS page and determine whether the degree-three ambient contribution is forced by the same surviving line or requires an enriched shadow of \(e_2\).
+
+Decision:
+- \(\dim W=9\): **PASS / CLOSED at q=3**;
+- \(\operatorname{rank}d_2=9\): **PASS / CLOSED at q=3**;
+- unique untwisted H² survivor \(\cong\langle(R,p)\rangle\): **PASS / CLOSED at q=3**;
+- \(\beta_\rho^2\) structural control: **OPEN / LOAD-BEARING**;
+- ambient \(H^2(\rho)\) control: **OPEN / LOAD-BEARING**;
+- unique coker maximizer without PD²: **OPEN / DECISIVE**.
+
+Record: research/KUMMER_HARD_ATTACK_45_W9_AND_D2_RANK9_2026-09-20.md (commit c8e22374a1a08840b011bc1ecc33f7e113fff90a).
