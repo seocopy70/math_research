@@ -1007,3 +1007,16 @@ Classification:
 - strict carrier-tower naturality: OPEN.
 
 Record: research/KUMMER_HARD_ATTACK_39_YONEDA_COEFFICIENT_PROFILE_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 40: RANK-ONE COEFFICIENT / SPECTRAL-BLINDNESS AUDIT
+
+Hard Attack 40 identifies the exact representation-theoretic content of the restricted Kummer profile. For A_k(rho)=Z/3^k, every equivariant phi:M_k->A_k(rho) satisfies phi(gm)=rho(g)phi(m), so phi factors through the twisted scalar specialization M_{k,rho}=M_k/<gm-rho(g)m>. Therefore the push-forward/coker profile of e_k is a scalar-character spectroscopy of the extension class.
+
+This yields a structural factorization **PASS / CLOSED**, but not a generic no-go: K_k may or may not be nonzero on the actual Demushkin e_k. A proof of non-faithfulness would require an explicit invisible class or a theorem about the representation structure of e_k.
+
+The remaining selector theorem is that rho -> |coker[Hom_{Z/3^k}(M_{k,rho},A_k(rho)) -> H^2(Q_k,A_k(rho))]| must have a unique maximizer at chi mod 3^k, without PD².
+
+Classification: scalar-character factorization **PASS / CLOSED**; faithfulness on e_k **OPEN / DECISIVE**; unique scalar-character maximizer without PD² **OPEN / DECISIVE**; Fox row as coordinate realization **OPEN**; PD²-based selector **PASS / LOCAL**; carrier minimality and strict tower naturality **OPEN**.
+
+Record: research/KUMMER_HARD_ATTACK_40_RANK_ONE_SPECTRAL_BLINDNESS_2026-09-20.md.
