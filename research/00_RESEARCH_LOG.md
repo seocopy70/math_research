@@ -955,3 +955,7 @@ finite intrinsic carrier -> transgression coker -> unique finite selector -> sel
 
 Do not force strict carrier-level inverse maps without a new structural reason.
 Record: research/KUMMER_HARD_ATTACK_36_SELECTOR_COHERENCE_ENDGAME_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 37
+PD²-independent selector uniqueness was attacked. No valid finite-input reconstruction theorem and no admissible no-go were obtained. Status remains OPEN. The coker selector and selector coherence remain PASS / LOCAL only under the PD² framework. Direct reuse of the known one-relator/Fox obstruction row as an intrinsic proof shortcut is FAIL / CLOSED. The exact load-bearing target is an intrinsic evaluation of the finite extension's 2-cell transgression from (Q_k,M_k,E_k,rho). Detailed record: `research/KUMMER_HARD_ATTACK_37_PD2_INDEPENDENT_SELECTOR_2026-09-20.md`.
