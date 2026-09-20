@@ -397,8 +397,7 @@ A genuine **PASS / LOCAL** detection-level compatibility is established for the 
 - q=3: first Bockstein/power direction is nonzero and Pál–Quick's canonical A_3 class is nonzero;
 - q=3^f, f≥2: first Bockstein layer vanishes and the Pál–Quick A_3 obstruction vanishes in their theorem range.
 
-This is a common q=3 power-layer detection, not an equality theorem.
-The stronger map/factorization
+This is a common q=3 power-layer detection, not an equality theorem.The stronger map/factorization
 \[
 [(R,p)]\longrightarrow\gamma_{A_3}
 \]
@@ -797,7 +796,6 @@ This verifies the hand derivation against the script; it does not create a new i
 
 ## A-1 coboundary control — REGISTERED / EXECUTION PENDING
 The pre-registered A-1 control has been added before any broader scan.
-
 Plan: plans/RANK4_D4_DELTA_Q_COBOUNDARY_CONTROL_2026-09-19.md
 Script: research/rank4_D4_delta_q_coboundary_control_2026-09-19.py
 Workflow: .github/workflows/rank4-d4-delta-q-coboundary-control.yml
@@ -1197,7 +1195,6 @@ At p=3, the power term x_1^3 has Zassenhaus degree 3 while the commutator terms 
 Nevertheless their orientations differ already mod 9:
 chi_3(x_2)=4 mod 9, while chi_infinity(x_2)=1 mod 9.
 Therefore the bare associated graded restricted Lie object cannot determine chi mod 9, and in particular cannot canonically reconstruct the marked coupling J_3=< (R_2,P_3) >.
-
 Important correction to F5-A: P_3=X_1^[3] exists in the ambient degree-3 restricted layer, but its being the degree-3 component of the same filtered defining relation as R_2 is extra marking/coupling data. The bare graded object does not retain that coupling.
 
 Final branch status:
@@ -1597,7 +1594,6 @@ H^1(G_q,\mathbf Z/9)=\{(a_1,a_2,a_3,a_4)\in(\mathbf Z/9)^4:q a_1=0\}
 gives (3A\times A^3) for (q=3) and (A^4) for (q\ge9). Together with the displayed Bockstein normal forms this does establish the three structured-carrier isomorphism types on this standard family: class (v_3(q)=1), class (v_3(q)=2), and class (v_3(q)\ge3). The converse distinctions are also structural: the underlying (W_q) differs between (q=3) and (q\ge9), while (\beta_9\) distinguishes (q=9) from (q\ge27).
 ### 2. Terminology correction
 The phrase “canonical normal-form identifications” is too strong. The coordinates (a_i) and the displayed models depend on a chosen standard presentation. The proved statement is: **explicit structure-preserving model isomorphisms exist in a chosen standard presentation, and the resulting abstract structured carrier has exactly three isomorphism types on this family.** No canonical basis or canonical coordinate identification is claimed.
-
 ### 3. Target formalization remains load-bearing
 The notation (O_{27}) must now be fixed before any bridge theorem is claimed. It should not be treated informally as “the character”. The natural target should be defined basis-free as the appropriate orientation torsor/object together with its mod-27 logarithmic datum, so that a statement
 \[
@@ -1997,7 +1993,6 @@ Record: `research/KUMMER_HARD_ATTACK_37_PD2_INDEPENDENT_SELECTOR_2026-09-20.md`.
 ## 2026-09-20 — HARD ATTACK 38: EXTENSION-CLASS TRANSGRESSION MADE BASIS-FREE
 
 Hard Attack 38 resolves the precise definitional gap left by Hard Attack 37. For the intrinsic finite extension 1 -> M_k -> E_k -> Q_k -> 1, with e_k=[E_k] in H^2(Q_k,M_k), and candidate coefficient module A_k(rho), the LHS transgression delta_{k,rho}: Hom_{Q_k}(M_k,A_k(rho)) -> H^2(Q_k,A_k(rho)) is canonically the push-forward of the extension class: delta_{k,rho}(phi)=phi_*(e_k), up to the conventional global sign of the spectral-sequence differential.
-
 Thus the finite coker is intrinsically C_k(rho)=H^2(Q_k,A_k(rho))/{phi_*(e_k)}, and can be viewed as the natural transgression profile of e_k over coefficient modules. No presentation, relator, Fox coordinates, q, chi, H^2(G,A), or dualizing module is needed to define this map. Gauge independence follows because only the cohomology class e_k and functorial push-forward are used.
 
 This closes the narrower logical gap “finite extension data -> intrinsic evaluation of its 2-cell transgression” at the level of definition and cohomological interpretation.
@@ -2397,8 +2392,7 @@ which does not preserve \(\ell\). Therefore this element of \(Sp_4(\mathbf F_3)\
 
 Decision:
 - full \(Sp_4(\mathbf F_3)\) lift to \(Q_2\): **FAIL / CLOSED**;
-- intrinsic full-Sp4 module interpretation of \(\mathcal S\): **FAIL / CLOSED**;
-- actual automorphism image versus line stabilizer: **OPEN / LOAD-BEARING**;
+- intrinsic full-Sp4 module interpretation of \(\mathcal S\): **FAIL / CLOSED**;- actual automorphism image versus line stabilizer: **OPEN / LOAD-BEARING**;
 - lift of actual automorphism image to \(Q_2\): **OPEN / LOAD-BEARING**;
 - \(\mathcal S\) under the actual automorphism image: **OPEN / LOAD-BEARING**;
 - twisted \(\beta_\rho^2|_{\mathcal S}\): **OPEN / LOAD-BEARING**;
@@ -2613,3 +2607,13 @@ Decision: intrinsic function-valued secondary obstruction = PASS / CLOSED at the
 New diagnostic: under pure relator conjugation intrinsic rho_3 and mu are fixed. Hence the previously isolated [v,R] contribution lambda(v)f(p) cannot be cancelled by changing mu. The full coordinate expansion must contain another compensating source or revise the decomposition.
 
 Record: research/HA61_B5_8_INTRINSIC_SECONDARY_OBSTRUCTION_FUNCTION_2026-09-20.md.
+
+## 2026-09-20 — HA61-B5-9: PURE RELATOR CONJUGATION EXACT CANCELLATION
+
+An independent exact check was completed. For any crossed 1-cocycle z for rho_3 and any relator r with rho_3(r)=1 and z(r)=0, pure conjugation r'=v r v^{-1} gives exactly z(r')=z(v)+rho_3(v)z(r)+rho_3(vr)z(v^{-1})=0. Thus the full obstruction is invariant at every filtration order.
+
+Since intrinsic rho_3/mu is fixed under pure presentation conjugation, the isolated [v,R] contribution lambda(v)f(p) cannot be compensated by a mu-shift. Therefore [v,R] is only one component of a larger exact prefix/suffix/source cancellation. The full degree-three ledger must retain those terms together.
+
+Decision: exact full crossed-cocycle conjugation invariance = PASS / LOCAL; [v,R] as complete gauge contribution = FAIL / CLOSED; exact prefix/suffix cancellation partner = OPEN / LOAD-BEARING; HA61-B = OPEN / LOAD-BEARING; HA61-C unopened.
+
+Record: research/HA61_B5_9_PURE_RELATOR_CONJUGATION_EXACT_CANCELLATION_2026-09-20.md.
