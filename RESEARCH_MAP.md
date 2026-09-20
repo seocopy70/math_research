@@ -2568,3 +2568,7 @@ The main Kummer branch now has a clean theorem schema:
 The strict inverse-system structure of raw carriers is not required for this reconstruction and remains OPEN. Minimality and universal category-independent claims remain OPEN and are explicitly separated from the main theorem.
 
 Stop criterion: do not continue merely to force raw carrier functoriality. Continue only if a new attack can remove PD² dependence from coherence, prove minimality in a defined category, prove strict carrier naturality, or broaden the admissible class.
+
+
+## 2026-09-20 — HARD ATTACK 37
+PD²-independent selector uniqueness was attacked. No valid finite-input reconstruction theorem and no admissible no-go were obtained. Status remains OPEN. The coker selector and selector coherence remain PASS / LOCAL only under the PD² framework. Direct reuse of the known one-relator/Fox obstruction row as an intrinsic proof shortcut is FAIL / CLOSED. The exact load-bearing target is an intrinsic evaluation of the finite extension's 2-cell transgression from (Q_k,M_k,E_k,rho). Detailed record: `research/KUMMER_HARD_ATTACK_37_PD2_INDEPENDENT_SELECTOR_2026-09-20.md`.
