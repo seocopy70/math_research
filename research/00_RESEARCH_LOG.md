@@ -1569,3 +1569,23 @@ Primary-zero \(\delta_2(f)=0\) is a **domain condition for the existence of an \
 - **HA61-C remains closed/not opened** until B4/B5 are resolved.
 
 This supersedes the stronger HA61-B wording that classified the independent \(B_{\rho_2}\) term as FAIL/CLOSED. The earlier claim is retained only as historical/superseded text; it must not control the current state.
+
+
+## 2026-09-20 — HA61-B5-6: DIAGONAL GAUGE LAW FALSIFIED AS PURE PRESENTATION ACTION
+
+A deeper attack distinguishes pure relator/presentation gauge from coefficient-extension coordinate/trivialization gauge. For r' = v r v^{-1}, the abstract group G and any intrinsic coefficient character rho_2,rho_3 are unchanged; hence the abstract lift parameter mu in rho_3=rho_2(1+9mu) is unchanged. Therefore the previously written diagonal law (t_2,mu) -> (t_2+a p,mu+a lambda) cannot be attributed to pure relator conjugation.
+
+The law remains a valid obstruction-preserving compensator at the representative/formula level, but its second component is not an actual presentation gauge transformation unless an additional coefficient-trivialization/section action is explicitly constructed.
+
+This exposes a possible missing term/source in the decomposition of the secondary obstruction: the gamma_2^3 / [v,R] contribution may be cancelled by a genuine coefficient-coordinate change or by a representative-level old-action/lift term, rather than by quotienting the orientation parameter mu.
+
+Decision:
+- formal diagonal compensator: PASS / LOCAL;
+- pure presentation -> diagonal action: FAIL / CLOSED;
+- gamma_2^3 independent scalar: FAIL / CLOSED only as a separate functional; gauge role OPEN;
+- combined presentation+coefficient gauge action: OPEN / LOAD-BEARING;
+- canonical affine quotient: OPEN / LOAD-BEARING;
+- HA61-B: OPEN / LOAD-BEARING;
+- HA61-C remains unopened.
+
+Record: research/HA61_B5_6_HARD_ATTACK_DIAGONAL_GAUGE_FALSIFICATION_2026-09-20.md
