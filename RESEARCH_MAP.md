@@ -1,3 +1,18 @@
+
+
+## 2026-09-20 — HARD ATTACK 54: PERMANENT 19-DIMENSIONAL QUOTIENT IS NOW FIXED
+
+HA53 was critically reviewed against HA52. The generic cyclic-kernel d3/Bockstein phenomenon cited in HA52 cannot affect the specific LHS bidegree (2,1): all r>=3 outgoing targets have negative fiber degree, and all incoming sources have negative base degree. Therefore E_3^{2,1}=E_infinity^{2,1} and the 19-dimensional sector is permanent.
+
+The authoritative object is now the quotient
+S = ker(H^2(V,F_3) tensor K -> H^4(V,F_3)) / im(d2:H^2(W,F_3)->H^2(V,F_3) tensor W^*),
+with dim S=19 and K=im(d2:W^*->H^2(V,F_3)), dim K=9.
+
+This is a genuine associated-graded filtration piece of H^3(Q_2,F_3). It is not yet an orientation carrier, and no decomposition is inferred from the dimension 19.
+
+Decision: permanent 19D LHS piece PASS / CLOSED; HA52 d3 warning HISTORICAL / SUPERSEDED; H-module structure OPEN / LOAD-BEARING; twisted beta_rho^2 action OPEN / LOAD-BEARING; orientation-selector interpretation OPEN / DECISIVE.
+
+Record: research/KUMMER_HARD_ATTACK_54_CRITICAL_CORRECTION_AND_19_QUOTIENT_2026-09-20.md
 ## 2026-09-20 — ACTIVE KUMMER BOTTLENECK AFTER HARD ATTACK 26
 
 The automatic implication
