@@ -1,3 +1,11 @@
+## 2026-09-20 — HA61-B5-10: INTRINSIC SECONDARY FAMILY + PURE-CONJUGATION CANCELLATION
+
+The intrinsic secondary object is now the function-valued family of connecting maps indexed by coefficient characters rho_3 lifting rho_2. It is presentation/lift natural by construction. The previously proposed diagonal quotient (t_2,mu)/F_3(p,lambda) is ruled out as an orientation carrier because pure relator conjugation fixes intrinsic rho_3/mu, and quotienting mu would identify distinct candidate next-digit coefficient actions. Exact crossed-word algebra for r' = v r v^{-1} gives complete cancellation, so the isolated [v,R] term cannot by itself define a gauge shift of t_2.
+
+Decision: intrinsic secondary family PASS/CLOSED; pure conjugation invariance PASS/CLOSED; diagonal affine quotient FAIL/CLOSED; P_4 residual -> intrinsic t_2 OPEN/LOAD-BEARING; E_{>P_4} factorization OPEN/LOAD-BEARING; HA61-B OPEN/LOAD-BEARING; HA61-C not opened.
+
+Record: research/HA61_B5_10_INTRINSIC_SECONDARY_FAMILY_AND_CONJUGATION_2026-09-20.md
+
 ## 2026-09-20 — HA61-B5-3: COMBINED AFFINE SECONDARY QUOTIENT
 
 B5-2 was sharpened to an explicit affine action. On the primary-zero locus, the gauge shift (t_2mapsto t_2+a p) is exactly compensated by (mumapstomu+alambda), because (f(p)=-(lambdawedge f)(R)). Thus the natural secondary object is the quotient/torsor ([(t_2,mu)]in(V^{(2)}oplus V^*)/mathbf F_3(p,lambda)) when (lambda
