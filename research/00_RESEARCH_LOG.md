@@ -1412,3 +1412,42 @@ Decision:
 - next authorized target: HA61-B3 general A_2-lift gauge test; no HA61-C yet.
 
 Record: research/HARD_ATTACK_61_B2_PRIMARY_ZERO_REDUCTION_2026-09-20.md (commit b82e275cc2621763ea735d878546ea661b3c6563).
+
+
+## 2026-09-20 — HA61-B3: A_2-LIFT GAUGE ATTACK — SCOPE CORRECTION
+
+HA61-B3 was re-audited at the general cohomological level. For
+\[
+0\to\mathbf F_3\to A_3=\mathbf Z/27(\rho_3)\to A_2=\mathbf Z/9(\rho_2)\to0,
+\]
+an \(A_2\)-valued cocycle representative may be changed within its cohomology class by the exact gauge
+\[
+z\mapsto z+d_{\rho_2}(3\phi).
+\]
+The connecting homomorphism \(\delta_3:H^1(G,A_2)\to H^2(G,\mathbf F_3)\) is well-defined on cohomology classes, so the **full secondary obstruction** is invariant under this lift-representative gauge:
+\[
+\Delta_\phi\delta_3=0.
+\]
+This closes the gauge-dependence question at the level of the total obstruction.
+
+However, this does **not** imply that a decomposition term \(B_{\rho_2}(z)\) vanishes individually. Cancellation with other representative-dependent pieces remains logically possible. In particular, the statement in the earlier HA61-B structural document that the primary-zero condition by itself eliminates every old-action contribution was too strong unless the full source expansion and filtration cutoff are supplied.
+
+The exact current source ledger is:
+1. old \(\rho_2\)-action / \(A_2\)-lift terms;
+2. new \(\mu\)-prefix × lift terms;
+3. relation/power jet terms;
+4. the \(P_3/P_4\) residual \(t_2\);
+5. lift-gauge cross terms;
+6. \(D_4\)/higher-filtration terms.
+
+Primary-zero \(\delta_2(f)=0\) is a **domain condition for the existence of an \(A_2\)-lift**, not by itself a proof that source (1) is absent from every chosen expansion. Therefore the independent-term question remains open until B4/B5 complete the source-by-source independence and filtration audit.
+
+### Decision
+- **B3 lift-gauge invariance of the total secondary connecting obstruction: PASS / CLOSED.**
+- **B3 old-action elimination / \(B_{\rho_2}=0\): OPEN / LOAD-BEARING.**
+- **HA61-B overall: OPEN / LOAD-BEARING.**
+- **B4:** test whether any surviving old-action contribution factors canonically through a presentation-free \(t_2\).
+- **B5:** explicit coefficient-valuation + filtration cutoff; membership in \(D_4\) alone is not sufficient.
+- **HA61-C remains closed/not opened** until B4/B5 are resolved.
+
+This supersedes the stronger HA61-B wording that classified the independent \(B_{\rho_2}\) term as FAIL/CLOSED. The earlier claim is retained only as historical/superseded text; it must not control the current state.
