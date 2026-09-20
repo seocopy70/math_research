@@ -940,3 +940,18 @@ Classification:
 - carrier-only inverse-system functoriality: OPEN.
 
 Record: research/KUMMER_HARD_ATTACK_35_INVERSE_SYSTEM_COMPATIBILITY_AUDIT_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 36: SELECTOR-ONLY COHERENCE
+
+Hard Attack 36 asked whether the practical inverse-limit reconstruction requires the raw coker carriers to form an inverse system. It does not.
+
+Define S_k(G) by the finite coker maximality predicate. The finite recognition theorem identifies S_k(G) with the singleton {chi mod 3^k}. Reduction of candidate characters therefore restricts to compatible maps between the singleton selector sets. Thus the inverse-limit selector set is a singleton, giving chi_filt.
+
+This is PASS / LOCAL under the PD² framework. It is a recognition/coherence theorem, not a carrier-only naturality theorem. Raw carrier tower functoriality remains OPEN; so do minimality and universal category-independent claims.
+
+The practical endpoint of the current main branch is therefore:
+finite intrinsic carrier -> transgression coker -> unique finite selector -> selector coherence -> chi_filt.
+
+Do not force strict carrier-level inverse maps without a new structural reason.
+Record: research/KUMMER_HARD_ATTACK_36_SELECTOR_COHERENCE_ENDGAME_2026-09-20.md.
