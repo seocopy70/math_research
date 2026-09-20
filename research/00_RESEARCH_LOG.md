@@ -1,3 +1,35 @@
+## 2026-09-20 — HA61-B5: NAIVE D_4 CUTOFF KILLED; P_4 RESIDUAL IS LOAD-BEARING
+
+HA61-B5 was pushed through the filtration/valuation boundary. The naive claim that every E_{>=4} term vanishes modulo 27 after division by 9 is false.
+
+The decisive test is a D_4 element g^9. For an A_3 crossed cocycle with rho(g)=1+3a mod 27,
+\[
+1+rho(g)+\cdots+rho(g)^8\equiv9\pmod{27},
+\]
+so
+\[
+z(g^9)/9\equiv f(g)\pmod3.
+\]
+Yet g^9\in D_4. Therefore D_4-membership is sufficient for the first mod-9 cutoff but is NOT sufficient for the second mod-27 cutoff.
+
+The correct B5 decomposition is therefore
+\[
+E_{\ge4}=E_{P_4}+E_{>P_4},
+\]
+where the first residual must be identified with the intrinsic next filtered datum t_2, while the deeper sector must be shown to vanish in the secondary quotient or factor through the same t_2.
+
+This is a genuine filtration-depth boundary and strengthens HA58: the P_4 residual is not optional bookkeeping; it is forced by the failure of the old D_4 cutoff.
+
+Decisions:
+- blanket E_{>=4} vanishing mod 27: **FAIL / CLOSED**;
+- D_4 membership as a sufficient secondary cutoff: **FAIL / CLOSED**;
+- P_4 residual = intrinsic t_2: **OPEN / LOAD-BEARING**;
+- deeper-than-P_4 terms: **OPEN**;
+- HA61-B overall: **OPEN / LOAD-BEARING**;
+- HA61-C: **not opened**.
+
+Record: research/HARD_ATTACK_61_B5_FILTRATION_CUTOFF_2026-09-20.md (commit d563edad1f5e690ab70c2e13ac28cacb76bc1318).
+
 
 ## 2026-09-20 — HA61-B4 A2-LIFT CLASS INDEPENDENCE AUDIT
 
