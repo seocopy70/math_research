@@ -1,3 +1,27 @@
+## 2026-09-20 — HA61-B5: D_4 CUTOFF FAILS AT MOD-27; P_4 RESIDUAL OPEN
+
+HA61-B5 establishes a sharp correction. The mod-9 argument “D_4-errors vanish after division by 3” cannot be reused at mod 27 after division by 9. The explicit D_4 element g^9 gives
+\[
+z(g^9)/9\equiv f(g)\pmod3
+\]
+for rho(g)=1+3a mod 27, so D_4-membership alone does not kill the secondary contribution.
+
+The correct source decomposition is
+\[
+E_{\ge4}=E_{P_4}+E_{>P_4}.
+\]
+The P_4 component is now the first forced candidate for the intrinsic t_2 residual; deeper terms must be separately killed or shown to factor through the same datum.
+
+Decision:
+- blanket E_{>=4} vanishing mod 27: **FAIL / CLOSED**;
+- D_4 as sufficient secondary cutoff: **FAIL / CLOSED**;
+- P_4 residual -> intrinsic t_2: **OPEN / LOAD-BEARING**;
+- deeper-than-P_4 factorization/vanishing: **OPEN**;
+- HA61-B: **OPEN / LOAD-BEARING**;
+- HA61-C: **not opened**.
+
+Record: research/HARD_ATTACK_61_B5_FILTRATION_CUTOFF_2026-09-20.md (commit d563edad1f5e690ab70c2e13ac28cacb76bc1318).
+
 
 
 ## 2026-09-20 — HA61-B4 PASS/LOCAL; B5 OPEN
