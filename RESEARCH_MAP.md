@@ -2446,3 +2446,23 @@ Status:
 - universal no-go: OPEN.
 
 Record: research/KUMMER_HARD_ATTACK_32_EINFTY11_D3_2026-09-20.md. No numerical scan authorized until the finite-input and selector gates are passed.
+
+
+## CRITICAL CORRECTION — 2026-09-20 — HARD ATTACK 31 REOPENED AFTER TOP-CLASS RESTRICTION AUDIT
+
+A decisive error was found in Hard Attack 31. The claim that the canonical PD^2 top class for A_k(chi) restricts nontrivially to N=P_{k+1}(G) is not valid. Already at k=1, A_1(chi)=F_3 because chi mod 3 is trivial, and for a proper open subgroup of p-power index the mod-p degree-two fundamental class can restrict to zero. Standard surface/Demuškin duality sources explicitly record vanishing of Res:H^2(G,F_p)->H^2(L,F_p) for proper open subgroups of index divisible by p.
+
+Therefore the inference “top class restricts nontrivially, hence inflation image is zero” is invalid. The exact identity
+coker(delta)=im(inflation H^2(Q,A)->H^2(G,A)) remains correct, but its use as an orientation no-go is reopened.
+
+Consequences:
+- Hard Attack 31 coker/Fitting selector closure: HISTORICAL / SUPERSEDED;
+- coker-based orientation selector: OPEN;
+- Fitting/annihilator of coker: OPEN;
+- claim that the canonical class lies in E_infty^{0,2}: UNJUSTIFIED;
+- claim E_infty^{1,1}(G,chi)=0 from that placement: UNJUSTIFIED;
+- raw d3/top-row enrichment remains closed if H^2(N,A) is imported as orientation-bearing input.
+
+The next binding attack is now the actual LHS filtration placement of H^2(G,A_k(chi)): compute inflation image, E_infty^{1,1}, and top-row restriction/edge behavior before classifying any derived selector. No numerical scan is authorized until this filtration audit is complete.
+
+Detailed correction: research/CRITICAL_CORRECTION_HARD_ATTACK_31_RESTRICTION_2026-09-20.md.
