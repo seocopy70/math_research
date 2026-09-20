@@ -2299,3 +2299,33 @@ No one of these is currently selected.
 
 ### Next authorized attack
 First search the repository for an already established lift of the filtered \(H\)-action to \(Q_2\) or its central extension. If none exists, attack extension-class invariance/lift directly. Only after that may the actual \(H\)-module structure of \(\mathcal S\) be computed. No dimension-based module identification is authorized.
+
+
+## 2026-09-20 — HARD ATTACK 56: FULL SP4 LIFT KILLED BY INTRINSIC TORSION LINE
+
+HA55's load-bearing H-lift gate was attacked directly. The full ambient symplectic group used in the degree-4 representation track cannot act through actual automorphisms of the frozen q=3 Demuškin group.
+
+The intrinsic degree-one audit already establishes
+\[
+G^{ab}\cong \mathbf Z_3^3\oplus\mathbf Z/3,
+\]
+with the Frattini image of \operatorname{Tor}(G^{ab}) a distinguished line \(\ell=\langle e_1\rangle\subset V\). Every actual automorphism preserves torsion in abelianization, hence preserves \(\ell\).
+
+But the authoritative symplectic convention has \(t_v=I+v(Jv)^T\). For \(v=e_2\), \(Je_2=e_1\), so
+\[
+t_{e_2}e_1=e_1+e_2,
+\]
+which does not preserve \(\ell\). Therefore this element of \(Sp_4(\mathbf F_3)\) cannot arise from an actual automorphism of \(G\), and the full ambient symplectic action cannot lift to \(Q_2\).
+
+Decision:
+- full \(Sp_4(\mathbf F_3)\) lift to \(Q_2\): **FAIL / CLOSED**;
+- intrinsic full-Sp4 module interpretation of \(\mathcal S\): **FAIL / CLOSED**;
+- actual automorphism image versus line stabilizer: **OPEN / LOAD-BEARING**;
+- lift of actual automorphism image to \(Q_2\): **OPEN / LOAD-BEARING**;
+- \(\mathcal S\) under the actual automorphism image: **OPEN / LOAD-BEARING**;
+- twisted \(\beta_\rho^2|_{\mathcal S}\): **OPEN / LOAD-BEARING**;
+- orientation-selector role of \(\mathcal S\): **OPEN / DECISIVE**.
+
+Interpretation: the earlier full \(Sp_4\) symmetry is an ambient graded symmetry, not the actual automorphism symmetry of the frozen q=3 group. The next authorized branch is the actual degree-one automorphism image, expected to lie in the stabilizer of the intrinsic torsion line. No full-Sp4 decomposition of \(\mathcal S\) should be treated as an intrinsic result.
+
+Record: research/KUMMER_HARD_ATTACK_56_FULL_SP4_LIFT_KILLED_BY_TORSION_LINE_2026-09-20.md
