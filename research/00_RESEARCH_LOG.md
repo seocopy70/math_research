@@ -1714,3 +1714,13 @@ Record: research/HA61_B5_13_INTRINSIC_ZERO_SELECTOR_2026-09-20.md (commit 1c4ecb
 ## 2026-09-20 — B5-13 CRITICAL CORRECTION
 
 The proposed uniqueness argument for the intrinsic delta3 zero-selector was wrong. A nonzero linear functional nu -> nu cup f on the 4-dimensional H^1(G,F3) is not injective; its kernel has dimension 3. Therefore, if the variation formula holds and one zero exists, the full coefficient-lift torsor has an affine zero set of size 27, not a singleton. B5-13 zero-selector uniqueness is FAIL/CLOSED. The variation identity remains OPEN/DECISIVE. The next legitimate question is whether the filtered data canonically selects a one-dimensional affine lift direction (or another quotient/structure) before zero-selection. Such a restriction cannot be introduced without a fresh Object/Input/Functoriality/Gauge/Novelty audit.
+
+
+## 2026-09-20 — HA61-B5-14: GLOBAL ZERO-MAP QUANTIFIER CORRECTION
+
+A critical quantifier correction supersedes the fixed-(f) no-go interpretation in B5-13. For fixed (f), the variation (
+u\mapsto\nu\smile f) has a 3-dimensional kernel in rank four, so (Z_3(f)) can have 27 points. But the research selector is the stronger condition (delta_{3,ho_3}\equiv0) as a map on all of (H^1(G,\mathbf Z/9(\rho_2))). If the universal variation identity holds and the reduction (H^1(G,\mathbf Z/9(\rho_2))\to H^1(G,\mathbf F_3)) is surjective, then two global zero maps imply (
+u\smile v=0) for every (v\in H^1(G,\mathbf F_3)); Demuškin cup nondegeneracy forces (
+u=0). Thus **global zero-map uniqueness is PASS / LOCAL conditional on the variation identity and reduction-surjectivity hypotheses**. The fixed-(f) 27-point argument is **HISTORICAL / SUPERSEDED as a no-go for the global selector**. Universal variation, existence from finite filtered/relation input, finite-window factorization through (G/P_4\) / (D_{10}), and Serre/Kummer novelty separation remain **OPEN / DECISIVE**. The (t_2) and diagonal quotient routes remain closed and are not revived.
+
+Record: research/HA61_B5_14_GLOBAL_ZERO_MAP_QUANTIFIER_CORRECTION_2026-09-20.md
