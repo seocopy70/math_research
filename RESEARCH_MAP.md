@@ -3059,3 +3059,12 @@ This supersedes the stronger HA61-B wording that classified the independent \(B_
 The B5-13 fixed-(f) 27-point argument is superseded as a no-go for the actual selector problem. The target is a lift (ho_3) for which the entire connecting map (delta_{3,ho_3}) vanishes. Conditional on the universal variation identity and surjectivity of the mod-9-to-mod-3 (H^1) reduction, Demuškin cup nondegeneracy implies **global zero-map uniqueness: PASS / LOCAL (conditional)**. This does not prove existence or finite filtered factorization. The active decisive gates are universal variation, finite filtered/relation existence, factorization through (G/P_4\) / (D_{10}), and Serre/Kummer novelty separation. The (t_2), (t_2/\langle p\rangle), and diagonal ((t_2,\mu)) routes remain FAIL/CLOSED; HA61-C remains unopened.
 
 Record: research/HA61_B5_14_GLOBAL_ZERO_MAP_QUANTIFIER_CORRECTION_2026-09-20.md
+
+
+## 2026-09-21 — B2 FINITE KUMMER SELECTOR GENERAL-k GATE STATUS
+
+The B2 branch now has a proof-level closure of its mathematical load-bearing gates. The semidirect product calculation proves P_j(S_k)=3^{j-1}A_k⋊U_j for all j, so every twisted crossed cocycle factors through Q_k=G/P_{k+1}. The finite Kummer lifting predicate is equivalent to vanishing of the twisted Fox row by Nakayama. In the standard odd-p Demushkin presentation, direct Fox elimination gives the unique character rho_2=(1-q)^(-1), all remaining coordinates trivial; Labute classification gives the corresponding arbitrary odd-p statement. Hensel is no longer required.
+
+This does **not** close novelty. Classical sources already formulate canonical orientation/Kummerianity through H^1 coefficient-lifting surjectivity. The active decisive question is whether the finite-window recognition/factorization from Q_k alone, with chi/q/dualizing action absent from the predicate input, is genuinely new or a reformulation/corollary already present in the literature.
+
+Record: research/B2_FINITE_KUMMER_SELECTOR_GENERAL_K_2026-09-21.md (commit 542b3d8b767a8c65500c92273a3de573112c1367).
