@@ -1,3 +1,12 @@
+
+
+## 2026-09-21 — B2 FINITE-WINDOW PROGRAM: K=2 PASSES LOCALLY
+
+B2 is now separated cleanly from B1. B1 (isomorphism-class determination within the standard family) remains known/non-new. B2 asks for a classification-free natural finite predicate on Q_k that reconstructs chi mod 3^k. At k=2, the lower-3-central window Q_2=G/P_3 passes locally: the universal Kummer lifting predicate is q-blind, natural, has unique solution rho=(1,4,1,1), and the existence lift is shown to annihilate P_3 directly. This is a genuine finite-window factorization result at mod 9, not merely the earlier full-G calculation.
+
+Decision: **B2/k=2 PASS / LOCAL**; uniform k theorem **OPEN / DECISIVE**. Next authorized gate: k=3, Q_3=G/P_4, with direct P_4 annihilation of the mod-27 lift as the first and only existence test before higher interpretation.
+
+Record: research/KUMMER_B2_K2_FINITE_WINDOW_MOD9_2026-09-21.md.
 ## 2026-09-20 — HA61-B5-12: CANONICAL t2 NO-GO
 
 A same-group relator-conjugation witness now kills the proposed single presentation-independent vector t2. For q=3, p!=0 and lambda=e2*, while the audited conjugation law shifts the coordinate residual by lambda(v)p. Choosing v with lambda(v)=1 changes t2 by p, although all intrinsic input data and the exact connecting-obstruction family remain unchanged. Thus raw t2 is not an intrinsic natural transformation. The quotient t2/<p> is invariant but insufficient because f(t2) does not descend: primary-zero gives f(p)+(lambda wedge f)(R)=0, not f(p)=0. The diagonal (t2,mu) quotient was already rejected because it identifies distinct coefficient actions. Therefore the single-vector P4/t2 compression route is FAIL/CLOSED. The intrinsic delta3 family remains PASS/CLOSED; alternative richer secondary compression is OPEN/DECISIVE; HA61-C via t2 is not opened.
