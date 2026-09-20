@@ -592,3 +592,41 @@ Therefore Mackey/transfer enrichment alone does not remove the missing lift ambi
 This is not a group-level universal no-go because \(T_c\) is a coefficient-system automorphism, not an admissible group automorphism. It is nevertheless a decisive stop for this successor: more bookkeeping of the same trivial-coefficient Bockstein data cannot supply the missing characteristic-zero rigidification.
 
 **Status:** Mackey/transfer enrichment as abstract coefficient-functor carrier **FAIL / CLOSED**; global group-level no-go **OPEN**; independent orientation bridge **OPEN**. The next meaningful branch must add genuinely group-sensitive filtered extension information.
+
+
+## 2026-09-20 — HARD ATTACK: KUMMER FACTORIZATION VS RECOGNITION
+
+The proposed second-stage claim through the lower 3-central quotient was split into two distinct statements.
+
+For
+[
+A_k=mathbf Z/3^k,quad U_k=1+3A_k,quad H_k=A_ktimes U_k,
+]
+a candidate character (ho:G	o U_k) and crossed homomorphism (f:G	o A_k(ho)) combine into
+[
+Phi(g)=(f(g),ho(g))in H_k.
+]
+The finite semidirect target satisfies (P_{k+1}(H_k)=1), so every such pair factors through
+[
+Q_k=G/P_{k+1}(G).
+]
+
+This proves a genuine factorization lemma: **candidate finite Kummer data is visible at (P_{k+1}).**
+
+However, this does not yet prove that (Q_k) recognizes the canonical orientation. The missing theorem is a q-blind predicate
+[
+mathsf K_k(Q_k,ho)
+]
+with a unique solution (ho=chimod3^k), natural under admissible morphisms and independent of q/presentation/known orientation data.
+
+The naive condition “there exists a crossed homomorphism” is vacuous because (f=0) works for every candidate (ho). Requiring (f
+eq0) still does not supply a canonical selector. A stronger duality condition risks simply repackaging the already-known orientation module/classification.
+
+Candidate characters (Q_k	o U_k) are plentiful, so uniqueness must come from an additional finite obstruction. No such higher-level obstruction has yet been constructed from (Q_k) alone.
+
+Decision:
+- finite semidirect/Kummer factorization through (G/P_{k+1}): **PASS / LOCAL**;
+- finite q-blind Kummer recognition (G/P_{k+1}Rightarrowchimod3^k): **OPEN**;
+- no numerical scan authorized until the recognition predicate is explicitly defined.
+
+Record: `research/KUMMER_RECOGNITION_LOWER_3_CENTRAL_HARD_ATTACK_2026-09-20.md`
