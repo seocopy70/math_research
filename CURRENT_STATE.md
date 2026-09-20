@@ -1,5 +1,16 @@
 
 
+## 2026-09-20 — HA61-B3 CLOSED / B4 OPEN
+
+HA61-B3 is now **PASS / CLOSED**. The A_2 representative gauge z→z+dφ cannot change the secondary connecting obstruction: after lifting φ to A_3, the compatible lift changes by dφ~, and d^2=0 gives exact equality of the obstruction cocycles. Therefore no genuinely gauge-dependent B_{rho_2} can be an intrinsic secondary invariant.
+
+This does NOT close the old-action question completely. Distinct A_2-valued cohomology lifts over the same primary-zero f can still differ by non-gauge data. The decisive next question is HA61-B4: whether the remaining non-mu secondary contribution is canonically represented by the next filtered residual t_2, or whether an additional lift-class parameter survives.
+
+Current order remains: B1 → B2 → **B3 PASS/CLOSED** → **B4 OPEN/LOAD-BEARING** → B5. No HA61-C and no all-n induction yet.
+
+Record: research/HARD_ATTACK_61_B3_GENERAL_A2_LIFT_GAUGE_2026-09-20.md.
+
+
 ## 2026-09-20 — HARD ATTACK 54: HA53 SUPERCEDES THE HA52 d3 WARNING
 
 A critical review of HA52–53 was recorded. HA52 correctly established dim E_3^{2,1}=19 but left a generic warning that a later d3-Bockstein phenomenon might remove the sector. HA53 closes that concern completely: for (p,q)=(2,1), every r>=3 has zero outgoing target E_r^{2+r,2-r}, and every incoming source E_r^{2-r,r} has negative first index. Hence E_3^{2,1}=E_infinity^{2,1}, with dimension 19. The generic cyclic-kernel d3-Bockstein phenomenon remains valid elsewhere, but cannot act on this bidegree.
