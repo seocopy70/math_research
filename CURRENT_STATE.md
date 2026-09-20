@@ -1566,3 +1566,38 @@ Decision:
 - no numerical scan authorized until the recognition predicate is explicitly defined.
 
 Record: `research/KUMMER_RECOGNITION_LOWER_3_CENTRAL_HARD_ATTACK_2026-09-20.md`
+
+
+## AUTHORITATIVE UPDATE — HARD ATTACK 24 — 2026-09-20 — KUMMER FACTORIZATION/RECOGNITION BOUNDARY
+
+The lower-3-central Kummer branch was tightened at definition level.
+
+For \(A_k=\mathbf Z/3^k\), \(U_k=1+3A_k\), \(H_k=A_k\rtimes U_k\), an induction gives
+\[
+P_n(H_k)\subseteq3^{n-1}A_k\rtimes(1+3^nA_k),
+\]
+hence \(P_{k+1}(H_k)=1\). Therefore every candidate finite orientation/crossed-homomorphism pair \((\rho,f)\) factors through
+\[
+Q_k=G/P_{k+1}(G).
+\]
+
+The strongest justified conclusion is consequently:
+**candidate finite Kummer data is visible at \(G/P_{k+1}\)**.
+
+The complete finite bookkeeping carrier is
+\[
+\mathcal K_k(Q)=\coprod_{\rho\in\operatorname{Hom}(Q,U_k)}Z^1(Q,A_k(\rho)).
+\]
+But this carrier contains all candidate coefficient actions; it does not itself provide a canonical selector. The naive condition \(\exists f\) is vacuous, while \(\exists f\ne0\) has no established uniqueness and any stronger duality condition risks repackaging known orientation data.
+
+Current binding status:
+- exact semidirect-target nilpotence: **PASS / LOCAL**;
+- Kummer factorization through \(G/P_{k+1}\): **PASS / LOCAL**;
+- complete finite Kummer carrier: **PASS / LOCAL**;
+- naive crossed-homomorphism selector: **FAIL / CLOSED**;
+- q-blind unique orientation recognition from \(Q_k\): **OPEN**;
+- admissible same-carrier/different-orientation no-go: **OPEN**.
+
+This confirms the earlier distinction between information sufficiency for candidate data and actual canonical orientation recognition. No numerical scan is authorized until a concrete selector predicate or admissible counterexample is available.
+
+Record: `research/KUMMER_RECOGNITION_LOWER_3_CENTRAL_HARD_ATTACK_24_2026-09-20.md`.
