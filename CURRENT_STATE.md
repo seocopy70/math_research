@@ -1,3 +1,12 @@
+## 2026-09-20 — HA61-B5-3: COMBINED AFFINE SECONDARY QUOTIENT
+
+B5-2 was sharpened to an explicit affine action. On the primary-zero locus, the gauge shift (t_2mapsto t_2+a p) is exactly compensated by (mumapstomu+alambda), because (f(p)=-(lambdawedge f)(R)). Thus the natural secondary object is the quotient/torsor ([(t_2,mu)]in(V^{(2)}oplus V^*)/mathbf F_3(p,lambda)) when (lambda
+e0); for (lambda=0) this affine ambiguity disappears.
+
+Decision: combined affine action PASS / LOCAL; raw (t_2) intrinsicity FAIL / CLOSED; no independent cubic-bracket functional PASS / LOCAL; universal affine carrier OPEN / LOAD-BEARING; deeper-than-(P_4) factorization OPEN / LOAD-BEARING; HA61-B OPEN / LOAD-BEARING; HA61-C not opened.
+
+Record: research/HARD_ATTACK_61_B5_3_COMBINED_AFFINE_SECONDARY_QUOTIENT_2026-09-20.md.
+
 ## 2026-09-20 — HA61-B5-1/B5-2: CORRECT SECONDARY WINDOW; AFFINE t_2 OBSTRUCTION
 
 B5 source audit corrected the proposed D_4/D_5 quotient. It is not a valid secondary quotient because g^9 lies in D_9 subset D_5 but evaluates nontrivially after /9. The relevant mod-27 finite-information threshold is G/P_4, corresponding to the D_10 information window already established for the standard family.
