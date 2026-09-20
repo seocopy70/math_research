@@ -2396,3 +2396,10 @@ Therefore Mackey/transfer enrichment alone does not remove the missing lift ambi
 This is not a group-level universal no-go because \(T_c\) is a coefficient-system automorphism, not an admissible group automorphism. It is nevertheless a decisive stop for this successor: more bookkeeping of the same trivial-coefficient Bockstein data cannot supply the missing characteristic-zero rigidification.
 
 **Status:** Mackey/transfer enrichment as abstract coefficient-functor carrier **FAIL / CLOSED**; global group-level no-go **OPEN**; independent orientation bridge **OPEN**. The next meaningful branch must add genuinely group-sensitive filtered extension information.
+
+
+## 2026-09-20 — ACTIVE: FINITE EXTENSION / 2-CELL CARRIER REFINED
+
+The extension-carrier branch is now precise. For N=P_{k+1}(G), Q_k=G/N, the first finite extension datum is M_k=N/(N^{3^k}[N,N]) together with E_k=G/(N^{3^k}[N,N]). This is q-blind and intrinsic and captures the kernel data relevant to H^1(N,A_k(rho)).
+
+Hard Attack 27 closes the naive inference that this finite extension already determines twisted H^2: the Hochschild-Serre degree-two terms include H^2(N,A_k(rho)). The next target is therefore not a larger arbitrary carrier, but a finite q-blind 2-cell obstruction T_k naturally extracted from the extension and capable of reproducing the one-relator twisted obstruction without importing the canonical dualizing action.
