@@ -398,7 +398,6 @@ This is a concrete counterexample to using the local degree bound of the frozen 
 
 Record:
 research/ORIENTATION_FOX_DEGREE3_NIELSEN_HARD_ATTACK_2026-09-20.md
-
 ## 2026-09-20 — HARD ATTACK 9: naive integral augmentation jet FAIL / CLOSED
 
 The proposed next object \(\langle r-1\rangle\subset I^2/I^4\) in \(\mathbf Z_3[[F]]\), with ordinary augmentation ideal \(I\), was attacked before any computation.
@@ -776,11 +775,15 @@ The proposed second-stage claim through the lower 3-central quotient was split i
 
 For
 [
-A_k=mathbf Z/3^k,quad U_k=1+3A_k,quad H_k=A_ktimes U_k,
+A_k=mathbf Z/3^k,quad U_k=1+3A_k,quad H_k=A_k
+times U_k,
 ]
-a candidate character (ho:G	o U_k) and crossed homomorphism (f:G	o A_k(ho)) combine into
+a candidate character (
+ho:G	o U_k) and crossed homomorphism (f:G	o A_k(
+ho)) combine into
 [
-Phi(g)=(f(g),ho(g))in H_k.
+Phi(g)=(f(g),
+ho(g))in H_k.
 ]
 The finite semidirect target satisfies (P_{k+1}(H_k)=1), so every such pair factors through
 [
@@ -791,11 +794,13 @@ This proves a genuine factorization lemma: **candidate finite Kummer data is vis
 
 However, this does not yet prove that (Q_k) recognizes the canonical orientation. The missing theorem is a q-blind predicate
 [
-mathsf K_k(Q_k,ho)
-]
-with a unique solution (ho=chimod3^k), natural under admissible morphisms and independent of q/presentation/known orientation data.
+mathsf K_k(Q_k,
+ho)
+]with a unique solution (
+ho=chimod3^k), natural under admissible morphisms and independent of q/presentation/known orientation data.
 
-The naive condition “there exists a crossed homomorphism” is vacuous because (f=0) works for every candidate (ho). Requiring (f
+The naive condition “there exists a crossed homomorphism” is vacuous because (f=0) works for every candidate (
+ho). Requiring (f
 eq0) still does not supply a canonical selector. A stronger duality condition risks simply repackaging the already-known orientation module/classification.
 
 Candidate characters (Q_k	o U_k) are plentiful, so uniqueness must come from an additional finite obstruction. No such higher-level obstruction has yet been constructed from (Q_k) alone.
@@ -1190,7 +1195,6 @@ Classification:
 - PD^2 finite selector: PASS / LOCAL.
 - carrier minimality: OPEN.
 - strict tower naturality: OPEN.
-
 Detailed record: research/HARD_ATTACK_40_CRITICAL_REVIEW_AND_NEXT_GATE_2026-09-20.md.
 
 
@@ -1590,9 +1594,18 @@ Decision:
 
 Record: research/HA61_B5_6_HARD_ATTACK_DIAGONAL_GAUGE_FALSIFICATION_2026-09-20.md
 
-
 ## 2026-09-20 — HA61-B5-7: mu-diagonal quotient ruled out as orientation carrier
 
 A stronger conceptual attack shows that quotienting (t2,mu) by the diagonal direction (p,lambda) would identify distinct coefficient characters rho_3=rho_2(1+9mu), precisely the alternatives the secondary obstruction must distinguish. Presentation/section gauge may change coordinate expressions, but cannot identify distinct intrinsic coefficient actions. Therefore the simple affine quotient is FAIL / CLOSED as the orientation carrier. The correct target is an intrinsic function-valued secondary obstruction on the affine space of coefficient lifts, with presentation-independent value; a representative-dependent t2 may appear only as a coordinate expression of that function.
 
 Record: research/HA61_B5_7_HARD_ATTACK_MU_QUOTIENT_DESTROYS_SELECTOR_2026-09-20.md
+
+## 2026-09-20 — HA61-B5-8: INTRINSIC SECONDARY OBSTRUCTION FUNCTION
+
+HA61-B5-8 closes the correct intrinsic object at the cohomological level. For fixed rho_2, each intrinsic rho_3 lift defines 0 -> F_3 -> Z/27(rho_3) -> Z/9(rho_2) -> 0, hence a canonical connecting map delta_{3,rho_3}. Naturality under group isomorphisms/presentation changes and descent from cocycles to cohomology make rho_3 -> delta_{3,rho_3} intrinsic.
+
+This is PASS / CLOSED for intrinsicity of the function-valued secondary obstruction, but not for the filtered realization. The affine quotient of (t_2,mu) remains FAIL / CLOSED as an orientation carrier because it identifies distinct rho_3 actions.
+
+New diagnostic: under pure relator conjugation intrinsic rho_3/mu is fixed. Hence the previously computed [v,R] contribution lambda(v)f(p) cannot be cancelled by changing mu. The full coordinate expansion must contain another compensating source or revise the decomposition. Next target: coordinate completeness/source audit, P_4 residual identification, and deeper-term factorization. HA61-C remains unopened.
+
+Record: research/HA61_B5_8_INTRINSIC_SECONDARY_OBSTRUCTION_FUNCTION_2026-09-20.md.
