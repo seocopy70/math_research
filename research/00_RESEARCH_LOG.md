@@ -1382,3 +1382,10 @@ Decision:
 - successive obstruction tower: **OPEN / DECISIVE**.
 
 Record: research/HARD_ATTACK_59_COKERNEL_AS_OBSTRUCTION_QUOTIENT_2026-09-20.md
+
+
+## 2026-09-20 — HARD ATTACK 61-B
+
+HA61-B structural cancellation audit: the feared independent old-coefficient-action term at the secondary coefficient-extension stage does not survive on the primary-obstruction zero locus. The new obstruction has the form f(t_2)+(mu wedge f)(R), conditional on an intrinsic t_2. The result is PASS / LOCAL. Independent B_rho2 term: FAIL / CLOSED as a separate invariant. Presentation-free t_2: OPEN / LOAD-BEARING. All-digit induction: OPEN / DECISIVE. Next: HA61-C intrinsic t_2 and gauge-independence.
+
+Record: research/HARD_ATTACK_61_B_STRUCTURAL_CANCELLATION_2026-09-20.md (commit 365c5241ba21707119a40090bd5a8cb20bc56366).
