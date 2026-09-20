@@ -397,8 +397,7 @@ Decision:
 This is a concrete counterexample to using the local degree bound of the frozen normal form as an intrinsic exact truncation theorem.
 
 Record:
-research/ORIENTATION_FOX_DEGREE3_NIELSEN_HARD_ATTACK_2026-09-20.md
-## 2026-09-20 — HARD ATTACK 9: naive integral augmentation jet FAIL / CLOSED
+research/ORIENTATION_FOX_DEGREE3_NIELSEN_HARD_ATTACK_2026-09-20.md## 2026-09-20 — HARD ATTACK 9: naive integral augmentation jet FAIL / CLOSED
 
 The proposed next object \(\langle r-1\rangle\subset I^2/I^4\) in \(\mathbf Z_3[[F]]\), with ordinary augmentation ideal \(I\), was attacked before any computation.
 
@@ -798,7 +797,6 @@ mathsf K_k(Q_k,
 ho)
 ]with a unique solution (
 ho=chimod3^k), natural under admissible morphisms and independent of q/presentation/known orientation data.
-
 The naive condition “there exists a crossed homomorphism” is vacuous because (f=0) works for every candidate (
 ho). Requiring (f
 eq0) still does not supply a canonical selector. A stronger duality condition risks simply repackaging the already-known orientation module/classification.
@@ -1196,7 +1194,6 @@ Classification:
 - carrier minimality: OPEN.
 - strict tower naturality: OPEN.
 Detailed record: research/HARD_ATTACK_40_CRITICAL_REVIEW_AND_NEXT_GATE_2026-09-20.md.
-
 
 ## 2026-09-20 — HARD ATTACK 48: BASE H^3 TARGET IS KILLED ALREADY AT d_2
 
@@ -1597,7 +1594,6 @@ Record: research/HA61_B5_6_HARD_ATTACK_DIAGONAL_GAUGE_FALSIFICATION_2026-09-20.m
 ## 2026-09-20 — HA61-B5-7: mu-diagonal quotient ruled out as orientation carrier
 
 A stronger conceptual attack shows that quotienting (t2,mu) by the diagonal direction (p,lambda) would identify distinct coefficient characters rho_3=rho_2(1+9mu), precisely the alternatives the secondary obstruction must distinguish. Presentation/section gauge may change coordinate expressions, but cannot identify distinct intrinsic coefficient actions. Therefore the simple affine quotient is FAIL / CLOSED as the orientation carrier. The correct target is an intrinsic function-valued secondary obstruction on the affine space of coefficient lifts, with presentation-independent value; a representative-dependent t2 may appear only as a coordinate expression of that function.
-
 Record: research/HA61_B5_7_HARD_ATTACK_MU_QUOTIENT_DESTROYS_SELECTOR_2026-09-20.md
 
 ## 2026-09-20 — HA61-B5-8: INTRINSIC SECONDARY OBSTRUCTION FUNCTION
@@ -1609,3 +1605,11 @@ This is PASS / CLOSED for intrinsicity of the function-valued secondary obstruct
 New diagnostic: under pure relator conjugation intrinsic rho_3/mu is fixed. Hence the previously computed [v,R] contribution lambda(v)f(p) cannot be cancelled by changing mu. The full coordinate expansion must contain another compensating source or revise the decomposition. Next target: coordinate completeness/source audit, P_4 residual identification, and deeper-term factorization. HA61-C remains unopened.
 
 Record: research/HA61_B5_8_INTRINSIC_SECONDARY_OBSTRUCTION_FUNCTION_2026-09-20.md.
+
+## 2026-09-20 — HA61-B5-9: PURE RELATOR CONJUGATION EXACT CANCELLATION
+
+The full crossed-cocycle identity was independently checked: for r'=v r v^{-1}, z(r')=0 exactly whenever z(r)=0 and rho_3(r)=1. Hence the intrinsic obstruction is presentation-conjugation invariant at every filtration order. Because rho_3/mu is fixed, the isolated [v,R] contribution lambda(v)f(p) cannot be cancelled by changing mu. It must be cancelled by other representative-level terms from the full conjugated word, including prefix/suffix contributions omitted when only P -> P+[v,R] was tracked.
+
+This is PASS / LOCAL for exact invariance and FAIL / CLOSED for treating [v,R] as the complete gauge contribution. The explicit cancellation partner remains OPEN / LOAD-BEARING and is now the immediate source-level target. HA61-B remains OPEN / LOAD-BEARING; HA61-C unopened.
+
+Record: research/HA61_B5_9_PURE_RELATOR_CONJUGATION_EXACT_CANCELLATION_2026-09-20.md.
