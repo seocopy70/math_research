@@ -1,3 +1,9 @@
+## 2026-09-20 — HA61-B5-12: CANONICAL t2 NO-GO
+
+A same-group relator-conjugation witness now kills the proposed single presentation-independent vector t2. For q=3, p!=0 and lambda=e2*, while the audited conjugation law shifts the coordinate residual by lambda(v)p. Choosing v with lambda(v)=1 changes t2 by p, although all intrinsic input data and the exact connecting-obstruction family remain unchanged. Thus raw t2 is not an intrinsic natural transformation. The quotient t2/<p> is invariant but insufficient because f(t2) does not descend: primary-zero gives f(p)+(lambda wedge f)(R)=0, not f(p)=0. The diagonal (t2,mu) quotient was already rejected because it identifies distinct coefficient actions. Therefore the single-vector P4/t2 compression route is FAIL/CLOSED. The intrinsic delta3 family remains PASS/CLOSED; alternative richer secondary compression is OPEN/DECISIVE; HA61-C via t2 is not opened.
+
+Record: research/HA61_B5_12_NO_GO_CANONICAL_T2_2026-09-20.md
+
 ## 2026-09-20 — HA61-B5-10: INTRINSIC SECONDARY FAMILY + PURE-CONJUGATION CANCELLATION
 
 The intrinsic secondary object is now the function-valued family of connecting maps indexed by coefficient characters rho_3 lifting rho_2. It is presentation/lift natural by construction. The previously proposed diagonal quotient (t_2,mu)/F_3(p,lambda) is ruled out as an orientation carrier because pure relator conjugation fixes intrinsic rho_3/mu, and quotienting mu would identify distinct candidate next-digit coefficient actions. Exact crossed-word algebra for r' = v r v^{-1} gives complete cancellation, so the isolated [v,R] term cannot by itself define a gauge shift of t_2.
