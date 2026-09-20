@@ -3068,3 +3068,12 @@ The B2 branch now has a proof-level closure of its mathematical load-bearing gat
 This does **not** close novelty. Classical sources already formulate canonical orientation/Kummerianity through H^1 coefficient-lifting surjectivity. The active decisive question is whether the finite-window recognition/factorization from Q_k alone, with chi/q/dualizing action absent from the predicate input, is genuinely new or a reformulation/corollary already present in the literature.
 
 Record: research/B2_FINITE_KUMMER_SELECTOR_GENERAL_K_2026-09-21.md (commit 542b3d8b767a8c65500c92273a3de573112c1367).
+
+
+## 2026-09-21 — B2 QUOTIENT CORRECTION + ONE-RELATOR SCOPE BOUNDARY
+
+The Kθ/P_{k+1} audit is corrected. Existing quotient inheritance theorems do not presently justify the finite window, but no non-inclusion has been proved; indeed P_{k+1}⊆ker(θ mod 3^k) is true. The remaining literature gate is whether a finite-coefficient/mod-p^n version with K_{θ mod p^n} or an equivalent theorem already contains the construction. **Novelty: OPEN / LOW-LIKELIHOOD — LITERATURE VERIFICATION REQUIRED.**
+
+Authorized one-relator stress test: the standard nondegenerate rank-4 Demushkin relation has unique finite Kummer selector; degenerate quadratic one-relator examples have 3→9 candidates across k=2→3, while one power+degenerate example has no candidate. **STRESS TEST: PASS / LOCAL.** This establishes a scope boundary for Kummer rigidity, not yet a theorem about δ̄4∘ι1. Next authorized target is the actual higher obstruction for r=[x1,x2][x1,x3] across its multiple finite Kummer characters.
+
+Record: research/ONE_RELATOR_KUMMER_SELECTOR_STRESS_TEST_2026-09-21.md.
