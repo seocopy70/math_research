@@ -1,3 +1,12 @@
+
+
+## 2026-09-21 — B2 K=2 FINITE WINDOW CLOSED LOCALLY
+
+The first finite-window B2 test is complete at Q_2=G/P_3. The predicate “all H^1(Q_2,F_3) classes lift to H^1(Q_2,Z/9(rho))” is q-blind and natural as a predicate of (Q_2,rho). For the standard rank-four Demuškin setting, existence is verified at the quotient level by showing the mod-9 Kummer lift annihilates P_3; uniqueness gives rho=(1,4,1,1). **PASS / LOCAL.**
+
+This does not solve uniform B2. The decisive next gate is k=3, Q_3=G/P_4: prove that the mod-27 Kummer lift annihilates P_4. No all-k induction or classification repackaging is authorized before that gate.
+
+Record: research/KUMMER_B2_K2_FINITE_WINDOW_MOD9_2026-09-21.md.
 ## 2026-09-20 — HA61-B5-12: CANONICAL t2 NO-GO
 
 A same-group relator-conjugation witness now kills the proposed single presentation-independent vector t2. For q=3, p!=0 and lambda=e2*, while the audited conjugation law shifts the coordinate residual by lambda(v)p. Choosing v with lambda(v)=1 changes t2 by p, although all intrinsic input data and the exact connecting-obstruction family remain unchanged. Thus raw t2 is not an intrinsic natural transformation. The quotient t2/<p> is invariant but insufficient because f(t2) does not descend: primary-zero gives f(p)+(lambda wedge f)(R)=0, not f(p)=0. The diagonal (t2,mu) quotient was already rejected because it identifies distinct coefficient actions. Therefore the single-vector P4/t2 compression route is FAIL/CLOSED. The intrinsic delta3 family remains PASS/CLOSED; alternative richer secondary compression is OPEN/DECISIVE; HA61-C via t2 is not opened.
