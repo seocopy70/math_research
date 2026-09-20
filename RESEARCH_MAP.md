@@ -2922,3 +2922,31 @@ Decisions:
 Next authorized target: P_4 normalization/transport theorem — prove or kill the canonical scalar bridge from the higher power residual to the already normalized mod-9 orientation direction.
 
 Record: research/HARD_ATTACK_58_MOD27_THRESHOLD_RESIDUAL_2026-09-20.md
+
+
+## 2026-09-20 — HARD ATTACK 59: COKER REINTERPRETED AS UNIVERSAL OBSTRUCTION QUOTIENT
+
+The “why coker?” conceptual attack was executed. The critical correction is that the coker itself is not the orientation invariant. Its structural role is the universal quotient that removes gauge/lift directions before an intrinsic obstruction is evaluated.
+
+For a raw deformation/obstruction space C and gauge image im(d), the quotient C/im(d)=coker(d) is universal for maps annihilating im(d). At mod 9, the established twisted degree-(2,3) obstruction family is precisely of this type: presentation/lift changes are invisible, so the obstruction factors through the quotient, while the orientation is selected by the zero/lifting condition of the resulting functional.
+
+Thus the correct conceptual chain is
+\[
+\text{raw relation/power data}\to\text{gauge quotient/coker}\to\text{intrinsic obstruction carrier}\to\text{orientation selector}.
+\]
+
+This explains the coker structurally without claiming that “coker = orientation.” The latter interpretation is rejected as overstrong.
+
+The same pattern suggests a precise successive-obstruction hypothesis for P_4: a next raw extension datum should have its own gauge image, intrinsic quotient, and twisted coefficient-extension obstruction, with a reduction map to the established mod-9 obstruction. If such a diagram commutes, the P_4 scalar may be forced by functorial compatibility rather than imported from q or the known orientation formula.
+
+A decisive negative test is also identified: if the same intrinsic P_4 projective residual admits two scalar normalizations compatible with all allowed gauge changes and with the same mod-9 reduction, then the P_4 filtered data plus Layer B cannot determine the normalized digit.
+
+Decisions:
+- coker as universal gauge-obstruction quotient: **PASS / LOCAL**;
+- coker itself as orientation carrier: **FAIL / CLOSED**;
+- mod-9 carrier as obstruction quotient + natural functional: **PASS / CLOSED** under the established twisted degree-(2,3) theorem;
+- successive obstruction tower: **OPEN / DECISIVE**;
+- P_4 reduction-compatibility with mod-9 obstruction: **OPEN / DECISIVE**;
+- P_4 scalar normalization from compatibility alone: **OPEN / DECISIVE**.
+
+Record: research/HARD_ATTACK_59_COKERNEL_AS_OBSTRUCTION_QUOTIENT_2026-09-20.md
