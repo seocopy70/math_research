@@ -1,3 +1,48 @@
+## 2026-09-20 — HA61-B5-1/B5-2: SECONDARY WINDOW CORRECTED; RAW t_2 FAILS INTRINSICITY
+
+A direct source audit found two important corrections.
+
+First, the previously proposed map
+\[
+D_4/D_5\to (1/9)z(\cdot)\bmod3
+\]
+is not well-defined: \(g^9\in D_9\subset D_5\) but \(z(g^9)/9=f(g)\). The correct mod-27 finite-information threshold is the lower-3-central quotient \(G/P_4\), equivalently the previously established D_10 information window on the standard family. The new residual is in the retained \(P_3/P_4\) layer.
+
+Second, the degree-three Lie/gauge sector was computed. For \(P\mapsto P+[v,R]\),
+\[
+T_{\lambda,f}([v,R])=-\lambda(v)(\lambda\wedge f)(R).
+\]
+On the primary-zero locus,
+\[
+(\lambda\wedge f)(R)=-f(p),
+\]
+so the raw secondary residual transforms as
+\[
+t_2\mapsto t_2+\lambda(v)p.
+\]
+The compensating coefficient-extension parameter transforms as
+\[
+\mu\mapsto\mu+\lambda(v)\lambda,
+\]
+because this leaves
+\[
+f(t_2)+(\mu\wedge f)(R)
+\]
+unchanged.
+
+Therefore:
+- D_4/D_5 secondary factorization: **FAIL / CLOSED**;
+- corrected P_4/D_10 threshold: **PASS / LOCAL**;
+- \gamma_2^3 contribution: old \lambda\wedge f sector, not a new independent carrier;
+- raw t_2 intrinsicity: **FAIL / CLOSED**;
+- combined affine secondary pair \((t_2,\mu)\) modulo the diagonal \((p,\lambda)\)-shift: **OPEN / LOAD-BEARING**;
+- universal absorption of all degree-three bracket/gauge terms: **OPEN**;
+- HA61-B: **OPEN / LOAD-BEARING**;
+- HA61-C: **not opened**.
+
+Records:
+- research/HARD_ATTACK_61_B5_1_SOURCE_QUOTIENT_CORRECTION_2026-09-20.md (c4c2869...)
+- research/HARD_ATTACK_61_B5_2_AFFINE_T2_GAUGE_2026-09-20.md (d817858...)
 ## 2026-09-20 — HA61-B5: NAIVE D_4 CUTOFF KILLED; P_4 RESIDUAL IS LOAD-BEARING
 
 HA61-B5 was pushed through the filtration/valuation boundary. The naive claim that every E_{>=4} term vanishes modulo 27 after division by 9 is false.
