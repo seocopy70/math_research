@@ -1,4 +1,22 @@
 
+## 2026-09-20 — HA61-B4 A2-LIFT CLASS INDEPENDENCE AUDIT
+
+B4 attacked the remaining ambiguity between distinct A_2-valued cohomology lifts over the same mod-3 class f. If z'-z=3c, the pullback of 0→F_3→A_3→A_2→0 along i:F_3→A_2, i(c)=3c, is canonically 0→F_3→A_2→F_3→0. Naturality therefore gives the exact identity
+
+  delta_3(z') - delta_3(z) = delta_2(c).
+
+So lift-class independence is NOT automatic; it is controlled exactly by the first-stage connecting map.
+
+For the frozen q=9 branch, rho_2=1 and direct primary crossed-word evaluation gives delta_2=0 identically. The mod-27 formula z(r_9)=9(1-a)z_1 is also unchanged under z_1→z_1+3c_1.
+
+For the frozen q=3 branch, rho_2(x_2)=4 and the exact primary coefficient is 2+4^{-1}=9≡0 mod 9, with other generator coefficients zero. Hence delta_2=0 identically there as well. The mod-27 coefficient is always divisible by 9, so z→z+3c again leaves delta_3 unchanged.
+
+Thus the lift-class ambiguity is closed for the two audited standard branches, but not universally. The non-mu secondary obstruction is a function of f alone on these branches, supporting the t_2 formula locally. General admissible filtered input still requires a proof that delta_2=0 (or an equivalent canonical mechanism).
+
+Decision: HA61-B4 = PASS / LOCAL. HA61-B5 = OPEN / LOAD-BEARING. HA61-C remains unopened; no all-n induction.
+
+Record: research/HARD_ATTACK_61_B4_LIFT_CLASS_INDEPENDENCE_2026-09-20.md (commit 91797618fff9fa9512c4b30ec08ea96df0d42e02).
+
 ## 2026-09-20 — HA61-B3 GENERAL A2-LIFT GAUGE TEST
 
 The general representative-gauge question was settled at the cochain level. For the coefficient extension 0→F_3→A_3→A_2→0, if z is an A_2-valued 1-cocycle and z'=z+d_{A_2}φ, choose any lift φ~ to A_3 and the compatible lift z~=z~+d_{A_3}φ~. Since d^2=0,
