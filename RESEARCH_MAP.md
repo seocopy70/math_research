@@ -2540,3 +2540,19 @@ The recent proposal set was reviewed and recorded separately so that promising d
 Detailed backlog: `research/NEXT_RESEARCH_IDEA_BACKLOG_2026-09-20.md`.
 
 **Immediate main line is unchanged:** strengthen the finite coker theorem and attack k→k+1 compatibility/naturality. Deferred ideas must not be reopened without a new structural reason.
+
+
+## 2026-09-20 — HARD ATTACK 35: INVERSE-SYSTEM COMPATIBILITY AUDIT
+
+The next attack separates two notions that had been conflated. The finite coker selector is compatible across k at the level of its selected output: under the PD² selector criterion, a level-(k+1) maximal selector reduces to the unique level-k selector. Thus practical inverse-limit reconstruction is PASS / LOCAL under the declared PD² framework.
+
+However, the coker carriers themselves do not automatically form a strict inverse system. Q_{k+1}->Q_k and E_{k+1}->E_k are natural, but M_{k+1} is based on the changing kernel P_{k+2}, while M_k is based on P_{k+1}; the induced map lands only in a generally proper submodule of M_k. Hence no automatic map between the Hom sources, transgressions, or cokernels follows.
+
+Classification:
+- naive direct coker-carrier reduction: FAIL / CLOSED as an inference;
+- carrier-tower naturality: OPEN / load-bearing;
+- finite selector compatibility: PASS / LOCAL under PD² verification;
+- practical inverse-limit reconstruction: PASS / LOCAL subject to PD² framework;
+- carrier-only inverse-system functoriality: OPEN.
+
+Detailed audit: research/KUMMER_HARD_ATTACK_35_INVERSE_SYSTEM_COMPATIBILITY_AUDIT_2026-09-20.md.
