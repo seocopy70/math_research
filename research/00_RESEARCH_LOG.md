@@ -787,3 +787,12 @@ Detailed record: research/KUMMER_2CELL_OBSTRUCTION_HARD_ATTACK_28_2026-09-20.md
 The obvious way to supply the missing 2-cell evaluation—adjoining H^2(P_{k+1}(G),F_3) or its Z/3^k lift—was attacked. Its quotient action is already the orientation-bearing duality action, so it is not an independently derived filtered carrier. This closes the direct top-class enrichment as a non-tautological solution, while leaving open a genuinely derived finite chain-level obstruction T_k.
 
 Classification: direct top-class enrichment FAIL / CLOSED for the stated objective; independent T_k OPEN / decisive. No further oriented-cohomology enrichment authorized.
+
+
+## 2026-09-20 — DISCOVERY PASS 30: FINITE DERIVED 2-CELL / FITTING CANDIDATE
+
+Current bottleneck after Hard Attack 29: derive, rather than append, the missing 2-cell rigidifier from (Q_k,M_k,E_k). Candidate T_k is a basis-free finite derived/transgression complex or its Fitting/annihilator/determinant-line defect, depending functorially on the candidate rho. It is intended to retain secondary extension information without choosing a generator or importing the dualizing module.
+
+Hard attack already closes the raw scalar Reidemeister/determinant version: chain bases and coefficient-module scalings change a scalar by units, so no canonical scalar selector is defined. The basis-free Fitting/annihilator/derived-line version remains OPEN / decisive. No identification with H^2(G,A_k(rho)) is assumed; such a bridge must be independently proved. No numerical scan is authorized until the object and bridge are explicit.
+
+Record: research/KUMMER_FINITE_DERIVED_2CELL_DISCOVERY_PASS_30_2026-09-20.md.
