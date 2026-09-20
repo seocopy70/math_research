@@ -1199,3 +1199,54 @@ Decision:
 - unique coker maximizer without PD2: OPEN / DECISIVE.
 
 Record: KUMMER_HARD_ATTACK_53_21_PERMANENT_SURVIVOR_2026-09-20.md (commit 20f4ba10bc744d5ae02e6c656cc6c55d8b216f5b).
+
+
+## 2026-09-20 — HARD ATTACK 55: CRITICAL REVIEW OF HA54 AND H-LIFT PRE-CHECK
+
+HA54 was critically re-audited before advancing to the representation-theoretic branch.
+
+### Confirmed
+The permanent LHS piece remains
+\[
+E_3^{2,1}=E_\infty^{2,1},\qquad \dim=19,
+\]
+and the concrete quotient
+\[
+\mathcal S=\frac{\ker(H^2(V,\mathbf F_3)\otimes K\to H^4(V,\mathbf F_3))}{\operatorname{im}(d_2:H^2(W,\mathbf F_3)\to H^2(V,\mathbf F_3)\otimes W^*)}
+\]
+has dimension 19. This is a genuine LHS associated-graded filtration piece. No orientation interpretation follows from permanence alone.
+
+### Critical correction / pre-check
+The existence of the previously computed \(H\)-action on the filtered degree-one object (and its image \(PSp_4(3)\)) does **not** by itself imply an action of \(H\) on
+\[
+1\to W\to Q_2\to V\to1.
+\]
+Before treating \(\mathcal S\) as an \(H\)-module, one must prove that the relevant \(H\)-action lifts to the central extension, equivalently that the extension class is preserved with the required induced action on \(W\), or construct the corresponding extension automorphisms directly.
+
+If this lift fails, that failure is itself a meaningful boundary and the \(H\)-module branch must be closed. If it succeeds, only then may one prove functorially that \(K\), \(\ker\mu\), \(\operatorname{im}d_2\), and \(\mathcal S\) are \(H\)-stable.
+
+### Input-category audit
+The objects \(V,W,Q_2\) are finite filtered/extension data, but their admissibility as the declared intrinsic input category must remain explicit. No presentation, classification, known \(\chi\), or PD^2 orientation data may be silently imported into the construction of the \(H\)-action or the interpretation of \(\mathcal S\).
+
+### q=3 boundary
+The numerical result \(\dim\mathcal S=19\) is a frozen \(q=3\) local structural result unless a general-q theorem is supplied. It must not be promoted to a universal dimension statement.
+
+### Strategic boundary
+The three possible interpretations remain open:
+1. **Collapse:** the 19D sector is controlled by already established \((R,p)\) data;
+2. **Controlled Enrichment:** it adds a finite, functorially determined correction needed for \(\beta_\rho^2\);
+3. **Independent Layer:** it carries genuinely new \(\rho\)-visibility.
+
+No one of these is currently selected.
+
+### Decisions
+- permanent 19D LHS filtration piece: **PASS / CLOSED**;
+- \(H\)-action lift to \(Q_2\): **OPEN / LOAD-BEARING**;
+- \(H\)-module structure of \(\mathcal S\): **OPEN / LOAD-BEARING**;
+- twisted \(\beta_\rho^2\) on \(\mathcal S\): **OPEN / LOAD-BEARING**;
+- orientation-selector role: **OPEN / DECISIVE**;
+- PD^2-free unique coker maximality: **OPEN / DECISIVE**;
+- q-universality of the 19D numerical result: **OPEN**.
+
+### Next authorized attack
+First search the repository for an already established lift of the filtered \(H\)-action to \(Q_2\) or its central extension. If none exists, attack extension-class invariance/lift directly. Only after that may the actual \(H\)-module structure of \(\mathcal S\) be computed. No dimension-based module identification is authorized.
