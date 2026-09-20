@@ -2136,3 +2136,20 @@ Decision:
 - unique coker maximizer without PD²: **OPEN / DECISIVE**.
 
 Record: research/KUMMER_HARD_ATTACK_48_BASE_TARGET_KILLED_AT_D2_2026-09-20.md (commit 2a8e5ec4ec9b8fbed7b501387f5a0becdd5d6222).
+
+
+## 2026-09-20 — HARD ATTACK 49: BASE H^4 TARGET ALSO KILLED AT d_2
+
+Hard Attack 48 closed E_infinity^{3,0}=0. The next base target was attacked directly. For the central extension 1 -> W -> Q_2 -> V -> 1, the LHS derivation gives d_2:H^2(V,F_3)⊗W^* -> H^4(V,F_3) with image H^2(V,F_3)∪K, where K=im(d_2:W^*->H^2(V,F_3)) is the 9-dimensional hyperplane from Hard Attack 45. An explicit spanning argument, independently checked by finite-dimensional rank computation, gives H^2(V,F_3)∪K=H^4(V,F_3) (dimension 35). Hence E_3^{4,0}=0 and E_infinity^{4,0}=0.
+
+This removes the second purely-base target. It does NOT imply E_infinity^{2,1}=0: the kernel of d_2 on E_2^{2,1} can be large, and the quotient by incoming d_2 from E_2^{0,2} is still load-bearing. The next gate is therefore the actual survival quotient E_3^{2,1}=ker(d_2:E_2^{2,1}->E_2^{4,0})/im(d_2:E_2^{0,2}->E_2^{2,1}), followed only then by the twisted Bockstein analysis.
+
+Decision:
+- H^2(V)∪K=H^4(V): **PASS / CLOSED**;
+- E_3^{4,0}=0 and E_infinity^{4,0}=0: **PASS / CLOSED**;
+- inference E_infinity^{2,1}=0: **NOT ESTABLISHED**;
+- base targets (3,0),(4,0): **CLOSED / NO SURVIVORS**;
+- full beta_rho^2: **OPEN / LOAD-BEARING**;
+- unique coker maximizer without PD²: **OPEN / DECISIVE**.
+
+Record: research/KUMMER_HARD_ATTACK_49_BASE_TARGET_H4_KILLED_AT_D2_2026-09-20.md
