@@ -1,3 +1,24 @@
+## 2026-09-20 — HA61-B5-1/B5-2: CORRECT SECONDARY WINDOW; AFFINE t_2 OBSTRUCTION
+
+B5 source audit corrected the proposed D_4/D_5 quotient. It is not a valid secondary quotient because g^9 lies in D_9 subset D_5 but evaluates nontrivially after /9. The relevant mod-27 finite-information threshold is G/P_4, corresponding to the D_10 information window already established for the standard family.
+
+The new P_3/P_4 power residual gives the genuine ninth-power functional. The gamma_2^3 sector reproduces the old lambda wedge f contribution. A cubic bracket gauge change P -> P+[v,R] gives
+T([v,R])=-lambda(v)(lambda wedge f)(R)=lambda(v)f(p)
+on the primary-zero locus. Hence the raw t_2 shifts by lambda(v)p.
+
+The total secondary functional is preserved by the paired affine change
+(t_2,mu) -> (t_2+a p, mu+a lambda).
+Thus raw t_2 is not intrinsic; the natural secondary object is a combined affine/torsor class. A universal presentation-free proof that all degree-three bracket terms are exactly absorbed by this quotient remains open.
+
+Decisions:
+- D_4/D_5 factorization: FAIL / CLOSED;
+- corrected P_4/D_10 threshold: PASS / LOCAL;
+- raw t_2 intrinsicity: FAIL / CLOSED;
+- combined affine secondary carrier: OPEN / LOAD-BEARING;
+- HA61-B: OPEN / LOAD-BEARING;
+- HA61-C: not opened.
+
+Records: research/HARD_ATTACK_61_B5_1_SOURCE_QUOTIENT_CORRECTION_2026-09-20.md; research/HARD_ATTACK_61_B5_2_AFFINE_T2_GAUGE_2026-09-20.md.
 ## 2026-09-20 — HA61-B5: D_4 CUTOFF FAILS AT MOD-27; P_4 RESIDUAL OPEN
 
 HA61-B5 establishes a sharp correction. The mod-9 argument “D_4-errors vanish after division by 3” cannot be reused at mod 27 after division by 9. The explicit D_4 element g^9 gives
