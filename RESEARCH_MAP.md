@@ -2895,3 +2895,30 @@ The Strategic Reset tests were executed.
 3. Strategic consequence. The 19D permanent LHS piece is not yet justified as the first genuinely new orientation layer. The next authorized target is the mod-27 threshold residual: finite extension data at P_4 or D_10 modulo the already established Layer-B information. If the residual vanishes, this supports collapse/reuse; if nonzero and it admits a natural orientation bridge, it identifies the first genuinely new layer.
 
 Record: research/HARD_ATTACK_57_INFORMATION_DEPTH_AND_LAYER_B_TOWER_2026-09-20.md
+
+## 2026-09-20 — HARD ATTACK 58: MOD-27 THRESHOLD RESIDUAL IDENTIFIED
+
+HA58 executed the authorized mod-27 threshold residual attack. The first new finite filtered information beyond the mod-9 Layer-B carrier appears at the next lower-3-central power/relation layer, at the P_4 threshold (equivalently within the D_10 information window on the Zassenhaus scale).
+
+For the standard family q=3^s:
+- q=3: the first power/relation contribution is already absorbed by Layer B;
+- q=9: a new nonzero restricted-power/relation class appears in P_3/P_4;
+- 27|q: that degree-three residual vanishes modulo P_4.
+
+Thus the residual strictly separates q=9 from 27|q even though both have the same mod-9 orientation value. It is genuinely beyond the fixed Layer-B carrier.
+
+The intrinsic residual is naturally projective: the degree-one torsion line and the symplectic commutator pairing identify its direction with the same orientation direction used at Layer B. What is not yet proved is the scalar normalization that identifies it with the exact second logarithmic digit 3e_2 in H^1(G,Z/9), or a universal natural transformation to chi mod 27.
+
+This means the first new higher information is now a simpler filtered extension datum, not the 19D LHS sector. The 19D branch is superseded as strategic priority, not mathematically disproved.
+
+Decisions:
+- higher P_4 power/relation residual exists and detects q=9 vs 27|q: PASS / LOCAL;
+- strict separation from Layer B: PASS / LOCAL;
+- projective orientation-direction identification: CONDITIONAL / LOCAL;
+- normalized mod-27 orientation bridge: OPEN / DECISIVE;
+- 19D S as first new layer: HISTORICAL / SUPERSEDED as strategic priority;
+- all-digit finite filtered orientation tower: OPEN / DECISIVE.
+
+Next authorized target: P_4 normalization/transport theorem — prove or kill the canonical scalar bridge from the higher power residual to the already normalized mod-9 orientation direction.
+
+Record: research/HARD_ATTACK_58_MOD27_THRESHOLD_RESIDUAL_2026-09-20.md
