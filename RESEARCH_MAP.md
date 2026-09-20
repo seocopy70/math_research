@@ -2950,3 +2950,25 @@ Decisions:
 - P_4 scalar normalization from compatibility alone: **OPEN / DECISIVE**.
 
 Record: research/HARD_ATTACK_59_COKERNEL_AS_OBSTRUCTION_QUOTIENT_2026-09-20.md
+
+
+## 2026-09-20 — HARD ATTACK 61-B: STRUCTURAL CANCELLATION OF OLD COEFFICIENT ACTION
+
+HA61-B attacked whether the q=3/q=9 cancellation found in HA61-A is an accident of the frozen normal forms or is forced by the two-stage coefficient-extension mechanism.
+
+Result: the feared old-action contribution does not survive as an independent secondary invariant once the (A_2)-valued cocycle lies on the primary obstruction zero locus. Terms coming from the old ρ_2 action belong to the already-satisfied first lifting obstruction / lift-gauge sector. The genuinely new coefficient-extension contribution is the derivative term ((μ∧f)(R)), while the new filtered information enters through the next residual (f(t_2)).
+
+Thus, conditional on an intrinsic definition of (t_2), the secondary obstruction has the structural form
+
+delta_3(f) = [f(t_2) + (mu wedge f)(R)] omega.
+
+This explains why HA61-A gives the same new-parameter slope in the q=3 branch (nontrivial ρ_2) and q=9 branch (trivial ρ_2). It is stronger than a frozen-word numerical cancellation, but it does not yet prove a presentation-free construction of (t_2).
+
+Decision:
+- HA61-B: **PASS / LOCAL**;
+- independent additive (B_{ρ_2}) at the secondary stage: **FAIL / CLOSED** as a separate invariant term;
+- secondary obstruction shape conditional on intrinsic (t_2): **PASS / LOCAL**;
+- presentation-free/gauge-independent (t_2): **OPEN / LOAD-BEARING**;
+- all-digit induction: **OPEN / DECISIVE**.
+
+Next authorized target: HA61-C — intrinsic definition and gauge-independence of (t_2), before any all-n induction. Record: research/HARD_ATTACK_61_B_STRUCTURAL_CANCELLATION_2026-09-20.md (commit 365c5241ba21707119a40090bd5a8cb20bc56366).
