@@ -2596,3 +2596,12 @@ Classification:
 Detailed record: research/KUMMER_HARD_ATTACK_38_EXTENSION_CLASS_TRANSGRESSION_2026-09-20.md.
 
 Next authorized attack: compare the known twisted Fox row with the intrinsic push-forward phi_*(e_k), then attack the finite coefficient-module dependence structurally. No broad numerical scan is authorized yet.
+
+
+## 2026-09-20 — HARD ATTACK 39: PROFILE COMPLETENESS BOUNDARY
+
+Hard Attack 39 resolves an information-theoretic ambiguity in the phrase "extension class <-> transgression profile". Over the full Q_k-module category, the profile is complete by evaluation at (M_k,id), so no new theorem is hidden there. Over the actual Kummer coefficient family A_k(rho), completeness is a separate faithfulness problem with kernel K_k = intersection_{rho,phi} ker(phi_*).
+
+The active main gate is therefore not recovery of e_k itself, but whether the restricted push-forward/coker profile of e_k has a unique orientation maximizer without PD². This preserves the intended q-blind finite-input problem and sharpens the boundary; no numerical scan is authorized before the restricted-profile theorem is addressed.
+
+Record: research/KUMMER_HARD_ATTACK_39_YONEDA_COEFFICIENT_PROFILE_2026-09-20.md.
