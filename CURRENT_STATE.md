@@ -1623,3 +1623,22 @@ Binding status:
 This strengthens the factorization/recognition boundary: \(G/P_{k+1}\) carries candidate Kummer data, but the selector cannot come from Kummer existence alone. The next meaningful branch must combine the candidate coefficient action with additional intrinsic filtered extension structure, or produce an admissible same-carrier/different-orientation no-go.
 
 Record: `research/KUMMER_RECOGNITION_NONZERO_COCYCLE_HARD_ATTACK_25_2026-09-20.md`.
+
+
+## METHODOLOGICAL CORRECTION — 2026-09-20 — DISCOVERY MUST RUN IN PARALLEL WITH ATTACK
+
+The recent Kummer work revealed a process-level imbalance: hard attacks reliably eliminate invalid constructions but do not by themselves generate the conceptual mechanism needed to cross an OPEN recognition gap.
+
+The research workflow is therefore explicitly dual-track:
+- **Attack:** verify definitions, functoriality, gauge/orientation bridge, q-blindness, separation, non-tautology, and logical validity.
+- **Discovery:** generate candidate mechanisms from the structural fingerprints of the target and from literature-derived reusable methods.
+
+For every OPEN bottleneck, the next step should include both:
+\[
+\text{obstruction question} \quad + \quad \text{idea-generation question}.
+\]
+In the current Kummer branch, the discovery question is: **what intrinsic finite structure naturally couples a candidate coefficient action \(\rho\) to the relation/extension data strongly enough to select \(\chi\)?**
+
+Candidate mechanism families to investigate include twisted extension classes, transgression/fundamental-class pairings, Bockstein–Kummer compatibility, duality-type pairings, and finite nilpotent/central extensions. These are hypotheses only and must pass the existing hard gates.
+
+This is a methodological correction, not a change to any mathematical result.
