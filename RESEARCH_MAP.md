@@ -2413,3 +2413,12 @@ The finite extension branch now has a canonical class e_k in H^2(Q_k,M_k) and an
 ## 2026-09-20 — ACTIVE: CHAIN-LEVEL 2-CELL RECONSTRUCTION GATE
 
 The extension branch has reached a sharper boundary. Bare Q_k, kernel extension M_k, canonical extension class e_k, and direct top-class action have all been separated: the first three do not automatically yield the desired orientation, while the last already contains it. The remaining legitimate program is to derive a finite chain-level/extension-level 2-cell invariant T_k from the q-blind filtered extension and prove an independent PD^2 identity to the canonical orientation action. Otherwise a separation counterexample must establish the impossibility within the admissible category.
+
+
+## 2026-09-20 — DISCOVERY PASS 30: FINITE DERIVED 2-CELL / FITTING CANDIDATE
+
+Hard Attack 29 closed direct top-class enrichment as non-tautological. A new discovery candidate is therefore opened inside the finite extension data itself. For N=P_{k+1}, Q=G/N, M=N/(N^{3^k}[N,N]), E=G/(N^{3^k}[N,N]), and candidate rho:Q→U_k, seek a basis-free finite derived/transgression complex whose kernel/cokernel, Fitting ideal, annihilator, or determinant-line defect supplies the missing 2-cell rigidification. The point is to avoid choosing a generator/evaluation in Hom_Q(M,A_k(rho)).
+
+Immediate attack: a raw scalar Reidemeister/determinant invariant is not canonical because chain bases and coefficient-module scalings change it by units. Thus scalar torsion selector FAIL / CLOSED. A basis-free finite derived/Fitting/annihilator object T_k remains OPEN / decisive. Its identification with the twisted PD^2 obstruction is not established and must not be assumed. No numerical scan is authorized before canonical definition + bridge.
+
+Record: research/KUMMER_FINITE_DERIVED_2CELL_DISCOVERY_PASS_30_2026-09-20.md.
