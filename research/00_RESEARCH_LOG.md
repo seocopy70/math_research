@@ -1,3 +1,30 @@
+## 2026-09-20 — DISCOVERY PASS: TWISTED KUMMER / TOP-COHOMOLOGY SELECTOR
+
+A new positive mechanism was identified after Hard Attacks 24–25 closed the shallow crossed-cocycle selectors.
+
+For a candidate finite orientation rho:G->U_k, with A_k=Z/3^k and A_k(rho) the twisted module, the PD^2/Kummer literature supplies a stronger selector: the top-degree twisted obstruction. At the full PD^2 level, the canonical orientation is characterized by maximal top cohomology |H^2(G,A_k(rho))|=3^k (equivalently, by the Kummer lifting property). This is not merely existence of a cocycle.
+
+For the standard rank-4 one-relator family
+G_q=<x1,x2,x3,x4 | x1^q[x1,x2][x3,x4]>,
+the crossed-derivation/top obstruction row was independently expanded:
+d1=q+u2^{-1}-1, d2=0,
+d3=-(u4-1)/(u3u4), d4=(u3-1)/(u3u4),
+after rho(r)=1 forces u1=1 in U_k.
+Hence the full row vanishes iff
+u2=(1-q)^{-1}, u3=u4=1,
+which is exactly chi mod 3^k on the standard family. Therefore the twisted top-cohomology/Kummer mechanism gives a unique finite-level selector on the standard family.
+
+Critical boundary: this does NOT yet prove that the selector is a functor of Q_k=G/P_{k+1}. Although rho and crossed cocycles factor through Q_k because P_{k+1}(A_k⋊U_k)=1, H^2(G,A_k(rho)) is not automatically determined by an arbitrary finite quotient. Presentation/relator-gauge independence and non-tautological filtered realization remain load-bearing.
+
+Decision:
+- twisted Kummer/top-cohomology selector as a mechanism: **PASS / LOCAL**;
+- unique finite-level selector on standard one-relator family: **PASS / LOCAL**;
+- intrinsic q-blind selector on Q_k: **OPEN**;
+- universal factorization through G/P_{k+1}: **OPEN**;
+- non-tautological filtered realization: **OPEN**.
+
+Record: `research/KUMMER_TWISTED_TOP_COHOMOLOGY_DISCOVERY_PASS_2026-09-20.md`
+
 
 
 ## 2026-09-20 — CRITICAL REVIEW OF LOWER 3-CENTRAL BOUNDARY / LOGICAL LIMIT
