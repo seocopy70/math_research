@@ -1362,3 +1362,23 @@ Decisions:
 Next authorized target: P_4 normalization/transport theorem — prove or kill the canonical scalar bridge from the higher power residual to the already normalized mod-9 orientation direction.
 
 Record: research/HARD_ATTACK_58_MOD27_THRESHOLD_RESIDUAL_2026-09-20.md
+
+
+## 2026-09-20 — HARD ATTACK 59: COKER AS UNIVERSAL OBSTRUCTION QUOTIENT
+
+The conceptual “why coker?” attack was completed. The coker is not itself an orientation invariant; it is the universal quotient removing gauge/lift directions before obstruction evaluation. At mod 9, the established twisted degree-(2,3) obstruction is presentation/lift invariant and therefore factors through the relevant quotient, while orientation is selected by the resulting functional's vanishing/lifting condition.
+
+This yields the structural pattern
+\[
+\text{raw relation/power data}\to\text{gauge quotient/coker}\to\text{intrinsic obstruction carrier}\to\text{orientation selector}.
+\]
+
+The key new research hypothesis is a successive obstruction tower: at P_4 there should be a new gauge quotient and coefficient-extension obstruction whose reduction is compatible with the established mod-9 obstruction. Such compatibility could force the scalar normalization of the second digit without using q or the known orientation formula. Conversely, two inequivalent scalar lifts with identical mod-9 reduction would prove a normalization boundary.
+
+Decision:
+- coker as universal gauge-obstruction quotient: **PASS / LOCAL**;
+- coker itself as orientation carrier: **FAIL / CLOSED**;
+- P_4 reduction-compatibility with mod-9 obstruction: **OPEN / DECISIVE**;
+- successive obstruction tower: **OPEN / DECISIVE**.
+
+Record: research/HARD_ATTACK_59_COKERNEL_AS_OBSTRUCTION_QUOTIENT_2026-09-20.md
