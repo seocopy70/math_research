@@ -2586,3 +2586,12 @@ Primary-zero \(\delta_2(f)=0\) is a **domain condition for the existence of an \
 - **HA61-C remains closed/not opened** until B4/B5 are resolved.
 
 This supersedes the stronger HA61-B wording that classified the independent \(B_{\rho_2}\) term as FAIL/CLOSED. The earlier claim is retained only as historical/superseded text; it must not control the current state.
+
+
+## 2026-09-20 — HA61-B5-6: diagonal compensator is not yet an actual presentation gauge
+
+A hard attack shows that pure relator conjugation preserves the abstract group and the intrinsic coefficient action rho_2,rho_3, hence it cannot by itself induce mu -> mu+a lambda in rho_3=rho_2(1+9mu). The diagonal law remains an obstruction-preserving representative-level compensator, but its mu-component requires an additional coefficient-trivialization/section action or a missing representative-level term. The simple quotient by F_3(p,lambda) is therefore superseded as a claimed canonical construction.
+
+Current classifications: formal diagonal compensator PASS / LOCAL; pure presentation -> diagonal action FAIL / CLOSED; gamma_2^3 independent scalar FAIL / CLOSED only as a separate functional, gauge role OPEN; combined presentation+coefficient gauge action OPEN / LOAD-BEARING; canonical affine quotient OPEN / LOAD-BEARING; HA61-B OPEN / LOAD-BEARING; HA61-C unopened.
+
+Record: research/HA61_B5_6_HARD_ATTACK_DIAGONAL_GAUGE_FALSIFICATION_2026-09-20.md.
