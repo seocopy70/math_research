@@ -2605,3 +2605,12 @@ Hard Attack 39 resolves an information-theoretic ambiguity in the phrase "extens
 The active main gate is therefore not recovery of e_k itself, but whether the restricted push-forward/coker profile of e_k has a unique orientation maximizer without PD². This preserves the intended q-blind finite-input problem and sharpens the boundary; no numerical scan is authorized before the restricted-profile theorem is addressed.
 
 Record: research/KUMMER_HARD_ATTACK_39_YONEDA_COEFFICIENT_PROFILE_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 40: SCALAR-CHARACTER SPECTRAL BOUNDARY
+
+The Kummer coefficient family does not probe arbitrary Q_k-module structure. Its equivariant maps factor through twisted coinvariant specializations M_{k,rho}. Hence the finite coker profile is a scalar-character spectroscopy of e_k.
+
+This is a genuine structural boundary but not yet a no-go for the Demushkin extension: the special e_k might be completely visible to these scalar specializations. The active theorem target is therefore a Demushkin-specific scalar-visibility/unique-maximizer result, not generic representation-theoretic faithfulness.
+
+Record: research/KUMMER_HARD_ATTACK_40_RANK_ONE_SPECTRAL_BLINDNESS_2026-09-20.md.
