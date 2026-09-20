@@ -2883,3 +2883,15 @@ The actual automorphism-image/lift branch remains OPEN/LOAD-BEARING but is subor
 Stop rule: no broad representation scan, no full 19D module computation, and no new spectral scan until Test I (digit-depth theorem) or Test II (tower reuse) produces a concrete structural target.
 
 Record: research/STRATEGIC_RESET_INFORMATION_LAYERS_2026-09-20.md (commit da2cd7ec3fae76106033580a1cc98e2cb2984316).
+
+## 2026-09-20 — HARD ATTACK 57: INFORMATION-DEPTH BOUNDARY + LAYER-B TOWER REUSE
+
+The Strategic Reset tests were executed.
+
+1. Information-depth boundary. On the standard family G_{3^s} versus G_infty, the sharp comparison thresholds are D_{3^s+1} for the Zassenhaus filtration and P_{s+2} for the lower-3-central filtration. Consequently, for χ mod 3^n in the worst case s=n−1, the family-level boundaries are D_{3^{n−1}+1} and P_{n+1}; mod 27 gives D_10 and P_4. Classification: PASS / LOCAL. This is not yet a universal pointed orientation-recognition theorem.
+
+2. Layer-B tower reuse. The mod-9 carrier [(R,p)] remains PASS / CLOSED. No theorem currently proves that this fixed carrier recursively generates all higher 3-adic digits. The mod-27 Bockstein-extension package is a finite q-layer detector, but its independent orientation bridge remains unresolved. Classification: tower reuse OPEN / DECISIVE; Bockstein package as all-digit carrier CONDITIONAL / OPEN.
+
+3. Strategic consequence. The 19D permanent LHS piece is not yet justified as the first genuinely new orientation layer. The next authorized target is the mod-27 threshold residual: finite extension data at P_4 or D_10 modulo the already established Layer-B information. If the residual vanishes, this supports collapse/reuse; if nonzero and it admits a natural orientation bridge, it identifies the first genuinely new layer.
+
+Record: research/HARD_ATTACK_57_INFORMATION_DEPTH_AND_LAYER_B_TOWER_2026-09-20.md
