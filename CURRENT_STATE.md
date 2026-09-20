@@ -398,7 +398,6 @@ A genuine **PASS / LOCAL** detection-level compatibility is established for the 
 - q=3^f, f≥2: first Bockstein layer vanishes and the Pál–Quick A_3 obstruction vanishes in their theorem range.
 
 This is a common q=3 power-layer detection, not an equality theorem.
-
 The stronger map/factorization
 \[
 [(R,p)]\longrightarrow\gamma_{A_3}
@@ -797,7 +796,6 @@ This verifies the hand derivation against the script; it does not create a new i
 
 
 ## A-1 coboundary control — REGISTERED / EXECUTION PENDING
-
 The pre-registered A-1 control has been added before any broader scan.
 
 Plan: plans/RANK4_D4_DELTA_Q_COBOUNDARY_CONTROL_2026-09-19.md
@@ -1198,7 +1196,6 @@ At p=3, the power term x_1^3 has Zassenhaus degree 3 while the commutator terms 
 
 Nevertheless their orientations differ already mod 9:
 chi_3(x_2)=4 mod 9, while chi_infinity(x_2)=1 mod 9.
-
 Therefore the bare associated graded restricted Lie object cannot determine chi mod 9, and in particular cannot canonically reconstruct the marked coupling J_3=< (R_2,P_3) >.
 
 Important correction to F5-A: P_3=X_1^[3] exists in the ambient degree-3 restricted layer, but its being the degree-3 component of the same filtered defining relation as R_2 is extra marking/coupling data. The bare graded object does not retain that coupling.
@@ -1598,7 +1595,6 @@ For (G_q=\langle x_1,x_2,x_3,x_4\mid x_1^q[x_1,x_2][x_3,x_4]\rangle), the calcul
 H^1(G_q,\mathbf Z/9)=\{(a_1,a_2,a_3,a_4)\in(\mathbf Z/9)^4:q a_1=0\}
 \]
 gives (3A\times A^3) for (q=3) and (A^4) for (q\ge9). Together with the displayed Bockstein normal forms this does establish the three structured-carrier isomorphism types on this standard family: class (v_3(q)=1), class (v_3(q)=2), and class (v_3(q)\ge3). The converse distinctions are also structural: the underlying (W_q) differs between (q=3) and (q\ge9), while (\beta_9\) distinguishes (q=9) from (q\ge27).
-
 ### 2. Terminology correction
 The phrase “canonical normal-form identifications” is too strong. The coordinates (a_i) and the displayed models depend on a chosen standard presentation. The proved statement is: **explicit structure-preserving model isomorphisms exist in a chosen standard presentation, and the resulting abstract structured carrier has exactly three isomorphism types on this family.** No canonical basis or canonical coordinate identification is claimed.
 
@@ -1676,11 +1672,15 @@ The proposed second-stage claim through the lower 3-central quotient was split i
 
 For
 [
-A_k=mathbf Z/3^k,quad U_k=1+3A_k,quad H_k=A_ktimes U_k,
+A_k=mathbf Z/3^k,quad U_k=1+3A_k,quad H_k=A_k
+times U_k,
 ]
-a candidate character (ho:G	o U_k) and crossed homomorphism (f:G	o A_k(ho)) combine into
+a candidate character (
+ho:G	o U_k) and crossed homomorphism (f:G	o A_k(
+ho)) combine into
 [
-Phi(g)=(f(g),ho(g))in H_k.
+Phi(g)=(f(g),
+ho(g))in H_k.
 ]
 The finite semidirect target satisfies (P_{k+1}(H_k)=1), so every such pair factors through
 [
@@ -1691,11 +1691,14 @@ This proves a genuine factorization lemma: **candidate finite Kummer data is vis
 
 However, this does not yet prove that (Q_k) recognizes the canonical orientation. The missing theorem is a q-blind predicate
 [
-mathsf K_k(Q_k,ho)
+mathsf K_k(Q_k,
+ho)
 ]
-with a unique solution (ho=chimod3^k), natural under admissible morphisms and independent of q/presentation/known orientation data.
+with a unique solution (
+ho=chimod3^k), natural under admissible morphisms and independent of q/presentation/known orientation data.
 
-The naive condition “there exists a crossed homomorphism” is vacuous because (f=0) works for every candidate (ho). Requiring (f
+The naive condition “there exists a crossed homomorphism” is vacuous because (f=0) works for every candidate (
+ho). Requiring (f
 eq0) still does not supply a canonical selector. A stronger duality condition risks simply repackaging the already-known orientation module/classification.
 
 Candidate characters (Q_k	o U_k) are plentiful, so uniqueness must come from an additional finite obstruction. No such higher-level obstruction has yet been constructed from (Q_k) alone.
@@ -1990,7 +1993,6 @@ The exact remaining load-bearing theorem is:
 \]
 
 Record: `research/KUMMER_HARD_ATTACK_37_PD2_INDEPENDENT_SELECTOR_2026-09-20.md`.
-
 
 ## 2026-09-20 — HARD ATTACK 38: EXTENSION-CLASS TRANSGRESSION MADE BASIS-FREE
 
@@ -2390,8 +2392,7 @@ with the Frattini image of \operatorname{Tor}(G^{ab}) a distinguished line \(\el
 
 But the authoritative symplectic convention has \(t_v=I+v(Jv)^T\). For \(v=e_2\), \(Je_2=e_1\), so
 \[
-t_{e_2}e_1=e_1+e_2,
-\]
+t_{e_2}e_1=e_1+e_2,\]
 which does not preserve \(\ell\). Therefore this element of \(Sp_4(\mathbf F_3)\) cannot arise from an actual automorphism of \(G\), and the full ambient symplectic action cannot lift to \(Q_2\).
 
 Decision:
@@ -2602,3 +2603,13 @@ Record: research/HA61_B5_6_HARD_ATTACK_DIAGONAL_GAUGE_FALSIFICATION_2026-09-20.m
 The diagonal quotient of (t2,mu) by (p,lambda) would identify distinct rho_3 coefficient characters and therefore cannot serve as the intrinsic next-digit orientation carrier. The correct target is an intrinsic function-valued secondary obstruction on the set/affine space of coefficient lifts, with representative-dependent t2 allowed only as a coordinate expression. HA61-B remains OPEN / LOAD-BEARING; HA61-C remains unopened.
 
 Record: research/HA61_B5_7_HARD_ATTACK_MU_QUOTIENT_DESTROYS_SELECTOR_2026-09-20.md.
+
+## 2026-09-20 — HA61-B5-8: INTRINSIC SECONDARY OBSTRUCTION FUNCTION
+
+The intrinsic target is now defined without the affine (t_2,mu) quotient. For fixed intrinsic rho_2, each coefficient character rho_3 reducing to rho_2 defines the canonical coefficient sequence 0 -> F_3 -> Z/27(rho_3) -> Z/9(rho_2) -> 0 and hence a canonical connecting map delta_{3,rho_3}. Naturality under group isomorphisms/presentation changes and descent from cocycles to cohomology make the family rho_3 -> delta_{3,rho_3} intrinsic.
+
+Decision: intrinsic function-valued secondary obstruction = PASS / CLOSED at the cohomological-object level; presentation/lift naturality = PASS / CLOSED; simple affine (t_2,mu)/(p,lambda) carrier = FAIL / CLOSED; coordinate-free t_2 = OPEN / LOAD-BEARING; coordinate completeness/P_4 identification = OPEN / LOAD-BEARING; HA61-B = OPEN / LOAD-BEARING; HA61-C unopened.
+
+New diagnostic: under pure relator conjugation intrinsic rho_3 and mu are fixed. Hence the previously isolated [v,R] contribution lambda(v)f(p) cannot be cancelled by changing mu. The full coordinate expansion must contain another compensating source or revise the decomposition.
+
+Record: research/HA61_B5_8_INTRINSIC_SECONDARY_OBSTRUCTION_FUNCTION_2026-09-20.md.
