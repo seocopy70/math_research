@@ -2408,3 +2408,8 @@ Hard Attack 27 closes the naive inference that this finite extension already det
 ## 2026-09-20 — ACTIVE: 2-CELL EVALUATION GATE
 
 The finite extension branch now has a canonical class e_k in H^2(Q_k,M_k) and an induced twisted transgression map. The remaining decisive problem is not more quotient depth but whether a distinguished 2-cell evaluation functional can be reconstructed from the finite filtered extension data without importing the Demushkin dualizing/orientation action. This is the current orientation-bridge gate.
+
+
+## 2026-09-20 — ACTIVE: CHAIN-LEVEL 2-CELL RECONSTRUCTION GATE
+
+The extension branch has reached a sharper boundary. Bare Q_k, kernel extension M_k, canonical extension class e_k, and direct top-class action have all been separated: the first three do not automatically yield the desired orientation, while the last already contains it. The remaining legitimate program is to derive a finite chain-level/extension-level 2-cell invariant T_k from the q-blind filtered extension and prove an independent PD^2 identity to the canonical orientation action. Otherwise a separation counterexample must establish the impossibility within the admissible category.
