@@ -1758,3 +1758,20 @@ The Kummer lifting predicate is equivalent to the vanishing of the twisted Fox r
 For the standard odd-p Demushkin relation r=x_1^q[x_1,x_2]...[x_{2m-1},x_{2m}], the Fox equations directly force rho_{2i-1}=1, then rho_{2i}=1 for i>1, and finally rho_2=(1-q)^(-1). Thus existence/uniqueness is obtained by direct elimination; Hensel is no longer a proof dependency. Labute classification extends this from the standard presentation to arbitrary odd-p Demushkin groups. **PASS / LOCAL.**
 
 The novelty gate remains OPEN / DECISIVE. Existing literature already characterizes the canonical orientation/Kummerian orientation through surjectivity of H^1(G,Z_p(theta)/p^n)→H^1(G,F_p) for all n. The remaining question is specifically whether the finite-window factorization/recognition formulation on Q_k=G/P_{k+1}, with chi/q/dualizing action absent from the predicate input, is already known or is a genuinely new finite-group formulation. Record: research/B2_FINITE_KUMMER_SELECTOR_GENERAL_K_2026-09-21.md (commit 542b3d8b767a8c65500c92273a3de573112c1367).
+
+
+## 2026-09-21 — ONE-RELATOR KUMMER SELECTOR STRESS TEST
+
+The authorized scope/generalization experiment was executed outside the standard Demushkin relation. The historical step3.py file was not present in the repository tree, so an independent fresh Fox evaluator was used; this is explicitly a diagnostic implementation, not a rerun of that script.
+
+Exhaustive finite-character enumeration at k=2,3 was performed for standard rank-4 Demushkin, power-free symplectic control, degenerate rank-4/rank-3 commutator relations, and power+degenerate relations. The standard Demushkin relation retains a unique selector: (1,4,1,1) mod 9 and (1,13,1,1) mod 27. The power-free symplectic control has the unique trivial selector. Degenerate relations show selector non-uniqueness: [x1,x2][x2,x3] has 3 solutions at k=2 and 9 at k=3; [x1,x2][x1,x3] has the same 3-to-9 growth. The relation x1^3[x1,x2][x1,x3] also has 3 and 9 solutions, while x1^3[x1,x2][x2,x3] has no solution at either k=2 or k=3.
+
+This is a genuine boundary diagnostic: Demushkin-type nondegeneracy gives rigidity, while degenerate one-relator quadratic data can produce positive-dimensional finite Kummer candidate families or no candidate at all. It does NOT prove or disprove automatic vanishing of the intrinsic higher obstruction \barδ4∘ι1. The next authorized experiment is to compute that actual coefficient-extension obstruction for the multiple-selector relation [x1,x2][x1,x3].
+
+Decision: **ONE-RELATOR STRESS TEST = PASS / LOCAL.** Record: research/ONE_RELATOR_KUMMER_SELECTOR_STRESS_TEST_2026-09-21.md (commit f61d879a6e11bf24a94ea34a0360530e36575224).
+
+## 2026-09-21 — B2 LITERATURE/QUOTIENT CORRECTION
+
+The Kθ-vs-P_{k+1} audit was tightened. Efrat–Quadrelli/Quadrelli quotient inheritance requires conditions such as N⊆Kθ(G) or N⊆ker θ for an already-given infinite orientation. This does not by itself imply the finite-window theorem for N=P_{k+1}. However, it is too strong to say the required inclusions are false: for the finite coefficient character θ mod 3^k, P_{k+1}⊆ker(θ mod 3^k) is in fact true. The unresolved literature gate is specifically whether a finite-coefficient/mod-3^n version with K_{θ mod 3^n} or equivalent quotient inheritance already subsumes the construction.
+
+Therefore the prior statement that the quotient route could be “excluded” is HISTORICAL / SUPERSEDED. Current status: mathematical B2 gates remain PASS; novelty remains **OPEN / LOW-LIKELIHOOD — LITERATURE VERIFICATION REQUIRED** pending this finite-coefficient comparison.
