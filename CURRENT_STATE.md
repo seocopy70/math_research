@@ -1950,3 +1950,26 @@ This is a structural factorization theorem, not yet a no-go: it does not prove t
 No broad scan is authorized. The next attack must determine whether the Demushkin extension class has a special scalar-character visibility theorem strong enough to force a unique maximizer.
 
 Record: research/KUMMER_HARD_ATTACK_40_RANK_ONE_SPECTRAL_BLINDNESS_2026-09-20.md.
+
+
+## 2026-09-20 — HARD ATTACK 40 CRITICAL REVIEW / NEXT GATE CORRECTION
+
+A critical audit confirms that Hard Attack 40 is a structural scalar-specialization reformulation, not a new obstruction theorem. The Kummer coefficient A_k(rho)=Z/3^k is rank-one, while M_{k,rho} need not be one-dimensional. K_k=0 is auxiliary rather than decisive.
+
+Important correction: maximality of |C_k(rho)| must not be described as "complete filling" of H^2. Since C_k=H^2/im(delta), maximal coker corresponds to minimal transgression image; in the established equality |C_k|=|H^2| the image of delta vanishes.
+
+The next authorized gate is therefore the scalar-character visibility/vanishing structure of delta_{k,rho} for the specific Demushkin extension, beginning with an intrinsic comparison at k=2 to the already closed cup+Bockstein degree-(2,3) obstruction. Fitting/determinant constructions are deferred unless they demonstrably add a new basis-independent control theorem.
+
+Current classification:
+- scalar-character factorization: PASS / CLOSED;
+- Hard Attack 40 as novelty: HISTORICAL / SUPERSEDED;
+- scalar-character visibility: OPEN / DECISIVE;
+- unique coker maximality without PD^2: OPEN / DECISIVE;
+- restricted faithfulness K_k=0: OPEN / AUXILIARY;
+- PD^2 finite selector: PASS / LOCAL;
+- Fox coordinate realization: OPEN;
+- Fitting/determinant: OPEN / DEFERRED;
+- carrier minimality: OPEN;
+- strict tower naturality: OPEN.
+
+Record: research/HARD_ATTACK_40_CRITICAL_REVIEW_AND_NEXT_GATE_2026-09-20.md.
