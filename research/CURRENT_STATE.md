@@ -760,3 +760,16 @@ The power-free control has projective Fox ideal equivalent to (B-1,A-1,D-1,C-1),
 This is a PASS/CLOSED fixed-normal-form compression result. It is not yet an intrinsic degree-3 filtered carrier theorem because arbitrary formal coordinate changes can increase polynomial degree. Detailed record: research/ORIENTATION_EXACT_FOX_DEGREE3_COMPRESSION_AUDIT_2026-09-19.md.
 
 Immediate next gate: determine whether the degree-3 truncation/low-degree presentation is preserved intrinsically by the allowed filtered presentation changes, or prove a genuine obstruction. No representation scan is authorized.
+
+
+## 19A. LITERATURE NOVELTY GATE — 2026-09-21
+
+The primary-source novelty audit is now recorded in research/00_RESEARCH_LOG.md.
+
+- Classical Demushkin canonical orientation existence/uniqueness: **FAIL / CLOSED as novelty** (Labute).
+- Classification by rank and orientation image, and filtration/graded methods in Demushkin theory: **FAIL / CLOSED as novelty**.
+- Intrinsic Zassenhaus/Jennings–Lazard filtration -> already-known orientation factorization: **OPEN**.
+- Finite-window recognition G/P_{k+1} -> chi mod 3^k: **OPEN / LITERATURE VERIFICATION REQUIRED**.
+- Overall project novelty: **OPEN / CONDITIONAL**.
+
+Do not describe the project as discovering canonical orientation. If a theorem survives, the candidate contribution is an intrinsic filtered/finite-window reconstruction/factorization theorem for the already-known canonical orientation. The finite-coefficient Kummerian quotient literature must still be compared line-by-line before claiming novelty.
