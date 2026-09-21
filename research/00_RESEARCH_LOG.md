@@ -1775,3 +1775,35 @@ Decision: **ONE-RELATOR STRESS TEST = PASS / LOCAL.** Record: research/ONE_RELAT
 The Kθ-vs-P_{k+1} audit was tightened. Efrat–Quadrelli/Quadrelli quotient inheritance requires conditions such as N⊆Kθ(G) or N⊆ker θ for an already-given infinite orientation. This does not by itself imply the finite-window theorem for N=P_{k+1}. However, it is too strong to say the required inclusions are false: for the finite coefficient character θ mod 3^k, P_{k+1}⊆ker(θ mod 3^k) is in fact true. The unresolved literature gate is specifically whether a finite-coefficient/mod-3^n version with K_{θ mod 3^n} or equivalent quotient inheritance already subsumes the construction.
 
 Therefore the prior statement that the quotient route could be “excluded” is HISTORICAL / SUPERSEDED. Current status: mathematical B2 gates remain PASS; novelty remains **OPEN / LOW-LIKELIHOOD — LITERATURE VERIFICATION REQUIRED** pending this finite-coefficient comparison.
+
+
+## 2026-09-21 — NOVELTY GATE: CANONICAL ORIENTATION VS FILTRATION-ONLY RECONSTRUCTION
+
+Primary-source literature audit was completed against the uploaded Labute paper (1967, *Classification of Demushkin Groups*) and the uploaded modern oriented/Kummerian Demushkin literature (arXiv:1707.07018v3 and arXiv:2103.12438v3).
+
+### Established by prior literature
+- Existence and uniqueness of the canonical/Serre orientation \(\chi:G\to\mathbf Z_p^\times\) for Demushkin groups are classical (Labute, Theorem 4).
+- \(\operatorname{Im}\chi\) and the associated \(q(G)\) are invariants; classification by rank and image is classical (Labute).
+- Demushkin orientation is already treated in modern cyclotomic/oriented/Kummerian language in the later literature.
+- Use of the descending central/Zassenhaus-type filtration and associated graded Lie algebra in Demushkin structure/classification is also not new (Labute §2).
+
+### Exact novelty boundary
+The literature checked does NOT, in the audited statements, supply the stronger factorization/reconstruction claim
+\[
+\operatorname{Fil}_{\mathrm{intr}}(G)\longrightarrow\chi_G
+\]
+where the input is restricted to an intrinsically defined Zassenhaus/Jennings--Lazard filtered/graded object and no presentation/basis/orientation is supplied. Likewise, a direct theorem that \(G/P_{k+1}\) alone canonically recognizes \(\chi\bmod 3^k\) has not been identified in this audit.
+
+Therefore the original broad claim “recover the canonical orientation of a Demushkin group” is **FAIL / CLOSED as a novelty claim**. The surviving research question is the narrower **filtration-only / finite-window factorization problem**, currently **OPEN / NOVELTY GATE NOT YET CLOSED**.
+
+This does not prove publication-level novelty: the finite-coefficient quotient literature must still be checked against the exact \(G/P_{k+1}\) recognition predicate and the project's non-tautological input category. In particular, existing Kummerian/oriented quotient-inheritance results must not be silently treated as either identical to or distinct from the finite-window theorem until the hypotheses are compared line-by-line.
+
+### Research consequence
+Do not describe the project as discovering canonical Demushkin orientation. Describe the candidate contribution, if ultimately proved, as an intrinsic filtered/finite-quotient reconstruction or factorization theorem for the already-known canonical orientation.
+
+Decision:
+- classical canonical orientation existence/uniqueness: **FAIL / CLOSED**;
+- filtration/graded methods in Demushkin theory: **FAIL / CLOSED as novelty**;
+- intrinsic filtration → orientation factorization: **OPEN**;
+- finite-window \(G/P_{k+1}\to\chi\bmod 3^k\): **OPEN / LITERATURE VERIFICATION REQUIRED**;
+- overall novelty of the present project: **OPEN / CONDITIONAL**.
