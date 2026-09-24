@@ -190,3 +190,60 @@ Potential contents:
 - minimal-carrier question.
 
 That companion paper should not be assumed complete while minimality remains open.
+
+
+## 2026-09-24 — CRITICAL N1–N5 REVIEW: MANUSCRIPT CORRECTIONS
+
+The following corrections are controlling for the manuscript.
+
+### Novelty boundary
+
+The paper must distinguish four layers:
+
+1. **Classical prior art:** Kummerian cohomological lifting, finite-level generator lifting, and unique canonical Demuškin orientation.
+2. **Project mathematics:** arbitrary-candidate factorization of twisted H^1 through Q_k=G/P_{k+1}, proved by the finite semidirect-product filtration.
+3. **Project recognition theorem:** for the fixed rank-4 q=3 group, the intrinsic finite predicate on Q_k has unique solution chi mod 3^k.
+4. **Publication novelty:** survives against the checked corpus, but remains conditional until peer-review-level exclusion of equivalent formulations.
+
+Do not say that the project discovered the canonical orientation, or that finite-level lifting on G is new.
+
+### Exact theorem scope
+
+The manuscript theorem is currently for the fixed rank-4, q=3 Demuškin group. The phrase “q-blind” means that q is absent from the selector input. It does not mean the theorem has been proved uniformly for all Demuškin q.
+
+### Depth wording
+
+Q_k=G/P_{k+1} is a sufficient finite window established by the proof. Minimality is not established. Replace any phrase such as “minimal finite window” by “the finite window Q_k” or “a sufficient finite window.”
+
+### U5 presentation
+
+U5 must be written as:
+- coefficient-extension variation/Yoneda lemma;
+- PD² duality proof of socle-map injectivity with exact dual modules;
+- cup-product nondegeneracy;
+- induction from the established k=2 base case.
+
+The older H^0/socle shortcut is superseded and must not appear.
+
+### Literature section
+
+The related-work section must explicitly compare:
+- Labute Prop. 6/Theorem 4;
+- Efrat–Quadrelli Prop. 7.3/Theorem 7.6;
+- Quadrelli–Weigel 2022 Prop. 2.6;
+- the quotient-inheritance results;
+- Quadrelli 2024 Prop. 2.10.
+
+The key distinction is direction: existing results start from an already given Kummerian orientation; the present selector starts from an arbitrary finite candidate rho and proves factorization through a specified finite quotient.
+
+### Current status table
+
+| Item | Status |
+|---|---|
+| Mathematical finite-window theorem | PASS / CLOSED |
+| Classical canonical orientation | KNOWN |
+| Exact novelty against checked literature | PASS / CONDITIONAL |
+| Absolute priority claim | NOT ESTABLISHED |
+| Minimality of P_{k+1} | OPEN |
+| Broad orientation-discovery claim | CLOSED / NON-NOVEL |
+
