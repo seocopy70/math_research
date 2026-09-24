@@ -1,863 +1,988 @@
-# 필터 관계 제트로부터 Demuškin pro-3 군의 3진 방향성 복원
+# Demuškin 논문 쉽게 이해하기 — 최신 연구결과 반영본
 
-**논문 초안 — 2026-09-19**
+**2026-09-24 업데이트**
 
-## 초록
+이 문서는 수학 논문의 기술적인 증명을 그대로 옮기는 문서가 아니라, **“이 논문이 실제로 무엇을 알아냈고, 기존 연구와 무엇이 다른가”**를 쉽게 설명하기 위한 해설 문서다.
 
-본 논문에서는 rank-four Demuškin pro-\(3\) 군의 canonical orientation character
-\[
-\chi:G\to\mathbf Z_3^\times
-\]
-가 filtered 및 graded relation data로부터 어느 정도까지 복원될 수 있는지를 연구한다. 표준 presentation
-\[
-G_3=\langle x_1,x_2,x_3,x_4\mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle
-\]
-에서 quadratic initial relation
-\[
-R_2=[X_1,X_2]+[X_3,X_4]
-\]
-만으로는 \(q=3\)과 \(q=\infty\)의 orientation을 구별하기에 충분한 정보가 남아 있지 않다. 최초의 유효한 보강은 projective degree-\((2,3)\) relation jet
-\[
-J_3=[(R_2,P_3)],\qquad P_3=X_1^{[3]}
-\]
-이다. 이 jet으로부터 자연스러운 degree-one crossed-derivation functional
-\[
-\Theta_J(\lambda)(f)=f(P_3)+(\lambda\wedge f)(R_2)
-\]
-을 얻는다. 이 functional의 zero set은 관련된 presentation, lift, relator-gauge 및 normalization 변화에 대해 intrinsic하며, \(q=3\)에서는 유일한 zero가 \(\lambda=e_2^*\)이다. 따라서 \(J_3\)는 canonical orientation을 modulo \(9\)까지 복원한다.
-
-이 construction이 실제로 보존하는 정보를 더 정확히 분석하면, raw jet 자체는 degree-one evaluation observable 전체가 정하는 자연스러운 quotient category에서 minimal하지 않다. 그 coarsest quotient는
-\[
-\overline J_3=[(R_2,p(P_3))]
-\]
-이며,
-\[
-p:L_3^{res}(V)\to L_3^{res}(V)/[V,L_2(V)]\cong V^{(1)}
-\]
-로 정의된다. 이 quotient는 모든 degree-one evaluation family를 보존하는 functorial quotient들 가운데 terminal, 즉 coarsest carrier이다.
-
-full \(3\)-adic character에 대해서는 compatible filtered relation-jet tower \(J_n\)으로부터 유일한 finite-level character
-\[
-\chi_n:G\to(\mathbf Z/3^n)^\times,
-\qquad
-\chi_n(x_2)=(-2)^{-1}\pmod{3^n}
-\]
-를 얻고, inverse limit를 통해
-\[
-\chi(x_2)=(1-3)^{-1}
-\]
-을 얻는다. 동시에
-\[
-G_{3^s}=\langle x_i\mid x_1^{3^s}[x_1,x_2][x_3,x_4]\rangle
-\]
-라는 family는 filtration degree와 \(3\)-adic coefficient precision을 모두 유한하게 제한한 universal carrier로는 full orientation을 복원할 수 없음을 보여준다. \(q\)-dependent power term이 degree \(3^s\)에서 처음 나타나기 때문이다. 따라서 본 연구의 결과는 하나의 유한한 \(\mathbf F_3\)-jet이 보편적으로 전체 \(3\)-adic character를 담는다는 주장이 아니라, orientation recovery에 필요한 정보의 계층과 그 한계를 명확히 제시한다.
-
-본 논문은 다음과 같은 일반적 reconstruction pattern을 분리해낸다. 어떤 invariant가 associated graded object에서는 보이지 않을 때, 숨은 parameter가 leading relation과 처음 결합하는 filtered relation jet을 보존하고, 관련 observable이 보지 못하는 정보는 정확히 quotient하는 것이다.
+이번 업데이트에서 논문의 중심을 기존의 “relation jet으로 orientation을 복원한다”는 설명에서, 현재 확정된 **finite-window Kummer recognition theorem**으로 바로잡았다.
 
 ---
 
-## 1. 서론
+## 1. 먼저, 우리가 풀려고 한 문제
 
-Filtered algebraic problem에서 반복해서 나타나는 어려움 중 하나는 associated graded object로 넘어가는 과정에서 원래 대상의 invariant를 복원하는 데 필요한 extension information이 사라질 수 있다는 점이다. Graded object는 leading term을 기록하지만, 실제 relation 내부에서 서로 다른 filtered piece가 어떻게 결합되어 있는지는 반드시 보존하지 않는다.
+연구 대상은 rank-4 Demuškin pro-3 군
 
-이 문제는 Demuškin pro-\(p\) 군에서 자연스럽게 나타난다. 이들의 associated graded restricted Lie algebra는 defining relation의 quadratic initial form에 의해 통제되지만, canonical orientation character는 본질적으로 \(p\)-adic인 invariant이다. 본 논문이 다루는 질문은 다음과 같다.
+[
+G=
+langle x_1,x_2,x_3,x_4
+mid
+x_1^3[x_1,x_2][x_3,x_4]=1
+angle
+]
 
-> **canonical orientation character를 복원하기 위해 필요한 filtered relation information은 정확히 어느 정도인가?**
+이다.
 
-rank-four pro-\(3\) model에서 얻은 답은 세 층으로 구성된다.
+이 군에는 canonical orientation
 
-첫째, bare quadratic graded relation만으로는 충분하지 않다. \(q=3\)과 \(q=\infty\) presentation은 동일한 quadratic initial relation
-\[
-R_2=[X_1,X_2]+[X_3,X_4]
-\]
-을 가지지만, orientation은 이미 modulo \(9\)에서 다르다.
+[
+chi:G	omathbf Z_3^	imes
+]
 
-둘째, 사라진 정보는 quadratic relation과 degree-three restricted-power component 사이의 결합에 나타난다. 이것이 projective relation jet
-\[
-J_3=[(R_2,P_3)]
-\]
-와 intrinsic recovery equation
-\[
-f(P_3)+(\lambda\wedge f)(R_2)=0
-\]
-을 준다. 표준 \(q=3\) presentation에서는 유일한 해가
-\[
-\lambda=e_2^*
-\]
-이므로
-\[
-\chi(x_1),\chi(x_2),\chi(x_3),\chi(x_4)
-\equiv(1,4,1,1)\pmod9.
-\]
+이라는 중요한 3-adic 정보가 있다.
 
-셋째, full \(3\)-adic 문제는 논리적으로 서로 다른 두 질문으로 나뉜다. Compatible finite-level filtered relation jets의 sequence는 모든 \(\chi\bmod3^n\)을 결정하고, 따라서 inverse limit로 full character를 결정한다. 그러나 \(q=3^s\) 전체 family에 대해 bounded-degree와 finite-precision을 동시에 갖는 universal carrier로는 이를 수행할 수 없다. 반면 fixed \(q=3\)에서 exact \(\mathbf Z_3\)-coefficients는 무한히 많은 \(3\)-adic digit을 포함하므로 bounded filtration degree에서도 full character를 복원할 수 있다.
+표준 presentation에서는
 
-따라서 본 논문의 목적은 모든 가능한 category에서 absolute “minimal jet”을 주장하는 것이 아니다. 대신 자연스러운 observable category에서 정확한 coarsest carrier를 식별하고, positive와 negative information result를 함께 확립하는 것이다.
+[
+chi(x_1)=chi(x_3)=chi(x_4)=1,
+qquad
+chi(x_2)=(1-3)^{-1}.
+]
+
+따라서
+
+[
+chi(x_2)
+equiv4pmod9,qquad
+13pmod{27},qquad
+40pmod{81},ldots
+]
+
+가 된다.
+
+### 중요한 점
+
+**canonical orientation 자체는 새로운 발견이 아니다.**
+
+Labute 이후 Demuškin 군의 orientation의 존재와 유일성은 알려져 있다.
+
+우리가 묻는 새로운 질문은 이것이다.
+
+> **전체 무한한 군 G를 직접 사용하거나, 이미 알려진 q나 dualizing action을 입력하지 않고, 유한한 filtered quotient만 보고도 그 orientation의 유한 정밀도 (chimod 3^k)를 intrinsic하게 알아낼 수 있는가?**
+
+이것이 현재 논문의 중심 질문이다.
 
 ---
 
-## 2. 모형과 기본 convention
+# 2. 왜 그냥 graded data를 보면 안 되는가?
 
-다음을 고정한다.
-\[
+가장 먼저 시도한 것은 Zassenhaus/Jennings–Lazard 같은 **associated graded 정보**였다.
+
+문제는 graded 정보가 너무 많이 압축한다는 것이다.
+
+예를 들어
+
+[
 G_3=
-\left\langle
-x_1,x_2,x_3,x_4
-\mid
-r=x_1^3[x_1,x_2][x_3,x_4]=1
-\right\rangle
-\]
-이며 group commutator는
-\[
-[x,y]=x^{-1}y^{-1}xy
-\]
-이다.
+langle x_imid x_1^3[x_1,x_2][x_3,x_4]angle
+]
 
-이에 대응하는 \(q=\infty\) model은
-\[
-G_\infty=
-\left\langle
-x_1,x_2,x_3,x_4
-\mid
-[x_1,x_2][x_3,x_4]=1
-\right\rangle
-\]
-이다.
+와 power-free control
 
-\(V\)를 degree-one \(\mathbf F_3\)-space라 하자. 표준 좌표에서
-\[
-V=\langle e_1,e_2,e_3,e_4\rangle.
-\]
+[
+G_infty=
+langle x_imid [x_1,x_2][x_3,x_4]angle
+]
 
-Quadratic initial relation은
-\[
-R_2=e_1\wedge e_2+e_3\wedge e_4.
-\]
+은 quadratic initial relation에서
 
-\(q=3\)에서는 동일한 filtered relation의 degree-three restricted-power contribution이
-\[
+[
+R_2=[X_1,X_2]+[X_3,X_4]
+]
+
+라는 같은 정보를 갖는다.
+
+하지만 orientation은 이미 mod 9에서 다르다.
+
+[
+chi_{G_3}(x_2)=4pmod9,
+qquad
+chi_{G_infty}(x_2)=1pmod9.
+]
+
+따라서
+
+[
+oxed{	ext{bare associated-graded quadratic data만으로는 }chimod9	ext{를 복원할 수 없다.}}
+]
+
+이것은 특정 계산 하나가 실패했다는 뜻이 아니다.
+
+**애초에 입력 정보 자체가 부족하다**는 no-go 결과다.
+
+---
+
+# 3. 그러면 어떤 정보가 더 필요한가?
+
+mod 9에서 처음 필요한 정보는 quadratic relation만이 아니라, 그 relation에 붙어 있는 degree-3 restricted-power 정보였다.
+
+표준 presentation에서는
+
+[
 P_3=X_1^{[3]}
-\]
-이고, \(q=\infty\)에서는 해당 degree-three component가 0이다.
+]
 
-Canonical orientation은 표준 Demuškin crossed-derivation characterization에서 유일하게 결정되는 orientation이다. Frozen \(q=3\) normal form에서는
-\[
-\chi(x_1)=\chi(x_3)=\chi(x_4)=1,
-\qquad
-\chi(x_2)=(1-3)^{-1}.
-\]
+가 나타난다.
 
-이하 모든 명제는 위의 frozen commutator convention을 사용한다.
+그래서 처음에는
 
----
-
-## 3. Quadratic graded level에서의 정보 손실
-
-첫 번째 obstruction은 즉시 나타난다.
-
-\(G_3\)와 \(G_\infty\) 모두 defining relation의 degree-two initial term은
-\[
-R_2=[X_1,X_2]+[X_3,X_4]
-\]
-로 동일하다.
-
-\(q=3\) relation의 \(x_1^3\) term은 Zassenhaus degree \(3\)에서 나타나므로 quadratic initial form에는 포함되지 않는다.
-
-그럼에도
-\[
-\chi_3(x_2)=4\pmod9,
-\qquad
-\chi_\infty(x_2)=1\pmod9.
-\]
-
-따라서 bare quadratic graded relation만으로는 \(\chi\bmod9\)조차 결정할 수 없다.
-
-이는 특정한 하나의 formula가 실패했다는 뜻이 아니다. 동일한 quadratic relation을 가지면서 서로 다른 orientation character를 갖는 두 group이 존재한다는 information-level obstruction이다.
-
-따라서 필요한 missing datum은 \(R_2\)의 또 다른 함수가 아니라, degree-three filtered relation component가 \(R_2\)와 어떻게 결합되는지를 보존하는 정보여야 한다.
-
----
-
-## 4. Projective degree-\((2,3)\) relation jet
-
-### 4.1 정의
-
-Minimal free pro-\(3\) presentation에서 filtered defining relation을 degree 3까지
-\[
-r=(R_2,P_3)+O(4)
-\]
-로 쓴다.
-
-관련된 object는 projective relation jet
-\[
+[
 J_3=[(R_2,P_3)]
-\]
-이다.
+]
 
-Projectivization은 본질적이다. Relation generator를 바꾸면 두 component가 공통 unit만큼 곱해질 수 있고, relator conjugation은 degree-three bracket term을 추가할 수 있기 때문이다.
+이라는 projective degree-(2,3) relation jet을 연구했다.
 
-\(\lambda,f\in V^*\)에 대해
-\[
-\Theta_J(\lambda)(f)
-=
-f(P_3)+(\lambda\wedge f)(R_2)
-\]
-를 정의한다.
-
-Canonical orientation modulo \(9\)는 이 functional의 unique zero로 encoding된다.
-
-### 4.2 명시적 계산
-
-\[
-\lambda=a_1e_1^*+a_2e_2^*+a_3e_3^*+a_4e_4^*
-\]
-및
-\[
-f=f_1e_1^*+f_2e_2^*+f_3e_3^*+f_4e_4^*
-\]
-로 쓴다.
-
-\[
-R_2=e_1\wedge e_2+e_3\wedge e_4,
-\qquad
-P_3=e_1^{[3]}
-\]
-이면
-\[
-\Theta_J(\lambda)(f)
-=
-(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4.
-\]
-
-이 식이 모든 \(f\)에 대해 0이어야 하므로
-\[
-a_1=a_3=a_4=0,
-\qquad
-a_2=1.
-\]
-
-따라서
-\[
-\boxed{\lambda_\chi=e_2^*.}
-\]
-
-\[
-\rho=1+3\lambda\pmod9
-\]
-로 쓰면
-\[
-\boxed{
-\rho(x_1),\rho(x_2),\rho(x_3),\rho(x_4)
-=(1,4,1,1)\pmod9.
-}
-\]
-
-따라서 degree-\((2,3)\) relation jet은
-\[
-\boxed{\chi\pmod9}
-\]
-를 복원한다.
-
-\(q=\infty\)에서는 \(P_3=0\)이고 \(R_2\)의 nondegeneracy로부터 unique zero가
-\[
-\lambda=0
-\]
-이다. 따라서 동일한 carrier가 definition에 \(q\)를 직접 삽입하지 않고도 \(q=3\)과 \(q=\infty\)를 구별한다.
-
----
-
-## 5. Intrinsicity: presentation, lift 및 gauge 변화
-
-선택한 defining relator 자체는 canonical하지 않다. 따라서 중요한 질문은 허용된 변화 아래 recovery zero set이 보존되는가이다.
-
-\(G\)에서 identity를 유도하는 free automorphism이 degree-two correction
-\[
-\alpha(X_i)=X_i+Q_i+O(3)
-\]
-를 가진다고 하자. Minimality와 one-dimensional quadratic initial relation으로부터
-\[
-Q_i=c_iR_2
-\]
-이다.
-
-Degree 3에서 relation jet의 induced change는
-\[
-(R_2,P_3)
-\longmapsto
-(uR_2,uP_3+[v,R_2])
-\]
-꼴이며, \(u\)는 unit이고 \(v\in V\)이다.
-
-모든 degree-one functional \(f\)에 대해
-\[
-f([v,R_2])=0.
-\]
-
-따라서
-\[
-\Theta'(\lambda)=u\,\Theta(\lambda).
-\]
-
-Scalar \(u\)는 zero set을 바꾸지 않는다. 따라서 계산에서 사용한 degree-\((2,3)\) presentation/lift/relator gauge 아래에서 recovered covector는 invariant이다.
-
-### Proposition 5.1
-
-표준 minimal one-relator pro-\(3\) presentation 가정과 frozen filtration convention 아래에서
-\[
-Z(\Theta_J)
-=
-\{\lambda\in V^*:\Theta_J(\lambda)=0\}
-\]
-는 degree-\((2,3)\) presentation 및 relator gauge에 대해 invariant이다.
-
-이 명제는 recovery observable에 관한 것이다. **전체 relation module의 선택된 generator 자체가 canonical하다는 뜻은 아니다.**
-
-Automorphism naturality는 \(V\), exterior power 및 동일한 bracket gauge cancellation에 유도되는 작용의 functoriality로부터 따른다.
-
----
-
-## 6. Coarsest natural carrier
-
-Raw \(J_3\)는 recovery functional이 실제로 사용하는 것보다 많은 정보를 담고 있다.
-
-다음의 canonical quotient가 있다.
-\[
-p:
-L_3^{res}(V)
-\longrightarrow
-L_3^{res}(V)/[V,L_2(V)].
-\]
-
-Characteristic \(3\)에서 이 quotient는 restricted-cube component
-\[
-V^{(1)}
-\]
-이다.
-
-모든 degree-one \(f\)에 대해
-\[
-f(P_3)=f(p(P_3)),
-\]
 그리고
-\[
-f([v,R_2])=0.
-\]
 
-따라서
-\[
-\boxed{
-\overline J_3=[(R_2,p(P_3))]
-\subset
-\mathbf P\bigl(\Lambda^2V\oplus V^{(1)}\bigr).
-}
-\]
-
-표준 examples에서는
-\[
-\overline J_3(3)
+[
+Theta_J(lambda)(f)
 =
-[(R_2,e_1^{(1)})],
-\qquad
-\overline J_3(\infty)
-=
-[(R_2,0)].
-\]
+f(P_3)+(lambdawedge f)(R_2)
+]
 
-### Theorem 6.1 — Coarsest quotient theorem
+라는 obstruction functional을 만들었다.
 
-Projective degree-\((2,3)\) relation jet의 functorial quotient 가운데 모든 degree-one observable
-\[
-\Theta_{R,P}(\lambda)(f)
-=
-f(P)+(\lambda\wedge f)(R)
-\]
-를 보존하는 category를 생각하자.
+표준 (q=3) 경우에는 이 식의 zero가 유일하게
 
-그러면 모든 그러한 quotient는
-\[
-J_3\twoheadrightarrow\overline J_3
-\]
-를 통해 unique하게 factor한다.
+[
+lambda=e_2^*
+]
 
-따라서 \(\overline J_3\)는 이 category에서 terminal, 동치로 coarsest admissible quotient이다.
+가 되고,
 
-#### 증명
+[
+ho=1+3lambda
+]
 
-두 jet의 \(p(P)\)가 다르면
-\[
-f(p(P)-p(P'))\neq0
-\]
-인 \(f\)를 선택할 수 있다. 그러면 \(\lambda=0\)에서 이미 대응하는 observable들이 달라지므로 모든 observable을 보존하는 quotient는 이들을 identify할 수 없다.
+이므로
 
-마찬가지로 서로 다른 projective quadratic relation line은 nondegenerate pairing
-\[
-(\lambda,f)\mapsto(\lambda\wedge f)(R)
-\]
-으로 검출된다.
+[
+oxed{hoequiv(1,4,1,1)pmod9}
+]
 
-따라서 admissible quotient는 반드시 \([R]\)과 \(p(P)\)를 보존해야 한다. 반대로 bracket component는 degree-one evaluation에 의해 소거되므로 전체 observable family는 이 두 부분을 통해 factor한다. 따라서 \(\overline J_3\)를 통한 factorization은 unique하다.
+을 얻는다.
 
-\(\square\)
-
-이는 raw \(J_3\) 자체가 categorical minimal이라는 더 강한 주장이 잘못되었음을 바로잡는다.
-
-이 결과가 의미 있는 이유는 이 carrier가 이미 복원된 orientation covector를 단순히 저장하는 것이 아니라 relation jet의 canonical algebraic quotient로 얻어지기 때문이다.
+이것은 **mod 9에서 orientation을 복원할 수 있다는 최초의 구체적인 positive result**였다.
 
 ---
 
-## 7. Full 3-adic reconstruction
+# 4. 그런데 여기서 한 단계 더 중요한 사실을 발견했다
 
-Mod-\(9\) 결과는 첫 번째 nontrivial finite-level recovery이다. Full character를 복원하기 위해 compatible filtered relation-jet tower
-\[
-(J_n)_{n\ge2}
-\]
-를 생각한다. 여기서 \(J_n\)은 이미 확인된 projective/gauge ambiguity를 quotient한 뒤 \(3^n\) modulo crossed-derivation calculation에 필요한 filtered relation information을 보존한다.
+처음에는 “degree-(2,3) jet 자체가 orientation carrier다”라고 생각하기 쉬웠다.
 
-후보
-\[
-\rho:G\to(\mathbf Z/3^n)^\times
-\]
-에 대해 crossed-derivation condition
-\[
-D(gh)=D(g)+\rho(g)D(h)
-\]
-을 filtered relation에 평가하면 coefficient functional
-\[
-\mathcal C_n(J_n,\rho)
-\]
-를 얻는다.
+하지만 더 엄밀하게 조사해 보니 이것도 너무 강한 표현이었다.
 
-\[
-\Phi_n(J_n)
-=
-\{\rho:\mathcal C_n(J_n,\rho)=0\}
-\]
-로 둔다.
+실제로 degree-3 정보 전체가 필요한 것이 아니라, **우리가 사용하는 degree-one obstruction이 볼 수 있는 부분만 있으면 된다.**
 
-Frozen \(q=3\) relation에서는 coefficient equations가
-\[
-\rho_n(x_1)=\rho_n(x_3)=\rho_n(x_4)=1
-\]
-및
-\[
-1+2\rho_n(x_2)=0\pmod{3^n}
-\]
-을 강제한다.
+degree-three bracket 부분은
 
-\(2\)는 modulo \(3^n\)에서 unit이므로
-\[
-\boxed{
-\rho_n(x_2)=(-2)^{-1}=(1-3)^{-1}\pmod{3^n}.
+[
+[V,L_2(V)]
+]
+
+로 quotient할 수 있고, restricted-power 부분만 남긴
+
+[
+p(P_3)in V^{(1)}
+]
+
+만으로 같은 degree-one observable을 보존할 수 있다.
+
+따라서 mod-9의 자연스러운 coarsest carrier는
+
+[
+oxed{
+overline J_3=[(R_2,p(P_3))]
 }
-\]
+]
+
+이다.
+
+### 단, 여기서도 주의
+
+이것을
+
+> “세상에서 가능한 모든 방법 가운데 가장 작은 정보”
+
+라고 주장하면 안 된다.
+
+현재 증명하는 것은 **정해진 degree-one evaluation observable을 보존하는 자연스러운 quotient category 안에서 coarsest**라는 뜻이다.
+
+즉, **absolute minimality가 아니다.**
+
+---
+
+# 5. 그리고 연구의 방향이 바뀌었다
+
+mod 9 relation-jet 결과를 계속 higher jet으로 밀어 올리는 방법도 연구했지만, 논문의 중심으로 삼기에는 문제가 있었다.
+
+특히:
+
+- presentation 좌표에 의존하는 construction
+- relator gauge 문제
+- naive degree-3 Fox truncation
+- 단일 (t_2) carrier의 intrinsicity 문제
+- higher-digit carrier의 minimality 문제
+
+등은 별도의 어려움을 만들었다.
+
+여러 hard attack을 거친 뒤 이 경로들은 대부분 **FAIL/CLOSED** 또는 논문의 주된 증명으로는 사용하지 않기로 정리되었다.
+
+대신 훨씬 자연스럽고 강한 방법이 발견되었다.
+
+그것이 **Kummer lifting을 이용한 finite-window recognition**이다.
+
+---
+
+# 6. 핵심 아이디어: “후보 orientation을 하나씩 시험한다”
+
+(kge2)에 대해
+
+[
+Q_k=G/P_{k+1}
+]
+
+를 생각한다.
+
+여기서 (P_{k+1})은 lower 3-central filtration의 다음 단계다.
+
+이제 어떤 후보 character
+
+[
+ho:Q_k	o(mathbf Z/3^k)^	imes
+]
+
+를 하나 잡는다.
+
+이 후보가 정말 canonical orientation인지 직접 묻는 대신, 다음 질문을 한다.
+
+[
+H^1(Q_k,mathbf Z/3^k(ho))
+longrightarrow
+H^1(Q_k,mathbf F_3)
+]
+
+가 surjective인가?
+
+즉,
+
+> **mod 3에서 가능한 모든 1-cocycle이 이 후보 (ho)를 사용한 mod (3^k) 계수까지 실제로 lift되는가?**
+
+를 검사한다.
+
+이를
+
+[
+mathsf K_k(Q_k,ho)
+]
+
+라고 쓰자.
+
+정의는
+
+[
+oxed{
+mathsf K_k(Q_k,ho):
+H^1(Q_k,mathbf Z/3^k(ho))
+	o H^1(Q_k,mathbf F_3)
+	ext{ is surjective}.
+}
+]
+
+---
+
+# 7. 이것이 중요한 이유
+
+Kummerian property 자체는 기존 문헌에 알려진 개념이다.
 
 따라서
-\[
-\Phi_n(J_n)=\{\chi_n\}.
-\]
 
-Reduction은 compatible하다:
-\[
-\chi_{n+1}\equiv\chi_n\pmod{3^n}.
-\]
+> “Kummer lifting criterion을 발견했다”
 
-또한
-\[
-\mathbf Z_3^\times
-\cong
-\varprojlim_n(\mathbf Z/3^n)^\times
-\]
-이므로 compatible family는 unique한
-\[
-\boxed{
-\chi:G\to\mathbf Z_3^\times
+는 것이 논문의 공헌이 아니다.
+
+핵심은 **그 criterion을 finite quotient 위의 orientation selector로 바꾸는 것**이다.
+
+현재 증명된 정리는 다음과 같다.
+
+[
+oxed{
+mathsf K_k(G/P_{k+1},ho)
+iff
+ho=chi_Gmod3^k,
+qquad kge2.
 }
-\]
-를 결정한다.
+]
 
-특히
-\[
-\chi(x_2)
+즉,
+
+> **유한 quotient (Q_k=G/P_{k+1})와 후보 (ho)만 주어졌을 때, Kummer lifting 조건을 통과하는 후보가 정확히 canonical orientation의 mod (3^k) 값이다.**
+
+이것이 현재 논문의 핵심 정리다.
+
+---
+
+# 8. “Q_k만 보면 된다”는 말의 정확한 뜻
+
+여기서 자주 오해할 수 있는 부분이 있다.
+
+“Q_k만 보면 G 전체가 필요 없다”라고 말하면 너무 강하다.
+
+정확한 뜻은 다음이다.
+
+[
+oxed{
+	ext{orientation recognition에 필요한 twisted }H^1
+	ext{ obstruction이 }Q_k	ext{를 통해 factor한다.}
+}
+]
+
+즉, G의 모든 정보를 Q_k가 가지고 있다는 뜻이 아니다.
+
+단지 **이번 recognition problem에 필요한 정보가 Q_k에서 이미 계산 가능하다**는 뜻이다.
+
+---
+
+# 9. 이 finite factorization은 어떻게 증명했는가?
+
+핵심은 후보 (ho)에 대해
+
+[
+A_k=mathbf Z/3^k
+]
+
+를 coefficient module로 놓고
+
+[
+A_ktimes U_1
+]
+
+이라는 semidirect product를 만든 뒤 그 lower 3-central filtration을 분석하는 것이다.
+
+그 결과
+
+[
+P_j(A_ktimes U_1)
 =
--\frac12
-=
-(1-3)^{-1}
-\]
+3^{j-1}A_ktimes U_j
+]
+
+가 모든 relevant (j)에 대해 성립한다.
+
+특히 (j=k+1)에서 triviality가 생기므로, G에서 만든 crossed cocycle은
+
+[
+P_{k+1}
+]
+
+을 소거한다.
+
+따라서
+
+[
+oxed{
+	ext{임의의 후보 }ho	ext{에 대한 relevant crossed cocycle가 }Q_k=G/P_{k+1}	ext{를 통해 factor한다.}
+}
+]
+
+이것이 논문의 중요한 structural step이다.
+
+여기서 중요한 점은 **canonical (chi)를 미리 넣지 않았다는 것**이다.
+
+후보 (ho)를 임의로 놓고 factorization을 증명한다.
+
+---
+
+# 10. Kummer 조건과 Fox 계산은 어떻게 연결되는가?
+
+이 부분은 논문의 실제 계산을 이해하는 데 중요하다.
+
+후보 (ho)에 대해
+
+[
+A_k=mathbf Z/3^k(ho)
+]
+
+를 사용한다.
+
+모든 mod-3 cocycle가 lift된다고 가정하면 twisted Fox 조건이 생긴다.
+
+이를 올바르게 반복 적용하면
+
+[
+F_iin3I
+]
+
+가 되고 다시 같은 논리를 적용해서
+
+[
+F_iin3^mA_k
+]
+
+를 모든 (m)에 대해 얻는다.
+
+그런데
+
+[
+igcap_m3^mA_k=0
+]
+
+이므로
+
+[
+F_i=0.
+]
+
+반대로 twisted Fox row가 0이면 lifting criterion을 얻는다.
+
+따라서
+
+[
+oxed{
+mathsf K_k
+iff
+	ext{twisted Fox obstruction vanishes}.
+}
+]
+
+Fox calculus는 여기서 **최종 invariant의 정의가 아니라 증명의 계산 도구**다.
+
+이 구분이 중요하다.
+
+---
+
+# 11. 표준 presentation에서는 후보가 어떻게 결정되는가?
+
+표준 relation
+
+[
+r=x_1^3[x_1,x_2][x_3,x_4]
+]
+
+을 사용하면 twisted Fox equation을 직접 풀 수 있다.
+
+결과는
+
+[
+ho(x_1)=ho(x_3)=ho(x_4)=1
+]
+
 이고
-\[
-\chi(x_2)\equiv4\pmod9,\quad
-13\pmod{27},\quad
-40\pmod{81},\quad
-121\pmod{243},\ldots
-\]
-이다.
 
-### Theorem 7.1 — Finite-level factorization 및 inverse limit
+[
+1+2ho(x_2)=0pmod{3^k}.
+]
 
-Frozen rank-four \(q=3\) Demuškin presentation에서 compatible projective filtered relation-jet tower는 finite-level crossed-derivation coefficient equation을 통해
-\[
-\chi_n:G\to(\mathbf Z/3^n)^\times
-\]
-를 유일하게 결정하며, compatible family \((\chi_n)_n\)는 full canonical orientation
-\[
-\chi:G\to\mathbf Z_3^\times
-\]
-를 결정한다.
+따라서
 
-이 정리는 mod-\(9\) jet \(J_3\) 하나만으로 모든 higher digit이 결정된다는 것을 주장하지 않는다.
+[
+oxed{
+ho(x_2)=(-2)^{-1}
+=(1-3)^{-1}
+pmod{3^k}.
+}
+]
+
+예를 들어
+
+[
+k=2:quad4pmod9,
+]
+
+[
+k=3:quad13pmod{27},
+]
+
+[
+k=4:quad40pmod{81}.
+]
+
+이 표준 presentation 계산은 **orientation selector의 unique solution을 확인하는 local/presentation-dependent 계산**이다.
+
+최종 theorem 자체가 presentation-dependent라는 뜻은 아니다.
 
 ---
 
-## 8. 날카로운 불가능성 결과
+# 12. 가장 중요한 부분: U5의 intrinsic uniqueness
 
-앞선 positive theorem에서 “finite information”의 의미를 정확히 구분할 필요가 있다.
+여기까지 하면 한 가지 의문이 남는다.
 
-다음 family를 생각한다.
-\[
-G_{3^s}
+혹시 finite quotient 위에서 서로 다른 두 후보가 똑같이 Kummer 조건을 만족하는 것은 아닌가?
+
+이것을 막는 것이 U5다.
+
+두 level-(k) 후보가
+
+[
+ho_k'=ho_k(1+3^{k-1}
+u)
+]
+
+관계라고 하자.
+
+계수확장에 대한 connecting map을 비교하면
+
+[
+oxed{
+delta_{ho_k'}-delta_{ho_k}
 =
-\left\langle
-x_1,x_2,x_3,x_4
-\mid
-x_1^{3^s}[x_1,x_2][x_3,x_4]=1
-\right\rangle
-\]
-및 \(G_\infty\).
+iota_{k-1}circ(
+usmile-).
+}
+]
 
-모든 member는 동일한 quadratic initial relation
-\[
-R_2=[X_1,X_2]+[X_3,X_4]
-\]
-을 가진다.
+여기서 (iota_{k-1})은 coefficient extension에서 오는 socle inclusion이다.
 
-그들의 orientation은
-\[
-\chi_{3^s}(x_2)=(1-3^s)^{-1},
-\qquad
-\chi_\infty(x_2)=1
-\]
+PD(^2) duality를 사용하면 이 map이 (H^2)에서 필요한 injectivity를 갖는다는 것을 증명할 수 있다.
+
+따라서 두 후보가 모두 전체 (H^1)에 대해 zero obstruction을 가진다면
+
+[
+
+usmile v=0
+]
+
+가 모든
+
+[
+vin H^1(G,mathbf F_3)
+]
+
+에 대해 성립한다.
+
+그런데 Demuškin 군의 cup product는 nondegenerate이므로
+
+[
+
+u=0.
+]
+
+따라서 후보가 하나뿐이다.
+
+이것이
+
+[
+oxed{	ext{intrinsic uniqueness}}
+]
+
 이다.
 
-그런데 power term
-\[
-x_1^{3^s}
-\]
-은 Zassenhaus degree \(3^s\)에서 처음 나타난다.
-
-Degree bound \(d\)를 고정하고
-\[
-3^s>d
-\]
-인 \(s\)를 택한다.
-
-그러면 bounded-degree filtered data는 \(q\)-dependent power term을 볼 수 없지만 full orientation은 서로 다르다.
-
-Coefficient precision도 modulo \(3^N\)으로 유한하게 제한한다면
-\[
-s\ge N
-\]
-을 택할 수 있고,
-\[
-(1-3^s)^{-1}\equiv1\pmod{3^N}
-\]
-이지만 full \(3\)-adic unit은 서로 다르다.
-
-### Theorem 8.1 — Finite-information obstruction
-
-고정된 finite Zassenhaus-degree bound와 고정된 finite \(3\)-adic coefficient precision을 동시에 갖는 carrier로부터 \(q=3^s\) family 전체의 full orientation을 복원하는 universal reconstruction procedure는 존재하지 않는다.
-
-이는 특정 candidate construction의 실패가 아니라 information obstruction이다.
-
-Fixed \(q=3\) exact result와 모순되지 않는다. Exact \(\mathbf Z_3\)-coefficients는 무한히 많은 \(3\)-adic digit을 포함하므로 finite-information carrier가 아니기 때문이다.
-
 ---
 
-## 9. Characteristic-zero 경계
+# 13. 존재성은 새로 발견한 것이 아니다
 
-Mod-\(3\) compressed carrier는 다음과 같은 유혹적인 대체를 제안한다.
-\[
-L_3^{res}(V)/[V,L_2(V)]
-\cong V^{(1)}
-\]
-에서 \(\mathbf F_3\) 대신 \(\mathbf Z_3\)를 넣는 것이다.
+여기서 또 하나 중요한 선이 있다.
 
-그러나 이는 정당하지 않다.
+유일성은 위의 finite obstruction과 PD(^2) 논리로 증명한다.
 
-Restricted Lie algebra는 characteristic-\(p\) 구조이다. 따라서 characteristic-three quotient를 단순히 scalar extension하여 “\(\mathbf Z_3\) 위의 restricted Lie algebra”를 자동으로 얻을 수 없다.
+하지만 canonical orientation이 실제로 Kummerian 조건을 만족한다는 사실 자체는 기존 Demuškin 이론에 의해 알려져 있다.
 
-따라서 exact full-\(\chi\) construction은 restricted-Lie quotient를 형식적으로 lift하는 방식이 아니라 filtered relation/augmentation 및 coefficient-evaluation framework로 정식화되어야 한다.
+즉 논문의 논리는
 
-Crossed-derivation evaluation family
-\[
-\mathcal C_n
-\]
-이 독립적으로 고정되어 있다면 exact evaluation quotient를 정의할 수 있다. 그러나
-\[
-[(R,p(P))]
-\]
-와 직접 대응하는 구체적이고 non-tautological한 finite exact characteristic-zero carrier는 아직 얻지 못했다.
+[
+	ext{기존 이론이 주는 existence}
++
+	ext{우리의 finite factorization}
++
+	ext{우리의 intrinsic uniqueness}
+]
 
-이는 빠뜨린 계산이 아니라 현재 방법의 실제 경계이다.
-
----
-
-## 10. 결과가 확립하는 것
-
-결과는 다음 information hierarchy로 요약할 수 있다.
-
-\[
-\boxed{
-\begin{array}{ccl}
-\text{bare quadratic graded relation}
-&\Longrightarrow&
-\text{orientation information lost}
-\\[2mm]
-\downarrow && \\
-\text{projective degree-(2,3) relation jet}
-&\Longrightarrow&
-\chi\bmod9
-\\[2mm]
-\downarrow && \\
-\text{coarsest natural quotient }[(R,p(P))]
-&\Longrightarrow&
-\text{same recovery observables}
-\\[2mm]
-\downarrow && \\
-\text{compatible finite-level filtered tower}
-&\Longrightarrow&
-\chi\bmod3^n\ \forall n
-\\[2mm]
-\downarrow && \\
-\text{inverse limit}
-&\Longrightarrow&
-\chi:G\to\mathbf Z_3^\times.
-\end{array}
-}
-\]
-
-대응하는 negative boundary는
-\[
-\boxed{
-\text{bounded degree + finite precision}
-\not\Longrightarrow
-\text{universal full }3\text{-adic orientation}.
-}
-\]
-
-이 구분은 필수적이다. 다음 세 가지 서로 다른 주장이 혼동되는 것을 막아준다.
-
-1. modulo \(9\) recovery;
-2. full compatible tower로부터의 recovery;
-3. 하나의 bounded finite-information carrier로부터 full character를 recovery.
-
-현재 설정에서 처음 두 가지가 확립되며, 세 번째는 universal finite-information setting에서 obstruction을 받는다.
-
----
-
-## 11. 더 넓은 reconstruction principle과의 관계
-
-계산 결과는 filtered algebraic reconstruction에 대한 다음과 같은 일반적 pattern을 시사한다.
-
-어떤 object \(X\)가 filtered relation
-\[
-r=r_d+r_{d+1}+\cdots
-\]
-을 가지고 있고 invariant \(I(X)\)가 leading graded data \(r_d\)만으로는 결정되지 않는다고 하자.
-
-전체 graded calculation의 차수를 무작정 올리는 대신 다음을 묻는다.
-
-1. 숨은 parameter가 최초로 등장하는 filtration degree는 어디인가?
-2. 그것이 동일한 filtered relation의 component로 들어오는가?
-3. 그 component를 평가하는 observable은 무엇인가?
-4. 관련 observable 모두가 annihilate하는 higher-jet 정보는 무엇인가?
-5. 모든 observable을 보존하는 coarsest quotient는 무엇인가?
-
-본 연구에서는
-\[
-r_2=R_2,
-\qquad
-r_3=P_3
-\]
-이고 relevant observable은 degree-one crossed-derivation evaluation
-\[
-f(P_3)+(\lambda\wedge f)(R_2)
-\]
 이다.
 
-따라서 얻어지는 carrier는 전체 degree-three Lie component가 아니라 observable quotient
-\[
-[(R_2,p(P_3))]
-\]
+이렇게 해야 논문의 공헌 범위를 정확하게 표현할 수 있다.
+
+---
+
+# 14. 그러면 기존 연구와 무엇이 다른가?
+
+기존 연구에는 이미 다음이 알려져 있다.
+
+- Demuškin 군의 canonical orientation의 존재와 유일성
+- Kummerian/cyclotomic orientation의 cohomological characterization
+- (H^1(G,mathbf Z_p(	heta)/p^n)	o H^1(G,mathbf F_p))의 surjectivity criterion
+- oriented group의 quotient inheritance와 관련된 여러 결과
+
+따라서 논문의 주장을
+
+> “우리가 처음으로 Demuškin orientation을 발견했다”
+
+라고 쓰면 안 된다.
+
+또
+
+> “기존에는 전체 무한한 구조를 봐야만 했다”
+
+라고 단정해서도 안 된다.
+
+현재까지 확인한 문헌과 우리의 theorem을 비교하면, 핵심 차이는 훨씬 좁고 구체적이다.
+
+### 현재 논문의 주장
+
+[
+Q_k=G/P_{k+1}
+]
+
+라는 특정 finite window 위에서,
+
+1. 후보 (ho)를 미리 canonical orientation이라고 가정하지 않고,
+2. (q), dualizing action을 selector의 입력으로 넣지 않고,
+3. intrinsic한 Kummer lifting predicate를 정의하고,
+4. 임의의 후보에 대한 crossed-cocycle factorization을 증명하여,
+5. 그 predicate의 유일한 해가
+   [
+   chi_Gmod3^k
+   ]
+   임을 보인다.
+
+따라서 novelty claim도 이 범위 안에서만 해야 한다.
+
+---
+
+# 15. “q-blind”는 무슨 뜻인가?
+
+논문에서 q-blind라는 말을 사용할 때 조심해야 한다.
+
+정확한 의미는
+
+> **selector의 입력으로 q를 직접 넣지 않는다.**
+
+라는 뜻이다.
+
+q가 실제 군의 구조와 아무 관련이 없다는 뜻도 아니고,
+
+> “모든 q에 대해 동일한 theorem이 증명되었다”
+
+는 뜻도 아니다.
+
+현재 주된 theorem은 **연구 대상인 rank-4 q=3 Demuškin 군**에 대해 증명되어 있다.
+
+---
+
+# 16. “presentation-free”도 정확하게 이해해야 한다
+
+표준 presentation을 사용했다고 해서 theorem이 presentation-dependent인 것은 아니다.
+
+논문에서는 실제 계산을 위해
+
+[
+x_1^3[x_1,x_2][x_3,x_4]
+]
+
+라는 표준 presentation을 사용할 수 있다.
+
+그 계산은 후보의 값을 식별하는 데 쓰인다.
+
+하지만 최종 selector
+
+[
+mathsf K_k(Q_k,ho)
+]
+
+는 quotient와 coefficient action으로 정의되는 intrinsic object다.
+
+따라서 정확한 표현은
+
+> **최종 predicate와 theorem은 intrinsic하며, 표준 presentation은 중간 계산 장치로 사용된다.**
+
 이다.
 
-이로부터 다음과 같은 연구 관점을 제안할 수 있다.
+---
 
-> **Filtered invariant recovery를 observability problem으로 다룰 수 있다. 즉 숨은 invariant가 처음으로 보이는 relation jet을 식별하고, recovery observable이 annihilate하는 정보를 quotient하는 것이다.**
+# 17. “finite window”는 정확히 무엇인가?
 
-본 논문은 이 원리를 구체적인 Demuškin setting에서 확립한다. 더 넓은 filtered object class에서의 타당성은 후속 연구 과제이다.
+각 (k)에 대해
+
+[
+Q_k=G/P_{k+1}
+]
+
+라는 유한 quotient를 본다.
+
+그러면
+
+[
+Q_2=G/P_3
+]
+
+에서는 mod 9 orientation,
+
+[
+Q_3=G/P_4
+]
+
+에서는 mod 27 orientation,
+
+일반적으로
+
+[
+Q_k=G/P_{k+1}
+]
+
+에서는 mod (3^k) orientation을 인식한다.
+
+즉 정밀도가 한 단계 올라갈 때 필요한 filtration window도 한 단계 깊어진다.
+
+이것이 논문의 “finite-window”라는 이름의 의미다.
 
 ---
 
-## 12. 한계와 열린 방향
+# 18. full orientation은 어떻게 얻는가?
 
-다음과 같은 더 강한 명제는 의도적으로 주장하지 않는다.
+각 유한 단계에서
 
-### 12.1 Absolute minimality
+[
+chi_k=chimod3^k
+]
 
-\(\overline J_3\)가 모든 conceivable construction 가운데 가장 작은 carrier라는 정리는 없다. 그러한 주장을 위해서는 더 큰 carrier category를 독립적으로 정당화해야 한다.
+를 알아낸다고 하자.
 
-현재 증명된 것은 full degree-one evaluation family를 보존하는 natural degree-\((2,3)\) relation-jet quotient category 안에서의 coarsest-quotient property이다.
+그러면
 
-### 12.2 Universal exact finite compression
+[
+chi_{k+1}equivchi_kpmod{3^k}
+]
 
-Fixed \(q=3\) exact relation/evaluation data는 full character를 결정하지만, \(\overline J_3\)와 유사한 concrete finite characteristic-zero carrier는 아직 식별되지 않았다.
+라는 compatibility가 있고,
 
-### 12.3 Higher rank와 general \(q\)
+[
+mathbf Z_3^	imes
+cong
+arprojlim_k(mathbf Z/3^k)^	imes
+]
 
-현재 증명은 frozen rank-four \(q=3\) normal form과 comparison family \(q=3^s\)에 대해 이루어졌다. 임의의 rank와 arbitrary \(q\)에 대한 general theorem은 open이다.
+이므로 inverse limit를 취하면
 
-### 12.4 Other filtrations
-
-논증은 여기서 사용한 Zassenhaus/restricted-power filtration 구조에 의존한다. 다른 filtration에서도 analogous first-informative jet이 존재하는지는 open이다.
-
----
-
-## 13. 결론
-
-핵심 결과는 하나의 작은 graded object가 마치 마법처럼 full \(3\)-adic orientation을 담고 있다는 것이 아니다.
-
-오히려 본 연구는 orientation information이 정확히 어디서 사라지고, 어떤 filtered relation information이 그것을 복원하는지를 식별한다.
-
-Rank-four Demuškin pro-\(3\) 군에서는
-
-\[
-\boxed{
-\text{quadratic graded data는 불충분하다;}
+[
+oxed{
+chi:G	omathbf Z_3^	imes
 }
-\]
+]
 
-\[
-\boxed{
-\text{projective degree-(2,3) relation jet은 }\chi\bmod9\text{를 복원한다;}
-}
-\]
-
-\[
-\boxed{
-\text{compatible filtered relation-jet tower는 full }\chi\text{를 복원한다;}
-}
-\]
-
-그리고
-\[
-\boxed{
-\text{universal bounded-degree finite-information carrier로는 full character를 복원할 수 없다.}
-}
-\]
-
-이와 함께 categorical result는 raw degree-\((2,3)\) jet에 불필요한 정보가 있음을 보여준다. Degree-three layer에서 degree-one evaluation에 보이지 않는 bracket subspace를 quotient하면 coarsest natural carrier
-\[
-\boxed{\overline J_3=[(R,p(P))]}
-\]
 를 얻는다.
 
-보다 넓은 방법론적 메시지는 다음과 같이 정확히 표현할 수 있다.
+따라서 중요한 구분은 다음이다.
 
-\[
-\boxed{
-\text{Graded data가 invariant를 잃는다면, hidden parameter가 leading relation과 결합하는 최초의 filtered relation jet을 조사하라.}
+### 하나의 finite quotient
+
+[
+Q_k
+quadLongrightarrowquad
+chimod3^k.
+]
+
+### 모든 compatible finite windows
+
+[
+(Q_k)_{kge2}
+quadLongrightarrowquad
+chi.
+]
+
+**하나의 mod-9 finite quotient가 full 3-adic orientation을 담는다는 주장은 아니다.**
+
+---
+
+# 19. 그러면 예전에 했던 “higher jet tower”는 틀렸나?
+
+그렇게 볼 필요는 없다.
+
+relation-jet 접근은 실제로 mod 9에서 orientation이 어디서 처음 보이기 시작하는지를 밝혀냈다.
+
+즉,
+
+[
+	ext{graded data}
+ightarrow
+	ext{first extension information}
+ightarrow
+chimod9
+]
+
+이라는 정보 경계를 발견하는 데 매우 중요했다.
+
+다만 현재 논문의 주된 theorem을 증명하는 데에는 그 전체 tower를 계속 구축할 필요가 없어졌다.
+
+따라서 논문에서는 이를 **motivation / information-boundary**로 짧게 사용하고, U1–U5의 finite Kummer recognition proof를 중심으로 구성한다.
+
+---
+
+# 20. 연구에서 폐기된 것과 살아남은 것
+
+현재 상태를 간단히 정리하면 다음과 같다.
+
+| 내용 | 현재 상태 | 논문에서의 역할 |
+|---|---|---|
+| Bare quadratic graded data로 (chimod9) 복원 | FAIL / CLOSED | 정보 하한 |
+| Degree-(2,3) relation jet의 mod-9 recovery | PASS / CLOSED | motivation 및 초기 positive result |
+| Raw (J_3) absolute minimality | FAIL / CLOSED | 과장 방지 |
+| (overline J_3=[(R,p(P))]) coarsest quotient | PASS / CLOSED | 보조 결과 |
+| 임의 후보의 finite factorization through (Q_k) | PASS / CLOSED | 핵심 |
+| Kummer lifting ↔ twisted Fox criterion | PASS / CLOSED | 핵심 보조정리 |
+| 표준 presentation에서 후보 식별 | PASS / LOCAL | 계산적 식별 |
+| U5 intrinsic uniqueness | PASS / CLOSED | 핵심 |
+| finite-window recognition theorem | PASS / CLOSED | **논문의 중심 정리** |
+| canonical orientation의 존재/유일성 자체 | KNOWN | 기존 이론 |
+| exact publication novelty | OPEN / STRONG CANDIDATE | 제출 전 계속 정확히 검증 |
+
+---
+
+# 21. 논문의 핵심을 한 문장으로 말하면
+
+가장 정확한 한 문장은 다음과 같다.
+
+> **이 논문은 canonical Demuškin orientation의 존재나 유일성을 새로 발견하는 것이 아니라, Kummerian lifting을 이용한 orientation recognition이 특정 finite lower-3-central quotient (Q_k=G/P_{k+1})에서 intrinsic하게 factor하고, 그 finite quotient 위의 Kummer predicate가 (chi_Gmod3^k)를 유일하게 식별한다는 finite-window recognition theorem을 제시한다.**
+
+조금 더 쉽게 말하면:
+
+> **“Demuškin 군의 숨은 3-adic 방향성을 무한한 전체 구조를 한꺼번에 해석하는 대신, 깊이 (k+1)까지만 잘라낸 유한한 창 (Q_k)에서 후보들에게 Kummer lifting 시험을 해 보면, 정확히 canonical orientation의 (k)자리 값만 살아남는다.”**
+
+---
+
+# 22. 현재 논문이 실제로 말할 수 있는 것과 말하면 안 되는 것
+
+### 말할 수 있다
+
+- quadratic graded information만으로는 mod 9 orientation을 결정할 수 없다.
+- mod 9에서는 degree-(2,3) relation information이 충분한 positive carrier가 된다.
+- Kummer lifting은 알려진 이론이지만, 이를 finite quotient 위의 intrinsic selector로 조직할 수 있다.
+- (Q_k=G/P_{k+1})에서 relevant twisted (H^1) obstruction이 factor한다.
+- canonical orientation은 이 finite predicate의 유일한 해다.
+- 이 결과는 (kge2)에 대해 uniform하게 정리된다.
+- 표준 presentation에서는 (ho(x_2)=(1-3)^{-1}pmod{3^k})가 직접 계산된다.
+
+### 말하면 안 된다
+
+- “canonical orientation을 최초로 발견했다.”
+- “기존에는 반드시 G 전체를 봐야 했다.”
+- “Q_k가 G의 모든 정보를 담는다.”
+- “q가 필요 없으므로 모든 q에 대해 동일한 theorem이다.”
+- “논문의 모든 construction이 presentation-free이다.”
+- “mod 9 하나만으로 full 3-adic orientation을 복원한다.”
+- “absolute minimal carrier를 찾았다.”
+- “세계 최초임이 완전히 확정되었다.”
+
+---
+
+# 23. 현재 논문의 구조
+
+현재 확정된 publication architecture는 다음과 같다.
+
+### 1. Introduction
+- 기존 canonical/Kummerian orientation 이론
+- finite-window 질문
+- graded information의 한계
+- main theorem
+- 정확한 novelty boundary
+
+### 2. Finite coefficient extensions and finite window
+- (A_k=mathbf Z/3^k)
+- semidirect product filtration
+- arbitrary-candidate factorization
+
+### 3. Finite Kummer criterion
+- coefficient lifting
+- corrected iterative/Nakayama argument
+- twisted Fox criterion
+
+### 4. Standard presentation
+- 표준 relation에서 후보 (ho) 식별
+- (1+2ho(x_2)=0)
+- (k=4)에서 (40mod81)은 예시일 뿐
+
+### 5. Intrinsic uniqueness
+- coefficient-extension variation formula
+- PD(^2) duality
+- cup-product nondegeneracy
+
+### 6. Main finite-window theorem
+
+[
+oxed{
+mathsf K_k(G/P_{k+1},ho)
+iff
+ho=chi_Gmod3^k.
 }
-\]
+]
 
-이 모형에서는 이 원리가 겉보기에는 보이지 않는 \(3\)-adic orientation을 명시적으로 복원 가능한 observable로 바꾸며, 동시에 bounded finite data가 더 이상 충분할 수 없는 information-theoretic boundary도 밝혀준다.
+### 7. Previous work and novelty boundary
 
----
-
-## 부록 A. 핵심 공식
-
-### A.1 Relation
-
-\[
-r=x_1^3[x_1,x_2][x_3,x_4].
-\]
-
-### A.2 Quadratic component
-
-\[
-R_2=[X_1,X_2]+[X_3,X_4].
-\]
-
-### A.3 Degree-three component
-
-\[
-P_3=X_1^{[3]}.
-\]
-
-### A.4 Recovery functional
-
-\[
-\Theta_J(\lambda)(f)
-=
-f(P_3)+(\lambda\wedge f)(R_2).
-\]
-
-### A.5 Coordinate form
-
-\[
-\Theta_J(\lambda)(f)
-=
-(1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4.
-\]
-
-### A.6 Recovered mod-\(9\) orientation
-
-\[
-\lambda_\chi=e_2^*,
-\qquad
-\chi\equiv(1,4,1,1)\pmod9.
-\]
-
-### A.7 Gauge
-
-\[
-(R,P)\mapsto(uR,uP+[v,R]).
-\]
-
-### A.8 Coarsest carrier
-
-\[
-\overline J_3=[(R,p(P))].
-\]
-
-### A.9 Finite-level equation
-
-\[
-1+2\rho_n(x_2)=0\pmod{3^n}.
-\]
-
-### A.10 Full orientation
-
-\[
-\chi(x_2)=(1-3)^{-1},
-\qquad
-\chi(x_i)=1\quad(i\ne2).
-\]
+### 8. Information-boundary discussion
 
 ---
 
-## 부록 B. 논문 상태표
+# 24. 마지막으로, 이 연구의 의미를 가장 쉽게 표현하면
 
-| 주장 / branch | 상태 |
-|---|---|
-| Bare quadratic graded data가 \(\chi\bmod9\)를 복원 | **FAIL / CLOSED** |
-| Projective degree-\((2,3)\) jet이 \(\chi\bmod9\)를 복원 | **PASS / CLOSED** |
-| Presentation/lift/gauge에 대한 recovery zero set의 불변성 | **PASS**, 명시된 표준 가정 아래 |
-| Raw \(J_3\)의 absolute minimality | 자연스러운 quotient category에서 **FAIL / CLOSED** |
-| \(\overline J_3=[(R,p(P))]\)의 coarsest natural quotient 성질 | **PASS / CLOSED** |
-| Compatible finite-level tower가 full \(\chi\)를 복원 | **PASS / CLOSED** |
-| Fixed \(q=3\) exact \(\mathbf Z_3\) relation/evaluation data가 full \(\chi\)를 복원 | **PASS / CLOSED** |
-| Universal bounded-degree + finite-precision full-\(\chi\) carrier | **FAIL / CLOSED** |
-| Naive \(\mathbf Z_3\) restricted-Lie scalar extension | **FAIL / CLOSED** |
-| \(\overline J_3\)와 유사한 concrete non-tautological finite exact compression | **OPEN / NOT PROVED** |
-| General rank / general \(q\) theorem | **OPEN** |
-| Other filtrations | **OPEN** |
+처음 질문은
+
+> “Demuškin 군의 orientation을 filtered/graded information만으로 복원할 수 있을까?”
+
+였다.
+
+연구가 진행되면서 답은 단순한 yes/no가 아니라 다음과 같이 정리되었다.
+
+[
+oxed{
+	ext{graded information만으로는 부족하다.}
+}
+]
+
+하지만
+
+[
+oxed{
+	ext{적절한 finite filtered window에서는 충분하다.}
+}
+]
+
+그리고 그 “적절한 방법”은 단순히 관계식을 더 많이 계산하는 것이 아니라
+
+[
+oxed{
+	ext{후보 }ho
+ightarrow
+	ext{Kummer lifting test}
+ightarrow
+	ext{finite factorization}
+ightarrow
+	ext{intrinsic uniqueness}
+}
+]
+
+라는 구조를 갖는다.
+
+즉 이 논문의 핵심은
+
+> **숨은 orientation을 직접 계산해서 집어내는 것이 아니라, 각 후보에게 “이 orientation이라면 모든 mod-3 cohomology class가 higher coefficient까지 lift되어야 한다”는 시험을 하고, 그 시험을 통과하는 유일한 후보를 orientation으로 식별하는 것**
+
+이다.
+
+이 관점에서 보면 논문의 진짜 주제는 단순한 Demuškin orientation 계산이 아니라,
+
+[
+oxed{
+	ext{finite-window recognition of a known }p	ext{-adic invariant}
+}
+]
+
+이라는 보다 구조적인 문제다.
+
+---
+
+## 부록: 현재 연구 상태 한눈에 보기
+
+[
+egin{array}{c|c}
+	ext{항목}&	ext{상태}\
+\hline
+	ext{수학적 finite-window theorem}&mathbf{PASS/CLOSED}\
+	ext{U1 factorization}&mathbf{PASS/CLOSED}\
+	ext{U2 arbitrary-candidate factorization}&mathbf{PASS/CLOSED}\
+	ext{U3 Kummer/Fox criterion}&mathbf{PASS/CLOSED}\
+	ext{U4 standard presentation identification}&mathbf{PASS/LOCAL}\
+	ext{U5 intrinsic uniqueness}&mathbf{PASS/CLOSED}\
+	ext{canonical orientation existence}&mathbf{KNOWN}\
+	ext{broad orientation-discovery claim}&mathbf{CLOSED/NON-NOVEL}\
+	ext{exact publication novelty}&mathbf{OPEN/STRONG CANDIDATE}
+end{array}
+]
+
+**현재 단계의 원칙:** 새로운 broad mathematical attack을 추가하기보다, U1–U5를 publication-style로 정리하고 문헌과 theorem statement를 source-level에서 정확히 대조한다.
