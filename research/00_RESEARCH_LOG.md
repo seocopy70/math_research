@@ -1,4 +1,12 @@
 
+## 2026-09-24 — N1 LITERATURE GATE: KUMMERIAN/CYCLOTOMIC ORIENTATION IS KNOWN; FINITE-WINDOW FACTORIZATION REMAINS OPEN
+
+A four-paper primary-literature audit was completed after restoring RESEARCH_MAP.md, CURRENT_STATE.md, 00_RESEARCH_LOG.md, and RESEARCH_CONTINUITY_PROTOCOL.md. The audited corpus is Labute (1967), Efrat–Quadrelli (2019, arXiv:1707.07018v3), Quadrelli–Weigel (2020, arXiv:1811.02250v3), and Quadrelli–Weigel (2022, arXiv:2103.12438v3). Labute Prop. 6/Thm. 4, Efrat–Quadrelli Thm. 7.1/Prop. 7.3/Thm. 7.6, and the corresponding Quadrelli–Weigel results establish the full-group Kummerian/cyclotomic lifting characterization and uniqueness of the canonical Demushkin orientation. Therefore “canonical orientation = unique Kummerian/cyclotomic orientation” is HISTORICAL / SUPERSEDED as a novelty claim.
+
+The audit did NOT find the stronger statement needed for B2: a q-blind, functorial predicate on the bare finite quotient Q_k=G/P_{k+1} whose unique solution is chi mod 3^k, together with a proof that the full-group lifting obstruction factors through Q_k. The missing finite-depth existence statement is that a mod-3^k lift constructed on G annihilates P_{k+1}; this is not supplied by the full-G Kummerian theorem. Thus the literature boundary is PASS / CLOSED, while finite Q_k reconstruction/factorization remains OPEN / DECISIVE. B2/k=2 remains PASS / LOCAL. The next authorized gate remains k=3, Q_3=G/P_4: direct P_4-annihilation of the mod-27 Kummer lift.
+
+Record: research/N1_LITERATURE_GATE_KUMMERIAN_CYCLOTOMIC_DEMUSHKIN_2026-09-24.md (commit 20064ad894951260bf2a130f9db37bea3a06f092).
+
 
 ## 2026-09-21 — B2 / k=2 FINITE-WINDOW KUMMER TEST
 
