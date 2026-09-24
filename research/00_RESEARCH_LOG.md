@@ -2096,3 +2096,32 @@ The previous 2026-09-24 entry labeled literature novelty “PASS / CONDITIONAL�
 Before submission, the novelty statement must remain narrow and be tied to source-level comparison, especially the exact depth P_{k+1}, arbitrary candidate rho, absence of pre-supplied chi/q/dualizing action, and the automatic factorization of arbitrary twisted crossed cocycles.
 
 No new mathematical attack is authorized merely to improve the manuscript. The next work is theorem-hypothesis cleanup, publication-style rewriting of U1-U5, and exact source verification where needed.
+
+
+## 2026-09-24 — N1–N5 CRITICAL REVIEW / MANUSCRIPT-CONTROLLING UPDATE
+
+Before finalizing N5, N1–N4 were rechecked for logical overreach.
+
+**N1:** Kummerian/cyclotomic lifting and canonical Demuškin orientation uniqueness are known. This is prior art.
+
+**N2:** Existing quotient-inheritance results do not automatically imply the present recognition theorem. Their direction starts from an already Kummerian oriented pair; the present problem starts with an arbitrary finite candidate rho.
+
+**N3:** Full-group finite-level uniqueness is historical/non-novel. Labute Proposition 6/Theorem 4 and Efrat–Quadrelli Proposition 7.3/Theorem 7.6 already supply the all-level lifting criterion and unique Demuškin orientation.
+
+**N4:** The mathematical factorization is now PASS/CLOSED: U1–U2 prove that arbitrary rho-twisted crossed cocycles factor through Q_k=G/P_{k+1}. This is a project theorem, but the fact that it is proved does not by itself settle publication novelty.
+
+**N5:** The audited corpus contains no exact theorem stating that the bare finite quotient Q_k carries the functorial predicate K_k(Q_k,rho) whose unique candidate is chi_G mod 3^k, with arbitrary-candidate factorization. Therefore the exact novelty candidate survives **conditionally**. This is not an absolute priority claim.
+
+**Important scope correction:** the current theorem is for the fixed rank-4 q=3 Demuškin group. “q-blind” means q is not an input to the selector, not that the theorem is uniform over all q.
+
+**Depth correction:** P_{k+1} is proved sufficient; minimality is OPEN. Do not use “minimal finite window.”
+
+**U5 proof correction:** variation is a coefficient-extension/Yoneda lemma; PD² injectivity must be presented using exact coefficient duals and the dual reduction map. Classical Kummerian existence is imported.
+
+Decision:
+- mathematical theorem: **PASS/CLOSED**;
+- exact literature novelty against checked sources: **PASS/CONDITIONAL**;
+- broad canonical-orientation novelty: **CLOSED/NON-NOVEL**;
+- minimal depth: **OPEN**.
+
+This entry controls manuscript wording over earlier contradictory novelty labels.
