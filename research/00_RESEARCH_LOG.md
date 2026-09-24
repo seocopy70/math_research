@@ -1,3 +1,41 @@
+## 2026-09-24 — k=3 CRITICAL REVIEW CORRECTION + k=4 GATE
+
+The k=3 document was strengthened after critical audit. Character parameterization, free-group-to-G descent, the hypotheses \(\rho(P_2)=\rho(P_3)=1\) in the valuation steps, and the exact meaning of the 81-case enumeration are now explicit. The phrase “canonical (P_4)-residual” was removed. Scope is corrected: the result is local to the standard rank-four (q=3) presentation; it is not yet a presentation-free or q-uniform theorem. k=3 remains PASS/LOCAL.
+
+The authorized k=4 gate was then executed. With
+\[
+\rho_4=(1+27a_1,13+27a_2,1+27a_3,1+27a_4),
+\]
+direct mod-81 crossed-word evaluation gives
+\[
+z(r)=27((1-a_2)z_1+a_1z_2-a_4z_3+a_3z_4)\pmod{81}.
+\]
+Universal vanishing forces \((a_1,a_2,a_3,a_4)=(0,1,0,0)\), hence the unique candidate is
+\[
+\rho_4=(1,40,1,1)\pmod{81}.
+\]
+Fresh exhaustive enumeration over all 81 compatible lifts confirms the same unique zero.
+
+For the candidate, the direct valuation chain is
+\[
+z(P_2)\subset3A_4,\quad z(P_3)\subset9A_4,\quad z(P_4)\subset27A_4,\quad z(P_5)=0,
+\]
+so every mod-3 class lifts and factors through \(Q_4=G/P_5\).
+
+Decision:
+- k=4 exact obstruction: **PASS / CLOSED** for the standard family;
+- k=4 uniqueness: **PASS / LOCAL**;
+- (P_5)-annihilation: **PASS / LOCAL**;
+- (Q_4)-factorization: **PASS / LOCAL**;
+- presentation-free selector: **OPEN**;
+- q-uniformity: **OPEN**;
+- all-k theorem: **OPEN / DECISIVE**;
+- minimal carrier: **OPEN / LOAD-BEARING**.
+
+The next authorized gate is the uniform finite-depth lemma for \(A_k=\mathbf Z/3^k\) and \(Q_k=G/P_{k+1}\), followed by a literature comparison. No (t_2) route is revived.
+
+Record: `research/KUMMER_B2_K4_FINITE_WINDOW_MOD81_2026-09-24.md` (commit 14947f40075be8fdec9e9b206b2c78a0ecc0b570).
+
 
 ## 2026-09-24 — B2 / k=3 FINITE-WINDOW MOD-27 GATE
 
