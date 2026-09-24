@@ -2969,3 +2969,31 @@ The previous 2026-09-24 entry labeled literature novelty “PASS / CONDITIONAL�
 Before submission, the novelty statement must remain narrow and be tied to source-level comparison, especially the exact depth P_{k+1}, arbitrary candidate rho, absence of pre-supplied chi/q/dualizing action, and the automatic factorization of arbitrary twisted crossed cocycles.
 
 No new mathematical attack is authorized merely to improve the manuscript. The next work is theorem-hypothesis cleanup, publication-style rewriting of U1-U5, and exact source verification where needed.
+
+
+## 2026-09-24 — CRITICAL REVIEW OF N1–N5 / MANUSCRIPT-CONTROLLING STATUS
+
+The N1–N4 literature discussion has been re-audited before finalizing N5.
+
+1. N1 is prior art: Kummerian cohomological lifting, finite-level generator lifting, and canonical Demuškin orientation uniqueness are known.
+2. N2 is negative: the checked quotient-inheritance results do not reverse automatically and do not by themselves recognize an unknown finite candidate rho.
+3. N3 is historical: full-group finite-level uniqueness is already contained in Labute/Efrat–Quadrelli.
+4. N4 is mathematically closed: U1–U2 give direct arbitrary-candidate factorization through Q_k=G/P_{k+1}. This is not, by itself, a novelty claim.
+5. N5 survives conditionally: no checked source states the exact bare-Q_k functorial selector theorem.
+
+The precise theorem remains for the fixed rank-4, q=3 Demuškin group:
+K_k(Q_k,rho) iff rho=chi_G mod 3^k, k>=2.
+“q-blind” means q is absent from the selector input; it does not mean the theorem is uniform in q.
+
+Depth: P_{k+1} is sufficient by the current proof. Minimality is not proved. Do not call Q_k the minimal finite window.
+
+U5 proof boundary: the variation lemma is a coefficient-extension/Yoneda statement; the PD² injection must be written via exact dual coefficient modules and the dual reduction map. Classical Kummerian existence is imported, not claimed as new.
+
+Current publication status:
+- mathematical theorem: PASS/CLOSED;
+- exact novelty against checked corpus: PASS/CONDITIONAL;
+- absolute priority: NOT ESTABLISHED;
+- broad canonical-orientation discovery: CLOSED/NON-NOVEL;
+- minimal depth: OPEN.
+
+This is the controlling manuscript status until a referee-level source identifies a direct equivalent theorem.
