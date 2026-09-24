@@ -1,3 +1,19 @@
+## 2026-09-24 — B2 / k=4 CLOSED LOCALLY
+
+After critical correction of the k=3 record, the authorized k=4 finite-window gate was executed for the standard rank-four (q=3) Demushkin group. The mod-81 obstruction is
+\[
+27((1-a_2)f_1+a_1f_2-a_4f_3+a_3f_4),
+\]
+so the unique compatible candidate is \((1,40,1,1)\pmod{81}\). Independent enumeration of all 81 lifts confirms uniqueness. Direct valuation gives
+\[
+z(P_2)\subset3A_4,quad z(P_3)\subset9A_4,quad z(P_4)\subset27A_4,quad z(P_5)=0,
+\]
+hence the lift factors through (Q_4=G/P_5).
+
+Classification: k=4 exact obstruction PASS/CLOSED for the standard family; k=4 uniqueness PASS/LOCAL; (P_5)-annihilation PASS/LOCAL; (Q_4)-factorization PASS/LOCAL. The selector is still presentation-based/local, not yet intrinsic or q-uniform. Uniform B2 remains OPEN/DECISIVE. The next authorized gate is the uniform finite-depth lemma for (A_k=\mathbf Z/3^k), (Q_k=G/P_{k+1}), followed by a literature comparison. No (t_2) route is revived.
+
+Record: research/KUMMER_B2_K4_FINITE_WINDOW_MOD81_2026-09-24.md.
+
 
 ## 2026-09-24 — B2 / k=3 CLOSED LOCALLY
 
