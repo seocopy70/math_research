@@ -82,3 +82,21 @@ Longleftrightarrow
 with no q or presentation in the input.
 
 The next mathematical attack is therefore not another Fox expansion. It is to prove or disprove this naturality/uniqueness statement from intrinsic Demushkin data, or to identify an existing theorem that already implies it.
+
+## 2026-09-24 — N3–N5 LITERATURE GATE RESULT
+
+N3 is now closed as a novelty source. Labute Proposition 6/Theorem 4 already gives the all-level crossed-derivation characterization and unique Demushkin orientation; Quadrelli's 2024 Lemma 2.9 restates Kummerianity as arbitrary finite-level generator-value lifting, and Example 2.6 identifies the unique canonical Demushkin orientation. Therefore full-group finite-coefficient uniqueness is historical/known, not the proposed contribution.
+
+N4 remains OPEN/LOAD-BEARING. The 2024 quotient-inheritance Proposition 2.10 requires an already Kummerian oriented pair, N subset ker(theta), and surjectivity of H^1(G,F_p) -> H^1(N,F_p)^G. Its proof explicitly uses that restriction hypothesis. This does not state the present finite candidate-recognition theorem for N=P_{k+1}. Our U1-U2 route instead proves direct finite-depth factorization for arbitrary candidate rho through Q_k.
+
+N5 remains OPEN/DECISIVE. No audited source states a q-blind, functorial selector on the bare Q_k=G/P_{k+1} whose unique candidate is chi mod 3^k. Labute's proof forces the character in a standard classification presentation, while modern Kummerian papers retain the already-given orientation as input.
+
+Recent checks: Blumer-Quadrelli (arXiv:2603.15464v2) concerns 1-cyclotomic obstructions for variations of Demushkin groups, not a finite Q_k selector; Pál-Quick (2026) concerns A_3-formality, not the finite Kummer selector.
+
+Decision:
+- N3 full-group uniqueness: HISTORICAL / SUPERSEDED as novelty;
+- N4 exact G/P_{k+1} factorization: OPEN / LOAD-BEARING;
+- N5 q-blind finite selector: OPEN / DECISIVE;
+- overall novelty: OPEN / CONDITIONAL.
+
+No new Fox computation is authorized from this gate. The next attack is the intrinsic U5 theorem, with factorization/recognition kept logically separate from the already-known existence and uniqueness of the canonical full-group orientation.
