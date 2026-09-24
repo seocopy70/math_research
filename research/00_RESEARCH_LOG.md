@@ -1,3 +1,18 @@
+## 2026-09-24 — U5 PRE-CHECK / LITERATURE COMPARISON
+
+The intrinsic finite predicate is now fixed as
+\[
+\mathsf K_k(Q_k,\rho):H^1(Q_k,\mathbf Z/3^k(\rho))\to H^1(Q_k,\mathbf F_3)\text{ surjective},
+\qquad Q_k=G/P_{k+1}.
+\]
+Object, functoriality, gauge independence of the predicate, and definitional q-blindness are PASS/CLOSED. U1-U3 provide the factorization/coordinate bridge; U4 remains presentation-local.
+
+A targeted literature comparison was performed. The audited modern literature characterizes full-group Kummerianity by surjectivity of the coefficient-lifting maps for all n and identifies the canonical Demushkin orientation as the unique Kummerian orientation. A quotient-inheritance proposition in the 2024 1-cyclotomicity literature requires an already Kummerian oriented pair, a normal subgroup N contained in ker(theta), and surjectivity of H^1(G,F_p)->H^1(N,F_p)^G. This does not directly establish the present finite candidate-selector on Q_k with N=P_{k+1}; the extra restriction hypothesis and the fact that rho is itself a finite candidate must be checked rather than assumed. The 2022 Kummerian equivalences likewise do not, in the audited statements, supply the bare-Q_k unique-selector theorem.
+
+Therefore U5 remains OPEN/LOAD-BEARING and the novelty gate remains OPEN/DECISIVE. No claim that the finite-window selector is already known, and no claim of novelty, is authorized.
+
+Record: research/U5_INTRINSIC_FINITE_SELECTOR_AUDIT_2026-09-24.md.
+
 ## 2026-09-24 — U1–U4 CRITICAL AUDIT: U3 AND U4 CORRECTIONS
 
 The proposed U1–U5 package was independently audited against the continuity protocol. U1 survives and is now CLOSED by the semidirect-product proof: for S_k=A_k⋊U_1 and U_j=1+3^jA_k, P_j(S_k)=3^{j-1}A_k⋊U_j, hence P_{k+1}(S_k)=1. U2 then gives the canonical finite-depth H^1 factorization through Q_k=G/P_{k+1}.
