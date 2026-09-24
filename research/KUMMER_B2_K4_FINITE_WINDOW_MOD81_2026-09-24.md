@@ -164,3 +164,55 @@ A_k=\mathbf Z/3^k,qquad Q_k=G/P_{k+1},
 followed by a direct literature comparison of that lemma with existing Kummerian quotient machinery.
 
 No (t_2) route is revived.
+
+## 8. Critical audit — 2026-09-24
+
+Independent modular recomputation over Z/81 confirms the displayed crossed-power and crossed-commutator calculation for all 81 parameter tuples. The exact obstruction formula is algebraically sound:
+
+z(r)=27((1-a_2)z_1+a_1z_2-a_4z_3+a_3z_4) mod 81.
+
+### 8.1 Character factorization
+Because the target is abelian, every candidate kills P_2, hence also P_5. Therefore every compatible candidate character factors through Q_4=G/P_5. This should be stated explicitly.
+
+### 8.2 Cocycle descent
+The relation calculation is first on the free pro-3 group. Descent to G requires z(r)=0 and rho(r)=1. The latter holds because every candidate factors through the abelianization. These conditions imply vanishing on the closed normal closure of r.
+
+### 8.3 Obstruction versus K_4
+If K_4(rho_4) holds on Q_4, every mod-3 class has a Q_4-valued lift, so the relation obstruction vanishes universally. Conversely, the unique zero candidate gives arbitrary generator lifts whose cocycles descend to G and then factor through Q_4 by the valuation argument. Thus the local equivalence is justified.
+
+### 8.4 Arbitrary generator lifts
+For the canonical candidate, z(r)=0 for arbitrary z_i in Z/81, not merely specially chosen lifts. This is an important strength of the existence argument.
+
+### 8.5 Valuation chain
+The chain z(P_2) subset 3A_4, z(P_3) subset 9A_4, z(P_4) subset 27A_4, z(P_5)=0 is valid. At each commutator step one must explicitly use g in P_j implies rho(g)=1, while rho(h)-1 is divisible by 3. This is the mechanism producing the extra factor of 3.
+
+This strongly suggests a uniform lemma, but k=4 alone does not prove it.
+
+### 8.6 Novelty boundary
+The full Kummerian/cyclotomic characterization and uniqueness of the Demushkin orientation are already known. The potentially new statement remains finite-depth factorization: finite-level coefficient lifting on G is already visible on Q_4. Even this remains LOCAL because the current construction is tied to the standard presentation.
+
+### 8.7 q-blindness
+The obstruction formula contains no explicit q, but the computation is on the fixed q=3 standard model. This is not yet q-uniformity.
+
+### 8.8 Dependence on k=3
+The k=4 candidate space was reduced using the established k=3 selector. Thus k=4 uniqueness is conditional on k=3 and should not be presented as independent from scratch.
+
+### 8.9 Enumeration
+The 81-case enumeration is independent verification, not proof. The proof is the obstruction formula plus the four basis-vector tests.
+
+### 8.10 Notation cleanup
+The source contains several formatting artifacts in LaTeX delimiters. They do not affect the mathematics but should be cleaned before publication use.
+
+### Revised audit classification
+- exact mod-81 obstruction: PASS / CLOSED;
+- compatible candidate character and Q_4-factorization: PASS / CLOSED, with the explicit P_5 subset P_2 argument;
+- unique zero obstruction: PASS / CLOSED;
+- cocycle descent to G: PASS / CLOSED;
+- valuation chain through P_5: PASS / LOCAL;
+- Q_4-level existence/surjectivity: PASS / LOCAL;
+- presentation-free selector: OPEN;
+- q-uniform theorem: OPEN;
+- all-k theorem: OPEN / DECISIVE;
+- minimal/coarsest intrinsic carrier: OPEN / LOAD-BEARING.
+
+**Audit decision: k=4 survives. It is not yet the uniform theorem.**
