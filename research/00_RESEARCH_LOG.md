@@ -1,3 +1,35 @@
+## 2026-09-24 — U1–U4 CRITICAL AUDIT: U3 AND U4 CORRECTIONS
+
+The proposed U1–U5 package was independently audited against the continuity protocol. U1 survives and is now CLOSED by the semidirect-product proof: for S_k=A_k⋊U_1 and U_j=1+3^jA_k, P_j(S_k)=3^{j-1}A_k⋊U_j, hence P_{k+1}(S_k)=1. U2 then gives the canonical finite-depth H^1 factorization through Q_k=G/P_{k+1}.
+
+Two corrections are load-bearing.
+
+### U3 correction
+The earlier claim “lifting each basis vector gives I⊂3I, hence Nakayama” is not justified. Basis-vector lifting first gives F_i∈3A_k, not F_i∈3I. The correct proof is a valuation induction: if all F_i∈3^mA_k and e_i has a cocycle lift α=e_i+3β with ΣF_jα_j=0, then F_i=−3ΣF_jβ_j∈3^{m+1}A_k. Starting at m=0 and iterating to m=k gives F_i=0. Thus the Fox–Kummer equivalence remains PASS/CLOSED, but the proof mechanism is valuation induction, not the previously stated Nakayama step. This assumes the relevant mod-3 H^1 is represented by arbitrary generator values (as in the standard Demuškin one-relator setting); that hypothesis must be stated explicitly in any general lemma.
+
+### U4 correction
+The previously proposed all-k coefficient formula involving c_k=(r_{k-1}-4)/3^{k-2} is false beyond the checked low levels. The exact z_1 coefficient is governed by
+\[
+2+\rho_k(x_2)^{-1}.
+\]
+Writing ρ_k(x_2)=r+3^{k-1}a_2 gives
+\[
+2+ρ_k(x_2)^{-1}\equiv(2+r^{-1})-r^{-2}3^{k-1}a_2\pmod{3^k}.
+\]
+Since the previous-stage obstruction gives 2+r^{-1}≡0 mod 3^{k-1}, the next digit is determined by the residue of (2+r^{-1})/3^{k-1}; on the canonical branch this forces a_2=1. Hence 1,4,13,40,121,364,… is still recovered, but the former 4−r recurrence is FAIL/CLOSED and must not control the proof.
+
+### Current classification
+- U1 finite-depth semidirect lemma: PASS/CLOSED.
+- U2 H^1 factorization: PASS/CLOSED.
+- U3 Fox–Kummer equivalence: PASS/CLOSED, with corrected valuation-induction proof and explicit mod-3 H^1 hypothesis.
+- U4 standard-presentation all-k uniqueness: PASS/LOCAL, using the corrected inverse coefficient; presentation-dependent.
+- U5 intrinsic/presentation-free/q-blind selector: OPEN/LOAD-BEARING.
+- Overall uniform B2: OPEN/DECISIVE.
+
+The older 2026-09-21 general-k record contains the superseded U3 Nakayama argument and the older recurrence formulation; this entry is the controlling correction. No t_2 route is revived.
+
+Immediate next gate: U5 Object/Input/Functoriality/Gauge/Orientation-bridge audit for the intrinsic finite predicate on (Q_k,ρ), followed by a targeted literature comparison for finite-coefficient quotient inheritance. Do not claim novelty or intrinsic uniqueness until this gate is closed.
+
 ## 2026-09-24 — k=3 CRITICAL REVIEW CORRECTION + k=4 GATE
 
 The k=3 document was strengthened after critical audit. Character parameterization, free-group-to-G descent, the hypotheses \(\rho(P_2)=\rho(P_3)=1\) in the valuation steps, and the exact meaning of the 81-case enumeration are now explicit. The phrase “canonical (P_4)-residual” was removed. Scope is corrected: the result is local to the standard rank-four (q=3) presentation; it is not yet a presentation-free or q-uniform theorem. k=3 remains PASS/LOCAL.
