@@ -1,3 +1,19 @@
+## 2026-09-24 — N3–N5 LITERATURE GATE RESULT
+
+The requested novelty-first audit was completed before any new U5 computation.
+
+**N3 — finite-level uniqueness:** the full-group statement is known. Labute Proposition 6/Theorem 4 gives the all-level crossed-derivation criterion and unique Demushkin orientation; Quadrelli (2024), Lemma 2.9, restates Kummerianity as arbitrary finite-level generator-value lifting. Therefore full-group finite-coefficient uniqueness is **HISTORICAL / SUPERSEDED** as a novelty claim.
+
+**N4 — factorization through Q_k=G/P_{k+1}:** no exact theorem found. Quadrelli (2024), Proposition 2.10, starts with an already Kummerian oriented pair and assumes N subset ker(theta) plus surjectivity of H^1(G,F_p) -> H^1(N,F_p)^G. Its proof uses that hypothesis to construct a cocycle vanishing on N. This is quotient inheritance, not the present finite candidate-recognition theorem. N4 is **OPEN / LOAD-BEARING**.
+
+**N5 — q-blind finite selector:** no exact published theorem was found in the audited corpus stating that the bare finite quotient Q_k carries a functorial predicate whose unique candidate is chi mod 3^k. Labute's proof uses a standard classification presentation; modern papers retain the known orientation as input. N5 is **OPEN / DECISIVE**.
+
+Recent checks of Blumer–Quadrelli, arXiv:2603.15464v2, and Pál–Quick's 2026 A_3-formality papers did not reveal an exact finite Q_k orientation-recognition theorem.
+
+**Consequence:** no new Fox computation is justified. The next authorized attack is the intrinsic U5 theorem, while keeping finite-window factorization/recognition logically separate from the already-known full-group canonical orientation theorem.
+
+Record: research/U5_INTRINSIC_FINITE_SELECTOR_AUDIT_2026-09-24.md.
+
 ## 2026-09-24 — U5 PRE-CHECK / LITERATURE COMPARISON
 
 The intrinsic finite predicate is now fixed as
