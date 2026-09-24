@@ -1912,3 +1912,19 @@ Decision:
 - intrinsic filtration → orientation factorization: **OPEN**;
 - finite-window \(G/P_{k+1}\to\chi\bmod 3^k\): **OPEN / LITERATURE VERIFICATION REQUIRED**;
 - overall novelty of the present project: **OPEN / CONDITIONAL**.
+
+
+## 2026-09-24 — U5 INTRINSIC UNIQUENESS ATTACK: INDUCTION THROUGH COEFFICIENT EXTENSIONS
+
+The authorized U5 attack was executed without new Fox expansion. A level-k candidate rho_k reducing to the unique level-(k-1) candidate chi_{k-1} differs from another lift by 1+3^{k-1}nu, nu in H^1(G,F_3). Each lift defines an intrinsic coefficient extension 0 -> A_{k-1}(chi_{k-1}) -> A_k(rho_k) -> F_3 -> 0 and hence a connecting map delta_{rho_k}: H^1(G,F_3) -> H^2(G,A_{k-1}(chi_{k-1})).
+
+The load-bearing variation identity is delta_{rho_k'}-delta_{rho_k} = iota_{k-1} o (nu cup -), where iota_{k-1} is induced by the socle inclusion F_3 -> A_{k-1}(chi_{k-1}). This is a coefficient-extension/Yoneda naturality statement and is presentation/Fox independent.
+
+For a Demushkin group, PD^2 duality with the canonical dualizing orientation should make iota_{k-1} injective on H^2. Therefore two level-k zero connecting maps imply nu cup v=0 for every v in H^1(G,F_3), and cup nondegeneracy gives nu=0. Existence is supplied by the known Kummerian canonical orientation; U1-U2 then factor the finite predicate through Q_k=G/P_{k+1}.
+
+Decision:
+- intrinsic induction mechanism: PASS / LOCAL;
+- U5 uniqueness: PASS / CONDITIONAL, pending complete proof of the coefficient-extension variation lemma and the PD^2 socle-injectivity lemma;
+- finite-window factorization/recognition: OPEN / DECISIVE pending exact literature comparison;
+- no Fox route reopened.
+Record: research/U5_INTRINSIC_UNIQUENESS_INDUCTION_2026-09-24.md.
