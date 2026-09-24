@@ -3181,3 +3181,46 @@ The previous 2026-09-24 entry labeled literature novelty “PASS / CONDITIONAL�
 Before submission, the novelty statement must remain narrow and be tied to source-level comparison, especially the exact depth P_{k+1}, arbitrary candidate rho, absence of pre-supplied chi/q/dualizing action, and the automatic factorization of arbitrary twisted crossed cocycles.
 
 No new mathematical attack is authorized merely to improve the manuscript. The next work is theorem-hypothesis cleanup, publication-style rewriting of U1-U5, and exact source verification where needed.
+
+
+## 2026-09-24 — AUTHORITATIVE UPDATE: N1–N5 CRITICAL REVIEW + FINAL LITERATURE BOUNDARY
+
+The earlier N1–N4 discussion has now been critically rechecked before promoting N5. The controlling distinction is between mathematical closure and publication novelty.
+
+### N1 — Existing Kummerian/cyclotomic theory
+**KNOWN / CLOSED as prior art.** Kummerian cohomological lifting, finite-level generator-value lifting, and existence/uniqueness of the canonical Demuškin orientation are classical. Labute Proposition 6/Theorem 4, Efrat–Quadrelli Theorem 7.1/Proposition 7.3/Theorem 7.6, and Quadrelli–Weigel Proposition 2.6 must be cited as prior art.
+
+### N2 — Automatic deduction from known quotient results
+**NO on the checked hypotheses/directions.** Existing quotient results are inheritance/structural statements for an already oriented Kummerian pair. They do not automatically reverse to recognize an unknown finite candidate rho from a Kummerian quotient.
+
+### N3 — Full-group finite-level uniqueness
+**HISTORICAL / NOT NOVEL.** The full-group finite coefficient lifting criterion and unique Demuškin orientation are already known. The paper's contribution cannot be framed as finite-level Kummerian uniqueness on G itself.
+
+### N4 — Factorization through Q_k=G/P_{k+1}
+**MATHEMATICAL PASS / CLOSED.** U1–U2 directly prove that every candidate-rho twisted crossed cocycle factors through Q_k. The checked literature does not state this exact arbitrary-candidate factorization theorem. This is a mathematical result of the project, but its publication novelty remains part of N5.
+
+### N5 — Exact finite selector
+**NO exact prior theorem found in the audited corpus; novelty survives conditionally.** No checked source states the exact bare-Q_k predicate
+H^1(Q_k,Z/3^k(rho)) -> H^1(Q_k,F_3) surjective
+as a functorial selector with unique solution rho=chi mod 3^k, together with arbitrary-candidate factorization through Q_k.
+
+Important precision: q-blind means q is not supplied to the selector. The theorem currently proved is for the fixed rank-4, q=3 Demuškin group; it is not a uniform theorem for all q.
+
+### Critical U5 review
+The intrinsic variation formula and PD^2 socle-injectivity proof are logically separate from novelty. The earlier informal H^0/socle argument is superseded; the publication proof must use the exact dual coefficient modules and the dual reduction map. Existence is classical and imported; U5 supplies intrinsic finite-level uniqueness.
+
+### Depth boundary
+P_{k+1} is established as a sufficient finite depth. Minimality is **OPEN**: the project has not proved that P_k is insufficient. Therefore the manuscript must not say “minimal finite window.”
+
+### Final status
+- Mathematical finite-window theorem: **PASS / CLOSED**
+- N1 prior-art boundary: **PASS / CLOSED**
+- N2 automatic-deduction test: **NO**
+- N3 full-group uniqueness novelty: **HISTORICAL / SUPERSEDED**
+- N4 finite factorization: **PASS / CLOSED**
+- N5 exact literature novelty: **PASS / CONDITIONAL**
+- Absolute priority claim: **NOT ESTABLISHED**
+- Broad canonical-orientation discovery claim: **CLOSED / NON-NOVEL**
+- Minimal-depth claim: **OPEN**
+
+Record: research/N1_N5_CRITICAL_REVIEW_2026-09-24.md (critical review controlling update).
