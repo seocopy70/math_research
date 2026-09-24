@@ -1,3 +1,27 @@
+## 2026-09-24 — U5 PRE-CHECK COMPLETE / U5 OPEN
+
+The intrinsic finite predicate is fixed as
+\[
+\mathsf K_k(Q_k,\rho):H^1(Q_k,\mathbf Z/3^k(\rho))\to H^1(Q_k,\mathbf F_3)\text{ surjective},
+\quad Q_k=G/P_{k+1}.
+\]
+Object, functoriality, predicate-level gauge independence, and definitional q-blindness are **PASS/CLOSED**. The bridge to Fox coordinates is available through U1-U3, but the all-k uniqueness proof remains presentation-local.
+
+Targeted literature comparison confirms that the known Kummerian/cyclotomic results characterize the full oriented pair and the canonical Demushkin orientation. A quotient-inheritance proposition requires an already Kummerian orientation plus an additional restriction-surjectivity hypothesis; it does not automatically imply the present finite candidate-selector for (P_{k+1}). Thus the exact bare-(Q_k) theorem remains unresolved in the audited corpus.
+
+**Active state:**
+- U1: **PASS/CLOSED**
+- U2: **PASS/CLOSED**
+- U3: **PASS/CLOSED** (valuation-induction proof; prior Nakayama wording superseded)
+- U4: **PASS/LOCAL** (corrected inverse coefficient; standard presentation)
+- U5: **OPEN/LOAD-BEARING**
+- Uniform B2: **OPEN/DECISIVE**
+- Novelty: **OPEN/DECISIVE**
+
+Next authorized attack: prove/disprove intrinsic uniform uniqueness of (mathsf K_k) from Demushkin structure without inserting q or a presentation, or identify a literature theorem that directly implies it. No new Fox computation and no (t_2) revival before that gate.
+
+Record: research/U5_INTRINSIC_FINITE_SELECTOR_AUDIT_2026-09-24.md.
+
 ## 2026-09-24 — U1–U4 CRITICAL AUDIT / U5 ACTIVE
 
 The uniform finite-depth program has been critically audited. U1 is **PASS/CLOSED** by the independent semidirect-product proof (P_j(A_k\rtimes U_1)=3^{j-1}A_k\rtimes U_j), giving (P_{k+1}=1). U2 is **PASS/CLOSED**: every crossed cocycle factors through (Q_k=G/P_{k+1}), yielding the canonical (H^1) identification.
