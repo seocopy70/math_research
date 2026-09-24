@@ -986,3 +986,193 @@ end{array}
 ]
 
 **현재 단계의 원칙:** 새로운 broad mathematical attack을 추가하기보다, U1–U5를 publication-style로 정리하고 문헌과 theorem statement를 source-level에서 정확히 대조한다.
+
+
+# 2026-09-24 — N1–N5 비판적 검토에 따른 최종 보정
+
+앞의 해설에서 논문의 핵심을 finite-window Kummer recognition으로 정리한 방향은 유지한다. 다만 문헌 대조를 마친 뒤 다음 표현은 더 엄격하게 보정한다.
+
+## 1. 무엇이 이미 알려져 있는가
+
+다음은 이 논문의 새로운 발견으로 쓰면 안 된다.
+
+- canonical Demuškin orientation의 존재와 유일성;
+- Kummerianity의 cohomological lifting criterion;
+- 모든 유한 coefficient level에서의 generator-value lifting criterion;
+- 표준 presentation에서 canonical orientation의 값.
+
+이 부분은 Labute와 Efrat–Quadrelli 및 Quadrelli–Weigel의 기존 결과다.
+
+따라서 이 논문의 핵심은 “orientation을 발견했다”가 아니다.
+
+## 2. 우리가 실제로 증명한 새로운 형태
+
+현재 theorem은 고정된 rank-4, q=3 Demuškin 군에 대해
+
+[
+Q_k=G/P_{k+1}
+]
+
+와 후보
+
+[
+ho:Q_k	o(mathbf Z/3^k)^	imes
+]
+
+만을 놓고
+
+[
+mathsf K_k(Q_k,ho):
+H^1(Q_k,mathbf Z/3^k(ho))
+	o H^1(Q_k,mathbf F_3)
+]
+
+의 전사성을 검사하면
+
+[
+oxed{
+mathsf K_k(Q_k,ho)
+iff
+ho=chi_Gmod3^k
+}
+]
+
+가 된다는 것이다.
+
+특히 U1–U2는 canonical orientation을 미리 가정하지 않은 임의의 후보 ho에 대해서도 관련 crossed cocycle가 Q_k를 통해 factor한다는 것을 직접 증명한다.
+
+## 3. “q-blind”의 정확한 뜻
+
+여기서 q-blind라는 말은
+
+> selector의 입력에 q를 직접 넣지 않는다.
+
+는 뜻이다.
+
+“모든 q에 대해 같은 theorem이 증명되었다”는 뜻이 아니다.
+
+현재 논문의 theorem은 **rank-4, q=3**에 한정한다.
+
+## 4. “finite window”와 “minimality”를 구분한다
+
+[
+Q_k=G/P_{k+1}
+]
+
+는 현재 증명에서 충분한 finite window다.
+
+그러나
+
+[
+P_k
+]
+
+만으로 충분하지 않다는 것, 즉 P_{k+1}이 최소라는 것은 아직 증명하지 않았다.
+
+따라서
+
+> “가장 작은 finite window”
+
+라고 말하지 않는다.
+
+정확한 표현은
+
+> “the finite window Q_k=G/P_{k+1}”
+
+또는
+
+> “a sufficient finite window”
+
+이다.
+
+## 5. U5의 역할
+
+U5는 canonical orientation의 존재를 증명하는 부분이 아니다.
+
+존재성은 기존 Kummerian Demuškin 이론에서 가져온다.
+
+U5의 역할은 두 후보
+
+[
+ho_k'=ho_k(1+3^{k-1}
+u)
+]
+
+의 coefficient-extension connecting map 차이를
+
+[
+delta_{ho_k'}-delta_{ho_k}
+=
+iota_{k-1}circ(
+usmile-)
+]
+
+로 표현하고, PD² duality로 (iota_{k-1})의 (H^2)-주입성을 확보한 뒤 Demuškin cup-product nondegeneracy로 (
+u=0)을 얻는 것이다.
+
+이것이 finite-level selector의 intrinsic uniqueness다.
+
+## 6. 기존 문헌과의 결정적 차이
+
+기존 Kummerian quotient 결과는 대체로
+
+[
+(G,	heta)	ext{가 이미 Kummerian}
+Longrightarrow
+(G/N,	heta_{/N})	ext{도 Kummerian}
+]
+
+형태의 inheritance/structural result다.
+
+우리의 문제는
+
+[
+ho	ext{가 임의의 finite candidate}
+]
+
+인 상태에서
+
+[
+(Q_k,ho)	ext{가 Kummerian lifting을 만족하는가?}
+]
+
+를 검사하여
+
+[
+ho=chi_Gmod3^k
+]
+
+를 recognition하는 것이다.
+
+따라서 두 결과를 동일한 theorem이라고 표현하면 안 된다.
+
+## 7. 현재 문헌 대조 결과
+
+Labute (1967), Efrat–Quadrelli (2019), Quadrelli–Weigel (2020, 2022), Quadrelli (2024)를 source-level로 대조한 범위에서는 다음 정확한 theorem은 확인되지 않았다.
+
+[
+oxed{
+mathsf K_k(G/P_{k+1},ho)
+iff
+ho=chi_Gmod3^k
+}
+]
+
+특히
+
+- bare Q_k;
+- arbitrary finite candidate ho;
+- automatic factorization of arbitrary twisted cocycles;
+- selector input에서 q, dualizing action, pre-supplied chi의 배제
+
+를 한꺼번에 갖는 결과는 확인되지 않았다.
+
+따라서 **현재 novelty는 PASS / CONDITIONAL**로 보는 것이 가장 정확하다.
+
+다만 이것을 절대적인 “세계 최초”라고 표현할 단계는 아니다. 출판 단계에서는 추가 참고문헌이나 심사 과정에서 동등한 정리가 발견될 가능성을 열어 둔다.
+
+## 8. 논문의 의미를 한 문장으로 다시 쓰면
+
+> **이 논문은 알려진 canonical Demuškin orientation 자체를 발견하는 것이 아니라, 그 orientation의 mod (3^k) 값을 특정 finite Zassenhaus window (G/P_{k+1})에서 intrinsic Kummer lifting predicate로 recognition할 수 있음을 보인다.**
+
+이 문장을 논문의 Introduction과 결론에서 기본 문장으로 사용한다.
