@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\title{Finite-Window Kummer Recognition of the Canonical Orientation of a Rank-Four Demuskin Group}
+\author{}
+\date{September 2026}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study finite-window recognition of the canonical orientation of the fixed rank-four q=3 Demuskin pro-3 group. For the Zassenhaus filtration P_i, put Q_k=G/P_{k+1}. For a candidate rho:Q_k to (Z/3^k Z)^times, let K_k(Q_k,rho) mean that H^1(Q_k,Z/3^k(rho) ) to H^1(Q_k,F_3) is surjective. We prove that K_k(Q_k,rho) holds exactly for rho=chi_G mod 3^k, for k>=2. The canonical orientation itself is classical; the result is a finite-window recognition statement.
+\end{abstract}
+
+\section{Introduction}
+Let
+\[
+G=\langle x_1,x_2,x_3,x_4 \mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle.
+\]
+The canonical orientation is known from Labute's theory of Demuskin groups and from later Kummerian formulations. Our question is whether its reduction modulo 3^k can be recognized from Q_k=G/P_{k+1} without supplying the orientation as input.
+
+\begin{theorem}[Finite-window recognition]
+For every k>=2 and every rho:Q_k to (Z/3^k Z)^times,
+\[
+\mathsf K_k(Q_k,rho) \Longleftrightarrow rho=chi_G\pmod {3^k}.
+\]
+\end{theorem}
+
+The proof has five steps: finite semidirect-product filtration, arbitrary-candidate factorization, finite Kummer lifting, standard-presentation identification, and intrinsic PD2 uniqueness.
+
+\section{Finite window}
+Put A_k=Z/3^k Z and U_1=1+3A_k, and let S_k=A_k\rtimes U_1. For U_j=1+3^j A_k and T_j=3^{j-1}A_k\rtimes U_j, the lower 3-central filtration satisfies
+\[
+P_j(S_k)=T_j, \qquad P_{k+1}(S_k)=1.
+\]
+If rho:G to U_1 and z in Z^1(G,A_k(rho)), then g to (z(g),rho(g)) is a homomorphism G to S_k. Hence it kills P_{k+1}(G), so every relevant twisted cocycle factors through Q_k.
+
+\begin{proposition}[Finite Kummer criterion]
+For a one-relator pro-3 group G=F/<<r>> and a candidate rho, the map
+\[
+H^1(G,A_k(rho))\to H^1(G,F_3)
+\]
+is surjective exactly when every prescribed mod-3 generator-value vector lifts through the twisted relator equation
+\[
+z(r)=\sum_i \left.\frac{\partial r}{\partial x_i}\right|_rho z(x_i)=0.
+\]
+\end{proposition}
+
+The proof is a finite Nakayama iteration over A_k; no Hensel argument is required.
+
+\section{Standard presentation}
+For
+\[
+r=x_1^3[x_1,x_2][x_3,x_4],
+\]
+the standard odd-p Demuskin calculation gives
+\[
+rho(x_1)=rho(x_3)=rho(x_4)=1, \qquad
+rho(x_2)=(1-3)^{-1}\pmod {3^k}.
+\]
+Thus the values at k=2,3,4 are 4 mod 9, 13 mod 27, and 40 mod 81.
+
+\section{Intrinsic uniqueness}
+Suppose two level-k candidates reduce to the same rho_{k-1}. Write
+\[
+rho_k'=rho_k(1+3^{k-1}nu), \qquad nu in H^1(G,F_3).
+\]
+The coefficient extension
+\[
+0\to A_{k-1}(rho_{k-1})\xrightarrow{iota}A_k(rho_k)\to F_3\to0
+\]
+has connecting map delta_{rho_k}. The Yoneda variation formula is
+\[
+delta_{rho_k'}-delta_{rho_k}=iota\circ(nu\smile -).
+\]
+On the canonical branch, PD2 duality makes H^2(G,F_3) to H^2(G,A_{k-1}(chi)) injective: its dual is the surjective reduction map on H^0. Hence if both connecting maps vanish, nu\smile v=0 for every v in H^1(G,F_3). Demuskin cup-product nondegeneracy gives nu=0.
+
+\section{Proof of the theorem}
+Existence of chi_G with the Kummerian lifting property is classical. Factorization through Q_k was proved above. For uniqueness, reduce a candidate successively to level 2. The standard calculation gives rho_2=chi_G mod 9. Inductively, the candidate and chi_G mod 3^k have the same reduction and both satisfy the predicate; intrinsic uniqueness gives equality.
+
+\section{Previous work and novelty boundary}
+The canonical orientation, global Kummerian characterization, and finite-level generator lifting are classical. The present result is narrower: it starts from the finite quotient Q_k and an arbitrary candidate rho, proves automatic factorization of the relevant twisted cocycles through Q_k, and uses the intrinsic Kummer predicate as a recognition rule. The checked literature did not yield an exact theorem in this bare-Q_k, arbitrary-candidate formulation. This is a conditional novelty statement, not an absolute priority claim.
+
+\section{Limitations}
+The theorem is for the fixed rank-four q=3 group. q-blind means q is absent from selector input, not uniformity in q. P_{k+1} is sufficient; minimality is open. The final predicate is intrinsic although the standard presentation is used as a local calculation.
+
+\section{Conclusion}
+The result separates a classical infinite-group existence theorem from a finite recognition principle:
+\[
+G/P_{k+1} \quad+\quad \text{intrinsic Kummer lifting}
+\quad\Longrightarrow\quad chi_G\pmod {3^k}.
+\]
+
+\bibliographystyle{amsplain}
+\bibliography{references}
+\end{document}
