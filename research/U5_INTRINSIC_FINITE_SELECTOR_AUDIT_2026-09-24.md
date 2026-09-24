@@ -101,75 +101,69 @@ Decision:
 
 No new Fox computation is authorized from this gate. The next attack is the intrinsic U5 theorem, with factorization/recognition kept logically separate from the already-known existence and uniqueness of the canonical full-group orientation.
 
-
 ## 2026-09-24 — U5 INTRINSIC UNIQUENESS CLOSED: VARIATION + PD² SOCLE INJECTIVITY
 
-The two load-bearing lemmas are now closed without Fox coordinates.
+The two load-bearing U5 lemmas are now closed without Fox coordinates.
 
 ### Lemma U5-V — coefficient-extension variation
 
-Let (k\ge2), let (ho_k) and (ho_k') be two candidate characters reducing to the same level-((k-1)) character (ho_{k-1}), and write
-[
-ho_k'=ho_k(1+3^{k-1}
-u),qquad 
-uin H^1(G,\mathbf F_3).
-]
-For (A_j=\mathbf Z/3^j(\rho_j)), the two coefficient extensions
-[
+Let \(k\ge2\), let \(\rho_k\) and \(\rho_k'\) be two candidate characters reducing to the same level-\((k-1)\) character \(\rho_{k-1}\), and write
+\[
+\rho_k'=\rho_k(1+3^{k-1}\nu),\qquad \nu\in H^1(G,\mathbf F_3).
+\]
+For \(A_j=\mathbf Z/3^j(\rho_j)\), the two coefficient extensions
+\[
 0\to A_{k-1}(\rho_{k-1})\xrightarrow{\iota_{k-1}}A_k(\rho_k)\to\mathbf F_3\to0
-]
-and its (ho_k')-analogue differ by the Yoneda class represented by (
-u). Naturality of connecting homomorphisms therefore gives
-[
-oxed{;
+\]
+and its \(\rho_k'\)-analogue differ by the Yoneda class represented by \(\nu\). Naturality of connecting homomorphisms therefore gives
+\[
+\boxed{\;
 \delta_{\rho_k'}-\delta_{\rho_k}
 =
 \iota_{k-1}\circ(\nu\smile -)
-;}
-]
+\;}
+\]
 as maps
-[
+\[
 H^1(G,\mathbf F_3)\longrightarrow H^2(G,A_{k-1}(\rho_{k-1})).
-]
-The formula is intrinsic: it uses only the coefficient-extension classes and the cup/Yoneda product. No presentation, Fox derivative, relator, (q), or preferred (H^2)-generator enters.
+\]
+The formula is intrinsic: it uses only the coefficient-extension classes and the cup/Yoneda product. No presentation, Fox derivative, relator, \(q\), or preferred \(H^2\)-generator enters.
 
-### Lemma U5-PD — socle inclusion is injective on (H^2)
+### Lemma U5-PD — socle inclusion is injective on \(H^2\)
 
-On the induction branch (ho_{k-1}=\chi\bmod3^{k-1}), the socle inclusion
-[
+On the induction branch \(\rho_{k-1}=\chi\bmod3^{k-1}\), the socle inclusion
+\[
 \iota_{k-1}:\mathbf F_3\hookrightarrow A_{k-1}(\chi_{k-1})
-]
+\]
 induces an injective map
-[
+\[
 H^2(G,\mathbf F_3)\hookrightarrow H^2(G,A_{k-1}(\chi_{k-1})).
-]
-Indeed, PD² duality identifies (H^2(G,M)) with the dual of the appropriate (H^0)-group of the dual coefficient module tensored with the dualizing module. For (M=A_{k-1}(\chi_{k-1})), the dualizing twist cancels the (chi_{k-1})-action, so the dual map to (H^2(\mathbf F_3)\to H^2(A_{k-1})) is the reduction
-[
+\]
+Indeed, PD² duality identifies \(H^2(G,M)\) with the dual of the appropriate \(H^0\)-group of the dual coefficient module tensored with the dualizing module. For \(M=A_{k-1}(\chi_{k-1})\), the dualizing twist cancels the \(\chi_{k-1}\)-action, so the dual map to \(H^2(\mathbf F_3)\to H^2(A_{k-1})\) is the reduction
+\[
 H^0(G,A_{k-1})\to H^0(G,\mathbf F_3),
-]
-which is surjective. Hence the original (H^2)-map is injective.
+\]
+which is surjective. Hence the original \(H^2\)-map is injective.
 
-The canonical dualizing orientation is used only as an internal theorem-proving device in this lemma; it is not part of the definition of the finite selector (mathsf K_k).
+The canonical dualizing orientation is used only as an internal theorem-proving device in this lemma; it is not part of the definition of the finite selector \(\mathsf K_k\).
 
 ### U5 uniqueness theorem
 
-Assume inductively that the unique level-((k-1)) selector is (chi\bmod3^{k-1}). If (ho_k,ho_k') both satisfy the intrinsic finite Kummer predicate, their connecting maps vanish identically. By Lemma U5-V and Lemma U5-PD,
-[
-
-u\smile v=0qquad\forall v\in H^1(G,\mathbf F_3).
-]
-The Demuškin cup pairing is nondegenerate, hence (
-u=0), so (ho_k=ho_k'). The base case (k=2) is the established finite-window result. Existence is supplied by the known canonical Kummerian/Demushkin orientation, and U1-U2 show that its finite-level lifting predicate is exactly the predicate on (Q_k=G/P_{k+1}).
+Assume inductively that the unique level-\((k-1)\) selector is \(\chi\bmod3^{k-1}\). If \(\rho_k,\rho_k'\) both satisfy the intrinsic finite Kummer predicate, their connecting maps vanish identically. By Lemma U5-V and Lemma U5-PD,
+\[
+\nu\smile v=0\qquad\forall v\in H^1(G,\mathbf F_3).
+\]
+The Demuškin cup pairing is nondegenerate, hence \(\nu=0\), so \(\rho_k=\rho_k'\). The base case \(k=2\) is the established finite-window result. Existence is supplied by the known canonical Kummerian/Demushkin orientation, and U1-U2 show that its finite-level lifting predicate is exactly the predicate on \(Q_k=G/P_{k+1}\).
 
 Therefore
-[
-oxed{
+\[
+\boxed{
 \mathsf K_k(Q_k,\rho)
 \Longleftrightarrow
 \rho=\chi_G\bmod3^k
 }
-]
-for every (k\ge2), for the finite selector defined intrinsically on ((Q_k,\rho)).
+\]
+for every \(k\ge2\), for the finite selector defined intrinsically on \((Q_k,\rho)\).
 
 ### Boundary and novelty
 
@@ -179,7 +173,7 @@ Decision:
 - coefficient-extension variation lemma: **PASS / CLOSED**;
 - PD² socle-injectivity lemma: **PASS / CLOSED**;
 - U5 intrinsic uniqueness: **PASS / CLOSED**;
-- N4 finite (G/P_{k+1}) factorization: **PASS / CLOSED**;
+- N4 finite \(G/P_{k+1}\) factorization: **PASS / CLOSED**;
 - N5 q-blind finite selector theorem: **PASS / CLOSED**;
 - overall novelty: **OPEN / CONDITIONAL**.
 
