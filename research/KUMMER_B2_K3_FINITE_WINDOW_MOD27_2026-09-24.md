@@ -349,3 +349,49 @@ and determine whether the k=4 obstruction admits the same finite-depth factoriza
 Q_4=G/P_5
 ]
 without importing the canonical orientation or classification.
+
+
+## 10. Critical review correction — 2026-09-24
+
+The following points are now authoritative clarifications.
+
+1. **Character parameterization.** Since the target ((\mathbf Z/27)^\times) is abelian, a candidate character is determined by generator values and automatically kills the commutator factors. The congruence conditions therefore give genuine compatible characters on (Q_3).
+
+2. **Descent from the free group.** The crossed homomorphism is first constructed on the free pro-3 group (F). The condition (z_F(r)=0), together with (\rho(r)=1), implies that the crossed cocycle kills the closed normal closure of (r), so it descends to (G). This descent step is now explicit rather than implicit.
+
+3. **Valuation argument.** In Step 2 one must state explicitly that (g\in P_2\Rightarrow\rho(g)=1), and similarly (\rho(P_3)=1), before dropping the corresponding commutator term.
+
+4. The phrase “canonical (P_4)-residual is zero” is removed. What is proved directly is simply (z(P_4)=0). No separate canonical residual is introduced.
+
+5. The exhaustive 81-case enumeration is independent verification only. The proof is the exact obstruction formula together with the basis-vector test and the (P_2\to P_3\to P_4) valuation chain.
+
+6. “Kummerianity” is not claimed at this finite level. The object is the single finite predicate (\mathsf K_3); full Kummerianity is an all-(n) statement already known in the literature.
+
+7. **Scope correction.** The result is presentation-based and local to the declared standard rank-four (q=3) model. It is not yet an abstract presentation-free selector theorem on arbitrary (Q_3), nor a (q)-uniform theorem. The term “q-blind” may be used only in the restricted sense that (q) is absent from the predicate formula; the underlying test object has already been fixed to the (q=3) standard model.
+
+8. **Dependence on k=2.** Uniqueness at k=3 is conditional on the established k=2 selector: every satisfying k=3 candidate must reduce to ((1,4,1,1)).
+
+9. The mathematically load-bearing novelty candidate is the finite-depth factorization
+\[
+\text{full-group coefficient lift}\longrightarrow Q_3=G/P_4
+\]
+proved by
+\[
+z(P_2)\subset3A_3,\qquad z(P_3)\subset9A_3,\qquad z(P_4)=0.
+\]
+
+### Revised classification
+
+- mod-27 relation calculation: **PASS / CLOSED**;
+- compatible character parameterization: **PASS / CLOSED**;
+- unique zero obstruction: **PASS / CLOSED**;
+- existence of (A_3)-valued lifts on (G): **PASS / LOCAL**;
+- (P_2)-valuation: **PASS / CLOSED**;
+- (P_3)-valuation: **PASS / LOCAL**;
+- (P_4)-annihilation: **PASS / LOCAL**;
+- (Q_3)-factorization: **PASS / LOCAL**;
+- abstract/presentation-free (Q_3) selector: **OPEN**;
+- general q-blindness theorem: **OPEN**;
+- presentation independence of the finite selector: **OPEN**;
+- all-(k) theorem: **OPEN / DECISIVE**;
+- minimal carrier: **OPEN / LOAD-BEARING**.
