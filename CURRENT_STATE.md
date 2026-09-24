@@ -1,4 +1,8 @@
 
+## 2026-09-24 — N1 LITERATURE GATE CLOSED
+
+The four primary references now form the audited literature baseline. The full-group Kummerian/cyclotomic characterization and uniqueness of the Demushkin orientation are known; this part is not the proposed new theorem. The remaining novelty boundary is finite filtered reconstruction: a q-blind natural predicate on Q_k=G/P_{k+1} together with factorization/annihilation of the relevant lift through Q_k. N1 literature boundary: PASS / CLOSED. B2/k=2: PASS / LOCAL. Uniform B2: OPEN / DECISIVE. Next authorized gate: k=3, Q_3=G/P_4, first prove P_4-annihilation of the mod-27 Kummer lift. See research/N1_LITERATURE_GATE_KUMMERIAN_CYCLOTOMIC_DEMUSHKIN_2026-09-24.md.
+
 
 ## 2026-09-21 — B2 K=2 FINITE WINDOW CLOSED LOCALLY
 
