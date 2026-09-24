@@ -3143,3 +3143,41 @@ Status after this Gate:
 - new computational/math attacks: **CLOSED** unless a referee/literature check identifies a direct prior equivalent theorem.
 
 Key sources checked: Labute 1967; Efrat–Quadrelli 2019; Quadrelli–Weigel 2020 and 2022; Quadrelli 2024.
+
+
+## 2026-09-24 — PAPER STRUCTURE BASELINE + NOVELTY STATUS CORRECTION
+
+A publication-structure review was completed for the closed U1–U5 program. A dedicated baseline document was created at `paper/PAPER_STRUCTURE_BASELINE.md` (commit 58de6b37e48f8d93f9a5303bfb8a4bfecfb45c41). This document is the working foundation for `paper/main.tex`; it is not itself a novelty claim.
+
+### Publication architecture fixed
+The main paper is to be organized around the finite-window recognition theorem, not around the historical sequence of research attacks:
+1. Introduction: known global Kummerian/cyclotomic orientation theory; finite-window question; brief information-boundary motivation; main theorem; prior-work/novelty boundary.
+2. Finite coefficient extensions and the finite window: U1 lower 3-central filtration of S_k=A_k semidirect U_1 and U2 factorization through Q_k=G/P_{k+1}.
+3. Finite Kummer criterion: U3, with the corrected iterative/Nakayama proof of Kummer lifting iff vanishing of the twisted Fox row.
+4. Identification in the standard presentation: U4 as a presentation-dependent/local calculation identifying rho(x_2)=(1-q)^(-1); (1,40,1,1) mod 81 is only the k=4 example.
+5. Intrinsic uniqueness via PD^2: U5 variation formula, coefficient-extension injectivity, and cup-product nondegeneracy.
+6. Main finite-window recognition theorem, assembling U1-U5.
+7. Relation to previous work and exact novelty boundary.
+8. Brief information-boundary discussion.
+
+### Information-boundary results
+The earlier negative results are retained as motivation/lower-bound context, not as a second full contribution in this manuscript: graded data alone do not determine chi mod 9; a single t_2 carrier does not determine chi; the successful object is the function-valued Kummer/lifting obstruction on the finite filtered quotient. Full proofs and the still-open minimal-carrier problem should be reserved for a possible companion paper.
+
+### Appendix policy
+Research files research/U1.md–U5.md are audit records and should NOT be pasted verbatim into the paper. Publication appendices should contain rewritten technical details only (semidirect filtration, twisted Fox calculation, PD^2/coefficient-extension details, and optional computational verification).
+
+### Important claim-precision rules
+- “q-blind” means q is not an input to the selector; it does not assert a uniform theorem for all q.
+- “presentation-free” means the final predicate/theorem is intrinsic; a standard presentation may be used as an intermediate verification device.
+- “Q_k suffices” means the relevant twisted H^1/Kummer obstruction factors through Q_k, not that Q_k determines all of G.
+- Canonical orientation existence/uniqueness is classical and must not be presented as the novelty.
+
+### Novelty-status correction
+The previous 2026-09-24 entry labeled literature novelty “PASS / CONDITIONAL” is now superseded for manuscript purposes. The checked sources establish the classical Kummerian/cyclotomic characterization and related quotient results, but the literature audit was not a complete line-by-line exclusion of every equivalent finite-window formulation. Therefore the defensible current status is:
+- mathematical finite-window theorem: PASS / CLOSED;
+- exact publication-level novelty: OPEN / STRONG CANDIDATE;
+- broad claim of discovering canonical Demuškin orientation: CLOSED / NON-NOVEL.
+
+Before submission, the novelty statement must remain narrow and be tied to source-level comparison, especially the exact depth P_{k+1}, arbitrary candidate rho, absence of pre-supplied chi/q/dualizing action, and the automatic factorization of arbitrary twisted crossed cocycles.
+
+No new mathematical attack is authorized merely to improve the manuscript. The next work is theorem-hypothesis cleanup, publication-style rewriting of U1-U5, and exact source verification where needed.
