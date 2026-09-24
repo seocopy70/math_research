@@ -1,4 +1,16 @@
 
+## 2026-09-24 — B2 / k=3 FINITE-WINDOW MOD-27 GATE
+
+The authorized k=3 attack was completed for the standard rank-four q=3 Demushkin group G=<x1,x2,x3,x4 | x1^3[x1,x2][x3,x4]>. By the k=2 result, any K_3 candidate reduces mod 9 to rho_2=(1,4,1,1), so all mod-27 lifts are rho_3=(1+9a1,13+9a2,1+9a3,1+9a4). Exact crossed-word evaluation gives
+z(r)=9(-a2 z1+a1 z2-a4 z3+a3 z4) mod 27.
+Hence the universal obstruction vanishes iff a1=a2=a3=a4=0, so the unique candidate is rho_3=(1,13,1,1). Independent enumeration of all 3^4=81 lifts confirms exactly one zero obstruction vector.
+
+The load-bearing finite existence gate was then proved directly. For the unique candidate, every mod-3 class f admits an A_3=Z/27(rho_3)-valued crossed cocycle lift on G because z(r)=0 for arbitrary generator lifts. Since z(P_2) is divisible by 3, z(P_3)=P_2^3[P_2,G] evaluates into 9A_3; then z(P_4)=P_3^3[P_3,G]=0 because the cube and commutator contributions are divisible by 27. Thus every lift annihilates P_4 and factors through Q_3=G/P_4. This is a genuine finite-window factorization proof, not an appeal to full-G Kummerianity.
+
+Classification: k=3 exact obstruction PASS/CLOSED for the standard family; k=3 uniqueness PASS/LOCAL; P_4-annihilation PASS/LOCAL; finite Q_3 factorization PASS/LOCAL. Uniform B2 remains OPEN/DECISIVE. Single-vector t_2 remains FAIL/CLOSED. Next authorized gate is k=4, A_3->A_4 and Q_4=G/P_5, with direct finite-depth factorization before any all-k claim.
+
+Record: research/KUMMER_B2_K3_FINITE_WINDOW_MOD27_2026-09-24.md (commit 4023dedb339e178cdf1fa715e8a44eb671d2ed77).
+
 ## 2026-09-24 — N1 LITERATURE GATE: KUMMERIAN/CYCLOTOMIC ORIENTATION IS KNOWN; FINITE-WINDOW FACTORIZATION REMAINS OPEN
 
 A four-paper primary-literature audit was completed after restoring RESEARCH_MAP.md, CURRENT_STATE.md, 00_RESEARCH_LOG.md, and RESEARCH_CONTINUITY_PROTOCOL.md. The audited corpus is Labute (1967), Efrat–Quadrelli (2019, arXiv:1707.07018v3), Quadrelli–Weigel (2020, arXiv:1811.02250v3), and Quadrelli–Weigel (2022, arXiv:2103.12438v3). Labute Prop. 6/Thm. 4, Efrat–Quadrelli Thm. 7.1/Prop. 7.3/Thm. 7.6, and the corresponding Quadrelli–Weigel results establish the full-group Kummerian/cyclotomic lifting characterization and uniqueness of the canonical Demushkin orientation. Therefore “canonical orientation = unique Kummerian/cyclotomic orientation” is HISTORICAL / SUPERSEDED as a novelty claim.
