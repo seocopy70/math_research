@@ -48,6 +48,8 @@ The level-k Kummer predicate is exactly
 \]
 
 ## 3. Intrinsic variation lemma
+
+Let \(\rho_k' = \rho_k(1+3^{k-1}\nu)\). Because \((1+3^{k-1}a)(1+3^{k-1}b)\equiv1+3^{k-1}(a+b)\pmod{3^k}\), the difference parameter \(\nu\) is a homomorphism \(G\to\mathbf F_3\), hence a class in \(H^1(G,\mathbf F_3)\).
 The key coefficient-extension identity is
 \[
 \boxed{
@@ -64,16 +66,29 @@ where
 is induced by the socle inclusion \(\mathbf F_3\hookrightarrow A_{k-1}(\chi_{k-1})\),
 \(1\mapsto3^{k-2}\).
 
-This is a Yoneda/naturality statement about the difference of the two coefficient extensions; it is independent of a presentation, relator, Fox derivative, or chosen \(H^2\)-generator.
+This is a Yoneda/naturality statement about the difference of the two coefficient extensions; it is independent of a presentation, relator, Fox derivative, or chosen \(H^2\)-generator. A cochain-level verification uses a section of coefficient reduction; changing the section by a 3-multiple changes the lifted cochain by a coboundary, so the resulting H^2-class is unchanged.
 
 ## 4. Why the socle map is injective
-Because \(G\) is Demuškin and \(\chi\) is its dualizing orientation, finite-module Poincaré duality identifies the relevant \(H^2\)-groups with dual invariant modules. Under this duality, the socle inclusion is dual to the natural quotient
-\[
-A_{k-1}(\mathbf 1)\twoheadrightarrow\mathbf F_3,
-\]
-whose invariant map is surjective. Therefore \(\iota_{k-1}\) is injective.
 
-Equivalently, the order-3 socle in the dualizing twist survives nontrivially in top cohomology.
+The earlier informal H^0/socle argument is **HISTORICAL / SUPERSEDED**: it incorrectly assumed that \(\operatorname{im}\chi\) contains \(1+3\), which need not hold for general Demuškin \(q\).
+
+Use finite-module PD² duality directly. With \(D=\mathbf Q_3/\mathbf Z_3(\chi)\),
+\[
+H^2(G,M)^\vee\simeq\operatorname{Hom}_G(M,D).
+\]
+For \(M=A_{k-1}(\chi)=\mathbf Z/3^{k-1}(\chi)\),
+\[
+\operatorname{Hom}_G(A_{k-1}(\chi),D)\cong\operatorname{Hom}(\mathbf Z/3^{k-1},\mathbf Q_3/\mathbf Z_3)\cong\mathbf Z/3^{k-1}.
+\]
+For \(M=\mathbf F_3\),
+\[
+\operatorname{Hom}_G(\mathbf F_3,D)=\operatorname{Hom}_G(\mathbf F_3,D[3])\cong\mathbf F_3,
+\]
+since \(D[3]\cong\mathbf F_3(\chi\bmod3)\cong\mathbf F_3\). Under these dualities, the socle inclusion \(\iota:\mathbf F_3\hookrightarrow A_{k-1}(\chi)\), \(1\mapsto3^{k-2}\), is dual to reduction
+\[
+\mathbf Z/3^{k-1}\twoheadrightarrow\mathbf F_3.
+\]
+This dual map is surjective, so \(\iota_{k-1}:H^2(G,\mathbf F_3)\to H^2(G,A_{k-1}(\chi))\) is injective. No assumption on the valuation of \(\chi(g)-1\) or on \(q\) is used.
 
 ## 5. Uniqueness
 If both \(\rho_k\) and \(\rho_k'\) satisfy \(\mathsf K_k\), then
@@ -100,7 +115,7 @@ Therefore the finite predicate has exactly one candidate:
 
 ## 6. What this proves / what it does not
 ### PASS / CLOSED (mathematical gate)
-Under the standard torsion-free pro-3 Demuškin hypotheses and the intrinsic coefficient-extension variation lemma above, the finite Kummer predicate is uniquely solved by the canonical orientation at every finite level. No new Fox calculation is required.
+Under the standard torsion-free pro-3 Demuškin hypotheses, the corrected intrinsic coefficient-extension variation lemma and the direct PD² duality proof above establish uniqueness at every finite level. Existence is the already-known Kummerian property of the canonical orientation; U1–U2 provide factorization through \(Q_k\). No new Fox calculation is required.
 
 ### Remaining logical boundary
 The result is **not** yet a novelty claim. The infinite statement “the canonical orientation is the unique Kummerian orientation” is classical (Labute; modern Kummerian formulations). The present theorem must therefore be positioned as a finite-window factorization/recognition result:
