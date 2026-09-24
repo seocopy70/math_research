@@ -2824,3 +2824,18 @@ B2 quotient inheritance was corrected: do not claim P_{k+1}⊄Kθ or P_{k+1}⊄k
 A separate authorized stress test was executed on non-Demushkin one-relator pro-3 relations using a fresh independent Fox evaluator. Standard rank-4 Demushkin retains unique selectors mod 9/27; degenerate quadratic relations produce 3,9 candidate characters or, after adding a power term in one tested rank-4 case, no candidate. This is PASS / LOCAL as a scope boundary, not a theorem about the intrinsic δ̄4∘ι1 map. Next target: compute the actual higher coefficient-extension obstruction on r=[x1,x2][x1,x3] for its multiple Kummer characters.
 
 Record: research/ONE_RELATOR_KUMMER_SELECTOR_STRESS_TEST_2026-09-21.md (commit f61d879a6e11bf24a94ea34a0360530e36575224).
+
+
+## 2026-09-24 — U5 INTRINSIC UNIQUENESS INDUCTION
+
+The authorized U5 attack has now moved the load-bearing problem from presentation/Fox uniqueness to an intrinsic coefficient-extension induction.
+
+For a level-k candidate rho_k, reduction gives a level-(k-1) candidate. By induction it equals chi_{k-1}. Two lifts then differ by 1+3^{k-1}nu, nu in H^1(G,F_3). Their coefficient extensions 0 -> A_{k-1}(chi_{k-1}) -> A_k(rho_k) -> F_3 -> 0 have connecting maps whose difference is expected to be the intrinsic cup-product variation delta_{rho_k'}-delta_{rho_k} = iota_{k-1} o (nu cup -). Demushkin PD^2 duality should imply the socle-induced map iota_{k-1} is injective. Then global zero of both connecting maps plus cup nondegeneracy forces nu=0.
+
+Status:
+- U5 uniqueness mechanism: PASS / LOCAL;
+- U5 uniqueness theorem: PASS / CONDITIONAL pending complete coefficient-extension/Yoneda and PD^2 injectivity proofs;
+- finite-window recognition/factorization novelty: OPEN / DECISIVE;
+- no Fox computation authorized or performed in this gate.
+
+Next authorized gate: write and independently verify the variation lemma and the socle-injectivity lemma, then perform exact line-by-line comparison with Labute Theorem 4/Proposition 6 and modern Kummerian quotient results.
