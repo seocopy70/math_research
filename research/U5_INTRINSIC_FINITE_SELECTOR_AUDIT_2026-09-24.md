@@ -178,3 +178,21 @@ Decision:
 - overall novelty: **OPEN / CONDITIONAL**.
 
 No Fox computation was used or reopened.
+
+
+## 2026-09-24 — CONTROLLING N1–N5 CRITICAL REVIEW
+
+The earlier N3–N5 labels in this audit are superseded by the final critical review.
+
+- N3 full-group finite-level uniqueness: **HISTORICAL / NOT NOVEL**.
+- N4 arbitrary-candidate factorization through Q_k=G/P_{k+1}: **MATHEMATICAL PASS / CLOSED**. This is distinct from quotient inheritance, but it is not by itself a novelty verdict.
+- N5 exact bare-Q_k selector theorem: **NO exact prior theorem found in the audited corpus; PASS / CONDITIONAL for novelty**.
+- Overall publication novelty: **PASS / CONDITIONAL**, not an absolute priority claim.
+
+Scope correction: the theorem currently proved is for the fixed rank-4, q=3 Demuškin group. “q-blind” means q is absent from selector input, not that the theorem is uniform over q.
+
+Depth correction: P_{k+1} is sufficient; minimality remains OPEN.
+
+U5 proof correction: variation is a coefficient-extension/Yoneda identity and PD² injectivity must be written using the exact dual coefficient modules and dual reduction map. Classical Kummerian existence is imported.
+
+This entry is controlling for manuscript wording.
