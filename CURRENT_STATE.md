@@ -1,4 +1,8 @@
 
+## 2026-09-24 — B2 / k=3 CLOSED LOCALLY
+
+The mod-27 finite-window gate for the standard rank-four q=3 Demushkin group is closed locally. The unique mod-27 candidate reducing to the k=2 solution is (1,13,1,1). The exact relation obstruction is 9(-a2 f1+a1 f2-a4 f3+a3 f4), giving a unique universal-zero lift. Direct valuation gives z(P2)⊂3A3, z(P3)⊂9A3, and z(P4)=0, so all lifts factor through Q3=G/P4. Therefore B2/k=3 is PASS/LOCAL. Uniform B2 is still OPEN/DECISIVE; next authorized gate k=4.
+
 ## 2026-09-24 — N1 LITERATURE GATE CLOSED
 
 The four primary references now form the audited literature baseline. The full-group Kummerian/cyclotomic characterization and uniqueness of the Demushkin orientation are known; this part is not the proposed new theorem. The remaining novelty boundary is finite filtered reconstruction: a q-blind natural predicate on Q_k=G/P_{k+1} together with factorization/annihilation of the relevant lift through Q_k. N1 literature boundary: PASS / CLOSED. B2/k=2: PASS / LOCAL. Uniform B2: OPEN / DECISIVE. Next authorized gate: k=3, Q_3=G/P_4, first prove P_4-annihilation of the mod-27 Kummer lift. See research/N1_LITERATURE_GATE_KUMMERIAN_CYCLOTOMIC_DEMUSHKIN_2026-09-24.md.
