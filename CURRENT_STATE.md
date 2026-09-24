@@ -1,3 +1,48 @@
+## 2026-09-24 — U5 INTRINSIC UNIQUENESS CLOSED / FINITE-WINDOW THEOREM ESTABLISHED
+
+The load-bearing U5 gate is now closed at theorem level.
+
+1. **Variation lemma — PASS/CLOSED.** For two level-(k) characters reducing to the same (ho_{k-1}), with (ho_k'=ho_k(1+3^{k-1}
+u)), coefficient-extension/Yoneda naturality gives
+[
+delta_{ho_k'}-delta_{ho_k}
+=
+iota_{k-1}circ(
+usmile-).
+]
+This is intrinsic and presentation/Fox/q independent.
+
+2. **PD² socle-injectivity lemma — PASS/CLOSED.** On the induction branch (ho_{k-1}=chimod3^{k-1}), the socle inclusion
+(mathbf F_3hookrightarrowmathbf Z/3^{k-1}(chi_{k-1}))
+induces an injection on (H^2). PD² duality reduces this to surjectivity of reduction on invariant sections of the untwisted dual coefficient module.
+
+3. **U5 uniqueness — PASS/CLOSED.** If two candidates satisfy the global finite Kummer predicate, their connecting maps vanish. The two lemmas imply (
+usmile v=0) for every (vin H^1(G,mathbf F_3)); Demuškin cup nondegeneracy gives (
+u=0). Induction starts from the established (k=2) selector.
+
+4. **Finite-window theorem — PASS/CLOSED.** U1-U2 already prove that the twisted finite lifting problem factors through (Q_k=G/P_{k+1}). Existence is supplied by the known canonical Kummerian orientation. Therefore, for every (kge2),
+[
+oxed{mathsf K_k(Q_k,ho)Longleftrightarrow ho=chi_Gmod3^k.}
+]
+
+Current classification:
+- U1: **PASS/CLOSED**
+- U2: **PASS/CLOSED**
+- U3: **PASS/CLOSED**
+- U4: **PASS/LOCAL** (standard-presentation coordinate check only)
+- U5: **PASS/CLOSED**
+- N3 full-group uniqueness as novelty: **HISTORICAL/SUPERSEDED**
+- N4 finite (G/P_{k+1}) factorization: **PASS/CLOSED**
+- N5 q-blind finite selector: **PASS/CLOSED**
+- Uniform B2 mathematical theorem: **PASS/CLOSED**
+- Overall novelty: **OPEN / CONDITIONAL**
+
+Important boundary: this does **not** claim that canonical Demuškin orientation is new. Existence/uniqueness of the full-group Kummerian orientation is known. The only remaining publication gate is whether the exact bare-(Q_k), q-blind finite-selector/factorization formulation is already an immediate corollary or equivalent reformulation of existing quotient/inheritance results.
+
+No new Fox computation was used or authorized.
+
+Record: `research/U5_INTRINSIC_FINITE_SELECTOR_AUDIT_2026-09-24.md` (commit 814c8b9a20f76cde5611c4f2c3698d85c6e5ce6c).
+
 ## 2026-09-24 — U5 / N3–N5 LITERATURE GATE CLOSED
 
 The targeted literature audit is now sharper. N3 (full-group finite-coefficient uniqueness) is **HISTORICAL / SUPERSEDED** as a novelty source: Labute Proposition 6/Theorem 4 already gives the all-level crossed-derivation criterion and unique Demushkin orientation, and Quadrelli (2024) Lemma 2.9 restates the finite-level generator-value lifting formulation. N4 (exact factorization through Q_k=G/P_{k+1}) remains **OPEN / LOAD-BEARING**. The modern quotient-inheritance result requires an already Kummerian orientation and an extra restriction-surjectivity hypothesis; it does not state the present finite candidate-selector theorem. N5 (q-blind, functorial finite selector on bare Q_k) remains **OPEN / DECISIVE**; no audited source states this exact theorem.
