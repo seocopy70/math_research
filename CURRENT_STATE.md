@@ -2898,3 +2898,36 @@ Status:
 - no Fox computation authorized or performed in this gate.
 
 Next authorized gate: write and independently verify the variation lemma and the socle-injectivity lemma, then perform exact line-by-line comparison with Labute Theorem 4/Proposition 6 and modern Kummerian quotient results.
+
+
+## 2026-09-24 — FINAL LITERATURE GATE: FINITE-WINDOW THEOREM NOT IDENTIFIED IN CHECKED LITERATURE
+
+The final literature comparison was completed against Labute (1967), Efrat–Quadrelli (2019), Quadrelli–Weigel (2020, 2022), and the later 2024 oriented/Kummerian treatment.
+
+Established prior art:
+- Labute's classical result gives existence/uniqueness of the canonical Demuškin orientation and the cocycle/Kummerian criterion.
+- Efrat–Quadrelli and subsequent work formulate Kummerianity by surjectivity of H^1(G,Z_p(theta)/p^n) -> H^1(G,F_p), and give quotient-inheritance results, but with hypotheses involving an already-given orientation and an additional restriction-map condition.
+- The checked literature also uses the Zassenhaus filtration and finite quotients for other cohomological/Galois-theoretic purposes.
+
+Exact comparison:
+No checked source states, in the required classification-free/q-blind input category, the theorem that for Q_k=G/P_{k+1} the intrinsic predicate
+K_k(Q_k,rho): H^1(Q_k,Z/3^k(rho)) -> H^1(Q_k,F_3) is surjective
+recognizes exactly rho=chi_G mod 3^k for every k>=2, with the factorization through Q_k proved for arbitrary candidate rho rather than starting from an already-given chi.
+
+The nearest known results therefore do NOT collapse the present theorem by direct citation. In particular, Proposition 2.10-type quotient inheritance cannot simply be invoked: its hypotheses concern a pre-existing oriented Kummerian pair and a surjective restriction map, whereas the present construction's point is to recognize the orientation from the finite quotient without supplying it in advance.
+
+Novelty decision: **PASS / CONDITIONAL — literature-based novelty survives the checked sources, but publication-level novelty must be phrased narrowly and verified against any additional references discovered during peer review.** The broad claim “canonical Demuškin orientation is new” remains closed/non-novel.
+
+The theorem statement is therefore fixed as the finite-window recognition/factorization theorem:
+\[
+\boxed{\mathsf K_k(G/P_{k+1},\rho)\iff \rho=\chi_G\bmod 3^k,\qquad k\ge2,}
+\]
+where the predicate is defined intrinsically on Q_k and no presentation coordinate, q, dualizing action, or pre-supplied canonical orientation is part of the selector input. The proof architecture is: (i) arbitrary-candidate crossed-cocycle factorization through Q_k; (ii) Kummerian existence for the canonical orientation; (iii) coefficient-extension variation identity; (iv) PD^2 socle injectivity; (v) cup-product nondegeneracy for uniqueness.
+
+Status after this Gate:
+- mathematical theorem: **PASS / CLOSED**
+- exact finite-window novelty against checked literature: **PASS / CONDITIONAL**
+- theorem statement: **FIXED**
+- new computational/math attacks: **CLOSED** unless a referee/literature check identifies a direct prior equivalent theorem.
+
+Key sources checked: Labute 1967; Efrat–Quadrelli 2019; Quadrelli–Weigel 2020 and 2022; Quadrelli 2024.
