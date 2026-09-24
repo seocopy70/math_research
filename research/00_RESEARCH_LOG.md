@@ -2,6 +2,44 @@
 
 The two load-bearing U5 lemmas are now proved intrinsically.
 
+**Variation lemma.** If two level-\(k\) candidate characters reducing to \(\rho_{k-1}\) differ by \(1+3^{k-1}\nu\), \(\nu\in H^1(G,\mathbf F_3)\), then the corresponding coefficient-extension connecting maps satisfy
+\[
+\delta_{\rho_k'}-\delta_{\rho_k}
+=
+\iota_{k-1}\circ(\nu\smile-).
+\]
+This is a Yoneda/coefficient-extension naturality statement and is independent of presentation, Fox coordinates, \(q\), and the choice of \(H^2\)-generator.
+
+**PD² socle-injectivity lemma.** On the canonical induction branch \(\rho_{k-1}=\chi\bmod3^{k-1}\), the socle inclusion
+\[
+\iota_{k-1}:\mathbf F_3\hookrightarrow \mathbf Z/3^{k-1}(\chi_{k-1})
+\]
+induces an injection on \(H^2\). PD² duality identifies the dual map with the reduction of invariant sections of the untwisted dual coefficient module, which is surjective.
+
+Hence if two candidate characters both satisfy the global finite Kummer predicate, their connecting maps vanish identically; the variation formula and injectivity imply \(\nu\smile v=0\) for every \(v\in H^1(G,\mathbf F_3)\). Demuškin cup nondegeneracy gives \(\nu=0\). Induction from the established \(k=2\) base case proves intrinsic uniqueness at every \(k\).
+
+Together with U1-U2, which give finite-depth factorization through \(Q_k=G/P_{k+1}\), and the known existence of the canonical Kummerian orientation, this yields
+\[
+\boxed{\mathsf K_k(Q_k,\rho)\Longleftrightarrow \rho=\chi_G\bmod3^k}
+\]
+for every \(k\ge2\).
+
+Classification:
+- U5 variation lemma: **PASS / CLOSED**
+- U5 PD² socle-injectivity: **PASS / CLOSED**
+- U5 intrinsic uniqueness: **PASS / CLOSED**
+- N4 finite-window factorization: **PASS / CLOSED**
+- N5 q-blind finite selector theorem: **PASS / CLOSED**
+- overall novelty: **OPEN / CONDITIONAL**
+
+No Fox computation was reopened. The remaining task is the final literature novelty comparison: determine whether this exact bare-\(Q_k\), q-blind selector/factorization statement is an immediate corollary or equivalent reformulation of an existing theorem.
+
+Record: \`research/U5_INTRINSIC_FINITE_SELECTOR_AUDIT_2026-09-24.md\`.
+
+## 2026-09-24 — U5 INTRINSIC UNIQUENESS CLOSED / FINITE-WINDOW SELECTOR THEOREM
+
+The two load-bearing U5 lemmas are now proved intrinsically.
+
 **Variation lemma.** If two level-(k) candidate characters reducing to (ho_{k-1}) differ by (1+3^{k-1}
 u), (
 uin H^1(G,mathbf F_3)), then the corresponding coefficient-extension connecting maps satisfy
