@@ -1,4 +1,27 @@
-## 2026-09-24 — B2 / k=4 CLOSED LOCALLY
+## 2026-09-24 — U1–U4 CRITICAL AUDIT / U5 ACTIVE
+
+The uniform finite-depth program has been critically audited. U1 is **PASS/CLOSED** by the independent semidirect-product proof (P_j(A_k\rtimes U_1)=3^{j-1}A_k\rtimes U_j), giving (P_{k+1}=1). U2 is **PASS/CLOSED**: every crossed cocycle factors through (Q_k=G/P_{k+1}), yielding the canonical (H^1) identification.
+
+U3 remains **PASS/CLOSED**, but the proof has been corrected: basis-vector lifting yields (F_i\in3A_k), and repeated lifting/valuation induction yields (F_i\in3^mA_k) for every (m), hence (F_i=0). The previously written (I\subset3I\) Nakayama argument is **HISTORICAL/SUPERSEDED**. The mod-3 (H^1) generator-value hypothesis must be explicit.
+
+U4 remains **PASS/LOCAL** for the standard presentation, but the earlier all-k (4-r_{k-1}) recurrence is **FAIL/CLOSED**. The correct coefficient is (2+\rho_k(x_2)^{-1}); its inverse expansion recovers the next digit on the canonical branch. This does not establish presentation-free uniqueness.
+
+Therefore the active load-bearing gate is
+\[
+\boxed{U5=\text{intrinsic, presentation-free, q-blind finite selector}}
+\]
+with Object/Input/Functoriality/Gauge/Orientation-bridge/Separation/Novelty/Stop audit required before further computation.
+
+Current classification:
+- U1: **PASS/CLOSED**
+- U2: **PASS/CLOSED**
+- U3: **PASS/CLOSED** (corrected proof)
+- U4: **PASS/LOCAL**
+- U5: **OPEN/LOAD-BEARING**
+- Uniform B2: **OPEN/DECISIVE**
+- No (t_2) route is revived.
+
+Next authorized gate: define the intrinsic finite predicate on ((Q_k,\rho)), prove its naturality, and compare its finite-coefficient quotient inheritance line-by-line with the audited Kummerian/cyclotomic literature.\n\n## 2026-09-24 — B2 / k=4 CLOSED LOCALLY
 
 After critical correction of the k=3 record, the authorized k=4 finite-window gate was executed for the standard rank-four (q=3) Demushkin group. The mod-81 obstruction is
 \[
