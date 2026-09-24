@@ -2,27 +2,23 @@
 
 The U5 load-bearing gate is now closed.
 
-For (Q_k=G/P_{k+1}) and the intrinsic predicate
-[
-mathsf K_k(Q_k,ho):H^1(Q_k,mathbf Z/3^k(ho))	o H^1(Q_k,mathbf F_3)
-	ext{ surjective},
-]
+For \(Q_k=G/P_{k+1}\) and the intrinsic predicate
+\[
+\mathsf K_k(Q_k,\rho):H^1(Q_k,\mathbf Z/3^k(\rho))\to H^1(Q_k,\mathbf F_3)
+\text{ surjective},
+\]
 the coefficient-extension variation lemma gives
-[
-delta_{ho_k'}-delta_{ho_k}
+\[
+\delta_{\rho_k'}-\delta_{\rho_k}
 =
-iota_{k-1}circ(
-usmile-)
-]
-when (ho_k'=ho_k(1+3^{k-1}
-u)). PD² duality gives injectivity of the socle map on (H^2) along the canonical branch. Hence global vanishing for two candidates forces (
-usmile H^1(G,mathbf F_3)=0), and Demuškin cup nondegeneracy forces (
-u=0). Together with the established (k=2) base case, this proves intrinsic uniqueness at every (k).
+\iota_{k-1}\circ(\nu\smile-)
+\]
+when \(\rho_k'=\rho_k(1+3^{k-1}\nu)\). PD² duality gives injectivity of the socle map on \(H^2\) along the canonical branch. Hence global vanishing for two candidates forces \(\nu\smile H^1(G,\mathbf F_3)=0\), and Demuškin cup nondegeneracy forces \(\nu=0\). Together with the established \(k=2\) base case, this proves intrinsic uniqueness at every \(k\).
 
-U1-U2 already provide arbitrary-candidate factorization of crossed cocycles through (Q_k); known Kummerian orientation supplies existence. Thus
-[
-oxed{mathsf K_k(Q_k,ho)Longleftrightarrow ho=chi_Gmod3^k,quad kge2.}
-]
+U1-U2 already provide arbitrary-candidate factorization of crossed cocycles through \(Q_k\); known Kummerian orientation supplies existence. Thus
+\[
+\boxed{\mathsf K_k(Q_k,\rho)\Longleftrightarrow \rho=\chi_G\bmod3^k,\quad k\ge2.}
+\]
 
 Classification:
 - U5 variation lemma: **PASS/CLOSED**
@@ -33,11 +29,9 @@ Classification:
 - Uniform B2 theorem: **PASS/CLOSED**
 - Overall novelty: **OPEN / CONDITIONAL**
 
-The canonical orientation itself remains known; the remaining Gate is only publication-level novelty: line-by-line determine whether the exact bare-(Q_k), q-blind selector/factorization theorem is already an immediate corollary or equivalent reformulation of existing literature. No Fox route is reopened.
+The canonical orientation itself remains known; the remaining Gate is only publication-level novelty: line-by-line determine whether the exact bare-\(Q_k\), q-blind selector/factorization theorem is already an immediate corollary or equivalent reformulation of existing literature. No Fox route is reopened.
 
-Record: `research/U5_INTRINSIC_FINITE_SELECTOR_AUDIT_2026-09-24.md` (commit 814c8b9a20f76cde5611c4f2c3698d85c6e5ce6c).
-
-
+Record: \`research/U5_INTRINSIC_FINITE_SELECTOR_AUDIT_2026-09-24.md\`.
 
 ## 2026-09-21 — B2 FINITE-WINDOW PROGRAM: K=2 PASSES LOCALLY
 
