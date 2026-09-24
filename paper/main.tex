@@ -18,7 +18,7 @@ Let
 \[
 G=\langle x_1,x_2,x_3,x_4 \mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle.
 \]
-The canonical orientation is known from Labute's theory of Demuskin groups and from later Kummerian formulations. Our question is whether its reduction modulo 3^k can be recognized from Q_k=G/P_{k+1} without supplying the orientation as input.
+The canonical orientation is classical: see Labute's classification and orientation criterion \cite{Labute1967}, and the Kummerian reformulation of Efrat--Quadrelli \cite{EfratQuadrelli2019}. Our question is whether its reduction modulo 3^k can be recognized from Q_k=G/P_{k+1} without supplying the orientation as input.
 
 \begin{theorem}[Finite-window recognition]
 For every k>=2 and every rho:Q_k to (Z/3^k Z)^times,
@@ -80,13 +80,13 @@ On the canonical branch, PD2 duality makes H^2(G,F_3) to H^2(G,A_{k-1}(chi)) inj
 Existence of chi_G with the Kummerian lifting property is classical. Factorization through Q_k was proved above. For uniqueness, reduce a candidate successively to level 2. The standard calculation gives rho_2=chi_G mod 9. Inductively, the candidate and chi_G mod 3^k have the same reduction and both satisfy the predicate; intrinsic uniqueness gives equality.
 
 \section{Previous work and novelty boundary}
-The canonical orientation, global Kummerian characterization, and finite-level generator lifting are classical. The present result is narrower: it starts from the finite quotient Q_k and an arbitrary candidate rho, proves automatic factorization of the relevant twisted cocycles through Q_k, and uses the intrinsic Kummer predicate as a recognition rule. The checked literature did not yield an exact theorem in this bare-Q_k, arbitrary-candidate formulation. This is a conditional novelty statement, not an absolute priority claim.
+The canonical orientation, global Kummerian characterization, and finite-level generator lifting are classical \cite{Labute1967,EfratQuadrelli2019}. The broader cyclotomic-orientation framework and structural consequences are developed in \cite{QuadrelliWeigel2020,QuadrelliWeigel2022}. The present result is narrower: it starts from the finite quotient Q_k and an arbitrary candidate rho, proves automatic factorization of the relevant twisted cocycles through Q_k, and uses the intrinsic Kummer predicate as a recognition rule. The checked literature corpus did not yield an exact theorem in this bare-$Q_k$, arbitrary-candidate formulation. This is a conditional novelty statement, not an absolute priority claim.
 
 \section{Limitations}
 The theorem is for the fixed rank-four q=3 group. q-blind means q is absent from selector input, not uniformity in q. P_{k+1} is sufficient; minimality is open. The final predicate is intrinsic although the standard presentation is used as a local calculation.
 
 \section{Conclusion}
-The result separates a classical infinite-group existence theorem from a finite recognition principle:
+The result separates a classical infinite-group existence theorem from a finite recognition principle. It should therefore be read as a theorem about the information required by a selector, not as a new construction of the canonical orientation:
 \[
 G/P_{k+1} \quad+\quad \text{intrinsic Kummer lifting}
 \quad\Longrightarrow\quad chi_G\pmod {3^k}.
