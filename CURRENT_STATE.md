@@ -1,3 +1,23 @@
+## 2026-09-24 — U5 / N3–N5 LITERATURE GATE CLOSED
+
+The targeted literature audit is now sharper. N3 (full-group finite-coefficient uniqueness) is **HISTORICAL / SUPERSEDED** as a novelty source: Labute Proposition 6/Theorem 4 already gives the all-level crossed-derivation criterion and unique Demushkin orientation, and Quadrelli (2024) Lemma 2.9 restates the finite-level generator-value lifting formulation. N4 (exact factorization through Q_k=G/P_{k+1}) remains **OPEN / LOAD-BEARING**. The modern quotient-inheritance result requires an already Kummerian orientation and an extra restriction-surjectivity hypothesis; it does not state the present finite candidate-selector theorem. N5 (q-blind, functorial finite selector on bare Q_k) remains **OPEN / DECISIVE**; no audited source states this exact theorem.
+
+Recent checks of Blumer–Quadrelli (arXiv:2603.15464v2) and Pál–Quick (2026) found no exact finite Q_k selector result. Therefore the efficient next step is the intrinsic U5 proof, with finite-window factorization/recognition kept separate from the already-known full-group canonical orientation theorem. No new Fox computation is authorized.
+
+Active state:
+- U1 PASS/CLOSED
+- U2 PASS/CLOSED
+- U3 PASS/CLOSED
+- U4 PASS/LOCAL
+- U5 OPEN/LOAD-BEARING
+- N3 HISTORICAL/SUPERSEDED
+- N4 OPEN/LOAD-BEARING
+- N5 OPEN/DECISIVE
+- Uniform B2 OPEN/DECISIVE
+- Novelty OPEN/CONDITIONAL
+
+Record: research/U5_INTRINSIC_FINITE_SELECTOR_AUDIT_2026-09-24.md.
+
 ## 2026-09-24 — U5 PRE-CHECK COMPLETE / U5 OPEN
 
 The intrinsic finite predicate is fixed as
