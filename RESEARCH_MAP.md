@@ -3315,3 +3315,11 @@ Classification:
 - Zassenhaus-window minimality: OPEN
 
 This supersedes the previous "OPEN / ENVIRONMENTAL VERIFICATION GAP" build status.
+
+
+## 2026-09-26 — SUCCESSOR AUDIT CORRECTION
+The successor branch audit of `followup_merged.tex` closes the mixed-commutator factorization gate categorically: (T_n(G)=G/P_n(G)) is a reflector onto (P_n=1) pro-(p) groups and therefore preserves free-product coproducts after truncation. Thus the kernel in (T_n(G_1*_pG_2)) is exactly (P_n) of the free product of the factor truncations, so mixed commutators occur at total Zassenhaus weight at least (n) and are killed by (S_k) at (n=p^{k-1}+1).
+
+The sharpness theorem in the uploaded draft remains OPEN pending a local repair: canonical ((1-p^f)^{-1}) is not surjective onto (U_1) for (f>1), but the theorem survives using (z(x_1)=1) for (f<k). The broad (mathcal{ET}_p^{rig}) positive class remains OPEN; finite free products of Demushkin blocks are supported.
+
+Record: `research/FOLLOWUP_MERGED_AUDIT_2026-09-26.md`.
