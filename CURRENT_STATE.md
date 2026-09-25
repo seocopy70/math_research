@@ -959,3 +959,32 @@ The manuscript bibliography was independently checked against publisher/arXiv re
 Final manuscript commit: `d74bf5f1d40f120c41e4dc4d4c204bfc3794bb77`.
 GitHub Actions workflow `36148729343` completed successfully. The final PDF is 13 pages; extracted artifact SHA-256: `584ee648c8b1e5ff1291b97df742012ab01783a586c045dda676af2e77d05508`.
 Appendices A–D, author, theorem, and corrected bibliography were independently checked in the downloaded PDF. The publication build is now closed; remaining research questions are novelty/minimality, not compilation or missing proof appendices.
+
+## 2026-09-26 — FINAL TYPO-FIX CI REBUILD CLOSED
+
+The previously open environmental gap is now closed. The post-typo manuscript commit 455f0426dfdbebd939650f6828eecc0bc630dd7e ("paper: correct Demuskin spelling in abstract") triggered GitHub Actions run 36154558321 for .github/workflows/paper-build.yml.
+
+The run completed successfully. The latex job passed checkout, manuscript compilation, PDF verification, submission-package generation, PDF upload, arXiv-source-package upload, and full-package upload.
+
+Artifacts from this exact source commit:
+- PDF artifact: finite-window-kummer-recognition-pdf, id 10872634056
+- source package artifact: finite-window-kummer-recognition-source, id 10872693867
+- full submission package artifact: finite-window-kummer-recognition-full, id 10872459395
+
+The extracted final PDF is 13 pages and has SHA-256 438bd2c8e88927918f83f5742eae2859da12b9916cb029f7700b34e4b74eab2e.
+The full submission package declares the same PDF hash and main.tex hash afc585a76138409e51ffb2d8c8ec609da2cebf250bb7924f9cb39466fe477de1.
+The source and full packages contain the same 23,584-byte main.tex content.
+
+Thus the exact requested identity is now established: corrected source -> same CI run -> corrected PDF + packages.
+
+Classification:
+- typo correction: PASS / CLOSED
+- exact source identity: PASS / CLOSED
+- fresh CI PDF build: PASS / CLOSED
+- source/PDF/package consistency: PASS / CLOSED
+- submission-package generation: PASS / CLOSED
+- mathematical theorem status: PASS / CLOSED
+- publication novelty: OPEN / CONDITIONAL
+- Zassenhaus-window minimality: OPEN
+
+This supersedes the previous "OPEN / ENVIRONMENTAL VERIFICATION GAP" build status.
