@@ -953,3 +953,9 @@ Publication-facing Appendices A–D have been inserted into `paper/main.tex` at 
 
 ## 2026-09-25 — PUBLICATION PACKAGE CLEANUP
 The manuscript bibliography was independently checked against publisher/arXiv records. The Mináč–Rogelstad–Tân citation was corrected to the 2016 Israel Journal of Mathematics article and given DOI 10.1007/s11856-016-1310-0; the U1 text now cites it explicitly. The unused `paper/references.bib` was removed, and an Appendix A notation typo was fixed. Research-log record: `70530dad18f9a09accd57e432db6e270ff0083a9`.
+
+
+## 2026-09-25 — FINAL PDF BUILD VERIFIED
+Final manuscript commit: `d74bf5f1d40f120c41e4dc4d4c204bfc3794bb77`.
+GitHub Actions workflow `36148729343` completed successfully. The final PDF is 13 pages; extracted artifact SHA-256: `584ee648c8b1e5ff1291b97df742012ab01783a586c045dda676af2e77d05508`.
+Appendices A–D, author, theorem, and corrected bibliography were independently checked in the downloaded PDF. The publication build is now closed; remaining research questions are novelty/minimality, not compilation or missing proof appendices.
