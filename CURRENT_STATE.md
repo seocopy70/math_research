@@ -1,3 +1,31 @@
+## 2026-09-25 — EXACT BUILD GATE CLOSED / U3 LATEX SYNTAX FIX
+
+The exact-commit build audit was finally completed far enough to expose the real issue. The TeX environment was not the blocker: after installing `texlive-latex-extra` and `poppler-utils`, GitHub Actions checked out exactly `962be77ed62040ed5707e3c59c54de6585a0086d` and failed in the first `pdflatex` pass at line 149 with
+
+`LaTeX Error: Command \\end{equation*} invalid in math mode`
+
+The source inspection shows the U3 proposition opened a display `\\[` but omitted the matching `\\]` before `\\end{proposition}`. This is a manuscript/LaTeX syntax defect, not a mathematical defect.
+
+The one-line source correction was applied to `paper/main.tex` and independently built on GitHub Actions with the same source content. Corrected manuscript commit: `058955142df5f831ec09d2b5e46461b0424e65e6`.
+
+Independent corrected build:
+- three pdflatex passes: **PASS**
+- final build warnings/errors matching audit: **none**
+- PDF: **PASS**, 10 pages, 284649 bytes
+- PDF SHA-256: `8056c70a42fdf6f32534bf4dc843c6264cc9bb1bdb282ade705c33f9fe64567f`
+- GitHub Actions run: `36145439668`, conclusion **success**
+- artifact: `fixed-u3-pdf`
+
+Classification:
+- exact `962be77` source identity: **PASS / CLOSED**
+- exact `962be77` clean build: **FAIL / CLOSED** (source syntax defect identified)
+- corrected manuscript build: **PASS / CLOSED**
+- mathematical U1-U5/theorem status: unchanged; no mathematical correction was introduced
+- publication novelty: **OPEN / CONDITIONAL**
+- Zassenhaus-window minimality: **OPEN**
+
+The corrected source is now the publication-working version. The next step is not another U1-U5 loop; it is final manuscript/PDF review and publication preparation.
+
 ## 2026-09-25 — POST-ASSEMBLY U1/U5c TIGHTENING
 
 The latest manuscript pass found no new mathematical failure. Two referee-level gaps were tightened in `paper/main.tex`:
