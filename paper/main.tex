@@ -32,24 +32,75 @@ For every k>=2 and every principal-unit rho:Q_k to U_{1,k}:=1+3A_k,
 The proof separates five logically distinct steps: the finite semidirect-product filtration, arbitrary-candidate factorization, the one-relator lifting obstruction, the base-level identification, and intrinsic PD$^2$ uniqueness.
 
 \section{Finite window and arbitrary-candidate factorization}
-Put A_k=Z/3^k Z and U_1=1+3A_k, and let S_k=A_k\rtimes U_1. For U_j=1+3^j A_k and T_j=3^{j-1}A_k\rtimes U_j, the lower 3-central filtration satisfies
+Put $A_k=\mathbf Z/3^k\mathbf Z$, $U_j=1+3^jA_k$ for $j\ge1$, with $U_j=1$ for $j\ge k$, and
 \[
-P_j(S_k)=T_j, \qquad P_{k+1}(S_k)=1.
+S_k=A_k\rtimes U_1,\qquad (a,u)(b,v)=(a+ub,uv).
 \]
-If $\rho:G\to U_{1,k}$ and $z\in Z^1(G,A_k(\rho))$, then $g\mapsto(z(g),\rho(g))$ is a homomorphism $G\to S_k$. Hence it kills $P_{k+1}(G)$, so every relevant twisted cocycle factors through $Q_k$.
+Let $P_1(S_k)=S_k$ and $P_{j+1}(S_k)=P_j(S_k)^3[P_j(S_k),S_k]$.
 
-\begin{proposition}[Finite Kummer criterion]
-For a one-relator pro-$3$ group $G=F/\overline{\langle\!\langle r\rangle\!\rangle}$ and a principal-unit candidate $\rho$, the map
+\begin{lemma}[U1: finite-depth semidirect filtration]
+For $1\le j\le k+1$, put $T_j=3^{j-1}A_k\rtimes U_j$. Then
 \[
-H^1(G,A_k(rho))\to H^1(G,F_3)
+P_j(S_k)=T_j,\qquad P_{k+1}(S_k)=1.
 \]
-is surjective exactly when every prescribed mod-3 generator-value vector lifts through the twisted relator equation
+\end{lemma}
+
+\begin{proof}
+For $(a,u)\in T_j$, write $u=1+3^jt$. Then
 \[
-z(r)=\sum_i \left.\frac{\partial r}{\partial x_i}\right|_rho z(x_i)=0.
+(a,u)^3=((1+u+u^2)a,u^3),
 \]
+and $1+u+u^2\in3A_k$. Moreover $U_j^3=U_{j+1}$ for $j<k$ by successive $3$-adic digit lifting. Hence $T_j^3\subseteq3^jA_k\rtimes U_{j+1}$.
+
+A direct commutator calculation gives $[T_j,S_k]\subseteq3^jA_k$. Conversely, with $[x,y]=x^{-1}y^{-1}xy$ and $4\in U_1$,
+\[
+[(a,1),(0,4)]=((4^{-1}-1)a,1).
+\]
+Since $4^{-1}-1=-3/4$ is $3$ times a unit, these commutators generate all of $3^jA_k$. Thus $[T_j,S_k]=3^jA_k$. Induction from $P_1=T_1$ now gives
+\[
+P_{j+1}(S_k)=T_j^3[T_j,S_k]=3^jA_k\rtimes U_{j+1}=T_{j+1}.
+\]
+At $j=k$, both factors are trivial.
+\end{proof}
+
+\begin{lemma}[U2: arbitrary-candidate factorization]
+Let $G$ be any pro-$3$ group, $\rho:G\to U_{1,k}$ a character, and
+$z\in Z^1(G,A_k(\rho))$. Then $z$ and $\rho$ factor through
+$Q_k=G/P_{k+1}(G)$, and inflation gives a canonical isomorphism
+\[
+H^1(Q_k,A_k(\bar\rho))\xrightarrow{\sim}H^1(G,A_k(\rho)).
+\]
+\end{lemma}
+
+\begin{proof}
+The crossed-cocycle identity is equivalent to $\psi(g)=(z(g),\rho(g))$ being a homomorphism $G\to S_k$. Functoriality of the lower $3$-central series and U1 give $\psi(P_{k+1}(G))=1$. Thus both components factor through $Q_k$. The same argument for coboundaries identifies $B^1$ on both sides, proving the cohomology isomorphism.
+\end{proof}
+
+\section{Finite Kummer criterion for a minimal one-relator presentation}
+Let $F$ be free pro-$3$ on $x_1,\dots,x_d$, let $G=F/\overline{\langle\!\langle r\rangle\!\rangle}$, and assume $r\in\Phi(F)$. For a principal-unit character $\rho:G\to U_{1,k}$, write $F_i(\rho)\in A_k$ for the twisted Fox evaluation, with the convention
+\[
+z(r)=\sum_iF_i(\rho)z(x_i).
+\]
+
+\begin{proposition}[U3: finite Kummer/Fox criterion]
+Under this minimality hypothesis,
+\[
+\mathsf K_k(G,\rho)\Longleftrightarrow F_i(\rho)=0
+\quad(1\le i\le d).
 \end{proposition}
 
-The proof is a finite Nakayama iteration over $A_k$; no Hensel argument is required. The principal-unit restriction is essential because reduction modulo $3$ must give the trivial coefficient action on $\mathbb F_3$.
+\begin{proof}
+Minimality gives $H^1(G,\mathbf F_3)\cong\mathbf F_3^d$ by generator values. A vector $a=(a_i)\in A_k^d$ is the value vector of a crossed cocycle exactly when $\sum_iF_i(\rho)a_i=0$.
+
+Assume every mod-$3$ vector lifts. For the lift of the $i$-th basis vector, write $a_i=1+3b_i$ and $a_j=3b_j$ for $j\ne i$. The relation equation first gives $F_i\in3A_k$. If all $F_j\in3^mA_k$, the same equation gives
+\[
+0=F_i(1+3b_i)+\sum_{j\ne i}F_j(3b_j)
+=F_i+3\sum_jF_jb_j,
+\]
+so $F_i\in3^{m+1}A_k$. Induction from $m=0$ to $m=k$ gives $F_i=0$. Conversely, if all $F_i=0$, every generator-value vector in $A_k^d$ satisfies the relation, so every mod-$3$ class lifts.
+\end{proof}
+
+The principal-unit restriction makes the reduction of the coefficient action trivial modulo $3$. The argument is valuation induction, not the earlier informal Nakayama step.
 
 \section{Coordinate identification at the base level}
 For
@@ -64,19 +115,69 @@ rho(x_2)=(1-3)^{-1}\pmod {3^k}.
 Thus the values at $k=2,3,4$ are $4\bmod9$, $13\bmod27$, and $40\bmod81$.
 
 \section{Intrinsic uniqueness}
-Suppose two level-k candidates reduce to the same rho_{k-1}. Write
+The next three results are the load-bearing U5 argument.
+
+\begin{lemma}[U5a: reduction]
+If $\mathsf K_k(G,\rho_k)$ holds, then $\mathsf K_{k-1}(G,\rho_{k-1})$ holds after reduction modulo $3^{k-1}$.
+\end{lemma}
+
+\begin{proof}
+Reduce a crossed cocycle modulo $3^{k-1}$. A level-$k$ lift of any class in $H^1(G,\mathbf F_3)$ therefore gives a level-$(k-1)$ lift of the same class.
+\end{proof}
+
+\begin{lemma}[U5b: coefficient-extension variation]
+Suppose $\rho_k$ and $\rho_k'$ lift the same $\rho_{k-1}$ and
 \[
-rho_k'=rho_k(1+3^{k-1}nu), \qquad \nu\in H^1(G,\mathbb F_3).
+\rho_k'=\rho_k(1+3^{k-1}\nu),\qquad \nu\in Z^1(G,\mathbf F_3).
 \]
-The coefficient extension
+Let $\delta_{\rho_k}$ and $\delta_{\rho_k'}$ be the connecting maps of the corresponding coefficient extensions. Then
 \[
-0\to A_{k-1}(rho_{k-1})\xrightarrow{iota}A_k(rho_k)\to F_3\to0
+\boxed{\delta_{\rho_k'}-\delta_{\rho_k}=\iota_*\circ(\nu\smile -),}
 \]
-has connecting map delta_{rho_k}. The Yoneda variation formula is
+where $\iota_*:H^2(G,\mathbf F_3)\to H^2(G,A_{k-1}(\rho_{k-1}))$ is induced by $\iota(1)=3^{k-2}$.
+\end{lemma}
+
+\begin{proof}
+Choose the common set-theoretic section $s:\mathbf F_3\to A_k$ with $s(1)=1$. For $c\in Z^1(G,\mathbf F_3)$, the connecting class is represented by the defect
 \[
-delta_{rho_k'}-delta_{rho_k}=iota\circ(nu\smile -).
+g s(c(h))+s(c(g))-s(c(gh)).
 \]
-On the canonical branch, PD$^2$ duality makes $H^2(G,\mathbb F_3)\to H^2(G,A_{k-1}(\chi))$ injective: its dual is the surjective reduction map on $H^0$. Hence if both connecting maps vanish, nu\smile v=0 for every v in H^1(G,F_3). Demu\v{s}kin cup-product nondegeneracy gives $\nu=0$.
+The two coefficient actions agree modulo $3^{k-1}$. Their difference on the lifted value $s(c(h))$ is the socle term $3^{k-1}\nu(g)c(h)$. Under the identification of the socle of the kernel with $\mathbf F_3$ via $1\mapsto3^{k-2}$, this additional defect is precisely the cochain representing $\iota(\nu\smile c)$. The cocycle identities show that the difference is a $2$-cocycle, and changing the section changes it by a coboundary. Therefore the displayed identity holds in cohomology.
+\end{proof}
+
+\begin{lemma}[U5c: PD$^2$ socle injectivity]
+For the canonical orientation $\chi$, the inclusion
+\[
+\iota:\mathbf F_3\hookrightarrow A_{k-1}(\chi_{k-1}),\qquad
+1\mapsto3^{k-2},
+\]
+induces an injection
+\[
+\iota_*:H^2(G,\mathbf F_3)\hookrightarrow
+H^2(G,A_{k-1}(\chi_{k-1})).
+\]
+\end{lemma}
+
+\begin{proof}
+Let $D=\mathbf Q_3/\mathbf Z_3(\chi)$ be the discrete dualizing module. Finite-module PD$^2$ duality gives
+\[
+H^2(G,M)^\vee\cong\operatorname{Hom}_G(M,D).
+\]
+For $M=A_{k-1}(\chi_{k-1})$ this Hom group is cyclic of order $3^{k-1}$, while for $M=\mathbf F_3$ it is $\mathbf F_3$, since $D[3]\cong\mathbf F_3$ with trivial residual action. Under these identifications, precomposition with $\iota$ is the reduction map
+$\mathbf Z/3^{k-1}\twoheadrightarrow\mathbf F_3$. Thus the dual of $\iota_*$ is surjective and $\iota_*$ is injective.
+\end{proof}
+
+\begin{proposition}[U5: intrinsic uniqueness]
+If $\rho_k$ and $\rho_k'$ both satisfy $\mathsf K_k$ and both reduce to $\chi_{k-1}$, then $\rho_k=\rho_k'$.
+\end{proposition}
+
+\begin{proof}
+The level-$k$ predicate is equivalent to vanishing of the connecting map. Hence U5b gives
+\[
+0=\delta_{\rho_k'}-\delta_{\rho_k}=\iota_*(\nu\smile -).
+\]
+By U5c, $\nu\smile v=0$ for every $v\in H^1(G,\mathbf F_3)$. The Demu\v{s}kin cup pairing is nondegenerate, hence $\nu=0$.
+\end{proof}
 
 \section{Proof of the theorem}
 Existence of chi_G with the Kummerian lifting property is classical. Factorization through Q_k was proved above. For uniqueness, reduce a candidate successively to level 2. The standard calculation gives rho_2=chi_G mod 9. Inductively, the candidate and chi_G mod 3^k have the same reduction and both satisfy the predicate; intrinsic uniqueness gives equality.
