@@ -988,3 +988,20 @@ Classification:
 - Zassenhaus-window minimality: OPEN
 
 This supersedes the previous "OPEN / ENVIRONMENTAL VERIFICATION GAP" build status.
+
+
+## 2026-09-26 — SUCCESSOR PAPER SCOPE FROZEN/DEFINED
+
+The existing publication manuscript is now explicitly **FROZEN** with respect to the new successor branch. No ET_p or new sharpness/obstruction material is to be inserted into the existing paper.
+
+The successor paper combines the corrected sharp finite-window draft with the ET_p obstruction/uniformity program. Its active axes are: (i) sharp finite-window factorization; (ii) abstract-Q_k information loss and q-collapse; (iii) free-pro-p/ET_p impossibility of unique orientation recovery from abstract Q_k alone; (iv) weak Kummerian selector sets, with BP as a separate refinement if needed; and (v) the still-open rigid ET_p uniform-window theorem.
+
+Current successor-branch classifications:
+- scope/integration decision: **PASS / CLOSED**
+- free-pro-p abstract-Q_k impossibility: **PASS / LOCAL**
+- q-collapse: **PASS / LOCAL**
+- rigid ET_p uniform window n(k)=p^(k-1)+1: **OPEN**
+- recognition minimality among arbitrary carriers: **OPEN**
+- publication novelty: **OPEN / CONDITIONAL**
+
+The mixed-commutator issue is load-bearing: no uniform-window theorem is claimed until D_1 *_p D_2 is explicitly tested at small k and the general filtration/image argument is proved.
