@@ -40,18 +40,22 @@ Record: \`research/U5_INTRINSIC_FINITE_SELECTOR_AUDIT_2026-09-24.md\`.
 
 The two load-bearing U5 lemmas are now proved intrinsically.
 
-**Variation lemma.** If two level-(k) candidate characters reducing to (ho_{k-1}) differ by (1+3^{k-1}
+**Variation lemma.** If two level-(k) candidate characters reducing to (
+ho_{k-1}) differ by (1+3^{k-1}
 u), (
 uin H^1(G,mathbf F_3)), then the corresponding coefficient-extension connecting maps satisfy
 [
-delta_{ho_k'}-delta_{ho_k}
+delta_{
+ho_k'}-delta_{
+ho_k}
 =
 iota_{k-1}circ(
 usmile-).
 ]
 This is a Yoneda/coefficient-extension naturality statement and is independent of presentation, Fox coordinates, (q), and the choice of (H^2)-generator.
 
-**PD² socle-injectivity lemma.** On the canonical induction branch (ho_{k-1}=chimod3^{k-1}), the socle inclusion
+**PD² socle-injectivity lemma.** On the canonical induction branch (
+ho_{k-1}=chimod3^{k-1}), the socle inclusion
 [
 iota_{k-1}:mathbf F_3hookrightarrow mathbf Z/3^{k-1}(chi_{k-1})
 ]
@@ -63,7 +67,9 @@ u=0). Induction from the established (k=2) base case proves intrinsic uniqueness
 
 Together with U1-U2, which give finite-depth factorization through (Q_k=G/P_{k+1}), and the known existence of the canonical Kummerian orientation, this yields
 [
-oxed{mathsf K_k(Q_k,ho)Longleftrightarrow ho=chi_Gmod3^k}
+oxed{mathsf K_k(Q_k,
+ho)Longleftrightarrow 
+ho=chi_Gmod3^k}
 ]
 for every (kge2).
 
@@ -1944,7 +1950,8 @@ The proposed uniqueness argument for the intrinsic delta3 zero-selector was wron
 ## 2026-09-20 — HA61-B5-14: GLOBAL ZERO-MAP QUANTIFIER CORRECTION
 
 A critical quantifier correction supersedes the fixed-(f) no-go interpretation in B5-13. For fixed (f), the variation (
-u\mapsto\nu\smile f) has a 3-dimensional kernel in rank four, so (Z_3(f)) can have 27 points. But the research selector is the stronger condition (delta_{3,ho_3}\equiv0) as a map on all of (H^1(G,\mathbf Z/9(\rho_2))). If the universal variation identity holds and the reduction (H^1(G,\mathbf Z/9(\rho_2))\to H^1(G,\mathbf F_3)) is surjective, then two global zero maps imply (
+u\mapsto\nu\smile f) has a 3-dimensional kernel in rank four, so (Z_3(f)) can have 27 points. But the research selector is the stronger condition (delta_{3,
+ho_3}\equiv0) as a map on all of (H^1(G,\mathbf Z/9(\rho_2))). If the universal variation identity holds and the reduction (H^1(G,\mathbf Z/9(\rho_2))\to H^1(G,\mathbf F_3)) is surjective, then two global zero maps imply (
 u\smile v=0) for every (v\in H^1(G,\mathbf F_3)); Demuškin cup nondegeneracy forces (
 u=0). Thus **global zero-map uniqueness is PASS / LOCAL conditional on the variation identity and reduction-surjectivity hypotheses**. The fixed-(f) 27-point argument is **HISTORICAL / SUPERSEDED as a no-go for the global selector**. Universal variation, existence from finite filtered/relation input, finite-window factorization through (G/P_4\) / (D_{10}), and Serre/Kummer novelty separation remain **OPEN / DECISIVE**. The (t_2) and diagonal quotient routes remain closed and are not revived.
 
@@ -2215,3 +2222,15 @@ Therefore N/P_4 is nonzero. Also N^3[N,G] is contained in P_4, while N is contai
 Classification update: N=P_3 intersect ker(chi) admissibility PASS/CLOSED; relative Frattini quotient nonzero PASS/CLOSED; restriction nonsurjectivity PASS/CLOSED; automatic Prop. 2.10 shortcut through this natural kernel-contained N FAIL/CLOSED. This does not assert a universal impossibility for every specially chosen N; that stronger statement is unnecessary.
 
 Record: research/PROP_2_10_RESTRICTION_SURJECTIVITY_HARD_ATTACK_2026-09-25.md, commit 5f6ec4c98d7831ef61a73bb97ea58176d4096df2.
+
+## 2026-09-25 — PROP. 2.10 PRIOR-ART AUDIT / NEGATIVE RESULT SEPARATION
+
+A targeted literature audit was performed for the negative result that, in the rank-4 p=3 Demushkin case, the restriction map H^1(G,F_3) -> H^1(P_3,F_3)^G is not surjective, so Quadrelli (2024) Proposition 2.10 cannot be applied automatically with N=P_3.
+
+The exact source statement was checked line-by-line. Proposition 2.10 assumes an already Kummerian oriented pair, N subset ker(theta), and surjectivity of the restriction map. Its proof explicitly uses the dual injection N/N^p[G,N] -> G/Phi(G). For N=P_3, our k=2 argument gives the opposite: P_3 subset Phi(G), while the source P_3/P_3^3[P_3,G] is nonzero because the published Zassenhaus dimension formula gives dim_F3(P_3/P_4)=c_3=(4^3-4)/3=20, and P_3^3[P_3,G] subset P_4. Hence the dual map is zero on a nonzero source and restriction is not surjective.
+
+Prior-art comparison found the ingredients are known: Proposition 2.10 itself, standard Frattini/Zassenhaus facts, and the Demushkin graded-dimension formula (Mináč–Rogelstad–Tân 2014). Targeted searches did not locate a source explicitly stating this exact composite application to N=P_3 or N=P_{k+1} as a Demushkin obstruction.
+
+Therefore this negative result is not claimed as a new theorem. Its publication value is narrower: it is a PASS / CONDITIONAL prior-art separation lemma showing that one concrete known quotient-inheritance route does not subsume the finite-window theorem. The direct-collapse route through Proposition 2.10 is FAIL / CLOSED.
+
+Record: research/PROP_2_10_PRIOR_ART_AUDIT_2026-09-25.md (commit 0670bf431dcd17fa205ef33c8979d3c055b4263c).
