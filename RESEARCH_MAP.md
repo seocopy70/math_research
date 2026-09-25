@@ -3224,3 +3224,25 @@ P_{k+1} is established as a sufficient finite depth. Minimality is **OPEN**: the
 - Minimal-depth claim: **OPEN**
 
 Record: research/N1_N5_CRITICAL_REVIEW_2026-09-24.md (critical review controlling update).
+
+
+## 2026-09-25 — AUTHORITATIVE UPDATE: PROP. 2.10 RESTRICTION-SURJECTIVITY SHORTCUT CLOSED
+
+The proposed follow-up problem asking whether Quadrelli (2024) Proposition 2.10 automatically applies with N=P_{k+1} has now been attacked at the structural level.
+
+Prop. 2.10 requires, besides an already Kummerian oriented pair and N⊂ker(theta), the surjectivity
+H^1(G,F_3) -> H^1(N,F_3)^G.
+Its proof identifies the dual condition with injectivity of
+N/N^3[G,N] -> G/Phi(G).
+For N=P_{k+1}, one has P_{k+1}⊂Phi(G), so this inclusion-induced map is zero. In the present infinite finitely generated Demushkin family, P_{k+1}/P_{k+2}≠0, while P_{k+1}^3[P_{k+1},G]⊂P_{k+2}. Hence
+P_{k+1}/P_{k+1}^3[P_{k+1},G] != 0,
+so the dual map is not injective and the restriction map is not surjective.
+
+Decision:
+- Problem 2 automatic restriction-surjectivity: FAIL / CLOSED.
+- Prop. 2.10 as a shortcut to the finite-window theorem: CLOSED.
+- N2 literature objection: sharpened from “not directly identified” to “the stated extra hypothesis fails for N=P_{k+1} in the present family.”
+- U1–U5 theorem: unchanged, PASS / CLOSED.
+- Exact publication novelty: OPEN / CONDITIONAL; this closes one prior-art route but does not prove absolute novelty.
+
+Record: research/PROP_2_10_RESTRICTION_SURJECTIVITY_HARD_ATTACK_2026-09-25.md (commit 5439b06cf45faa6042225ab3e338997c10f2301a).
