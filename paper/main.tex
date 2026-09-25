@@ -55,26 +55,38 @@ P_{3^{k-1}}(S_k)=3^{k-1}A_k\ne1.
 \end{lemma}
 
 \begin{proof}
-For $n=1$ the assertion is $P_1=S_k$. We use the standard recursive form of the
-Zassenhaus filtration
+We use the Jennings--Lazard description of the Zassenhaus filtration
 \[
-P_n=P_{\lceil n/3\rceil}^{\,3}
-\prod_{i+j=n}[P_i,P_j]\qquad(n\ge2).
+P_n(S_k)=\prod_{i3^j\ge n}\gamma_i(S_k)^{3^j}.
 \]
-Suppose inductively that the asserted formula holds for all smaller indices, and
-write $e=e(n)$. By the definition of $e(n)=\lceil\log_3 n\rceil$, one has
-$e(\lceil n/3\rceil)=e-1$ for $e\ge1$. The cube of
-$3^{e-1}A_k\rtimes U_e$ has translation part $3^eA_k$ and unit part
-$U_{e+1}$: the translation is generated already by
-$(3^{e-1}a,1)^3=(3^ea,1)$, while $U_e^3=U_{e+1}$.
-For the commutator terms, translations commute with translations, and
+First, with $\gamma_1(S_k)=S_k$, a direct commutator calculation gives
 \[
-[3^aA_k,U_{b+1}]\subseteq3^{a+b+1}A_k,
+\gamma_2(S_k)=[S_k,S_k]=3A_k,
+\qquad
+\gamma_i(S_k)=3^{i-1}A_k\quad(i\ge2),
 \]
-while the unit factors commute with each other. If $i+j=n$, these
-commutator contributions lie in $3^eA_k$. Thus the right side is contained
-in $3^eA_k\rtimes U_{e+1}$, while the cube term already generates both
-factors. Hence equality follows.
+where the last equality follows inductively from
+$[3^{i-1}A_k,S_k]=3^iA_k$ (until the subgroup becomes trivial).
+For the $i=1$ factors, the $3^j$-power subgroup is
+\[
+S_k^{3^j}=3^jA_k\rtimes U_{j+1}.
+\]
+Indeed, pure translations give $3^jA_k$, pure units give
+$U_1^{3^j}=U_{j+1}$, and the binomial formula for
+$(a,u)^{3^j}$ shows that no smaller translation valuation occurs.
+
+Let $e=e(n)$. The $i=1$ factor with $3^j\ge n$ first occurs at $j=e$,
+and hence already contributes
+$3^eA_k\rtimes U_{e+1}$.
+For every $i\ge2$ and every $j$ with $i3^j\ge n$, one has
+$i-1+j\ge e$; hence
+\[
+\gamma_i(S_k)^{3^j}=3^{i-1+j}A_k\subseteq3^eA_k.
+\]
+Thus the product is exactly
+$3^eA_k\rtimes U_{e+1}$. At $n=3^{k-1}$ this is
+$3^{k-1}A_k\rtimes U_k$, which is nontrivial, while at
+$n=3^{k-1}+1$ one has $e(n)=k$, so the subgroup is trivial.
 \end{proof}
 
 \begin{lemma}[U2: arbitrary-candidate factorization]
@@ -84,10 +96,25 @@ $Q_k=G/P_{3^{k-1}+1}(G)$, and inflation gives a canonical isomorphism
 \[
 H^1(Q_k,A_k(\bar\rho))\xrightarrow{\sim}H^1(G,A_k(\rho)).
 \]
+Moreover inflation also gives
+\[
+H^1(Q_k,\mathbf F_3)\xrightarrow{\sim}H^1(G,\mathbf F_3),
+\]
+and these identifications make the two finite Kummer lifting maps commute.
 \end{lemma}
 
 \begin{proof}
-The crossed-cocycle identity is equivalent to $\psi(g)=(z(g),\rho(g))$ being a homomorphism $G\to S_k$. Functoriality of the Zassenhaus filtration and U1 give $\psi(P_{3^{k-1}+1}(G))=1$. Thus both components factor through $Q_k$. The same argument for coboundaries identifies $B^1$ on both sides, proving the cohomology isomorphism.
+The crossed-cocycle identity is equivalent to $\psi(g)=(z(g),\rho(g))$ being a homomorphism $G\to S_k$. Functoriality of the Zassenhaus filtration and U1 give
+$\psi(P_{3^{k-1}+1}(G))=1$. Thus both components factor through $Q_k$.
+The same argument for coboundaries identifies $B^1$ on both sides, proving the
+twisted $H^1$ isomorphism.
+
+For trivial coefficients, $P_{3^{k-1}+1}(G)\subseteq P_2(G)=\Phi(G)$.
+Hence every continuous homomorphism $G\to\mathbf F_3$ kills the quotient
+kernel, and inflation is an isomorphism on $H^1(-,\mathbf F_3)$.
+Naturality of coefficient reduction gives the commutative square
+between the twisted and untwisted $H^1$ groups. Therefore surjectivity of the
+lifting map is equivalent on $G$ and on $Q_k$.
 \end{proof}
 
 \section{Finite Kummer criterion for a minimal one-relator presentation}
@@ -104,7 +131,7 @@ Under this minimality hypothesis,
 \end{proposition}
 
 \begin{proof}
-For a vector $a=(a_i)\in A_k^d$, the crossed-cocycle relation is equivalent to the single relation equation
+For a vector $a=(a_i)\in A_k^d$, the crossed-cocycle relation is equivalent, by the left Fox identity for the chosen convention, to the single relation equation
 $\sum_iF_i(\rho)a_i=0$. Because $\rho\equiv1\pmod3$, reduction modulo $3$ of the coefficient action is trivial, and minimality identifies $H^1(G,\mathbf F_3)$ with the generator-value vectors $\mathbf F_3^d$. If the lifting map is surjective, then for each basis vector there is a lift with $a_i\equiv1\pmod3$ and $a_j\equiv0\pmod3$ for $j\ne i$. Writing $a_i=1+3b_i$ and $a_j=3b_j$ first gives $F_i\in3A_k$. More generally, if all $F_j\in3^mA_k$, then
 \[
 0=F_i(1+3b_i)+\sum_{j\ne i}F_j(3b_j)
