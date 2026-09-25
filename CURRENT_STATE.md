@@ -2997,3 +2997,24 @@ Current publication status:
 - minimal depth: OPEN.
 
 This is the controlling manuscript status until a referee-level source identifies a direct equivalent theorem.
+
+
+## 2026-09-25 — PROP. 2.10 HARD ATTACK: RESTRICTION-SURJECTIVITY FAILS FOR N=P_{k+1}
+
+A structural attack was made on the main remaining quotient-inheritance objection. Quadrelli (2024), Proposition 2.10 requires
+H^1(G,F_3) -> H^1(N,F_3)^G
+to be surjective. The proof identifies its dual with
+N/N^3[G,N] -> G/Phi(G).
+For N=P_{k+1}, the source maps trivially because P_{k+1}⊂Phi(G). But P_{k+1}/P_{k+2}≠0 in the infinite finitely generated Demushkin group, and
+P_{k+1}^3[P_{k+1},G]⊂P_{k+2}.
+Thus the dual source is nonzero, so the dual map is not injective and the restriction map is not surjective.
+
+Classification:
+- automatic Prop. 2.10 hypothesis for N=P_{k+1}: FAIL / CLOSED;
+- Prop. 2.10 direct-collapse route: CLOSED;
+- finite-window theorem U1–U5: PASS / CLOSED;
+- exact publication novelty: OPEN / CONDITIONAL.
+
+This is distinct from the U1–U2 twisted-coefficient factorization theorem; the failed restriction map uses trivial coefficients on P_{k+1} and is the extra hypothesis of Prop. 2.10. No closed branch is revived.
+
+Record: research/PROP_2_10_RESTRICTION_SURJECTIVITY_HARD_ATTACK_2026-09-25.md.
