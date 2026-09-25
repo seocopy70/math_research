@@ -1,4 +1,21 @@
+## 2026-09-25 — PAPER U1–U5 PROOF AUDIT STARTED
+
+The actual `paper/main.tex` has now been audited against the authoritative U1–U5 research records. The underlying research theorem remains PASS/CLOSED, but the manuscript proof is not yet submission-ready.
+
+Findings:
+- U1: research PASS/CLOSED; manuscript underproved because the semidirect filtration induction is only asserted.
+- U2: mathematically sound, but the canonical H^1 inflation isomorphism should be stated/proved explicitly.
+- U3: OPEN/LOAD-BEARING in manuscript. The current generic one-relator statement is too broad unless minimality is assumed, and the corrected iterative proof is omitted.
+- U4: PASS/LOCAL. The manuscript asserts the standard coordinate calculation without showing it; only the k=2 base case is needed for the intrinsic induction.
+- U5: OPEN/LOAD-BEARING in manuscript. The variation identity, exact coefficient maps, PD² duality convention, induction reduction, and existence-on-Q_k bridge must be written out.
+- The theorem assembly is logically coherent once these lemmas are supplied.
+
+Authoritative audit: `research/PAPER_U1_U5_PROOF_AUDIT_2026-09-25.md`.
+
+No closed research branch was reopened. No new Fox computation was performed.
+
 ## 2026-09-25 — PROP. 2.10 PRIOR-ART SEPARATION AUDIT
+
 
 The negative result for N=P_3 was compared against the primary Proposition 2.10 source and the Zassenhaus-dimension literature. Quadrelli (2024) Proposition 2.10 requires restriction-surjectivity as an explicit hypothesis and uses the dual injection N/N^3[G,N] -> G/Phi(G). For the rank-4 p=3 Demushkin group, P_3 subset Phi(G), while dim_F3(P_3/P_4)=20 and P_3^3[P_3,G] subset P_4. Therefore restriction H^1(G,F_3) -> H^1(P_3,F_3)^G is not surjective.
 
