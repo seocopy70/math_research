@@ -2747,3 +2747,26 @@ Classification:
 - successor-paper publication novelty: **OPEN / CONDITIONAL**
 
 No modification of the frozen publication manuscript is authorized by this entry.
+
+
+## 2026-09-26 — FOLLOW-UP MERGED AUDIT: SHARPNESS REPAIR + MIXED-COMMUTATOR CLOSURE
+
+The uploaded successor draft `followup_merged.tex` was audited without modifying the frozen publication manuscript.
+
+- The source has a LaTeX defect: `\Fp` is undefined. A temporary definition `\Fp=\mathbb F_p` gives a clean three-pass local build (3 pages), with one non-fatal overfull hbox. **FAIL/CLOSED (source syntax)**.
+- Section I crossed-cocycle algebra is consistent after the previously recorded prefactor correction; solving the relation gives (a_2=(1-p^f)^{-1}), hence (4,13,40) for (p=3,f=1). **PASS/LOCAL**.
+- Section II contains a false step: for (f>1), canonical (a_2=(1-p^f)^{-1}) is not a generator of (U_1), so “choose (a_2=1+p) while (F_i=0)” is invalid. The sharpness theorem is salvageable: for (f<k), canonical (ho) with (z(x_1)=1) already witnesses (x_1^{p^{k-1}}mapsto p^{k-1}
+e0); for (fge k), the existing (x_3) witness works. **Written proof FAIL/CLOSED; theorem OPEN pending repair**.
+- Section III must restrict “no predicate depending only on (Q_k)” to an **isomorphism-natural/functorial selector on the bare abstract quotient**. Free pro-(p) groups are Kummerian for every orientation, so the obstruction remains genuine.
+- Section IV (q)-collapse passes locally: (x_1^{p^f}in P_{p^f}\setminus P_{p^f+1}) gives the exact threshold (fge k). **PASS/LOCAL**.
+- Section V mixed commutator gate closes categorically. For (T_n(G)=G/P_n(G)), every map to a pro-(p) group with (P_n=1) factors uniquely through (T_n(G)); hence (T_n) is a reflector. Since free pro-(p) product is a coproduct,
+  [
+  T_n(G_1*_pG_2)cong T_n(G_1)*_pT_n(G_2)/P_n(T_n(G_1)*_pT_n(G_2)).
+  ]
+  Thus the kernel (N) is exactly (P_n(H)), (H=Q_n(G_1)*_pQ_n(G_2)), and mixed commutators have total Zassenhaus weight at least (n). At (p=3,k=2,n=4), terms such as ([P_1,P_3]) and ([P_2,P_2]) are therefore killed by (P_4(S_2)=1). **PASS/CLOSED**.
+- Positive uniformity is supported for the precise subclass of finite free pro-(p) products of Demushkin groups with canonical orientations; free products preserve Kummerianity and factorwise uniqueness gives the product orientation. The broader current (mathcal{ET}_p^{rig}) wording remains **OPEN** until its recursive class is defined precisely. The Newton/J block-diagonal algorithmic claim should be separated unless an explicit input model is supplied.
+- Literature spot-checks support the free-product Zassenhaus/co-product structure and Kummerian free-product facts. 
+
+Audit artifact: `research/FOLLOWUP_MERGED_AUDIT_2026-09-26.md`, commit `e4fca7e63a282d0f4b009299fbf906582270c8ef`.
+
+Current classification: I **PASS/LOCAL**; II **OPEN** pending repair; III **PASS/LOCAL** after naturality qualification; IV **PASS/LOCAL**; V mixed commutator **PASS/CLOSED**; V pure Demushkin free-product uniformity **PASS/CLOSED**; V broad (mathcal{ET}_p^{rig}) **OPEN**; LaTeX source **FAIL/CLOSED**; novelty **OPEN/CONDITIONAL**.
