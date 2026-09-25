@@ -109,11 +109,14 @@ r=x_1^3[x_1,x_2][x_3,x_4],
 \]
 the standard odd-$p$ Demu\v{s}kin calculation gives
 \[
-rho(x_1)=rho(x_3)=rho(x_4)=1, \qquad
-rho(x_2)=(1-3)^{-1}\pmod {3^k}.
+\rho(x_1)=\rho(x_3)=\rho(x_4)=1,\qquad
+\rho(x_2)=(1-3)^{-1}\pmod{3^k}.
 \]
-Thus the values at $k=2,3,4$ are $4\bmod9$, $13\bmod27$, and $40\bmod81$.
-
+For the induction below only the base level $k=2$ is needed. Modulo $9$,
+\[
+\rho_2(x_1,x_2,x_3,x_4)=(1,4,1,1).
+\]
+This is a presentation-dependent local calculation; U5 is the intrinsic part of the proof.
 \section{Intrinsic uniqueness}
 The next three results are the load-bearing U5 argument.
 
@@ -180,8 +183,16 @@ By U5c, $\nu\smile v=0$ for every $v\in H^1(G,\mathbf F_3)$. The Demu\v{s}kin cu
 \end{proof}
 
 \section{Proof of the theorem}
-Existence of chi_G with the Kummerian lifting property is classical. Factorization through Q_k was proved above. For uniqueness, reduce a candidate successively to level 2. The standard calculation gives rho_2=chi_G mod 9. Inductively, the candidate and chi_G mod 3^k have the same reduction and both satisfy the predicate; intrinsic uniqueness gives equality.
+The canonical orientation $\chi_G$ is Kummerian by the classical Demu\v{s}kin
+theory, so its reduction satisfies the finite predicate at every level.
+U2 identifies this predicate on $G$ with the predicate on $Q_k$.
 
+Conversely, suppose $\mathsf K_k(Q_k,\rho_k)$ holds. U2 transfers the
+predicate to $G$, and U5a transfers it to every lower level. At level $2$,
+U4 gives $\rho_2=\chi_G\bmod9$. For $j\ge3$, the candidate and
+$\chi_G\bmod3^j$ have the same reduction to level $j-1$ and both satisfy
+the level-$j$ predicate. U5 gives equality. Induction yields
+$\rho_k=\chi_G\pmod{3^k}$.
 \section{Literature boundary and contribution}
 The existence and uniqueness of the canonical Demu\v{s}kin orientation, and the corresponding all-level Kummerian criterion, are classical. Labute gives the canonical orientation in the classification of Demu\v{s}kin groups \cite{Labute1967}; the cohomological and cocycle formulations of Kummerianity are developed in Efrat--Quadrelli and subsequent work \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. We therefore do not claim the canonical orientation, or the global Kummerian criterion, as new.
 
