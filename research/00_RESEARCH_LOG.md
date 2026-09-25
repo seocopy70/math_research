@@ -2452,3 +2452,76 @@ Classification:
 - theorem assembly: **PASS / PROVISIONAL**
 - exact publication novelty: **OPEN / CONDITIONAL**
 - Zassenhaus window minimality: **OPEN**
+
+## 2026-09-25 — EXACT 962be77 FINAL MANUSCRIPT AUDIT / BUILD GATE
+
+The exact manuscript commit requested for the final gate was independently resolved:
+`962be77ed62040ed5707e3c59c54de6585a0086d` (`paper/main.tex`, blob
+`4dd8400a0f0d107ec6aa58eaa04ed69c8a0be6af`). The commit is real and its
+message is `paper: make U1 valuation proof explicit and source U5c PD2 duality`.
+
+### Source-level end-to-end audit
+
+The exact `paper/main.tex` at this SHA was read in four ranges and checked against
+the authoritative U1-U5 state.
+
+- **U1:** the manuscript now uses the actual Jennings--Lazard Zassenhaus product,
+  not the lower-3-central recursion. The claimed finite window is
+  `P_{3^{k-1}+1}`, and the proof explicitly derives the power valuation and
+  `S_k^{3^j}=3^j A_k \rtimes U_{j+1}`.
+- **U2:** arbitrary crossed cocycles and arbitrary candidate characters factor
+  through the corrected Zassenhaus quotient; the trivial-coefficient H^1 inflation
+  step is explicitly included.
+- **U3:** the finite Kummer/Fox criterion is stated only under the minimal
+  one-relator hypothesis and uses valuation induction rather than the superseded
+  informal Nakayama argument.
+- **U4:** only the k=2 base selector is used; the coordinate calculation gives
+  `(1,4,1,1)` and is not used as an all-k presentation-level uniqueness claim.
+- **U5a/U5b/U5c:** reduction, coefficient-extension variation, and PD^2
+  socle-injectivity are explicitly stated. The U5b sign convention is fixed at
+  cochain level. U5c identifies the dual of the socle inclusion with reduction
+  `A_{k-1}->F_3`, with the finite-coefficient PD^2 duality anchored to Wilkes
+  (2020), §1.
+- **Theorem assembly:** existence is imported only as classical Kummerianity of
+  the canonical orientation; uniqueness is obtained by U4 + U5 induction.
+  No circular definition of the selector through `chi` was found.
+- **Novelty wording:** the manuscript explicitly disclaims novelty for the
+  canonical orientation/global Kummerian criterion and keeps the finite-window
+  publication claim narrow and conditional.
+- **Minimality:** explicitly left OPEN; no unsupported optimal-window claim remains.
+
+### Independent literature spot-check
+
+Wilkes' §1 states the finite-module PD^2 duality and orientation-character
+convention used by U5c. Quadrelli (2024), Proposition 2.10, indeed requires
+an already Kummerian oriented pair plus the restriction-surjectivity hypothesis;
+the manuscript's separation language is therefore appropriately conditional.
+The audited sources support the stated classical prior-art boundary.
+
+### Build automation result
+
+A temporary GitHub Actions audit workflow was created on a disposable branch
+based exactly on `962be77`, explicitly checking out that SHA, running three
+`pdflatex` passes, checking the PDF/logs, and uploading the PDF/log artifact.
+The branch was then reset to the exact audited commit to leave no manuscript
+change behind. The connector did not expose a workflow run/status for this
+push-triggered audit (no run/status was returned), so **no false claim of a
+fresh GitHub Actions PDF build is made**.
+
+The local container has `pdflatex` and `latexmk`, but the environment cannot
+resolve `github.com`; therefore an exact local checkout could not be performed
+from the public repository. The earlier repository record of an 8-page,
+three-pass build applies to the preceding corrected commit, not to 962be77.
+
+### Final classification
+
+- Exact source identity: **PASS / CLOSED**
+- U1-U5 source consistency: **PASS / CLOSED**
+- Theorem assembly / hypothesis-conclusion discipline: **PASS / CLOSED**
+- Novelty wording discipline: **PASS / CLOSED / CONDITIONAL**
+- Zassenhaus-window minimality: **OPEN**
+- Exact fresh PDF build at 962be77: **OPEN / ENVIRONMENTAL VERIFICATION GAP**
+
+No new mathematical branch is opened. The next action is publication preparation
+only, unless a genuine build environment becomes available.
+
