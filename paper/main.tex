@@ -367,6 +367,168 @@ G/P_{3^{k-1}+1} \quad+\quad \text{intrinsic Kummer lifting}
 \quad\Longrightarrow\quad \chi_G\pmod {3^k}.
 \]
 
+
+\appendix
+\section{Detailed verification of the finite-depth calculation}
+This appendix records the valuation steps used in Lemma U1, including the
+boundary of the finite window. Put $A_k=\mathbb Z/3^k\mathbb Z$ and
+$U_s=1+3^sA_k$.
+
+For $u=1+3^s b\in U_s$, $s\ge1$, the binomial expansion gives
+\[
+u^{3^j}-1
+=3^j3^sb+\sum_{m\ge2}\binom{3^j}{m}3^{sm}b^m.
+\]
+For $s+j<k$, the first term has valuation $s+j$. The remaining terms have
+strictly larger $3$-adic valuation, so
+\[
+(1+3^sb)^{3^j}\equiv1+3^{s+j}b\pmod{3^k}.
+\]
+If $s+j\ge k$, the same valuation estimate shows that the power is $1$
+modulo $3^k$. Consequently
+\[
+U_1^{3^j}=U_{j+1}.
+\]
+For the translation subgroup,
+\[
+(a,1)^{3^j}=(3^ja,1),
+\]
+and the semidirect-product multiplication shows that every $3^j$-th
+power has translation component divisible by $3^j$. Hence
+\[
+S_k^{3^j}=3^jA_k\rtimes U_{j+1}.
+\]
+
+For $i\ge2$, direct commutator induction gives
+\[
+\gamma_i(S_k)=3^{i-1}A_k.
+\]
+Let $e=\lceil\log_3 n\rceil$. If $i3^j\ge n$, then
+$i-1+j\ge e$, and therefore
+\[
+\gamma_i(S_k)^{3^j}=3^{i-1+j}A_k\subseteq3^eA_k.
+\]
+The $i=1,j=e$ factor already supplies
+$3^eA_k\rtimes U_{e+1}$, so the Jennings--Lazard product is exactly
+\[
+P_n(S_k)=3^eA_k\rtimes U_{e+1}.
+\]
+The two adjacent indices at the endpoint are worth recording explicitly:
+\[
+P_{3^{k-1}}(S_k)=3^{k-1}A_k\ne1,\qquad
+P_{3^{k-1}+1}(S_k)=3^kA_k\rtimes U_{k+1}=1.
+\]
+Thus the stated finite window is not obtained by replacing
+$3^{k-1}+1$ with $3^{k-1}$.
+
+\section{Independent base-level enumeration}
+At $k=2$ there are exactly $3^4=81$ principal-unit candidates, since
+each $a_i$ lies in $\{1,4,7\}\subset\mathbb Z/9\mathbb Z$.
+The four twisted Fox equations reduce this finite search symbolically,
+without any appeal to the classification theorem.
+
+Because $a_2$ is a unit, $F_2=0$ is equivalent to
+\[
+a_1-1=0,
+\]
+so $a_1=1$. This leaves $3^3=27$ candidates. Next,
+$F_3=F_4=0$ is equivalent to
+\[
+a_4-1=0,\qquad a_3-1=0,
+\]
+so $a_3=a_4=1$, leaving three candidates. Finally
+\[
+F_1=0\iff 1+2a_2=0\pmod9,
+\]
+whose unique solution in $\{1,4,7\}$ is $a_2=4$.
+
+The reduction of the candidate set can therefore be recorded as
+\[
+81\longrightarrow27\longrightarrow3\longrightarrow1,
+\]
+with the successive constraints
+\[
+F_2=0,\qquad (F_3,F_4)=0,\qquad F_1=0.
+\]
+The surviving tuple is
+\[
+(a_1,a_2,a_3,a_4)=(1,4,1,1).
+\]
+This enumeration is a finite verification of the base step; the theorem
+does not rely on a computer search.
+
+\section{Cochain-level verification of the coefficient variation}
+We record the calculation behind U5b so that the extension comparison is
+reproducible independently of the presentation-specific Fox computation.
+Use
+\[
+0\to A_{k-1}(\rho_{k-1})
+\xrightarrow{j}A_k(\rho_k)
+\xrightarrow{\pi}\mathbb F_3\to0,
+\qquad j(a)=3a,
+\]
+and the common section $s(1)=1$. For $c\in Z^1(G,\mathbb F_3)$,
+\[
+d_sc(g,h)=g\!\cdot s(c(h))-s(c(gh))+s(c(g)).
+\]
+If
+\[
+\rho_k'=\rho_k(1+3^{k-1}\nu),
+\qquad \nu\in Z^1(G,\mathbb F_3),
+\]
+then
+\[
+g\!\cdot' s(c(h))-g\!\cdot s(c(h))
+=3^{k-1}\nu(g)c(h).
+\]
+Therefore
+\[
+d_s'c-d_sc
+=3^{k-1}(\nu\smile c)
+=j\!\left(3^{k-2}(\nu\smile c)\right).
+\]
+With
+\[
+\iota:\mathbb F_3\hookrightarrow A_{k-1},
+\qquad \iota(1)=3^{k-2},
+\]
+this becomes
+\[
+[d_s'c]-[d_sc]=\iota_*[\nu\smile c].
+\]
+Thus the difference of connecting maps is exactly
+\[
+\delta_{\rho_k'}-\delta_{\rho_k}
+=\iota_*\circ(\nu\smile-).
+\]
+Changing the set-theoretic section changes each connecting cochain by a
+coboundary, so the displayed cohomology identity is section-independent.
+The sign is fixed by the convention
+\[
+(\nu\smile c)(g,h)=\nu(g)c(h).
+\]
+
+\section{Proof--computation boundary and reproducibility record}
+The manuscript uses computation only as finite verification of identities
+whose mathematical proofs are given in the main text. In particular:
+
+\begin{enumerate}[label=(\roman*)]
+\item the U1 filtration is established symbolically from the
+Jennings--Lazard product and explicit valuation estimates;
+\item the $k=2$ base case has a complete $81$-candidate symbolic
+enumeration, summarized in Appendix B;
+\item the U5b comparison is a cochain calculation, not a numerical test;
+\item the U5c injectivity statement is deduced from finite-coefficient
+$PD^2$ duality and the explicit dual of the socle inclusion.
+\end{enumerate}
+
+Accordingly, no numerical experiment is used as a substitute for a proof.
+The finite enumeration in Appendix B is included to make the only
+presentation-level exhaustive check transparent and independently
+reproducible. The research repository records broader exploratory
+computations and failed or superseded windows separately; those exploratory
+artifacts are not used as premises of the theorem stated here.
+
 \begin{thebibliography}{99}
 \bibitem{MinacRogelstadTan2014}
 J. Mináč, M. Rogelstad and N. D. Tân, \emph{How fast do Zassenhaus filtrations of pro-$p$-groups descend?}, arXiv:1405.6980 (2014).
