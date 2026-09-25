@@ -2125,3 +2125,29 @@ Decision:
 - minimal depth: **OPEN**.
 
 This entry controls manuscript wording over earlier contradictory novelty labels.
+
+
+## 2026-09-25 — PAPER MANUSCRIPT / LITERATURE MERGE AUDIT
+
+The manuscript `paper/main.tex` was compared against the controlling U5/N1 records and the audited Kummerian/cyclotomic literature. The objective was explicitly to take only supported improvements, not to import unverified claims.
+
+Key manuscript corrections:
+- candidate characters are now explicitly principal-unit characters `rho:Q_k -> U_{1,k}=1+3(Z/3^k)`;
+- the intrinsic finite Kummer predicate is separated from all presentation/Fox coordinates;
+- finite-depth factorization is given its own logical section before the coordinate base-case calculation;
+- classical full-group Kummerian/canonical-orientation results are explicitly treated as known background;
+- q-blindness is defined as absence of q from selector input, not uniformity over the Demushkin family;
+- P_{k+1} is stated as sufficient, with minimality left OPEN;
+- novelty wording is restricted to the exact combined bare-Q_k/arbitrary-candidate/factorization formulation and remains conditional on the audited corpus.
+
+No closed branch was revived, no uniform-in-q theorem was claimed, and no recent uploaded paper was treated as proving the finite selector unless supported by the controlling audit.
+
+Classification:
+- manuscript finite-window theorem: PASS/CLOSED under the current fixed-group hypotheses and U5 proof;
+- classical Kummerian orientation as novelty: HISTORICAL/SUPERSEDED;
+- exact publication novelty: PASS/CONDITIONAL;
+- minimality: OPEN;
+- family-wide generalization: OPEN.
+
+Detailed manuscript audit: `research/PAPER_LITERATURE_MERGE_AUDIT_2026-09-25.md`.
+Commit: `46eaa54ccc34ab7eafa1680624e221653ff885de`.
