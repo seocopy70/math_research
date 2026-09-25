@@ -1,5 +1,7 @@
 \documentclass[11pt]{article}
-\usepackage{amsmath,amssymb,amsthm,mathtools}\n\usepackage{enumitem}\n\usepackage{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{hyperref}
 \title{Finite-Window Kummer Recognition of the Canonical Orientation\\of a Rank-Four Demu\v{s}kin Pro-$3$ Group}
 \author{}
 \date{September 2026}
@@ -10,7 +12,7 @@
 \maketitle
 
 \begin{abstract}
-We study finite-window recognition of the canonical orientation of the fixed rank-four q=3 Demuskin pro-3 group. For the Zassenhaus filtration P_i, put Q_k=G/P_{k+1}. For a principal-unit character $\rho:Q_k\to U_{1,k}:=1+3(\mathbb Z/3^k\mathbb Z)$, let $\mathsf K_k(Q_k,\rho)$ mean that $H^1(Q_k,\mathbb Z/3^k(\rho))\to H^1(Q_k,\mathbb F_3)$ is surjective. We prove that K_k(Q_k,rho) holds exactly for rho=chi_G mod 3^k, for k>=2. The canonical orientation itself is classical; the result is a finite-window recognition statement.
+We study finite-window recognition of the canonical orientation of the fixed rank-four q=3 Demuskin pro-3 group. Let $P_i$ be the Zassenhaus filtration and put $Q_k=G/P_{k+1}$. For a principal-unit character $\rho:Q_k\to U_{1,k}:=1+3(\mathbb Z/3^k\mathbb Z)$, let $\mathsf K_k(Q_k,\rho)$ mean that $H^1(Q_k,\mathbb Z/3^k(\rho))\to H^1(Q_k,\mathbb F_3)$ is surjective. We prove that $\mathsf K_k(Q_k,\rho)$ holds exactly for $\rho=\chi_G\bmod3^k$, for $k\ge2$. The canonical orientation itself is classical; the result is a finite-window recognition statement.
 \end{abstract}
 
 \section{Introduction}
@@ -37,7 +39,7 @@ P_j(S_k)=T_j, \qquad P_{k+1}(S_k)=1.
 If $\rho:G\to U_{1,k}$ and $z\in Z^1(G,A_k(\rho))$, then $g\mapsto(z(g),\rho(g))$ is a homomorphism $G\to S_k$. Hence it kills $P_{k+1}(G)$, so every relevant twisted cocycle factors through $Q_k$.
 
 \begin{proposition}[Finite Kummer criterion]
-For a one-relator pro-3 group G=F/<<r>> and a candidate rho, the map
+For a one-relator pro-$3$ group $G=F/\overline{\langle\!\langle r\rangle\!\rangle}$ and a principal-unit candidate $\rho$, the map
 \[
 H^1(G,A_k(rho))\to H^1(G,F_3)
 \]
@@ -47,24 +49,24 @@ z(r)=\sum_i \left.\frac{\partial r}{\partial x_i}\right|_rho z(x_i)=0.
 \]
 \end{proposition}
 
-The proof is a finite Nakayama iteration over A_k; no Hensel argument is required. The principal-unit restriction is essential because reduction modulo 3 must give the trivial coefficient action on F_3.
+The proof is a finite Nakayama iteration over $A_k$; no Hensel argument is required. The principal-unit restriction is essential because reduction modulo $3$ must give the trivial coefficient action on $\mathbb F_3$.
 
 \section{Coordinate identification at the base level}
 For
 \[
 r=x_1^3[x_1,x_2][x_3,x_4],
 \]
-the standard odd-p Demuskin calculation gives
+the standard odd-$p$ Demu\v{s}kin calculation gives
 \[
 rho(x_1)=rho(x_3)=rho(x_4)=1, \qquad
 rho(x_2)=(1-3)^{-1}\pmod {3^k}.
 \]
-Thus the values at k=2,3,4 are 4 mod 9, 13 mod 27, and 40 mod 81.
+Thus the values at $k=2,3,4$ are $4\bmod9$, $13\bmod27$, and $40\bmod81$.
 
 \section{Intrinsic uniqueness}
 Suppose two level-k candidates reduce to the same rho_{k-1}. Write
 \[
-rho_k'=rho_k(1+3^{k-1}nu), \qquad nu in H^1(G,F_3).
+rho_k'=rho_k(1+3^{k-1}nu), \qquad \nu\in H^1(G,\mathbb F_3).
 \]
 The coefficient extension
 \[
@@ -74,7 +76,7 @@ has connecting map delta_{rho_k}. The Yoneda variation formula is
 \[
 delta_{rho_k'}-delta_{rho_k}=iota\circ(nu\smile -).
 \]
-On the canonical branch, PD2 duality makes H^2(G,F_3) to H^2(G,A_{k-1}(chi)) injective: its dual is the surjective reduction map on H^0. Hence if both connecting maps vanish, nu\smile v=0 for every v in H^1(G,F_3). Demuskin cup-product nondegeneracy gives nu=0.
+On the canonical branch, PD$^2$ duality makes $H^2(G,\mathbb F_3)\to H^2(G,A_{k-1}(\chi))$ injective: its dual is the surjective reduction map on $H^0$. Hence if both connecting maps vanish, nu\smile v=0 for every v in H^1(G,F_3). Demu\v{s}kin cup-product nondegeneracy gives $\nu=0$.
 
 \section{Proof of the theorem}
 Existence of chi_G with the Kummerian lifting property is classical. Factorization through Q_k was proved above. For uniqueness, reduce a candidate successively to level 2. The standard calculation gives rho_2=chi_G mod 9. Inductively, the candidate and chi_G mod 3^k have the same reduction and both satisfy the predicate; intrinsic uniqueness gives equality.
@@ -89,7 +91,7 @@ The theorem is for the fixed rank-four $q=3$ group. ``$q$-blind'' means that $q$
 The result separates a classical infinite-group existence theorem from a finite recognition principle. It should therefore be read as a theorem about the information required by a selector, not as a new construction of the canonical orientation:
 \[
 G/P_{k+1} \quad+\quad \text{intrinsic Kummer lifting}
-\quad\Longrightarrow\quad chi_G\pmod {3^k}.
+\quad\Longrightarrow\quad \chi_G\pmod {3^k}.
 \]
 
 \bibliographystyle{amsplain}
