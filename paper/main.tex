@@ -20,10 +20,10 @@ Let
 \[
 G=\langle x_1,x_2,x_3,x_4 \mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle.
 \]
-An orientation of a pro-$3$ group $H$ is a continuous homomorphism $\theta:H\to1+3\mathbb Z_3$, giving the twisted module $\mathbb Z_3(\theta)$. The oriented group is Kummerian when, for every n>=1, the natural map H^1(H,Z_3(theta)/3^n) to H^1(H,F_3) is surjective; this is the standard Kummerian formulation used by Efrat--Quadrelli and Quadrelli--Weigel \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. Labute proved that every Demushkin group has a unique orientation making it Kummerian, namely the canonical orientation induced by the dualizing module \cite{Labute1967}. Our question is whether its reduction modulo 3^k can be recognized from Q_k=G/P_{k+1} without supplying the orientation as input.
+An orientation of a pro-$3$ group $H$ is a continuous homomorphism $\theta:H\to1+3\mathbb Z_3$, giving the twisted module $\mathbb Z_3(\theta)$. The oriented group is Kummerian when, for every n\ge1, the natural map H^1(H,Z_3(theta)/3^n) to H^1(H,F_3) is surjective; this is the standard Kummerian formulation used by Efrat--Quadrelli and Quadrelli--Weigel \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. Labute proved that every Demushkin group has a unique orientation making it Kummerian, namely the canonical orientation induced by the dualizing module \cite{Labute1967}. Our question is whether its reduction modulo 3^k can be recognized from Q_k=G/P_{k+1} without supplying the orientation as input.
 
 \begin{theorem}[Finite-window recognition]
-For every k>=2 and every principal-unit rho:Q_k to U_{1,k}:=1+3A_k,
+For every k\ge2 and every principal-unit rho:Q_k to U_{1,k}:=1+3A_k,
 \[
 \mathsf K_k(Q_k,rho) \Longleftrightarrow rho=chi_G\pmod {3^k}.
 \]
@@ -106,16 +106,36 @@ For
 \[
 r=x_1^3[x_1,x_2][x_3,x_4],
 \]
-the standard odd-$p$ Demu\v{s}kin calculation gives
+the canonical orientation has
 \[
-\rho(x_1)=\rho(x_3)=\rho(x_4)=1,\qquad
-\rho(x_2)=(1-3)^{-1}\pmod{3^k}.
+\chi(x_1)=\chi(x_3)=\chi(x_4)=1,\qquad
+\chi(x_2)=(1-3)^{-1}\in1+3\mathbf Z_3.
 \]
-For the induction below only the base level $k=2$ is needed. Modulo $9$,
+For the induction below only the base level \(k=2\) is needed. We now verify its reduction directly, rather than appeal to the classification as a black box.
+
+Let \(A_2=\mathbf Z/9\mathbf Z\) and let \(\rho_2:G\to1+3A_2\) be any candidate. Write \(a_i=\rho_2(x_i)\). For the left crossed-cocycle convention
+\(z(gh)=z(g)+\rho_2(g)z(h)\), direct expansion of
+\(r=x_1^3[x_1,x_2][x_3,x_4]\) gives
 \[
-\rho_2(x_1,x_2,x_3,x_4)=(1,4,1,1).
+\begin{aligned}
+F_1&=\frac{a_1^2+a_1a_2+a_2}{a_2},&
+F_2&=\frac{a_1^2(a_1-1)}{a_2},\\
+F_3&=-\frac{a_1^3(a_4-1)}{a_3a_4},&
+F_4&=\frac{a_1^3(a_3-1)}{a_3a_4}.
+\end{aligned}
 \]
-This is a presentation-dependent local calculation; U5 is the intrinsic part of the proof.
+All denominators are units in \(A_2\). By U3, \(\mathsf K_2(G,\rho_2)\) is equivalent to \(F_i=0\) for all \(i\). Since \(a_1,a_2,a_3,a_4\in\{1,4,7\}\), the equations immediately give
+\[
+F_2=0\Rightarrow a_1=1,\qquad
+F_3=F_4=0\Rightarrow a_3=a_4=1,
+\]
+and then
+\[
+F_1=0\Rightarrow 1+2a_2=0\pmod 9
+\Rightarrow a_2=4.
+\]
+Thus every level-\(2\) Kummer candidate is
+\(\rho_2=(1,4,1,1)=\chi\pmod9\). Conversely this candidate is the reduction of the classical canonical Kummerian orientation. This completes the base step without using the desired conclusion itself.
 \section{Intrinsic uniqueness}
 The next three results are the load-bearing U5 argument.
 
@@ -140,17 +160,44 @@ where $\iota_*:H^2(G,\mathbf F_3)\to H^2(G,A_{k-1}(\rho_{k-1}))$ is induced by $
 \end{lemma}
 
 \begin{proof}
-Choose the common set-theoretic section $s:\mathbf F_3\to A_k$ with $s(1)=1$. For $c\in Z^1(G,\mathbf F_3)$, the connecting class is represented by the defect
+For clarity, use the coefficient extension
 \[
-g s(c(h))+s(c(g))-s(c(gh)).
+0\longrightarrow A_{k-1}(\rho_{k-1})
+\xrightarrow{\,j\,}A_k(\rho_k)
+\xrightarrow{\,\pi\,}\mathbf F_3\longrightarrow0,
+\qquad j(a)=3a.
 \]
-The two coefficient actions agree after reduction to $A_{k-1}$. On the common lift $s(c(h))$, their difference is
-$3^{k-1}\nu(g)c(h)$ in $A_k$. The kernel of
-$A_k\to A_{k-1}$ is $3^{k-1}A_k\cong\mathbf F_3$; after identifying this kernel with $\mathbf F_3$ by
-$1\mapsto3^{k-1}$, the defect is the cup-product cochain
-$\nu\smile c$. Passing through the coefficient-extension identification of this kernel with the socle
-$3^{k-2}A_{k-1}\subset A_{k-1}$ gives exactly
-$\iota_*(\nu\smile c)$. The cocycle identities show that the difference is a $2$-cocycle, and changing the section changes it by a coboundary. Therefore the displayed identity holds in cohomology.
+Choose the common set-theoretic section \(s:\mathbf F_3\to A_k\) with \(s(1)=1\). For
+\(c\in Z^1(G,\mathbf F_3)\), the connecting class is represented by
+\[
+d_s c(g,h)
+=g\!\cdot s(c(h))-s(c(gh))+s(c(g)).
+\]
+Because \(\rho_k'=\rho_k(1+3^{k-1}\nu)\), the two actions differ on the common lift by
+\[
+g\!\cdot' s(c(h))-g\!\cdot s(c(h))
+=3^{k-1}\nu(g)c(h)\in A_k.
+\]
+Hence
+\[
+d_s'c-d_sc=3^{k-1}(\nu\smile c)
+=j\!\left(3^{k-2}(\nu\smile c)\right),
+\]
+where the last equality uses the canonical socle inclusion
+\[
+\iota:\mathbf F_3\hookrightarrow A_{k-1},\qquad
+\iota(1)=3^{k-2}.
+\]
+Thus, before passing to cohomology, the difference of the two connecting
+cochains is exactly \(j\circ\iota\circ(\nu\smile c)\). The usual
+connecting-map construction is independent of the chosen section up to a
+coboundary, so the induced cohomology classes satisfy
+\[
+[\delta_{\rho_k'}(c)]-[\delta_{\rho_k}(c)]
+=\iota_*([\nu\smile c]).
+\]
+This also fixes the sign for the convention
+\((\nu\smile c)(g,h)=\nu(g)c(h)\).
 \end{proof}
 
 \begin{lemma}[U5c: PD$^2$ socle injectivity]
@@ -182,10 +229,21 @@ For $M=\mathbf F_3$, the residual action of $\chi$ is trivial, hence
 \[
 H^2(G,\mathbf F_3)^\vee\cong\mathbf F_3.
 \]
-Under these identifications, the dual of the socle inclusion
-$\iota(1)=3^{k-2}$ is the reduction map
-$A_{k-1}\twoheadrightarrow\mathbf F_3$. Hence the dual map is surjective, and therefore
-$\iota_*$ is injective.
+The duality isomorphisms are natural in the coefficient module. To
+identify the induced dual map explicitly, write
+\[
+(A_{k-1}(\chi_{k-1}))^\vee\otimes I\cong A_{k-1}
+\]
+by sending \(a\in A_{k-1}\) to the character
+\(x\mapsto ax/3^{k-1}\), with the twist by \(I\) cancelling the
+contragredient action. Under this identification, precomposition with
+\(\iota(1)=3^{k-2}\) sends \(a\) to
+\[
+\frac{a\,3^{k-2}}{3^{k-1}}=\frac a3\pmod{\mathbf Z_3},
+\]
+which is exactly \(a\bmod3\). Thus the dual of \(\iota_*\) is the reduction
+map \(A_{k-1}\twoheadrightarrow\mathbf F_3\). It is surjective, so
+\(\iota_*\) is injective.
 \end{proof}
 
 \begin{proposition}[U5: intrinsic uniqueness]
