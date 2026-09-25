@@ -167,3 +167,16 @@ The failed restriction map concerns ordinary trivial-coefficient $H^1(P_{k+1},\m
 3. Keep the theorem's novelty statement narrow.
 4. Optionally run GAP at $k=2,3$ as an independent numerical verification of the nonzero relative Frattini layer.
 
+
+
+## 2026-09-25 — FINAL PRIMARY-SOURCE CORRECTION
+
+Quadrelli 2024 Proposition 2.10 was checked directly. Its hypotheses include N contained in ker(theta) and surjectivity of H^1(G,F_p) -> H^1(N,F_p)^G. The proof explicitly uses the dual inclusion N/N^p[G,N] -> G/Phi(G), and later uses N contained in ker(theta) again.
+
+The Zassenhaus dimension source was also checked directly: Minac–Rogelstad–Nguyen Duy Tan, Example 5.3 gives, for p=3 Demushkin rank d, c_3=(d^3-d)/3. Thus d=4 gives c_3=20 and P_3/P_4 is nonzero. Since P_3^3[P_3,G] is contained in P_4 and P_3 is contained in Phi(G), the dual inclusion is zero with nonzero source. Therefore H^1(G,F_3) -> H^1(P_3,F_3)^G is not surjective.
+
+This closes automatic restriction-surjectivity for N=P_{k+1}: FAIL / CLOSED. However, it does not by itself refute Proposition 2.10 as an admissible application with N=P_3, because P_3 need not be contained in ker(chi). The previous wording that the entire Prop. 2.10 shortcut was therefore closed is superseded.
+
+A stronger admissible kernel-contained test was examined: N=P_3 intersect ker(chi). This subgroup is normal and contained in ker(chi), but the claim that its restriction map is nonsurjective requires an additional filtration-level proof that (P_3 intersect ker(chi))/(P_3 intersect ker(chi))^3[.,G] is nonzero. That proof is NOT recorded as closed here. In particular, the tentative use of x_2^3 modulo 27 does not by itself establish the required quotient statement. This branch remains OPEN until independently proved.
+
+Final classification: Prop. 2.10 statement/proof PASS / CLOSED; duality PASS / CLOSED; c_3=20 PASS / CLOSED; P_3 restriction nonsurjectivity PASS / CLOSED; automatic restriction-surjectivity for N=P_{k+1} FAIL / CLOSED; admissible kernel-contained counterexample OPEN; Prop. 2.10 as a complete shortcut to the finite-window theorem OPEN / CONDITIONAL; publication novelty OPEN / CONDITIONAL.
