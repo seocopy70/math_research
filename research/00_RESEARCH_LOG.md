@@ -2647,3 +2647,10 @@ A source-level bibliography audit was performed against publisher/arXiv records.
 The separate unused `paper/references.bib` was removed so the arXiv source package has one authoritative manual bibliography rather than an unused duplicate source.
 A minor Appendix A notation typo (`u^{3^j}`) was also corrected.
 The manuscript bibliography entries for Labute (1967), Efrat–Quadrelli (2019), Quadrelli–Weigel (2020), Quadrelli–Weigel (2022), Quadrelli (2024), and Wilkes (2020) were cross-checked against publisher/arXiv metadata; their recorded journal/volume/page/article/DOI data are consistent with the audited sources.
+
+
+### 2026-09-25 — FINAL CI PDF BUILD CLOSED
+The publication manuscript at commit `d74bf5f1d40f120c41e4dc4d4c204bfc3794bb77` was compiled by GitHub Actions with the repository TeX environment. Final workflow run `36148729343` completed successfully: LaTeX compilation, manuscript verification, and PDF artifact upload all passed.
+The final artifact is 13 pages. SHA-256 of the extracted PDF is `584ee648c8b1e5ff1291b97df742012ab01783a586c045dda676af2e77d05508`.
+Independent local inspection of the downloaded artifact confirmed the title/author, theorem, all four Appendix A–D sections, and the corrected Mináč–Rogelstad–Tân bibliography entry. The build log showed no undefined citations/references or LaTeX Warning/Error matches in the final verification pass. One harmless 0.416pt overfull hbox remains in a heading; it does not affect compilation or mathematical content.
+The successful PDF artifact is retained by GitHub Actions (artifact id `10869809009`, expiration 2026-12-24).
