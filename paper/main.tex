@@ -82,7 +82,21 @@ On the canonical branch, PD$^2$ duality makes $H^2(G,\mathbb F_3)\to H^2(G,A_{k-
 Existence of chi_G with the Kummerian lifting property is classical. Factorization through Q_k was proved above. For uniqueness, reduce a candidate successively to level 2. The standard calculation gives rho_2=chi_G mod 9. Inductively, the candidate and chi_G mod 3^k have the same reduction and both satisfy the predicate; intrinsic uniqueness gives equality.
 
 \section{Literature boundary and contribution}
-The canonical orientation and the all-level Kummerian characterization are classical \cite{Labute1967,EfratQuadrelli2019}. The broader cyclotomic-orientation framework and structural consequences are developed in \cite{QuadrelliWeigel2020,QuadrelliWeigel2022}. The present result is narrower: it starts from the finite quotient Q_k and an arbitrary principal-unit candidate rho, proves automatic factorization of the relevant twisted cocycles through Q_k, and uses the intrinsic finite Kummer predicate as a recognition rule. This should not be confused with the classical all-level Kummerian characterization. Within the audited corpus, no exact theorem was found combining the bare finite quotient $Q_k$, an arbitrary principal-unit candidate, and the finite-depth factorization proved here. This is a conditional novelty statement, not an absolute priority claim.
+The existence and uniqueness of the canonical Demu\v{s}kin orientation, and the corresponding all-level Kummerian criterion, are classical. Labute gives the canonical orientation in the classification of Demu\v{s}kin groups \cite{Labute1967}; the cohomological and cocycle formulations of Kummerianity are developed in Efrat--Quadrelli and subsequent work \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. We therefore do not claim the canonical orientation, or the global Kummerian criterion, as new.
+
+The distinction relevant here is the direction of recognition. The classical theory starts with an oriented pair $(G,\theta)$ and asks whether the prescribed orientation is Kummerian. In contrast, our finite-window statement starts from the bare finite quotient
+\[
+Q_k=G/P_{k+1}
+\]
+and an arbitrary principal-unit candidate $\rho:Q_k\to U_{1,k}$, and uses the intrinsic predicate $\mathsf K_k(Q_k,\rho)$ to select the reduction of the canonical orientation. The finite-depth factorization in Sections 2--3 is part of this direction: the candidate is not supplied by the prior theory, and the relevant twisted cocycles are shown to factor through $Q_k$ for an arbitrary candidate.
+
+A potentially relevant quotient-inheritance result is Proposition 2.10 of Quadrelli \cite{Quadrelli2024}. It assumes an already Kummerian oriented pair $(G,\theta)$, a normal subgroup $N\subseteq\ker(\theta)$, and surjectivity of
+\[
+H^1(G,\mathbb F_p)\longrightarrow H^1(N,\mathbb F_p)^G.
+\]
+Those hypotheses are materially different from the present recognition problem. In the present rank-four $p=3$ case, the natural choice $N=P_3$ does not satisfy the required restriction-surjectivity condition: $P_3\subseteq\Phi(G)$, whereas $P_3/P_4\ne0$ (indeed its dimension is $20$). Thus Proposition 2.10 cannot be invoked as an automatic quotient-inheritance mechanism for our finite-window theorem. This is a separation observation, not a claim that Proposition 2.10 itself is new or that no other special quotient could satisfy its hypotheses.
+
+Within the literature audited for this manuscript, we did not identify an exact theorem whose input is the bare $Q_k$, whose candidate $\rho$ is arbitrary, whose selector is precisely the finite Kummer predicate $\mathsf K_k(Q_k,\rho)$, and whose arbitrary-candidate factorization through $Q_k$ is established. Accordingly, the publication-level novelty claim is intentionally conditional and narrow; it is not a claim of absolute priority.
 
 \section{Limitations and logical boundaries}
 The theorem is for the fixed rank-four $q=3$ group. ``$q$-blind'' means that $q$ is absent from the selector input; it does not mean uniformity over the Demu\v{s}kin family. $P_{k+1}$ is sufficient; minimality of the window is open. The final predicate is intrinsic although the standard presentation is used as a local calculation.
