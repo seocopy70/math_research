@@ -2234,3 +2234,109 @@ Prior-art comparison found the ingredients are known: Proposition 2.10 itself, s
 Therefore this negative result is not claimed as a new theorem. Its publication value is narrower: it is a PASS / CONDITIONAL prior-art separation lemma showing that one concrete known quotient-inheritance route does not subsume the finite-window theorem. The direct-collapse route through Proposition 2.10 is FAIL / CLOSED.
 
 Record: research/PROP_2_10_PRIOR_ART_AUDIT_2026-09-25.md (commit 0670bf431dcd17fa205ef33c8979d3c055b4263c).
+
+
+## 2026-09-25 — U1–U5 MANUSCRIPT-ONLY PROOF AUDIT / SECOND PASS
+
+The manuscript was re-audited using the actual current paper/main.tex, rather than relying on earlier research summaries.
+
+### U1–U3
+U1 finite-depth semidirect filtration was rechecked at the indexing level. With
+\(T_j=3^{j-1}A_k\rtimes U_j\), \(U_j=1+3^jA_k\), one has
+\(T_j^3\subseteq3^jA_k\rtimes U_{j+1}\) and
+\([T_j,S_k]=3^jA_k\); the commutator with \(4\in U_1\) supplies all of
+\(3^jA_k\) because \(4^{-1}-1=-3/4\) is a 3-adic unit times 3.
+The induction \(P_j(S_k)=T_j\) is therefore consistent, including the terminal
+\(P_{k+1}=1\).
+
+U2 was rechecked as a genuine arbitrary-candidate statement: a crossed cocycle
+and its character form a homomorphism into \(S_k\), so functoriality of the
+Zassenhaus/lower-3 filtration forces \(P_{k+1}(G)\) into the kernel. Hence both
+the candidate and every cocycle factor through \(Q_k\), and the cohomology
+identification is not restricted to the canonical orientation.
+
+U3 valuation induction remains valid. The principal-unit hypothesis makes the
+residual coefficient action trivial, minimality identifies mod-3 classes with
+generator-value vectors, and surjectivity successively forces every twisted Fox
+coefficient into \(3^mA_k\) for all \(m\), hence to zero.
+
+### U4 — GAP FOUND AND CLOSED
+The earlier manuscript sentence “standard odd-p Demushkin calculation gives”
+was judged insufficient as the proof base because U4 is the induction anchor.
+It has now been replaced by a self-contained mod-9 twisted-cocycle/Fox
+calculation.
+
+For \(a_i=\rho_2(x_i)\in\{1,4,7\}\subset\mathbf Z/9\mathbf Z\), the relation
+\(r=x_1^3[x_1,x_2][x_3,x_4]\) gives
+\[
+F_1=(a_1^2+a_1a_2+a_2)/a_2,\quad
+F_2=a_1^2(a_1-1)/a_2,
+\]
+\[
+F_3=-a_1^3(a_4-1)/(a_3a_4),\quad
+F_4=a_1^3(a_3-1)/(a_3a_4).
+\]
+By U3, Kummer lifting is equivalent to \(F_i=0\). Thus
+\(F_2=0\Rightarrow a_1=1\), \(F_3=F_4=0\Rightarrow a_3=a_4=1\), and
+\(F_1=0\Rightarrow1+2a_2=0\pmod9\Rightarrow a_2=4\).
+Therefore the unique level-2 candidate is \((1,4,1,1)\), equal to the canonical
+orientation modulo 9. This closes U4 without using the desired theorem
+circularly.
+
+### U5b — COCHAIN-LEVEL GAP TIGHTENED
+The coefficient extension is now written explicitly as
+\[
+0\to A_{k-1}(\rho_{k-1})\xrightarrow{j}A_k(\rho_k)\to\mathbf F_3\to0,
+\qquad j(a)=3a.
+\]
+For a common section \(s(1)=1\), the difference of connecting cochains is
+computed before passing to cohomology:
+\[
+d_s'c-d_sc=3^{k-1}(\nu\smile c)
+=j(3^{k-2}(\nu\smile c)).
+\]
+With \(\iota(1)=3^{k-2}\), this yields
+\[
+\delta_{\rho_k'}-\delta_{\rho_k}=\iota_*(\nu\smile-)
+\]
+for the convention \((\nu\smile c)(g,h)=\nu(g)c(h)\). The sign is now fixed
+rather than hidden under “cocycle identities show”.
+
+### U5c — NATURALITY GAP TIGHTENED
+The PD2 duality argument was expanded to identify the dual map explicitly.
+For \(M=A_{k-1}(\chi_{k-1})\),
+\[
+M^\vee\otimes I\cong A_{k-1}
+\]
+with trivial action. Under the natural duality identification, precomposition
+with the socle inclusion \(1\mapsto3^{k-2}\) sends \(a\) to
+\(a\,3^{k-2}/3^{k-1}=a/3\), i.e. reduction modulo 3. Therefore the dual of
+\(\iota_*\) is the surjective reduction map \(A_{k-1}\twoheadrightarrow\mathbf F_3\),
+so \(\iota_*\) is injective.
+
+### U5 status
+After these changes, U5 is internally closed at the cochain and duality-map
+levels, subject to the standard PD2 duality theorem and the stated convention
+that \(\chi\) is the action on the dualizing module. The remaining nondegenerate
+cup pairing is exactly the Demushkin defining property.
+
+### LITERATURE CHECK
+A fresh targeted search found Quadrelli (2024), Proposition 2.10, explicitly
+stating Kummerian quotient inheritance under the restriction-surjectivity
+hypothesis. The manuscript's separation from this result is therefore correctly
+framed as a failure of that hypothesis for the natural \(N=P_3\), not as a claim
+that quotient inheritance is unknown. Searches for finite-level / mod-\(p^n\)
+Kummerian recognition of an arbitrary candidate on a Zassenhaus quotient did not
+locate an exact theorem matching the present selector statement.
+
+### BUILD CHECK
+A three-pass pdflatex compilation of the manuscript state containing the U4
+closure and tightened U5b/U5c completed with exit status 0, no undefined-reference
+or LaTeX warning/error matches in the final pass, and produced an 8-page PDF.
+The compiled PDF is an audit build; the GitHub source update itself is commit
+3af1ec738614dbbb92b21e965cd4b7163ee7a664.
+
+Status: U1 PASS/CLOSED; U2 PASS/CLOSED; U3 PASS/CLOSED; U4 PASS/CLOSED;
+U5a PASS/CLOSED; U5b PASS/CLOSED after cochain expansion; U5c PASS/CLOSED
+after naturality expansion. The proof is now ready for a fresh end-to-end
+audit rather than another repetition of the same local checks.
