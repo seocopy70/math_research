@@ -1,3 +1,57 @@
+## 2026-09-25 — CRITICAL ZASSENHAUS WINDOW CORRECTION + MANUSCRIPT RE-AUDIT
+
+A second end-to-end audit found and corrected a substantive filtration error in the
+publication manuscript.
+
+The manuscript had called \(P_i\) the Zassenhaus filtration but had defined
+\(P_{j+1}=P_j^3[P_j,G]\), which is the lower \(3\)-central filtration. Those
+filtrations are not equal beyond the first steps. Therefore the previous
+factorization claim through \(G/P_{k+1}\) was not valid for the actual Zassenhaus
+filtration.
+
+For the finite semidirect target
+\[
+S_k=A_k\rtimes U_1,\qquad A_k=\mathbf Z/3^k,\quad U_j=1+3^jA_k,
+\]
+the corrected calculation is
+\[
+P_n(S_k)=3^{e(n)}A_k\rtimes U_{e(n)+1},
+\qquad e(n)=\lceil\log_3 n\rceil,\ e(1)=0.
+\]
+Hence
+\[
+P_{3^{k-1}}(S_k)=3^{k-1}A_k\ne1,\qquad
+P_{3^{k-1}+1}(S_k)=1.
+\]
+Thus the actual Zassenhaus finite window is
+\[
+\boxed{Q_k=G/P_{3^{k-1}+1}},
+\]
+not \(G/P_{k+1}\). U2 has been corrected accordingly.
+
+This is a genuine mathematical correction. The theorem's recognition mechanism
+survives, but the finite window is larger than previously claimed. Minimality of
+this corrected window remains OPEN.
+
+Current manuscript status:
+- U1 lower-3-central formulation: FAIL/CLOSED (superseded)
+- U1 corrected Zassenhaus formulation: PASS/CLOSED
+- U2 arbitrary-candidate factorization through corrected \(Q_k\): PASS/CLOSED
+- U3 finite Kummer/Fox criterion: PASS/CLOSED
+- U4 mod-9 base selector: PASS/CLOSED after explicit Fox calculation
+- U5a: PASS/CLOSED
+- U5b: PASS/CLOSED after cochain-level expansion
+- U5c: PASS/CLOSED after explicit dual-map naturality check
+- Main finite-window theorem with corrected \(Q_k\): PASS at the current proof level
+- Minimality of the Zassenhaus window: OPEN
+- Publication novelty: OPEN / CONDITIONAL
+
+Corrected manuscript commit:
+26d0180dbf1aece68acf14277da5baa0cf2aed1c
+
+A three-pass local pdflatex build of the corrected manuscript state completed with
+status 0 and produced an 8-page PDF.
+
 ## 2026-09-25 — PAPER U1–U5 PROOF AUDIT STARTED
 
 The actual `paper/main.tex` has now been audited against the authoritative U1–U5 research records. The underlying research theorem remains PASS/CLOSED, but the manuscript proof is not yet submission-ready.
