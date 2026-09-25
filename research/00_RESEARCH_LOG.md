@@ -2429,3 +2429,26 @@ The current main theorem therefore has a coherent dependency chain:
 No circular use of the desired selector theorem was found. In particular, U5 uses the independently known canonical dualizing orientation only inside the PD² injectivity lemma; it does not define the selector using that orientation.
 
 Remaining audit status: **THEOREM ASSEMBLY = PASS / PROVISIONAL**, pending a fresh line-by-line audit of the repaired manuscript and a successful clean LaTeX build. Publication novelty remains **OPEN / CONDITIONAL** and window minimality remains **OPEN**.
+
+
+## 2026-09-25 — U1 REFEREE-PROOF TIGHTENING + U5c PD² SOURCE ANCHOR
+
+The post-assembly attack did not uncover a new mathematical failure. Two manuscript-level gaps were nevertheless tightened.
+
+**U1:** the Zassenhaus proof in `paper/main.tex` now makes the power valuation explicit. Pure translations satisfy
+((a,1)^{3^j}=(3^j a,1)); for (u=1+3^s bin U_s), the binomial/3-adic valuation calculation gives
+(u^{3^j}equiv1+3^{s+j}bpmod{3^k}) until the term vanishes. Thus (U_1^{3^j}=U_{j+1}), and the exact identity
+(S_k^{3^j}=3^jA_ktimes U_{j+1}) is justified rather than asserted. The commutator generation (gamma_2=3A_k) is also tied explicitly to ([4,a]=3a).
+
+**U5c:** the finite-coefficient PD² duality statement is now anchored to Gareth Wilkes, *Classification of pro-(p) (PD^2) pairs and the pro-(p) curve complex*, Groups, Geometry and Dynamics 14 (2020), §1, which states the orientation-character convention and the finite-module duality used here. The manuscript keeps the explicit dual-map calculation: under (M^eeotimes Icong A_{k-1}), dualizing the socle inclusion (1mapsto3^{k-2}) gives reduction (A_{k-1}	woheadrightarrowmathbf F_3).
+
+Commit: `962be77ed62040ed5707e3c59c54de6585a0086d`.
+
+**Build status:** source-level clean-build verification of this exact commit is still pending; the previous 8-page three-pass build was for the preceding corrected manuscript commit, not this post-tightening commit. No claim of a fresh PDF build is made here.
+
+Classification:
+- U1 referee-level explicitness: **PASS / CLOSED**
+- U5c literature anchoring: **PASS / CLOSED**
+- theorem assembly: **PASS / PROVISIONAL**
+- exact publication novelty: **OPEN / CONDITIONAL**
+- Zassenhaus window minimality: **OPEN**
