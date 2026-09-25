@@ -1,3 +1,78 @@
+# 2026-09-25 — EXACT 962be77 BUILD ATTACK: U3 LATEX SYNTAX DEFECT FOUND AND FIXED
+
+## Pre-check
+
+The authoritative state required the exact manuscript commit
+`962be77ed62040ed5707e3c59c54de6585a0086d` to be checked out and compiled before
+publication preparation could proceed. The source-level U1-U5/theorem audit had already
+passed; this was a build-verification gate, not authorization for another mathematical
+branch.
+
+## Execution
+
+A disposable GitHub Actions audit checked out exactly `962be77`. The first attempt
+failed before compilation because the runner lacked TeX packages. A second audit installed
+`texlive-latex-extra` and `poppler-utils`, then reproduced the failure in the first
+`pdflatex` pass.
+
+The actual error was:
+
+```
+! LaTeX Error: Command \\end{equation*} invalid in math mode.
+l.149 \\end{proposition}
+! ==> Fatal error occurred, no output PDF file produced!
+```
+
+Inspection of the exact source showed the U3 proposition contained an opened display
+`\\[` with no matching `\\]` before `\\end{proposition}`. The defect is purely
+syntactic. It does not alter any mathematical statement, hypothesis, proof, or reference.
+
+## Correction
+
+The missing `\\]` was inserted immediately before `\\end{proposition}` in
+`paper/main.tex`. Corrected main-branch commit:
+`058955142df5f831ec09d2b5e46461b0424e65e6`.
+
+The same one-line correction was independently tested first on a disposable branch before
+being applied to main.
+
+## Independent verification
+
+GitHub Actions run `36145439668` built the corrected source with TeX dependencies and
+performed three `pdflatex` passes.
+
+Result:
+- three-pass build: **PASS**
+- final-pass warning/error audit: **clean**
+- PDF: **10 pages**
+- PDF size: **284649 bytes**
+- PDF SHA-256:
+  `8056c70a42fdf6f32534bf4dc843c6264cc9bb1bdb282ade705c33f9fe64567f`
+- uploaded artifact: `fixed-u3-pdf`
+
+The generated PDF was extracted and independently inspected for the final-pass
+warning/error condition; no `Undefined`, `LaTeX Warning`, `LaTeX Error`,
+`Fatal error`, `Emergency stop`, or `!` matches occurred in build3.log.
+
+## Classification
+
+- exact `962be77` source identity: **PASS / CLOSED**
+- exact `962be77` clean build: **FAIL / CLOSED** — manuscript syntax defect
+- corrected source build: **PASS / CLOSED**
+- mathematical theorem/U1-U5 status: **UNCHANGED**
+- novelty: **OPEN / CONDITIONAL**
+- Zassenhaus-window minimality: **OPEN**
+
+## Logical boundary
+
+This finding must not be described as a mathematical failure of U3. The U3 proof content
+was unchanged. It is a publication-source defect caught by the final build gate.
+
+## Next action
+
+No new mathematical computation is authorized from this event. Proceed to final PDF review,
+citation/source consistency review, and publication preparation.
+
 ## 2026-09-24 — U5 INTRINSIC UNIQUENESS CLOSED / FINITE-WINDOW SELECTOR THEOREM
 
 The two load-bearing U5 lemmas are now proved intrinsically.
