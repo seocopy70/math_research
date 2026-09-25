@@ -57,8 +57,11 @@ P_{3^{k-1}}(S_k)=3^{k-1}A_k\ne1.
 \begin{proof}
 We use the Jennings--Lazard description of the Zassenhaus filtration
 \[
-P_n(S_k)=\prod_{i3^j\ge n}\gamma_i(S_k)^{3^j}.
+P_n(S_k)=\prod_{i3^j\ge n}\gamma_i(S_k)^{3^j},
 \]
+which is equivalent to the standard recursive definition of the
+Zassenhaus filtration; see, for example, the formulation recalled by
+Mináč--Rogelstad--Tân.
 First, with $\gamma_1(S_k)=S_k$, a direct commutator calculation gives
 \[
 \gamma_2(S_k)=[S_k,S_k]=3A_k,
@@ -79,7 +82,9 @@ Let $e=e(n)$. The $i=1$ factor with $3^j\ge n$ first occurs at $j=e$,
 and hence already contributes
 $3^eA_k\rtimes U_{e+1}$.
 For every $i\ge2$ and every $j$ with $i3^j\ge n$, one has
-$i-1+j\ge e$; hence
+$i-1+j\ge e$. Indeed, if $j\le e-1$, then
+$i>3^{e-1-j}$, so $i-1+j\ge3^{e-1-j}+j\ge e$; if
+$j\ge e$, the inequality is immediate. Hence
 \[
 \gamma_i(S_k)^{3^j}=3^{i-1+j}A_k\subseteq3^eA_k.
 \]
@@ -342,6 +347,9 @@ G/P_{3^{k-1}+1} \quad+\quad \text{intrinsic Kummer lifting}
 \]
 
 \begin{thebibliography}{99}
+\bibitem{MinacRogelstadTan2014}
+J. Mináč, M. Rogelstad and N. D. Tân, \emph{How fast do Zassenhaus filtrations of pro-$p$-groups descend?}, arXiv:1405.6980 (2014).
+
 \bibitem{Labute1967}
 J. Labute, \emph{Classification of Demushkin Groups}, Canadian J. Math. 19 (1967), 106--132.
 
