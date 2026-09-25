@@ -32,9 +32,60 @@ jobs:
           grep -q 'Proof--computation boundary' main.tex
           ! grep -Eiq 'undefined|LaTeX Warning|Error:' main.log
 
+      - name: Generate submission packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf submission
+          mkdir -p submission/source submission/full
+          cp paper/main.tex submission/source/main.tex
+          cp paper/main.tex submission/full/main.tex
+          cp paper/main.pdf submission/full/finite-window-kummer-recognition.pdf
+          (
+            cd submission/full
+            sha256sum main.tex finite-window-kummer-recognition.pdf > SHA256SUMS.txt
+          )
+          cat > submission/full/README_SUBMISSION.txt <<'EOF'
+          Finite-Window Kummer Recognition of the Canonical Orientation
+          of a Rank-Four Demuskin Pro-3 Group
+
+          Publication snapshot: repository main at the CI build commit.
+          The arXiv source bundle contains main.tex only; the bibliography is embedded.
+          The full bundle contains the source, CI-built PDF, checksums, and this README.
+          EOF
+          (
+            cd submission/source
+            zip -q -9 ../../finite-window-kummer-recognition-source.zip main.tex
+          )
+          (
+            cd submission/full
+            zip -q -9 ../../finite-window-kummer-recognition-full.zip               main.tex finite-window-kummer-recognition.pdf SHA256SUMS.txt README_SUBMISSION.txt
+          )
+          sha256sum             finite-window-kummer-recognition-source.zip             finite-window-kummer-recognition-full.zip             > submission/PACKAGE_SHA256SUMS.txt
+          cat submission/PACKAGE_SHA256SUMS.txt
+
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: finite-window-kummer-recognition-pdf
           path: paper/main.pdf
+          if-no-files-found: error
+
+      - name: Upload arXiv source package
+        uses: actions/upload-artifact@v4
+        with:
+          name: finite-window-kummer-recognition-source
+          path: |
+            finite-window-kummer-recognition-source.zip
+            submission/PACKAGE_SHA256SUMS.txt
+          if-no-files-found: error
+
+      - name: Upload full submission package
+        uses: actions/upload-artifact@v4
+        with:
+          name: finite-window-kummer-recognition-full
+          path: |
+            finite-window-kummer-recognition-full.zip
+            submission/full/SHA256SUMS.txt
+            submission/full/README_SUBMISSION.txt
           if-no-files-found: error
