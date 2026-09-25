@@ -2187,3 +2187,18 @@ is not surjective.
 This single k=2 counterexample is sufficient to classify automatic Prop. 2.10 restriction-surjectivity as FAIL/CLOSED. Any all-k nonvanishing strengthening is left unclaimed pending a separate explicit proof.
 
 Record correction: research/PROP_2_10_RESTRICTION_SURJECTIVITY_HARD_ATTACK_2026-09-25.md, commit 70dad1bcab1145590d5a06b125dcf07b9249e7e5.
+
+
+## 2026-09-25 — PROP. 2.10 PRIMARY-SOURCE VERIFICATION / FINAL SCOPE CORRECTION
+
+Quadrelli (2024) Proposition 2.10 was checked directly. The proposition requires N contained in ker(theta) and surjectivity of H^1(G,F_p) -> H^1(N,F_p)^G. Its proof explicitly uses the dual inclusion N/N^p[G,N] -> G/Phi(G), and the kernel condition again later in the cocycle descent argument.
+
+The Minac–Rogelstad–Nguyen Duy Tan Zassenhaus dimension formula was also checked directly: for a p=3 Demushkin group of rank d, c_3=(d^3-d)/3. Thus for d=4, c_3=20, so P_3/P_4 is nonzero. Since P_3^3[P_3,G] is contained in P_4 and P_3 is contained in Phi(G), the dual inclusion has nonzero source and is zero. Therefore H^1(G,F_3) -> H^1(P_3,F_3)^G is not surjective.
+
+Classification: automatic restriction-surjectivity for N=P_{k+1} is FAIL / CLOSED. This is sufficient to kill the proposed automaticity claim using k=2 only. The all-k nonvanishing statement is not claimed.
+
+Critical scope correction: P_3 itself is not automatically an admissible N for Prop. 2.10 because the proposition separately requires P_3 contained in ker(chi). Therefore the earlier statement that the entire Prop. 2.10 shortcut was closed by the P_3 restriction failure is superseded. An admissible kernel-contained counterexample such as N=P_3 intersect ker(chi) requires a separate proof of nonzero relative Frattini quotient; that branch is OPEN and the tentative x_2^3 modulo 27 argument is not promoted.
+
+Final status: Prop. 2.10 statement/proof PASS / CLOSED; duality PASS / CLOSED; c_3=20 PASS / CLOSED; P_3 restriction nonsurjectivity PASS / CLOSED; automaticity FAIL / CLOSED; admissible kernel-contained counterexample OPEN; Prop. 2.10 as a complete shortcut OPEN / CONDITIONAL; publication novelty OPEN / CONDITIONAL.
+
+Record: research/PROP_2_10_RESTRICTION_SURJECTIVITY_HARD_ATTACK_2026-09-25.md, commit 7147923991ed9960e9019ac465832f3bc90d5a1b.
