@@ -945,3 +945,7 @@ The current main theorem therefore has a coherent dependency chain:
 No circular use of the desired selector theorem was found. In particular, U5 uses the independently known canonical dualizing orientation only inside the PD² injectivity lemma; it does not define the selector using that orientation.
 
 Remaining audit status: **THEOREM ASSEMBLY = PASS / PROVISIONAL**, pending a fresh line-by-line audit of the repaired manuscript and a successful clean LaTeX build. Publication novelty remains **OPEN / CONDITIONAL** and window minimality remains **OPEN**.
+
+
+## 2026-09-25 — APPENDIX A–D INSERTED
+Publication-facing Appendices A–D have been inserted into `paper/main.tex` at commit `71d59a39bc142892fdc1dcd38034b49158e6b41a`. The appendices cover the finite-depth U1 calculation, the complete (k=2) (81\to27\to3\to1) base enumeration, the U5b cochain calculation, and the proof/computation reproducibility boundary. The research log records the change at `55afc15a087ba3e73a5cc5ac4697ace1d1fb42f5`.
