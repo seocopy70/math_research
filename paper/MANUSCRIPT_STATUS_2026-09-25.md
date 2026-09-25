@@ -73,7 +73,8 @@ Do not turn the research log into the paper. The research log records failed rou
 ## Current status
 
 - Mathematical theorem: **PASS / CLOSED**
-- Manuscript first draft: **OPEN / WORKING**
-- Publication-level proof audit: **OPEN**
-- Exact publication novelty: **OPEN / STRONG CANDIDATE**
+- Manuscript proof expansion: **PASS / LOCAL**
+- Independent manuscript proof audit: **OPEN / LOAD-BEARING**
+- Clean compilation verification: **OPEN**
+- Exact publication novelty: **OPEN / CONDITIONAL**
 - Minimality: **OPEN**
