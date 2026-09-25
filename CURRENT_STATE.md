@@ -1,3 +1,24 @@
+## 2026-09-25 — POST-ASSEMBLY U1/U5c TIGHTENING
+
+The latest manuscript pass found no new mathematical failure. Two referee-level gaps were tightened in `paper/main.tex`:
+
+- **U1:** the exact power valuation behind (S_k^{3^j}=3^jA_ktimes U_{j+1}) is now written explicitly, including pure translations, (3)-adic unit powering, and the commutator generator ( [4,a]=3a).
+- **U5c:** the finite-coefficient PD² duality statement is now explicitly anchored to Wilkes (2020), §1, while retaining the manuscript's explicit dual-map calculation showing that the dual of the socle inclusion is reduction (A_{k-1}	woheadrightarrowmathbf F_3).
+
+Latest manuscript commit: `962be77ed62040ed5707e3c59c54de6585a0086d`.
+
+**Exact-build gate:** a clean local PDF build of this exact post-tightening commit has not yet been independently executed. The earlier 8-page three-pass build belongs to the preceding corrected commit. Therefore the build gate remains OPEN until the exact commit is compiled.
+
+Current status:
+- U1: **PASS / CLOSED**
+- U2: **PASS / CLOSED**
+- U3: **PASS / CLOSED**
+- U4: **PASS / CLOSED**
+- U5a/U5b/U5c: **PASS / CLOSED**
+- theorem assembly: **PASS / PROVISIONAL**
+- Zassenhaus window minimality: **OPEN**
+- exact publication novelty: **OPEN / CONDITIONAL**
+
 ## 2026-09-25 — CRITICAL ZASSENHAUS WINDOW CORRECTION + MANUSCRIPT RE-AUDIT
 
 A second end-to-end audit found and corrected a substantive filtration error in the
