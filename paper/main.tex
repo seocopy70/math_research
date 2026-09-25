@@ -18,10 +18,10 @@ Let
 \[
 G=\langle x_1,x_2,x_3,x_4 \mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle.
 \]
-The canonical orientation is classical: see Labute's classification and orientation criterion \cite{Labute1967}, and the Kummerian reformulation of Efrat--Quadrelli \cite{EfratQuadrelli2019}. Our question is whether its reduction modulo 3^k can be recognized from Q_k=G/P_{k+1} without supplying the orientation as input.
+An orientation of a pro-3 group H is a continuous homomorphism theta:H to 1+3Z_3, giving the twisted module Z_3(theta). The oriented group is Kummerian when, for every n>=1, the natural map H^1(H,Z_3(theta)/3^n) to H^1(H,F_3) is surjective; this is the standard Kummerian formulation used by Efrat--Quadrelli and Quadrelli--Weigel \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. Labute proved that every Demushkin group has a unique orientation making it Kummerian, namely the canonical orientation induced by the dualizing module \cite{Labute1967}. Our question is whether its reduction modulo 3^k can be recognized from Q_k=G/P_{k+1} without supplying the orientation as input.
 
 \begin{theorem}[Finite-window recognition]
-For every k>=2 and every rho:Q_k to (Z/3^k Z)^times,
+For every k>=2 and every principal-unit rho:Q_k to U_{1,k}:=1+3A_k,
 \[
 \mathsf K_k(Q_k,rho) \Longleftrightarrow rho=chi_G\pmod {3^k}.
 \]
@@ -47,7 +47,7 @@ z(r)=\sum_i \left.\frac{\partial r}{\partial x_i}\right|_rho z(x_i)=0.
 \]
 \end{proposition}
 
-The proof is a finite Nakayama iteration over A_k; no Hensel argument is required.
+The proof is a finite Nakayama iteration over A_k; no Hensel argument is required. The principal-unit restriction is essential because reduction modulo 3 must give the trivial coefficient action on F_3.
 
 \section{Standard presentation}
 For
