@@ -90,14 +90,13 @@ Under this minimality hypothesis,
 \end{proposition}
 
 \begin{proof}
-Minimality gives $H^1(G,\mathbf F_3)\cong\mathbf F_3^d$ by generator values. A vector $a=(a_i)\in A_k^d$ is the value vector of a crossed cocycle exactly when $\sum_iF_i(\rho)a_i=0$.
-
-Assume every mod-$3$ vector lifts. For the lift of the $i$-th basis vector, write $a_i=1+3b_i$ and $a_j=3b_j$ for $j\ne i$. The relation equation first gives $F_i\in3A_k$. If all $F_j\in3^mA_k$, the same equation gives
+For a vector $a=(a_i)\in A_k^d$, the crossed-cocycle relation is equivalent to the single relation equation
+$\sum_iF_i(\rho)a_i=0$. Because $\rho\equiv1\pmod3$, reduction modulo $3$ of the coefficient action is trivial, and minimality identifies $H^1(G,\mathbf F_3)$ with the generator-value vectors $\mathbf F_3^d$. If the lifting map is surjective, then for each basis vector there is a lift with $a_i\equiv1\pmod3$ and $a_j\equiv0\pmod3$ for $j\ne i$. Writing $a_i=1+3b_i$ and $a_j=3b_j$ first gives $F_i\in3A_k$. More generally, if all $F_j\in3^mA_k$, then
 \[
 0=F_i(1+3b_i)+\sum_{j\ne i}F_j(3b_j)
 =F_i+3\sum_jF_jb_j,
 \]
-so $F_i\in3^{m+1}A_k$. Induction from $m=0$ to $m=k$ gives $F_i=0$. Conversely, if all $F_i=0$, every generator-value vector in $A_k^d$ satisfies the relation, so every mod-$3$ class lifts.
+so $F_i\in3^{m+1}A_k$. Induction through $m=0,\ldots,k-1$ gives $F_i=0$. Conversely, if all $F_i=0$, every generator-value vector in $A_k^d$ satisfies the relation and therefore every mod-$3$ class lifts.
 \end{proof}
 
 The principal-unit restriction makes the reduction of the coefficient action trivial modulo $3$. The argument is valuation induction, not the earlier informal Nakayama step.
@@ -145,7 +144,13 @@ Choose the common set-theoretic section $s:\mathbf F_3\to A_k$ with $s(1)=1$. Fo
 \[
 g s(c(h))+s(c(g))-s(c(gh)).
 \]
-The two coefficient actions agree modulo $3^{k-1}$. Their difference on the lifted value $s(c(h))$ is the socle term $3^{k-1}\nu(g)c(h)$. Under the identification of the socle of the kernel with $\mathbf F_3$ via $1\mapsto3^{k-2}$, this additional defect is precisely the cochain representing $\iota(\nu\smile c)$. The cocycle identities show that the difference is a $2$-cocycle, and changing the section changes it by a coboundary. Therefore the displayed identity holds in cohomology.
+The two coefficient actions agree after reduction to $A_{k-1}$. On the common lift $s(c(h))$, their difference is
+$3^{k-1}\nu(g)c(h)$ in $A_k$. The kernel of
+$A_k\to A_{k-1}$ is $3^{k-1}A_k\cong\mathbf F_3$; after identifying this kernel with $\mathbf F_3$ by
+$1\mapsto3^{k-1}$, the defect is the cup-product cochain
+$\nu\smile c$. Passing through the coefficient-extension identification of this kernel with the socle
+$3^{k-2}A_{k-1}\subset A_{k-1}$ gives exactly
+$\iota_*(\nu\smile c)$. The cocycle identities show that the difference is a $2$-cocycle, and changing the section changes it by a coboundary. Therefore the displayed identity holds in cohomology.
 \end{proof}
 
 \begin{lemma}[U5c: PD$^2$ socle injectivity]
@@ -162,12 +167,25 @@ H^2(G,A_{k-1}(\chi_{k-1})).
 \end{lemma}
 
 \begin{proof}
-Let $D=\mathbf Q_3/\mathbf Z_3(\chi)$ be the discrete dualizing module. Finite-module PD$^2$ duality gives
+Let $I=\mathbf Q_3/\mathbf Z_3(\chi)$ be the dualizing module, with the convention that $\chi$ is the canonical dualizing orientation. For a finite $3$-primary $G$-module $M$, PD$^2$ duality gives
 \[
-H^2(G,M)^\vee\cong\operatorname{Hom}_G(M,D).
+H^2(G,M)^\vee\cong H^0\!\left(G,M^\vee\otimes I\right),
+\qquad
+M^\vee=\operatorname{Hom}(M,\mathbf Q_3/\mathbf Z_3).
 \]
-For $M=A_{k-1}(\chi_{k-1})$ this Hom group is cyclic of order $3^{k-1}$, while for $M=\mathbf F_3$ it is $\mathbf F_3$, since $D[3]\cong\mathbf F_3$ with trivial residual action. Under these identifications, precomposition with $\iota$ is the reduction map
-$\mathbf Z/3^{k-1}\twoheadrightarrow\mathbf F_3$. Thus the dual of $\iota_*$ is surjective and $\iota_*$ is injective.
+Take $M=A_{k-1}(\chi_{k-1})$. Then
+$M^\vee\otimes I\cong A_{k-1}$ with trivial $G$-action, so
+\[
+H^2(G,A_{k-1}(\chi_{k-1}))^\vee\cong A_{k-1}.
+\]
+For $M=\mathbf F_3$, the residual action of $\chi$ is trivial, hence
+\[
+H^2(G,\mathbf F_3)^\vee\cong\mathbf F_3.
+\]
+Under these identifications, the dual of the socle inclusion
+$\iota(1)=3^{k-2}$ is the reduction map
+$A_{k-1}\twoheadrightarrow\mathbf F_3$. Hence the dual map is surjective, and therefore
+$\iota_*$ is injective.
 \end{proof}
 
 \begin{proposition}[U5: intrinsic uniqueness]
@@ -175,7 +193,11 @@ If $\rho_k$ and $\rho_k'$ both satisfy $\mathsf K_k$ and both reduce to $\chi_{k
 \end{proposition}
 
 \begin{proof}
-The level-$k$ predicate is equivalent to vanishing of the connecting map. Hence U5b gives
+For the coefficient extension
+$0\to A_{k-1}(\rho_{k-1})\to A_k(\rho_k)\to\mathbf F_3\to0$,
+the level-$k$ lifting predicate is equivalent to surjectivity of
+$H^1(G,A_k(\rho_k))\to H^1(G,\mathbf F_3)$, hence to vanishing of its connecting map
+$\delta_{\rho_k}:H^1(G,\mathbf F_3)\to H^2(G,A_{k-1}(\rho_{k-1}))$. Hence U5b gives
 \[
 0=\delta_{\rho_k'}-\delta_{\rho_k}=\iota_*(\nu\smile -).
 \]
