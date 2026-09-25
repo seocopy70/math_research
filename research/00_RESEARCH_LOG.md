@@ -2627,3 +2627,16 @@ Classification:
 - theorem assembly: **PASS / CLOSED**
 - novelty: **OPEN / CONDITIONAL**
 - window minimality: **OPEN**
+
+
+### 2026-09-25 — APPENDIX A–D INSERTION
+The manuscript `paper/main.tex` was updated at commit `71d59a39bc142892fdc1dcd38034b49158e6b41a` to include four publication-facing appendices:
+- Appendix A: detailed finite-depth Zassenhaus/valuation verification, including the endpoint distinction (P_{3^{k-1}}
+eq1) versus (P_{3^{k-1}+1}=1);
+- Appendix B: independent (k=2) base-level enumeration (81\to27\to3\to1);
+- Appendix C: cochain-level verification of the U5b connecting-map variation and sign convention;
+- Appendix D: explicit proof/computation boundary and reproducibility record.
+
+The appendices are deliberately restricted to calculations used by the theorem; broader exploratory computations remain in the research log rather than being presented as proof premises.
+
+A local three-pass PDF rebuild could not be rerun in this environment after this commit because the container has no DNS/network access to GitHub. This is an environment limitation, not a claimed manuscript/build failure. The source update itself was successfully written through the GitHub connector.
