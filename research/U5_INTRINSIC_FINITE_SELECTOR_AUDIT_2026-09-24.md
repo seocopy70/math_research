@@ -196,3 +196,21 @@ Depth correction: P_{k+1} is sufficient; minimality remains OPEN.
 U5 proof correction: variation is a coefficient-extension/Yoneda identity and PD² injectivity must be written using the exact dual coefficient modules and dual reduction map. Classical Kummerian existence is imported.
 
 This entry is controlling for manuscript wording.
+
+
+## 2026-09-25 — PROP. 2.10 RESTRICTION-SURJECTIVITY HARD ATTACK / N2 SHARPENED
+
+The proposed second follow-up problem was tested against the exact 2024 Proposition 2.10 statement. That proposition assumes an already Kummerian oriented pair (G,theta), N⊂ker(theta), and surjectivity of
+res^1_{G,N}: H^1(G,F_p) -> H^1(N,F_p)^G.
+Its proof explicitly uses the dual inclusion
+N/N^p[G,N] -> G/Phi(G).
+
+For the present N=P_{k+1}(G), p=3, one has N⊂Phi(G), hence the dual inclusion map is zero. At the same time the relevant relative Frattini quotient is nonzero: P_{k+1}/P_{k+2}≠0, while P_{k+1}^3[P_{k+1},G]⊂P_{k+2}. Therefore
+P_{k+1}/P_{k+1}^3[P_{k+1},G] != 0,
+so the dual map is not injective and the restriction map is not surjective.
+
+Decision: FAIL / CLOSED for automatic restriction-surjectivity. Consequently Proposition 2.10 cannot be used with N=P_{k+1} as an automatic corollary mechanism for the present finite-window theorem.
+
+This does not itself prove absolute novelty. It removes one concrete quotient-inheritance collapse route. The U1–U5 theorem remains PASS/CLOSED and exact publication novelty remains OPEN/CONDITIONAL.
+
+Record: research/PROP_2_10_RESTRICTION_SURJECTIVITY_HARD_ATTACK_2026-09-25.md (commit 5439b06cf45faa6042225ab3e338997c10f2301a).
