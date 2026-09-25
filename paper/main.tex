@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
-\usepackage{amsmath,amssymb,amsthm}
-\title{Finite-Window Kummer Recognition of the Canonical Orientation of a Rank-Four Demuskin Group}
+\usepackage{amsmath,amssymb,amsthm,mathtools}\n\usepackage{enumitem}\n\usepackage{hyperref}
+\title{Finite-Window Kummer Recognition of the Canonical Orientation\\of a Rank-Four Demu\v{s}kin Pro-$3$ Group}
 \author{}
 \date{September 2026}
 \newtheorem{theorem}{Theorem}[section]
@@ -10,7 +10,7 @@
 \maketitle
 
 \begin{abstract}
-We study finite-window recognition of the canonical orientation of the fixed rank-four q=3 Demuskin pro-3 group. For the Zassenhaus filtration P_i, put Q_k=G/P_{k+1}. For a candidate rho:Q_k to (Z/3^k Z)^times, let K_k(Q_k,rho) mean that H^1(Q_k,Z/3^k(rho) ) to H^1(Q_k,F_3) is surjective. We prove that K_k(Q_k,rho) holds exactly for rho=chi_G mod 3^k, for k>=2. The canonical orientation itself is classical; the result is a finite-window recognition statement.
+We study finite-window recognition of the canonical orientation of the fixed rank-four q=3 Demuskin pro-3 group. For the Zassenhaus filtration P_i, put Q_k=G/P_{k+1}. For a principal-unit character $\rho:Q_k\to U_{1,k}:=1+3(\mathbb Z/3^k\mathbb Z)$, let $\mathsf K_k(Q_k,\rho)$ mean that $H^1(Q_k,\mathbb Z/3^k(\rho))\to H^1(Q_k,\mathbb F_3)$ is surjective. We prove that K_k(Q_k,rho) holds exactly for rho=chi_G mod 3^k, for k>=2. The canonical orientation itself is classical; the result is a finite-window recognition statement.
 \end{abstract}
 
 \section{Introduction}
@@ -18,7 +18,7 @@ Let
 \[
 G=\langle x_1,x_2,x_3,x_4 \mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle.
 \]
-An orientation of a pro-3 group H is a continuous homomorphism theta:H to 1+3Z_3, giving the twisted module Z_3(theta). The oriented group is Kummerian when, for every n>=1, the natural map H^1(H,Z_3(theta)/3^n) to H^1(H,F_3) is surjective; this is the standard Kummerian formulation used by Efrat--Quadrelli and Quadrelli--Weigel \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. Labute proved that every Demushkin group has a unique orientation making it Kummerian, namely the canonical orientation induced by the dualizing module \cite{Labute1967}. Our question is whether its reduction modulo 3^k can be recognized from Q_k=G/P_{k+1} without supplying the orientation as input.
+An orientation of a pro-$3$ group $H$ is a continuous homomorphism $\theta:H\to1+3\mathbb Z_3$, giving the twisted module $\mathbb Z_3(\theta)$. The oriented group is Kummerian when, for every n>=1, the natural map H^1(H,Z_3(theta)/3^n) to H^1(H,F_3) is surjective; this is the standard Kummerian formulation used by Efrat--Quadrelli and Quadrelli--Weigel \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. Labute proved that every Demushkin group has a unique orientation making it Kummerian, namely the canonical orientation induced by the dualizing module \cite{Labute1967}. Our question is whether its reduction modulo 3^k can be recognized from Q_k=G/P_{k+1} without supplying the orientation as input.
 
 \begin{theorem}[Finite-window recognition]
 For every k>=2 and every principal-unit rho:Q_k to U_{1,k}:=1+3A_k,
@@ -27,14 +27,14 @@ For every k>=2 and every principal-unit rho:Q_k to U_{1,k}:=1+3A_k,
 \]
 \end{theorem}
 
-The proof has five steps: finite semidirect-product filtration, arbitrary-candidate factorization, finite Kummer lifting, standard-presentation identification, and intrinsic PD2 uniqueness.
+The proof separates five logically distinct steps: the finite semidirect-product filtration, arbitrary-candidate factorization, the one-relator lifting obstruction, the base-level identification, and intrinsic PD$^2$ uniqueness.
 
-\section{Finite window}
+\section{Finite window and arbitrary-candidate factorization}
 Put A_k=Z/3^k Z and U_1=1+3A_k, and let S_k=A_k\rtimes U_1. For U_j=1+3^j A_k and T_j=3^{j-1}A_k\rtimes U_j, the lower 3-central filtration satisfies
 \[
 P_j(S_k)=T_j, \qquad P_{k+1}(S_k)=1.
 \]
-If rho:G to U_1 and z in Z^1(G,A_k(rho)), then g to (z(g),rho(g)) is a homomorphism G to S_k. Hence it kills P_{k+1}(G), so every relevant twisted cocycle factors through Q_k.
+If $\rho:G\to U_{1,k}$ and $z\in Z^1(G,A_k(\rho))$, then $g\mapsto(z(g),\rho(g))$ is a homomorphism $G\to S_k$. Hence it kills $P_{k+1}(G)$, so every relevant twisted cocycle factors through $Q_k$.
 
 \begin{proposition}[Finite Kummer criterion]
 For a one-relator pro-3 group G=F/<<r>> and a candidate rho, the map
@@ -49,7 +49,7 @@ z(r)=\sum_i \left.\frac{\partial r}{\partial x_i}\right|_rho z(x_i)=0.
 
 The proof is a finite Nakayama iteration over A_k; no Hensel argument is required. The principal-unit restriction is essential because reduction modulo 3 must give the trivial coefficient action on F_3.
 
-\section{Standard presentation}
+\section{Coordinate identification at the base level}
 For
 \[
 r=x_1^3[x_1,x_2][x_3,x_4],
@@ -79,11 +79,11 @@ On the canonical branch, PD2 duality makes H^2(G,F_3) to H^2(G,A_{k-1}(chi)) inj
 \section{Proof of the theorem}
 Existence of chi_G with the Kummerian lifting property is classical. Factorization through Q_k was proved above. For uniqueness, reduce a candidate successively to level 2. The standard calculation gives rho_2=chi_G mod 9. Inductively, the candidate and chi_G mod 3^k have the same reduction and both satisfy the predicate; intrinsic uniqueness gives equality.
 
-\section{Previous work and novelty boundary}
-The canonical orientation and the all-level Kummerian characterization are classical \cite{Labute1967,EfratQuadrelli2019}. The broader cyclotomic-orientation framework and structural consequences are developed in \cite{QuadrelliWeigel2020,QuadrelliWeigel2022}. The present result is narrower: it starts from the finite quotient Q_k and an arbitrary principal-unit candidate rho, proves automatic factorization of the relevant twisted cocycles through Q_k, and uses the intrinsic finite Kummer predicate as a recognition rule. This should not be confused with the classical all-level Kummerian characterization. The checked literature corpus did not yield an exact theorem in this bare-$Q_k$, arbitrary-candidate formulation. This is a conditional novelty statement, not an absolute priority claim.
+\section{Literature boundary and contribution}
+The canonical orientation and the all-level Kummerian characterization are classical \cite{Labute1967,EfratQuadrelli2019}. The broader cyclotomic-orientation framework and structural consequences are developed in \cite{QuadrelliWeigel2020,QuadrelliWeigel2022}. The present result is narrower: it starts from the finite quotient Q_k and an arbitrary principal-unit candidate rho, proves automatic factorization of the relevant twisted cocycles through Q_k, and uses the intrinsic finite Kummer predicate as a recognition rule. This should not be confused with the classical all-level Kummerian characterization. Within the audited corpus, no exact theorem was found combining the bare finite quotient $Q_k$, an arbitrary principal-unit candidate, and the finite-depth factorization proved here. This is a conditional novelty statement, not an absolute priority claim.
 
-\section{Limitations}
-The theorem is for the fixed rank-four q=3 group. q-blind means q is absent from selector input, not uniformity in q. P_{k+1} is sufficient; minimality is open. The final predicate is intrinsic although the standard presentation is used as a local calculation.
+\section{Limitations and logical boundaries}
+The theorem is for the fixed rank-four $q=3$ group. ``$q$-blind'' means that $q$ is absent from the selector input; it does not mean uniformity over the Demu\v{s}kin family. $P_{k+1}$ is sufficient; minimality of the window is open. The final predicate is intrinsic although the standard presentation is used as a local calculation.
 
 \section{Conclusion}
 The result separates a classical infinite-group existence theorem from a finite recognition principle. It should therefore be read as a theorem about the information required by a selector, not as a new construction of the canonical orientation:
