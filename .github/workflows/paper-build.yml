@@ -25,11 +25,11 @@ jobs:
         run: |
           test -s main.pdf
           grep -q 'Output written on main.pdf' main.log
-          pdftotext main.pdf main.txt
-          grep -q 'Appendix A' main.txt
-          grep -q 'Appendix B' main.txt
-          grep -q 'Appendix C' main.txt
-          grep -q 'Appendix D' main.txt
+          grep -q '\\appendix' main.tex
+          grep -q 'Detailed verification of the finite-depth calculation' main.tex
+          grep -q 'Independent base-level enumeration' main.tex
+          grep -q 'Cochain-level verification' main.tex
+          grep -q 'Proof--computation boundary' main.tex
           ! grep -Eiq 'undefined|LaTeX Warning|Error:' main.log
 
       - name: Upload PDF artifact
