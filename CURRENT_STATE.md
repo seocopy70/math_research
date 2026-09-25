@@ -3018,3 +3018,21 @@ Classification:
 This is distinct from the U1–U2 twisted-coefficient factorization theorem; the failed restriction map uses trivial coefficients on P_{k+1} and is the extra hypothesis of Prop. 2.10. No closed branch is revived.
 
 Record: research/PROP_2_10_RESTRICTION_SURJECTIVITY_HARD_ATTACK_2026-09-25.md.
+
+
+## 2026-09-25 — CORRECTION / SCOPE TIGHTENING OF PROP. 2.10 ATTACK
+
+The previous entry stated the nonvanishing of P_{k+1}/P_{k+2} uniformly in k without separately recording the needed graded-dimension argument. That is stronger than necessary and is superseded.
+
+The decisive result needs only k=2:
+for the rank-4 p=3 Demushkin group, the published Zassenhaus dimension formula gives
+dim_F3(P_3/P_4)=c_3=(4^3-4)/3=20.
+Hence P_3/P_4 is nonzero, while P_3^3[P_3,G]⊂P_4. Since P_3⊂Phi(G), the dual inclusion
+P_3/P_3^3[P_3,G] -> G/Phi(G)
+is zero and has nonzero source. Therefore
+H^1(G,F_3) -> H^1(P_3,F_3)^G
+is not surjective.
+
+This single k=2 counterexample is sufficient to classify automatic Prop. 2.10 restriction-surjectivity as FAIL/CLOSED. Any all-k nonvanishing strengthening is left unclaimed pending a separate explicit proof.
+
+Record correction: research/PROP_2_10_RESTRICTION_SURJECTIVITY_HARD_ATTACK_2026-09-25.md, commit 70dad1bcab1145590d5a06b125dcf07b9249e7e5.
