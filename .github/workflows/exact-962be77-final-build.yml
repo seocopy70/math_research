@@ -1,0 +1,50 @@
+name: exact-962be77-final-build
+on:
+  push:
+    branches: [audit/latex-962be77-final]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact audited commit
+        uses: actions/checkout@v4
+        with:
+          ref: 962be77ed62040ed5707e3c59c54de6585a0086d
+          fetch-depth: 1
+      - name: Install TeX and PDF tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-extra poppler-utils
+      - name: Build PDF (three passes)
+        working-directory: paper
+        run: |
+          set -euxo pipefail
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex > build1.log 2>&1
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex > build2.log 2>&1
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex > build3.log 2>&1
+      - name: Inspect source and logs
+        working-directory: paper
+        run: |
+          set -euo pipefail
+          test -s main.pdf
+          test "$(git rev-parse HEAD)" = "962be77ed62040ed5707e3c59c54de6585a0086d"
+          echo "HEAD=$(git rev-parse HEAD)" | tee audit-summary.txt
+          echo "PDF_BYTES=$(wc -c < main.pdf)" | tee -a audit-summary.txt
+          echo "PDF_PAGES=$(pdfinfo main.pdf | awk '/^Pages:/ {print $2}')" | tee -a audit-summary.txt
+          if grep -Eni 'Undefined|LaTeX Warning|LaTeX Error|Fatal error|Emergency stop|! ' build3.log; then
+            echo "WARNING_OR_ERROR_MATCH=1" | tee -a audit-summary.txt
+            exit 1
+          fi
+          echo "WARNING_OR_ERROR_MATCH=0" | tee -a audit-summary.txt
+          sha256sum main.tex main.pdf | tee -a audit-summary.txt
+      - name: Upload PDF and audit logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: exact-962be77-final-build
+          path: |
+            paper/main.pdf
+            paper/build1.log
+            paper/build2.log
+            paper/build3.log
+            paper/audit-summary.txt
+          if-no-files-found: error
