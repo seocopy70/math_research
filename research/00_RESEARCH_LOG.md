@@ -2640,3 +2640,10 @@ eq1) versus (P_{3^{k-1}+1}=1);
 The appendices are deliberately restricted to calculations used by the theorem; broader exploratory computations remain in the research log rather than being presented as proof premises.
 
 A local three-pass PDF rebuild could not be rerun in this environment after this commit because the container has no DNS/network access to GitHub. This is an environment limitation, not a claimed manuscript/build failure. The source update itself was successfully written through the GitHub connector.
+
+
+### 2026-09-25 — PUBLICATION BIBLIOGRAPHY AUDIT
+A source-level bibliography audit was performed against publisher/arXiv records. One concrete metadata error was corrected in `paper/main.tex`: the Mináč–Rogelstad–Tân item was incorrectly titled as “How fast do Zassenhaus filtrations of pro-p-groups descend?”; the cited work is actually emph{Dimensions of Zassenhaus filtration subquotients of some pro-p-groups}, Israel Journal of Mathematics 212 (2016), no. 2, 825–855, DOI 10.1007/s11856-016-1310-0. The U1 text now cites this item explicitly.
+The separate unused `paper/references.bib` was removed so the arXiv source package has one authoritative manual bibliography rather than an unused duplicate source.
+A minor Appendix A notation typo (`u^{3^j}`) was also corrected.
+The manuscript bibliography entries for Labute (1967), Efrat–Quadrelli (2019), Quadrelli–Weigel (2020), Quadrelli–Weigel (2022), Quadrelli (2024), and Wilkes (2020) were cross-checked against publisher/arXiv metadata; their recorded journal/volume/page/article/DOI data are consistent with the audited sources.
