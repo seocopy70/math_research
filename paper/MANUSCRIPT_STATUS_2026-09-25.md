@@ -5,7 +5,6 @@
 The first publication-style manuscript now exists at:
 
 - `paper/main.tex`
-- `paper/references.bib`
 
 The manuscript is deliberately narrower than the research history. It presents the finite-window recognition theorem and keeps the canonical Demuškin orientation as classical prior art.
 
@@ -32,9 +31,9 @@ The manuscript is deliberately narrower than the research history. It presents t
 - minimality of (P_{k+1});
 - absolute/world-first publication priority.
 
-## Publication-critical verification still required
+## Publication-critical verification — updated
 
-The manuscript is a **first mathematical draft**, not yet submission-ready. The following are the remaining load-bearing checks:
+The manuscript has now received the U1–U5 proof expansion and Appendices A–D. The following remain as final release gates:
 
 ### A. U1 filtration
 Write the lower-3-central recursion explicitly and verify both inclusions
@@ -73,8 +72,10 @@ Do not turn the research log into the paper. The research log records failed rou
 ## Current status
 
 - Mathematical theorem: **PASS / CLOSED**
-- Manuscript proof expansion: **PASS / LOCAL**
-- Independent manuscript proof audit: **OPEN / LOAD-BEARING**
-- Clean compilation verification: **OPEN**
+- Manuscript proof expansion: **PASS / CLOSED**
+- Appendices A–D: **PASS / CLOSED**
+- Bibliography metadata audit: **PASS / CLOSED**
+- Independent manuscript proof audit: **PASS / CLOSED (latest audit)**
+- Clean compilation verification: **OPEN — latest post-Appendix build still required**
 - Exact publication novelty: **OPEN / CONDITIONAL**
 - Minimality: **OPEN**
