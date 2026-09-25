@@ -949,3 +949,7 @@ Remaining audit status: **THEOREM ASSEMBLY = PASS / PROVISIONAL**, pending a fre
 
 ## 2026-09-25 — APPENDIX A–D INSERTED
 Publication-facing Appendices A–D have been inserted into `paper/main.tex` at commit `71d59a39bc142892fdc1dcd38034b49158e6b41a`. The appendices cover the finite-depth U1 calculation, the complete (k=2) (81\to27\to3\to1) base enumeration, the U5b cochain calculation, and the proof/computation reproducibility boundary. The research log records the change at `55afc15a087ba3e73a5cc5ac4697ace1d1fb42f5`.
+
+
+## 2026-09-25 — PUBLICATION PACKAGE CLEANUP
+The manuscript bibliography was independently checked against publisher/arXiv records. The Mináč–Rogelstad–Tân citation was corrected to the 2016 Israel Journal of Mathematics article and given DOI 10.1007/s11856-016-1310-0; the U1 text now cites it explicitly. The unused `paper/references.bib` was removed, and an Appendix A notation typo was fixed. Research-log record: `70530dad18f9a09accd57e432db6e270ff0083a9`.
