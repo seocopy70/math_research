@@ -2340,3 +2340,70 @@ Status: U1 PASS/CLOSED; U2 PASS/CLOSED; U3 PASS/CLOSED; U4 PASS/CLOSED;
 U5a PASS/CLOSED; U5b PASS/CLOSED after cochain expansion; U5c PASS/CLOSED
 after naturality expansion. The proof is now ready for a fresh end-to-end
 audit rather than another repetition of the same local checks.
+
+
+## 2026-09-25 — CRITICAL FILTRATION CORRECTION: ZASSENHAUS VS LOWER 3-CENTRAL
+
+A further end-to-end audit found a substantive indexing error that was not visible in the
+earlier U1 local audit.
+
+The manuscript called \(P_i\) the Zassenhaus filtration but defined it by
+\[
+P_{j+1}=P_j^3[P_j,S],
+\]
+which is the lower \(3\)-central filtration, not the \(3\)-Zassenhaus/Jennings
+filtration. These filtrations agree at the first step but diverge at the
+\(3\)-power jumps. Consequently the earlier claim \(P_{k+1}(S_k)=1\) was false
+for the Zassenhaus filtration.
+
+For the actual target
+\[
+S_k=A_k\rtimes U_1,\qquad A_k=\mathbf Z/3^k,\quad U_j=1+3^jA_k,
+\]
+the corrected Zassenhaus computation is
+\[
+P_n(S_k)=3^{e(n)}A_k\rtimes U_{e(n)+1},
+\qquad e(n)=\lceil\log_3 n\rceil,\ e(1)=0.
+\]
+Hence
+\[
+P_{3^{k-1}}(S_k)=3^{k-1}A_k\ne1,
+\qquad
+P_{3^{k-1}+1}(S_k)=1.
+\]
+The key point is that the Zassenhaus recursion is
+\[
+P_n=P_{\lceil n/3\rceil}^3\prod_{i+j=n}[P_i,P_j],
+\]
+and the cube term supplies exactly the next \(3\)-adic translation and unit
+levels; the commutator terms are no deeper than the claimed containment.
+
+Therefore the finite quotient in the theorem has been corrected from
+\[
+G/P_{k+1}
+\quad\text{to}\quad
+Q_k=G/P_{3^{k-1}+1}.
+\]
+U2 has been correspondingly corrected: arbitrary candidate/cocycle maps into
+\(S_k\) factor through this actual Zassenhaus quotient by functoriality.
+
+This is a real correction, not cosmetic. In particular, the old \(P_{k+1}\)
+factorization cannot be retained for the Zassenhaus filtration. The corrected
+window is larger; minimality remains OPEN.
+
+The corrected manuscript is committed as:
+26d0180dbf1aece68acf14277da5baa0cf2aed1c.
+
+A fresh three-pass pdflatex compilation of the corrected manuscript state
+completed with status 0, 8 pages, and no undefined-reference or LaTeX
+warning/error matches in the final pass.
+
+Status update:
+- Old U1 formulation: FAIL/CLOSED (terminology + indexing error).
+- Correct Zassenhaus U1: PASS/CLOSED.
+- U2 after correction: PASS/CLOSED.
+- U3: PASS/CLOSED.
+- U4: PASS/CLOSED.
+- U5a/U5b/U5c: PASS/CLOSED.
+- Main theorem: structurally preserved, but with the corrected Zassenhaus
+  window \(P_{3^{k-1}+1}\).
