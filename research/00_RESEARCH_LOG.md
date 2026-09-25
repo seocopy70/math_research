@@ -2719,3 +2719,31 @@ Classification:
 - Zassenhaus-window minimality: OPEN
 
 This supersedes the previous "OPEN / ENVIRONMENTAL VERIFICATION GAP" build status.
+
+
+## 2026-09-26 — FOLLOW-UP PAPER SCOPE: SHARP WINDOW + ET_p OBSTRUCTION/UNIFORMITY
+
+A scope decision was made for the successor-paper program. The existing publication manuscript/paper is **FROZEN** and is not to be modified by this branch.
+
+The successor paper should **combine**, rather than split, the corrected sharp finite-window draft line with the newly developed elementary-type oriented pro-p framework (ET_p). The common research question is the boundary of finite-window recognition: sharp factorization depth, information-theoretic obstructions, q-collapse, and the possible uniformity of the same window on rigid subclasses.
+
+Planned successor-paper architecture:
+1. finite-window affine/Kummer factorization and corrected sharpness;
+2. abstract-Q_k information loss and q-collapse;
+3. strong impossibility on the free pro-p member F_2 = Z_p *_p Z_p of the broad ET_p class, where arbitrary orientations are Kummerian and the abstract finite quotient alone cannot select a unique orientation;
+4. weak selector formulation separating the Kummerian candidate set from any additional BP refinement;
+5. rigid ET_p/free-product subclass as the next positive uniform-window question.
+
+Important logical boundary: the rigid-subclass claim that the same n(k)=p^(k-1)+1 window works uniformly is **OPEN**, not a theorem. In particular, mixed free-product commutators need an explicit calculation; they cannot be assumed to die at the same Zassenhaus depth merely from factorwise filtration behavior. The first authorized test is a concrete D_1 *_p D_2 calculation for small k, followed by a general proof only if supported.
+
+The abstract-quotient impossibility is to be stated precisely: it rules out recovery from the **isomorphism class of the abstract Q_k alone**. It does not rule out recognition when extra marking, quotient maps, distinguished subgroups, coefficient actions, or other structure are supplied.
+
+Classification:
+- successor-paper integration of sharpness + ET_p obstruction program: **PASS / CLOSED (scope decision)**
+- free-pro-p/ET_p abstract-Q_k impossibility: **PASS / LOCAL**
+- q-collapse as obstruction: **PASS / LOCAL**
+- rigid ET_p uniform-window theorem: **OPEN**
+- recognition minimality among arbitrary intrinsic carriers: **OPEN**
+- successor-paper publication novelty: **OPEN / CONDITIONAL**
+
+No modification of the frozen publication manuscript is authorized by this entry.
