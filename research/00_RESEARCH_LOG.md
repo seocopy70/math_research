@@ -2407,3 +2407,25 @@ Status update:
 - U5a/U5b/U5c: PASS/CLOSED.
 - Main theorem: structurally preserved, but with the corrected Zassenhaus
   window \(P_{3^{k-1}+1}\).
+
+
+## 2026-09-25 — THEOREM ASSEMBLY ATTACK: CORRECTED ZASSENHAUS WINDOW
+
+A full assembly-level attack was performed against the current manuscript after the U1–U5 component audits. The attack did not find a fatal circularity in the U1→U2→U3→U4→U5→theorem chain. Two hidden assembly dependencies were identified and repaired in `paper/main.tex`:
+
+1. **Zassenhaus vs lower-3-central proof separation.** The older research U1 artifact proves the analogous lower-3-central statement (P_{k+1}(S_k)=1), so it cannot by itself justify the corrected Zassenhaus window (G/P_{3^{k-1}+1}). The manuscript proof was therefore replaced by a direct Jennings–Lazard Zassenhaus calculation using 
+(P_n=prod_{i3^j\ge n}\gamma_i^{3^j}), together with (gamma_2(S_k)=3A_k), (gamma_i(S_k)=3^{i-1}A_k), and the resulting exact formula (P_n(S_k)=3^{e(n)}A_k\rtimes U_{e(n)+1}). The distinction is now explicit: the old lower-3-central record is historical/superseded for the corrected-window proof.
+
+2. **Trivial-coefficient (H^1) identification.** U2 already gives the twisted (H^1) isomorphism, but the predicate also has target (H^1(-,\mathbf F_3)). The manuscript now explicitly proves (P_{3^{k-1}+1}(G)\subseteq\Phi(G)), hence inflation is an isomorphism on (H^1(-,\mathbf F_3)), and records the commutative square with coefficient reduction. This closes the previously implicit passage between the predicate on (G) and the predicate on (Q_k).
+
+The current main theorem therefore has a coherent dependency chain:
+- corrected actual Zassenhaus depth → arbitrary-candidate twisted factorization;
+- trivial-coefficient (H^1) identification → equivalence of finite predicates on (G) and (Q_k);
+- U3 → finite Fox criterion under explicit minimal one-relator hypotheses;
+- U4 → only the (k=2) base selector;
+- U5 → intrinsic higher-level uniqueness on the canonical branch;
+- classical Kummerianity → independent existence of the canonical candidate.
+
+No circular use of the desired selector theorem was found. In particular, U5 uses the independently known canonical dualizing orientation only inside the PD² injectivity lemma; it does not define the selector using that orientation.
+
+Remaining audit status: **THEOREM ASSEMBLY = PASS / PROVISIONAL**, pending a fresh line-by-line audit of the repaired manuscript and a successful clean LaTeX build. Publication novelty remains **OPEN / CONDITIONAL** and window minimality remains **OPEN**.
