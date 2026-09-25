@@ -2202,3 +2202,16 @@ Critical scope correction: P_3 itself is not automatically an admissible N for P
 Final status: Prop. 2.10 statement/proof PASS / CLOSED; duality PASS / CLOSED; c_3=20 PASS / CLOSED; P_3 restriction nonsurjectivity PASS / CLOSED; automaticity FAIL / CLOSED; admissible kernel-contained counterexample OPEN; Prop. 2.10 as a complete shortcut OPEN / CONDITIONAL; publication novelty OPEN / CONDITIONAL.
 
 Record: research/PROP_2_10_RESTRICTION_SURJECTIVITY_HARD_ATTACK_2026-09-25.md, commit 7147923991ed9960e9019ac465832f3bc90d5a1b.
+
+
+## 2026-09-25 — KERNEL-CONTAINED PROP. 2.10 COUNTEREXAMPLE CLOSED
+
+The previously OPEN branch N=P_3 intersect ker(chi) is now closed negatively by a cleaner commutator argument. Since chi is abelian-valued, [P_2,G] is contained in ker(chi), and the Zassenhaus commutator rule gives [P_2,G] contained in P_3; hence [P_2,G] is contained in N.
+
+In the associated restricted graded Lie algebra, the initial Demushkin relation is R=[X_1,X_2]+[X_3,X_4] in degree 2. The degree-3 relation space is span{[R,X_i]:1<=i<=4}. Direct coefficient linear algebra over F_3 in the free associative degree-3 space gives rank 4 for these four relation vectors, while adjoining [[X_1,X_2],X_1] gives rank 5. Thus [[X_1,X_2],X_1] survives in degree 3, so [P_2,G] is not contained in P_4.
+
+Therefore N/P_4 is nonzero. Also N^3[N,G] is contained in P_4, while N is contained in Phi(G). Hence N/N^3[N,G] is nonzero and the inclusion-induced map to G/Phi(G) is zero. By Quadrelli Prop. 2.10 duality, H^1(G,F_3) -> H^1(N,F_3)^G is not surjective.
+
+Classification update: N=P_3 intersect ker(chi) admissibility PASS/CLOSED; relative Frattini quotient nonzero PASS/CLOSED; restriction nonsurjectivity PASS/CLOSED; automatic Prop. 2.10 shortcut through this natural kernel-contained N FAIL/CLOSED. This does not assert a universal impossibility for every specially chosen N; that stronger statement is unnecessary.
+
+Record: research/PROP_2_10_RESTRICTION_SURJECTIVITY_HARD_ATTACK_2026-09-25.md, commit 5f6ec4c98d7831ef61a73bb97ea58176d4096df2.
