@@ -59,43 +59,56 @@ the dual restriction map cannot be surjective.
 
 So the question reduces to whether the coinvariant/Frattini quotient of $P_{k+1}$ is nonzero.
 
-## Nonvanishing
+## Decisive finite-window counterexample: k=2
 
-For the infinite finitely generated rank-4 Demuškin group under study, the Zassenhaus filtration is strict:
+To refute automaticity, it is enough to take $k=2$, so $N=P_3$.
+
+For a rank-$d$ Demuškin pro-p group, Mináč–Rogelstad–Nguyễn Duy Tân compute the dimensions
 \[
-P_{k+1}/P_{k+2}\ne0.
+c_n(G)=\dim_{\mathbf F_p}P_n/P_{n+1}.
 \]
-
-Moreover
+Their Example 5.3 gives, for $p=3$,
 \[
-P_{k+1}^3\subseteq P_{3(k+1)}\subseteq P_{k+2},
+c_3(G)=\frac{d^3-d}{3}.
+\]
+For the present rank-$4$ group,
+\[
+\boxed{\dim_{\mathbf F_3}P_3/P_4=20.}
+\]
+Thus $P_3/P_4\neq0$.
+
+On the other hand,
+\[
+P_3^3\subseteq P_9\subseteq P_4,
 \qquad
-[P_{k+1},G]\subseteq P_{k+2}.
+[P_3,G]\subseteq P_4,
 \]
-Hence
+so
 \[
-P_{k+1}^3[P_{k+1},G]\subseteq P_{k+2}.
+P_3^3[P_3,G]\subseteq P_4.
 \]
-
-Since $P_{k+1}/P_{k+2}\ne0$, it follows that
+Therefore
 \[
 \boxed{
-P_{k+1}/P_{k+1}^3[P_{k+1},G]\ne0.
+P_3/P_3^3[P_3,G]\neq0.
 }
 \]
 
-Thus the dual map required by Proposition 2.10 is non-injective, and therefore
+Since $P_3\subseteq\Phi(G)$, the inclusion-induced map
+\[
+P_3/P_3^3[P_3,G]\to G/\Phi(G)
+\]
+is zero. It is therefore not injective. By the duality used explicitly in the proof of Proposition 2.10, the restriction map
 \[
 \boxed{
-H^1(G,\mathbf F_3)\to
-H^1(P_{k+1},\mathbf F_3)^G
-\text{ is not surjective.}
+H^1(G,\mathbf F_3)\to H^1(P_3,\mathbf F_3)^G
 }
 \]
+is not surjective.
 
-This is not a computational conjecture: the obstruction comes from the fact that $P_{k+1}$ lies inside the Frattini subgroup while still possessing a nontrivial first relative Frattini layer.
+This single $k=2$ counterexample already proves that the Proposition 2.10 restriction-surjectivity hypothesis is **not automatic** for $N=P_{k+1}$.
 
-For the strictness assertion, one may use the standard properties of the Zassenhaus filtration for finitely generated pro-p groups; the repository's existing Zassenhaus/Demuškin records also treat the successive graded pieces as nontrivial in the relevant family. A finite GAP check at $k=2,3$ is useful as independent verification, but it is not the logical basis of the result.
+A stronger all-$k$ statement is plausible and can be checked from the explicit Zassenhaus dimension formula, but it is not needed to close the automaticity question and is therefore not promoted here without a separate proof.
 
 ## Consequence for the proposed problem 2
 
@@ -124,7 +137,7 @@ The logical distinction is now sharp:
 - Proposition 2.10: known Kummerian $(G,\theta)$ + $N\subseteq\ker\theta$ + restriction-surjectivity $\Rightarrow$ quotient Kummerian.
 - Present theorem: arbitrary finite candidate $\rho$ + direct finite-depth factorization $\Rightarrow$ intrinsic predicate on $Q_k$, followed by intrinsic uniqueness.
 
-For $N=P_{k+1}$, the extra restriction-surjectivity premise is not available. Therefore Proposition 2.10 cannot be invoked to obtain the present finite-window theorem.
+Already at $k=2$ with $N=P_3$, the extra restriction-surjectivity premise is false. Therefore Proposition 2.10 cannot be invoked to obtain the present finite-window theorem.
 
 ## Important non-implication
 
