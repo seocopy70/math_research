@@ -12,7 +12,7 @@
 \maketitle
 
 \begin{abstract}
-We study finite-window recognition of the canonical orientation of the fixed rank-four q=3 Demuskin pro-3 group. Let $P_i$ be the Zassenhaus filtration and put $Q_k=G/P_{k+1}$. For a principal-unit character $\rho:Q_k\to U_{1,k}:=1+3(\mathbb Z/3^k\mathbb Z)$, let $\mathsf K_k(Q_k,\rho)$ mean that $H^1(Q_k,\mathbb Z/3^k(\rho))\to H^1(Q_k,\mathbb F_3)$ is surjective. We prove that $\mathsf K_k(Q_k,\rho)$ holds exactly for $\rho=\chi_G\bmod3^k$, for $k\ge2$. The canonical orientation itself is classical; the result is a finite-window recognition statement.
+We study finite-window recognition of the canonical orientation of the fixed rank-four q=3 Demuskin pro-3 group. Let $P_i$ be the Zassenhaus filtration and put $Q_k=G/P_{3^{k-1}+1}$. For a principal-unit character $\rho:Q_k\to U_{1,k}:=1+3(\mathbb Z/3^k\mathbb Z)$, let $\mathsf K_k(Q_k,\rho)$ mean that $H^1(Q_k,\mathbb Z/3^k(\rho))\to H^1(Q_k,\mathbb F_3)$ is surjective. We prove that $\mathsf K_k(Q_k,\rho)$ holds exactly for $\rho=\chi_G\bmod3^k$, for $k\ge2$. The canonical orientation itself is classical; the result is a finite-window recognition statement.
 \end{abstract}
 
 \section{Introduction}
@@ -20,10 +20,10 @@ Let
 \[
 G=\langle x_1,x_2,x_3,x_4 \mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle.
 \]
-An orientation of a pro-$3$ group $H$ is a continuous homomorphism $\theta:H\to1+3\mathbb Z_3$, giving the twisted module $\mathbb Z_3(\theta)$. The oriented group is Kummerian when, for every n\ge1, the natural map H^1(H,Z_3(theta)/3^n) to H^1(H,F_3) is surjective; this is the standard Kummerian formulation used by Efrat--Quadrelli and Quadrelli--Weigel \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. Labute proved that every Demushkin group has a unique orientation making it Kummerian, namely the canonical orientation induced by the dualizing module \cite{Labute1967}. Our question is whether its reduction modulo 3^k can be recognized from Q_k=G/P_{k+1} without supplying the orientation as input.
+An orientation of a pro-$3$ group $H$ is a continuous homomorphism $\theta:H\to1+3\mathbb Z_3$, giving the twisted module $\mathbb Z_3(\theta)$. The oriented group is Kummerian when, for every n\ge1, the natural map H^1(H,Z_3(theta)/3^n) to H^1(H,F_3) is surjective; this is the standard Kummerian formulation used by Efrat--Quadrelli and Quadrelli--Weigel \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. Labute proved that every Demushkin group has a unique orientation making it Kummerian, namely the canonical orientation induced by the dualizing module \cite{Labute1967}. Our question is whether its reduction modulo $3^k$ can be recognized from $Q_k=G/P_{3^{k-1}+1}$ without supplying the orientation as input.
 
 \begin{theorem}[Finite-window recognition]
-For every k\ge2 and every principal-unit rho:Q_k to U_{1,k}:=1+3A_k,
+For every $k\ge2$ and every principal-unit $\rho:Q_k\to U_{1,k}:=1+3A_k$,
 \[
 \mathsf K_k(Q_k,rho) \Longleftrightarrow rho=chi_G\pmod {3^k}.
 \]
@@ -36,44 +36,58 @@ Put $A_k=\mathbf Z/3^k\mathbf Z$, $U_j=1+3^jA_k$ for $j\ge1$, with $U_j=1$ for $
 \[
 S_k=A_k\rtimes U_1,\qquad (a,u)(b,v)=(a+ub,uv).
 \]
-Let $P_1(S_k)=S_k$ and $P_{j+1}(S_k)=P_j(S_k)^3[P_j(S_k),S_k]$.
+Let $P_n(S_k)$ denote the $3$-Zassenhaus filtration.
 
-\begin{lemma}[U1: finite-depth semidirect filtration]
-For $1\le j\le k+1$, put $T_j=3^{j-1}A_k\rtimes U_j$. Then
+\begin{lemma}[U1: finite-depth Zassenhaus filtration]
+For $n\ge1$, set
 \[
-P_j(S_k)=T_j,\qquad P_{k+1}(S_k)=1.
+e(n)=\left\lceil\log_3 n\right\rceil,\qquad e(1)=0.
+\]
+Then
+\[
+P_n(S_k)=3^{e(n)}A_k\rtimes U_{e(n)+1}.
+\]
+In particular,
+\[
+P_{3^{k-1}+1}(S_k)=1,\qquad
+P_{3^{k-1}}(S_k)=3^{k-1}A_k\ne1.
 \]
 \end{lemma}
 
 \begin{proof}
-For $(a,u)\in T_j$, write $u=1+3^jt$. Then
+For $n=1$ the assertion is $P_1=S_k$. We use the standard recursive form of the
+Zassenhaus filtration
 \[
-(a,u)^3=((1+u+u^2)a,u^3),
+P_n=P_{\lceil n/3\rceil}^{\,3}
+\prod_{i+j=n}[P_i,P_j]\qquad(n\ge2).
 \]
-and $1+u+u^2\in3A_k$. Moreover $U_j^3=U_{j+1}$ for $j<k$ by successive $3$-adic digit lifting. Hence $T_j^3\subseteq3^jA_k\rtimes U_{j+1}$.
-
-A direct commutator calculation gives $[T_j,S_k]\subseteq3^jA_k$. Conversely, with $[x,y]=x^{-1}y^{-1}xy$ and $4\in U_1$,
+Suppose inductively that the asserted formula holds for all smaller indices, and
+write $e=e(n)$. By the definition of $e(n)=\lceil\log_3 n\rceil$, one has
+$e(\lceil n/3\rceil)=e-1$ for $e\ge1$. The cube of
+$3^{e-1}A_k\rtimes U_e$ has translation part $3^eA_k$ and unit part
+$U_{e+1}$: the translation is generated already by
+$(3^{e-1}a,1)^3=(3^ea,1)$, while $U_e^3=U_{e+1}$.
+For the commutator terms, translations commute with translations, and
 \[
-[(a,1),(0,4)]=((4^{-1}-1)a,1).
+[3^aA_k,U_{b+1}]\subseteq3^{a+b+1}A_k,
 \]
-Since $4^{-1}-1=-3/4$ is $3$ times a unit, these commutators generate all of $3^jA_k$. Thus $[T_j,S_k]=3^jA_k$. Induction from $P_1=T_1$ now gives
-\[
-P_{j+1}(S_k)=T_j^3[T_j,S_k]=3^jA_k\rtimes U_{j+1}=T_{j+1}.
-\]
-At $j=k$, both factors are trivial.
+while the unit factors commute with each other. If $i+j=n$, these
+commutator contributions lie in $3^eA_k$. Thus the right side is contained
+in $3^eA_k\rtimes U_{e+1}$, while the cube term already generates both
+factors. Hence equality follows.
 \end{proof}
 
 \begin{lemma}[U2: arbitrary-candidate factorization]
 Let $G$ be any pro-$3$ group, $\rho:G\to U_{1,k}$ a character, and
 $z\in Z^1(G,A_k(\rho))$. Then $z$ and $\rho$ factor through
-$Q_k=G/P_{k+1}(G)$, and inflation gives a canonical isomorphism
+$Q_k=G/P_{3^{k-1}+1}(G)$, and inflation gives a canonical isomorphism
 \[
 H^1(Q_k,A_k(\bar\rho))\xrightarrow{\sim}H^1(G,A_k(\rho)).
 \]
 \end{lemma}
 
 \begin{proof}
-The crossed-cocycle identity is equivalent to $\psi(g)=(z(g),\rho(g))$ being a homomorphism $G\to S_k$. Functoriality of the lower $3$-central series and U1 give $\psi(P_{k+1}(G))=1$. Thus both components factor through $Q_k$. The same argument for coboundaries identifies $B^1$ on both sides, proving the cohomology isomorphism.
+The crossed-cocycle identity is equivalent to $\psi(g)=(z(g),\rho(g))$ being a homomorphism $G\to S_k$. Functoriality of the Zassenhaus filtration and U1 give $\psi(P_{3^{k-1}+1}(G))=1$. Thus both components factor through $Q_k$. The same argument for coboundaries identifies $B^1$ on both sides, proving the cohomology isomorphism.
 \end{proof}
 
 \section{Finite Kummer criterion for a minimal one-relator presentation}
@@ -278,7 +292,7 @@ The existence and uniqueness of the canonical Demu\v{s}kin orientation, and the 
 
 The distinction relevant here is the direction of recognition. The classical theory starts with an oriented pair $(G,\theta)$ and asks whether the prescribed orientation is Kummerian. In contrast, our finite-window statement starts from the bare finite quotient
 \[
-Q_k=G/P_{k+1}
+Q_k=G/P_{3^{k-1}+1}
 \]
 and an arbitrary principal-unit candidate $\rho:Q_k\to U_{1,k}$, and uses the intrinsic predicate $\mathsf K_k(Q_k,\rho)$ to select the reduction of the canonical orientation. The finite-depth factorization in Sections 2--3 is part of this direction: the candidate is not supplied by the prior theory, and the relevant twisted cocycles are shown to factor through $Q_k$ for an arbitrary candidate.
 
@@ -291,12 +305,12 @@ Those hypotheses are materially different from the present recognition problem. 
 Within the literature audited for this manuscript, we did not identify an exact theorem whose input is the bare $Q_k$, whose candidate $\rho$ is arbitrary, whose selector is precisely the finite Kummer predicate $\mathsf K_k(Q_k,\rho)$, and whose arbitrary-candidate factorization through $Q_k$ is established. Accordingly, the publication-level novelty claim is intentionally conditional and narrow; it is not a claim of absolute priority.
 
 \section{Limitations and logical boundaries}
-The theorem is for the fixed rank-four $q=3$ group. ``$q$-blind'' means that $q$ is absent from the selector input; it does not mean uniformity over the Demu\v{s}kin family. $P_{k+1}$ is sufficient; minimality of the window is open. The final predicate is intrinsic although the standard presentation is used as a local calculation.
+The theorem is for the fixed rank-four $q=3$ group. ``$q$-blind'' means that $q$ is absent from the selector input; it does not mean uniformity over the Demu\v{s}kin family. $P_{3^{k-1}+1}$ is sufficient; minimality of the window is open. The final predicate is intrinsic although the standard presentation is used as a local calculation.
 
 \section{Conclusion}
 The result separates a classical infinite-group existence theorem from a finite recognition principle. It should therefore be read as a theorem about the information required by a selector, not as a new construction of the canonical orientation:
 \[
-G/P_{k+1} \quad+\quad \text{intrinsic Kummer lifting}
+G/P_{3^{k-1}+1} \quad+\quad \text{intrinsic Kummer lifting}
 \quad\Longrightarrow\quad \chi_G\pmod {3^k}.
 \]
 
