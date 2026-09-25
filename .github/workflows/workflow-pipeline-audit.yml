@@ -37,7 +37,7 @@ jobs:
         working-directory: paper
         run: |
           test -s main.pdf
-          pdfinfo main.pdf | grep '^Pages:'
+          grep -q 'Output written on main.pdf' main.log
           pdftotext main.pdf main.txt
           grep -q 'Appendix A' main.txt
           grep -q 'Appendix B' main.txt
