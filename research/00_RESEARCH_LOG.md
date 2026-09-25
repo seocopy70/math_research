@@ -1,3 +1,39 @@
+## 2026-09-26 — EXTENDED SHARP FINITE-WINDOW DRAFT: CRITICAL AUDIT
+
+The uploaded `sharp_finite_window.tex` was attacked as a proposed successor paper.
+
+A fatal manuscript-level mathematical error was found in the left crossed-cocycle commutator formula. With (z(gh)=z(g)+\rho(g)z(h)) and ([a,b]=a^{-1}b^{-1}ab), the correct identity is
+[
+z([a,b])=\rho(a)^{-1}\rho(b)^{-1}\bigl((1-\rho(b))z(a)+(\rho(a)-1)z(b)\bigr).
+]
+The draft omits the prefactor. This propagates into the explicit Fox coefficients and the all-(k) selector.
+
+For the stated normal form (r=x_1^{p^f}[x_1,x_2]\cdots), the corrected zero condition gives
+[
+\rho(x_2)=(1-p^f)^{-1}\pmod{p^k},
+]
+the known canonical orientation value, not (1+p^f). The discrepancy first appears at (k=3): for (p=3,f=1), the draft gives (4\pmod{27}), while the canonical value is (13\pmod{27}). Thus the current main theorem/abstract are **FAIL/CLOSED as written** for (k\ge3).
+
+A second independent issue: the draft's "sharp window" theorem proves a universal affine-representation factorization threshold, not recognition minimality among all intrinsic predicates/carriers. The latter remains **OPEN**, consistent with the authoritative research state.
+
+A further flaw in the sharpness proof is that it claims the canonical (chi\bmod p^k) is surjective onto (U_{1,k}) for all (f). This is false for (f\ge k), where (chi\bmod p^k) is trivial.
+
+The Newton algorithm and q-recovery sections inherit the corrected orientation equation and also require a precise distinction between abstract-(Q_k), marked-(Q_k), and normal-form presentation input models.
+
+Detailed audit:
+`research/EXTENDED_SHARP_FINITE_WINDOW_CRITICAL_AUDIT_2026-09-26.md`.
+
+Classification:
+- crossed-cocycle formula: **FAIL/CLOSED**
+- all-k selector as currently written: **FAIL/CLOSED**
+- corrected finite-window factorization mechanism: **PASS/CONDITIONAL**
+- recognition minimality: **OPEN**
+- q-collapse classification: **PASS/LOCAL**
+- Newton algorithm: **OPEN/CONDITIONAL**
+- publication novelty: **OPEN/CONDITIONAL**
+
+No closed branch is revived. Required next step is repair of the cocycle/Fox equations before any further extension scan.
+
 # 2026-09-25 — EXACT 962be77 BUILD ATTACK: U3 LATEX SYNTAX DEFECT FOUND AND FIXED
 
 ## Pre-check
