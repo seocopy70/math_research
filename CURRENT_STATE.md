@@ -1005,3 +1005,20 @@ Current successor-branch classifications:
 - publication novelty: **OPEN / CONDITIONAL**
 
 The mixed-commutator issue is load-bearing: no uniform-window theorem is claimed until D_1 *_p D_2 is explicitly tested at small k and the general filtration/image argument is proved.
+
+
+## 2026-09-26 — FOLLOW-UP MERGED AUDIT: MIXED-COMMUTATOR GATE CLOSED
+
+The uploaded `followup_merged.tex` has been attacked against the successor-paper state. The mixed-commutator issue is now structurally closed: the truncation functor (T_n(G)=G/P_n(G)) is left adjoint to the inclusion of (P_n=1) pro-(p) groups, so it preserves the free-product coproduct after reflection. Consequently
+[
+T_n(G_1*_pG_2)cong T_n(G_1)*_pT_n(G_2)/P_n(T_n(G_1)*_pT_n(G_2)),
+]
+and the kernel (N) in the successor draft is exactly the (P_n)-subgroup of the free product of factor quotients. This closes the requested (D_1*_pD_2) mixed-factorization gate for all (k), not merely small (k).
+
+A separate sharpness proof defect remains: for (f>1), canonical ((1-p^f)^{-1}) is not a generator of (U_1). The proof should instead use canonical (ho) with (z(x_1)=1) for (f<k), and the existing (x_3) witness for (fge k). The theorem is therefore **OPEN pending this local repair**.
+
+The free-pro-(p) impossibility should be stated only for isomorphism-natural/functorial predicates on the bare abstract (Q_k). The q-collapse result is **PASS/LOCAL**. Uniformity is **PASS/CLOSED** for finite free products of Demushkin groups and remains **OPEN** for the broader undefined (mathcal{ET}_p^{rig}) class.
+
+The uploaded source has a trivial LaTeX defect: `\Fp` is undefined; a temporary macro repair compiled in three passes. The uploaded file itself was not changed.
+
+Audit artifact: `research/FOLLOWUP_MERGED_AUDIT_2026-09-26.md`, commit `e4fca7e63a282d0f4b009299fbf906582270c8ef`.
