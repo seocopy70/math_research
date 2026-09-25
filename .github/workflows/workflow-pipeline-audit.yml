@@ -21,3 +21,32 @@ jobs:
           python-version: '3.11'
       - name: Audit shell pipelines
         run: python research/WORKFLOW_PIPELINE_AUDIT_2026-09-17.py
+
+
+  paper-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile manuscript
+        uses: xu-cheng/latex-action@v4
+        with:
+          working_directory: paper
+          root_file: main.tex
+          args: -pdf -interaction=nonstopmode -halt-on-error
+      - name: Verify manuscript PDF
+        working-directory: paper
+        run: |
+          test -s main.pdf
+          pdfinfo main.pdf | grep '^Pages:'
+          pdftotext main.pdf main.txt
+          grep -q 'Appendix A' main.txt
+          grep -q 'Appendix B' main.txt
+          grep -q 'Appendix C' main.txt
+          grep -q 'Appendix D' main.txt
+          ! grep -Eiq 'undefined|LaTeX Warning|Error:' main.log
+      - name: Upload manuscript PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: finite-window-kummer-recognition-pdf
+          path: paper/main.pdf
+          if-no-files-found: error
