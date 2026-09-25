@@ -2600,3 +2600,30 @@ three-pass build applies to the preceding corrected commit, not to 962be77.
 No new mathematical branch is opened. The next action is publication preparation
 only, unless a genuine build environment becomes available.
 
+
+
+## 2026-09-25 — AUTHOR + U5c CITATION + FINAL PDF BUILD
+
+The publication manuscript was updated in `paper/main.tex`:
+- author set exactly to **Seo Seongkyo**;
+- U5c citation wording tightened to identify Wilkes (2020), §1, specifically the finite-coefficient duality stated immediately before Proposition 1.5, with the same orientation-character convention.
+
+Commit: `4e98bec29ad558f64f314f0897d706c8acd980d1`.
+
+The resulting manuscript was independently rebuilt from the exact GitHub source content at that commit using three consecutive `pdflatex -interaction=nonstopmode -halt-on-error` passes. Final checks:
+- exit status: **0**;
+- PDF pages: **8**;
+- passes 2 and 3: no LaTeX errors, warnings, or undefined-reference matches;
+- PDF text confirms author line: **Seo Seongkyo**;
+- SHA-256: `202dda263a7dfa1679c0b69a80e50705633b7add8033502f69eb9855dcd110e7`.
+
+The local build is an exact-source-content build of the committed `paper/main.tex`; the container cannot resolve `github.com`, so this is not represented as a fresh GitHub Actions artifact. No mathematical branch was reopened.
+
+Classification:
+- author metadata: **PASS / CLOSED**
+- U5c citation precision: **PASS / CLOSED**
+- final local PDF build: **PASS / CLOSED**
+- fresh GitHub Actions artifact: **NOT CLAIMED / ENVIRONMENTAL**
+- theorem assembly: **PASS / CLOSED**
+- novelty: **OPEN / CONDITIONAL**
+- window minimality: **OPEN**
