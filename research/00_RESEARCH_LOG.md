@@ -2898,3 +2898,48 @@ Results:
 - Paper 3 classification: **PASS / CLOSED as a mathematically sound application/companion manuscript; FAIL / CLOSED as an independent novelty paper on the current evidence**.
 
 Paper 2 remains untouched. A genuinely independent Paper 3 now requires a new application theorem or obstruction, not further cosmetic expansion of the current free-product synthesis.
+
+## 2026-09-26 — PAPER 2 + PAPER 3 MERGED: FINAL PUBLICATION-TRACK DECISION
+
+Paper 3's current corpus was merged into Paper 2 after the requested sequence:
+Paper 2 baseline restoration -> Paper 3 application absorption -> independent referee audit -> novelty/redundancy audit -> manuscript repair -> fresh CI -> publication-candidate gate.
+
+Merged manuscript:
+- branch: `paper2-paper3-merged-2026-09-26`
+- source: `paper/successor_main.tex`
+- publication-candidate status: **PASS / CLOSED internally**, subject to the already stated conditional novelty boundary.
+
+Merged application content:
+- finite free pro-p product truncation/coproduct compatibility;
+- uniform affine window for mixed commutators;
+- heterogeneous `f_i<k` versus `f_i>=k` finite-depth parameter profile;
+- explicit composite example `D_{1,4}*_pD_{3,2}*_pD_{7,4}`;
+- blockwise Kummer recognition for finite free pro-3 products of rank-four `q=3` blocks.
+
+Referee result:
+- mathematical core: PASS/CLOSED;
+- affine sharpness: PASS/CLOSED;
+- free-product extension: PASS/CLOSED in the stated class;
+- finite-depth `f`-collapse: PASS/CLOSED after tightening the abelianization argument;
+- blockwise Kummer application: PASS/CLOSED within its stated class;
+- no new load-bearing mathematical defect found.
+
+Novelty/redundancy result:
+- Paper 3 as an independent publication is **FAIL/CLOSED on current evidence** because its present claims are applications/synthesis of Paper 2 plus the preceding recognition theorem and known free-product machinery.
+- This does **not** mean the application material lacks mathematical value.
+- The material is retained inside Paper 2, where it strengthens the theorem's concrete scope without competing with the central novelty.
+- Publication novelty for Paper 2 remains **CONDITIONAL** and is phrased narrowly; no absolute priority claim is made.
+
+CI:
+- final merged manuscript build: **PASS**;
+- merged PDF: **11 pages**;
+- CI run for the final manuscript commit: `36215909243`;
+- earlier failed CI runs were caused by verification-script issues, not manuscript compilation; the final verification and artifact upload passed.
+
+Records:
+- `research/PAPER2_PAPER3_MERGED_REFEREE_AUDIT_2026-09-26.md`
+- `research/PAPER2_PAPER3_NOVELTY_REDUNDANCY_AUDIT_2026-09-26.md`
+- `paper/PAPER2_MERGED_PUBLICATION_CANDIDATE_2026-09-26.md`
+
+Decision:
+**Do not submit the former Paper 3 separately in its current form. Treat its present content as the applications/synthesis component of Paper 2.**
