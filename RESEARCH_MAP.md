@@ -1,3 +1,29 @@
+## 2026-09-26 — PAPER 2 + PAPER 3 MERGED PUBLICATION CANDIDATE
+
+The current publication-track decision is now fixed:
+
+- Paper 2 remains the independent theorem paper.
+- The former Paper 3 corpus is absorbed into Paper 2 as applications/synthesis, not submitted separately.
+- Merged manuscript branch: `paper2-paper3-merged-2026-09-26`.
+- Manuscript source: `paper/successor_main.tex`.
+- Former Paper 3 source `paper3/main.tex` is retained as research/application history.
+- Merged independent referee audit: PASS/CLOSED.
+- Novelty/redundancy audit: Paper 3 as a standalone paper is FAIL/CLOSED on current evidence; its current material is application-level.
+- Merged Paper 2 mathematical core: PASS/CLOSED.
+- Affine sharpness (n_{\\mathrm{aff}}(k)=p^{k-1}+1): PASS/CLOSED in the stated affine crossed-cocycle category.
+- Free-product/mixed-commutator extension: PASS/CLOSED for finite free pro-(p) products of the stated Demuškin blocks.
+- Blockwise Kummer application: PASS/CLOSED for finite free pro-3 products of rank-four (q=3) blocks.
+- Publication novelty remains CONDITIONAL; no absolute priority claim is made.
+- Final merged manuscript CI: PASS, PDF artifact generated.
+
+Detailed records:
+- `research/PAPER2_PAPER3_MERGED_REFEREE_AUDIT_2026-09-26.md`
+- `research/PAPER2_PAPER3_NOVELTY_REDUNDANCY_AUDIT_2026-09-26.md`
+- `paper/PAPER2_MERGED_PUBLICATION_CANDIDATE_2026-09-26.md`
+
+This publication-track update does not alter the frozen Paper 1 manuscript or the earlier successor baseline; it establishes the merged Paper 2 branch as the current candidate.
+
+
 ## 2026-09-24 — AUTHORITATIVE UPDATE: U5 CLOSED / UNIFORM FINITE-WINDOW SELECTOR PROVED
 
 The U5 load-bearing gate is now closed.
