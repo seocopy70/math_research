@@ -1982,3 +1982,484 @@ G/P_4\to\chi\bmod27=\text{OPEN/DECISIVE}
 \]
 
 이 문서는 기존 세부 연구기록을 대체하지 않으며, RESEARCH_MAP / CURRENT_STATE / 00_RESEARCH_LOG 및 각 stage document를 읽기 전에 연구 전체 흐름을 빠르게 복원하기 위한 중간 총정리이다.
+
+
+---
+
+# 53. 2026-09-26 — 중간 평가 업데이트: 첫 논문과 후속 연구의 역할을 분리해서 본 현재 평가
+
+이번 중간 평가에서는 지금까지의 연구 기록과 현재 후속 연구의 상태를 **“실제로 수학적으로 무엇을 얻었는가”**와 **“논문으로서 무엇을 주장할 수 있는가”**를 분리해서 정리한다.
+
+한 줄 요약:
+
+> 첫 논문은 “무한한 군 전체를 보지 않고도, 정확히 정해진 유한한 Zassenhaus window 안에서 canonical orientation을 Kummer 조건으로 찾아낼 수 있다”는 인식 정리를 만든 것이고, 후속 연구는 그 window가 왜 필요한지, 얼마나 날카로운지, 그리고 \(q=p^f\) 변화에 따라 정보가 어디까지 보존되는지를 파고드는 방향이다.
+
+다만 후속논문은 현재 아이디어와 결과는 상당히 좋아졌지만, 처음 작성된 sharp_finite_window.tex 자체는 아직 논문으로 제출할 상태가 아니다. 그 차이를 정확히 분리한다.
+
+## 53.1 첫 논문의 핵심 기여
+
+첫 논문의 핵심 정리는 현재 다음과 같이 정리된다.
+
+\[
+G=\langle x_1,x_2,x_3,x_4\mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle
+\]
+
+에 대해 실제 Zassenhaus filtration을 사용하여
+
+\[
+Q_k=G/P_{3^{k-1}+1}
+\]
+
+라는 유한 quotient를 취하고,
+
+\[
+\rho:Q_k\to U_{1,k}=1+3\mathbf Z/3^k
+\]
+
+후보들과 finite Kummer lifting predicate
+
+\[
+\mathsf K_k(Q_k,\rho):
+H^1(Q_k,\mathbf Z/3^k(\rho))
+\longrightarrow H^1(Q_k,\mathbf F_3)
+\]
+
+의 surjectivity를 검사한다.
+
+현재 U1–U5가 닫혔으므로, \(k\ge2\)에 대해
+
+\[
+\boxed{
+\mathsf K_k(Q_k,\rho)
+\iff
+\rho=\chi_G\pmod{3^k}
+}
+\]
+
+가 성립한다.
+
+쉽게 말하면 기존 이론이
+
+\[
+G+\chi\Longrightarrow\text{Kummerian}
+\]
+
+이라는 방향이었다면, 이번 연구는
+
+\[
+Q_k+\text{arbitrary candidate }\rho+\mathsf K_k
+\Longrightarrow
+\rho=\chi\pmod{3^k}
+\]
+
+라는 방향으로 문제를 뒤집었다.
+
+따라서 첫 논문의 정확한 표현은 **“canonical orientation을 발견했다”가 아니라 “canonical orientation을 finite information으로 recognition하는 theorem을 만들었다”**이다.
+
+## 53.2 첫 논문의 수학적 구조 U1–U5
+
+### U1 — 유한 window가 실제로 충분한 이유
+
+후보 \(\rho\)와 crossed cocycle \(z\)를 합치면
+
+\[
+G\to A_k\rtimes U_{1,k}
+\]
+
+라는 affine representation을 만든다.
+
+현재의 올바른 Zassenhaus 계산은
+
+\[
+P_n(A_k\rtimes U_1)
+=
+3^{e(n)}A_k\rtimes U_{e(n)+1},
+\qquad e(n)=\lceil\log_3 n\rceil,
+\]
+
+따라서
+
+\[
+P_{3^{k-1}}\neq1,
+\qquad
+P_{3^{k-1}+1}=1.
+\]
+
+그러므로 relevant affine/Kummer information은 정확히
+
+\[
+Q_k=G/P_{3^{k-1}+1}
+\]
+
+에서 끝난다.
+
+즉 “무한히 깊은 group structure가 필요하지 않다”는 것이 첫 번째 큰 결과다.
+
+### U2 — 임의의 후보에 대해서도 factorization
+
+canonical \(\chi\)에 대해서만 factorization을 보인 것이 아니다. 임의의 후보 \(\rho\)에 대해서도 crossed cocycle와 coefficient action이 corrected finite quotient를 통해 factorization한다.
+
+따라서 정답을 미리 가정하지 않는 recognition theorem의 논리적 기반이 된다.
+
+### U3 — cohomology와 one-relator Fox obstruction의 연결
+
+crossed cocycle 조건은 one-relator presentation에서
+
+\[
+\sum_iF_i(\rho)z(x_i)=0
+\]
+
+형태의 식으로 바뀌고, Kummer lifting surjectivity와 결합하여 twisted Fox row vanishing과 동치가 된다.
+
+초기의 Nakayama식 설명은 valuation induction으로 교정되었다. 따라서 이것은 단순한 brute-force search가 아니라
+
+\[
+\text{cohomological lifting property}
+\Longleftrightarrow
+\text{one-relator Fox obstruction}
+\]
+
+이라는 연결이다.
+
+### U4 — \(k=2\) base selector
+
+mod \(9\)에서는
+
+\[
+\rho_2=(1,4,1,1)
+\]
+
+이 유일한 후보가 된다.
+
+이는 이후 U5 induction의 시작점이다.
+
+### U5 — 모든 \(k\)에서의 intrinsic uniqueness
+
+두 후보가 같은 이전 단계로 내려가면
+
+\[
+\rho_k'=\rho_k(1+3^{k-1}\nu)
+\]
+
+로 쓸 수 있고 coefficient-extension variation formula가
+
+\[
+\delta_{\rho_k'}-\delta_{\rho_k}
+=
+\iota_{k-1}\circ(\nu\smile-)
+\]
+
+를 준다.
+
+PD² duality에 의한 socle-injectivity와 Demuškin cup-product nondegeneracy를 결합하면 두 후보가 모두 Kummerian일 경우
+
+\[
+\nu=0
+\]
+
+이므로 후보는 유일하다.
+
+따라서
+
+\[
+\text{mod }9
+\to
+\text{mod }27
+\to
+\text{mod }81
+\to\cdots
+\]
+
+를 매 단계 brute force할 필요 없이 하나의 구조적 uniqueness theorem으로 닫는다.
+
+## 53.3 첫 논문의 진짜 의미
+
+기존에 알려진 것은 canonical orientation의 존재·유일성, Kummerian characterization, Demuškin classification 등이다. 이것들은 신규 발견으로 주장하지 않는다.
+
+이번 연구의 살아 있는 주장은
+
+\[
+\boxed{
+Q_k=G/P_{3^{k-1}+1}
+\quad+\quad
+\text{q-blind finite Kummer predicate}
+\Longrightarrow
+\chi\bmod3^k
+}
+\]
+
+라는 finite-window recognition 구조다.
+
+현재 이 theorem 자체의 publication-level novelty는 여전히 문헌 Gate가 결정한다. 즉 “이미 알려진 finite-coefficient quotient inheritance/Kummerian theorem의 즉각적인 corollary 또는 동치 재서술인가?”를 line-by-line으로 닫아야 한다.
+
+## 53.4 후속 연구가 묻는 질문
+
+첫 논문이
+
+\[
+Q_k=G/P_{3^{k-1}+1}
+\]
+
+이면 충분하다고 했다면, 자연스러운 다음 질문은
+
+> 정말 이만큼 깊어야 하는가?
+
+이다.
+
+또 일반 Demuškin relation의
+
+\[
+q=p^f
+\]
+
+변화에 따라 finite window가 q-information을 언제까지 기억하는지도 묻는다.
+
+따라서 후속 연구의 중심은
+
+\[
+\boxed{\text{Boundary / Sharpness / Information loss}}
+\]
+
+이다.
+
+첫 논문이 sufficiency를 닫았다면 후속 연구는 lower bound/sharpness와 information boundary를 붙이는 방향이다.
+
+## 53.5 현재 확보한 sharpness의 의미
+
+현재 후속 연구에서 확보한 중요한 강화는 **affine category에서의 sharpness**다.
+
+특히 odd \(p\)에서 실제로 surjective한 affine orientation character
+
+\[
+\rho(G)=U_{1,k}
+\]
+
+를 허용해도
+
+\[
+\boxed{n_{\mathrm{aff}}(k)=p^{k-1}+1}
+\]
+
+이라는 depth boundary가 sharp하다.
+
+즉 단순한 trivial/퇴화 representation만으로 생기는 인공적인 현상이 아니라, coefficient action이 실제로 \(U_{1,k}\) 전체를 움직이는 affine representation에서도 같은 경계가 남는다.
+
+단, 이 결과는 정확히 **affine category에서 sharp**하다는 뜻이다.
+
+\[
+\boxed{
+\text{affine sharpness}
+\neq
+\text{absolute intrinsic minimality}
+}
+\]
+
+전혀 다른 carrier/invariant category가 더 얕은 quotient에서 orientation을 recognition할 가능성까지 배제한 것은 아니다. 따라서 absolute minimality는 아직 OPEN이다.
+
+## 53.6 \(q=p^f\)와 information collapse
+
+후속 연구에서 중요한 또 하나의 현상은 finite precision에서 q-information이 사라지는 구간이다.
+
+\[
+\chi_f(x_2)=(1-p^f)^{-1}
+\]
+
+이고 \(f\ge k\)이면 mod \(p^k\)에서
+
+\[
+p^f\equiv0\pmod{p^k},
+\]
+
+따라서
+
+\[
+\chi_f\bmod p^k
+=
+\chi_\infty\bmod p^k.
+\]
+
+즉 finite window가 모든 q-information을 기억하는 것은 아니다.
+
+이것은
+
+> finite filtered data가 canonical orientation의 어느 부분까지 기억할 수 있는가?
+
+라는 더 큰 정보경계 문제로 연결된다.
+
+## 53.7 후속 draft의 치명적인 교정 사항
+
+처음 작성된 sharp_finite_window.tex에는 crossed-cocycle commutator 공식에
+
+\[
+\rho(a)^{-1}\rho(b)^{-1}
+\]
+
+prefactor가 빠져 있었다.
+
+정확한 공식은
+
+\[
+z([a,b])=
+\rho(a)^{-1}\rho(b)^{-1}
+\bigl((1-\rho(b))z(a)+(\rho(a)-1)z(b)\bigr).
+\]
+
+따라서 당시 draft의 all-\(k\) selector 계산은 잘못되었고, 정상적인 zero condition은
+
+\[
+\boxed{\rho(x_2)=(1-p^f)^{-1}\pmod{p^k}}
+\]
+
+이다.
+
+예를 들어
+
+\[
+p=3,\ f=1,\ k=3
+\]
+
+이면 canonical value는
+
+\[
+(1-3)^{-1}=13\pmod{27}
+\]
+
+이고, 잘못된 draft formula는 \(4\pmod{27}\)을 주었다.
+
+따라서 기존 sharp_finite_window.tex는 그대로는
+
+\[
+\boxed{\text{FAIL/CLOSED as written}}
+\]
+
+이다.
+
+이것은 연구 아이디어 전체의 붕괴가 아니라 중심 계산식 하나의 오류가 후속 계산 전체에 전파된 경우다. 현재 원칙은 이 오류를 인정한 상태에서 corrected finite-window mechanism과 sharpness 결과를 별도로 보존하는 것이다.
+
+## 53.8 “수학적 성과”와 “논문 상태”의 분리
+
+### 첫 논문
+
+수학적 상태:
+
+\[
+\boxed{\text{U1--U5/theorem chain = PASS/CLOSED}}
+\]
+
+원고 상태:
+
+publication preparation 단계. 2026-09-25 corrected manuscript build도 독립 검증되었고, 현재 publication-working version이 있다.
+
+다만 publication-level novelty는 여전히
+
+\[
+\boxed{\text{OPEN/CONDITIONAL}}
+\]
+
+이다.
+
+### 후속 논문
+
+연구 상태:
+
+\[
+\boxed{\text{좋은 수학적 결과들이 이미 확보된 연구 프로그램}}
+\]
+
+원고 상태:
+
+\[
+\boxed{\text{아직 제출 불가}}
+\]
+
+특히 다음은 살아 있는 뼈대다.
+
+- general \(p^f\) family
+- finite-window information boundary
+- q-collapse
+- affine factorization threshold
+- odd-\(p\) surjective-affine sharpness
+- affine-category minimality
+
+반대로 다음은 폐기/수정 대상이다.
+
+- 잘못된 crossed-cocycle commutator formula
+- 그 formula에 의존한 기존 all-\(k\) selector 계산
+- 잘못된 Newton recurrence
+- absolute minimality를 의미하는 과도한 표현
+
+## 53.9 두 논문의 역할
+
+첫 논문:
+
+\[
+\boxed{\text{Recognition / Sufficiency}}
+\]
+
+후속 연구:
+
+\[
+\boxed{\text{Sharpness / Boundary / Information loss}}
+\]
+
+두 논문을 이어 놓으면
+
+\[
+\text{Full infinite group}
+\to
+\text{finite Zassenhaus window}
+\to
+\text{Kummer selector}
+\to
+\chi\bmod p^k
+\]
+
+그리고 후속 연구에서
+
+\[
+\text{How small can the window be?}
+\to
+\text{affine sharpness}
+\to
+\text{surjective-affine sharpness}
+\to
+q\text{-information collapse}
+\]
+
+라는 구조가 생긴다.
+
+## 53.10 현재 연구 전체의 가장 정확한 표현
+
+> **Classical theory:** canonical orientation exists and is Kummerian.
+>
+> **Paper 1:** a specific finite Zassenhaus window already recognizes it by a q-blind Kummer lifting predicate.
+>
+> **Follow-up:** the finite window has a sharp affine boundary, even for surjective affine characters in odd characteristic, while deeper q-information eventually collapses at finite precision.
+
+그리고 아직 주장하지 않는 것은
+
+\[
+\boxed{
+\text{“따라서 모든 가능한 intrinsic carrier에서 절대 최소다.”}
+}
+\]
+
+이다.
+
+현재까지의 가장 정확한 연구 분류는:
+
+\[
+\boxed{
+\text{Paper 1: theorem-level mathematics CLOSED; publication novelty OPEN/CONDITIONAL}
+}
+\]
+
+\[
+\boxed{
+\text{Follow-up: affine sharpness PASS/CLOSED; absolute minimality OPEN; manuscript FAIL/CLOSED as written}
+}
+\]
+
+이 기록은 2026-09-26 현재의 중간 평가로 추가한다. 기존 2026-09-21 중간 총정리의 역사적 기록은 수정하지 않고, 이후의 authoritative research map/current state/log와 충돌할 경우 더 최신 기록을 따른다.
+
+작성일: **2026-09-26**
