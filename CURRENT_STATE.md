@@ -1036,3 +1036,25 @@ Classification: affine sharpness d>=2 all f **PASS/CLOSED**; prior d=2,f>1 sharp
 Targeted literature review completed. Quadrelli–Weigel 2022 defines standard oriented elementary type using free pro-\ell groups, Demushkin groups, free products and fibre products; therefore a manuscript definition restricted to finite free products of Demushkin blocks must be called a rigid test class, not the standard ET_p. Quadrelli 2024 and the audited Zassenhaus literature do not state the exact bare abstract-Q_k, q-blind selector theorem. Current exact prior-art status remains OPEN / CONDITIONAL.
 
 The defensible impossibility target is an isomorphism-natural selector on bare abstract Q_k. Arbitrary non-natural choice functions are not ruled out by the present argument. Record: research/ETP_ABSTRACT_QK_SCOPE_AUDIT_2026-09-26.md.
+
+
+## 2026-09-26 — SUCCESSOR TWO REMAINING QUESTIONS: CATEGORY-RELATIVE MINIMALITY CLOSED
+
+The natural minimality question for the successor has been closed. Absolute minimality over arbitrary carriers remains category-dependent, but in the exact admissible category of all affine crossed-cocycle representations into S_k=A_k\rtimes U_{1,k}, the factorization depth
+n_aff(k)=p^{k-1}+1
+is sharp for every standard Demushkin parameter f>=1 and every rank d>=2.
+
+The lower-bound witness is:
+- f<k: canonical rho with rho(x_1)=1, rho(x_2)=(1-p^f)^(-1), z(x_1)=1; then z(x_1^{p^{k-1}})=p^{k-1} !=0 mod p^k.
+- f>=k, including d=2: rho(x_1)=1, rho(x_2)=1+p, z(x_2)=1; then z(x_2^{p^{k-1}})=((1+p)^{p^{k-1}}-1)/p has valuation k-1 and is nonzero mod p^k.
+
+Thus affine factorization minimality is **PASS / CLOSED**. The earlier d=2,f>1 failure claim is **HISTORICAL / SUPERSEDED**. Absolute carrier-independent minimality remains **OPEN / category-dependent**.
+
+## 2026-09-26 — SUCCESSOR NOVELTY BOUNDARY FINALIZED
+
+Targeted literature review establishes the correct novelty boundary. Canonical Demushkin orientation, its Kummerian uniqueness, and the general Kummerian/1-cyclotomic framework are classical and must be cited as prior art. The audited 2026 Blumer–Quadrelli and Pál–Quick papers address related but different questions and do not state the present sharp finite-window affine factorization theorem.
+
+The exact present theorem was not located verbatim in the audited corpus. Therefore the successor's defensible novelty claim is the finite-window/sharp-factorization theorem plus its q-collapse/information-loss boundary, not canonical-orientation recovery itself.
+
+Strict publication priority remains **OPEN / CONDITIONAL**, because absence of an equivalent theorem cannot be proved by a finite literature search. This is now a publication-wording issue rather than an unresolved mathematical mechanism.
+
