@@ -29,14 +29,21 @@ The lower bound includes rank two and does not require the orientation component
 The canonical Demushkin orientation is classical: Labute identifies it through the dualizing module, while the Kummerian/cyclotomic formulation is developed in later work. See \cite{Labute1967,EfratQuadrelli2019,QuadrelliWeigel2022}.
 The present question is narrower. Given a finite coefficient level $k$, how much Zassenhaus information is required to preserve every affine crossed-cocycle representation into $S_k$? And does the resulting quotient necessarily contain enough information to recognize a unique orientation?
 
-These are different questions. The first is a factorization problem in a specified representation category. The second is a recognition problem whose answer depends on the input category and predicate.
+These are different questions. The first is a factorization problem in a specified representation category. The second is a recognition problem whose answer depends on the input category and predicate. The principal theorem of this paper is the exact and sharp factorization window; the recognition discussion is a logical boundary result, not a new positive recognition theorem.
+
+For a fixed pro-$p$ group $G$, define
+\[
+n_{\mathrm{aff}}(k;G):=\min\{n\ge1:\text{every continuous }\psi:G\to S_k\text{ kills }P_n(G)\}.
+\]
+When $G=G_{f,d}$ we abbreviate this to $n_{\mathrm{aff}}(k)$.
 
 \begin{theorem}[Sharp affine finite window]
-Let $p$ be odd, $f\ge1$, $d\ge2$ even, and let $G_{f,d}$ be as above. For every $k\ge2$, every
+Let $p$ be odd, $f\ge1$, $d\ge2$ even, and let $G_{f,d}$ be as above. For every $k\ge2$ and every continuous
 \[
-\psi=(z,\rho):G_{f,d}\longrightarrow S_k
+\psi=(z,\rho):G_{f,d}\longrightarrow S_k,
+\qquad z\in Z^1(G_{f,d},A_k(\rho)),
 \]
-be continuous, with $z\in Z^1(G_{f,d},A_k(\rho))$ factors uniquely through
+$\psi$ factors uniquely through
 \[
 Q_k(G_{f,d})=G_{f,d}/P_{p^{k-1}+1}(G_{f,d}).
 \]
@@ -71,7 +78,7 @@ P_{p^{k-1}+1}(S_k)=1.
 \end{lemma}
 
 \begin{proof}
-Use the Jennings--Lazard product
+Use the Jennings--Lazard product for the Zassenhaus filtration
 \[
 P_n(S_k)=\prod_{ip^j\ge n}\gamma_i(S_k)^{p^j}.
 \]
@@ -97,7 +104,7 @@ kills $P_{p^{k-1}+1}(G)$. Thus the crossed cocycle, its orientation component, a
 \begin{proof}
 The crossed-cocycle identity is exactly the homomorphism condition into $S_k$. Zassenhaus filtrations are functorial, so
 $\psi(P_{p^{k-1}+1}(G))\subseteq P_{p^{k-1}+1}(S_k)=1$.
-Coboundaries are transported by the same factorization.
+Thus both the coefficient action and the cocycle factor through the quotient, and inflation identifies the corresponding cocycles and coboundaries with their quotient-level counterparts.
 \end{proof}
 
 \section{Sharpness}
@@ -167,7 +174,7 @@ If $f\ge k$, then $x_1^{p^f}\in P_{p^f}(G_{f,d})$, and $p^f\ge p^k>p^{k-1}+1$. H
 \]
 Thus all $f\ge k$ collapse to the same finite quotient after identifying the generators. At the same time
 $(1-p^f)^{-1}\equiv1\pmod{p^k}$, so the canonical orientation has the same reduction.
-For $f<k$, the abelianization retains $p^f[x_1]=0$, so the finite torsion order remains visible.
+For $f<k$, one has $G_{f,d}^{\mathrm{ab}}\simeq \mathbb Z_p^{d-1}\oplus\mathbb Z/p^f\mathbb Z$, while quotienting by $P_{p^{k-1}+1}$ reduces the free abelian directions only modulo $p^k$. Hence the image of $[x_1]$ still has exact order $p^f$ in the abelianization of $Q_k^{(f)}$, so the finite torsion order remains visible.
 
 \section{Factorization is not recognition}
 For a continuous candidate $\rho:Q_k\to U_{1,k}$ define
@@ -181,14 +188,17 @@ The predicate is natural in $(Q_k,\rho)$ and has no $f$ or presentation as input
 However, uniqueness is an additional property of the input class.
 
 \begin{proposition}[Information loss in free pro-$p$ groups]
-Let $F_d$ be free pro-$p$ of finite rank $d\ge2$. Every continuous orientation $\rho:F_d\to U_{1,k}$ is Kummerian at every finite coefficient level. Hence
-$\mathsf K_k(F_d/P_{p^{k-1}+1}(F_d),\rho)$ does not single out a unique orientation.
+Let $F_d$ be free pro-$p$ of finite rank $d\ge2$. For every continuous orientation $\rho:F_d\to U_{1,k}$, the finite-level lifting map
+\[
+H^1(F_d,A_k(\rho))\longrightarrow H^1(F_d,\mathbb F_p)
+\]
+is surjective. Thus the Kummerian predicate itself does not single out a unique orientation on the class of free pro-$p$ groups.
 \end{proposition}
 
 \begin{proof}
 $\operatorname{cd}_p(F_d)=1$, so $H^2(F_d,M)=0$ for every finite discrete $p$-primary module $M$. Therefore the connecting map for
 $0\to pA_k(\rho)\to A_k(\rho)\to\mathbb F_p\to0$
-vanishes and the $H^1$ reduction map is surjective. Factorization transfers the same lifting information to the finite quotient. Since $F_d$ has many distinct orientations, the predicate itself cannot be a uniqueness selector on this class.
+vanishes and the $H^1$ reduction map is surjective. Since $F_d$ has many distinct orientations, the predicate itself cannot be a uniqueness selector on this class.
 \end{proof}
 
 \begin{remark}
