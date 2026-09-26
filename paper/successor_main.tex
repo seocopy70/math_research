@@ -19,7 +19,7 @@ We study the exact Zassenhaus depth needed to factor affine crossed-cocycle repr
 \[
 G_{f,d}=\langle x_1,\ldots,x_d\mid x_1^{p^f}[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d]=1\rangle,
 \]
-with odd $p$, $f\ge1$, and even $d\ge2$, every affine representation factors through
+with odd $p$, $f\ge1$, and even $d\ge2$, every continuous affine representation factors through
 $Q_k(G)=G/P_{p^{k-1}+1}(G)$, and this depth is sharp in the category of all affine crossed-cocycle representations:
 $ n_{\mathrm{aff}}(k)=p^{k-1}+1$.
 The lower bound includes rank two and does not require the orientation component to be surjective. We also separate factorization from recognition: a sharp factorization window does not by itself imply that a Kummerian predicate selects a unique orientation.
@@ -87,7 +87,7 @@ $\gamma_i(S_k)^{p^j}\subseteq p^eA_k$. This proves the formula and the endpoint 
 \end{proof}
 
 \begin{proposition}[Arbitrary-candidate factorization]
-For every pro-$p$ group $G$, every $\rho:G\to U_{1,k}$, and every $z\in Z^1(G,A_k(\rho))$, the homomorphism
+For every pro-$p$ group $G$, every continuous $\rho:G\to U_{1,k}$, and every continuous $z\in Z^1(G,A_k(\rho))$, the homomorphism
 \[
 \psi(g)=(z(g),\rho(g))
 \]
@@ -181,7 +181,7 @@ The predicate is natural in $(Q_k,\rho)$ and has no $f$ or presentation as input
 However, uniqueness is an additional property of the input class.
 
 \begin{proposition}[Information loss in free pro-$p$ groups]
-Let $F_d$ be free pro-$p$ of finite rank $d\ge2$. Every orientation $\rho:F_d\to U_{1,k}$ is Kummerian at every finite coefficient level. Hence
+Let $F_d$ be free pro-$p$ of finite rank $d\ge2$. Every continuous orientation $\rho:F_d\to U_{1,k}$ is Kummerian at every finite coefficient level. Hence
 $\mathsf K_k(F_d/P_{p^{k-1}+1}(F_d),\rho)$ does not single out a unique orientation.
 \end{proposition}
 
@@ -196,7 +196,7 @@ This does not prove that every conceivable isomorphism-natural selector is impos
 \end{remark}
 
 \section{Finite free products of Demushkin blocks}
-Let $G=D_1*_p\cdots *_pD_m$ be a finite free pro-$p$ product of Demushkin groups, each with canonical orientation. Write $T_n(G)=G/P_n(G)$.
+Let $G=D_1*_p\cdots *_pD_m$ be a finite free pro-$p$ product of Demushkin groups. The theorem below concerns continuous affine representations and does not require a chosen orientation on the factors. Write $T_n(G)=G/P_n(G)$.
 
 \begin{lemma}[Zassenhaus truncation and coproducts]
 For pro-$p$ groups $G_1,G_2$,
@@ -213,7 +213,7 @@ $T_n$ is left adjoint to the inclusion of pro-$p$ groups $H$ satisfying $P_n(H)=
 \end{proof}
 
 \begin{theorem}[Uniform affine window for finite Demushkin free products]
-For a finite free pro-$p$ product of Demushkin groups, every affine crossed-cocycle representation at level $k$ factors through
+For a finite free pro-$p$ product of Demushkin groups, every continuous affine crossed-cocycle representation at level $k$ factors through
 \[
 G/P_{p^{k-1}+1}(G).
 \]
@@ -241,7 +241,7 @@ The logical chain is
 \]
 
 \section{Literature boundary and novelty}
-The canonical Demushkin orientation and its Kummerian characterization are classical \cite{Labute1967,EfratQuadrelli2019}. Oriented elementary-type constructions and related Kummerian closure phenomena are treated by Quadrelli--Weigel \cite{QuadrelliWeigel2022}. Quadrelli's 2024 work studies 1-cyclotomicity and quotient-related obstructions \cite{Quadrelli2024}. These are surrounding results, not claims of prior identity with the present theorem.
+The canonical Demushkin orientation and its Kummerian characterization are classical \cite{Labute1967,EfratQuadrelli2019}. The general functoriality of the Zassenhaus filtration under continuous homomorphisms, and its representation-theoretic use, are standard; see Lazard/Jennings theory and Efrat's treatment of Zassenhaus filtrations and representations \cite{Efrat2014,MinacRogelstadTan2016}. Oriented elementary-type constructions and related Kummerian closure phenomena are treated by Quadrelli--Weigel \cite{QuadrelliWeigel2022}. Quadrelli's 2024 work studies 1-cyclotomicity and quotient-related obstructions \cite{Quadrelli2024}. These are surrounding results, not claims of prior identity with the present theorem. In particular, the literature establishes the standard Kummerian/1-cyclotomic framework and substantial information on Zassenhaus quotients, but the audit did not locate an earlier theorem stated in the present affine target category with the exact depth $p^{k-1}+1$ and the present sharpness witnesses.
 
 The present contribution is deliberately narrower: the exact depth $p^{k-1}+1$ for factorization of all affine crossed-cocycle representations into $A_k\rtimes U_{1,k}$, explicit lower-bound witnesses through rank two, finite-depth $f$-collapse, and the separation of sharp factorization from uniqueness of a Kummerian orientation.
 
@@ -257,6 +257,8 @@ The main formula is
 It is uniform for the standard Demushkin parameters $f\ge1$ and even rank $d\ge2$, including rank two. Any stronger claim of absolute minimality or universal orientation reconstruction requires a separately specified carrier category and recognition theorem.
 
 \begin{thebibliography}{99}
+\bibitem{Efrat2014}
+I. Efrat, \emph{The Zassenhaus filtration, Massey products, and representations of profinite groups}, Adv. Math. 263 (2014), 389--411.
 \bibitem{MinacRogelstadTan2016}
 J. Mináč, M. Rogelstad and N. D. Tân, \emph{Dimensions of Zassenhaus filtration subquotients of some pro-$p$-groups}, Israel J. Math. 212 (2016), 825--855.
 \bibitem{Labute1967}
