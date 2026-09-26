@@ -169,7 +169,7 @@ the power relation is invisible whenever $f\ge k$. In that range the image of th
 \[
 [x_1,x_2]\cdots[x_{d-1},x_d]=1.
 \]
-For $f<k$, the parameter remains visible already in the abelianization: the image of $x_1$ has order $p^f$ in the relevant finite abelian quotient.
+For $f<k$, the parameter remains visible in the marked finite abelianization: the image of $x_1$ has order exactly $p^f$. This is a statement about the quotient together with its inherited block marking, not an assertion that every abstract isomorphism of finite quotients canonically identifies the individual blocks.
 \end{proposition}
 
 \begin{proof}
@@ -180,7 +180,7 @@ For $f<k$, the abelianization of $D_{f,d}$ is
 \[
 \mathbb Z_p^{d-1}\oplus\mathbb Z/p^f\mathbb Z.
 \]
-The truncation modulo $P_{p^{k-1}+1}$ reduces the free directions at the finite level but does not remove the torsion order $p^f$ when $f<k$. Thus the finite abelianization distinguishes this case from the power-free case.
+In the abelianization, $P_{p^{k-1}+1}$ contributes only $p$-power relations of exponent at least $p^k$ in the free directions, so it does not kill the pre-existing torsion class of order $p^f$ when $f<k$. Thus the marked finite abelianization distinguishes this case from the power-free case.
 \end{proof}
 
 \begin{corollary}[Parameter profile of a product]
@@ -285,7 +285,7 @@ Thus the canonical orientation of the composite group is recognized blockwise fr
 \end{theorem}
 
 \begin{proof}
-By the truncation lemma, the finite quotient is the reflected free product of the factor quotients. The degree-one cohomology decomposition identifies the global reduction map with the direct sum of the corresponding factor reduction maps. A direct sum map is surjective exactly when each summand map is surjective. The final equivalence follows by applying the Paper 1 selector theorem to each factor.
+By the truncation lemma, the finite quotient is the reflected free product of the factor quotients. By the arbitrary-candidate factorization theorem of Paper 2, inflation identifies the twisted $H^1$ of $Q_k(G)$ with that of $G$ for every candidate $ho$; for trivial coefficients, $P_{p^{k-1}+1}(G)\subseteq\Phi(G)$ gives the corresponding $H^1$ identification. The standard degree-one cohomology decomposition for a free pro-$p$ product then identifies the global reduction map with the direct sum of the corresponding factor reduction maps. A direct sum map is surjective exactly when each summand map is surjective. The final equivalence follows by applying the Paper 1 selector theorem to each factor.
 \end{proof}
 
 \begin{remark}
@@ -364,13 +364,9 @@ Finally, the number $p^{k-1}+1$ is used here as the sharp threshold in the affin
 
 \section{Conclusion}
 
-The preceding abstract results have a concrete composite application. For finite free pro-$p$ products of standard Demuškin blocks, one finite Zassenhaus window
-\[
-Q_k(G)=G/P_{p^{k-1}+1}(G)
-\]
-controls every affine crossed-cocycle representation, mixed commutators require no extra depth, and the quotient retains exactly the blockwise $f_i<k$ torsion distinctions while collapsing the power relations with $f_i\ge k$.
+The preceding abstract results have a concrete composite application. For finite free pro-$p$ products of standard Demuškin blocks, the imported finite-window theorem gives one uniform Zassenhaus depth, while the marked finite quotient records which block parameters have not yet crossed the depth threshold. For the rank-four $q=3$ recognition class, the finite Kummer selector can then be applied blockwise.
 
-For the rank-four $q=3$ recognition class, the intrinsic Kummer selector of Paper 1 extends blockwise to the free product. Thus the three-paper program yields not merely an abstract finite-window theorem but a concrete family of composite examples on which the machinery can be executed.
+The resulting contribution is therefore best understood as an application and synthesis paper: it organizes how the sharp affine window, the free-product structure, and the finite parameter-collapse test are used together. It does not claim priority for any of the underlying Kummerianity or free-product results.
 
 \begin{thebibliography}{99}
 \bibitem{Labute1967}
@@ -384,6 +380,12 @@ C. Quadrelli and T. S. Weigel, \emph{Oriented pro-$\ell$ groups with the Bogomol
 
 \bibitem{Quadrelli2024}
 C. Quadrelli, \emph{Chasing Maximal Pro-$p$ Galois Groups via 1-Cyclotomicity}, Mediterr. J. Math. 21 (2024), 56.
+
+\bibitem{EfratQuadrelli2019Free}
+I. Efrat and C. Quadrelli, Proposition 7.5 in \emph{The Kummerian Property and Maximal Pro-$p$ Galois Groups}, J. Algebra 525 (2019), 284--310.
+
+\bibitem{QuadrelliWeigel2022Free}
+C. Quadrelli and T. S. Weigel, Proposition 5.5 in \emph{Oriented pro-$\ell$ groups with the Bogomolov--Positselski property}, Res. Number Theory 8 (2022), 21.
 
 \end{thebibliography}
 \end{document}
