@@ -2770,3 +2770,22 @@ e0); for (fge k), the existing (x_3) witness works. **Written proof FAIL/CLOSED;
 Audit artifact: `research/FOLLOWUP_MERGED_AUDIT_2026-09-26.md`, commit `e4fca7e63a282d0f4b009299fbf906582270c8ef`.
 
 Current classification: I **PASS/LOCAL**; II **OPEN** pending repair; III **PASS/LOCAL** after naturality qualification; IV **PASS/LOCAL**; V mixed commutator **PASS/CLOSED**; V pure Demushkin free-product uniformity **PASS/CLOSED**; V broad (mathcal{ET}_p^{rig}) **OPEN**; LaTeX source **FAIL/CLOSED**; novelty **OPEN/CONDITIONAL**.
+
+
+## 2026-09-26 — PAPER/FOLLOWUP TEX DIRECT BUILD AUDIT
+
+Directly inspected the locally uploaded `followup_merged.tex` and compared it with current GitHub `paper/` contents. The repository `paper/` directory currently contains main.tex and audit/status markdowns, but does not contain `followup_merged.tex`, `sharp_factorization_qcollapse.tex`, or `final_audit_report.tex`; therefore only `followup_merged.tex` was directly audited here.
+
+Findings:
+- Direct pdflatex build fails at line 74 because `\\Fp` is undefined. Temporary macro definition is sufficient to pass this syntax defect. **FAIL/CLOSED (LaTeX source defect)**.
+- The file still contains the previously identified false sharpness sentence at line 43: for (f>1), it says to choose (a_2=1+p) while retaining (F_i=0) “by adjusting”. This contradicts the solved equations, which force (a_2=(1-p^f)^{-1}). **FAIL/CLOSED (proof sentence)**.
+- The abstract/theorem text still says (d=2) “fails ... open”. The new computational claim in the user-supplied audit is stronger: (d=2) sharpness holds for (f=1) but fails for (f>1), with explicit (p=3) exhaustive counts. That stronger boundary is NOT yet reflected in the tex. The theorem should be reformulated to distinguish (dge4) all (f) from (d=2,f=1), and state the (d=2,f>1) obstruction precisely.
+- Section III still states the overly broad theorem “no predicate depending only on (Q_k)”. This must be narrowed to an isomorphism-natural/functorial selector on the bare quotient; otherwise arbitrary non-natural choice functions are not excluded. **PASS/LOCAL after wording repair**.
+- Section V still marks the mixed-commutator gate OPEN. The categorical truncation argument already established in the successor audit closes this gate: (T_n(G)=G/P_n(G)) is the reflector to (P_n=1) pro-(p) groups, hence (T_n(G_1*_pG_2)cong T_n(G_1)*_pT_n(G_2)/P_n(T_n(G_1)*_pT_n(G_2))). Thus the kernel is exactly (P_n) of the free product of factor quotients. **PASS/CLOSED**, so the current Section V is stale.
+- Section V's definition “each free-product factor contains a Demushkin block” is too vague for the claimed (H^2), blockwise uniqueness, and Newton algorithm conclusions. The positive result should be restricted to a precisely defined class, e.g. finite free products of Demushkin blocks, unless further closure operations are proved.
+- The manuscript has no bibliography environment, bibliography file, or actual citation commands despite naming Labute, Blumer–Quadrelli, Quadrelli–Weigel, etc. The literature section is prose-only. This is **FAIL/publication-critical**.
+- The Newton (O(kd)) claim is presented without a defined input model, convergence/uniqueness lemma, or proof that the stated Jacobian remains the relevant invertible block matrix throughout lifting. It should be separated as a computational coordinate realization, not part of the structural theorem, unless proved.
+- The (q)-collapse theorem itself is structurally plausible and the abelianization formula distinguishes (f<k) from (fge k); however the “iff” should explicitly state the parameter range (fge1) and the precise free-group/Zassenhaus lemma used for the forward implication.
+
+Classification after direct build/audit:
+I **PASS/LOCAL**; II **OPEN** (the theorem boundary can be repaired, but current proof text is false); III **PASS/LOCAL** after naturality qualification; IV **PASS/LOCAL**; V mixed commutator **PASS/CLOSED** but manuscript stale; broad rigid class **OPEN**; bibliography **FAIL/CLOSED**; LaTeX **FAIL/CLOSED**.
