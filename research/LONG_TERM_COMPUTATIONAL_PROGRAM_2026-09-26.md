@@ -150,6 +150,63 @@ This is a genuine extension of the single-block sharpness phenomenon, but it doe
 
 ---
 
+
+# II. Reusable mathematical toolkit status
+
+The successor work should also be treated as a reusable **mathematical toolkit**, not only as a publication manuscript.
+
+This is a distinct status from publication readiness. The current results are sufficiently stable to serve as infrastructure for later long-term projects, while several broader recognition/decision claims remain OPEN.
+
+## What is already practically reusable
+
+1. **Sharp finite-window depth**
+   [
+   n_{\rm aff}(k)=p^{k-1}+1.
+   ]
+   This gives a concrete depth budget whenever the affine crossed-cocycle carrier is the chosen category. It can be reused as the baseline against which new carriers or filtrations are compared.
+
+2. **Finite-quotient information-loss boundary**
+   [
+   f\ge k\Longrightarrow Q_k^{(f)}\cong Q_k^{(\infty)}.
+   ]
+   This supplies a first diagnostic: before trying to recover a parameter from finite data, determine whether that parameter has already disappeared from the bare quotient.
+
+3. **Affine crossed-cocycle obstruction framework**
+   
+   The chain
+   [
+   G\longrightarrow Q_k\longrightarrow
+   S_k=A_k\rtimes U_{1,k}
+   \longrightarrow \text{finite obstruction}
+   ]
+   is reusable as an experimental and proof framework for orientation-recognition questions.
+
+4. **Sharpness witnesses**
+   
+   The explicit lower-bound constructions provide a ready-made method for testing whether a proposed shorter window can work. They are therefore useful as adversarial tests for future finite carriers.
+
+## What this toolkit does not yet provide
+
+It is not a universal recognition algorithm. In particular, the current results do not by themselves establish:
+
+- arbitrary-carrier minimality;
+- natural transport of orientation from an abstract Q_k isomorphism alone;
+- finite Kummerianity decision procedures for broader classes;
+- coding-theoretic, holographic, or GL(2) deformation theorems.
+
+Thus future projects should treat the successor result as a **validated finite-window baseline/toolkit**, not as a completed general-purpose algorithm.
+
+## Long-term operational use
+
+For each new project, the first question should be:
+
+> Can the new problem be reduced to the existing finite-window/affine-obstruction machinery, and if not, exactly which additional structure is missing?
+
+This turns the successor paper into reusable research infrastructure while preserving the CLOSED/OPEN boundaries above.
+
+**Status: PRACTICALLY REUSABLE TOOLKIT / NOT A UNIVERSAL ALGORITHM.**
+
+
 # II. Updated long-term research directions
 
 The old four-task list is superseded by the following application-oriented program. The ordering below reflects current mathematical readiness, not a claim about importance.
