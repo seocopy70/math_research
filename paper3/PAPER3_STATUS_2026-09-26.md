@@ -1,42 +1,24 @@
-# Paper 3 status — 2026-09-26
+# Paper 3 final status — 2026-09-26
 
-## Title
-Finite-Window Applications to Free Products of Demuškin Blocks
+## Workflow completed
 
-## Role in the three-paper program
-- Paper 1: finite-window Kummer recognition for the fixed rank-four q=3 Demuškin group.
-- Paper 2: sharp affine factorization depth n_aff(k)=p^(k-1)+1.
-- Paper 3: application of Papers 1–2 to explicit finite free pro-p products of standard Demuškin blocks.
+1. CI baseline: **PASS / CLOSED** — initial Paper 3 build run 36213977187 on commit 901fcc6.
+2. Independent referee audit: **PASS / CLOSED** — no fatal mathematical defect; one logical H^1 identification was tightened and the marked-quotient wording was repaired.
+3. Free-product/Kummer literature audit: **PASS / CLOSED** — Efrat–Quadrelli Prop. 7.5 and Quadrelli–Weigel Prop. 5.5 are direct prior art for the Kummerian free-product component.
+4. Logical redundancy audit: **FAIL / CLOSED** for independent novelty.
+5. Necessary manuscript repairs: **COMPLETED** in commit 55a51dc30579881843658968af2049b0a6dbce8d.
+6. Fresh CI after repair: **TRIGGERED by the repaired source commit; final run result must be recorded from GitHub Actions before any submission claim.**
+7. Publication-candidate gate: **FAIL / CLOSED as an independent research-paper candidate; PASS / CLOSED as a mathematically sound application/companion manuscript.**
 
-## Current manuscript
-- Source: paper3/main.tex
-- Initial manuscript commit: 19c3c5e375ef3afaf9c08cfb182a6076aa379dfa
-- CI workflow: .github/workflows/paper3-build.yml
-- CI run: 36213977187
+## Final mathematical classification
 
-## Mathematical scope
-Closed/supported:
-1. Uniform affine factorization through G/P_{p^(k-1)+1}(G).
-2. Free-product truncation via the reflector T_n(G)=G/P_n(G).
-3. No extra mixed-commutator depth.
-4. Finite-depth f-collapse: f>=k becomes invisible in the power relation; f<k remains visible in abelianization.
-5. Explicit heterogeneous-block example.
-6. Blockwise Kummer recognition for products whose factors are in the already-proved Paper 1 recognition class.
+- Uniform affine factorization for finite Demushkin block products: **PASS / CLOSED** as application of Paper 2.
+- Free-product truncation/mixed-commutator control: **PASS / CLOSED**.
+- f-collapse/heterogeneous parameter profile: **PASS / LOCAL**.
+- Blockwise Kummer recognition: **PASS / LOCAL** and known in its Kummerian free-product component.
+- Independent novelty: **FAIL / CLOSED**.
+- Paper 2: **unchanged**.
 
-Not claimed:
-- absolute minimality of the quotient as an intrinsic carrier;
-- the full standard ET_p class;
-- a new classification of Demuškin orientations;
-- a uniform Kummer selector for arbitrary q or arbitrary Demuškin blocks;
-- publication priority for the application formulation.
+## Interpretation
 
-## Publication status
-Mathematical application manuscript: WORKING / PASS pending independent referee audit.
-Exact publication novelty: OPEN / CONDITIONAL.
-CI build: pending run 36213977187.
-
-## Required next gates
-1. Clean CI compile and PDF verification.
-2. Independent referee audit of every application theorem, especially H^1 decomposition after finite truncation and the f-collapse statement.
-3. Literature/novelty audit against free-product Kummerian results.
-4. If no mathematical gap is found, prepare a publication candidate package; otherwise repair only the affected claims.
+Paper 3 should be retained as a useful application/companion paper, not promoted to a separate novelty claim on the present evidence. The correct next route to a genuinely independent Paper 3 is a new application theorem (for example a local-field finite decision theorem with a nontrivial new arithmetic obstruction), not cosmetic expansion of the current free-product manuscript.
