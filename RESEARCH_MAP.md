@@ -3323,3 +3323,20 @@ The successor branch audit of `followup_merged.tex` closes the mixed-commutator 
 The sharpness theorem in the uploaded draft remains OPEN pending a local repair: canonical ((1-p^f)^{-1}) is not surjective onto (U_1) for (f>1), but the theorem survives using (z(x_1)=1) for (f<k). The broad (mathcal{ET}_p^{rig}) positive class remains OPEN; finite free products of Demushkin blocks are supported.
 
 Record: `research/FOLLOWUP_MERGED_AUDIT_2026-09-26.md`.
+
+
+## 2026-09-26 — LONG-TERM COMPUTATIONAL PROGRAM RECORDED
+
+A staged computational program has been authorized for the successor branch, downstream of the established affine sharpness theorem and q-collapse boundary. The program is recorded in `research/LONG_TERM_COMPUTATIONAL_PROGRAM_2026-09-26.md`.
+
+Tasks:
+1. explicit affine sharpness-witness computation for small (p,k,f,d);
+2. finite-window recognition prototype on independently validated concrete Demuškin/local-field examples;
+3. numerical measurement of q-collapse/information loss across (f<k) versus (fge k);
+4. comparison with lower (p)-central and other precisely defined filtrations.
+
+Execution order: **Task 1 → Task 3 → Task 2 → Task 4**.
+
+This is a long-term implementation program, not a claim that the computational results are already established. Each task requires its own pre-check, independent verification, and PASS/LOCAL/FAIL/OPEN classification. The frozen publication manuscript remains untouched.
+
+Classification: **OPEN / AUTHORIZED FOR STAGED IMPLEMENTATION**.
