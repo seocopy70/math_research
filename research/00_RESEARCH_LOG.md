@@ -2789,3 +2789,45 @@ Findings:
 
 Classification after direct build/audit:
 I **PASS/LOCAL**; II **OPEN** (the theorem boundary can be repaired, but current proof text is false); III **PASS/LOCAL** after naturality qualification; IV **PASS/LOCAL**; V mixed commutator **PASS/CLOSED** but manuscript stale; broad rigid class **OPEN**; bibliography **FAIL/CLOSED**; LaTeX **FAIL/CLOSED**.
+
+
+## 2026-09-26 — SUCCESSOR TWO REMAINING QUESTIONS: CATEGORY-RELATIVE MINIMALITY CLOSED
+
+A final lower-bound attack was completed on the finite recognition depth. Absolute minimality over arbitrary carriers remains ill-posed without an admissible category, but the natural successor category is the factorization category of all affine crossed-cocycle representations
+rho:G -> U_{1,k}, z:G -> A_k(rho).
+
+For the standard Demushkin family G_f and every d>=2, the threshold n_aff(k)=p^(k-1)+1 is sharp.
+
+For f<k, the canonical orientation rho(x_1)=1, rho(x_2)=(1-p^f)^(-1), together with z(x_1)=1 and all other z(x_i)=0, satisfies the relator equation because
+p^f + rho(x_2)^(-1)(1-rho(x_2))=0 mod p^k,
+while z(x_1^(p^(k-1)))=p^(k-1) != 0 mod p^k.
+
+For f>=k, the d=2 boundary also closes: take rho(x_1)=1, rho(x_2)=1+p, z(x_1)=0, z(x_2)=1. The relator obstruction vanishes modulo p^k, while
+z(x_2^(p^(k-1)))=((1+p)^(p^(k-1))-1)/p
+has p-adic valuation k-1 and is therefore nonzero modulo p^k. Setting unused coordinates to zero gives the same witness for every d>=2.
+
+Hence:
+- affine factorization-depth minimality n_aff(k)=p^(k-1)+1: **PASS / CLOSED** for d>=2, all f>=1;
+- absolute minimality among arbitrary intrinsic carriers: **OPEN / category-dependent**;
+- the earlier d=2,f>1 sharpness failure claim is **HISTORICAL / SUPERSEDED**.
+
+Detailed audit: research/SUCCESSOR_TWO_REMAINING_PROBLEMS_CLOSURE_2026-09-26.md.
+
+## 2026-09-26 — SUCCESSOR NOVELTY / PRIOR-ART BOUNDARY FINALIZED
+
+A targeted literature audit was completed against Labute's canonical-orientation theorem, Efrat–Quadrelli/Quadrelli Kummerian and 1-cyclotomic criteria, Quadrelli–Weigel's oriented elementary-type results, and the relevant 2026 Blumer–Quadrelli and Pál–Quick papers.
+
+The audit confirms:
+- canonical Demushkin orientation and its Kummerian uniqueness are classical: **NON-NOVEL / CLOSED**;
+- Kummerianity and 1-cyclotomicity criteria are classical/known: **NON-NOVEL / CLOSED**;
+- the present sharp finite-window affine factorization statement at depth p^(k-1)+1 was not located verbatim in the audited corpus;
+- the bare abstract-Q_k impossibility must remain restricted to isomorphism-natural/functorial q-blind selectors;
+- the q-collapse result is compatible with the finite target orientation residue and is not itself a canonical-orientation novelty;
+- Pál–Quick 2026 addresses A_3-formality/canonical Hochschild classes, not the present finite-window affine factorization theorem;
+- Blumer–Quadrelli 2026 addresses non-1-cyclotomic examples, not the present recognition theorem.
+
+Accordingly the defensible publication claim is the finite-window/sharp-factorization result and its information-loss boundary, not discovery of the canonical orientation.
+
+Publication novelty remains **OPEN / CONDITIONAL** in the strict sense: a literature search can establish a defensible boundary but cannot prove absence of an equivalent formulation everywhere. No source found in the audited corpus states the exact present theorem.
+
+Detailed audit: research/SUCCESSOR_TWO_REMAINING_PROBLEMS_CLOSURE_2026-09-26.md.
