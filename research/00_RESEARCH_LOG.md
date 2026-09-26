@@ -2869,3 +2869,31 @@ ID `10895855568`; size 340066 bytes; digest
 
 This closes the publication-candidate technical build gate. It does not close novelty, absolute minimality outside the declared affine category, or broader ET_p uniformity.
 Classification: **PASS / CLOSED** for exact build; **OPEN / CONDITIONAL** for novelty.
+
+
+## 2026-09-26 — FINAL REFEREE + PRIOR-ART AUDIT CLOSED THE INTERNAL MATHEMATICAL GATE
+
+A final theorem-by-theorem referee pass was completed after the exact CI build gate.
+
+Key correction made before closure: continuity is now explicit for profinite-group representations, orientations, cocycles, and candidate maps. This avoids silently quantifying over arbitrary abstract homomorphisms to finite groups.
+
+Independent checks:
+- affine target filtration formula and endpoints: **PASS**
+- small integer endpoint checks for p=3,5,7 and k=2,3,4: **PASS**
+- f<k witness relator calculation: **PASS**
+- f>=k witness and LTE valuation: **PASS**
+- d=2 sharpness: **PASS**
+- finite free-product truncation argument: **PASS**
+
+Prior-art audit covered the exact target/depth/cocycle/Demushkin combination and relevant Zassenhaus/Kummerian literature. Efrat 2014 and Mináč--Rogelstad--Tân 2016 were added explicitly to the manuscript's literature boundary.
+
+No earlier theorem with the exact composite formulation was located in the audited corpus. This is not an absolute priority claim.
+
+Final classification:
+- mathematical core: **PASS / CLOSED**
+- proof package in declared category: **PASS / CLOSED**
+- publication-candidate technical state: **PASS / CLOSED**
+- prior-art separation: **PASS / CONDITIONAL**
+- novelty: **OPEN / CONDITIONAL**
+- absolute minimality: **OPEN / category-dependent**
+- broader ET_p: **OPEN**
