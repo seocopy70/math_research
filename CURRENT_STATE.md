@@ -1022,3 +1022,10 @@ The free-pro-(p) impossibility should be stated only for isomorphism-natural/fun
 The uploaded source has a trivial LaTeX defect: `\Fp` is undefined; a temporary macro repair compiled in three passes. The uploaded file itself was not changed.
 
 Audit artifact: `research/FOLLOWUP_MERGED_AUDIT_2026-09-26.md`, commit `e4fca7e63a282d0f4b009299fbf906582270c8ef`.
+
+
+## 2026-09-26 — FOLLOW-UP SHARPNESS d=2 CORRECTION
+
+The prior successor-paper audit incorrectly treated failure of a surjective witness onto the full affine target S_k in rank 2, f>1 as failure of factorization-depth sharpness. This is superseded. For the actual factorization category, trivial rho=1 with z(x_2)=1 gives a valid affine representation whose image contains A_k, and P_{p^{k-1}}(A_k)=p^{k-1}A_k is nontrivial. Therefore n_aff(k)=p^{k-1}+1 remains sharp for rank d>=2 and all f>=1. Surjective-target witness failure is a separate stronger requirement and is not load-bearing.
+
+Classification: affine sharpness d>=2 all f **PASS/CLOSED**; prior d=2,f>1 sharpness-failure claim **HISTORICAL/SUPERSEDED**. Record: research/FOLLOWUP_SHARPNESS_D2_CORRECTION_2026-09-26.md.
