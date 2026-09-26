@@ -2881,3 +2881,20 @@ The final submission PDF was extracted from that exact artifact and preserved lo
 The successor manuscript is now **PASS / CLOSED for internal external-submission readiness**. Remaining research classifications are unchanged: novelty remains **OPEN / CONDITIONAL**, absolute carrier minimality remains **OPEN / category-dependent**, and broader elementary-type uniformity remains **OPEN** and unclaimed.
 
 The external submission itself has not been sent; venue selection and the venue-specific submission metadata remain the only external-action steps.
+
+
+## 2026-09-26 — PAPER 3 FINAL AUDIT / INDEPENDENT NOVELTY GATE
+
+Paper 3 `Finite-Window Applications to Free Products of Demuškin Blocks` was taken through the requested sequence: CI baseline -> independent referee audit -> free-product/Kummer literature audit -> logical redundancy audit -> necessary manuscript repair -> fresh CI trigger -> publication-candidate gate.
+
+Results:
+- initial Paper 3 CI run 36213977187 on commit 901fcc6: **PASS / CLOSED**;
+- referee audit: **PASS / CLOSED**; no fatal mathematical error, but the blockwise Kummer proof was tightened to explicitly use Paper 2 arbitrary-candidate factorization and the finite H^1 identifications;
+- f-collapse wording was narrowed to the marked finite abelianization;
+- Efrat--Quadrelli Prop. 7.5 and Quadrelli--Weigel Prop. 5.5 were added as direct prior art for free-product Kummerianity;
+- logical redundancy audit: **FAIL / CLOSED** for independent novelty; the principal claims are applications/corollaries of Paper 2 plus known free-product Kummerianity;
+- repaired manuscript commit: `55a51dc30579881843658968af2049b0a6dbce8d`;
+- fresh Paper 3 CI was triggered by the repaired source; the final run result must be checked from GitHub Actions before any external submission claim;
+- Paper 3 classification: **PASS / CLOSED as a mathematically sound application/companion manuscript; FAIL / CLOSED as an independent novelty paper on the current evidence**.
+
+Paper 2 remains untouched. A genuinely independent Paper 3 now requires a new application theorem or obstruction, not further cosmetic expansion of the current free-product synthesis.
