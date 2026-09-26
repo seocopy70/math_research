@@ -1,6 +1,32 @@
 # CURRENT_STATE — 수학증명
 
-Last updated: 2026-09-19 (S9 preflight)
+Last updated: 2026-09-26 — Paper 2 + Paper 3 merged publication candidate
+
+## 0. CURRENT PUBLICATION TRACK
+
+- **Paper 1:** unchanged; existing publication candidate/frozen manuscript remains preserved.
+- **Paper 2:** current independent theorem paper.
+- **Paper 3:** current source is retained as application/history material; its present free-product corpus is absorbed into Paper 2 and is not a separate submission candidate.
+- **Merged Paper 2 branch:** `paper2-paper3-merged-2026-09-26`.
+- **Merged source:** `paper/successor_main.tex`.
+- **Merged referee audit:** PASS/CLOSED.
+- **Novelty/redundancy audit:** PASS as Paper 2 application integration; Paper 3 standalone novelty FAIL/CLOSED on current evidence.
+- **Merged manuscript CI:** PASS; 11-page PDF generated.
+- **Publication novelty:** CONDITIONAL, deliberately not stated as an absolute priority claim.
+
+## 1. CURRENT MATHEMATICAL GATES
+
+- Affine finite-window theorem: PASS/CLOSED.
+- Category-relative sharpness (n_{\\mathrm{aff}}(k)=p^{k-1}+1): PASS/CLOSED.
+- Rank-two (d=2) boundary: PASS/CLOSED.
+- Finite-depth (f)-collapse: PASS/CLOSED after explicit abelianization proof tightening.
+- Mixed-commutator/free-product factorization: PASS/CLOSED for finite free pro-(p) products of the stated Demuškin blocks.
+- Blockwise finite Kummer recognition: PASS/CLOSED for finite free pro-3 products of rank-four (q=3) blocks.
+- Absolute minimality among arbitrary intrinsic carriers: **not claimed**.
+- Broader elementary-type closure: **not claimed**.
+
+The older S9/Q3 research track below remains preserved as historical research state; the publication-track header above controls manuscript decisions.
+
 
 > 목적: 새 창이 열려도 현재 연구의 작업 상태와 확정된 디테일을 즉시 복원하기 위한 live state. 상세 유도·계산은 별도 연구 문서가 정본이다.
 
