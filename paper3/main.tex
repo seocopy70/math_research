@@ -1,0 +1,389 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\title{Finite-Window Applications to Free Products of Demuškin Blocks}
+\author{Seo Seongkyo}
+\date{September 2026}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+
+\newcommand{\Zp}{\mathbb Z_p}
+\newcommand{\Fp}{\mathbb F_p}
+\newcommand{\Uk}{U_{1,k}}
+\newcommand{\Pk}{P_{p^{k-1}+1}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper records concrete applications of the finite-window machinery developed in the preceding two papers. We consider finite free pro-$p$ products of standard Demuškin blocks
+\[
+D_i=\langle x_{i,1},\ldots,x_{i,d_i}\mid
+x_{i,1}^{p^{f_i}}\prod_j[x_{i,2j-1},x_{i,2j}]=1\rangle ,
+\]
+with odd $p$, even $d_i\ge2$, and arbitrary positive integers $f_i$. We prove that every affine crossed-cocycle representation at coefficient level $p^k$ factors through the single uniform quotient
+$Q_k(G)=G/P_{p^{k-1}+1}(G)$, independently of the individual values $f_i$. The free-product truncation is compatible with the coproduct structure, so no additional mixed-commutator depth is required. We then give two concrete finite-window applications: (i) a heterogeneous-block example in which the finite quotient records exactly the blocks with $f_i<k$ while blocks with $f_i\ge k$ have the same finite-depth power relation, and (ii) a blockwise Kummer-recognition theorem for products whose blocks lie in the rank-four, $q=p$ recognition class established in the first paper. The result is an application-level synthesis, not a claim of absolute finite-carrier minimality or a new classification of all elementary-type pro-$p$ groups.
+\end{abstract}
+
+\section{Introduction}
+
+The preceding papers separate three logically different tasks. Paper 1 establishes a finite-window Kummer selector for the canonical orientation in the fixed rank-four $q=3$ Demuškin case. Paper 2 determines the sharp finite depth for the entire affine crossed-cocycle category:
+\[
+n_{\mathrm{aff}}(k)=p^{k-1}+1.
+\]
+The purpose here is to apply those results to an explicit family of nontrivial composite groups rather than to enlarge the abstract recognition theorem.
+
+The basic objects are finite free pro-$p$ products
+\[
+G=D_1*_p\cdots *_pD_m
+\]
+of standard Demuškin blocks. The parameters $f_i$ are allowed to differ. This is important: the finite-window construction should not require the blocks to have a common $p$-power parameter.
+
+There are three questions.
+
+\begin{enumerate}
+\item Does one finite depth work simultaneously for all blocks and all mixed words?
+\item What information about the individual $f_i$ survives at that depth?
+\item When the blocks belong to the recognition class of Paper 1, does the intrinsic finite Kummer predicate recover their canonical orientations block by block?
+\end{enumerate}
+
+The first two questions have unconditional answers in the stated family. The third is deliberately restricted to the recognition class already proved in Paper 1.
+
+\section{The block family and the uniform finite window}
+
+Fix an odd prime $p$. For $f\ge1$ and even $d\ge2$, put
+\[
+D_{f,d}=\left\langle x_1,\ldots,x_d\mid
+r_f=x_1^{p^f}[x_1,x_2]\cdots[x_{d-1},x_d]=1\right\rangle .
+\]
+For $k\ge2$ set
+\[
+A_k=\mathbb Z/p^k\mathbb Z,\qquad
+U_{1,k}=1+pA_k,\qquad
+S_k=A_k\rtimes U_{1,k}.
+\]
+The Zassenhaus filtration is denoted by $P_n$.
+
+The finite affine calculation from Paper 2 gives
+\[
+P_n(S_k)=p^{e(n)}A_k\rtimes U_{e(n)+1},
+\qquad e(n)=\lceil\log_p n\rceil.
+\]
+Consequently
+\[
+P_{p^{k-1}}(S_k)=p^{k-1}A_k\ne1,
+\qquad
+P_{p^{k-1}+1}(S_k)=1.
+\]
+
+\begin{proposition}[Uniform factorization]
+Let $G$ be any pro-$p$ group. Every continuous homomorphism
+\[
+\psi=(z,\rho):G\longrightarrow S_k
+\]
+kills $P_{p^{k-1}+1}(G)$. In particular every affine crossed-cocycle and its coefficient character factor through
+\[
+Q_k(G)=G/P_{p^{k-1}+1}(G).
+\]
+\end{proposition}
+
+\begin{proof}
+Zassenhaus filtrations are functorial under continuous homomorphisms. Hence
+\[
+\psi(P_n(G))\subseteq P_n(S_k).
+\]
+Taking $n=p^{k-1}+1$ and using the displayed target calculation gives the claim.
+\end{proof}
+
+The important point for applications is that this proposition does not inspect the defining relations of $G$. It is therefore already uniform over all blocks and all mixed words.
+
+\section{Free-product truncation}
+
+For a pro-$p$ group $H$ write
+\[
+T_n(H)=H/P_n(H).
+\]
+
+\begin{lemma}[Truncation preserves free pro-$p$ coproducts]
+For pro-$p$ groups $G_1,G_2$ there is a canonical isomorphism
+\[
+T_n(G_1*_pG_2)
+\cong
+T_n\!\left(T_n(G_1)*_pT_n(G_2)\right).
+\]
+Equivalently, if
+\[
+H=T_n(G_1)*_pT_n(G_2),
+\]
+then
+\[
+T_n(G_1*_pG_2)\cong H/P_n(H).
+\]
+\end{lemma}
+
+\begin{proof}
+The functor $T_n$ is the reflector from pro-$p$ groups to the full subcategory of groups satisfying $P_n(H)=1$. Indeed every map from $G$ to such an $H$ kills $P_n(G)$ by functoriality. Reflectors preserve coproducts after reflection. Since the free pro-$p$ product is the coproduct, the stated formula follows.
+\end{proof}
+
+\begin{theorem}[Uniform window for finite Demuškin products]
+Let
+\[
+G=D_{f_1,d_1}*_p\cdots *_pD_{f_m,d_m}.
+\]
+Then every continuous affine crossed-cocycle representation of $G$ into $S_k$ factors through
+\[
+Q_k(G)=G/P_{p^{k-1}+1}(G).
+\]
+No additional depth is required for mixed commutators between different factors.
+\end{theorem}
+
+\begin{proof}
+The factorization is the preceding proposition. The truncation lemma shows that the finite quotient can equivalently be formed by first truncating each factor and then applying the same truncation to their free product. Thus mixed commutators are part of the reflected $P_{p^{k-1}+1}$-kernel and are killed at the same depth.
+\end{proof}
+
+\begin{remark}
+This is a uniform sufficiency statement. It does not claim that the quotient is minimal among all possible intrinsic carriers.
+\end{remark}
+
+\section{What survives of the individual parameters}
+
+The defining power term of $D_{f,d}$ is
+$x_1^{p^f}$. In the free pro-$p$ group on the generators,
+$x_1\in P_1\setminus P_2$, and the initial restricted-Lie term of
+$x_1^{p^f}$ has Zassenhaus weight $p^f$. Hence
+\[
+x_1^{p^f}\in P_{p^f}\setminus P_{p^f+1}.
+\]
+
+\begin{proposition}[Finite-depth $f$-collapse]
+For
+\[
+Q_k(D_{f,d})=D_{f,d}/P_{p^{k-1}+1}(D_{f,d}),
+\]
+the power relation is invisible whenever $f\ge k$. In that range the image of the defining relation agrees with the power-free relation
+\[
+[x_1,x_2]\cdots[x_{d-1},x_d]=1.
+\]
+For $f<k$, the parameter remains visible already in the abelianization: the image of $x_1$ has order $p^f$ in the relevant finite abelian quotient.
+\end{proposition}
+
+\begin{proof}
+If $f\ge k$, then
+$p^f\ge p^k>p^{k-1}+1$, so
+$x_1^{p^f}\in P_{p^{k-1}+1}$ and dies in the quotient.
+For $f<k$, the abelianization of $D_{f,d}$ is
+\[
+\mathbb Z_p^{d-1}\oplus\mathbb Z/p^f\mathbb Z.
+\]
+The truncation modulo $P_{p^{k-1}+1}$ reduces the free directions at the finite level but does not remove the torsion order $p^f$ when $f<k$. Thus the finite abelianization distinguishes this case from the power-free case.
+\end{proof}
+
+\begin{corollary}[Parameter profile of a product]
+For
+\[
+G=*_{i=1}^mD_{f_i,d_i},
+\]
+the finite quotient $Q_k(G)$ has a blockwise parameter profile
+\[
+\{f_i<k\}\quad\text{versus}\quad\{f_i\ge k\}.
+\]
+Blocks with $f_i\ge k$ have identical finite-depth power relations after the generators are identified, whereas each block with $f_i<k$ retains its torsion order $p^{f_i}$ in abelianization.
+\end{corollary}
+
+This is the first concrete application: a single finite window simultaneously processes heterogeneous Demuškin parameters, while the quotient itself records precisely the parameters that have not yet collapsed at level $k$.
+
+\section{Affine sharpness in an actual composite example}
+
+Consider
+\[
+G=D_{1,4}*_pD_{3,2}*_pD_{7,4}.
+\]
+At level $k=4$, the parameters split as
+\[
+1<4,\qquad 3<4,\qquad 7\ge4.
+\]
+Thus the first two blocks retain their torsion parameters in finite abelianization, while the third block has already entered the finite-depth power-free regime.
+
+Nevertheless every affine representation of the whole free product factors through the single quotient
+\[
+G/P_{p^3+1}(G).
+\]
+
+\begin{proposition}[Concrete lower-bound witness]
+For every standard block $D_{f,d}$ and every $k\ge2$, there is an affine representation into $S_k$ which is nontrivial on $P_{p^{k-1}}(D_{f,d})$. Consequently the same depth cannot be lowered uniformly for the class of finite free products containing such a block.
+\end{proposition}
+
+\begin{proof}
+If $f<k$, use the canonical orientation on the block and the crossed cocycle with
+$z(x_1)=1$ and all other generator values zero. Then
+\[
+z(x_1^{p^{k-1}})=p^{k-1}\ne0\pmod{p^k}.
+\]
+If $f\ge k$, use
+$\rho(x_1)=1$, $\rho(x_2)=1+p$,
+$z(x_1)=0$, $z(x_2)=1$, with the remaining values zero. The geometric-sum formula gives
+\[
+z(x_2^{p^{k-1}})
+=\frac{(1+p)^{p^{k-1}}-1}{p},
+\]
+whose $p$-adic valuation is $k-1$ by LTE. Thus it is nonzero modulo $p^k$. Extending the representation by the trivial representation on the other free factors gives the witness for the free product.
+\end{proof}
+
+The point of the example is not to introduce a new sharpness theorem; that theorem belongs to Paper 2. It demonstrates that the sharp affine threshold survives intact in a genuinely composite group with heterogeneous blocks.
+
+\section{Blockwise Kummer recognition}
+
+We now restrict to the recognition setting already established in Paper 1. Let
+\[
+G=G_1*_p\cdots *_pG_m
+\]
+where each $G_i$ is a rank-four $q=3$ Demuškin block for which Paper 1 proves
+\[
+\mathsf K_k(Q_k(G_i),\rho_i)
+\Longleftrightarrow
+\rho_i=\chi_i\bmod 3^k.
+\]
+
+For a candidate
+\[
+\rho:Q_k(G)\to U_{1,k},
+\]
+write $\rho_i$ for its restriction to the finite quotient of the $i$th factor.
+
+\begin{proposition}[Cohomology of a finite free product]
+For a finite coefficient module $M$ and a free pro-$p$ product
+$G=*_{i=1}^mG_i$,
+\[
+H^1(G,M)\cong\bigoplus_{i=1}^mH^1(G_i,M|_{G_i}).
+\]
+The same decomposition holds for $H^1(G,\Fp)$.
+\end{proposition}
+
+\begin{proof}
+A continuous crossed homomorphism on a free pro-$p$ product is uniquely determined by its restrictions to the free factors, and the same statement holds after quotienting by principal crossed homomorphisms. Equivalently, this is the standard Mayer--Vietoris decomposition for a free pro-$p$ coproduct in degree one.
+\end{proof}
+
+\begin{theorem}[Blockwise finite Kummer recognition]
+Under the hypotheses above,
+\[
+\mathsf K_k(Q_k(G),\rho)
+\Longleftrightarrow
+\mathsf K_k(Q_k(G_i),\rho_i)\quad\text{for every }i.
+\]
+Consequently
+\[
+\mathsf K_k(Q_k(G),\rho)
+\Longleftrightarrow
+\rho_i=\chi_i\bmod 3^k\quad\text{for every }i.
+\]
+Thus the canonical orientation of the composite group is recognized blockwise from the same finite Zassenhaus window.
+\end{theorem}
+
+\begin{proof}
+By the truncation lemma, the finite quotient is the reflected free product of the factor quotients. The degree-one cohomology decomposition identifies the global reduction map with the direct sum of the corresponding factor reduction maps. A direct sum map is surjective exactly when each summand map is surjective. The final equivalence follows by applying the Paper 1 selector theorem to each factor.
+\end{proof}
+
+\begin{remark}
+This theorem is an application of Paper 1, not a new claim that the canonical orientation of arbitrary Demuškin groups has been rediscovered. The selector is applied only to the declared rank-four $q=3$ block class.
+\end{remark}
+
+\section{A worked heterogeneous example}
+
+Take
+\[
+G=G_{3,4}*_3G_{3,4}*_3G_{3,4},
+\]
+three rank-four $q=3$ blocks, and $k=4$. The global quotient is
+\[
+Q_4(G)=G/P_{28}(G),
+\]
+because $3^{4-1}+1=28$.
+
+A candidate orientation
+\[
+\rho:Q_4(G)\to1+3\mathbb Z/81\mathbb Z
+\]
+restricts to three candidates $\rho_1,\rho_2,\rho_3$. The blockwise theorem says that the global Kummer predicate is satisfied precisely when all three restrictions equal the canonical reduction.
+
+For the standard coordinates of each block this reduction has
+\[
+\chi_i(x_{i,1})=\chi_i(x_{i,3})=\chi_i(x_{i,4})=1,
+\qquad
+\chi_i(x_{i,2})=(1-3)^{-1}\equiv40\pmod{81}.
+\]
+The value $40$ is not an input to the intrinsic predicate; it is the coordinate value obtained after the intrinsic selector has been identified with the standard presentation.
+
+This example illustrates the intended use of the machinery: a single finite quotient carries the entire finite Kummer lifting problem for the composite object, and the recognition problem decomposes into independent block tests.
+
+\section{Relation to the three-paper program}
+
+Paper 1 answers a recognition question for a fixed Demuškin block:
+\[
+Q_k\;\rightsquigarrow\;\chi\bmod p^k.
+\]
+
+Paper 2 determines the sharp affine information depth:
+\[
+n_{\mathrm{aff}}(k)=p^{k-1}+1.
+\]
+
+The present paper combines these two results on explicit composite objects:
+\[
+\boxed{
+\text{blockwise recognition}
++
+\text{uniform finite factorization}
++
+\text{heterogeneous parameter profile}.
+}
+\]
+
+The logical order is therefore
+\[
+\text{Paper 1: recognition}
+\quad+\quad
+\text{Paper 2: sharp affine window}
+\quad\Longrightarrow\quad
+\text{Paper 3: finite-window applications}.
+\]
+
+No claim of absolute minimality of $Q_k$ is needed for this application theorem.
+
+\section{Scope and limitations}
+
+The positive application theorem is deliberately restricted to finite free pro-$p$ products of the stated Demuškin blocks. The standard elementary-type class is broader: it also involves additional closure operations such as fibre products and semidirect constructions. The present argument does not establish the same finite-selector theorem for that full class.
+
+Likewise, the heterogeneous $f_i$ example uses the canonical orientations and the explicit finite-depth collapse theorem. It does not claim that the bare quotient alone classifies every parameter or every group structure.
+
+Finally, the number $p^{k-1}+1$ is used here as the sharp threshold in the affine representation category established in Paper 2. Whether another, non-affine intrinsic carrier can encode the same orientation information at a smaller depth remains open.
+
+\section{Conclusion}
+
+The preceding abstract results have a concrete composite application. For finite free pro-$p$ products of standard Demuškin blocks, one finite Zassenhaus window
+\[
+Q_k(G)=G/P_{p^{k-1}+1}(G)
+\]
+controls every affine crossed-cocycle representation, mixed commutators require no extra depth, and the quotient retains exactly the blockwise $f_i<k$ torsion distinctions while collapsing the power relations with $f_i\ge k$.
+
+For the rank-four $q=3$ recognition class, the intrinsic Kummer selector of Paper 1 extends blockwise to the free product. Thus the three-paper program yields not merely an abstract finite-window theorem but a concrete family of composite examples on which the machinery can be executed.
+
+\begin{thebibliography}{99}
+\bibitem{Labute1967}
+J. Labute, \emph{Classification of Demushkin groups}, Canad. J. Math. 19 (1967), 106--132.
+
+\bibitem{EfratQuadrelli2019}
+I. Efrat and C. Quadrelli, \emph{The Kummerian Property and Maximal Pro-$p$ Galois Groups}, J. Algebra 525 (2019), 284--310.
+
+\bibitem{QuadrelliWeigel2022}
+C. Quadrelli and T. S. Weigel, \emph{Oriented pro-$\ell$ groups with the Bogomolov--Positselski property}, Res. Number Theory 8 (2022), 21.
+
+\bibitem{Quadrelli2024}
+C. Quadrelli, \emph{Chasing Maximal Pro-$p$ Galois Groups via 1-Cyclotomicity}, Mediterr. J. Math. 21 (2024), 56.
+
+\end{thebibliography}
+\end{document}
