@@ -23,7 +23,7 @@ with odd $p$, $f\ge1$, and even $d\ge2$, every affine representation factors thr
 $Q_k(G)=G/P_{p^{k-1}+1}(G)$, and this depth is sharp in the category of all affine crossed-cocycle representations:
 $ n_{\mathrm{aff}}(k)=p^{k-1}+1$.
 The lower bound includes rank two and does not require the orientation component to be surjective. We also separate factorization from recognition: a sharp factorization window does not by itself imply that a Kummerian predicate selects a unique orientation.
-\enden{abstract}
+\end{abstract}
 
 \section{Introduction}
 The canonical Demushkin orientation is classical: Labute identifies it through the dualizing module, while the Kummerian/cyclotomic formulation is developed in later work. See \cite{Labute1967,EfratQuadrelli2019,QuadrelliWeigel2022}.
@@ -44,11 +44,11 @@ Moreover some such representation is nontrivial on $P_{p^{k-1}}(G_{f,d})$. Hence
 \[
 \boxed{n_{\mathrm{aff}}(k)=p^{k-1}+1.}
 \]
-\enden{theorem}
+\end{theorem}
 
 \begin{remark}
 This is category-relative minimality. No absolute minimality among arbitrary intrinsic carriers is claimed.
-\enden{remark}
+\end{remark}
 
 \section{The affine target and the finite window}
 Put
@@ -68,7 +68,7 @@ P_{p^{k-1}}(S_k)=p^{k-1}A_k\ne1,
 \qquad
 P_{p^{k-1}+1}(S_k)=1.
 \]
-\enden{lemma}
+\end{lemma}
 
 \begin{proof}
 Use the Jennings--Lazard product
@@ -84,7 +84,7 @@ $S_k^{p^j}=p^jA_k\rtimes U_{j+1}$.
 If $e=e(n)$, the $i=1,j=e$ term already supplies $p^eA_k\rtimes U_{e+1}$.
 For $i\ge2$ with $ip^j\ge n$, one has $i-1+j\ge e$, hence
 $\gamma_i(S_k)^{p^j}\subseteq p^eA_k$. This proves the formula and the endpoint values.
-\enden{proof}
+\end{proof}
 
 \begin{proposition}[Arbitrary-candidate factorization]
 For every pro-$p$ group $G$, every $\rho:G\to U_{1,k}$, and every $z\in Z^1(G,A_k(\rho))$, the homomorphism
@@ -92,13 +92,13 @@ For every pro-$p$ group $G$, every $\rho:G\to U_{1,k}$, and every $z\in Z^1(G,A_
 \psi(g)=(z(g),\rho(g))
 \]
 kills $P_{p^{k-1}+1}(G)$. Thus the crossed cocycle, its orientation component, and the associated twisted $H^1$ lifting problem factor through $Q_k(G)$.
-\enden{proposition}
+\end{proposition}
 
 \begin{proof}
 The crossed-cocycle identity is exactly the homomorphism condition into $S_k$. Zassenhaus filtrations are functorial, so
 $\psi(P_{p^{k-1}+1}(G))\subseteq P_{p^{k-1}+1}(S_k)=1$.
 Coboundaries are transported by the same factorization.
-\enden{proof}
+\end{proof}
 
 \section{Sharpness}
 \begin{proposition}[The case $f<k$]
@@ -112,7 +112,7 @@ Set $z(x_1)=1$ and $z(x_i)=0$ for $i>1$. Then $z$ descends to a crossed cocycle 
 \[
 z(x_1^{p^{k-1}})=p^{k-1}\ne0\pmod{p^k}.
 \]
-\enden{proposition}
+\end{proposition}
 
 \begin{proof}
 With the convention $z(gh)=z(g)+\chi(g)z(h)$, the power--commutator part of the relator evaluates to
@@ -120,25 +120,25 @@ With the convention $z(gh)=z(g)+\chi(g)z(h)$, the power--commutator part of the 
 p^f+\chi(x_2)^{-1}(1-\chi(x_2))=0,
 \]
 because $\chi(x_2)=(1-p^f)^{-1}$. The remaining commutators have zero cocycle value. Since $\chi(x_1)=1$, $z(x_1^m)=m$.
-\enden{proof}
+\end{proof}
 
 \begin{proposition}[The case $f\ge k$, including rank two]
 Let $f\ge k$ and define
 \[
-\rho(x_1)=1,quad \rho(x_2)=1+p,quad z(x_1)=0,quad z(x_2)=1,
+\rho(x_1)=1,\quad \rho(x_2)=1+p,\quad z(x_1)=0,\quad z(x_2)=1,
 \]
 with all unused generator values and cocycle values trivial. Then $z$ is a crossed cocycle and
 \[
 z(x_2^{p^{k-1}})
 = \frac{(1+p)^{p^{k-1}}-1}{p}\ne0\pmod{p^k}.
 \]
-\enden{proposition}
+\end{proposition}
 
 \begin{proof}
 The term $x_1^{p^f}$ is invisible at level $p^k$, and $z(x_1)=0$ kills the commutator contribution. The cyclic cocycle formula gives the displayed geometric sum. LTE yields
-$\v_p((1+p)^{p^{k-1}}-1)=k$, so the quotient has valuation $k-1$.
+$v_p((1+p)^{p^{k-1}}-1)=k$, so the quotient has valuation $k-1$.
 Only $x_1,x_2$ are used, so the construction covers $d=2$.
-\enden{proof}
+\end{proof}
 
 \begin{theorem}[Category-relative minimality]
 For every odd $p$, every $f\ge1$, every even $d\ge2$, and every $k\ge2$,
@@ -146,15 +146,15 @@ For every odd $p$, every $f\ge1$, every even $d\ge2$, and every $k\ge2$,
 \boxed{n_{\mathrm{aff}}(k)=p^{k-1}+1}
 \]
 for the category of all crossed-cocycle representations into $A_k(\rho)\rtimes U_{1,k}$.
-\enden{theorem}
+\end{theorem}
 
 \begin{proof}
 The filtration lemma gives the upper bound. The two preceding propositions give a witness nontrivial on $P_{p^{k-1}}$ in the cases $f<k$ and $f\ge k$, respectively. Thus no smaller depth works for the entire affine category.
-\enden{proof}
+\end{proof}
 
 \begin{remark}
 No surjectivity assumption on $\rho(G)$ is needed. For $f<k$ the canonical orientation may fail to generate $U_{1,k}$, but the translation component already detects the missing Zassenhaus layer.
-\enden{remark}
+\end{remark}
 
 \section{Finite-depth q-collapse}
 Let
@@ -183,17 +183,17 @@ However, uniqueness is an additional property of the input class.
 \begin{proposition}[Information loss in free pro-$p$ groups]
 Let $F_d$ be free pro-$p$ of finite rank $d\ge2$. Every orientation $\rho:F_d\to U_{1,k}$ is Kummerian at every finite coefficient level. Hence
 $\mathsf K_k(F_d/P_{p^{k-1}+1}(F_d),\rho)$ does not single out a unique orientation.
-\enden{proposition}
+\end{proposition}
 
 \begin{proof}
 $\operatorname{cd}_p(F_d)=1$, so $H^2(F_d,M)=0$ for every finite discrete $p$-primary module $M$. Therefore the connecting map for
 $0\to pA_k(\rho)\to A_k(\rho)\to\mathbb F_p\to0$
 vanishes and the $H^1$ reduction map is surjective. Factorization transfers the same lifting information to the finite quotient. Since $F_d$ has many distinct orientations, the predicate itself cannot be a uniqueness selector on this class.
-\enden{proof}
+\end{proof}
 
 \begin{remark}
 This does not prove that every conceivable isomorphism-natural selector is impossible. Such a claim would require a separate automorphism or indistinguishability argument for the exact quotient category.
-\enden{remark}
+\end{remark}
 
 \section{Finite free products of Demushkin blocks}
 Let $G=D_1*_p\cdots *_pD_m$ be a finite free pro-$p$ product of Demushkin groups, each with canonical orientation. Write $T_n(G)=G/P_n(G)$.
@@ -206,11 +206,11 @@ T_n(G_1*_pG_2)
 \frac{T_n(G_1)*_pT_n(G_2)}
 {P_n(T_n(G_1)*_pT_n(G_2))}.
 \]
-\enden{lemma}
+\end{lemma}
 
 \begin{proof}
 $T_n$ is left adjoint to the inclusion of pro-$p$ groups $H$ satisfying $P_n(H)=1$, because every map $G\to H$ kills $P_n(G)$. Left adjoints preserve coproducts, giving the formula.
-\enden{proof}
+\end{proof}
 
 \begin{theorem}[Uniform affine window for finite Demushkin free products]
 For a finite free pro-$p$ product of Demushkin groups, every affine crossed-cocycle representation at level $k$ factors through
@@ -218,15 +218,15 @@ For a finite free pro-$p$ product of Demushkin groups, every affine crossed-cocy
 G/P_{p^{k-1}+1}(G).
 \]
 Thus the same depth is sufficient uniformly for this class. If one factor is a standard $G_{f,d}$, the sharp witness above shows that no smaller depth works uniformly for the whole class.
-\enden{theorem}
+\end{theorem}
 
 \begin{proof}
 The factorization follows directly from the arbitrary-candidate factorization proposition. The truncation lemma shows that no separate mixed-commutator window is needed. The lower bound is inherited from one factor by the universal property of the free pro-$p$ coproduct.
-\enden{proof}
+\end{proof}
 
 \begin{remark}
 No claim is made for broader recursively defined elementary-type classes involving fibre products or amalgamated operations.
-\enden{remark}
+\end{remark}
 
 \section{Relation with the preceding paper}
 The preceding paper treats finite-window recognition for the fixed rank-four $p=3$ Demushkin group. Its intrinsic Kummer predicate on the corresponding finite quotient selects the canonical orientation modulo $3^k$. The present paper adds the exact factorization depth for the full affine crossed-cocycle category, extends sharpness to the rank-two boundary, records the finite-depth $f$-collapse, and separates factorization from recognition.
@@ -234,9 +234,9 @@ The preceding paper treats finite-window recognition for the fixed rank-four $p=
 The logical chain is
 \[
 \text{affine factorization}
-\quad\ne\
+\quad\ne\quad
 \quad\text{orientation recognition}
-\quad\ne\
+\quad\ne\quad
 \quad\text{absolute information sufficiency}.
 \]
 
@@ -267,5 +267,5 @@ I. Efrat and C. Quadrelli, \emph{The Kummerian Property and Maximal Pro-$p$ Galo
 C. Quadrelli and T. S. Weigel, \emph{Oriented pro-\ell groups with the Bogomolov--Positselski property}, Res. Number Theory 8 (2022), 21.
 \bibitem{Quadrelli2024}
 C. Quadrelli, \emph{Chasing Maximal Pro-$p$ Galois Groups via 1-Cyclotomicity}, Mediterr. J. Math. 21 (2024), 56.
-\enden{thebibliography}
-\enden{document}
+\end{thebibliography}
+\end{document}
