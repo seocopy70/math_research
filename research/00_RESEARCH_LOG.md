@@ -2897,3 +2897,21 @@ Final classification:
 - novelty: **OPEN / CONDITIONAL**
 - absolute minimality: **OPEN / category-dependent**
 - broader ET_p: **OPEN**
+
+
+## 2026-09-26 — SUCCESSOR SUBMISSION-PREPARATION REPAIR CLOSED
+
+Following the independent referee audit, the successor manuscript was moved to submission branch `successor-submission-2026-09-26` and PR #3 against `successor-publication-candidate-2026-09-26` was opened.
+
+Publication-stage repairs completed:
+- formal definition of (n_{\\mathrm{aff}}(k;G));
+- correction of the main theorem's quantifier wording;
+- explicit identification of the principal novelty mechanism as target-filtration calculation plus sharp Demushkin witnesses;
+- clarification of cocycle/coboundary factorization;
+- explicit (f<k) abelianization argument for finite-depth torsion visibility;
+- replacement of the overly strong finite-quotient transfer sentence in the free-pro-(p) boundary by the directly proved finite-level (H^1)-surjectivity statement on (F_d);
+- preservation of conditional novelty language and explicit non-claims about absolute carrier minimality and broader elementary-type classes.
+
+The earlier publication-candidate CI had passed cleanly. A fresh submission-branch CI run was started for the repaired source. Until that run is green, the release gate remains **CONDITIONAL**.
+
+Classification: **PASS / CLOSED** for the mathematical repair package; **CONDITIONAL** for final technical release pending the fresh CI run.
