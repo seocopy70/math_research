@@ -1075,3 +1075,63 @@ Order of execution: **1 → 3 → 2 → 4**. Rank-2/local-field examples are to 
 Important boundary: these are computational validation/application tasks. Reproducing a known canonical orientation is not itself a novelty claim. No task may silently revive closed Fox, (t_2), or other superseded routes. The frozen publication manuscript is not to be modified by this program.
 
 Classification: **LONG-TERM PROGRAM — OPEN / AUTHORIZED FOR STAGED IMPLEMENTATION**.
+
+
+## 2026-09-26 — SUCCESSOR PUBLICATION CANDIDATE CI GATE PASSED
+
+The successor branch `successor-publication-candidate-2026-09-26` has now passed its exact GitHub Actions publication-candidate build gate at commit
+`730b1bf815e0c30cd46d0803cf1b72482df970a8`.
+
+An initial CI failure exposed only a bibliography LaTeX math-mode defect (`pro-\\ell` outside math mode); this was corrected without changing mathematics. The corrected source passed:
+- LaTeX compilation;
+- PDF existence/output verification;
+- final log check for undefined citations, LaTeX warnings, or errors;
+- PDF artifact upload.
+
+Artifact: `successor-manuscript-pdf`, ID `10895855568`, 340066 bytes.
+
+The branch diff against current `main` contains only the three successor files:
+`.github/workflows/successor-build.yml`,
+`paper/successor_main.tex`,
+and `research/SUCCESSOR_PUBLICATION_CANDIDATE_AUDIT_2026-09-26.md`.
+The preceding `paper/main.tex` is not changed by the successor diff.
+
+Current successor classification:
+- mathematical core: **PASS / CLOSED**
+- exact publication-candidate build: **PASS / CLOSED**
+- preceding manuscript preservation: **PASS / CLOSED**
+- absolute minimality outside the declared affine category: **OPEN / category-dependent**
+- broader ET_p uniformity: **OPEN**
+- novelty: **OPEN / CONDITIONAL**
+
+Next work is publication-level mathematical/literature scrutiny, not another LaTeX build gate.
+
+
+## 2026-09-26 — FINAL REFEREE + PRIOR-ART AUDIT
+
+The successor manuscript has passed a final theorem-by-theorem mathematical referee audit and a targeted prior-art search.
+
+Mathematical classification:
+- continuity hypotheses made explicit: **PASS / CLOSED**
+- affine target Zassenhaus filtration: **PASS / CLOSED**
+- arbitrary-candidate factorization: **PASS / CLOSED**
+- sharpness for f<k: **PASS / CLOSED**
+- sharpness for f>=k including d=2: **PASS / CLOSED**
+- no orientation-surjectivity requirement: **PASS / CLOSED**
+- category-relative minimality: **PASS / CLOSED**
+- finite-depth f-collapse: **PASS / LOCAL**
+- factorization vs recognition: **PASS / LOCAL**
+- free-pro-p information-loss example: **PASS / LOCAL**
+- finite free-product uniformity: **PASS / CLOSED**
+- scope discipline: **PASS / CLOSED**
+
+The source was strengthened to cite Efrat (2014) and Mináč--Rogelstad--Tân (2016) for the established Zassenhaus/representation background and to make all profinite continuity assumptions explicit.
+
+Targeted prior-art searches did not locate a theorem stated simultaneously for the exact affine target
+$S_k=(Z/p^k)\rtimes(1+pZ/p^k)$, the exact depth $p^{k-1}+1$, all continuous affine crossed-cocycle representations, and matching sharp lower-bound witnesses for the standard Demushkin family including d=2 without orientation-surjectivity.
+
+Accordingly novelty remains **OPEN / CONDITIONAL**, not CLOSED. The correct claim is only that the audited literature search did not locate the exact theorem in this formulation.
+
+Absolute minimality outside the affine category remains **OPEN / category-dependent**. Broader elementary-type extension remains **OPEN**.
+
+The successor is now a genuine **publication candidate** on mathematical-structure/reproducibility grounds. Remaining uncertainty is scholarly novelty/priority validation, not an identified defect in the theorem/proof package.
