@@ -1,0 +1,30 @@
+name: Build Paper 3
+on:
+  push:
+    paths:
+      - 'paper3/**'
+      - '.github/workflows/paper3-build.yml'
+  workflow_dispatch:
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile Paper 3
+        uses: xu-cheng/latex-action@v4
+        with:
+          working_directory: paper3
+          root_file: main.tex
+          args: -pdf -interaction=nonstopmode -halt-on-error
+      - name: Verify PDF
+        working-directory: paper3
+        run: |
+          test -s main.pdf
+          grep -q 'Output written on main.pdf' main.log
+          ! grep -Eiq 'undefined|LaTeX Warning|Error:' main.log
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper3-pdf
+          path: paper3/main.pdf
+          if-no-files-found: error
