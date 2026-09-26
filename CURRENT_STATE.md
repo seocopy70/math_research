@@ -1029,3 +1029,10 @@ Audit artifact: `research/FOLLOWUP_MERGED_AUDIT_2026-09-26.md`, commit `e4fca7e6
 The prior successor-paper audit incorrectly treated failure of a surjective witness onto the full affine target S_k in rank 2, f>1 as failure of factorization-depth sharpness. This is superseded. For the actual factorization category, trivial rho=1 with z(x_2)=1 gives a valid affine representation whose image contains A_k, and P_{p^{k-1}}(A_k)=p^{k-1}A_k is nontrivial. Therefore n_aff(k)=p^{k-1}+1 remains sharp for rank d>=2 and all f>=1. Surjective-target witness failure is a separate stronger requirement and is not load-bearing.
 
 Classification: affine sharpness d>=2 all f **PASS/CLOSED**; prior d=2,f>1 sharpness-failure claim **HISTORICAL/SUPERSEDED**. Record: research/FOLLOWUP_SHARPNESS_D2_CORRECTION_2026-09-26.md.
+
+
+## 2026-09-26 — ET_p / ABSTRACT-Q_k SCOPE AUDIT
+
+Targeted literature review completed. Quadrelli–Weigel 2022 defines standard oriented elementary type using free pro-\ell groups, Demushkin groups, free products and fibre products; therefore a manuscript definition restricted to finite free products of Demushkin blocks must be called a rigid test class, not the standard ET_p. Quadrelli 2024 and the audited Zassenhaus literature do not state the exact bare abstract-Q_k, q-blind selector theorem. Current exact prior-art status remains OPEN / CONDITIONAL.
+
+The defensible impossibility target is an isomorphism-natural selector on bare abstract Q_k. Arbitrary non-natural choice functions are not ruled out by the present argument. Record: research/ETP_ABSTRACT_QK_SCOPE_AUDIT_2026-09-26.md.
