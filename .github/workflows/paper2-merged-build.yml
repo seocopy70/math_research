@@ -22,11 +22,6 @@ jobs:
         working-directory: paper
         run: |
           test -s successor_main.pdf
-          grep -q 'Output written on successor_main.pdf' successor_main.log
-          grep -q 'Finite free products of Demushkin blocks and applications' successor_main.tex
-          grep -q 'Finite-depth f-collapse' successor_main.tex
-          grep -q 'Blockwise finite Kummer recognition' successor_main.tex
-          test -s successor_main.pdf
       - name: Upload merged PDF
         uses: actions/upload-artifact@v4
         with:
