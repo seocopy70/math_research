@@ -1,0 +1,35 @@
+name: Paper 2 merged application build
+
+on:
+  push:
+    paths:
+      - 'paper/successor_main.tex'
+      - '.github/workflows/paper2-merged-build.yml'
+  workflow_dispatch:
+
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile merged Paper 2
+        uses: xu-cheng/latex-action@v4
+        with:
+          working_directory: paper
+          root_file: successor_main.tex
+          args: -pdf -interaction=nonstopmode -halt-on-error
+      - name: Verify merged manuscript
+        working-directory: paper
+        run: |
+          test -s successor_main.pdf
+          grep -q 'Output written on successor_main.pdf' successor_main.log
+          grep -q 'Finite free products of Demushkin blocks and applications' successor_main.tex
+          grep -q 'Finite-depth f-collapse' successor_main.tex
+          grep -q 'Blockwise finite Kummer recognition' successor_main.tex
+          ! grep -Eiq 'undefined|LaTeX Warning|Error:' successor_main.log
+      - name: Upload merged PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper2-merged-applications-pdf
+          path: paper/successor_main.pdf
+          if-no-files-found: error
