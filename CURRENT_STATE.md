@@ -1105,3 +1105,33 @@ Current successor classification:
 - novelty: **OPEN / CONDITIONAL**
 
 Next work is publication-level mathematical/literature scrutiny, not another LaTeX build gate.
+
+
+## 2026-09-26 — FINAL REFEREE + PRIOR-ART AUDIT
+
+The successor manuscript has passed a final theorem-by-theorem mathematical referee audit and a targeted prior-art search.
+
+Mathematical classification:
+- continuity hypotheses made explicit: **PASS / CLOSED**
+- affine target Zassenhaus filtration: **PASS / CLOSED**
+- arbitrary-candidate factorization: **PASS / CLOSED**
+- sharpness for f<k: **PASS / CLOSED**
+- sharpness for f>=k including d=2: **PASS / CLOSED**
+- no orientation-surjectivity requirement: **PASS / CLOSED**
+- category-relative minimality: **PASS / CLOSED**
+- finite-depth f-collapse: **PASS / LOCAL**
+- factorization vs recognition: **PASS / LOCAL**
+- free-pro-p information-loss example: **PASS / LOCAL**
+- finite free-product uniformity: **PASS / CLOSED**
+- scope discipline: **PASS / CLOSED**
+
+The source was strengthened to cite Efrat (2014) and Mináč--Rogelstad--Tân (2016) for the established Zassenhaus/representation background and to make all profinite continuity assumptions explicit.
+
+Targeted prior-art searches did not locate a theorem stated simultaneously for the exact affine target
+$S_k=(Z/p^k)\rtimes(1+pZ/p^k)$, the exact depth $p^{k-1}+1$, all continuous affine crossed-cocycle representations, and matching sharp lower-bound witnesses for the standard Demushkin family including d=2 without orientation-surjectivity.
+
+Accordingly novelty remains **OPEN / CONDITIONAL**, not CLOSED. The correct claim is only that the audited literature search did not locate the exact theorem in this formulation.
+
+Absolute minimality outside the affine category remains **OPEN / category-dependent**. Broader elementary-type extension remains **OPEN**.
+
+The successor is now a genuine **publication candidate** on mathematical-structure/reproducibility grounds. Remaining uncertainty is scholarly novelty/priority validation, not an identified defect in the theorem/proof package.
