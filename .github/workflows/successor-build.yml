@@ -1,4 +1,5 @@
 name: Build successor manuscript
+# Publication-candidate CI
 
 on:
   push:
