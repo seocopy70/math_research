@@ -2831,3 +2831,20 @@ Accordingly the defensible publication claim is the finite-window/sharp-factoriz
 Publication novelty remains **OPEN / CONDITIONAL** in the strict sense: a literature search can establish a defensible boundary but cannot prove absence of an equivalent formulation everywhere. No source found in the audited corpus states the exact present theorem.
 
 Detailed audit: research/SUCCESSOR_TWO_REMAINING_PROBLEMS_CLOSURE_2026-09-26.md.
+
+
+## 2026-09-26 — LONG-TERM COMPUTATIONAL PROGRAM RECORDED
+
+Following the completed successor-paper sharpness/minimality and q-collapse audits, a concrete implementation program was added as `research/LONG_TERM_COMPUTATIONAL_PROGRAM_2026-09-26.md`.
+
+The program deliberately separates computational validation from theorem claims. It begins with direct affine sharpness witnesses, then q-collapse measurements, then a finite-window recognition prototype on independently checked concrete Demuškin/local-field examples, and finally a comparison with other filtrations.
+
+The first task will test the two currently established witness regimes:
+- (f<k): canonical (ho(x_2)=(1-p^f)^{-1}), (z(x_1)=1);
+- (fge k): (ho(x_2)=1+p), (z(x_2)=1), with the LTE valuation check.
+
+The local-field branch is explicitly conditional on verifying the precise group presentation, (q), orientation convention, and finite quotient model before implementation. The filtration-comparison branch must keep Zassenhaus and lower (p)-central filtrations distinct; the 2025 correction remains controlling.
+
+Recommended execution order: **Task 1 → Task 3 → Task 2 → Task 4**.
+
+Classification: **OPEN / AUTHORIZED FOR STAGED IMPLEMENTATION**. No computation is claimed as completed by this record.
