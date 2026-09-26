@@ -3340,3 +3340,8 @@ Execution order: **Task 1 → Task 3 → Task 2 → Task 4**.
 This is a long-term implementation program, not a claim that the computational results are already established. Each task requires its own pre-check, independent verification, and PASS/LOCAL/FAIL/OPEN classification. The frozen publication manuscript remains untouched.
 
 Classification: **OPEN / AUTHORIZED FOR STAGED IMPLEMENTATION**.
+
+
+## 2026-09-26 — PAPER 3 APPLICATION MANUSCRIPT GATE
+
+Paper 3 (free products of Demuškin blocks) is now classified **PASS / CLOSED as an application/companion manuscript** but **FAIL / CLOSED as an independent novelty paper**. The referee audit found no fatal mathematical defect after tightening the blockwise H^1 argument; the free-product/Kummer literature audit found direct prior art in Efrat--Quadrelli Prop. 7.5 and Quadrelli--Weigel Prop. 5.5; the redundancy audit shows the principal results are corollaries/syntheses of Papers 1--2 and known free-product Kummerianity. Paper 2 remains frozen. A genuinely independent Paper 3 requires a new application theorem or obstruction.
