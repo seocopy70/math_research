@@ -2848,3 +2848,24 @@ The local-field branch is explicitly conditional on verifying the precise group 
 Recommended execution order: **Task 1 → Task 3 → Task 2 → Task 4**.
 
 Classification: **OPEN / AUTHORIZED FOR STAGED IMPLEMENTATION**. No computation is claimed as completed by this record.
+
+
+## 2026-09-26 — SUCCESSOR EXACT BUILD GATE CLOSED
+
+Successor publication-candidate branch `successor-publication-candidate-2026-09-26` reached exact CI closure at commit
+`730b1bf815e0c30cd46d0803cf1b72482df970a8`.
+
+The first successor CI attempt failed because the bibliography contained `Oriented pro-\\ell groups` with `\\ell` outside math mode. This was a source syntax defect only. The source was corrected to `Oriented pro-$\\ell$ groups`, with no mathematical change.
+
+The corrected commit passed two independent GitHub Actions triggers:
+- Build successor manuscript: **PASS**
+- PDF verification: **PASS**
+- warning/error/undefined-citation log check: **PASS / CLEAN**
+- PDF artifact upload: **PASS**
+
+Artifact `successor-manuscript-pdf`:
+ID `10895855568`; size 340066 bytes; digest
+`9e4126ef05ccdcd5078d26677217b9779e103187e461fc8122c5420fa51985c9`.
+
+This closes the publication-candidate technical build gate. It does not close novelty, absolute minimality outside the declared affine category, or broader ET_p uniformity.
+Classification: **PASS / CLOSED** for exact build; **OPEN / CONDITIONAL** for novelty.
