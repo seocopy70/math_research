@@ -1058,3 +1058,20 @@ The exact present theorem was not located verbatim in the audited corpus. Theref
 
 Strict publication priority remains **OPEN / CONDITIONAL**, because absence of an equivalent theorem cannot be proved by a finite literature search. This is now a publication-wording issue rather than an unresolved mathematical mechanism.
 
+
+
+## 2026-09-26 — LONG-TERM COMPUTATIONAL SUCCESSOR PROGRAM AUTHORIZED
+
+The successor branch now has a formal long-term computational work plan, recorded in `research/LONG_TERM_COMPUTATIONAL_PROGRAM_2026-09-26.md`.
+
+The plan operationalizes the established theory rather than reopening closed gates:
+- Task 1: direct computation of affine sharpness witnesses at adjacent Zassenhaus depths;
+- Task 3: numerical q-collapse/information-loss measurements;
+- Task 2: finite-window recognition prototype on independently validated concrete Demuškin/local-field examples;
+- Task 4: comparison with lower (p)-central and other precisely defined filtrations.
+
+Order of execution: **1 → 3 → 2 → 4**. Rank-2/local-field examples are to be used first where they reduce quotient-model complexity. Concrete local-field examples require an independent pre-check of presentation, (q), orientation convention, and finite quotient model before implementation.
+
+Important boundary: these are computational validation/application tasks. Reproducing a known canonical orientation is not itself a novelty claim. No task may silently revive closed Fox, (t_2), or other superseded routes. The frozen publication manuscript is not to be modified by this program.
+
+Classification: **LONG-TERM PROGRAM — OPEN / AUTHORIZED FOR STAGED IMPLEMENTATION**.
