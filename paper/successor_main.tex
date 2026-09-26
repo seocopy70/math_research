@@ -205,8 +205,17 @@ vanishes and the $H^1$ reduction map is surjective. Since $F_d$ has many distinc
 This does not prove that every conceivable isomorphism-natural selector is impossible. Such a claim would require a separate automorphism or indistinguishability argument for the exact quotient category.
 \end{remark}
 
-\section{Finite free products of Demushkin blocks}
-Let $G=D_1*_p\cdots *_pD_m$ be a finite free pro-$p$ product of Demushkin groups. The theorem below concerns continuous affine representations and does not require a chosen orientation on the factors. Write $T_n(G)=G/P_n(G)$.
+\section{Finite free products of Demushkin blocks and applications}
+Let
+\[
+G=D_1*_p\cdots *_pD_m
+\]
+be a finite free pro-$p$ product of Demushkin groups. This section records concrete consequences of the sharp affine-window theorem. The upper-bound statement is intrinsic and does not require chosen presentations or orientations on the factors; the lower-bound and parameter-profile statements use the standard Demushkin presentations only where explicitly indicated.
+
+Write
+\[
+T_n(G)=G/P_n(G).
+\]
 
 \begin{lemma}[Zassenhaus truncation and coproducts]
 For pro-$p$ groups $G_1,G_2$,
@@ -219,7 +228,9 @@ T_n(G_1*_pG_2)
 \end{lemma}
 
 \begin{proof}
-$T_n$ is left adjoint to the inclusion of pro-$p$ groups $H$ satisfying $P_n(H)=1$, because every map $G\to H$ kills $P_n(G)$. Left adjoints preserve coproducts, giving the formula.
+$T_n$ is left adjoint to the inclusion of pro-$p$ groups $H$ satisfying
+$P_n(H)=1$, because every continuous map $G\to H$ kills $P_n(G)$.
+Left adjoints preserve coproducts, giving the formula.
 \end{proof}
 
 \begin{theorem}[Uniform affine window for finite Demushkin free products]
@@ -227,15 +238,182 @@ For a finite free pro-$p$ product of Demushkin groups, every continuous affine c
 \[
 G/P_{p^{k-1}+1}(G).
 \]
-Thus the same depth is sufficient uniformly for this class. If one factor is a standard $G_{f,d}$, the sharp witness above shows that no smaller depth works uniformly for the whole class.
+Thus the same depth is sufficient uniformly for this class. If one factor is a standard $G_{f,d}$, the sharp witness in the preceding section shows that no smaller depth works uniformly for the whole class.
 \end{theorem}
 
 \begin{proof}
-The factorization follows directly from the arbitrary-candidate factorization proposition. The truncation lemma shows that no separate mixed-commutator window is needed. The lower bound is inherited from one factor by the universal property of the free pro-$p$ coproduct.
+The factorization follows directly from the arbitrary-candidate factorization proposition. The truncation lemma shows that no separate mixed-commutator window is needed: mixed words are absorbed into the reflected $P_{p^{k-1}+1}$-kernel. For the lower bound, take a sharp affine witness on one factor and compose it with the canonical factor inclusion into the free pro-$p$ coproduct.
+\end{proof}
+
+\subsection{Finite-depth parameter collapse}
+
+For $f\ge1$ and even $d\ge2$, consider the standard block
+\[
+D_{f,d}=
+\left\langle x_1,\ldots,x_d\ \middle|\
+x_1^{p^f}[x_1,x_2]\cdots[x_{d-1},x_d]=1
+\right\rangle .
+\]
+The power term has initial Zassenhaus weight $p^f$:
+\[
+x_1^{p^f}\in P_{p^f}\setminus P_{p^f+1}
+\]
+in the free pro-$p$ group before imposing the relation. Hence at the window
+\[
+Q_k(D_{f,d})=D_{f,d}/P_{p^{k-1}+1}(D_{f,d})
+\]
+the power term is invisible whenever $f\ge k$.
+
+\begin{proposition}[Finite-depth $f$-collapse]
+For the standard block $D_{f,d}$, if $f\ge k$, the image of the defining relation in $Q_k(D_{f,d})$ agrees with the power-free relation
+\[
+[x_1,x_2]\cdots[x_{d-1},x_d]=1.
+\]
+If $f<k$, the torsion class represented by $x_1$ survives with order $p^f$ in the abelianization of the finite quotient. Thus the marked finite quotient distinguishes the two regimes
+\[
+f<k,\qquad f\ge k.
+\]
+\end{proposition}
+
+\begin{proof}
+If $f\ge k$, then $p^f\ge p^k>p^{k-1}+1$, so
+$x_1^{p^f}\in P_{p^{k-1}+1}$ and disappears in the quotient.
+For $f<k$, the abelianization of the standard block is
+\[
+D_{f,d}^{\mathrm{ab}}\cong\mathbb Z_p^{\,d-1}\oplus\mathbb Z/p^f\mathbb Z.
+\]
+The image of $P_{p^{k-1}+1}$ cannot remove the pre-existing order-$p^f$
+torsion class, since $f<k$ and the finite window only imposes relations
+of $p$-power order at least $p^k$ in the corresponding free directions.
+Hence the marked abelianization retains the order-$p^f$ class.
+\end{proof}
+
+\begin{corollary}[Heterogeneous parameter profile]
+For
+\[
+G=*_{i=1}^mD_{f_i,d_i},
+\]
+the finite quotient $Q_k(G)$ processes all blocks at the same Zassenhaus
+depth. In the inherited block marking, it separates the parameters with
+$f_i<k$ from those with $f_i\ge k$: the latter have already entered the
+power-free finite-depth regime, while the former retain their
+$p^{f_i}$ torsion class in abelianization.
+\end{corollary}
+
+This is an application-level information-loss statement. It does not claim
+that the bare abstract quotient canonically recovers the individual block
+decomposition or that the quotient is an absolute minimal carrier.
+
+\subsection{A heterogeneous composite sharpness example}
+
+Consider
+\[
+G=D_{1,4}*_pD_{3,2}*_pD_{7,4}.
+\]
+At coefficient level $k=4$ the three parameters satisfy
+\[
+1<4,\qquad 3<4,\qquad 7\ge4.
+\]
+Thus the first two blocks retain their finite-depth power parameters,
+whereas the third has already entered the power-free regime. Nevertheless
+the entire composite group uses the single affine window
+\[
+Q_4(G)=G/P_{p^3+1}(G).
+\]
+
+The sharpness theorem remains visible on this composite object. Choose a
+sharp witness on the first block and extend it trivially across the other
+free factors. Then the resulting affine representation is still nontrivial
+on $P_{p^3}(G)$, so the depth $p^3+1$ cannot be lowered uniformly for the
+class containing this example.
+
+The point is not a new sharpness theorem: the exact threshold is proved
+above for the affine category. The example shows concretely that the same
+sharp window survives a genuinely composite object with heterogeneous
+Demu\v{s}kin parameters and mixed commutators.
+
+\subsection{Blockwise finite Kummer recognition}
+
+We now record the application to the recognition theorem of the preceding
+paper, and restrict it exactly to the class for which that theorem is
+available. Let
+\[
+G=G_1*_3\cdots *_3G_m
+\]
+where every $G_i$ is a rank-four $q=3$ Demu\v{s}kin block. For each factor,
+let $\chi_i$ denote its canonical orientation. Paper 1 establishes, for
+arbitrary principal-unit candidates $\rho_i$,
+\[
+\mathsf K_k(Q_k(G_i),\rho_i)
+\Longleftrightarrow
+\rho_i=\chi_i\pmod{3^k}.
+\]
+
+For a candidate
+\[
+\rho:Q_k(G)\longrightarrow U_{1,k},
+\]
+write $\rho_i$ for its restriction to the finite quotient associated to the
+$i$th factor.
+
+\begin{proposition}[Degree-one free-product decomposition]
+For a finite coefficient module $M$ and a free pro-$p$ product,
+\[
+H^1(G,M)\cong\bigoplus_{i=1}^m H^1(G_i,M|_{G_i}),
+\]
+and the same decomposition holds with $M=\mathbb F_p$.
+\end{proposition}
+
+\begin{proof}
+A continuous crossed homomorphism on a free pro-$p$ product is uniquely
+determined by its restrictions to the free factors. Principal crossed
+homomorphisms decompose compatibly, giving the stated degree-one
+Mayer--Vietoris decomposition.
+\end{proof}
+
+\begin{theorem}[Blockwise finite Kummer recognition]
+Under the preceding hypotheses,
+\[
+\mathsf K_k(Q_k(G),\rho)
+\Longleftrightarrow
+\mathsf K_k(Q_k(G_i),\rho_i)
+\quad\text{for every }i.
+\]
+Consequently,
+\[
+\mathsf K_k(Q_k(G),\rho)
+\Longleftrightarrow
+\rho_i=\chi_i\pmod{3^k}
+\quad\text{for every }i.
+\]
+\end{theorem}
+
+\begin{proof}
+By the truncation lemma, the finite quotient is the reflected
+$P_{p^{k-1}+1}$-quotient of the free pro-$3$ product of the factor
+truncations. The arbitrary-candidate factorization theorem identifies the
+finite-level twisted $H^1$ problem on $G$ with the corresponding problem on
+$Q_k(G)$ for every candidate. For trivial coefficients,
+$P_{p^{k-1}+1}(G)\subseteq\Phi(G)$ gives the analogous $H^1$ identification.
+The degree-one free-product decomposition therefore identifies the global
+reduction map with the direct sum of the factor reduction maps. Such a
+direct sum is surjective exactly when every factor map is surjective.
+Applying the rank-four $q=3$ selector theorem from Paper 1 to each factor
+gives the final equivalence.
 \end{proof}
 
 \begin{remark}
-No claim is made for broader recursively defined elementary-type classes involving fibre products or amalgamated operations.
+This is an application of the preceding recognition theorem, not a new
+classification of orientations of arbitrary free products. In particular,
+the theorem does not assert that a general free product is itself
+Demu\v{s}kin or has a single canonical orientation. It recognizes the
+canonical orientations of the declared factors block by block.
+\end{remark}
+
+\begin{remark}
+No claim is made for broader recursively defined elementary-type classes
+involving fibre products or amalgamated operations. Likewise, no absolute
+minimality of $Q_k$ among arbitrary intrinsic carriers is asserted.
 \end{remark}
 
 \section{Relation with the preceding paper}
