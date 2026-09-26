@@ -283,10 +283,15 @@ For $f<k$, the abelianization of the standard block is
 \[
 D_{f,d}^{\mathrm{ab}}\cong\mathbb Z_p^{\,d-1}\oplus\mathbb Z/p^f\mathbb Z.
 \]
-The image of $P_{p^{k-1}+1}$ cannot remove the pre-existing order-$p^f$
-torsion class, since $f<k$ and the finite window only imposes relations
-of $p$-power order at least $p^k$ in the corresponding free directions.
-Hence the marked abelianization retains the order-$p^f$ class.
+Let $e(n)=\lceil\log_p n\rceil$. From the Jennings--Lazard product,
+after abelianization only the $i=1$ power terms can contribute, so the
+image of $P_n(D_{f,d})$ in $D_{f,d}^{\mathrm{ab}}$ is contained in
+$p^{e(n)}D_{f,d}^{\mathrm{ab}}$. At
+$n=p^{k-1}+1$ one has $e(n)=k$, hence the image of the finite-window
+kernel is contained in $p^kD_{f,d}^{\mathrm{ab}}$. Since $f<k$, this
+subgroup is zero on the $\mathbb Z/p^f\mathbb Z$ summand. Therefore the
+order-$p^f$ torsion class represented by $x_1$ survives unchanged in the
+abelianization of the finite quotient.
 \end{proof}
 
 \begin{corollary}[Heterogeneous parameter profile]
