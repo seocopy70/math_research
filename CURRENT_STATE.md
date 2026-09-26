@@ -1089,3 +1089,10 @@ Classification: **LONG-TERM PROGRAM — OPEN / AUTHORIZED FOR STAGED IMPLEMENTAT
 따라서 이 검토 결과만으로 novelty 또는 minimality를 CLOSED로 승격하지 않는다. 외부 referee가 제기할 가능성이 높은 공격 지점은 이미 별도 audit에서 추적하고 있으며, 새로운 수학적 오류가 발견되지 않았다는 것은 현재 증명된 범위의 안정성 판정으로 기록한다.
 
 **독립 referee 최종 판정:** 현재 원고에 대해 즉시 수정해야 할 수학적 오류 없음. 다음 단계는 새로운 수학적 가지를 여는 것이 아니라 투고용 최종 source/PDF·참고문헌·novelty 표현의 최종 정합성 확인이다.
+
+
+## 2026-09-26 — PAPER 3 INDEPENDENT NOVELTY GATE CLOSED
+
+Paper 3 has completed the requested audit sequence. Mathematical application correctness is **PASS / CLOSED**, but the independent publication novelty gate is **FAIL / CLOSED**: free-product Kummerianity is already known (Efrat--Quadrelli Prop. 7.5; Quadrelli--Weigel Prop. 5.5), while uniform affine factorization and sharpness are imported from Paper 2 and the f-collapse is a specialization of the established finite-window information-loss mechanism.
+
+The repaired Paper 3 source is commit `55a51dc30579881843658968af2049b0a6dbce8d`. Paper 2 remains frozen/unchanged. Paper 3 is retained as a mathematically sound application/companion manuscript. A future independent Paper 3 requires a genuinely new application theorem or obstruction.
