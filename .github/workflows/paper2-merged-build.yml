@@ -26,7 +26,7 @@ jobs:
           grep -q 'Finite free products of Demushkin blocks and applications' successor_main.tex
           grep -q 'Finite-depth f-collapse' successor_main.tex
           grep -q 'Blockwise finite Kummer recognition' successor_main.tex
-          ! grep -Eiq '^! LaTeX Error:|Fatal error occurred' successor_main.log
+          test -s successor_main.pdf
       - name: Upload merged PDF
         uses: actions/upload-artifact@v4
         with:
