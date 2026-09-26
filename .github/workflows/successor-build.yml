@@ -1,0 +1,34 @@
+name: Build successor manuscript
+
+on:
+  push:
+    branches:
+      - successor-publication-candidate-2026-09-26
+    paths:
+      - 'paper/successor_main.tex'
+      - '.github/workflows/successor-build.yml'
+  workflow_dispatch:
+
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile successor
+        uses: xu-cheng/latex-action@v4
+        with:
+          working_directory: paper
+          root_file: successor_main.tex
+          args: -pdf -interaction=nonstopmode -halt-on-error
+      - name: Verify successor PDF
+        working-directory: paper
+        run: |
+          test -s successor_main.pdf
+          grep -q 'Output written on successor_main.pdf' successor_main.log
+          ! grep -Eiq 'undefined|LaTeX Warning|Error:' successor_main.log
+      - name: Upload successor PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: successor-manuscript-pdf
+          path: paper/successor_main.pdf
+          if-no-files-found: error
