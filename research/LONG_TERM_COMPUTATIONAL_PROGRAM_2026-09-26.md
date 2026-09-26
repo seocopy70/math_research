@@ -2,271 +2,462 @@
 
 ## Purpose
 
-This document records a long-term, implementation-oriented research program for the successor-paper branch. The program is explicitly downstream of the two established theoretical results:
+This is the authoritative long-term research-program record downstream of the frozen main paper and the successor paper. It is updated whenever a successor result changes the executable research agenda.
 
-1. the finite-window affine/Kummer factorization through the corrected Zassenhaus quotient at depth
-   [
-   n_{mathrm{aff}}(k)=p^{k-1}+1;
-   ]
-2. sharpness of that depth in the admissible category of affine crossed-cocycle representations
-   [
-   S_k=A_ktimes U_{1,k},qquad A_k=mathbf Z/p^k,
-   ]
-   for every standard Demuškin parameter (fge1) and rank (dge2).
-
-The existing publication manuscript is frozen. This program belongs to the successor branch and must not modify the frozen paper unless a later explicit publication decision authorizes it.
+The frozen publication manuscript remains protected. Long-term work must not modify the frozen paper unless a later explicit publication decision authorizes it.
 
 ## Governing research protocol
 
-Every task follows the repository's continuity protocol:
+Every task follows:
 
 **pre-check → define object/input → justify legitimacy → execute → independent verification → classify → record immediately.**
 
-Before any substantial computation, explicitly check:
+A computation is evidence, not automatically a theorem. In particular:
 
-- Object
-- Input
-- Functoriality
-- Gauge
-- Orientation bridge
-- q-blindness
-- Separation
-- Novelty
-- Stop conditions
+- reproducing the canonical Demuškin orientation is not by itself a novelty claim;
+- presentation-specific calculations do not establish an intrinsic selector;
+- a result for a restricted carrier/category must not be promoted to an absolute statement;
+- CLOSED, OPEN, PASS/LOCAL, and CONDITIONAL statuses must be kept separate.
 
-A computational success is evidence, not by itself a new theorem. In particular, recovering a known canonical orientation in a chosen presentation is not a novelty claim.
-
-## Task 1 — Explicit sharpness-witness computation
-
-### Objective
-
-Directly computationally verify the affine sharpness witnesses at small ((p,k,f,d)), confirming that the relevant affine crossed cocycle survives at
-[
-P_{p^{k-1}}
-]
-but is killed at
-[
-P_{p^{k-1}+1}.
-]
-
-### Initial test set
-
-- (p=3, k=2,3);
-- (p=5, k=2);
-- several (f) values straddling (f<k) and (fge k);
-- begin with (d=2), then repeat with unused coordinates added for (d>2).
-
-### Witnesses
-
-For (f<k), use the canonical candidate
-[
-ho(x_1)=1,qquad
-ho(x_2)=(1-p^f)^{-1}pmod{p^k},
-]
-with
-[
-z(x_1)=1,qquad z(x_i)=0 (i>1).
-]
-The relation equation is satisfied, while
-[
-z(x_1^{p^{k-1}})=p^{k-1}
-otequiv0pmod{p^k}.
-]
-
-For (fge k), use
-[
-ho(x_1)=1,qquad ho(x_2)=1+p,
-]
-with
-[
-z(x_1)=0,qquad z(x_2)=1,
-]
-and verify via LTE that
-[
-v_p!left(
-rac{(1+p)^{p^{k-1}}-1}{p}
-ight)=k-1.
-]
-
-### Implementation target
-
-Implement the affine crossed-cocycle law and relator evaluation independently of the manuscript's coordinate formulas where possible. Then compare:
-
-1. symbolic valuation prediction;
-2. direct finite-ring computation;
-3. filtration-membership prediction;
-4. actual nonzero/zero image.
-
-### Deliverable
-
-A reproducible table of ((p,k,f,d)), witness type, valuation, image in (A_k), and survival/death at the two adjacent Zassenhaus depths.
-
-Potential paper use: computational appendix / verification supplement, not automatically a theorem of independent novelty.
-
-### Classification target
-
-**OPEN** until independently implemented and checked.
+The current successor audit closes affine-category sharpness. It does **not** close absolute minimality over arbitrary carriers, nor unconditional publication priority.
 
 ---
 
-## Task 2 — Finite-window recognition prototype on concrete Demuškin groups / local fields
+# I. Current mathematical baseline — supersedes earlier duplicated task statements
 
-### Objective
+## 1. Finite-window objects
 
-Implement the finite-window recognition mechanism and test it on concrete examples whose maximal pro-(p) Galois groups are known Demuškin groups.
+For the standard Demuškin family
 
-### Candidate examples
+\[
+G_f=\langle x_1,\ldots,x_d\mid
+x_1^{p^f}[x_1,x_2][x_3,x_4]\cdots=1\rangle,
+\]
 
-Start with examples such as
-[
-mathbf Q_3(zeta_3),quad
-mathbf Q_5(zeta_5),quad
-mathbf Q_3(zeta_9),
-]
-subject to a preliminary verification of the precise (G_K(p)) presentation, Demuškin parameter, and orientation conventions for each field.
+with odd p, d≥2, and
 
-Rank-2 examples should be preferred initially to minimize quotient/presentation complexity.
+\[
+Q_k=G_f/P_{p^{k-1}+1}(G_f),
+\]
 
-### Required pre-check
+the successor theory establishes the finite-window affine factorization depth
 
-Before implementation, verify independently:
+\[
+n_{\rm aff}(k)=p^{k-1}+1.
+\]
 
-- the exact Demuškin presentation or a suitable finite quotient model;
-- the relevant (q)-parameter;
-- the canonical orientation convention;
-- how (Q_k=G/P_{p^{k-1}+1}) is represented computationally;
-- what data are genuinely supplied to the recognition algorithm.
+The relevant finite affine coefficient group is
 
-Do not silently identify a local-field presentation with the standard frozen presentation.
+\[
+S_k=A_k\rtimes U_{1,k},\qquad A_k=\mathbf Z/p^k,
+\]
 
-### Prototype
+with the affine crossed-cocycle representation \((\rho,z)\).
 
-For a finite quotient (Q_k), implement the candidate predicate
-[
-mathsf K_k(Q_k,ho):
-H^1(Q_k,mathbf Z/p^k(ho))
-longrightarrow H^1(Q_k,mathbf F_p)
-]
-being surjective, together with the finite-depth crossed-cocycle realization used in the successor theory.
+For the rank-4 p=3 instance used in the papers, the canonical orientation residues are
 
-Test:
+\[
+\rho_2\equiv4\pmod9,\qquad
+\rho_2\equiv13\pmod{27},\qquad
+\rho_2\equiv40\pmod{81}.
+\]
 
-1. candidate orientation residues;
-2. existence of lifts;
-3. uniqueness among candidates;
-4. factorization through (Q_k);
-5. disappearance of information below the sharp depth.
+These are independently verified finite computations, not the conceptual source of the theorem.
 
-### Deliverable
+## 2. Affine sharpness — CLOSED
 
-A reproducible success/failure matrix by field, (p), (k), quotient depth, candidate (ho), and recovered orientation residue.
+The category-relative sharpness statement is now closed:
 
-### Important boundary
+\[
+n_{\rm aff}(k)=p^{k-1}+1
+\]
 
-This is an application/implementation experiment. It does not establish a new theorem merely by reproducing the canonical orientation already known from Demuškin theory.
+is sharp for **all d≥2 and all f≥1**.
 
-### Classification target
+No surjectivity assumption on the orientation character is required.
 
-**OPEN** until the concrete finite quotient model and recognition implementation are independently validated.
+The lower-bound witnesses split into two regimes:
 
----
+- f<k: the canonical affine witness with z(x_1)=1 survives on x_1^{p^{k-1}};
+- f≥k: the d=2 witness with \rho(x_2)=1+p and z(x_2)=1 survives on x_2^{p^{k-1}}, by LTE.
 
-## Task 3 — Numerical measurement of q-collapse / information loss
+Thus the d=2 boundary is included, and no x_3 witness is needed.
 
-### Objective
+**Status: PASS / CLOSED — affine crossed-cocycle factorization minimality.**
 
-Measure directly how the finite quotient loses information about the Demuškin parameter (q=p^f), especially across the threshold (f=k).
+This does **not** prove absolute minimality for arbitrary information carriers.
 
-### Initial experiment
+## 3. q-collapse — CLOSED at the abstract finite-quotient level
 
-For fixed small (p,k), construct the standard family
-[
-G_f=langle x_1,ldots,x_dmid
-x_1^{p^f}[x_1,x_2][x_3,x_4]cdots=1angle
-]
-for
-[
-f=1,2,ldots,k+1.
-]
+For fixed k,
 
-Compute finite quotients at the sharp window and, where useful, one step shallower.
+\[
+f\ge k\quad\Longrightarrow\quad
+Q_k^{(f)}\cong Q_k^{(\infty)},
+\]
 
-### Measurements
+and the induced orientation information modulo p^k is the same.
 
-At minimum record:
+Equivalently, the finite window becomes q-blind once f reaches the k-level threshold.
 
-- abelianization of the finite quotient;
-- invariant factors;
-- images of the power relation;
-- candidate orientation residues modulo (p^k);
-- whether (q=p^f) remains distinguishable.
+This is an information-loss/isomorphism statement. It does not imply that every possible marked, structured, or external carrier loses q-information.
 
-The expected structural transition to test is the (f<k) versus (fge k) collapse in the abelianized finite quotient.
+**Status: PASS / CLOSED for the stated bare finite quotient statement.**
 
-### Deliverable
+## 4. Selector impossibility boundary — CLOSED in the stated broad class
 
-A table indexed by ((p,k,f)) showing the abelianization structure and the exact collapse threshold, plus a separate table for orientation-residue behavior.
+A uniform selector on the whole elementary-type class \mathcal{ET}_p cannot recover all orientations from the bare finite quotient.
 
-### Logical boundary
+In particular,
 
-q-collapse is an information-loss/separation result. It is not, by itself, a proof that no structured or marked finite carrier can recover the lost information.
+\[
+G=\mathbf Z_p *_p \mathbf Z_p
+\]
 
-### Classification target
+is a q-blind/free-product example for which the relevant finite Kummer predicate does not distinguish arbitrary orientations.
 
-**PASS / LOCAL** only after direct computation agrees with the theoretical formula; otherwise classify the discrepancy explicitly.
+Therefore the correct statement is not “finite quotients always determine orientation”, but rather:
 
----
+> finite-window recognition succeeds in the Demuškin/PD² affine setting, while a uniform isomorphism-natural selector on the whole \mathcal{ET}_p class is impossible.
 
-## Task 4 — Compare Zassenhaus depth with other natural filtrations
+**Status: PASS / CLOSED for the stated q-blindness/impossibility boundary.**
 
-### Objective
+## 5. Finite Demuškin free products — CLOSED for the current affine window
 
-Determine experimentally how the sharp affine factorization depth compares with lower (p)-central and related natural filtrations.
+For
 
-### Candidate comparison
+\[
+D_1 *_p\cdots *_p D_r,
+\]
 
-For the same affine recognition problem, measure the first truncation depth at which all relevant crossed cocycles factor through:
+where the D_i are finite Demuškin blocks in the class treated by the successor work, the same affine window
 
-- Zassenhaus filtration;
-- lower (p)-central filtration;
-- other explicitly defined dimension-series variants, if computationally accessible.
+\[
+p^{k-1}+1
+\]
 
-### Required discipline
+is uniform.
 
-The filtration must be defined precisely before comparing depths. Do not transfer a Zassenhaus result to lower (p)-central notation; the 2026 manuscript audit already established that confusing these filtrations caused a substantive error.
+This is a genuine extension of the single-block sharpness phenomenon, but it does not yet close the recursively generated elementary-type class
 
-### Deliverable
+\[
+\mathcal{ET}_p^{\rm rig}
+=
+\lim_{\to}(-*_p-,-\rtimes\mathbf Z_p).
+\]
 
-A filtration-by-filtration depth table and a proof-oriented explanation of any observed difference.
-
-### Classification target
-
-**OPEN**. Computation may suggest a comparison theorem but does not establish optimality without a structural argument.
+**Status: PASS / CLOSED for finite Demuškin block free products; OPEN for the recursive class.**
 
 ---
 
-## Recommended execution order
+# II. Updated long-term research directions
 
-1. **Task 1 — explicit sharpness witnesses**
-2. **Task 3 — q-collapse / information loss**
-3. **Task 2 — concrete recognition prototype**
-4. **Task 4 — filtration comparison**
+The old four-task list is superseded by the following application-oriented program. The ordering below reflects current mathematical readiness, not a claim about importance.
 
-This order minimizes implementation risk and keeps each experiment tied to an already established theorem.
+## Priority A — Finite local-anabelian decision procedure
 
-## Long-term success criterion
+### Question
 
-The program is successful if it produces a reproducible computational layer that:
+For concrete p-adic fields K whose maximal pro-p Galois group is Demuškin, can the finite quotient
 
-- verifies the sharpness witnesses independently;
-- visualizes the (f<k) / (fge k) information boundary;
-- demonstrates finite-window recognition on at least one independently validated concrete Demuškin example;
-- clarifies whether other filtrations exhibit a different factorization depth.
+\[
+Q_k=G_K(p)/P_{p^{k-1}+1}
+\]
 
-Any stronger mathematical conclusion requires a separate proof gate and literature audit.
+be used as a practical finite-level test for the canonical cyclotomic orientation modulo p^k?
 
-## Status
+A useful comparison problem is:
 
-**LONG-TERM PROGRAM: OPEN / AUTHORIZED FOR STAGED IMPLEMENTATION**
+> Given two independently specified local fields K_1,K_2 with validated Demuškin presentations and abstractly isomorphic finite quotients Q_k^{(1)}≅Q_k^{(2)}, what additional naturality/identification data are required before one may conclude that their canonical orientations agree modulo p^k?
 
-No computation is implied by this record. Each task must pass its own pre-check before execution.
+### What is already available
+
+- the affine finite-window theorem;
+- the exact sharp depth;
+- the q-collapse boundary;
+- an explicit reconstruction formula in the standard family;
+- Newton-style recovery of the relevant p-adic residue in the standard parameterization.
+
+### What remains to prove
+
+The finite-window theorem does **not** by itself prove that an arbitrary abstract isomorphism of Q_k's canonically transports the orientation. The successor audit explicitly leaves the statement
+
+> “bare abstract Q_k determines the canonical orientation without naturality/functoriality hypotheses”
+
+unestablished.
+
+Therefore the implementation must keep three inputs separate:
+
+1. the abstract finite group Q_k;
+2. the natural map from G_K(p) to Q_k;
+3. any identification/presentation data used to interpret the recovered character.
+
+The case \mu_p\not\subset K, where the maximal pro-p Galois group is free rather than Demuškin in the relevant setting, is a useful contrast, but it must be formulated carefully and checked against the exact local-field hypotheses.
+
+### First concrete experiments
+
+- p=3,5;
+- small k;
+- low-rank local examples;
+- independently validate the G_K(p) presentation and orientation convention before constructing Q_k.
+
+### Deliverable
+
+A reproducible finite-level recognition prototype and a table separating:
+
+- quotient isomorphism;
+- candidate orientation;
+- recovered residue;
+- naturality assumptions;
+- what information is lost.
+
+**Status: OPEN / HIGH PRIORITY.**
+
+---
+
+## Priority B — Finite Kummerianity test for Demuškin free products
+
+### Question
+
+Can Kummerianity/1-cyclotomicity be tested using only finite data for the closed class
+
+\[
+D_1 *_p\cdots *_p D_r?
+\]
+
+The proposed finite test uses the successor finite quotient together with the twisted lifting equations and Jacobian/non-singularity data.
+
+### Mathematical route
+
+For a candidate orientation \rho, work with
+
+\[
+\mathsf K_k(Q_k,\rho):
+H^1(Q_k,\mathbf Z/p^k(\rho))
+\longrightarrow H^1(Q_k,\mathbf F_p)
+\]
+
+and the corresponding finite crossed-cocycle system.
+
+The implementation should test:
+
+1. construction of Q_k;
+2. candidate orientations;
+3. solvability of the finite lifting equations;
+4. uniqueness;
+5. compatibility across k;
+6. agreement with independently known Kummerianity.
+
+The relationship to the quotient-inheritance literature must be stated precisely: the finite-window result is not simply a restatement of quotient inheritance, because the successor theorem supplies the specific affine factorization depth and removes the need to assume the quotient property as an input.
+
+### Deliverable
+
+A prototype decision procedure plus a theorem/conjecture boundary:
+
+- **proved** for the currently closed finite Demuškin block-product class;
+- **experimental** for broader elementary-type groups.
+
+**Status: OPEN / HIGH PRIORITY.**
+
+---
+
+## Priority D — Zassenhaus dimension and free-product combinatorics
+
+### Question
+
+Can the sharp-window Zassenhaus calculations be turned into explicit dimension formulas for finite free products of Demuškin blocks?
+
+The starting mechanism is the established power-term valuation:
+
+\[
+x_1^{p^f}\in P_{p^f}\setminus P_{p^f+1},
+\]
+
+combined with the free-pro-p product behavior of the Zassenhaus filtration.
+
+### Target
+
+Derive explicit formulas for the dimensions of relevant filtration quotients in
+
+\[
+D_1 *_p\cdots *_p D_r,
+\]
+
+and compare them with existing dimension calculations for pro-p groups.
+
+The recursive \mathcal{ET}_p^{\rm rig} extension remains OPEN and should not be assumed.
+
+### Deliverable
+
+A formula, proof, and small-parameter computational verification.
+
+**Status: OPEN / MEDIUM-HIGH PRIORITY.**
+
+---
+
+## Priority C — Massey products and A_3-formality
+
+### Question
+
+Can the finite-window equations be interpreted precisely in terms of Massey products, canonical Hochschild classes, or A_3-formality?
+
+The attractive heuristic is that the relation equations and their twisted coefficient terms encode higher cohomological information. However, the exact identification
+
+\[
+F_i=0\quad\Longleftrightarrow\quad A_3\text{-formality}
+\]
+
+must **not** be treated as established merely from the current computations.
+
+### Required work
+
+- verify the exact definitions and hypotheses in the 2026 Pál–Quick literature;
+- identify which finite obstruction is genuinely represented by F_i;
+- distinguish q-detection from finite-window orientation recognition;
+- test the q-collapse regime f≥k to determine exactly which higher operation becomes invisible at the finite level.
+
+### Potential result
+
+A precise example of an A_3/A_\infty obstruction that is not recoverable from the bare finite window, or a positive finite-level criterion under additional structure.
+
+**Status: OPEN / EXPLORATORY.**
+
+---
+
+# III. Broader speculative programs — retained, but explicitly not current theorems
+
+## 1. p-adic holography / information-theoretic translation
+
+The current mathematics supports only a structural analogy, not a physical result.
+
+A genuine p-adic holography program would need, at minimum:
+
+1. a specified bulk object such as a Bruhat–Tits tree;
+2. a precisely defined boundary state/function space;
+3. a gauge action realizing the Demuškin group;
+4. an observable whose finite-depth restriction corresponds to Q_k;
+5. a correlation-function calculation showing actual indistinguishability in the q-collapse regime.
+
+The group isomorphism
+
+\[
+Q_k^{(f)}\cong Q_k^{(\infty)}
+\]
+
+alone is not a holographic correlation-function result.
+
+**Status: OPEN / SPECULATIVE.**
+
+## 2. p-adic coding-theory translation
+
+A possible route is to interpret the relation as a parity-check constraint over A_k and study what information survives a p^{k-1}+1 local view.
+
+To become a mathematical coding-theory result, the program must define:
+
+- the code;
+- alphabet and rate;
+- parity-check/Tanner structure;
+- decoding or local-testability notion;
+- the exact information-loss statistic;
+- a theorem connecting q-collapse to that statistic.
+
+The current finite-window theorem is not itself a coding theorem.
+
+**Status: OPEN / SPECULATIVE.**
+
+## 3. Langlands / deformation-theoretic extension
+
+The current result is genuinely at the one-dimensional orientation/determinant level. A GL(2) extension would require new deformation theory.
+
+A concrete target is to compare the deformation functors/rings of a finite quotient and the full Galois group at the k-th infinitesimal level, rather than merely observing that the determinant/cyclotomic character is fixed modulo p^k.
+
+Potential tasks:
+
+- formulate the precise deformation functors;
+- determine the map between finite-quotient and full-group deformation rings;
+- test whether the finite window controls a k-th infinitesimal neighborhood;
+- only then investigate modularity-lifting analogies.
+
+The free-product/q-blindness analogy with L-parameters is presently conceptual, not a theorem.
+
+**Status: OPEN / SPECULATIVE.**
+
+---
+
+# IV. Current priority order
+
+The previous experimental order is superseded.
+
+### 1. A — finite local-anabelian recognition prototype
+Closest to the established theorem, but must resolve naturality/input boundaries.
+
+### 2. B — finite Kummerianity decision procedure
+Natural algorithmic continuation of the closed finite Demuškin/free-product result.
+
+### 3. D — Zassenhaus dimension formulas
+A comparatively safe pure-combinatorial extension with a clear proof target.
+
+### 4. C — Massey/A_3-formality
+Potentially deep, but dependent on a precise literature-level identification of the finite obstruction.
+
+### 5. p-adic coding / holography
+Keep as a structured research memo until a genuine observable/information-theoretic formulation exists.
+
+### 6. Langlands / GL(2) deformation
+Long-range program requiring substantial new deformation-theoretic input.
+
+---
+
+# V. Explicit CLOSED / OPEN ledger
+
+## CLOSED
+
+- \(n_{\rm aff}(k)=p^{k-1}+1\) is sharp for every odd p, every f≥1, and every d≥2 in the affine crossed-cocycle factorization category.
+- The d=2 f≥k lower-bound witness is valid.
+- q-collapse \(f\ge k\Rightarrow Q_k^{(f)}\cong Q_k^{(\infty)}\) for the stated family.
+- The corresponding orientation information modulo p^k is unchanged in that collapse.
+- Uniform bare finite-window recognition cannot hold on the whole \mathcal{ET}_p class.
+- The finite Demuškin block free-product class has the same sharp affine window.
+
+## OPEN
+
+- absolute minimality over an arbitrary, explicitly defined carrier category;
+- recursive \mathcal{ET}_p^{\rm rig} closure;
+- naturality/functoriality conditions under abstract Q_k isomorphism;
+- concrete local-field implementation;
+- finite Kummerianity decision algorithm beyond the already closed theorem class;
+- Zassenhaus dimension formulas for Demuškin block free products;
+- precise Massey/A_3-formality interpretation;
+- physical/information-theoretic translations;
+- GL(2) deformation/Langlands extensions.
+
+## CONDITIONAL / NON-NOVELTY BOUNDARY
+
+The following are classical or imported and must not be presented as new:
+
+- existence/uniqueness of the canonical Demuškin orientation;
+- Kummerianity / 1-cyclotomicity itself;
+- standard oriented elementary-type closure results.
+
+The defensible successor novelty boundary remains:
+
+1. finite quotient use in the present affine twisted-obstruction factorization;
+2. exact sharp depth \(p^{k-1}+1\) for all affine crossed-cocycle representations in the stated Demuškin family.
+
+Publication priority remains **CONDITIONAL**, because literature search cannot logically establish the absence of an equivalent formulation.
+
+---
+
+# VI. Operational rule for future work
+
+When a new result is obtained:
+
+1. update this file first if it changes the long-term program;
+2. supersede, rather than duplicate, older task statements;
+3. record the mathematical classification separately from implementation status;
+4. never promote a prototype or numerical confirmation to a theorem without a proof gate;
+5. preserve the frozen main-paper record and all prior CLOSED results.
+
+**Current long-term program status: OPEN / AUTHORIZED FOR STAGED IMPLEMENTATION.**
+
+The next authorized research action is Priority A, subject to its pre-check and naturality boundary.
