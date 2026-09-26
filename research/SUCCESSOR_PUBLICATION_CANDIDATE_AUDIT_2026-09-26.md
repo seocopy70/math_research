@@ -102,3 +102,150 @@ The branch comparison against current `main` still shows exactly three successor
 - literature novelty: **OPEN / CONDITIONAL**
 
 The successor branch has therefore cleared the technical publication-candidate build gate. It must not yet be described as a novel published result or as an absolute-minimality theorem.
+
+
+## FINAL MATHEMATICAL REFEREE + PRIOR-ART AUDIT — 2026-09-26
+
+### Referee pass
+
+The successor manuscript was re-read theorem-by-theorem after the exact CI gate had already passed. The audit separates mathematical correctness, scope, and novelty.
+
+#### R1. Definition and continuity boundary — PASS / CLOSED
+The manuscript now explicitly restricts affine representations, orientations, cocycles, and candidate maps to continuous maps where the profinite topology matters. This removes an otherwise implicit gap: arbitrary abstract homomorphisms from a profinite group to a finite group need not be continuous.
+
+#### R2. Target filtration — PASS / CLOSED
+For
+[
+S_k=A_ktimes U_{1,k},qquad A_k=mathbf Z/p^k,quad U_{1,k}=1+pA_k,
+]
+the formula
+[
+P_n(S_k)=p^{e(n)}A_ktimes U_{e(n)+1},
+qquad e(n)=lceillog_p nceil,
+]
+was checked against the Jennings--Lazard product. The endpoint identities
+[
+P_{p^{k-1}}(S_k)=p^{k-1}A_k
+e1,qquad
+P_{p^{k-1}+1}(S_k)=1
+]
+are correct for odd (p).
+
+Independent integer arithmetic checks for (p=3,5,7) and (k=2,3,4) confirmed the endpoint logarithmic transitions.
+
+#### R3. Functorial factorization — PASS / CLOSED
+The upper bound is a direct consequence of continuous functoriality of the Zassenhaus filtration and the triviality of (P_{p^{k-1}+1}(S_k)). This is standard background rather than a claimed new functorial principle. Efrat's representation-theoretic treatment of the Zassenhaus filtration and Mináč--Rogelstad--Tân's work on Zassenhaus dimensions are now cited explicitly.
+
+#### R4. Sharpness, (f<k) — PASS / CLOSED
+The canonical orientation and cocycle witness satisfy the relator. With
+[
+a=(1-p^f)^{-1},
+]
+the cocycle contribution of the power--commutator part is
+[
+p^f+a^{-1}(1-a)=0,
+]
+while (z(x_1^{p^{k-1}})=p^{k-1}
+otequiv0pmod{p^k}).
+
+#### R5. Sharpness, (fge k), including (d=2) — PASS / CLOSED
+The witness
+[
+ho(x_2)=1+p,qquad z(x_2)=1,qquad ho(x_1)=1,quad z(x_1)=0
+]
+satisfies the relator at level (p^k), and
+[
+z(x_2^{p^{k-1}})
+=rac{(1+p)^{p^{k-1}}-1}{p}
+]
+has (p)-adic valuation (k-1) by LTE. The witness uses only two generators, so the rank-two boundary is genuinely covered.
+
+#### R6. Surjectivity — PASS / CLOSED
+The lower-bound proof does not require (ho(G)=U_{1,k}). For (f<k), the canonical orientation can have proper image while the translation component still detects the terminal layer. The manuscript now states this as a property of the proof rather than as an extra hypothesis.
+
+#### R7. Category-relative minimality — PASS / CLOSED
+The lower and upper bounds match exactly in the declared category:
+[
+n_{mathrm{aff}}(k)=p^{k-1}+1.
+]
+The manuscript correctly avoids the stronger and unjustified phrase "absolute minimality".
+
+#### R8. Finite-depth (f)-collapse — PASS / LOCAL
+For (fge k), the power relation lies beyond the retained Zassenhaus window, so the finite quotient identifies the (f)-parameters at that depth. This is a genuine information-loss statement at the specified carrier level. It does not assert isomorphism of the full infinite Demushkin groups.
+
+#### R9. Factorization versus recognition — PASS / LOCAL
+The logical distinction is sound. The factorization theorem is representation-theoretic; uniqueness of an orientation selected by a finite cohomological predicate is a separate recognition property.
+
+#### R10. Free pro-(p) counterexample — PASS / LOCAL
+For free pro-(p) groups, (operatorname{cd}_p=1) gives the finite-level lifting surjectivity. The manuscript correctly limits the conclusion to the stated Kummer predicate and explicitly refuses to claim impossibility of every conceivable natural selector.
+
+#### R11. Finite free products — PASS / CLOSED
+The truncation identity follows from the universal property of the pro-(p) coproduct and the fact that the Zassenhaus quotient is universal among quotients with (P_n=1). The uniform upper bound is therefore inherited functorially; the sharp lower bound is inherited from a standard Demushkin factor.
+
+#### R12. Scope boundary — PASS / CLOSED
+The manuscript does not extend the theorem to amalgamated/fibre-product elementary-type constructions. This is important because current literature shows that amalgamated Demushkin constructions can have substantially different 1-cyclotomic behavior.
+
+### Prior-art audit
+
+The audit covered the manuscript's cited literature plus targeted searches for the exact combination of:
+- Zassenhaus depth;
+- affine/semidirect targets;
+- crossed cocycles;
+- finite coefficient levels;
+- Demushkin groups;
+- Kummerian orientations;
+- finite-window/factorization language.
+
+Relevant established literature includes:
+
+1. Labute's classification of Demushkin groups and the canonical orientation framework.
+2. Efrat--Quadrelli (2019), which develops the Kummerian property, cocycle characterization, and the Demushkin canonical orientation.
+3. Efrat (2014), which connects Zassenhaus filtration depth to finite-dimensional representation theory.
+4. Mináč--Rogelstad--Tân (2016), which computes Zassenhaus graded dimensions for free, Demushkin, and free-product families.
+5. Quadrelli--Weigel (2022), which develops oriented pro-(ell) groups and Kummerian/Bogomolov--Positselski phenomena.
+6. Quadrelli (2024), which treats 1-cyclotomic obstructions for constructions involving Demushkin groups and explicitly distinguishes free products from pro-(p)-cyclic amalgams.
+
+The audit did **not** locate a prior theorem stated with all of the following simultaneously:
+[
+S_k=(mathbf Z/p^k)times(1+pmathbf Z/p^k),
+quad
+n=p^{k-1}+1,
+]
+all continuous affine crossed-cocycle representations, and a matching sharp lower bound for the standard Demushkin family including (d=2) and without orientation-surjectivity.
+
+This is **not** an absolute priority claim. The correct publication wording is therefore:
+
+> "To the best of our literature search, we did not find a theorem in the literature stated in this exact affine representation category with this exact sharp depth and lower-bound formulation."
+
+The manuscript now uses this conditional boundary rather than asserting priority.
+
+### Important novelty boundary
+
+The following ingredients are individually not claimed as new:
+- Zassenhaus functoriality;
+- Jennings--Lazard filtration formulae;
+- Kummerianity of free pro-(p) groups;
+- canonical Demushkin orientation;
+- general Zassenhaus information on Demushkin/free-product families.
+
+The potentially publishable composite result is the **sharp finite affine representation window**
+[
+oxed{n_{mathrm{aff}}(k)=p^{k-1}+1},
+]
+together with its rank-two/surjectivity-independent sharpness, finite-depth (f)-collapse, and explicit factorization/recognition separation.
+
+### Final referee classification
+
+- Mathematical correctness of core theorem: **PASS / CLOSED**
+- Proof completeness within declared category: **PASS / CLOSED**
+- Scope discipline: **PASS / CLOSED**
+- Technical source quality: **PASS / CLOSED**
+- Exact CI build: **PASS / CLOSED**
+- Prior-art separation: **PASS / CONDITIONAL**
+- Novelty: **OPEN / CONDITIONAL**
+- Absolute minimality outside affine category: **OPEN / category-dependent**
+- Broader elementary-type extension: **OPEN**
+
+### Recommendation for submission state
+
+The manuscript is now suitable to be treated as a **publication candidate** from the mathematical-structure and reproducibility standpoint. It should not yet be described as having established priority or unconditional novelty. The remaining uncertainty is external scholarly validation of novelty, not an identified mathematical defect in the present theorem/proof package.
