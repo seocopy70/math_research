@@ -51,8 +51,8 @@ Broader recursively defined elementary-type classes remain outside scope.
 
 ## Publication gates
 - Preceding manuscript preservation: PASS / CLOSED.
-- Successor source syntax: OPEN until CI.
-- Independent CI build: OPEN until run.
+- Successor source syntax: PASS / LOCAL static audit; exact GitHub CI result is not exposed by the available workflow-run status endpoint.
+- Independent CI build: CONFIGURED / awaiting externally reported Actions result.
 - Literature novelty: OPEN / CONDITIONAL.
 - Absolute minimality beyond the affine category: OPEN / category-dependent.
 - Broad ET_p uniformity: OPEN.
