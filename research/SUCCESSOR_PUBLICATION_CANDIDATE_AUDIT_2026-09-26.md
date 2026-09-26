@@ -59,3 +59,46 @@ Broader recursively defined elementary-type classes remain outside scope.
 
 ## Required next gate
 Run the successor CI build from the exact branch commit, then perform a source-level audit of the CI-built manuscript. Do not promote this branch to a final submission package until CI and the independent audit both pass.
+
+
+## 2026-09-26 — EXACT CI GATE PASSED
+
+The successor branch was checked at the exact head commit
+`730b1bf815e0c30cd46d0803cf1b72482df970a8`.
+
+The first CI attempt on the initial successor source exposed a real LaTeX defect in the bibliography: the phrase `pro-\\ell` was outside math mode. This was corrected to `pro-$\\ell$` in the successor source only. No mathematical statement or proof was changed.
+
+Independent GitHub Actions verification then passed on the corrected exact commit:
+- Build successor manuscript, run 10: **PASS**
+- LaTeX compile: **PASS**
+- PDF existence/output check: **PASS**
+- final log check for `undefined`, `LaTeX Warning`, or `Error:`: **PASS / CLEAN**
+- artifact `successor-manuscript-pdf`: **PASS**
+- artifact ID: `10895855568`
+- artifact size: 340066 bytes
+- artifact SHA-256: `9e4126ef05ccdcd5078d26677217b9779e103187e461fc8122c5420fa51985c9`
+
+Two identical successful CI runs were observed for the corrected commit (PR and branch-push triggers). The earlier failed runs are historical and are explained by the now-corrected bibliography syntax defect.
+
+The branch comparison against current `main` still shows exactly three successor-only files:
+1. `.github/workflows/successor-build.yml`
+2. `paper/successor_main.tex`
+3. `research/SUCCESSOR_PUBLICATION_CANDIDATE_AUDIT_2026-09-26.md`
+
+`paper/main.tex` is not modified by this successor branch diff.
+
+### Updated publication classification
+
+- affine factorization theorem: **PASS / CLOSED**
+- sharpness including d=2 and non-surjective affine orientation: **PASS / CLOSED**
+- finite-depth f-collapse: **PASS / LOCAL**
+- recognition/factorization separation: **PASS / LOCAL**
+- finite free-product uniformity: **PASS / CLOSED**
+- exact successor CI build: **PASS / CLOSED**
+- publication-candidate source: **PASS / CLOSED**
+- preceding manuscript preservation: **PASS / CLOSED**
+- absolute minimality beyond affine category: **OPEN / category-dependent**
+- broader ET_p uniformity: **OPEN**
+- literature novelty: **OPEN / CONDITIONAL**
+
+The successor branch has therefore cleared the technical publication-candidate build gate. It must not yet be described as a novel published result or as an absolute-minimality theorem.
