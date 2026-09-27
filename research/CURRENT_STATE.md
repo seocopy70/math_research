@@ -1,18 +1,16 @@
 # CURRENT_STATE — 수학증명
 
-Last updated: 2026-09-26 — Paper 2 + Paper 3 merged publication candidate
+Last updated: 2026-09-27 — Paper 3 finite-window recognition-threshold program opened
 
-## 0. CURRENT PUBLICATION TRACK
+## 0. CURRENT RESEARCH PROGRAM — PAPER 3
 
-- **Paper 1:** unchanged; existing publication candidate/frozen manuscript remains preserved.
-- **Paper 2:** current independent theorem paper.
-- **Paper 3:** current source is retained as application/history material; its present free-product corpus is absorbed into Paper 2 and is not a separate submission candidate.
-- **Merged Paper 2 branch:** `paper2-paper3-merged-2026-09-26`.
-- **Merged source:** `paper/successor_main.tex`.
-- **Merged referee audit:** PASS/CLOSED.
-- **Novelty/redundancy audit:** PASS as Paper 2 application integration; Paper 3 standalone novelty FAIL/CLOSED on current evidence.
-- **Merged manuscript CI:** PASS; 11-page PDF generated.
-- **Publication novelty:** CONDITIONAL, deliberately not stated as an absolute priority claim.
+- **Paper 1:** CLOSED/FROZEN for the current research program. Existing manuscript and evidence remain preserved.
+- **Paper 2:** CLOSED/FROZEN for the current research program. The merged theorem/application manuscript remains the publication candidate; no reopening is authorized merely to generate variants.
+- **Former Paper 3:** CLOSED as an independent novelty paper; its free-product/application corpus is absorbed into Paper 2.
+- **New Paper 3:** **ACTIVE** — finite-window recognition thresholds.
+- Authoritative plan: `research/PAPER3_FINITE_WINDOW_RECOGNITION_PROGRAM_2026-09-27.md`.
+- Ultimate goal: develop a general theory of how finite filtered observations determine global invariants, including factorization, recognition, sharp thresholds, and information-theoretic obstructions.
+- Strategic meaning: New Paper 3 is the **most natural first step toward that ultimate generalization**, not another application of Paper 2.
 
 ## 1. CURRENT MATHEMATICAL GATES
 
