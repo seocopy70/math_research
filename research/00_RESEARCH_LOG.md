@@ -3867,3 +3867,26 @@ Classification:
 - m=1 sufficiency: **OPEN**;
 - uniform computable m-bound: **OPEN / LOAD-BEARING**;
 - finite delta-family reconstruction at corrected depth: **OPEN / LOAD-BEARING**.
+
+
+## 2026-09-28 — MRT PRIMARY-SOURCE AUDIT: c4 IS EXPLICIT
+
+Before computing the D2 deeper-window kernel layer P_4/P_5, the Mináč–Rogelstad–Nguyễn Duy Tân source was checked directly rather than extrapolating the previously verified c_3 formula. Their Section 5, Example 5.3 explicitly gives
+\[
+c_4(G)=\begin{cases}(d^4-5d^2+4)/4,&p\ne2,\\(d^4-3d^2+2d)/4,&p=2.\end{cases}
+\]
+Thus for p=3,d=4,
+\[
+\boxed{\dim_{\mathbf F_3}P_4/P_5=45.}
+\]
+The source also states the general Proposition 5.2 formula for c_n via the w_n sequence. No k->k+1 extrapolation is used.
+
+This closes only the dimension subtask. It does not determine the W_5-action, fixed-point space H^1(P_4/P_5,F_3)^{W_5}, transgression image in H^2(W_4,F_3), or intersection with the delta-family.
+
+Classification:
+- MRT explicit c_4 formula: **PASS / CLOSED**;
+- p=3,d=4 value c_4=45: **PASS / CLOSED**;
+- P_4/P_5 dimension as D2 input: **PASS / LOCAL**;
+- module action/fixed points/transgression/delta separation: **OPEN / LOAD-BEARING**.
+
+Audit: research/MRT_C4_PRIMARY_SOURCE_AUDIT_2026-09-28.md
