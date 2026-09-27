@@ -1,3 +1,41 @@
+## 2026-09-27 — PAPER 3 M-GATE: BLUMER–QUADRELLI F1 MASSEY SHARPNESS
+
+The uploaded arXiv-2603.15464v2 source was independently unpacked and checked against the current Paper 3 target discussion.
+
+Verified from the actual source:
+- Proposition (2.a): for G in F1 and n <= q, G satisfies a strong variant of n-fold Massey vanishing.
+- Example 2(a): ordinary Demuškin groups satisfy strong n-fold Massey vanishing for every n >= 3, with Blumer–Quadrelli citing Pál–Szabó, Theorem 3.5 (arXiv:1811.06192). The earlier Mináč–Tân attribution is corrected.
+- For G in F1, the associated graded restricted Lie algebra is explicitly presented by <X1,Y1,...,Xd,Yd | [X2,Y2]+...+[Xd,Yd]=0>, so the F1 branch is structurally compatible with the existing Zassenhaus/initial-form/Magnus-Fox toolkit.
+
+Logical correction:
+- “Demuškin triple-Massey vanishing” as a target in the fixed Demuškin category is FAIL / CLOSED because the target is constant there.
+- The F1 proposition supplies a genuine parameter-dependent sufficient bound n <= q.
+- Blumer–Quadrelli do not prove the converse n > q => failure of strong n-fold Massey vanishing. Therefore sharpness is OPEN and is a legitimate M-Gate candidate, subject to a post-publication literature audit.
+
+Paper 3 M-Gate:
+M0 category = F1 or minimal enlargement: OPEN.
+M1 sharpness of n <= q: OPEN / LOAD-BEARING.
+M2 post-Blumer–Quadrelli/Pál–Szabó/Pál–Quick prior-art audit: OPEN / MANDATORY BEFORE COMPUTATION.
+M3 finite Zassenhaus recognition threshold: NOT AUTHORIZED until M1/M2.
+M4 generalization to p,d,q,n and larger mild/multi-relator classes: DEFERRED.
+
+Smallest proposed stress test, only after M2:
+d=2, q=p, n=p+1.
+
+The branch is promoted only if it yields more than a one-off calculation, ideally a clean threshold/structural theorem depending on p,d,q,n and with a mechanism surviving at least one category enlargement.
+
+Detailed audit:
+research/PAPER3_F1_MASSEY_SHARPNESS_GATE_2026-09-27.md
+
+Classification:
+- fixed Demuškin triple-Massey target: FAIL / CLOSED
+- F1 sufficient bound n <= q: PASS / CLOSED (verified literature fact)
+- sharpness: OPEN / LOAD-BEARING
+- post-publication prior-art audit: OPEN / MANDATORY
+- finite-window Massey recognition threshold: OPEN / NOT YET AUTHORIZED
+- general threshold theorem: OPEN / CONDITIONAL
+
+
 ## 2026-09-25 — EXACT BUILD GATE CLOSED / U3 LATEX SYNTAX FIX
 
 The exact-commit build audit was finally completed far enough to expose the real issue. The TeX environment was not the blocker: after installing `texlive-latex-extra` and `poppler-utils`, GitHub Actions checked out exactly `962be77ed62040ed5707e3c59c54de6585a0086d` and failed in the first `pdflatex` pass at line 149 with
