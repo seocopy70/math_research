@@ -1246,3 +1246,20 @@ Classification:
 - F1 \(q=3,n=4\) sharpness: **OPEN / LOAD-BEARING**
 
 Next authorized action: 소예 독립 검증 → 구현 교차검증 → 그 후 전수계산.
+
+## 2026-09-27 — PAPER 3 F1 LEVEL A COMPUTATION: CLOSED
+
+The smallest authorized F1 sharpness computation (p,q,d,n)=(3,3,2,4) is now closed at Level A. Exact enumeration of 80^4=40,960,000 ordered nonzero H^1-sequences gives 3,681,856 cup-pass sequences, of which 1,135,296 fail the explicit Level-A local obstruction and 2,546,560 pass it. Therefore cup-vanishing does not imply the Level-A local condition.
+
+This does **not** prove failure of the full fourfold Dwyer lift. The Level-B compensation problem remains load-bearing. After the cup filter, the central relation reduces symbolically to T_15=C_15+D_15, but simultaneous vanishing of the other required coordinates must still be checked.
+
+Current F1 status:
+- original-text/Dwyer conventions: **PASS / CLOSED**
+- Level-A exhaustive computation: **PASS / CLOSED**
+- cup-zero => Level-A local condition: **FAIL / CLOSED**
+- full F1 q=3,n=4 sharpness: **OPEN / LOAD-BEARING**
+- Level-B compensation: **OPEN / LOAD-BEARING**
+
+Next authorized action: **Level-B symbolic reduction; do not start arbitrary U_5 matrix enumeration yet.**
+
+Detailed record: research/PAPER3_F1_Q3_N4_LEVEL_A_COMPUTATION_2026-09-27.md.
