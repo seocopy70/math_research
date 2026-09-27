@@ -277,3 +277,16 @@ For fixed f with bar(f) != 0, Demushkin cup nondegeneracy makes the variation a 
 Updated status: variation formula **PROVED**; fixed-f 27-fold zero-set **PROVED CONDITIONALLY**; finite-filtered access to L(rho_2) and the full delta_3 family **OPEN**; family-to-chi mod 27 recognition **OPEN**. The q=3 rank-four t_2 no-go remains a genuine COUNTEREXAMPLE.
 
 Next load-bearing task: construct or refute a finite-filtered carrier realizing the lift torsor/family without importing chi mod 27.
+
+
+## 2026-09-27 — HA58 ZERO-EXISTENCE REVIEW: DEMUSHKIN CASE CAN BE CLOSED AT THEOREM LEVEL
+
+A further distinction is required. For fixed-rank Demushkin G, the standard Demushkin duality theorem gives dim H^2(G,F_3)=1 and a nondegenerate cup-product pairing H^1(G,F_3) x H^1(G,F_3) -> H^2(G,F_3). Therefore, for bar(f) != 0, the functional nu -> nu cup bar(f) is surjective onto H^2(G,F_3). Hence the equation
+
+nu cup bar(f) = -delta_{3,rho_3}(f)
+
+always has a solution, and the fixed-f zero-set is an affine 3-dimensional hyperplane of size 27 in rank 4.
+
+Thus the zero-existence issue is not an intrinsic open problem once the standard Demushkin duality theorem is admitted. Its status should be recorded as **EXTERNAL/PROVED UNDER DEMUSHKIN DUALITY**, not OPEN. What remains open is the finite-filtered construction/access of the torsor and the delta-family, and the special case bar(f)=0 is not resolved by this surjectivity argument (variation is then identically zero, so the zero-set is either empty or all 81).
+
+This does not change the next load-bearing gate: W_n(G) -> L(rho_2) or equivalently an appropriate finite-data realization of the full lift-indexed delta-family without importing chi mod 27.
