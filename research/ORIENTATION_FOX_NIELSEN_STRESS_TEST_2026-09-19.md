@@ -159,7 +159,7 @@ Do not accumulate more presentation examples. Attack the identification theorem 
 
 Route A should be attempted first; Route B is then the structural comparison.
 
-Fox derivatives are standard tools for encoding crossed-homomorphism constraints from a presentation, but that standard fact does not itself identify the Demuškin orientation with row vanishing. citeturn0search0turn0search1
+Fox derivatives are standard tools for encoding crossed-homomorphism constraints from a presentation, but that standard fact does not itself identify the Demuškin orientation with row vanishing. 
 
 ## Bottom line
 
