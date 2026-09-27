@@ -3285,3 +3285,30 @@ Blumer–Quadrelli arXiv:2603.15464v2 원문(main.tex)을 직접 대조하여, �
 Nonzero \(\alpha_h\in H^1(G,\mathbf F_3)\cong\mathbf F_3^4\)만 제한하면 sequence 후보는 \(80^4=40,960,000\)개이다. 다만 즉시 전수계산하지 않고, 먼저 hand-check 가능한 소예와 독립 구현 검증을 거친 뒤 cup filter → \((A_1,B_1)\) realization → \([A_1^3,B_1]\) local test → \((A_2,B_2)\) compensation → full relation 순으로 분리해 계산한다.
 
 Next authorized action: original-text audit 결과를 기준으로 small-example independent verification을 수행한 뒤 exhaustive computation 여부를 결정한다.
+
+## 2026-09-27 — PAPER 3 F1 q=3,n=4 LEVEL A EXHAUSTIVE COMPUTATION CLOSED
+
+The authorized Level-A computation was completed for the smallest F1 sharpness test (p,q,d,n)=(3,3,2,4), using the original Blumer–Quadrelli/Dwyer conventions already audited.
+
+The search space is 80^4=40,960,000 ordered nonzero H^1(G,F_3) sequences. Exact enumeration gives:
+- all sequences: **40,960,000**;
+- adjacent cup-pass: **3,681,856**;
+- Level-A local-obstruction pass: **2,546,560**;
+- Level-A local-obstruction fail: **1,135,296**.
+
+Thus, among cup-pass sequences, the explicit Level-A obstruction is nonzero for approximately **30.8348%**. The verified conclusion is: cup-vanishing does not imply the Level-A local condition.
+
+This is **not** yet a sharpness result for the fourfold Massey/Dwyer lift. The full relation is still A_1^3[A_1,B_1][A_2,B_2]=I_5, and Level-B compensation by A_2,B_2 must be tested separately.
+
+The Level-B structural reduction was also recorded: after the adjacent cup filter, D_13=D_24=D_35=0, hence (CD)_15=0 and the central coordinate reduces to T_15=C_15+D_15. This does not imply that compensation always exists, because the other matrix coordinates must vanish simultaneously.
+
+Classification:
+- Level-A exhaustive enumeration: **PASS / CLOSED**
+- cup-vanishing does not imply Level-A local condition: **PASS / CLOSED**
+- full F1 q=3,n=4 sharpness: **OPEN / LOAD-BEARING**
+- Level-B compensation: **OPEN / LOAD-BEARING**
+- “Level-A failure implies full-lift failure”: **NOT ESTABLISHED**
+
+Detailed record: research/PAPER3_F1_Q3_N4_LEVEL_A_COMPUTATION_2026-09-27.md.
+
+Next authorized action: **Level-B symbolic reduction before any large matrix enumeration**.
