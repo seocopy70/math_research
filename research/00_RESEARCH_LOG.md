@@ -3504,3 +3504,17 @@ is promoted to the first **strong candidate** because it is coordinate-free and 
 Candidate C (multi-parameter category) remains secondary.
 
 Next authorized action: Candidate B line-by-line non-redundancy/prior-art audit. No large computation is authorized until the carrier, compression map, upper factorization bound, and independent target recognition bound are all explicit.
+
+## 2026-09-27 — CANDIDATE B MOD-27 BOCKSTEIN CARRIER AUDIT COMPLETE
+
+The requested mathematical and literature audit is complete for the mod-27 coefficient-extension carrier.
+
+Final decision: exact object/functoriality PASS/CLOSED; full standard-family structured classification PASS/CLOSED; finite q-layer detection PASS/LOCAL; new non-tautological mod-27 orientation carrier FAIL/CLOSED.
+
+The earlier abstract-symmetry no-go remains HISTORICAL/SUPERSEDED because group-level realizability of that symmetry was not proved and is not used here.
+
+Literature audit found strong direct overlap with Simons (1989), which explicitly constructs characteristic Demushkin tower level subgroups using a Bockstein on H^1(X,Z/q), together with the established Kummerian/canonical-orientation framework of Efrat-Quadrelli and later 1-cyclotomic work. Higher/generalized Bockstein constructions are also established. These sources do not prove identity with the exact proposed carrier, but they block novelty for the coefficient-extension idea alone.
+
+Strategic consequence: no further beta_1,beta_9 scans. The next decisive target is the intrinsic P_4/D_10 higher power/relation residual and its scalar normalization/transport theorem.
+
+Detailed audit: research/PAPER3_MOD27_BOCKSTEIN_CARRIER_LINE_AUDIT_2026-09-27.md (commit 7a3f7d5d56dc261f9d3f80e825fe4c86a741c63b).
