@@ -3591,3 +3591,12 @@ The second critical review identified four scope issues and they are now locked.
 The strategic phrase “torsor-valued carrier” is retained only as a candidate compression architecture. The next load-bearing problem is the intrinsic finite-window factorization W_n → {δ_{3,ρ_3}}, with a precise functorial category and without importing the canonical orientation itself.
 
 Detailed correction: research/PAPER3_HA58_P4_D10_FULL_INTRINSICITY_AUDIT_2026-09-27.md §14.
+
+
+## 2026-09-27 — HA58 THIRD CRITICAL REVIEW / VARIATION FORMULA CORRECTION
+
+The variation identity for the lift-indexed connecting family remains OPEN in HA61-B5-13. Therefore the rank-4 kernel calculation yields only a conditional no-go for singleton fixed-f zero selection; it does not by itself close the unconditional zero-selector route. The correct status is: variation formula OPEN; conditional 27-element affine-hyperplane consequence PROVED CONDITIONALLY; unconditional singleton zero-selector OPEN.
+
+The next gate is also refined: the mod-9 projective degree-(2,3) carrier/recovery is already audited as PASS/CLOSED at its declared level and should not be reopened. The unresolved sequence is finite-input access to L(ρ_2), finite factorization to the δ_3 family, then χ mod 27 reconstruction/compression.
+
+Detailed correction: research/PAPER3_HA58_P4_D10_FULL_INTRINSICITY_AUDIT_2026-09-27.md §15.
