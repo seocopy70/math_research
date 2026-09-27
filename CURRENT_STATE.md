@@ -487,3 +487,23 @@ Current D2 frontier:
 - finite delta-family reconstruction at corrected depth: **OPEN / LOAD-BEARING**.
 
 For k=2, p=3, d=4, the first concrete audit is W_4 -> W_5, with extension kernel P_4/P_5. The required calculation is the W_5-fixed subspace of H^1(P_4/P_5,F_3), its transgression image in H^2(W_4,F_3), and then the position of the actual delta-family relative to that kernel. No claim is made that the nonzero full kernel contains the canonical delta class.
+
+
+## 2026-09-28 — D2 FIRST HAND CALCULATION COMPLETED
+
+The first corrected deeper-window computation for p=3,d=4,k=2 is now complete. For the central extension
+\[
+1\to P_4/P_5\to W_5\to W_4\to1,
+\]
+MRT gives dim_F3(P_4/P_5)=45. Since [P_4,G]⊂P_5, W_5 acts trivially on the fiber, so H^1(P_4/P_5,F_3)^{W_5} has dimension 45. Frattini containment makes H^1(W_4,F_3)->H^1(W_5,F_3) an isomorphism; hence transgression is injective and the one-step inflation kernel H^2(W_4,F_3)->H^2(W_5,F_3) has dimension 45.
+
+The canonical delta branch is outside this kernel because its image in H^2(G,F_3) is nonzero. Thus m=1 does not kill the canonical branch. The remaining load-bearing question is whether every false candidate is also outside this 45-dimensional kernel; exact delta-family/kernel intersection remains OPEN.
+
+Classification:
+- m=1 kernel structure: **PASS / CLOSED**;
+- canonical branch survives m=1: **PASS / LOCAL**;
+- m=1 full selector: **OPEN / LOAD-BEARING**;
+- exact delta/kernel intersection: **OPEN / LOAD-BEARING**;
+- uniform m-bound: **OPEN / LOAD-BEARING**.
+
+Detailed calculation: research/PAPER3_D2_P4_P5_HAND_CALC_2026-09-28.md
