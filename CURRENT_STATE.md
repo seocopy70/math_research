@@ -1110,3 +1110,18 @@ The active gate is now S3: establish or refute r_{T_beta}(C;D_bullet) <= p+1 for
 Critical proof discipline: the proposed p-power-map/dual-Bockstein route is only a hypothesis until the p-power operation is shown to be canonically encoded by W_{p+1} and the Bockstein reconstruction is proved natural under arbitrary truncated filtered-object isomorphism. Presentation formulas are to be used as independent verification, not as the intrinsic proof itself.
 
 Stage document: research/PAPER3_S3_BOCKSTEIN_UPPER_BOUND_AUDIT_2026-09-27.md.
+
+
+## 2026-09-27 — PAPER 3 S3 / EXACT BOCKSTEIN THRESHOLD CLOSED
+
+S3 upper bound is **PASS / CLOSED** for odd p in the declared fixed-rank Demushkin category. The proof uses only the underlying quotient G/D_{p+1}: Lazard's formula gives D_{p+1} ⊆ G^{p^2}[G,G], so W_{p+1} determines G_ab/p^2G_ab. Bockstein kernel equals the space of mod-p characters lifting to Z/p^2, hence its rank is determined by this finite abelianization. Since fixed-rank Demushkin groups have dim H^1=d and dim H^2=1, Bockstein maps of equal rank are isomorphic.
+
+Therefore, combined with the already closed S1/S2 lower bound,
+\[
+r_{T_beta}(C;D_bullet)=p+1
+\]
+is now **PASS / CLOSED** for odd p and the declared category.
+
+Boundary: no p=2 or general-pro-p extension; no canonical coordinate identification is claimed. The independent one-relator NSW/Labute formula agrees with the intrinsic liftability proof.
+
+Detailed stage record: research/PAPER3_S3_BOCKSTEIN_UPPER_BOUND_AUDIT_2026-09-27.md.
