@@ -3469,3 +3469,15 @@ Classification: **OPEN / AUTHORIZED FOR STAGED IMPLEMENTATION**.
 ## 2026-09-26 — PAPER 3 APPLICATION MANUSCRIPT GATE
 
 Paper 3 (free products of Demuškin blocks) is now classified **PASS / CLOSED as an application/companion manuscript** but **FAIL / CLOSED as an independent novelty paper**. The referee audit found no fatal mathematical defect after tightening the blockwise H^1 argument; the free-product/Kummer literature audit found direct prior art in Efrat--Quadrelli Prop. 7.5 and Quadrelli--Weigel Prop. 5.5; the redundancy audit shows the principal results are corollaries/syntheses of Papers 1--2 and known free-product Kummerianity. Paper 2 remains frozen. A genuinely independent Paper 3 requires a new application theorem or obstruction.
+
+## 2026-09-27 — PAPER 3 F3 DEFINITIONAL CORRECTION / NEW LOAD-BEARING AXIS
+
+The literal same-target comparison between a factorization threshold f_T and a recognition threshold r_T is closed as a definitional identity: both ask whether the same target T is determined by W_n. A genuine separation therefore requires two levels: a richer carrier/observation O and a coarser target T=Phi(O). The active Paper 3 question is now whether f_O can strictly exceed r_T, or otherwise exhibit a structural gap, in a declared category/filtration.
+
+Classification:
+- same-target f_T vs r_T separation: **INVALID / CLOSED — DEFINITIONAL IDENTITY**
+- carrier-vs-target separation f_O vs r_T: **OPEN / LOAD-BEARING**
+- T_beta equality: **CLOSED / CONSISTENCY CHECK**
+- candidate selection: **OPEN**
+
+Next authorized action: novelty/non-redundancy screen for a concrete richer carrier O and compressed target T=Phi(O), with Paper 2 affine/Kummer orientation data retained only as a candidate carrier, not assumed novel.
