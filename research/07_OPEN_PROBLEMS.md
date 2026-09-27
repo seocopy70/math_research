@@ -93,3 +93,13 @@ The q=3 rank-four t_2 conjugation witness is a genuine COUNTEREXAMPLE to a unive
 The full-torsor zero-selector uniqueness mechanism is COUNTEREXAMPLE / CLOSED in rank 4. The variation formula, filtered existence, and a canonical one-dimensional lift restriction remain OPEN.
 
 Do not treat “torsor-valued carrier” as an established object. It is a candidate compression strategy. Do not reopen the single-vector P_4/t_2 route.
+
+
+## 2026-09-27 — HA58 OPEN-PROBLEM SCOPE CORRECTION #3
+
+- δ_3 lift-family cohomological definition/naturality: PROVED at fixed (G,ρ_2) cohomological-object level.
+- Intrinsic variation formula under ρ_3↦ρ_3(1+9ν): OPEN.
+- Fixed-f 27-fold zero-set consequence: PROVED CONDITIONALLY on the variation formula and rank-four Demuškin cup structure.
+- Unconditional singleton zero-selector failure: OPEN unless an independent counterexample is supplied.
+- Mod-9 projective degree-(2,3) recovery is already audited at PASS/CLOSED level; do not reopen it merely to manufacture a Gate A.
+- Remaining load-bearing gates: finite filtered access to L(ρ_2), finite factorization to the δ_3 family, and χ mod 27 reconstruction/compression.
