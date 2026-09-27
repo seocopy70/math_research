@@ -1,3 +1,20 @@
+## 2026-09-28 — KUMMERIAN / 1-CYCLOTOMIC FOUR-LAYER PRIOR-ART AUDIT
+
+The authorized narrower literature audit was completed before any new carrier computation.
+
+Primary/near-primary sources checked: Efrat–Quadrelli (2019), Quadrelli–Weigel (2022), and Quadrelli (2024). These sources confirm the classical Kummerian/1-cyclotomic framework: finite coefficient-lifting maps H^1(G,Z_p(theta)/p^n) -> H^1(G,F_p), equivalent cocycle criteria, and uniqueness of the canonical orientation for Demushkin groups.
+
+Four-layer result:
+1. L(rho_2): formal lift space is a standard first-order character torsor when nonempty, but no bare-Q_k intrinsic construction was found. **PASS / LOCAL**.
+2. {delta_{3,rho_3}}: the underlying coefficient-lift obstruction mechanism is known once an orientation is supplied, but the exact project family is not presented as an orientation-free finite-input object. **PASS / LOCAL**.
+3. Exact variation delta_{rho_3(1+9nu)}-delta_{rho_3}=nu cup f-bar: no matching theorem was located. **OPEN / NOT VERIFIED**.
+4. Reconstruction from bare Q_k=G/P_{k+1} without importing orientation: no direct theorem was found. **OPEN / LOAD-BEARING**.
+
+Therefore the classical Kummerian theory does not by itself collapse the present finite-window problem. The only potentially non-classical part remains the natural finite-window reconstruction/factorization, not canonical orientation or Kummerianity itself.
+
+Detailed audit: research/PAPER3_DELTA3_MAZUR_MASSEY_PRIOR_ART_AUDIT_2026-09-28.md, Addendum 3.
+Next authorized action: compare this four-layer boundary against U1–U5 and isolate exactly which finite-factorization statements require independent proof. No new carrier computation yet.
+
 ## 2026-09-28 — δ3 FAMILY-LEVEL VARIATION AUDIT
 
 The prior-art audit was extended from individual \(\delta_{3,\rho_3}\) to the load-bearing family
