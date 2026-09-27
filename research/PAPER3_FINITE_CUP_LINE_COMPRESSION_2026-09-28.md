@@ -240,3 +240,48 @@ C_k\cong\mathbf F_p
 \]
 
 This is the current Paper 3 carrier-compression result.
+
+
+## CRITICAL REVIEW CORRECTION — 2026-09-28
+
+The previous PASS/CLOSED claim that the finite cup-product image
+\[
+C_k=\operatorname{im}(H^1(Q_k,\mathbf F_p)^{\otimes2}\to H^2(Q_k,\mathbf F_p))
+\]
+has dimension exactly one was **not proved**.
+
+The flaw is precise. Naturality only gives
+\[
+C_k\longrightarrow H^2(G,\mathbf F_p)
+\]
+with image equal to the one-dimensional Demuškin \(H^2(G,\mathbf F_p)\). It does **not** imply that the map \(C_k\to H^2(G)\) is injective. There may be finite \(H^2\) cup-product classes that inflate to zero in \(G\).
+
+The statement “the degree-two initial relation is unchanged because the kernel lies in \(D_3\)” controls the initial/graded quadratic relation, but does not by itself identify the entire finite \(H^2(Q_k)\) cup-product image or rule out a cup-product kernel.
+
+Therefore the following earlier conclusions are reclassified:
+
+- \(\dim C_k=1\): **OPEN / REQUIRES PROOF**.
+- “\(C_k\) embeds canonically into \(O_k\)”: **OPEN / REQUIRES PROOF**.
+- “1D finite selector carrier”: **OPEN / NOT ESTABLISHED**.
+- “minimality = 1 in the selector-carrier category”: **OPEN / NOT ESTABLISHED**.
+- The underlying D2 statement that false-branch outputs are represented by cup products remains supported by the audited variation identity.
+- The previously closed D1/D2/D3/D4 results are unaffected.
+
+The correct immediate target is now:
+\[
+\boxed{
+\text{Determine }\ker\!\left(
+C_k\to H^2(G,\mathbf F_p)
+\right),
+\text{ or prove it is zero, for the actual }Q_k.
+}
+\]
+
+A useful reformulation is:
+\[
+C_k/\ker(\operatorname{inf}_G)
+\cong H^2(G,\mathbf F_p),
+\]
+but this quotient is not automatically intrinsic to the finite pair alone. Hence the global one-dimensional detector remains valid, while finite intrinsic one-dimensional compression is again the active load-bearing problem.
+
+The 45-dimensional computation remains deferred until the abstract kernel question is exhausted.
