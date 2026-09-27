@@ -186,9 +186,11 @@ The baseline closure certificate is recorded in `research/Q3_Q9_C2c2_exact_degre
 
 ## 10. Literature support
 
-A restricted ideal is an ordinary ideal closed under the p-map. A source defining this explicitly is Benayadi et al., where an ideal I of a restricted Lie algebra is called a p-ideal when x^[p] belongs to I for every x in I. The same source describes the smallest p-ideal containing an ordinary ideal via p-power closure. citeturn0search21
+A restricted ideal is an ordinary ideal closed under the p-map. A source defining this explicitly is Benayadi et al., where an ideal I of a restricted Lie algebra is called a p-ideal when x^[p] belongs to I for every x in I. The same source describes the smallest p-ideal containing an ordinary ideal via p-power closure. 
 
-The grading behavior needed here is also standard in Jennings/restricted Lie constructions: the p-th power of a homogeneous element of degree d is homogeneous of degree pd. citeturn0search1
+
+The grading behavior needed here is also standard in Jennings/restricted Lie constructions: the p-th power of a homogeneous element of degree d is homogeneous of degree pd. 
+
 
 These sources support the definition-level distinction only; they do not prove the project's specific R9 dimensions or H-stability.
 
