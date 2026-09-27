@@ -3440,3 +3440,19 @@ Classification:
 Detailed audit: research/PAPER3_T_BETA_UPPER_BOUND_AUDIT_2026-09-27.md.
 
 Next authorized action: define/test the same-target factorization threshold \(f_{T_\beta}\); do not infer it from the recognition threshold. No new Massey computation is authorized.
+
+
+
+## 2026-09-27 — PAPER 3 T_beta FACTORIZATION THRESHOLD AUDIT CLOSED
+
+The same-target factorization threshold was independently determined for T_beta(G)=[beta_G], without using the recognition equality r_{T_beta}=p+1 as evidence.
+
+Upper bound: D_{p+1}(G) is contained in G^{p^2}[G,G], so W_{p+1} recovers G_ab/p^2G_ab. The Bockstein kernel is the image of Hom(G,Z/p^2) -> Hom(G,F_p), hence is determined by that quotient. Since dim H^2=1 in the fixed-rank Demushkin category, the Bockstein map isomorphism class is determined by its rank. Therefore f_{T_beta} <= p+1.
+
+Lower bound: the independently verified S1/S2 pair has W_p(G_p) isomorphic to W_p(G_{p^2}) but T_beta(G_p) non-isomorphic to T_beta(G_{p^2}), so f_{T_beta}>p.
+
+Therefore f_{T_beta}=p+1. This is a direct factorization proof, not an inference from r_{T_beta}=p+1. Consequently this target gives equality f_{T_beta}=r_{T_beta}=p+1 in the declared category/window, and the same-target separation attempt is FAIL / CLOSED.
+
+Detailed audit: research/PAPER3_T_BETA_FACTORIZATION_THRESHOLD_AUDIT_2026-09-27.md.
+
+Next authorized action: close the T_beta separation branch and return to the general separation search, changing target/category/filtration-window rather than reusing the same Bockstein target.
