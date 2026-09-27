@@ -260,3 +260,20 @@ Two corrections are now locked.
 2. Gate A must not reopen the already-audited mod-9 result. The projective degree-(2,3) carrier recovering χ mod 9 is already recorded as PASS/CLOSED at the declared audited level. The unresolved HA61 gates are: finite-input construction of L(ρ_2) without importing higher orientation data; finite-input factorization to the δ_3 family; and reconstruction/compression of χ mod 27.
 
 Terminology: “cohomological-object level” now explicitly means well-defined/functorial for fixed G and fixed ρ_2, not D_•-intrinsic or finite-window-determined. When nonempty, L(ρ_2) is an H^1(G,F_3)-torsor algebraically; this does not establish a finite filtered torsor-valued carrier.
+
+
+## 2026-09-27 — HA58 CRITICAL REVIEW #4: VARIATION FORMULA PROVED, FINITE ACCESS REMAINS OPEN
+
+Direct cochain calculation proves, for rho_3'=rho_3(1+9nu) and f in H^1(G,Z/9(rho_2)),
+
+**delta_{3,rho_3'}(f)-delta_{3,rho_3}(f)=nu cup bar(f)**,
+
+where bar(f) is the mod-3 reduction, under the standard inhomogeneous differential convention (up to overall sign under the opposite connecting-map convention).
+
+The earlier Ext argument is withdrawn: multiplication by 3 on Z/9(rho_2) is not injective, so the displayed sequence was not exact. The variation theorem survives independently by the explicit cochain proof.
+
+For fixed f with bar(f) != 0, Demushkin cup nondegeneracy makes the variation a nonzero functional on rank-4 H^1(G,F_3). Hence any nonempty zero-set is an affine hyperplane of size 27. But nu=0 is a zero only when delta_{3,rho_3}(f)=0; finite-filtered zero existence remains OPEN. If bar(f)=0, the zero-set is either empty or all 81 lifts.
+
+Updated status: variation formula **PROVED**; fixed-f 27-fold zero-set **PROVED CONDITIONALLY**; finite-filtered access to L(rho_2) and the full delta_3 family **OPEN**; family-to-chi mod 27 recognition **OPEN**. The q=3 rank-four t_2 no-go remains a genuine COUNTEREXAMPLE.
+
+Next load-bearing task: construct or refute a finite-filtered carrier realizing the lift torsor/family without importing chi mod 27.
