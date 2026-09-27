@@ -760,3 +760,22 @@ Thus:
 No 45-dimensional recomputation is authorized yet. Next target is the intrinsic/functorial structure of the false-obstruction set.
 
 Authoritative correction: research/PAPER3_CARRIER_SPAN_REDUCTION_2026-09-28.md, commit cc50379a53fc295a0e830537f7c35846d696d3d6.
+
+
+## 2026-09-28 — CARRIER FRONTIER REFINED: GLOBAL SHADOW VS FINITE-PAIR CARRIER
+
+The carrier-minimality attack produced a useful categorical split.
+
+The transgression quotient O_k has a canonical global map
+lambda_k: O_k -> H^2(G,F_p), because transgression classes die already in E_k and hence have zero global inflation. D2 proves every false-lift obstruction has nonzero image under lambda_k. Since Demushkin H^2 is one-dimensional, this gives a one-dimensional detector if global inflation is allowed.
+
+Therefore absolute minimality of O_k is not a meaningful target: in a global category, a 1-dimensional detector already exists. The genuine Paper 3 problem is the finite-pair intrinsic category built only from E_k -> Q_k.
+
+New load-bearing question:
+Can lambda_k, or any equivalent nonzero functional on every false-obstruction set, be reconstructed functorially from the finite pair E_k -> Q_k alone?
+
+If yes, the intrinsic carrier collapses to dimension 1. If no, the failure identifies the extra finite filtered-relation information that must be retained.
+
+The 45-dimensional calculation remains deferred; it is relevant only if the finite-pair obstruction-set/module question cannot be resolved abstractly.
+
+Authoritative analysis: research/PAPER3_CARRIER_SPAN_REDUCTION_2026-09-28.md, commit 9fbca468daaa0d2ef363e48524d766ad3b4fb610.
