@@ -2989,3 +2989,20 @@ Logical boundary: this is recognition up to isomorphism of the Bockstein map; it
 
 Classification: **PASS / CLOSED — S3 and exact threshold closed.**
 Detailed proof: research/PAPER3_S3_BOCKSTEIN_UPPER_BOUND_AUDIT_2026-09-27.md.
+
+
+## 2026-09-27 — PAPER 3 BOCKSTEIN FACTORIZATION THRESHOLD CLOSED
+
+The same-target factorization audit was completed for the **isomorphism-class Bockstein target** T_beta(G)=[beta_G]. The S3 construction is not merely a recognition implication: W_{p+1} canonically determines G_ab/p^2G_ab, hence the liftability kernel ker(beta_G), and in fixed-rank Demushkin category the Bockstein isomorphism class is determined by that kernel/rank. Therefore a natural factorization through W_{p+1} exists.
+
+S1/S2 separately rule out factorization through W_p because W_p(G_p) isomorphic to W_p(G_{p^2}) while their Bockstein isomorphism classes differ.
+
+Thus
+\[
+\boxed{f_{T_beta}=p+1=r_{T_beta}}
+\]
+for odd p, fixed-rank Demushkin, Zassenhaus filtration, and the isomorphism-class Bockstein target.
+
+Important consequence: the current Bockstein example does **not** furnish the hoped-for same-target separation f_T != r_T. The factorization/recognition distinction remains conceptually meaningful, but this target has equal thresholds. A full coordinate-level Bockstein factorization is a separate, stronger question and remains unclaimed.
+
+Classification: **PASS / CLOSED** for the declared target; same-target separation via T_beta: **FAIL / CLOSED as a candidate mechanism**.
