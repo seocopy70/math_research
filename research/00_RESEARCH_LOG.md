@@ -3663,3 +3663,17 @@ Classification: **PASS / LOCAL** for the boundary localization; publication nove
 - Added `.github/workflows/citation-hygiene.yml`, which scans the repository on every push/PR for ChatGPT citation-artifact markers and fails CI if any are found.
 - The first repository-wide run on commit `f1d18af5752afcc297759e0f895bb9af0d1a5834` completed **successfully** (workflow run `36331337426`). Therefore the repository-wide hygiene gate is currently **PASS / CLOSED** for the targeted `citeturn...` artifact pattern.
 - Research content status is unchanged: U1–U3 finite-factorization prior-art comparison remains the next authorized mathematical action; no carrier computation is authorized before that comparison.
+
+
+## 2026-09-28 — FINAL U1–U3 SOURCE-LEVEL PRIOR-ART COMPARISON
+
+Primary/near-primary Kummerian literature was compared directly against U1–U3. Quadrelli (2024) gives the finite-coefficient H^1 lifting criterion, Labute's prescribed-generator cocycle criterion, and a quotient-inheritance result with extra oriented-pair hypotheses. These are genuine prior art for the ingredients, but they do not state the project's arbitrary-candidate finite factorization through Q_k=G/P_{k+1}.
+
+Classification:
+- U1 exact packaged semidirect finite-depth factorization as prior art: **OPEN / NOT FOUND**
+- U2: **PASS / CLOSED** as a consequence of U1; existing Kummerian quotient theorem is **FAIL / CLOSED** as an identity
+- U3 finite-window twisted-Fox assembly: **OPEN / NOT FOUND**
+- possible novelty boundary: **OPEN / CONDITIONAL**, localized at finite factorization/assembly
+
+Detailed record: research/PAPER3_DELTA3_MAZUR_MASSEY_PRIOR_ART_AUDIT_2026-09-28.md, Addendum 5.
+Next authorized action: resume carrier computation under the independent U1–U3 lemma chain.
