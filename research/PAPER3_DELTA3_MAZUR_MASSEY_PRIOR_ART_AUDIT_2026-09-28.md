@@ -171,7 +171,6 @@ Only if that comparison is negative should the finite-window carrier constructio
 
 **PASS / LOCAL**: the proposed Mazur/Massey identity check was completed at the level needed to decide whether the current $\delta_3$ carrier should be immediately closed as a rediscovery. It should not be closed on that basis. The remaining finite-window novelty gate is still OPEN.
 
-
 ## Addendum — family-level / variation-formula audit
 
 The individual-object comparison is not sufficient for the load-bearing family
@@ -181,11 +180,11 @@ L(\rho_2)\ni\rho_3\mapsto\delta_{3,\rho_3},
 \delta_{3,\rho_3(1+9\nu)}(f)-\delta_{3,\rho_3}(f)=\nu\cup\bar f.
 \]
 
-Bellaïche, *Pseudodeformations* (Math. Z. 270 (2012), 1163–1180), provides genuine prior art for the surrounding deformation-theoretic pattern: obstruction classes live in a cokernel of a degree-2/Yoneda-product map, and the relevant extension spaces are controlled by cup/Yoneda products. The primary preprint explicitly states an obstruction \(\bar c(T)\) in \((\operatorname{Coker}h^2)\otimes\mathfrak m\), with \(h^2\) a Yoneda product map
+Bellaïche, *Pseudodeformations* (Math. Z. 270 (2012), 1163–1180), provides genuine prior art for the surrounding deformation-theoretic pattern: obstruction classes live in a cokernel of a degree-2/Yoneda-product map, and the relevant extension spaces are controlled by cup/Yoneda products. The primary preprint explicitly states an obstruction $\bar c(T)$ in $(\operatorname{Coker}h^2)\otimes\mathfrak m$, with $h^2$ a Yoneda product map
 \[
 H^1(G,\chi)\otimes H^1(G,\chi^{-1})\to H^2(G,1).
 \]
-This confirms strong **methodological and formal prior art** for “parameterized deformation data + H^2 obstruction + cup/Yoneda control.” citeturn1search34
+This confirms strong **methodological and formal prior art** for “parameterized deformation data + H^2 obstruction + cup/Yoneda control.”
 
 However, the targeted search did **not** establish that Bellaïche's theorem identifies the present coefficient-lift torsor
 \[
@@ -200,10 +199,10 @@ The search also did not establish a theorem that reconstructs this family from a
 Therefore the family-level audit is split:
 
 - “torsor/parameterized obstruction theories with H^2 and Yoneda/cup control already exist”: **PASS / CLOSED — KNOWN**.
-- “Bellaïche's pseudo-deformation obstruction package is literally the present \(L(\rho_2),\delta_{3,\rho_3}\) family”: **FAIL / CLOSED — not established; do not identify**.
-- “the exact variation formula \(\delta_{\rho_3(1+9\nu)}-\delta_{\rho_3}=\nu\cup\bar f\) is already a Bellaïche theorem”: **OPEN / NOT VERIFIED**, not to be claimed.
+- “Bellaïche's pseudo-deformation obstruction package is literally the present $L(\rho_2),\delta_{3,\rho_3}$ family”: **FAIL / CLOSED — not established; do not identify**.
+- “the exact variation formula $\delta_{\rho_3(1+9\nu)}-\delta_{\rho_3}=\nu\cup\bar f$ is already a Bellaïche theorem”: **OPEN / NOT VERIFIED**, not to be claimed.
 - “some deformation-theoretic framework already implies the finite-window factorization
-\(W_n\to\{\delta_{3,\rho_3}\}\)”: **OPEN / NOT FOUND**.
+$W_n\to\{\delta_{3,\rho_3}\}$”: **OPEN / NOT FOUND**.
 
 This does not remove the need for the Kummerian/1-cyclotomic finite-data audit. It sharpens it: that audit must separately ask for (i) the lift torsor, (ii) the obstruction family, (iii) its translation/variation law, and (iv) finite-window reconstruction.
 
@@ -211,3 +210,8 @@ This does not remove the need for the Kummerian/1-cyclotomic finite-data audit. 
 
 **PASS / LOCAL** — family-level prior-art audit completed to the extent supported by the searched primary Bellaïche material; exact family/variation identity remains unverified.
 
+## Addendum 2 — citation hygiene correction
+
+A search-tool citation marker was accidentally copied into the repository text in the previous revision. It has no mathematical status and has been removed. The Bellaïche prior-art statement above is intentionally left as a prose source attribution rather than a tool-internal citation marker.
+
+**PASS / CLOSED — record hygiene corrected.**
