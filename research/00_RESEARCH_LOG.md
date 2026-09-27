@@ -3368,3 +3368,75 @@ Classification:
 - T_beta upper bound r_{T_beta}≤p+1: **OPEN / LOAD-BEARING**.
 
 Next authorized action: write the explicit Bockstein kernel/liftability lemma and then the Demuškin rank-to-isomorphism step; do not claim the full upper bound until both are independently checked.
+
+
+## 2026-09-27 — PAPER 3 T_beta UPPER BOUND CLOSED
+
+The authorized upper-bound test for the Bockstein target has been completed.
+
+For
+\[
+0\to\mathbf F_p\to\mathbf Z/p^2\to\mathbf F_p\to0,
+\]
+the long exact sequence gives
+\[
+H^1(G,\mathbf Z/p^2)\to H^1(G,\mathbf F_p)
+\xrightarrow{\beta_G}H^2(G,\mathbf F_p).
+\]
+With trivial coefficient action,
+\[
+\ker\beta_G=
+\operatorname{im}\left[
+\operatorname{Hom}(G,\mathbf Z/p^2)\to
+\operatorname{Hom}(G,\mathbf F_p)
+\right].
+\]
+Thus the Bockstein kernel is exactly the set of mod-p characters liftable to \(\mathbf Z/p^2\).
+
+Every \(\mathbf Z/p^2\)-valued character factors through
+\[
+G_{\mathrm{ab}}/p^2G_{\mathrm{ab}}.
+\]
+The already closed inclusion
+\[
+D_{p+1}(G)\subseteq G^{p^2}[G,G]
+\]
+implies that \(W_{p+1}\) determines this quotient. Hence \(W_{p+1}\) determines \(\ker\beta_G\), and therefore \(\operatorname{rank}\beta_G\).
+
+For the fixed-rank Demushkin category,
+\[
+\dim H^1(G,\mathbf F_p)=d,\qquad \dim H^2(G,\mathbf F_p)=1.
+\]
+Two linear maps \(\mathbf F_p^d\to\mathbf F_p\) are isomorphic iff they have the same rank. Therefore the abstract Bockstein target
+\[
+T_\beta(G)=[\beta_G]
+\]
+is determined by \(W_{p+1}(G)\).
+
+Important boundary: this identifies the linear-map isomorphism class, not the Demushkin group or its parameter \(q\). Rank zero does not distinguish \(q=p^2,p^3,\ldots\).
+
+Thus
+\[
+r_{T_\beta}\le p+1.
+\]
+Combined with the existing S1/S2 lower bound
+\[
+r_{T_\beta}\ge p+1,
+\]
+we obtain
+\[
+\boxed{r_{T_\beta}=p+1}
+\]
+in the declared category.
+
+Classification:
+- Bockstein kernel/liftability: **PASS / CLOSED**
+- \(W_{p+1}\Rightarrow\ker\beta\): **PASS / CLOSED**
+- \(W_{p+1}\Rightarrow[\beta]\): **PASS / CLOSED**
+- \(r_{T_\beta}\le p+1\): **PASS / CLOSED**
+- \(r_{T_\beta}=p+1\): **PASS / CLOSED**
+- same-target factorization-vs-recognition separation: **OPEN / LOAD-BEARING**
+
+Detailed audit: research/PAPER3_T_BETA_UPPER_BOUND_AUDIT_2026-09-27.md.
+
+Next authorized action: define/test the same-target factorization threshold \(f_{T_\beta}\); do not infer it from the recognition threshold. No new Massey computation is authorized.
