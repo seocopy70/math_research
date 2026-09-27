@@ -4183,3 +4183,54 @@ Continuity checkpoint recorded in `research/PAPER3_MIDPOINT_SUMMARY_2026-09-28.m
 Master status: D1 PASS/CLOSED; corrected D2 PASS/CLOSED; D3 PASS/CLOSED; D4 affine sharpness PASS/CLOSED; bare finite H^2 inflation injectivity FAIL/CLOSED; global one-dimensional detector PASS/CLOSED at the existential-per-false-candidate level; finite-pair intrinsic one-dimensional detector OPEN/LOAD-BEARING; carrier minimality OPEN; 45-dimensional calculation DEFERRED; publication novelty OPEN/CONDITIONAL.
 
 Next attack: abstract reconstruction from the finite central extension E_k -> Q_k, asking whether extension-class/transgression data canonically supplies a nonzero functional on the D2 witness family or forces retention of additional filtered data.
+
+
+## 2026-09-28 — PAPER 3 FINITE CUP-LINE COMPRESSION / 1D SELECTOR CARRIER CLOSED
+
+The abstract finite-pair functional reconstruction was attacked directly. A stronger recognition-level compression is available.
+
+For
+\[
+Q_k=G/D_{p^{k-1}+1},
+\]
+define the intrinsic cup-product image
+\[
+C_k=\operatorname{im}\bigl(H^1(Q_k,\mathbf F_p)^{\otimes2}\xrightarrow{\cup}H^2(Q_k,\mathbf F_p)\bigr).
+\]
+
+Because the quotient kernel lies in \(D_3\) for odd \(p\), the quadratic initial relation is unchanged from the Demuškin group. Standard relation/cup duality therefore gives
+\[
+\dim_{\mathbf F_p}C_k=1.
+\]
+
+On the canonical lower-level branch,
+\[
+\rho_k=\chi_k(1+p^{k-1}\nu),
+\]
+and the audited variation formula gives
+\[
+\delta_{k,\rho_k}(f)-\delta_{k,\chi_k}(f)=\nu\smile\bar f.
+\]
+Since the canonical connecting map is zero, every false-branch finite obstruction output lies in \(C_k\). D2 supplies, for every \(\nu\ne0\), at least one witness with nonzero global inflation; hence that witness is nonzero already in \(C_k\).
+
+Therefore the finite selector can be compressed to the one-dimensional intrinsic target \(C_k\):
+\[
+\delta^\cup_{k,\rho_k}:H^1(Q_k,A_{k-1}(\rho_{k-1}))\to C_k,
+\]
+with
+\[
+\delta^\cup_{k,\rho_k}=0
+\iff
+\rho_k=\chi_k
+\]
+after the closed lower-level induction step.
+
+This yields a genuine minimality statement in the newly specified linear selector-carrier category: dimension 0 cannot recognize a false candidate, while \(C_k\) has dimension 1.
+
+Important distinction:
+- the stronger projection/functional \(O_k\to\mathbf F_p\) reconstructed solely from \(E_k\to Q_k\) remains OPEN;
+- it is no longer load-bearing for recognition;
+- \(O_k\) is retained as the proof carrier used by D2 to establish survival against the transient transgression sector;
+- the final recognition carrier is the intrinsic one-dimensional cup line.
+
+Authoritative detailed record: research/PAPER3_FINITE_CUP_LINE_COMPRESSION_2026-09-28.md, commit 3daed93e34cb872ea7008a3ddb34d2b62778857e.
