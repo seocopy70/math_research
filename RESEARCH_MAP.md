@@ -3737,3 +3737,12 @@ q-status: selector is q-blind at the fixed project scope (q absent from selector
 Remaining frontiers: (1) absolute carrier minimality, after fixing a carrier category; (2) minimal selector window below P_{p^{k-1}+1}; (3) uniform-in-q recognition; (4) publication novelty audit.
 
 Detailed record: research/PAPER3_D3_SELECTOR_PROMOTION_D4_BOUNDARY_2026-09-28.md
+
+
+## 2026-09-28 — CARRIER MINIMALITY FORMALIZED AS A CATEGORY QUESTION
+
+“Absolute minimality of O_k” is not yet a well-posed numerical problem. Without fixing the allowed carrier category, arbitrary recognition carriers can be nonlinear/Boolean and dimension is meaningless; even among linear quotients, minimum-dimension quotients need not be unique. The meaningful next target is a specified category of finite F_p-linear functorial carriers built from the canonical finite extension E_k→Q_k, and a universal quotient/factorization theorem for O_k.
+
+Current classification: O_k is a sufficient canonical carrier PASS/CLOSED; absolute minimality NOT WELL-POSED until category fixed; linear quotient minimality OPEN; functorial universal minimality OPEN. Do not revive large 45-dimensional computations before this categorical target is fixed.
+
+Detailed record: research/PAPER3_CARRIER_MINIMALITY_BOUNDARY_2026-09-28.md
