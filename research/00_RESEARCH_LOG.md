@@ -3999,3 +3999,28 @@ Classification:
 - m=1 full D2 selector: OPEN / LOAD-BEARING.
 
 Detailed record: research/PAPER1_PAPER3_Q4_P4P5_BRIDGE_AUDIT_2026-09-28.md.
+
+
+## 2026-09-28 — D2-A / D2-B CLOSED: FINITE REPRESENTATIVE AND SURVIVAL
+
+The declared D2 load-bearing implication is now proved for the fixed rank-four pro-3 Demushkin case.
+
+For any false lift rho_3'=rho_3(1+9nu), 0 != nu in H^1(G,F_3), the audited variation identity and canonical Kummerian existence give delta_{rho_3'}(f)=nu cup fbar. Demushkin cup nondegeneracy supplies a in H^1(G,F_3) with nu cup a != 0, and the audited reduction map supplies f with fbar=a.
+
+Because P_4 is contained in Phi(G)=P_2, both nu and a factor through W_4=G/P_4. Thus alpha_4=nu_4 cup a_4 in H^2(W_4,F_3) inflates to the nonzero global separating class delta_{rho_3'}(f). Hence alpha_4 cannot die under W_4 -> W_5: if it did, functoriality would force its image in H^2(G,F_3) to vanish.
+
+Therefore:
+global separation => finite W4 representative => W4 -> W5 survival.
+
+This closes the exact D2-A and D2-B statements. The previously proposed literal "delta-family intersect Q4*" calculation is not required: the 45-dimensional transgression kernel consists of classes with zero image in global H^2, while the separating variation class has nonzero global image.
+
+Logical boundary: this does not claim that the entire delta-family is reconstructible as a map-valued object from W4 alone. It proves the existence-of-a-separating-output criterion that D2 actually requires.
+
+Classification:
+- D2-A finite representative: PASS / CLOSED
+- D2-B W4 -> W5 survival: PASS / CLOSED
+- m=1 full separation at the stated existence-of-a-separating-output criterion: PASS / CLOSED
+- exact delta-family / Q4* intersection: NOT REQUIRED / SUPERSEDED
+- full W4 reconstruction of the entire delta-family: SEPARATE / NOT CLAIMED
+
+Detailed record: research/PAPER3_D2_FINITE_REPRESENTATIVE_SURVIVAL_RESULT_2026-09-28.md.
