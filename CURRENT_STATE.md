@@ -1298,3 +1298,45 @@ Current status:
 - r_{T_beta}≤p+1: **OPEN / LOAD-BEARING**
 
 Next authorized action: prove and independently check the Bockstein kernel = mod-p reductions of Z/p^2-valued characters, then verify the Demuškin rank-to-isomorphism step.
+
+
+## 2026-09-27 — PAPER 3 T_beta RECOGNITION THRESHOLD CLOSED
+
+The authorized Bockstein upper-bound gate is now closed.
+
+Using
+\[
+0\to\mathbf F_p\to\mathbf Z/p^2\to\mathbf F_p\to0,
+\]
+the Bockstein kernel is exactly the reduction image of \(\mathbf Z/p^2\)-valued characters. Since these characters factor through \(G_{\mathrm{ab}}/p^2G_{\mathrm{ab}}\), and \(W_{p+1}\) determines that quotient via
+\[
+D_{p+1}(G)\subseteq G^{p^2}[G,G],
+\]
+the truncated filtered object determines \(\ker\beta\) and hence \(\operatorname{rank}\beta\).
+
+For fixed-rank odd-p Demushkin groups, \(\dim H^1=d\) and \(\dim H^2=1\), so rank determines the abstract linear-map isomorphism class \([\beta]\). Therefore
+\[
+W_{p+1}(G)\cong W_{p+1}(H)\Rightarrow T_\beta(G)\cong T_\beta(H),
+\]
+and
+\[
+r_{T_\beta}\le p+1.
+\]
+
+Combined with the existing S1/S2 lower bound \(r_{T_\beta}\ge p+1\), this gives
+\[
+\boxed{r_{T_\beta}=p+1}
+\]
+in the declared category.
+
+Precision boundary: rank does not determine the Demushkin parameter \(q\); it determines only the isomorphism class of the Bockstein linear map. The same-target factorization threshold \(f_{T_\beta}\) remains a separate open question.
+
+Current classification:
+- T_beta kernel/liftability: **PASS / CLOSED**
+- W_{p+1} ⇒ ker beta: **PASS / CLOSED**
+- W_{p+1} ⇒ [beta]: **PASS / CLOSED**
+- r_{T_beta} ≤ p+1: **PASS / CLOSED**
+- r_{T_beta} = p+1: **PASS / CLOSED**
+- factorization-vs-recognition separation for T_beta: **OPEN / LOAD-BEARING**
+
+Next authorized action: define/test the same-target factorization threshold \(f_{T_\beta}\). Do not infer it from \(r_{T_\beta}\).
