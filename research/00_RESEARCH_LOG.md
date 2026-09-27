@@ -3980,3 +3980,22 @@ Classification:
 Detailed record: research/PAPER1_PAPER3_Q4_P4P5_BRIDGE_AUDIT_2026-09-28.md.
 
 This branch is a side investigation supporting D2 repair; it is not promoted to the principal Paper 3 theorem until the delta/kernel intersection is independently computed.
+
+## 2026-09-28 — CRITICAL REFINEMENT OF THE PAPER 1 ↔ PAPER 3 BRIDGE
+
+The proposed direct calculation of the finite delta-family intersect Q4* was critically audited and found to be ill-typed. The delta-family is a family of maps into H^2, while Q4* is identified via transgression with a subspace of the finite H^2(W4) target. The correct object-level test is therefore delta_{3,rho3}(f) in tra(Q4*) for individual outputs, not a subspace intersection of the whole family.
+
+A stronger consequence follows from the already-proved global variation formula: for rho3'=rho3(1+9nu), nu nonzero, cup nondegeneracy gives an f with nonzero variation in H^2(G,F3). Any class in the one-step finite kernel maps to zero in H^2(G). Hence the separating global variation output cannot lie in that kernel.
+
+This yields PASS / LOCAL for the existence of a globally separating output outside the one-step kernel, conditional on the missing finite representative/factorization compatibility. It does not yet prove m=1 full selector.
+
+The Paper 1 10-25-10 decomposition can be reused only through the dual Q4* representation after an explicit dual-module audit. It is not itself a decomposition of the delta-family.
+
+Classification:
+- literal delta-family intersect Q4*: INVALID / CLOSED — type mismatch;
+- output-level transgression-kernel test: OPEN / LOAD-BEARING;
+- globally separating false-lift output outside one-step kernel: PASS / LOCAL conditional on finite compatibility;
+- Paper 1 10-25-10 dual reuse: OPEN / AUTHORIZED SIDE COMPUTATION;
+- m=1 full D2 selector: OPEN / LOAD-BEARING.
+
+Detailed record: research/PAPER1_PAPER3_Q4_P4P5_BRIDGE_AUDIT_2026-09-28.md.
