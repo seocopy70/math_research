@@ -218,3 +218,16 @@ Consequences:
 - introducing such a restriction would require a new object/input/functoriality/gauge/novelty audit and must not be smuggled in as a consequence of cup nondegeneracy.
 
 This is a genuine structural correction, not a cosmetic change. The next attack should therefore test whether the filtered data canonically determines a **one-dimensional lift direction or quotient of the coefficient-lift torsor**, or whether the surviving family fundamentally carries a higher-dimensional ambiguity.
+
+
+## 2026-09-27 — STATUS NORMALIZATION AFTER THIRD CRITICAL REVIEW
+
+The historical PASS/CLOSED labels in §§1,7 are superseded by the later critical-review corrections below. The surviving object is retained as a cohomological object for fixed (G,ρ_2), but the finite-filtered factorization remains OPEN.
+
+The intrinsic variation identity
+δ_{3,ρ_3(1+9ν)}(f)−δ_{3,ρ_3}(f)=±(ν∪f)
+remains **OPEN**. Consequently, in rank four the 27-element affine-hyperplane conclusion is **PROVED CONDITIONALLY** on that identity and on f≠0; unconditional failure of singleton zero selection is **OPEN**. Any statement that the full-torsor zero-selector is already COUNTEREXAMPLE/CLOSED is superseded.
+
+When nonempty, L(ρ_2) is algebraically an H^1(G,F_3)-torsor. This does not establish a finite filtered torsor-valued carrier. Do not interpret “torsor-valued carrier” as a theorem.
+
+The already audited mod-9 projective carrier/recovery should not be reopened merely to create a new Gate A. The remaining load-bearing questions concern finite-input access to L(ρ_2), finite factorization to the δ_3 family, and χ mod 27 recognition/compression.
