@@ -695,3 +695,50 @@ Detailed record: research/PAPER3_D3_SELECTOR_PROMOTION_D4_BOUNDARY_2026-09-28.md
 Current classification: O_k is a sufficient canonical carrier PASS/CLOSED; absolute minimality NOT WELL-POSED until category fixed; linear quotient minimality OPEN; functorial universal minimality OPEN. Do not revive large 45-dimensional computations before this categorical target is fixed.
 
 Detailed record: research/PAPER3_CARRIER_MINIMALITY_BOUNDARY_2026-09-28.md
+
+
+## 2026-09-28 — GATE D GENERALIZATION CLOSED AFTER D2 TRANSGRESSION-QUOTIENT REPAIR
+
+The Gate D generalization has now been re-derived with the corrected D2 carrier and independently checked against the earlier failure mode.
+
+Scope:
+- torsion-free Demuškin pro-p groups;
+- odd prime p;
+- even rank d>=2;
+- q in {0,p,p^2,...};
+- every k>=2.
+
+The false statement
+H^2(Q_k,F_p) -> H^2(G,F_p) injective
+remains FAIL/CLOSED. It is not used anywhere in the corrected proof.
+
+Instead:
+Q_k=G/D_{p^{k-1}+1},
+E_k=G/D_{p^{k-1}+2},
+K_k=D_{p^{k-1}+1}/D_{p^{k-1}+2},
+and
+O_k=H^2(Q_k,F_p)/im(tra_k).
+
+The proof is now:
+
+1. D1: every candidate crossed cocycle factors through Q_k by the uniform odd-p affine semidirect filtration.
+2. Canonical branch: global Kummerianity gives a global lift; D1 forces that lift to factor through Q_k, so the finite connecting map is zero directly. No H^2 inflation injectivity is needed.
+3. False branch: rho_k'=chi_k(1+p^{k-1}nu), nu!=0. PD^2 cup nondegeneracy and canonical lower-level Kummerianity provide f with nonzero global variation nu cup fbar. Its finite representative alpha_k cannot lie in im(tra_k), because transgression classes die already in H^2(E_k), while alpha_k has nonzero global inflation. Hence [alpha_k] is nonzero in O_k.
+4. D3 induction then gives uniqueness at every k.
+5. D4 LTE gives the exact predecessor obstruction at D_{p^{k-1}}, hence the declared selector threshold p^{k-1}+1.
+
+Critical non-circularity condition:
+the proof uses only canonical lower-level reduction-surjectivity, not arbitrary-candidate Kummer surjectivity.
+
+Classification:
+- Gate D architecture: PASS/CLOSED;
+- D1 arbitrary odd-p factorization: PASS/CLOSED;
+- corrected D2 carrier: PASS/CLOSED;
+- D3 arbitrary-k finite selector: PASS/CLOSED;
+- D4 exact selector threshold: PASS/CLOSED;
+- uniform-in-q within the declared torsion-free Demuškin class: PASS/CLOSED;
+- arbitrary pro-p groups: NOT CLAIMED;
+- absolute/functorial carrier minimality: OPEN;
+- publication novelty: OPEN/CONDITIONAL.
+
+Authoritative proof: research/PAPER3_GATE_D_GENERAL_ODD_P_RANK_Q_K_RESULT_2026-09-28.md, commit 99bbbeb2d6072b8f435ada806e08e48781f5d381.
