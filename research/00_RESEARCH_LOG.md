@@ -3600,3 +3600,8 @@ The variation identity for the lift-indexed connecting family remains OPEN in HA
 The next gate is also refined: the mod-9 projective degree-(2,3) carrier/recovery is already audited as PASS/CLOSED at its declared level and should not be reopened. The unresolved sequence is finite-input access to L(ρ_2), finite factorization to the δ_3 family, then χ mod 27 reconstruction/compression.
 
 Detailed correction: research/PAPER3_HA58_P4_D10_FULL_INTRINSICITY_AUDIT_2026-09-27.md §15.
+
+
+## 2026-09-27 — HA58 CRITICAL REVIEW #4
+
+Direct cochain calculation proves the variation identity for rho_3'=rho_3(1+9nu): delta_{rho_3'}(f)-delta_{rho_3}(f)=nu cup bar(f), where bar(f) is the mod-3 reduction, under the standard convention. The earlier Ext/Yoneda shortcut is withdrawn because multiplication by 3 on Z/9 is not injective. For bar(f) != 0 in rank 4, any nonempty fixed-f zero-set has 27 lifts; nu=0 is not automatically a zero. Finite-filtered access to the lift family remains OPEN. See the HA58 audit Critical Review #4.
