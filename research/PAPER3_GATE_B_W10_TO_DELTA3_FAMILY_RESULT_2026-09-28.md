@@ -31,3 +31,10 @@ Classification:
 Gate B = PASS / CLOSED.
 
 Detailed proof record is this document. The next gate is Gate C: whether the full family uniquely selects chi mod 27.
+
+
+## Hardening of the nonzero H^2 step
+
+The assertion H^2(Q,F_3) != 0 can be replaced by the standard pro-3 cohomological criterion: a finitely generated pro-p group with H^2(-,F_p)=0 is free pro-p. Since Q is a nontrivial finite 3-group, it cannot be a nontrivial free pro-3 group. Hence H^2(Q,F_3) != 0.
+
+This avoids any appeal to a dimension formula for the finite quotient.
