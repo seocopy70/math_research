@@ -1,3 +1,27 @@
+## 2026-09-28 — P-1 DEGREE-3 STATUS FROZEN / CURRENT FRONTIER GATE D
+
+P-1 is retained as a verified presentation-level baseline, not as the active carrier route.
+
+- (L_3(F)=L_3^{\mathrm{Lie}}(F)\oplus V^{[3]}), (\dim=24): **PASS / CLOSED**.
+- (\operatorname{in}_3(r)=X_1^{[3]}): **PASS / CLOSED**, presentation-level.
+- (\dim[R_2,V]=4): **PASS / CLOSED**.
+- (\operatorname{gr}_3(I_r)=[R_2,V]\oplus\mathbf F_3X_1^{[3]}), (\dim=5): **PASS / CLOSED**.
+- (\dim L_3(G)=19): **PASS / CLOSED**.
+- (\ker P_G=\mathbf F_3X_1): **PASS / CLOSED — presentation-level only**.
+- Canonical line from degree 3 alone: **OPEN**, explicitly not required for the current carrier.
+
+The controlling filtration fact is (F_{(2)}F_{(2)}\subseteq F_{(4)}); the previous incorrect (F_{(2)}F_{(2)}\subseteq F_{(3)}) statement is superseded.
+
+The active finite-window path remains:
+\[
+W_{10}\to L_{10}(\rho_2)\to\{\delta_{3,\rho_3}\}\to\chi\bmod27,
+\]
+with Gate A, Gate B, and Gate C recorded as PASS/CLOSED at their declared scopes. No degree-3 canonical-line revival is authorized.
+
+**Current authorized frontier: Gate D.** Test the construction for arbitrary prime/rank/parameter/level \((p,d,q,k)\), and separate formal steps from those requiring Demuškin (PD^2), finite p-group cohomology, and the specific sharp Zassenhaus depth. Absolute carrier minimality and publication novelty remain unclaimed/conditional unless separately established.
+
+---
+
 ## 2026-09-28 — U1–U5 VS KUMMERIAN PRIOR-ART BOUNDARY
 
 The four-layer Kummerian/1-cyclotomic audit was compared directly with the U1–U5 proof architecture.
