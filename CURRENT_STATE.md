@@ -1151,3 +1151,14 @@ Classification:
 Important boundary: the pair establishes a Bockstein recognition lower bound only. It does not prove equality and does not by itself establish \(f_T\ne r_T\), since factorization and recognition must be compared for the same target.
 
 Detailed record: research/PAPER3_S2_BOCKSTEIN_SEPARATION_AUDIT_2026-09-27.md.
+
+
+## 2026-09-27 — PAPER 3 S4 TARGET NONTRIVIALITY GATE: T_cup INVALID
+
+The proposed S4 target T_cup(G)=(H^1(G,F_p), cup), viewed as an isomorphism class, has failed the mandatory target-nontriviality pre-check. In the fixed-rank Demuškin category, the cup pairing is a nondegenerate alternating form, and all such forms of the same finite dimension are isomorphic. Hence equal-rank Demuškin groups cannot form a separation pair with different T_cup.
+
+Classification: S4 T_cup = INVALID / TRIVIAL TARGET — CLOSED; rank-4 S4 computation = STOPPED / NOT AUTHORIZED; S4 program = GATE FAILURE / RE-DESIGN REQUIRED; Target Nontriviality Gate = ACTIVE / LOAD-BEARING.
+
+Mandatory target gate for future candidates: TN1 nontriviality; TN2 non-derivability from an already-closed target; TN3 genuine filtration dependence; TN4 prior-art audit. Only targets passing TN1–TN4 may enter concrete separation computation.
+
+Decision: do not perform further S4 rank-4 computation until a replacement target passes the target gate. Detailed audit: research/PAPER3_S4_TARGET_NONTRIVIALITY_GATE_T_CUP_2026-09-27.md.
