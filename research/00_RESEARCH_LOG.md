@@ -3109,3 +3109,48 @@ Current Paper 3 status:
 - Explicit separation: **OPEN / LOAD-BEARING**
 - Pure Bockstein sharpness: **DEFERRED**
 - Ultimate finite-window recognition program: **ACTIVE**
+
+
+## 2026-09-27 — PAPER 3 S2 BOCKSTEIN SEPARATION AUDIT
+
+The rank-2 candidate pair
+\[
+G_p=\langle x,y\mid x^p[x,y]=1\rangle,
+\qquad
+G_{p^2}=\langle x,y\mid x^{p^2}[x,y]=1\rangle
+\]
+has now passed the independent Bockstein-difference gate.
+
+For the Bockstein
+\[
+\beta_G:H^1(G,\mathbf F_p)\to H^2(G,\mathbf F_p)
+\]
+from
+\[
+0\to\mathbf F_p\to\mathbf Z/p^2\to\mathbf F_p\to0,
+\]
+the standard one-relator formula reads the mod-p coefficient of the p-power term in the quadratic initial form of the relator. Direct relator-lift evaluation gives the same result.
+
+With \(\chi_x,\chi_y\) dual to \(x,y\):
+- for \(G_p\), \(\beta(\chi_x)=\pm u\neq0\), \(\beta(\chi_y)=0\), so \(\operatorname{rank}\beta=1\) and \(\operatorname{Im}\beta=H^2\cong\mathbf F_p\);
+- for \(G_{p^2}\), the coefficient is \(p\equiv0\pmod p\), so \(\beta=0\) and \(\operatorname{Im}\beta=0\).
+
+Thus both requested distinctions pass:
+1. the whole Bockstein maps are non-isomorphic because their ranks differ;
+2. their images differ, one nonzero and one zero.
+
+Together with S1, already PASS/CLOSED with
+\[
+W_p(G_p)\cong W_p(G_{p^2}),
+\]
+this yields the concrete recognition lower bound
+\[
+\boxed{r_{T_\beta}(\mathcal C;D_\bullet)\ge p+1}
+\]
+for any category containing this pair under the current Zassenhaus-window definition.
+
+This is **PASS / LOCAL** as a lower-bound result. It does not establish the exact equality \(r_{T_\beta}=p+1\), and it does not yet establish \(f_T\ne r_T\) because that comparison must use the same target \(T_\beta\).
+
+Detailed record: research/PAPER3_S2_BOCKSTEIN_SEPARATION_AUDIT_2026-09-27.md.
+
+Next Gate: upper-bound test at \(p+1\), with same-target factorization kept logically separate.
