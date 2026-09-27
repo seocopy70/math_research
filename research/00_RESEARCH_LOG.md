@@ -3577,3 +3577,17 @@ W_n\to\{\delta_{3,\rho_3}\}=\mathbf{OPEN},
 Literature claim narrowed: Quadrelli 2024 Example 2.6 is retained as external support for canonical Demuškin orientation/Kummer lifting; Mináč–Pasini–Quadrelli–Tân 2021 is retained for Zassenhaus/quadratic-dual background. The previous broad claim about a source proving loss of orientation from Zassenhaus data is withdrawn pending exact primary-source verification.
 
 Audit correction commit: 471321c973de05c6c5ac407f3944b3a12017b331.
+
+
+## 2026-09-27 — HA58 SECOND CRITICAL REVIEW / SCOPE CORRECTION
+
+The second critical review identified four scope issues and they are now locked.
+
+1. The δ_3 family is PROVED only as a cohomological object/natural family indexed by L(ρ_2). Its derivation from finite filtered data is OPEN.
+2. If ρ_2 is the already-known canonical mod-9 orientation, nonemptiness of L(ρ_2) is EXTERNAL; non-circular finite-filtered recovery of the lift information is OPEN.
+3. The t_2 conjugation no-go is a genuine COUNTEREXAMPLE in the q=3 rank-four branch and is sufficient to refute a universal single-vector theorem. It is not claimed to cover every q-branch.
+4. The full-torsor zero-selector uniqueness route is COUNTEREXAMPLE / CLOSED in rank 4; the variation formula, finite-filtered existence, and any one-dimensional lift-direction construction remain OPEN.
+
+The strategic phrase “torsor-valued carrier” is retained only as a candidate compression architecture. The next load-bearing problem is the intrinsic finite-window factorization W_n → {δ_{3,ρ_3}}, with a precise functorial category and without importing the canonical orientation itself.
+
+Detailed correction: research/PAPER3_HA58_P4_D10_FULL_INTRINSICITY_AUDIT_2026-09-27.md §14.
