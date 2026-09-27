@@ -3597,3 +3597,18 @@ Classification:
 - D2 explicit depth: **OPEN / LOAD-BEARING**.
 - D2 uniform bound: **OPEN / LOAD-BEARING**.
 - Gate D full theorem: **CONDITIONAL / OPEN**.
+
+
+## 2026-09-28 — D2 m=1 KERNEL COMPUTED
+
+The first corrected deeper-window test is now closed at the kernel-structure level for p=3,d=4,k=2. The extension is 1 -> P4/P5 -> W5 -> W4 -> 1. MRT gives dim(P4/P5)=45; [P4,G]⊂P5 makes the W5-action trivial; the five-term sequence plus Frattini H^1 inflation gives transgression rank 45 and therefore a 45-dimensional kernel of H^2(W4,F3)->H^2(W5,F3). The canonical delta class is outside this kernel because its image in H^2(G,F3) is nonzero.
+
+This does not yet establish m=1 separation of the entire false-candidate delta-family. The exact intersection of the W4 delta-family with the 45-dimensional one-step kernel remains the load-bearing OPEN problem. No uniform m-bound is claimed.
+
+Classification:
+- D2 m=1 kernel structure: **PASS / CLOSED**;
+- canonical branch survives m=1: **PASS / LOCAL**;
+- m=1 full selector: **OPEN / LOAD-BEARING**;
+- exact delta/kernel intersection: **OPEN / LOAD-BEARING**.
+
+Detailed record: research/PAPER3_D2_P4_P5_HAND_CALC_2026-09-28.md
