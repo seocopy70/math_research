@@ -3612,3 +3612,44 @@ Classification:
 - exact delta/kernel intersection: **OPEN / LOAD-BEARING**.
 
 Detailed record: research/PAPER3_D2_P4_P5_HAND_CALC_2026-09-28.md
+
+
+## 2026-09-28 — PAPER 1 ↔ PAPER 3 DEGREE-4 BRIDGE
+
+A side investigation has now established a structural bridge between the old Paper 1 45-dimensional object and the current Paper 3 D2 obstruction layer.
+
+For the rank-4 p=3 Demuškin group:
+\[
+Q_4=L_4(F)/(R)_4,\qquad \dim Q_4=45,
+\]
+and the verified Paper 1 orbit span W45 subset Q4 also has dimension 45, so W45=Q4.
+
+The mild/free-restricted-Lie description of the p-Zassenhaus graded object identifies
+\[
+P_4/P_5\cong Q_4.
+\]
+Hence the old 45-dimensional structure is the complete degree-4 Zassenhaus fiber, not merely a numerically matching auxiliary module.
+
+The corrected Paper 3 D2 extension
+\[
+1\to P_4/P_5\to W_5\to W_4\to1
+\]
+then yields, via transgression,
+\[
+\ker(H^2(W_4,F_3)\to H^2(W_5,F_3))
+\cong (P_4/P_5)^*
+\cong Q_4^*
+\cong W_{45}^*.
+\]
+
+Interpretation:
+- Paper 1 searched Q4=W45 as a possible orientation carrier and found no canonical orientation bridge.
+- Paper 3 D2 encounters Q4* as the first finite cohomological ambiguity created by deepening W4 to W5.
+- The relationship is therefore a genuine object/dual-obstruction bridge, not evidence that the old orientation route should be reopened.
+
+Classification:
+- structural Paper 1/Paper 3 degree-4 bridge: PASS / CLOSED at the declared scope;
+- delta-family intersection with the dual sector: OPEN / LOAD-BEARING;
+- Paper 1 orientation carrier revival: HISTORICAL / SUPERSEDED.
+
+Detailed audit: research/PAPER1_PAPER3_Q4_P4P5_BRIDGE_AUDIT_2026-09-28.md.
