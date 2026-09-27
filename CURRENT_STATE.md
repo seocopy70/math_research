@@ -234,3 +234,18 @@ The phrase “끝까지 진행했다” is narrowed: the authorized audit proced
 The detailed correction is recorded in
 research/PAPER3_HA58_P4_D10_FULL_INTRINSICITY_AUDIT_2026-09-27.md
 at commit 471321c973de05c6c5ac407f3944b3a12017b331.
+
+
+## 2026-09-27 — HA58 SECOND CRITICAL REVIEW: δ_3 / t_2 SCOPE LOCK
+
+- Each δ_{3,ρ_3}, and the full lift-indexed family L(ρ_2) → δ_{3,ρ_3}, are PROVED at the cohomological-object/naturality level once ρ_2 is fixed.
+- Finite filtered factorization W_n → {δ_{3,ρ_3}} is OPEN.
+- If ρ_2 is the known canonical mod-9 orientation, L(ρ_2) nonempty is EXTERNAL by established canonical-orientation existence. Non-circular finite-filtered recovery remains OPEN.
+- The t_2 no-go is a genuine COUNTEREXAMPLE in the q=3 rank-four branch, sufficient to rule out a universal canonical single-vector theorem. No identical formula is claimed for every q-branch.
+- Full-torsor zero-selector uniqueness is COUNTEREXAMPLE / CLOSED in rank 4: a nonzero cup functional has 3-dimensional kernel, so a zero, if it exists, leaves up to 27 lifts.
+- The variation formula, finite-filtered existence, and any canonical one-dimensional lift restriction are OPEN.
+- “Torsor-valued carrier” is a candidate architecture, not an established result.
+
+Next authorized gate:
+W_n(G) → {δ_{3,ρ_3}}_{ρ_3∈L(ρ_2)}
+with an explicit category and no importation of the canonical orientation into the factorization proof.
