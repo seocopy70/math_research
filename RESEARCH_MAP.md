@@ -3496,3 +3496,20 @@ The HA58/HA61-B surviving object is now classified with a strict two-level disti
 - affine/torsor-valued carrier: candidate strategy only, not an established object.
 
 The single-vector P_4/t_2 route remains closed. The next load-bearing Paper 3 gate is the intrinsic finite-window factorization into the δ_3 family, followed by a non-circular compression/recognition analysis.
+
+
+## 2026-09-27 — HA58 THIRD CRITICAL REVIEW CONSISTENCY CORRECTION
+
+The global map is synchronized with the latest HA58/P4/D10 audit corrections.
+
+- The mod-9 projective degree-(2,3) carrier/recovery remains **PASS / CLOSED at its declared audited scope** and is not reopened as a new Gate A.
+- The cohomological lift family `rho_3 -> delta_{3,rho_3}` is **PROVED at fixed (G,rho_2) cohomological-object/naturality level**; Level 0 coefficient-extension existence is definitional.
+- Finite filtered access to `L(rho_2)` and finite-window factorization to the delta_3 family remain **OPEN**.
+- When nonempty, `L(rho_2)` is an `H^1(G,F_3)`-torsor; in rank 4 it has 81 elements. This does not establish a finite-filtered torsor-valued carrier.
+- The intrinsic variation formula under `rho_3 -> rho_3(1+9nu)` remains **OPEN**.
+- If that formula holds with nonzero cup functional in rank 4, the fixed-f zero set has 27 elements; this is **PROVED CONDITIONALLY**, not an unconditional counterexample.
+- Unconditional singleton zero-selector failure remains **OPEN** unless an independent counterexample is supplied.
+- The q=3 rank-four relator-conjugation witness remains a genuine **COUNTEREXAMPLE** to a universal canonical single-vector `t_2) theorem; no identical claim is made for q=9 or 27|q branches.
+- The “torsor-valued carrier” remains a candidate compression strategy, not an established result.
+
+The immediate mathematical probe is the intrinsic variation formula: prove it or produce a counterexample, then use the result to design the finite-data factorization into the lift-indexed delta_3 family.
