@@ -288,3 +288,21 @@ This audit does **not** close the present carrier as a rediscovery. It does, how
 - Quadrelli (2024), *Chasing Maximal Pro-p Galois Groups via 1-Cyclotomicity*.
 
 **Audit result: PASS / LOCAL. No new carrier computation is authorized yet; the next authorized step is to compare the four-layer result directly with the existing U1–U5 finite-selector theorem and determine whether the theorem's only genuinely non-classical component is the finite factorization through (Q_k).**
+
+
+## Addendum 4 — U1–U5 comparison: novelty boundary localization
+
+The four-layer Kummerian audit was compared directly with the existing U1–U5 proof architecture.
+
+- Classical Kummerianity/canonical orientation and full-group lifting existence are **KNOWN / CLOSED**.
+- U5's uniqueness mechanism overlaps the classical uniqueness theorem at the conceptual level; it is not itself the novelty claim. Its project role is to make uniqueness compatible with the finite candidate-selector architecture and remove presentation dependence.
+- U1–U2 provide the genuinely finite-data bridge: arbitrary twisted crossed cocycles for arbitrary candidate rho factor through (Q_k=G/P_{k+1}) via the finite semidirect-product filtration. No audited Kummerian source was found stating this exact bare-(Q_k), arbitrary-candidate factorization theorem.
+- U3 turns finite Kummer lifting into a finite twisted Fox obstruction. Its ingredients are classical in spirit, but the exact finite-window assembly remains to be compared against any equivalent theorem.
+- U4 is presentation-local and is not novelty-bearing.
+- U5 is required to remove presentation dependence after finite factorization, but the underlying canonical-orientation uniqueness is classical.
+
+Therefore the possible publication novelty is localized at the **finite-factorization/assembly layer**, not at canonical orientation, Kummerianity, or their general cohomological characterization.
+
+**Classification: PASS / LOCAL.** The mathematical finite-window theorem remains PASS / CLOSED in the research record; publication novelty remains OPEN / CONDITIONAL.
+
+Next authorized action: perform the final source-level comparison of U1–U3, especially the semidirect finite-depth factorization, against any equivalent finite-coefficient quotient theorem. No new carrier computation before that comparison.
