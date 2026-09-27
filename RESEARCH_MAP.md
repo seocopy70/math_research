@@ -3562,3 +3562,23 @@ W_10(G) -> L(rho_2) -> {delta_{3,rho_3}} -> chi mod 27.
 This is a genuine finite-family carrier/selector construction and is distinct from the previously closed single-vector t_2 route.
 
 Gate D is now the only active mathematical gate: determine which parts generalize to arbitrary odd p, even rank, and general k, and separate the sharp Zassenhaus depth input from the cohomological/PD^2 input. No general theorem is claimed until those dependencies are independently audited.
+
+
+## 2026-09-28 — PAPER 3 GATE D CLOSED: GENERAL ODD-p FINITE KUMMER SELECTOR
+
+The Gate D generalization is complete at the declared selector scope. For every torsion-free Demushkin pro-p group of even rank d>=2, odd p, allowed q, and k>=2, the finite Kummer selector is intrinsically recoverable from the Zassenhaus window W_{p^{k-1}+1}. The proof separates formal ingredients (odd-p semidirect filtration, Zassenhaus functoriality, finite-group cohomology, coefficient-extension naturality) from Demushkin-specific inputs (PD^2/cup nondegeneracy and classical Kummerian existence).
+
+The exact selector threshold is
+\[
+\boxed{n_k^{Kum}=p^{k-1}+1},
+\]
+with the preceding window W_{p^{k-1}} ruled out by the canonical geometric-sum/LTE witness, including q=0.
+
+Classification:
+- Gate D: **PASS / CLOSED** for the declared finite Kummer selector.
+- Absolute carrier minimality: **OPEN / NOT CLAIMED**.
+- Publication novelty: **OPEN / CONDITIONAL**.
+
+This closes the generalization branch. The remaining Paper 3 problem is now strictly the richer-carrier program: construct an intrinsic filtered observation O that contains relation information beyond the Kummer selector, define a coarser target T=Phi(O), and study carrier-vs-target information depth without reopening the closed Kummer or degree-3 routes.
+
+Detailed result: research/PAPER3_GATE_D_GENERAL_ODD_P_RANK_Q_K_RESULT_2026-09-28.md.
