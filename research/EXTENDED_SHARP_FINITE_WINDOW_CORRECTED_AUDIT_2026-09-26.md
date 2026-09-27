@@ -66,7 +66,7 @@ At minimum the follow-up paper must discuss:
 - the current main finite-window paper, if this is a genuine follow-up;
 - relevant 2026 work of Blumer–Quadrelli and Pál–Quick, with a precise “what is and is not used” comparison.
 
-Labute's classification and canonical orientation are established prior art, and Quadrelli (2024) explicitly states the finite-level Kummerian criterion and a quotient-inheritance proposition requiring restriction-surjectivity. citeturn0search2turn2search1
+Labute's classification and canonical orientation are established prior art, and Quadrelli (2024) explicitly states the finite-level Kummerian criterion and a quotient-inheritance proposition requiring restriction-surjectivity. 
 
 **Classification: OPEN / publication-critical.**
 
