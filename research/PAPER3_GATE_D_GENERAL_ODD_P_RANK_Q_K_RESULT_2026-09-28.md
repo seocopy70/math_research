@@ -133,3 +133,24 @@ The fixed (p,d,q) calculation is not the essential source of the finite-selector
 W_n(G)\to O(G)\to T(G),
 \]
 where O contains finite filtered relation information not reducible to the already-understood Kummer selector, and the admissible carrier category is explicit.
+
+
+## CRITICAL REVIEW — 2026-09-28
+
+The Gate D write-up is retained, but its PASS/CLOSED status is **downgraded to CONDITIONAL pending a line-by-line proof audit**. The general architecture is plausible and the D4 LTE sharpness calculation is structurally sound, but several extensions from the verified p=3,k=3 case were asserted too quickly for publication-grade closure:
+
+1. The claimed exact lower p-central series of A_k ⋊ U_{1,k} for arbitrary odd p and all k must be proved carefully, including endpoint indexing and the action/commutator calculation.
+2. The passage from D_{N+1}(G) to the full crossed-cocycle factorization must be written as an explicit functorial lemma, not only inferred from the semidirect filtration slogan.
+3. The H^2(Q_k,F_p) != 0 argument is valid in spirit, but the precise finite p-group/pro-p cohomological statement and the nontriviality of Q_k must be stated and checked for every allowed case.
+4. Most importantly, the higher-k variation formula and the asserted injectivity of the coefficient inclusion into H^2 are not yet independently audited at the same level as the mod-27 case. The phrase “finite-coefficient PD^2 socle injectivity” is a load-bearing assertion and cannot be treated as automatic.
+5. The D4 sharpness witness uses a standard presentation only as a negative witness, which is legitimate for proving failure of a universal selector window, but the descent of the canonical action to the predecessor quotient must be explicitly established for general q and k.
+
+Therefore the correct present classification is:
+- Gate D architecture/generalization: **PASS / LOCAL**;
+- D4 LTE predecessor obstruction: **PASS / LOCAL** pending full descent audit;
+- full arbitrary-(p,d,q,k) Gate D theorem: **CONDITIONAL / OPEN for publication-grade proof**;
+- fixed p=3, rank 4, q=3 Gates A-C: **PASS / CLOSED** at their recorded scope;
+- absolute carrier minimality: **OPEN / NOT CLAIMED**;
+- publication novelty: **OPEN / CONDITIONAL**.
+
+Authorized next action: audit D1-D4 lemma-by-lemma before treating Gate D as closed. Do not silently retain the stronger CLOSED label.
