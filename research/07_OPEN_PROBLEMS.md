@@ -53,3 +53,28 @@ Test whether \(T\) can be identified with or related to a higher cohomological o
 ## F. Novelty control
 
 No statement should be promoted to “new theorem” until a primary-source search has ruled out an existing equivalent formulation. Computations should remain clearly separated from externally established facts.
+
+
+## 2026-09-27 — HA58/P4/D10 audit update
+
+The HA58/P4/D10 route is now fully audited. The following are no longer open questions in their original form:
+
+- canonical single-vector \(t_2\) realization: **COUNTEREXAMPLE**
+- \(t_2/\langle p\rangle\) as a scalar obstruction carrier: **COUNTEREXAMPLE**
+- diagonal \((t_2,\mu)\) quotient as the repair: **COUNTEREXAMPLE**
+
+The finite-depth source classification is also settled at the audited D_4/mod-27 depth: \(F^9\) and the old \(\gamma_2^3\) sector are the surviving source types; \(\gamma_3^3\) and \(\gamma_4\) do not survive the /9 mod-3 normalization.
+
+The remaining load-bearing questions are therefore narrower:
+
+1. **Intrinsic definition:** Can the surviving secondary obstruction family be defined as a canonical function-valued/affine object without choosing a relation representative?
+2. **Transport:** What is the exact functorial category in which
+   \[
+   \rho_3\mapsto\delta_{3,\rho_3}
+   \]
+   transports naturally?
+3. **Compression:** Does that family admit a richer affine/torsor-valued carrier preserving coefficient-lift dependence?
+4. **Recognition:** Can a coarser target \(\chi\bmod 27\) factor through such a richer carrier even though the single-vector \(t_2\) route fails?
+5. **Finite-depth orientation:** Can the higher connecting family be linked to the already established mod-9 obstruction by an intrinsic coefficient-extension diagram?
+
+Do not reopen the single-vector P_4/\(t_2\) route unless a new mathematical mechanism avoids the conjugation counterexample.
