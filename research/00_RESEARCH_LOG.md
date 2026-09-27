@@ -3816,3 +3816,54 @@ Impact:
 - Publication novelty: **OPEN / CONDITIONAL**.
 
 The stale CLOSED labels in CURRENT_STATE.md and RESEARCH_MAP.md were explicitly synchronized downward in the same research update. Next authorized action is D2 repair; no CLOSED Gate D claim is retained.
+
+
+## 2026-09-28 — GATE D D2 REPAIR: CONTINUITY / DEEPER-WINDOW FORMULATION
+
+The D2 repair direction is now recorded as follows.
+
+For Q_k=G/P_{p^{k-1}+1}(G), let N=P_{p^{k-1}+1}(G). The previous bare-Q_k H^2-injectivity claim is rejected. However, continuous profinite cohomology gives
+\[
+H^2(G,F_p)\cong \varinjlim_{M\trianglelefteq_o G} H^2(G/M,F_p)
+\]
+along inflation. Since the Zassenhaus tower W_n=G/P_n is cofinal in the open normal subgroups of a finitely generated residually-p group, every class in H^2(Q_k,F_p) that dies in H^2(G,F_p) dies after some finite deeper window W_{N_k+m}. Because H^2(Q_k,F_p) is finite-dimensional, the ascending chain of kernels stabilizes after some finite m_0. Therefore there exists a finite deeper window that detects exactly the stable kernel of inflation to G.
+
+Important logical boundary: this proves existence of a finite m_0, not a computable or uniform bound m_0(d,p,q,k), and it does not prove that m=1 suffices. It also does not yet prove that the specific delta-family is separated from the transient kernel at a prescribed depth.
+
+### k=2 first obstruction check
+
+For the rank-4 p=3 case, Q_2=W_4 and the next window is W_5. The five-term sequence for
+\[
+1\to P_4/P_5\to W_4\to W_5\to1
+\]
+shows that
+\[
+\ker\bigl(H^2(W_4,F_3)\to H^2(W_5,F_3)\bigr)
+\]
+contains the image of the transgression from
+\[
+H^1(P_4/P_5,F_3)^{W_5}.
+\]
+The kernel cannot be declared zero merely from finite-window depth; the relevant fixed-point space must be computed. More generally, the earlier P_3/P_4=20 record is about the first graded layer and should not be silently substituted for the P_4/P_5 layer appearing in this exact sequence.
+
+Thus the first hand calculation is:
+1. compute the W_5-action on P_4/P_5;
+2. compute H^1(P_4/P_5,F_3)^{W_5};
+3. determine the actual transgression image inside H^2(W_4,F_3);
+4. evaluate the concrete delta classes on this kernel.
+
+A nonzero kernel at m=1 does not by itself show that the canonical delta class survives there; it only proves that bare one-step deepening does not automatically make inflation injective on all of H^2(W_4,F_3).
+
+### Revised D2 repair question
+
+The load-bearing question is now:
+\[
+\boxed{\text{For the delta-family, what is the smallest }m\text{ such that its finite representatives are separated from the stable inflation kernel?}}
+\]
+A uniform bound in (p,d,q,k), if obtained, would restore a finite explicit selector theorem with a corrected threshold. Without such a bound, the continuity argument remains existence-only and cannot be promoted to a computable Gate D theorem.
+
+Classification:
+- continuity/stabilization existence: **PASS / LOCAL**;
+- m=1 sufficiency: **OPEN**;
+- uniform computable m-bound: **OPEN / LOAD-BEARING**;
+- finite delta-family reconstruction at corrected depth: **OPEN / LOAD-BEARING**.
