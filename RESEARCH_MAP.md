@@ -3548,3 +3548,17 @@ Classification:
 This closes the already-suspected minimality gap for the specific Kummer selector. The research program should now move to the genuine carrier-vs-target question (W_n\to O\to T), rather than attempting to lower this selector's Zassenhaus window.
 
 Detailed audit: `research/PAPER3_ZASSENHAUSZ_WINDOW_MINIMALITY_AUDIT_2026-09-28.md`.
+
+
+## 2026-09-28 — Paper 3 finite-window recognition chain upgraded
+
+The new finite-window route has now closed three gates at the declared fixed rank-four, p=3, k=3 scope:
+- Gate A: W_10 constructs the full finite lift set L(rho_2), using the already-closed mod-9 carrier on W_4 and the U1-U2 finite-depth factorization.
+- Gate B: the full connecting-map family factors through W_10. The key target-side lemma is H^2(G/P_10,F_3) ~= H^2(G,F_3), obtained from the five-term sequence because P_10 is contained in Phi(G), followed by nonvanishing of degree-two mod-3 cohomology of the finite nontrivial 3-group G/P_10 and Demushkin dim H^2(G,F_3)=1.
+- Gate C: the unique member of the lift family with identically zero connecting map is chi mod 27. Existence is classical Kummerianity; uniqueness follows from the proved variation formula and nondegenerate Demushkin cup product.
+
+Thus the current declared finite recognition chain is
+W_10(G) -> L(rho_2) -> {delta_{3,rho_3}} -> chi mod 27.
+This is a genuine finite-family carrier/selector construction and is distinct from the previously closed single-vector t_2 route.
+
+Gate D is now the only active mathematical gate: determine which parts generalize to arbitrary odd p, even rank, and general k, and separate the sharp Zassenhaus depth input from the cohomological/PD^2 input. No general theorem is claimed until those dependencies are independently audited.
