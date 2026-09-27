@@ -1096,3 +1096,19 @@ Classification: **LONG-TERM PROGRAM — OPEN / AUTHORIZED FOR STAGED IMPLEMENTAT
 Paper 3 has completed the requested audit sequence. Mathematical application correctness is **PASS / CLOSED**, but the independent publication novelty gate is **FAIL / CLOSED**: free-product Kummerianity is already known (Efrat--Quadrelli Prop. 7.5; Quadrelli--Weigel Prop. 5.5), while uniform affine factorization and sharpness are imported from Paper 2 and the f-collapse is a specialization of the established finite-window information-loss mechanism.
 
 The repaired Paper 3 source is commit `55a51dc30579881843658968af2049b0a6dbce8d`. Paper 2 remains frozen/unchanged. Paper 3 is retained as a mathematically sound application/companion manuscript. A future independent Paper 3 requires a genuinely new application theorem or obstruction.
+
+
+## 2026-09-27 — PAPER 3 F-AUDIT CLOSED / SEPARATION GATE ACTIVE
+
+The Efrat–Mináč A/B prior-art audit and the follow-up Factorization-vs-Recognition audit are now recorded as completed. Factorization itself is NON-NOVEL/CLOSED; recognition of a quotient from cohomological data is partially covered/known. The potentially distinct Paper 3 axis is the explicit separation of factorization depth from recognition depth.
+
+Current gate:
+- F1 factorization concept: **NON-NOVEL / CLOSED**
+- F2 quotient recognition from target-side data: **KNOWN / PARTIAL**
+- F3 factorization-vs-recognition as separate threshold invariants: **OPEN / STRONG CANDIDATE**
+- F4 concrete separation theorem/example: **OPEN / LOAD-BEARING**
+- Pure Bockstein sharpness: **DEFERRED** until F4 is resolved.
+
+Next authorized attack: construct or rule out a genuine factorization-vs-recognition separation example in a declared category with fixed filtration and precise window morphisms. No novelty claim is permitted until a mathematical separation theorem/example is established.
+
+Detailed record: research/PAPER3_FACTORIZATION_RECOGNITION_AUDIT_2026-09-27.md.
