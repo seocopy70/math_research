@@ -440,3 +440,35 @@ This avoids both overclaiming W_n → ρ_2 as a theorem in an unspecified catego
 “Cohomological-object level” means exactly: for fixed intrinsic G and fixed coefficient character ρ_2, the set/indexing domain L(ρ_2), the coefficient short exact sequence for each ρ_3, and the resulting connecting maps are well-defined and functorial under the declared group/coefficient-data isomorphisms. It does **not** mean D_•-intrinsic, finite-window-determined, or orientation-reconstructing.
 
 “L(ρ_2) is a torsor” means, when nonempty, the free transitive action of H^1(G,F_3) given by ρ_3 ↦ ρ_3(1+9ν). This is an established algebraic fact about the lift set; it is not yet a claim that a finite filtered carrier is torsor-valued.
+
+
+## 16. CRITICAL REVIEW #4 — VARIATION FORMULA: COCHAIN PROOF VALID, YONEDA SHORTCUT INVALID
+
+The proposed variation proof contains a correct core calculation but an incorrect intermediate Ext/Yoneda identification.
+
+### 16.1 Direct cochain proof
+
+Fix rho_2, rho_3 in L(rho_2), nu in H^1(G,F_3), and rho_3'(g)=rho_3(g)(1+9nu(g)). For f in H^1(G,Z/9(rho_2)), choose a set-theoretic lift tilde f:G->Z/27. With the standard inhomogeneous differential convention, the two connecting cocycles differ by
+(d_{rho_3'}tilde f-d_{rho_3}tilde f)(g,h)=(rho_3'(g)-rho_3(g))tilde f(h).
+Since rho_3'(g)-rho_3(g)=9rho_3(g)nu(g) and rho_3(g)=1 mod 3, under 9Z/27 ~= F_3 this is nu(g) bar(f)(h). Hence
+
+**delta_{3,rho_3(1+9nu)}(f)-delta_{3,rho_3}(f)=nu cup bar(f)**
+
+under the standard convention, with an overall minus sign only if the connecting-map convention is reversed. The essential correction is that the second factor is bar(f), the mod-3 reduction of f.
+
+### 16.2 Ext/Yoneda shortcut withdrawn
+
+The earlier argument using 0 -> Z/9(rho_2) --3--> Z/9(rho_2) -> F_3 -> 0 is invalid because multiplication by 3 on Z/9 has nonzero kernel. Consequently the claimed identification Ext^1_G(Z/9(rho_2),F_3)=H^1(G,F_3) was not justified. The variation theorem does not depend on this shortcut; the direct cochain calculation above proves it.
+
+### 16.3 Zero-set correction
+
+For fixed f, the variation formula gives F_f(nu)-F_f(0)=nu cup bar(f). If bar(f) != 0, Demushkin cup nondegeneracy makes this a nonzero linear functional with 3-dimensional kernel in rank 4. Therefore the zero-set is either empty or an affine hyperplane of size 27. It is **not** automatically nonempty: nu=0 is a zero iff delta_{3,rho_3}(f)=0. If bar(f)=0, the zero-set is either empty or all 81 lifts.
+
+### 16.4 Final classification
+
+- intrinsic variation formula: **PROVED**;
+- fixed-f 27-fold zero-set: **PROVED CONDITIONALLY** on bar(f) != 0 and existence of one zero;
+- global finite-filtered zero existence: **OPEN**;
+- finite filtered construction W_n -> {delta_{3,rho_3}}: **OPEN**.
+
+The next load-bearing problem is therefore finite filtered access to the lift torsor/family, not another variation-formula proof.
