@@ -2943,3 +2943,35 @@ Records:
 
 Decision:
 **Do not submit the former Paper 3 separately in its current form. Treat its present content as the applications/synthesis component of Paper 2.**
+
+
+## 2026-09-27 — PAPER 3 REOPENED AS NEW RESEARCH PROGRAM: FINITE-WINDOW RECOGNITION THRESHOLDS
+
+The former Paper 3 application/free-product manuscript is now definitively closed as an independent novelty paper and remains absorbed into the Paper 2 publication candidate. Paper 1 and Paper 2 are likewise treated as closed/frozen stages for the next research program; their completed mathematics and publication artifacts remain authoritative and are not reopened merely for variants.
+
+A **new Paper 3** is opened with a different mathematical purpose: define and study the amount of finite filtered information required to recognize a global invariant.
+
+Motivation:
+1. Paper 1 showed that finite filtered information can recover a global invariant.
+2. Paper 2 established a sharp affine/Kummer factorization depth (n_{\mathrm{aff}}(k)=p^{k-1}+1).
+3. The natural next abstraction is to make the required recognition depth itself a category-relative mathematical object.
+
+The new target is
+[
+r_T(\mathcal C;D_\bullet)
+=
+\min\{n:W_n(G)\cong W_n(H)\Rightarrow T(G)\cong T(H)
+\text{ for all }G,H\in\mathcal C\},
+]
+with (r_T=\infty) if no such (n) exists. The category is essential: a threshold for one fixed group is trivial/ill-posed because (T(G)) is already fixed.
+
+Factorization and recognition thresholds are explicitly separated. Paper 2's (f_{\mathrm{aff}}(k)=p^{k-1}+1) is a benchmark/bridge and is not automatically identified with a new recognition threshold.
+
+Initial execution plan:
+N0 definition -> N1 basic threshold theory -> N2 Paper 2 bridge -> N3 genuinely new target after prior-art audit -> N4 separation/recognition examples -> N5 category/filtration comparison.
+
+Ultimate goal recorded explicitly: develop a general theory of finite-window recognition for filtered algebraic objects, identifying conditions for finite recognizability, sharp thresholds, and information-theoretic obstructions. **The new Paper 3 is the most natural first step toward that ultimate generalization.**
+
+Detailed authoritative plan: `research/PAPER3_FINITE_WINDOW_RECOGNITION_PROGRAM_2026-09-27.md`.
+
+Decision: **Paper 3 new program ACTIVE; Paper 1/2 CLOSED/FROZEN for this research program.**
