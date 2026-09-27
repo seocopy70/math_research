@@ -595,3 +595,35 @@ Classification:
 - full W4 reconstruction of the entire delta-family: SEPARATE / NOT CLAIMED
 
 Detailed record: research/PAPER3_D2_FINITE_REPRESENTATIVE_SURVIVAL_RESULT_2026-09-28.md.
+
+
+## CRITICAL AUDIT — 2026-09-28 — D2 PARAMETER-SPACE TYPE ERROR
+
+A critical type error was found in the newly written D2-A/D2-B record. The line
+\[
+0\ne\nu\in Q_4^*\cong H^1(G,\mathbf F_3)
+\]
+is false: in the fixed rank-four p=3 case, \(\dim Q_4^*=45\), whereas \(\dim H^1(G,\mathbf F_3)=4\). The variation parameter \(\nu\) in
+\[
+\rho_3'=\rho_3(1+9\nu)
+\]
+must lie in \(H^1(G,\mathbf F_3)\), not in \(Q_4^*\).
+
+Thus the literal earlier D2 formula with \(\forall 0\ne\nu\in Q_4^*\) is **INVALID / TYPE ERROR**. The corrected load-bearing statement is the same existence-of-separating-output assertion with
+\[
+\forall\,0\ne\nu\in H^1(G,\mathbf F_3).
+\]
+For that corrected statement, the D2-A/D2-B proof remains valid: choose \(a\) by Demushkin cup nondegeneracy, lift \(a\) to \(f\), form \(\alpha_4=\nu_4\smile a_4\), and use functoriality to prove survival.
+
+This correction does not affect the identification
+\[
+\ker(H^2(W_4)\to H^2(W_5))\cong Q_4^*;
+\]
+that is a separate output/kernel statement. It does mean that \(Q_4^*\) is the transient cohomological obstruction space, not the parameter space of coefficient-lift variations.
+
+Classification:
+- literal D2 statement with \(\nu\in Q_4^*\): **INVALID / CLOSED**;
+- corrected D2-A finite representative for \(\nu\in H^1(G,\mathbf F_3)\): **PASS / CLOSED**;
+- corrected D2-B W4 -> W5 survival: **PASS / CLOSED**;
+- identification of \(Q_4^*\) as the one-step kernel: **PASS / CLOSED**;
+- delta-family / \(Q_4^*\) direct intersection: **SUPERSEDED / NOT LOAD-BEARING**.
