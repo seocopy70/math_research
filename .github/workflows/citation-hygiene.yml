@@ -1,0 +1,39 @@
+name: Citation hygiene
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  citation-hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject ChatGPT citation artifacts
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          needle = "cite" + "turn"
+          rx = re.compile(re.escape(needle) + r"[0-9]+(?:search|news|file|view)[0-9]+")
+          bad = []
+          for p in Path(".").rglob("*"):
+              if not p.is_file() or ".git" in p.parts:
+                  continue
+              if p.suffix.lower() in {".gz", ".tgz"} or p.name.endswith(".tar.gz"):
+                  continue
+              try:
+                  s = p.read_text(encoding="utf-8")
+              except (UnicodeDecodeError, OSError):
+                  continue
+              if rx.search(s):
+                  bad.append(str(p))
+          if bad:
+              print("Citation-artifact markers found in:")
+              for p in bad:
+                  print(p)
+              raise SystemExit(1)
+          print("Citation hygiene PASS: no ChatGPT citation-artifact markers found.")
