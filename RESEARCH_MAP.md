@@ -3722,3 +3722,18 @@ Classification:
 The deeper-window search for a uniform stabilization bound is no longer required for recognition. The key shift is: recognition only needs the finite transient obstruction sector to be quotiented out, not full stable reconstruction of H^2(G).
 
 Detailed proof: research/PAPER3_D2_TRANSGRESSION_QUOTIENT_CARRIER_RESULT_2026-09-28.md
+
+
+## 2026-09-28 — D3 FINITE SELECTOR PROMOTED; D4 CATEGORY BOUNDARY FIXED
+
+D3 is now **PASS / CLOSED** at the declared fixed rank-4, p=3, q=3 scope. The induction is: arbitrary-candidate factorization transfers K_k from Q_k to G; reduction/descent transfers it to level k-1; induction identifies rho_{k-1}=chi mod p^{k-1}; hence rho_k=chi_k(1+p^{k-1}nu) with nu in H^1(G,F_p). If nu != 0, the repaired D2 transgression-quotient separation produces a finite nonzero obstruction, contradicting K_k. Thus nu=0. Canonical Kummerianity gives existence.
+
+**Critical dependency correction:** D2 does NOT require arbitrary-candidate surjectivity H^1(G,A_k(rho_k))->H^1(G,F_p). That would be circular because surjectivity is essentially the Kummer predicate. The required reduction-surjectivity is for the canonical lower-level module H^1(G,A_{k-1}(chi_{k-1})) -> H^1(G,F_p), supplied by classical Kummerianity of chi_G. This distinction is load-bearing and must remain explicit.
+
+D4 is **PASS / CLOSED only in the affine crossed-cocycle representation category**: n_aff(k)=p^{k-1}+1 is sharp there by the already audited LTE witnesses, including rank-two. This does not prove minimality of the intrinsic Kummer selector window, nor absolute minimality of O_k.
+
+q-status: selector is q-blind at the fixed project scope (q absent from selector input), but no uniform-in-q theorem is claimed. q-family uniformity and q-recovery remain separate/open.
+
+Remaining frontiers: (1) absolute carrier minimality, after fixing a carrier category; (2) minimal selector window below P_{p^{k-1}+1}; (3) uniform-in-q recognition; (4) publication novelty audit.
+
+Detailed record: research/PAPER3_D3_SELECTOR_PROMOTION_D4_BOUNDARY_2026-09-28.md
