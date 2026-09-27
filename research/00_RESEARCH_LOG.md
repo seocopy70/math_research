@@ -2975,3 +2975,25 @@ Ultimate goal recorded explicitly: develop a general theory of finite-window rec
 Detailed authoritative plan: `research/PAPER3_FINITE_WINDOW_RECOGNITION_PROGRAM_2026-09-27.md`.
 
 Decision: **Paper 3 new program ACTIVE; Paper 1/2 CLOSED/FROZEN for this research program.**
+
+
+## 2026-09-27 — PAPER 3 ULTIMATE-GOAL PRIOR-ART AUDIT
+
+Before N3 target selection, the project-level ultimate goal was checked against prior literature rather than assuming that the general framework itself is new.
+
+Key findings:
+- finite determinacy / degree of determinacy is established prior art;
+- recognition from finite quotients / profinite rigidity is established prior art;
+- Efrat–Mináč (TAMS 2017, arXiv:1103.1508) is a particularly close conceptual precedent: it asks how much group-theoretic information is needed to determine a cohomological target and constructs a minimal quotient, with a general cohomological-duality framework;
+- Zassenhaus finite-level determination of cohomological data is also established in the Efrat/Massey-product literature;
+- finite quotients determining infinite graded/filtered structures occur in other settings as well.
+
+The remaining potentially distinct axis is narrower: a uniform category-relative threshold r_T(C;D_bullet) for a prescribed filtration, treated as a primary mathematical object, with explicit separation from factorization depth, sharp same-window/different-target lower bounds, and systematic category/filtration comparison. No exact theorem containing this full combination was located in the present search.
+
+Decision:
+- broad ultimate goal: OPEN / CONDITIONAL, not a novelty claim;
+- category-uniform filtration threshold framework: OPEN / LOAD-BEARING;
+- Bockstein as first N3 target: NOT SELECTED / HIGH PRIOR-ART RISK;
+- N3 framework-level prior-art comparison is now mandatory before substantial target computation.
+
+Detailed audit: research/PAPER3_ULTIMATE_GOAL_PRIOR_ART_AUDIT_2026-09-27.md.
