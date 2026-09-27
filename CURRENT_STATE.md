@@ -1340,3 +1340,23 @@ Current classification:
 - factorization-vs-recognition separation for T_beta: **OPEN / LOAD-BEARING**
 
 Next authorized action: define/test the same-target factorization threshold \(f_{T_\beta}\). Do not infer it from \(r_{T_\beta}\).
+
+
+
+## 2026-09-27 — PAPER 3 T_beta FACTORIZATION THRESHOLD CLOSED
+
+The same-target factorization threshold for T_beta=[beta] has been independently computed.
+
+- W_{p+1} -> G_ab/p^2G_ab -> ker(beta) -> [beta]: **PASS / CLOSED**
+- W_p(G_p) isomorphic to W_p(G_{p^2}) but T_beta(G_p) non-isomorphic to T_beta(G_{p^2}): **PASS / CLOSED**
+- f_{T_beta} <= p+1: **PASS / CLOSED**
+- f_{T_beta} > p: **PASS / CLOSED**
+- therefore f_{T_beta}=p+1: **PASS / CLOSED**
+
+This was derived independently and was not inferred from r_{T_beta}=p+1. Hence
+f_{T_beta}=r_{T_beta}=p+1
+in the declared fixed-rank odd-p Demushkin category with the declared unmarked Zassenhaus windows.
+
+Consequence: same-target factorization-vs-recognition separation using T_beta is **FAIL / CLOSED**. The general separation program remains **OPEN / LOAD-BEARING** and must now vary the target, category, or filtration/window structure rather than assume a separation from this Bockstein case.
+
+Detailed record: research/PAPER3_T_BETA_FACTORIZATION_THRESHOLD_AUDIT_2026-09-27.md.
