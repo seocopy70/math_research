@@ -797,3 +797,20 @@ The primary-source novelty audit is now recorded in research/00_RESEARCH_LOG.md.
 - Overall project novelty: **OPEN / CONDITIONAL**.
 
 Do not describe the project as discovering canonical orientation. If a theorem survives, the candidate contribution is an intrinsic filtered/finite-window reconstruction/factorization theorem for the already-known canonical orientation. The finite-coefficient Kummerian quotient literature must still be compared line-by-line before claiming novelty.
+
+
+## 2026-09-28 — LIVE GATE: Paper 3 Gate B after Gate A closure
+
+Gate A is now **PASS / CLOSED at the declared category-level scope**. From W_10(G), use the already-closed intrinsic mod-9 carrier on the canonical truncation W_10 -> W_4 to obtain rho_2, then form the finite lift set
+\[
+L_{10}(rho_2)=\{\bar rho_3: G/P_{10}(G)\to(\mathbf Z/27)^\times:\bar rho_3\bmod9=\bar rho_2\}.
+\]
+U1-U2 imply L_{10}(rho_2) is canonically identified with the full L(rho_2). This construction is q-blind and does not insert chi mod 27.
+
+**Current load-bearing gate:**
+\[
+\boxed{W_{10}(G)\longrightarrow\{\delta_{3,rho_3}\}_{rho_3\in L(rho_2)}}
+\]
+Determine whether the connecting-map family itself is reconstructible from the finite filtered input. Do not merely restate the finite lift set. Use U2 for coefficient/cohomology factorization and U3 for the finite obstruction realization, but first verify exactly which H^1/H^2 data and relation-level information are available from W_10. No presentation-local Fox row may be promoted to an intrinsic family without the factorization proof.
+
+Detailed Gate A record: research/PAPER3_GATE_A_W10_TO_LRHO2_2026-09-28.md.
