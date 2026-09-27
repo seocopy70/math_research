@@ -103,3 +103,8 @@ Do not treat “torsor-valued carrier” as an established object. It is a candi
 - Unconditional singleton zero-selector failure: OPEN unless an independent counterexample is supplied.
 - Mod-9 projective degree-(2,3) recovery is already audited at PASS/CLOSED level; do not reopen it merely to manufacture a Gate A.
 - Remaining load-bearing gates: finite filtered access to L(ρ_2), finite factorization to the δ_3 family, and χ mod 27 reconstruction/compression.
+
+
+## 2026-09-27 — HA58 OPEN-PROBLEM UPDATE #4
+
+The intrinsic variation formula is now PROVED by direct cochain calculation: delta_{rho_3(1+9nu)}(f)-delta_{rho_3}(f)=nu cup bar(f). The earlier Ext shortcut is withdrawn. For fixed f with bar(f) != 0, any nonempty zero-set has exactly 27 lifts; if bar(f)=0, it has either 0 or 81 lifts. Finite-filtered existence and construction of the lift torsor L(rho_2), the full delta_3 family, and chi mod 27 recognition remain OPEN. Do not reopen the single-vector t_2 route.
