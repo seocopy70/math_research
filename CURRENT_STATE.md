@@ -627,3 +627,47 @@ Classification:
 - corrected D2-B W4 -> W5 survival: **PASS / CLOSED**;
 - identification of \(Q_4^*\) as the one-step kernel: **PASS / CLOSED**;
 - delta-family / \(Q_4^*\) direct intersection: **SUPERSEDED / NOT LOAD-BEARING**.
+
+
+## 2026-09-28 — PAPER 3 D2 REPAIR CLOSED: TRANSGRESSION-QUOTIENT CARRIER
+
+The false bare-Q_k H^2-inflation injectivity step is replaced by a finite extension/transgression quotient.
+
+Let N_k=p^{k-1}, Q_k=W_{N_k+1}, E_k=W_{N_k+2}, and K_k=D_{N_k+1}/D_{N_k+2}. Since [D_i,G]⊂D_{i+1}, K_k is central in E_k and
+\[
+1\to K_k\to E_k\to Q_k\to1
+\]
+is an intrinsic finite central extension. Because K_k⊂Φ(E_k), H^1(Q_k,F_p)→H^1(E_k,F_p) is an isomorphism. The five-term sequence therefore gives
+\[
+\ker(H^2(Q_k,F_p)\to H^2(E_k,F_p))=\operatorname{im}(\operatorname{tra}_k).
+\]
+Define
+\[
+\mathcal O_k(G)=H^2(Q_k,F_p)/\operatorname{im}(\operatorname{tra}_k).
+\]
+
+This quotient, not H^2(Q_k) itself, is the corrected finite obstruction carrier. It is intrinsic to the finite extension E_k→Q_k and does not require identifying H^2(Q_k) with global H^2(G).
+
+For the canonical lift, finite crossed-cocycle factorization plus global Kummerianity gives a finite lift, hence the finite connecting map is already zero in H^2(Q_k), and therefore in O_k. For any false lift rho_k'=rho_k(1+p^{k-1}nu), nu≠0 in H^1(G,F_p), Demushkin cup nondegeneracy and the audited reduction-surjectivity provide f with nonzero global variation nu cup fbar. Its finite representative alpha_k has nonzero inflation to H^2(G), so it cannot lie in im(tra_k), which is killed already in H^2(E_k). Thus its class in O_k is nonzero.
+
+Therefore the induced finite connecting map
+\[
+\bar\delta_{k,rho_k}:H^1(Q_k,Z/p^{k-1}(rho_{k-1}))\to O_k(G)
+\]
+is identically zero exactly for the canonical lift, at the declared Demushkin scope, subject only to the already-audited arbitrary-candidate factorization and global variation/PD^2 inputs.
+
+Classification:
+- bare-Q_k H^2-inflation injectivity: **FAIL / CLOSED** permanently;
+- stable-kernel continuity: **PASS / LOCAL**, no longer load-bearing;
+- transgression-quotient carrier O_k: **PASS / CLOSED**;
+- finite canonical zero map: **PASS / CLOSED**;
+- false-lift finite separation in O_k: **PASS / CLOSED**;
+- arbitrary-(p,d,q,k) D2 repair: **PASS / CLOSED** at the declared selector scope;
+- D3 finite selector: **PASS / LOCAL -> promoted conditional on the audited D1/global inputs**;
+- D4 sharp threshold: **PASS / LOCAL -> compatible with repaired selector**;
+- absolute carrier minimality: **OPEN / NOT CLAIMED**;
+- publication novelty: **OPEN / CONDITIONAL**.
+
+The deeper-window search for a uniform stabilization bound is no longer required for recognition. The key shift is: recognition only needs the finite transient obstruction sector to be quotiented out, not full stable reconstruction of H^2(G).
+
+Detailed proof: research/PAPER3_D2_TRANSGRESSION_QUOTIENT_CARRIER_RESULT_2026-09-28.md
