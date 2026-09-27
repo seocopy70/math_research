@@ -12,28 +12,39 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Reject ChatGPT citation artifacts
+      - name: Reject citation artifacts and private-use characters
         shell: python
         run: |
           from pathlib import Path
           import re
-          needle = "cite" + "turn"
-          rx = re.compile(re.escape(needle) + r"[0-9]+(?:search|news|file|view)[0-9]+")
-          bad = []
-          for p in Path(".").rglob("*"):
-              if not p.is_file() or ".git" in p.parts:
+
+          artifact_rx = re.compile(r"cite(?:turn\d+(?:search|news|file|view|academia)\d+)+")
+          pua_rx = re.compile(r"[\uE000-\uF8FF]")
+          bad_pua = []
+          bad_artifact = []
+
+          for path in Path(".").rglob("*"):
+              if not path.is_file() or ".git" in path.parts:
                   continue
-              if p.suffix.lower() in {".gz", ".tgz"} or p.name.endswith(".tar.gz"):
+              if path.suffix.lower() in {".gz", ".tgz"} or path.name.endswith(".tar.gz"):
                   continue
               try:
-                  s = p.read_text(encoding="utf-8")
+                  text = path.read_text(encoding="utf-8")
               except (UnicodeDecodeError, OSError):
                   continue
-              if rx.search(s):
-                  bad.append(str(p))
-          if bad:
-              print("Citation-artifact markers found in:")
-              for p in bad:
-                  print(p)
+
+              if pua_rx.search(text):
+                  bad_pua.append(str(path))
+              if artifact_rx.search(text):
+                  bad_artifact.append(str(path))
+
+          if bad_pua or bad_artifact:
+              if bad_pua:
+                  print("Private-use Unicode characters found:")
+                  print("\n".join(bad_pua))
+              if bad_artifact:
+                  print("Citation-artifact markers found:")
+                  print("\n".join(bad_artifact))
               raise SystemExit(1)
-          print("Citation hygiene PASS: no ChatGPT citation-artifact markers found.")
+
+          print("Citation hygiene PASS: no PUA characters or ChatGPT citation-artifact markers found.")
