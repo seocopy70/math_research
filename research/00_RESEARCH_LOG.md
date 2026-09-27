@@ -3744,3 +3744,22 @@ Detailed records:
 - research/PAPER3_GATE_C_DELTA3_TO_CHI27_RESULT_2026-09-28.md
 
 Current authorized frontier: Gate D — test the argument for arbitrary rank/prime and general k, while separating what is formal from what depends on Demushkin PD^2, finite p-group cohomology, and the specific sharp Zassenhaus depth.
+
+
+## 2026-09-28 — P-1 DEGREE-3 STATUS FROZEN / FRONTIER RECALIBRATED
+
+The degree-3 P-1 audit was reviewed against the authoritative continuity protocol and current Paper 3 state. The following is frozen:
+
+- (L_3(F)=L_3^{\mathrm{Lie}}(F)\oplus V^{[3]}), dimensions (20+4=24): **PASS / CLOSED**.
+- \(\operatorname{in}_3(r)=X_1^{[3]}\) for (r=x_1^3[x_1,x_2][x_3,x_4]): **PASS / CLOSED**, presentation-level.
+- \(\dim[R_2,V]=4\): **PASS / CLOSED**.
+- \(\operatorname{gr}_3(I_r)=[R_2,V]\oplus\mathbf F_3X_1^{[3]}\), dimension 5: **PASS / CLOSED**.
+- \(\dim L_3(G)=19\): **PASS / CLOSED**.
+- \(\ker(P_G:V\to L_3(G))=\mathbf F_3X_1\): **PASS / CLOSED — presentation-level only**.
+- Canonical/\(\operatorname{Aut}(W_N)\)-invariant line from degree 3 alone: **OPEN**, and not part of the active carrier path.
+
+The corrected filtration product fact \(F_{(2)}F_{(2)}\subseteq F_{(4)}\) is explicitly controlling; the earlier erroneous (F_{(2)}F_{(2)}\subseteq F_{(3)}) statement is superseded and must not be revived.
+
+Research-direction correction: the degree-3 line is not to be promoted to a canonical carrier. The active Paper 3 path has already advanced through Gate A \((W_{10}\to L(\rho_2))\), Gate B (finite \(\delta_3\)-family factorization), and Gate C (unique zero-map selector recovering \(\chi\bmod27\)), all recorded as PASS/CLOSED at their stated scopes. The current frontier is **Gate D: test arbitrary \((p,d,q,k)\) and separate formal ingredients from those depending on Demuškin \(PD^2\), finite p-group cohomology, and the sharp Zassenhaus depth**.
+
+This entry does not claim absolute carrier minimality or publication novelty. It preserves P-1 as a verified baseline computation and prevents reopening the presentation-dependent degree-3 canonical-line route without a genuinely new question.
