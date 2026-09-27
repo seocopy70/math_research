@@ -1,3 +1,21 @@
+## 2026-09-28 — FINAL FRONTIER AUDIT / SELECTOR MINIMALITY CLOSED
+
+The post-recognition frontier has been audited end-to-end.
+
+- Selector minimality for the fixed rank-4, q=3 pro-3 Demuškin group is **PASS / CLOSED**:
+  n_selector(k)=3^{k-1}+1.
+  The proof uses the two correct shallow ranges: m <= 3^{k-2} where chi_k does not factor, and 3^{k-2}<m<=3^{k-1} where it factors but Kummer lifting fails by the S_N(u) valuation obstruction.
+- The finite cup-line carrier C_k=im(H^1(Q_k,F_3) tensor H^1(Q_k,F_3) -> H^2(Q_k,F_3)) is **PASS / CLOSED**, dim C_k=1, using relation-module/cup-product duality rather than bare finite-to-global H^2 injectivity.
+- Therefore 1D finite selector-carrier minimality is **PASS / CLOSED** in the declared linear selector-carrier category.
+- The stronger canonical functional O_k -> F_p reconstructed solely from E_k -> Q_k remains **OPEN / NOT LOAD-BEARING**.
+- Publication novelty remains **OPEN / CONDITIONAL**. The narrow candidate novelty boundary is the finite-factorization/finite-recognition assembly; canonical Kummerian orientation is classical.
+
+Authoritative detailed audit: research/PAPER3_FINAL_FRONTIER_AUDIT_2026-09-28.md, commit b86f332c472cf946902a4e898a597d094fae1b72.
+
+**Next authorized action:** final line-by-line audit of D1/D2, stale manuscript wording cleanup, generalized-q scope reconciliation, then independent LaTeX compilation. Do not reopen the closed selector-minimality or cup-line branches.
+
+---
+
 ## 2026-09-28 — P-1 DEGREE-3 STATUS FROZEN / CURRENT FRONTIER GATE D
 
 P-1 is retained as a verified presentation-level baseline, not as the active carrier route.
