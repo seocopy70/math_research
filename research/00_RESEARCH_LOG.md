@@ -3677,3 +3677,12 @@ Classification:
 
 Detailed record: research/PAPER3_DELTA3_MAZUR_MASSEY_PRIOR_ART_AUDIT_2026-09-28.md, Addendum 5.
 Next authorized action: resume carrier computation under the independent U1–U3 lemma chain.
+
+
+## 2026-09-28 — Citation hygiene correction
+
+The previous hygiene CI was found to have a false-negative condition because the repository citation artifacts contain invisible Private Use Area delimiters. GitHub search identified 15 affected files. All 15 were cleaned, and direct post-cleanup reads confirmed zero Private Use Area characters and no visible citation-artifact pattern in those files.
+
+The citation-hygiene workflow was hardened to fail on any Private Use Area character and on visible ChatGPT citation-artifact patterns. Hardened CI run 36331775297 on commit 8102ab49c3e3173bec4bd103cad7aaf07c63654a completed successfully.
+
+The earlier hygiene PASS based on the old detector is superseded. Current repository-wide citation hygiene is **PASS / CLOSED**, based on direct file verification plus the hardened CI run. Mathematical research status is unchanged; U1–U3 prior-art comparison remains complete and carrier computation may resume.
