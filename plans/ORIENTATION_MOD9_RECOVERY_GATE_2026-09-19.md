@@ -24,13 +24,15 @@ Therefore the next target is not another mod-3 automorphism scalar.
 
 ## 2. Candidate, but not yet canonical recovery: mod-9 cup/Bockstein
 
-A natural first candidate is the mod-9 cohomological lift of the Demushkin duality pairing. For a one-relator pro-\(p\) presentation, the cup-product matrix with coefficients \(\mathbf Z/p^m\) is controlled by the Magnus/Fox coefficients of the defining relation. Literature records, for a standard relation, that the coefficients of the relation determine the cup-product matrix over \(\mathbf Z/p^m\), including the diagonal contribution from the power \(x_1^q\). citeturn0search5turn1search4
+A natural first candidate is the mod-9 cohomological lift of the Demushkin duality pairing. For a one-relator pro-\(p\) presentation, the cup-product matrix with coefficients \(\mathbf Z/p^m\) is controlled by the Magnus/Fox coefficients of the defining relation. Literature records, for a standard relation, that the coefficients of the relation determine the cup-product matrix over \(\mathbf Z/p^m\), including the diagonal contribution from the power \(x_1^q\). 
+
 
 For \(q=3\), the first nonzero lift beyond mod 3 is therefore expected to appear at mod 9. This is only a candidate mechanism at this gate, not yet a proved recovery theorem.
 
 ## 3. Intrinsic orientation characterization
 
-The canonical orientation of a Demushkin/PD2 group is characterized by the dualizing module. A general PD2 criterion states that a character \(\rho:G\to\mathbf Z_p^\times\) equals the orientation exactly when the corresponding twisted top cohomology has the correct size at every \(p^m\)-level. citeturn1search1
+The canonical orientation of a Demushkin/PD2 group is characterized by the dualizing module. A general PD2 criterion states that a character \(\rho:G\to\mathbf Z_p^\times\) equals the orientation exactly when the corresponding twisted top cohomology has the correct size at every \(p^m\)-level. 
+
 
 Thus there is a rigorous intrinsic target:
 \[
