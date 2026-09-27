@@ -3637,3 +3637,13 @@ research/PAPER3_DELTA3_MAZUR_MASSEY_PRIOR_ART_AUDIT_2026-09-28.md
 commit 3c6c0eac5e91fe5ee3c36ae66487e3e087f0522d.
 
 Next authorized action: perform a narrower Kummerian/1-cyclotomic prior-art comparison for whether existing theorems construct the coefficient-lift torsor or equivalent connecting-map family from finite quotient/Zassenhaus data without assuming the canonical orientation. No new carrier computation is authorized before that comparison.
+
+
+## 2026-09-28 — KUMMERIAN / 1-CYCLOTOMIC FOUR-LAYER PRIOR-ART AUDIT
+
+Completed the authorized literature-first audit before computation. Efrat–Quadrelli (2019), Quadrelli–Weigel (2022), and Quadrelli (2024) confirm the standard Kummerian finite coefficient-lifting and cocycle framework and the classical uniqueness of the canonical Demushkin orientation. The four layers were separated: (i) L(rho_2) is formally a standard lift torsor when nonempty but no bare-Q_k intrinsic construction was found; (ii) individual finite coefficient-lift obstruction machinery is known once orientation is supplied, but the exact project family is not located as an orientation-free finite-input object; (iii) the exact variation law delta_{rho_3(1+9nu)}-delta_{rho_3}=nu cup f-bar was not located as a Kummerian/1-cyclotomic theorem; (iv) no direct theorem reconstructing the full family from bare Q_k=G/P_{k+1} without importing orientation was found.
+
+Classification: (i) PASS / LOCAL; (ii) PASS / LOCAL; (iii) OPEN / NOT VERIFIED; (iv) OPEN / LOAD-BEARING. Classical canonical orientation/Kummerianity remains KNOWN/CLOSED. The finite-window factorization remains the decisive boundary.
+
+Detailed record: research/PAPER3_DELTA3_MAZUR_MASSEY_PRIOR_ART_AUDIT_2026-09-28.md, Addendum 3.
+Next authorized action: compare the four-layer result against U1–U5 and isolate the genuinely finite-data statements; no new carrier computation until that comparison is complete.
