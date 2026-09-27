@@ -554,3 +554,19 @@ Classification:
 Detailed record: research/PAPER1_PAPER3_Q4_P4P5_BRIDGE_AUDIT_2026-09-28.md.
 
 Next authorized side action: test the delta-variation family against the Q4* transgression sector; do not restart the old search for an orientation vector inside W45.
+
+## 2026-09-28 — CRITICAL REFINEMENT: D2 / Q4* COMPARISON TYPE
+
+The proposed direct comparison “delta-family ∩ Q4*” is now corrected as INVALID / CLOSED — type mismatch.
+
+The delta-family consists of connecting homomorphisms into H^2, whereas Q4* is identified by transgression with a 45-dimensional subspace of H^2(W4,F3). Thus the correct comparison is output-class-wise:
+delta_{3,rho3}(f) in tra(Q4*) = ker(H^2(W4)->H^2(W5)).
+
+For every false lift rho3'=rho3(1+9nu), nu nonzero, the global variation formula and Demushkin cup nondegeneracy give some f with nonzero variation. Since a class in the one-step kernel maps to zero in H^2(G), that separating global variation class cannot be in the one-step kernel. This is PASS / LOCAL, conditional on the finite representative/factorization needed at W4.
+
+The load-bearing finite question is:
+for every nu nonzero, does there exist f whose finite representative of nu cup fbar survives W4 -> W5?
+
+The Paper 1 10-25-10 structure remains potentially useful only after dualizing Q4 and proving the induced Sp4(F3)-module convention. It is not a decomposition of the delta-family itself.
+
+Detailed correction: research/PAPER1_PAPER3_Q4_P4P5_BRIDGE_AUDIT_2026-09-28.md.
