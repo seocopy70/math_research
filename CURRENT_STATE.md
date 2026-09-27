@@ -249,3 +249,14 @@ at commit 471321c973de05c6c5ac407f3944b3a12017b331.
 Next authorized gate:
 W_n(G) → {δ_{3,ρ_3}}_{ρ_3∈L(ρ_2)}
 with an explicit category and no importation of the canonical orientation into the factorization proof.
+
+
+## 2026-09-27 — HA58 THIRD CRITICAL REVIEW: VARIATION / GATE SCOPE LOCK
+
+Two corrections are now locked.
+
+1. The intrinsic variation formula δ_{3,ρ_3(1+9ν)}(f)−δ_{3,ρ_3}(f)=±(ν∪f) remains **OPEN**. Therefore the statement that the full rank-four zero-selector is already a COUNTEREXAMPLE/CLOSED is too strong. What is proved is only the conditional consequence: if the variation formula holds and is nonzero, then fixed-f zeros form an affine hyperplane of size 27. Unconditional singleton failure remains OPEN unless an independent counterexample is supplied.
+
+2. Gate A must not reopen the already-audited mod-9 result. The projective degree-(2,3) carrier recovering χ mod 9 is already recorded as PASS/CLOSED at the declared audited level. The unresolved HA61 gates are: finite-input construction of L(ρ_2) without importing higher orientation data; finite-input factorization to the δ_3 family; and reconstruction/compression of χ mod 27.
+
+Terminology: “cohomological-object level” now explicitly means well-defined/functorial for fixed G and fixed ρ_2, not D_•-intrinsic or finite-window-determined. When nonempty, L(ρ_2) is an H^1(G,F_3)-torsor algebraically; this does not establish a finite filtered torsor-valued carrier.
