@@ -1,3 +1,20 @@
+
+## 2026-09-27 — M2 POST-BLUMER–QUADRELLI F1 SHARPNESS AUDIT CLOSED
+
+A targeted post-publication literature audit was completed before computation. Marina Palaisti, arXiv:2609.00253 (submitted 2026-08-31), is explicitly an F2 two-relator paper: it studies the added commuting relator, develops support-block reductions, and proves a five-fold vanishing theorem for the full-interior-support case while reducing remaining support types. It does not treat the F1 one-relator family or prove sharpness/failure for F1 at n>q. Targeted searches for F1 + n>q + Massey/Demuškin likewise found no exact converse or obstruction.
+
+The F2 result is therefore a methodological comparison, not prior art resolving F1. Its one-relator reduction relies on the extra commuting relator/second central defect; no transfer to F1 is assumed.
+
+Classification:
+- M2 post-Blumer–Quadrelli prior-art audit: **PASS / CLOSED** (audited negative; not an absolute claim about unindexed/unpublished work).
+- F1 proof-mechanism breakpoint at n=q+1: **PASS / CLOSED** from independent hand calculation.
+- Actual F1 sharpness/failure at n=q+1: **OPEN / LOAD-BEARING**.
+- M3 finite-window recognition: **NOT YET AUTHORIZED**.
+
+Next authorized action: smallest M1 computation (p,q,d,n)=(3,3,2,4), U_5(F_3), with exact admissibility/cup-vanishing/Dwyer-lift conditions and independent verification.
+
+Detailed audit: research/M2_POST_BQ_F1_SHARPNESS_LITERATURE_AUDIT_2026-09-27.md
+
 ## 2026-09-27 — PAPER 3 M-GATE: BLUMER–QUADRELLI F1 MASSEY SHARPNESS
 
 The uploaded arXiv-2603.15464v2 source was independently unpacked and checked against the current Paper 3 target discussion.
