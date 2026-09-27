@@ -1,7 +1,7 @@
 # Paper 3 — T_beta Factorization Threshold Audit
 
 Date: 2026-09-27
-Status: **PASS / CLOSED**
+Status: **PASS / CLOSED (mathematical threshold; novelty OPEN)**
 
 ## Scope
 
@@ -13,6 +13,20 @@ T_\beta(G)=[\beta_G],\qquad
 in the fixed odd-p fixed-rank Demushkin category with the declared Zassenhaus-window convention.
 
 The result \(r_{T_\beta}=p+1\) is not used as evidence for the factorization threshold.
+
+## Target convention — locked
+
+Here \(T_\beta(G)\) means the **isomorphism class of the linear map**
+\[
+\beta_G:H^1(G,\mathbf F_p)\to H^2(G,\mathbf F_p),
+\]
+where isomorphisms are independent linear isomorphisms on source and target.
+
+This convention is essential. The actual map with fixed bases/identifications is not determined by its rank. In the fixed-rank Demushkin category,
+\[
+\dim H^1(G,\mathbf F_p)=d,\qquad \dim H^2(G,\mathbf F_p)=1,
+\]
+so the linear-map isomorphism class is determined by the rank (0 or 1).
 
 ## Definition
 
@@ -31,7 +45,7 @@ For every pro-p group,
 D_{p+1}(G)\subseteq G^{p^2}[G,G].
 \]
 
-Hence the quotient
+Hence
 \[
 G/[G^{p^2}[G,G]]
 \cong G_{\mathrm{ab}}/p^2G_{\mathrm{ab}}
@@ -57,17 +71,7 @@ the long exact sequence gives
 \]
 
 All \(\mathbf Z/p^2\)-valued characters factor through
-\(G_{\mathrm{ab}}/p^2G_{\mathrm{ab}}\). Therefore \(W_{p+1}\) determines \(\ker\beta_G\), hence \(\operatorname{rank}\beta_G\).
-
-In the fixed-rank Demushkin category,
-\[
-\dim H^2(G,\mathbf F_p)=1.
-\]
-So the isomorphism class of the linear map
-\[
-\beta_G:\mathbf F_p^d\to\mathbf F_p
-\]
-is determined by its rank.
+\(G_{\mathrm{ab}}/p^2G_{\mathrm{ab}}\). Therefore \(W_{p+1}\) determines \(\ker\beta_G\), hence \(\operatorname{rank}\beta_G\), and under the locked target convention it determines \([\beta_G]\).
 
 Thus there is a well-defined factorization
 \[
@@ -77,6 +81,8 @@ and
 \[
 f_{T_\beta}\le p+1.
 \]
+
+**Audit status: PASS.**
 
 ## Lower bound: W_p does not determine T_beta
 
@@ -109,7 +115,9 @@ Therefore no function of \(W_p\) alone can determine \(T_\beta\), so
 f_{T_\beta}>p.
 \]
 
-This lower bound is independent of the recognition equality.
+**Convention-compatibility lock:** the lower-bound pair is being used only under the same fixed odd-p fixed-rank Demushkin category and the same unmarked Zassenhaus-window convention declared for Paper 3. No marked structure or presentation coordinates are being smuggled into the target/window comparison.
+
+**Audit status: PASS.**
 
 ## Conclusion
 
@@ -128,7 +136,22 @@ Combined with the separately proved recognition result, this yields
 \]
 for the declared category, filtration and window convention.
 
-This is an equality result, not a separation result.
+This equality is mathematically closed under the stated conventions. It is **not** by itself a novelty claim.
+
+## Novelty boundary
+
+The factorization mechanism
+\[
+W_{p+1}\Rightarrow G_{\mathrm{ab}}/p^2G_{\mathrm{ab}}
+\Rightarrow[\beta_G]
+\]
+and closely related Bockstein/finite-quotient observations may have antecedents in the literature. Therefore:
+
+- mathematical threshold: **PASS / CLOSED**;
+- same-target Bockstein separation attempt: **FAIL / CLOSED**;
+- literature novelty of the threshold/equality: **OPEN / NOT YET AUDITED**.
+
+No novelty claim should be made until the relevant prior literature is explicitly checked against this exact target/category/filtration definition.
 
 ## Logical boundary
 
@@ -138,11 +161,16 @@ Any future separation search must vary at least one of the target, category, or 
 
 ## Classification
 
+- target convention (linear-map isomorphism class): **LOCKED / PASS**
 - factorization definition: **PASS / CLOSED**
+- \(W_{p+1}\Rightarrow G_{\mathrm{ab}}/p^2G_{\mathrm{ab}}\): **PASS / CLOSED**
+- \(G_{\mathrm{ab}}/p^2G_{\mathrm{ab}}\Rightarrow[\beta_G]\): **PASS / CLOSED under target convention**
 - \(f_{T_\beta}\le p+1\): **PASS / CLOSED**
+- S1/S2 lower-bound pair under Paper 3 conventions: **PASS / CLOSED**
 - \(f_{T_\beta}>p\): **PASS / CLOSED**
 - \(f_{T_\beta}=p+1\): **PASS / CLOSED**
 - same-target \(T_\beta\) separation: **FAIL / CLOSED**
+- novelty of the threshold/equality: **OPEN / NOT YET AUDITED**
 - general factorization-vs-recognition separation program: **OPEN / LOAD-BEARING**
 
 Detailed evidence:
