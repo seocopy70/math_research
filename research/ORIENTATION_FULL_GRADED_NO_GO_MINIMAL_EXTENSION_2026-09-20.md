@@ -22,7 +22,7 @@ Mináč–Pasini–Quadrelli–Tân prove that for Demushkin groups
 operatorname{gr}mathbf F_p[[G]]cong U(L(G))
 ]
 
-is quadratic/PBW and give precisely this quadratic presentation for odd (p). The same source recalls that (q) is a separate invariant encoded by the canonical orientation. citeturn3search0turn2search0
+is quadratic/PBW and give precisely this quadratic presentation for odd (p). The same source recalls that (q) is a separate invariant encoded by the canonical orientation. 
 
 Thus, in the present rank-four odd-prime setting,
 
