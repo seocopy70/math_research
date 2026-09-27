@@ -159,7 +159,7 @@ That supports a **conditional novelty claim**, not a priority claim.
 The manuscript's current wording is appropriately cautious. Do not strengthen it to “first”, “new”, or “previously unknown” without broader literature verification.
 
 Relevant literature checks:
-Efrat 2014 explicitly concerns Zassenhaus filtrations and representations; Mináč–Rogelstad–Tân 2016 covers Demushkin groups and their free pro-(p) products; Quadrelli 2024 treats Kummerian/1-cyclotomic structure and free/amalgamated constructions. citeturn3search0turn1academia44turn2search3
+Efrat 2014 explicitly concerns Zassenhaus filtrations and representations; Mináč–Rogelstad–Tân 2016 covers Demushkin groups and their free pro-(p) products; Quadrelli 2024 treats Kummerian/1-cyclotomic structure and free/amalgamated constructions. citeturn3search0turn1academia44turn2search3
 
 ## 7. Hidden referee attack: is the main theorem too tautological?
 
