@@ -283,7 +283,7 @@ This distinction is now a controlling definition for the successor program.
 
 ## 7. Gate N2 — First concrete question
 
-Fix the precise Demuškin class used by the relevant theorem, and let
+For a nontrivial recognition problem, fix an admissible Demuškin class containing at least the standard family members whose orientations are to be distinguished (in particular, the varying-(f) family used in the sharpness/q-collapse analysis), and let
 \[
 D_\bullet=\text{Zassenhaus filtration},
 \qquad
@@ -303,6 +303,8 @@ p^{k-1}+1.
 The right-hand side is already established as the affine factorization threshold, not yet as the recognition threshold.
 
 ### Authorized routes
+
+The lower-bound route must use genuinely different admissible groups, not two presentations of one fixed group. In particular, a class containing only one isomorphism class makes the recognition problem degenerate.
 
 1. **Lower bound:** construct \(G,H\in\mathcal C\) with
    \[
