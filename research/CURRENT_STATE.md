@@ -814,3 +814,24 @@ U1-U2 imply L_{10}(rho_2) is canonically identified with the full L(rho_2). This
 Determine whether the connecting-map family itself is reconstructible from the finite filtered input. Do not merely restate the finite lift set. Use U2 for coefficient/cohomology factorization and U3 for the finite obstruction realization, but first verify exactly which H^1/H^2 data and relation-level information are available from W_10. No presentation-local Fox row may be promoted to an intrinsic family without the factorization proof.
 
 Detailed Gate A record: research/PAPER3_GATE_A_W10_TO_LRHO2_2026-09-28.md.
+
+
+## 2026-09-28 — Gates B/C CLOSED; LIVE GATE D
+
+Gate B is **PASS / CLOSED**: W_10 determines the full family of connecting maps. The key new target-side step is the five-term sequence for 1 -> P_10 -> G -> Q_10 -> 1. Since P_10 is contained in Phi(G), H^1(Q_10,F_3) -> H^1(G,F_3) is an isomorphism, hence H^2(Q_10,F_3) -> H^2(G,F_3) is injective. Nonzero H^2(Q_10,F_3), together with dim H^2(G,F_3)=1, makes it an isomorphism. Connecting-map naturality plus U2 then gives the entire delta-family from finite quotient cohomology.
+
+Gate C is **PASS / CLOSED** at mod 27: the canonical Kummerian orientation gives one lift with delta=0. The proved variation formula and nondegenerate Demushkin cup product imply that no second lift can have delta identically zero. Therefore the unique zero-map member of the finite family is chi mod 27.
+
+The current finite-window recognition chain is:
+W_10(G) -> L(rho_2) -> {delta_{3,rho_3}} -> chi mod 27.
+
+**LIVE GATE D:** separate the formal general mechanism from the rank-four/mod-27 special inputs, then test arbitrary odd p, arbitrary even rank d, and general k. In particular track:
+1. the sharp window N=p^(k-1)+1;
+2. P_N subset Phi(G);
+3. H^2(G,F_p) dimension/PD^2 target identification;
+4. nonzero H^2(G/P_N,F_p) and inflation isomorphism;
+5. coefficient-lift torsor and variation formula at level k;
+6. uniqueness of the globally zero connecting map;
+7. which parts require Demushkin hypotheses and which extend to broader categories.
+
+Do not claim a general theorem until each item is independently checked.
