@@ -4092,3 +4092,35 @@ Detailed record: research/PAPER3_D3_SELECTOR_PROMOTION_D4_BOUNDARY_2026-09-28.md
 Current classification: O_k is a sufficient canonical carrier PASS/CLOSED; absolute minimality NOT WELL-POSED until category fixed; linear quotient minimality OPEN; functorial universal minimality OPEN. Do not revive large 45-dimensional computations before this categorical target is fixed.
 
 Detailed record: research/PAPER3_CARRIER_MINIMALITY_BOUNDARY_2026-09-28.md
+
+
+## 2026-09-28 — GATE D GENERALIZATION CLOSED AFTER CORRECTED D2
+
+Gate D has been re-derived from the failure of the bare-Q_k H^2 inflation argument rather than patched by assumption.
+
+Scope: torsion-free Demuškin pro-p groups, odd p, even rank d>=2, q in {0,p,p^2,...}, every k>=2.
+
+Core corrected construction:
+Q_k=G/D_{p^{k-1}+1}, E_k=G/D_{p^{k-1}+2}, K_k=D_{p^{k-1}+1}/D_{p^{k-1}+2},
+O_k=H^2(Q_k,F_p)/im(tra_k).
+
+D1: uniform odd-p affine semidirect filtration gives factorization of every candidate crossed cocycle through Q_k.
+D2 canonical branch: global Kummerian lift factors through Q_k, so finite delta is zero directly; no finite-to-global H^2 injectivity is used.
+D2 false branch: for rho_k'=chi_k(1+p^{k-1}nu), nu!=0, PD^2 cup nondegeneracy plus canonical lower-level Kummerianity gives f with nonzero global variation. The finite representative cannot be transgression because transgression classes die in E_k while the witness has nonzero global inflation. Thus O_k detects every false first-order lift.
+D3: induction gives finite selector uniqueness at every k.
+D4: LTE witness gives exact declared selector threshold p^{k-1}+1.
+
+Important non-circularity: arbitrary-candidate Kummer surjectivity is never assumed; only canonical lower-level reduction-surjectivity is used.
+
+Classification:
+- Gate D: PASS/CLOSED.
+- D1: PASS/CLOSED.
+- corrected D2 carrier and separation: PASS/CLOSED.
+- D3 all-k selector: PASS/CLOSED.
+- D4 threshold: PASS/CLOSED.
+- uniform-in-q within the declared torsion-free Demuškin family: PASS/CLOSED.
+- arbitrary pro-p generalization: NOT CLAIMED.
+- carrier minimality: OPEN.
+- publication novelty: OPEN/CONDITIONAL.
+
+Authoritative proof: research/PAPER3_GATE_D_GENERAL_ODD_P_RANK_Q_K_RESULT_2026-09-28.md, commit 99bbbeb2d6072b8f435ada806e08e48781f5d381.
