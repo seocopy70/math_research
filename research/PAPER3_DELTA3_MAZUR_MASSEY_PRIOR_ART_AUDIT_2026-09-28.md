@@ -342,13 +342,15 @@ The Kummerian literature instead starts with an already oriented pair \((G,\thet
 \[
 H^1(G,\mathbf Z_p(\theta)/p^n)\to H^1(G,\mathbf F_p).
 \]
-Quadrelli's quotient-inheritance result requires a normal subgroup satisfying additional hypotheses, including containment in \(\ker\theta\) and surjectivity of a restriction map; it is therefore not the same statement as arbitrary-candidate factorization through the specific lower-3-central quotient \(Q_k\). citeturn2search0turn4search0
+Quadrelli's quotient-inheritance result requires a normal subgroup satisfying additional hypotheses, including containment in \(\ker\theta\) and surjectivity of a restriction map; it is therefore not the same statement as arbitrary-candidate factorization through the specific lower-3-central quotient \(Q_k\). 
+
 
 **Classification:** U2 as a consequence of U1 = **PASS / CLOSED**; identification with an existing Kummerian quotient theorem = **FAIL / CLOSED**.
 
 ### U3 — finite Kummer/Fox obstruction
 
-The audited Kummerian sources explicitly use arbitrary prescribed generator values for twisted 1-cocycles and compute the relation obstruction via the twisted cocycle/commutator formula; this is genuine prior art for the **methodological ingredients** of U3. citeturn4search0
+The audited Kummerian sources explicitly use arbitrary prescribed generator values for twisted 1-cocycles and compute the relation obstruction via the twisted cocycle/commutator formula; this is genuine prior art for the **methodological ingredients** of U3. 
+
 
 However, the project U3 packages those ingredients into a finite twisted-Fox criterion on the finite quotient \(Q_k\), with the minimal one-relator hypothesis made explicit. No searched source was found that states this exact finite-window Fox criterion as the equivalent recognition predicate on \(Q_k\).
 
