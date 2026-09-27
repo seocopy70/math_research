@@ -2943,3 +2943,24 @@ Records:
 
 Decision:
 **Do not submit the former Paper 3 separately in its current form. Treat its present content as the applications/synthesis component of Paper 2.**
+
+
+## 2026-09-27 — PAPER 3 S3 UPPER-BOUND GATE OPENED
+
+S1·S2 are both **PASS / CLOSED**, giving the recognition lower bound
+\[
+r_{T_\beta}(\mathcal C;D_\bullet)\ge p+1.
+\]
+The next and currently active gate is S3: prove or refute the upper bound
+\[
+r_{T_\beta}(\mathcal C;D_\bullet)\le p+1.
+\]
+The intended target is that, for the declared fixed-rank Demuškin category,
+\[
+W_{p+1}(G)\cong W_{p+1}(H)\Rightarrow \beta_G\cong\beta_H.
+\]
+The working proof route is to identify the canonical p-power operation encoded by the truncated filtered group, establish an intrinsic/natural reconstruction of the Bockstein from that operation, and only then use the one-relator formula as an independent check. No claim that the p-power map is automatically available, or that the Bockstein is automatically its dual, is accepted until the functorial and basis-free statements are proved.
+
+A dedicated stage document was created: research/PAPER3_S3_BOCKSTEIN_UPPER_BOUND_AUDIT_2026-09-27.md.
+
+Classification: **OPEN — S3 active**. The equality r_{T_\beta}=p+1 remains unproved; p+1 is a working hypothesis, not a theorem.
