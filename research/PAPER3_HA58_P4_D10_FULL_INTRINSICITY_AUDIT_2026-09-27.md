@@ -403,3 +403,40 @@ W_n(G) → {δ_{3,ρ_3}}_{ρ_3∈L(ρ_2)}
 in a precisely declared category, followed by the question of whether a coarser orientation target can be recovered from a richer carrier without importing the orientation definition itself.
 
 A torsor/affine carrier is one possible compression, not a presupposed answer.
+
+
+## 15. CRITICAL REVIEW #3 — VARIATION FORMULA AND GATE DECOMPOSITION CORRECTION — 2026-09-27
+
+The third critical review exposes two further precision issues.
+
+### 15.1 The variation formula is genuinely OPEN
+
+The repository source HA61-B5-13 explicitly states that
+δ_{3,ρ_3(1+9ν)}(f) − δ_{3,ρ_3}(f) = ±(ν∪f)
+is the expected intrinsic variation identity but is **not yet promoted to PASS/PROVED**. It is therefore incorrect to use the dimension-3 kernel calculation as an unconditional counterexample to singleton zero selection.
+
+Correct status:
+- intrinsic variation formula: **OPEN**;
+- conditional consequence “if the variation formula holds, then fixed-f zeros form an affine hyperplane of size 27 in rank 4”: **PROVED CONDITIONALLY**;
+- unconditional singleton zero-selector status: **OPEN / NOT ESTABLISHED**;
+- any proof that a global zero-map is non-singleton must wait for the variation theorem (or an independent explicit counterexample).
+
+The earlier wording “full-torsor zero-selector uniqueness = COUNTEREXAMPLE / CLOSED” is therefore withdrawn and replaced by the conditional statement above.
+
+### 15.2 The next gate must not reopen an already-closed mod-9 problem
+
+The earlier proposal to split the next gate as W_n → ρ_2 → L(ρ_2) → δ_3 is useful conceptually, but Gate A is not uniformly OPEN in the current Paper 3 baseline. The project already has a projective degree-(2,3) carrier whose recovery of χ mod 9 is recorded as presentation/gauge invariant and PASS/CLOSED at the declared mod-9 level. Thus the correct unresolved question is not simply “can W_n recover ρ_2?”; it is whether the exact declared finite-window category carries the already-audited mod-9 carrier in the form required to seed the HA61 coefficient-lift construction.
+
+The load-bearing separation is therefore:
+(A) mod-9 carrier/recovery: **CLOSED at the declared audited level**;
+(B) construction/factorization of the full lift domain L(ρ_2) from the finite filtered input, without importing χ beyond the recovered mod-9 datum: **OPEN**;
+(C) construction of the δ_3 family from that finite input: **OPEN**;
+(D) compression/recognition of χ mod 27 from the family: **OPEN**.
+
+This avoids both overclaiming W_n → ρ_2 as a theorem in an unspecified category and unnecessarily reopening a completed mod-9 audit.
+
+### 15.3 Terminology lock
+
+“Cohomological-object level” means exactly: for fixed intrinsic G and fixed coefficient character ρ_2, the set/indexing domain L(ρ_2), the coefficient short exact sequence for each ρ_3, and the resulting connecting maps are well-defined and functorial under the declared group/coefficient-data isomorphisms. It does **not** mean D_•-intrinsic, finite-window-determined, or orientation-reconstructing.
+
+“L(ρ_2) is a torsor” means, when nonempty, the free transitive action of H^1(G,F_3) given by ρ_3 ↦ ρ_3(1+9ν). This is an established algebraic fact about the lift set; it is not yet a claim that a finite filtered carrier is torsor-valued.
