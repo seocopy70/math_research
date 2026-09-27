@@ -3257,3 +3257,31 @@ The continuity protocol was amended accordingly in commit 399284d86566b3b70c2806
 
 Current F1 M2 literature audit remains OPEN / MANDATORY. No Massey computation is authorized until the theorem-by-theorem prior-art audit is completed and classified.
 
+
+
+## 2026-09-27 — PAPER 3 F1/q=3,n=4 MASSEY–DWYER ORIGINAL-TEXT AUDIT
+
+Blumer–Quadrelli arXiv:2603.15464v2 원문(main.tex)을 직접 대조하여, 예정된 F1 sharpness computation의 입력·Dwyer convention·lift 조건을 확정했다.
+
+### Confirmed from source
+- 각 \(\alpha_h\in H^1(G,\mathbf F_3)\)는 생성자들에 대한 값으로 결정되는 cohomology class이며, 단일 matrix entry가 아니다.
+- Dwyer convention은 \((A_i)_{h,h+1}=\alpha_h(x_i)\), \((B_i)_{h,h+1}=\alpha_h(y_i)\)이다. 따라서 \((\alpha_1,\ldots,\alpha_4)\)에서 \(A_1,B_1,A_2,B_2\) 등의 행렬을 구성해야 하며, 역방향 \(A\mapsto(\alpha_h)\)를 기본 정의로 사용할 수 없다.
+- fourfold Massey product의 necessary adjacent condition은 \(\alpha_h\smile\alpha_{h+1}=0\)이다.
+- \(d=2\)인 F1에서는 이를 \(c_hd_{h+1}-d_hc_{h+1}=0\)로 쓸 수 있다. 여기서 \(c_h=\alpha_h(x_2), d_h=\alpha_h(y_2)\).
+- \(q=3,n=4\)에서 full Dwyer relation은 \(A_1^3[A_1,B_1][A_2,B_2]=I_5\)이다.
+
+### Critical logical correction
+\([A_1^3,B_1]=1\)은 full fourfold Dwyer lift의 존재와 동치가 아니다. 이는 \(n\le q\) 증명에서 자동으로 확보되는 local step이었으나, \(n=q+1\)에서는 더 이상 자동이 아니며, 이후 \(A_2,B_2\)의 compensation 가능성을 별도로 검사해야 한다.
+
+### Classification
+- alpha extraction definition: **PASS / CLOSED**
+- Dwyer matrix convention: **PASS / CLOSED**
+- adjacent cup condition: **PASS / CLOSED**
+- naive \(A\mapsto\alpha\) implementation assumption: **FAIL / CLOSED**
+- identifying \([A_1^3,B_1]=1\) with full lift: **FAIL / CLOSED**
+- F1 \(q=3,n=4\) local obstruction / sharpness: **OPEN / LOAD-BEARING**
+
+### Computation boundary
+Nonzero \(\alpha_h\in H^1(G,\mathbf F_3)\cong\mathbf F_3^4\)만 제한하면 sequence 후보는 \(80^4=40,960,000\)개이다. 다만 즉시 전수계산하지 않고, 먼저 hand-check 가능한 소예와 독립 구현 검증을 거친 뒤 cup filter → \((A_1,B_1)\) realization → \([A_1^3,B_1]\) local test → \((A_2,B_2)\) compensation → full relation 순으로 분리해 계산한다.
+
+Next authorized action: original-text audit 결과를 기준으로 small-example independent verification을 수행한 뒤 exhaustive computation 여부를 결정한다.
