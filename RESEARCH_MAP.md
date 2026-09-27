@@ -3513,3 +3513,24 @@ The global map is synchronized with the latest HA58/P4/D10 audit corrections.
 - The “torsor-valued carrier” remains a candidate compression strategy, not an established result.
 
 The immediate mathematical probe is the intrinsic variation formula: prove it or produce a counterexample, then use the result to design the finite-data factorization into the lift-indexed delta_3 family.
+
+
+## AUTHORITATIVE UPDATE — 2026-09-27 — HA58 CRITICAL REVIEW #4
+
+The intrinsic variation formula is now **PROVED** by direct cochain calculation. For rho_3'=rho_3(1+9nu) and f in H^1(G,Z/9(rho_2)), with bar(f) the mod-3 reduction,
+
+delta_{rho_3'}(f)-delta_{rho_3}(f)=nu cup bar(f)
+
+under the standard inhomogeneous differential convention, up to overall sign under the opposite connecting-map convention. The earlier Yoneda/Ext shortcut is withdrawn because multiplication by 3 on Z/9(rho_2) is not injective.
+
+For fixed f with bar(f) != 0, any nonempty zero-set is an affine hyperplane of size 27 in rank 4. The earlier claim that nu=0 automatically gives a zero is withdrawn. If bar(f)=0, the zero-set is either empty or all 81 lifts.
+
+Current locks:
+- variation formula: **PROVED**;
+- fixed-f 27-fold zero-set: **PROVED CONDITIONALLY** on nonempty zero-set and bar(f) != 0;
+- finite-filtered access to L(rho_2): **OPEN**;
+- finite-filtered access to the full delta_3 family: **OPEN**;
+- family-to-chi mod 27 recognition: **OPEN**;
+- q=3 rank-four single-vector t_2 route: **COUNTEREXAMPLE**.
+
+The next load-bearing task is finite-data realization of the lift torsor/family, not another variation-formula proof.
