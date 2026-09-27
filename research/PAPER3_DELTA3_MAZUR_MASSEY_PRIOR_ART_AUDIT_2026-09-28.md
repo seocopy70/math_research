@@ -304,3 +304,71 @@ Therefore the possible publication novelty is localized at the **finite-factoriz
 **Classification: PASS / LOCAL.** The mathematical finite-window theorem remains PASS / CLOSED in the research record; publication novelty remains OPEN / CONDITIONAL.
 
 Next authorized action: perform the final source-level comparison of U1–U3, especially the semidirect finite-depth factorization, against any equivalent finite-coefficient quotient theorem. No new carrier computation before that comparison.
+
+
+## Addendum 5 — U1–U3 source-level comparison: finite-factorization boundary — 2026-09-28
+
+The final source-level comparison was performed before any new carrier computation.
+
+### U1 — semidirect finite-depth lemma
+
+U1 proves, for the specific finite semidirect product
+\[
+S_k=A_k\rtimes U_1,
+\qquad A_k=\mathbf Z/3^k,
+\]
+that its lower 3-central series satisfies
+\[
+P_j(S_k)=3^{j-1}A_k\rtimes U_j,
+\qquad P_{k+1}(S_k)=1.
+\]
+The proof then uses the crossed-cocycle homomorphism
+\[
+\psi(g)=(z(g),\rho(g))
+\]
+to obtain \(\psi(P_{k+1}(G))=1\) for an **arbitrary candidate** \(\rho:G\to U_1\), hence factorization through \(Q_k=G/P_{k+1}(G)\).
+
+The audited literature contains the standard twisted-cocycle law and finite-coefficient Kummerian criteria, but no theorem was located that states this exact semidirect finite-depth calculation together with the resulting arbitrary-candidate \(Q_k\)-factorization as a Kummerian quotient theorem.
+
+**Classification:** U1 finite-depth mechanism = **PASS / LOCAL as prior-art boundary**; exact packaged factorization theorem = **OPEN / NOT FOUND**.
+
+### U2 — cohomology factorization
+
+Once U1 is established, U2 is a formal consequence: both \(Z^1\) and \(B^1\) factor through \(Q_k\), giving
+\[
+H^1(Q_k,A_k(\bar\rho))\cong H^1(G,A_k(\rho)).
+\]
+The Kummerian literature instead starts with an already oriented pair \((G,\theta)\) and studies the surjectivity
+\[
+H^1(G,\mathbf Z_p(\theta)/p^n)\to H^1(G,\mathbf F_p).
+\]
+Quadrelli's quotient-inheritance result requires a normal subgroup satisfying additional hypotheses, including containment in \(\ker\theta\) and surjectivity of a restriction map; it is therefore not the same statement as arbitrary-candidate factorization through the specific lower-3-central quotient \(Q_k\). citeturn2search0turn4search0
+
+**Classification:** U2 as a consequence of U1 = **PASS / CLOSED**; identification with an existing Kummerian quotient theorem = **FAIL / CLOSED**.
+
+### U3 — finite Kummer/Fox obstruction
+
+The audited Kummerian sources explicitly use arbitrary prescribed generator values for twisted 1-cocycles and compute the relation obstruction via the twisted cocycle/commutator formula; this is genuine prior art for the **methodological ingredients** of U3. citeturn4search0
+
+However, the project U3 packages those ingredients into a finite twisted-Fox criterion on the finite quotient \(Q_k\), with the minimal one-relator hypothesis made explicit. No searched source was found that states this exact finite-window Fox criterion as the equivalent recognition predicate on \(Q_k\).
+
+**Classification:** U3 ingredients = **KNOWN / CLOSED**; exact finite-window Kummer/Fox assembly = **OPEN / NOT FOUND**.
+
+### Final boundary
+
+The source-level comparison therefore preserves the previous localization:
+
+\[
+\boxed{\text{possible novelty is at finite factorization/assembly, not at Kummerianity itself.}}
+\]
+
+More precisely:
+- canonical Kummerian/1-cyclotomic orientation: **KNOWN / CLOSED**;
+- finite twisted coefficient-lifting criterion: **KNOWN / CLOSED**;
+- quotient inheritance for certain already-oriented pairs: **KNOWN / CLOSED**, but not the project's arbitrary-candidate \(Q_k\) factorization;
+- U1 semidirect finite-depth factorization: **PASS / LOCAL; exact literature identity not found**;
+- U2: **PASS / CLOSED consequence of U1**;
+- U3 finite-window Fox assembly: **OPEN / NOT FOUND**;
+- overall publication novelty: **OPEN / CONDITIONAL**.
+
+**Next authorized action:** the carrier computation may now resume, but only against the precisely stated finite-window theorem and with U1–U3 treated as independently load-bearing lemmas. No claim of absolute novelty is permitted from this audit alone.
