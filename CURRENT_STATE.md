@@ -916,3 +916,23 @@ New load-bearing target:
 Either prove this kernel is zero for the actual \(Q_k\), or characterize it intrinsically. Do not claim one-dimensional finite compression until this is settled.
 
 Authoritative correction is appended to the finite cup-line compression record, commit f99a4b38de1bd5becb8b4f3d8307b628708745ef.
+
+
+## 2026-09-28 — PAPER 3 FINITE CUP-LINE KERNEL CLOSED
+
+The active kernel question for C_k = im(H^1(Q_k,F_p)^{⊗2} -> H^2(Q_k,F_p)) is now resolved abstractly.
+
+For a minimal free pro-p presentation G=F/R, Q_k=G/D_{p^{k-1}+1}=F/R_k with R_k=R D_{p^{k-1}+1}(F). Because p is odd and p^{k-1}+1>=3, the added quotient relators lie in D_3(F). Hence the image of R_k in D_2(F)/D_3(F) is exactly the one-dimensional span of the Demushkin relator's nonzero quadratic initial form.
+
+Standard relation-module/cup-product duality identifies the dual of the finite cup map with this degree-two initial-form map. Therefore dim_Fp C_k=1. This is the missing proof: it does not use finite-to-global H^2 injectivity. The resulting nonzero one-dimensional C_k -> H^2(G) is therefore injective.
+
+Consequences:
+- ker(C_k -> H^2(G))=0: PASS/CLOSED;
+- C_k embeds in O_k: PASS/CLOSED;
+- every D2 false-branch witness lies in the intrinsic one-dimensional cup line, and every false candidate has a nonzero such witness: PASS/CLOSED;
+- 1D intrinsic finite selector carrier: PASS/CLOSED;
+- linear selector-carrier minimality = 1: PASS/CLOSED;
+- 45-dimensional calculation: DEFERRED / NOT REQUIRED;
+- stronger canonical functional O_k -> F_p determined from E_k -> Q_k alone: OPEN / NOT LOAD-BEARING.
+
+Primary detailed proof: research/PAPER3_FINITE_CUP_LINE_COMPRESSION_2026-09-28.md, commit c5aa630f7b49eca16ac7696c0989c9a6da1df7eb. The relation/cup compatibility is standard and documented in the cited literature audit.
