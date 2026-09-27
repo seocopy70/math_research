@@ -49,7 +49,8 @@ The seven-term extension of the five-term sequence places the middle term in
 \[
 H^1(Q,H^1(N,A))\longrightarrow H^3(Q,A),
 \]
-with the displayed map being the relevant \(d_2^{1,1}\). Standard spectral-sequence bookkeeping confirms that \(E_\infty^{1,1}\) is the kernel of this differential once the preceding page is reached. citeturn0search21turn0search0
+with the displayed map being the relevant \(d_2^{1,1}\). Standard spectral-sequence bookkeeping confirms that \(E_\infty^{1,1}\) is the kernel of this differential once the preceding page is reached. 
+
 
 This is important because \(E_\infty^{1,1}\) is not the same object as the cokernel closed in Hard Attack 31.
 
