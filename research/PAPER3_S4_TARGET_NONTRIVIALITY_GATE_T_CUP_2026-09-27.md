@@ -75,3 +75,42 @@ The S4 failure is a successful application of the project protocol:
 The computation stage is intentionally not entered because the target fails before any rank-4 calculation is meaningful.
 
 This record supersedes any active status that treated S4 as ready for rank-4 separation computation.
+
+
+## Structural correction to TN2 — 2026-09-27
+
+The original TN2 formulation was too strong for the fixed-rank Demuškin category. Since the Demuškin classification theorem makes the parameter q a complete isomorphism invariant in this category, every isomorphism-invariant target T(G) is, abstractly, a function of q. Therefore a requirement of the literal form
+\[
+T\neq F(\chi\bmod p^k)
+\]
+should NOT be treated as a universal admissibility gate within this category: depending on how \chi/q are identified, it may be structurally impossible or merely a reparameterization issue.
+
+The meaningful question is instead the **information resolution of the target relative to q**: which p-adic information about q is required to distinguish T-values, and at what filtered depth is that information recognizable?
+
+This yields an important fork for Paper 3:
+
+1. **Stay in fixed-rank Demuškin category.** Use the already established family
+\[
+T_k(G)=\chi_G\bmod p^k
+\]
+and the verified finite-quotient threshold relation
+\[
+r_{T_k}=n(k)=p^{k-1}+1
+\]
+where the existing theorem supplies the required equivalence. This gives a clean target-dependent threshold family, but is a reinterpretation/generalization of existing results rather than an intrinsically new target type.
+
+2. **Seek genuinely richer target dependence.** Expand the category to one with multiple independent classification parameters, e.g. a free product of several Demuškin blocks as already studied in Paper 2. Then targets may depend on aggregate versus blockwise parameters, creating the possibility of threshold behavior not reducible to a single q-resolution function.
+
+### Revised gate
+
+Replace literal TN2 by:
+
+**TN2' — Non-redundancy / resolution test.** Determine whether the target introduces information not already represented by the chosen q/\chi resolution level, rather than requiring T to be non-functional of \chi in the absolute sense.
+
+For each candidate target, record:
+- parameter dependence: which classification parameters determine T;
+- resolution level: what p-adic/finite information about those parameters is needed;
+- existing threshold theorem: whether the threshold follows immediately from an established finite-quotient theorem;
+- genuine novelty: whether the target produces a new mathematical separation rather than a repackaging.
+
+Consequently, Massey-product and Aut-orbit searches are **PAUSED**, not rejected: they should not consume computation resources inside the one-parameter category until the category/target fork is decided.
