@@ -211,7 +211,8 @@ with
 \]
 This confirms that the orientation/q relationship used in the project's standard-family audit is classical, not a new bridge.
 
-Source: Quadrelli-related 1-cyclotomicity literature and the 2024 survey/article. citeturn3search1turn2search2
+Source: Quadrelli-related 1-cyclotomicity literature and the 2024 survey/article. 
+
 
 **Status: PRIOR ART / CLOSED as novelty.**
 
@@ -227,7 +228,8 @@ for all n, and prove a group-theoretic characterization for torsion-free pairs. 
 
 This is important because it shows that coefficient-lifting towers are already a standard language for the canonical orientation. A trivial-coefficient tower \(H^1(G,\mathbf Z/p^n)\) therefore needs a very strong independent obstruction claim before it can be presented as a new orientation carrier.
 
-Source: Efrat–Quadrelli, *The Kummerian Property and Maximal Pro-p Galois Groups*. citeturn1search0turn1search1
+Source: Efrat–Quadrelli, *The Kummerian Property and Maximal Pro-p Galois Groups*. 
+
 
 **Status: PRIOR ART / CLOSED as novelty boundary.**
 
@@ -247,7 +249,8 @@ coming from
 \to\mathbf Z/q\mathbf Z
 \to0.
 \]
-The kernel of this Bockstein has codimension one, and its cup-orthogonal complement supplies the relevant level character; the resulting kernel is the characteristic level subgroup. citeturn4view0
+The kernel of this Bockstein has codimension one, and its cup-orthogonal complement supplies the relevant level character; the resulting kernel is the characteristic level subgroup. 
+
 
 This is materially overlapping with the conceptual claim that finite coefficient-extension/Bockstein data can recover finite layers of the canonical Demushkin tower.
 
@@ -261,15 +264,18 @@ Efrat–Quadrelli explicitly use the Bockstein associated to
 \[
 0\to\mathbf Z/p\to\mathbf Z/p^2\to\mathbf Z/p\to0
 \]
-and relate it to defining-relation coefficients in Demushkin/one-relator computations. This confirms that the mod-p Bockstein is classical relation/cohomology data in precisely the relevant setting. citeturn1search1
+and relate it to defining-relation coefficients in Demushkin/one-relator computations. This confirms that the mod-p Bockstein is classical relation/cohomology data in precisely the relevant setting. 
+
 
 **Status: PRIOR ART / CLOSED.**
 
 ## L5. Higher Bockstein/generalized Bockstein literature
 
-Generalized Bockstein maps for profinite groups and their relation to higher cohomological structure/Massey products are already developed in the literature. The existence of a higher Bockstein layer is therefore not itself novel. citeturn2search0turn2academia6
+Generalized Bockstein maps for profinite groups and their relation to higher cohomological structure/Massey products are already developed in the literature. The existence of a higher Bockstein layer is therefore not itself novel. 
 
-Likewise, recent work on Bockstein spectral sequences treats the entire tower of Bockstein differentials functorially. citeturn2search1
+
+Likewise, recent work on Bockstein spectral sequences treats the entire tower of Bockstein differentials functorially. 
+
 
 **Status: PRIOR ART / CLOSED as novelty of “higher Bockstein package” alone.**
 
@@ -277,7 +283,8 @@ Likewise, recent work on Bockstein spectral sequences treats the entire tower of
 
 Pál–Quick's 2026 work proves an \(A_3\)-formality distinction for odd-prime Demushkin groups: q-invariant 3 versus q-invariant not equal to 3. This is not the same invariant as \(\mathcal B_{27}\), but it reinforces that finite cohomological structures can detect q-specific information and that q=3 is already a recognized cohomological boundary.
 
-Source: Pál–Quick, *A_3-formality for Demushkin groups at odd primes*. citeturn0academia4
+Source: Pál–Quick, *A_3-formality for Demushkin groups at odd primes*. 
+
 
 **Status: ADJACENT PRIOR ART / no direct identity established.**
 
@@ -285,7 +292,8 @@ Source: Pál–Quick, *A_3-formality for Demushkin groups at odd primes*. cit
 
 The 2026 Blumer–Quadrelli paper studies whether Demushkin-type groups admit a 1-cyclotomic orientation and constructs families that do not. This is directly relevant to any proposed finite orientation criterion: the orientation property is already an active structural object, so a new finite carrier must be distinguished from merely restating 1-cyclotomic/Kummerianity.
 
-Source: *Variations of Demushkin Groups that are not Absolute Galois Groups*. citeturn5academia2
+Source: *Variations of Demushkin Groups that are not Absolute Galois Groups*. 
+
 
 **Status: ADJACENT PRIOR ART / novelty gate remains stringent.**
 
@@ -293,7 +301,8 @@ Source: *Variations of Demushkin Groups that are not Absolute Galois Groups*. �
 
 Palaisti's 2026 work concerns higher Massey products in Demushkin variations and explicitly tracks support/projective directions and the persistence of the power term \(x_1^q\). It is not a direct prior-art match for \(\mathcal B_{27}\), but it is relevant to the project's broader finite-layer strategy and should not be confused with a new orientation carrier.
 
-Source: *Higher Massey Products in Demuškin Variations...*. citeturn5academia1
+Source: *Higher Massey Products in Demuškin Variations...*. 
+
 
 **Status: ADJACENT / no direct identity.**
 
