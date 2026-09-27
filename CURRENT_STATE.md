@@ -507,3 +507,50 @@ Classification:
 - uniform m-bound: **OPEN / LOAD-BEARING**.
 
 Detailed calculation: research/PAPER3_D2_P4_P5_HAND_CALC_2026-09-28.md
+
+
+## 2026-09-28 — PAPER 1 ↔ PAPER 3 Q4 / P4-P5 BRIDGE AUDIT
+
+A dedicated side investigation resolved the previously noted 45-dimensional coincidence.
+
+For the verified Paper 1 construction,
+\[
+Q_4=L_4(F)/(R)_4,\quad \dim Q_4=45,
+\]
+and the orbit span satisfies \(\dim W_{45}=45\), hence
+\[
+\boxed{W_{45}=Q_4}.
+\]
+
+For the rank-4 p=3 Demuškin group, the free restricted-Lie/mild Zassenhaus presentation identifies the degree-4 Zassenhaus graded piece with the same quadratic degree-4 quotient:
+\[
+\boxed{P_4/P_5\cong Q_4\cong W_{45}}.
+\]
+This is a structural identification, not a dimension-only inference.
+
+The corrected D2 one-step extension
+\[
+1\to P_4/P_5\to W_5\to W_4\to1
+\]
+has transgression image
+\[
+\ker(H^2(W_4,\mathbf F_3)\to H^2(W_5,\mathbf F_3))
+\cong H^1(P_4/P_5,\mathbf F_3)
+\cong Q_4^*
+\cong W_{45}^*,
+\]
+with dimension 45.
+
+Thus the old Paper 1 45-dimensional object is precisely the degree-4 Zassenhaus fiber, while the corrected Paper 3 D2 one-step cohomological ambiguity is its dual. This does not revive the old orientation-carrier route.
+
+Classification:
+- W45=Q4: PASS / CLOSED
+- Q4 isomorphic to P4/P5: PASS / CLOSED at the declared rank-4 p=3 Demuškin scope
+- D2 one-step kernel isomorphic to Q4*: PASS / CLOSED
+- delta-family / Q4* intersection: OPEN / LOAD-BEARING
+- m=1 full D2 selector: OPEN / LOAD-BEARING
+- Paper 1 orientation-carrier route: HISTORICAL / SUPERSEDED
+
+Detailed record: research/PAPER1_PAPER3_Q4_P4P5_BRIDGE_AUDIT_2026-09-28.md.
+
+Next authorized side action: test the delta-variation family against the Q4* transgression sector; do not restart the old search for an orientation vector inside W45.
