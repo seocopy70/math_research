@@ -1112,3 +1112,42 @@ Current gate:
 Next authorized attack: construct or rule out a genuine factorization-vs-recognition separation example in a declared category with fixed filtration and precise window morphisms. No novelty claim is permitted until a mathematical separation theorem/example is established.
 
 Detailed record: research/PAPER3_FACTORIZATION_RECOGNITION_AUDIT_2026-09-27.md.
+
+
+## 2026-09-27 — PAPER 3 S2 BOCKSTEIN SEPARATION GATE CLOSED
+
+The rank-2 separation candidate
+\[
+G_p=\langle x,y\mid x^p[x,y]=1\rangle,
+\qquad
+G_{p^2}=\langle x,y\mid x^{p^2}[x,y]=1\rangle
+\]
+has passed S2.
+
+S1 had already established
+\[
+W_p(G_p)\cong W_p(G_{p^2})
+\]
+for the declared unmarked truncated filtered object.
+
+S2 now independently establishes:
+\[
+\beta_{G_p}(\chi_x)\neq0,\quad \beta_{G_p}(\chi_y)=0,
+\]
+while
+\[
+\beta_{G_{p^2}}=0.
+\]
+Hence the full Bockstein maps have different ranks (1 versus 0), and their images are respectively all of \(H^2\cong\mathbf F_p\) and zero.
+
+Classification:
+- S1 window isomorphism: **PASS / CLOSED**
+- S2 full Bockstein difference: **PASS / CLOSED**
+- S2 image difference: **PASS / CLOSED**
+- recognition lower bound \(r_{T_\beta}\ge p+1\): **PASS / LOCAL**
+- exact threshold \(r_{T_\beta}=p+1\): **OPEN**
+- same-target factorization-vs-recognition separation: **OPEN / LOAD-BEARING**
+
+Important boundary: the pair establishes a Bockstein recognition lower bound only. It does not prove equality and does not by itself establish \(f_T\ne r_T\), since factorization and recognition must be compared for the same target.
+
+Detailed record: research/PAPER3_S2_BOCKSTEIN_SEPARATION_AUDIT_2026-09-27.md.
