@@ -3534,3 +3534,17 @@ Current locks:
 - q=3 rank-four single-vector t_2 route: **COUNTEREXAMPLE**.
 
 The next load-bearing task is finite-data realization of the lift torsor/family, not another variation-formula proof.
+
+
+## 2026-09-28 — PAPER 3 ZASSENHAUSZ SELECTOR THRESHOLD SHARP
+
+The finite Kummer recognition selector has now been given a sharp Zassenhaus-window theorem in the fixed rank-four q=3 setting. For (A_k=\mathbf Z/3^k), (N=3^{k-1}), U1–U3 prove factorization through (G/P_{N+1}), while the canonical candidate and the class (f(x_2)=1) give (z(x_2^N)\neq0\pmod{3^k}), with (v_3(\sum_{j=0}^{N-1}(1-3)^{-j})=k-1). Hence (G/P_N) is insufficient.
+
+Classification:
+- exact selector threshold (n_k^{Kum}=3^{k-1}+1): **PASS / CLOSED**;
+- absolute minimality among arbitrary carriers: **OPEN / NOT CLAIMED**;
+- publication novelty: **OPEN / CONDITIONAL**.
+
+This closes the already-suspected minimality gap for the specific Kummer selector. The research program should now move to the genuine carrier-vs-target question (W_n\to O\to T), rather than attempting to lower this selector's Zassenhaus window.
+
+Detailed audit: `research/PAPER3_ZASSENHAUSZ_WINDOW_MINIMALITY_AUDIT_2026-09-28.md`.
