@@ -1,31 +1,32 @@
 
-## 2026-09-27 — PAPER 3 T_beta FACTORIZATION AUDIT CRITICAL CORRECTION
+## 2026-09-27 — PAPER 3 SEPARATION AXIS: FACTORIZATION VS RECOGNITION DEFINITIONAL CORRECTION
 
-Critical review of the same-target Bockstein factorization audit identified two boundary conditions that must be explicit.
+A structural correction is now required before any new target computation.
 
-1. Target convention is locked as the **linear-map isomorphism class**
+If the factorization invariant is defined for the **same target** T by
 \[
-T_\beta(G)=[\beta_G],\qquad \beta_G:H^1(G,\mathbf F_p)\to H^2(G,\mathbf F_p).
+f_T=\min\{n:T\text{ factors through }W_n\},
 \]
-The source and target are allowed independent linear isomorphisms. Only under this convention does rank determine the target when \(\dim H^2=1\). The basis-dependent actual map is not determined by rank.
-
-2. The S1/S2 lower-bound pair \(G_p,G_{p^2}\) is explicitly used under the same Paper 3 fixed odd-p fixed-rank Demushkin category and the same **unmarked Zassenhaus-window** convention. No marked structure or presentation coordinates are part of the window comparison.
-
-The mathematical conclusion survives:
+and recognition is defined by
 \[
-\boxed{f_{T_\beta}=r_{T_\beta}=p+1}.
+r_T=\min\{n:W_n(G)\cong W_n(H)\Rightarrow T(G)\cong T(H)\text{ for all }G,H\in\mathcal C\},
 \]
-The threshold equality is mathematically **PASS / CLOSED** under the locked conventions. However, this does **not** close the literature novelty question. The factorization mechanism and related Bockstein/finite-quotient observations may have prior antecedents, so exact novelty remains **OPEN / NOT YET AUDITED**.
+then these are the same information condition at category level: both say precisely that T is determined by the n-window. Therefore a genuine numerical separation \(f_T\ne r_T\) for the same T cannot be the intended research phenomenon.
 
-Corrected classification:
-- target convention: **LOCKED / PASS**
-- \(W_{p+1}\Rightarrow G_{\mathrm{ab}}/p^2G_{\mathrm{ab}}\): **PASS / CLOSED**
-- \(G_{\mathrm{ab}}/p^2G_{\mathrm{ab}}\Rightarrow[\beta]\): **PASS / CLOSED under target convention**
-- \(f_{T_\beta}\le p+1\): **PASS / CLOSED**
-- S1/S2 lower-bound pair under Paper 3 conventions: **PASS / CLOSED**
-- \(f_{T_\beta}>p\): **PASS / CLOSED**
-- \(f_{T_\beta}=p+1\): **PASS / CLOSED**
-- same-target T_beta separation: **FAIL / CLOSED**
-- novelty of the threshold/equality: **OPEN / NOT YET AUDITED**
+The meaningful separation axis is instead:
+\[
+\boxed{\text{factorization threshold }f_O\text{ of a richer carrier/observation }O
+\quad\text{versus recognition threshold }r_T\text{ of a target }T=\Phi(O).}
+\]
+Here O may retain extension, cocycle, orientation, or other structure that is later compressed to T. Then \(f_O\) and \(r_T\) can legitimately differ because they are thresholds for different objects.
 
-Detailed audit: research/PAPER3_T_BETA_FACTORIZATION_THRESHOLD_AUDIT_2026-09-27.md, corrected commit `0ac32319db372c8e420173a5c9904ca6227e0649`.
+This explains the T_beta outcome more sharply: once O=T_beta, equality with the recognition threshold is forced by definition, not an accidental theorem. The computation \(f_{T_\beta}=r_{T_\beta}=p+1\) is therefore useful as a consistency check, but it cannot be a separation result.
+
+New Paper 3 gate:
+- F3 as literal same-target \(f_T\) vs \(r_T\) separation: **INVALID / CLOSED — DEFINITIONAL IDENTITY**.
+- F3' richer-carrier vs coarser-target separation: **OPEN / LOAD-BEARING**.
+- First task: identify a nontrivial carrier O and a genuine quotient/compression \(\Phi(O)=T\), then determine \(f_O\) and \(r_T\) independently.
+
+Candidate direction retained from earlier work: the finite Kummer/affine orientation carrier O_k versus a coarser target T_k (or a secondary cohomological target), but it must pass a non-redundancy and prior-art screen before computation. The target must not collapse back to the same object O_k.
+
+This correction supersedes any earlier language suggesting that a same-target numerical inequality \(f_T\ne r_T\) itself could be a theorem.
