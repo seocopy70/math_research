@@ -360,3 +360,46 @@ The earlier sentence claiming that the third cited source directly established l
 - richer secondary carrier / finite-filtered zero-selector: OPEN.
 
 The phrase “끝까지 진행했다” is corrected to mean: the authorized audit procedure was completed, not that the orientation-reconstruction problem was solved.
+
+
+## 14. CRITICAL REVIEW #2 — SCOPE REFINEMENT OF THE SURVIVING δ_3 FAMILY — 2026-09-27
+
+The second critical review is accepted with four scope corrections.
+
+### 14.1 Separate three claims about δ_3
+
+1. Each connecting map is a well-defined cohomological invariant: PROVED.
+2. The family, indexed by all coefficient lifts L(ρ_2), is a natural cohomological object once ρ_2 is fixed: PROVED.
+3. The family is obtainable from the finite filtered object W_n, or is D_•-intrinsic in the sense required by Paper 3: OPEN.
+
+Thus the earlier label “intrinsic cohomological δ_3 family = PROVED” is retained only with the explicit qualifier “cohomological-object level.” It is not evidence that W_n determines the family.
+
+### 14.2 Nonemptiness of L(ρ_2): existence versus filtered reconstruction
+
+If ρ_2 is specifically the canonical Demuškin orientation reduced modulo 9, nonemptiness of L(ρ_2) follows from the externally established existence of the canonical orientation. This is EXTERNAL, not an OPEN existence claim.
+
+What remains OPEN is the stronger non-circular statement needed by Paper 3: can the relevant lift existence, or the part of the lift torsor needed for orientation reconstruction, be obtained from the declared finite filtered/relation input without importing the canonical orientation?
+
+### 14.3 Scope of the t_2 counterexample
+
+HA61-B5-12 gives a decisive q=3 rank-four witness λ=e_2^*, p=e_1≠0. Since λ is nonzero, an element v with λ(v)=1 exists by choosing an element representing the corresponding nonzero mod-3 abelianization class. Hence the audited conjugation law really produces t_2↦t_2+p.
+
+The counterexample is therefore COUNTEREXAMPLE in the q=3 branch, not merely conditional. This already refutes any universal theorem asserting a canonical single t_2 for a class containing that branch. We do not claim that every q=9 or 27|q branch has the identical coordinate-shift formula.
+
+### 14.4 Zero-selector status
+
+The full coefficient-lift zero-selector is not PROVED/LOCAL. The corrected status is:
+- uniqueness of a zero in the full rank-four lift torsor: COUNTEREXAMPLE / CLOSED when the nonzero variation functional is used, because its kernel has dimension 3;
+- the intrinsic variation formula δ_{3,ρ_3(1+9ν)}(f)-δ_{3,ρ_3}(f)=±(ν∪f): OPEN;
+- existence of a zero from finite filtered input: OPEN;
+- a one-dimensional affine restriction of the lift torsor, if any: OPEN.
+
+Thus “torsor-valued carrier” is a strategic candidate, not yet a theorem.
+
+### 14.5 Next load-bearing gate
+
+The next gate is not simply “prove the family is intrinsic”: cohomological naturality is already established. The decisive finite-window question is
+W_n(G) → {δ_{3,ρ_3}}_{ρ_3∈L(ρ_2)}
+in a precisely declared category, followed by the question of whether a coarser orientation target can be recovered from a richer carrier without importing the orientation definition itself.
+
+A torsor/affine carrier is one possible compression, not a presupposed answer.
