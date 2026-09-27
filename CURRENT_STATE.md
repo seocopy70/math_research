@@ -792,3 +792,24 @@ Thus lambda_k is still a 1-dimensional detector in the global category, but only
 The finite-pair question remains OPEN: whether E_k -> Q_k canonically determines an equivalent nonzero functional on the witness family. Non-recoverability is NOT claimed.
 
 Authoritative correction: research/PAPER3_CARRIER_SPAN_REDUCTION_2026-09-28.md, commit 948ad02cff8d2c9dfa226b7fbaba17055b9d46f0.
+
+
+## 2026-09-28 — PAPER 3 MIDPOINT CHECKPOINT / RECOGNITION CLOSED, CARRIER COMPRESSION FRONTIER
+
+A formal midpoint checkpoint was recorded in `research/PAPER3_MIDPOINT_SUMMARY_2026-09-28.md`.
+
+The large-scale state is now frozen as follows:
+- D1 finite factorization through Q_k: PASS/CLOSED at the declared torsion-free Demushkin scope;
+- corrected D2 transgression-quotient separation: PASS/CLOSED;
+- D3 finite Kummer selector: PASS/CLOSED;
+- D4 affine depth p^{k-1}+1: PASS/CLOSED in the declared affine category;
+- bare-Q_k H^2 inflation injectivity: FAIL/CLOSED;
+- absolute carrier minimality: OPEN and category-dependent;
+- finite-pair intrinsic 1D reconstruction from E_k -> Q_k: OPEN/LOAD-BEARING.
+
+The correct global detector is existential per false candidate:
+for every rho != chi_k there exists f with lambda_k(delta_{k,rho}(f)) != 0. No claim is made that every finite obstruction output survives globally.
+
+Next authorized attack is abstract finite-pair reconstruction. The 45-dimensional rank-4 p=3 calculation remains deferred unless the abstract route cannot decide the question.
+
+Authoritative midpoint note: research/PAPER3_MIDPOINT_SUMMARY_2026-09-28.md.
