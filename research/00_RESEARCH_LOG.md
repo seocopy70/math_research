@@ -3927,3 +3927,56 @@ Classification:
 - uniform m-bound: OPEN / LOAD-BEARING.
 
 Detailed record: research/PAPER3_D2_P4_P5_HAND_CALC_2026-09-28.md
+
+
+## 2026-09-28 — PAPER 1 ↔ PAPER 3 Q4 / P4-P5 BRIDGE AUDIT
+
+A side investigation was authorized to determine whether the old Paper 1 45-dimensional structure has a genuine relation to the current Paper 3 D2 layer.
+
+Verified Paper 1 facts:
+\[
+\dim L_4=60,\quad \dim(R)_4=15,\quad \dim Q_4=45,
+\]
+and the verified orbit span W45 subset Q4 has dimension 45. Therefore
+\[
+\boxed{W_{45}=Q_4}.
+\]
+
+Using the free restricted-Lie description of the p-Zassenhaus graded object and the mild Demuškin quadratic initial relation, the degree-4 restricted graded piece has no independent degree-4 p-power generator beyond the ordinary Lie degree-4 part: X^[3] has degree 3, [X^[3],Y]=ad(X)^3Y is ordinary Lie degree 4, and the next p-power has degree 6. The degree-4 restricted relation ideal is the same quadratic-relator ideal used in Q4. Hence
+\[
+\boxed{P_4/P_5\cong Q_4\cong W_{45}}.
+\]
+
+The independent MRT primary-source audit gives dim P4/P5=45, agreeing with the Paper 1 quotient dimension.
+
+For the corrected D2 extension
+\[
+1\to P_4/P_5\to W_5\to W_4\to1,
+\]
+the five-term sequence and the previously verified Frattini/transgression calculation give
+\[
+\ker(H^2(W_4,F_3)\to H^2(W_5,F_3))
+\cong H^1(P_4/P_5,F_3)
+\cong Q_4^*\cong W_{45}^*,
+\]
+dimension 45.
+
+This is the precise bridge: Paper 1's old object is the degree-4 Zassenhaus fiber; Paper 3's one-step D2 ambiguity is its dual. It does not revive the old orientation-carrier route.
+
+New load-bearing question:
+\[
+\boxed{\text{Does the finite delta-family have a nonzero component in the }Q_4^*\text{ transgression sector?}}
+\]
+Equivalently, compute the intersection of the finite delta-family with the one-step inflation kernel using the natural degree-4 pairing.
+
+Classification:
+- W45=Q4: PASS / CLOSED
+- Q4 isomorphic to P4/P5: PASS / CLOSED at rank 4, p=3 Demuškin scope
+- D2 one-step kernel isomorphic to Q4*: PASS / CLOSED
+- delta-family/kernel intersection: OPEN / LOAD-BEARING
+- m=1 full D2 separation: OPEN / LOAD-BEARING
+- Paper 1 orientation-carrier route: HISTORICAL / SUPERSEDED
+
+Detailed record: research/PAPER1_PAPER3_Q4_P4P5_BRIDGE_AUDIT_2026-09-28.md.
+
+This branch is a side investigation supporting D2 repair; it is not promoted to the principal Paper 3 theorem until the delta/kernel intersection is independently computed.
