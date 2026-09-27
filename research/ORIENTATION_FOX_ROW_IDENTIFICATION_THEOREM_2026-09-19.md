@@ -20,7 +20,7 @@ the canonical orientation is characterized by the Labute/Serre crossed-derivatio
 
 > a character \(\chi:F\to\mathbf Z_p^\times\) gives the canonical orientation precisely when every \(\chi\)-crossed derivation of the free pro-p group into the rank-one module \(\mathbf Z_p(\chi)\) descends through the relator, i.e. kills \(r\).
 
-This characterization is used explicitly in modern formalized work on Demuškin orientations: the crossed derivation is arbitrary on the free generators, and descent is equivalent to the relator equation vanishing for arbitrary generator values. See the cited discussion of Labute's Theorem 4 and the explicit crossed-derivation calculation. citeturn2search0turn2search3
+This characterization is used explicitly in modern formalized work on Demuškin orientations: the crossed derivation is arbitrary on the free generators, and descent is equivalent to the relator equation vanishing for arbitrary generator values. See the cited discussion of Labute's Theorem 4 and the explicit crossed-derivation calculation. 
 
 This is exactly the missing bridge needed by the Fox construction; it is not an interpretation invented from the present calculation.
 
