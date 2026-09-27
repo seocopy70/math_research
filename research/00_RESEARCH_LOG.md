@@ -3715,3 +3715,14 @@ Classification: **PASS / CLOSED for Gate A at the declared category-level scope.
 
 Detailed record: research/PAPER3_GATE_A_W10_TO_LRHO2_2026-09-28.md
 Next authorized action: Gate B — determine whether the family {delta_{3,rho_3}} is reconstructible from W_10 and L_10(rho_2), using U2/U3 but without importing the canonical mod-27 orientation.
+
+
+## 2026-09-28 — Gate B precheck: finite obstruction assembly is the actual remaining problem
+
+After closing Gate A, the Gate B precheck separated the domain and target issues. U1-U2 give finite factorization of the candidate coefficient action and twisted H^1 domain through Q_10. U3 gives a finite twisted-Fox obstruction only after choosing a minimal one-relator presentation. What is not yet proved is a presentation-independent finite target object H_10(W_10) and natural map whose value agrees with the intrinsic connecting map delta_{3,rho_3} for every rho_3.
+
+The naive replacement H_10=H^2(Q_10,F_3) is therefore promoted only as the next test, not as an assumed solution: Q_10 does not by itself remember the extension 1 -> P_10 -> G -> Q_10 -> 1, and no quotient-level map to H^2(G,F_3) has yet been established that recovers the Fox obstruction.
+
+Classification: **OPEN / LOAD-BEARING**. No failure theorem is claimed yet. Next authorized attack: test H^2(Q_10,F_3) and the canonical transgression/extension subquotient as possible intrinsic finite obstruction carriers; classify any failure exactly.
+
+Detailed record: research/PAPER3_GATE_B_W10_TO_DELTA3_FAMILY_PRECHECK_2026-09-28.md
