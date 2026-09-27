@@ -1281,3 +1281,20 @@ Current Paper 3 priority:
 - T_cup: **FAIL / CLOSED — TRIVIAL TARGET**
 
 Next authorized action: **Bockstein upper-bound test at p+1**.
+
+
+## 2026-09-27 — PAPER 3 T_beta UPPER-BOUND PRE-CHECK
+
+The filtration step is now fixed: for Zassenhaus,
+D_{p+1}(G) ⊆ G^{p^2}[G,G],
+so W_{p+1}(G) intrinsically determines
+G/[G^{p^2}[G,G]] ≅ G_ab/p^2G_ab.
+This is a general pro-p fact, not a Demuškin-only assertion.
+
+Current status:
+- W_{p+1} ⇒ G_ab/p^2G_ab: **PASS / CLOSED**
+- W_{p+1} ⇒ rank β in the chosen odd-p fixed-rank Demuškin category: **PASS / LOCAL**
+- W_{p+1} ⇒ [β]: **OPEN / LOAD-BEARING**
+- r_{T_beta}≤p+1: **OPEN / LOAD-BEARING**
+
+Next authorized action: prove and independently check the Bockstein kernel = mod-p reductions of Z/p^2-valued characters, then verify the Demuškin rank-to-isomorphism step.
