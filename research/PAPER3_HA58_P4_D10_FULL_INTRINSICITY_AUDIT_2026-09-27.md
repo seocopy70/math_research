@@ -246,3 +246,117 @@ This is directly relevant to the final Paper 3 question:
 \text{How much filtered relation information is necessary and sufficient to recover the canonical p-adic orientation?}
 }
 \]
+
+## 13. CRITICAL REVIEW CORRECTION — 2026-09-27
+
+The critical review correctly identifies a presentation defect: several classifications were stated without reproducing the definitions/proofs needed to make the audit self-contained. The mathematical record is tightened as follows.
+
+### 13.1 Intrinsic connecting family: PROVED, but only at the cohomological-object level
+
+The family is explicitly defined by
+\[
+L(\rho_2)=\{\rho_3:G\to(\mathbf Z/27)^\times:\rho_3\bmod9=\rho_2\}
+\]
+and, for each \(\rho_3\in L(\rho_2)\),
+\[
+0\to\mathbf F_3\to\mathbf Z/27(\rho_3)\to\mathbf Z/9(\rho_2)\to0
+\]
+with
+\[
+\delta_{3,\rho_3}:H^1(G,\mathbf Z/9(\rho_2))\to H^2(G,\mathbf F_3).
+\]
+
+The HA61-B5-8/B5-10/B5-13 source chain contains the definition and naturality argument. The proof mechanism is ordinary cohomological naturality: connecting maps are defined on cohomology classes, coboundary changes do not alter the connecting class, and group isomorphisms carrying coefficient data induce morphisms of short exact coefficient sequences.
+
+Therefore PROVED is retained only for the intrinsic cohomological family, not for a finite filtered carrier or orientation-reconstruction theorem.
+
+### 13.2 The single-vector counterexample is independently auditable
+
+The decisive witness is the HA61-B5-12 source record.
+
+For the same abstract group, replace the relator by
+\[
+r'=vrv^{-1}.
+\]
+The full crossed-word obstruction family is unchanged. In the chosen relation-jet coordinate,
+\[
+P\mapsto P+[v,R],
+\qquad
+T([v,R])=\lambda(v)f(p)
+\]
+on the primary-zero locus.
+
+For the frozen rank-four q=3 branch,
+\[
+\lambda=e_2^*,\qquad p=e_1\ne0.
+\]
+Choose \(v\) with \(\lambda(v)=1\). Then
+\[
+t_2\mapsto t_2+p.
+\]
+The intrinsic coefficient data and the full connecting family remain unchanged. Hence a presentation-independent single vector \(t_2\) cannot represent the full secondary obstruction.
+
+This is a genuine COUNTEREXAMPLE.
+
+The two immediate repairs are also blocked:
+- quotienting by \(\langle p\rangle\) loses \(f(p)\), since primary-zero gives
+  \[
+  f(p)+(\lambda\wedge f)(R)=0,
+  \]
+  not \(f(p)=0\);
+- the diagonal \((t_2,\mu)\)-quotient identifies distinct coefficient lifts, so it is not an admissible intrinsic orientation carrier.
+
+### 13.3 Scope lock for PROVED
+
+\[
+\boxed{\text{intrinsic cohomological definition/naturality of }\delta_3=\mathrm{PROVED}}
+\]
+but
+\[
+\boxed{W_n(G)\to\{\delta_{3,\rho_3}\}_{\rho_3}=\mathrm{OPEN}}
+\]
+and
+\[
+\boxed{\{\delta_{3,\rho_3}\}_{\rho_3}\to\chi\bmod27=\mathrm{OPEN}}.
+\]
+
+Invoking the already-known orientation/Kummer lifting characterization does not count as a new filtered reconstruction theorem.
+
+### 13.4 Split the finite-depth source status
+
+The earlier combined “PROVED / COMPUTED” label is replaced by:
+- explicit finite source ledger: COMPUTED;
+- individual divisibility/vanishing identities already established in the ledger: PROVED.
+
+### 13.5 Define “frozen”
+
+“Frozen” means the presentation/relator normal form, coefficient-extension convention, basis, and transgression normalization are fixed for an explicit calculation. No presentation-independence is claimed.
+
+Thus frozen scalar/detection statements remain COMPUTED.
+
+### 13.6 Literature audit correction
+
+The earlier literature paragraph was too broad.
+
+Quadrelli (2024), Example 2.6, explicitly states that an infinite Demuškin group has a canonical orientation, unique among orientations completing it to a 1-cyclotomic oriented pro-p group, and for the standard presentation gives
+\[
+\chi(x_2)=(1-p^f)^{-1}.
+\]
+This is EXTERNAL support for the canonical-orientation/Kummer-lifting background. urlQuadrelli 2024, Example 2.6turn0search0
+
+Mináč–Pasini–Quadrelli–Tân (2021) establishes relationships between quadratic duals of Galois cohomology and the p-Zassenhaus filtration. This supports the general filtered/cohomological background, but does not establish the HA58 residual. EXTERNAL. urlKoszul algebras and quadratic duals in Galois cohomologyturn0search1
+
+The earlier sentence claiming that the third cited source directly established loss of orientation information from Zassenhaus data is withdrawn until a primary source and exact theorem/proposition are identified.
+
+### 13.7 Corrected overall status
+
+- HA58 standard-family residual: COMPUTED;
+- intrinsic cohomological delta_3 family: PROVED;
+- finite-filtered factorization into that family: OPEN;
+- single-vector t_2: COUNTEREXAMPLE;
+- t_2/<p> and diagonal quotient repairs: COUNTEREXAMPLE;
+- canonical projective bridge: OPEN;
+- canonical scalar normalization for a finite intrinsic carrier: OPEN;
+- richer secondary carrier / finite-filtered zero-selector: OPEN.
+
+The phrase “끝까지 진행했다” is corrected to mean: the authorized audit procedure was completed, not that the orientation-reconstruction problem was solved.
