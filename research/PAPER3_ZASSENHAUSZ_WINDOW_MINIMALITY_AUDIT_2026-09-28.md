@@ -168,3 +168,16 @@ The table is verification only; the LTE argument is the proof.
 - absolute carrier minimality: **OPEN / NOT CLAIMED**
 - publication novelty of the threshold: **OPEN / CONDITIONAL**
 - next Paper 3 problem: richer-carrier separation (O	o T), not another attempt to lower this selector's Zassenhaus window.
+
+
+## Critical review correction — 2026-09-28
+
+The sharpness argument is mathematically sound, but one prerequisite was implicit and must be stated explicitly: to formulate \(\mathsf K_k(G/P_N,\chi_k)\), the canonical coefficient action \(\chi_k\) must descend to \(G/P_N\). This follows by functoriality of the Zassenhaus filtration under homomorphisms together with
+\[
+D_N(1+3\mathbf Z_3)=1+3^k\mathbf Z_3\quad\text{for }N=3^{k-1},
+\]
+so \(\chi_k(P_N)=1\pmod{3^k}\). Equivalently, this can be proved directly from the Zassenhaus image filtration of the principal-unit target. The witness \(z(x_2^N)\neq0\) then shows that the lifting predicate on \(G/P_N\) fails, rather than merely that a particular cocycle fails to descend.
+
+A second editorial correction: the independently checked modular table in this document covers \(k=2,\ldots,6\), not \(k=2,\ldots,8\). The proof itself is all-\(k\) and does not depend on the finite table.
+
+Classification unchanged: **PASS / CLOSED** for the sharpness theorem of the stated Kummer selector; the descent lemma is now made explicit. Absolute carrier minimality and publication novelty remain **OPEN / CONDITIONAL**.
