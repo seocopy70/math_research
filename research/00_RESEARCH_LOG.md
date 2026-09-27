@@ -2964,3 +2964,28 @@ The working proof route is to identify the canonical p-power operation encoded b
 A dedicated stage document was created: research/PAPER3_S3_BOCKSTEIN_UPPER_BOUND_AUDIT_2026-09-27.md.
 
 Classification: **OPEN — S3 active**. The equality r_{T_\beta}=p+1 remains unproved; p+1 is a working hypothesis, not a theorem.
+
+
+## 2026-09-27 — PAPER 3 S3 BOCKSTEIN UPPER BOUND CLOSED
+
+S3 has been proved for odd p in the declared fixed-rank Demuškin category.
+
+Key intrinsic argument:
+1. Lazard's Zassenhaus formula gives D_{p+1}(G) ⊆ G^{p^2}[G,G].
+2. Hence W_{p+1}(G), already through its underlying quotient G/D_{p+1}, determines G_ab/p^2G_ab.
+3. β_G(χ)=0 iff χ lifts from F_p to Z/p^2, so this finite abelianization determines rank(β_G).
+4. For fixed-rank Demuškin groups, dim H^1=d and dim H^2=1; therefore the isomorphism class of the linear Bockstein map is determined by its rank.
+5. Thus W_{p+1}(G) ≅ W_{p+1}(H) ⇒ β_G ≅ β_H.
+
+Independent check: the NSW/Labute one-relator formula gives the same rank dichotomy for the standard odd-p Demuškin relation: q=p gives nonzero Bockstein, while q≥p^2 or q=0 gives zero.
+
+Combined with S1/S2:
+\[
+\boxed{r_{T_\beta}(\mathcal C;D_\bullet)=p+1}
+\]
+for odd p and the declared fixed-rank Demuškin category.
+
+Logical boundary: this is recognition up to isomorphism of the Bockstein map; it is not a canonical coordinate identification. No p=2 or general-pro-p extension is claimed.
+
+Classification: **PASS / CLOSED — S3 and exact threshold closed.**
+Detailed proof: research/PAPER3_S3_BOCKSTEIN_UPPER_BOUND_AUDIT_2026-09-27.md.
