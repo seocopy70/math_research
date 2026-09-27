@@ -3518,3 +3518,35 @@ Literature audit found strong direct overlap with Simons (1989), which explicitl
 Strategic consequence: no further beta_1,beta_9 scans. The next decisive target is the intrinsic P_4/D_10 higher power/relation residual and its scalar normalization/transport theorem.
 
 Detailed audit: research/PAPER3_MOD27_BOCKSTEIN_CARRIER_LINE_AUDIT_2026-09-27.md (commit 7a3f7d5d56dc261f9d3f80e825fe4c86a741c63b).
+
+
+## 2026-09-27 — PAPER 3 HA58/P4/D10 FULL INTRINSICITY AUDIT
+
+Audit record:
+\`research/PAPER3_HA58_P4_D10_FULL_INTRINSICITY_AUDIT_2026-09-27.md\`
+
+Sequence completed:
+1. intrinsic definition;
+2. coordinate dependence;
+3. transport/functoriality;
+4. projective direction;
+5. scalar normalization.
+
+Final results:
+- standard-family HA58 residual and q=9 versus 27|q detection: **COMPUTED**
+- intrinsic HA58 residual definition: **OPEN**
+- residual transport/functoriality: **OPEN**
+- standard-family projective direction: **COMPUTED**
+- canonical projective map: **OPEN**
+- frozen scalar normalization: **COMPUTED**
+- canonical scalar normalization: **OPEN**
+- single-vector \(t_2\) realization: **COUNTEREXAMPLE**
+- \(t_2/\langle p\rangle\) repair: **COUNTEREXAMPLE**
+- diagonal \((t_2,\mu)\) repair: **COUNTEREXAMPLE**
+- intrinsic connecting family \(\rho_3\mapsto\delta_{3,\rho_3}\): **PROVED**
+
+Decisive no-go: relation conjugation \(r\mapsto vrv^{-1}\) can shift the putative \(t_2\) by \(p\) while leaving the intrinsic connecting-obstruction family unchanged. Therefore the proposed canonical single vector cannot be the correct intrinsic carrier.
+
+Finite source ledger: after /9 mod 3, only \(F^9\) and the old \(\gamma_2^3\) sector survive; \(\gamma_3^3,\gamma_4\) vanish at this finite depth.
+
+Strategic reset: stop the single-vector P_4/t_2 route. The next authorized problem is the construction/compression of a richer affine/torsor-valued carrier for the intrinsic secondary obstruction family, preserving coefficient-lift dependence and testing compatibility with the established mod-9 obstruction.
