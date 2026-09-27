@@ -3792,3 +3792,27 @@ Classification:
 
 Detailed proof: research/PAPER3_GATE_D_GENERAL_ODD_P_RANK_Q_K_RESULT_2026-09-28.md.
 Next authorized problem: richer intrinsic carrier O versus coarser target T, not another attempt to generalize the already-closed Kummer selector.
+
+
+## 2026-09-28 — PAPER 3 GATE D D2 CRITICAL CORRECTION: H^2 INFLATION IS NOT INJECTIVE
+
+A line-by-line audit of the Gate D D2 argument identified a concrete logical failure in the five-term Hochschild–Serre step. Let Q_k=G/P_{N_k+1}(G), N=P_{N_k+1}(G). Since N⊂Phi(G), inflation H^1(Q_k,F_p)→H^1(G,F_p) is an isomorphism. Exactness then forces the restriction map to H^1(N,F_p)^{Q_k} to be zero, so the transgression is injective and
+\[
+\ker\bigl(H^2(Q_k,F_p)\to H^2(G,F_p)\bigr)
+=\operatorname{im}(\mathrm{tra})
+\cong H^1(N,F_p)^{Q_k}.
+\]
+Here N is a nontrivial open pro-p subgroup of a Demuškin group, hence H^1(N,F_p)≠0. Since Q_k is a finite p-group acting on a nonzero finite-dimensional F_p-vector space, the fixed-point space is nonzero. Thus the claimed H^2-inflation injectivity is not merely unverified: the current argument implies a nonzero kernel. The conclusion H^2(Q_k,F_p)≅H^2(G,F_p) is therefore rejected.
+
+Impact:
+- Gate B/D2 bare-Q_k finite delta-family reconstruction: **FAIL / CLOSED** for this argument.
+- Replacement extension/transgression carrier or a precisely identified injective obstruction subspace: **OPEN / LOAD-BEARING**.
+- Gate D architecture: **PASS / LOCAL**.
+- D3 global uniqueness mechanism: **PASS / LOCAL**, but finite intrinsic reconstruction remains conditional on D2.
+- D4 LTE sharpness: **PASS / LOCAL**.
+- Fixed p=3 rank-4 q=3 Gates A-C: **PASS / CLOSED** at their recorded scopes.
+- Full arbitrary-(p,d,q,k) Gate D: **CONDITIONAL / OPEN**.
+- Absolute carrier minimality: **OPEN / NOT CLAIMED**.
+- Publication novelty: **OPEN / CONDITIONAL**.
+
+The stale CLOSED labels in CURRENT_STATE.md and RESEARCH_MAP.md were explicitly synchronized downward in the same research update. Next authorized action is D2 repair; no CLOSED Gate D claim is retained.
