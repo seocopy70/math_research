@@ -399,3 +399,28 @@ Next authorized action: carrier computation may resume under the U1–U3 theorem
 ## 2026-09-28 — Citation hygiene correction
 
 The prior hygiene detector had a false-negative condition caused by invisible citation delimiters. Fifteen affected files were cleaned. The hardened workflow now rejects Private Use Area characters and known citation-artifact patterns; run 36331775297 passed. Current hygiene status: **PASS / CLOSED**. No mathematical conclusion changed.
+
+
+## 2026-09-28 — PAPER 3 ZASSENHAUSZ WINDOW SHARPNESS CLOSED
+
+The authorized carrier computation now yields a sharpness theorem for the finite Kummer selector. Let (N=3^{k-1}). U1–U3 prove sufficiency of (Q=G/P_{N+1}). For the canonical candidate (chi_k(x_2)=(1-3)^{-1}) and the mod-3 class (f(x_2)=1), every twisted cocycle lift satisfies
+[
+z(x_2^N)=left(sum_{j=0}^{N-1}chi_k(x_2)^jight)z(x_2).
+]
+LTE gives valuation (k-1) for the geometric sum, so (z(x_2^N)
+eq0pmod{3^k}). Since (x_2^Nin P_N), the canonical lifting problem does not factor through (G/P_N). Thus the preceding window fails.
+
+Therefore the exact Zassenhaus-window threshold of the declared Kummer selector is
+[
+\boxed{n_k^{\mathrm{Kum}}=3^{k-1}+1}.
+]
+In particular (n_2=4) and (n_3=10). This is selector sharpness, not absolute minimality among arbitrary carriers.
+
+Classification:
+- preceding-window obstruction: **PASS / CLOSED**
+- sharp selector threshold: **PASS / CLOSED**
+- absolute carrier minimality: **OPEN / NOT CLAIMED**
+- publication novelty: **OPEN / CONDITIONAL**
+
+Detailed audit: `research/PAPER3_ZASSENHAUSZ_WINDOW_MINIMALITY_AUDIT_2026-09-28.md`.
+Next authorized target: richer-carrier (O\to T) separation; do not reopen the already-sharp selector window.
