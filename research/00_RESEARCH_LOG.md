@@ -3702,3 +3702,16 @@ Detailed audit: `research/PAPER3_ZASSENHAUSZ_WINDOW_MINIMALITY_AUDIT_2026-09-28.
 
  Critical-review correction: the sharpness proof is sound, but the audit must explicitly establish descent of the canonical action to G/P_N. This follows from Zassenhaus functoriality and D_N(1+3Z_3)=1+3^kZ_3 for N=3^{k-1}. The witness then proves failure of the Kummer predicate on the preceding quotient itself. The independent modular table is k=2..6; all-k validity comes from LTE. Classification remains PASS/CLOSED for selector sharpness.
 Detailed audit correction: `research/PAPER3_ZASSENHAUSZ_WINDOW_MINIMALITY_AUDIT_2026-09-28.md` (commit `c25eb982fc8ff4280098b44e4c4992ed6f86e563d`).
+
+## 2026-09-28 — Paper 3 Gate A: W_10 -> L(rho_2)
+
+The first carrier gate after the sharp Kummer window was attacked without reopening the mod-9 problem. Let Q_10=G/P_10(G). The already-audited intrinsic mod-9 carrier is applied to the canonical truncation W_10 -> W_4 to obtain rho_2. Then define
+\[
+L_{10}(rho_2)=\{\bar rho_3:Q_{10}\to(\mathbf Z/27)^\times:\bar rho_3\bmod9=\bar rho_2\}.
+\]
+The finite semidirect-product filtration used in U1-U2 implies every full-group mod-27 lift rho_3 of rho_2 kills P_10, so restriction gives L(rho_2) -> L_10(rho_2); inflation gives the inverse. Hence W_10 determines the full lift domain as a finite, functorial, q-blind set, with no use of chi mod 27.
+
+Classification: **PASS / CLOSED for Gate A at the declared category-level scope.** This is a construction result, not a novelty claim: the lift-set/torsor mechanism is standard once rho_2 is supplied. What remains load-bearing is Gate B, construction of the full family of connecting maps from the finite input. The result does not select a rho_3, prove delta-family factorization, or recover chi mod 27.
+
+Detailed record: research/PAPER3_GATE_A_W10_TO_LRHO2_2026-09-28.md
+Next authorized action: Gate B — determine whether the family {delta_{3,rho_3}} is reconstructible from W_10 and L_10(rho_2), using U2/U3 but without importing the canonical mod-27 orientation.
