@@ -1,3 +1,21 @@
+## 2026-09-28 — U1–U5 VS KUMMERIAN PRIOR-ART BOUNDARY
+
+The four-layer Kummerian/1-cyclotomic audit was compared directly with the U1–U5 proof architecture.
+
+The boundary is now precise:
+- **Classical / KNOWN:** canonical Demuškin orientation and its uniqueness as Kummerian/1-cyclotomic; finite coefficient-lifting criteria; cocycle realization and full-group existence.
+- **U5 uniqueness mechanism:** conceptually overlaps the classical uniqueness theorem, so it is not itself a novelty claim. Its value in Paper 3 is to make uniqueness compatible with the finite candidate-selector architecture.
+- **U1–U2:** the genuinely finite-data bridge: arbitrary twisted crossed cocycles for arbitrary candidate rho factor through the specific finite quotient (Q_k=G/P_{k+1}) via the finite semidirect-product filtration. The audited Kummerian literature does not state this exact bare-(Q_k), arbitrary-candidate factorization theorem.
+- **U3:** converts finite Kummer lifting into a finite twisted Fox obstruction. This is the explicit recognition mechanism; its ingredients are classical, but the finite-window assembly remains distinct unless an equivalent theorem is found.
+- **U4:** presentation-local identification only; not novelty-bearing.
+- **U5:** intrinsic uniqueness/induction; classical uniqueness content, but needed to remove presentation dependence after the finite factorization step.
+
+Therefore the current novelty gate is sharply localized at the finite-factorization/assembly layer, not at “discovering Kummerianity” or “discovering canonical orientation.”
+
+Classification: **PASS / LOCAL** for the prior-art boundary. The mathematical finite-window theorem remains **PASS / CLOSED** in the research record; publication novelty remains **OPEN / CONDITIONAL**.
+
+Next authorized action: no new carrier computation. First perform the final source-level comparison of U1–U3 (especially the semidirect finite-depth factorization) against any equivalent finite-coefficient quotient theorem; only then decide whether the finite-window theorem can be treated as genuinely distinct.
+
 ## 2026-09-28 — KUMMERIAN / 1-CYCLOTOMIC FOUR-LAYER PRIOR-ART AUDIT
 
 The authorized narrower literature audit was completed before any new carrier computation.
@@ -24,7 +42,7 @@ L(\rho_2)\ni\rho_3\mapsto\delta_{3,\rho_3},
 \delta_{3,\rho_3(1+9\nu)}(f)-\delta_{3,\rho_3}(f)=\nu\cup\bar f.
 \]
 
-Bellaïche's *Pseudodeformations* confirms strong prior art for the surrounding deformation-theoretic pattern: obstruction classes in a cokernel of a degree-2/Yoneda-product map, with extension spaces controlled by cup/Yoneda products. citeturn1search34
+Bellaïche's *Pseudodeformations* confirms strong prior art for the surrounding deformation-theoretic pattern: obstruction classes in a cokernel of a degree-2/Yoneda-product map, with extension spaces controlled by cup/Yoneda products.
 
 But the targeted audit did **not** establish that Bellaïche identifies the present coefficient-lift torsor \(L(\rho_2)\) with such a deformation-parameter torsor, nor that his results contain the exact translation law \(\nu\mapsto\nu\cup\bar f\) for this family. It also did not find a finite-Zassenhaus reconstruction theorem for the family without importing the canonical orientation.
 
