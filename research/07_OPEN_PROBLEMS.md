@@ -78,3 +78,18 @@ The remaining load-bearing questions are therefore narrower:
 5. **Finite-depth orientation:** Can the higher connecting family be linked to the already established mod-9 obstruction by an intrinsic coefficient-extension diagram?
 
 Do not reopen the single-vector P_4/\(t_2\) route unless a new mathematical mechanism avoids the conjugation counterexample.
+
+
+## 2026-09-27 — HA58 NEXT GATE REFINED AFTER SECOND CRITICAL REVIEW
+
+The surviving δ_3 family is scope-locked as follows:
+- cohomological definition/naturality: PROVED;
+- nonemptiness for the known canonical ρ_2: EXTERNAL;
+- finite filtered factorization W_n → {δ_{3,ρ_3}}: OPEN;
+- orientation reconstruction from the family: OPEN.
+
+The q=3 rank-four t_2 conjugation witness is a genuine COUNTEREXAMPLE to a universal canonical single-vector claim; no general statement about the q=9 or 27|q coordinate formula is inferred.
+
+The full-torsor zero-selector uniqueness mechanism is COUNTEREXAMPLE / CLOSED in rank 4. The variation formula, filtered existence, and a canonical one-dimensional lift restriction remain OPEN.
+
+Do not treat “torsor-valued carrier” as an established object. It is a candidate compression strategy. Do not reopen the single-vector P_4/t_2 route.
