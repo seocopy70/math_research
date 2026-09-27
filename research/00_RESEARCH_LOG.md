@@ -3890,3 +3890,40 @@ Classification:
 - module action/fixed points/transgression/delta separation: **OPEN / LOAD-BEARING**.
 
 Audit: research/MRT_C4_PRIMARY_SOURCE_AUDIT_2026-09-28.md
+
+
+## 2026-09-28 — D2 FIRST HAND CALCULATION COMPLETED: P4/P5 AND m=1 KERNEL
+
+For p=3,d=4,k=2, the correct central extension is
+\[
+1\to P_4/P_5\to W_5\to W_4\to1.
+\]
+MRT Example 5.3 gives c_4=45, hence dim_F3(P_4/P_5)=45. Since [P_4,G] is contained in P_5, W_5 acts trivially on P_4/P_5. Therefore
+\[
+\dim H^1(P_4/P_5,F_3)^{W_5}=45.
+\]
+Because P_4/P_5 lies in the Frattini kernel, H^1(W_4,F_3)->H^1(W_5,F_3) is an isomorphism, so the five-term transgression is injective. Consequently
+\[
+\dim\operatorname{im}(tra)=45,
+\qquad
+\dim\ker(H^2(W_4,F_3)\to H^2(W_5,F_3))=45.
+\]
+
+The canonical delta branch is not in this kernel: its image in H^2(G,F_3) is the nonzero Demuškin top class, whereas every class killed already at W5 maps to zero in H^2(G,F_3). Thus one-step deepening does not kill the canonical branch.
+
+However, this does NOT prove m=1 separates every false candidate. The remaining load-bearing object is the intersection of the finite delta-family at W4 with the 45-dimensional one-step inflation kernel. Exact computation of that intersection, and any resulting uniform m-bound, remain OPEN.
+
+Important correction: earlier shorthand wrote the extension in the wrong arrow direction. The authoritative form is 1 -> P4/P5 -> W5 -> W4 -> 1. The dedicated hand-calculation record uses the corrected direction.
+
+Classification:
+- P4/P5 dimension 45: PASS / CLOSED;
+- W5-action trivial: PASS / CLOSED;
+- fixed-point space dimension 45: PASS / CLOSED;
+- transgression rank 45: PASS / CLOSED;
+- one-step inflation-kernel dimension 45: PASS / CLOSED;
+- canonical delta outside the one-step kernel: PASS / LOCAL;
+- m=1 full delta-family separation: OPEN / LOAD-BEARING;
+- exact delta/kernel intersection: OPEN / LOAD-BEARING;
+- uniform m-bound: OPEN / LOAD-BEARING.
+
+Detailed record: research/PAPER3_D2_P4_P5_HAND_CALC_2026-09-28.md
