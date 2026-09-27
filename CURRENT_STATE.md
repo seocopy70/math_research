@@ -1263,3 +1263,21 @@ Current F1 status:
 Next authorized action: **Level-B symbolic reduction; do not start arbitrary U_5 matrix enumeration yet.**
 
 Detailed record: research/PAPER3_F1_Q3_N4_LEVEL_A_COMPUTATION_2026-09-27.md.
+
+## 2026-09-27 — PAPER 3 PRIORITY RESET
+
+The F1 q=3,n=4 Massey/Dwyer Level-A result remains PASS/CLOSED, but the branch is now **DEFERRED / NOT LOAD-BEARING** for Paper 3. The finite-window recognition program does not require this specific Massey sharpness computation at its current stage.
+
+The proposed T_cup alternative is explicitly rejected: the fixed-rank Demuškin cup-pairing isomorphism class is a trivial target under the S4 gate, so no rank-4 cup recognition computation is authorized.
+
+The active load-bearing candidate is the Bockstein target T_beta. Existing S1/S2 records provide the recognition lower bound r_{T_beta} >= p+1 as PASS/LOCAL. The next authorized task is an upper-bound test at p+1, with factorization and recognition kept logically distinct.
+
+Current Paper 3 priority:
+- finite-window threshold framework: **ACTIVE**
+- T_beta lower bound: **PASS / LOCAL**
+- T_beta exact threshold: **OPEN / LOAD-BEARING**
+- same-target factorization-vs-recognition separation: **OPEN / LOAD-BEARING**
+- F1 Massey sharpness: **DEFERRED**
+- T_cup: **FAIL / CLOSED — TRIVIAL TARGET**
+
+Next authorized action: **Bockstein upper-bound test at p+1**.
