@@ -44,7 +44,7 @@ It should not be advertised as discovering the orientation itself. The exact val
 \]
 was already known/independently obtained in the project by the direct crossed-derivation calculation.
 
-Literature supports the standard roles of Labute's classification and Fox derivations, but the exact theorem-to-formula bridge must remain explicitly cited in a publication version rather than treated as a project-internal fact. Fox calculus itself is classical, and Labute's classification is standard background. citeturn0search0turn0search1turn0search3
+Literature supports the standard roles of Labute's classification and Fox derivations, but the exact theorem-to-formula bridge must remain explicitly cited in a publication version rather than treated as a project-internal fact. Fox calculus itself is classical, and Labute's classification is standard background. 
 
 ## 2. Second critical correction: the mod-9 agreement is strong but only first-order
 
