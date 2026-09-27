@@ -29,3 +29,15 @@ Thus the mathematical equality
 is retained under the declared conventions, but no novelty claim is attached to it until the exact literature antecedents are checked.
 
 Detailed audit: research/PAPER3_T_BETA_FACTORIZATION_THRESHOLD_AUDIT_2026-09-27.md (corrected commit 0ac32319db372c8e420173a5c9904ca6227e0649).
+
+## 2026-09-27 — PAPER 3 SEPARATION AXIS CORRECTION
+
+A structural correction closes a definitional ambiguity in the factorization-vs-recognition program. If both quantities are defined for the same target T by "T factors through W_n" versus "W_n determines T", then they are the same information condition and cannot furnish a genuine numerical separation. Therefore the load-bearing separation problem must use a richer carrier/observation O and a coarser target T=Phi(O): compare f_O with r_T.
+
+Status:
+- same-target f_T versus r_T separation: **INVALID / CLOSED — DEFINITIONAL IDENTITY**
+- richer-carrier O versus coarser-target T separation: **OPEN / LOAD-BEARING**
+- T_beta branch: **CLOSED** as a consistency check, not a separation example
+- next authorized gate: candidate carrier/target pair novelty + non-redundancy audit before computation
+
+The finite Kummer/affine orientation carrier versus a coarser target remains the first candidate family, but no target is promoted until its compression map and independent thresholds are explicit.
