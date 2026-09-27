@@ -342,9 +342,9 @@ Quadrelli (2024), Example 2.6, explicitly states that an infinite Demuškin grou
 \[
 \chi(x_2)=(1-p^f)^{-1}.
 \]
-This is EXTERNAL support for the canonical-orientation/Kummer-lifting background. urlQuadrelli 2024, Example 2.6turn0search0
+This is EXTERNAL support for the canonical-orientation/Kummer-lifting background. urlQuadrelli 2024, Example 2.6turn0search0
 
-Mináč–Pasini–Quadrelli–Tân (2021) establishes relationships between quadratic duals of Galois cohomology and the p-Zassenhaus filtration. This supports the general filtered/cohomological background, but does not establish the HA58 residual. EXTERNAL. urlKoszul algebras and quadratic duals in Galois cohomologyturn0search1
+Mináč–Pasini–Quadrelli–Tân (2021) establishes relationships between quadratic duals of Galois cohomology and the p-Zassenhaus filtration. This supports the general filtered/cohomological background, but does not establish the HA58 residual. EXTERNAL. urlKoszul algebras and quadratic duals in Galois cohomologyturn0search1
 
 The earlier sentence claiming that the third cited source directly established loss of orientation information from Zassenhaus data is withdrawn until a primary source and exact theorem/proposition are identified.
 
