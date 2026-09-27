@@ -216,7 +216,6 @@ A search-tool citation marker was accidentally copied into the repository text i
 
 **PASS / CLOSED — record hygiene corrected.**
 
-
 ## Addendum 3 — Kummerian / 1-cyclotomic four-layer prior-art audit — 2026-09-28
 
 The authorized narrower audit was completed against primary/near-primary Kummerian and 1-cyclotomic literature, especially Efrat–Quadrelli (2019), Quadrelli–Weigel (2022), and Quadrelli (2024).
@@ -225,15 +224,15 @@ The authorized narrower audit was completed against primary/near-primary Kummeri
 
 Known at the formal level: for fixed \(\rho_2\), the set of lifts \(\rho_3\bmod 9=\rho_2\), when nonempty, is a torsor under the appropriate first-order character space (H^1(G,\mathbf F_3)). This is elementary coefficient-character deformation theory.
 
-Kummerian literature does study all orientations \(\theta:G\to1+p\mathbf Z_p\), and for Demushkin groups proves that the canonical orientation is the unique one making the pair Kummerian / 1-cyclotomic. Labute's criterion is formulated via the surjectivity of (H^1(G,\mathbf Z_p(\theta)/p^n)\to H^1(G,\mathbf F_p)) for all (n), equivalently by existence of 1-cocycles with prescribed generator values. citeturn0search0turn1search0
+Kummerian literature does study all orientations \(\theta:G\to1+p\mathbf Z_p\), and for Demushkin groups proves that the canonical orientation is the unique one making the pair Kummerian / 1-cyclotomic. Labute's criterion is formulated via the surjectivity of H^1(G,\mathbf Z_p(\theta)/p^n)\to H^1(G,\mathbf F_p) for all n, equivalently by existence of 1-cocycles with prescribed generator values.
 
-But the audited literature does **not** present the particular finite-level set (L(\rho_2)) as a named intrinsic torsor object attached to a bare (Q_k), nor does it construct it from (Q_k) without first supplying an orientation.
+But the audited literature does **not** present the particular finite-level set L(\rho_2) as a named intrinsic torsor object attached to a bare Q_k, nor does it construct it from Q_k without first supplying an orientation.
 
 **Classification:** **PASS / LOCAL — formal torsor known; intrinsic finite-input construction NOT FOUND.**
 
 ### (ii) Full obstruction family
 
-For an already chosen orientation \(\theta\), the literature explicitly uses the family of finite coefficient modules \(\mathbf Z_p(\theta)/p^n\) and the associated (H^1)-lifting/surjectivity condition; Labute's cocycle criterion makes the finite-level lifting mechanism completely explicit. citeturn1search0
+For an already chosen orientation \(\theta\), the literature explicitly uses the family of finite coefficient modules \(\mathbf Z_p(\theta)/p^n\) and the associated H^1-lifting/surjectivity condition; Labute's cocycle criterion makes the finite-level lifting mechanism completely explicit.
 
 Thus the ingredients behind individual connecting obstructions are **KNOWN**. However, the searched sources do not package the project-specific family \(\{\delta_{3,\rho_3}\}_{\rho_3\in L(\rho_2)}\) as a standalone orientation-free object, nor do they construct that whole family from a finite Zassenhaus quotient.
 
@@ -241,7 +240,7 @@ Thus the ingredients behind individual connecting obstructions are **KNOWN**. Ho
 
 ### (iii) Translation / variation law
 
-The Kummerian literature gives the twisted 1-cocycle law (c(gh)=c(g)+\theta(g)c(h)) and the resulting commutator formula, and its proofs are compatible with the general coefficient-extension viewpoint. citeturn1search0
+The Kummerian literature gives the twisted 1-cocycle law and the resulting commutator formula, and its proofs are compatible with the general coefficient-extension viewpoint.
 
 Nevertheless, the targeted search did **not** locate an explicit theorem in the Kummerian/1-cyclotomic literature stating the exact family translation identity
 \[
@@ -257,9 +256,9 @@ The strongest directly relevant prior art remains the classical full-group theor
 \[
 \mathsf K_k(Q_k,\rho)\Longleftrightarrow \rho=\chi_G\bmod 3^k
 \]
-for the bare Zassenhaus quotient (Q_k=G/P_{k+1}). citeturn0search0turn1search1
+for the bare Zassenhaus quotient Q_k=G/P_{k+1}.
 
-The targeted search likewise found no theorem reconstructing the entire family (L(\rho_2)\mapsto\{\delta_{3,\rho_3}\}) from a finite Zassenhaus window without importing the canonical orientation.
+The targeted search likewise found no theorem reconstructing the entire family L(\rho_2)\mapsto\{\delta_{3,\rho_3}\} from a finite Zassenhaus window without importing the canonical orientation.
 
 **Classification:** **OPEN / LOAD-BEARING — no direct prior-art theorem found.**
 
@@ -267,10 +266,10 @@ The targeted search likewise found no theorem reconstructing the entire family (
 
 | Layer | Current literature status | Project classification |
 |---|---|---|
-| (i) (L(\rho_2)) as formal lift torsor | Standard first-order character/lift structure; not found as bare-(Q_k) intrinsic object | **PASS / LOCAL** |
+| (i) L(\rho_2) as formal lift torsor | Standard first-order character/lift structure; not found as bare-Q_k intrinsic object | **PASS / LOCAL** |
 | (ii) coefficient-lift obstruction family | Individual/finite-level Kummer lifting machinery is known once orientation is supplied | **PASS / LOCAL** |
 | (iii) exact (\nu\cup\bar f) translation law as family theorem | Not located | **OPEN / NOT VERIFIED** |
-| (iv) finite (Q_k)/Zassenhaus reconstruction without orientation | Not located | **OPEN / LOAD-BEARING** |
+| (iv) finite Q_k/Zassenhaus reconstruction without orientation | Not located | **OPEN / LOAD-BEARING** |
 
 ### Logical consequence
 
@@ -287,8 +286,7 @@ This audit does **not** close the present carrier as a rediscovery. It does, how
 - Quadrelli–Weigel (2022), *Profinite groups with a cyclotomic p-orientation*.
 - Quadrelli (2024), *Chasing Maximal Pro-p Galois Groups via 1-Cyclotomicity*.
 
-**Audit result: PASS / LOCAL. No new carrier computation is authorized yet; the next authorized step is to compare the four-layer result directly with the existing U1–U5 finite-selector theorem and determine whether the theorem's only genuinely non-classical component is the finite factorization through (Q_k).**
-
+**Audit result: PASS / LOCAL. No new carrier computation is authorized yet; the next authorized step is to compare the four-layer result directly with the existing U1–U5 finite-selector theorem and determine whether the theorem's only genuinely non-classical component is the finite factorization through Q_k.**
 
 ## Addendum 4 — U1–U5 comparison: novelty boundary localization
 
@@ -296,7 +294,7 @@ The four-layer Kummerian audit was compared directly with the existing U1–U5 p
 
 - Classical Kummerianity/canonical orientation and full-group lifting existence are **KNOWN / CLOSED**.
 - U5's uniqueness mechanism overlaps the classical uniqueness theorem at the conceptual level; it is not itself the novelty claim. Its project role is to make uniqueness compatible with the finite candidate-selector architecture and remove presentation dependence.
-- U1–U2 provide the genuinely finite-data bridge: arbitrary twisted crossed cocycles for arbitrary candidate rho factor through (Q_k=G/P_{k+1}) via the finite semidirect-product filtration. No audited Kummerian source was found stating this exact bare-(Q_k), arbitrary-candidate factorization theorem.
+- U1–U2 provide the genuinely finite-data bridge: arbitrary twisted crossed cocycles for arbitrary candidate rho factor through Q_k=G/P_{k+1} via the finite semidirect-product filtration. No audited Kummerian source was found stating this exact bare-Q_k, arbitrary-candidate factorization theorem.
 - U3 turns finite Kummer lifting into a finite twisted Fox obstruction. Its ingredients are classical in spirit, but the exact finite-window assembly remains to be compared against any equivalent theorem.
 - U4 is presentation-local and is not novelty-bearing.
 - U5 is required to remove presentation dependence after finite factorization, but the underlying canonical-orientation uniqueness is classical.
