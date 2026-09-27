@@ -218,7 +218,7 @@ The residual detection pattern therefore agrees with the expected second 3-adic 
 
 This comparison is validation only; the orientation formula is not part of the residual's definition.
 
-Labute's theorem explicitly gives the standard Demuškin formula \(\chi(x_2)=(1-q)^{-1}\) for the normal form. citeturn1search29
+Labute's theorem explicitly gives the standard Demuškin formula \(\chi(x_2)=(1-q)^{-1}\) for the normal form. 
 
 ---
 
