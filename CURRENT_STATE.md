@@ -1,3 +1,27 @@
+## 2026-09-28 — δ3 FAMILY-LEVEL VARIATION AUDIT
+
+The prior-art audit was extended from individual \(\delta_{3,\rho_3}\) to the load-bearing family
+\[
+L(\rho_2)\ni\rho_3\mapsto\delta_{3,\rho_3},
+\qquad
+\delta_{3,\rho_3(1+9\nu)}(f)-\delta_{3,\rho_3}(f)=\nu\cup\bar f.
+\]
+
+Bellaïche's *Pseudodeformations* confirms strong prior art for the surrounding deformation-theoretic pattern: obstruction classes in a cokernel of a degree-2/Yoneda-product map, with extension spaces controlled by cup/Yoneda products. citeturn1search34
+
+But the targeted audit did **not** establish that Bellaïche identifies the present coefficient-lift torsor \(L(\rho_2)\) with such a deformation-parameter torsor, nor that his results contain the exact translation law \(\nu\mapsto\nu\cup\bar f\) for this family. It also did not find a finite-Zassenhaus reconstruction theorem for the family without importing the canonical orientation.
+
+Classification:
+- parameterized obstruction + H^2/Yoneda/cup framework: **PASS / CLOSED — KNOWN**
+- Bellaïche package = exact present \(L(\rho_2),\delta_3\) family: **FAIL / CLOSED — not established**
+- exact \(\delta\)-variation formula as Bellaïche theorem: **OPEN / NOT VERIFIED**
+- finite-window reconstruction \(W_n\to\{\delta_{3,\rho_3}\}\): **OPEN / NOT FOUND**
+
+The next Kummerian/1-cyclotomic audit must therefore check four items separately: (i) lift torsor, (ii) obstruction family, (iii) translation/variation law, and (iv) finite-window reconstruction.
+
+Detailed addendum: research/PAPER3_DELTA3_MAZUR_MASSEY_PRIOR_ART_AUDIT_2026-09-28.md.
+Status: **PASS / LOCAL**.
+
 ## 2026-09-28 — PAPER 3 δ3 / MAZUR / MASSEY PRIOR-ART AUDIT
 
 A novelty-first audit was completed before any new carrier computation. The surviving cohomological family is
