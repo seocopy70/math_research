@@ -3696,3 +3696,9 @@ eq0pmod{3^k}). Since (x_2^Nin P_N), the canonical lift cannot factor through (G/
 Result: (oxed{n_k^{Kum}=3^{k-1}+1}) for the declared Kummer recognition selector. Explicit checks: (k=2): (z(x_2^3)=3pmod9); (k=3): (z(x_2^9)=9pmod{27}); higher checks agree. Classification: **PASS / CLOSED** for selector sharpness; **OPEN / NOT CLAIMED** for absolute minimality among arbitrary carriers; publication novelty **OPEN / CONDITIONAL**.
 
 Detailed audit: `research/PAPER3_ZASSENHAUSZ_WINDOW_MINIMALITY_AUDIT_2026-09-28.md` (commit `6ba314ae54032ca743a8793b0492709f8118d4a4`).
+
+
+## 2026-09-28 — Critical review correction: predecessor-window descent
+
+ Critical-review correction: the sharpness proof is sound, but the audit must explicitly establish descent of the canonical action to G/P_N. This follows from Zassenhaus functoriality and D_N(1+3Z_3)=1+3^kZ_3 for N=3^{k-1}. The witness then proves failure of the Kummer predicate on the preceding quotient itself. The independent modular table is k=2..6; all-k validity comes from LTE. Classification remains PASS/CLOSED for selector sharpness.
+Detailed audit correction: `research/PAPER3_ZASSENHAUSZ_WINDOW_MINIMALITY_AUDIT_2026-09-28.md` (commit `c25eb982fc8ff4280098b44e4c4992ed6f86e563d`).
