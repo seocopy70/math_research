@@ -3481,3 +3481,18 @@ Classification:
 - candidate selection: **OPEN**
 
 Next authorized action: novelty/non-redundancy screen for a concrete richer carrier O and compressed target T=Phi(O), with Paper 2 affine/Kummer orientation data retained only as a candidate carrier, not assumed novel.
+
+
+## 2026-09-27 — HA58 SECOND CRITICAL REVIEW / GLOBAL SCOPE LOCK
+
+The HA58/HA61-B surviving object is now classified with a strict two-level distinction:
+
+- cohomological family ρ_3 ↦ δ_{3,ρ_3}, indexed by L(ρ_2): PROVED as a natural cohomological object once ρ_2 is fixed;
+- finite-filtered factorization W_n → {δ_{3,ρ_3}}: OPEN;
+- nonemptiness of L(ρ_2) for the already-known canonical ρ_2: EXTERNAL; non-circular recovery from finite filtered data: OPEN;
+- q=3 rank-four t_2 conjugation witness: COUNTEREXAMPLE to any universal canonical single-vector theorem;
+- full-torsor zero-selector uniqueness: COUNTEREXAMPLE / CLOSED in rank 4;
+- variation formula, filtered existence, and any canonical one-dimensional lift restriction: OPEN;
+- affine/torsor-valued carrier: candidate strategy only, not an established object.
+
+The single-vector P_4/t_2 route remains closed. The next load-bearing Paper 3 gate is the intrinsic finite-window factorization into the δ_3 family, followed by a non-circular compression/recognition analysis.
