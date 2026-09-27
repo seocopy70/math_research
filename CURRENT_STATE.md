@@ -156,3 +156,38 @@ Mathematical and literature audit complete. B_27 is retained as a finite q-layer
 The full structured carrier is classified into the three valuation classes on the standard family; no independent orientation-sensitive rigidifier has been exhibited; and direct prior-art overlap exists with Bockstein-based Demushkin level constructions and the Kummerian/canonical-orientation framework. The earlier abstract-symmetry no-go is not used because group-realizability was not established.
 
 No further trivial-coefficient Bockstein scan. Next decisive target: intrinsic P_4/D_10 higher power/relation residual and its scalar normalization/transport theorem.
+
+
+## 2026-09-27 — PAPER 3 HA58 P4/D10 FULL INTRINSICITY AUDIT
+
+The HA58/P4/D10 route has now been audited end-to-end in the required order: definition -> coordinate dependence -> transport -> projective direction -> scalar normalization.
+
+Authoritative audit:
+\`research/PAPER3_HA58_P4_D10_FULL_INTRINSICITY_AUDIT_2026-09-27.md\`
+commit: \`e0db79240aa54d181399cda5ae9b3430cb948c97\`.
+
+Final classifications:
+
+- lower-3-central filtration definition: **PROVED**
+- q=9 standard-family residual existence: **COMPUTED**
+- q=9 versus 27|q detection pattern: **COMPUTED**
+- degree-3 q=9 difference = 0: **COMPUTED**
+- finite D_4 source classification at mod 27: **PROVED / COMPUTED**
+- intrinsic residual definition as HA58 intended: **OPEN**
+- residual transport/functoriality: **OPEN**
+- standard-family projective direction: **COMPUTED**
+- canonical projective map from the intrinsic torsion line: **OPEN**
+- frozen standard-family scalar normalization: **COMPUTED**
+- canonical scalar normalization: **OPEN**
+- intrinsic single-vector \(t_2\) route: **COUNTEREXAMPLE**
+- single presentation-independent residual vector: **COUNTEREXAMPLE**
+- intrinsic connecting-obstruction family \(\rho_3\mapsto\delta_{3,\rho_3}\): **PROVED**
+- richer secondary carrier beyond \(t_2\): **OPEN**
+
+Decisive correction: HA61-B5-12 supplies a same-abstract-group / different-relation-coordinate witness under \(r\mapsto vrv^{-1}\) for which the putative \(t_2\) changes by \(p\) while the intrinsic connecting-obstruction family is unchanged. Therefore the proposed canonical single vector \(t_2\) cannot exist in the intended presentation-independent form. The quotient \(t_2/\langle p\rangle\) is also insufficient because the secondary obstruction evaluates \(f(t_2)\) while the primary-zero condition does not force \(f(p)=0\).
+
+The finite-depth source ledger is now exhausted: after division by 9 mod 3, \(F^9\) and the old \(\gamma_2^3\) sector survive; \(\gamma_3^3\) and \(\gamma_4\) do not. Thus the remaining problem is not an unknown higher-term computation but the intrinsic compression of the surviving secondary obstruction family.
+
+Strategic consequence: **do not resurrect the single-vector P_4 residual route.** The next authorized Paper 3 problem is to determine whether the intrinsic function-valued secondary obstruction family can be compressed to a richer affine/torsor-valued carrier while retaining coefficient-lift dependence.
+
+This strengthens the main Paper 3 architecture \(W_n(G)\to O(G)\to T(G)\): the HA58 case is now a concrete example where a finite filtered computation contains genuine new information but a natural-looking vector compression is non-intrinsic.
