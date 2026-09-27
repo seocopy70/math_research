@@ -3583,3 +3583,17 @@ Classification:
 - publication novelty: **OPEN / CONDITIONAL**.
 
 This reopens D2 rather than reopening the already-closed fixed rank-four Gates A-C.
+
+## 2026-09-28 — PAPER 3 D2 REPAIR FRONTIER: CONTINUITY + DEEPER WINDOW
+
+The D2 bare-Q_k H^2-isomorphism route is closed. A replacement route uses continuity of profinite cohomology and the cofinal Zassenhaus tower: any class in H^2(Q_k,F_p) that vanishes in H^2(G,F_p) is killed at some deeper finite quotient, and finite-dimensionality yields eventual kernel stabilization. This gives a finite depth existentially, but not an explicit or uniform m-bound.
+
+The first test case is k=2, p=3, d=4:
+Q_2=W_4 -> W_5.
+The exact sequence is controlled by the kernel layer P_4/P_5. The authorized hand calculation is to determine the W_5-fixed part of H^1(P_4/P_5,F_3), its transgression into H^2(W_4,F_3), and whether the concrete delta-family meets the transient kernel. A nonzero full kernel does not by itself imply that the canonical delta class survives.
+
+Classification:
+- D2 continuity/stabilization: **PASS / LOCAL**.
+- D2 explicit depth: **OPEN / LOAD-BEARING**.
+- D2 uniform bound: **OPEN / LOAD-BEARING**.
+- Gate D full theorem: **CONDITIONAL / OPEN**.
