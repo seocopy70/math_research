@@ -3826,3 +3826,19 @@ E_k\to Q_k\;\stackrel{?}{\Longrightarrow}\;\text{canonical nonzero functional on
 Global inflation supplies a one-dimensional detector, but that map uses G and is not automatically part of the finite pair. The remaining question is whether an equivalent detector is recoverable functorially from the finite extension alone. Non-recoverability is not claimed.
 
 No 45-dimensional recomputation is authorized before this abstract finite-pair attack is exhausted.
+
+
+## 2026-09-28 — PAPER 3 MIDPOINT / FRONTIER MOVED TO INTRINSIC CARRIER COMPRESSION
+
+The midpoint checkpoint is frozen in `research/PAPER3_MIDPOINT_SUMMARY_2026-09-28.md`.
+
+The recognition theorem is now closed at the declared Demushkin scope: D1, corrected D2, D3, and affine D4 are closed. The earlier bare-Q_k H^2-inflation route remains FAIL/CLOSED and is not to be revived.
+
+The active frontier is:
+\[
+E_k\to Q_k\;\stackrel{?}{\Longrightarrow}\;\text{canonical nonzero functional on the D2 witness family}.
+\]
+
+Global inflation gives a one-dimensional detector, but that map uses G and is not automatically part of the finite pair. The question is whether an equivalent detector is recoverable functorially from the finite extension alone. Non-recoverability is not claimed.
+
+Do not reopen the 45-dimensional calculation until the abstract finite-pair attack is exhausted.
