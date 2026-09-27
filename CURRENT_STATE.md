@@ -191,3 +191,46 @@ The finite-depth source ledger is now exhausted: after division by 9 mod 3, \(F^
 Strategic consequence: **do not resurrect the single-vector P_4 residual route.** The next authorized Paper 3 problem is to determine whether the intrinsic function-valued secondary obstruction family can be compressed to a richer affine/torsor-valued carrier while retaining coefficient-lift dependence.
 
 This strengthens the main Paper 3 architecture \(W_n(G)\to O(G)\to T(G)\): the HA58 case is now a concrete example where a finite filtered computation contains genuine new information but a natural-looking vector compression is non-intrinsic.
+
+
+## 2026-09-27 — CRITICAL REVIEW CORRECTION OF HA58/P4/D10 AUDIT
+
+The subsequent critical review was itself audited against the repository source chain. Two distinctions are now locked.
+
+1. The review is correct that the original report was not self-contained enough: the proof basis for the intrinsic cohomological family and the exact t_2 counterexample should have been reproduced.
+2. The review is not correct that the repository lacks those proofs/definitions. HA61-B5-8/B5-10 explicitly define
+\[
+L(\rho_2)=\{\rho_3\bmod 9=\rho_2\}
+\]
+and the coefficient sequence
+\[
+0\to\mathbf F_3\to\mathbf Z/27(\rho_3)\to\mathbf Z/9(\rho_2)\to0,
+\]
+with the connecting family
+\[
+\rho_3\mapsto\delta_{3,\rho_3}.
+\]
+Naturality of connecting homomorphisms proves the intrinsic cohomological object. Thus this remains **PROVED**, but only at the cohomological-object level.
+
+Likewise HA61-B5-12 supplies the explicit same-group relator-conjugation witness:
+\[
+r\mapsto vrv^{-1},\qquad t_2\mapsto t_2+\lambda(v)p
+\]
+with q=3 frozen branch \(\lambda=e_2^*,p=e_1\ne0\). The full intrinsic obstruction family is unchanged. Therefore the single-vector \(t_2\) claim is genuinely **COUNTEREXAMPLE**, not merely OPEN.
+
+The corrected scope is:
+\[
+\text{intrinsic }\delta_3\text{ family}=\mathbf{PROVED},
+\]
+but
+\[
+W_n(G)\to\{\delta_{3,\rho_3}\}_{\rho_3}=\mathbf{OPEN},
+\qquad
+\{\delta_{3,\rho_3}\}_{\rho_3}\to\chi\bmod27=\mathbf{OPEN}.
+\]
+
+The phrase “끝까지 진행했다” is narrowed: the authorized audit procedure was completed; the orientation-reconstruction problem itself remains OPEN.
+
+The detailed correction is recorded in
+research/PAPER3_HA58_P4_D10_FULL_INTRINSICITY_AUDIT_2026-09-27.md
+at commit 471321c973de05c6c5ac407f3944b3a12017b331.
