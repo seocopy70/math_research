@@ -4161,3 +4161,16 @@ If yes, the intrinsic carrier collapses to dimension 1. If no, the failure ident
 The 45-dimensional calculation remains deferred; it is relevant only if the finite-pair obstruction-set/module question cannot be resolved abstractly.
 
 Authoritative analysis: research/PAPER3_CARRIER_SPAN_REDUCTION_2026-09-28.md, commit 9fbca468daaa0d2ef363e48524d766ad3b4fb610.
+
+
+## 2026-09-28 — CRITICAL REVIEW: GLOBAL-SHADOW CLAIM NARROWED
+
+A load-bearing overstatement in the carrier-minimality note was corrected. D2 proves that for every false candidate there exists at least one witness with nonzero global inflation; it does NOT prove that every finite obstruction output from every witness has nonzero global shadow.
+
+Correct detector statement:
+for every rho != chi_k, there exists f such that lambda_k(delta_{k,rho}(f)) != 0.
+Thus lambda_k is still a 1-dimensional detector in the global category, but only at the existential-per-candidate level.
+
+The finite-pair question remains OPEN: whether E_k -> Q_k canonically determines an equivalent nonzero functional on the witness family. Non-recoverability is NOT claimed.
+
+Authoritative correction: research/PAPER3_CARRIER_SPAN_REDUCTION_2026-09-28.md, commit 948ad02cff8d2c9dfa226b7fbaba17055b9d46f0.
