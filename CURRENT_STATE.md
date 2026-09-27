@@ -381,3 +381,16 @@ always has a solution, and the fixed-f zero-set is an affine 3-dimensional hyper
 Thus the zero-existence issue is not an intrinsic open problem once the standard Demushkin duality theorem is admitted. Its status should be recorded as **EXTERNAL/PROVED UNDER DEMUSHKIN DUALITY**, not OPEN. What remains open is the finite-filtered construction/access of the torsor and the delta-family, and the special case bar(f)=0 is not resolved by this surjectivity argument (variation is then identically zero, so the zero-set is either empty or all 81).
 
 This does not change the next load-bearing gate: W_n(G) -> L(rho_2) or equivalently an appropriate finite-data realization of the full lift-indexed delta-family without importing chi mod 27.
+
+
+## 2026-09-28 — FINAL U1–U3 PRIOR-ART COMPARISON
+
+The final source-level comparison was completed before new carrier computation.
+
+- U1 semidirect finite-depth calculation uses standard twisted-cocycle/semidirect ingredients, but no audited source states the exact packaged theorem that arbitrary candidate orientations factor through the specific finite quotient Q_k=G/P_{k+1} via this finite semidirect filtration. **OPEN / NOT FOUND as prior-art identity.**
+- U2 is a formal consequence of U1 and gives H^1(Q_k,A_k(\bar\rho)) ≅ H^1(G,A_k(\rho)). Existing Kummerian quotient-inheritance results assume an oriented pair and additional hypotheses; they do not identify with this arbitrary-candidate factorization. **PASS / CLOSED for U2; FAIL / CLOSED as literature identity.**
+- U3's twisted cocycle, prescribed-generator, and relation-obstruction ingredients are classical, but the exact finite-window twisted-Fox recognition assembly on Q_k was not found. **OPEN / NOT FOUND.**
+
+Final boundary: possible novelty remains localized at finite factorization/assembly, not canonical orientation or Kummerianity. Publication novelty remains **OPEN / CONDITIONAL**.
+
+Next authorized action: carrier computation may resume under the U1–U3 theorem chain; no absolute novelty claim is permitted.
