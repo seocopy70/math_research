@@ -296,3 +296,89 @@ This branch remains a side investigation supporting the Gate D repair and is not
 - MRT primary-source audit: `research/MRT_C4_PRIMARY_SOURCE_AUDIT_2026-09-28.md`.
 - Paper 3 D2 hand calculation: `research/PAPER3_D2_P4_P5_HAND_CALC_2026-09-28.md`.
 - Current continuity protocol: `research/RESEARCH_CONTINUITY_PROTOCOL.md`.
+
+## 11. CRITICAL REFINEMENT — delta-family vs Q4* is not a literal subspace intersection
+
+The proposed next step “decompose the delta-family inside the 10-25-10 decomposition of (Q_4^*)” is **not type-correct as stated**.
+
+The connecting obstruction is a family of maps
+[
+delta_{3,ho_3}:H^1(G,mathbf Z/9(ho_2))	o H^2(G,mathbf F_3),
+]
+and, at a finite quotient where it factors, each candidate is likewise a map into a cohomology group. By contrast, (Q_4^*) is identified via transgression with a 45-dimensional subspace of (H^2(W_4,mathbf F_3)). It is therefore a space of cohomology classes, not a space in which the entire delta-family naturally lives.
+
+The correct comparison is at the **output-class level**: for a candidate (ho_3) and an input (f), ask whether the finite class
+[
+delta_{3,ho_3}(f)
+]
+lies in
+[
+operatorname{tra}(Q_4^*)=
+kerigl(H^2(W_4,mathbf F_3)	o H^2(W_5,mathbf F_3)igr).
+]
+
+This is different from decomposing the delta-family itself into 10- and 25-dimensional representation pieces.
+
+### 11.1 Strong consequence already available
+
+For a false lift
+[
+ho_3'=ho_3(1+9
+u),qquad 
+u
+e0,
+]
+the proved global variation formula gives
+[
+delta_{ho_3'}(f)-delta_{ho_3}(f)
+=
+
+usmilear f
+]
+for some (f) with nonzero variation, by Demuškin cup nondegeneracy.
+
+Therefore that particular output class has nonzero image in (H^2(G,mathbf F_3)). Any class in
+[
+kerigl(H^2(W_4)	o H^2(W_5)igr)
+]
+maps to zero in (H^2(G)). Hence the nonzero separating variation class for a false candidate cannot lie in the one-step kernel.
+
+Thus, **conditional on the finite factorization and comparison map needed to represent the variation at (W_4)**, a false candidate is already separated by at least one output class at the (W_4	o W_5) step.
+
+What remains is not “does the entire false delta-family intersect (Q_4^*)?” but the sharper finite question
+[
+oxed{
+orall,
+u
+e0, exists f:
+	ext{ the finite representative of }
+usmilear f
+	ext{ survives }W_4	o W_5?
+}
+]
+
+The global cup-pairing argument supplies the nonzero class at (G); the missing ingredient is finite factorization/representative compatibility.
+
+### 11.2 Consequence for the Paper 1 10-25-10 decomposition
+
+The old decomposition remains valuable, but not in the originally proposed direct way.
+
+The authorized reuse is:
+
+1. identify the transgression subspace in (H^2(W_4)) with (Q_4^*);
+2. determine the induced (Sp_4(mathbf F_3))-action on this dual space;
+3. transport the verified 10-25-10 structure of (Q_4) to its dual, only after explicitly proving the relevant dual/module convention;
+4. express finite variation classes in this dualized representation basis;
+5. test which representation components can or cannot lie in the transgression image.
+
+No claim is made that the old (O_	auoplusDelta Ooplus(ker N/operatorname{im}N)) decomposition is itself a decomposition of the delta-family.
+
+### 11.3 Classification after the correction
+
+- Literal delta-family (cap Q_4^*) as a subspace intersection: **INVALID / CLOSED — type mismatch**.
+- Output-level condition (delta_{3,ho_3}(f)inoperatorname{tra}(Q_4^*)): **OPEN / LOAD-BEARING**.
+- Global false-lift variation has a separating output outside the one-step kernel: **PASS / LOCAL**, conditional on finite representative compatibility.
+- Reuse of Paper 1 10-25-10 through the dual representation: **OPEN / AUTHORIZED SIDE COMPUTATION**.
+- (m=1) full D2 selector: **OPEN / LOAD-BEARING**.
+
+This correction supersedes the earlier wording that treated the whole delta-family as if it were a subspace of (Q_4^*).
