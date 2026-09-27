@@ -3217,3 +3217,26 @@ Strategic fork recorded:
 
 Massey-product and Aut-orbit searches are PAUSED pending this fork; no new computation is authorized yet.
 Classification: **OPEN / LOAD-BEARING**.
+
+## 2026-09-27 — CONTINUITY PROTOCOL: AUTOMATIC RECORDING ENABLED
+
+Decision: research-changing evidence is now treated as an automatic repository-write trigger. The assistant must not wait for a separate “기록 반영” request.
+
+Trigger events include:
+- material literature/prior-art findings;
+- theorem/lemma verification, correction, or falsification;
+- PASS/LOCAL, FAIL/CLOSED, OPEN, CONDITIONAL, or HISTORICAL/SUPERSEDED outcomes;
+- changes to novelty or logical boundaries;
+- opening/freezing/downgrading/promoting/abandoning a branch;
+- changes to the next authorized action.
+
+Default recording:
+1. research/00_RESEARCH_LOG.md — chronology/evidence;
+2. CURRENT_STATE.md — active state and next action when changed;
+3. RESEARCH_MAP.md — only for global architecture/status changes;
+4. relevant stage/audit document — load-bearing branch details.
+
+The continuity protocol was amended accordingly in commit 399284d86566b3b70c28066db424ee6eb9fb0c58.
+
+Current F1 M2 literature audit remains OPEN / MANDATORY. No Massey computation is authorized until the theorem-by-theorem prior-art audit is completed and classified.
+
