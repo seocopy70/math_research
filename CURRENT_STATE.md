@@ -1125,3 +1125,16 @@ is now **PASS / CLOSED** for odd p and the declared category.
 Boundary: no p=2 or general-pro-p extension; no canonical coordinate identification is claimed. The independent one-relator NSW/Labute formula agrees with the intrinsic liftability proof.
 
 Detailed stage record: research/PAPER3_S3_BOCKSTEIN_UPPER_BOUND_AUDIT_2026-09-27.md.
+
+
+## 2026-09-27 — PAPER 3 BOCKSTEIN FACTORIZATION = RECOGNITION
+
+For the declared **isomorphism-class Bockstein target** and odd p fixed-rank Demushkin category, the factorization audit is closed:
+\[
+f_{T_beta}=p+1=r_{T_beta}.
+\]
+Upper factorization follows because W_{p+1} determines G_ab/p^2G_ab and hence the Bockstein liftability kernel; lower factorization is ruled out by the S1/S2 pair at W_p.
+
+Therefore the Bockstein target does not provide a same-target separation f_T != r_T. This is a **FAIL / CLOSED candidate mechanism**, not a failure of the recognition theorem. Coordinate-level/full-map natural factorization remains a stronger, separately specified question.
+
+Detailed record: research/PAPER3_BOCKSTEIN_FACTORIZATION_RECOGNITION_PRECHECK_2026-09-27.md.
