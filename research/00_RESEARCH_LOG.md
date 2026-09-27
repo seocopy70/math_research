@@ -4234,3 +4234,37 @@ Important distinction:
 - the final recognition carrier is the intrinsic one-dimensional cup line.
 
 Authoritative detailed record: research/PAPER3_FINITE_CUP_LINE_COMPRESSION_2026-09-28.md, commit 3daed93e34cb872ea7008a3ddb34d2b62778857e.
+
+
+## 2026-09-28 — CRITICAL REVIEW: 1D CUP-LINE COMPRESSION CLAIM DOWNGRADED
+
+A substantive error was found in the newly proposed finite cup-line compression.
+
+The claim
+\[
+\dim C_k=1,\qquad
+C_k=\operatorname{im}(H^1(Q_k,\mathbf F_p)^{\otimes2}\to H^2(Q_k,\mathbf F_p))
+\]
+does not follow merely from the fact that the Demuškin cup image in \(H^2(G,\mathbf F_p)\) is one-dimensional.
+
+Naturality proves only that
+\[
+C_k\to H^2(G,\mathbf F_p)
+\]
+has one-dimensional image. The finite map may have a nontrivial kernel. The assertion that the degree-two initial relation is unchanged modulo \(D_3\) is a graded statement and does not by itself eliminate higher finite \(H^2\) cup-product classes that inflate trivially.
+
+Accordingly:
+- finite cup-line dimension 1: OPEN;
+- embedding \(C_k\hookrightarrow O_k\): OPEN;
+- 1D finite selector carrier: OPEN;
+- minimality = 1: OPEN;
+- D2's cup-product variation identity and existential false-candidate separation remain valid;
+- D1/D2/D3/D4 remain unaffected.
+
+New load-bearing target:
+\[
+\ker(C_k\to H^2(G,\mathbf F_p)).
+\]
+Either prove this kernel is zero for the actual \(Q_k\), or characterize it intrinsically. Do not claim one-dimensional finite compression until this is settled.
+
+Authoritative correction is appended to the finite cup-line compression record, commit f99a4b38de1bd5becb8b4f3d8307b628708745ef.
