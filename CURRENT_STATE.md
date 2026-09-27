@@ -1096,3 +1096,17 @@ Classification: **LONG-TERM PROGRAM — OPEN / AUTHORIZED FOR STAGED IMPLEMENTAT
 Paper 3 has completed the requested audit sequence. Mathematical application correctness is **PASS / CLOSED**, but the independent publication novelty gate is **FAIL / CLOSED**: free-product Kummerianity is already known (Efrat--Quadrelli Prop. 7.5; Quadrelli--Weigel Prop. 5.5), while uniform affine factorization and sharpness are imported from Paper 2 and the f-collapse is a specialization of the established finite-window information-loss mechanism.
 
 The repaired Paper 3 source is commit `55a51dc30579881843658968af2049b0a6dbce8d`. Paper 2 remains frozen/unchanged. Paper 3 is retained as a mathematically sound application/companion manuscript. A future independent Paper 3 requires a genuinely new application theorem or obstruction.
+
+
+## 2026-09-27 — PAPER 3 S3 UPPER-BOUND GATE ACTIVE
+
+The new Paper 3 recognition-threshold branch has completed S1 and S2:
+- S1 truncated-window isomorphism: **PASS / CLOSED**;
+- S2 whole Bockstein and image separation: **PASS / CLOSED**;
+- resulting lower bound r_{T_beta}(C;D_bullet) >= p+1: **PASS / LOCAL**.
+
+The active gate is now S3: establish or refute r_{T_beta}(C;D_bullet) <= p+1 for the declared fixed-rank Demushkin category. The expected equality r_{T_beta}=p+1 is **OPEN**.
+
+Critical proof discipline: the proposed p-power-map/dual-Bockstein route is only a hypothesis until the p-power operation is shown to be canonically encoded by W_{p+1} and the Bockstein reconstruction is proved natural under arbitrary truncated filtered-object isomorphism. Presentation formulas are to be used as independent verification, not as the intrinsic proof itself.
+
+Stage document: research/PAPER3_S3_BOCKSTEIN_UPPER_BOUND_AUDIT_2026-09-27.md.
