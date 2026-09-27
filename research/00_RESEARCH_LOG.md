@@ -3075,3 +3075,37 @@ Candidate novelty for Paper 3 must instead come from a mathematically nontrivial
 The next mandatory step is **N3 prior-art theorem-by-theorem comparison**, not broad computation. The pure Bockstein (r_{T_eta}=p+1) proposal remains a conjectural test case, not an established result.
 
 Classification: **OPEN / LOAD-BEARING.**
+
+
+## 2026-09-27 — PAPER 3 FACTORIZATION vs RECOGNITION AUDIT (F1–F4)
+
+The first N3 theorem-by-theorem prior-art audit was completed before any new target computation. The audit compared Efrat–Mináč and related finite-determinacy/Zassenhaus literature against the Paper 3 distinction between factorization and recognition thresholds.
+
+### F1 — Factorization
+Existing literature explicitly contains the factorization/determination direction: quotient information such as G/G_(3) determines the relevant cohomological target, equivalently the target is obtained by inflation from a finite quotient. Therefore a factorization threshold by itself is **NON-NOVEL / CLOSED**.
+
+### F2 — Recognition of a quotient from the target
+Existing literature also contains results in the reverse information direction, notably statements of the form “the degree ≤2 cohomology determines G_[3].” Thus recognition/reconstruction of a particular quotient from cohomological data is **PARTIALLY COVERED / KNOWN**. This direction is not identical to the Paper 3 recognition threshold, which asks when a finite window determines T.
+
+### F3 — Explicit separation of thresholds
+The audited corpus did not identify a theorem that explicitly treats
+\[
+f_T(\mathcal C;D_\bullet)\quad\text{and}\quad r_T(\mathcal C;D_\bullet)
+\]
+as separate threshold invariants and studies whether they can differ. Existing work generally states one quotient/target determines another, rather than isolating factorization depth versus recognition depth as distinct numerical objects. Classification: **OPEN / STRONG CANDIDATE**. This is not yet a novelty claim.
+
+### F4 — Separation example
+No explicit example was found in the audited corpus exhibiting a genuine numerical separation between factorization and recognition thresholds. In particular, no verified pair has yet been constructed that forces a distinction of the required kind. Classification: **OPEN / LOAD-BEARING**.
+
+### Decision
+The next authorized attack is **not** the pure Bockstein threshold. First attempt to construct or rule out a genuine factorization-vs-recognition separation example. Only after this gate is closed should the project move to the pure Bockstein candidate or filtration/category dependence.
+
+Logical boundary: F1 being known does not close F3/F4; F3 being absent from the audited literature does not prove novelty. A concrete theorem or separation construction is required.
+
+Current Paper 3 status:
+- Efrat–Mináč Theorem A/B audit: **NON-NOVEL / CLOSED**
+- Factorization concept: **NON-NOVEL / CLOSED**
+- Factorization vs recognition distinction: **OPEN / STRONG CANDIDATE**
+- Explicit separation: **OPEN / LOAD-BEARING**
+- Pure Bockstein sharpness: **DEFERRED**
+- Ultimate finite-window recognition program: **ACTIVE**
