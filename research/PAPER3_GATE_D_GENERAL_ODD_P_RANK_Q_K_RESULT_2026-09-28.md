@@ -1,7 +1,7 @@
 # PAPER 3 — Gate D: arbitrary odd p, rank d, q, and k
 
 Date: 2026-09-28
-Status: PASS / CLOSED at the stated Kummer-selector scope
+Status: CONDITIONAL / OPEN pending D2 reconstruction
 
 ## Target
 
@@ -72,7 +72,7 @@ injective. Q_k is a nontrivial finite p-group, hence H^2(Q_k,F_p) is nonzero; De
 
 Together with D1, every coefficient extension and every connecting map at level k is reconstructed from Q_k itself. This is the arbitrary-p,d,k version of Gate B.
 
-## D3 — unique selector
+## D3 — unique selector (global statement remains, finite reconstruction is conditional)
 
 For p odd, any two lifts reducing to rho_{k-1} differ by
 \[
@@ -88,7 +88,7 @@ Along the canonical branch, finite-coefficient PD^2 duality makes \iota_* inject
 
 The base k=2 uses the same argument with A_1=F_p, so no presentation-specific U4 calculation is needed. Classical Kummerianity supplies existence of the canonical zero map at every level.
 
-Therefore Gates A-C generalize formally once the classical Demushkin PD^2/Kummerian inputs are admitted.
+Therefore the global selector mechanism is structurally plausible once the classical Demushkin PD^2/Kummerian inputs are admitted, but the claim that it is reconstructed intrinsically from Q_k alone remains conditional on a repaired D2.
 
 ## D4 — sharp Zassenhaus depth for the selector
 
@@ -120,8 +120,8 @@ This does NOT prove absolute minimality among arbitrary finite carriers. It does
 
 - D0 definition: PASS / CLOSED
 - D1 arbitrary-p factorization: PASS / CLOSED
-- D2 finite delta-family factorization: PASS / CLOSED
-- D3 unique finite-level selector: PASS / CLOSED, using classical Demushkin PD^2 and Kummerian existence
+- D2 finite delta-family factorization through bare Q_k: **FAIL / CLOSED for the present H^2-inflation argument; OPEN for a replacement carrier**
+- D3 unique finite-level selector on G: PASS / CLOSED under classical Demushkin PD^2 and Kummerian existence; **finite-carrier reconstruction remains CONDITIONAL**
 - D4 sharp Zassenhaus threshold: PASS / CLOSED for the declared Kummer selector
 - absolute carrier minimality: OPEN / NOT CLAIMED
 - publication novelty: OPEN / CONDITIONAL
@@ -135,22 +135,26 @@ W_n(G)\to O(G)\to T(G),
 where O contains finite filtered relation information not reducible to the already-understood Kummer selector, and the admissible carrier category is explicit.
 
 
-## CRITICAL REVIEW — 2026-09-28
+## CRITICAL REVIEW — 2026-09-28 — D2 REOPENED
 
-The Gate D write-up is retained, but its PASS/CLOSED status is **downgraded to CONDITIONAL pending a line-by-line proof audit**. The general architecture is plausible and the D4 LTE sharpness calculation is structurally sound, but several extensions from the verified p=3,k=3 case were asserted too quickly for publication-grade closure:
+The earlier critical review correctly downgraded Gate D, but it understated the D2 problem. The present five-term argument does not merely lack an independent audit: it is contradicted by the exact sequence itself.
 
-1. The claimed exact lower p-central series of A_k ⋊ U_{1,k} for arbitrary odd p and all k must be proved carefully, including endpoint indexing and the action/commutator calculation.
-2. The passage from D_{N+1}(G) to the full crossed-cocycle factorization must be written as an explicit functorial lemma, not only inferred from the semidirect filtration slogan.
-3. The H^2(Q_k,F_p) != 0 argument is valid in spirit, but the precise finite p-group/pro-p cohomological statement and the nontriviality of Q_k must be stated and checked for every allowed case.
-4. Most importantly, the higher-k variation formula and the asserted injectivity of the coefficient inclusion into H^2 are not yet independently audited at the same level as the mod-27 case. The phrase “finite-coefficient PD^2 socle injectivity” is a load-bearing assertion and cannot be treated as automatic.
-5. The D4 sharpness witness uses a standard presentation only as a negative witness, which is legitimate for proving failure of a universal selector window, but the descent of the canonical action to the predecessor quotient must be explicitly established for general q and k.
+For N=P_{N_k+1}, the H^1 inflation is an isomorphism, so the restriction map is zero and the transgression
+H^1(N,F_p)^{Q_k}->H^2(Q_k,F_p)
+is injective. Hence the kernel of H^2(Q_k,F_p)->H^2(G,F_p) is exactly the image of this nonzero fixed-point space. Since N is a nontrivial open pro-p subgroup and Q_k is a finite p-group, H^1(N,F_p)^{Q_k} is nonzero. Therefore the asserted H^2 inflation injectivity is false in the present setup.
 
-Therefore the correct present classification is:
-- Gate D architecture/generalization: **PASS / LOCAL**;
-- D4 LTE predecessor obstruction: **PASS / LOCAL** pending full descent audit;
-- full arbitrary-(p,d,q,k) Gate D theorem: **CONDITIONAL / OPEN for publication-grade proof**;
-- fixed p=3, rank 4, q=3 Gates A-C: **PASS / CLOSED** at their recorded scope;
-- absolute carrier minimality: **OPEN / NOT CLAIMED**;
+This invalidates the bare-Q_k reconstruction step in D2. It does not invalidate the already-closed fixed rank-four Gates A-C, because Gate C's uniqueness is a global Demushkin cohomology statement rather than the false H^2(Q_k) isomorphism. It does invalidate the claim that Gate B has been generalized to arbitrary (p,d,q,k) using only the bare quotient Q_k.
+
+Correct present classification:
+- Gate D architecture/generalization: **PASS / LOCAL**.
+- D1 arbitrary-p factorization: **OPEN / LOAD-BEARING** pending independent lemma proof.
+- D2 bare-Q_k H^2 inflation argument: **FAIL / CLOSED**.
+- D2 replacement finite obstruction carrier / extension-transgression reconstruction: **OPEN / LOAD-BEARING**.
+- D3 global uniqueness mechanism: **PASS / LOCAL**; finite intrinsic reconstruction remains conditional on D2.
+- D4 LTE predecessor obstruction: **PASS / LOCAL**.
+- full arbitrary-(p,d,q,k) finite-selector theorem: **CONDITIONAL / OPEN**.
+- fixed p=3, rank 4, q=3 Gates A-C: **PASS / CLOSED** at recorded scopes.
+- absolute carrier minimality: **OPEN / NOT CLAIMED**.
 - publication novelty: **OPEN / CONDITIONAL**.
 
-Authorized next action: audit D1-D4 lemma-by-lemma before treating Gate D as closed. Do not silently retain the stronger CLOSED label.
+Authorized next action: redesign D2 around the actual extension/transgression data or identify a smaller intrinsic subspace of obstruction classes for which a quotient-level inverse is valid. Do not restore the CLOSED label without that repair.
