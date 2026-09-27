@@ -3488,3 +3488,19 @@ New Paper 3 gate:
 Candidate direction retained from earlier work: the finite Kummer/affine orientation carrier O_k versus a coarser target T_k (or a secondary cohomological target), but it must pass a non-redundancy and prior-art screen before computation. The target must not collapse back to the same object O_k.
 
 This correction supersedes any earlier language suggesting that a same-target numerical inequality \(f_T\ne r_T\) itself could be a theorem.
+
+## 2026-09-27 — PAPER 3 CARRIER-TARGET SEPARATION GATE OPENED
+
+The corrected architecture has been operationalized in `research/PAPER3_CARRIER_TARGET_SEPARATION_GATE_2026-09-27.md`.
+
+Candidate A (affine/Kummer carrier -> Bockstein target) is retained as a **control separation**, not a novelty claim: the carrier is deliberately richer than the Bockstein target, so its factorization depth can exceed the target's recognition depth. This validates the corrected carrier-vs-target architecture but does not by itself constitute new mathematics.
+
+Candidate B, the mod-27 Bockstein-extension carrier
+\[
+\mathcal B_{27}=(H^1(G,\mathbf F_3),H^1(G,\mathbf Z/9),\mathrm{red},\iota,\smile,\beta_1,\beta_9),
+\]
+is promoted to the first **strong candidate** because it is coordinate-free and potentially richer than T_beta. Its exact compression to a genuinely coarser target, factorization depth, and prior-art status are not yet closed.
+
+Candidate C (multi-parameter category) remains secondary.
+
+Next authorized action: Candidate B line-by-line non-redundancy/prior-art audit. No large computation is authorized until the carrier, compression map, upper factorization bound, and independent target recognition bound are all explicit.
