@@ -3647,3 +3647,10 @@ Classification: (i) PASS / LOCAL; (ii) PASS / LOCAL; (iii) OPEN / NOT VERIFIED; 
 
 Detailed record: research/PAPER3_DELTA3_MAZUR_MASSEY_PRIOR_ART_AUDIT_2026-09-28.md, Addendum 3.
 Next authorized action: compare the four-layer result against U1–U5 and isolate the genuinely finite-data statements; no new carrier computation until that comparison is complete.
+
+
+## 2026-09-28 — U1–U5 VS KUMMERIAN PRIOR-ART BOUNDARY
+
+The Kummerian/1-cyclotomic four-layer audit was compared directly with U1–U5. Canonical orientation, Kummerianity, finite coefficient lifting, and full-group existence are classical. U5 uniqueness overlaps the classical uniqueness content and is not itself the novelty claim. The potentially distinct component is U1–U2: arbitrary-candidate twisted crossed cocycles factor through the specific finite Zassenhaus quotient (Q_k=G/P_{k+1}) via the finite semidirect-product filtration. U3 supplies the finite obstruction realization; U4 is presentation-local. Thus the possible publication novelty is localized at the finite-factorization/assembly layer.
+
+Classification: **PASS / LOCAL** for the boundary localization; publication novelty remains **OPEN / CONDITIONAL**. Next authorized action: final source-level comparison of U1–U3 against equivalent finite-coefficient quotient results; no new carrier computation.
