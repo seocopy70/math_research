@@ -3312,3 +3312,22 @@ Classification:
 Detailed record: research/PAPER3_F1_Q3_N4_LEVEL_A_COMPUTATION_2026-09-27.md.
 
 Next authorized action: **Level-B symbolic reduction before any large matrix enumeration**.
+
+## 2026-09-27 — PAPER 3 PRIORITY RESET: F1 MASSEY SHARPNESS COMPUTATION DEFERRED
+
+After re-checking the authoritative Paper 3 program against the current F1 Level-A result, the project decision is to **de-prioritize the q=3,n=4 Massey/Dwyer sharpness branch**. The Level-A computation remains valid and recorded, but it is not required by the core Paper 3 finite-window recognition program unless it yields a structural threshold theorem or separation mechanism.
+
+Reason: the active Paper 3 objective is the category-relative recognition threshold r_T(C;D_bullet), with factorization and recognition explicitly separated. The current F1 Level-A/B calculation addresses a specific n=q+1 Massey-vanishing sharpness question, which is at most an application/case study and is not presently the load-bearing definition, basic theory, or first non-corollary recognition theorem.
+
+Important correction to the proposed alternative: the fixed-rank Demuškin cup target T_cup as an isomorphism class is already CLOSED as trivial/non-discriminating, by the S4 target-nontriviality gate. Therefore no new T_cup rank-4 computation is authorized.
+
+The more coherent active route is the already-open Bockstein target T_beta: S1 gives a finite-window lower-bound pair and S2 gives r_{T_beta} >= p+1 as PASS/LOCAL. The next useful gate is an upper-bound test at p+1, while keeping same-target factorization versus recognition logically separate.
+
+Decision:
+- F1 Level-A result: **PASS / CLOSED**, retained as evidence and possible future case study.
+- F1 Level-B compensation: **OPEN / DEFERRED**; no further large enumeration authorized now.
+- F1 q=3,n=4 Massey sharpness as Paper 3 load-bearing route: **DEFERRED / NOT LOAD-BEARING**.
+- T_cup isomorphism-class route: **FAIL / CLOSED — TRIVIAL TARGET**; no computation.
+- T_beta recognition threshold: **OPEN / LOAD-BEARING**.
+
+Next authorized action: **Bockstein upper-bound test at p+1**, followed by a same-target comparison with the factorization threshold. No new Massey computation unless a later structural argument shows it is needed.
