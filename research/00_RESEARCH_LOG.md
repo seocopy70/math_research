@@ -3550,3 +3550,30 @@ Decisive no-go: relation conjugation \(r\mapsto vrv^{-1}\) can shift the putativ
 Finite source ledger: after /9 mod 3, only \(F^9\) and the old \(\gamma_2^3\) sector survive; \(\gamma_3^3,\gamma_4\) vanish at this finite depth.
 
 Strategic reset: stop the single-vector P_4/t_2 route. The next authorized problem is the construction/compression of a richer affine/torsor-valued carrier for the intrinsic secondary obstruction family, preserving coefficient-lift dependence and testing compatibility with the established mod-9 obstruction.
+
+
+## 2026-09-27 — CRITICAL REVIEW OF HA58/P4/D10 REPORT
+
+The report was critically re-audited against the repository source chain.
+
+Correction:
+- original presentation was insufficiently self-contained;
+- intrinsic cohomological family \(\rho_3\mapsto\delta_{3,\rho_3}\) is nevertheless genuinely defined and proved at the cohomological-object level in HA61-B5-8/B5-10;
+- single-vector \(t_2\) no-go is genuinely supported by HA61-B5-12 through the explicit relator-conjugation witness \(t_2\mapsto t_2+\lambda(v)p\).
+
+Locked distinction:
+\[
+\text{intrinsic cohomological }\delta_3\text{ family}=\mathbf{PROVED},
+\]
+while
+\[
+W_n\to\{\delta_{3,\rho_3}\}=\mathbf{OPEN},
+\qquad
+\{\delta_{3,\rho_3}\}\to\chi\bmod27=\mathbf{OPEN}.
+\]
+
+“Frozen” now means fixed presentation, coefficient-extension convention, basis and transgression normalization; it does not imply intrinsicity.
+
+Literature claim narrowed: Quadrelli 2024 Example 2.6 is retained as external support for canonical Demuškin orientation/Kummer lifting; Mináč–Pasini–Quadrelli–Tân 2021 is retained for Zassenhaus/quadratic-dual background. The previous broad claim about a source proving loss of orientation from Zassenhaus data is withdrawn pending exact primary-source verification.
+
+Audit correction commit: 471321c973de05c6c5ac407f3944b3a12017b331.
