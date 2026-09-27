@@ -454,3 +454,31 @@ Next authorized target: richer-carrier (O\to T) separation; do not reopen the al
 
  Critical-review correction: the sharpness proof is sound, but the audit must explicitly establish descent of the canonical action to G/P_N. This follows from Zassenhaus functoriality and D_N(1+3Z_3)=1+3^kZ_3 for N=3^{k-1}. The witness then proves failure of the Kummer predicate on the preceding quotient itself. The independent modular table is k=2..6; all-k validity comes from LTE. Classification remains PASS/CLOSED for selector sharpness.
 Detailed audit correction: `research/PAPER3_ZASSENHAUSZ_WINDOW_MINIMALITY_AUDIT_2026-09-28.md` (commit `c25eb982fc8ff4280098b44e4c4992ed6f86e563d`).
+
+## 2026-09-28 — PAPER 3 GATE D CLOSED: ARBITRARY ODD p, EVEN RANK d, q, k
+
+Gate D has now been proved at the declared finite-Kummer-selector scope. The fixed rank-four p=3 q=3 calculation is not essential.
+
+For every torsion-free Demushkin pro-p group G of even rank d>=2, odd p, allowed Demushkin parameter q, and k>=2, set N=p^{k-1}. The intrinsic finite selector on W_{N+1}=G/D_{N+1} is defined recursively: at k=2 use the finite Kummer lifting predicate; for k>2 use the full family of connecting maps for all lifts rho_k of the already recovered rho_{k-1}, selecting the unique lift whose entire connecting map is zero.
+
+The arbitrary-p semidirect filtration A_k rt U_{1,k} gives D_{N+1} factorization for every candidate crossed cocycle. Because D_{N+1} is contained in Phi(G), H^1(W_{N+1},F_p) -> H^1(G,F_p) is an isomorphism; the five-term sequence gives injectivity in H^2, while nontrivial finite p-group cohomology and dim H^2(G,F_p)=1 for Demushkin G force H^2 inflation to be an isomorphism. Hence the full delta-family is finite and intrinsic.
+
+The coefficient-extension variation identity and finite-coefficient PD^2 socle injectivity give uniqueness at every k. Classical Kummerianity supplies existence. No presentation-specific U4 calculation is needed for the base k=2 uniqueness.
+
+Sharpness also generalizes. In a standard Demushkin presentation choose f(x_2)=1. For the canonical action a=chi(x_2)=(1-q)^(-1), the witness on x_2^N has geometric factor S_N. For q=0, S_N=N=p^{k-1}; for q!=0, LTE gives v_p(S_N)=k-1. Thus the canonical lift cannot factor through D_N. Therefore the declared finite Kummer selector has exact Zassenhaus threshold
+\[
+\boxed{n_k^{Kum}=p^{k-1}+1}
+\]
+for all odd p, even rank d>=2, allowed q, and k>=2.
+
+Classification:
+- D0 definition: PASS / CLOSED
+- D1 arbitrary-p factorization: PASS / CLOSED
+- D2 finite delta-family factorization: PASS / CLOSED
+- D3 unique selector: PASS / CLOSED under classical Demushkin PD^2/Kummerian existence
+- D4 sharp selector threshold: PASS / CLOSED
+- absolute minimality among arbitrary carriers: OPEN / NOT CLAIMED
+- publication novelty: OPEN / CONDITIONAL
+
+Detailed proof: research/PAPER3_GATE_D_GENERAL_ODD_P_RANK_Q_K_RESULT_2026-09-28.md.
+Next authorized problem: richer intrinsic carrier O versus coarser target T, not another attempt to generalize the already-closed Kummer selector.
