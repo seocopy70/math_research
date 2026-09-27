@@ -3654,3 +3654,12 @@ Next authorized action: compare the four-layer result against U1–U5 and isolat
 The Kummerian/1-cyclotomic four-layer audit was compared directly with U1–U5. Canonical orientation, Kummerianity, finite coefficient lifting, and full-group existence are classical. U5 uniqueness overlaps the classical uniqueness content and is not itself the novelty claim. The potentially distinct component is U1–U2: arbitrary-candidate twisted crossed cocycles factor through the specific finite Zassenhaus quotient (Q_k=G/P_{k+1}) via the finite semidirect-product filtration. U3 supplies the finite obstruction realization; U4 is presentation-local. Thus the possible publication novelty is localized at the finite-factorization/assembly layer.
 
 Classification: **PASS / LOCAL** for the boundary localization; publication novelty remains **OPEN / CONDITIONAL**. Next authorized action: final source-level comparison of U1–U3 against equivalent finite-coefficient quotient results; no new carrier computation.
+
+
+## 2026-09-28 — Citation hygiene structural fix
+
+- Re-audit found residual ChatGPT search citation artifacts in the Paper 3 prior-art audit's Addendum 3 (e.g. concatenated `citeturn...` markers).
+- Removed the residual markers from `research/PAPER3_DELTA3_MAZUR_MASSEY_PRIOR_ART_AUDIT_2026-09-28.md` without changing the mathematical conclusions.
+- Added `.github/workflows/citation-hygiene.yml`, which scans the repository on every push/PR for ChatGPT citation-artifact markers and fails CI if any are found.
+- The first repository-wide run on commit `f1d18af5752afcc297759e0f895bb9af0d1a5834` completed **successfully** (workflow run `36331337426`). Therefore the repository-wide hygiene gate is currently **PASS / CLOSED** for the targeted `citeturn...` artifact pattern.
+- Research content status is unchanged: U1–U3 finite-factorization prior-art comparison remains the next authorized mathematical action; no carrier computation is authorized before that comparison.
