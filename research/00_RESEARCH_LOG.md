@@ -3686,3 +3686,13 @@ The previous hygiene CI was found to have a false-negative condition because the
 The citation-hygiene workflow was hardened to fail on any Private Use Area character and on visible ChatGPT citation-artifact patterns. Hardened CI run 36331775297 on commit 8102ab49c3e3173bec4bd103cad7aaf07c63654a completed successfully.
 
 The earlier hygiene PASS based on the old detector is superseded. Current repository-wide citation hygiene is **PASS / CLOSED**, based on direct file verification plus the hardened CI run. Mathematical research status is unchanged; U1–U3 prior-art comparison remains complete and carrier computation may resume.
+
+
+## 2026-09-28 — Sharp Zassenhaus window for the finite Kummer selector
+
+The authorized post-audit carrier computation closed the selector minimality gate. Set (N=3^{k-1}). U1–U3 establish sufficiency of (G/P_{N+1}). For the canonical candidate (chi_k(x_2)=(1-3)^{-1}), take (f(x_2)=1). Every lift has (z(x_2^N)=S_N z(x_2)), where (S_N=sum_{j=0}^{N-1}chi_k(x_2)^j). LTE gives (v_3(S_N)=k-1), hence (z(x_2^N)
+eq0pmod{3^k}). Since (x_2^Nin P_N), the canonical lift cannot factor through (G/P_N). Therefore the preceding window fails.
+
+Result: (oxed{n_k^{Kum}=3^{k-1}+1}) for the declared Kummer recognition selector. Explicit checks: (k=2): (z(x_2^3)=3pmod9); (k=3): (z(x_2^9)=9pmod{27}); higher checks agree. Classification: **PASS / CLOSED** for selector sharpness; **OPEN / NOT CLAIMED** for absolute minimality among arbitrary carriers; publication novelty **OPEN / CONDITIONAL**.
+
+Detailed audit: `research/PAPER3_ZASSENHAUSZ_WINDOW_MINIMALITY_AUDIT_2026-09-28.md` (commit `6ba314ae54032ca743a8793b0492709f8118d4a4`).
