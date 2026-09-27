@@ -3165,3 +3165,17 @@ Classification: S4 T_cup = INVALID / TRIVIAL TARGET — CLOSED; rank-4 S4 comput
 Mandatory target gate for future candidates: TN1 nontriviality; TN2 non-derivability from an already-closed target; TN3 genuine filtration dependence; TN4 prior-art audit. Only targets passing TN1–TN4 may enter concrete separation computation.
 
 Decision: do not perform further S4 rank-4 computation until a replacement target passes the target gate. Detailed audit: research/PAPER3_S4_TARGET_NONTRIVIALITY_GATE_T_CUP_2026-09-27.md.
+
+
+## 2026-09-27 — PAPER 3 S4 STRUCTURAL CORRECTION: TN2 REVISED
+
+A structural objection was identified and accepted: in the fixed-rank Demuškin category, q is a complete isomorphism invariant. Hence every isomorphism-invariant target T(G) is abstractly a function of q. The previous literal TN2 condition, T != F(chi mod p^k), is therefore too strong as a universal gate and may be structurally impossible or merely a reparameterization distinction.
+
+Revised gate: **TN2' — Non-redundancy / resolution test.** For each candidate target, determine (i) which classification parameters determine T, (ii) what p-adic/finite resolution of those parameters T requires, (iii) whether an existing theorem already supplies the corresponding threshold, and (iv) whether the target yields genuinely new mathematics rather than a repackaging.
+
+Strategic fork recorded:
+1. Fixed-rank one-parameter Demuškin category: use the already established family T_k = chi mod p^k and r_{T_k}=n(k)=p^{k-1}+1 as a clean target-dependent threshold family, while classifying it as reinterpretation/generalization unless a new theorem is proved.
+2. Expand the category to a multi-parameter class, e.g. free products of several Demuškin blocks already studied in Paper 2, where aggregate versus blockwise targets may yield genuinely richer threshold dependence.
+
+Massey-product and Aut-orbit searches are PAUSED pending this fork; no new computation is authorized yet.
+Classification: **OPEN / LOAD-BEARING**.
