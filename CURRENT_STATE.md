@@ -1,3 +1,35 @@
+## 2026-09-28 — PAPER 3 δ3 / MAZUR / MASSEY PRIOR-ART AUDIT
+
+A novelty-first audit was completed before any new carrier computation. The surviving cohomological family is
+[
+ho_3mapstodelta_{3,ho_3},qquad
+delta_{3,ho_3}:H^1(G,mathbf Z/9(ho_2))	o H^2(G,mathbf F_3),
+]
+from
+[
+0	omathbf F_3	omathbf Z/27(ho_3)	omathbf Z/9(ho_2)	o0.
+]
+
+Key distinction:
+- Mazur deformation theory supplies the same **general small-extension / H^2-obstruction mechanism**, but (delta_{3,ho_3}) is not literally the obstruction to lifting (ho_2) to (ho_3). Here (ho_3) is already fixed, and (delta) obstructs lifting a cohomology class (fin H^1(G,mathbf Z/9(ho_2))).
+- Efrat's Zassenhaus/Massey/U_n embedding-problem machinery has the same abstract obstruction pattern, but its lifted object is a unipotent representation/defining system, not the twisted coefficient 1-cocycle (f). Therefore (delta_3) is not literally the U_4/Massey obstruction.
+- Strong Massey vanishing for Demuškin groups is known, so a fixed-category Massey-vanishing target remains CLOSED as trivial/constant. It does not imply that the full coefficient-extension family ({delta_{3,ho_3}}) is zero.
+- Pál–Quick A_3-formality gives independent q-sensitive higher-cohomological information, but its DGA/Hochschild canonical-class input is not the finite Zassenhaus window nor the (delta_3) family.
+
+Classification:
+- general H^2 obstruction mechanism: **KNOWN / PASS-CLOSED**
+- (delta_3) = Mazur deformation obstruction: **FAIL / CLOSED**
+- (delta_3) = Efrat U_4/Massey embedding obstruction: **FAIL / CLOSED**
+- strong Demuškin Massey vanishing: **PASS / CLOSED**
+- strong Massey vanishing (Rightarrowdelta_3=0): **NOT ESTABLISHED; do not infer**
+- A_3-formality = (delta_3): **OPEN / not found**
+- finite filtered factorization (W_n	o{delta_{3,ho_3}}): **OPEN / LOAD-BEARING**
+- novelty of the finite-window factorization theorem: **OPEN / CONDITIONAL**
+
+Detailed audit: `research/PAPER3_DELTA3_MAZUR_MASSEY_PRIOR_ART_AUDIT_2026-09-28.md`, commit `3c6c0eac5e91fe5ee3c36ae66487e3e087f0522d`.
+
+Next authorized action: a narrower Kummerian/1-cyclotomic prior-art comparison asking whether existing theorems construct the coefficient-lift torsor or equivalent connecting-map family from a finite quotient/Zassenhaus data **without assuming the canonical orientation**. No new carrier computation is authorized before that comparison.
+
 
 
 ## 2026-09-27 — PAPER 3 MIDPOINT SUMMARY / CURRENT MASTER CONTEXT
