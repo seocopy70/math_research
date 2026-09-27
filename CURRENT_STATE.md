@@ -1231,3 +1231,18 @@ Strategic fork recorded:
 
 Massey-product and Aut-orbit searches are PAUSED pending this fork; no new computation is authorized yet.
 Classification: **OPEN / LOAD-BEARING**.
+
+
+## 2026-09-27 — F1 q=3,n=4 ORIGINAL-TEXT AUDIT CLOSED; COMPUTATION SPEC FIXED
+
+Blumer–Quadrelli arXiv:2603.15464v2 원문 대조로 F1 sharpness computation의 입력과 Dwyer convention을 확정했다. 각 \(\alpha_h\)는 \(H^1\) class이고 \((A_i)_{h,h+1}=\alpha_h(x_i), (B_i)_{h,h+1}=\alpha_h(y_i)\)로 realization한다. \(d=2,q=3,n=4\)의 adjacent cup condition은 \(c_hd_{h+1}-d_hc_{h+1}=0\), full lift relation은 \(A_1^3[A_1,B_1][A_2,B_2]=I_5\)이다.
+
+중요한 경계: \([A_1^3,B_1]=1\)은 full fourfold Dwyer lift와 동치가 아니다. 따라서 local obstruction과 full lift existence를 별도 단계로 검사한다.
+
+Classification:
+- source definitions/conventions: **PASS / CLOSED**
+- naive \(A\mapsto\alpha\): **FAIL / CLOSED**
+- local obstruction = full lift라는 식별: **FAIL / CLOSED**
+- F1 \(q=3,n=4\) sharpness: **OPEN / LOAD-BEARING**
+
+Next authorized action: 소예 독립 검증 → 구현 교차검증 → 그 후 전수계산.
