@@ -1,10 +1,10 @@
-# PAPER 3 — CARRIER MINIMALITY: SPAN REDUCTION THEOREM — 2026-09-28
+# PAPER 3 — CARRIER MINIMALITY: CORRECTED LINEAR-QUOTIENT REDUCTION — 2026-09-28
 
 ## Status
 
-**Carrier minimality is now reduced to a precise finite linear-algebra problem in the quotient-carrier category.**
+A first carrier-minimality reduction was critically rechecked. The earlier claim that the minimum carrier dimension equals the dimension of the span of all false-lift outputs was **too strong**: recognition only needs to preserve each actual false obstruction, not every linear combination of false obstructions.
 
-This does not yet prove that the transgression quotient \(\mathcal O_k\) is minimal or universal. It identifies exactly what must be computed to prove such a statement.
+The corrected result is an exact kernel-avoidance formulation.
 
 ## 1. Fixed finite carrier
 
@@ -20,139 +20,154 @@ define
 H^2(Q_k,\mathbf F_p)/\operatorname{im}(\operatorname{tra}_k).
 \]
 
-The corrected D2 theorem gives, for every false first-order lift
+Let
 \[
-\rho_k=\chi_k(1+p^{k-1}\nu),\qquad \nu\ne0,
+\mathscr F_k\subset\mathcal O_k\setminus\{0\}
 \]
-at least one finite obstruction class
+be the set of all finite obstruction classes produced by false first-order lifts and their witnesses:
 \[
-o(\nu,f)\in\mathcal O_k
+\mathscr F_k
+=
+\{\, [\delta_{k,\rho}(f)]:
+\rho\ne\chi_k,\ f\text{ a witness}\,\}.
 \]
-that is nonzero.
+
+D2 proves
+\[
+\boxed{\mathscr F_k\ne\varnothing}
+\]
+and, more strongly, every false candidate has at least one nonzero element of \mathscr F_k associated with it.
 
 Let
 \[
-\mathscr S_k
-=
-\operatorname{span}_{\mathbf F_p}
-\{\,o(\nu,f):
-\nu\ne0,\ f\text{ is an admissible witness for }\nu\,\}
-\subseteq\mathcal O_k.
+\mathscr S_k=\operatorname{span}(\mathscr F_k).
 \]
 
-More invariantly, take the span of the images in \(\mathcal O_k\) of all finite connecting outputs arising from all false candidates.
+## 2. Exact criterion for a linear quotient carrier
 
-Then
+Take a linear quotient carrier
 \[
-\mathscr S_k\ne0
-\]
-by D2.
-
-## 2. Linear quotient-carrier theorem
-
-Restrict first to the category of finite-dimensional \(\mathbf F_p\)-linear quotient carriers:
-\[
-\pi:\mathcal O_k\twoheadrightarrow C,
-\]
-with recognition performed by the induced obstruction map.
-
-A carrier C detects every false lift iff
-\[
-\ker(\pi)\cap\mathscr S_k=\{0\}.
+\pi:\mathcal O_k\twoheadrightarrow C.
 \]
 
-### Proof
-
-If a nonzero
-\[
-s\in\ker(\pi)\cap\mathscr S_k
-\]
-is represented by a linear combination of false-lift outputs, the quotient has lost a direction that is load-bearing for the obstruction span. Conversely, if the kernel has zero intersection with \(\mathscr S_k\), every nonzero obstruction direction remains nonzero after projection.
-
-The linear-algebra consequence is
-\[
-\boxed{\dim C\ge \dim\mathscr S_k.}
-\]
-
-Conversely, after choosing a complement
-\[
-\mathcal O_k=\mathscr S_k\oplus U,
-\]
-the projection
-\[
-\mathcal O_k\to\mathscr S_k
-\]
-is a quotient-carrier of dimension \(\dim\mathscr S_k\) that detects every false obstruction.
-
-Therefore, in the unrestricted linear quotient category,
+The carrier detects every false candidate exactly when, for every false candidate \rho, at least one of its obstruction witnesses remains nonzero:
 \[
 \boxed{
-\min\dim C=\dim\mathscr S_k.
+\forall \rho\ne\chi_k,\quad
+\exists f\quad
+\pi([\delta_{k,\rho}(f)])\ne0.
 }
 \]
 
-This is an exact reduction, not a heuristic.
-
-## 3. What this says about \(\mathcal O_k\)
-
-The transgression quotient is minimal in the linear quotient category iff
+Equivalently,
 \[
-\boxed{\mathscr S_k=\mathcal O_k.}
+\ker\pi
+\]
+must avoid the obstruction set belonging to each false candidate.
+
+This is weaker than
+\[
+\ker\pi\cap\mathscr S_k=\{0\}.
 \]
 
-So the old vague question “is \(\mathcal O_k\) minimal?” has been replaced by the concrete spanning question:
+The latter is a sufficient condition, but in general is not necessary, because a nonzero linear combination of individually detectable obstruction classes may lie in the kernel without causing any actual false candidate to become undetectable.
+
+### Concrete warning
+
+Over \(\mathbf F_3\), a set such as
+\[
+\{e_1,e_2,e_1+e_2\}
+\]
+spans a 2-dimensional space, yet the 1-dimensional functional
+\[
+(x,y)\mapsto x+y
+\]
+is nonzero on all three listed vectors. Thus “carrier dimension = span dimension” is not a valid recognition theorem.
+
+This correction is now authoritative.
+
+## 3. Correct minimality invariant
+
+The unrestricted linear-quotient problem is therefore:
 
 \[
 \boxed{
-\text{Do all of }\mathcal O_k
-\text{ arise, linearly, from false-lift obstruction outputs?}
+\min_{\pi:\mathcal O_k\twoheadrightarrow C}
+\dim C
+\quad\text{subject to}\quad
+\ker\pi\cap\mathscr F_\rho=\varnothing
+\text{ for every false candidate }\rho,
 }
 \]
+where \(\mathscr F_\rho\) is the set of obstruction outputs available for that candidate.
 
-If yes, \(\mathcal O_k\) is dimension-minimal among all linear quotient carriers.
-
-If
+Equivalently, if \(K\le\mathcal O_k\) is the kernel of a quotient, then
 \[
-0<\dim\mathscr S_k<\dim\mathcal O_k,
+K\cap\mathscr F_\rho=\varnothing
+\quad\text{for every false }\rho,
 \]
-then \(\mathcal O_k\) contains recognition-inert directions and is not dimension-minimal in that category.
-
-## 4. Immediate lower bound
-
-D2 already proves
+and
 \[
-\dim\mathscr S_k\ge1.
+\dim C=\dim\mathcal O_k-\dim K.
 \]
 
-The global Demuškin pairing alone does **not** determine \(\dim\mathscr S_k\). Globally,
+So the problem is a finite linear-algebraic **subspace-avoidance problem**, not a span-dimension problem.
+
+## 4. What the span still tells us
+
+The span
 \[
-H^2(G,\mathbf F_p)
+\mathscr S_k=\operatorname{span}(\mathscr F_k)
 \]
-is one-dimensional, so all separating outputs have the same nonzero global image up to scalar. Distinct finite obstruction directions can therefore differ only by finite information invisible after global inflation.
+remains useful.
 
-Hence one cannot infer
+If one imposes the stronger carrier requirement that **every nonzero vector of \mathscr S_k** must remain detectable, then
 \[
-\mathscr S_k=\mathcal O_k
+\ker\pi\cap\mathscr S_k=\{0\}
 \]
-from PD^2 nondegeneracy alone.
-
-This is the exact point at which a genuine finite-carrier computation or representation-theoretic argument would become necessary.
-
-## 5. Functorial category remains separate
-
-The projection onto a chosen complement \(\mathscr S_k\) is generally noncanonical. Therefore the preceding theorem does **not** prove functorial minimality.
-
-For the stronger category
+is necessary and sufficient, and hence
 \[
-\mathcal C_k^{\mathrm{fun}}
-=
-\{\text{finite }\mathbf F_p\text{-linear carriers functorially attached to }E_k\to Q_k\},
+\dim C\ge\dim\mathscr S_k.
 \]
-the remaining target is a universal property of \(\mathcal O_k\), for example:
 
-> Every admissible functorial separating carrier receives a canonical factorization from \(\mathcal O_k\), or from a canonical quotient of \(\mathcal O_k\).
+Thus
+\[
+\dim\mathscr S_k
+\]
+is an exact minimum only for the stronger “detect every nonzero vector in the obstruction span” category, not automatically for the original recognition problem.
 
-That remains **OPEN**.
+D2 still gives
+\[
+\mathscr S_k\ne0.
+\]
+
+## 5. Consequences for \mathcal O_k
+
+The correct questions are now:
+
+### Recognition-minimality
+Does there exist a proper quotient
+\[
+\mathcal O_k\twoheadrightarrow C
+\]
+whose kernel avoids every actual false-candidate obstruction set?
+
+### Span-complete minimality
+Is
+\[
+\mathscr S_k=\mathcal O_k?
+\]
+If so, \mathcal O_k is minimal in the stronger span-complete category.
+
+### Functorial minimality
+Is there a canonical quotient of \mathcal O_k that is minimal and functorial under isomorphisms of the finite filtered pair
+\[
+E_k\to Q_k?
+\]
+
+The first is the true recognition problem; the second is a useful stronger problem; the third is the strongest categorical target.
+
+All three remain OPEN.
 
 ## 6. 45-dimensional calculation: exact role
 
@@ -161,46 +176,44 @@ The old rank-4, p=3 calculation
 \dim(P_4/P_5)=45,\qquad
 \ker(H^2(W_4)\to H^2(W_5))\cong Q_4^*
 \]
-is not required for the definition of \(\mathscr S_2\).
+is not required for the corrected D2 theorem.
 
-It becomes relevant only if we attempt to compute
-\[
-\dim\mathscr S_2
-\]
-or its \(Sp_4(\mathbf F_3)\)-module structure.
+It becomes relevant only if we try to determine:
+- the actual obstruction set \mathscr F_2;
+- its span or module structure;
+- or the existence of a proper functorial quotient of \mathcal O_2.
 
-Therefore the correct research order is:
+Therefore the previous decision stands:
 
 \[
 \boxed{
-\text{define }\mathscr S_k
-\to
-\text{prove functorial properties}
-\to
-\text{only then compute its dimension/module structure if needed}.
+\text{do not restart the 45-dimensional computation yet.}
 }
 \]
 
-This preserves the previous decision not to restart the 45-dimensional computation prematurely.
+First identify the intrinsic structure of the obstruction set and its functorial symmetries.
 
 ## 7. Classification
 
-- exact linear-quotient reduction: **PASS / CLOSED**;
-- \(\mathscr S_k\ne0\): **PASS / CLOSED** by D2;
-- \(\min\dim C=\dim\mathscr S_k\) in unrestricted linear quotient category: **PASS / CLOSED**;
-- \(\mathcal O_k\) minimality: **OPEN**, equivalent to \(\mathscr S_k=\mathcal O_k\);
+- corrected recognition-carrier formulation: **PASS / CLOSED**;
+- D2 nonempty false-obstruction set: **PASS / CLOSED**;
+- exact minimal dimension in unrestricted quotient category: **OPEN**;
+- span-complete lower bound: **PASS / CLOSED as a conditional statement**;
+- \mathcal O_k minimality: **OPEN**;
 - functorial universal minimality: **OPEN**;
-- 45-dimensional computation as a recognition input: **NOT REQUIRED**;
-- 45-dimensional computation as a possible minimality/module input: **DEFERRED / CONDITIONAL**.
+- 45-dimensional computation as current recognition input: **NOT REQUIRED**;
+- 45-dimensional computation as later minimality/module input: **DEFERRED / CONDITIONAL**.
 
 ## Next target
 
-The next mathematically sharp question is not “calculate 45 again.” It is:
+The sharp next question is:
 
 \[
 \boxed{
-\text{Can }\mathscr S_k\text{ be characterized intrinsically, or bounded below, without coordinates?}
+\text{What is the intrinsic/functorial structure of the false-obstruction set }\mathscr F_k?
 }
 \]
 
-A particularly useful first test is whether the functorial span of false-lift outputs is forced to contain a canonical submodule of \(\mathcal O_k\). Only after that should a concrete rank-4 module calculation be reopened.
+In particular, determine whether automorphisms of the finite filtered pair force \mathscr F_k to contain sufficiently many directions that every proper functorial quotient kills some false candidate.
+
+Only after this symmetry/obstruction-set analysis should a concrete rank-4 module calculation be reopened.
