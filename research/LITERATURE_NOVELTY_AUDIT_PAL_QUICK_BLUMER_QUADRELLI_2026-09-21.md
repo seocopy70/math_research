@@ -44,7 +44,8 @@ Therefore:
 
 Important caution: this paper prevents the overstatement that “higher structure cannot see q”. It demonstrably can.
 
-Source: arXiv:2601.07551. citeturn0academia0
+Source: arXiv:2601.07551. 
+
 
 ---
 
@@ -88,7 +89,8 @@ Therefore:
 - intrinsic filtered-input → orientation factorization: **OPEN**;
 - finite-window recognition on \(G/P_{k+1}\): **OPEN / LITERATURE VERIFICATION REQUIRED**.
 
-Source: arXiv:2603.15464. citeturn0academia1
+Source: arXiv:2603.15464. 
+
 
 ---
 
@@ -112,7 +114,8 @@ Therefore:
 - relevance to the p=3 filtered finite-window problem: **background/methodological only**;
 - direct closure of the present factorization question: **NO**.
 
-Source: arXiv:2607.01028. citeturn0academia2
+Source: arXiv:2607.01028. 
+
 
 ---
 
