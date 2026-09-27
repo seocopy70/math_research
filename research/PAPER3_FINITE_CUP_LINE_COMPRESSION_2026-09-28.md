@@ -351,3 +351,27 @@ u\cup\bar f) lie in (C_k), and D2's existential witness has nonzero global infla
 | Canonical (O_k\tomathbf F_p) reconstructed from (E_k\to Q_k) alone | **OPEN / NOT LOAD-BEARING** |
 
 This supersedes the immediately preceding “kernel open” correction. The correction was useful: it identified exactly the missing proof obligation, which is now discharged by relation-module/cup duality.
+
+
+## CRITICAL REVIEW — 2026-09-28 — RELATION/CUP RANK ARGUMENT AUDITED
+
+The new closure is substantially stronger than the previous naturality-only argument, and the decisive idea is correct, but two points must remain explicit.
+
+1. The quotient presentation must be written correctly. If G=F/R and Q_k=G/D_n(G), then the kernel of F -> Q_k is R_k=R D_n(F), because Zassenhaus filtration is functorial and D_n(G) is the image of D_n(F). Since n=p^{k-1}+1>=3 for odd p, D_n(F) subset D_3(F). Also R_k subset F^(2), so F -> Q_k remains a minimal pro-p presentation.
+
+2. The phrase “standard relation-module/cup duality gives rank equality” needs the actual finite presentation map, not merely Theorem 7.3 quoted as a black box. Proposition 7.1 gives the commutative pairing diagram for a minimal pro-p presentation, and the rank of the cup map equals the rank of its dual relation-to-quadratic-initial-form map. For Q_k, that latter map has image exactly the one-dimensional span of in_2(r), because the added relators D_n(F) contribute nothing modulo D_3(F). Hence dim C_k=1. The published source explicitly states the pairing compatibility in Proposition 7.1 and identifies the quadratic initial-form map with cup products. citeturn0search2
+
+This closes the earlier logical gap: the proof is NOT “global H^2 is one-dimensional, therefore finite C_k is one-dimensional.” It is “finite cup map and finite quadratic relation map are dual, and the latter has rank one.”
+
+A further check: for the torsion-free odd-p Demushkin relation, the degree-two commutator form is nonzero; the q-term x_1^q has degree q>=p>=3 and therefore does not alter the quadratic initial form. Thus the rank-one conclusion applies throughout the declared odd-p Demushkin scope.
+
+What must NOT be claimed: the cited theorem by itself does not prove any arbitrary pro-p group has one-dimensional cup image. The one-dimensionality here uses the specific one-relator Demushkin presentation together with the fact that the finite quotient adds only relators in D_3.
+
+Final audited status:
+- finite cup-line rank argument: PASS / CLOSED;
+- kernel C_k -> H^2(G) = 0: PASS / CLOSED;
+- C_k -> O_k injective: PASS / CLOSED;
+- 1D finite selector carrier: PASS / CLOSED, conditional on already-closed D2 variation/separation;
+- absolute selector-window minimality: OPEN;
+- canonical O_k -> F_p from E_k -> Q_k alone: OPEN / not load-bearing;
+- publication novelty: OPEN / CONDITIONAL.
