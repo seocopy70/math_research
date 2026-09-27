@@ -3726,3 +3726,21 @@ The naive replacement H_10=H^2(Q_10,F_3) is therefore promoted only as the next 
 Classification: **OPEN / LOAD-BEARING**. No failure theorem is claimed yet. Next authorized attack: test H^2(Q_10,F_3) and the canonical transgression/extension subquotient as possible intrinsic finite obstruction carriers; classify any failure exactly.
 
 Detailed record: research/PAPER3_GATE_B_W10_TO_DELTA3_FAMILY_PRECHECK_2026-09-28.md
+
+## 2026-09-28 — Paper 3 Gate B CLOSED and Gate C CLOSED: finite delta-family and mod-27 selector
+
+A new cohomological factorization closes the previously load-bearing finite-family gate. For Q_10=G/P_10, P_10 is contained in Phi(G), so H^1(Q_10,F_3)->H^1(G,F_3) is an isomorphism. The five-term Hochschild-Serre sequence then makes H^2(Q_10,F_3)->H^2(G,F_3) injective. Since Q_10 is a nontrivial finite 3-group, H^2(Q_10,F_3) is nonzero; Demushkinity gives dim H^2(G,F_3)=1. Hence inflation is an isomorphism. Together with U2, coefficient-extension naturality gives a finite quotient-level connecting map for every rho_3 in the finite lift set, and the full family reconstructs the intrinsic G-level family.
+
+Classification: **Gate B PASS / CLOSED**.
+
+The next step also closes Gate C. Classical Kummerianity gives existence of the canonical lift chi mod 27 with delta=0. If rho_3'=rho_3(1+9nu), the proved variation formula gives delta_{rho_3'}(f)-delta_{rho_3}(f)=nu cup bar(f). If two lifts had identically zero connecting maps, then nu cups every element of H^1(G,F_3) to zero. Demushkin cup nondegeneracy forces nu=0. Thus the full delta-family has a unique zero map, and that unique lift is chi mod 27.
+
+Important distinction: fixed-f zero sets may still have 27 elements; Gate C uses the entire homomorphism delta, whose common zero selector is unique.
+
+Classification: **Gate C PASS / CLOSED** for the fixed rank-four Demushkin category at mod 27.
+
+Detailed records:
+- research/PAPER3_GATE_B_W10_TO_DELTA3_FAMILY_RESULT_2026-09-28.md
+- research/PAPER3_GATE_C_DELTA3_TO_CHI27_RESULT_2026-09-28.md
+
+Current authorized frontier: Gate D — test the argument for arbitrary rank/prime and general k, while separating what is formal from what depends on Demushkin PD^2, finite p-group cohomology, and the specific sharp Zassenhaus depth.
