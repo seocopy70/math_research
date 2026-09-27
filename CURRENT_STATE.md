@@ -813,3 +813,21 @@ for every rho != chi_k there exists f with lambda_k(delta_{k,rho}(f)) != 0. No c
 Next authorized attack is abstract finite-pair reconstruction. The 45-dimensional rank-4 p=3 calculation remains deferred unless the abstract route cannot decide the question.
 
 Authoritative midpoint note: research/PAPER3_MIDPOINT_SUMMARY_2026-09-28.md.
+
+
+## 2026-09-28 — PAPER 3 MIDPOINT CHECKPOINT / RECOGNITION CLOSED, CARRIER COMPRESSION FRONTIER
+
+Formal midpoint checkpoint: `research/PAPER3_MIDPOINT_SUMMARY_2026-09-28.md`.
+
+- D1 finite factorization: PASS/CLOSED at the declared torsion-free Demushkin scope.
+- Corrected D2 transgression-quotient separation: PASS/CLOSED.
+- D3 finite Kummer selector: PASS/CLOSED.
+- D4 affine depth p^{k-1}+1: PASS/CLOSED in the declared affine category.
+- Bare-Q_k H^2 inflation injectivity: FAIL/CLOSED.
+- Global one-dimensional detector: PASS/CLOSED, existential per false candidate.
+- Finite-pair intrinsic one-dimensional reconstruction from E_k -> Q_k: OPEN/LOAD-BEARING.
+- Absolute/functorial carrier minimality: OPEN.
+- 45-dimensional rank-4 p=3 calculation: DEFERRED.
+- Publication novelty: OPEN/CONDITIONAL.
+
+Next authorized attack: determine whether the finite central extension E_k -> Q_k canonically yields an equivalent nonzero functional on the D2 witness family. No non-recoverability claim is made.
