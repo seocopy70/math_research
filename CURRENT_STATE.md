@@ -394,3 +394,8 @@ The final source-level comparison was completed before new carrier computation.
 Final boundary: possible novelty remains localized at finite factorization/assembly, not canonical orientation or Kummerianity. Publication novelty remains **OPEN / CONDITIONAL**.
 
 Next authorized action: carrier computation may resume under the U1–U3 theorem chain; no absolute novelty claim is permitted.
+
+
+## 2026-09-28 — Citation hygiene correction
+
+The prior hygiene detector had a false-negative condition caused by invisible citation delimiters. Fifteen affected files were cleaned. The hardened workflow now rejects Private Use Area characters and known citation-artifact patterns; run 36331775297 passed. Current hygiene status: **PASS / CLOSED**. No mathematical conclusion changed.
