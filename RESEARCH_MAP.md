@@ -3810,3 +3810,19 @@ Thus lambda_k is still a 1-dimensional detector in the global category, but only
 The finite-pair question remains OPEN: whether E_k -> Q_k canonically determines an equivalent nonzero functional on the witness family. Non-recoverability is NOT claimed.
 
 Authoritative correction: research/PAPER3_CARRIER_SPAN_REDUCTION_2026-09-28.md, commit 948ad02cff8d2c9dfa226b7fbaba17055b9d46f0.
+
+
+## 2026-09-28 — PAPER 3 MIDPOINT / FRONTIER MOVED FROM RECOGNITION TO INTRINSIC CARRIER COMPRESSION
+
+The Paper 3 midpoint is frozen in `research/PAPER3_MIDPOINT_SUMMARY_2026-09-28.md`.
+
+The recognition theorem itself is now closed: finite Kummer data on Q_k selects chi mod p^k at the declared Demushkin scope. D1, corrected D2, D3, and affine D4 are closed; the earlier bare-Q_k H^2 inflation route remains permanently closed as a false proof route.
+
+The active frontier is narrower:
+\[
+E_k\to Q_k\;\stackrel{?}{\Longrightarrow}\;\text{canonical nonzero functional on the D2 witness family}.
+\]
+
+Global inflation supplies a one-dimensional detector, but that map uses G and is not automatically part of the finite pair. The remaining question is whether an equivalent detector is recoverable functorially from the finite extension alone. Non-recoverability is not claimed.
+
+No 45-dimensional recomputation is authorized before this abstract finite-pair attack is exhausted.
