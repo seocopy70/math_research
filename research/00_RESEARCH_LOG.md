@@ -4124,3 +4124,21 @@ Classification:
 - publication novelty: OPEN/CONDITIONAL.
 
 Authoritative proof: research/PAPER3_GATE_D_GENERAL_ODD_P_RANK_Q_K_RESULT_2026-09-28.md, commit 99bbbeb2d6072b8f435ada806e08e48781f5d381.
+
+
+## 2026-09-28 — CARRIER MINIMALITY CRITICAL CORRECTION
+
+The first linear-carrier reduction was critically rechecked. The statement “minimum carrier dimension equals the span dimension of all false-lift outputs” was too strong: recognition only requires at least one surviving obstruction per false candidate, not preservation of every linear combination.
+
+Correct formulation: for a quotient pi:O_k -> C, detection requires ker(pi) to avoid the actual obstruction set for every false candidate. The unrestricted linear problem is therefore a finite subspace-avoidance problem. The span S_k of all obstruction outputs gives an exact lower bound only in the stronger category that requires every nonzero vector of S_k to remain detectable.
+
+Thus:
+- corrected recognition-minimality formulation: PASS/CLOSED;
+- D2 nonempty false-obstruction set: PASS/CLOSED;
+- exact minimal dimension in the original quotient-recognition category: OPEN;
+- span-complete minimality: OPEN;
+- functorial minimality: OPEN.
+
+No 45-dimensional recomputation is authorized yet. Next target is the intrinsic/functorial structure of the false-obstruction set.
+
+Authoritative correction: research/PAPER3_CARRIER_SPAN_REDUCTION_2026-09-28.md, commit cc50379a53fc295a0e830537f7c35846d696d3d6.
