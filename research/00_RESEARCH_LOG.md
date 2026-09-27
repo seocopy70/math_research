@@ -2997,3 +2997,81 @@ Decision:
 - N3 framework-level prior-art comparison is now mandatory before substantial target computation.
 
 Detailed audit: research/PAPER3_ULTIMATE_GOAL_PRIOR_ART_AUDIT_2026-09-27.md.
+
+
+## 2026-09-27 — PAPER 3 EFRAT–MINÁČ / FINITE-DETERMINACY COMPARISON MATRIX
+
+N3 prior-art analysis was refined by rewriting the Efrat–Mináč framework in the project's proposed threshold language and separating verified statements from hypotheses.
+
+### Verified prior-art baseline
+
+Efrat–Mináč, *Galois groups and cohomological functors* (TAMS 2017; arXiv:1103.1508), constructs a canonical quotient (G[3]) for absolute Galois groups containing the relevant roots of unity and proves that it determines the full mod-(q) cohomology ring; Theorem A gives the corresponding minimality condition. For (q=p) odd, the relevant third term agrees with the third Zassenhaus term. Their cohomological-duality framework also includes examples involving cup product and Bockstein together with cup product. This is direct prior art against any broad claim that “finite filtered information determines a cohomological invariant” is itself new.
+
+Efrat 2014, *The Zassenhaus filtration, Massey products, and representations of profinite groups*, supplies a close representation-theoretic precedent: under stated hypotheses, a Zassenhaus term is characterized as an intersection of kernels of upper-triangular unipotent representations. This is prior art for the general bridge between finite-dimensional representation data and Zassenhaus depth.
+
+### Proposed (r_T) recasting — status by item
+
+The project notation
+[
+r_T(mathcal C;D_ullet)
+=
+min{n:W_n(G)cong W_n(H)Rightarrow T(G)cong T(H)
+	ext{ for all }G,Hinmathcal C}
+]
+remains useful, but the following distinctions are mandatory.
+
+1. For cup-product/decomposable-cohomology targets, an (n=3) upper bound and a minimal determining quotient are already Efrat–Mináč territory. **NON-NOVEL / CLOSED as a general phenomenon.**
+
+2. For the combined Bockstein + cup target, Efrat–Mináč provide direct prior art. **NON-NOVEL / CLOSED as a general phenomenon.**
+
+3. The statement that a pure Bockstein target (T_eta) has an exact threshold (r_{T_eta}=p+1) is **NOT YET VERIFIED** and must not be treated as an established result. It is only a candidate research question.
+
+4. “Minimal determining quotient” is not automatically identical to the project's (r_T). The Efrat–Mináč theorem concerns a specific cohomological target and category; (r_T) is a category-level indistinguishability threshold for a prescribed filtration. Exact equivalence must be proved, not assumed.
+
+5. The proposed distinction
+[
+	ext{factorization threshold}
+eq	ext{recognition threshold}
+]
+is conceptually useful, but novelty is **OPEN** until a concrete theorem/example produces a genuine separation.
+
+6. Filtration dependence
+[
+r_T(mathcal C;D_ullet)
+eq r_T(mathcal C;E_ullet)
+]
+is a candidate axis; no novelty claim is made until an explicit example or comparison theorem survives prior-art checking.
+
+7. Information-loss/separation pairs
+[
+W_{n-1}(G)cong W_{n-1}(H),qquad T(G)
+otcong T(H)
+]
+are a natural lower-bound language, but explicit constructions must first be checked against existing minimal-determining-quotient results.
+
+### Comparison matrix
+
+| Axis | Existing finite-determinacy / Efrat–Mináč | New Paper 3 program | Current classification |
+|---|---|---|---|
+| Target | cup/decomposable cohomology; Bockstein+cup variants | arbitrary prescribed target (T) | broad claim **OPEN/CONDITIONAL** |
+| Threshold | third-level sufficiency/minimal quotient in specific classes | exact (r_T(mathcal C;D_ullet)) | **OPEN / LOAD-BEARING** |
+| Sharp lower bound | minimal determining quotient already gives a form of minimality | explicit same-window separation pair | **OPEN** |
+| Factorization vs recognition | not the primary distinction | explicit separate invariants | **OPEN**; must produce nontrivial separation |
+| Filtration comparison | mainly fixed canonical filtrations in cited results | compare (D_ullet,E_ullet) | **OPEN** |
+| Category dependence | class-specific | ((mathcal C,D_ullet,T)mapsto r_T) | **OPEN** |
+| Uniformity | theorem-specific | threshold as category-level object | **OPEN / CONDITIONAL** |
+| Information-loss obstruction | implicit/structural minimality exists | explicit obstruction theorem | **OPEN** |
+
+### Research decision
+
+The broad slogan “finite information determines a global invariant” is **not** a novelty claim and is now treated as established background.
+
+Candidate novelty for Paper 3 must instead come from a mathematically nontrivial combination not already supplied by Efrat–Mináč or related finite-determinacy theory, most plausibly:
+- a target-independent threshold formalism with precise functorial hypotheses;
+- a theorem genuinely separating factorization and recognition thresholds;
+- a filtration-comparison theorem;
+- or an explicit sharp separation family not reducible to an existing minimal-determining-quotient theorem.
+
+The next mandatory step is **N3 prior-art theorem-by-theorem comparison**, not broad computation. The pure Bockstein (r_{T_eta}=p+1) proposal remains a conjectural test case, not an established result.
+
+Classification: **OPEN / LOAD-BEARING.**
