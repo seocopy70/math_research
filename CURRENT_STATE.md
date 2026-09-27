@@ -475,3 +475,15 @@ Classification:
 - publication novelty: **OPEN / CONDITIONAL**.
 
 Next authorized action: repair D2 using extension/transgression data or a precisely identified quotient-level obstruction subspace. Do not treat Gate D as closed.
+
+## 2026-09-28 — LIVE GATE D2 REPAIR: DEEPER-WINDOW COHOMOLOGY
+
+The rejected bare-Q_k H^2-injectivity argument is replaced by a weaker continuity statement. For Q_k=G/P_{p^{k-1}+1}, every H^2(Q_k,F_p) class that dies in H^2(G,F_p) dies after some deeper finite Zassenhaus quotient W_{p^{k-1}+1+m}. Finite-dimensionality of H^2(Q_k,F_p) implies stabilization at some finite m_0. This is an existence theorem only: no explicit or uniform bound for m_0 is known, and m=1 is not established.
+
+Current D2 frontier:
+- continuity/stabilization existence: **PASS / LOCAL**;
+- m=1 sufficiency: **OPEN**;
+- uniform computable m-bound: **OPEN / LOAD-BEARING**;
+- finite delta-family reconstruction at corrected depth: **OPEN / LOAD-BEARING**.
+
+For k=2, p=3, d=4, the first concrete audit is W_4 -> W_5, with extension kernel P_4/P_5. The required calculation is the W_5-fixed subspace of H^1(P_4/P_5,F_3), its transgression image in H^2(W_4,F_3), and then the position of the actual delta-family relative to that kernel. No claim is made that the nonzero full kernel contains the canonical delta class.
