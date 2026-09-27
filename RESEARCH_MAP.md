@@ -1,3 +1,46 @@
+## 2026-09-27 — NEW PAPER 3: FINITE-WINDOW RECOGNITION THRESHOLD PROGRAM
+
+The former Paper 3 application manuscript is closed as an independent paper and remains absorbed into the Paper 2 publication candidate. Paper 1 and Paper 2 are now treated as closed/frozen research stages for the purpose of the next program.
+
+A new **Paper 3** is opened as a genuinely new research program:
+**finite-window recognition thresholds**.
+
+The motivation is the natural generalization of the completed sequence:
+- Paper 1: finite filtered information can recover a global invariant;
+- Paper 2: a concrete affine/Kummer observation has sharp factorization depth (p^{k-1}+1);
+- Paper 3: make the amount of finite information needed to recognize a global target into a category-relative mathematical object and begin its theory.
+
+The central object is
+[
+r_T(mathcal C;D_\bullet)
+=
+\min\{n: W_n(G)\cong W_n(H)\Rightarrow T(G)\cong T(H)
+\text{ for all }G,H\in\mathcal C\},
+]
+with (r_T=\infty) when no such (n) exists. The admissible category is part of the definition.
+
+Factorization threshold and recognition threshold are explicitly separated. Paper 2's
+[
+f_{\mathrm{aff}}(k)=p^{k-1}+1
+]
+is retained as a benchmark/bridge, not automatically reclassified as a new recognition theorem.
+
+Initial gates:
+- N0: formal category-level definition and exact window object — PASS/CLOSED target.
+- N1: basic threshold theory (well-definedness, monotonicity, separation lower bound, target monotonicity, joint targets) — PASS/CLOSED target.
+- N2: exact bridge to Paper 2 — OPEN.
+- N3: select the first genuinely new target after prior-art/non-redundancy screening — OPEN.
+- N4: construct recognition/separation examples and threshold bounds — OPEN.
+- N5: category/filtration comparison — later OPEN.
+
+Ultimate goal:
+develop a general theory of finite-window recognition of global invariants for filtered algebraic objects, including structural conditions for finite recognizability, sharp thresholds, and information-theoretic obstructions. **Paper 3 is explicitly recorded as the most natural first step toward this ultimate generalization.**
+
+Authoritative detailed plan:
+`research/PAPER3_FINITE_WINDOW_RECOGNITION_PROGRAM_2026-09-27.md`.
+
+This entry is a new research-program decision; it does not reopen closed Paper 1/2 mathematical branches.
+
 ## 2026-09-26 — PAPER 2 + PAPER 3 MERGED PUBLICATION CANDIDATE
 
 The current publication-track decision is now fixed:
