@@ -3746,3 +3746,17 @@ Detailed record: research/PAPER3_D3_SELECTOR_PROMOTION_D4_BOUNDARY_2026-09-28.md
 Current classification: O_k is a sufficient canonical carrier PASS/CLOSED; absolute minimality NOT WELL-POSED until category fixed; linear quotient minimality OPEN; functorial universal minimality OPEN. Do not revive large 45-dimensional computations before this categorical target is fixed.
 
 Detailed record: research/PAPER3_CARRIER_MINIMALITY_BOUNDARY_2026-09-28.md
+
+
+## 2026-09-28 — Gate D corrected general theorem CLOSED
+
+Gate D is now PASS/CLOSED for the declared torsion-free Demuškin class: odd p, even rank d>=2, q in {0,p,p^2,...}, all k>=2.
+
+The earlier bare-Q_k H^2-inflation argument remains FAIL/CLOSED. The corrected proof uses the intrinsic finite central extension E_k -> Q_k and the carrier
+O_k=H^2(Q_k,F_p)/im(tra_k).
+
+D1 arbitrary-p affine factorization, D2 transgression-quotient separation, D3 all-k induction, and D4 LTE sharpness are now closed at this scope. Uniform-in-q is therefore closed within this declared Demuškin family. No claim is made for arbitrary pro-p groups.
+
+Next frontier is not Gate D generalization and not another 45-dimensional calculation. It is the specified carrier-category problem: whether O_k is universal/minimal among admissible finite functorial linear recognition carriers, plus the separate publication-novelty audit.
+
+Authoritative proof: research/PAPER3_GATE_D_GENERAL_ODD_P_RANK_Q_K_RESULT_2026-09-28.md (commit 99bbbeb2d6072b8f435ada806e08e48781f5d381).
