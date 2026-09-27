@@ -3331,3 +3331,40 @@ Decision:
 - T_beta recognition threshold: **OPEN / LOAD-BEARING**.
 
 Next authorized action: **Bockstein upper-bound test at p+1**, followed by a same-target comparison with the factorization threshold. No new Massey computation unless a later structural argument shows it is needed.
+
+
+## 2026-09-27 — PAPER 3 T_beta UPPER-BOUND PRE-CHECK: W_{p+1} ⇒ G_ab/p^2G_ab FIXED
+
+The proposed Bockstein upper-bound route was audited at the key filtration step. A useful correction is required: the earlier statement that W_{p+1} does not generally determine G_ab/p^2G_ab was too weak. In fact, for the Zassenhaus filtration one has the general inclusion
+
+D_{p+1}(G) ⊆ G^{p^2}[G,G].
+
+This follows directly from Lazard's formula D_n=∏_{ip^j≥n} γ_i^{p^j}: at n=p+1, the i=1 contribution begins at G^{p^2}, while every i≥2 contribution lies in [G,G]. Hence, with K=G^{p^2}[G,G],
+
+D_{p+1} ⊆ K,
+
+and therefore the quotient W_{p+1} contains enough information to recover
+G/K ≅ G_ab/p^2G_ab:
+the image K/D_{p+1} is intrinsically the subgroup
+(G/D_{p+1})^{p^2}[(G/D_{p+1}),(G/D_{p+1})]
+of the truncated quotient group.
+
+Thus the precise functorial chain is
+
+W_{p+1}(G)
+→ G/D_{p+1}(G)
+→ G/[G^{p^2}[G,G]]
+≅ G_ab/p^2G_ab.
+
+This is stronger than merely reading a p-power map D_1/D_2→D_p/D_{p+1}; the latter can be retained as an equivalent structural interpretation, but it should not be used as the primary proof unless its well-definedness and duality are separately stated.
+
+For the odd-p fixed-rank Demuškin category, the remaining upper-bound step is then:
+G_ab/p^2G_ab determines the mod-p^2 liftability kernel of H^1(G,F_p), hence the Bockstein rank; because H^2 has dimension 1, rank β∈{0,1}, and the fixed Demuškin classification identifies the corresponding Bockstein isomorphism class.
+
+Classification:
+- W_{p+1} ⇒ G_ab/p^2G_ab: **PASS / CLOSED** (general pro-p filtration fact).
+- W_{p+1} ⇒ rank β: **PASS / LOCAL**, pending the explicit Bockstein/liftability lemma and Demuškin parameter check in the chosen odd-p category.
+- W_{p+1} ⇒ [β]: **OPEN / LOAD-BEARING** until that lemma is written with exact hypotheses.
+- T_beta upper bound r_{T_beta}≤p+1: **OPEN / LOAD-BEARING**.
+
+Next authorized action: write the explicit Bockstein kernel/liftability lemma and then the Demuškin rank-to-isomorphism step; do not claim the full upper bound until both are independently checked.
