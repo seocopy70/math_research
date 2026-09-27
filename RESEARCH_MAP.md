@@ -3564,21 +3564,22 @@ This is a genuine finite-family carrier/selector construction and is distinct fr
 Gate D is now the only active mathematical gate: determine which parts generalize to arbitrary odd p, even rank, and general k, and separate the sharp Zassenhaus depth input from the cohomological/PD^2 input. No general theorem is claimed until those dependencies are independently audited.
 
 
-## 2026-09-28 — PAPER 3 GATE D CLOSED: GENERAL ODD-p FINITE KUMMER SELECTOR
+## 2026-09-28 — PAPER 3 GATE D REOPENED: D2 H^2 INFLATION FAILURE
 
-The Gate D generalization is complete at the declared selector scope. For every torsion-free Demushkin pro-p group of even rank d>=2, odd p, allowed q, and k>=2, the finite Kummer selector is intrinsically recoverable from the Zassenhaus window W_{p^{k-1}+1}. The proof separates formal ingredients (odd-p semidirect filtration, Zassenhaus functoriality, finite-group cohomology, coefficient-extension naturality) from Demushkin-specific inputs (PD^2/cup nondegeneracy and classical Kummerian existence).
-
-The exact selector threshold is
-\[
-\boxed{n_k^{Kum}=p^{k-1}+1},
-\]
-with the preceding window W_{p^{k-1}} ruled out by the canonical geometric-sum/LTE witness, including q=0.
+The previous CLOSED classification is superseded by a critical audit of D2. For Q_k=G/P_{p^{k-1}+1} and N=P_{p^{k-1}+1}, the five-term Hochschild–Serre sequence gives
+\\[
+\ker(H^2(Q_k,F_p)\to H^2(G,F_p))\cong H^1(N,F_p)^{Q_k}.
+\\]
+The H^1 inflation isomorphism makes the transgression injective; the fixed-point space is nonzero for the nontrivial open pro-p subgroup N under the finite p-group Q_k. Therefore H^2 inflation is not injective in general, so the previous bare-Q_k reconstruction of the full delta-family is not established.
 
 Classification:
-- Gate D: **PASS / CLOSED** for the declared finite Kummer selector.
-- Absolute carrier minimality: **OPEN / NOT CLAIMED**.
-- Publication novelty: **OPEN / CONDITIONAL**.
+- Gate D architecture: **PASS / LOCAL**.
+- D2 bare-Q_k H^2 argument: **FAIL / CLOSED**.
+- D2 replacement finite obstruction carrier: **OPEN / LOAD-BEARING**.
+- D3 global uniqueness: **PASS / LOCAL**, finite reconstruction conditional.
+- D4 LTE selector sharpness: **PASS / LOCAL**.
+- full arbitrary-(p,d,q,k) theorem: **CONDITIONAL / OPEN**.
+- absolute carrier minimality: **OPEN / NOT CLAIMED**.
+- publication novelty: **OPEN / CONDITIONAL**.
 
-This closes the generalization branch. The remaining Paper 3 problem is now strictly the richer-carrier program: construct an intrinsic filtered observation O that contains relation information beyond the Kummer selector, define a coarser target T=Phi(O), and study carrier-vs-target information depth without reopening the closed Kummer or degree-3 routes.
-
-Detailed result: research/PAPER3_GATE_D_GENERAL_ODD_P_RANK_Q_K_RESULT_2026-09-28.md.
+This reopens D2 rather than reopening the already-closed fixed rank-four Gates A-C.
