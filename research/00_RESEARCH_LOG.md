@@ -3605,3 +3605,35 @@ Detailed correction: research/PAPER3_HA58_P4_D10_FULL_INTRINSICITY_AUDIT_2026-09
 ## 2026-09-27 — HA58 CRITICAL REVIEW #4
 
 Direct cochain calculation proves the variation identity for rho_3'=rho_3(1+9nu): delta_{rho_3'}(f)-delta_{rho_3}(f)=nu cup bar(f), where bar(f) is the mod-3 reduction, under the standard convention. The earlier Ext/Yoneda shortcut is withdrawn because multiplication by 3 on Z/9 is not injective. For bar(f) != 0 in rank 4, any nonempty fixed-f zero-set has 27 lifts; nu=0 is not automatically a zero. Finite-filtered access to the lift family remains OPEN. See the HA58 audit Critical Review #4.
+
+
+## 2026-09-28 — δ3 / MAZUR / MASSEY PRIOR-ART AUDIT
+
+Before any new carrier computation, the surviving family
+[
+\rho_3\mapsto\delta_{3,\rho_3},qquad
+\delta_{3,\rho_3}:H^1(G,\mathbf Z/9(\rho_2))\to H^2(G,\mathbf F_3)
+]
+was compared with Mazur deformation theory, Efrat's Zassenhaus/Massey/unipotent embedding problems, and recent A_3-formality work.
+
+Findings:
+- Mazur supplies the same general small-extension/H^2-obstruction mechanism, but \delta_{3,\rho_3} is **not literally Mazur's deformation obstruction for \rho_2\to\rho_3**: \rho_3 is already fixed and the obstruction concerns lifting a cohomology class f.
+- Efrat's U_n/Massey mechanism has the same abstract obstruction pattern, but its lifted object is a unipotent representation/defining system rather than the twisted coefficient 1-cocycle f. Thus **\delta_3 is not literally the U_4/Massey embedding obstruction**.
+- Strong Massey vanishing for Demushkin groups is known, so fixed-category Massey vanishing remains a CLOSED constant target; it does **not** imply the whole coefficient-extension \delta_3 family is zero.
+- Pál–Quick A_3-formality supplies independent q-sensitive higher-cohomological information, but its DGA/Hochschild canonical-class input is not the finite Zassenhaus window or the \delta_3 family.
+
+Classification:
+- general H^2 obstruction mechanism: **KNOWN / PASS-CLOSED**
+- \delta_3 = Mazur deformation obstruction: **FAIL / CLOSED**
+- \delta_3 = Efrat U_4/Massey obstruction: **FAIL / CLOSED**
+- strong Demushkin Massey vanishing: **PASS / CLOSED**
+- strong Massey vanishing => \delta_3=0: **NOT ESTABLISHED; do not infer**
+- A_3-formality = \delta_3: **OPEN / not found**
+- finite filtered factorization W_n -> {\delta_{3,\rho_3}}: **OPEN / LOAD-BEARING**
+- novelty of finite-window factorization: **OPEN / CONDITIONAL**
+
+Detailed audit:
+research/PAPER3_DELTA3_MAZUR_MASSEY_PRIOR_ART_AUDIT_2026-09-28.md
+commit 3c6c0eac5e91fe5ee3c36ae66487e3e087f0522d.
+
+Next authorized action: perform a narrower Kummerian/1-cyclotomic prior-art comparison for whether existing theorems construct the coefficient-lift torsor or equivalent connecting-map family from finite quotient/Zassenhaus data without assuming the canonical orientation. No new carrier computation is authorized before that comparison.
