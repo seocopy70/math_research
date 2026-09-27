@@ -1,8 +1,37 @@
 # PAPER 3 — CARRIER MINIMALITY: CORRECTED LINEAR-QUOTIENT REDUCTION — 2026-09-28
 
-## Status
+## Critical review status
 
-Carrier minimality has been reduced to an exact kernel-avoidance problem. A second distinction is now locked: a one-dimensional **global** shadow exists, but it is not an intrinsic finite-pair carrier.
+A further audit found one important overstatement in the previous version.
+
+D2 proves that **for each false candidate** there exists at least one witness whose obstruction has nonzero global inflation. It does **not** prove that every obstruction output produced by an arbitrary witness has nonzero global inflation.
+
+Therefore the previous statement
+\[
+o\in\mathscr F_k\implies\lambda_k(o)\ne0
+\]
+was too strong if \(\mathscr F_k\) means the set of *all* finite outputs.
+
+The corrected object is the **witness-detecting set**
+\[
+\mathscr W_k
+=
+\left\{
+o_{\rho,f}\in\mathcal O_k:
+\rho\ne\chi_k,\ 
+\operatorname{inf}_G(o_{\rho,f})\ne0
+\right\}.
+\]
+
+D2 proves:
+\[
+\boxed{
+\forall\rho\ne\chi_k,\quad
+\exists o_{\rho,f}\in\mathscr W_k.
+}
+\]
+
+This is exactly what is needed for recognition. It is not necessary that every possible witness output belong to \(\mathscr W_k\).
 
 ## 1. Fixed finite carrier
 
@@ -18,193 +47,168 @@ define
 H^2(Q_k,\mathbf F_p)/\operatorname{im}(\operatorname{tra}_k).
 \]
 
-Let
+Global inflation induces
 \[
-\mathscr F_k\subset\mathcal O_k\setminus\{0\}
+\lambda_k:\mathcal O_k\to H^2(G,\mathbf F_p),
 \]
-be the set of all finite obstruction classes produced by false first-order lifts and their witnesses.
+because every transgression class dies in \(E_k\) and therefore dies after inflation to \(G\).
 
-D2 proves
+The canonical branch gives zero connecting map. For each false first-order candidate
 \[
-\boxed{\mathscr F_k\ne\varnothing}
+\rho_k=\chi_k(1+p^{k-1}\nu),\qquad\nu\ne0,
 \]
-and every false candidate has at least one nonzero obstruction in this set.
-
-Let
+D2 supplies at least one witness \(f\) such that
 \[
-\mathscr S_k=\operatorname{span}(\mathscr F_k).
+\lambda_k([\delta_{k,\rho_k}(f)])\ne0.
 \]
 
-## 2. Exact criterion for a linear quotient carrier
+## 2. Exact recognition criterion
 
-Take a quotient carrier
+Let \(\mathscr W_\rho\subset\mathcal O_k\setminus\{0\}\) be the set of witness-detecting obstruction classes for a fixed false candidate \(\rho\):
 \[
-\pi:\mathcal O_k\twoheadrightarrow C.
+\mathscr W_\rho
+=
+\left\{
+[\delta_{k,\rho}(f)]:
+\lambda_k([\delta_{k,\rho}(f)])\ne0
+\right\}.
 \]
 
-It detects every false candidate exactly when, for every false candidate \rho, at least one of its obstruction witnesses remains nonzero:
+D2 says
+\[
+\boxed{\mathscr W_\rho\ne\varnothing}
+\]
+for every \(\rho\ne\chi_k\).
+
+For a linear quotient
+\[
+\pi:\mathcal O_k\twoheadrightarrow C,
+\]
+the quotient detects every false candidate exactly when
 \[
 \boxed{
-\forall \rho\ne\chi_k,\quad
-\exists f\quad
-\pi([\delta_{k,\rho}(f)])\ne0.
+\forall\rho\ne\chi_k,\quad
+\exists o\in\mathscr F_\rho:
+\pi(o)\ne0,
+}
+\]
+where \(\mathscr F_\rho\) is the full finite obstruction set for \rho.
+
+Equivalently, the kernel must not contain the entire obstruction set of any false candidate:
+\[
+\boxed{
+\ker\pi\not\supseteq\mathscr F_\rho
+\quad\text{for every }\rho\ne\chi_k.
 }
 \]
 
-Equivalently, the kernel must avoid the obstruction set attached to every false candidate.
+This is the exact recognition criterion.
 
-This is weaker than
+The stronger condition
 \[
-\ker\pi\cap\mathscr S_k=\{0\}.
+\ker\pi\cap\operatorname{span}(\mathscr F_k)=\{0\}
 \]
+is sufficient but not necessary.
 
-The latter is sufficient, but generally not necessary.
-
-### Concrete warning
-
-Over \(\mathbf F_3\), the set
-\[
-\{e_1,e_2,e_1+e_2\}
-\]
-spans a 2-dimensional space, yet the 1-dimensional functional
-\[
-(x,y)\mapsto x+y
-\]
-is nonzero on all three vectors. Therefore “minimum recognition-carrier dimension = span dimension” is false in general.
-
-The previous version of this file made exactly that overstrong inference and is superseded.
-
-## 3. Exact recognition-minimality problem
-
-The unrestricted linear quotient problem is the finite subspace-avoidance problem
-\[
-\boxed{
-\min_{\pi:\mathcal O_k\twoheadrightarrow C}
-\dim C
-}
-\]
-subject to
-\[
-\forall \rho\ne\chi_k,\quad
-\exists f:\pi([\delta_{k,\rho}(f)])\ne0.
-\]
-
-Equivalently, for a kernel K\le\mathcal O_k,
-\[
-K\cap\mathscr F_\rho=\varnothing
-\]
-for every false candidate's obstruction set \mathscr F_\rho, and
-\[
-\dim C=\dim\mathcal O_k-\dim K.
-\]
-
-This is exact.
-
-## 4. The global-shadow theorem
-
-There is nevertheless a canonical one-dimensional detector **after global inflation is allowed**.
+## 3. Global one-dimensional detector
 
 Because
 \[
-\operatorname{im}(\operatorname{tra}_k)
+\dim_{\mathbf F_p}H^2(G,\mathbf F_p)=1,
 \]
-dies already in H^2(E_k) and hence in H^2(G), global inflation factors through the quotient:
+and D2 gives, for every false candidate, a witness with nonzero \lambda_k-image, the map
 \[
-\lambda_k:\mathcal O_k\longrightarrow H^2(G,\mathbf F_p).
+\lambda_k:\mathcal O_k\to H^2(G,\mathbf F_p)
 \]
+is a **one-dimensional recognition detector in the global category**.
 
-D2 proves that every false-lift obstruction class has nonzero image:
+Important correction:
+
+This does **not** say every finite obstruction output survives globally. It says every false candidate has at least one output that survives globally.
+
+Thus the logical implication is:
 \[
 \boxed{
-o\in\mathscr F_k\implies \lambda_k(o)\ne0.
+\rho\ne\chi_k
+\Longrightarrow
+\exists f:\lambda_k(\delta_{k,\rho}(f))\ne0.
 }
 \]
 
-For a Demushkin group,
+That is exactly the selector property.
+
+## 4. Finite-pair intrinsic category
+
+The global detector uses the inflation map into
 \[
-\dim_{\mathbf F_p}H^2(G,\mathbf F_p)=1.
+H^2(G,\mathbf F_p),
 \]
-Therefore the global shadow \lambda_k detects every false obstruction.
-
-Hence, in a category that is allowed to use the global inflation map,
+which is not part of the finite pair
 \[
-\boxed{\text{a 1-dimensional carrier is sufficient.}}
-\]
-
-This is not the desired intrinsic finite-data result, because \lambda_k is defined using the map to the full group G. It is precisely the information the finite carrier problem is trying not to import.
-
-This distinction is important:
-
-- **global category:** 1-dimensional recognition is already available;
-- **finite-pair intrinsic category:** whether \lambda_k can be reconstructed from E_k\to Q_k is OPEN.
-
-Thus “\mathcal O_k is minimal” cannot be true in an unrestricted category.
-
-## 5. What the finite-pair problem really asks
-
-The relevant category must forbid importing the global map
-\[
-H^2(Q_k)\to H^2(G).
+E_k\to Q_k.
 \]
 
-A natural category is:
-\[
-\mathcal C_k^{\mathrm{fin}}
-=
-\{\text{finite }\mathbf F_p\text{-linear carriers constructed functorially from }E_k\to Q_k\}.
-\]
-
-The actual question becomes:
-
+Therefore the actual intrinsic question remains:
 \[
 \boxed{
-\text{Can the global-shadow functional }\lambda_k
-\text{ be reconstructed from the finite pair }E_k\to Q_k?
+\text{Can an equivalent one-dimensional detector be reconstructed functorially
+from }E_k\to Q_k\text{ alone?}
 }
 \]
 
-If yes, a 1-dimensional finite carrier would suffice.
+This is genuinely OPEN.
 
-If no, then the finite-pair carrier necessarily retains additional information, and the minimality problem becomes genuinely nontrivial.
+However, one should **not** yet phrase the negation as “the finite pair cannot recover \lambda_k.” There is no proof of non-recoverability. In particular, a canonical functional might be determined indirectly by the extension class of
+\[
+1\to K_k\to E_k\to Q_k\to1
+\]
+together with the Demuškin structure.
 
-## 6. Relation to the 45-dimensional calculation
+So the current frontier is a reconstruction problem, not an impossibility claim.
 
-The old rank-4, p=3 calculation
+## 5. 45-dimensional calculation
+
+The old
 \[
 \dim(P_4/P_5)=45,\qquad
 \ker(H^2(W_4)\to H^2(W_5))\cong Q_4^*
 \]
-is not needed for the global-shadow theorem and not needed for D2/D3.
+calculation is still not required for D2/D3 or for the global one-dimensional detector.
 
-It becomes relevant only to the finite-pair question:
-whether the non-global directions in \mathcal O_2 can be removed functorially while preserving detection of all false candidates.
+It becomes relevant only if abstract reconstruction fails or cannot be decided, and we need to analyze the finite-pair extension/module structure concretely.
 
-So the previous decision remains:
+Thus:
 
 \[
-\boxed{\text{do not restart the 45-dimensional computation yet.}}
+\boxed{\text{45-dimensional calculation remains DEFERRED.}}
 \]
 
-## 7. Classification
+## 6. Final critical classification
 
-- corrected recognition-minimality formulation: **PASS / CLOSED**;
-- D2 nonempty false-obstruction set: **PASS / CLOSED**;
-- global 1-dimensional detector: **PASS / CLOSED**;
-- finite-pair reconstruction of the global shadow: **OPEN / LOAD-BEARING**;
-- \mathcal O_k minimality in an unrestricted category: **FAIL / CLOSED — too strong a question**;
-- \mathcal O_k minimality in the finite-pair functorial category: **OPEN**;
-- 45-dimensional computation as current recognition input: **NOT REQUIRED**;
-- 45-dimensional computation as later finite-pair minimality input: **DEFERRED / CONDITIONAL**.
+| Item | Status |
+|---|---|
+| D2 false-candidate separation | PASS / CLOSED |
+| Global \(\lambda_k\) factors through \(\mathcal O_k\) | PASS / CLOSED |
+| 1D global recognition detector | PASS / CLOSED |
+| “every obstruction output has nonzero global shadow” | **FAIL / CLOSED — overstatement** |
+| Exact quotient-recognition criterion | PASS / CLOSED |
+| Finite-pair 1D reconstruction | OPEN / LOAD-BEARING |
+| Finite-pair non-recoverability | OPEN / NOT CLAIMED |
+| \(\mathcal O_k\) absolute minimality | FAIL / CLOSED as ill-posed |
+| Functorial finite-pair minimality | OPEN |
+| 45-dimensional recomputation | DEFERRED |
 
 ## Next target
 
-The sharp next test is now:
+The mathematically sharp next question is:
 
 \[
 \boxed{
-\text{Is }\lambda_k:\mathcal O_k\to H^2(G,\mathbf F_p)
-\text{ recoverable from the finite pair }E_k\to Q_k?
+\text{Does the extension }E_k\to Q_k
+\text{ canonically determine a nonzero functional on the D2 witness family?}
 }
 \]
 
-If it is, the carrier problem collapses to a one-dimensional intrinsic selector. If it is not, that failure itself identifies exactly what extra finite filtered relation information must be retained.
+If yes, the finite intrinsic carrier may collapse to one dimension.
+
+If no, one must identify the smallest additional filtered data required.
