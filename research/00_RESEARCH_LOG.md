@@ -4174,3 +4174,12 @@ Thus lambda_k is still a 1-dimensional detector in the global category, but only
 The finite-pair question remains OPEN: whether E_k -> Q_k canonically determines an equivalent nonzero functional on the witness family. Non-recoverability is NOT claimed.
 
 Authoritative correction: research/PAPER3_CARRIER_SPAN_REDUCTION_2026-09-28.md, commit 948ad02cff8d2c9dfa226b7fbaba17055b9d46f0.
+
+
+## 2026-09-28 — PAPER 3 MIDPOINT CHECKPOINT
+
+Continuity checkpoint recorded in `research/PAPER3_MIDPOINT_SUMMARY_2026-09-28.md`.
+
+Master status: D1 PASS/CLOSED; corrected D2 PASS/CLOSED; D3 PASS/CLOSED; D4 affine sharpness PASS/CLOSED; bare finite H^2 inflation injectivity FAIL/CLOSED; global one-dimensional detector PASS/CLOSED at the existential-per-false-candidate level; finite-pair intrinsic one-dimensional detector OPEN/LOAD-BEARING; carrier minimality OPEN; 45-dimensional calculation DEFERRED; publication novelty OPEN/CONDITIONAL.
+
+Next attack: abstract reconstruction from the finite central extension E_k -> Q_k, asking whether extension-class/transgression data canonically supplies a nonzero functional on the D2 witness family or forces retention of additional filtered data.
