@@ -242,8 +242,14 @@ Let $F$ be free pro-$3$ on $x_1,\ldots,x_d$ and let
 H=F/\overline{\langle\!\langle r\rangle\!\rangle}
 \]
 be a minimal one-relator quotient, where $F$ is free pro-$3$ of rank
-$d=\dim_{\mathbb F_3}H^1(H,\mathbb F_3)$ and $r\in\Phi(F)$. For a
-principal-unit character
+$d=\dim_{\mathbb F_3}H^1(H,\mathbb F_3)$ and $r\in\Phi(F)$. Since $r\in\Phi(F)$, the relator imposes no
+linear relation on $F/\Phi(F)$, so
+\[
+H/\Phi(H)\cong F/\Phi(F),\qquad
+\dim_{\mathbb F_3}H^1(H,\mathbb F_3)=\operatorname{rank}F=d.
+\]
+Thus the displayed value of $d$ is the rank of the free group as well as
+the minimal number of generators of $H$. For a principal-unit character
 $\rho:H\to U_{1,k}$, write $F_i(\rho)\in A_k$ for the twisted Fox
 coefficients, normalized by
 \[
@@ -471,8 +477,13 @@ N_k=3^{k-1},\qquad Q_k=G/P_{N_k+1},\qquad
 E_k=G/P_{N_k+2},\qquad K_k=P_{N_k+1}/P_{N_k+2}.
 \]
 The kernel $K_k$ is central in $E_k$ because
-$[P_i(G),G]\subseteq P_{i+1}(G)$. Moreover $K_k\subseteq\Phi(E_k)$,
-so the five-term exact sequence gives an injective transgression
+$[P_i(G),G]\subseteq P_{i+1}(G)$. Moreover, since
+$N_k+1\ge4$, one has
+\[
+P_{N_k+1}(G)\subseteq P_2(G)=\Phi(G),
+\]
+and therefore its image $K_k$ in $E_k$ lies in $\Phi(E_k)$. Hence the
+five-term exact sequence gives an injective transgression
 \[
 \operatorname{tra}_k:H^1(K_k,\mathbb F_3)^{Q_k}
 \hookrightarrow H^2(Q_k,\mathbb F_3)
@@ -563,9 +574,18 @@ Q_k=F/R_k,
 \qquad
 R_k=R\,P_n(F).
 \]
-Since $n\ge3$, $P_n(F)\subseteq P_3(F)$, so the image of $R_k$ in
-$P_2(F)/P_3(F)$ is exactly the one-dimensional span of
+Since $n\ge3$, $P_n(F)\subseteq P_3(F)$. Thus
 \[
+\operatorname{im}\bigl(R_k\to P_2(F)/P_3(F)\bigr)
+=
+\operatorname{im}\bigl(R\to P_2(F)/P_3(F)\bigr).
+\]
+Because $R=\overline{\langle\!\langle r\rangle\!\rangle}$ and conjugation,
+$3$-powering, and multiplication by elements of $P_3(F)$ do not change
+the degree-two initial form, this latter image is exactly
+\[
+\mathbf F_3\cdot\operatorname{in}_2(r),
+\qquad
 \operatorname{in}_2(r)=[X_1,X_2]+[X_3,X_4].
 \]
 Also $R_k\subseteq\Phi(F)$, so this is a minimal pro-$3$ presentation.
@@ -614,8 +634,11 @@ nondegeneracy gives $f$ with
 \[
 \nu\smile\bar f\ne0.
 \]
-By the definition of $C_k$ and the inflation injectivity just proved,
-this nonzero variation is represented by a nonzero class in the
+By definition, $C_k$ is the image of the finite cup-product map, so
+$\nu\smile\bar f\in C_k$. After applying the coefficient inclusion
+$\iota_*$, the same class is represented by the corresponding cup-product
+variation in $H^2(G,\mathbf F_3)$; by the inflation injectivity just proved,
+its finite representative is nonzero. Thus the variation is detected by the
 one-dimensional finite cup line. Hence $C_k$ supplies a one-dimensional
 linear detector for every false next-digit candidate.
 
@@ -632,6 +655,9 @@ For $m\ge1$, write
 \[
 W_m=G/P_m.
 \]
+Here, for a pro-$3$ group, $G^{3^e}$ denotes the closed subgroup generated
+by all $3^e$-th powers; the standard Zassenhaus formula gives
+$G^{3^e}\subseteq P_{3^e}(G)$.
 For $m\le3^{k-1}+1$, the finite Kummer predicate at depth $m$ is defined
 using the quotient $W_m$ and the corresponding coefficient level.
 
@@ -876,6 +902,36 @@ The sign is fixed by
 \[
 (\nu\smile c)(g,h)=\nu(g)c(h).
 \]
+
+\section{Derivation of the twisted Fox coefficients}\label{app:fox-derivation}
+
+Let $a_i=\rho(x_i)$ and $X_i=z(x_i)$ for a crossed cocycle
+$z$ with convention $z(gh)=z(g)+\rho(g)z(h)$. Then
+\[
+z(x_i^3)=(1+a_i+a_i^2)X_i.
+\]
+For $a=\rho(x)$, $b=\rho(y)$, $X=z(x)$ and $Y=z(y)$, direct use of
+$z(g^{-1})=-\rho(g)^{-1}z(g)$ gives, for
+$[x,y]=x^{-1}y^{-1}xy$,
+\[
+z([x,y])=\frac{1-b}{ab}X+\frac{a-1}{ab}Y.
+\]
+Applying this first to $[x_1,x_2]$ and then to $[x_3,x_4]$, and observing
+that every commutator has trivial image under the one-dimensional
+character, yields
+\[
+\begin{aligned}
+F_1&=(1+a_1+a_1^2)+a_1^3\frac{1-a_2}{a_1a_2}
+=\frac{a_1^2+a_1a_2+a_2}{a_2},\\
+F_2&=a_1^3\frac{a_1-1}{a_1a_2}
+=\frac{a_1^2(a_1-1)}{a_2},\\
+F_3&=a_1^3\frac{1-a_4}{a_3a_4},\\
+F_4&=a_1^3\frac{a_3-1}{a_3a_4}.
+\end{aligned}
+\]
+All denominators are units in $A_k$ because $\rho$ is principal-unit valued.
+This derives the coefficients used in the level-$2$ calculation rather than
+treating them as an unproved symbolic input.
 
 \section{Proof--computation boundary and reproducibility record}
 
