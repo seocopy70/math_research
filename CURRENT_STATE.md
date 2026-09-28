@@ -978,3 +978,19 @@ Classification:
 Detailed closure record: research/PAPER3_REFEREE_GAP_CLOSURE_2026-09-28.md.
 
 Build: commit f97b9f04dd873fd2d0123d325443032c4840d086 triggered Paper 3 CI run 36361479679; at record time it was queued, so compilation is not yet classified.
+
+
+## 2026-09-28 — FINAL D1/D2 SOURCE AUDIT: STALE FORMULAS CORRECTED
+
+The final line-by-line attack found two stale formulas in general Gate D documentation and corrected them before finalization.
+
+- D1: the Zassenhaus filtration is logarithmic in n; the false shorthand P_j(S_k)=T_j for every integer j was replaced by P_n(S_k)=p^{ceil(log_p n)}A_k semidirect U_{ceil(log_p n)+1}. The endpoint P_{p^{k-1}+1}=1 and nontrivial predecessor remain unchanged.
+- D2: the transgression-carrier variation identity has common target H^2(G,F_p), so the correct formula is directly delta_{rho'}-delta_{chi}=nu cup f-bar. The auxiliary iota formulation is not used in this typed statement.
+
+Classification:
+- D1 endpoint/factorization: PASS / CLOSED after correction;
+- D2 variation target typing: PASS / CLOSED after correction;
+- stale historical formulas: HISTORICAL / SUPERSEDED;
+- no new selector counterexample found.
+
+The final proof audit therefore closes the previously authorized D1/D2 source-level attack. The remaining blocker is compilation plus final manuscript/novelty positioning, not a new mathematical branch.
