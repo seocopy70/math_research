@@ -1,3 +1,24 @@
+## 2026-09-28 — PAPER 3 REFEREE DETAIL REPAIR / ARTIFACT GATE REOPENED
+
+A new adversarial manuscript review raised M1–M10. The source was checked against the authoritative research state and primary literature before editing.
+
+Result:
+- M1 D3 relation-module image chain: PASS/CLOSED after explicit R_k -> P_2/P_3 chain.
+- M2 D4 shallow range: PASS/CLOSED; existing valuation chain is correct.
+- M3 D4 middle range: PASS/CLOSED after explicit x_2^N in G^N subseteq P_N subseteq P_m chain.
+- M4 D2 transgression: PASS/CLOSED after explicit P_{N_k+1} subseteq P_2=Phi(G), hence K_k subseteq Phi(E_k).
+- M5 C_k typing: PASS/CLOSED; finite cup image and coefficient-extension target are explicitly separated.
+- M6 Labute Theorem 4: PASS/CLOSED; primary-source check confirms the existence/uniqueness plus Proposition-6 crossed-homomorphism criterion attribution.
+- M7 alleged U3 d inconsistency: FAIL/CLOSED as an objection; r in Phi(F) implies H/Phi(H) ~= F/Phi(F), so rank(F)=dim H^1(H,F_3)=d.
+- M8 Fox coefficients: PASS/CLOSED after adding a cochain-level derivation appendix.
+- M9 G^{3^e}: PASS/CLOSED after defining the power subgroup and stating G^{3^e} subseteq P_{3^e}.
+- M10 Appendix A formatting: PASS/CLOSED.
+
+Source repair commit: f686fef1bfbab0b566d2cd424aa097955a2c61ec.
+Detailed audit: research/PAPER3_REFEREE_DETAIL_REPAIR_2026-09-28.md.
+
+Artifact gate is explicitly reopened because the source changed. The next authorized sequence is exact-source CI -> independent PDF/content audit -> checksum/package verification -> final manifest update. No prior PDF is authoritative after this source change.
+
 ## 2026-09-28 — MANUSCRIPT SOURCE CLEANUP CORRECTION
 
 The first cleanup commit accidentally introduced repeated-character typos while replacing the reviewer-noted “ogether” typo. This was caught immediately by source inspection and corrected.
