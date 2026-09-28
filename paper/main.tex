@@ -449,33 +449,42 @@ U4 gives $\rho_2=\chi_G\bmod9$. For $j\ge3$, the candidate and
 $\chi_G\bmod3^j$ have the same reduction to level $j-1$ and both satisfy
 the level-$j$ predicate. U5 gives equality. Induction yields
 $\rho_k=\chi_G\pmod{3^k}$.
-\section{Literature boundary and contribution (historical)
-The existence and uniqueness of the canonical Demu\v{s}kin orientation, and the corresponding all-level Kummerian criterion, are classical. Labute gives the canonical orientation in the classification of Demu\v{s}kin groups \cite{Labute1967}; the cohomological and cocycle formulations of Kummerianity are developed in Efrat--Quadrelli and subsequent work \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. We therefore do not claim the canonical orientation, or the global Kummerian criterion, as new.
+\section{Literature boundary and contribution}
+The existence and uniqueness of the canonical Demushkin orientation, and the all-level Kummerian criterion, are classical; see Labute and the Kummerian/1-cyclotomic literature. We do not claim these facts as new.
 
-The distinction relevant here is the direction of recognition. The classical theory starts with an oriented pair $(G,\theta)$ and asks whether the prescribed orientation is Kummerian. In contrast, our finite-window statement starts from the bare finite quotient
-\[
-Q_k=G/P_{3^{k-1}+1}
-\]
-and an arbitrary principal-unit candidate $\rho:Q_k\to U_{1,k}$, and uses the intrinsic predicate $\mathsf K_k(Q_k,\rho)$ to select the reduction of the canonical orientation. The finite-depth factorization in Sections 2--3 is part of this direction: the candidate is not supplied by the prior theory, and the relevant twisted cocycles are shown to factor through $Q_k$ for an arbitrary candidate.
+The contribution here is the finite recognition direction. The input is the bare finite quotient $Q_k$, the candidate is arbitrary, and the selector is the intrinsic finite Kummer lifting predicate. The proof supplies the finite-data bridge by combining arbitrary-candidate factorization, the one-step transgression carrier, the cup-product separation, and the sharp fixed-category selector bound.
 
-A potentially relevant quotient-inheritance result is Proposition 2.10 of Quadrelli \cite{Quadrelli2024}. It assumes an already Kummerian oriented pair $(G,\theta)$, a normal subgroup $N\subseteq\ker(\theta)$, and surjectivity of
-\[
-H^1(G,\mathbb F_p)\longrightarrow H^1(N,\mathbb F_p)^G.
-\]
-Those hypotheses are materially different from the present recognition problem. In the present rank-four $p=3$ case, the natural choice $N=P_3$ does not satisfy the required restriction-surjectivity condition: $P_3\subseteq\Phi(G)$, whereas $P_3/P_4\ne0$ (indeed its dimension is $20$). Thus Proposition 2.10 cannot be invoked as an automatic quotient-inheritance mechanism for our finite-window theorem. This is a separation observation, not a claim that Proposition 2.10 itself is new or that no other special quotient could satisfy its hypotheses.
+A relevant quotient-inheritance result is Proposition 2.10 of Quadrelli \cite{Quadrelli2024}. Its hypotheses include an already Kummerian oriented pair, a normal subgroup in the kernel of the orientation, and a restriction-surjectivity condition. Those hypotheses are not the present bare-$Q_k$, arbitrary-candidate problem, so the proposition does not by itself imply the theorem proved here.
 
-Within the literature audited for this manuscript, we did not identify an exact theorem whose input is the bare $Q_k$, whose candidate $\rho$ is arbitrary, whose selector is precisely the finite Kummer predicate $\mathsf K_k(Q_k,\rho)$, and whose arbitrary-candidate factorization through $Q_k$ is established. Accordingly, the publication-level novelty claim is intentionally conditional and narrow; it is not a claim of absolute priority.
+Our literature audit did not identify an exact theorem combining all of the following in one statement: bare $Q_k$ input, arbitrary principal-unit candidate, arbitrary-candidate twisted-$H^1$ factorization through $Q_k$, finite Kummer recognition, and the fixed-category sharp selector threshold. The publication novelty claim is therefore conditional: no absolute priority claim is made.
 
-\section{Limitations and logical boundaries (historical baseline)
-The theorem is for the fixed rank-four $q=3$ group. ``$q$-blind'' means that $q$ is absent from the selector input; it does not mean uniformity over the Demu\v{s}kin family. $P_{3^{k-1}+1}$ is sufficient; minimality of the window is open. The final predicate is intrinsic although the standard presentation is used as a local calculation.
+\section{Scope and logical boundaries}
+The theorem and selector-minimality result are for the fixed rank-four $q=3$ Demushkin pro-$3$ group. The one-dimensional carrier is minimal only in the explicitly declared linear selector-carrier category.
+
+We do not claim:
+\begin{itemize}
+\item absolute minimality among arbitrary nonlinear finite carriers;
+\item a canonical functional $\mathcal O_k\to\mathbb F_3$ reconstructed solely from $E_k\to Q_k$;
+\item injectivity of $H^2(Q_k,\mathbb F_3)\to H^2(G,\mathbb F_3)$;
+\item uniform selector-minimality for all $q=3^f$;
+\item priority over unpublished or unindexed work.
+\end{itemize}
 
 \section{Conclusion}
-The result separates a classical infinite-group existence theorem from a finite recognition principle. It should therefore be read as a theorem about the information required by a selector, not as a new construction of the canonical orientation:
+The finite recognition problem closes at the following audited boundary:
 \[
-G/P_{3^{k-1}+1} \quad+\quad \text{intrinsic Kummer lifting}
-\quad\Longrightarrow\quad \chi_G\pmod {3^k}.
+\boxed{
+W_{3^{k-1}+1}(G)
+\longrightarrow Q_k
+\longrightarrow C_k\simeq\mathbb F_3
+\longrightarrow \chi_G\bmod3^k.
+}
 \]
-
+The transgression quotient $\mathcal O_k$ remains the proof carrier which removes the first transient finite $H^2$ sector. The quantitative selector statement is
+\[
+\boxed{n_{\mathrm{selector}}(k)=3^{k-1}+1}
+\]
+for the fixed rank-four $q=3$ Kummer selector. This is category-relative minimality, not an absolute statement about every possible finite observation.
 
 \appendix
 \section{Detailed verification of the finite-depth calculation}
