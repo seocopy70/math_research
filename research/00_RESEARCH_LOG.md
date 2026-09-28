@@ -4335,3 +4335,25 @@ The final manuscript source at commit f97b9f04dd873fd2d0123d325443032c4840d086 w
 This build is the manuscript corresponding to the repaired free-product twisted-H^1 proof and corrected scope. Subsequent commits after f97b9f04dd873fd2d0123d325443032c4840d086 only update research/audit records; they do not alter `paper3/main.tex`. Therefore this artifact is the current final manuscript PDF.
 
 Publication novelty remains **OPEN / CONDITIONAL**; no priority claim is made.
+
+
+## 2026-09-28 — PAPER/RESEARCH SYNCHRONIZATION FAILURE AUDIT + CORRECTIVE GATE
+
+A manuscript synchronization failure was identified after the uploaded `Paper3_FINAL_2026-09-28.pdf` was found to predate the authoritative D2/D3/D4 frontier. The research records had already recorded the newer results, but the publication source/PDF was not automatically required to consume every load-bearing CLOSED result.
+
+Root cause: the existing continuity protocol enforced **research-result logging**, but did not enforce a separate **research → manuscript synchronization gate**. Thus the research state and publication artifact could diverge while each appeared internally consistent.
+
+Classification:
+- Research results D2/D3/D4: **PASS/CLOSED** as recorded in the authoritative research state.
+- Previous uploaded Paper 3 PDF as a representation of the latest frontier: **FAIL/CLOSED**.
+- Current manuscript synchronization: **OPEN / LOAD-BEARING** until clean CI and artifact verification pass.
+- Final PDF status: **NOT FINAL** until source, CI PDF, and research-state manifest are cross-verified.
+
+Mandatory corrective process from this point:
+1. Every load-bearing PASS/CLOSED result must declare whether it changes the manuscript; if yes, record the exact source path/section that must change.
+2. Maintain a Paper 3 manuscript manifest mapping each load-bearing result (D1, D2, D3, D4, selector minimality, cup carrier, novelty boundary) to its manuscript section and status.
+3. A paper cannot be labelled FINAL merely because research is PASS/CLOSED. FINAL requires: authoritative-source recheck → manuscript synchronization → independent CI compile → PDF content verification → artifact hash/commit capture → immediate log entry.
+4. The dated PDF filename is no longer authoritative by itself; the authoritative identity is the CI commit SHA plus the generated artifact checksum.
+5. CI must test both positive markers (all required final results present) and negative stale markers (e.g. 'minimality remains open') before artifact publication.
+
+This audit supersedes the prior assumption that recording a result was sufficient to guarantee manuscript synchronization.
