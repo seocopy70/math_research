@@ -4471,3 +4471,23 @@ Paper 3's prior final PDF was found to predate the final source repair. The curr
 Process correction: a prior passing PDF is never authoritative after the source changes. Finality requires exact source identity, CI on that exact source, independent PDF audit, checksum, and manifest.
 
 Classification: Paper 3 manuscript artifact **PASS / CLOSED**; mathematical publication novelty remains **OPEN / CONDITIONAL**; stronger finite-pair canonical functional remains **OPEN / NOT LOAD-BEARING**.
+
+
+## 2026-09-28 — THREE-PAPER PDF REVIEW AUDIT / VERSION-MAPPING CORRECTION
+
+An external review of Paper 1/2/3 was checked against the exact PDFs delivered in the current session and the exact source commits that built them.
+
+Key result:
+- The alleged Paper 2 page-3 print corruption is not present in the delivered artifact. Page 3 was independently text-extracted and visually rendered; it contains normal Lemma 2.1/Lemma 2.2 material. Classification: **FAIL/CLOSED as a review objection**. No rebuild is authorized unless a different PDF is identified by filename/hash.
+- The Paper 1 objections appear to target a different/older manuscript mapping. The delivered Paper 1 is the affine factorization paper and already uses p,f,k, includes the preceding-paper relation, and cites Efrat 2014. Classification: **PASS/CLOSED** at declared scope.
+- The Paper 3 x3->x2 objection is already absent from the current source; x_2^{3^e} is present. The C_k/iota/inflation typing is already explicit; F_1 algebra is explicitly simplified; the commutator formula is mathematically consistent. Classification: **PASS/CLOSED** at declared scope.
+- Labute Theorem 4 attribution remains verified from the earlier primary-source audit.
+
+Artifact bindings:
+Paper 1 = run 36212215849 / commit 73001ba0611e4f4aa7db8c733ee01d67542e16eb / SHA 09d67cbb88c647e4b7bb92bb91b2d46fe6b9b2c4b32959b7cebd7e468a554eda.
+Paper 2 = run 36216012111 / commit 0194e01176ae1c21fc70858be3797eeb1a3e7c18 / SHA af14b4b7ab971d8ed2d8cac84daae3ff6422ed389cec92b690cc3e184dde1aee.
+Paper 3 = run 36368630643 / commit 2b4ccb849e93af840ca216b06c06c72a36c84dd8 / SHA 00a4ee8deba65eb7c08a9b703d3c19b50801ffdde2c13cab0155186c247bb4e3.
+
+Detailed audit: research/THREE_PAPER_PDF_REVIEW_AUDIT_2026-09-28.md.
+
+Decision: **No mathematical branch reopened; no PDF rebuild triggered by this review alone.**
