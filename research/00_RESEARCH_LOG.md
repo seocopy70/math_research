@@ -4648,3 +4648,37 @@ Classification:
 - §8 rank-one literature compatibility: **PASS / LOCAL** (primary source directly checked).
 - Publication artifact gate: **OPEN / PENDING** until the repaired source is rebuilt and the exact PDF is independently checked.
 - Publication novelty: **OPEN / CONDITIONAL**.
+
+
+## 2026-09-28 — PAPER 3 REBUILT AND PDF ARTIFACT AUDIT COMPLETED
+
+The repaired `paper/main.tex` was rebuilt by GitHub Actions from commit `dd3d2e69c4e320129a3d0025c853747dabe744e4`.
+
+CI run:
+- workflow: `Build paper PDF`
+- run: `36393007041`
+- job: `latex` / `108832850224`
+- conclusion: **success**
+- all manuscript-specific verification commands passed.
+
+Source/PDF identity:
+- CI submission bundle `main.tex` Git blob SHA: `0a71fab5f2227b7f4659d5f10fca3e555c7add8b`
+- current authoritative `paper/main.tex` has the same Git blob SHA.
+- Therefore the CI PDF was built from the exact authoritative source checked above.
+
+PDF verification:
+- 17 pages, letter size.
+- §8 repaired typed chain appears in the actual PDF:
+  `C_k -> H^2(G,F_3) -> H^2(G,A_{k-1}(chi_{k-1}))`.
+- The corrected statement relating `delta_{rho_k}-delta_{chi_k}` to `iota_*(nu cup f)` appears in the PDF.
+- Visual inspection of pages 9–10 found no layout, clipping, or formula-rendering defect in the repaired §7/§8 boundary.
+- CI log contained no LaTeX undefined-reference/warning/error hit under the manuscript gate.
+- Submission bundle checksum for the CI-built PDF:
+  `2ab01035bb42a16b36b2f1efafa66cafda9c73b041c5a3c5c5aa2c9ca5a8e697`.
+
+Classification:
+- §8 type repair: **PASS / CLOSED**.
+- §8 primary-source/rank-one compatibility: **PASS / LOCAL**.
+- PDF/source artifact gate: **PASS / CLOSED**.
+- Overall Paper 3 mathematical status remains **INTERNAL REVIEW PASSED**, not publication-level PASS/CLOSED.
+- Publication novelty remains **OPEN / CONDITIONAL**.
