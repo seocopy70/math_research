@@ -1,3 +1,52 @@
+## 2026-09-28 — THREE-PAPER EXACT ARTIFACT + LITERATURE GATE CLOSED
+
+The three-paper revision checklist was completed through independent source→CI→PDF verification.
+
+Paper 1:
+- A source-binding defect was discovered during audit: the generic paper-build workflow on the Paper 1 branch compiled paper/main.tex, which is the Paper 2 manuscript, while the Paper 1 source is paper/successor_main.tex.
+- The resulting successful run was therefore explicitly rejected as Paper 1 evidence.
+- A dedicated source-correct workflow, .github/workflows/paper1-build.yml, was added on paper1-fixes-2026-09-28.
+- Authoritative source blob: 1855e9a992a98caf0a0f6deae484f13e049d0a20.
+- Source-correct CI: run 36401507321, all steps PASS.
+- Full artifact: 10960891547; 8 pages.
+- PDF SHA-256: 4efec62888f3803935717658f9f638902ff2ef2bd8845c83a32dc6770542e5ef.
+- Independent PDF text audit confirmed the sharp affine theorem, all-f/d lower-bound witness, category-relative minimality, factorization-vs-recognition boundary, and the newly added Mináč–Tân–Trà literature boundary.
+- Visual inspection of representative pages passed.
+- Classification: PASS / CLOSED.
+
+Paper 2:
+- The first clean validation branch contained a non-mathematical validation-marker edit to paper/main.tex, so its artifact was not accepted as exact-source evidence.
+- The authoritative source from paper2-fixes-clean-2026-09-28 was restored byte-for-byte on paper2-ci-clean-2026-09-28.
+- Exact-source CI run 36401141711: all steps PASS.
+- Authoritative source blob: 7411d241505b8a0a496f46cee05bbecc8d40eb47.
+- Full artifact: 10959918919; 13 pages.
+- PDF SHA-256: 1381f75048bf0f83d9174c6a2b8bb85b31e62010f945697413182c9f5be94c64.
+- Independent audit confirmed U4 labeling, U5c finite-coefficient PD² duality, the 1412.7685 literature identification, and the final theorem text. U5c was checked internally: finite-coefficient duality identifies the dual of the socle inclusion with A_{k-1} -> F_3, a surjection, so the H² map is injective.
+- Visual inspection of representative pages passed.
+- Classification: PASS / CLOSED.
+
+Paper 3:
+- Revision branch paper3-fixes-2026-09-28 compiled successfully under the existing build and citation-hygiene workflows.
+- Authoritative source blob: aa351f77c07a748588208d0d383f0c4dbd6dfca7.
+- CI run 36395985678: Build paper PDF and citation hygiene PASS.
+- Full artifact: 10957609279; 17 pages.
+- PDF SHA-256: 2be2e84e06eb77eb9e6e4c9bbfb522bb037db5675bb04c7a9a0c6bac34a9787e.
+- Independent audit confirmed §8 typed cup-line chain, D4 exact selector depth, literature-audit scope, and explicit non-claims. Visual inspection of representative pages passed.
+- Classification: PASS / CLOSED.
+
+Literature verification:
+- arXiv:1412.7685 verified as Claudio Quadrelli, Cohomology of absolute Galois groups; its scope includes cyclotomic orientations and Zassenhaus/restricted-Lie/cohomological material.
+- arXiv:2510.20133 verified as J. Mináč, N. D. Tân, N. T. Trà, Zassenhaus filtrations as intersections. Its stated scope is a representation-theoretic description of Zassenhaus terms as intersections of kernels; Paper 1 now cites it only as surrounding methodology, not as prior identity with the exact affine sharpness theorem.
+- Labute Theorem 4 and Proposition 6 orientation attribution were cross-checked against later literature reproducing those exact references; the q≠2 normal form and canonical orientation criterion are consistent with the manuscript.
+- NSW Theorem 3.9.15 / Chapter III PD²-Demuškin relationship was cross-checked through secondary sources. MathSciNet/zbMATH Open were not searched and are not claimed as searched.
+
+Final three-paper publication-artifact classification:
+- Paper 1: PASS / CLOSED
+- Paper 2: PASS / CLOSED
+- Paper 3: PASS / CLOSED
+- Publication novelty: OPEN / CONDITIONAL
+- No absolute priority claim.
+
 ## 2026-09-28 — THREE-PAPER AUTHORITATIVE REVISION CHECKLIST EXECUTION
 
 The supplied revision checklist was treated as the authoritative edit list for Paper 1/2/3. No direct edits were made to the previously frozen main-branch artifacts.
