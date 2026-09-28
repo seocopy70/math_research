@@ -124,7 +124,7 @@ H^1(Q_k,\mathbf F_p)^{\otimes2}
 \dim C_k=1.
 \]
 
-Relation-module/cup-product duality proves this rank directly from the quadratic initial form of the Demuškin relator; the argument does not use finite-to-global \(H^2\) injectivity. The relevant pairing compatibility is recorded in Mináč–Pasini–Quadrelli–Tân, Proposition 7.1. citeturn3search0
+Relation-module/cup-product duality proves this rank directly from the quadratic initial form of the Demuškin relator; the argument does not use finite-to-global \(H^2\) injectivity. The relevant pairing compatibility is recorded in Mináč–Pasini–Quadrelli–Tân, Proposition 7.1. citeturn3search0
 
 This compresses the **target carrier** at the sharp window.
 
@@ -210,7 +210,7 @@ At present none of these three routes is established.
 
 ## 7. Literature check
 
-The classical literature establishes the canonical Demuškin orientation and its Kummerian characterization, but the audited sources do not supply the missing implication from sharp affine factorization to sharp finite Kummer recognition. Labute's classical theory identifies the canonical orientation, while later Kummerian/1-cyclotomic work formulates the cohomological criterion; these are logically distinct from a minimal finite selector window. citeturn0search4turn2search0
+The classical literature establishes the canonical Demuškin orientation and its Kummerian characterization, but the audited sources do not supply the missing implication from sharp affine factorization to sharp finite Kummer recognition. Labute's classical theory identifies the canonical orientation, while later Kummerian/1-cyclotomic work formulates the cohomological criterion; these are logically distinct from a minimal finite selector window. citeturn0search4turn2search0
 
 The prior-art audit therefore does not close this gap.
 
