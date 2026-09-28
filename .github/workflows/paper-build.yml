@@ -29,8 +29,11 @@ jobs:
           grep -q 'D2: transgression-quotient separation' main.tex
           grep -q 'D3: finite cup-line' main.tex
           grep -q 'D4: exact selector depth' main.tex
-          grep -q 'Coefficient-variation calculation' main.tex
-          grep -q 'Reproducibility and proof/computation boundary' main.tex
+          grep -q 'n_{\\mathrm{selector}}(k)=3^{k-1}+1' main.tex
+          grep -q 'dim C_k=1' main.tex
+          ! grep -Eiq 'minimality.*open|absolute.*priority|application-level synthesis' main.tex
+          grep -q 'Cochain-level verification of coefficient variation' main.tex
+          grep -q 'Proof--computation boundary and reproducibility record' main.tex
           ! grep -Eiq 'undefined|LaTeX Warning|Error:' main.log
 
       - name: Generate submission packages
