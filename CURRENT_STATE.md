@@ -1,3 +1,13 @@
+
+
+## 2026-09-28 — PAPER 3 EXACT-SOURCE ARTIFACT GATE CLOSED
+
+The repaired `paper/main.tex` has now passed the exact-source CI/PDF gate and independent artifact audit.
+
+Authoritative source: `ac53cc2e753fc7b8fb0eb4b78a0085ccfdbc5a89`; blob `3f0bc48ac532d0ed72bcfe876a8283bed178dfbc`; source SHA-256 `bc951dce61717ed184e8763118a3ffef310615b09b95b8fd6ae7ca0a83e42a49`.
+CI run **36374270475** and PDF verification: **PASS / CLOSED**. PDF artifact **10950077812**, SHA-256 `d38c63bd1b453482217c7876d818ff7b50e48cbde7f219552953d8a5e36d56c0`, 17 pages. Independent PDF/content audit: **PASS / CLOSED**.
+
+The publication artifact gate is therefore **PASS / CLOSED**. No earlier PDF remains authoritative.
 ## 2026-09-28 — PAPER 3 REFEREE DETAIL REPAIR 2 / ARTIFACT GATE
 
 The authoritative manuscript source was repaired in commit `2ab97e7d11f5238f6586aa435c9da36d62781d91`. The source-level repair is complete and rechecked. The exact commit triggered Build paper PDF run `36373920812`, currently **IN PROGRESS**.

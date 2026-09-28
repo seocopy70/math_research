@@ -4515,3 +4515,26 @@ Classification:
 - publication novelty: OPEN / CONDITIONAL.
 
 The exact source commit has triggered Build paper PDF run 36373920812; no final artifact is declared until that run and the independent PDF/package audit pass.
+
+
+## 2026-09-28 — PAPER 3 EXACT-SOURCE ARTIFACT GATE CLOSED
+
+The referee-detail repair source was compiled and independently audited.
+
+- Exact manuscript source commit used by CI: `ac53cc2e753fc7b8fb0eb4b78a0085ccfdbc5a89`.
+- Source blob SHA: `3f0bc48ac532d0ed72bcfe876a8283bed178dfbc`.
+- Source SHA-256: `bc951dce61717ed184e8763118a3ffef310615b09b95b8fd6ae7ca0a83e42a49`.
+- Build paper PDF run **36374270475**: **PASS / CLOSED**.
+- PDF artifact **10950077812**; PDF SHA-256 `d38c63bd1b453482217c7876d818ff7b50e48cbde7f219552953d8a5e36d56c0`; 17 pages.
+- Full artifact **10950097816**; internal SHA256SUMS verified.
+- Independent PDF text and visual audit: **PASS / CLOSED**.
+
+A transient LaTeX failure in run 36373920812 was caused solely by the undefined `\\mathscr` selector-domain macro; it was corrected to `\\mathcal`. The subsequent exact-source build passed. The accidental predicate-renaming audit was also corrected before the final successful build; the final PDF consistently uses `\\mathsf K_k` for the Kummer predicate and (J_k) for the auxiliary kernel.
+
+Final classification:
+- manuscript artifact: **PASS / CLOSED**;
+- mathematical theorem scope: **PASS / CLOSED**;
+- selector threshold: **PASS / CLOSED** at fixed rank-4 (q=3) scope;
+- 1D cup-line carrier/minimality: **PASS / CLOSED** in the declared linear selector-carrier category;
+- stronger canonical finite-pair functional: **OPEN / NOT LOAD-BEARING**;
+- publication novelty: **OPEN / CONDITIONAL**.

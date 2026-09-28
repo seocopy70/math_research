@@ -1,3 +1,8 @@
+
+
+## 2026-09-28 — PAPER 3 EXACT-SOURCE ARTIFACT GATE CLOSED
+
+The repaired theorem manuscript has passed exact-source CI and independent PDF verification. Authoritative source commit `ac53cc2e753fc7b8fb0eb4b78a0085ccfdbc5a89`; PDF artifact `10950077812`; PDF SHA-256 `d38c63bd1b453482217c7876d818ff7b50e48cbde7f219552953d8a5e36d56c0`. Publication artifact gate: **PASS / CLOSED**. Publication novelty remains **OPEN / CONDITIONAL**.
 ## 2026-09-28 — PAPER 3 REFEREE DETAIL REPAIR 2 / ARTIFACT GATE
 
 The referee-detail repair has been applied to the authoritative `paper/main.tex` source at commit `2ab97e7d11f5238f6586aa435c9da36d62781d91`. Source-level verification passed. Exact CI/PDF verification is now pending for this commit; no final artifact is declared yet.
