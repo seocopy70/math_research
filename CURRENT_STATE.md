@@ -1,3 +1,28 @@
+## 2026-09-28 — PAPER 3 MANUSCRIPT FINALIZATION CLOSED
+
+The manuscript synchronization failure has been corrected and the publication artifact gate is now closed.
+
+- The theorem-paper source is \`paper/main.tex\`; the stale application-only \`paper3/main.tex\` is not the final manuscript.
+- Source-level line audit: **PASS / CLOSED**.
+- Compile failure identified and repaired: unmatched math delimiter in U5a (“modulo \(3^{k-1}\)”).
+- CI **Build paper PDF** run **36363508628**: **PASS / CLOSED**.
+- Independent workflow shell audit run **36363508467**: **PASS / CLOSED**.
+- Citation hygiene run **36363508580**: **PASS / CLOSED**.
+- PDF artifact **10946925073**; full submission artifact **10945849160**.
+- PDF SHA-256: \`813fda4840783c3b37002828ccfbe092ccffed6ad189f46430222e5e930a56b0\`.
+- Submission-source SHA-256: \`759476d1003fe2d106cfeae5d82f12f8d866afabfddbdd4a3d063cc0d90e7af0\`.
+- PDF: **14 pages, 405,622 bytes**.
+- Independent PDF text/content audit: **PASS / CLOSED**; theorem, D3 cup-line, D4 selector threshold, conditional novelty boundary, and stale-claim rejection markers were verified.
+- Citation-artifact PUA/cite-token contamination found by CI in three research notes was cleaned and citation hygiene subsequently passed.
+- Temporary validation PR #5 was closed without merge after successful validation.
+
+Final manuscript synchronization manifest:
+\`research/PAPER3_MANUSCRIPT_MANIFEST_2026-09-28.md\`.
+
+Publication novelty remains **OPEN / CONDITIONAL**. The stronger canonical functional from \(E_k\\to Q_k\) alone remains **OPEN / NOT LOAD-BEARING**.
+
+**Next authorized action:** none for manuscript finalization. Do not reopen closed D1/D2/D3/D4 or selector-minimality branches merely to modify the final artifact. Future work is a separate research branch.
+
 ## 2026-09-28 — FINAL FRONTIER AUDIT / SELECTOR MINIMALITY CLOSED
 
 The post-recognition frontier has been audited end-to-end.
