@@ -16,6 +16,9 @@
 We study finite-window recognition of the canonical orientation of the fixed rank-four q=3 Demu\v{s}kin pro-3 group. Let $P_i$ be the Zassenhaus filtration and put $Q_k=G/P_{3^{k-1}+1}$. For a principal-unit character $\rho:Q_k\to U_{1,k}:=1+3(\mathbb Z/3^k\mathbb Z)$, let $\mathsf K_k(Q_k,\rho)$ mean that $H^1(Q_k,\mathbb Z/3^k(\rho))\to H^1(Q_k,\mathbb F_3)$ is surjective. We prove that $\mathsf K_k(Q_k,\rho)$ holds exactly for $\rho=\chi_G\bmod3^k$, for $k\ge2$. The canonical orientation itself is classical; the result is a finite-window recognition statement.
 \end{abstract}
 
+\paragraph{Companion papers.}
+This is one of three related manuscripts. [P1] treats the exact finite Zassenhaus depth for factoring all affine crossed-cocycle representations; [P2] is the present finite-window Kummer recognition paper; [P3] proves the exact selector depth and identifies a one-dimensional cup-line carrier. The companion-paper references are intentionally placeholders until the final arXiv records are fixed.
+
 \section{Introduction}
 Let
 \[
@@ -163,6 +166,12 @@ so $F_i\in3^{m+1}A_k$. Induction through $m=0,\ldots,k-1$ gives $F_i=0$. Convers
 The principal-unit restriction makes the reduction of the coefficient action trivial modulo $3$. The argument is valuation induction, not the earlier informal Nakayama step.
 
 \section{Coordinate identification at the base level}
+
+\begin{proposition}[U4: base-level identification]
+Let $\rho_2:G\to1+3A_2$ be any candidate with $\mathsf K_2(G,\rho_2)$. Then $\rho_2=(1,4,1,1)=\chi_G\bmod9$.
+\end{proposition}
+
+\begin{proof}
 For
 \[
 r=x_1^3[x_1,x_2][x_3,x_4],
@@ -197,6 +206,8 @@ F_1=0\Rightarrow 1+2a_2=0\pmod 9
 \]
 Thus every level-\(2\) Kummer candidate is
 \(\rho_2=(1,4,1,1)=\chi\pmod9\). Conversely this candidate is the reduction of the classical canonical Kummerian orientation. This completes the base step without using the desired conclusion itself.
+\end{proof}
+
 \section{Intrinsic uniqueness}
 The next three results are the load-bearing U5 argument.
 
@@ -342,6 +353,9 @@ $\chi_G\bmod3^j$ have the same reduction to level $j-1$ and both satisfy
 the level-$j$ predicate. U5 gives equality. Induction yields
 $\rho_k=\chi_G\pmod{3^k}$.
 \section{Literature boundary and contribution}
+
+The graded quotients $P_n/P_{n+1}$ do not detect the orientation (cf.\ arXiv:1412.7685, Remark~3.25); the recognition here uses the finite quotient $Q_k$ itself together with twisted cohomology. The cited source is Claudio Quadrelli, \emph{Cohomology of Absolute Galois Groups} (arXiv:1412.7685).
+
 The existence and uniqueness of the canonical Demu\v{s}kin orientation, and the corresponding all-level Kummerian criterion, are classical. Labute gives the canonical orientation in the classification of Demu\v{s}kin groups \cite{Labute1967}; the cohomological and cocycle formulations of Kummerianity are developed in Efrat--Quadrelli and subsequent work \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. We therefore do not claim the canonical orientation, or the global Kummerian criterion, as new.
 
 The distinction relevant here is the direction of recognition. The classical theory starts with an oriented pair $(G,\theta)$ and asks whether the prescribed orientation is Kummerian. In contrast, our finite-window statement starts from the bare finite quotient
