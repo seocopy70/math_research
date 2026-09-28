@@ -1,3 +1,27 @@
+## 2026-09-28 — PAPER 3 §8 CUP-LINE TYPE REPAIR
+
+The authoritative `paper/main.tex` was repaired at commit `dd3d2e69c4e320129a3d0025c853747dabe744e4`.
+
+The previous §8 sentence incorrectly described the image of \\(\iota_*\\) as still lying in \\(H^2(G,\\mathbb F_3)\\). It is now written with the explicit typed chain
+\\[
+C_k\xrightarrow{\operatorname{infl}}H^2(G,\mathbb F_3)
+\xrightarrow{\iota_*}H^2(G,A_{k-1}(\chi_{k-1})),
+\\]
+followed by Lemma U5b's identification with the connecting-map variation.
+
+Primary-source verification against Mináč–Pasini–Quadrelli–Tân (Adv. Math. 380 (2021), §7):
+- Proposition 7.1: relation initial forms and cup-product evaluation form a commutative pairing diagram.
+- Proposition 7.2: for odd p, the relevant degree-two pairing is perfect on the alternating part \\(\Lambda^2(V)\\).
+- The present p=3 rank-four relation has one-dimensional degree-two initial-form span, so the §8 finite cup carrier has rank one.
+
+Classification:
+- §8 type repair: **PASS / CLOSED**.
+- §8 rank-one primary-source compatibility: **PASS / LOCAL**.
+- Publication artifact gate: **OPEN / PENDING exact-source CI + PDF/content audit + checksum**.
+- Publication novelty: **OPEN / CONDITIONAL**.
+
+The mathematical frontier is unchanged; this is a source-detail repair and independent literature verification.
+
 ## 2026-09-28 — PAPER 3 DETAIL REPAIR / LITERATURE AUDIT CURRENT STATE
 
 The authoritative Paper 3 source changed at commit `470d06e34088db2b101acac7ad3bf4b0eaa1bb02`.
