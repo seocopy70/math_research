@@ -1,3 +1,17 @@
+
+## 2026-09-28 — PAPER 3 ARTIFACT GATE CLOSED
+
+The repaired source commit `dd3d2e69c4e320129a3d0025c853747dabe744e4` successfully completed the `Build paper PDF` workflow (run `36393007041`). The CI-built submission bundle was independently unpacked and checked.
+
+The packaged `main.tex` has Git blob SHA `0a71fab5f2227b7f4659d5f10fca3e555c7add8b`, matching the authoritative current `paper/main.tex`. The CI PDF is 17 pages. The repaired §8 typed cohomology chain and the subsequent Lemma 5.2 comparison were verified in the extracted PDF text, and pages 9–10 were visually inspected.
+
+CI submission PDF checksum: `2ab01035bb42a16b36b2f1efafa66cafda9c73b041c5a3c5c5aa2c9ca5a8e697`.
+
+Classification:
+- artifact gate: **PASS / CLOSED**
+- overall Paper 3: **INTERNAL REVIEW PASSED**
+- publication novelty: **OPEN / CONDITIONAL**
+
 ## 2026-09-28 — PAPER 3 §8 CUP-LINE TYPE REPAIR
 
 The authoritative `paper/main.tex` was repaired at commit `dd3d2e69c4e320129a3d0025c853747dabe744e4`.
