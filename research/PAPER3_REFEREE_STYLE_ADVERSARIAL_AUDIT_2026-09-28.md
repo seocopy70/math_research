@@ -29,15 +29,15 @@ The manuscript should state the precise Demushkin convention and allowed q=p^f r
 
 Status: **LOCAL**.
 
-## 6. Critical issue: lower-bound witness for f<k is not checked against the defining relation
-The proposition proposes z(x_1)=1 with canonical orientation and claims a crossed-cocycle witness. But a crossed cocycle on the quotient/free group is not automatically a crossed cocycle on the Demushkin quotient: the defining relator must map to zero under the affine representation. This must be explicitly verified. The current one-line construction is insufficient.
+## 6. Attack result: the f<k lower-bound witness survives the relator check
+An explicit referee attack on the proposed witness z(x_1)=1 with canonical orientation was performed. With q=p^f, rho(x_1)=1 and rho(x_2)=u=(1-q)^(-1), the convention [a,b]=a^(-1)b^(-1)ab gives z([x_1,x_2])=u^(-1)-1=-q, while z(x_1^q)=q. Hence z(r_f)=q-q=0, and the remaining commutators contribute zero. The witness is therefore a valid crossed cocycle on the Demushkin quotient. This alleged gap is CLOSED.
 
-Status: **OPEN / LOAD-BEARING for that proposition**.
+Status: **PASS / CLOSED after explicit computation**.
 
-## 7. Major issue: f>=k lower-bound witness also requires relator verification
-The choice rho(x_2)=1+p and z(x_2)=1 must satisfy the full defining relation. Since the relation contains [x_1,x_2] and x_1 is sent trivially, it likely works, but the manuscript must calculate it rather than assume it.
+## 7. Attack result: the f>=k lower-bound witness also survives the relator check
+For rho(x_1)=1, rho(x_2)=1+p, z(x_1)=0, z(x_2)=1, the power term is trivial under z because rho(x_1)=1 and z(x_1)=0, while z([x_1,x_2])=0. The remaining commutators are also trivial under the chosen values. Thus the proposed witness does define an affine representation. The remaining proof obligation is only to state this calculation explicitly.
 
-Status: **OPEN / LOCAL-to-load-bearing**.
+Status: **PASS / CLOSED mathematically; LOCAL exposition repair**.
 
 ## 8. Critical issue: imported theorem dependencies are underspecified
 The manuscript must state exactly which theorem from Paper 1 is invoked, at which q/rank/k scope, and exactly which factorization theorem from Paper 2 is invoked. A referee must be able to distinguish cited preprint results from claims actually proved here.
@@ -96,6 +96,6 @@ The following core claims remain credible and independently motivated after stri
 **MANUSCRIPT: MAJOR REVISION.**
 **CORE PROGRAM: OPEN BUT VIABLE.**
 **NO FATAL MATHEMATICAL COUNTEREXAMPLE FOUND IN THIS PASS.**
-**LOAD-BEARING OPEN ITEMS: free-product twisted-H^1 diagram, relator verification for lower-bound witnesses, exact dependency statements, and manuscript/novelty alignment.**
+**LOAD-BEARING OPEN ITEMS: free-product twisted-H^1 diagram, exact dependency statements, and manuscript/novelty alignment. The lower-bound relator attacks were explicitly checked and did not expose a mathematical failure.**
 
 Do not label Paper 3 ready for submission until these four items are repaired and independently checked.
