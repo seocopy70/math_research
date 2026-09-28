@@ -4491,3 +4491,27 @@ Paper 3 = run 36368630643 / commit 2b4ccb849e93af840ca216b06c06c72a36c84dd8 / SH
 Detailed audit: research/THREE_PAPER_PDF_REVIEW_AUDIT_2026-09-28.md.
 
 Decision: **No mathematical branch reopened; no PDF rebuild triggered by this review alone.**
+
+
+## 2026-09-28 — PAPER 3 REFEREE DETAIL REPAIR 2 / SOURCE SYNCHRONIZATION
+
+The current authoritative `paper/main.tex` was repaired directly from the repository source after the referee-level review. The repair commit is `2ab97e7d11f5238f6586aa435c9da36d62781d91` (source blob `ce6ef7277b34b8e4e600ec6ab3b42862a551a903`).
+
+Applied source changes:
+- §6 auxiliary kernel renamed from (K_k) to (J_k), preserving (mathsf K_k) for the Kummer predicate;
+- the auxiliary (mathcal O_k) transgression quotient/proof-carrier discussion removed; (C_k) is the explicit carrier used in the manuscript;
+- §9 now defines the depth-(m) selector (mathsf K_{k,m}(W_m,ho)) on the actual factor-through domain (mathscr D_{k,m}), and explicitly states that (chi_Gmod3^k) is outside this domain for (mle3^{k-2});
+- the convention (chi_G(x_2)=(1-3)^{-1}) is fixed explicitly;
+- Lemma 5.3/U5c now states the dualizing-module action, Pontryagin-dual convention, and (PD^2)-naturality of the dual coefficient map;
+- the U3 divisibility induction is explicitly described as simultaneous in all Fox coefficients;
+- the carrier wording is now “a minimal linear carrier in the declared selector-carrier category”.
+
+Source-level recheck after write: old (K_k) kernel notation absent, (mathcal O_k) absent, selector-domain definition present, convention/naturality wording present.
+
+Classification:
+- manuscript source repair: PASS / CLOSED;
+- publication artifact gate: OPEN / PENDING exact CI + independent PDF audit;
+- mathematical frontier classifications: unchanged;
+- publication novelty: OPEN / CONDITIONAL.
+
+The exact source commit has triggered Build paper PDF run 36373920812; no final artifact is declared until that run and the independent PDF/package audit pass.
