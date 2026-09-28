@@ -25,6 +25,18 @@ $ n_{\mathrm{aff}}(k)=p^{k-1}+1$.
 The lower bound includes rank two and does not require the orientation component to be surjective. We also separate factorization from recognition: a sharp factorization window does not by itself imply that a Kummerian predicate selects a unique orientation.
 \end{abstract}
 
+\\paragraph{Companion papers.}
+This is one of three related manuscripts. [P1] treats the exact finite Zassenhaus
+depth for factoring all affine crossed-cocycle representations in the Demu\\v{s}kin
+family; [P2] proves finite-window Kummer recognition of the canonical orientation
+of the rank-four $q=3$ group; [P3] proves the exact selector depth and
+identifies a one-dimensional cup-line carrier.
+Lemma~2.1 and Proposition~2.2 (finite affine filtration, arbitrary-candidate
+factorization) appear in each, in the form needed there; [P1] is the reference
+for them.
+[P1], [P2], and [P3] are placeholders for the corresponding arXiv records and
+should be replaced by the final arXiv identifiers before submission.
+
 \section{Introduction}
 The canonical Demushkin orientation is classical: Labute identifies it through the dualizing module, while the Kummerian/cyclotomic formulation is developed in later work. See \cite{Labute1967,EfratQuadrelli2019,QuadrelliWeigel2022}.
 The present question is narrower. Given a finite coefficient level $k$, how much Zassenhaus information is required to preserve every affine crossed-cocycle representation into $S_k$? And does the resulting quotient necessarily contain enough information to recognize a unique orientation?
@@ -108,55 +120,24 @@ Thus both the coefficient action and the cocycle factor through the quotient, an
 \end{proof}
 
 \section{Sharpness}
-\begin{proposition}[The case $f<k$]
-Let $f<k$. For the canonical orientation,
-\[
-\chi(x_1)=\chi(x_3)=\cdots=\chi(x_d)=1,
-\qquad
-\chi(x_2)=(1-p^f)^{-1}\pmod{p^k}.
-\]
-Set $z(x_1)=1$ and $z(x_i)=0$ for $i>1$. Then $z$ descends to a crossed cocycle and
-\[
-z(x_1^{p^{k-1}})=p^{k-1}\ne0\pmod{p^k}.
-\]
+\begin{proposition}[Lower-bound witness, all $f\ge1$ and $d\ge2$]
+Let $b\in U_{1,k}$ be the residue of $(1-p^f)^{-1}$ modulo $p^k$; note
+$b=1$ if $f\ge k$. Define $\rho(x_2)=b$,
+$\rho(x_i)=1$ for $i\ne2$, and
+$z(x_1)=1$, $z(x_i)=0$ for $i>1$.
+Then $\psi=(z,\rho)$ is a continuous homomorphism $G_{f,d}\to S_k$, and
+$z(x_1^{p^{k-1}})=p^{k-1}\neq0\pmod{p^k}$.
 \end{proposition}
 
 \begin{proof}
-With the convention $z(gh)=z(g)+\chi(g)z(h)$, the power--commutator part of the relator evaluates to
+With $z(gh)=z(g)+\rho(g)z(h)$ one has $z(x_1^m)=m$ since $\rho(x_1)=1$, and
+$z([x_1,x_2])=b^{-1}(1-b)$. Every other commutator
+$[x_{2j-1},x_{2j}]$, $j\ge2$, has cocycle value $0$. Hence
 \[
-p^f+\chi(x_2)^{-1}(1-\chi(x_2))=0,
+z(r)=p^f+b^{-1}(1-b)=p^f+b^{-1}-1=p^f+(1-p^f)-1=0\pmod{p^k},
 \]
-because $\chi(x_2)=(1-p^f)^{-1}$. The remaining commutators have zero cocycle value. Since $\chi(x_1)=1$, $z(x_1^m)=m$.
-\end{proof}
-
-\begin{proposition}[The case $f\ge k$, including rank two]
-Let $f\ge k$ and define
-\[
-\rho(x_1)=1,\quad \rho(x_2)=1+p,\quad z(x_1)=0,\quad z(x_2)=1,
-\]
-with all unused generator values and cocycle values trivial. Then $z$ is a crossed cocycle and
-\[
-z(x_2^{p^{k-1}})
-= \frac{(1+p)^{p^{k-1}}-1}{p}\ne0\pmod{p^k}.
-\]
-\end{proposition}
-
-\begin{proof}
-The term $x_1^{p^f}$ is invisible at level $p^k$, and $z(x_1)=0$ kills the commutator contribution. The cyclic cocycle formula gives the displayed geometric sum. LTE yields
-$v_p((1+p)^{p^{k-1}}-1)=k$, so the quotient has valuation $k-1$.
-Only $x_1,x_2$ are used, so the construction covers $d=2$.
-\end{proof}
-
-\begin{theorem}[Category-relative minimality]
-For every odd $p$, every $f\ge1$, every even $d\ge2$, and every $k\ge2$,
-\[
-\boxed{n_{\mathrm{aff}}(k)=p^{k-1}+1}
-\]
-for the category of all continuous crossed-cocycle representations into $A_k(\rho)\rtimes U_{1,k}$.
-\end{theorem}
-
-\begin{proof}
-The filtration lemma gives the upper bound. The two preceding propositions give a witness nontrivial on $P_{p^{k-1}}$ in the cases $f<k$ and $f\ge k$, respectively. Thus no smaller depth works for the entire affine category.
+so $z$ respects the relator (for $f\ge k$ both terms vanish mod $p^k$).
+Finally $x_1^{p^{k-1}}\in P_{p^{k-1}}(G_{f,d})$.
 \end{proof}
 
 \begin{remark}
@@ -222,24 +203,27 @@ T_n(G_1*_pG_2)
 $T_n$ is left adjoint to the inclusion of pro-$p$ groups $H$ satisfying $P_n(H)=1$, because every map $G\to H$ kills $P_n(G)$. Left adjoints preserve coproducts, giving the formula.
 \end{proof}
 
-\begin{theorem}[Uniform affine window for finite Demushkin free products]
-For a finite free pro-$p$ product of Demushkin groups, every continuous affine crossed-cocycle representation at level $k$ factors through
-\[
-G/P_{p^{k-1}+1}(G).
-\]
-Thus the same depth is sufficient uniformly for this class. If one factor is a standard $G_{f,d}$, the sharp witness above shows that no smaller depth works uniformly for the whole class.
+\begin{theorem}[Uniform window for finite Demu\v{s}kin free products]
+Let $G=D_1*_p\cdots *_pD_m$. Every continuous affine crossed-cocycle
+representation at level $k$ factors through $G/P_{p^{k-1}+1}(G)$.
+This is a direct consequence of Proposition~2.2, which holds for every
+pro-$p$ group. If one factor is a standard $G_{f,d}$, the witness of
+Proposition~3.1, composed with the projection $G\to G_{f,d}$ onto that factor,
+shows that no smaller depth works uniformly.
 \end{theorem}
 
 \begin{proof}
-The factorization follows directly from the arbitrary-candidate factorization proposition. The truncation lemma shows that no separate mixed-commutator window is needed. The lower bound is inherited from one factor by the universal property of the free pro-$p$ coproduct.
-\end{proof}
-
-\begin{remark}
+Zassenhaus filtration is functorial under continuous homomorphisms, so the
+projection to a free factor preserves the required filtration containment.
+The factorization statement is therefore the direct consequence of the
+arbitrary-candidate factorization proposition, while the displayed witness
+gives the uniform lower bound.
+\end{proof}\begin{remark}
 No claim is made for broader recursively defined elementary-type classes involving fibre products or amalgamated operations.
 \end{remark}
 
 \section{Relation with the preceding paper}
-The preceding paper treats finite-window recognition for the fixed rank-four $p=3$ Demushkin group. Its intrinsic Kummer predicate on the corresponding finite quotient selects the canonical orientation modulo $3^k$. The present paper adds the exact factorization depth for the full affine crossed-cocycle category, extends sharpness to the rank-two boundary, records the finite-depth $f$-collapse, and separates factorization from recognition.
+The companion paper [P2] treats finite-window recognition for the fixed rank-four $p=3$ group. Its intrinsic Kummer predicate on the corresponding finite quotient selects the canonical orientation modulo $3^k$. The present paper adds the exact factorization depth for the full affine crossed-cocycle category, extends sharpness to the rank-two boundary, records the finite-depth $f$-collapse, and separates factorization from recognition.
 
 The logical chain is
 \[
