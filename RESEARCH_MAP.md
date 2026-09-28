@@ -2,7 +2,7 @@
 
 The prior manuscript-finalization closure is superseded by an adversarial source audit that found proof-detail omissions in `paper/main.tex`. The mathematical frontier itself remains closed at the declared scopes; the publication artifact gate is reopened only for source synchronization and independent verification.
 
-- Source revision commit: `7adb6fe8ab43dd924daf282730c0c316757a892a`.
+- Source revision commit: `dc73b0365be4020545e73ec768dbea5fed889b0e` (cleanup typo corrected).
 - U2/U3 hypotheses, D2 transgression quotient \(\mathcal O_k\), D3 relation-module/cup duality, D4 shallow-range valuation, and D4 LTE wording have been repaired.
 - Independent CI/PDF verification: **PENDING**.
 - Publication novelty remains **OPEN / CONDITIONAL**.
