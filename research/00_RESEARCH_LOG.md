@@ -4288,3 +4288,22 @@ Consequences:
 - stronger canonical functional O_k -> F_p determined from E_k -> Q_k alone: OPEN / NOT LOAD-BEARING.
 
 Primary detailed proof: research/PAPER3_FINITE_CUP_LINE_COMPRESSION_2026-09-28.md, commit c5aa630f7b49eca16ac7696c0989c9a6da1df7eb. The relation/cup compatibility is standard and documented in the cited literature audit.
+
+
+## 2026-09-28 — PAPER 3 REFEREE GAP CLOSURE
+
+The authorized referee attack was completed on the load-bearing free-product twisted-H1 step.
+
+Result:
+- PASS / CLOSED: candidate-dependent module transport and the commutative coefficient-reduction diagram;
+- PASS / CLOSED: N cap G_i=P_n(G_i) via functoriality plus retraction;
+- PASS / CLOSED: finite twisted-H1 reduction to factorwise Kummer predicates using Paper 2 arbitrary-candidate factorization;
+- PASS / CLOSED: explicit universal-property proof for truncation preserving the free pro-p coproduct after reflection;
+- PASS / CLOSED: selected-depth abelianization calculation for the f<k parameter witness;
+- PASS / CLOSED: rank-four q=3 recognition scope separated from the broader heterogeneous affine family.
+
+The corresponding manuscript repair is commit f97b9f04dd873fd2d0123d325443032c4840d086.
+
+The strongest previous referee objection is therefore closed. Publication novelty remains OPEN / CONDITIONAL and the Paper 3 application manuscript remains distinct from the theorem-paper track.
+
+Detailed record: research/PAPER3_REFEREE_GAP_CLOSURE_2026-09-28.md.
