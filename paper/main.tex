@@ -2,582 +2,371 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage[T1]{fontenc}
 \title{Finite-Window Kummer Recognition and Selector Minimality\\for a Rank-Four Demu\v{s}kin Pro-$3$ Group}
 \author{Seo Seongkyo}
 \date{September 2026}
-% Publication source: reproducible clean-build workflow in .github/workflows/paper-build.yml.
+
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+
+\newcommand{\Fp}{\mathbb F_3}
+\newcommand{\Zp}{\mathbb Z_3}
+\newcommand{\Ak}{\mathbb Z/3^k\mathbb Z}
+\newcommand{\Uk}{1+3\Ak}
+\newcommand{\Pk}{P_{3^{k-1}+1}}
+\newcommand{\Kk}{\mathsf K_k}
+
 \begin{document}
 \maketitle
 
 \begin{abstract}
-We study finite-window recognition of the canonical orientation of the fixed rank-four q=3 Demu\v{s}kin pro-3 group. Let $P_i$ be the Zassenhaus filtration and put $Q_k=G/P_{3^{k-1}+1}$. For a principal-unit character $\rho:Q_k\to U_{1,k}:=1+3(\mathbb Z/3^k\mathbb Z)$, let $\mathsf K_k(Q_k,\rho)$ mean that $H^1(Q_k,\mathbb Z/3^k(\rho))\to H^1(Q_k,\mathbb F_3)$ is surjective. We prove that $\mathsf K_k(Q_k,\rho)$ holds exactly for $\rho=\chi_G\bmod3^k$, for $k\ge2$. The canonical orientation itself is classical; the result is a finite-window recognition statement.
+We study finite-window recognition of the canonical orientation of the fixed
+rank-four $q=3$ Demu\v{s}kin pro-$3$ group. Let $P_n$ denote its Zassenhaus
+filtration and put $Q_k=G/P_{3^{k-1}+1}$. For a principal-unit character
+$\rho:Q_k\to U_{1,k}:=1+3(\mathbb Z/3^k\mathbb Z)$, let
+$\mathsf K_k(Q_k,\rho)$ mean that
+\[
+H^1(Q_k,\mathbb Z/3^k(\rho))\longrightarrow H^1(Q_k,\mathbb F_3)
+\]
+is surjective. We prove
+\[
+\mathsf K_k(Q_k,\rho)\Longleftrightarrow
+\rho=\chi_G\pmod{3^k}
+\]
+for every $k\ge2$. The canonical orientation and its Kummerian uniqueness
+are classical. The finite contribution is the arbitrary-candidate
+factorization through the bare finite quotient, the fixed-scope selector
+minimality theorem, and the intrinsic one-dimensional cup-line carrier for
+the surviving first-order variation. Publication novelty is stated
+conditionally; no absolute priority claim is made.
 \end{abstract}
 
 \section{Introduction}
+
 Let
 \[
-G=\langle x_1,x_2,x_3,x_4 \mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle.
+G=\langle x_1,x_2,x_3,x_4\mid
+x_1^3[x_1,x_2][x_3,x_4]=1\rangle,
+\qquad [a,b]=a^{-1}b^{-1}ab.
 \]
-An orientation of a pro-$3$ group $H$ is a continuous homomorphism $\theta:H\to1+3\mathbb Z_3$, giving the twisted module $\mathbb Z_3(\theta)$. The oriented group is Kummerian when, for every $n\ge1$, the natural map
-$H^1(H,\mathbf Z_3(\theta)/3^n\mathbf Z_3(\theta))\to H^1(H,\mathbf F_3)$ is surjective; this is the standard Kummerian formulation used by Efrat--Quadrelli and Quadrelli--Weigel \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. Labute proved that every Demushkin group has a unique orientation making it Kummerian, namely the canonical orientation induced by the dualizing module \cite{Labute1967}. Our question is whether its reduction modulo $3^k$ can be recognized from $Q_k=G/P_{3^{k-1}+1}$ without supplying the orientation as input.
+Write $P_n=P_n(G)$ for the Zassenhaus filtration. The canonical
+Demu\v{s}kin orientation is a continuous homomorphism
+\[
+\chi_G:G\longrightarrow 1+3\mathbb Z_3.
+\]
+For an orientation $\theta$, the coefficient module
+$\mathbb Z_3(\theta)$ is the usual rank-one twisted module.
+
+The Kummerian condition says that the coefficient-reduction maps
+\[
+H^1(G,\mathbb Z_3(\theta)/3^n)
+\longrightarrow H^1(G,\mathbb F_3)
+\]
+are surjective for all $n$. The existence and uniqueness of the
+Kummerian orientation for Demu\v{s}kin groups are classical, due to
+Labute and the later Kummerian/1-cyclotomic theory.
+
+The question here is narrower and finite:
+can the reduction $\chi_G\bmod 3^k$ be recognized from the bare finite
+Zassenhaus quotient
+\[
+Q_k=G/P_{3^{k-1}+1}
+\]
+without supplying $q$, a presentation coordinate, or the canonical
+orientation itself?
+
+For a principal-unit character $\rho:Q_k\to U_{1,k}$ define
+\[
+\Kk(Q_k,\rho):
+\quad
+H^1(Q_k,\Ak(\rho))
+\longrightarrow H^1(Q_k,\mathbb F_3)
+\quad\text{is surjective}.
+\]
 
 \begin{theorem}[Finite-window recognition]
-For every $k\ge2$ and every principal-unit $\rho:Q_k\to U_{1,k}:=1+3A_k$,
+For every $k\ge2$ and every principal-unit
+$\rho:Q_k\to U_{1,k}$,
 \[
-\mathsf K_k(Q_k,\rho) \Longleftrightarrow \rho=\chi_G\pmod {3^k}.
+\boxed{
+\Kk(Q_k,\rho)\Longleftrightarrow
+\rho=\chi_G\pmod{3^k}.
+}
 \]
 \end{theorem}
 
-The proof separates finite arbitrary-candidate factorization, a one-step transgression quotient for the transient $H^2$ sector, the coefficient-variation/cup obstruction, and an independent sharp selector-depth argument. A one-dimensional intrinsic cup-product carrier is then extracted from the finite quotient.
-
-\section{Finite window and arbitrary-candidate factorization}
-Put $A_k=\mathbf Z/3^k\mathbf Z$, $U_j=1+3^jA_k$ for $j\ge1$, with $U_j=1$ for $j\ge k$, and
+The proof is organized as follows. First, an explicit
+Jennings--Lazard calculation gives the exact finite depth needed to
+factor every arbitrary twisted crossed cocycle. Second, a finite
+one-relator Fox criterion reduces the base case to four equations.
+Third, a coefficient-variation identity together with $PD^2$ duality
+gives intrinsic uniqueness at successive $3$-adic levels. Finally, an
+independent lower-bound argument proves the exact selector depth
 \[
-S_k=A_k\rtimes U_1,\qquad (a,u)(b,v)=(a+ub,uv).
+n_{\mathrm{selector}}(k)=3^{k-1}+1.
+\]
+We then identify the intrinsic one-dimensional cup-product image in the
+finite quotient and explain precisely what it does and does not carry.
+
+\section{The finite window and arbitrary-candidate factorization}
+
+Put
+\[
+A_k=\mathbb Z/3^k\mathbb Z,\qquad
+U_j=1+3^jA_k\quad(j\ge1),
+\]
+with $U_j=1$ for $j\ge k$, and
+\[
+S_k=A_k\rtimes U_1,\qquad
+(a,u)(b,v)=(a+ub,uv).
 \]
 Let $P_n(S_k)$ denote the $3$-Zassenhaus filtration.
 
 \begin{lemma}[U1: finite-depth Zassenhaus filtration]
-For $n\ge1$, set
+For $n\ge1$, put
 \[
-e(n)=\left\lceil\log_3 n\right\rceil,\qquad e(1)=0.
+e(n)=\lceil\log_3 n\rceil,\qquad e(1)=0.
 \]
 Then
 \[
+\boxed{
 P_n(S_k)=3^{e(n)}A_k\rtimes U_{e(n)+1}.
+}
 \]
 In particular,
 \[
-P_{3^{k-1}+1}(S_k)=1,\qquad
-P_{3^{k-1}}(S_k)=3^{k-1}A_k\ne1.
+P_{3^{k-1}}(S_k)=3^{k-1}A_k\ne1,
+\qquad
+P_{3^{k-1}+1}(S_k)=1.
 \]
 \end{lemma}
 
 \begin{proof}
-We use the Jennings--Lazard description of the Zassenhaus filtration
+Use the Jennings--Lazard description
 \[
-P_n(S_k)=\prod_{i3^j\ge n}\gamma_i(S_k)^{3^j},
+P_n(S_k)=\prod_{i3^j\ge n}\gamma_i(S_k)^{3^j}.
 \]
-which is equivalent to the standard recursive definition of the
-Zassenhaus filtration; see, for example, the formulation recalled by
-Mináč--Rogelstad--Tân \cite{MinacRogelstadTan2014}.
-First, with $\gamma_1(S_k)=S_k$, a direct commutator calculation gives
+A direct commutator calculation gives
 \[
-\gamma_2(S_k)=[S_k,S_k]=3A_k,
-\qquad
-\gamma_i(S_k)=3^{i-1}A_k\quad(i\ge2),
+\gamma_2(S_k)=3A_k,\qquad
+\gamma_i(S_k)=3^{i-1}A_k\quad(i\ge2).
 \]
-where $[u,a]=(u-1)a$ for $u\in U_1$ and $a\in A_k$, so taking
-$u=4$ already gives all of $3A_k$; induction then gives
-$[3^{i-1}A_k,S_k]=3^iA_k$ until the subgroup becomes trivial.
-For the $i=1$ factors we make the valuation calculation explicit.  Pure
-translations satisfy
-\[
-(a,1)^{3^j}=(3^ja,1),
-\]
-while, for $u=1+3^s b\in U_s$ with $s\ge1$, the binomial expansion (equivalently
-the standard $3$-adic valuation formula for $(1+3^s b)^{3^j}-1$) gives
-\[
-u^{3^j}\equiv1+3^{s+j}b\pmod{3^k}
-\]
-whenever $s+j<k$, and $u^{3^j}=1$ when $s+j\ge k$.  Hence
-$U_1^{3^j}=U_{j+1}$ (with $U_{j+1}=1$ for $j+1\ge k$).
-Since $S_k^{3^j}$ contains both the pure translation subgroup
-$3^jA_k$ and the pure unit subgroup $U_{j+1}$, while every $3^j$-th
-power has translation component divisible by $3^j$, we obtain exactly
+Indeed, $[u,a]=(u-1)a$ for $u\in U_1$, $a\in A_k$, and
+$u=4$ already generates $3A_k$.
+
+For $j\ge0$,
 \[
 S_k^{3^j}=3^jA_k\rtimes U_{j+1}.
 \]
-
-Let $e=e(n)$. The $i=1$ factor with $3^j\ge n$ first occurs at $j=e$,
-and hence already contributes
-$3^eA_k\rtimes U_{e+1}$.
-For every $i\ge2$ and every $j$ with $i3^j\ge n$, one has
-$i-1+j\ge e$. Indeed, if $j\le e-1$, then
-$i>3^{e-1-j}$, so $i-1+j\ge3^{e-1-j}+j\ge e$; if
-$j\ge e$, the inequality is immediate. Hence
+The translation part is divisible by $3^j$ because
 \[
-\gamma_i(S_k)^{3^j}=3^{i-1+j}A_k\subseteq3^eA_k.
+(a,1)^{3^j}=(3^ja,1),
 \]
-Thus the product is exactly
-$3^eA_k\rtimes U_{e+1}$. At $n=3^{k-1}$ this is
-$3^{k-1}A_k\rtimes U_k$, which is nontrivial, while at
-$n=3^{k-1}+1$ one has $e(n)=k$, so the subgroup is trivial.
+and the unit part satisfies
+\[
+U_1^{3^j}=U_{j+1}
+\]
+by the usual $3$-adic valuation of
+$(1+3^sb)^{3^j}-1$.
+
+Let $e=e(n)$. The $i=1$ term with $3^j\ge n$ first occurs at
+$j=e$ and contributes
+\[
+3^eA_k\rtimes U_{e+1}.
+\]
+If $i\ge2$ and $i3^j\ge n$, then
+$i-1+j\ge e$, so
+\[
+\gamma_i(S_k)^{3^j}
+=3^{i-1+j}A_k
+\subseteq3^eA_k.
+\]
+Thus no further factor enlarges the subgroup, proving the formula.
+At $n=3^{k-1}$ one has $e=k-1$, while at
+$n=3^{k-1}+1$ one has $e=k$.
 \end{proof}
 
 \begin{lemma}[U2: arbitrary-candidate factorization]
-Let $G$ be any pro-$3$ group, $\rho:G\to U_{1,k}$ a character, and
-$z\in Z^1(G,A_k(\rho))$. Then $z$ and $\rho$ factor through
-$Q_k=G/P_{3^{k-1}+1}(G)$, and inflation gives a canonical isomorphism
+Let $H$ be any pro-$3$ group, let
+$\rho:H\to U_{1,k}$ be a continuous character, and let
+$z\in Z^1(H,A_k(\rho))$. Then both $z$ and $\rho$ kill
+$P_{3^{k-1}+1}(H)$. Hence they factor through
 \[
-H^1(Q_k,A_k(\bar\rho))\xrightarrow{\sim}H^1(G,A_k(\rho)).
+Q_k(H)=H/P_{3^{k-1}+1}(H).
 \]
-Moreover inflation also gives
+Inflation gives natural isomorphisms
 \[
-H^1(Q_k,\mathbf F_3)\xrightarrow{\sim}H^1(G,\mathbf F_3),
+H^1(Q_k(H),A_k(\bar\rho))
+\xrightarrow{\sim}
+H^1(H,A_k(\rho))
 \]
-and these identifications make the two finite Kummer lifting maps commute.
+and
+\[
+H^1(Q_k(H),\mathbb F_3)
+\xrightarrow{\sim}
+H^1(H,\mathbb F_3),
+\]
+and these identifications commute with coefficient reduction.
 \end{lemma}
 
 \begin{proof}
-The crossed-cocycle identity is equivalent to $\psi(g)=(z(g),\rho(g))$ being a homomorphism $G\to S_k$. Functoriality of the Zassenhaus filtration and U1 give
-$\psi(P_{3^{k-1}+1}(G))=1$. Thus both components factor through $Q_k$.
-The same argument for coboundaries identifies $B^1$ on both sides, proving the
-twisted $H^1$ isomorphism.
+The crossed-cocycle identity is equivalent to
+\[
+g\longmapsto(z(g),\rho(g))
+\]
+being a homomorphism $H\to S_k$. Lemma U1 and functoriality of the
+Zassenhaus filtration therefore show that
+$P_{3^{k-1}+1}(H)$ is killed by both components.
 
-For trivial coefficients, $P_{3^{k-1}+1}(G)\subseteq P_2(G)=\Phi(G)$.
-Hence every continuous homomorphism $G\to\mathbf F_3$ kills the quotient
-kernel, and inflation is an isomorphism on $H^1(-,\mathbf F_3)$.
-Naturality of coefficient reduction gives the commutative square
-between the twisted and untwisted $H^1$ groups. Therefore surjectivity of the
-lifting map is equivalent on $G$ and on $Q_k$.
+The same argument for coboundaries gives the twisted $H^1$ isomorphism.
+For trivial coefficients,
+\[
+P_{3^{k-1}+1}(H)\subseteq P_2(H)=\Phi(H),
+\]
+so every homomorphism to $\mathbb F_3$ kills the kernel and inflation is
+an isomorphism on $H^1$. Naturality of coefficient reduction gives the
+commutative square.
 \end{proof}
 
-\section{Finite Kummer criterion for one-relator presentations}
-Let $F$ be free pro-$3$ on $x_1,\dots,x_d$, let $G=F/\overline{\langle\!\langle r\rangle\!\rangle}$, and assume $r\in\Phi(F)$. For a principal-unit character $\rho:G\to U_{1,k}$, write $F_i(\rho)\in A_k$ for the twisted Fox evaluation, with the convention
+\section{The finite Kummer/Fox criterion}
+
+Let $F$ be free pro-$3$ on $x_1,\ldots,x_d$ and let
+\[
+H=F/\overline{\langle\!\langle r\rangle\!\rangle}
+\]
+be a minimal one-relator quotient. For a principal-unit character
+$\rho:H\to U_{1,k}$, write $F_i(\rho)\in A_k$ for the twisted Fox
+coefficients, normalized by
 \[
 z(r)=\sum_iF_i(\rho)z(x_i).
 \]
 
 \begin{proposition}[U3: finite Kummer/Fox criterion]
-Under this minimality hypothesis,
+Under the minimality hypothesis,
 \[
-\mathsf K_k(G,\rho)\Longleftrightarrow F_i(\rho)=0
-\quad(1\le i\le d).
+\boxed{
+\mathsf K_k(H,\rho)\Longleftrightarrow
+F_i(\rho)=0\quad(1\le i\le d).
+}
 \]
 \end{proposition}
 
 \begin{proof}
-For a vector $a=(a_i)\in A_k^d$, the crossed-cocycle relation is equivalent, by the left Fox identity for the chosen convention, to the single relation equation
-$\sum_iF_i(\rho)a_i=0$. Because $\rho\equiv1\pmod3$, reduction modulo $3$ of the coefficient action is trivial, and minimality identifies $H^1(G,\mathbf F_3)$ with the generator-value vectors $\mathbf F_3^d$. If the lifting map is surjective, then for each basis vector there is a lift with $a_i\equiv1\pmod3$ and $a_j\equiv0\pmod3$ for $j\ne i$. Writing $a_i=1+3b_i$ and $a_j=3b_j$ first gives $F_i\in3A_k$. More generally, if all $F_j\in3^mA_k$, then
+A crossed cocycle is determined on the free generators, and the single
+relation is exactly
+\[
+\sum_iF_i(\rho)a_i=0.
+\]
+Because $\rho\equiv1\pmod3$, the coefficient action is trivial after
+reduction modulo $3$, and minimality identifies
+$H^1(H,\mathbb F_3)$ with $\mathbb F_3^d$.
+
+If the reduction map is surjective, choose a lift with
+$a_i\equiv1\pmod3$ and $a_j\equiv0\pmod3$ for $j\ne i$.
+If all $F_j\in3^mA_k$, then
 \[
 0=F_i(1+3b_i)+\sum_{j\ne i}F_j(3b_j)
 =F_i+3\sum_jF_jb_j,
 \]
-so $F_i\in3^{m+1}A_k$. Induction through $m=0,\ldots,k-1$ gives $F_i=0$. Conversely, if all $F_i=0$, every generator-value vector in $A_k^d$ satisfies the relation and therefore every mod-$3$ class lifts.
+so $F_i\in3^{m+1}A_k$. Starting at $m=0$ and iterating gives
+$F_i=0$. Conversely, if all $F_i=0$, every generator-value vector
+in $A_k^d$ satisfies the relation, so every mod-$3$ class lifts.
 \end{proof}
 
-The principal-unit restriction makes the reduction of the coefficient action trivial modulo $3$. The argument is valuation induction, not the earlier informal Nakayama step.
+\section{The base case $k=2$}
 
-\section{Coordinate identification at the base level}
 For
 \[
 r=x_1^3[x_1,x_2][x_3,x_4],
 \]
-the canonical orientation has
+write $a_i=\rho_2(x_i)\in\{1,4,7\}\subset\mathbb Z/9\mathbb Z$.
+For the convention
 \[
-\chi(x_1)=\chi(x_3)=\chi(x_4)=1,\qquad
-\chi(x_2)=(1-3)^{-1}\in1+3\mathbf Z_3.
+z(gh)=z(g)+\rho_2(g)z(h),
 \]
-For the induction below only the base level \(k=2\) is needed. We now verify its reduction directly, rather than appeal to the classification as a black box.
-
-Let \(A_2=\mathbf Z/9\mathbf Z\) and let \(\rho_2:G\to1+3A_2\) be any candidate. Write \(a_i=\rho_2(x_i)\). For the left crossed-cocycle convention
-\(z(gh)=z(g)+\rho_2(g)z(h)\), direct expansion of
-\(r=x_1^3[x_1,x_2][x_3,x_4]\) gives
+the twisted Fox coefficients are
 \[
 \begin{aligned}
-F_1&=\frac{a_1^2+a_1a_2+a_2}{a_2},&
-F_2&=\frac{a_1^2(a_1-1)}{a_2},\\
-F_3&=-\frac{a_1^3(a_4-1)}{a_3a_4},&
+F_1&=\frac{a_1^2+a_1a_2+a_2}{a_2},
+&
+F_2&=\frac{a_1^2(a_1-1)}{a_2},
+\\
+F_3&=-\frac{a_1^3(a_4-1)}{a_3a_4},
+&
 F_4&=\frac{a_1^3(a_3-1)}{a_3a_4}.
 \end{aligned}
 \]
-All denominators are units in \(A_2\). By U3, \(\mathsf K_2(G,\rho_2)\) is equivalent to \(F_i=0\) for all \(i\). Since \(a_1,a_2,a_3,a_4\in\{1,4,7\}\), the equations immediately give
+All denominators are units modulo $9$. By U3, the finite Kummer predicate
+is equivalent to the vanishing of all four coefficients. Hence
 \[
 F_2=0\Rightarrow a_1=1,\qquad
 F_3=F_4=0\Rightarrow a_3=a_4=1,
 \]
 and then
 \[
-F_1=0\Rightarrow 1+2a_2=0\pmod 9
-\Rightarrow a_2=4.
+F_1=0
+\Longleftrightarrow
+1+2a_2=0\pmod9
+\Longleftrightarrow
+a_2=4.
 \]
-Thus every level-\(2\) Kummer candidate is
-\(\rho_2=(1,4,1,1)=\chi\pmod9\). Conversely this candidate is the reduction of the classical canonical Kummerian orientation. This completes the base step without using the desired conclusion itself.
-\section{The finite transgression carrier}
-
-The bare finite map $H^2(Q_k,\mathbb F_3)\to H^2(G,\mathbb F_3)$ is not assumed to be injective. The correct finite obstruction carrier removes the first transient sector.
-
-Put $N=3^{k-1}$ and
+Thus the unique level-$2$ candidate is
 \[
-E_k=G/P_{N+2},\qquad K_k=P_{N+1}/P_{N+2}.
+\boxed{\rho_2=(1,4,1,1)=\chi_G\bmod9.}
 \]
-Since $[P_i(G),G]\subseteq P_{i+1}(G)$, $K_k$ is central in $E_k$, giving
-\[
-1\to K_k\to E_k\to Q_k\to1.
-\]
-Because $K_k\subseteq\Phi(E_k)$, inflation on $H^1(-,\mathbb F_3)$ is an isomorphism. The five-term sequence therefore gives
-\[
-\ker\bigl(H^2(Q_k,\mathbb F_3)\to H^2(E_k,\mathbb F_3)\bigr)
-=\operatorname{im}(\operatorname{tra}_k).
-\]
-We define
-\[
-\boxed{\mathcal O_k=
-H^2(Q_k,\mathbb F_3)/\operatorname{im}(\operatorname{tra}_k).}
-\]
-This object is intrinsic to the finite extension $E_k\to Q_k$; no presentation, $q$, or canonical orientation is inserted.
+The surviving candidate is indeed Kummerian because it is the reduction
+of the classical canonical Kummerian orientation. This establishes the
+base step without using the desired recognition theorem as an input.
 
-Let $\delta_{k,\rho_k}$ be the finite connecting obstruction attached to a candidate lift $\rho_k$. Its class in $\mathcal O_k$ is denoted $\bar\delta_{k,\rho_k}$.
-
-\begin{proposition}[D2: transgression-quotient separation]
-Assume that $\rho_k$ reduces to the canonical $\chi_{k-1}$. Then
-\[
-\boxed{\bar\delta_{k,\rho_k}=0\iff\rho_k=\chi_k.}
-\]
-\end{proposition}
-
-\begin{proof}
-The canonical branch is Kummerian, and Lemma U2 makes its lifts factor through $Q_k$, so $\delta_{k,\chi_k}=0$ already in finite cohomology. Any other lift has the form
-\[
-\rho_k'=\chi_k(1+3^{k-1}\nu),\qquad 0\ne\nu\in H^1(G,\mathbb F_3).
-\]
-The coefficient-extension comparison gives, after inflation to $G$,
-\[
-\operatorname{inf}\bigl(\delta_{k,\rho_k'}(f)-\delta_{k,\chi_k}(f)\bigr)
-=\nu\smile\bar f.
-\]
-The Demushkin cup pairing is nondegenerate, so some $f$ gives a nonzero right-hand side. Hence the corresponding finite class cannot lie in the transgression image, because transgression classes die after inflation to $E_k$ and hence to $G$. Thus the class is nonzero in $\mathcal O_k$.
-\end{proof}
-
-\section{The intrinsic one-dimensional cup carrier}
-
-Define
-\[
-\boxed{C_k=\operatorname{im}\bigl(H^1(Q_k,\mathbb F_3)^{\otimes2}\xrightarrow{\cup}H^2(Q_k,\mathbb F_3)\bigr).}
-\]
-
-\begin{proposition}[D3: finite cup-line]
-For every $k\ge2$, $\dim_{\mathbb F_3}C_k=1$, and inflation
-$C_k\to H^2(G,\mathbb F_3)$ is injective. Consequently $C_k$ embeds in $\mathcal O_k$.
-\end{proposition}
-
-\begin{proof}
-Write $G=F/R$ with $F$ free pro-$3$ on four generators and $R$ normally generated by $r$. Then
-\[
-Q_k=F/R_k,\qquad R_k=R\,P_{3^{k-1}+1}(F).
-\]
-The added relators lie in $P_3(F)$, so the image of $R_k$ in $P_2(F)/P_3(F)$ is exactly the one-dimensional span of
-\[
-\operatorname{in}_2(r)=[X_1,X_2]+[X_3,X_4].
-\]
-For a minimal pro-$p$ presentation, the standard relation-module/cup-product pairing identifies the dual of the finite cup map with the map from the relation module to the quadratic initial-form space. Thus the rank of the finite cup map equals the rank of the displayed quadratic relation image, namely one. The global inflation of this line is nonzero by the nondegenerate Demushkin cup pairing, hence it is injective. Since transgression classes have zero inflation to $E_k$, the line embeds in $\mathcal O_k$.
-\end{proof}
-
-\begin{corollary}[One-dimensional selector carrier]
-On the canonical lower-level branch, every false candidate has a nonzero obstruction output already in $C_k$. Hence the finite recognition selector can be carried by a one-dimensional intrinsic vector space.
-\end{corollary}
-
-\section{Selector minimality}
-
-\begin{proposition}[D4: exact selector depth]
-For the fixed rank-four $q=3$ Demushkin group, the least Zassenhaus index $m$ for which the finite Kummer predicate recognizes $\chi\bmod3^k$ is
-\[
-\boxed{n_{\mathrm{selector}}(k)=3^{k-1}+1.}
-\]
-\end{proposition}
-
-\begin{proof}
-Write $N=3^{k-1}$. If $m\le3^{k-2}$, the canonical character does not kill the image of $P_m(G)$ in the free $x_2$-direction of the abelianization, so it does not factor through $W_m=G/P_m$.
-
-Now let $3^{k-2}<m\le N$. The character does factor through $W_m$, but the image of $x_2$ has exact order $N$. Put $u=\chi(x_2)=(1-3)^{-1}$ and take the mod-$3$ class with value $1$ on $x_2$. Any twisted lift would have $z(x_2)\equiv1\pmod3$, while $x_2^N=1$ forces
-\[
-0=z(x_2^N)=S_N(u)z(x_2),\qquad S_N(u)=1+u+\cdots+u^{N-1}.
-\]
-Since $u-1$ is a $3$-adic unit, LTE gives $v_3(S_N(u))=k-1$. Thus $S_N(u)$ is nonzero modulo $3^k$ but divisible by $3$, and the relation forces $z(x_2)\equiv0\pmod3$, a contradiction. Therefore the Kummer predicate fails throughout this range. The upper bound $m=N+1$ is the finite-window recognition theorem.
-\end{proof}
-
-\begin{remark}
-This is selector minimality for the fixed rank-four $q=3$ category and the Kummer selector. It is independent of the affine sharpness statement. It is not an absolute lower bound for arbitrary nonlinear finite observations.
-\end{remark}
-
-\section{Revised contribution and logical boundary}
-
-The classical existence and uniqueness of the Kummerian Demushkin orientation are not claimed as new. The finite contribution is the assembly
-\[
-\text{bare }Q_k\ \longrightarrow\ \text{arbitrary-candidate factorization}
-\ \longrightarrow\ \mathcal O_k\ \longrightarrow\ C_k\simeq\mathbb F_3\ \longrightarrow\ \chi\bmod3^k.
-\]
-The literature audit did not identify an exact theorem combining the bare finite input, arbitrary-candidate twisted-$H^1$ factorization, the finite Kummer selector, and the fixed-category sharp selector threshold. Accordingly, the publication novelty claim remains conditional: no absolute priority claim is made.
-
-\section{Limitations}
-The selector-minimality theorem is fixed to rank four and $q=3$. The one-dimensional carrier is minimal only in the explicitly declared linear selector-carrier category. We do not claim absolute carrier minimality, a canonical functional $\mathcal O_k\to\mathbb F_3$ reconstructed solely from $E_k\to Q_k$, or uniform selector minimality for all $q=3^f$.
-\section{Intrinsic uniqueness}
-The next three results are the load-bearing U5 argument.
+\section{Intrinsic uniqueness at higher levels}
 
 \begin{lemma}[U5a: reduction]
-If $\mathsf K_k(G,\rho_k)$ holds, then $\mathsf K_{k-1}(G,\rho_{k-1})$ holds after reduction modulo $3^{k-1}$.
+If $\mathsf K_k(G,\rho_k)$ holds, then
+$\mathsf K_{k-1}(G,\rho_{k-1})$ holds after reduction modulo $3^{k-1}$.
 \end{lemma}
 
 \begin{proof}
-Reduce a crossed cocycle modulo $3^{k-1}$. A level-$k$ lift of any class in $H^1(G,\mathbf F_3)$ therefore gives a level-$(k-1)$ lift of the same class.
+Reduce a level-$k$ crossed cocycle modulo $3^{k-1}.
+A lift of every class in $H^1(G,\mathbb F_3)$ at level $k$ therefore
+gives a lift at level $k-1$.
 \end{proof}
 
 \begin{lemma}[U5b: coefficient-extension variation]
 Suppose $\rho_k$ and $\rho_k'$ lift the same $\rho_{k-1}$ and
 \[
-\rho_k'=\rho_k(1+3^{k-1}\nu),\qquad \nu\in Z^1(G,\mathbf F_3).
+\rho_k'=\rho_k(1+3^{k-1}\nu),
+\qquad \nu\in Z^1(G,\mathbb F_3).
 \]
-Let $\delta_{\rho_k}$ and $\delta_{\rho_k'}$ be the connecting maps of the corresponding coefficient extensions. Then
+Let
 \[
-\boxed{\delta_{\rho_k'}-\delta_{\rho_k}=\iota_*\circ(\nu\smile -),}
+\delta_{\rho_k},\delta_{\rho_k'}:
+H^1(G,\mathbb F_3)
+\longrightarrow
+H^2(G,A_{k-1}(\rho_{k-1}))
 \]
-where $\iota_*:H^2(G,\mathbf F_3)\to H^2(G,A_{k-1}(\rho_{k-1}))$ is induced by $\iota(1)=3^{k-2}$.
-\end{lemma}
-
-\begin{proof}
-For clarity, use the coefficient extension
-\[
-0\longrightarrow A_{k-1}(\rho_{k-1})
-\xrightarrow{\,j\,}A_k(\rho_k)
-\xrightarrow{\,\pi\,}\mathbf F_3\longrightarrow0,
-\qquad j(a)=3a.
-\]
-Choose the common set-theoretic section \(s:\mathbf F_3\to A_k\) with \(s(1)=1\). For
-\(c\in Z^1(G,\mathbf F_3)\), the connecting class is represented by
-\[
-d_s c(g,h)
-=g\!\cdot s(c(h))-s(c(gh))+s(c(g)).
-\]
-Because \(\rho_k'=\rho_k(1+3^{k-1}\nu)\), the two actions differ on the common lift by
-\[
-g\!\cdot' s(c(h))-g\!\cdot s(c(h))
-=3^{k-1}\nu(g)c(h)\in A_k.
-\]
-Hence
-\[
-d_s'c-d_sc=3^{k-1}(\nu\smile c)
-=j\!\left(3^{k-2}(\nu\smile c)\right),
-\]
-where the last equality uses the canonical socle inclusion
-\[
-\iota:\mathbf F_3\hookrightarrow A_{k-1},\qquad
-\iota(1)=3^{k-2}.
-\]
-Thus, before passing to cohomology, the difference of the two connecting
-cochains is exactly \(j\circ\iota\circ(\nu\smile c)\). The usual
-connecting-map construction is independent of the chosen section up to a
-coboundary, so the induced cohomology classes satisfy
-\[
-[\delta_{\rho_k'}(c)]-[\delta_{\rho_k}(c)]
-=\iota_*([\nu\smile c]).
-\]
-This also fixes the sign for the convention
-\((\nu\smile c)(g,h)=\nu(g)c(h)\).
-\end{proof}
-
-\begin{lemma}[U5c: PD$^2$ socle injectivity]
-For the canonical orientation $\chi$, the inclusion
-\[
-\iota:\mathbf F_3\hookrightarrow A_{k-1}(\chi_{k-1}),\qquad
-1\mapsto3^{k-2},
-\]
-induces an injection
-\[
-\iota_*:H^2(G,\mathbf F_3)\hookrightarrow
-H^2(G,A_{k-1}(\chi_{k-1})).
-\]
-\end{lemma}
-
-\begin{proof}
-Let $I=\mathbf Q_3/\mathbf Z_3(\chi)$ be the dualizing module, with the convention that $\chi$ is the canonical dualizing orientation. For a finite $3$-primary $G$-module $M$, the standard finite-coefficient
-duality for pro-$p$ $PD^2$ groups gives
-\[
-H^2(G,M)^\vee\cong H^0\!\left(G,M^\vee\otimes I\right),
-\qquad
-M^\vee=\operatorname{Hom}(M,\mathbf Q_3/\mathbf Z_3).
-\]
-In the pro-$p$ setting this is the standard extension of the defining
-$PD^2$ cup-product duality to finite $p$-primary coefficients; see
-Wilkes, \emph{Classification of pro-$p$ $PD^2$ pairs and the pro-$p$
-curve complex}, §1 (the duality formula preceding Proposition 1.5),
-which records the same orientation-character convention and finite-module
-duality.
-Take $M=A_{k-1}(\chi_{k-1})$. Then
-$M^\vee\otimes I\cong A_{k-1}$ with trivial $G$-action, so
-\[
-H^2(G,A_{k-1}(\chi_{k-1}))^\vee\cong A_{k-1}.
-\]
-For $M=\mathbf F_3$, the residual action of $\chi$ is trivial, hence
-\[
-H^2(G,\mathbf F_3)^\vee\cong\mathbf F_3.
-\]
-The duality isomorphisms are natural in the coefficient module. To
-identify the induced dual map explicitly, write
-\[
-(A_{k-1}(\chi_{k-1}))^\vee\otimes I\cong A_{k-1}
-\]
-by sending \(a\in A_{k-1}\) to the character
-\(x\mapsto ax/3^{k-1}\), with the twist by \(I\) cancelling the
-contragredient action. Under this identification, precomposition with
-\(\iota(1)=3^{k-2}\) sends \(a\) to
-\[
-\frac{a\,3^{k-2}}{3^{k-1}}=\frac a3\pmod{\mathbf Z_3},
-\]
-which is exactly \(a\bmod3\). Thus the dual of \(\iota_*\) is the reduction
-map \(A_{k-1}\twoheadrightarrow\mathbf F_3\). It is surjective, so
-\(\iota_*\) is injective.
-\end{proof}
-
-\begin{proposition}[U5: intrinsic uniqueness]
-If $\rho_k$ and $\rho_k'$ both satisfy $\mathsf K_k$ and both reduce to $\chi_{k-1}$, then $\rho_k=\rho_k'$.
-\end{proposition}
-
-\begin{proof}
-For the coefficient extension
-$0\to A_{k-1}(\rho_{k-1})\to A_k(\rho_k)\to\mathbf F_3\to0$,
-the level-$k$ lifting predicate is equivalent to surjectivity of
-$H^1(G,A_k(\rho_k))\to H^1(G,\mathbf F_3)$, hence to vanishing of its connecting map
-$\delta_{\rho_k}:H^1(G,\mathbf F_3)\to H^2(G,A_{k-1}(\rho_{k-1}))$. Hence U5b gives
-\[
-0=\delta_{\rho_k'}-\delta_{\rho_k}=\iota_*(\nu\smile -).
-\]
-By U5c, $\nu\smile v=0$ for every $v\in H^1(G,\mathbf F_3)$. The Demu\v{s}kin cup pairing is nondegenerate, hence $\nu=0$.
-\end{proof}
-
-\section{Proof of the theorem}
-The canonical orientation $\chi_G$ is Kummerian by the classical Demu\v{s}kin
-theory, so its reduction satisfies the finite predicate at every level.
-U2 identifies this predicate on $G$ with the predicate on $Q_k$.
-
-Conversely, suppose $\mathsf K_k(Q_k,\rho_k)$ holds. U2 transfers the
-predicate to $G$, and U5a transfers it to every lower level. At level $2$,
-U4 gives $\rho_2=\chi_G\bmod9$. For $j\ge3$, the candidate and
-$\chi_G\bmod3^j$ have the same reduction to level $j-1$ and both satisfy
-the level-$j$ predicate. U5 gives equality. Induction yields
-$\rho_k=\chi_G\pmod{3^k}$.
-\section{Literature boundary and contribution}
-The existence and uniqueness of the canonical Demushkin orientation, and the all-level Kummerian criterion, are classical; see Labute and the Kummerian/1-cyclotomic literature. We do not claim these facts as new.
-
-The contribution here is the finite recognition direction. The input is the bare finite quotient $Q_k$, the candidate is arbitrary, and the selector is the intrinsic finite Kummer lifting predicate. The proof supplies the finite-data bridge by combining arbitrary-candidate factorization, the one-step transgression carrier, the cup-product separation, and the sharp fixed-category selector bound.
-
-A relevant quotient-inheritance result is Proposition 2.10 of Quadrelli \cite{Quadrelli2024}. Its hypotheses include an already Kummerian oriented pair, a normal subgroup in the kernel of the orientation, and a restriction-surjectivity condition. Those hypotheses are not the present bare-$Q_k$, arbitrary-candidate problem, so the proposition does not by itself imply the theorem proved here.
-
-Our literature audit did not identify an exact theorem combining all of the following in one statement: bare $Q_k$ input, arbitrary principal-unit candidate, arbitrary-candidate twisted-$H^1$ factorization through $Q_k$, finite Kummer recognition, and the fixed-category sharp selector threshold. The publication novelty claim is therefore conditional: no absolute priority claim is made.
-
-\section{Scope and logical boundaries}
-The theorem and selector-minimality result are for the fixed rank-four $q=3$ Demushkin pro-$3$ group. The one-dimensional carrier is minimal only in the explicitly declared linear selector-carrier category.
-
-We do not claim:
-\begin{itemize}
-\item absolute minimality among arbitrary nonlinear finite carriers;
-\item a canonical functional $\mathcal O_k\to\mathbb F_3$ reconstructed solely from $E_k\to Q_k$;
-\item injectivity of $H^2(Q_k,\mathbb F_3)\to H^2(G,\mathbb F_3)$;
-\item uniform selector-minimality for all $q=3^f$;
-\item priority over unpublished or unindexed work.
-\end{itemize}
-
-\section{Conclusion}
-The finite recognition problem closes at the following audited boundary:
+be the connecting maps of the corresponding coefficient extensions.
+Then
 \[
 \boxed{
-W_{3^{k-1}+1}(G)
-\longrightarrow Q_k
-\longrightarrow C_k\simeq\mathbb F_3
-\longrightarrow \chi_G\bmod3^k.
+\delta_{\rho_k'}-\delta_{\rho_k}
+=
+\iota_*\circ(\nu\smile-),
 }
 \]
-The transgression quotient $\mathcal O_k$ remains the proof carrier which removes the first transient finite $H^2$ sector. The quantitative selector statement is
+where
 \[
-\boxed{n_{\mathrm{selector}}(k)=3^{k-1}+1}
+\iota:\mathbb F_3\hookrightarrow A_{k-1}(\rho_{k-1}),
+\qquad
+\iota(1)=3^{k-2}.
 \]
-for the fixed rank-four $q=3$ Kummer selector. This is category-relative minimality, not an absolute statement about every possible finite observation.
+\end{lemma}
 
-\appendix
-\section{Detailed verification of the finite-depth calculation}
-This appendix records the valuation steps used in Lemma U1, including the
-boundary of the finite window. Put $A_k=\mathbb Z/3^k\mathbb Z$ and
-$U_s=1+3^sA_k$.
-
-For $u=1+3^s b\in U_s$, $s\ge1$, the binomial expansion gives
-\[
-u^{3^j}-1
-=3^j3^sb+\sum_{m\ge2}\binom{3^j}{m}3^{sm}b^m.
-\]
-For $s+j<k$, the first term has valuation $s+j$. The remaining terms have
-strictly larger $3$-adic valuation, so
-\[
-(1+3^sb)^{3^j}\equiv1+3^{s+j}b\pmod{3^k}.
-\]
-If $s+j\ge k$, the same valuation estimate shows that the power is $1$
-modulo $3^k$. Consequently
-\[
-U_1^{3^j}=U_{j+1}.
-\]
-For the translation subgroup,
-\[
-(a,1)^{3^j}=(3^ja,1),
-\]
-and the semidirect-product multiplication shows that every $3^j$-th
-power has translation component divisible by $3^j$. Hence
-\[
-S_k^{3^j}=3^jA_k\rtimes U_{j+1}.
-\]
-
-For $i\ge2$, direct commutator induction gives
-\[
-\gamma_i(S_k)=3^{i-1}A_k.
-\]
-Let $e=\lceil\log_3 n\rceil$. If $i3^j\ge n$, then
-$i-1+j\ge e$, and therefore
-\[
-\gamma_i(S_k)^{3^j}=3^{i-1+j}A_k\subseteq3^eA_k.
-\]
-The $i=1,j=e$ factor already supplies
-$3^eA_k\rtimes U_{e+1}$, so the Jennings--Lazard product is exactly
-\[
-P_n(S_k)=3^eA_k\rtimes U_{e+1}.
-\]
-The two adjacent indices at the endpoint are worth recording explicitly:
-\[
-P_{3^{k-1}}(S_k)=3^{k-1}A_k\ne1,\qquad
-P_{3^{k-1}+1}(S_k)=3^kA_k\rtimes U_{k+1}=1.
-\]
-Thus the stated finite window is not obtained by replacing
-$3^{k-1}+1$ with $3^{k-1}$.
-
-\section{Independent base-level enumeration}
-At $k=2$ there are exactly $3^4=81$ principal-unit candidates, since
-each $a_i$ lies in $\{1,4,7\}\subset\mathbb Z/9\mathbb Z$.
-The four twisted Fox equations reduce this finite search symbolically,
-without any appeal to the classification theorem.
-
-Because $a_2$ is a unit, $F_2=0$ is equivalent to
-\[
-a_1-1=0,
-\]
-so $a_1=1$. This leaves $3^3=27$ candidates. Next,
-$F_3=F_4=0$ is equivalent to
-\[
-a_4-1=0,\qquad a_3-1=0,
-\]
-so $a_3=a_4=1$, leaving three candidates. Finally
-\[
-F_1=0\iff 1+2a_2=0\pmod9,
-\]
-whose unique solution in $\{1,4,7\}$ is $a_2=4$.
-
-The reduction of the candidate set can therefore be recorded as
-\[
-81\longrightarrow27\longrightarrow3\longrightarrow1,
-\]
-with the successive constraints
-\[
-F_2=0,\qquad (F_3,F_4)=0,\qquad F_1=0.
-\]
-The surviving tuple is
-\[
-(a_1,a_2,a_3,a_4)=(1,4,1,1).
-\]
-This enumeration is a finite verification of the base step; the theorem
-does not rely on a computer search.
-
-\section{Cochain-level verification of the coefficient variation}
-We record the calculation behind U5b so that the extension comparison is
-reproducible independently of the presentation-specific Fox computation.
+\begin{proof}
 Use
 \[
 0\to A_{k-1}(\rho_{k-1})
@@ -585,87 +374,492 @@ Use
 \xrightarrow{\pi}\mathbb F_3\to0,
 \qquad j(a)=3a,
 \]
-and the common section $s(1)=1$. For $c\in Z^1(G,\mathbb F_3)$,
+and the common set-theoretic section $s(1)=1$.
+For $c\in Z^1(G,\mathbb F_3)$,
+\[
+d_sc(g,h)=g\!\cdot s(c(h))-s(c(gh))+s(c(g)).
+\]
+The two coefficient actions differ by
+\[
+g\!\cdot' s(c(h))-g\!\cdot s(c(h))
+=3^{k-1}\nu(g)c(h).
+\]
+Hence
+\[
+d_s'c-d_sc
+=
+3^{k-1}(\nu\smile c)
+=
+j\!\left(3^{k-2}(\nu\smile c)\right).
+\]
+Passing to cohomology gives the asserted identity.
+\end{proof}
+
+\begin{lemma}[U5c: $PD^2$ socle injectivity]
+For the canonical orientation $\chi$, the inclusion
+\[
+\iota:\mathbb F_3\hookrightarrow A_{k-1}(\chi_{k-1}),
+\qquad 1\mapsto3^{k-2},
+\]
+induces an injection
+\[
+\iota_*:
+H^2(G,\mathbb F_3)
+\hookrightarrow
+H^2(G,A_{k-1}(\chi_{k-1})).
+\]
+\end{lemma}
+
+\begin{proof}
+Let $I=\mathbb Q_3/\mathbb Z_3(\chi)$ be the dualizing module.
+Finite-coefficient $PD^2$ duality gives
+\[
+H^2(G,M)^\vee
+\cong
+H^0(G,M^\vee\otimes I)
+\]
+for finite $3$-primary modules $M$. For
+$M=A_{k-1}(\chi_{k-1})$, the twist cancels and
+\[
+H^2(G,A_{k-1}(\chi_{k-1}))^\vee\cong A_{k-1}.
+\]
+For $M=\mathbb F_3$,
+\[
+H^2(G,\mathbb F_3)^\vee\cong\mathbb F_3.
+\]
+Under these natural identifications, the dual of $\iota_*$ is the
+reduction map
+\[
+A_{k-1}\twoheadrightarrow\mathbb F_3,
+\]
+because precomposition with $1\mapsto3^{k-2}$ sends $a$ to $a\bmod3$.
+The dual map is surjective, hence $\iota_*$ is injective.
+\end{proof}
+
+\begin{proposition}[U5: intrinsic uniqueness]
+If $\rho_k$ and $\rho_k'$ both satisfy $\mathsf K_k$ and both reduce to
+$\chi_{k-1}$, then
+\[
+\rho_k=\rho_k'.
+\]
+\end{proposition}
+
+\begin{proof}
+Surjectivity of the coefficient-reduction map is equivalent to the
+vanishing of its connecting map. Hence
+\[
+0=\delta_{\rho_k'}-\delta_{\rho_k}
+=\iota_*(\nu\smile-).
+\]
+By U5c,
+\[
+\nu\smile v=0
+\qquad\text{for all }v\in H^1(G,\mathbb F_3).
+\]
+The Demu\v{s}kin cup pairing is nondegenerate, so $\nu=0$.
+\end{proof}
+
+\section{Proof of the finite-window recognition theorem}
+
+The canonical orientation $\chi_G$ is Kummerian by the classical
+Demu\v{s}kin theory, so $\chi_G\bmod3^k$ satisfies the finite predicate.
+Lemma U2 transfers this statement between $G$ and $Q_k$.
+
+Conversely, suppose $\mathsf K_k(Q_k,\rho_k)$ holds. Lemma U2 transfers
+the predicate to $G$, and U5a transfers it to every lower level.
+At level $2$, the explicit base calculation gives
+\[
+\rho_2=\chi_G\bmod9.
+\]
+For $j\ge3$, $\rho_j$ and $\chi_G\bmod3^j$ have the same reduction to
+level $j-1$, and both satisfy the level-$j$ predicate. U5 therefore gives
+\[
+\rho_j=\chi_G\bmod3^j.
+\]
+Induction yields
+\[
+\rho_k=\chi_G\bmod3^k.
+\]
+This proves the theorem.
+
+\section{The intrinsic one-dimensional cup carrier}
+
+Define
+\[
+\boxed{
+C_k=
+\operatorname{im}\!\left(
+H^1(Q_k,\mathbb F_3)\otimes H^1(Q_k,\mathbb F_3)
+\xrightarrow{\cup}
+H^2(Q_k,\mathbb F_3)
+\right).
+}
+\]
+
+\begin{proposition}[D3: finite cup-line]
+For every $k\ge2$,
+\[
+\boxed{\dim_{\mathbb F_3}C_k=1,}
+\]
+and inflation $C_k\to H^2(G,\mathbb F_3)$ is injective.
+\end{proposition}
+
+\begin{proof}
+Write $G=F/R$ with $F$ free pro-$3$ on four generators and $R$
+normally generated by $r$. Put
+\[
+n=3^{k-1}+1,
+\qquad
+Q_k=F/R_k,
+\qquad
+R_k=R\,P_n(F).
+\]
+Since $n\ge3$, $P_n(F)\subseteq P_3(F)$, so the image of $R_k$ in
+$P_2(F)/P_3(F)$ is exactly the one-dimensional span of
+\[
+\operatorname{in}_2(r)=[X_1,X_2]+[X_3,X_4].
+\]
+Also $R_k\subseteq\Phi(F)$, so this is a minimal pro-$3$ presentation.
+
+For a minimal pro-$p$ presentation, the standard relation-module/cup
+pairing identifies the dual of the cup-product map with the degree-two
+initial-form map on the relation module. In the odd-$p$ case this is the
+commutator pairing of Miná\v{c}--Pasini--Quadrelli--T\^an, Proposition 7.1.
+Applied to $F/R_k$, the latter map has rank one because its image is
+exactly the span of $\operatorname{in}_2(r)$. Therefore the finite cup
+map has rank one.
+
+The global inflation of this line is nonzero: a nonzero cup class in
+$C_k$ maps to the corresponding cup product of its inflated $H^1$ classes,
+and the Demu\v{s}kin cup pairing is nondegenerate. Since both $C_k$ and
+$H^2(G,\mathbb F_3)$ are one-dimensional, the inflation is injective.
+\end{proof}
+
+The coefficient connecting map itself has target
+\[
+H^2(Q_k,A_{k-1}(\rho_{k-1})),
+\]
+not $H^2(Q_k,\mathbb F_3)$. Thus the statement about $C_k$ is not that the
+entire connecting map has codomain $C_k$. Rather, $C_k$ is the intrinsic
+finite carrier of the surviving first-order cup variation.
+
+Indeed, on the canonical lower-level branch write
+\[
+\rho_k=\chi_k(1+3^{k-1}\nu).
+\]
+U5b gives, after inflation to $G$,
+\[
+\delta_{\rho_k}(f)-\delta_{\chi_k}(f)
+=
+\iota_*(\nu\smile\bar f).
+\]
+The canonical connecting map vanishes. For every $\nu\ne0$, cup
+nondegeneracy gives $f$ with
+\[
+\nu\smile\bar f\ne0.
+\]
+By the definition of $C_k$ and the inflation injectivity just proved,
+this nonzero variation is represented by a nonzero class in the
+one-dimensional finite cup line. Hence $C_k$ supplies a one-dimensional
+linear detector for every false next-digit candidate.
+
+\begin{remark}
+This is minimal only in the declared linear selector-carrier category:
+a zero-dimensional vector space cannot detect any false candidate, while
+$C_k$ has dimension one. No absolute minimality among arbitrary nonlinear
+finite observations is claimed.
+\end{remark}
+
+\section{Exact selector depth}
+
+For $m\ge1$, write
+\[
+W_m=G/P_m.
+\]
+For $m\le3^{k-1}+1$, the finite Kummer predicate at depth $m$ is defined
+using the quotient $W_m$ and the corresponding coefficient level.
+
+\begin{proposition}[D4: exact selector depth]
+For the fixed rank-four $q=3$ Demu\v{s}kin group, the least Zassenhaus
+index $m$ for which the finite Kummer predicate recognizes
+$\chi_G\bmod3^k$ is
+\[
+\boxed{
+n_{\mathrm{selector}}(k)=3^{k-1}+1.
+}
+\]
+\end{proposition}
+
+\begin{proof}
+Put $N=3^{k-1}$.
+
+If $m\le3^{k-2}$, the canonical character does not factor through $W_m$:
+the image of $P_m$ in the free $x_2$-direction of the abelianization has
+nontrivial $\chi_G$-image modulo $3^k$.
+
+Now suppose
+\[
+3^{k-2}<m\le N.
+\]
+Then $\chi_G\bmod3^k$ does factor through $W_m$, but the image of $x_2$
+has exact order $N$. Put
+\[
+u=\chi_G(x_2)=(1-3)^{-1}.
+\]
+Take the mod-$3$ character with value $1$ on $x_2$ and $0$ on the other
+generators. Any twisted lift $z$ would satisfy
+$z(x_2)\equiv1\pmod3$, while $x_2^N=1$ in $W_m$ forces
+\[
+0=z(x_2^N)=S_N(u)z(x_2),
+\qquad
+S_N(u)=1+u+\cdots+u^{N-1}.
+\]
+Since $u-1$ is a $3$-adic unit, LTE gives
+\[
+v_3(S_N(u))=k-1.
+\]
+Thus $S_N(u)$ is nonzero modulo $3^k$ but divisible by $3$, and the
+relation forces $z(x_2)\equiv0\pmod3$, a contradiction. Hence the
+Kummer predicate fails throughout this range.
+
+The upper bound $m=N+1$ is the finite-window recognition theorem already
+proved above. Therefore the threshold is exact.
+\end{proof}
+
+\begin{remark}
+This is selector minimality for the fixed rank-four $q=3$ category and the
+specific finite Kummer selector. It is independent of the affine
+representation sharpness theorem. It is not an absolute lower bound for
+arbitrary nonlinear finite observations.
+\end{remark}
+
+\section{Literature boundary and contribution}
+
+The existence and uniqueness of the canonical Demu\v{s}kin orientation,
+and the all-level Kummerian criterion, are classical; see Labute and the
+Kummerian/1-cyclotomic literature. The quadratic relation/cup compatibility
+used for the finite cup line is also standard; see
+Miná\v{c}--Pasini--Quadrelli--T\^an, Proposition 7.1. None of these
+ingredients is claimed as a new theorem here.
+
+The finite contribution is the assembly
+\[
+\text{bare }Q_k
+\longrightarrow
+\text{arbitrary-candidate factorization}
+\longrightarrow
+\text{finite Kummer recognition},
+\]
+together with the fixed-scope selector-minimality theorem and the
+one-dimensional finite cup-line compression of the surviving
+first-order variation.
+
+A literature audit was performed against the classical
+Kummerian/1-cyclotomic sources and the relevant Zassenhaus/cup-product
+literature. It did not identify an exact theorem combining all of the
+following in one statement: bare $Q_k$ as finite input, arbitrary
+principal-unit candidate, arbitrary-candidate twisted-$H^1$ factorization
+through $Q_k$, finite Kummer recognition, and the fixed-scope sharp
+selector threshold. The publication novelty claim is therefore
+conditional: this manuscript does not claim absolute priority and does not
+claim that unpublished or unindexed work has been excluded.
+
+\section{Scope and logical boundaries}
+
+The main theorem and selector-minimality result are for the fixed rank-four
+$q=3$ Demu\v{s}kin pro-$3$ group.
+
+The one-dimensional cup line is minimal only in the explicitly declared
+linear selector-carrier category. We do not claim:
+\begin{itemize}
+\item absolute minimality among arbitrary nonlinear finite carriers;
+\item a canonical functional on the whole finite transgression quotient
+reconstructed solely from the finite extension $E_k\to Q_k$;
+\item injectivity of the full map
+$H^2(Q_k,\mathbb F_3)\to H^2(G,\mathbb F_3)$;
+\item uniform selector-minimality for all $q=3^f$;
+\item absolute publication priority.
+\end{itemize}
+
+\section{Conclusion}
+
+For the fixed rank-four $q=3$ Demu\v{s}kin pro-$3$ group, the canonical
+orientation modulo $3^k$ is recognized from the bare finite Zassenhaus
+window
+\[
+Q_k=G/P_{3^{k-1}+1}
+\]
+by the intrinsic finite Kummer predicate. The exact selector depth is
+\[
+\boxed{
+n_{\mathrm{selector}}(k)=3^{k-1}+1.
+}
+\]
+This minimality is relative to the declared Kummer selector and fixed
+rank-four $q=3$ category, not an absolute statement about every possible
+finite observation.
+
+The finite cup-product image
+\[
+C_k=\operatorname{im}\bigl(
+H^1(Q_k,\mathbb F_3)^{\otimes2}\to H^2(Q_k,\mathbb F_3)
+\bigr)
+\]
+is intrinsically one-dimensional and provides the minimal linear carrier
+for the surviving first-order cup-variation detector.
+
+The publication-level novelty boundary is intentionally narrow and
+conditional. Canonical Demu\v{s}kin orientation and Kummerianity are
+classical; the claim here concerns the finite-window recognition and
+fixed-scope selector-minimality assembly. No absolute priority claim is
+made.
+
+\appendix
+\section{Detailed verification of the finite-depth calculation}
+
+Put $A_k=\mathbb Z/3^k\mathbb Z$ and $U_s=1+3^sA_k$.
+For $u=1+3^sb$, $s\ge1$,
+\[
+(1+3^sb)^{3^j}-1
+=
+3^{s+j}b+\sum_{m\ge2}\binom{3^j}{m}3^{sm}b^m.
+\]
+The first term has valuation $s+j$ whenever $s+j<k$, while the remaining
+terms have strictly larger valuation. Thus
+\[
+(1+3^sb)^{3^j}\equiv1+3^{s+j}b\pmod{3^k},
+\]
+and the power is $1$ when $s+j\ge k$. Hence
+\[
+U_1^{3^j}=U_{j+1}.
+\]
+Together with
+\[
+(a,1)^{3^j}=(3^ja,1)
+\]
+this yields
+\[
+S_k^{3^j}=3^jA_k\rtimes U_{j+1}.
+\]
+For $i\ge2$,
+\[
+\gamma_i(S_k)=3^{i-1}A_k.
+\]
+The Jennings--Lazard product then gives
+\[
+P_n(S_k)=3^{\lceil\log_3n\rceil}A_k
+\rtimes U_{\lceil\log_3n\rceil+1}.
+\]
+In particular,
+\[
+P_{3^{k-1}}(S_k)=3^{k-1}A_k\ne1,
+\qquad
+P_{3^{k-1}+1}(S_k)=1.
+\]
+
+\section{Independent base-level enumeration}
+
+At $k=2$ there are $3^4=81$ principal-unit candidates. The four
+twisted Fox equations reduce this finite set symbolically:
+\[
+81\longrightarrow27\longrightarrow3\longrightarrow1,
+\]
+using successively
+\[
+F_2=0,\qquad (F_3,F_4)=0,\qquad F_1=0.
+\]
+The surviving tuple is
+\[
+(a_1,a_2,a_3,a_4)=(1,4,1,1).
+\]
+This is a finite verification of the base step, not a substitute for the
+higher-level proof.
+
+\section{Cochain-level verification of coefficient variation}
+
+Use
+\[
+0\to A_{k-1}(\rho_{k-1})
+\xrightarrow{j}A_k(\rho_k)
+\xrightarrow{\pi}\mathbb F_3\to0,
+\qquad j(a)=3a.
+\]
+For a common section $s(1)=1$ and
+$c\in Z^1(G,\mathbb F_3)$,
 \[
 d_sc(g,h)=g\!\cdot s(c(h))-s(c(gh))+s(c(g)).
 \]
 If
 \[
 \rho_k'=\rho_k(1+3^{k-1}\nu),
-\qquad \nu\in Z^1(G,\mathbb F_3),
 \]
 then
 \[
-g\!\cdot' s(c(h))-g\!\cdot s(c(h))
-=3^{k-1}\nu(g)c(h).
-\]
-Therefore
-\[
-d_s'c-d_sc
-=3^{k-1}(\nu\smile c)
+d_s'c-d_sc=3^{k-1}(\nu\smile c)
 =j\!\left(3^{k-2}(\nu\smile c)\right).
 \]
-With
-\[
-\iota:\mathbb F_3\hookrightarrow A_{k-1},
-\qquad \iota(1)=3^{k-2},
-\]
-this becomes
-\[
-[d_s'c]-[d_sc]=\iota_*[\nu\smile c].
-\]
-Thus the difference of connecting maps is exactly
+Thus
 \[
 \delta_{\rho_k'}-\delta_{\rho_k}
-=\iota_*\circ(\nu\smile-).
+=
+\iota_*\circ(\nu\smile-).
 \]
-Changing the set-theoretic section changes each connecting cochain by a
-coboundary, so the displayed cohomology identity is section-independent.
-The sign is fixed by the convention
+The sign is fixed by
 \[
 (\nu\smile c)(g,h)=\nu(g)c(h).
 \]
 
 \section{Proof--computation boundary and reproducibility record}
+
 The manuscript uses computation only as finite verification of identities
-whose mathematical proofs are given in the main text. In particular:
-
+whose mathematical proofs are given in the text:
 \begin{enumerate}[label=(\roman*)]
-\item the U1 filtration is established symbolically from the
-Jennings--Lazard product and explicit valuation estimates;
-\item the $k=2$ base case has a complete $81$-candidate symbolic
-enumeration, summarized in Appendix B;
-\item the U5b comparison is a cochain calculation, not a numerical test;
-\item the U5c injectivity statement is deduced from finite-coefficient
-$PD^2$ duality and the explicit dual of the socle inclusion.
+\item the U1 filtration is derived symbolically from the
+Jennings--Lazard product and valuation estimates;
+\item the $k=2$ base case is an explicit $81$-candidate symbolic
+enumeration;
+\item the coefficient-variation formula is a cochain calculation;
+\item the $PD^2$ socle injectivity is a duality argument, not a numerical
+experiment.
 \end{enumerate}
-
-Accordingly, no numerical experiment is used as a substitute for a proof.
-Appendix B makes the presentation-level exhaustive check transparent
-and independently reproducible. The research repository records broader exploratory
-computations and failed or superseded windows separately; those exploratory
-artifacts are not used as premises of the theorem stated here.
+No numerical experiment is used as a substitute for a proof.
 
 \begin{thebibliography}{99}
-\bibitem{MinacRogelstadTan2014}
-J. Mináč, M. Rogelstad and N. D. Tân, \emph{Dimensions of Zassenhaus filtration subquotients of some pro-$p$-groups}, Israel J. Math. 212 (2016), no. 2, 825--855. DOI: 10.1007/s11856-016-1310-0.
 
 \bibitem{Labute1967}
-J. Labute, \emph{Classification of Demushkin Groups}, Canadian J. Math. 19 (1967), 106--132.
+J. Labute, \emph{Classification of Demushkin Groups},
+Canadian J. Math. 19 (1967), 106--132.
 
 \bibitem{EfratQuadrelli2019}
-I. Efrat and C. Quadrelli, \emph{The Kummerian Property and Maximal Pro-$p$ Galois Groups}, J. Algebra 525 (2019), 284--310.
+I. Efrat and C. Quadrelli,
+\emph{The Kummerian Property and Maximal Pro-$p$ Galois Groups},
+J. Algebra 525 (2019), 284--310.
 
 \bibitem{QuadrelliWeigel2020}
-C. Quadrelli and T. S. Weigel, \emph{Profinite Groups with a Cyclotomic $p$-Orientation}, Documenta Math. 25 (2020), 1881--1916.
+C. Quadrelli and T. S. Weigel,
+\emph{Profinite Groups with a Cyclotomic $p$-Orientation},
+Documenta Math. 25 (2020), 1881--1916.
 
 \bibitem{QuadrelliWeigel2022}
-C. Quadrelli and T. S. Weigel, \emph{Oriented pro-$\ell$ groups with the Bogomolov--Positselski property}, Res. Number Theory 8 (2022), 21.
+C. Quadrelli and T. S. Weigel,
+\emph{Oriented pro-$\ell$ groups with the Bogomolov--Positselski property},
+Res. Number Theory 8 (2022), 21.
 
 \bibitem{Quadrelli2024}
-C. Quadrelli, \emph{Chasing Maximal Pro-$p$ Galois Groups via 1-Cyclotomicity}, Mediterr. J. Math. 21 (2024), 56.
+C. Quadrelli,
+\emph{Chasing Maximal Pro-$p$ Galois Groups via 1-Cyclotomicity},
+Mediterr. J. Math. 21 (2024), 56.
 
-\bibitem{Wilkes2020}
-G. Wilkes, \emph{Classification of pro-$p$ $PD^2$ pairs and the pro-$p$ curve complex}, Groups, Geometry, and Dynamics 14 (2020), 917--948.
+\bibitem{MinacRogelstadTan2016}
+J. Mináč, M. Rogelstad and N. D. Tân,
+\emph{Dimensions of Zassenhaus filtration subquotients of some pro-$p$-groups},
+Israel J. Math. 212 (2016), 825--855.
+
+\bibitem{MinacPasiniQuadrelliTan2021}
+J. Mináč, F. W. Pasini, C. Quadrelli and N. D. Tân,
+\emph{Koszul algebras and quadratic duals in Galois cohomology},
+Adv. Math. 380 (2021), 107569.
+
 \end{thebibliography}
+
 \end{document}
