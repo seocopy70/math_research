@@ -1,6 +1,7 @@
 name: Build paper PDF
 
 on:
+  pull_request:
   push:
     paths:
       - 'paper/**'
