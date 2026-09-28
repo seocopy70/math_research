@@ -4028,3 +4028,22 @@ The final manuscript source at commit f97b9f04dd873fd2d0123d325443032c4840d086 w
 This build is the manuscript corresponding to the repaired free-product twisted-H^1 proof and corrected scope. Subsequent commits after f97b9f04dd873fd2d0123d325443032c4840d086 only update research/audit records; they do not alter `paper3/main.tex`. Therefore this artifact is the current final manuscript PDF.
 
 Publication novelty remains **OPEN / CONDITIONAL**; no priority claim is made.
+
+
+## 2026-09-28 — THREE-PAPER STORY + MATHEMATICAL TRANSLATION
+
+A pedagogical unified explanation of Papers 1–3 has been recorded at:
+`research/THREE_PAPER_STORY_AND_MATH_EXPLANATION_2026-09-28.md`.
+
+Structure:
+- Part I: one continuous “infinite maze / finite map / genuine direction signpost” story with minimal mathematical vocabulary.
+- Part II: one-sentence memory aid for Paper 1 → Paper 2 → Paper 3.
+- Part III: metaphor → mathematical-object dictionary.
+- Part IV: short glossary before the technical explanation.
+- Part V: the same story translated back into accessible mathematical language, including the finite quotient \(Q_k\), arbitrary-candidate factorization, Kummer predicate, transgression quotient \(\mathcal O_k\), and finite cup-product line \(C_k\).
+- Part VI–VII: unified mathematical machine and final conceptual summary.
+
+Core pedagogical framing:
+**Paper 1 = finite recognition is possible → Paper 2 = exact depth needed for the relevant affine information → Paper 3 = Kummer recognition at that finite window, with declared linear selector-carrier compression.**
+
+This is an explanatory companion to the authoritative theorem/audit records, not a replacement for them.
