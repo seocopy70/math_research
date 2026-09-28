@@ -1,22 +1,13 @@
-## 2026-09-28 — PAPER 3 MANUSCRIPT FINAL ARTIFACT SYNCHRONIZED / CLOSED
+## 2026-09-28 — PAPER 3 MANUSCRIPT FINAL ARTIFACT REOPENED FOR SOURCE VERIFICATION
 
-The theorem-paper manuscript has now been synchronized with the authoritative research frontier and independently validated.
+The prior manuscript-finalization closure is superseded by an adversarial source audit that found proof-detail omissions in `paper/main.tex`. The mathematical frontier itself remains closed at the declared scopes; the publication artifact gate is reopened only for source synchronization and independent verification.
 
-- Final source: \`paper/main.tex\`
-- Manuscript synchronization gate: **PASS / CLOSED**
-- Source audit + compile repair: **PASS / CLOSED**
-- CI Build Paper PDF run 36363508628: **PASS / CLOSED**
-- Shell pipeline audit run 36363508467: **PASS / CLOSED**
-- Citation hygiene run 36363508580: **PASS / CLOSED**
-- PDF artifact 10946925073; full submission artifact 10945849160
-- PDF SHA-256: \`813fda4840783c3b37002828ccfbe092ccffed6ad189f46430222e5e930a56b0\`
-- PDF: 14 pages, 405,622 bytes
-- Finalization manifest: \`research/PAPER3_MANUSCRIPT_MANIFEST_2026-09-28.md\`
+- Source revision commit: `7adb6fe8ab43dd924daf282730c0c316757a892a`.
+- U2/U3 hypotheses, D2 transgression quotient \(\mathcal O_k\), D3 relation-module/cup duality, D4 shallow-range valuation, and D4 LTE wording have been repaired.
+- Independent CI/PDF verification: **PENDING**.
+- Publication novelty remains **OPEN / CONDITIONAL**.
 
-The earlier stale statement that the application manuscript/Paper 3 was the current final artifact is superseded. The current final manuscript is the finite-window recognition theorem paper containing D1/U1-U2, base-level recognition, U5 uniqueness, the intrinsic one-dimensional cup-line result, and fixed-scope selector minimality.
-
-Publication novelty remains **OPEN / CONDITIONAL** and is not altered by artifact finalization.
-
+Do not treat the previous PDF/hash/artifact manifest as final for the repaired source until the new CI/PDF gate passes.
 
 ## 2026-09-27 — M2 POST-BLUMER–QUADRELLI F1 SHARPNESS AUDIT CLOSED
 
