@@ -4307,3 +4307,15 @@ The corresponding manuscript repair is commit f97b9f04dd873fd2d0123d325443032c48
 The strongest previous referee objection is therefore closed. Publication novelty remains OPEN / CONDITIONAL and the Paper 3 application manuscript remains distinct from the theorem-paper track.
 
 Detailed record: research/PAPER3_REFEREE_GAP_CLOSURE_2026-09-28.md.
+
+
+## 2026-09-28 — FINAL D1/D2 SOURCE AUDIT
+
+The final line-by-line attack found and corrected two stale formulas in general Gate D documentation.
+
+1. The Zassenhaus target filtration uses the logarithmic index ceil(log_p n), not a step-by-one index j. The endpoint required for factorization is unchanged.
+2. The D2 transgression-carrier variation identity is typed in H^2(G,F_p), so it is delta_{rho'}-delta_{chi}=nu cup f-bar; the auxiliary iota formulation is not part of that statement.
+
+Classification: D1 endpoint/factorization PASS / CLOSED after correction; D2 variation target typing PASS / CLOSED after correction; stale historical formulas HISTORICAL / SUPERSEDED.
+
+No new selector counterexample was found. The authorized D1/D2 attack is now closed; remaining work is compilation and final manuscript/novelty positioning.
