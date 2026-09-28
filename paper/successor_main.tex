@@ -25,7 +25,7 @@ $ n_{\mathrm{aff}}(k)=p^{k-1}+1$.
 The lower bound includes rank two and does not require the orientation component to be surjective. We also separate factorization from recognition: a sharp factorization window does not by itself imply that a Kummerian predicate selects a unique orientation.
 \end{abstract}
 
-\\paragraph{Companion papers.}
+\paragraph{Companion papers.}
 This is one of three related manuscripts. [P1] treats the exact finite Zassenhaus
 depth for factoring all affine crossed-cocycle representations in the Demu\\v{s}kin
 family; [P2] proves finite-window Kummer recognition of the canonical orientation
@@ -138,6 +138,18 @@ z(r)=p^f+b^{-1}(1-b)=p^f+b^{-1}-1=p^f+(1-p^f)-1=0\pmod{p^k},
 \]
 so $z$ respects the relator (for $f\ge k$ both terms vanish mod $p^k$).
 Finally $x_1^{p^{k-1}}\in P_{p^{k-1}}(G_{f,d})$.
+\end{proof}
+
+\begin{theorem}[Category-relative minimality]
+For every odd $p$, every $f\ge1$, every even $d\ge2$, and every $k\ge2$,
+\[
+\boxed{n_{\mathrm{aff}}(k)=p^{k-1}+1}
+\]
+for the category of all continuous crossed-cocycle representations into $A_k(\rho)\rtimes U_{1,k}$.
+\end{theorem}
+
+\begin{proof}
+The filtration lemma gives the upper bound. The witness of Proposition~3.1 gives the lower bound. Thus no smaller depth works for the entire affine category.
 \end{proof}
 
 \begin{remark}
