@@ -26,10 +26,11 @@ jobs:
           test -s main.pdf
           grep -q 'Output written on main.pdf' main.log
           grep -q '\\appendix' main.tex
-          grep -q 'Detailed verification of the finite-depth calculation' main.tex
-          grep -q 'Independent base-level enumeration' main.tex
-          grep -q 'Cochain-level verification' main.tex
-          grep -q 'Proof--computation boundary' main.tex
+          grep -q 'D2: transgression-quotient separation' main.tex
+          grep -q 'D3: finite cup-line' main.tex
+          grep -q 'D4: exact selector depth' main.tex
+          grep -q 'Coefficient-variation calculation' main.tex
+          grep -q 'Reproducibility and proof/computation boundary' main.tex
           ! grep -Eiq 'undefined|LaTeX Warning|Error:' main.log
 
       - name: Generate submission packages
@@ -46,8 +47,8 @@ jobs:
             sha256sum main.tex finite-window-kummer-recognition.pdf > SHA256SUMS.txt
           )
           cat > submission/full/README_SUBMISSION.txt <<'EOF'
-          Finite-Window Kummer Recognition of the Canonical Orientation
-          of a Rank-Four Demuskin Pro-3 Group
+          Finite-Window Kummer Recognition and Selector Minimality
+          for a Rank-Four Demuskin Pro-3 Group
 
           Publication snapshot: repository main at the CI build commit.
           The arXiv source bundle contains main.tex only; the bibliography is embedded.
