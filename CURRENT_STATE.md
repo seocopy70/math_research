@@ -9,7 +9,7 @@ The prior manuscript-finalization closure is superseded because the adversarial 
 - D4 shallow-range non-factorization: **REPAIRED** by direct valuation calculation.
 - D4 LTE: **REPAIRED**, using \(v_3(u-1)=1\) and \(v_3(S_N(u))=k-1\).
 - Recognition theorem: explicit cross-reference label added.
-- Source revision commit: `7adb6fe8ab43dd924daf282730c0c316757a892a`.
+- Source revision commit: `dc73b0365be4020545e73ec768dbea5fed889b0e` (accidental cleanup typo corrected immediately).
 - CI compilation/PDF verification for this revision: **PENDING**.
 - Publication novelty: **OPEN / CONDITIONAL**.
 
