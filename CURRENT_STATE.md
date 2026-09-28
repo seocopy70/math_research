@@ -1,3 +1,22 @@
+## 2026-09-28 — PAPER 3 DETAIL REPAIR / LITERATURE AUDIT CURRENT STATE
+
+The authoritative Paper 3 source changed at commit `470d06e34088db2b101acac7ad3bf4b0eaa1bb02`.
+
+Applied:
+- §9 lower-bound wording corrected to distinguish (m\le3^{k-2}) (outside (mathcal D_{k,m})) from (3^{k-2}<m\le3^{k-1}) (inside domain, selector fails).
+- U5c final sentence now explicitly derives injectivity of (iota_*) from surjectivity of its dual.
+- Literature audit wording records only searches actually performed: arXiv and general web searches on 2026-09-28; MathSciNet/zbMATH Open are not claimed.
+
+Targeted literature result:
+- Efrat–Quadrelli 2019 confirms prior art for Kummerianity/cohomological and 1-cocycle lifting.
+- Mináč–Pasini–Quadrelli–Tân 2021 confirms the minimal-presentation relation/cup-product pairing used here.
+- No exact theorem combining the present bare-(Q_k), arbitrary-candidate, finite Kummer recognition, and fixed-scope sharp selector-depth package was identified in the targeted search.
+
+Classification:
+- mathematical frontier: unchanged, PASS / CLOSED at declared scope;
+- literature audit: PASS / LOCAL;
+- publication artifact gate: OPEN / PENDING exact-source CI + PDF/content audit + checksum.
+
 ## 2026-09-28 — THREE-PAPER MATHEMATICAL CONTRIBUTION ASSESSMENT RECORDED
 
 For future research continuity, the researcher-facing synthesis is frozen in:
