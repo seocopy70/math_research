@@ -1,3 +1,18 @@
+## 2026-09-28 — THREE-PAPER MATHEMATICAL CONTRIBUTION ASSESSMENT RECORDED
+
+A researcher-facing synthesis of the mathematical achievement, difficulty, and combined contribution of Paper 1–3 has been frozen as:
+`research/THREE_PAPER_MATHEMATICAL_CONTRIBUTION_ASSESSMENT_2026-09-28.md`.
+
+Core synthesis:
+- Paper 1: finite recognition/factorization of global orientation-related data.
+- Paper 2: sharp affine information threshold (n_{\\mathrm{aff}}(k)=p^{k-1}+1).
+- Paper 3: finite Kummer selector recognizing (chi_G\\bmod p^k), with fixed rank-4 (p=3) selector threshold (n_{\\mathrm{selector}}(k)=3^{k-1}+1) and 1D minimality in the declared linear selector-carrier category.
+- Combined arc: **Recognition → Sharp threshold → Recognition at the sharp window**.
+- Overall mathematical assessment: research-level coherent finite-recognition program at the declared scopes.
+- Publication novelty: **OPEN / CONDITIONAL**; no priority claim.
+
+This is an explanatory assessment, not a replacement for the authoritative theorem/audit records.
+
 
 
 ## 2026-09-28 — PAPER 3 EXACT-SOURCE ARTIFACT GATE CLOSED
