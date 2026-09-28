@@ -1,3 +1,27 @@
+## 2026-09-28 — THREE-PAPER PDF REVIEW AUDIT / VERSION-MAPPING CORRECTION
+
+The externally supplied three-paper review was checked against the exact artifacts previously delivered in this session.
+
+- Paper 1 artifact: affine factorization paper, run 36212215849, commit 73001ba0611e4f4aa7db8c733ee01d67542e16eb, 8 pages, SHA-256 09d67cbb88c647e4b7bb92bb91b2d46fe6b9b2c4b32959b7cebd7e468a554eda.
+- Paper 2 artifact: finite-window Kummer recognition paper, run 36216012111, commit 0194e01176ae1c21fc70858be3797eeb1a3e7c18, 13 pages, SHA-256 af14b4b7ab971d8ed2d8cac84daae3ff6422ed389cec92b690cc3e184dde1aee.
+- Paper 3 artifact: selector-minimality paper, run 36368630643, commit 2b4ccb849e93af840ca216b06c06c72a36c84dd8, 17 pages, SHA-256 00a4ee8deba65eb7c08a9b703d3c19b50801ffdde2c13cab0155186c247bb4e3.
+
+Critical correction:
+- The alleged Paper 2 page-3 grid of repeated 1 glyphs is NOT present in the exact delivered Paper 2 artifact. Independent text extraction and visual rendering of page 3 show a normal proof page. No rebuild is authorized from that objection alone.
+- The supplied Paper 1 objections correspond to a different/older manuscript mapping; the delivered Paper 1 already uses p,f,k rather than an undefined q and contains the relation with the preceding recognition paper.
+- The alleged Paper 3 x3 typo is absent: current source uses x_2^{3^e}.
+- The alleged Paper 3 C_k/iota/inflation omission is already explicitly handled in the current source.
+- The F_1 algebra and commutator formula are correct under the stated conventions.
+- Labute Theorem 4 attribution was already independently verified.
+
+Classification:
+- Paper 1: PASS / CLOSED at declared manuscript scope.
+- Paper 2: PASS / CLOSED at declared manuscript scope and delivered artifact.
+- Paper 3: PASS / CLOSED at declared manuscript scope.
+- Publication novelty for all three remains CONDITIONAL/OPEN as already recorded.
+
+No mathematical branch is reopened. Detailed audit: research/THREE_PAPER_PDF_REVIEW_AUDIT_2026-09-28.md.
+
 ## 2026-09-28 — PAPER 3 REFEREE DETAIL REPAIR / CI GATE REOPENED
 
 A referee-style adversarial review of the repaired theorem manuscript identified ten detail objections (M1–M10). Primary-source checking and source inspection show that M1, M3, M4, M8, and M9 were legitimate presentation/proof-detail omissions and have now been repaired in paper/main.tex. M2, M5, and M10 were already substantively satisfied; their wording was checked. M6 (Labute Theorem 4) was verified against the primary source and is accurately attributed. M7's alleged rank inconsistency is not a mathematical error: because r in Phi(F), H/Phi(H) is isomorphic to F/Phi(F), so rank(F)=dim H^1(H,F_3). The manuscript now states this explicitly.
