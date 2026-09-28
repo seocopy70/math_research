@@ -155,7 +155,9 @@ z(r)=\sum_iF_i(\rho)z(x_i).
 \]
 
 \begin{proposition}[U3: finite Kummer/Fox criterion]
-Under this minimality hypothesis,
+Let $F$ be free pro-$3$ on $x_1,\dots,x_d$ and let $G=F/\langle\!\langle r\rangle\!\rangle$
+with $r\in\Phi(F)$ and $d=\dim_{\mathbb F_3}H^1(G,\mathbb F_3)$
+(the presentation is minimal). Then
 \[
 \mathsf K_k(G,\rho)\Longleftrightarrow F_i(\rho)=0
 \quad(1\le i\le d).
@@ -175,6 +177,13 @@ so $F_i\in3^{m+1}A_k$. Induction through $m=0,\ldots,k-1$ gives $F_i=0$. Convers
 The principal-unit restriction makes the reduction of the coefficient action trivial modulo $3$. The argument is valuation induction, not the earlier informal Nakayama step.
 
 \section{Coordinate identification at the base level}
+
+\begin{proposition}[U4: base-level identification]
+Let $\rho_2:G\to1+3A_2$ be any candidate with $\mathsf K_2(G,\rho_2)$. Then
+$\rho_2=(1,4,1,1)=\chi_G\bmod 9$.
+\end{proposition}
+
+\begin{proof}
 For
 \[
 r=x_1^3[x_1,x_2][x_3,x_4],
@@ -209,6 +218,8 @@ F_1=0\Rightarrow 1+2a_2=0\pmod 9
 \]
 Thus every level-\(2\) Kummer candidate is
 \(\rho_2=(1,4,1,1)=\chi\pmod9\). Conversely this candidate is the reduction of the classical canonical Kummerian orientation. This completes the base step without using the desired conclusion itself.
+\end{proof}
+
 \section{Intrinsic uniqueness}
 The next three results are the load-bearing U5 argument.
 
