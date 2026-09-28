@@ -1,3 +1,7 @@
+## 2026-09-28 — PAPER 3 REFEREE DETAIL REPAIR 2 / ARTIFACT GATE
+
+The referee-detail repair has been applied to the authoritative `paper/main.tex` source at commit `2ab97e7d11f5238f6586aa435c9da36d62781d91`. Source-level verification passed. Exact CI/PDF verification is now pending for this commit; no final artifact is declared yet.
+
 ## 2026-09-28 — PAPER 3 REFEREE DETAIL REPAIR / SOURCE GATE REOPENED
 
 The latest adversarial review of paper/main.tex was checked against primary literature and the authoritative research state. Legitimate detail omissions M1/M3/M4/M8/M9 were repaired; M6 Labute attribution was verified; M7's alleged U3 rank inconsistency was rejected because r in Phi(F) leaves F/Phi(F) unchanged. The source revision is f686fef1bfbab0b566d2cd424aa097955a2c61ec.
