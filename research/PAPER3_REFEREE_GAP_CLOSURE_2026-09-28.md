@@ -75,3 +75,18 @@ The mathematical application theorem is now internally coherent at the declared 
 ## 7. Build status
 
 Commit `f97b9f04dd873fd2d0123d325443032c4840d086` triggered GitHub Actions workflow `Build Paper 3`, run `36361479679`. At the time of this record the run is queued; no build conclusion is claimed yet.
+
+
+## 8. Final D1/D2 line-by-line attack found and repaired two stale formulas
+
+A source-level audit after the free-product repair found two errors in the general Gate D documentation:
+
+- The old shorthand P_j(S_k)=T_j for every integer j was false for the Zassenhaus filtration. The correct logarithmic-index formula is P_n(S_k)=p^{ceil(log_p n)}A_k semidirect U_{ceil(log_p n)+1}. The only endpoint needed by the factorization theorem, P_{p^{k-1}+1}=1 with P_{p^{k-1}} nonzero, is unchanged.
+- The D2 transgression-carrier document had an auxiliary iota_* in a variation identity whose codomain was H^2(G,F_p). The correct identity in that document is directly delta_{k,rho'}(f)-delta_{k,chi}(f)=nu cup f-bar in H^2(G,F_p). The iota formulation is reserved for the differently typed coefficient-extension identity in the theorem-paper proof.
+
+These are now corrected in the authoritative Gate D and D2 documents. Historical notes containing the old formulas are retained only as superseded history.
+
+Classification:
+- D1 endpoint/factorization: **PASS / CLOSED after correction**;
+- D2 variation target typing: **PASS / CLOSED after correction**;
+- stale historical formulas: **HISTORICAL / SUPERSEDED**.
