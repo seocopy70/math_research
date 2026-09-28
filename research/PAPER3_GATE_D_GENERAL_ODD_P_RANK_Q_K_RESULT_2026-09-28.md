@@ -63,17 +63,21 @@ U_j=1+p^j\mathbf Z/p^k
 T_j=p^{j-1}A_k\rtimes U_j.
 \]
 
-For odd p,
+For odd p, the correct Zassenhaus index is logarithmic:
 \[
-P_j(S_k)=T_j\quad(1\le j\le k),
+e(n)=\lceil\log_p n\rceil,
 \qquad
-P_{k+1}(S_k)=1.
+P_n(S_k)=p^{e(n)}A_k\rtimes U_{e(n)+1},
 \]
+with the conventions $e(1)=0$ and $U_j=1$ for $j\ge k$. In particular,
+\[
+P_{p^{k-1}}(S_k)=p^{k-1}A_k\ne1,
+\qquad
+P_{p^{k-1}+1}(S_k)=1.
+\]
+The filtration is constant between successive p-powers; it is therefore incorrect to write $P_j(S_k)=T_j$ for every integer j.
 
-The proof is valuation-theoretic:
-- p-th powers send the additive layer p^{j-1}A_k to p^jA_k and U_j onto U_{j+1};
-- commutators with U_1 generate exactly p^jA_k;
-- the reverse inclusions follow from these two generation statements.
+The proof is valuation-theoretic: the Jennings--Lazard description gives the jumps at the p-powers, while the additive and principal-unit layers contribute exactly the displayed terms. The endpoint needed for factorization is the vanishing statement at $p^{k-1}+1$.
 
 For a crossed cocycle z in
 \[
