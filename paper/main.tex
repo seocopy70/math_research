@@ -46,6 +46,18 @@ the surviving first-order variation. Publication novelty is stated
 conditionally; no absolute priority claim is made.
 \end{abstract}
 
+\paragraph{Companion papers.}
+This is one of three related manuscripts. [P1] treats the exact finite Zassenhaus
+depth for factoring all affine crossed-cocycle representations in the Demu\v{s}kin
+family; [P2] proves finite-window Kummer recognition of the canonical orientation
+of the rank-four $q=3$ group; [P3] proves the exact selector depth and
+identifies a one-dimensional cup-line carrier.
+Lemma~2.1 and Proposition~2.2 (finite affine filtration, arbitrary-candidate
+factorization) appear in each, in the form needed there; [P1] is the reference
+for them.
+[P1], [P2], and [P3] are placeholders for the corresponding arXiv records and
+should be replaced by the final arXiv identifiers before submission.
+
 \section{Introduction}
 
 Let
@@ -413,37 +425,26 @@ For the canonical orientation $\chi$, the inclusion
 \]
 induces an injection
 \[
-\iota_*:
-H^2(G,\mathbb F_3)
-\hookrightarrow
-H^2(G,A_{k-1}(\chi_{k-1})).
+\iota_*:H^2(G,\mathbb F_3)\hookrightarrow H^2(G,A_{k-1}(\chi_{k-1})).
 \]
 \end{lemma}
 
 \begin{proof}
-Let $I=\mathbb Q_3/\mathbb Z_3(\chi)$ be the dualizing module.
-Finite-coefficient $PD^2$ duality gives
+Let $I=\mathbb Q_3/\mathbb Z_3(\chi)$ be the dualizing module of the Demu\v{s}kin
+group $G$ (here $\chi$ is the canonical orientation, i.e.\ $g$ acts on
+$\mathbb Q_3/\mathbb Z_3$ by multiplication by $\chi(g)$). For a finite
+$3$-primary $G$-module $M$, Poincar\'e duality of the $\mathrm{PD}_2$ group $G$
+gives a natural isomorphism, contravariant in $M$,
 \[
-H^2(G,M)^\vee
-\cong
-H^0(G,M^\vee\otimes I)
+H^2(G,M)^\vee\cong\operatorname{Hom}_G(M,I).
 \]
-for finite $3$-primary modules $M$. For
-$M=A_{k-1}(\chi_{k-1})$, the twist cancels and
-\[
-H^2(G,A_{k-1}(\chi_{k-1}))^\vee\cong A_{k-1}.
-\]
-For $M=\mathbb F_3$,
-\[
-H^2(G,\mathbb F_3)^\vee\cong\mathbb F_3.
-\]
-Under these natural identifications, the dual of $\iota_*$ is the
-reduction map
-\[
-A_{k-1}\twoheadrightarrow\mathbb F_3,
-\]
-because precomposition with $1\mapsto3^{k-2}$ sends $a$ to $a\bmod3$.
-The dual map is surjective, hence $\iota_*$ is injective.
+For $M=A_{k-1}(\chi_{k-1})$ every $\mathbb Z$-linear map $A_{k-1}\to\mathbb Q_3/\mathbb Z_3$
+is $G$-equivariant, because source and target carry the same scalar action $\chi(g)$.
+Hence $\operatorname{Hom}_G(A_{k-1}(\chi_{k-1}),I)=\operatorname{Hom}_{\mathbb Z}(A_{k-1},\mathbb Q_3/\mathbb Z_3)\cong A_{k-1}$,
+via $b\mapsto(a\mapsto ab/3^{k-1})$. For $M=\mathbb F_3$, $\chi\equiv1\pmod3$,
+so $I[3]\cong\mathbb F_3$ is trivial and $\operatorname{Hom}_G(\mathbb F_3,I)\cong\mathbb F_3$.
+Naturality identifies the dual of $\iota_*$ with precomposition by $\iota$; it sends
+$b$ to $b\bmod3$. Thus the dual map is $A_{k-1}\twoheadrightarrow\mathbb F_3$, so $\iota_*$ is injective.
 \end{proof}
 
 \begin{proposition}[U5: intrinsic uniqueness]
@@ -757,6 +758,12 @@ through $Q_k$, finite Kummer recognition, and the fixed-scope sharp
 selector threshold. The publication novelty claim is therefore
 conditional: this manuscript does not claim absolute priority and does not
 claim that unpublished or unindexed work has been excluded.
+
+\section{Literature audit record}
+
+A literature audit was performed against the classical Kummerian/1-cyclotomic sources and the relevant Zassenhaus/cup-product literature. Searches were run on arXiv and the general web on 28 September 2026 using the keywords ``Demushkin group'', ``Kummerian'', ``1-cyclotomic'', ``orientation'', ``Zassenhaus filtration'', ``finite quotient'', and ``cup product / quadratic relation'', and the reference lists of [2]--[5] and [7] were consulted. [MathSciNet and zbMATH Open were not searched.]
+
+This audit did not identify an exact theorem combining all of the following in one statement: bare $Q_k$ as finite input, arbitrary principal-unit candidate, arbitrary-candidate twisted-$H^1$ factorization through $Q_k$, finite Kummer recognition, and the fixed-scope sharp selector threshold. The publication novelty claim remains conditional; this paragraph records the actual search scope and is not an absolute priority claim.
 
 \section{Scope and logical boundaries}
 
