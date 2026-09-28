@@ -1,0 +1,91 @@
+name: Build Paper 1 PDF
+
+on:
+  push:
+    branches:
+      - paper1-fixes-2026-09-28
+    paths:
+      - 'paper/successor_main.tex'
+      - '.github/workflows/paper1-build.yml'
+  workflow_dispatch:
+
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile Paper 1 manuscript
+        uses: xu-cheng/latex-action@v4
+        with:
+          working_directory: paper
+          root_file: successor_main.tex
+          args: -pdf -interaction=nonstopmode -halt-on-error
+
+      - name: Verify Paper 1 PDF
+        working-directory: paper
+        run: |
+          test -s successor_main.pdf
+          grep -q 'Output written on successor_main.pdf' successor_main.log
+          grep -q 'Sharp affine finite window' successor_main.tex
+          grep -q 'Lower-bound witness, all' successor_main.tex
+          grep -q 'Category-relative minimality' successor_main.tex
+          grep -q 'Factorization is not recognition' successor_main.tex
+          ! grep -Eiq 'undefined|LaTeX Warning|Error:' successor_main.log
+
+      - name: Generate Paper 1 submission packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf paper1-submission
+          mkdir -p paper1-submission/source paper1-submission/full
+          cp paper/successor_main.tex paper1-submission/source/main.tex
+          cp paper/successor_main.tex paper1-submission/full/main.tex
+          cp paper/successor_main.pdf paper1-submission/full/sharp-affine-finite-window.pdf
+          (
+            cd paper1-submission/full
+            sha256sum main.tex sharp-affine-finite-window.pdf > SHA256SUMS.txt
+          )
+          cat > paper1-submission/full/README_SUBMISSION.txt <<'EOF'
+          Sharp Finite-Window Recognition and Information Loss in Oriented Pro-p Groups
+
+          Publication snapshot: repository branch paper1-fixes-2026-09-28 at the CI build commit.
+          The arXiv source bundle contains main.tex only; the bibliography is embedded.
+          The full bundle contains the source, CI-built PDF, checksums, and this README.
+          EOF
+          (
+            cd paper1-submission/source
+            zip -q -9 ../../sharp-affine-finite-window-source.zip main.tex
+          )
+          (
+            cd paper1-submission/full
+            zip -q -9 ../../sharp-affine-finite-window-full.zip main.tex sharp-affine-finite-window.pdf SHA256SUMS.txt README_SUBMISSION.txt
+          )
+          sha256sum sharp-affine-finite-window-source.zip sharp-affine-finite-window-full.zip > paper1-submission/PACKAGE_SHA256SUMS.txt
+          cat paper1-submission/PACKAGE_SHA256SUMS.txt
+
+      - name: Upload Paper 1 PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper1-sharp-affine-finite-window-pdf
+          path: paper/successor_main.pdf
+          if-no-files-found: error
+
+      - name: Upload Paper 1 source package
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper1-sharp-affine-finite-window-source
+          path: |
+            sharp-affine-finite-window-source.zip
+            paper1-submission/PACKAGE_SHA256SUMS.txt
+          if-no-files-found: error
+
+      - name: Upload Paper 1 full submission package
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper1-sharp-affine-finite-window-full
+          path: |
+            sharp-affine-finite-window-full.zip
+            paper1-submission/full/SHA256SUMS.txt
+            paper1-submission/full/README_SUBMISSION.txt
+          if-no-files-found: error
