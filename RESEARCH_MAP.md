@@ -1,3 +1,22 @@
+## 2026-09-28 — PAPER 3 MANUSCRIPT FINAL ARTIFACT SYNCHRONIZED / CLOSED
+
+The theorem-paper manuscript has now been synchronized with the authoritative research frontier and independently validated.
+
+- Final source: \`paper/main.tex\`
+- Manuscript synchronization gate: **PASS / CLOSED**
+- Source audit + compile repair: **PASS / CLOSED**
+- CI Build Paper PDF run 36363508628: **PASS / CLOSED**
+- Shell pipeline audit run 36363508467: **PASS / CLOSED**
+- Citation hygiene run 36363508580: **PASS / CLOSED**
+- PDF artifact 10946925073; full submission artifact 10945849160
+- PDF SHA-256: \`813fda4840783c3b37002828ccfbe092ccffed6ad189f46430222e5e930a56b0\`
+- PDF: 14 pages, 405,622 bytes
+- Finalization manifest: \`research/PAPER3_MANUSCRIPT_MANIFEST_2026-09-28.md\`
+
+The earlier stale statement that the application manuscript/Paper 3 was the current final artifact is superseded. The current final manuscript is the finite-window recognition theorem paper containing D1/U1-U2, base-level recognition, U5 uniqueness, the intrinsic one-dimensional cup-line result, and fixed-scope selector minimality.
+
+Publication novelty remains **OPEN / CONDITIONAL** and is not altered by artifact finalization.
+
 
 ## 2026-09-27 — M2 POST-BLUMER–QUADRELLI F1 SHARPNESS AUDIT CLOSED
 
