@@ -1,3 +1,11 @@
+## 2026-09-28 — PAPER 3 REFEREE DETAIL REPAIR 2 / ARTIFACT GATE
+
+The authoritative manuscript source was repaired in commit `2ab97e7d11f5238f6586aa435c9da36d62781d91`. The source-level repair is complete and rechecked. The exact commit triggered Build paper PDF run `36373920812`, currently **IN PROGRESS**.
+
+The publication artifact remains **OPEN / PENDING** until CI compilation, PDF verification, and independent artifact/content audit complete. No prior PDF is authoritative for this source revision.
+
+The mathematical classifications remain unchanged: finite-window recognition PASS/CLOSED; fixed-scope selector threshold PASS/CLOSED; 1D cup-line carrier/minimality PASS/CLOSED in the declared linear selector-carrier category; stronger finite-pair functional OPEN/NOT LOAD-BEARING; novelty OPEN/CONDITIONAL.
+
 ## 2026-09-28 — THREE-PAPER PDF REVIEW AUDIT / VERSION-MAPPING CORRECTION
 
 The externally supplied three-paper review was checked against the exact artifacts previously delivered in this session.
