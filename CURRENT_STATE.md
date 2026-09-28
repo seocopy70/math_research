@@ -1010,3 +1010,21 @@ The final manuscript source at commit f97b9f04dd873fd2d0123d325443032c4840d086 w
 This build is the manuscript corresponding to the repaired free-product twisted-H^1 proof and corrected scope. Subsequent commits after f97b9f04dd873fd2d0123d325443032c4840d086 only update research/audit records; they do not alter `paper3/main.tex`. Therefore this artifact is the current final manuscript PDF.
 
 Publication novelty remains **OPEN / CONDITIONAL**; no priority claim is made.
+
+
+## 2026-09-28 — AUTHORITATIVE PAPER 3 SYNCHRONIZATION STATUS
+
+The research frontier and the publication artifact are now treated as separate states with an explicit synchronization gate.
+
+Current mathematical frontier: D1/D2/D3/D4, one-dimensional cup carrier, and category-relative selector minimality are PASS/CLOSED according to the research audit.
+
+Current manuscript/PDF status: **OPEN / LOAD-BEARING**, not yet final. The first attempted synchronization commit `a334cefff5fe90c15cfe86984d2dc3331d6c4838` failed LaTeX compilation, so no PDF from that run is authoritative.
+
+FINAL requires all of:
+- research state checked against authoritative files;
+- manuscript manifest complete;
+- main.tex contains every load-bearing result and no superseded conclusion;
+- independent CI LaTeX compile PASS;
+- PDF content verification PASS;
+- generated artifact tied to the exact commit SHA and checksum;
+- immediate research-log entry recording the final artifact identity.
