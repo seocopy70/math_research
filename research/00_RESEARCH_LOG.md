@@ -1,3 +1,14 @@
+## 2026-09-28 — MANUSCRIPT SOURCE CLEANUP CORRECTION
+
+The first cleanup commit accidentally introduced repeated-character typos while replacing the reviewer-noted “ogether” typo. This was caught immediately by source inspection and corrected.
+
+- Corrected manuscript commit: `dc73b0365be4020545e73ec768dbea5fed889b0e`.
+- `ttogether` / `Ttogether` contamination: **REMOVED**.
+- Recognition theorem label, D2 \(\mathcal O_k\) section, U2/U3 repairs, D3 Proposition 7.1 citation, and D4 corrections remain present.
+- CI/PDF verification remains **PENDING** for the corrected source.
+
+No mathematical status changes.
+
 ## 2026-09-28 — PAPER 3 REFEREE GAP CLOSURE / MANUSCRIPT RESYNCHRONIZATION
 
 The adversarial manuscript review exposed real source-level gaps despite the prior publication artifact closure. The mathematical research frontier was already closed at the relevant scopes, but the manuscript had not faithfully synchronized several load-bearing proof details. This is classified as a **MANUSCRIPT SYNCHRONIZATION DEFECT**, not a reopening of the mathematics.
