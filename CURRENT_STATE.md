@@ -954,3 +954,27 @@ Consequences:
 - stronger canonical functional O_k -> F_p determined from E_k -> Q_k alone: OPEN / NOT LOAD-BEARING.
 
 Primary detailed proof: research/PAPER3_FINITE_CUP_LINE_COMPRESSION_2026-09-28.md, commit c5aa630f7b49eca16ac7696c0989c9a6da1df7eb. The relation/cup compatibility is standard and documented in the cited literature audit.
+
+
+## 2026-09-28 — PAPER 3 REFEREE GAP CLOSURE: FREE-PRODUCT TWISTED-H1
+
+The load-bearing referee objection in the application manuscript has been repaired and independently rechecked at the proof-structure level.
+
+- Candidate-dependent coefficient module is now explicit: M_rho=Z/p^k(rho), with M_rho_i the restriction to G_i.
+- The degree-one free-product decomposition is stated together with the natural commutative coefficient-reduction diagram.
+- For N=P_{p^{k-1}+1}(G), the factor intersection N cap G_i=P_{p^{k-1}+1}(G_i) is justified by functoriality plus the canonical retraction G to G_i.
+- Paper 2 arbitrary-candidate factorization therefore transports the finite twisted H^1 problem to the free factors, and the global Kummer predicate is exactly the direct sum of the factor predicates.
+- The truncation/coproduct lemma was rewritten with an explicit universal-property proof.
+- The selected-depth abelianization calculation was tightened to D_{p^{k-1}+1}(D_{f,d}^{ab})=p^k Z_p^{d-1} plus zero torsion component.
+- Scope wording corrected: Paper 1 recognition is rank-four q=3, while heterogeneous f_i is used only for the broader affine application.
+
+Classification:
+- free-product twisted-H^1 gap: PASS / CLOSED
+- truncation lemma: PASS / CLOSED
+- parameter-collapse wording/proof: PASS / CLOSED
+- scope consistency: PASS / CLOSED
+- publication novelty: OPEN / CONDITIONAL
+
+Detailed closure record: research/PAPER3_REFEREE_GAP_CLOSURE_2026-09-28.md.
+
+Build: commit f97b9f04dd873fd2d0123d325443032c4840d086 triggered Paper 3 CI run 36361479679; at record time it was queued, so compilation is not yet classified.
