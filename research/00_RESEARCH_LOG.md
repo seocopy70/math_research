@@ -4598,3 +4598,25 @@ The sharpness and minimality statements remain category-relative:
 
 This distinction is part of the mathematical contribution and should be preserved in future summaries.
 
+
+
+## 2026-09-28 — PAPER 3 LITERATURE-AUDIT WORDING + RANGE/DUALITY DETAIL REPAIR
+
+The authoritative Paper 3 source was rechecked against the current research state and the requested referee-detail corrections.
+
+Applied to `paper/main.tex`:
+- §9 selector-domain lower-bound wording now correctly states the two ranges as (m\le 3^{k-2}) (target outside (mathcal D_{k,m})) and (3^{k-2}<m\le3^{k-1}) (target in the domain but selector fails).
+- Lemma U5c now states explicitly: “This map is surjective; since it is the dual of (iota_*), the map (iota_*) is injective.”
+- The literature-audit paragraph now records the actual search scope performed on 28 September 2026: arXiv and general web searches, with keywords covering Demuškın/Kummerian/1-cyclotomic/orientation/Zassenhaus/finite quotient/cup-product-quadratic relation. MathSciNet and zbMATH Open are not claimed as searched.
+
+Targeted external verification:
+- Efrat–Quadrelli (J. Algebra 525, 2019) explicitly studies the Kummerian property for oriented pro-(p) groups and characterizes it cohomologically and via 1-cocycles; it also records the Demuškin uniqueness result via Labute. This is prior art for the Kummerian predicate and lifting framework, not for the present combined bare-(Q_k), arbitrary-candidate, exact-selector-depth statement.
+- Mináč–Pasini–Quadrelli–Tân (Adv. Math. 380, 2021), §7, gives the minimal-presentation relation/cup-product pairing used for the finite cup-line argument.
+- The targeted searches did not identify an exact theorem combining bare (Q_k) as input, arbitrary principal-unit candidate, arbitrary-candidate twisted-(H^1) factorization through (Q_k), finite Kummer recognition, and the fixed-scope sharp selector threshold. This remains a literature-audit finding, not an absolute priority claim.
+
+Classification:
+- source detail repair: PASS / CLOSED;
+- literature audit: PASS / LOCAL (targeted negative search; not an exhaustive database-indexing claim);
+- publication novelty: OPEN / CONDITIONAL.
+
+Because the manuscript source changed, the publication artifact gate is reopened until exact-source CI, PDF/content verification, checksum capture, and manifest update complete.
