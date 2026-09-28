@@ -994,3 +994,19 @@ Classification:
 - no new selector counterexample found.
 
 The final proof audit therefore closes the previously authorized D1/D2 source-level attack. The remaining blocker is compilation plus final manuscript/novelty positioning, not a new mathematical branch.
+
+
+## 2026-09-28 — FINAL PAPER 3 CI BUILD / PDF VERIFIED
+
+The final manuscript source at commit f97b9f04dd873fd2d0123d325443032c4840d086 was compiled by GitHub Actions workflow **Build Paper 3**, run **36361479679**.
+
+- LaTeX compilation: **PASS / CLOSED**
+- PDF verification step: **PASS / CLOSED**
+- Artifact: `paper3-pdf` (artifact 10946385056)
+- PDF: 10 pages, 370,375 bytes
+- SHA-256: `adf76e22672184f5c022bc268bfcdc932cb575b5151b0adca215293dcab132ba`
+- No LaTeX error/undefined-reference/warning failure was reported by the workflow verification step.
+
+This build is the manuscript corresponding to the repaired free-product twisted-H^1 proof and corrected scope. Subsequent commits after f97b9f04dd873fd2d0123d325443032c4840d086 only update research/audit records; they do not alter `paper3/main.tex`. Therefore this artifact is the current final manuscript PDF.
+
+Publication novelty remains **OPEN / CONDITIONAL**; no priority claim is made.
