@@ -140,7 +140,7 @@ The finite factorization theorem gives a representative
 \[
 \alpha_k\in H^2(Q_k,\mathbf F_p)
 \]
-whose inflation to G is
+whose inflation to G is, by the same variation identity,
 \[
 \inf_{Q_k}^G(\alpha_k)=\nu\smile a\neq0.
 \]
