@@ -319,7 +319,7 @@ is precisely the map induced by the degree-two initial-form map
 [
 R_k/R_k^p[R_k,F]longrightarrow D_2(F)/D_3(F).
 ]
-This is the content of the standard cup/initial-relator compatibility: the value of a cup product on a relation is exactly the coefficient of that relation's degree-two commutator (and, for (p=2), power) initial form. For odd (p), only the alternating commutator part occurs. The general pairing is recorded in Mináč–Pasini–Quadrelli–Tân, Proposition 7.1 and the associated pairing diagram around Theorem 7.3. citeturn3search0turn2search3
+This is the content of the standard cup/initial-relator compatibility: the value of a cup product on a relation is exactly the coefficient of that relation's degree-two commutator (and, for (p=2), power) initial form. For odd (p), only the alternating commutator part occurs. The general pairing is recorded in Mináč–Pasini–Quadrelli–Tân, Proposition 7.1 and the associated pairing diagram around Theorem 7.3. [literature citation]
 
 Therefore the rank of the finite cup map equals the rank of its dual degree-two relation map. Since the latter has image exactly (mathbf F_p\cdotoperatorname{in}_2(r)),
 [
@@ -359,7 +359,7 @@ The new closure is substantially stronger than the previous naturality-only argu
 
 1. The quotient presentation must be written correctly. If G=F/R and Q_k=G/D_n(G), then the kernel of F -> Q_k is R_k=R D_n(F), because Zassenhaus filtration is functorial and D_n(G) is the image of D_n(F). Since n=p^{k-1}+1>=3 for odd p, D_n(F) subset D_3(F). Also R_k subset F^(2), so F -> Q_k remains a minimal pro-p presentation.
 
-2. The phrase “standard relation-module/cup duality gives rank equality” needs the actual finite presentation map, not merely Theorem 7.3 quoted as a black box. Proposition 7.1 gives the commutative pairing diagram for a minimal pro-p presentation, and the rank of the cup map equals the rank of its dual relation-to-quadratic-initial-form map. For Q_k, that latter map has image exactly the one-dimensional span of in_2(r), because the added relators D_n(F) contribute nothing modulo D_3(F). Hence dim C_k=1. The published source explicitly states the pairing compatibility in Proposition 7.1 and identifies the quadratic initial-form map with cup products. citeturn0search2
+2. The phrase “standard relation-module/cup duality gives rank equality” needs the actual finite presentation map, not merely Theorem 7.3 quoted as a black box. Proposition 7.1 gives the commutative pairing diagram for a minimal pro-p presentation, and the rank of the cup map equals the rank of its dual relation-to-quadratic-initial-form map. For Q_k, that latter map has image exactly the one-dimensional span of in_2(r), because the added relators D_n(F) contribute nothing modulo D_3(F). Hence dim C_k=1. The published source explicitly states the pairing compatibility in Proposition 7.1 and identifies the quadratic initial-form map with cup products. [literature citation]
 
 This closes the earlier logical gap: the proof is NOT “global H^2 is one-dimensional, therefore finite C_k is one-dimensional.” It is “finite cup map and finite quadratic relation map are dual, and the latter has rank one.”
 
