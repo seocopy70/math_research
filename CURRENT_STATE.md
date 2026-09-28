@@ -1,3 +1,16 @@
+## 2026-09-28 — THREE-PAPER MATHEMATICAL CONTRIBUTION ASSESSMENT RECORDED
+
+For future research continuity, the researcher-facing synthesis is frozen in:
+`research/THREE_PAPER_MATHEMATICAL_CONTRIBUTION_ASSESSMENT_2026-09-28.md`.
+
+The three-paper arc is recorded as:
+**Paper 1 = finite recognition/factorization → Paper 2 = sharp affine threshold (p^{k-1}+1) → Paper 3 = recognition at the sharp scale, with fixed rank-4 (p=3) selector threshold (3^{k-1}+1) and 1D linear selector-carrier minimality.**
+
+Overall mathematical assessment: **research-level coherent finite-recognition program at the declared scopes**.
+Publication novelty: **OPEN / CONDITIONAL**; no priority claim.
+
+This is an explanatory synthesis only; authoritative mathematical classifications remain in the individual Gate/audit records.
+
 
 
 ## 2026-09-28 — PAPER 3 EXACT-SOURCE ARTIFACT GATE CLOSED
