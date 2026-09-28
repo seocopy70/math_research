@@ -589,27 +589,25 @@ entire connecting map has codomain $C_k$. Rather, $C_k$ is the intrinsic
 finite carrier of the surviving first-order cup variation.
 
 Indeed, on the canonical lower-level branch write
+$\rho_k=\chi_k(1+3^{k-1}\nu)$ with $\nu\neq0$. By cup nondegeneracy there is
+$f\in H^1(G,\mathbb F_3)$ with $\nu\smile f\neq0$ in $H^2(G,\mathbb F_3)$.
+By Lemma~2.2, $\nu$ and $f$ are inflated from $Q_k$, and inflation commutes
+with cup products, so
+$\nu\smile f=\operatorname{infl}(c)$ for some $c\in C_k$.
+Since $\operatorname{infl}\colon C_k\to H^2(G,\mathbb F_3)$ is injective,
+$c\neq0$ and $C_k$ detects the class. By Lemma~5.3,
+$\iota_*\colon H^2(G,\mathbb F_3)\hookrightarrow H^2(G,A_{k-1}(\chi_{k-1}))$
+is injective, hence
 \[
-\rho_k=\chi_k(1+3^{k-1}\nu).
+C_k\xrightarrow{\ \operatorname{infl}\ }H^2(G,\mathbb F_3)
+\xrightarrow{\ \iota_*\ }H^2(G,A_{k-1}(\chi_{k-1})),
+\qquad
+0\neq\iota_*(\nu\smile f).
 \]
-U5b gives, after inflation to $G$,
-\[
-\delta_{\rho_k}(f)-\delta_{\chi_k}(f)
-=
-\iota_*(\nu\smile\bar f).
-\]
-The canonical connecting map vanishes. For every $\nu\ne0$, cup
-nondegeneracy gives $f$ with
-\[
-\nu\smile\bar f\ne0.
-\]
-By definition, $C_k$ is the image of the finite cup-product map, so
-$\nu\smile\bar f\in C_k$. After applying the coefficient inclusion
-$\iota_*$, the same class is represented by the corresponding cup-product
-variation in $H^2(G,\mathbf F_3)$; by the inflation injectivity just proved,
-its finite representative is nonzero. Thus the variation is detected by the
-one-dimensional finite cup line. Hence $C_k$ supplies a one-dimensional
-linear detector for every false next-digit candidate.
+By Lemma~5.2, $\delta_{\rho_k}(f)-\delta_{\chi_k}(f)=\iota_*(\nu\smile f)\neq0$.
+The canonical connecting map vanishes, so $\delta_{\rho_k}(f)\neq0$.
+Thus every false next-digit candidate is detected by the one-dimensional
+line $C_k$.
 
 \begin{remark}
 This is minimal only in the declared linear selector-carrier category:
