@@ -1,3 +1,19 @@
+## 2026-09-28 — PAPER 3 CURRENT-SOURCE ARTIFACT VERIFIED
+
+The final Paper 3 source/PDF synchronization gate is now closed against the exact current source.
+
+- Authoritative main commit: `22f821acdbee5a68513272c70056b7f97a559df5`.
+- `paper/main.tex` blob: `599b5d2b19f3e256ab25535a6aebc1beea907fa2`.
+- Source SHA-256: `b0fef874507e4f2eef249296d5aca83000a954b0c15c2bf0abfc69664de7b0ac`.
+- CI run **36367519607**: **PASS / CLOSED**; compile, verification, package generation and uploads all passed.
+- Current PDF: artifact **10947718917**, 16 pages, 412,490 bytes, SHA-256 `2907598169954f6388d764d3596cbe0fad680165c6397a99fcd67efd669b4a6e`.
+- Full submission artifact: **10948425435**; internal source/PDF checksums independently verified.
+- Independent PDF text/content audit: **PASS / CLOSED**.
+- The previous PDF from run 36363508628 is superseded because its head predates the final source repair.
+- Paper 1 and Paper 2 artifact audits are recorded in `research/PAPER_ARTIFACT_AUDIT_2026-09-28.md`.
+
+**Manuscript-finalization identity is now:** source commit + source blob + CI PASS on that exact source + independent PDF audit + checksum + artifact manifest.
+
 ## 2026-09-28 — PAPER 3 MANUSCRIPT RESYNCHRONIZATION REOPENED FOR VERIFICATION
 
 The prior manuscript-finalization closure is superseded because the adversarial source audit identified proof-detail omissions in `paper/main.tex`. The underlying research results remain closed; only the publication artifact gate is reopened.

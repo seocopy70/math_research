@@ -4431,3 +4431,22 @@ Mandatory corrective process from this point:
 5. CI must test both positive markers (all required final results present) and negative stale markers (e.g. 'minimality remains open') before artifact publication.
 
 This audit supersedes the prior assumption that recording a result was sufficient to guarantee manuscript synchronization.
+
+## 2026-09-28 — PAPER 1/2 RE-AUDIT + PAPER 3 CURRENT-SOURCE ARTIFACT CLOSURE
+
+Paper 1 and Paper 2 were rechecked against their authoritative manuscript branches and current research boundaries. Paper 1 remains the fixed rank-4, q=3 finite-window Kummer recognition theorem with classical orientation prior art and no minimality claim. Paper 2 remains the sharp affine factorization theorem with (n_{\mathrm{aff}}(k)=p^{k-1}+1), rank-two sharpness, finite free-product applications, and explicitly bounded claims. Both are **PASS / CLOSED** at their declared manuscript scopes; publication novelty remains conditional.
+
+Paper 3's prior final PDF was found to predate the final source repair. The current source was therefore rebuilt from the exact current main branch and independently audited.
+
+- Main commit: `22f821acdbee5a68513272c70056b7f97a559df5`.
+- Source blob: `599b5d2b19f3e256ab25535a6aebc1beea907fa2`.
+- Source SHA-256: `b0fef874507e4f2eef249296d5aca83000a954b0c15c2bf0abfc69664de7b0ac`.
+- CI run **36367519607**: **PASS / CLOSED**.
+- PDF artifact **10947718917**: 16 pages, 412,490 bytes, SHA-256 `2907598169954f6388d764d3596cbe0fad680165c6397a99fcd67efd669b4a6e`.
+- Full artifact **10948425435**: SHA-256 digest `eb11307dcfd02ade4576328d882b713c498cd8a96950667c0d3fd75f3430af1e`.
+- Independent PDF extraction/content audit: **PASS / CLOSED**.
+- Internal full-package SHA256SUMS verification: **PASS**.
+
+Process correction: a prior passing PDF is never authoritative after the source changes. Finality requires exact source identity, CI on that exact source, independent PDF audit, checksum, and manifest.
+
+Classification: Paper 3 manuscript artifact **PASS / CLOSED**; mathematical publication novelty remains **OPEN / CONDITIONAL**; stronger finite-pair canonical functional remains **OPEN / NOT LOAD-BEARING**.
