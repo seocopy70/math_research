@@ -3947,3 +3947,26 @@ Consequences:
 - stronger canonical functional O_k -> F_p determined from E_k -> Q_k alone: OPEN / NOT LOAD-BEARING.
 
 Primary detailed proof: research/PAPER3_FINITE_CUP_LINE_COMPRESSION_2026-09-28.md, commit c5aa630f7b49eca16ac7696c0989c9a6da1df7eb. The relation/cup compatibility is standard and documented in the cited literature audit.
+
+
+## 2026-09-28 — FINAL D1/D2 LINE-BY-LINE ATTACK: TWO STALE FORMULAS CORRECTED
+
+A final adversarial audit of the Gate D source-level proof found two documentation-level mathematical type/index errors before they could be allowed into the final theorem record.
+
+1. **D1 Zassenhaus indexing:** an old Gate D statement wrote P_j(S_k)=T_j for every integer j, with T_j=p^{j-1}A_k semidirect U_j. This is false for the Zassenhaus filtration because the filtration is constant between p-powers. The correct formula is
+   P_n(S_k)=p^{ceil(log_p n)}A_k semidirect U_{ceil(log_p n)+1},
+   with P_{p^{k-1}+1}=1 and P_{p^{k-1}} nonzero. The endpoint needed for finite factorization is unchanged. Gate D remains PASS/CLOSED after correction.
+
+2. **D2 variation target type:** an old Gate D/D2 write-up inserted an auxiliary iota_* into the variation identity even though the connecting maps there take values in H^2(G,F_p). The correct common-target identity is
+   delta_{k,rho'}(f)-delta_{k,chi}(f)=nu cup f-bar
+   in H^2(G,F_p). The auxiliary iota formulation belongs only to the differently typed coefficient-extension formulation in the theorem-paper proof and must not be transplanted into the D2 transgression-carrier statement.
+
+The affected Gate D and D2 source documents were corrected. Historical logs containing the superseded formulas are retained as history and must not be treated as current statements.
+
+Classification:
+- D1 endpoint/factorization theorem: **PASS / CLOSED after correction**;
+- D2 transgression-carrier variation type: **PASS / CLOSED after correction**;
+- stale formulas in historical notes: **HISTORICAL / SUPERSEDED**;
+- no new mathematical counterexample to the finite selector was found.
+
+Detailed follow-up: research/PAPER3_REFEREE_GAP_CLOSURE_2026-09-28.md (to be extended with this correction).
