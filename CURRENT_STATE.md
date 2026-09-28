@@ -1,3 +1,27 @@
+## 2026-09-28 — PAPER 3 MANUSCRIPT RESYNCHRONIZATION REOPENED FOR VERIFICATION
+
+The prior manuscript-finalization closure is superseded because the adversarial source audit identified proof-detail omissions in `paper/main.tex`. The underlying research results remain closed; only the publication artifact gate is reopened.
+
+- U2 inflation/coefficient-triviality chain: **REPAIRED**.
+- U3 minimal one-relator hypothesis: **REPAIRED**.
+- D2 transgression quotient \(\mathcal O_k\): **ADDED** as a proof carrier, with no absolute-minimality claim.
+- D3 finite cup-line proof: **REPAIRED**, with Mináč–Pasini–Quadrelli–Tân Proposition 7.1 explicitly identified.
+- D4 shallow-range non-factorization: **REPAIRED** by direct valuation calculation.
+- D4 LTE: **REPAIRED**, using \(v_3(u-1)=1\) and \(v_3(S_N(u))=k-1\).
+- Recognition theorem: explicit cross-reference label added.
+- Source revision commit: `7adb6fe8ab43dd924daf282730c0c316757a892a`.
+- CI compilation/PDF verification for this revision: **PENDING**.
+- Publication novelty: **OPEN / CONDITIONAL**.
+
+The mathematical classifications are unchanged:
+- finite-window recognition: **PASS / CLOSED** at the declared fixed rank-4, \(q=3\) Demuškin scope;
+- selector threshold \(n_{\mathrm{selector}}(k)=3^{k-1}+1\): **PASS / CLOSED** at that scope;
+- one-dimensional cup-line carrier/minimality: **PASS / CLOSED** in the declared linear selector-carrier category;
+- canonical \(\mathcal O_k\to\mathbf F_3\) reconstructed from \(E_k\to Q_k\) alone: **OPEN / NOT LOAD-BEARING**;
+- publication novelty: **OPEN / CONDITIONAL**.
+
+Next authorized action: CI compile → independent PDF text/content audit → final artifact/hash update → only then restore manuscript-finalization CLOSED.
+
 ## 2026-09-28 — PAPER 3 MANUSCRIPT FINALIZATION CLOSED
 
 The manuscript synchronization failure has been corrected and the publication artifact gate is now closed.
