@@ -27,7 +27,7 @@ D_i=\langle x_{i,1},\ldots,x_{i,d_i}\mid
 x_{i,1}^{p^{f_i}}\prod_j[x_{i,2j-1},x_{i,2j}]=1\rangle ,
 \]
 with odd $p$, even $d_i\ge2$, and arbitrary positive integers $f_i$. We prove that every affine crossed-cocycle representation at coefficient level $p^k$ factors through the single uniform quotient
-$Q_k(G)=G/P_{p^{k-1}+1}(G)$, independently of the individual values $f_i$. The free-product truncation is compatible with the coproduct structure, so no additional mixed-commutator depth is required. We then give two concrete finite-window applications: (i) a heterogeneous-block example in which the finite quotient records exactly the blocks with $f_i<k$ while blocks with $f_i\ge k$ have the same finite-depth power relation, and (ii) a blockwise Kummer-recognition theorem for products whose blocks lie in the rank-four, $q=p$ recognition class established in the first paper. The result is an application-level synthesis, not a claim of absolute finite-carrier minimality or a new classification of all elementary-type pro-$p$ groups.
+$Q_k(G)=G/P_{p^{k-1}+1}(G)$, independently of the individual values $f_i$. The free-product truncation is compatible with the coproduct structure, so no additional truncation is required for the stated affine target. We then give two concrete finite-window applications: (i) a heterogeneous-block example in which the finite quotient records exactly the blocks with $f_i<k$ while blocks with $f_i\ge k$ have the same finite-depth power relation, and (ii) a blockwise Kummer-recognition theorem for products whose blocks lie in the rank-four, $q=3$ recognition class established in Paper 1. The result is an application-level synthesis, not a claim of absolute finite-carrier minimality or a new classification of all elementary-type pro-$p$ groups.
 \end{abstract}
 
 \section{Introduction}
@@ -182,7 +182,7 @@ For $f<k$, the abelianization of $D_{f,d}$ is
 \[
 \mathbb Z_p^{d-1}\oplus\mathbb Z/p^f\mathbb Z.
 \]
-In the abelianization $D_{f,d}^{\mathrm{ab}}\cong\mathbb Z_p^{d-1}\oplus\mathbb Z/p^f\mathbb Z$, the image of $P_n(D_{f,d})$ is $p^{\lceil\log_p n\rceil}\mathbb Z_p^{d-1}\oplus 0$ for $n\ge2$: the torsion summand is killed by $p^f$ already, while the free summand has the usual power filtration. For $n=p^{k-1}+1$, this free part is $p^k\mathbb Z_p^{d-1}$, so the torsion generator still has exact order $p^f$ in the finite quotient whenever $f<k$.
+In the abelianization $D_{f,d}^{\mathrm{ab}}\cong\mathbb Z_p^{d-1}\oplus\mathbb Z/p^f\mathbb Z$, the image of the selected Zassenhaus term is computed from the abelian power filtration. For $n=p^{k-1}+1$, one has $D_n(D_{f,d}^{\mathrm{ab}})=p^k\mathbb Z_p^{d-1}\oplus0$. Hence the torsion generator still has exact order $p^f$ in the finite quotient whenever $f<k$.
 \end{proof}
 
 \begin{corollary}[Parameter profile of a product]
@@ -275,11 +275,11 @@ and under these identifications the coefficient-reduction map is the direct sum 
 \begin{proof}
 The first isomorphism is the standard degree-one Mayer--Vietoris decomposition for a free pro-$p$ coproduct, applied to the fixed discrete module $M_\rho$. The second is the same statement for trivial coefficients. The point requiring care here is that the module depends on $\rho$: by definition, its restriction to $G_i$ is exactly $M_{\rho_i}$, so the restriction map is a map of coefficient modules. Naturality of coefficient reduction then gives the commutative diagram
 \[
-\begin{CD}
-H^1(G,M_\rho) @>>> \bigoplus_i H^1(G_i,M_{\rho_i})\\
-@VVV @VV\oplus\mathrm{red}_i V\\
-H^1(G,\Fp) @>>> \bigoplus_i H^1(G_i,\Fp).
-\end{CD}
+\begin{array}{ccc}
+H^1(G,M_\rho) & \xrightarrow{\ \sim\ } & \bigoplus_i H^1(G_i,M_{\rho_i})\\
+\downarrow\!\mathrm{red} & & \downarrow\!\bigoplus_i\mathrm{red}_i\\
+H^1(G,\Fp) & \xrightarrow{\ \sim\ } & \bigoplus_i H^1(G_i,\Fp).
+\end{array}
 \]
 Here the horizontal arrows are the restriction isomorphisms. Thus the global reduction map is identified exactly with the direct sum of the factor maps.
 \end{proof}
