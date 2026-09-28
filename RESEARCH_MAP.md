@@ -1,3 +1,22 @@
+## 2026-09-28 — START HERE 중앙 안내서
+
+연구 입문·전체 그림·읽기 경로를 한 곳에서 안내하는 중앙 문서를 추가했다:
+`research/00_START_HERE.md`.
+
+이 문서는 기존 문서를 통합하거나 대체하지 않는다. 역할은 다음과 같이 분리한다.
+- START HERE: 입문·전체 그림·읽기 순서
+- THREE_PAPER_STORY_AND_MATH_EXPLANATION: 쉬운 비유와 수학 번역
+- THREE_PAPER_MATHEMATICAL_CONTRIBUTION_ASSESSMENT: 세 논문의 수학적 성과·기여도 종합 평가
+- 01_MATHEMATICAL_MOTIVATION: 연구동기
+- 02_GLOBAL_ROADMAP: 기술적 로드맵
+- CURRENT_STATE / RESEARCH_MAP / 00_RESEARCH_LOG / 개별 audit: authoritative 연구 상태·실제 기록·증명
+- paper/, paper3/: 원고 및 publication artifact 상태
+
+권장 입문 경로:
+START HERE → 쉬운 설명 → 수학적 기여 평가 → Paper 3 midpoint/current state → authoritative 기록.
+
+기존 권위 문서와 실제 연구기록은 자기 자리에 그대로 유지한다. START HERE는 그 문서들을 연결하는 학습용 목차다.
+
 ## 2026-09-28 — THREE-PAPER MATHEMATICAL CONTRIBUTION ASSESSMENT RECORDED
 
 A researcher-facing synthesis of the mathematical achievement, difficulty, and combined contribution of Paper 1–3 has been frozen as:
