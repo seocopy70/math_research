@@ -1,3 +1,14 @@
+## 2026-09-28 — PAPER 3 REFEREE DETAIL REPAIR / CI GATE REOPENED
+
+A referee-style adversarial review of the repaired theorem manuscript identified ten detail objections (M1–M10). Primary-source checking and source inspection show that M1, M3, M4, M8, and M9 were legitimate presentation/proof-detail omissions and have now been repaired in paper/main.tex. M2, M5, and M10 were already substantively satisfied; their wording was checked. M6 (Labute Theorem 4) was verified against the primary source and is accurately attributed. M7's alleged rank inconsistency is not a mathematical error: because r in Phi(F), H/Phi(H) is isomorphic to F/Phi(F), so rank(F)=dim H^1(H,F_3). The manuscript now states this explicitly.
+
+- Source repair commit: f686fef1bfbab0b566d2cd424aa097955a2c61ec.
+- Referee detail audit: research/PAPER3_REFEREE_DETAIL_REPAIR_2026-09-28.md.
+- Mathematical scope/classifications unchanged: finite-window recognition PASS/CLOSED; selector threshold PASS/CLOSED at fixed rank-4 q=3 scope; 1D cup-line carrier/minimality PASS/CLOSED in the declared linear selector-carrier category; stronger finite-pair functional OPEN/NOT LOAD-BEARING; novelty OPEN/CONDITIONAL.
+- Manuscript artifact status: OPEN/PENDING exact CI build + independent PDF/package audit.
+
+The previous final PDF remains superseded. No new FINAL artifact may be declared from the prior run.
+
 ## 2026-09-28 — PAPER 3 CURRENT-SOURCE ARTIFACT VERIFIED
 
 The final Paper 3 source/PDF synchronization gate is now closed against the exact current source.
