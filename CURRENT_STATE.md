@@ -1,3 +1,26 @@
+## 2026-09-28 — THREE-PAPER ARTIFACT GATE FINALIZATION
+
+The authoritative three-paper revision checklist has now been followed through the source→CI→PDF→independent audit chain.
+
+- Paper 1: branch paper1-fixes-2026-09-28, authoritative paper/successor_main.tex blob 1855e9a992a98caf0a0f6deae484f13e049d0a20; source-correct CI run 36401507321; PDF artifact 10960891547; 8 pages; PDF SHA-256 4efec62888f3803935717658f9f638902ff2ef2bd8845c83a32dc6770542e5ef. Source identity, PDF text, visual pages, and checksum passed. PASS / CLOSED.
+- Paper 2: authoritative manuscript source blob 7411d241505b8a0a496f46cee05bbecc8d40eb47 was restored exactly on CI branch paper2-ci-clean-2026-09-28; final exact-source CI run 36401141711; full artifact 10959918919; 13 pages; PDF SHA-256 1381f75048bf0f83d9174c6a2b8bb85b31e62010f945697413182c9f5be94c64. Source identity, U4/U5c text, PDF visual audit, and checksum passed. PASS / CLOSED.
+- Paper 3: authoritative paper/main.tex blob aa351f77c07a748588208d0d383f0c4dbd6dfca7; CI run 36395985678; full artifact 10957609279; 17 pages; PDF SHA-256 2be2e84e06eb77eb9e6e4c9bbfb522bb037db5675bb04c7a9a0c6bac34a9787e. Source identity, §8 cup-line chain, D4 threshold, literature audit, PDF visual audit, and checksum passed. PASS / CLOSED.
+- Publication novelty remains OPEN / CONDITIONAL; no priority claim.
+
+Important synchronization correction:
+- The generic paper-build.yml on the Paper 1 branch builds paper/main.tex, not paper/successor_main.tex. Its successful run therefore produced a Paper 2 PDF and was not accepted as Paper 1 evidence.
+- A dedicated source-correct .github/workflows/paper1-build.yml was added on the Paper 1 branch; the resulting run is the authoritative Paper 1 CI artifact.
+- This was caught by the required independent source↔artifact identity check; no wrong artifact was promoted.
+
+Literature verification completed:
+- Claudio Quadrelli, Cohomology of absolute Galois groups, arXiv:1412.7685: author/title/source identity verified.
+- J. Mináč, N. D. Tân, N. T. Trà, Zassenhaus filtrations as intersections, arXiv:2510.20133: author/title and its broader representation-theoretic Zassenhaus scope verified; Paper 1 now records it as surrounding literature, without claiming identity with the exact affine theorem.
+- Labute Theorem 4 / Proposition 6 orientation attribution and the standard Demuškin classification boundary were independently cross-checked against later literature reproducing those exact references.
+- NSW Chapter III / Theorem 3.9.15 and the PD²/Demuškin relationship were cross-checked through secondary sources; no MathSciNet/zbMATH Open search is claimed.
+
+Mathematical U5c check:
+- Paper 2 U5c's finite-coefficient PD² duality argument is internally type-correct: the dual of the socle inclusion is the reduction map A_{k-1} -> F_3, hence surjective and therefore the original H^2 map is injective.
+
 ## 2026-09-28 — THREE-PAPER REVISION CHECKLIST GATE
 
 The supplied revision checklist is now the controlling edit list for the three manuscripts.
