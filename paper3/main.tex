@@ -127,7 +127,9 @@ T_n(G_1*_pG_2)\cong H/P_n(H).
 \end{lemma}
 
 \begin{proof}
-The functor $T_n$ is the reflector from pro-$p$ groups to the full subcategory of groups satisfying $P_n(H)=1$. Indeed every map from $G$ to such an $H$ kills $P_n(G)$ by functoriality. Reflectors preserve coproducts after reflection. Since the free pro-$p$ product is the coproduct, the stated formula follows.
+Let $H=T_n(G_1)*_pT_n(G_2)$. The quotient maps $G_i\to T_n(G_i)$ induce a continuous map
+$G_1*_pG_2\to H$. Since $P_n(H)$ is killed after passing to $T_n(H)$, this gives a canonical map
+$T_n(G_1*_pG_2)\to T_n(H)$. Conversely, any continuous map from $G_1*_pG_2$ to a pro-$p$ group $K$ with $P_n(K)=1$ restricts to maps $G_i\to K$ and hence factors uniquely through $T_n(G_i)$. By the coproduct universal property it therefore factors uniquely through $H$, and then through $T_n(H)$. Thus both sides have the same universal property as the reflection of $G_1*_pG_2$ into the full subcategory $P_n=1$, proving the canonical isomorphism.
 \end{proof}
 
 \begin{theorem}[Uniform window for finite Demuškin products]
@@ -143,7 +145,7 @@ No additional depth is required for mixed commutators between different factors.
 \end{theorem}
 
 \begin{proof}
-The factorization is the preceding proposition. The truncation lemma shows that the finite quotient can equivalently be formed by first truncating each factor and then applying the same truncation to their free product. Thus mixed commutators are part of the reflected $P_{p^{k-1}+1}$-kernel and are killed at the same depth.
+The factorization is the preceding proposition. The truncation lemma shows that the same global reflected quotient is obtained whether one truncates the factors first or truncates the free product directly. Hence, for the stated affine target, no additional truncation beyond $P_{p^{k-1}+1}(G)$ is needed to handle mixed commutators.
 \end{proof}
 
 \begin{remark}
@@ -180,7 +182,7 @@ For $f<k$, the abelianization of $D_{f,d}$ is
 \[
 \mathbb Z_p^{d-1}\oplus\mathbb Z/p^f\mathbb Z.
 \]
-In the abelianization, $P_{p^{k-1}+1}$ contributes only $p$-power relations of exponent at least $p^k$ in the free directions, so it does not kill the pre-existing torsion class of order $p^f$ when $f<k$. Thus the marked finite abelianization distinguishes this case from the power-free case.
+In the abelianization $D_{f,d}^{\mathrm{ab}}\cong\mathbb Z_p^{d-1}\oplus\mathbb Z/p^f\mathbb Z$, the image of $P_n(D_{f,d})$ is $p^{\lceil\log_p n\rceil}\mathbb Z_p^{d-1}\oplus 0$ for $n\ge2$: the torsion summand is killed by $p^f$ already, while the free summand has the usual power filtration. For $n=p^{k-1}+1$, this free part is $p^k\mathbb Z_p^{d-1}$, so the torsion generator still has exact order $p^f$ in the finite quotient whenever $f<k$.
 \end{proof}
 
 \begin{corollary}[Parameter profile of a product]
@@ -255,17 +257,31 @@ For a candidate
 \]
 write $\rho_i$ for its restriction to the finite quotient of the $i$th factor.
 
-\begin{proposition}[Cohomology of a finite free product]
-For a finite coefficient module $M$ and a free pro-$p$ product
-$G=*_{i=1}^mG_i$,
+\begin{proposition}[Degree-one free-product decomposition with the twisted module]
+Let $G=*_{i=1}^mG_i$ and let $\rho:G\to U_{1,k}$ be a continuous character. Put
 \[
-H^1(G,M)\cong\bigoplus_{i=1}^mH^1(G_i,M|_{G_i}).
+M_\rho=\mathbb Z/p^k\mathbb Z(\rho),\qquad
+M_{\rho_i}=M_\rho|_{G_i},
 \]
-The same decomposition holds for $H^1(G,\Fp)$.
+where $\rho_i=\rho|_{G_i}$. Then restriction induces natural isomorphisms
+\[
+H^1(G,M_\rho)\xrightarrow{\sim}\bigoplus_i H^1(G_i,M_{\rho_i}),
+\qquad
+H^1(G,\Fp)\xrightarrow{\sim}\bigoplus_i H^1(G_i,\Fp),
+\]
+and under these identifications the coefficient-reduction map is the direct sum of the factor reduction maps.
 \end{proposition}
 
 \begin{proof}
-A continuous crossed homomorphism on a free pro-$p$ product is uniquely determined by its restrictions to the free factors, and the same statement holds after quotienting by principal crossed homomorphisms. Equivalently, this is the standard Mayer--Vietoris decomposition for a free pro-$p$ coproduct in degree one.
+The first isomorphism is the standard degree-one Mayer--Vietoris decomposition for a free pro-$p$ coproduct, applied to the fixed discrete module $M_\rho$. The second is the same statement for trivial coefficients. The point requiring care here is that the module depends on $\rho$: by definition, its restriction to $G_i$ is exactly $M_{\rho_i}$, so the restriction map is a map of coefficient modules. Naturality of coefficient reduction then gives the commutative diagram
+\[
+\begin{CD}
+H^1(G,M_\rho) @>>> \bigoplus_i H^1(G_i,M_{\rho_i})\\
+@VVV @VV\oplus\mathrm{red}_i V\\
+H^1(G,\Fp) @>>> \bigoplus_i H^1(G_i,\Fp).
+\end{CD}
+\]
+Here the horizontal arrows are the restriction isomorphisms. Thus the global reduction map is identified exactly with the direct sum of the factor maps.
 \end{proof}
 
 \begin{theorem}[Blockwise finite Kummer recognition]
