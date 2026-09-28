@@ -272,7 +272,7 @@ This also fixes the sign for the convention
 \((\nu\smile c)(g,h)=\nu(g)c(h)\).
 \end{proof}
 
-\begin{lemma}[U5c: PD$^2$ socle injectivity]
+\begin{lemma}[U5c: $PD^2$ socle injectivity]
 For the canonical orientation $\chi$, the inclusion
 \[
 \iota:\mathbf F_3\hookrightarrow A_{k-1}(\chi_{k-1}),\qquad
@@ -286,43 +286,23 @@ H^2(G,A_{k-1}(\chi_{k-1})).
 \end{lemma}
 
 \begin{proof}
-Let $I=\mathbf Q_3/\mathbf Z_3(\chi)$ be the dualizing module, with the convention that $\chi$ is the canonical dualizing orientation. For a finite $3$-primary $G$-module $M$, the standard finite-coefficient
-duality for pro-$p$ $PD^2$ groups gives
+Let $I=\mathbf Q_3/\mathbf Z_3(\chi)$ be the dualizing module, with the
+canonical orientation convention. For a finite $3$-primary $G$-module $M$,
+finite-coefficient $PD^2$ duality gives
 \[
-H^2(G,M)^\vee\cong H^0\!\left(G,M^\vee\otimes I\right),
-\qquad
-M^\vee=\operatorname{Hom}(M,\mathbf Q_3/\mathbf Z_3).
+H^2(G,M)^\vee\cong H^0(G,M^\vee\otimes I).
 \]
-In the pro-$p$ setting this is the standard extension of the defining
-$PD^2$ cup-product duality to finite $p$-primary coefficients; see
-Wilkes, \emph{Classification of pro-$p$ $PD^2$ pairs and the pro-$p$
-curve complex}, §1 (the duality formula preceding Proposition 1.5),
-which records the same orientation-character convention and finite-module
-duality.
-Take $M=A_{k-1}(\chi_{k-1})$. Then
-$M^\vee\otimes I\cong A_{k-1}$ with trivial $G$-action, so
+For $M=A_{k-1}(\chi_{k-1})$, the twist by $I$ cancels the
+contragredient action, so $M^\vee\otimes I\cong A_{k-1}$ trivially.
+For $M=\mathbf F_3$, the residual action is trivial and the corresponding
+dual is $\mathbf F_3$. Naturality identifies the dual of $\iota_*$ with
+the reduction map
 \[
-H^2(G,A_{k-1}(\chi_{k-1}))^\vee\cong A_{k-1}.
+A_{k-1}\twoheadrightarrow\mathbf F_3,qquad a\mapsto a\bmod3,
 \]
-For $M=\mathbf F_3$, the residual action of $\chi$ is trivial, hence
-\[
-H^2(G,\mathbf F_3)^\vee\cong\mathbf F_3.
-\]
-The duality isomorphisms are natural in the coefficient module. To
-identify the induced dual map explicitly, write
-\[
-(A_{k-1}(\chi_{k-1}))^\vee\otimes I\cong A_{k-1}
-\]
-by sending \(a\in A_{k-1}\) to the character
-\(x\mapsto ax/3^{k-1}\), with the twist by \(I\) cancelling the
-contragredient action. Under this identification, precomposition with
-\(\iota(1)=3^{k-2}\) sends \(a\) to
-\[
-\frac{a\,3^{k-2}}{3^{k-1}}=\frac a3\pmod{\mathbf Z_3},
-\]
-which is exactly \(a\bmod3\). Thus the dual of \(\iota_*\) is the reduction
-map \(A_{k-1}\twoheadrightarrow\mathbf F_3\). It is surjective, so
-\(\iota_*\) is injective.
+because $1\mapsto3^{k-2}$ evaluates to $a/3$ in
+$\mathbf Q_3/\mathbf Z_3$. The dual map is therefore surjective, so
+$\iota_*$ is injective.
 \end{proof}
 
 \begin{proposition}[U5: intrinsic uniqueness]
@@ -561,6 +541,9 @@ C. Quadrelli and T. S. Weigel, \emph{Oriented pro-$\ell$ groups with the Bogomol
 
 \bibitem{Quadrelli2024}
 C. Quadrelli, \emph{Chasing Maximal Pro-$p$ Galois Groups via 1-Cyclotomicity}, Mediterr. J. Math. 21 (2024), 56.
+
+\bibitem{Quadrelli2014}
+C. Quadrelli, \emph{Cohomology of Absolute Galois Groups}, Ph.D. thesis, arXiv:1412.7685 (2014).
 
 \bibitem{Wilkes2020}
 G. Wilkes, \emph{Classification of pro-$p$ $PD^2$ pairs and the pro-$p$ curve complex}, Groups, Geometry, and Dynamics 14 (2020), 917--948.
