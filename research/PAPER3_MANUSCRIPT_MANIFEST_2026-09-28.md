@@ -1,41 +1,53 @@
 # Paper 3 manuscript manifest — 2026-09-28 (current-source verified)
 
 ## Authoritative identity
-- Main branch commit: `22f821acdbee5a68513272c70056b7f97a559df5`
 - Manuscript source: `paper/main.tex`
-- Git blob SHA: `599b5d2b19f3e256ab25535a6aebc1beea907fa2`
-- Source SHA-256: `b0fef874507e4f2eef249296d5aca83000a954b0c15c2bf0abfc69664de7b0ac`
+- Source commit used by CI: `ac53cc2e753fc7b8fb0eb4b78a0085ccfdbc5a89`
+- Git blob SHA: `3f0bc48ac532d0ed72bcfe876a8283bed178dfbc`
+- Source SHA-256: `bc951dce61717ed184e8763118a3ffef310615b09b95b8fd6ae7ca0a83e42a49`
 
 ## CI verification
 - Workflow: **Build paper PDF**
-- Run: **36367519607**
-- Job: **108756783355**
+- Run: **36374270475**
+- Job: **108776775979**
 - Result: **PASS / CLOSED**
-- Compile, PDF verification, submission-package generation, and all artifact uploads: PASS
+- Compile manuscript: PASS
+- PDF verification: PASS
+- Submission-package generation: PASS
+- PDF/source/full artifact uploads: PASS
 
 ## Current PDF
-- Artifact ID: **10947718917**
-- PDF SHA-256: `2907598169954f6388d764d3596cbe0fad680165c6397a99fcd67efd669b4a6e`
-- PDF size: **412,490 bytes**
-- Pages: **16**
+- Artifact ID: **10950077812**
+- PDF SHA-256: `d38c63bd1b453482217c7876d818ff7b50e48cbde7f219552953d8a5e36d56c0`
+- PDF size: **415,064 bytes**
+- Pages: **17**
 
 ## Full submission artifact
-- Artifact ID: **10948425435**
-- Artifact ZIP digest: `sha256:eb11307dcfd02ade4576328d882b713c498cd8a96950667c0d3fd75f3430af1e`
-- Internal `SHA256SUMS.txt` independently checked: source and PDF both **OK**
+- Artifact ID: **10950097816**
+- Artifact digest: `sha256:4e0ebd4041e31287d3fde877baec52511e164454a2b4b51f156cb996a9115344`
+- Internal `SHA256SUMS.txt`: source and PDF both **OK**
+
+## Source artifact
+- Artifact ID: **10949833169**
+- Internal source SHA-256: `bc951dce61717ed184e8763118a3ffef310615b09b95b8fd6ae7ca0a83e42a49`
+- Extracted-source Git blob recomputation: `3f0bc48ac532d0ed72bcfe876a8283bed178dfbc`
 
 ## Independent post-CI PDF audit
 - Extracted PDF text: **PASS**
-- Main theorem, D2 transgression quotient, D3 finite cup-line, D4 exact selector depth, fixed-scope minimality boundary, and conditional novelty wording all present.
-- Forbidden stale manuscript claims checked: no “first in the literature”, no absolute-priority claim, no obsolete application-only framing.
-- No stale “minimality remains open” statement was found in the PDF; the remaining OPEN statements concern stronger/absolute carrier questions as intended.
+- Visual checks of title/abstract, Lemma 5.3, selector domain/D4, and C_k boundary: **PASS**
+- Predicate notation consistently uses `\\mathsf K_k`; auxiliary kernel is (J_k).
+- `\\mathcal O_k` material is absent.
+- `\\mathcal D_{k,m}` and `\\mathsf K_{k,m}` are present, with the shallow-domain exclusion stated.
+- Carrier wording is category-relative.
+- No stale minimality-open or absolute-priority claim remains.
+- Failed run **36373920812** was a LaTeX macro error (`\\mathscr`); corrected to `\\mathcal`. Exact-source run **36374270475** then passed.
 
 ## Final classification
 - Mathematical theorem: **PASS / CLOSED**
-- Selector threshold (n_{\mathrm{selector}}(k)=3^{k-1}+1): **PASS / CLOSED** at fixed rank-4, (q=3) scope
+- Selector threshold: **PASS / CLOSED** at fixed rank-4, (q=3) scope
 - 1D cup-line carrier/minimality: **PASS / CLOSED** in the declared linear selector-carrier category
-- Stronger canonical functional from (E_k\to Q_k) alone: **OPEN / NOT LOAD-BEARING**
+- Stronger canonical finite-pair functional: **OPEN / NOT LOAD-BEARING**
 - Publication novelty: **OPEN / CONDITIONAL**
 - Manuscript artifact gate: **PASS / CLOSED**
 
-The prior PDF from run 36363508628 is superseded because it was built before the final source repair. This manifest identifies the replacement artifact by exact source commit, source blob, CI run, PDF checksum, and artifact ID.
+This manifest supersedes the previous manifest identity. The authoritative publication artifact is the exact PDF produced from source commit `ac53cc2e753fc7b8fb0eb4b78a0085ccfdbc5a89`.
