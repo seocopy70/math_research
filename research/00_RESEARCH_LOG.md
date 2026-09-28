@@ -1,3 +1,39 @@
+## 2026-09-28 — FINAL PAPER 3 ARTIFACT / MANUSCRIPT SYNCHRONIZATION CLOSED
+
+The manuscript synchronization gate required after the stale-PDF incident is now fully closed.
+
+Authoritative final source: \`paper/main.tex\`.
+
+Completed checks:
+- source line-by-line audit and structural reordering;
+- compile-failure diagnosis: unmatched closing math delimiter in U5a;
+- repair and successful clean LaTeX compilation;
+- Build Paper PDF CI run **36363508628**: PASS/CLOSED;
+- workflow shell audit run **36363508467**: PASS/CLOSED;
+- citation hygiene run **36363508580**: PASS/CLOSED;
+- independent extraction/content audit of the CI PDF: PASS/CLOSED;
+- exact artifact checksum capture.
+
+Final artifact:
+- PDF artifact ID: **10946925073**
+- full submission artifact ID: **10945849160**
+- PDF SHA-256: \`813fda4840783c3b37002828ccfbe092ccffed6ad189f46430222e5e930a56b0\`
+- source package SHA-256: \`759476d1003fe2d106cfeae5d82f12f8d866afabfddbdd4a3d063cc0d90e7af0\`
+- PDF size/pages: **405,622 bytes / 14 pages**
+- CI validation commit: \`3acf4d551f66b21df7ed0528164ef76c690cbc13\`
+- main-branch manuscript blob: \`c82e6c5277dd7aa21d3bc4ab9d5490d25cf6c694\`
+
+A separate CI audit also found citation-artifact Unicode/tokens in three Paper 3 research notes; these were cleaned, and citation hygiene subsequently passed. This is a repository hygiene correction, not a mathematical change.
+
+The final manuscript now explicitly reflects the closed research frontier: finite-window recognition, U5 uniqueness, intrinsic 1D cup-line carrier, and fixed rank-4 \(q=3\) selector minimality. The stronger finite-pair functional reconstruction remains OPEN/NOT LOAD-BEARING. Publication novelty remains OPEN/CONDITIONAL.
+
+The temporary validation PR #5 was closed without merge after successful validation.
+
+Classification:
+- manuscript synchronization: **PASS / CLOSED**
+- final PDF artifact: **PASS / CLOSED**
+- publication novelty: **OPEN / CONDITIONAL**
+
 
 ## 2026-09-27 — M2 POST-BLUMER–QUADRELLI F1 SHARPNESS AUDIT CLOSED
 
