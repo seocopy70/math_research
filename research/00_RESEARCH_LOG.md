@@ -1,3 +1,30 @@
+## 2026-09-28 — PAPER 3 REFEREE GAP CLOSURE / MANUSCRIPT RESYNCHRONIZATION
+
+The adversarial manuscript review exposed real source-level gaps despite the prior publication artifact closure. The mathematical research frontier was already closed at the relevant scopes, but the manuscript had not faithfully synchronized several load-bearing proof details. This is classified as a **MANUSCRIPT SYNCHRONIZATION DEFECT**, not a reopening of the mathematics.
+
+Corrected in `paper/main.tex`:
+- U2 now explicitly states the coefficient-triviality/inflation chain: \(\rho\equiv1\pmod3\), \(P_{3^{k-1}+1}\subseteq P_2=\Phi\), and the kernel acts trivially on \(A_k(\rho)\).
+- U3 now states the minimal one-relator hypothesis explicitly, including the free rank \(d=\dim H^1(H,\mathbf F_3)\) and \(r\in\Phi(F)\).
+- The finite transgression quotient \(\mathcal O_k=H^2(Q_k,\mathbf F_3)/\operatorname{im}(\operatorname{tra}_k)\) is now included as the D2 proof carrier, while explicitly not claiming it is the final minimal carrier.
+- The finite cup-line proof now cites Mináč–Pasini–Quadrelli–Tân, Proposition 7.1 at the actual relation-module/cup pairing step and explains why the added \(P_n(F)\subseteq P_3(F)\) relators contribute no quadratic initial form.
+- The selector lower bound for \(m\le3^{k-2}\) now gives the direct valuation calculation showing \(\chi_G\) does not factor through \(W_m\).
+- The LTE argument now correctly records \(v_3(u-1)=1\) and derives \(v_3(S_N(u))=k-1\).
+- The recognition theorem is given an explicit LaTeX label for cross-reference, and manuscript typos were cleaned.
+- The literature boundary now includes \(\mathcal O_k\) as a proof carrier while retaining the conditional novelty wording.
+
+Independent source check:
+- Mináč–Pasini–Quadrelli–Tân, Proposition 7.1 was verified directly from the published article: it gives the commutative pairing diagram relating the relation initial-form map to cup-product evaluation. This supports the manuscript's rank-one finite cup-line argument under the stated minimal-presentation hypotheses.
+- Labute Theorem 4 was independently checked for existence/uniqueness of the canonical orientation and the value \(\chi(x_2)=(1-q)^{-1}\) in the odd-\(p\) normal form.
+
+Classification:
+- mathematical D2/D3/D4 status: **UNCHANGED / PASS-CLOSED at declared scopes**;
+- manuscript synchronization: **REPAIR COMMITTED**;
+- prior “final artifact” state: **SUPERSEDED by this source revision**;
+- CI/PDF verification of commit `7adb6fe8ab43dd924daf282730c0c316757a892a`: **PENDING**;
+- publication novelty: **OPEN / CONDITIONAL**.
+
+Next authorized action: independent CI compilation, PDF text/content audit, artifact hash capture, then update the manuscript manifest and final state only after those gates pass.
+
 ## 2026-09-28 — FINAL PAPER 3 ARTIFACT / MANUSCRIPT SYNCHRONIZATION CLOSED
 
 The manuscript synchronization gate required after the stale-PDF incident is now fully closed.
