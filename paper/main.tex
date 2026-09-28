@@ -195,12 +195,12 @@ so $F_i\in3^{m+1}A_k$. Induction through $m=0,\ldots,k-1$ gives $F_i=0$. Convers
 The principal-unit restriction makes the reduction of the coefficient action trivial modulo $3$. The argument is valuation induction, not the earlier informal Nakayama step.
 
 \section{Coordinate identification at the base level}
+
 \begin{proposition}[U4: base-level identification]
 Let $\rho_2:G\to1+3A_2$ be any candidate with $\mathsf K_2(G,\rho_2)$. Then $\rho_2=(1,4,1,1)=\chi_G\bmod9$.
 \end{proposition}
 
 \begin{proof}
-
 For
 \[
 r=x_1^3[x_1,x_2][x_3,x_4],
@@ -237,6 +237,21 @@ Thus every level-\(2\) Kummer candidate is
 \(\rho_2=(1,4,1,1)=\chi\pmod9\). Conversely this candidate is the reduction of the classical canonical Kummerian orientation. This completes the base step without using the desired conclusion itself.
 \end{proof}
 
+\section{Intrinsic uniqueness}
+The next three results are the load-bearing U5 argument.
+
+\begin{lemma}[U5a: reduction]
+If $\mathsf K_k(G,\rho_k)$ holds, then $\mathsf K_{k-1}(G,\rho_{k-1})$ holds after reduction modulo $3^{k-1}$.
+\end{lemma}
+
+\begin{proof}
+Reduce a crossed cocycle modulo $3^{k-1}$. A level-$k$ lift of any class in $H^1(G,\mathbf F_3)$ therefore gives a level-$(k-1)$ lift of the same class.
+\end{proof}
+
+\begin{lemma}[U5b: coefficient-extension variation]
+Suppose $\rho_k$ and $\rho_k'$ lift the same $\rho_{k-1}$ and
+\[
+\rho_k'=\rho_k(1+3^{k-1}\nu),\qquad \nu\in Z^1(G,\mathbf F_3).
 \]
 Let $\delta_{\rho_k}$ and $\delta_{\rho_k'}$ be the connecting maps of the corresponding coefficient extensions. Then
 \[
@@ -286,42 +301,57 @@ This also fixes the sign for the convention
 \((\nu\smile c)(g,h)=\nu(g)c(h)\).
 \end{proof}
 
-\begin{lemma}[U5c: $PD^2$ socle injectivity]
+\begin{lemma}[U5c: PD$^2$ socle injectivity]
 For the canonical orientation $\chi$, the inclusion
 \[
-\iota:\mathbb F_3\hookrightarrow A_{k-1}(\chi_{k-1}),
-\qquad 1\mapsto3^{k-2},
+\iota:\mathbf F_3\hookrightarrow A_{k-1}(\chi_{k-1}),\qquad
+1\mapsto3^{k-2},
 \]
 induces an injection
 \[
-\iota_*:H^2(G,\mathbb F_3)\hookrightarrow H^2(G,A_{k-1}(\chi_{k-1})).
+\iota_*:H^2(G,\mathbf F_3)\hookrightarrow
+H^2(G,A_{k-1}(\chi_{k-1})).
 \]
 \end{lemma}
 
 \begin{proof}
-Let $I=\mathbb Q_3/\mathbb Z_3(\chi)$ be the dualizing module of the Demu\v{s}kin
-group $G$ (here $\chi$ is the canonical orientation, i.e.\ $g$ acts on
-$\mathbb Q_3/\mathbb Z_3$ by multiplication by $\chi(g)$). For a finite
-$3$-primary $G$-module $M$, Poincar\'e duality of the $\mathrm{PD}_2$ group $G$
-gives a natural isomorphism, contravariant in $M$,
+Let $I=\mathbf Q_3/\mathbf Z_3(\chi)$ be the dualizing module, with the convention that $\chi$ is the canonical dualizing orientation. For a finite $3$-primary $G$-module $M$, the standard finite-coefficient
+duality for pro-$p$ $PD^2$ groups gives
 \[
-H^2(G,M)^\vee\cong\operatorname{Hom}_G(M,I).
+H^2(G,M)^\vee\cong H^0\!\left(G,M^\vee\otimes I\right),
+\qquad
+M^\vee=\operatorname{Hom}(M,\mathbf Q_3/\mathbf Z_3).
 \]
-For $M=A_{k-1}(\chi_{k-1})$ every $\mathbb Z$-linear map
-$A_{k-1}\to\mathbb Q_3/\mathbb Z_3$ is $G$-equivariant, because the action on
-source and target is the same scalar $\chi(g)$. Hence
+In the pro-$p$ setting this is the standard extension of the defining
+$PD^2$ cup-product duality to finite $p$-primary coefficients; see
+Wilkes, \emph{Classification of pro-$p$ $PD^2$ pairs and the pro-$p$
+curve complex}, §1 (the duality formula preceding Proposition 1.5),
+which records the same orientation-character convention and finite-module
+duality.
+Take $M=A_{k-1}(\chi_{k-1})$. Then
+$M^\vee\otimes I\cong A_{k-1}$ with trivial $G$-action, so
 \[
-\operatorname{Hom}_G(A_{k-1}(\chi_{k-1}),I)
-=\operatorname{Hom}_{\mathbb Z}(A_{k-1},\mathbb Q_3/\mathbb Z_3)
-\cong A_{k-1},
+H^2(G,A_{k-1}(\chi_{k-1}))^\vee\cong A_{k-1}.
 \]
-$b\mapsto(a\mapsto ab/3^{k-1})$. For $M=\mathbb F_3$ we have
-$\chi\equiv1\pmod3$, so the action on $I[3]\cong\mathbb F_3$ is trivial and
-$\operatorname{Hom}_G(\mathbb F_3,I)\cong\mathbb F_3$.
-By naturality, the Pontryagin dual of $\iota_*$ is precomposition with $\iota$;
-$\varphi_b(\iota(1))=\varphi_b(3^{k-2})=b/3$, i.e.\ $b\bmod3$.
-Thus the dual map is the reduction $A_{k-1}\twoheadrightarrow\mathbb F_3$,
-which is surjective, and therefore $\iota_*$ is injective.
+For $M=\mathbf F_3$, the residual action of $\chi$ is trivial, hence
+\[
+H^2(G,\mathbf F_3)^\vee\cong\mathbf F_3.
+\]
+The duality isomorphisms are natural in the coefficient module. To
+identify the induced dual map explicitly, write
+\[
+(A_{k-1}(\chi_{k-1}))^\vee\otimes I\cong A_{k-1}
+\]
+by sending \(a\in A_{k-1}\) to the character
+\(x\mapsto ax/3^{k-1}\), with the twist by \(I\) cancelling the
+contragredient action. Under this identification, precomposition with
+\(\iota(1)=3^{k-2}\) sends \(a\) to
+\[
+\frac{a\,3^{k-2}}{3^{k-1}}=\frac a3\pmod{\mathbf Z_3},
+\]
+which is exactly \(a\bmod3\). Thus the dual of \(\iota_*\) is the reduction
+map \(A_{k-1}\twoheadrightarrow\mathbf F_3\). It is surjective, so
+\(\iota_*\) is injective.
 \end{proof}
 
 \begin{proposition}[U5: intrinsic uniqueness]
