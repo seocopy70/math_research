@@ -4620,3 +4620,31 @@ Classification:
 - publication novelty: OPEN / CONDITIONAL.
 
 Because the manuscript source changed, the publication artifact gate is reopened until exact-source CI, PDF/content verification, checksum capture, and manifest update complete.
+
+
+## 2026-09-28 — PAPER 3 §8 CUP-LINE TYPE REPAIR + PRIMARY-SOURCE RECHECK
+
+A type error in the §8 cup-line detector was identified and repaired in the authoritative `paper/main.tex`.
+
+Problem:
+- The previous wording said that after applying \\(\iota_*\\), the cup-product variation was represented in \\(H^2(G,\\mathbb F_3)\\).
+- This is ill-typed because \\(\iota_*:H^2(G,\\mathbb F_3)\\to H^2(G,A_{k-1}(\\chi_{k-1}))\\).
+
+Repair:
+- The detector is now written explicitly as
+  \\(C_k\\xrightarrow{\\operatorname{infl}}H^2(G,\\mathbb F_3)\\xrightarrow{\\iota_*}H^2(G,A_{k-1}(\\chi_{k-1})).\\)
+- Lemma U5c is used only after the finite cup class has first been shown nonzero by inflation injectivity.
+- Lemma U5b then identifies the resulting nonzero twisted class with
+  \\(\delta_{\rho_k}(f)-\delta_{\chi_k}(f)\\).
+
+Independent primary-source recheck:
+- Mináč–Pasini–Quadrelli–Tân, Advances in Mathematics 380 (2021), §7, Proposition 7.1 explicitly gives the commutative relation/cup-product pairing diagram.
+- Proposition 7.2 states that for odd p the induced pairing restricts to a perfect pairing with \\(\Lambda^2(V)\\).
+- Theorem 7.3 gives the corresponding relation/cup-product duality statement.
+- For the present p=3 rank-four one-relator quotient, \\(P_{3^{k-1}+1}(F)\\subseteq P_3(F)\\), so the degree-two relation image remains the one-dimensional span of \\(\operatorname{in}_2(r)=[X_1,X_2]+[X_3,X_4]\\). Hence the §8 rank-one argument is consistent with the primary source.
+
+Classification:
+- §8 type repair: **PASS / CLOSED**.
+- §8 rank-one literature compatibility: **PASS / LOCAL** (primary source directly checked).
+- Publication artifact gate: **OPEN / PENDING** until the repaired source is rebuilt and the exact PDF is independently checked.
+- Publication novelty: **OPEN / CONDITIONAL**.
