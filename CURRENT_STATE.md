@@ -1,3 +1,25 @@
+## 2026-10-01 — POST-PAPER-3 RESEARCH SCOPE FROZEN: CARRIER UNIVERSALITY / MINIMALITY ONLY
+
+The next research branch is now deliberately narrowed to exactly two possible outcomes:
+
+1. attack the **finite-pair universal property / minimality** of the existing carrier; or
+2. construct a **genuinely new carrier** that is not merely a reformulation/compression of the frozen Paper 3 selector.
+
+Nothing else is authorized as a primary research target.
+
+In particular:
+- Paper 3 itself remains **FROZEN / COMPLETE** and is not to be re-proved.
+- The completed Kummer selector, full delta-family, intrinsic cup-line, and prior Gate D proof machinery are fixed inputs/boundaries, not targets for reproof.
+- No larger-window calculation (including W_11/W_12), Fox computation, or high-dimensional carrier computation is authorized unless it is forced by the finite-pair universal/minimality question or by a genuinely new carrier construction.
+- A carrier counts as genuinely new only if it is finite-input, q-blind, functorial, gauge-independent, and non-equivalent to the frozen selector, with a new separation/threshold/factorization consequence.
+- Any minimality statement must name its admissible carrier category; “absolute minimality” without a category is not an authorized claim.
+
+Immediate decision gate:
+**finite-pair universal property/minimality → PASS/LOCAL, FAIL/CLOSED, or OPEN; otherwise new-carrier construction.**
+
+This scope supersedes broader historical roadmap language that would reopen F1/F2 recognition branches merely for additional family examples. Those branches remain historical/conditional unless they directly supply a new carrier or resolve the finite-pair universal/minimality problem.
+
+
 ## 2026-10-01 — POST-PAPER-3 CARRIER NON-REDUNDANCY AUDIT
 
 The first post-Paper-3 carrier battleground has been taken to its current structural boundary.
