@@ -889,3 +889,26 @@ This is a structural counterexample, not a large numerical computation. It does 
 The correct next order is now: define the admissible Demuškin ExtWin category → analyze fibers of U → test invariance/reconstruction. No W_11/W_12, large Fox scan, or unrelated branch is authorized. Paper 3 remains frozen and unaffected.
 
 Detailed audit: research/PAPER3_MIXED_EXTENSION_WINDOW_FIBER_NO_GO_AUDIT_2026-10-01.md.
+
+## 2026-10-01 — DEMUŠKIN ADMISSIBILITY / EXTENSION-FIBER RECONSTRUCTION
+
+The previously undefined “admissible Demuškin extension-window category” was made explicit for the active mixed-Fox branch: canonical Zassenhaus windows of infinite odd-prime finite-rank Demuškin groups of fixed rank, with q a p-power or 0.
+
+Using the standard Demuškin classification and the Zassenhaus grading, the forgetful map from the extension window to the bare pair has a singleton fiber up to extension-window isomorphism at the declared scope:
+- q<N_k is detected by Q_k through the first q-dependent graded relation;
+- q=N_k is detected by dim(A_k);
+- q>N_k gives the same E_k through precision N_k+1.
+
+Hence the earlier broad-category H^2 obstruction does not propagate automatically to the Demuškin family.
+
+Classification:
+- broad arbitrary-extension pair descent: FAIL/CLOSED;
+- Demuškin admissibility definition: PASS/CLOSED at declared scope;
+- Demuškin pair→extension reconstruction: PASS/LOCAL;
+- extension-window→Mixed Fox: PASS/LOCAL;
+- original pair→Mixed Fox: OPEN/LOAD-BEARING.
+
+Primary literature control: Labute/Demuškin classification and Mináč–Rogelstad–Tân Zassenhaus-dimension results were checked. Detailed audit: research/PAPER3_MIXED_DEMUSHKIN_ADMISSIBILITY_RECONSTRUCTION_AUDIT_2026-10-01.md.
+
+Next authorized action: formalize the reconstruction lemma and independently verify naturality/projective covariance of the extension-window→Mixed Fox map. No large Fox computation is authorized.
+
