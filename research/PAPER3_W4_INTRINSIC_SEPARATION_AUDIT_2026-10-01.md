@@ -62,3 +62,42 @@ This is a local exact threshold, not a theorem for all F1 groups, all cyclotomic
 ## Next authorized branch
 
 Do not generalize by analogy alone. The next branch is the parameter-uniform q=p^f test, with the same nine pre-checks: object, input, functoriality, gauge, orientation bridge, q-blindness, separation, novelty, and stop. The desired theorem would show a genuine W_q equality / W_{q+1} intrinsic separation mechanism, or else produce a counterexample to that pattern.
+
+
+## 7. Parameter-uniform extension: finite q=p^f
+
+The same argument extends without using a coordinate-level W_{q+1} carrier.
+
+Let q=p^f be finite, p odd, d>=2. Compare
+G_F1(q)=<x1,y1,...,xd,yd | [x1^q,y1] [x2,y2]... [xd,yd]=1>
+with the cyclotomic control
+G_cyc(q)=D_{1,q}*F_{2d-2},
+where D_{1,q}=<x2,y2 | x2^q[x2,y2]=1>.
+
+### W_q equality
+
+In the free pro-p group on the common generators:
+- x1^q belongs to D_q, hence [x1^q,y1] belongs to D_{q+1};
+- x2^q belongs to D_q.
+
+Therefore both defining relators are congruent to the same quadratic word [x2,y2]... [xd,yd] modulo D_q. Consequently the quotient windows W_q of the two groups are isomorphic.
+
+### W_{q+1} separation
+
+For G_cyc(q), the relation gives x2^q=[x2,y2]^{-1}. Hence after abelianizing W_{q+1}(G_cyc(q)), the commutator vanishes and x2^q becomes trivial.
+
+For G_F1(q), the associated restricted Lie algebra is the free product of a free rank-2 restricted Lie algebra and a Demushkin restricted Lie algebra on the remaining 2d-2 generators (Blumer–Quadrelli, using mildness). In particular the iterated restricted power X2^{[q]} is nonzero. Thus x2^q has nonzero image in D_q/D_{q+1}, and remains nontrivial in the abelianization of W_{q+1}(G_F1(q)).
+
+Hence the abelianizations of the W_{q+1} windows are non-isomorphic. This is a completely intrinsic group invariant; no presentation-local choice of a p-power coordinate is required for the final comparison.
+
+Therefore, for every finite q=p^f with p odd and d>=2,
+r_{T_cyc}({G_F1(q),G_cyc(q)};D_bullet)=q+1.
+
+The lower bound is W_q equality; the upper bound is W_{q+1} non-isomorphism.
+
+### Classification
+
+- Uniform finite-q pairwise threshold: **PASS / CLOSED**.
+- Formula q+1 is proved for the declared two-object pair at every finite q=p^f, not inferred by analogy.
+- This remains a local pairwise theorem, not a recognition theorem on a broad category.
+- No q-independent global selector/carrier theorem is claimed.
