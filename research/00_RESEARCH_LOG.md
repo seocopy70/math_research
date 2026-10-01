@@ -216,7 +216,7 @@ A final editorial pass was applied to the three publication-candidate manuscript
 
 - Paper 1 branch: `paper1-editorial-final-2026-10-01`; source `paper/successor_main.tex`; final CI run **36797031449**: PASS; PDF 8 pages; final PDF SHA-256 `ec25a3bb55ae19e48629895bca722981ad5e33827cc5be2ce1228326c64271b0`.
 - Paper 2 branch: `paper2-editorial-final-2026-10-01`; source `paper/main.tex`; final CI run **36796701931**: PASS; PDF 12 pages; final PDF SHA-256 `aabe2f0056b0ce250e06fa7cba1840f93a58754d02c8fb0bfacc46d00bdbdcb7`.
-- Paper 3 branch: `paper3-editorial-final-2026-10-01`; source `paper/main.tex`; final CI run **36797451738**: PASS; PDF 14 pages; final PDF SHA-256 `15eef73b46ae70db087f434108a187e4f79fcbc01a88326507127d7d0f34a95a`.
+- Paper 3 branch: `paper3-editorial-final-2026-10-01`; source `paper/main.tex`; final CI run **36797451738**: PASS; PDF 14 pages; final PDF SHA-256 `15eef73b46fa70db087f434108a187e4f79fcbc01a88326507127d7d0f34a95a`.
 
 Editorial changes include: removal of placeholder companion-paper/arXiv language; removal of repeated defensive novelty boilerplate; replacement of informal “kills” in the Paper 1 definition by the standard “factors through” formulation; clearer separation of factorization, recognition, and scope; explicit (q=p=3) identification in the fixed rank-four papers; consistent Demuškin typography; and clearer standalone titles. No mathematical theorem, hypothesis, boundary, or novelty classification was changed.
 
