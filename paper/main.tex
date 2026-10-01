@@ -4,8 +4,7 @@
 \usepackage{hyperref}
 \title{Finite-Window Kummer Recognition of the Canonical Orientation\\of a Rank-Four Demu\v{s}kin Pro-$3$ Group}
 \author{Seo Seongkyo}
-\date{September 2026}
-% Publication source: reproducible clean-build workflow in .github/workflows/paper-build.yml.
+\date{October 2026}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
@@ -13,19 +12,16 @@
 \maketitle
 
 \begin{abstract}
-We study finite-window recognition of the canonical orientation of the fixed rank-four q=3 Demu\v{s}kin pro-3 group. Let $P_i$ be the Zassenhaus filtration and put $Q_k=G/P_{3^{k-1}+1}$. For a principal-unit character $\rho:Q_k\to U_{1,k}:=1+3(\mathbb Z/3^k\mathbb Z)$, let $\mathsf K_k(Q_k,\rho)$ mean that $H^1(Q_k,\mathbb Z/3^k(\rho))\to H^1(Q_k,\mathbb F_3)$ is surjective. We prove that $\mathsf K_k(Q_k,\rho)$ holds exactly for $\rho=\chi_G\bmod3^k$, for $k\ge2$. The canonical orientation itself is classical; the result is a finite-window recognition statement.
+We study finite-window recognition of the canonical orientation of the fixed rank-four q=3 Demu\v{s}kin pro-3 group. Let $P_i$ be the Zassenhaus filtration and put $Q_k=G/P_{3^{k-1}+1}$. For a principal-unit character $\rho:Q_k\to U_{1,k}:=1+3(\mathbb Z/3^k\mathbb Z)$, let $\mathsf K_k(Q_k,\rho)$ mean that $H^1(Q_k,\mathbb Z/3^k(\rho))\to H^1(Q_k,\mathbb F_3)$ is surjective. We prove that $\mathsf K_k(Q_k,\rho)$ holds exactly for $\rho=\chi_G\bmod3^k$, for $k\ge2$. The canonical orientation is classical; the theorem concerns the finite information needed to recognize its reduction.
 \end{abstract}
-
-\paragraph{Companion papers.}
-This is one of three related manuscripts. [P1] treats the exact finite Zassenhaus depth for factoring all affine crossed-cocycle representations; [P2] is the present finite-window Kummer recognition paper; [P3] proves the exact selector depth and identifies a one-dimensional cup-line carrier. The companion-paper references are intentionally placeholders until the final arXiv records are fixed.
 
 \section{Introduction}
 Let
 \[
 G=\langle x_1,x_2,x_3,x_4 \mid x_1^3[x_1,x_2][x_3,x_4]=1\rangle.
 \]
-An orientation of a pro-$3$ group $H$ is a continuous homomorphism $\theta:H\to1+3\mathbb Z_3$, giving the twisted module $\mathbb Z_3(\theta)$. The oriented group is Kummerian when, for every $n\ge1$, the natural map
-$H^1(H,\mathbf Z_3(\theta)/3^n\mathbf Z_3(\theta))\to H^1(H,\mathbf F_3)$ is surjective; this is the standard Kummerian formulation used by Efrat--Quadrelli and Quadrelli--Weigel \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. Labute proved that every Demushkin group has a unique orientation making it Kummerian, namely the canonical orientation induced by the dualizing module \cite{Labute1967}. Our question is whether its reduction modulo $3^k$ can be recognized from $Q_k=G/P_{3^{k-1}+1}$ without supplying the orientation as input.
+An orientation of a pro-$3$ group $H$ is a continuous homomorphism $\theta:H\to1+3\mathbb Z_3$, giving the twisted module $\mathbb Z_3(\theta)$. Here $q=3=p$ in the fixed Demu\\v{s}kin case. The oriented group is Kummerian when, for every $n\ge1$, the natural map
+$H^1(H,\mathbf Z_3(\theta)/3^n\mathbf Z_3(\theta))\to H^1(H,\mathbf F_3)$ is surjective; this is the standard Kummerian formulation used by Efrat--Quadrelli and Quadrelli--Weigel \cite{EfratQuadrelli2019,QuadrelliWeigel2020,QuadrelliWeigel2022}. Labute proved that every Demushkin group has a unique orientation making it Kummerian, namely the canonical orientation induced by the dualizing module \cite{Labute1967}. The question is whether its reduction modulo $3^k$ can be recognized from the bare quotient $Q_k=G/P_{3^{k-1}+1}$, with the candidate orientation treated as unknown.
 
 \begin{theorem}[Finite-window recognition]
 For every $k\ge2$ and every principal-unit $\rho:Q_k\to U_{1,k}:=1+3A_k$,
@@ -350,13 +346,13 @@ H^1(G,\mathbb F_p)\longrightarrow H^1(N,\mathbb F_p)^G.
 \]
 Those hypotheses are materially different from the present recognition problem. In the present rank-four $p=3$ case, the natural choice $N=P_3$ does not satisfy the required restriction-surjectivity condition: $P_3\subseteq\Phi(G)$, whereas $P_3/P_4\ne0$ (indeed its dimension is $20$). Thus Proposition 2.10 cannot be invoked as an automatic quotient-inheritance mechanism for our finite-window theorem. This is a separation observation, not a claim that Proposition 2.10 itself is new or that no other special quotient could satisfy its hypotheses.
 
-Within the literature audited for this manuscript, we did not identify an exact theorem whose input is the bare $Q_k$, whose candidate $\rho$ is arbitrary, whose selector is precisely the finite Kummer predicate $\mathsf K_k(Q_k,\rho)$, and whose arbitrary-candidate factorization through $Q_k$ is established. Accordingly, the publication-level novelty claim is intentionally conditional and narrow; it is not a claim of absolute priority.
+Within the literature reviewed for this manuscript, we did not identify an exact theorem combining the bare input $Q_k$, an arbitrary principal-unit candidate $\rho$, the finite Kummer selector $\mathsf K_k(Q_k,\rho)$, and the arbitrary-candidate factorization through $Q_k$. The comparison is therefore stated at this scope; no priority claim is made.
 
 \section{Limitations and logical boundaries}
-The theorem is for the fixed rank-four $q=3$ group. ``$q$-blind'' means that $q$ is absent from the selector input; it does not mean uniformity over the Demu\v{s}kin family. $P_{3^{k-1}+1}$ is sufficient; minimality of the window is open. The final predicate is intrinsic although the standard presentation is used as a local calculation.
+The theorem is for the fixed rank-four $q=3$ group. ``$q$-blind'' means that $q$ is not supplied as selector input. The theorem establishes sufficiency of $P_{3^{k-1}+1}$; window minimality is not part of this paper. The predicate is intrinsic, while the standard presentation is used only for the local calculation.
 
 \section{Conclusion}
-The result separates a classical infinite-group existence theorem from a finite recognition principle. It should therefore be read as a theorem about the information required by a selector, not as a new construction of the canonical orientation:
+The result separates a classical infinite-group existence theorem from a finite recognition principle. The result identifies the finite information needed by this selector; it is not a new construction of the canonical orientation:
 \[
 G/P_{3^{k-1}+1} \quad+\quad \text{intrinsic Kummer lifting}
 \quad\Longrightarrow\quad \chi_G\pmod {3^k}.
