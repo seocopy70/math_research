@@ -136,3 +136,28 @@ Do not launch a large computation.
 First construct the exact (p,d,q)=(3,2,3) Demushkin/F1 pair at the presentation level, determine the first Zassenhaus degree at which their defining relations can differ, and test whether that difference can be converted into an intrinsic finite-window Kummerian obstruction.
 
 Any computation must be independently reproduced and classified before promotion.
+
+
+## 10. Forward generalization roadmap (recorded 2026-10-01)
+
+This is a roadmap, not a theorem claim.
+
+### Phase A — F1 pair, smallest case
+Determine the exact finite-window behavior of D(p,d,q) versus F1(p,d,q), beginning with (p,d,q)=(3,2,3). No large computation before the intrinsic finite obstruction/carrier is defined.
+
+### Phase B — F1 parameter uniformity
+If Phase A succeeds, extend to the allowed parameter range (p,d,q). Seek a recognition/separation threshold r_cyc(p,d,q), or rigorous lower/upper bounds. A single example remains PASS/LOCAL.
+
+### Phase C — category enlargement
+Only after F1 uniformity or a reusable carrier mechanism is established, test a genuinely different non-1-cyclotomic family; F2 is the first deferred candidate. This tests whether the mechanism is structural rather than family-specific.
+
+### Phase D — property enlargement
+If the mechanism survives more than one family, enlarge the target beyond T_cyc to a family of global properties T, seeking an intrinsic functorial form W_n(G) -> O_n(G) -> T(G).
+
+### Phase E — general finite-window recognition theory
+The long-term target is the category-relative recognition threshold r_T(C;D_bullet), together with existence/nonexistence, sharp bounds, intrinsic carriers, functorial factorization, and information-theoretic obstructions.
+
+### Promotion / stop rules
+Promote only theorem-level finite separation, sharp threshold, no-go theorem, or reusable carrier results. Stop/escalate only after Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation are explicit. Do not revive the closed F1 Massey route without new evidence. Do not claim priority or that the field is waiting for this exact result.
+
+The strategic purpose is to test whether the finite-recognition program developed in Papers 1–3 survives deliberate enlargement beyond the Demushkin category. Success justifies the next phase; failure may yield a structural no-go result.
