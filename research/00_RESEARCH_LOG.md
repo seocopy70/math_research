@@ -269,3 +269,29 @@ The current research decision is to postpone new mathematics until a fresh chat/
 Forward sequence: A) smallest D/F1 pair at (3,2,3); B) uniform F1 parameter theorem if supported; C) genuinely different category enlargement (F2 deferred); D) enlargement from T_cyc to a family of global properties; E) general finite-window recognition theory r_T(C;D_bullet). Promotion requires theorem-level finite separation, sharp threshold, no-go, or reusable carrier. Do not run large computation before the mandatory pre-checks. Do not re-open the closed F1 Massey route without new evidence. Do not claim priority or that the field is waiting for this result.
 
 Classification: F1 finite-window recognition OPEN / DECISIVE; roadmap CONDITIONAL; Paper 1–3 publication novelty OPEN / CONDITIONAL.
+
+
+## 2026-10-01 — PAPER 3 PHASE A: D vs F1 FINITE-WINDOW RECOGNITION
+
+Phase A was executed after the mandatory repository restoration and pre-checks.
+
+For the fixed two-family category C_{p,d,q}={ordinary Demushkin D_{d,q}, Blumer–Quadrelli F1_{d,q}} and target T_cyc = 1-cyclotomicity:
+
+- W_2 is identical for the two families: both have the same 2d-dimensional abelianization window.
+- At W_3, the intrinsic commutator/cup pairing has rank 2d for D and 2d-2 for F1.
+- The reason is the degree-2 initial form: D has sum_{i=1}^d [X_i,Y_i], whereas F1 has sum_{i=2}^d [X_i,Y_i], because [x_1^q,y_1] starts in Zassenhaus degree q+1 >= 3.
+- Therefore W_3 separates D from F1 without inserting q or using a presentation-dependent lift.
+- At (p,d,q)=(3,2,3), the ranks are 4 and 2; an independent exact matrix calculation confirms this.
+- Since W_2 does not separate and W_3 does, the declared two-object recognition threshold is exactly r_{T_cyc}(C_{3,2,3};D)=3. The same argument gives the uniform pairwise result r=3 for odd p, d>=2, q=p^f.
+
+Literature boundary: the underlying D/F1 degree-2 structures and the global 1-cyclotomic/non-1-cyclotomic facts are already explicit in Blumer–Quadrelli and the Demushkin literature. Thus the r=3 statement is a finite-window reformulation/derivation, not a priority claim.
+
+Classification:
+- Phase A fixed pair: **PASS / CLOSED**.
+- Uniform D-vs-F1 pairwise theorem: **PASS / CLOSED**.
+- Novelty from Phase A alone: **OPEN / CONDITIONAL; currently weak**.
+- F1 broader finite-window recognition program: **OPEN / DECISIVE**.
+
+Detailed record: research/PAPER3_PHASE_A_D_VS_F1_FINITE_RECOGNITION_2026-10-01.md
+
+Next authorized direction: seek a broader category in which the same intrinsic W_3 carrier recognizes 1-cyclotomicity without hard-coding family membership or q; do not treat the D/F1 pair alone as sufficient for a new-paper claim.
