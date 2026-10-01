@@ -25,27 +25,15 @@ $ n_{\mathrm{aff}}(k)=p^{k-1}+1$.
 The lower bound includes rank two and does not require the orientation component to be surjective. We also separate factorization from recognition: a sharp factorization window does not by itself imply that a Kummerian predicate selects a unique orientation.
 \end{abstract}
 
-\paragraph{Companion papers.}
-This is one of three related manuscripts. [P1] treats the exact finite Zassenhaus
-depth for factoring all affine crossed-cocycle representations in the Demu\\v{s}kin
-family; [P2] proves finite-window Kummer recognition of the canonical orientation
-of the rank-four $q=3$ group; [P3] proves the exact selector depth and
-identifies a one-dimensional cup-line carrier.
-Lemma~2.1 and Proposition~2.2 (finite affine filtration, arbitrary-candidate
-factorization) appear in each, in the form needed there; [P1] is the reference
-for them.
-[P1], [P2], and [P3] are placeholders for the corresponding arXiv records and
-should be replaced by the final arXiv identifiers before submission.
-
 \section{Introduction}
-The canonical Demushkin orientation is classical: Labute identifies it through the dualizing module, while the Kummerian/cyclotomic formulation is developed in later work. See \cite{Labute1967,EfratQuadrelli2019,QuadrelliWeigel2022}.
-The present question is narrower. Given a finite coefficient level $k$, how much Zassenhaus information is required to preserve every affine crossed-cocycle representation into $S_k$? And does the resulting quotient necessarily contain enough information to recognize a unique orientation?
+The canonical Demushkin orientation is classical: Labute identifies it through the dualizing module, while the Kummerian and cyclotomic formulations are developed in later work. See \cite{Labute1967,EfratQuadrelli2019,QuadrelliWeigel2022}.
+The finite question considered here is an information-loss question. At coefficient level $k$, an affine crossed-cocycle representation sees only a finite part of the Zassenhaus filtration. We ask for the first filtration index at which every representation in the specified affine category factors through the same finite quotient, and then record what this factorization does—and does not—say about orientation recognition.
 
-These are different questions. The first is a factorization problem in a specified representation category. The second is a recognition problem whose answer depends on the input category and predicate. The principal theorem of this paper is the exact and sharp factorization window; the recognition discussion is a logical boundary result, not a new positive recognition theorem.
+These are distinct problems. The first is a sharp factorization theorem in a specified representation category. The second depends on the class of groups and on the recognition predicate. The main result of this paper is the exact factorization threshold; the recognition discussion is included to make that logical boundary explicit.
 
 For a fixed pro-$p$ group $G$, define
 \[
-n_{\mathrm{aff}}(k;G):=\min\{n\ge1:\text{every continuous }\psi:G\to S_k\text{ kills }P_n(G)\}.
+n_{\mathrm{aff}}(k;G):=\min\{n\ge1:\text{every continuous }\psi:G\to S_k\text{ factors through }G/P_n(G)\}.
 \]
 When $G=G_{f,d}$ we abbreviate this to $n_{\mathrm{aff}}(k)$.
 
@@ -66,7 +54,7 @@ Moreover some such representation is nontrivial on $P_{p^{k-1}}(G_{f,d})$. Hence
 \end{theorem}
 
 \begin{remark}
-This is category-relative minimality. No absolute minimality among arbitrary intrinsic carriers is claimed.
+The minimality statement is relative to the stated affine representation category.
 \end{remark}
 
 \section{The affine target and the finite window}
@@ -235,7 +223,7 @@ No claim is made for broader recursively defined elementary-type classes involvi
 \end{remark}
 
 \section{Relation with the preceding paper}
-The companion paper [P2] treats finite-window recognition for the fixed rank-four $p=3$ group. Its intrinsic Kummer predicate on the corresponding finite quotient selects the canonical orientation modulo $3^k$. The present paper adds the exact factorization depth for the full affine crossed-cocycle category, extends sharpness to the rank-two boundary, records the finite-depth $f$-collapse, and separates factorization from recognition.
+A separate finite-window recognition result treats the fixed rank-four $p=3$ group and its intrinsic Kummer predicate. The present paper complements that result by determining the exact factorization depth for the full affine crossed-cocycle category, extending sharpness to rank two, and recording the finite-depth collapse in the parameter $f$.
 
 The logical chain is
 \[
@@ -247,20 +235,20 @@ The logical chain is
 \]
 
 \section{Literature boundary and novelty}
-The canonical Demushkin orientation and its Kummerian characterization are classical \cite{Labute1967,EfratQuadrelli2019}. The general functoriality of the Zassenhaus filtration under continuous homomorphisms, and its representation-theoretic use, are standard; see Lazard/Jennings theory and Efrat's treatment of Zassenhaus filtrations and representations \cite{Efrat2014,MinacRogelstadTan2016}. Oriented elementary-type constructions and related Kummerian closure phenomena are treated by Quadrelli--Weigel \cite{QuadrelliWeigel2022}. Quadrelli's 2024 work studies 1-cyclotomicity and quotient-related obstructions \cite{Quadrelli2024}. These are surrounding results, not claims of prior identity with the present theorem. In particular, the literature establishes the standard Kummerian/1-cyclotomic framework and substantial information on Zassenhaus quotients, but the audit did not locate an earlier theorem stated in the present affine target category with the exact depth $p^{k-1}+1$ and the present sharpness witnesses.
+The canonical Demushkin orientation and its Kummerian characterization are classical \cite{Labute1967,EfratQuadrelli2019}. The general functoriality of the Zassenhaus filtration under continuous homomorphisms, and its representation-theoretic use, are standard; see Lazard/Jennings theory and Efrat's treatment of Zassenhaus filtrations and representations \cite{Efrat2014,MinacRogelstadTan2016}. Oriented elementary-type constructions and related Kummerian closure phenomena are treated by Quadrelli--Weigel \cite{QuadrelliWeigel2022}. Quadrelli's 2024 work studies 1-cyclotomicity and quotient-related obstructions \cite{Quadrelli2024}. These results provide the surrounding framework for the present argument. The literature audit did not identify an earlier theorem stated in the present affine target category with the same depth $p^{k-1}+1$ and the same sharpness witnesses.
 
 The present contribution is deliberately narrower: the exact depth $p^{k-1}+1$ for factorization of all affine crossed-cocycle representations into $A_k\rtimes U_{1,k}$, explicit lower-bound witnesses through rank two, finite-depth $f$-collapse, and the separation of sharp factorization from uniqueness of a Kummerian orientation. Mináč--Tân--Trà, \emph{Zassenhaus filtrations as intersections} (arXiv:2510.20133), gives a broader representation-theoretic description of Zassenhaus filtration terms as intersections of kernels of representations; the present paper does not identify that work with the exact affine target category or the sharp depth proved here.
 
-The novelty claim is conditional. The audited corpus did not reveal a theorem stated in exactly this representation category with exactly this depth and lower-bound formulation. This is a publication boundary statement, not an absolute priority claim.
+The novelty claim is conditional on the scope of the literature audit. No absolute priority claim is made.
 
 \section{Limitations and conclusion}
-The sharpness theorem is category-relative. The positive free-product theorem is restricted to finite free products of Demushkin blocks. The free-pro-$p$ example concerns the Kummer predicate itself, not every conceivable selector. The finite-depth q-collapse does not imply that the full groups with different $f$ are isomorphic.
+The sharpness theorem is relative to the stated affine category. The free-product statement is restricted to finite free products of Demushkin blocks, and the free-pro-$p$ example concerns the displayed Kummer predicate rather than arbitrary selectors. The finite-depth $f$-collapse concerns the finite quotient and does not imply that the corresponding full groups are isomorphic.
 
 The main formula is
 \[
 \boxed{n_{\mathrm{aff}}(k)=p^{k-1}+1.}
 \]
-It is uniform for the standard Demushkin parameters $f\ge1$ and even rank $d\ge2$, including rank two. Any stronger claim of absolute minimality or universal orientation reconstruction requires a separately specified carrier category and recognition theorem.
+It is uniform for the standard Demushkin parameters $f\ge1$ and even rank $d\ge2$, including rank two. Questions of absolute information-theoretic minimality or universal orientation reconstruction require a separately specified carrier category and recognition theorem.
 
 \begin{thebibliography}{99}
 \bibitem{Efrat2014}
