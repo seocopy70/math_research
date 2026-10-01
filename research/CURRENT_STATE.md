@@ -1,5 +1,24 @@
 # CURRENT_STATE — 수학증명
 
+## 2026-10-01 — O_k FINITE-PAIR UNIVERSAL OBSTRUCTION PROPERTY AUDIT
+
+The proposed load-bearing attack on the finite transgression carrier is now resolved at the categorical level.
+
+For the fixed pair E_k→Q_k, with O_k=H^2(Q_k,F_p)/im(tra_k), a linear obstruction carrier defined by a natural map from H^2(Q_k,F_p) that annihilates the transgression sector automatically receives a unique map from O_k. This is exactly the cokernel universal property, so it is PASS / CLOSED but TAUTOLOGICAL / NOT LOAD-BEARING.
+
+The opposite proposed direction, in which every independent admissible separating carrier C canonically factors C→O_k, is not implied by D2 or by finite-pair functoriality. Moreover, if uniqueness is included, the claim is decisively false: the admissible direct-sum carrier C=O_k⊕O_k with diagonal obstruction map has at least two natural projections C→O_k.
+
+Therefore:
+- O_k as finite intrinsic obstruction carrier: PASS / CLOSED.
+- O_k→C universality among quotient-type obstruction carriers: PASS / CLOSED, TAUTOLOGICAL.
+- Universal C→O_k existence for a genuinely broader carrier category: OPEN / NOT PROVED.
+- Universal C→O_k uniqueness: FAIL / CLOSED.
+- Absolute O_k minimality: FAIL / CLOSED as ill-posed.
+
+The existing one-dimensional cup-line C_k remains the already-established sufficient recognition carrier; it is not promoted as a new result by this audit. The O_k universal-property branch is therefore exhausted. The next authorized branch must be a genuinely independent finite-pair carrier, subject first to object/intrinsicity/functoriality/gauge/orientation-bridge/q-blindness/non-redundancy checks. No large computation is authorized before those checks.
+
+Detailed audit: research/PAPER3_OK_FINITE_PAIR_UNIVERSAL_OBSTRUCTION_AUDIT_2026-10-01.md.
+
 Last updated: 2026-09-27 — Paper 3 finite-window recognition-threshold program opened
 
 ## 0. CURRENT RESEARCH PROGRAM — PAPER 3
