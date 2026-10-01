@@ -626,3 +626,21 @@ Classification:
 - Gate D broader finite-window recognition: OPEN / LOAD-BEARING.
 
 No W_11/W_12 or new Fox computation is authorized merely to extend the selector chain. Detailed pre-check: research/PAPER3_GATE_D_FINITE_WINDOW_RECOGNITION_PRECHECK_2026-10-01.md.
+
+## 2026-10-01 — CRITICAL REVIEW OF GATE D STATUS
+
+The prior Gate-D framing was refined after critical review. F2 remains PASS / CLOSED operationally, with candidate-completeness OPEN and no universal no-go claim.
+
+Paper 3's immediate target is kept specific: finite-window recognition of the declared global target (canonical cyclotomic orientation / chi mod 3^k), not a general theory for arbitrary T. A broader category-level recognition theory is a later research program, not silently promoted into Paper 3.
+
+Gate D status is now stratified rather than a bare OPEN label:
+- Chain existence / finite calculation: PARTIALLY VERIFIED at the fixed audited scope.
+- Intrinsic carrier: OPEN.
+- Orientation bridge carrier -> chi mod 27: OPEN.
+- Gauge/presentation independence: OPEN as a dedicated proof obligation.
+- Functoriality: OPEN as a dedicated carrier-level obligation.
+- Paper 2 redundancy boundary: CLOSED — merely restating W_10 -> chi mod 27 is not a new Paper 3 result.
+
+The next action is a focused three-item pre-check/attack: (1) Object definition, (2) carrier-level functoriality/intrinsicity, (3) orientation bridge. The full nine-item checklist remains a guardrail, not a prerequisite bureaucracy. No large computation is authorized before these three pass or produce a decisive obstruction.
+
+Stop rule: if the carrier is shown to depend essentially on presentation/orientation choices, close that carrier branch as FAIL / CLOSED rather than generalizing around the artifact. If the carrier survives but the bridge remains unresolved, classify OPEN. If a natural bridge is proved, classify PASS / LOCAL or PASS / CLOSED according to scope. A time-based two-week deadline is not adopted as a mathematical stop criterion; the branch stops on structural evidence, not elapsed time.
