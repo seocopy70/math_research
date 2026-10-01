@@ -378,3 +378,22 @@ Classification:
 Next authorized gate: determine intrinsically whether W_4 separates the pair. Do not use a presentation-local p-power coordinate without proving its naturality.
 
 Detailed record: research/PAPER3_SAME_W3_OBSTRUCTION_F1_VS_CYC_CONTROL_2026-10-01.md
+
+## 2026-10-01 — W_4 CLOSES THE CONCRETE F1 RECOGNITION PAIR
+
+The same-W_3 obstruction pair was pushed one level further at (p,d,q)=(3,2,3).
+
+For F1, modulo D_4 the relation gives [x_2,y_2]=1 because [x_1^3,y_1] lies in D_4.
+
+For the cyclotomic control D_{1,3}*F_2, the relation gives [x_2,y_2]=x_2^{-3}; the class x_2^3 is nonzero in D_3/D_4 because the associated restricted Lie algebra has only the quadratic relation [X_2,Y_2] and no degree-3 relation killing X_2^[3].
+
+Thus W_4 separates the pair. Combined with W_3 equality:
+r_{T_cyc}({G_F1,G_cyc};D)=4.
+
+Classification:
+- W_3 equality: PASS / CLOSED;
+- W_4 separation: PASS / CLOSED for the concrete pair;
+- exact concrete threshold 4: PASS / CLOSED;
+- uniform q=p^f threshold q+1: OPEN / LOAD-BEARING.
+
+Detailed record: research/PAPER3_SAME_W3_OBSTRUCTION_F1_VS_CYC_CONTROL_2026-10-01.md
