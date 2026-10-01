@@ -179,3 +179,8 @@ The three-paper editorial final pass is complete on isolated final branches. The
 - Editorial artifact status: **PASS / CLOSED**.
 - Mathematical research status: **UNCHANGED**.
 - Publication novelty: **OPEN / CONDITIONAL**.
+
+
+## 2026-10-01 — ACTIVE NEXT-GENERALIZATION ROADMAP
+
+The next research window starts from research/PAPER3_F1_CYCLOTOMIC_FINITE_WINDOW_GATE_2026-10-01.md after mandatory continuity restoration. The fixed conditional sequence is: (1) D versus F1 at (3,2,3); (2) F1 parameter-uniform extension if supported; (3) a genuinely different category such as deferred F2; (4) enlargement from T_cyc to a family of global properties; (5) category-relative finite-window recognition theory r_T(C;D_bullet). A failed intrinsic-carrier or separation attempt may terminate the branch or produce a no-go theorem and does not authorize escalation. Current F1 finite-window recognition is OPEN / DECISIVE; the general recognition theory is OPEN / CONDITIONAL. No new computation is authorized in this chat.
