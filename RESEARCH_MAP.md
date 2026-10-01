@@ -4090,3 +4090,12 @@ Classification: Phase A **PASS / CLOSED**; novelty from this pair alone **OPEN /
 Detailed record: research/PAPER3_PHASE_A_D_VS_F1_FINITE_RECOGNITION_2026-10-01.md
 
 The roadmap therefore advances to the broader-category test: determine whether the W_3 carrier survives beyond the two-family D/F1 pair without hard-coding family membership or q.
+
+
+## 2026-10-01 — PAPER 3 PHASE B CLOSED: D/F1/F2
+
+The finite-window recognition carrier W_3 extends from D/F1 to the Blumer–Quadrelli D/F1/F2 family union. W_2 is common to all three; W_3 distinguishes D, F1, and F2 by the intrinsic quadratic relation/cup structure. Therefore r_{T_cyc}=3 on the declared three-family category, uniformly for odd p, d>=2, q=p^f.
+
+Classification: PASS / CLOSED mathematically, but only PASS / LOCAL as a reusable carrier. The extension remains weak as a novelty candidate because the distinction is already visible in published quadratic data.
+
+The next decisive question is no longer “can W_3 separate another named family?” but whether there is a cyclotomic/non-cyclotomic pair with identical W_3 quadratic/cup data. This is the required obstruction test before promoting W_3 to a general recognition mechanism.
