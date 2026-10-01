@@ -355,3 +355,26 @@ This is the first result in the F1 branch that directly realizes the intended Pa
 
 Next authorized gate: determine intrinsically whether W_4 separates the pair. Do not use a presentation-local p-power coordinate without proving its naturality.
 Detailed record: research/PAPER3_SAME_W3_OBSTRUCTION_F1_VS_CYC_CONTROL_2026-10-01.md
+
+
+## 2026-10-01 — SAME-W3 OBSTRUCTION FOUND: F1 vs CYCLOTOMIC CONTROL
+
+The decisive obstruction test produced a genuine same-window/different-target pair at (p,d,q)=(3,2,3).
+
+Take G_F1=<x_1,y_1,x_2,y_2 | [x_1^3,y_1][x_2,y_2]=1> and the cyclotomic control G_cyc=D_{1,3}*F_2=<x_1,y_1,x_2,y_2 | x_2^3[x_2,y_2]=1>.
+
+Blumer–Quadrelli gives T_cyc(G_F1)=false; the Demushkin factor is 1-cyclotomic and free pro-p products of cyclotomic pairs remain cyclotomic, so T_cyc(G_cyc)=true.
+
+Modulo D_3, both defining relators reduce to the same quadratic relation [x_2,y_2]=1: in F1, [x_1^3,y_1] has Zassenhaus degree 4; in the cyclotomic control, x_2^3 has degree 3 and is discarded by G/D_3. Thus W_3(G_F1) ~= W_3(G_cyc), while the global target differs.
+
+Conclusion: r_{T_cyc}>=4 for every admissible category containing this pair.
+
+Classification:
+- same-W_3 separation pair: PASS / CLOSED;
+- lower bound r>=4: PASS / CLOSED;
+- general W_3 recognition: FAIL / CLOSED;
+- exact threshold: OPEN / LOAD-BEARING.
+
+Next authorized gate: determine intrinsically whether W_4 separates the pair. Do not use a presentation-local p-power coordinate without proving its naturality.
+
+Detailed record: research/PAPER3_SAME_W3_OBSTRUCTION_F1_VS_CYC_CONTROL_2026-10-01.md
