@@ -161,3 +161,34 @@ The long-term target is the category-relative recognition threshold r_T(C;D_bull
 Promote only theorem-level finite separation, sharp threshold, no-go theorem, or reusable carrier results. Stop/escalate only after Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation are explicit. Do not revive the closed F1 Massey route without new evidence. Do not claim priority or that the field is waiting for this exact result.
 
 The strategic purpose is to test whether the finite-recognition program developed in Papers 1–3 survives deliberate enlargement beyond the Demushkin category. Success justifies the next phase; failure may yield a structural no-go result.
+
+## 11. 2026-10-01 — Phase B UNIFORMITY RECHECK CLOSED
+
+The critical review identified two possible gaps in the previously recorded parameter-uniform theorem: full (W_q) equality versus initial-form equality, and uniform nonvanishing of (X_2^{[p^f]}).
+
+Both are now closed.
+
+1. **Full (W_q) equality.** For the common free pro-(p) presentation group (F), both defining relators reduce to the same word (s=[x_2,y_2]cdots[x_d,y_d]) modulo (D_q(F)). Since (D_q(F/R)=D_q(F)R/R), both quotient windows are literally
+[
+F/(D_q(F),s).
+]
+Thus the argument is at the quotient-group level, not merely at the associated-graded initial-form level.
+
+2. **Uniform restricted-power nonvanishing.** The Blumer–Quadrelli description of the F1 associated restricted Lie algebra admits a restricted-Lie map sending (X_2) to a free rank-one abelian restricted generator and all other degree-one generators to zero. Therefore (X_2^{[p^f]}
+eq0) for every finite (q=p^f).
+
+3. **Independent group-level cross-check.** The abelianizations of the two (W_{q+1}) windows are
+[
+(mathbb Z/p^{f+1})^{2d}
+quad	ext{and}quad
+(mathbb Z/p^{f+1})^{2d-1}oplusmathbb Z/p^f,
+]
+respectively. Their orders differ by (p), giving an independent intrinsic separation.
+
+Therefore Phase B is promoted from OPEN/LOAD-BEARING to **PASS / CLOSED** at the declared pairwise scope:
+[
+r_{T_{m cyc}}igl({G_{F1}(q),G_{m cyc}(q)};D_ulletigr)=q+1
+]
+for every odd prime (p), finite (q=p^f), and (dge2).
+
+This does not promote the broad recognition theorem, which remains **OPEN / CONDITIONAL**.
