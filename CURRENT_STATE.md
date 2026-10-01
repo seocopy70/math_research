@@ -1,3 +1,27 @@
+## 2026-10-01 — NEXT GENERALIZATION: F1 CYCLOTOMIC FINITE-WINDOW GATE
+
+Gate D is closed for the full torsion-free Demushkin class at odd p, even rank, arbitrary allowed q, and all k>=2. The most aggressive next step is therefore to leave the Demushkin category.
+
+Active target:
+\[
+W_n(G)\longrightarrow T_{\mathrm{cyc}}(G),
+\qquad
+T_{\mathrm{cyc}}(G)=\text{existence of a 1-cyclotomic/Kummerian orientation}.
+\]
+
+Initial category: paired Demushkin/F1 variations at fixed (p,d,q). The first stress test is (p,d,q)=(3,2,3).
+
+The immediate theorem question is whether finite Zassenhaus windows can separate the 1-cyclotomic Demushkin member from the non-1-cyclotomic F1 member, and whether the first separating datum has an intrinsic Kummerian obstruction interpretation.
+
+Current status:
+- F1 finite-window 1-cyclotomic recognition: OPEN / DECISIVE.
+- Orientation bridge: OPEN / LOAD-BEARING.
+- Separation pair: OPEN / DECISIVE.
+- No large computation authorized until the finite object/carrier and separation claim are defined.
+
+Detailed gate: research/PAPER3_F1_CYCLOTOMIC_FINITE_WINDOW_GATE_2026-10-01.md
+
+
 ## 2026-10-01 — THREE-PAPER PUBLICATION-STYLE FINALIZATION
 
 A style-only publication pass was completed on the three already-audited manuscript sources. The mathematical content and research classifications are unchanged.
