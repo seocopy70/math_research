@@ -197,3 +197,14 @@ Verified from the actual source:
 - Proposition (2.a): for G in F1 and n <= q, G satisfies a strong variant of n-fold Massey vanishing.
 - Example 2(a): ordinary Demuškin groups satisfy strong n-fold Massey vanishing for every n >= 3, with Blumer–Quadrelli citing Pál–Szabó, Theorem 3.5 (arXiv:1811.06192). The earlier Mináč–Tân attribution is corrected.
 - For G in F1, the associated graded restricted Lie algebra is explicitly presented by <X1,Y1,...,Xd,Yd | [X2,Y2]+...+[Xd,Yd]=0>, so the F1 branch is structurally compatible with the existing Zassenhaus/initial-form/Magnus-Fox toolkit.
+
+## 2026-10-01 — THREE-PAPER PUBLICATION-STYLE FINALIZATION
+
+A style-only publication pass was completed after the existing mathematical and artifact gates had closed. The pass removed companion-paper/placeholder boilerplate, reduced repetitive defensive novelty language, standardized finite coefficient notation, made p=q=3,f=1 explicit in Paper 2, replaced informal "kills" terminology, and tightened the motivation/abstract language. No mathematical theorem, proof, hypothesis, scope, or novelty conclusion was intentionally changed.
+
+Final style artifacts:
+- Paper 1: branch paper1-style-final-2026-10-01; 8 pages; SHA-256 b4806dc7ed111ffeb3b93d5ef9066d958252fff132506a5d95f25dad76afe960.
+- Paper 2: branch paper2-style-final-2026-10-01; 13 pages; SHA-256 97504d2bc5db7f668f2287d62bca902cde0b285b1a4b7ef11ffe58c0c8928e32.
+- Paper 3: branch paper3-style-final-2026-10-01; 17 pages; SHA-256 3518e5f966401d48eae9c8b76b80fe7a9ba4e53f76bc4255edb66862082bf7ff.
+
+CI/PDF verification and visual first-page inspection: PASS/CLOSED. Publication novelty remains OPEN/CONDITIONAL. Detailed record: research/THREE_PAPER_PUBLICATION_STYLE_FINAL_2026-10-01.md.
