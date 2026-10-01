@@ -154,10 +154,24 @@ The relation-module literature likewise treats the relation module as carrying t
 
 - broad arbitrary-extension pair descent: **FAIL / CLOSED**;
 - extension-window construction: **PASS / LOCAL**;
-- Demuškin-restricted pair descent: **OPEN / LOAD-BEARING**;
+- Demuškin-restricted bare-pair descent: **OPEN / LOAD-BEARING**;
 - admissible-category definition: **OPEN / prerequisite**;
+- extension-window → mixed Fox naturality: **PASS / LOCAL** (formal categorical statement still to be written);
 - large Fox computation: **NOT AUTHORIZED**;
 - Paper 3: **FROZEN / COMPLETE** and unaffected.
+
+## Final research interpretation
+
+The attack does not produce a Demuškin same-pair counterexample. Instead it establishes a sharper categorical boundary: the Mixed Fox object is naturally a carrier of the **finite extension window**, not of the bare pair. The broad counterexample shows that no theorem can forget extension-class data without an additional Demuškin-specific reconstruction theorem.
+
+Therefore the Mixed Fox branch has two logically distinct futures:
+
+1. prove that the declared Demuškin category canonically reconstructs the extension window from the bare finite pair; only then can Mixed Fox become a genuine finite-pair carrier; or
+2. retain the extension window as the finite input and treat Mixed Fox as a genuinely new **finite extension-window carrier**.
+
+The second formulation is already structurally supported by the stable/projective relation-module mechanism. It is not equivalent to the original bare-pair carrier program.
+
+No claim of universal bare-pair descent is justified at present.
 
 ## Next authorized action
 
