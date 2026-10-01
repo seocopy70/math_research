@@ -203,3 +203,22 @@ Status:
 - No large computation authorized until a plausible W3-matching cyclotomic control is found.
 
 Record: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md
+
+## 2026-10-01 — AUTHORITATIVE CORRECTION: F1 UNIFORM q=p^f THRESHOLD RECHECK
+
+A post-closure critical review requested an explicit theorem-level audit of the two load-bearing steps in the uniform F1/cyclotomic-control result.
+
+Both steps are now closed:
+
+- Full W_q equality: both relators have the same image modulo D_q(F), and quotient functoriality gives D_q(F/R)=D_q(F)R/R. Hence the two W_q quotients are literally the same quotient F/(D_q(F),s), not merely associated-graded-equivalent.
+- Uniform X_2^[p^f] nonvanishing: the Blumer–Quadrelli F1 restricted-Lie presentation admits a map X_2 to a free rank-one abelian restricted Lie algebra, proving X_2^[p^f] != 0 for every finite q=p^f.
+- Independent group-level separation: the abelianizations of W_{q+1} are (Z/p^{f+1})^{2d} and (Z/p^{f+1})^{2d-1} direct-sum Z/p^f, so they have different orders.
+
+Authoritative status after the recheck:
+- W_q full equality: PASS / CLOSED.
+- W_{q+1} intrinsic separation: PASS / CLOSED.
+- Uniform pairwise threshold r=q+1: PASS / CLOSED for every odd p, finite q=p^f, d>=2, at the declared two-object category.
+- Broad category-level recognition: OPEN / CONDITIONAL.
+- Novelty/priority: OPEN / CONDITIONAL.
+
+This correction supersedes any earlier entry in CURRENT_STATE that still labels the uniform extension OPEN/LOAD-BEARING. Detailed audit: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md.
