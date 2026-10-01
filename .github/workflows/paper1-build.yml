@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - paper1-fixes-2026-09-28
+      - paper1-editorial-final-2026-10-01
     paths:
       - 'paper/successor_main.tex'
       - '.github/workflows/paper1-build.yml'
@@ -47,7 +48,7 @@ jobs:
             sha256sum main.tex sharp-affine-finite-window.pdf > SHA256SUMS.txt
           )
           cat > paper1-submission/full/README_SUBMISSION.txt <<'EOF'
-          Sharp Finite-Window Recognition and Information Loss in Oriented Pro-p Groups
+          Sharp Finite-Window Factorization for Affine Crossed-Cocycle Representations
 
           Publication snapshot: repository branch paper1-fixes-2026-09-28 at the CI build commit.
           The arXiv source bundle contains main.tex only; the bibliography is embedded.
