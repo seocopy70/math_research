@@ -260,3 +260,12 @@ A final editorial pass was applied to the three publication-candidate manuscript
 Editorial changes include: removal of placeholder companion-paper/arXiv language; removal of repeated defensive novelty boilerplate; replacement of informal “kills” in the Paper 1 definition by the standard “factors through” formulation; clearer separation of factorization, recognition, and scope; explicit (q=p=3) identification in the fixed rank-four papers; consistent Demuškin typography; and clearer standalone titles. No mathematical theorem, hypothesis, boundary, or novelty classification was changed.
 
 Two review comments were deliberately not adopted because they are not errors in the authoritative source: (1+3A_k) is a multiplicative principal-unit subgroup (so the notation is legitimate), and extracted strings such as “3j” are PDF text-extraction artifacts rather than source-level (3^j) failures. The research frontier remains unchanged: Paper 1/2/3 mathematical status PASS/CLOSED at their declared scopes; publication novelty remains OPEN/CONDITIONAL.
+
+
+## 2026-10-01 — F1 GENERALIZATION ROADMAP FROZEN BEFORE NEXT RESEARCH WINDOW
+
+The current research decision is to postpone new mathematics until a fresh chat/window and preserve the forward roadmap in the authoritative stage record. The F1 branch is an ambitious but legitimate generalization test, not a claim that the field is awaiting this exact theorem. Its value rises sharply only for an intrinsic structural result: finite separation, sharp recognition threshold, no-go theorem, or reusable carrier. Reproving that F1 is not 1-cyclotomic is not new by itself; the new target is finite-window visibility/intrinsicization of the known obstruction.
+
+Forward sequence: A) smallest D/F1 pair at (3,2,3); B) uniform F1 parameter theorem if supported; C) genuinely different category enlargement (F2 deferred); D) enlargement from T_cyc to a family of global properties; E) general finite-window recognition theory r_T(C;D_bullet). Promotion requires theorem-level finite separation, sharp threshold, no-go, or reusable carrier. Do not run large computation before the mandatory pre-checks. Do not re-open the closed F1 Massey route without new evidence. Do not claim priority or that the field is waiting for this result.
+
+Classification: F1 finite-window recognition OPEN / DECISIVE; roadmap CONDITIONAL; Paper 1–3 publication novelty OPEN / CONDITIONAL.
