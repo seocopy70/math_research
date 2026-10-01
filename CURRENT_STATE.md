@@ -481,3 +481,20 @@ Current classification:
 No larger Fox computation is authorized. The next decisive attack is fiber invariance / extension reconstruction. If an admissible same-pair/different-extension pair yields different projective mixed Fox jets, the original finite-pair branch is **FAIL / CLOSED**. If fiber invariance or canonical reconstruction is proved, the extension-window theorem can descend to the original pair.
 
 Detailed audit: `research/PAPER3_MIXED_EXTENSION_WINDOW_CATEGORICAL_AUDIT_2026-10-01.md`.
+
+
+## 2026-10-01 — MIXED FOX FIBER-INVARIANCE ATTACK / CATEGORY BOUNDARY
+
+The direct fiber attack has produced a structural boundary. The proposed descent F_k=\bar F_k∘U cannot hold on the broad category of arbitrary finite central extension windows: the same pair (Q,A) can support distinct extension classes, and the projective Fox relation data retains the power/commutator distinction. A concrete same-pair example is Q=C3×C3, A=C3, with C9×C3 versus the exponent-3 Heisenberg extension.
+
+This closes only the **broad arbitrary-extension descent**:
+- arbitrary extension-window → bare pair: **FAIL / CLOSED**;
+- mixed Fox extension-window construction: **PASS / LOCAL**.
+
+It does **not** yet close the intended Demuškin-restricted theorem. The missing prerequisite is an explicit admissible category of extension windows arising from the project's filtered Demuškin objects. The active gate is therefore:
+
+**define admissible Demuškin ExtWin category → analyze fibers of U → determine whether extension class is reconstructible from (Q_k,A_k) or whether a same-pair Demuškin counterexample exists.**
+
+Until that category is defined, “fiber invariance” is not a well-typed universal claim. No large Fox/W_11/W_12 computation is authorized. Paper 3 remains FROZEN / COMPLETE and is unaffected.
+
+Detailed audit: research/PAPER3_MIXED_EXTENSION_WINDOW_FIBER_NO_GO_AUDIT_2026-10-01.md.
