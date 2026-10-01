@@ -398,7 +398,6 @@ Classification: F1 finite-window recognition OPEN / DECISIVE; roadmap CONDITIONA
 Phase A was executed after the mandatory repository restoration and pre-checks.
 
 For the fixed two-family category C_{p,d,q}={ordinary Demushkin D_{d,q}, Blumer–Quadrelli F1_{d,q}} and target T_cyc = 1-cyclotomicity:
-
 - W_2 is identical for the two families: both have the same 2d-dimensional abelianization window.
 - At W_3, the intrinsic commutator/cup pairing has rank 2d for D and 2d-2 for F1.
 - The reason is the degree-2 initial form: D has sum_{i=1}^d [X_i,Y_i], whereas F1 has sum_{i=2}^d [X_i,Y_i], because [x_1^q,y_1] starts in Zassenhaus degree q+1 >= 3.
@@ -799,7 +798,6 @@ Classification:
 
 Next authorized attack: formalize the finite-pair category and test the universal factorization property of \(\mathcal O_k\). No new W-depth, Fox, 45-dimensional, or Paper 2 reproof computation is authorized.
 
-
 ## 2026-10-01 — MIXED FOX CRITICAL FACTORIZATION REVIEW
 
 Independent review corrected the interpretation of the standard-family mixed Fox calculation. The equations for r_q correctly give A=C=D=1 and B=(1-q)^(-1) mod 3^k, and completed/projective covariance remains PASS / LOCAL. However, q-level congruence/factorization within the standard family is not the required abstract finite-pair theorem W_k(G)≅W_k(H) ⇒ M_k(G)≅M_k(H). Therefore global finite-pair descent remains OPEN / LOAD-BEARING. The earlier non-redundancy statement was also narrowed: higher 3-adic information relative to the bare F_3 vector-space object is a local information distinction, not yet a category-level non-redundancy theorem. No larger computation is authorized. Detailed correction: research/PAPER3_MIXED_FACTORISATION_CRITICAL_REVIEW_2026-10-01.md.
@@ -831,3 +829,44 @@ Classification:
 Detailed audit: research/PAPER3_MIXED_RELATION_MODULE_DESCENT_AUDIT_2026-10-01.md.
 
 Next authorized action: formalize the extension-window category and the natural transformation W_k -> M_k, then perform an independent covariance/naturality check. No larger Fox computation is authorized.
+
+## 2026-10-01 — MIXED FOX EXTENSION-WINDOW CATEGORICAL AUDIT
+
+The categorical descent issue was sharpened after the weighted Magnus step.
+
+For
+\[
+N_k=3^{k-1}+1,\quad Q_k=G/D_{N_k},\quad E_k=G/D_{N_k+1},\quad A_k=D_{N_k}/D_{N_k+1},
+\]
+the natural finite input for the projective mixed Fox relation jet is the central extension
+\[
+1\to A_k\to E_k\to Q_k\to1.
+\]
+
+This resolves the type defect in treating \((Q_k,A_k)\) as though \(A_k\) were a subgroup of \(Q_k\). But it also exposes a stronger logical boundary: the extension window is an enriched input. The forgetful map
+\[
+U:\mathbf{ExtWin}_k\to\mathbf{Pair}_k,qquad
+(A_k\hookrightarrow E_k\twoheadrightarrow Q_k)\mapsto(Q_k,A_k)
+\]
+forgets the extension class.
+
+Therefore the original finite-pair theorem requires the mixed Fox construction \(F_k\) on extension windows to factor through \(U\):
+\[
+F_k=\overline F_k\circ U,
+\]
+equivalently, to be constant up to canonical projective equivalence on every admissible fiber of \(U\).
+
+No extension reconstruction or fiber-invariance theorem is currently proved. Thus adding \(E_k\) is not yet justified as a canonical enrichment of the original finite pair; it must be treated as additional input.
+
+Positive result: because \(E_k\) is finite, the mixed Fox relation jet can be formulated from the finite group algebra \(\mathbf Z_3[E_k]\), its mixed maximal ideal, and the stable/projective relation-module construction. The weighted Magnus result then supplies compatibility with the precision-k jet of the original group. This makes the extension-window branch legitimate, but it does not yet make it a finite-pair carrier.
+
+Literature control: Mel'nikov's pro-p relation-module exact sequence supplies the Fox/Lyndon structural mechanism; Efrat supplies natural finite Zassenhaus/Magnus constructions. Neither source supplies the present project-specific finite-pair factorization. citeturn0search24turn0search4turn0academia23
+
+Classification:
+- extension-window object: **PASS / CLOSED**;
+- extension-window → projective mixed Fox construction: **PASS / LOCAL**;
+- extension-window as canonical enrichment of \((Q_k,A_k)\): **OPEN**;
+- original finite-pair → mixed Fox descent: **OPEN / LOAD-BEARING**;
+- novelty: **OPEN**.
+
+Next authorized action: test fiber invariance / canonical reconstruction. No larger Fox computation is authorized. Detailed audit: `research/PAPER3_MIXED_EXTENSION_WINDOW_CATEGORICAL_AUDIT_2026-10-01.md`.
