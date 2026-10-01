@@ -57,7 +57,7 @@ The required pre-check was completed before any new computation. The search was 
 
 Primary literature checked:
 - Quadrelli–Weigel, *Profinite Groups with a Cyclotomic p-Orientation* (arXiv:1811.02250 / Doc. Math. 25 (2020)): cyclotomicity is preserved under free products and specified fibre/semidirect constructions; the elementary-type framework is generated from free pro-p groups and Demushkin groups by free products and cyclotomic semidirect/fibre-product operations.
-- Mináč–Pasini–Quadrelli–Tân, *Koszul algebras and quadratic duals in Galois cohomology* (Adv. Math. 380 (2021), arXiv:1903.???): the cyclotomic semidirect construction is explicitly part of the elementary-type class.
+- Mináč–Pasini–Quadrelli–Tân, *Koszul algebras and quadratic duals in Galois cohomology* (Adv. Math. 380 (2021), arXiv:1808.01695): the cyclotomic semidirect construction is explicitly part of the elementary-type class.
 - Blumer–Quadrelli, arXiv:2603.15464v2: the F2 family has the two-dimensional quadratic relation space used in the present gate and is globally non-1-cyclotomic.
 
 Pre-check conclusion:
