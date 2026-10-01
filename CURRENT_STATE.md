@@ -403,3 +403,8 @@ The post-Paper-3 attack has now been sharpened using the frozen carrier-compress
 The proposed elapsed-time “2 weeks” stop rule is not adopted. Structural evidence controls closure. The branch closes immediately on the recognition-minimality question because a smaller frozen carrier already exists; only the distinct universal-obstruction question remains.
 
 Next authorized action: explicitly define the finite-pair category and morphisms, define “separating obstruction carrier” and the factorization/universal property, then attempt the universal theorem or construct a counterexample. No W_11/W_12, Fox, 45-dimensional computation, or Paper 2 reproof is authorized.
+
+
+## 2026-10-01 — MIXED FOX FACTORIZATION INTERPRETATION CORRECTED
+
+The standard-family mixed Fox calculation remains valid but is explicitly classified only as **PASS / LOCAL** evidence. Parameter congruence q≡q' (mod 3^k) within the standard family is not the same statement as descent from the abstract finite pair W_k. The required global implication W_k(G)≅W_k(H) ⇒ M_k(G)≅M_k(H) remains **OPEN / LOAD-BEARING**. Likewise, “higher 3-adic information” is not by itself a category-level non-redundancy theorem; category-relative non-redundancy remains OPEN. No larger computation is authorized before the A/B descent-versus-counterexample gate is resolved. See research/PAPER3_MIXED_FACTORISATION_CRITICAL_REVIEW_2026-10-01.md.
