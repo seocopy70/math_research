@@ -1,5 +1,13 @@
 # CURRENT_STATE — 수학증명
 
+## 2026-10-01 — MIXED (3,I)-ADIC FINITE BRIDGE ATTACK
+
+The mixed candidate survived the standard-family finite-level attack. Using the projective Fox row for r_q=x_1^q[x_1,x_2][x_3,x_4], the mixed maximal-ideal truncation at m^{k+1}, m=(3,A-1,B-1,C-1,D-1), retains exactly the finite precision needed for chi mod 3^k on the standard family. The equations force A=C=D=1 and the remaining equation gives B=(1-q)^(-1) to the required precision. This is a direct Fox-equation bridge, not the forbidden q-classification-repackaging route.
+
+Status: completed projective intrinsicity PASS/LOCAL; finite mixed carrier PASS/LOCAL on the standard Demushkin family; direct orientation bridge PASS/LOCAL on that family; non-redundancy against the closed C_k selector PASS/LOCAL. The global finite-pair descent theorem remains OPEN/LOAD-BEARING. The next decisive dichotomy is: prove that the finite mixed scheme modulo m^{k+1} is a functor of the project's abstract finite-pair input, or construct two admissible same-pair inputs with different mixed finite schemes and close the branch.
+
+Detailed audit: research/PAPER3_MIXED_3I_ADIC_FINITE_BRIDGE_AUDIT_2026-10-01.md.
+
 ## 2026-10-01 — GENUINELY NEW CARRIER BRANCH / MIXED (3,I)-ADIC GATE
 
 The O_k universal-property branch is closed and will not be revisited. The remaining branch is a genuinely new finite filtered carrier satisfying finite filtered input → intrinsic carrier → chi.
