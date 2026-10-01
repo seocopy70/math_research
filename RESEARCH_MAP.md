@@ -1,3 +1,24 @@
+## 2026-10-01 — CRITICAL TRACK CORRECTION: PAPER 3 FROZEN / POST-PAPER-3 GENERALIZATION
+
+**Paper 3 본체는 완성·고정된 publication candidate이다.** 현재 Gate D, (t_2), full (delta)-family, intrinsic-carrier 문제를 다시 공격하는 것은 Paper 3 본체의 정리나 증명을 재검증하는 작업이 아니다.
+
+현재 작업은 Paper 3가 제시한 **후속 일반화 연구 프로그램**을 별도 연구 가지로 검증하는 것이다:
+[
+	ext{finite-window}longrightarrow	ext{intrinsic carrier}longrightarrow	ext{global orientation}.
+]
+
+후속 연구의 실패는 Paper 3 본체의 완성도나 기존 정리를 무효화하지 않는다. Paper 2 selector 역시 완료된 선행 결과로 고정하며 재증명하지 않는다.
+
+현재 경계:
+- Paper 3 본체: **완성·고정**.
+- Paper 3 이후 carrier/generalization branch: **OPEN / LOAD-BEARING**.
+- 첫 실제 승부처: carrier intrinsicity / functoriality / gauge independence.
+- 다음 승부처: orientation bridge의 비중복성.
+- 구조적 실패 시 해당 후속 branch만 **FAIL / CLOSED**하고 상위 완성 논문을 재개방하지 않는다.
+
+기존 역사적 항목은 추적성을 위해 보존한다. 이 항목이 현재 active-track의 의미를 정정한다.
+
+
 ## 2026-10-01 — PUBLICATION-STYLE FINAL ARTIFACTS
 
 A style-only finalization pass was completed after the three-paper source→CI→PDF audits. See research/THREE_PAPER_PUBLICATION_STYLE_FINAL_2026-10-01.md.
