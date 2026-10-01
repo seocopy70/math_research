@@ -1,5 +1,21 @@
 ## 2026-10-01 — POST-PAPER-3 CARRIER NON-REDUNDANCY AUDIT
 
+## 2026-10-01 — GENUINELY NEW CARRIER BRANCH / MIXED (3,I)-ADIC GATE
+
+The O_k universal-property branch is closed and will not be revisited. The remaining branch is a genuinely new finite filtered carrier satisfying finite filtered input → intrinsic carrier → chi.
+
+The mixed (3,I)-adic Fox candidate is the first authorized target. Its completed/projective construction survives the definition-level attacks: relator conjugation acts by a unit, relation-generator gauge acts projectively, Nielsen changes act by invertible Fox Jacobian plus coordinate substitution, and the maximal ideal m=(3,U_1,...,U_d) is preserved. Therefore completed/projective intrinsicity is **PASS / LOCAL**.
+
+However, this is not yet a finite-pair theorem. The natural mixed finite object A_F/m^n is characteristic-zero filtered data, whereas the project finite pair W_k is built from the mod-3 Zassenhaus filtration. Standard literature identifies Zassenhaus with powers of the augmentation ideal in F_3[[G]], not with the mixed (3,I)-adic filtration over Z_3[[G]]. Thus factorization W_k → mixed finite carrier is a separate, load-bearing theorem and remains **OPEN**.
+
+Orientation bridge to chi mod 3^k is also **OPEN / LOAD-BEARING**. It must be direct and natural, not merely mixed carrier → q-class → known Demushkin orientation formula. Non-redundancy against the closed one-dimensional C_k selector is **OPEN**.
+
+Decision: mixed candidate remains **OPEN**, but no numerical scan is authorized. The next and only authorized attack is finite-pair factorization: prove W_k determines the relevant mixed finite carrier, or construct an admissible same-W_k/different-mixed-data counterexample and close the branch.
+
+Hard stop: if intrinsicity of a genuinely new finite carrier cannot be established within two weeks of this branch opening, close the branch. For the mixed candidate, completed/projective intrinsicity has passed locally; the two-week boundary concerns finite-level intrinsicity/factorization rather than further refinement of the exact Fox scheme.
+
+Detailed audit: research/PAPER3_MIXED_3I_ADIC_CARRIER_GATE_AUDIT_2026-10-01.md.
+
 ## 2026-10-01 — O_k FINITE-PAIR UNIVERSAL OBSTRUCTION PROPERTY AUDIT
 
 The proposed load-bearing attack on the finite transgression carrier is now resolved at the categorical level.
