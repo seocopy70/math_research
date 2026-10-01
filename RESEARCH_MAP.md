@@ -1,3 +1,14 @@
+## 2026-10-01 — PUBLICATION-STYLE FINAL ARTIFACTS
+
+A style-only finalization pass was completed after the three-paper source→CI→PDF audits. See research/THREE_PAPER_PUBLICATION_STYLE_FINAL_2026-10-01.md.
+
+The final style branches are:
+- Paper 1: paper1-style-final-2026-10-01
+- Paper 2: paper2-style-final-2026-10-01
+- Paper 3: paper3-style-final-2026-10-01
+
+Classification: PASS / CLOSED for publication-style artifact finalization. Mathematical status and publication novelty classification are unchanged.
+
 ## 2026-09-28 — START HERE 중앙 안내서
 
 연구 입문·전체 그림·읽기 경로를 한 곳에서 안내하는 중앙 문서를 추가했다:
