@@ -295,3 +295,24 @@ Classification:
 Detailed record: research/PAPER3_PHASE_A_D_VS_F1_FINITE_RECOGNITION_2026-10-01.md
 
 Next authorized direction: seek a broader category in which the same intrinsic W_3 carrier recognizes 1-cyclotomicity without hard-coding family membership or q; do not treat the D/F1 pair alone as sufficient for a new-paper claim.
+
+
+## 2026-10-01 — PAPER 3 PHASE B: D/F1/F2 RECOGNITION
+
+Phase B extends the finite-window test category from D vs F1 to the three-family category {D,F1,F2}.
+
+For odd p, d>=2, q=p^f:
+- W_2 is identical across the three families.
+- D has one quadratic relation line with nondegenerate alternating rank 2d.
+- F1 has one quadratic relation line with rank 2d-2.
+- F2 has a two-dimensional quadratic relation space (the Demushkin quadratic relation plus the independent unpaired commutator).
+Thus W_3 separates all three family types intrinsically, and the exact recognition threshold for T_cyc on the declared three-family category is r=3.
+
+Classification:
+- D/F1/F2 recognition: **PASS / CLOSED**.
+- Uniform parameter statement: **PASS / CLOSED**.
+- Reusable W_3 carrier: **PASS / LOCAL**.
+- Novelty from this family-by-family extension: **OPEN / CONDITIONAL; weak**.
+
+The important negative boundary is now explicit: continuing to add families whose non-cyclotomicity is already encoded in the quadratic relation does not deepen the program. The next decisive test is a cyclotomic/non-cyclotomic pair with the same W_3 quadratic/cup data. If such a pair exists, W_3 recognition is false on the enlarged category and a higher finite carrier is required; if no such pair exists in a meaningful category, a structural theorem must explain why.
+Detailed record: research/PAPER3_PHASE_B_D_F1_F2_FINITE_RECOGNITION_2026-10-01.md
