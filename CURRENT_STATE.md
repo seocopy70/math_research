@@ -223,17 +223,17 @@ Classification: **PASS / CLOSED** at the declared two-object category. Broad cat
 Authoritative detail: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md
 
 
-## 2026-10-01 — F2 SAME-W3 CONTROL GATE OPEN
+## 2026-10-01 — F2 SAME-W3 CYCLOTOMIC CONTROL GATE CLOSED
 
-The uniform F1 pairwise theorem is closed at r=q+1. The next branch is F2. The obvious cyclotomic free-product control is already ruled out at W3 in the smallest rank-4 case by a GL4-invariant Pfaffian pencil type (repeated root for F2 versus split roots for the free-product control).
+The F2 same-W3 control search is now closed at the authorized structural level. The audited rank-4/two-relator standard elementary-type cyclotomic constructions have Pfaffian type \(ab\) or \(0\), whereas the F2 quadratic relation pencil has repeated-root type \(a^2\). These types are not GL4-equivalent.
 
 Status:
-- F2 same-W3 cyclotomic obstruction: **OPEN / DECISIVE**.
-- Natural free-product control: **FAIL / CLOSED**.
-- Broad F2 recognition: **OPEN / CONDITIONAL**.
-- No large computation authorized until a plausible W3-matching cyclotomic control is found.
+- F2 × standard elementary-type cyclotomic control: **FAIL / CLOSED**.
+- F2 × arbitrary cyclotomic pro-p group: **OPEN / CONDITIONAL**; no universal no-go theorem is claimed.
+- F2 \(W_4\) computation: **NOT AUTHORIZED**.
+- F2 broader finite-window recognition: **OPEN / CONDITIONAL**.
 
-Record: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md
+This closes the standard construction mechanism rather than claiming that all cyclotomic groups are impossible controls. F1 is not reopened. Detailed record: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md
 
 ## 2026-10-01 — AUTHORITATIVE CORRECTION: F1 UNIFORM q=p^f THRESHOLD RECHECK
 
