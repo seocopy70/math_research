@@ -572,3 +572,35 @@ Classification:
 This is a structural boundary, not a failed search report: the standard elementary-type cyclotomic construction mechanism cannot realize the repeated-root F2 \(W_3\) quadratic type in the audited rank-4/two-relator setting. F1 is not reopened. The next research direction must therefore be a genuinely broader finite-window recognition question, subject to a fresh pre-check and literature/non-redundancy audit.
 
 Authoritative detail: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md
+
+
+## 2026-10-01 — F2 CONTROL AUDIT CORRECTION: PFAFFIAN VERIFIED; CANDIDATE COMPLETENESS REMAINS OPEN
+
+A one-time independent verification was performed on the F2 same-\(W_3\) control gate, without reopening the F2 research branch.
+
+For the rank-4 F2 relation plane
+\[
+R_{F2}=\langle X_1\wedge Y_1+X_2\wedge Y_2,\;X_1\wedge X_2\rangle,
+\]
+the ordered-basis skew matrix of \(a(\omega_1+\omega_2)+b\eta\) has direct Pfaffian
+\[
+\operatorname{Pf}=a^2.
+\]
+For the two construction shapes actually preserved in the earlier elementary-type audit:
+1. split/free-product of two rank-2 one-relator factors: \(R=\langle\omega_1,\omega_2\rangle\), giving \(\operatorname{Pf}=ab\);
+2. shared-direction semidirect shape followed by a free rank-1 factor: the two quadratic forms share a degree-one direction, giving \(\operatorname{Pf}=0\).
+
+Thus the direct calculation independently confirms the candidate-level obstruction \(a^2\not\sim ab,0\) under \(GL_4\).
+
+However, the repository does **not** contain an independent proof that these two shapes exhaust the full standard elementary-type rank-4/two-relator construction class. The earlier wording “structural no-go for the audited standard construction mechanism” / “construction mechanism itself” therefore overstated the evidence.
+
+Corrected classifications:
+- recovered examined elementary-type candidates: **FAIL / CLOSED**;
+- completeness of the recovered candidate list: **OPEN**;
+- arbitrary cyclotomic pro-\(p\) control: **OPEN / CONDITIONAL**;
+- operational F2 branch: **CLOSED** unless new evidence supplies a new construction or proves completeness;
+- no \(W_4\) computation authorized.
+
+This entry supersedes only the strength of the prior no-go wording. It does not reopen F1 or the already rejected candidates.
+
+Record: `research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md`
