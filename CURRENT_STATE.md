@@ -12,7 +12,7 @@ Status:
 
 Authoritative audit: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md
 
-Next authorized gate: parameter-uniform q=p^f. The target is a theorem or counterexample for W_q equality versus W_{q+1} intrinsic separation; analogy alone is insufficient.
+Parameter-uniform finite-q threshold is now **PASS / CLOSED** for the declared F1/cyclotomic-control pair: r=q+1 for every finite q=p^f, p odd, d>=2. Next authorized gate: seek a genuinely broader category or a same-window obstruction beyond this pair; do not infer a broad recognition theorem from the pairwise result.
 
 
 ## 2026-10-01 — THREE-PAPER PUBLICATION-STYLE FINALIZATION
@@ -177,3 +177,16 @@ The three-paper editorial final pass is complete on isolated final branches. The
 ## 2026-10-01 — ACTIVE NEXT-GENERALIZATION ROADMAP
 
 The next research window starts from research/PAPER3_F1_CYCLOTOMIC_FINITE_WINDOW_GATE_2026-10-01.md after mandatory continuity restoration. The fixed conditional sequence is: (1) D versus F1 at (3,2,3); (2) F1 parameter-uniform extension if supported; (3) a genuinely different category such as deferred F2; (4) enlargement from T_cyc to a family of global properties; (5) category-relative finite-window recognition theory r_T(C;D_bullet). A failed intrinsic-carrier or separation attempt may terminate the branch or produce a no-go theorem and does not authorize escalation. Current F1 finite-window recognition is now **PASS / LOCAL** at the concrete pair, with exact two-object threshold **PASS / CLOSED**. The parameter-uniform extension remains **OPEN / LOAD-BEARING**; the general recognition theory is **OPEN / CONDITIONAL**.
+
+
+## 2026-10-01 — F1 UNIFORM FINITE-q THRESHOLD
+
+The pairwise obstruction theorem is now uniform in finite q=p^f:
+\[
+r_{T_{cyc}}(\{G_{F1}(q),G_{cyc}(q)\};D_\bullet)=q+1
+\]
+for odd p and d>=2. W_q isomorphism follows directly from Zassenhaus degree bookkeeping; W_{q+1} non-isomorphism follows from the intrinsic abelianization difference, using the nonzero restricted p^f-power class in the F1 associated graded Lie algebra.
+
+Classification: **PASS / CLOSED** at the declared two-object category. Broad category-level recognition remains **OPEN / CONDITIONAL**.
+
+Authoritative detail: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md
