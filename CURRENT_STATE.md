@@ -1,3 +1,21 @@
+## 2026-10-01 — F2 ONE-TIME INDEPENDENT CONTROL AUDIT / COMPLETENESS LIMIT
+
+The F2 branch was independently checked once, without reopening the search. The F2 rank-4 quadratic relation pencil has direct Pfaffian \(a^2\). The recovered elementary-type candidate list contains exactly two construction shapes in the surviving audit trail: (i) split/free-product rank-2 one-relator factors, with Pfaffian \(ab\); and (ii) a shared-direction cyclotomic semidirect shape with a free rank-1 factor, with Pfaffian \(0\).
+
+The direct Pfaffian calculation is **PASS / CLOSED** for these examined candidates. But the repository does not independently prove that the recovered two-shape list is exhaustive for the entire standard elementary-type rank-4/two-relator class.
+
+Therefore the correct status is:
+- F2 × recovered examined candidates: **FAIL / CLOSED**.
+- completeness of examined candidate list: **OPEN**.
+- F2 × arbitrary cyclotomic pro-p group: **OPEN / CONDITIONAL**.
+- F2 W4 computation: **NOT AUTHORIZED**.
+- operational F2 branch: **CLOSED** unless new evidence supplies a new construction or proves completeness.
+- broad F2 finite-window recognition: **OPEN / CONDITIONAL**.
+
+This supersedes the stronger wording that the standard elementary-type construction mechanism itself had been ruled out. The correct statement is candidate-level, not universal.
+
+Detailed audit: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md
+
 ## 2026-10-01 — F2 STANDARD ELEMENTARY-TYPE CONTROL ROUTE CLOSED
 
 The F2 same-W3 search was carried through the authorized construction-level pre-check. Literature confirms cyclotomic free products and fibre/semidirect constructions as legitimate control mechanisms, but the standard elementary-type class cannot supply a rank-4 two-relator quadratic relation plane of F2 repeated-root Pfaffian type. Symbolic rank/relation bookkeeping reduces the relevant rank-4/two-relator shapes to Pfaffian ~ab or Pfaffian 0, whereas F2 has Pfaffian ~a^2.
