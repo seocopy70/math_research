@@ -208,3 +208,16 @@ Final style artifacts:
 - Paper 3: branch paper3-style-final-2026-10-01; 17 pages; SHA-256 3518e5f966401d48eae9c8b76b80fe7a9ba4e53f76bc4255edb66862082bf7ff.
 
 CI/PDF verification and visual first-page inspection: PASS/CLOSED. Publication novelty remains OPEN/CONDITIONAL. Detailed record: research/THREE_PAPER_PUBLICATION_STYLE_FINAL_2026-10-01.md.
+
+
+## 2026-10-01 — THREE-PAPER EDITORIAL FINAL PDF PASS
+
+A final editorial pass was applied to the three publication-candidate manuscripts to remove visible AI/session scaffolding and amateur-style presentation without changing the mathematical claims or reopening closed proof branches.
+
+- Paper 1 branch: `paper1-editorial-final-2026-10-01`; source `paper/successor_main.tex`; final CI run **36797031449**: PASS; PDF 8 pages; final PDF SHA-256 `ec25a3bb55ae19e48629895bca722981ad5e33827cc5be2ce1228326c64271b0`.
+- Paper 2 branch: `paper2-editorial-final-2026-10-01`; source `paper/main.tex`; final CI run **36796701931**: PASS; PDF 12 pages; final PDF SHA-256 `aabe2f0056b0ce250e06fa7cba1840f93a58754d02c8fb0bfacc46d00bdbdcb7`.
+- Paper 3 branch: `paper3-editorial-final-2026-10-01`; source `paper/main.tex`; final CI run **36797451738**: PASS; PDF 14 pages; final PDF SHA-256 `15eef73b46ae70db087f434108a187e4f79fcbc01a88326507127d7d0f34a95a`.
+
+Editorial changes include: removal of placeholder companion-paper/arXiv language; removal of repeated defensive novelty boilerplate; replacement of informal “kills” in the Paper 1 definition by the standard “factors through” formulation; clearer separation of factorization, recognition, and scope; explicit (q=p=3) identification in the fixed rank-four papers; consistent Demuškin typography; and clearer standalone titles. No mathematical theorem, hypothesis, boundary, or novelty classification was changed.
+
+Two review comments were deliberately not adopted because they are not errors in the authoritative source: (1+3A_k) is a multiplicative principal-unit subgroup (so the notation is legitimate), and extracted strings such as “3j” are PDF text-extraction artifacts rather than source-level (3^j) failures. The research frontier remains unchanged: Paper 1/2/3 mathematical status PASS/CLOSED at their declared scopes; publication novelty remains OPEN/CONDITIONAL.

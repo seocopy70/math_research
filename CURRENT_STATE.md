@@ -144,3 +144,14 @@ Critical correction:
 - The alleged Paper 2 page-3 grid of repeated 1 glyphs is NOT present in the exact delivered Paper 2 artifact. Independent text extraction and visual rendering of page 3 show a normal proof page. No rebuild is authorized from that objection alone.
 - The supplied Paper 1 objections correspond to a different/older manuscript mapping; the delivered Paper 1 already uses p,f,k rather than an undefined q and contains the relation with the preceding recognition paper.
 - The alleged Paper 3 x3 typo is absent: current source uses x_2^{3^e}.
+
+## 2026-10-01 — EDITORIAL PDF ARTIFACT STATUS
+
+The three-paper editorial final pass is complete on isolated final branches. The resulting CI-built PDFs are verified and ready as publication-candidate artifacts; mathematical status is unchanged. The branches are intentionally kept separate from the frozen main manuscript until the artifact set is promoted.
+
+- Paper 1: `paper1-editorial-final-2026-10-01`, CI 36797031449, 8 pages.
+- Paper 2: `paper2-editorial-final-2026-10-01`, CI 36796701931, 12 pages.
+- Paper 3: `paper3-editorial-final-2026-10-01`, CI 36797451738, 14 pages.
+- Editorial artifact status: **PASS / CLOSED**.
+- Mathematical research status: **UNCHANGED**.
+- Publication novelty: **OPEN / CONDITIONAL**.
