@@ -835,3 +835,19 @@ W_10(G) -> L(rho_2) -> {delta_{3,rho_3}} -> chi mod 27.
 7. which parts require Demushkin hypotheses and which extend to broader categories.
 
 Do not claim a general theorem until each item is independently checked.
+
+
+## 2026-10-01 — CURRENT LIVE GATE: F1 PHASE A CLOSED
+
+Phase A (D vs F1) is now **PASS / CLOSED** at the declared two-family category.
+
+For C_{p,d,q}={D_{d,q},F1_{d,q}} and T_cyc=1-cyclotomicity:
+- W_2 does not separate the two families.
+- W_3 separates them intrinsically by commutator/cup-pairing rank 2d versus 2d-2.
+- Hence r_{T_cyc}(C_{3,2,3};D)=3, and the same pairwise theorem holds uniformly for odd p, d>=2, q=p^f.
+- The detector is q-blind and presentation-independent at the declared window level.
+- This does not establish a broad-category recognition theorem; Phase-A novelty is currently weak because the structural ingredients are already explicit in the source literature.
+
+Detailed record: `research/PAPER3_PHASE_A_D_VS_F1_FINITE_RECOGNITION_2026-10-01.md`.
+
+**Next live gate:** broaden the category beyond the D/F1 pair and test whether the same W_3 commutator/cup carrier recognizes T_cyc without family labels or q. If no nontrivial broader category survives, close this carrier as a local/reformulation result and move to the next target rather than forcing generalization.
