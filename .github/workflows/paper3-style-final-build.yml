@@ -1,0 +1,52 @@
+name: Build Paper 3 style-final PDF
+on:
+  push:
+    branches:
+      - paper3-style-final-2026-10-01
+    paths:
+      - 'paper/main.tex'
+      - '.github/workflows/paper3-style-final-build.yml'
+  workflow_dispatch:
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile Paper 3 manuscript
+        uses: xu-cheng/latex-action@v4
+        with:
+          working_directory: paper
+          root_file: main.tex
+          args: -pdf -interaction=nonstopmode -halt-on-error
+      - name: Verify PDF
+        working-directory: paper
+        run: |
+          test -s main.pdf
+          grep -q 'Output written on main.pdf' main.log
+          grep -q '\\appendix' main.tex
+          grep -q 'Independent base-level enumeration' main.tex
+          grep -q 'Cochain-level verification' main.tex
+          grep -q 'Proof--computation boundary' main.tex
+          ! grep -Eiq 'undefined|LaTeX Warning|Error:' main.log
+      - name: Package PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf paper3-style-submission
+          mkdir -p paper3-style-submission
+          cp paper/main.tex paper3-style-submission/main.tex
+          cp paper/main.pdf paper3-style-submission/finite-window-kummer-selector-final.pdf
+          (cd paper3-style-submission && sha256sum main.tex finite-window-kummer-selector-final.pdf > SHA256SUMS.txt)
+          (cd paper3-style-submission && zip -q -9 ../finite-window-kummer-selector-final.zip main.tex finite-window-kummer-selector-final.pdf SHA256SUMS.txt)
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper3-style-final-pdf
+          path: paper/main.pdf
+          if-no-files-found: error
+      - name: Upload full submission package
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper3-style-final-full
+          path: finite-window-kummer-selector-final.zip
+          if-no-files-found: error
