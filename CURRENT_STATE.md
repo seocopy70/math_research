@@ -1,25 +1,18 @@
-## 2026-10-01 — NEXT GENERALIZATION: F1 CYCLOTOMIC FINITE-WINDOW GATE
+## 2026-10-01 — F1 SAME-W3 OBSTRUCTION / W4 INTRINSIC SEPARATION AUDIT
 
-Gate D is closed for the full torsion-free Demushkin class at odd p, even rank, arbitrary allowed q, and all k>=2. The most aggressive next step is therefore to leave the Demushkin category.
+The concrete (p,d,q)=(3,2,3) pair has now passed an independent W4 intrinsicity audit. The earlier presentation-local equation is not used as the invariant. Instead, the truncated restricted relation module has a canonical degree-3 p-power component: it is zero for F1 and nonzero for the cyclotomic free-product control. This is preserved by restricted-Lie isomorphisms.
 
-Active target:
-\[
-W_n(G)\longrightarrow T_{\mathrm{cyc}}(G),
-\qquad
-T_{\mathrm{cyc}}(G)=\text{existence of a 1-cyclotomic/Kummerian orientation}.
-\]
+Status:
+- W3 equality: **PASS / CLOSED**.
+- W4 intrinsic separation: **PASS / CLOSED** for the declared pair.
+- Exact two-object threshold r=4: **PASS / CLOSED**.
+- Uniform q=p^f extension: **OPEN / LOAD-BEARING**.
+- Broad category-level recognition theorem: **OPEN / CONDITIONAL**.
+- Novelty/priority: **OPEN / CONDITIONAL**; no priority claim.
 
-Initial category: paired Demushkin/F1 variations at fixed (p,d,q). The first stress test is (p,d,q)=(3,2,3).
+Authoritative audit: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md
 
-The immediate theorem question is whether finite Zassenhaus windows can separate the 1-cyclotomic Demushkin member from the non-1-cyclotomic F1 member, and whether the first separating datum has an intrinsic Kummerian obstruction interpretation.
-
-Current status:
-- F1 finite-window 1-cyclotomic recognition: OPEN / DECISIVE.
-- Orientation bridge: OPEN / LOAD-BEARING.
-- Separation pair: OPEN / DECISIVE.
-- No large computation authorized until the finite object/carrier and separation claim are defined.
-
-Detailed gate: research/PAPER3_F1_CYCLOTOMIC_FINITE_WINDOW_GATE_2026-10-01.md
+Next authorized gate: parameter-uniform q=p^f. The target is a theorem or counterexample for W_q equality versus W_{q+1} intrinsic separation; analogy alone is insufficient.
 
 
 ## 2026-10-01 — THREE-PAPER PUBLICATION-STYLE FINALIZATION
@@ -183,4 +176,4 @@ The three-paper editorial final pass is complete on isolated final branches. The
 
 ## 2026-10-01 — ACTIVE NEXT-GENERALIZATION ROADMAP
 
-The next research window starts from research/PAPER3_F1_CYCLOTOMIC_FINITE_WINDOW_GATE_2026-10-01.md after mandatory continuity restoration. The fixed conditional sequence is: (1) D versus F1 at (3,2,3); (2) F1 parameter-uniform extension if supported; (3) a genuinely different category such as deferred F2; (4) enlargement from T_cyc to a family of global properties; (5) category-relative finite-window recognition theory r_T(C;D_bullet). A failed intrinsic-carrier or separation attempt may terminate the branch or produce a no-go theorem and does not authorize escalation. Current F1 finite-window recognition is OPEN / DECISIVE; the general recognition theory is OPEN / CONDITIONAL. No new computation is authorized in this chat.
+The next research window starts from research/PAPER3_F1_CYCLOTOMIC_FINITE_WINDOW_GATE_2026-10-01.md after mandatory continuity restoration. The fixed conditional sequence is: (1) D versus F1 at (3,2,3); (2) F1 parameter-uniform extension if supported; (3) a genuinely different category such as deferred F2; (4) enlargement from T_cyc to a family of global properties; (5) category-relative finite-window recognition theory r_T(C;D_bullet). A failed intrinsic-carrier or separation attempt may terminate the branch or produce a no-go theorem and does not authorize escalation. Current F1 finite-window recognition is now **PASS / LOCAL** at the concrete pair, with exact two-object threshold **PASS / CLOSED**. The parameter-uniform extension remains **OPEN / LOAD-BEARING**; the general recognition theory is **OPEN / CONDITIONAL**.
