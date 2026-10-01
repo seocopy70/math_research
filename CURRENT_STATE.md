@@ -408,3 +408,8 @@ Next authorized action: explicitly define the finite-pair category and morphisms
 ## 2026-10-01 — MIXED FOX FACTORIZATION INTERPRETATION CORRECTED
 
 The standard-family mixed Fox calculation remains valid but is explicitly classified only as **PASS / LOCAL** evidence. Parameter congruence q≡q' (mod 3^k) within the standard family is not the same statement as descent from the abstract finite pair W_k. The required global implication W_k(G)≅W_k(H) ⇒ M_k(G)≅M_k(H) remains **OPEN / LOAD-BEARING**. Likewise, “higher 3-adic information” is not by itself a category-level non-redundancy theorem; category-relative non-redundancy remains OPEN. No larger computation is authorized before the A/B descent-versus-counterexample gate is resolved. See research/PAPER3_MIXED_FACTORISATION_CRITICAL_REVIEW_2026-10-01.md.
+
+
+## 2026-10-01 — MIXED FOX WEIGHTED MAGNUS GATE NARROWED
+
+The apparent characteristic-zero/mod-3 incompatibility is no longer the main obstruction. Efrat's p-adic Magnus coefficient estimate implies that for N_k=3^{k-1}+1, D_{N_k} is invisible to the mixed (3,I)-adic coefficient jet through precision k, while the boundary term is represented by D_{N_k}/D_{N_k+1}. Thus the weighted coefficient descent is **PASS / CLOSED**, and naive deep-relator counterexamples are **FAIL / CLOSED**. The remaining load-bearing issue is specifically categorical projective relation-module descent W_k -> M_k. Even if that succeeds, a separate non-redundancy gate remains because the frozen selector already recognizes chi mod 3^k at the same window. No large computation is authorized. See research/PAPER3_MIXED_3I_ADIC_WEIGHTED_MAGNUS_DESCENT_2026-10-01.md.
