@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - paper1-fixes-2026-09-28
+      - paper1-style-final-2026-10-01
     paths:
       - 'paper/successor_main.tex'
       - '.github/workflows/paper1-build.yml'
