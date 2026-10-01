@@ -101,3 +101,92 @@ The lower bound is W_q equality; the upper bound is W_{q+1} non-isomorphism.
 - Formula q+1 is proved for the declared two-object pair at every finite q=p^f, not inferred by analogy.
 - This remains a local pairwise theorem, not a recognition theorem on a broad category.
 - No q-independent global selector/carrier theorem is claimed.
+
+
+## 2026-10-01 — CRITICAL REVIEW RECHECK: UNIFORM (q=p^f) THRESHOLD
+
+A post-closure critical review questioned two load-bearing points: (A) whether (W_q) equality follows at the level of the full filtered quotient, rather than only from initial forms; and (B) whether (X_2^{[p^f]}
+eq0) is justified uniformly for all finite (q=p^f).
+
+Both points are now independently closed.
+
+### A. Full (W_q) equality
+
+Let (F) be the common free pro-(p) group and let (R_1,R_2) be the normal closures of the two defining relators. For the F1 relator,
+[
+[x_1^q,y_1]in D_{q+1}(F)subseteq D_q(F),
+]
+while for the cyclotomic control (x_2^qin D_q(F)). Hence both relators have the same image
+[
+s=[x_2,y_2]cdots[x_d,y_d]
+]
+in (F/D_q(F)).
+
+For a quotient (G=F/R), functoriality of the Zassenhaus filtration gives
+[
+D_q(G)=D_q(F)R/R,
+]
+so
+[
+G/D_q(G)simeq F/(D_q(F)R).
+]
+Therefore equality of the relator normal closures in (F/D_q(F)), not merely equality of initial forms, follows: both quotients are
+[
+F/igl(D_q(F),sigr).
+]
+Thus the (W_q) equality is a full filtered-group quotient statement.
+
+### B. Uniform nonvanishing at (q=p^f)
+
+Blumer–Quadrelli explicitly identify the F1 associated restricted Lie algebra as the free product of a free restricted Lie algebra on (X_1,Y_1) and a Demuškin restricted Lie algebra on the remaining (2d-2) generators. In particular, the map sending (X_2) to a free rank-one abelian restricted Lie generator (t) and all other degree-one generators to (0) is compatible with the defining quadratic relation. Hence
+[
+X_2^{[p^f]}longmapsto t^{[p^f]}
+eq0
+]
+in the target free-abelian restricted Lie algebra. Therefore
+[
+X_2^{[q]}
+eq0
+]
+in degree (q) for every finite (q=p^f).
+
+There is also a completely independent group-level verification of the needed (W_{q+1}) separation. In the F1 group, all defining relations are commutators, so
+[
+G_{F1}(q)^{ab}simeq mathbb Z_p^{,2d}.
+]
+For (n=q+1=p^f+1), the image of (D_n) in the abelianization is
+[
+p^{f+1}mathbb Z_p^{,2d},
+]
+because (lceillog_p(q+1)ceil=f+1). Hence
+[
+igl(W_{q+1}(G_{F1}(q))igr)^{ab}
+simeq(mathbb Z/p^{f+1})^{2d}.
+]
+
+For the control,
+[
+G_{cyc}(q)^{ab}simeq
+mathbb Z_p^{,2d-1}oplusmathbb Z/p^f,
+]
+since (x_2^q[x_2,y_2]=1) becomes (x_2^q=1) after abelianization. Passing to (W_{q+1}) gives
+[
+igl(W_{q+1}(G_{cyc}(q))igr)^{ab}
+simeq
+(mathbb Z/p^{f+1})^{2d-1}oplusmathbb Z/p^f.
+]
+These finite abelian groups have different orders, so the two (W_{q+1}) windows are non-isomorphic. This independently verifies the upper bound without relying on a presentation-local p-power coordinate.
+
+### Revised classification
+
+The earlier uniform theorem was not overclaimed once the above two details are made explicit. The correct final status is:
+
+- (W_q) full filtered equality: **PASS / CLOSED**.
+- Uniform (X_2^{[p^f]}
+eq0): **PASS / CLOSED**.
+- Independent abelianization separation at (W_{q+1}): **PASS / CLOSED**.
+- Uniform pairwise threshold (r=q+1): **PASS / CLOSED** for the declared two-object category.
+- Broad category-level recognition: **OPEN / CONDITIONAL**.
+- Novelty/priority: **OPEN / CONDITIONAL**.
+
+The result remains local/pairwise: it does not establish a q-independent carrier or a recognition theorem for an arbitrary category of cyclotomic/non-cyclotomic pro-(p) groups.
