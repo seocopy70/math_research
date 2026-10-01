@@ -469,3 +469,28 @@ Thus the immediate free-product cyclotomic control is FAIL / CLOSED as a same-W3
 Next authorized search: cyclotomic groups outside this free-product control class, especially elementary-type cyclotomic semidirect products, for a W3 quadratic relation space of F2 type. No large computation until such a control is identified.
 
 Record: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md
+
+## 2026-10-01 — F1 UNIFORM THRESHOLD CRITICAL RECHECK CLOSED
+
+A critical review challenged the parameter-uniform F1/cyclotomic-control theorem on two points: whether (W_q) equality had been shown for the full filtered quotient, and whether (X_2^{[p^f]}
+eq0) had been established uniformly.
+
+Independent recheck closes both.
+
+- **Full (W_q) equality:** in the common free pro-(p) group (F), both defining relators reduce modulo (D_q(F)) to the same word (s=[x_2,y_2]cdots[x_d,y_d]). Using (D_q(F/R)=D_q(F)R/R), both windows are exactly (F/(D_q(F),s)). This is stronger than equality of initial forms.
+- **Restricted-power nonvanishing:** the Blumer–Quadrelli F1 associated restricted Lie algebra admits a restricted map (X_2mapsto t), all other generators to (0), into a free rank-one abelian restricted Lie algebra. Hence (X_2^{[p^f]}
+eq0) for every finite (q=p^f).
+- **Independent group-level verification:** the (W_{q+1}) abelianizations are
+  [
+  (mathbb Z/p^{f+1})^{2d}
+  quad	ext{and}quad
+  (mathbb Z/p^{f+1})^{2d-1}oplusmathbb Z/p^f,
+  ]
+  so their orders differ by (p). This independently forces (W_{q+1}) non-isomorphism.
+
+Classification:
+- uniform pairwise threshold (r=q+1): **PASS / CLOSED**;
+- broad category-level recognition: **OPEN / CONDITIONAL**;
+- novelty/priority: **OPEN / CONDITIONAL**.
+
+The result remains a pairwise local theorem and does not establish a q-independent recognition carrier.
