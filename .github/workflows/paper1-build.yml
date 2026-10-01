@@ -1,4 +1,5 @@
 name: Build Paper 1 PDF
+# Final editorial verification trigger
 
 on:
   push:
