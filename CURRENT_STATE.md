@@ -1,3 +1,19 @@
+## 2026-10-01 — POST-PAPER-3 CARRIER NON-REDUNDANCY AUDIT
+
+The first post-Paper-3 carrier battleground has been taken to its current structural boundary.
+
+- Paper 3 본체: **FROZEN / COMPLETE**.
+- Paper 2 selector: **FROZEN / COMPLETE; no reproof authorized**.
+- single-vector t_2: **FAIL / CLOSED** as an intrinsic carrier.
+- full delta-family: intrinsic as a proof/input family, but **FAIL / CLOSED — REDUNDANT** as a new post-Paper-3 recognition theorem because its zero predicate is exactly the completed Kummer selector.
+- finite one-dimensional cup-line: **PASS / LOCAL** as an intrinsic compression at the audited scope, but **FAIL / CLOSED — REDUNDANT** as a new recognition theorem for the same reason.
+- transgression quotient O_k: **PASS / LOCAL** as the finite proof carrier; universal/minimal finite-pair status remains **OPEN**.
+- genuinely new non-redundant finite-pair carrier: **OPEN**, but only if it is finite-input, q-blind, functorial, gauge-independent, non-equivalent to the frozen selector, and yields a new category-relative separation/threshold statement.
+
+This is a post-Paper-3 research boundary, not a reopening of Paper 3. No W_11/W_12, Fox, or 45-dimensional computation is authorized merely to repackage the completed selector.
+
+Detailed audit: research/POST_PAPER3_CARRIER_NONREDUNDANCY_AUDIT_2026-10-01.md.
+
 ## 2026-10-01 — PAPER 3 본체 고정 / 후속 일반화 연구 트랙 분리
 
 중요한 연구-정체성 정정이다.
