@@ -724,3 +724,34 @@ Consequences:
 Decision gate: **finite-pair universal property/minimality → PASS/LOCAL, FAIL/CLOSED, or OPEN; otherwise pursue a genuinely new carrier.**
 
 This entry controls the next research window and supersedes broader historical roadmap wording where it conflicts with this narrower scope.
+
+
+## 2026-10-01 — O_k FINITE-PAIR MINIMALITY ATTACK: IMMEDIATE REDUNDANCY BOUNDARY
+
+The proposed five-step plan was critically reordered before execution. The exact transgression quotient is already defined and its intrinsic finite-pair legitimacy is already CLOSED at the declared scope:
+\[
+Q_k=G/D_{p^{k-1}+1},\quad E_k=G/D_{p^{k-1}+2},\quad
+\mathcal O_k=H^2(Q_k,\mathbf F_p)/\operatorname{im}(\operatorname{tra}_k).
+\]
+The central extension and five-term transgression make this construction presentation-independent and functorial under morphisms of filtered finite extensions (contravariantly on cohomology); orientation and q are not part of its definition.
+
+The decisive minimality issue is already bounded by the frozen finite cup-line result. The intrinsic line
+\[
+C_k(Q_k)=\operatorname{im}(H^1(Q_k,\mathbf F_p)^{\otimes2}\xrightarrow{\cup}H^2(Q_k,\mathbf F_p))
+\]
+has \(\dim C_k=1\) by the audited relation-module/cup-duality argument, embeds into \(\mathcal O_k\), and the finite selector's false-branch obstruction outputs lie in \(C_k\). Thus \(C_k\) is already a one-dimensional finite-input, q-blind, intrinsic selector carrier, while \(\mathcal O_k\) is only a proof carrier.
+
+This creates a hard boundary: \(\mathcal O_k\) cannot be the minimal recognition carrier in any admissible category that contains both the transgression carrier and this intrinsic cup-line carrier. Reopening the cup-line proof is not authorized; it is a frozen input. The remaining genuinely mathematical question is narrower: whether \(\mathcal O_k\) nevertheless has a finite-pair UNIVERSAL property as a proof/obstruction carrier, i.e. whether every admissible functorial linear obstruction carrier for the transient-stable separation problem factors canonically through \(\mathcal O_k\). The existence of the smaller selector carrier prevents conflating this with recognition minimality.
+
+The previously suggested two-week elapsed-time stop rule is rejected as a mathematical criterion. The correct stop is structural: if \(C_k\) already supplies the required recognition property, the \(\mathcal O_k\)-minimality branch is CLOSED as REDUNDANT; only the distinct universal-obstruction property may remain OPEN. If a genuinely new carrier is proposed, it must be finite-input, q-blind, functorial, gauge-independent, non-equivalent to the frozen selector, and yield a new separation/threshold/factorization consequence.
+
+Classification:
+- exact definition of \(\mathcal O_k\): PASS / CLOSED;
+- presentation/orientation independence: PASS / CLOSED at the declared finite-pair scope;
+- functoriality: PASS / CLOSED for filtered-pair morphisms/isomorphisms, with cohomological variance stated explicitly;
+- recognition minimality of \(\mathcal O_k\): FAIL / CLOSED by existing intrinsic one-dimensional \(C_k\) carrier;
+- finite-pair universal obstruction property of \(\mathcal O_k\): OPEN / LOAD-BEARING;
+- Paper 2 selector redundancy: CLOSED as a recognition theorem; \(\mathcal O_k\) adds only the proof-carrier quotient unless a universal-obstruction theorem is proved;
+- new carrier: NOT OPENED yet.
+
+Next authorized attack: formalize the finite-pair category and test the universal factorization property of \(\mathcal O_k\). No new W-depth, Fox, 45-dimensional, or Paper 2 reproof computation is authorized.
