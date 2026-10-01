@@ -4144,3 +4144,22 @@ r_{T_{cyc}}=q+1.
 W_q equality is proved by Zassenhaus degree bookkeeping; W_{q+1} separation is proved by the intrinsic abelianization difference, with F1's nonzero restricted p^f-power class supplied by the Blumer–Quadrelli associated graded description.
 
 Classification: **PASS / CLOSED** at the two-object category; broad recognition remains **OPEN / CONDITIONAL**. This is the strongest current F1 finite-window result. Record: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md.
+
+## 2026-10-01 — F1 UNIFORM THRESHOLD RECHECK CLOSED
+
+The previously recorded uniform finite-q pairwise theorem has passed a second critical audit.
+
+The two possible gaps were closed explicitly:
+1. W_q equality is a full quotient-group equality using D_q(F/R)=D_q(F)R/R, not merely an initial-form comparison.
+2. Uniform X_2^[p^f] != 0 follows from an explicit restricted-Lie map to a free rank-one abelian restricted Lie algebra; an independent abelianization calculation gives the same W_{q+1} separation.
+
+Final pairwise theorem:
+r_{T_cyc}({G_F1(q),G_cyc(q)};D_bullet)=q+1
+for every odd prime p, finite q=p^f, and d>=2.
+
+Classification:
+- uniform pairwise threshold: PASS / CLOSED;
+- broad category-level recognition: OPEN / CONDITIONAL;
+- novelty/priority: OPEN / CONDITIONAL.
+
+This is still a local pairwise result. It does not establish a q-independent recognition carrier or a general category-level finite-window theorem. Next authorized branch remains F2 or another genuinely different category, after the required pre-check.
