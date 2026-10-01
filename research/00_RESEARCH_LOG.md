@@ -532,3 +532,23 @@ Classification:
 - novelty/priority: **OPEN / CONDITIONAL**.
 
 The result remains a pairwise local theorem and does not establish a q-independent recognition carrier.
+
+
+## 2026-10-01 — F2 SAME-W3 CYCLOTOMIC CONTROL GATE CLOSED
+
+The F2 same-W3 control search was completed at the authorized structural level. For the smallest rank-4 F2 relation space
+\[
+R_{F2}=\langle \omega_1+\omega_2,\eta\rangle,
+\qquad \operatorname{Pf}(a(\omega_1+\omega_2)+b\eta)\sim a^2,
+\]
+the repeated-root Pfaffian type is incompatible with the split-root type of the standard elementary-type cyclotomic constructions examined at rank 4 with two defining relations. The latter yield only Pfaffian type \(ab\) or the degenerate case \(0\), not \(a^2\).
+
+Classification:
+- F2 × standard elementary-type cyclotomic control: **FAIL / CLOSED**.
+- F2 × arbitrary cyclotomic pro-p group: **OPEN / CONDITIONAL**; no universal no-go theorem is claimed.
+- F2 \(W_4\) computation: **NOT AUTHORIZED** because no legitimate W3-matching control was found.
+- F2 broader finite-window recognition: **OPEN / CONDITIONAL**.
+
+This is a structural boundary, not a failed search report: the standard elementary-type cyclotomic construction mechanism cannot realize the repeated-root F2 \(W_3\) quadratic type in the audited rank-4/two-relator setting. F1 is not reopened. The next research direction must therefore be a genuinely broader finite-window recognition question, subject to a fresh pre-check and literature/non-redundancy audit.
+
+Authoritative detail: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md
