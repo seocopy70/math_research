@@ -109,3 +109,39 @@ The likely candidate mechanism is a filtered extension/p-power datum at the firs
 - General finite-window recognition program: **OPEN / DECISIVE**.
 
 No novelty/priority claim is made from the pair alone.
+
+
+## 8. Phase-A concrete upper bound: W_4 separates
+
+For the concrete pair (p,d,q)=(3,2,3), W_4 is sufficient.
+
+In the F1 group,
+\[
+[x_1^3,y_1][x_2,y_2]=1,
+\]
+and [x_1^3,y_1] lies in D_4. Hence in G_F1/D_4,
+\[
+[x_2,y_2]=1.
+\]
+
+In the cyclotomic control,
+\[
+x_2^3[x_2,y_2]=1,
+\]
+so in G_cyc/D_4,
+\[
+[x_2,y_2]=x_2^{-3}.
+\]
+The class of x_2^3 in D_3/D_4 is nonzero: the Demushkin associated restricted Lie algebra has the single quadratic relation [X_2,Y_2], and no degree-3 relation kills X_2^{[3]}. Therefore [x_2,y_2] is nonzero in D_3/D_4 for the control.
+
+This is an intrinsic filtered statement: W_4 records whether the commutator class determined by the W_3 quadratic relation survives into the next filtration layer. Consequently
+\[
+W_4(G_{F1})\not\cong W_4(G_{cyc}).
+\]
+
+Combining W_3 equality with W_4 separation gives the exact threshold for this two-object category:
+\[
+\boxed{r_{T_{cyc}}(\{G_{F1},G_{cyc}\};D_\bullet)=4.}
+\]
+
+The uniform q=p^f analogue is strongly suggested by the same degree bookkeeping (W_q equality and a q-power correction at W_{q+1}), but the intrinsic W_{q+1} carrier has not yet been proved uniformly. It remains OPEN rather than being promoted from analogy.
