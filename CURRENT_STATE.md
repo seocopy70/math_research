@@ -1,3 +1,33 @@
+## 2026-10-01 — DEMUŠKIN ADMISSIBILITY / EXTENSION-FIBER RECONSTRUCTION GATE
+
+The admissibility prerequisite for the Mixed Fox branch has now been made explicit at the declared standard scope.
+
+Define the active category ExtWin^Dem_{k,d} by canonical Zassenhaus windows
+1 -> A_k=D_{N_k}/D_{N_k+1} -> E_k=G/D_{N_k+1} -> Q_k=G/D_{N_k} -> 1,
+N_k=3^{k-1}+1,
+arising from infinite odd-prime finite-rank Demuškin groups of fixed rank d, with q(G) a p-power or 0. Morphisms are whole-extension isomorphisms.
+
+A fiber analysis gives three cases:
+- q<N_k: Q_k sees the first q-dependent Zassenhaus graded relation;
+- q=N_k: Q_k does not see the q-term, but dim A_k distinguishes the degree-N_k relation;
+- q>N_k (including q=0): the q-term is invisible through E_k, so the extension window itself is independent of q.
+
+Thus, within the standard odd-p fixed-rank Demuškin family,
+(Q_k,A_k) => [E_k -> Q_k]
+up to extension-window isomorphism.
+
+Classification:
+- admissible Demuškin category definition: PASS / CLOSED at declared scope;
+- Demuškin fiber reconstruction: PASS / LOCAL;
+- extension-window -> mixed Fox: PASS / LOCAL;
+- original bare-pair -> mixed Fox: OPEN / LOAD-BEARING;
+- arbitrary-extension pair descent: FAIL / CLOSED only for the broad category;
+- Paper 3: FROZEN / COMPLETE.
+
+This materially narrows the previous OPEN gate. The next authorized action is formal lemma packaging plus independent naturality/projective-covariance verification. No large Fox computation is authorized.
+
+Detailed audit: research/PAPER3_MIXED_DEMUSHKIN_ADMISSIBILITY_RECONSTRUCTION_AUDIT_2026-10-01.md.
+
 ## 2026-10-01 — POST-PAPER-3 RESEARCH SCOPE FROZEN: CARRIER UNIVERSALITY / MINIMALITY ONLY
 
 The next research branch is now deliberately narrowed to exactly two possible outcomes:
