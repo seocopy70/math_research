@@ -190,3 +190,16 @@ for odd p and d>=2. W_q isomorphism follows directly from Zassenhaus degree book
 Classification: **PASS / CLOSED** at the declared two-object category. Broad category-level recognition remains **OPEN / CONDITIONAL**.
 
 Authoritative detail: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md
+
+
+## 2026-10-01 — F2 SAME-W3 CONTROL GATE OPEN
+
+The uniform F1 pairwise theorem is closed at r=q+1. The next branch is F2. The obvious cyclotomic free-product control is already ruled out at W3 in the smallest rank-4 case by a GL4-invariant Pfaffian pencil type (repeated root for F2 versus split roots for the free-product control).
+
+Status:
+- F2 same-W3 cyclotomic obstruction: **OPEN / DECISIVE**.
+- Natural free-product control: **FAIL / CLOSED**.
+- Broad F2 recognition: **OPEN / CONDITIONAL**.
+- No large computation authorized until a plausible W3-matching cyclotomic control is found.
+
+Record: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md
