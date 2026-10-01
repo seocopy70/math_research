@@ -4133,3 +4133,14 @@ Classification:
 - novelty/priority: OPEN / CONDITIONAL.
 
 Record: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md
+
+
+## 2026-10-01 — F1 UNIFORM FINITE-q THRESHOLD
+
+The same-W3 obstruction theorem has been generalized to every finite q=p^f (odd p, d>=2) for the declared F1/cyclotomic-control pair:
+\[
+r_{T_{cyc}}=q+1.
+\]
+W_q equality is proved by Zassenhaus degree bookkeeping; W_{q+1} separation is proved by the intrinsic abelianization difference, with F1's nonzero restricted p^f-power class supplied by the Blumer–Quadrelli associated graded description.
+
+Classification: **PASS / CLOSED** at the two-object category; broad recognition remains **OPEN / CONDITIONAL**. This is the strongest current F1 finite-window result. Record: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md.
