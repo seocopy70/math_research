@@ -705,3 +705,22 @@ The orientation bridge exists at the audited fixed Demushkin scope via the zero-
 Decision: no W_11/W_12 or Fox computation is authorized. The next admissible research target is a genuinely non-redundant carrier extracted from the surviving family, subject again to the intrinsicity/gauge test. Paper 2 selector reproof is explicitly not authorized.
 
 Detailed record: research/PAPER3_GATE_D_THREE_ATTACK_INTRINSIC_CARRIER_2026-10-01.md
+
+## 2026-10-01 — NEXT RESEARCH SCOPE FROZEN: FINITE-PAIR UNIVERSALITY/MINIMALITY OR GENUINELY NEW CARRIER
+
+The post-Paper-3 research scope has been explicitly narrowed.
+
+Paper 3 is **FROZEN / COMPLETE**. The next branch is not a re-proof or further audit of Paper 3. The only authorized mathematical targets are:
+
+- the existing carrier's **finite-pair universal property / minimality**, with the admissible carrier category stated explicitly; or
+- a **genuinely new carrier**, meaning a finite-input, q-blind, functorial, gauge-independent object not equivalent to the frozen selector and yielding a new separation/threshold/factorization consequence.
+
+Consequences:
+- the completed Kummer selector, full delta-family, intrinsic cup-line, and prior Gate D machinery are fixed inputs/boundaries;
+- no W_11/W_12, Fox, or large-dimensional computation is authorized merely to repackage the completed selector;
+- broader F1/F2 recognition examples are not active targets unless they directly produce a new carrier or settle the finite-pair universal/minimality question;
+- any “minimality” claim without a declared admissible category is not authorized.
+
+Decision gate: **finite-pair universal property/minimality → PASS/LOCAL, FAIL/CLOSED, or OPEN; otherwise pursue a genuinely new carrier.**
+
+This entry controls the next research window and supersedes broader historical roadmap wording where it conflicts with this narrower scope.
