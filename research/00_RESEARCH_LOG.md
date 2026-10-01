@@ -798,3 +798,8 @@ Classification:
 - new carrier: NOT OPENED yet.
 
 Next authorized attack: formalize the finite-pair category and test the universal factorization property of \(\mathcal O_k\). No new W-depth, Fox, 45-dimensional, or Paper 2 reproof computation is authorized.
+
+
+## 2026-10-01 — MIXED FOX CRITICAL FACTORIZATION REVIEW
+
+Independent review corrected the interpretation of the standard-family mixed Fox calculation. The equations for r_q correctly give A=C=D=1 and B=(1-q)^(-1) mod 3^k, and completed/projective covariance remains PASS / LOCAL. However, q-level congruence/factorization within the standard family is not the required abstract finite-pair theorem W_k(G)≅W_k(H) ⇒ M_k(G)≅M_k(H). Therefore global finite-pair descent remains OPEN / LOAD-BEARING. The earlier non-redundancy statement was also narrowed: higher 3-adic information relative to the bare F_3 vector-space object is a local information distinction, not yet a category-level non-redundancy theorem. No larger computation is authorized. Detailed correction: research/PAPER3_MIXED_FACTORISATION_CRITICAL_REVIEW_2026-10-01.md.
