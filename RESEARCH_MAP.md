@@ -4110,3 +4110,11 @@ Therefore W_3 is not a general recognition carrier and r_{T_cyc}>=4 on any categ
 Classification: same-W_3 obstruction PASS/CLOSED; W_3 general recognition FAIL/CLOSED; lower bound r>=4 PASS/CLOSED; exact threshold OPEN/LOAD-BEARING.
 
 Next decisive gate: intrinsic W_4 separation.
+
+## 2026-10-01 — F1 SHARP CONCRETE RECOGNITION THRESHOLD
+
+For (p,d,q)=(3,2,3), the F1 group and the cyclotomic control D_{1,3}*F_2 have identical W_3 but different W_4. Therefore r_{T_cyc}=4 for the declared two-object category.
+
+This is materially different from the earlier D/F1/F2 family-union result: the first window fails, a deeper filtered extension layer is necessary, and the threshold is sharp.
+
+The uniform q=p^f extension (candidate threshold q+1) remains OPEN / LOAD-BEARING because the intrinsic W_{q+1} carrier must be proved uniformly.
