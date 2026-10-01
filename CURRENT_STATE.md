@@ -1,3 +1,19 @@
+## 2026-10-01 — F2 SAME-W3 CONTROL PRE-CHECK COMPLETED
+
+F1 uniformity is not reopened. The next authorized branch is F2 genuinely same-cyclotomic control search.
+
+Targeted literature pre-check confirms that cyclotomic controls exist through free products and cyclotomic semidirect/fibre-product constructions (Quadrelli–Weigel 2020; Mináč–Pasini–Quadrelli–Tân 2021), but no explicit rank-4 control matching the F2 W3 repeated-root Pfaffian type was identified. The previously tested free-product control remains FAIL/CLOSED.
+
+Status:
+- existence of legitimate cyclotomic control classes: **PASS / CLOSED**;
+- F2 W3-matching control: **OPEN / DECISIVE**;
+- no-go theorem for all controls: **NOT established**;
+- large computation: **NOT AUTHORIZED**.
+
+Next authorized action: construct and symbolically inspect the smallest cyclotomic semidirect/fibre-product candidates for their W3 quadratic relation pencil. Only a genuine W3 match authorizes finite-window computation.
+
+Detailed record: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md.
+
 ## 2026-10-01 — F1 SAME-W3 OBSTRUCTION / W4 INTRINSIC SEPARATION AUDIT
 
 The concrete (p,d,q)=(3,2,3) pair has now passed an independent W4 intrinsicity audit. The earlier presentation-local equation is not used as the invariant. Instead, the truncated restricted relation module has a canonical degree-3 p-power component: it is zero for F1 and nonzero for the cyclotomic free-product control. This is preserved by restricted-Lie isomorphisms.
