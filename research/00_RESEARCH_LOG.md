@@ -870,3 +870,22 @@ Classification:
 - novelty: **OPEN**.
 
 Next authorized action: test fiber invariance / canonical reconstruction. No larger Fox computation is authorized. Detailed audit: `research/PAPER3_MIXED_EXTENSION_WINDOW_CATEGORICAL_AUDIT_2026-10-01.md`.
+
+
+## 2026-10-01 — MIXED FOX EXTENSION-WINDOW FIBER ATTACK / BROAD-CATEGORY NO-GO
+
+The first direct fiber-invariance attack exposed a prerequisite that had not been formalized: the phrase “admissible extension window” must specify the category before a same-pair fiber test can be interpreted as the project's theorem.
+
+For the broad category of finite central 3-extensions with fixed trivial pair Q=C3×C3, A=C3, there are distinct extension classes in H^2(Q,A). Concrete examples with the same forgotten pair are the power-type extension C9×C3 and the exponent-3 Heisenberg extension with center C3. Their extension classes have different power/Bockstein versus commutator components, and the relation-module/Fox boundary data distinguishes those components. Projectivization removes unit/gauge rescaling but does not identify the two extension classes.
+
+Therefore:
+- arbitrary-extension pair descent: FAIL / CLOSED;
+- extension-window mixed Fox construction: PASS / LOCAL;
+- Demuškin-restricted pair descent: OPEN / LOAD-BEARING;
+- admissible Demuškin extension-window category: OPEN / PREREQUISITE.
+
+This is a structural counterexample, not a large numerical computation. It does not prove failure on the specific Demuškin family because that family may impose a unique/constrained extension class over each pair.
+
+The correct next order is now: define the admissible Demuškin ExtWin category → analyze fibers of U → test invariance/reconstruction. No W_11/W_12, large Fox scan, or unrelated branch is authorized. Paper 3 remains frozen and unaffected.
+
+Detailed audit: research/PAPER3_MIXED_EXTENSION_WINDOW_FIBER_NO_GO_AUDIT_2026-10-01.md.
