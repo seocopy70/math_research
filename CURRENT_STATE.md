@@ -268,3 +268,25 @@ Authoritative status after the recheck:
 - Novelty/priority: OPEN / CONDITIONAL.
 
 This correction supersedes any earlier entry in CURRENT_STATE that still labels the uniform extension OPEN/LOAD-BEARING. Detailed audit: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md.
+
+## 2026-10-01 — GATE D FINITE-WINDOW RECOGNITION PRE-CHECK
+
+The F2 branch remains operationally sealed. A mandatory Gate-D pre-check was completed before any new computation.
+
+For the proposed fixed-scope chain
+\\[
+W_{10}\\to L(\\rho_2)\\to\\{\\delta_{3,\\rho_3}\\}\\to\\chi\\bmod27,
+\\]
+Object/Input/Functoriality/Gauge/Orientation-bridge/q-blindness pass at the audited p=3,k=3 scope. However, the same bare finite quotient + arbitrary-candidate Kummer selector mechanism is already assembled in the completed Paper 2 theorem for
+\\(Q_k=G/P_{3^{k-1}+1}\\). Therefore merely repackaging W_10 as a carrier to chi mod 27 is not a new Paper 3 theorem.
+
+The load-bearing Paper 3 question is the recognition layer: the carrier must yield a category-relative statement about
+\\(r_T(\\mathcal C;D_\\bullet)\\), including a genuine same-window/different-target separation for lower bounds or a uniform same-window recognition theorem for upper bounds. The already proved F1/cyclotomic pairwise threshold q+1 is retained as a benchmark, not conflated with the Paper 2 selector theorem.
+
+Classification:
+- fixed W_10 selector chain: PASS / CLOSED (existing Gates A-C);
+- literal delta-family \\cap Q_4^*: FAIL / CLOSED (type mismatch, superseded);
+- W_10\\tochi mod27 as a new standalone Paper 3 theorem: FAIL / CLOSED on redundancy grounds;
+- Gate D broader finite-window recognition: OPEN / LOAD-BEARING.
+
+No W_11/W_12 or new Fox computation is authorized merely to extend the selector chain. Detailed pre-check: research/PAPER3_GATE_D_FINITE_WINDOW_RECOGNITION_PRECHECK_2026-10-01.md.
