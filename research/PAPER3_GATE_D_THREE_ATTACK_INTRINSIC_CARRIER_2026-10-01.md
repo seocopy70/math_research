@@ -1,3 +1,50 @@
+# POST-PAPER-3 RESEARCH — Gate D three-attack intrinsic-carrier triage — 2026-10-01
+
+## Scope correction
+
+**Paper 3 본체는 완성·고정되어 있다.** 이 문서는 Paper 3 본체의 정리·증명·완성도를 재검증하는 문서가 아니다.
+
+이 문서가 다루는 것은 Paper 3가 제시한 **후속 일반화 연구 프로그램**이다:
+[
+W_nlongrightarrow	ext{intrinsic carrier}longrightarrow	ext{global orientation}.
+]
+
+따라서 여기서 (t_2), full (delta)-family, intrinsic carrier 또는 Gate D가 실패해도 그 결과는 **Paper 3 본체의 FAIL이 아니다.** 실패하면 해당 후속 연구 branch만 닫는다.
+
+## Frozen inputs
+
+Paper 3 본체와 Paper 2 selector 결과는 이 branch의 **완료된 선행 입력**이다. 이를 다시 증명하거나 publication-completeness gate로 되돌리지 않는다.
+
+## Purpose
+
+The three attacks are applied to the **post-Paper-3 generalization branch**:
+1. **Object attack** — exact finite-input object legitimacy.
+2. **Intrinsicity attack** — presentation, relator, basis/Nielsen, coefficient-lift, and gauge independence; this is the first decisive battleground.
+3. **Orientation-bridge attack** — a non-redundant map from a surviving carrier to finite orientation data.
+
+The structural stop rule remains unchanged: if intrinsicity fails, close only this carrier branch; do not reopen Paper 3 or Paper 2.
+
+## Current classification
+
+- Paper 3 본체: **FROZEN / COMPLETE**.
+- Paper 2 selector: **FROZEN / COMPLETE; no reproof authorized**.
+- F2 operational branch: **CLOSED**.
+- F1 pairwise finite-window threshold (q+1): **PASS / CLOSED** at declared two-object scope.
+- (W_{10}	odelta)-family: **PASS / CLOSED** at audited fixed scope as a pre-existing input.
+- single-vector (t_2) carrier: **FAIL / CLOSED**.
+- genuinely new intrinsic/coarser post-Paper-3 carrier: **OPEN / LOAD-BEARING**.
+- Paper 2 selector reproof: **NOT AUTHORIZED**.
+
+## Immediate decision boundary
+
+The first real battleground is **not whether Paper 3 is correct**. It is whether a genuinely new carrier extracted from the surviving finite-window/cohomological data exists and remains intrinsic.
+
+The second battleground is whether such a carrier yields a non-redundant orientation bridge.
+
+No (W_{11}/W_{12}) or new Fox computation is authorized merely to re-establish the frozen Paper 2/3 selector chain.
+
+---
+
 # PAPER 3 — Gate D three-attack intrinsic-carrier triage — 2026-10-01
 
 ## Purpose
