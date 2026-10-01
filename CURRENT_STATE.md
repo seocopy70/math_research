@@ -1,3 +1,24 @@
+## 2026-10-01 — PAPER 3 본체 고정 / 후속 일반화 연구 트랙 분리
+
+중요한 연구-정체성 정정이다.
+
+- **Paper 3 본체:** 이미 완성된 논문으로 간주하고 고정한다. 현재 후속 연구에서 Paper 3의 정리·증명·완성도를 다시 검증하는 것으로 해석하지 않는다.
+- **현재 작업:** Paper 3에서 제시한 **후속 연구 프로그램**, 즉 finite-window → intrinsic carrier → global orientation으로의 일반화 가능성을 별도 연구 가지로 공격한다.
+- (t_2), full (delta)-family, intrinsic carrier, Gate D는 Paper 3 본체의 필수 증명 단계가 아니다.
+- 후속 연구가 실패하거나 닫혀도 Paper 3 본체의 기존 정리와 완성본은 영향을 받지 않는다.
+- Paper 2 selector를 다시 증명하지 않는다. 완료된 선행 결과는 후속 연구의 고정 입력/경계로만 사용한다.
+
+정확한 트랙:
+[
+oxed{	ext{Paper 3 본체}=	ext{완성·고정}}
+qquad
+oxed{	ext{현재 작업}=	ext{Paper 3 이후의 후속 일반화 연구}}
+]
+
+앞으로 “Paper 3의 핵심 주장을 다시 검증한다”는 표현은 사용하지 않는다. 정확한 표현은 **“Paper 3 이후 후속 일반화 연구에서 carrier의 생존 여부를 검증한다”**이다.
+
+현재 후속 연구의 첫 실제 승부처는 carrier intrinsicity / functoriality / gauge independence이며, 다음 승부처는 orientation bridge의 비중복성이다. 구조적 실패 시 해당 후속 carrier branch만 닫고 Paper 3 본체나 Paper 2 selector를 재개방하지 않는다.
+
 ## 2026-10-01 — F2 ONE-TIME INDEPENDENT CONTROL AUDIT / COMPLETENESS LIMIT
 
 The F2 branch was independently checked once, without reopening the search. The F2 rank-4 quadratic relation pencil has direct Pfaffian \(a^2\). The recovered elementary-type candidate list contains exactly two construction shapes in the surviving audit trail: (i) split/free-product rank-2 one-relator factors, with Pfaffian \(ab\); and (ii) a shared-direction cyclotomic semidirect shape with a free rank-1 factor, with Pfaffian \(0\).
