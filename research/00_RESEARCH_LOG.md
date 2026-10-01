@@ -1,3 +1,22 @@
+## 2026-10-01 — POST-PAPER-3 CARRIER NON-REDUNDANCY AUDIT
+
+The first post-Paper-3 carrier battleground was pushed to a structural stopping boundary.
+
+The full delta-family survives intrinsicity, but its zero predicate is exactly the already completed Kummer selector. The finite cup-line is a genuine intrinsic compression at the audited scope, but it has the same recognition predicate and is therefore redundant as a new theorem. The single-vector t_2 remains closed by the explicit presentation-gauge witness.
+
+The transgression quotient O_k remains useful as a finite proof carrier because it removes the finite transgression ambiguity; it is not itself the orientation invariant. Its universal/minimal finite-pair property is still open.
+
+Classification:
+- Paper 3 본체: **FROZEN / COMPLETE**.
+- Paper 2 selector: **FROZEN / COMPLETE; no reproof**.
+- t_2: **FAIL / CLOSED**.
+- full delta-family as new recognition: **FAIL / CLOSED — REDUNDANT**.
+- cup-line as new recognition: **FAIL / CLOSED — REDUNDANT**; mathematically **PASS / LOCAL** as compression.
+- O_k: **PASS / LOCAL** as proof carrier; universal/minimal carrier **OPEN**.
+- genuinely new non-redundant carrier: **OPEN**.
+
+No deeper computation is authorized merely to re-establish the frozen selector. Detailed record: research/POST_PAPER3_CARRIER_NONREDUNDANCY_AUDIT_2026-10-01.md.
+
 ## 2026-10-01 — TRACK CORRECTION: PAPER 3 본체 고정 / 후속 일반화 연구 분리
 
 현재 작업을 “Paper 3 핵심 주장의 재검증”이라고 부르는 것은 부정확하다.
