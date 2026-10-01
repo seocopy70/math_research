@@ -15,7 +15,7 @@
 \maketitle
 
 \begin{abstract}
-We study the exact Zassenhaus depth needed to factor affine crossed-cocycle representations at finite coefficient level. Let $A_k=\mathbb Z/p^k\mathbb Z$, $U_{1,k}=1+pA_k$, and $S_k=A_k\rtimes U_{1,k}$. For the standard Demushkin family
+We study the exact Zassenhaus depth needed to factor affine crossed-cocycle representations at finite coefficient level. Let $A_k=\mathbb Z/p^k\mathbb Z$, $U_{1,k}=1+pA_k$, and $S_k=A_k\rtimes U_{1,k}$. For the standard Demu\v{s}kin family
 \[
 G_{f,d}=\langle x_1,\ldots,x_d\mid x_1^{p^f}[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d]=1\rangle,
 \]
@@ -25,20 +25,8 @@ $ n_{\mathrm{aff}}(k)=p^{k-1}+1$.
 The lower bound includes rank two and does not require the orientation component to be surjective. We also separate factorization from recognition: a sharp factorization window does not by itself imply that a Kummerian predicate selects a unique orientation.
 \end{abstract}
 
-\paragraph{Companion papers.}
-This is one of three related manuscripts. [P1] treats the exact finite Zassenhaus
-depth for factoring all affine crossed-cocycle representations in the Demu\\v{s}kin
-family; [P2] proves finite-window Kummer recognition of the canonical orientation
-of the rank-four $q=3$ group; [P3] proves the exact selector depth and
-identifies a one-dimensional cup-line carrier.
-Lemma~2.1 and Proposition~2.2 (finite affine filtration, arbitrary-candidate
-factorization) appear in each, in the form needed there; [P1] is the reference
-for them.
-[P1], [P2], and [P3] are placeholders for the corresponding arXiv records and
-should be replaced by the final arXiv identifiers before submission.
-
 \section{Introduction}
-The canonical Demushkin orientation is classical: Labute identifies it through the dualizing module, while the Kummerian/cyclotomic formulation is developed in later work. See \cite{Labute1967,EfratQuadrelli2019,QuadrelliWeigel2022}.
+The canonical Demu\v{s}kin orientation is classical: Labute identifies it through the dualizing module, while the Kummerian/cyclotomic formulation is developed in later work. See \cite{Labute1967,EfratQuadrelli2019,QuadrelliWeigel2022}.
 The present question is narrower. Given a finite coefficient level $k$, how much Zassenhaus information is required to preserve every affine crossed-cocycle representation into $S_k$? And does the resulting quotient necessarily contain enough information to recognize a unique orientation?
 
 These are different questions. The first is a factorization problem in a specified representation category. The second is a recognition problem whose answer depends on the input category and predicate. The principal theorem of this paper is the exact and sharp factorization window; the recognition discussion is a logical boundary result, not a new positive recognition theorem.
@@ -198,8 +186,8 @@ vanishes and the $H^1$ reduction map is surjective. Since $F_d$ has many distinc
 This does not prove that every conceivable isomorphism-natural selector is impossible. Such a claim would require a separate automorphism or indistinguishability argument for the exact quotient category.
 \end{remark}
 
-\section{Finite free products of Demushkin blocks}
-Let $G=D_1*_p\cdots *_pD_m$ be a finite free pro-$p$ product of Demushkin groups. The theorem below concerns continuous affine representations and does not require a chosen orientation on the factors. Write $T_n(G)=G/P_n(G)$.
+\section{Finite free products of Demu\v{s}kin blocks}
+Let $G=D_1*_p\cdots *_pD_m$ be a finite free pro-$p$ product of Demu\v{s}kin groups. The theorem below concerns continuous affine representations and does not require a chosen orientation on the factors. Write $T_n(G)=G/P_n(G)$.
 
 \begin{lemma}[Zassenhaus truncation and coproducts]
 For pro-$p$ groups $G_1,G_2$,
@@ -231,7 +219,7 @@ The factorization statement is therefore the direct consequence of the
 arbitrary-candidate factorization proposition, while the displayed witness
 gives the uniform lower bound.
 \end{proof}\begin{remark}
-No claim is made for broader recursively defined elementary-type classes involving fibre products or amalgamated operations.
+The theorem does not cover broader recursively defined elementary-type classes involving fibre products or amalgamated operations.
 \end{remark}
 
 \section{Relation with the preceding paper}
@@ -247,20 +235,20 @@ The logical chain is
 \]
 
 \section{Literature boundary and novelty}
-The canonical Demushkin orientation and its Kummerian characterization are classical \cite{Labute1967,EfratQuadrelli2019}. The general functoriality of the Zassenhaus filtration under continuous homomorphisms, and its representation-theoretic use, are standard; see Lazard/Jennings theory and Efrat's treatment of Zassenhaus filtrations and representations \cite{Efrat2014,MinacRogelstadTan2016}. Oriented elementary-type constructions and related Kummerian closure phenomena are treated by Quadrelli--Weigel \cite{QuadrelliWeigel2022}. Quadrelli's 2024 work studies 1-cyclotomicity and quotient-related obstructions \cite{Quadrelli2024}. These results provide the standard Kummerian/1-cyclotomic and Zassenhaus framework. In the literature reviewed for this manuscript, we did not locate an earlier theorem stated in the present affine target category with the exact depth $p^{k-1}+1$ and the present sharpness witnesses.
+The canonical Demu\v{s}kin orientation and its Kummerian characterization are classical \cite{Labute1967,EfratQuadrelli2019}. The general functoriality of the Zassenhaus filtration under continuous homomorphisms, and its representation-theoretic use, are standard; see Lazard/Jennings theory and Efrat's treatment of Zassenhaus filtrations and representations \cite{Efrat2014,MinacRogelstadTan2016}. Oriented elementary-type constructions and related Kummerian closure phenomena are treated by Quadrelli--Weigel \cite{QuadrelliWeigel2022}. Quadrelli's 2024 work studies 1-cyclotomicity and quotient-related obstructions \cite{Quadrelli2024}. These results provide the standard Kummerian/1-cyclotomic and Zassenhaus framework. In the literature reviewed for this manuscript, we did not locate an earlier theorem stated in the present affine target category with the exact depth $p^{k-1}+1$ and the present sharpness witnesses.
 
 The present contribution is deliberately narrower: the exact depth $p^{k-1}+1$ for factorization of all affine crossed-cocycle representations into $A_k\rtimes U_{1,k}$, explicit lower-bound witnesses through rank two, finite-depth $f$-collapse, and the separation of sharp factorization from uniqueness of a Kummerian orientation. Mináč--Tân--Trà, \emph{Zassenhaus filtrations as intersections} (arXiv:2510.20133), gives a broader representation-theoretic description of Zassenhaus filtration terms as intersections of kernels of representations; the present paper does not identify that work with the exact affine target category or the sharp depth proved here.
 
 The comparison is limited to the literature reviewed for this manuscript; no priority claim is made.
 
 \section{Limitations and conclusion}
-The sharpness theorem is category-relative. The positive free-product theorem is restricted to finite free products of Demushkin blocks. The free-pro-$p$ example concerns the Kummer predicate itself, not every conceivable selector. The finite-depth q-collapse does not imply that the full groups with different $f$ are isomorphic.
+The sharpness theorem is category-relative. The positive free-product theorem is restricted to finite free products of Demu\v{s}kin blocks. The free-pro-$p$ example concerns the Kummer predicate itself, not every conceivable selector. The finite-depth q-collapse does not imply that the full groups with different $f$ are isomorphic.
 
 The main result is the exact factorization depth
 \[
 \boxed{n_{\mathrm{aff}}(k)=p^{k-1}+1.}
 \]
-It is uniform for the standard Demushkin parameters $f\ge1$ and even rank $d\ge2$, including rank two. Questions of absolute minimality or universal orientation reconstruction require a separately specified carrier category and recognition theorem.
+It is uniform for the standard Demu\v{s}kin parameters $f\ge1$ and even rank $d\ge2$, including rank two. Questions of absolute minimality or universal orientation reconstruction require a separately specified carrier category and recognition theorem.
 
 \begin{thebibliography}{99}
 \bibitem{Efrat2014}
@@ -268,7 +256,7 @@ I. Efrat, \emph{The Zassenhaus filtration, Massey products, and representations 
 \bibitem{MinacRogelstadTan2016}
 J. Mináč, M. Rogelstad and N. D. Tân, \emph{Dimensions of Zassenhaus filtration subquotients of some pro-$p$-groups}, Israel J. Math. 212 (2016), 825--855.
 \bibitem{Labute1967}
-J. Labute, \emph{Classification of Demushkin Groups}, Canadian J. Math. 19 (1967), 106--132.
+J. Labute, \emph{Classification of Demu\v{s}kin Groups}, Canadian J. Math. 19 (1967), 106--132.
 \bibitem{EfratQuadrelli2019}
 I. Efrat and C. Quadrelli, \emph{The Kummerian Property and Maximal Pro-$p$ Galois Groups}, J. Algebra 525 (2019), 284--310.
 \bibitem{QuadrelliWeigel2022}
