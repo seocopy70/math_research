@@ -316,3 +316,42 @@ Classification:
 
 The important negative boundary is now explicit: continuing to add families whose non-cyclotomicity is already encoded in the quadratic relation does not deepen the program. The next decisive test is a cyclotomic/non-cyclotomic pair with the same W_3 quadratic/cup data. If such a pair exists, W_3 recognition is false on the enlarged category and a higher finite carrier is required; if no such pair exists in a meaningful category, a structural theorem must explain why.
 Detailed record: research/PAPER3_PHASE_B_D_F1_F2_FINITE_RECOGNITION_2026-10-01.md
+
+
+## 2026-10-01 — SAME-W3 OBSTRUCTION FOUND: F1 vs CYCLOTOMIC CONTROL
+
+The decisive obstruction test produced a genuine same-window/different-target pair at (p,d,q)=(3,2,3).
+
+Take
+\[
+G_{F1}=\langle x_1,y_1,x_2,y_2\mid [x_1^3,y_1][x_2,y_2]=1\rangle
+\]
+and the cyclotomic control
+\[
+G_{cyc}=D_{1,3}*F_2
+=\langle x_1,y_1,x_2,y_2\mid x_2^3[x_2,y_2]=1\rangle.
+\]
+
+Blumer–Quadrelli gives T_cyc(G_F1)=false; the Demushkin factor is 1-cyclotomic and free pro-p products of cyclotomic pairs remain cyclotomic, so T_cyc(G_cyc)=true.
+
+Modulo D_3, both defining relators reduce to the same quadratic relation [x_2,y_2]=1:
+- in F1, [x_1^3,y_1] has Zassenhaus degree 4;
+- in the cyclotomic control, x_2^3 has degree 3 and is discarded by G/D_3.
+Thus W_3(G_F1) ~= W_3(G_cyc), while the global target differs.
+
+Conclusion:
+\[
+\boxed{r_{T_cyc}\ge4}
+\]
+for every admissible category containing this pair.
+
+This closes the proposed general W_3 recognition route:
+- general W_3 recognition: **FAIL / CLOSED**;
+- same-W_3 separation pair: **PASS / CLOSED**;
+- lower bound r>=4: **PASS / CLOSED**;
+- exact threshold: **OPEN / LOAD-BEARING**.
+
+This is the first result in the F1 branch that directly realizes the intended Paper 3 obstruction pattern rather than merely rephrasing known family differences.
+
+Next authorized gate: determine intrinsically whether W_4 separates the pair. Do not use a presentation-local p-power coordinate without proving its naturality.
+Detailed record: research/PAPER3_SAME_W3_OBSTRUCTION_F1_VS_CYC_CONTROL_2026-10-01.md
