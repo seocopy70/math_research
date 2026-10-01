@@ -1,3 +1,42 @@
+## 2026-10-01 — F1 CYCLOTOMIC FINITE-WINDOW GENERALIZATION OPENED
+
+The next research branch deliberately leaves the torsion-free Demushkin category. Rather than treating F1 Massey sharpness as the endpoint, F1 is adopted as an adversarial near-Demushkin test-bed for the finite-window recognition program.
+
+Primary target:
+\[
+T_{\mathrm{cyc}}(G)=1 \iff G\text{ admits a 1-cyclotomic/Kummerian orientation}.
+\]
+
+The first category is the paired Demushkin/F1 family at fixed odd p, even rank d, and finite admissible q. The finite input is the intrinsic Zassenhaus window W_n(G); q, presentation data, and a preselected orientation are excluded from the target definition.
+
+The decisive question is whether a finite window can distinguish the 1-cyclotomic Demushkin member from the non-1-cyclotomic F1 variation, and if so whether the first separating datum has an intrinsic Kummerian obstruction interpretation.
+
+Pre-check status:
+- Object: PASS.
+- Input: PASS.
+- Functoriality: PASS.
+- Gauge: OPEN / must be proved for the eventual obstruction carrier.
+- Orientation bridge: OPEN / LOAD-BEARING.
+- q-blindness: PASS at definition level.
+- Separation: OPEN / DECISIVE.
+- Novelty: targeted 2026 audit found no exact finite-Zassenhaus 1-cyclotomic recognition theorem for this D/F1 pair.
+- Stop: no large computation authorized yet.
+
+Targeted literature update:
+- Blumer–Quadrelli establish F1 as non-1-cyclotomic and give the parameter-dependent sufficient strong-Massey bound n<=q.
+- Palaisti (arXiv:2609.00253, 2026-08-31) concerns F2, not F1, and does not resolve F1 sharpness.
+- A fresh web audit found no exact F1 converse/sharpness or finite-window 1-cyclotomic recognition result. This is PASS / LOCAL, not an absolute priority claim.
+
+Smallest authorized stress test:
+(p,d,q)=(3,2,3), Demushkin versus F1. First determine the relation depth/window at which they can differ and whether the difference yields an intrinsic finite Kummerian obstruction.
+
+Detailed stage document:
+research/PAPER3_F1_CYCLOTOMIC_FINITE_WINDOW_GATE_2026-10-01.md
+
+Classification:
+F1 finite-window 1-cyclotomic recognition: OPEN / DECISIVE.
+
+
 ## 2026-09-28 — THREE-PAPER EXACT ARTIFACT + LITERATURE GATE CLOSED
 
 The three-paper revision checklist was completed through independent source→CI→PDF verification.
