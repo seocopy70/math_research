@@ -454,3 +454,18 @@ Classification:
 Literature input: Blumer–Quadrelli arXiv:2603.15464v2 proves the F1 non-1-cyclotomicity and the explicit associated restricted Lie algebra structure; the finite-window threshold deduction is the present work.
 
 Record: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md
+
+
+## 2026-10-01 — F2 GATE PRE-CHECK: OBVIOUS CYCLOTOMIC FREE-PRODUCT CONTROL RULED OUT AT W3
+
+The next enlargement is the Blumer–Quadrelli F2 family. Before computation, the required pre-check was completed.
+
+For the smallest rank-4 F2 quadratic relation space
+R_F2=<[X1,Y1]+[X2,Y2],[X1,X2]>,
+the Pfaffian of the relation pencil is proportional to a^2. For the natural cyclotomic control D_{1,q}*D_{1,q}, the relation space is <[X1,Y1],[X2,Y2]> and its Pfaffian is proportional to ab. These pencil types are not GL4-equivalent (repeated root versus two distinct roots), so W3 cannot match.
+
+Thus the immediate free-product cyclotomic control is FAIL / CLOSED as a same-W3 candidate. This does not rule out all cyclotomic controls.
+
+Next authorized search: cyclotomic groups outside this free-product control class, especially elementary-type cyclotomic semidirect products, for a W3 quadratic relation space of F2 type. No large computation until such a control is identified.
+
+Record: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md
