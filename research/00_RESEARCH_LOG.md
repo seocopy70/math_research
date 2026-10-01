@@ -912,3 +912,35 @@ Primary literature control: Labute/Demuškin classification and Mináč–Rogels
 
 Next authorized action: formalize the reconstruction lemma and independently verify naturality/projective covariance of the extension-window→Mixed Fox map. No large Fox computation is authorized.
 
+
+
+## 2026-10-02 — MIXED FOX DEMUŠKIN PAIR DESCENT / NATURALITY BOUNDARY
+
+The admissibility/fiber prerequisite was advanced to a precise logical boundary.
+
+For N_k=3^{k-1}+1 and the standard odd-p fixed-rank Demuškin family, the canonical extension window
+1 -> A_k=D_{N_k}/D_{N_k+1} -> E_k=G/D_{N_k+1} -> Q_k=G/D_{N_k} -> 1
+is determined up to extension-window isomorphism by the bare pair (Q_k,A_k):
+
+- q<N_k is recovered from the first q-dependent intrinsic Zassenhaus graded defect below N_k;
+- q=N_k is distinguished from q>N_k by the boundary-layer dimension of A_k;
+- q>N_k (including q=0) yields the same truncated extension window.
+
+This is a Demuškin-restricted reconstruction statement and does not contradict the already CLOSED broad arbitrary-central-extension no-go.
+
+Critical logical correction: singleton fibers establish descent of an isomorphism-invariant object assignment, but do not automatically produce a functorial section on arbitrary pair morphisms. The mixed Fox construction on extension windows is therefore classified as PASS/LOCAL for covariance/projective gauge, while the full natural-transformation factorization through a formally specified Pair_k morphism category remains OPEN.
+
+Classification:
+- Demuškin pair -> extension-window reconstruction: PASS/CLOSED at isomorphism-class scope;
+- extension-window -> projective mixed Fox jet: PASS/LOCAL;
+- bare pair -> mixed Fox jet as an isomorphism-invariant assignment: PASS/LOCAL;
+- full categorical naturality/functorial factorization: OPEN;
+- arbitrary-extension pair descent: FAIL/CLOSED;
+- Paper 3: FROZEN/COMPLETE.
+
+Independent literature control used Labute/Demuškin classification and Mináč–Rogelstad–Tân Zassenhaus-dimension results; Fox/Lyndon relation-module covariance remains the standard structural mechanism, while the project-specific finite-pair factorization is not claimed as prior literature.
+
+Detailed audit:
+research/PAPER3_MIXED_DEMUSHKIN_PAIR_DESCENT_NATURALITY_AUDIT_2026-10-02.md
+
+Next authorized action: formalize and independently verify the projective mixed-Fox covariance under extension-window isomorphism, Nielsen/generator change, relation-generator gauge, relator conjugation, and mixed maximal-ideal truncation. No W_11/W_12, large Fox, 45-dimensional, or Paper 2 reproof computation.
