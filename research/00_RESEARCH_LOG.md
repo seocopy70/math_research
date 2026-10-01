@@ -1,3 +1,27 @@
+## 2026-10-01 — F2 SAME-W3 CYCLOTOMIC CONTROL PRE-CHECK / LITERATURE AUDIT
+
+The required pre-check was completed before any new computation. The search was restricted to genuinely cyclotomic constructions capable in principle of producing a rank-4, two-dimensional quadratic relation space of the F2 repeated-root Pfaffian type.
+
+Primary literature checked:
+- Quadrelli–Weigel, *Profinite Groups with a Cyclotomic p-Orientation* (arXiv:1811.02250 / Doc. Math. 25 (2020)): cyclotomicity is preserved under free products and specified fibre/semidirect constructions; the elementary-type framework is generated from free pro-p groups and Demushkin groups by free products and cyclotomic semidirect/fibre-product operations.
+- Mináč–Pasini–Quadrelli–Tân, *Koszul algebras and quadratic duals in Galois cohomology* (arXiv:1808.01695 / Adv. Math. 380 (2021)): cyclotomic semidirect products are part of the elementary-type construction, and the quadratic dual is tied to the p-Zassenhaus relation data.
+- Blumer–Quadrelli, arXiv:2603.15464v2: the F2 family has the two-dimensional quadratic relation space used in this gate and is globally non-1-cyclotomic.
+
+Pre-check conclusion:
+1. A meaningful cyclotomic control class definitely exists; the search target is mathematically legitimate.
+2. No explicit rank-4 cyclotomic example with W3 quadratic relation pencil GL4-equivalent to the F2 repeated-root type was found in the targeted literature search.
+3. The standard elementary-type free-product control remains FAIL/CLOSED by the Pfaffian test.
+4. Cyclotomic semidirect/fibre-product operations are genuine candidates, but the standard constructions inspected do not immediately furnish a rank-4, two-relation F2-type quadratic shadow. This is a warning, not a no-go theorem.
+5. No large computation is authorized. The next legitimate step is a construction-level symbolic search among the smallest cyclotomic fibre/semidirect constructions and rank-preserving combinations, testing the W3 relation pencil before any finite-group enumeration.
+
+Classification:
+- meaningful cyclotomic control class: **PASS / CLOSED**;
+- actual F2-matching W3 control: **OPEN / DECISIVE**;
+- free-product control: **FAIL / CLOSED**;
+- broad F2 finite-window recognition: **OPEN / CONDITIONAL**.
+
+Important boundary: this negative literature pre-check is not a proof that no cyclotomic control exists.
+
 ## 2026-10-01 — F1 CYCLOTOMIC FINITE-WINDOW GENERALIZATION OPENED
 
 The next research branch deliberately leaves the torsion-free Demushkin category. Rather than treating F1 Massey sharpness as the endpoint, F1 is adopted as an adversarial near-Demushkin test-bed for the finite-window recognition program.
