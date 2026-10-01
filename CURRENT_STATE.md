@@ -1,3 +1,16 @@
+## 2026-10-01 — THREE-PAPER PUBLICATION-STYLE FINALIZATION
+
+A style-only publication pass was completed on the three already-audited manuscript sources. The mathematical content and research classifications are unchanged.
+
+- Paper 1 style-final branch: paper1-style-final-2026-10-01; 8-page PDF; SHA-256 b4806dc7ed111ffeb3b93d5ef9066d958252fff132506a5d95f25dad76afe960; PASS/CLOSED.
+- Paper 2 style-final branch: paper2-style-final-2026-10-01; 13-page PDF; SHA-256 97504d2bc5db7f668f2287d62bca902cde0b285b1a4b7ef11ffe58c0c8928e32; PASS/CLOSED.
+- Paper 3 style-final branch: paper3-style-final-2026-10-01; 17-page PDF; SHA-256 3518e5f966401d48eae9c8b76b80fe7a9ba4e53f76bc4255edb66862082bf7ff; PASS/CLOSED.
+- Removed companion/placeholder boilerplate, reduced repetitive defensive novelty language, standardized finite coefficient notation, improved introductions, and replaced informal "kills" terminology.
+- Paper 3 uses the source-correct dedicated style-final workflow because the legacy paper3-build workflow targets the older paper3/main.tex application manuscript.
+- PDF text extraction and first-page visual checks passed.
+- Publication novelty remains OPEN / CONDITIONAL; mathematical frontier unchanged.
+- Detailed record: research/THREE_PAPER_PUBLICATION_STYLE_FINAL_2026-10-01.md.
+
 ## 2026-09-28 — THREE-PAPER ARTIFACT GATE FINALIZATION
 
 The authoritative three-paper revision checklist has now been followed through the source→CI→PDF→independent audit chain.
