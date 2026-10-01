@@ -397,3 +397,32 @@ Classification:
 - uniform q=p^f threshold q+1: OPEN / LOAD-BEARING.
 
 Detailed record: research/PAPER3_SAME_W3_OBSTRUCTION_F1_VS_CYC_CONTROL_2026-10-01.md
+
+
+## 2026-10-01 — W4 INTRINSICITY AUDIT / CONCRETE THRESHOLD 4 CLOSED
+
+The prior critical review identified a load-bearing gap in the W4 argument: the statement that x2^[3] survives in D3/D4 was correct in substance but the earlier record did not make the invariant presentation-independent. This has now been repaired.
+
+For the concrete pair
+G_F1=<x1,y1,x2,y2 | [x1^3,y1][x2,y2]=1> and
+G_cyc=D_{1,3}*F(x1,y1), with D_{1,3}=<x2,y2 | x2^3[x2,y2]=1>,
+the uploaded Blumer–Quadrelli source explicitly identifies the F1 associated graded restricted Lie algebra as a free product of a free rank-2 restricted Lie algebra and a rank-2 Demushkin restricted Lie algebra. In the latter, the only defining quadratic relation is [X2,Y2], so X2^[3] is nonzero in degree 3.
+
+The intrinsic comparison is made at the truncated restricted relation module over the common W3 quadratic shadow:
+- F1 has zero degree-3 defining relation component.
+- The cyclotomic control has a nonzero degree-3 p-power component X2^[3].
+The p-power image is functorial under restricted-Lie isomorphisms, so the distinction is not tied to the chosen generator x2.
+
+Therefore W4 separates the pair intrinsically. Combined with W3 equality:
+r_Tcyc({G_F1,G_cyc};D_bullet)=4.
+
+Classification:
+- intrinsic W4 separation: PASS / CLOSED;
+- exact threshold 4 for the declared two-object category: PASS / CLOSED;
+- uniform q=p^f analogue: OPEN / LOAD-BEARING;
+- broad recognition theorem: OPEN / CONDITIONAL;
+- novelty/priority: OPEN / CONDITIONAL.
+
+Literature source: Blumer–Quadrelli, arXiv:2603.15464v2; it proves the global F1 non-1-cyclotomicity and gives the relevant associated graded restricted Lie algebra structure. The finite-window W4 deduction is the present research step.
+
+Authoritative detail: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md
