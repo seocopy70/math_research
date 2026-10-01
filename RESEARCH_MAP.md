@@ -4118,3 +4118,18 @@ For (p,d,q)=(3,2,3), the F1 group and the cyclotomic control D_{1,3}*F_2 have id
 This is materially different from the earlier D/F1/F2 family-union result: the first window fails, a deeper filtered extension layer is necessary, and the threshold is sharp.
 
 The uniform q=p^f extension (candidate threshold q+1) remains OPEN / LOAD-BEARING because the intrinsic W_{q+1} carrier must be proved uniformly.
+
+
+## 2026-10-01 — W4 INTRINSIC SEPARATION AUDIT CLOSED
+
+The concrete same-W3 obstruction pair at (p,d,q)=(3,2,3) has passed an independent intrinsicity audit. The previous coordinate-level relation [x2,y2]=x2^{-3} is replaced by the canonical degree-3 p-power component of the truncated restricted relation module. This component is zero for F1 and nonzero for the cyclotomic free-product control, and is preserved by restricted-Lie isomorphisms.
+
+Classification:
+- W3 equality: PASS / CLOSED.
+- W4 intrinsic separation: PASS / CLOSED for the concrete pair.
+- exact two-object threshold r=4: PASS / CLOSED.
+- uniform q=p^f analogue: OPEN / LOAD-BEARING.
+- broad category-level recognition: OPEN / CONDITIONAL.
+- novelty/priority: OPEN / CONDITIONAL.
+
+Record: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md
