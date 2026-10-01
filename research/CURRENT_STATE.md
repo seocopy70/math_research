@@ -873,3 +873,10 @@ At (p,d,q)=(3,2,3), an F1 group and the cyclotomic control D_{1,3}*F_2 satisfy W
 This closes the W_3 carrier as a general detector. The active question is W_4 separation: find an intrinsic filtered extension invariant in W_4, or prove W_4 is still insufficient and push the obstruction deeper. No presentation-local p-power coordinate may be promoted without a functoriality/gauge proof.
 
 Detailed record: research/PAPER3_SAME_W3_OBSTRUCTION_F1_VS_CYC_CONTROL_2026-10-01.md.
+
+## 2026-10-01 — CONCRETE F1 RECOGNITION THRESHOLD CLOSED AT 4
+
+The active W_4 gate is now PASS / CLOSED for the concrete pair (p,d,q)=(3,2,3):
+r_{T_cyc}({F1_{2,3},D_{1,3}*F_2};D)=4.
+
+W_3 is identical; W_4 separates by the intrinsic survival of the quadratic commutator class into D_3/D_4. The next load-bearing question is the uniform parameter theorem, expected to have candidate threshold q+1, but it is not authorized as a theorem until the W_{q+1} carrier is made intrinsic and independently verified.
