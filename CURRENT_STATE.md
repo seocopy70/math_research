@@ -387,3 +387,19 @@ The orientation bridge exists at the audited fixed Demushkin scope via the zero-
 Decision: no W_11/W_12 or Fox computation is authorized. The next admissible research target is a genuinely non-redundant carrier extracted from the surviving family, subject again to the intrinsicity/gauge test. Paper 2 selector reproof is explicitly not authorized.
 
 Detailed record: research/PAPER3_GATE_D_THREE_ATTACK_INTRINSIC_CARRIER_2026-10-01.md
+
+## 2026-10-01 — O_k MINIMALITY BOUNDARY CLOSED; UNIVERSALITY IS THE ONLY LIVE O_k QUESTION
+
+The post-Paper-3 attack has now been sharpened using the frozen carrier-compression result.
+
+- Exact definition of \(\mathcal O_k\): **PASS / CLOSED**.
+- Presentation/orientation independence: **PASS / CLOSED** at the finite-pair level; \(\mathcal O_k\) is constructed from the intrinsic central extension \(E_k\to Q_k\), cohomology, and transgression, with no presentation coordinate or orientation inserted.
+- Functoriality: **PASS / CLOSED** for filtered finite-pair morphisms/isomorphisms, with the expected contravariant cohomological variance.
+- Recognition minimality of \(\mathcal O_k\): **FAIL / CLOSED — REDUNDANT**. The frozen intrinsic cup-line \(C_k\subset H^2(Q_k,\mathbf F_p)\) is one-dimensional, finite-input, q-blind, intrinsic, and already carries all false-branch selector outputs. Hence \(\mathcal O_k\) is not the minimal recognition carrier in any category containing \(C_k\).
+- Paper 2 selector redundancy: **CLOSED** as a recognition issue; no reproof is authorized.
+- Finite-pair universal obstruction property of \(\mathcal O_k\): **OPEN / LOAD-BEARING**. This is a different claim from recognition minimality: the live question is whether every admissible functorial linear obstruction carrier for the transient/stable separation problem factors canonically through \(\mathcal O_k\).
+- Genuinely new carrier: **NOT OPENED**; only to be pursued if the universal-property attack fails or is shown irrelevant.
+
+The proposed elapsed-time “2 weeks” stop rule is not adopted. Structural evidence controls closure. The branch closes immediately on the recognition-minimality question because a smaller frozen carrier already exists; only the distinct universal-obstruction question remains.
+
+Next authorized action: explicitly define the finite-pair category and morphisms, define “separating obstruction carrier” and the factorization/universal property, then attempt the universal theorem or construct a counterexample. No W_11/W_12, Fox, 45-dimensional computation, or Paper 2 reproof is authorized.
