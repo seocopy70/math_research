@@ -851,3 +851,16 @@ For C_{p,d,q}={D_{d,q},F1_{d,q}} and T_cyc=1-cyclotomicity:
 Detailed record: `research/PAPER3_PHASE_A_D_VS_F1_FINITE_RECOGNITION_2026-10-01.md`.
 
 **Next live gate:** broaden the category beyond the D/F1 pair and test whether the same W_3 commutator/cup carrier recognizes T_cyc without family labels or q. If no nontrivial broader category survives, close this carrier as a local/reformulation result and move to the next target rather than forcing generalization.
+
+
+## 2026-10-01 — PHASE B COMPLETE; W_3 CARRIER NOW PASS / LOCAL
+
+The D/F1/F2 family-union test is closed at W_3:
+\[
+r_{T_{\rm cyc}}=3
+\]
+for the declared category and all odd p, d>=2, q=p^f.
+
+W_3 distinguishes D, F1, F2 using only intrinsic quadratic relation/cup data; W_2 is insufficient. This confirms a reusable local carrier but not a broad recognition theorem.
+
+**Next decisive gate:** same-W_3 obstruction test. Find or rule out a cyclotomic/non-cyclotomic pair with identical W_3 quadratic/cup data. Do not continue adding families with visibly different quadratic shadows; that would be redundant rather than deeper generalization.
