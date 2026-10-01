@@ -426,3 +426,31 @@ Classification:
 Literature source: Blumer–Quadrelli, arXiv:2603.15464v2; it proves the global F1 non-1-cyclotomicity and gives the relevant associated graded restricted Lie algebra structure. The finite-window W4 deduction is the present research step.
 
 Authoritative detail: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md
+
+
+## 2026-10-01 — F1 UNIFORM FINITE-q THRESHOLD CLOSED
+
+The concrete W4 result generalizes cleanly to every finite q=p^f (odd p, d>=2) without relying on a presentation-local carrier.
+
+Define
+G_F1(q)=<x1,y1,...,xd,yd | [x1^q,y1] [x2,y2]... [xd,yd]=1>
+and the cyclotomic control
+G_cyc(q)=D_{1,q}*F_{2d-2}, with D_{1,q}=<x2,y2 | x2^q[x2,y2]=1>.
+
+W_q equality: x1^q contributes only in D_{q+1} after commutation in F1, while x2^q in the control lies in D_q; modulo D_q both relators have the same quadratic word. Thus W_q isomorphic.
+
+W_{q+1} separation: in the control, x2^q=[x2,y2]^{-1}, so x2^q is trivial in the abelianization of W_{q+1}. In F1, Blumer–Quadrelli's explicit associated restricted Lie algebra description implies X2^[q] is nonzero, so x2^q survives in D_q/D_{q+1} and remains nontrivial in the abelianization of W_{q+1}. Hence the two W_{q+1} windows are non-isomorphic.
+
+Therefore, for every finite q=p^f with p odd and d>=2:
+r_Tcyc({G_F1(q),G_cyc(q)};D_bullet)=q+1.
+
+This is stronger than the earlier analogy-based q+1 candidate: it is a proved local pairwise threshold theorem. It does NOT establish a broad category recognition theorem or a q-independent carrier.
+
+Classification:
+- uniform finite-q pairwise threshold: PASS / CLOSED;
+- broad category recognition: OPEN / CONDITIONAL;
+- novelty/priority: OPEN / CONDITIONAL.
+
+Literature input: Blumer–Quadrelli arXiv:2603.15464v2 proves the F1 non-1-cyclotomicity and the explicit associated restricted Lie algebra structure; the finite-window threshold deduction is the present work.
+
+Record: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md
