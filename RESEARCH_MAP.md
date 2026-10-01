@@ -4077,3 +4077,16 @@ Core pedagogical framing:
 **Paper 1 = finite recognition is possible → Paper 2 = exact depth needed for the relevant affine information → Paper 3 = Kummer recognition at that finite window, with declared linear selector-carrier compression.**
 
 This is an explanatory companion to the authoritative theorem/audit records, not a replacement for them.
+
+
+## 2026-10-01 — PAPER 3 PHASE A CLOSED: D vs F1
+
+The first authorized F1 generalization test has been completed.
+
+For the two-family category {ordinary Demushkin D_{d,q}, F1_{d,q}} with target 1-cyclotomicity, W_2 is q-blind and identical, while W_3 intrinsically separates the families by the rank of the degree-2 commutator/cup pairing: 2d for D versus 2d-2 for F1. Hence the exact recognition threshold is r=3 for the declared two-family category, including (p,d,q)=(3,2,3), and the argument is uniform in odd p, d>=2, q=p^f.
+
+Classification: Phase A **PASS / CLOSED**; novelty from this pair alone **OPEN / CONDITIONAL and currently weak**. The result is a derived finite-window reformulation of structural data already explicit in the literature, not a priority claim.
+
+Detailed record: research/PAPER3_PHASE_A_D_VS_F1_FINITE_RECOGNITION_2026-10-01.md
+
+The roadmap therefore advances to the broader-category test: determine whether the W_3 carrier survives beyond the two-family D/F1 pair without hard-coding family membership or q.
