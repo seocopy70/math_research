@@ -1,43 +1,106 @@
-# PAPER 3 — F2 SAME-W3 CYCLOTOMIC CONTROL GATE
+# PAPER 3 — F2 SAME-W3 CONTROL GATE
 
 Date: 2026-10-01
 
 ## Purpose
 
-Test whether the F2 family admits a genuinely cyclotomic control with the same \(W_3\) quadratic relation type, which would authorize a finite-window separation computation.
+Test whether the F2 family admits a cyclotomic control with the same \(W_3\) quadratic relation type, which would authorize a finite-window separation computation.
 
-## Pre-check and structural audit
+## Independent verification of the audited F2 Pfaffian
 
-For the smallest rank-4 F2 relation space,
+Use the ordered basis
+\[
+(X_1,Y_1,X_2,Y_2).
+\]
+For
 \[
 R_{F2}=\langle \omega_1+\omega_2,\eta\rangle,
-\qquad \operatorname{Pf}(a(\omega_1+\omega_2)+b\eta)\sim a^2.
+\qquad
+\omega_1=X_1\wedge Y_1,quad
+\omega_2=X_2\wedge Y_2,quad
+\eta=X_1\wedge X_2,
 \]
-The repeated-root Pfaffian type is invariant under the natural \(GL_4\) action on the degree-one space.
-
-The audited standard elementary-type cyclotomic constructions with rank 4 and two defining relations yield only the small relation-pencil types
+the pencil \(a(\omega_1+\omega_2)+b\eta\) has skew matrix
 \[
-ab \quad\text{or}\quad 0.
+\begin{pmatrix}
+0&a&b&0\\
+-a&0&0&0\\
+-b&0&0&a\\
+0&0&-a&0
+\end{pmatrix}.
 \]
-Hence these constructions cannot have the same \(W_3\) quadratic relation type as F2.
+For a \(4\times4\) skew matrix \(M\),
+\[
+\operatorname{Pf}(M)=M_{12}M_{34}-M_{13}M_{24}+M_{14}M_{23}
+\]
+(in 1-based indexing). Direct substitution gives
+\[
+\boxed{\operatorname{Pf}_{F2}(a,b)=a^2}.
+\]
+Thus the repeated-root type is verified directly, independently of the earlier prose calculation.
 
-## Classification
+For the split free-product control
+\[
+R_{\mathrm{split}}=\langle \omega_1,\omega_2\rangle,
+\]
+the pencil has Pfaffian
+\[
+\boxed{\operatorname{Pf}_{\mathrm{split}}(a,b)=ab}.
+\]
+For the shared-direction elementary semidirect shape, represented by
+\[
+R_{\mathrm{shared}}=\langle X_1\wedge Y_1,\,X_1\wedge X_2\rangle,
+\]
+every pencil has a common factor \(X_1\), hence rank \(\le2\), and
+\[
+\boxed{\operatorname{Pf}_{\mathrm{shared}}(a,b)=0}.
+\]
 
-- **F2 × standard elementary-type cyclotomic control: FAIL / CLOSED.**
-- **F2 × arbitrary cyclotomic pro-\(p\) group: OPEN / CONDITIONAL.** No universal no-go theorem has been established.
-- **F2 \(W_4\) computation: NOT AUTHORIZED.** No legitimate W3-matching control was found.
-- **F2 broader finite-window recognition: OPEN / CONDITIONAL.**
+Therefore the three Pfaffian types actually audited are
+\[
+a^2,qquad ab,qquad 0,
+\]
+and \(a^2\) is not \(GL_4\)-equivalent to either of the latter two.
+
+## Recovered examined-construction list
+
+The repository's earlier construction-level audit records the following two relevant rank-4/two-relator shapes inside the **standard elementary-type construction scheme**:
+
+1. **Split/free-product shape:** free product of two rank-2 one-relator factors (rank-2 Demuškin factors, or the rank-2 cyclotomic semidirect factor \(\mathbf Z_p\rtimes\mathbf Z_p\)). The two quadratic relation forms live on disjoint 2-planes, giving Pfaffian \(ab\).
+
+2. **Shared-direction semidirect shape:** a rank-2 free factor extended by one cyclotomic semidirect \(\mathbf Z_p\) direction, then free-producted with one free generator. The two quadratic action forms share the semidirect direction, giving Pfaffian \(0\).
+
+This is the actual list recoverable from the authoritative audit trail. No additional concrete rank-4/two-relator elementary-type shape is explicitly recorded there.
+
+## Completeness audit
+
+The direct Pfaffian calculation is **PASS / CLOSED** for the three recorded shapes.
+
+The **completeness of the construction list is not independently established at theorem level** by the surviving repository record. The prior phrase “standard elementary-type construction mechanism cannot realize” was therefore too strong. What is justified is only:
+
+> the audited/recovered candidate list consists of the two shapes above, and both are excluded by the direct Pfaffian test.
+
+Accordingly, the mathematical status is:
+
+- F2 × recovered/explicitly examined elementary-type candidates: **FAIL / CLOSED**.
+- Completeness of the examined candidate list within the full standard elementary-type class: **OPEN**.
+- F2 × arbitrary cyclotomic pro-\(p\) group: **OPEN / CONDITIONAL**.
+- F2 \(W_4\) computation: **NOT AUTHORIZED**.
+- Operational F2 branch: **CLOSED**; no further search is authorized unless new evidence supplies a genuinely new construction or a proof of completeness.
+- Broad F2 finite-window recognition: **OPEN / CONDITIONAL**.
 
 ## Logical boundary
 
-This is a structural no-go for the audited standard construction mechanism, not a theorem excluding every cyclotomic pro-\(p\) group. In particular, it must not be stated as "all cyclotomic controls are impossible."
+This audit does **not** prove a universal structural no-go for all standard elementary-type cyclotomic groups, because the completeness of the recovered candidate list has not been independently established. It also does not exclude arbitrary cyclotomic pro-\(p\) controls.
 
-F1 is not reopened. A nonstandard cyclotomic search would require a fresh explicit pre-check and a justified reason that the broader category is load-bearing; blind search or W4 computation without a W3 match is not authorized.
+The correct negative statement is therefore candidate-level:
 
-## Methodological significance
+> In the explicitly recovered rank-4/two-relator elementary-type constructions actually examined, the F2 repeated-root quadratic type \(a^2\) is incompatible with the available Pfaffian types \(ab\) and \(0\).
 
-The negative result is a genuine boundary: the F2 repeated-root \(W_3\) type is not realized by the standard elementary-type cyclotomic mechanism in the audited low-rank/two-relator setting. Therefore the next Paper 3 branch should move to a genuinely broader finite-window recognition question rather than force the F1 obstruction template onto F2.
+No claim about an unexamined construction mechanism is made.
+
+F1 is not reopened. A future reopening would require new mathematical evidence, not a relabeling of this audit.
 
 ## Provenance
 
-The cyclotomic construction classes and their closure properties are grounded in the project’s audited cyclotomic literature. The present gate adds the structural Pfaffian comparison and its logical boundary; it does not claim priority or a universal classification.
+The cyclotomic construction classes and their closure properties are grounded in the project's audited cyclotomic literature. The present audit adds an independent direct Pfaffian computation and restores the actual candidate list preserved in the repository. The completeness limitation is recorded explicitly rather than inferred.
