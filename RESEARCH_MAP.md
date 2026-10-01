@@ -4099,3 +4099,14 @@ The finite-window recognition carrier W_3 extends from D/F1 to the Blumer–Quad
 Classification: PASS / CLOSED mathematically, but only PASS / LOCAL as a reusable carrier. The extension remains weak as a novelty candidate because the distinction is already visible in published quadratic data.
 
 The next decisive question is no longer “can W_3 separate another named family?” but whether there is a cyclotomic/non-cyclotomic pair with identical W_3 quadratic/cup data. This is the required obstruction test before promoting W_3 to a general recognition mechanism.
+
+
+## 2026-10-01 — DECISIVE F1 OBSTRUCTION: SAME W_3, DIFFERENT GLOBAL T_cyc
+
+At (p,d,q)=(3,2,3), an F1 group and the cyclotomic control D_{1,3}*F_2 have isomorphic unmarked Zassenhaus windows W_3, because both reduce modulo D_3 to the same quadratic relation [x_2,y_2], while their global 1-cyclotomicity differs.
+
+Therefore W_3 is not a general recognition carrier and r_{T_cyc}>=4 on any category containing this pair.
+
+Classification: same-W_3 obstruction PASS/CLOSED; W_3 general recognition FAIL/CLOSED; lower bound r>=4 PASS/CLOSED; exact threshold OPEN/LOAD-BEARING.
+
+Next decisive gate: intrinsic W_4 separation.
