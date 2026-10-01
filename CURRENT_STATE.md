@@ -413,3 +413,26 @@ The standard-family mixed Fox calculation remains valid but is explicitly classi
 ## 2026-10-01 — MIXED FOX WEIGHTED MAGNUS GATE NARROWED
 
 The apparent characteristic-zero/mod-3 incompatibility is no longer the main obstruction. Efrat's p-adic Magnus coefficient estimate implies that for N_k=3^{k-1}+1, D_{N_k} is invisible to the mixed (3,I)-adic coefficient jet through precision k, while the boundary term is represented by D_{N_k}/D_{N_k+1}. Thus the weighted coefficient descent is **PASS / CLOSED**, and naive deep-relator counterexamples are **FAIL / CLOSED**. The remaining load-bearing issue is specifically categorical projective relation-module descent W_k -> M_k. Even if that succeeds, a separate non-redundancy gate remains because the frozen selector already recognizes chi mod 3^k at the same window. No large computation is authorized. See research/PAPER3_MIXED_3I_ADIC_WEIGHTED_MAGNUS_DESCENT_2026-10-01.md.
+
+
+
+## 2026-10-01 — MIXED FOX CATEGORICAL RELATION-MODULE DESCENT AUDIT
+
+The weighted Magnus descent is confirmed as **PASS / CLOSED**: at N_k=3^{k-1}+1, the mixed (3,I)-adic coefficient jet through precision k is insensitive to D_{N_k}, and the first possible relation contribution is exactly the boundary layer D_{N_k}/D_{N_k+1}.
+
+The remaining categorical issue was isolated more sharply. The natural finite input for the projective Fox relation-jet descent is the finite **extension window**
+1 -> A_k -> E_k -> Q_k -> 1,
+with E_k=G/D_{N_k+1}, Q_k=G/D_{N_k}, A_k=D_{N_k}/D_{N_k+1}, not merely the two abstract objects Q_k and A_k separately. The latter notation is under-specified because A_k is not a subgroup of Q_k and does not by itself encode the extension class.
+
+Using the pro-3 Fox/Lyndon relation-module exact sequence together with the weighted boundary estimate gives the proof architecture: the finite quotient determines the lower mixed jet; the extension determines the finite relation-module class; the boundary layer supplies the weighted-order-k relation contribution; stable presentation changes disappear after projectivization. This is **PASS / LOCAL** as a proof architecture, not yet a formally written natural-transformation theorem.
+
+Classification:
+- weighted coefficient descent: **PASS / CLOSED**;
+- stable/projective Fox mechanism: **PASS / LOCAL**;
+- descent from the finite extension window to the projective mixed Fox jet: **PASS / LOCAL — formal naturality statement remains to be written and independently checked**;
+- descent from the bare (Q_k,A_k) notation: **OPEN / NOT WELL-TYPED until the input category is explicitly defined**;
+- whole Mixed Fox branch: **OPEN / LOAD-BEARING**.
+
+Detailed audit: research/PAPER3_MIXED_RELATION_MODULE_DESCENT_AUDIT_2026-10-01.md.
+
+Next authorized action: formalize the extension-window category and the natural transformation W_k -> M_k, then perform an independent covariance/naturality check. No larger Fox computation is authorized.
