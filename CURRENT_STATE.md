@@ -397,8 +397,7 @@ The post-Paper-3 attack has now been sharpened using the frozen carrier-compress
 - Functoriality: **PASS / CLOSED** for filtered finite-pair morphisms/isomorphisms, with the expected contravariant cohomological variance.
 - Recognition minimality of \(\mathcal O_k\): **FAIL / CLOSED — REDUNDANT**. The frozen intrinsic cup-line \(C_k\subset H^2(Q_k,\mathbf F_p)\) is one-dimensional, finite-input, q-blind, intrinsic, and already carries all false-branch selector outputs. Hence \(\mathcal O_k\) is not the minimal recognition carrier in any category containing \(C_k\).
 - Paper 2 selector redundancy: **CLOSED** as a recognition issue; no reproof is authorized.
-- Finite-pair universal obstruction property of \(\mathcal O_k\): **OPEN / LOAD-BEARING**. This is a different claim from recognition minimality: the live question is whether every admissible functorial linear obstruction carrier for the transient/stable separation problem factors canonically through \(\mathcal O_k\).
-- Genuinely new carrier: **NOT OPENED**; only to be pursued if the universal-property attack fails or is shown irrelevant.
+- Finite-pair universal obstruction property of \(\mathcal O_k\): **OPEN / LOAD-BEARING**. This is a different claim from recognition minimality: the live question is whether every admissible functorial linear obstruction carrier for the transient/stable separation problem factors canonically through \(\mathcal O_k\).- Genuinely new carrier: **NOT OPENED**; only to be pursued if the universal-property attack fails or is shown irrelevant.
 
 The proposed elapsed-time “2 weeks” stop rule is not adopted. Structural evidence controls closure. The branch closes immediately on the recognition-minimality question because a smaller frozen carrier already exists; only the distinct universal-obstruction question remains.
 
@@ -436,3 +435,49 @@ Classification:
 Detailed audit: research/PAPER3_MIXED_RELATION_MODULE_DESCENT_AUDIT_2026-10-01.md.
 
 Next authorized action: formalize the extension-window category and the natural transformation W_k -> M_k, then perform an independent covariance/naturality check. No larger Fox computation is authorized.
+
+## 2026-10-01 — MIXED FOX EXTENSION-WINDOW CATEGORICAL AUDIT / INPUT-STRENGTHENING BOUNDARY
+
+The categorical packaging was pushed one step further. The correct finite input for the projective mixed Fox construction is the central extension window
+\[
+1\to A_k\to E_k\to Q_k\to1,
+\quad
+E_k=G/D_{N_k+1},\quad
+Q_k=G/D_{N_k},\quad
+A_k=D_{N_k}/D_{N_k+1}.
+\]
+
+This fixes the previous type defect: \(A_k\) is not a subgroup of \(Q_k\), so the bare notation \((Q_k,A_k)\) does not encode the extension class.
+
+However, a critical new boundary is now explicit. Passing from the original pair
+\[
+W_k=(Q_k,A_k)
+\]
+to the extension window
+\[
+\mathsf W_k^{ext}=(A_k\hookrightarrow E_k\twoheadrightarrow Q_k)
+\]
+adds genuine input unless a reconstruction/fiber-invariance theorem is proved. The forgetful map
+\[
+U:\mathbf{ExtWin}_k\to\mathbf{Pair}_k
+\]
+must therefore be treated as load-bearing.
+
+The original finite-pair descent is equivalent to the factorization condition
+\[
+F_k=\overline F_k\circ U,
+\]
+where \(F_k\) is the extension-window mixed Fox construction. Equivalently, the mixed Fox jet must be constant, up to canonical projective equivalence, on every admissible fiber of \(U\).
+
+Current classification:
+- extension-window object: **PASS / CLOSED**;
+- type correctness: **PASS / CLOSED**;
+- extension-window → projective mixed Fox construction: **PASS / LOCAL** as the correct finite-input proof target; formal naturality still requires independent verification;
+- extension-window as canonical enrichment of the original pair: **OPEN**;
+- original pair → mixed Fox descent: **OPEN / LOAD-BEARING**;
+- genuine finite-pair carrier: **OPEN**;
+- novelty: **OPEN**.
+
+No larger Fox computation is authorized. The next decisive attack is fiber invariance / extension reconstruction. If an admissible same-pair/different-extension pair yields different projective mixed Fox jets, the original finite-pair branch is **FAIL / CLOSED**. If fiber invariance or canonical reconstruction is proved, the extension-window theorem can descend to the original pair.
+
+Detailed audit: `research/PAPER3_MIXED_EXTENSION_WINDOW_CATEGORICAL_AUDIT_2026-10-01.md`.
