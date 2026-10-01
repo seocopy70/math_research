@@ -1,3 +1,38 @@
+## 2026-10-02 — DEMUŠKIN PAIR DESCENT / NATURALITY BOUNDARY
+
+The admissibility/fiber prerequisite has been pushed one step further and its logical scope is now fixed.
+
+For
+\[
+N_k=3^{k-1}+1,\quad
+Q_k=G/D_{N_k},\quad
+E_k=G/D_{N_k+1},\quad
+A_k=D_{N_k}/D_{N_k+1},
+\]
+inside the declared standard odd-p fixed-rank Demuškin family:
+
+- q<N_k is intrinsically recovered from the first q-dependent Zassenhaus graded defect below N_k;
+- q=N_k is separated from q>N_k by the boundary-layer dimension of A_k;
+- q>N_k (including q=0) gives the same truncated extension window.
+
+Hence the forgetful fiber is a singleton **up to extension-window isomorphism**.
+
+The crucial correction is that this proves object/isomorphism-class reconstruction, not automatically a functorial section on arbitrary pair morphisms. Therefore:
+
+- Demuškin pair -> extension-window reconstruction: **PASS / CLOSED at isomorphism-class scope**;
+- extension-window -> projective Mixed Fox jet: **PASS / LOCAL**;
+- bare finite-pair -> Mixed Fox jet as an isomorphism-invariant assignment: **PASS / LOCAL**;
+- full categorical natural transformation through a specified Pair_k morphism category: **OPEN**.
+
+The broad arbitrary-central-extension no-go remains **FAIL / CLOSED** and is not contradicted.
+
+Primary literature control: Labute/Demuškin classification and Mináč–Rogelstad–Tân Zassenhaus-dimension results; Fox/Lyndon relation-module mechanism is standard. The project-specific categorical factorization remains our own load-bearing step.
+
+Detailed audit:
+research/PAPER3_MIXED_DEMUSHKIN_PAIR_DESCENT_NATURALITY_AUDIT_2026-10-02.md
+
+Next authorized action: formal covariance/naturality of the projective Mixed Fox construction under extension-window isomorphisms, Nielsen/generator change, relation-generator gauge, relator conjugation, and mixed truncation. No W_11/W_12, large Fox, 45-dimensional, or Paper 2 reproof computation.
+
 ## 2026-10-01 — DEMUŠKIN ADMISSIBILITY / EXTENSION-FIBER RECONSTRUCTION GATE
 
 The admissibility prerequisite for the Mixed Fox branch has now been made explicit at the declared standard scope.
