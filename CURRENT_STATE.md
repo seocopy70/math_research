@@ -1,3 +1,18 @@
+## 2026-10-01 — F2 STANDARD ELEMENTARY-TYPE CONTROL ROUTE CLOSED
+
+The F2 same-W3 search was carried through the authorized construction-level pre-check. Literature confirms cyclotomic free products and fibre/semidirect constructions as legitimate control mechanisms, but the standard elementary-type class cannot supply a rank-4 two-relator quadratic relation plane of F2 repeated-root Pfaffian type. Symbolic rank/relation bookkeeping reduces the relevant rank-4/two-relator shapes to Pfaffian ~ab or Pfaffian 0, whereas F2 has Pfaffian ~a^2.
+
+Status:
+- F1 uniformity: not reopened; remains PASS/CLOSED at declared pairwise scope.
+- F2 same-W3 control in standard elementary-type class: **FAIL / CLOSED**.
+- F2 same-W3 control among arbitrary cyclotomic pro-p groups: **OPEN / CONDITIONAL**.
+- finite W4 computation: **NOT AUTHORIZED** because no genuine W3-matching control was found.
+- broad F2 finite-window recognition: **OPEN / CONDITIONAL**.
+
+This is a structural boundary, not an absolute no-go theorem for every cyclotomic pro-p group. The next escalation, if pursued, must be a genuinely non-elementary cyclotomic construction with explicit W3 matching; otherwise the F2 branch should be closed as a control-search dead end.
+
+Detailed record: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md.
+
 ## 2026-10-01 — F2 SAME-W3 CONTROL PRE-CHECK COMPLETED
 
 F1 uniformity is not reopened. The next authorized branch is F2 genuinely same-cyclotomic control search.
