@@ -2130,3 +2130,23 @@ Detailed audit: research/PAPER4_D2_SIGNATURE_RELATION_QUOTIENT_NO_GO_AUDIT_2026-
 ## 2026-10-02 — D2 CONVENTION CORRECTION
 
 The separated two-sink discussion in the new D2/extension audits has been corrected: absence of an edge does not imply commutation in the oriented pro-p RAAG convention. Mixed vectors can therefore carry lower-filtration contamination. This does not change D2: the rank-two special-edge model alone proves that the D1 depth signature is scalar-blind while the canonical orientation is not. The coefficient-valued extension carrier remains closed by the chordal-tree kernel obstruction.
+
+
+## 2026-10-02 — D2 CRITICAL RE-AUDIT: SCOPE NARROWED; FULL EXTENSION REMAINS OPEN
+
+A critical re-audit of the D2 conclusion identified two overclaims that must not control subsequent research.
+
+1. **Coefficient-valued extension scope.** The chordal-tree relation \(u-s-t\in\ker\Phi\) with \(\omega_q(u-s-t)=-1\neq0\) closes the specific first-coefficient / incidence quotient used in the audit. It does **not** prove failure of the full restricted finite extension \(E|_{H(O_q)}\), because the first coefficient map is itself a projection that discards higher extension information. Therefore “coefficient-valued extension fails” is superseded by the narrower statement “the first coefficient-valued incidence quotient fails.”
+
+2. **Isolated ordinary-direction functional argument.** The family \(\omega_c(\alpha s+\beta z)=\alpha+c\beta\) shows that the filtered q-profile does not constrain an arbitrary linear extension on the \(z\)-coordinate. It does **not**, by itself, prove non-uniqueness of the canonical orientation \(\omega_q\), because the constructed \(\omega_c\) is not shown to satisfy the defining canonical orientation conditions (e.g. torsion-free/Kummerian conditions). Thus the previous unrestricted “filtered q-profile cannot determine canonical orientation” conclusion is overbroad at that point.
+
+The surviving structural conclusions are:
+- D1 global depth signature is PASS / LOCAL;
+- D1 depth signature is scalar-blind in the rank-two special-edge model, so orientation factorization through D1 and quotients exhausted by D1 signatures is FAIL / CLOSED;
+- the first coefficient-valued incidence quotient is FAIL / CLOSED by the chordal-tree kernel obstruction;
+- the full restricted/nonlinear finite-extension datum is **OPEN / LOAD-BEARING**;
+- the separate same-window un-oriented finite-window no-go for the unrestricted specially oriented class remains controlling at the class level, unless the admissible class is explicitly restricted or orientation marking is enriched.
+
+Methodological correction: D3 must not become a new carrier hunt. The next object must be a **smallest intrinsically defined nonlinear/extension invariant** that genuinely retains information discarded by D1 and by the first coefficient quotient, with a fresh Object/Input/Functoriality/Gauge/Orientation-bridge/q-blindness/Separation/Novelty/Stop pre-check.
+
+The two overclaims are classified **HISTORICAL / SUPERSEDED**; the narrower D2 no-go remains **FAIL / CLOSED**. Detailed correction recorded in research/PAPER4_D2_CRITICAL_REAUDIT_2026-10-02.md.
