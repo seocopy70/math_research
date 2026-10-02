@@ -1880,14 +1880,17 @@ but it is too strong to conclude that the intrinsic extension-defect method is u
 
 For commuting pairs in (W_n), the commutator lift is canonically defined modulo (D_{n+1}), because changing a lift by (D_n) changes the commutator by ([D_n,D_1]subseteq D_{n+1}). To remove contamination from pairs with the same degree-one direction and deep corrections, the defect is organized by (2)-planes (Ule L_1) and their first nonzero commutator-survival degree
 [
-ho(U).
+
+ho(U).
 ]
 
 The smallest non-abelian-origin special model
 [
-G=langle x,y,zmid xyx^{-1}=y^{1+q}, xzx^{-1}=z^{1+q}angle
+G=langle x,y,zmid xyx^{-1}=y^{1+q}, xzx^{-1}=z^{1+q}
+angle
 ]
-was analyzed. The origin subgroup (langle y,zangle) is free pro-(p), so (2)-planes contained in its degree-one span have ordinary degree-2 commutator survival. By contrast, planes (operatorname{span}(ar x,u)) with (0
+was analyzed. The origin subgroup (langle y,z
+angle) is free pro-(p), so (2)-planes contained in its degree-one span have ordinary degree-2 commutator survival. By contrast, planes (operatorname{span}(ar x,u)) with (0
 e uinoperatorname{span}(ar y,ar z)) have first survival degree (q). If (operatorname{span}(ar x+v,u)) has independent (v,u) in the origin plane, its degree-2 commutator is nonzero, so it is not a (q)-special plane.
 
 Hence the local (q)-special Grassmannian is precisely the incidence family of the sinkhole line with its origin plane. If the origin plane has dimension at least two, its intersection is the sinkhole line.
@@ -1913,7 +1916,8 @@ The active Gate D was pursued to completion. The theorem excluding accidental q-
 
 Counterexample:
 [
-G=langle s,a,bmid asa^{-1}=s^{1+q},;bsb^{-1}=s^{1+q},;[a,b]=1angle,
+G=langle s,a,bmid asa^{-1}=s^{1+q},;bsb^{-1}=s^{1+q},;[a,b]=1
+angle,
 ]
 with (s) the unique special/sinkhole vertex and (a,b) ordinary. This is a complete specially oriented graph, a class explicitly allowed in the literature. citeturn0search0
 
@@ -1923,7 +1927,9 @@ B_q(a,s)=s^q,quad B_q(b,s)=s^q,quad B_q(a,b)=0.
 ]
 Its radical is (mathbf F_p(a-b)). The q-special 2-planes are exactly those not containing this radical. In particular
 [
-U_1=langle s,aangle,qquad U_2=langle s+a,bangle
+U_1=langle s,a
+angle,qquad U_2=langle s+a,b
+angle
 ]
 are both q-special while (U_1cap U_2=0). Hence the intersection of all q-special planes is zero, not the sinkhole line.
 
@@ -3119,3 +3125,17 @@ Correct classification:
 - blind carrier search: **STOP**.
 
 The next task is therefore not “compute \(H^2(Q_s,A_s)\) and decide everything”, but determine the **first nonabelian quotient of \(K_s\)** in which the extension defect survives, if any. The abelianized kernel is the first diagnostic layer; vanishing there does not close the branch.
+
+## 2026-10-03 — GATE T1-C: FIRST NONABELIAN KERNEL BOUNDARY
+
+The scalar/coinvariant and critical-norm shortcuts are now closed. The remaining Gate-T problem has been pushed to the actual finite kernel.
+
+For W_s=G_{s,a}/D_{p^s+1}(G_{s,a}), Q_s=D/D_{p^s+1}(D), and K_s=ker(W_s→Q_s), the correct hierarchy is K_s → A_s=K_s/[K_s,K_s] → B_s=gamma_2(K_s)/gamma_3(K_s) → ... . The abelianized coinvariant scalar defect is killable by the x_1→z^{-p^{s-a}}x_1 lift change, so it is FAIL/CLOSED as an obstruction. The class-2 critical norm identity is homogeneous, hence also FAIL/CLOSED as a nonzero witness.
+
+The lift correction is not known to kill the entire defect before coinvariants: the non-augmentation part of the relation-module differential produces a (y−1)-type contribution. Its survival is not yet proved. Thus the first genuinely load-bearing computation is the actual F_p[Q_s]-module A_s, with all lift-change coboundaries quotiented; if that vanishes, move to B_s. No claim of nonsplitting or exact threshold is restored.
+
+Classification: critical visibility PASS/LOCAL; scalar/coinvariant obstruction FAIL/CLOSED; critical norm shortcut FAIL/CLOSED; non-coinvariant kernel module OPEN/LOAD-BEARING; critical nonsplitting OPEN/LOAD-BEARING; exact n_sep^rel(s)=p^s+1 OPEN/LOAD-BEARING; blind carrier search STOP.
+
+Detailed audit: research/PAPER4_QPOS_GATE_T1C_NONABELIAN_KERNEL_BOUNDARY_AUDIT_2026-10-03.md.
+
+Next authorized action: compute the actual finite F_p[Q_s]-relation module A_s at n=p^s+1, then the first nonabelian kernel quotient if needed.
