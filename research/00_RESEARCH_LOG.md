@@ -1672,3 +1672,16 @@ The remaining load-bearing issue is linear-combination cancellation. Quadrelli's
 Classification: global W_2 ordinary quotient = **FAIL / CLOSED as primary abstraction**; exact-depth J_m = **PASS / LOCAL**; ordinary/special separation = **PASS / LOCAL**; RP-5 strengthened separation = **PASS / LOCAL**; q-blind local definition = **PASS / LOCAL**; linear-combination purity = **OPEN / LOAD-BEARING**; arbitrary incidence reconstruction = **OPEN**.
 
 Detailed record: research/PAPER4_EXACT_DEPTH_CENTRALIZER_JUMP_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — PAPER 4 ORIGIN-CONDITIONED DEFECT CANDIDATE AUDIT
+
+Candidate 1, the raw origin-restricted pairing \(B_q|_{O\times L_1}\), fails the intrinsicity pre-check in the general nonabelian case. A lift change by \(D_2\) produces a commutator correction in \([D_2,D_1]\subseteq D_3\), so there is no general lift-independent value in \(D_q/D_{q+1}\). This is a genuine definition-level obstruction, not an ordinary-edge issue.
+
+A corrected object survives: for each adjacent window \(E_n:1\to A_n\to W_{n+1}\to W_n\to1\), use the q-blind RP-3 origin sector \(O_n\subset L_1\), form its canonical preimage \(H_n(O)\le W_n\), and restrict the finite extension to \(H_n(O)\). The resulting extension class is intrinsic and gauge-independent. Its actual centralizer commutator defect is likewise well-defined because the kernel \(A_n\) is central in \(W_{n+1}\).
+
+RP-5 retains the rank-1/rank-2 separating signal, and the mixed ordinary/special model retains zero ordinary-edge defect versus nonzero special-edge defect. These remain local checks, not a general incidence theorem.
+
+Classification: raw pairing **FAIL / CLOSED**; restricted origin extension **PASS / LOCAL**; canonical degree-one extraction **OPEN / LOAD-BEARING**; arbitrary directed incidence **OPEN / LOAD-BEARING**.
+
+Detailed audit: research/PAPER4_ORIGIN_CONDITIONED_DEFECT_AUDIT_2026-10-02.md.
