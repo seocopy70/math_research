@@ -2491,3 +2491,58 @@ Class-2/norm-action is therefore **CONDITIONAL**, not the uniquely justified mat
 This correction preserves the top-down program and does not reopen blind carrier hunting.
 
 Next authorized task: **T1 actual finite-kernel / module-valued extension-class computation at \\(n=p^s+1\\)**, with visibility and identifiability kept logically separate.
+
+
+## 2026-10-03 — GATE T1-A: ABELIANIZED CRITICAL DEFECT IS COBoundary / NONABELIAN OBSTRUCTION REMAINS
+
+The next finite-layer calculation was pushed one level further. Let
+\\[
+W_s=G_{s,a}/D_{p^s+1}(G_{s,a}),\\qquad Q_s=D/D_{p^s+1}(D),\\qquad K_s=\\ker(W_s\\to Q_s).
+\\]
+Write
+\\[
+A_s=K_s/[K_s,K_s].
+\\]
+The critical section defect coming from the Demuškin relation is the class of
+\\[
+\bar z^{p^s}
+\\]
+in the abelianized kernel layer. In the coinvariant quotient, the action of \\(Q_s\\) is trivial, and the torsion term \\(x_1^{p^a}\\) gives multiplication by \\(p^a\\). Since \\(s>a\\),
+\\[
+p^s=p^a p^{s-a}.
+\\]
+Thus the lift change
+\\[
+x_1\\longmapsto \bar z^{-p^{s-a}}x_1
+\\]
+produces, on the abelianized critical defect, exactly the required \\(p^s\\bar z\\)-term (up to the harmless sign/unit convention). This is the finite-layer version of the earlier scalar coboundary mechanism.
+
+Therefore the **scalar/coinvariant critical defect does not survive as an abelianized extension obstruction**. This is a stronger and more precise statement than merely saying the centralized test is inconclusive:
+
+- scalar central defect: **FAIL / CLOSED as an obstruction**;
+- abelianized-kernel/coinvariant obstruction: **FAIL / CLOSED at the critical scalar layer**;
+- full \\(Q_s\\)-module extension class: **OPEN**;
+- genuinely nonabelian/class-2 obstruction: **OPEN / LOAD-BEARING**.
+
+The standard five-term/transgression framework supports the interpretation: extension classes with abelian kernel are controlled by \\(H^2(Q_s,A_s)\\), while lift changes act by coboundaries. citeturn5search0turn5search11
+
+This does **not** yet prove that the full extension splits. The missing datum is precisely the non-coinvariant \\(Q_s\\)-action on \\(A_s\\), together with the commutator layer
+\\[
+B_s=\\gamma_2(K_s)/\\gamma_3(K_s)
+\\]
+and the norm identity
+\\[
+N_{p^s}(T_x)c_x(\bar z)=[r_D,x]
+\\]
+in the class-2 quotient. Hence the next task is no longer “find whether the scalar class is nonzero”; that branch is closed. The only remaining load-bearing question for Gate T is whether the non-coinvariant norm/action data carry a residual obstruction after all gauge/lift changes.
+
+Important scope: this is a result for the stated stress presentation at the critical finite layer. It is not a universal theorem for arbitrary free-by-Demushkin extensions.
+
+### Updated Gate T1 classification
+- critical-layer visibility: **PASS / LOCAL**;
+- scalar central H^2 shortcut: **FAIL / CLOSED**;
+- abelianized/coinvariant critical obstruction: **FAIL / CLOSED**;
+- non-coinvariant module-valued extension class: **OPEN / LOAD-BEARING**;
+- class-2/norm obstruction: **OPEN / LOAD-BEARING** as the first genuinely remaining obstruction;
+- exact \\(n_{\\rm sep}^{rel}(s)=p^s+1\\): **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
