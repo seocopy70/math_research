@@ -1250,3 +1250,47 @@ Current classification:
 - intrinsic sinkhole recognition: OPEN/LOAD-BEARING;
 - exact orientation recovery from bare W_n: OPEN;
 - orientation no-go from phi_{a,c}: FAIL/CLOSED.
+
+
+## 2026-10-02 — 2-GENERATOR FILTERED EXTENSION DEFECT: CARRIER FOUND
+
+The proposed relation-module route was critically corrected. The q-correction \(v^q\) should not be identified with a class of \(\operatorname{gr}_q(R)\): the relator \(r=[w,v]v^{-q}\) has initial Zassenhaus degree 2, while \([w,v]\notin R\), so subtracting the degree-2 term does not produce an element of the relation subgroup.
+
+The correct intrinsic carrier is the central extension
+\[
+1\to A_n=D_n/D_{n+1}\to W_{n+1}\to W_n\to1
+\]
+and its commutator defect \(\kappa_n\) when \(W_n\) is abelian. For
+\[
+G=\langle v,w\mid wvw^{-1}=v^{1+q}\rangle,
+\]
+one has \(G'=\overline{\langle v^q\rangle}\subseteq D_q\). Hence \(W_n\) is abelian for \(n\le q\), \(\operatorname{im}\kappa_n=0\) for \(n<q\), and
+\[
+\operatorname{im}\kappa_q
+=G'D_{q+1}/D_{q+1}
+=\mathbf F_p\overline{v^q}.
+\]
+Thus q is intrinsically the first nonzero extension-commutator degree.
+
+The restricted q-power operation then isolates the origin line:
+\[
+\{x\in L_1:P_q(x)\in\operatorname{im}\kappa_q\}
+=\mathbf F_p\bar v
+\]
+in the rank-2 model. The sinkhole is therefore canonically determined only as the quotient direction \(L_1/\mathbf F_p\bar v\); a canonical complementary line has not been established.
+
+The former gauge obstruction remains rejected. Under the standard convention the sinkhole is \(w\), \(\theta(v)=1\), \(\theta(w)=1+q\), and \(v\mapsto v^a,\ w\mapsto v^cw\) preserves \(\theta\).
+
+Classification:
+- intrinsic extension-commutator carrier: **PASS / LOCAL**;
+- q first-defect detection: **PASS / LOCAL**;
+- origin-line recognition: **PASS / LOCAL**;
+- canonical sinkhole line: **CONDITIONAL**;
+- naive \(\operatorname{gr}(R)\) q-correction: **FAIL / CLOSED — WRONG OBJECT**;
+- gauge orientation obstruction: **FAIL / CLOSED**;
+- standard 2-generator orientation bridge: **PASS / LOCAL**;
+- general multi-special-edge separation: **OPEN / LOAD-BEARING**.
+
+Detailed audit: research/PAPER3_RAAG_2GEN_FILTERED_EXTENSION_DEFECT_AUDIT_2026-10-02.md.
+
+Next authorized action: smallest genuinely multi-special-edge configuration, with no large computation until object/functoriality/gauge/orientation-bridge/q-blindness/separation/novelty/stop are rechecked.
