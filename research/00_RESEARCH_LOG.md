@@ -1,3 +1,40 @@
+## 2026-10-02 — PAPER 4 PAIRING/KERNEL SHEAR NO-GO: LINEAR PACKAGE CLOSED
+
+The \\(\\ker\\Phi) analysis strengthens to a no-go for the entire linear package \\(\\mathcal D=(U,O,A,P_E,\\Phi)\\).
+
+In the chordal-tree model,
+\\[
+\\Phi(s)=P_a,\\quad \\Phi(t)=P_b,\\quad \\Phi(u)=P_a+P_b,
+\\]
+so
+\\[
+k=u-s-t\\in\\ker\\Phi,\\qquad \\omega_q(k)=-1\\ne0.
+\\]
+
+Define the invisible shear
+\\[
+g_c(s)=s,\\quad g_c(t)=t,\\quad g_c(u)=u+c,k.
+\\]
+For \\(c=1)\\), this is an automorphism of \\(U)\\), and since \\(\\Phi(k)=0)\\),
+\\[
+\\Phi\\circ g_c=\\Phi.
+\\]
+It acts trivially on the origin sector and on the intrinsic q-power target \\(P_E)\\). Hence the whole package \\(\\mathcal D)\\) is fixed, while
+\\[
+\\omega_q(g_1(u))=0\\ne1=\\omega_q(u).
+\\]
+
+Therefore no natural/intrinsic construction from \\(U,O,A,P_E,\\Phi)\\) alone can equal \\(\\omega_q)\\). The kernel is precisely an invisible shear direction carrying nonzero orientation mass.
+
+Classification:
+- linear pairing/kernel package as an orientation carrier: **FAIL / CLOSED**;
+- \\(\\ker\\Phi)\\) as diagnostic/no-go data: **PASS / LOCAL**;
+- full finite-window orientation problem: **OPEN**.
+
+Detailed audit: research/PAPER4_PAIRING_KERNEL_SHEAR_NO_GO_AUDIT_2026-10-02.md.
+
+Next boundary: only a genuinely non-linear/nonabelian extension datum can break this shear symmetry. No new linear functional on the same package is authorized.
+
 ## 2026-10-02 — PAPER 4 \\(\\ker\\Phi) ORIENTATION TEST: KERNEL-RESCUE BRANCH CLOSED
 
 The proposed \\(\\ker\\Phi) rescue was tested on the smallest models.
