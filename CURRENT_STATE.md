@@ -2408,3 +2408,39 @@ Authoritative status after correction:
 - RAAG: **CLOSED-AS-MAIN-ROUTE**.
 
 The next authorized task is singular: independently compute/verify the actual finite Zassenhaus layer at \(n=p^s+1\) and the corresponding extension class. No Gate-U intrinsicity work and no new carrier hunt is authorized until this succeeds or fails.
+
+
+## 2026-10-02 — GATE T FINAL RE-AUDIT / CRITICAL LAYER PASS, NON-SPLITTING OPEN
+
+Gate T was independently pushed one step further.
+
+For the q>0 stress family
+\[
+G_{s,a}=\langle z,x_1,\ldots,x_d\mid z^{p^s}=r_D\rangle,\qquad
+r_D=x_1^{p^a}[x_1,x_2]\cdots[x_{d-1},x_d],\quad s>a,
+\]
+at \(n=p^s+1\), the critical class \(z^{p^s}\) is genuinely nonzero in the actual quotient:
+a finite class-2 \(p\)-group
+\[
+H_s=\langle z,u,v\mid z\ {\rm central},\ z^{p^{s+1}}=1,\ u^{p^a}=1,\ v^{p^{s+1}}=1,\ [u,v]=z^{p^s}\rangle
+\]
+is a quotient of \(G_{s,a}\), has \(D_{p^s+1}(H_s)=1\), and has \(z^{p^s}\ne1\). Hence
+\[
+z^{p^s}\notin D_{p^s+1}(G_{s,a}).
+\]
+
+This closes the previously suspected layer-survival gap:
+- critical-layer survival at \(p^s\): **PASS / LOCAL**.
+
+However, the previous \(H^2(D,\mathbf F_p)\)-generator argument does not prove that the finite relative extension is nonsplit. For \(q=p^a>0\), the torsion term \(x_1^{p^a}\) can absorb a naive scalar defect through a lift change of size \(p^{s-a}\). The centralized test extension explicitly exhibits this coboundary mechanism.
+
+Therefore the exact threshold is **not** promoted:
+- critical extension class at \(p^s+1\): **OPEN / LOAD-BEARING**;
+- non-splitting at \(p^s+1\): **OPEN / LOAD-BEARING**;
+- exact \(n_{\rm sep}^{\rm rel}(s)=p^s+1\): **OPEN / LOAD-BEARING**;
+- prior PASS threshold claim: **HISTORICAL / SUPERSEDED**.
+
+The next authorized action is now sharply narrowed to the **module-valued finite extension class with \(D/D_n(D)\)-action**, equivalently the class-2/norm-action test. This is a controlled promotion of the paused class-2 branch, not a return to blind carrier hunting.
+
+Detailed audit:
+research/PAPER4_QPOS_GATE_T_CRITICAL_SEPARATION_AUDIT_2026-10-02.md.
