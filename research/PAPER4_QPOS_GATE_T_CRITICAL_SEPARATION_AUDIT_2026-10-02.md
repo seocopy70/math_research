@@ -551,3 +551,16 @@ its \\(D/D_{p^s+1}(D)\\)-action, the quotient by lift-change coboundaries, and t
 - prior exact-threshold PASS: **HISTORICAL / SUPERSEDED**.
 
 No Gate-U jump and no blind carrier hunt is authorized.
+
+
+---
+
+## 9. 2026-10-03 — T1-A: ABELIANIZED CRITICAL DEFECT IS KILLABLE
+
+At the critical depth \\(n=p^s+1\\), put \\(W_s=G_{s,a}/D_n(G_{s,a})\\), \\(Q_s=D/D_n(D)\\), and \\(A_s=K_s/[K_s,K_s]\\). The scalar defect is represented by the surviving class \\(\bar z^{p^s}\\). After passing to the coinvariant quotient, the \\(Q_s\\)-action is trivial. The torsion term \\(x_1^{p^a}\\) therefore makes the defect divisible by \\(p^a\\), and since \\(s>a\\), the lift change by \\(z^{-p^{s-a}}\\) kills the \\(p^s\\)-defect in the abelianized layer.
+
+So the scalar defect is not a nonzero invariant in the abelianized/coinvariant extension. This closes the old scalar obstruction as a route to nonsplitting.
+
+The remaining obstruction, if any, must retain non-coinvariant action and/or nonabelian commutator information. In the class-2 quotient this is encoded by \\(A_s\\), \\(B_s=\gamma_2(K_s)/\gamma_3(K_s)\\), the commutator pairing, and the norm operator \\(N_{p^s}(T_x)\\). The norm/action equation is therefore not an optional decorative refinement: it is the first place where an obstruction can survive after the abelianized scalar defect has been quotiented out.
+
+This still does not prove that the full extension splits. The status remains **OPEN / LOAD-BEARING** at the non-coinvariant/class-2 level.
