@@ -1,3 +1,19 @@
+## 2026-10-02 — PAPER 4 TOP-DOWN RESET / CARRIER-HUNTING BOUNDARY
+
+The latest complete-3-vertex counterexample closes the current arbitrary-linear-direction purity formulation for \(J_q(u)\): a non-origin linear direction can be q-active. This is not evidence that Paper 4 has returned to an unconstrained carrier search; it is evidence that the present bottom-up incidence target is too strong.
+
+The earlier top-down transition remains controlling. T−1 (intrinsic canonical orientation target) and T0 (finite-window identifiability at the standard Demuškin scope) remain closed. Paper 4 must therefore return to target-first design: first specify the exact orientation-relevant information that a finite window must determine, then derive the weakest non-tautological intrinsic observable capable of carrying that information. Full directed-incidence reconstruction is not a prerequisite unless the target-first analysis proves it necessary.
+
+Accordingly, the recent sequence \(J_q\) → joint \((P_q,B_q)\) → restricted origin extension is classified as local carrier exploration, not as a new mandate to continue generating carriers indefinitely. The restricted origin extension remains OPEN/LOAD-BEARING only as a possible realization after the target-first pre-check; it is not authorized to expand into another open-ended carrier hunt.
+
+Immediate methodological decision:
+1. freeze the failed \(J_q\) purity theorem;
+2. do not pursue arbitrary-incidence reconstruction as the default target;
+3. reconstruct the top-down target decomposition: orientation target → necessary finite observable → non-reencoding/coarseness requirement → candidate realization;
+4. only then test whether the existing RP-3 origin carrier plus a relative extension datum is actually required.
+
+Classification: **TOP-DOWN RESET = ACTIVE; bottom-up carrier search = NOT AUTHORIZED until target-first necessity is established.**
+
 ## 2026-10-02 — PAPER 4 ARBITRARY-LINEAR-DIRECTION J_q PURITY REFUTED
 
 The exact-depth centralizer jump survives ordinary-edge removal but fails as a pure one-direction incidence detector for arbitrary linear directions.
