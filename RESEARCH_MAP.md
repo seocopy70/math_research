@@ -1,3 +1,25 @@
+## 2026-10-02 — PAPER 4 GATE D: SAME-WINDOW / DIFFERENT-ORIENTATION NO-GO — FAIL / CLOSED
+
+The top-down Gate D attack has now produced the requested structural counterexample.
+
+The current admissible class permits isolated special vertices. Fix a nontrivial specially oriented graph Γ0 with q=p^f, and add an isolated vertex z. Declare z ordinary in ΓA and special in ΓB. Both graphs remain specially oriented; if Γ0 is chordal, both remain chordal. The defining group presentations are identical because z has no incident edges. Hence the underlying pro-p group, its Zassenhaus filtration, and every finite window W_n are identical.
+
+Nevertheless the canonical orientations satisfy θA(z)=1 and θB(z)=1+q, so for q=p^{k-1}, [θA mod p^k]≠[θB mod p^k].
+
+This is a genuine class-level non-identifiability theorem:
+W_q(G)←W_{q+1}(G) does not determine [θ_G mod p^k]
+for the current specially oriented RAAG class with un-oriented finite input.
+
+The obstruction is stronger than a same-window non-isomorphic pair: the two oriented structures live on the same underlying filtered group. Therefore no carrier defined solely from the un-oriented finite window can recover the orientation on this class.
+
+This closes Gate D for the current class and freezes the carrier-hunt boundary. The recent T1 affine-hull failure remains a correct secondary realization failure, but it is no longer the deepest obstruction.
+
+The only admissible continuation is to impose an explicit orientation-rigidity restriction on the class or enrich the input with the missing orientation marking. A natural candidate is to exclude isolated special vertices by requiring every special vertex to be the terminus of a special edge. This is not yet a positive theorem and must not be treated as one.
+
+Detailed audit: research/PAPER4_GATE_D_SAME_WINDOW_DIFFERENT_ORIENTATION_AUDIT_2026-10-02.md.
+
+Classification: FAIL / CLOSED — Gate D at the current class.
+
 ## 2026-10-02 — PAPER 4 TOP-DOWN RESET / CARRIER-HUNTING BOUNDARY
 
 The latest complete-3-vertex counterexample closes the current arbitrary-linear-direction purity formulation for \(J_q(u)\): a non-origin linear direction can be q-active. This is not evidence that Paper 4 has returned to an unconstrained carrier search; it is evidence that the present bottom-up incidence target is too strong.
