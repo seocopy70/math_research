@@ -2278,3 +2278,40 @@ Pre-check:
 This is the first candidate structurally beyond the closed H1/E2 layers. It retains kernel commutator data and quotient action. It has not been shown to detect the q>0 deep-tail threshold, so its overall status is **OPEN / LOAD-BEARING**.
 
 Next authorized test: determine whether its surviving data factors through already closed abelian/E2/graded layers. If yes, close it; if not, test T1 threshold detection. No raw Magnus/Fox scalar computation yet.
+
+
+## 2026-10-02 — P4-Q+ CLASS-2 FACTOR-THROUGH GATE
+
+The first factor-through test for the candidate
+\[
+C_n^{(2)}:1\to K_n/\gamma_3(K_n)\to W_n/\gamma_3(K_n)\to D/D_n(D)\to1
+\]
+was completed at the structural level.
+
+Writing
+\[
+A_n=K_n/\gamma_2(K_n),\qquad B_n=\gamma_2(K_n)/\gamma_3(K_n),
+\]
+the candidate retains the intrinsic class-2 commutator pairing
+\[
+\beta_n:A_n\wedge A_n\to B_n
+\]
+and the quotient-group action. This information is not formally determined by the previously closed abelian/H1-extension package. The ordinary mod-p Zassenhaus graded object likewise cannot be used to close the candidate merely because it is blind to the deep parameter in the stress model.
+
+This is **PASS / LOCAL**, not a stress-family theorem. The relevant \(G_{s,a}\) family still requires an explicit separation calculation.
+
+### Current active gate
+- structural non-factorization from closed abelian/H1 layers: **PASS / LOCAL**;
+- stress-family factor-through test: **OPEN / LOAD-BEARING**;
+- T1 threshold separation: **OPEN / LOAD-BEARING**;
+- A6 strictness: **OPEN**;
+- A7 non-reencoding: **OPEN**.
+
+### Next authorized action
+Compute only the intrinsic class-2 data
+\[
+(A_n,B_n,\beta_n,\text{class-2 power map},D\text{-action})
+\]
+for the q>0 stress family at the candidate threshold scale. No broad carrier search and no raw Magnus/Fox scalar expansion is authorized.
+
+Detailed audit: research/PAPER4_QPOS_CLASS2_FACTOR_THROUGH_AUDIT_2026-10-02.md.
