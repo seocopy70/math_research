@@ -1,3 +1,27 @@
+## 2026-10-02 — MIXED FOX NATURALITY CLOSED AT INTRINSIC SCOPE / NEW-CARRIER BRANCH CLOSED
+
+The final naturality attack produced two corrections and one closure.
+
+First, the earlier q=N_k boundary case was mathematically vacuous: in the standard odd-p Demuškin family q=p^s or 0, while N_k=p^{k-1}+1 is not a p-power. The correct reconstruction has only two genuine regimes:
+- q<p^k: q is detected intrinsically below N_k;
+- q>=p^k (or q=0): the q-term is invisible through the window and all such cases give the same truncated extension window.
+
+Second, for intrinsicity the needed morphisms are filtered finite-pair **isomorphisms**. If W_k(G)≅W_k(H), the reconstructed Demuškin windows are isomorphic up to the same q-regime, and the finite projective Mixed Fox construction is invariant under the induced group-algebra/Fox-Lyndon transport, Nielsen Jacobians, relation-generator gauge, relator conjugation, and mixed truncation. Therefore:
+- pair-isomorphism covariance: **PASS / CLOSED**;
+- pair -> extension-window reconstruction: **PASS / CLOSED** at declared standard scope;
+- finite-pair -> projective Mixed Fox object: **PASS / LOCAL**.
+
+Arbitrary non-invertible morphism functoriality remains OPEN, but it is not load-bearing for intrinsic isomorphism-class well-definedness.
+
+Third, the non-redundancy gate closes the Mixed Fox branch as a new recognition theorem. At fixed rank in the standard Demuškin family, the finite extension window carries only the q-regime visible at the stated precision; extracting chi mod p^k from it via q/classification is classification repackaging, explicitly not a new orientation bridge. Thus:
+- Mixed Fox as a genuinely new recognition carrier: **FAIL / CLOSED — REDUNDANT**.
+- genuinely new carrier search: **OPEN**.
+
+Detailed audit:
+research/PAPER3_MIXED_FOX_NATURALITY_NONREDUNDANCY_DECISION_2026-10-02.md
+
+No W_11/W_12, large Fox scan, q=N_k reopening, or Paper 2 reproof is authorized. Next branch must be genuinely different finite-input carrier and pass Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop.
+
 ## 2026-10-02 — DEMUŠKIN PAIR DESCENT / NATURALITY BOUNDARY
 
 The admissibility/fiber prerequisite has been pushed one step further and its logical scope is now fixed.
