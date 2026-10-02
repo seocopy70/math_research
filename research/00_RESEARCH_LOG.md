@@ -3325,3 +3325,30 @@ Updated classification:
 The next authorized object is no longer another (A_s) candidate. The remaining A-level issue is integral (p)-power information; if the target is genuinely mod-(p), the Fox/Abar route is now closed and the conditional next layer is the actual (B_s=gamma_2(K_s)/gamma_3(K_s)).
 
 No carrier search is reopened.
+
+
+## 2026-10-03 — T1-C CRITICAL REVIEW: RECURSIVE LIFT-ABSORPTION IS NOT ESTABLISHED
+
+A critical review of the proposed recursive lift-absorption argument found a load-bearing gap. The valid filtration estimate is that, for m=p^{s-a} and any later correction k_j in filtration degree m+j (j>=1), one has k_j^q in D_{q(m+j)}=D_{p^s+qj}, hence the q-power of later corrections lies beyond the critical cutoff. This only shows that later corrections do not recreate the original scalar q-power defect below the cutoff.
+
+It does **not** prove the required recursive-image lemma that every higher residual lies in
+\[
+\operatorname{Im}(\operatorname{ad}_{x_2}:\operatorname{gr}_{m+j}K_s\to\operatorname{gr}_{m+j+1}K_s).
+\]
+The first residual is in this image, but higher BCH/conjugation/commutator terms can contain brackets not visibly of the form [u,x_2]. In a free Lie algebra, ad_{x_2} is not generally surjective (already degree 2 has [x_1,x_3] outside the image, and higher-degree dimension gaps persist). Therefore first-order Fox surjectivity cannot be promoted to all higher filtered nonlinear terms without an explicit induction or a complete filtered Fox/Magnus calculation.
+
+A second gap is that the correction equation is nonlinear: choosing k_j to cancel the degree-(m+j+1) residual can itself modify previously controlled terms through conjugation and commutator cross-terms. Degree counting alone does not establish triangular solvability.
+
+Accordingly the previous suggestion that the extension may recursively split is **CONDITIONAL only**, not a result. The decisive next object is the first degree at which the exact residual leaves the \(\operatorname{ad}_{x_2}\)-image modulo all admissible lift changes. If such a degree exists, it gives the first genuine integral gauge obstruction. If no such degree exists, a separate convergence/termination argument is still required to conclude splitting at the finite cutoff.
+
+Updated classification:
+- scalar/coinvariant obstruction: **FAIL / CLOSED**;
+- first-order mod-p Fox cokernel: **FAIL / CLOSED**;
+- recursive q-power filtration estimate: **PASS / LOCAL**;
+- recursive-image lemma: **OPEN / LOAD-BEARING**;
+- recursive lift absorption: **CONDITIONAL**;
+- full finite extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact n_sep^rel(s)=p^s+1: **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+No claim that the stress-family extension splits is authorized. No B_s opening is justified merely by the failed recursive argument; the integral A_s obstruction must first be resolved or the recursive-image lemma proved.
