@@ -2215,3 +2215,21 @@ Classification:
 - finite-window factorization of such an object: OPEN.
 
 Detailed audit: research/PAPER4_QPOS_FINITE_COEFFICIENT_E2_TOR_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — MINIMAL NONABELIAN FINITE-EXTENSION PRE-CHECK
+
+The most direct intrinsic nonlinear object induced by a window is the relative finite extension
+1 -> N/(N∩D_n(G)) -> G/D_n(G) -> D/D_n(D) -> 1.
+It is functorial and gauge-free once G→D is structured input, but it is not a genuine carrier: it essentially repackages the finite window together with its quotient map. Thus it fails the novelty/compression requirement as a standalone candidate.
+
+The active problem is now sharply narrowed to a **strict intrinsic compression** of this finite relative extension: a scalar or smaller module quotient that survives all gauges, does not insert q/orientation, and factors through the finite window without simply re-encoding it.
+
+Classification:
+- finite relative extension: PASS / LOCAL as an intrinsic object;
+- same object as novel compression carrier: FAIL / CLOSED;
+- strict nonlinear compression: OPEN / LOAD-BEARING;
+- universal no-compression theorem: OPEN;
+- blind carrier hunt: STOP.
+
+Detailed audit: research/PAPER4_QPOS_MINIMAL_NONABELIAN_FINITE_EXTENSION_PRECHECK_2026-10-02.md.
