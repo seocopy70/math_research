@@ -2381,3 +2381,30 @@ Current authoritative state:
 - RAAG: **CLOSED-AS-MAIN-ROUTE**.
 
 Detailed audit: research/PAPER4_QPOS_GATE_T_CRITICAL_SEPARATION_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — GATE T CRITICAL RE-AUDIT / T0 MAP CHECK
+
+A critical review correctly forced a re-audit of the load-bearing Gate-T proof. One part of that review is itself corrected: for
+\[
+D=\langle x_1,\dots,x_d\mid r_D\rangle,
+\qquad
+G_{s,a}=\langle z,x_1,\dots,x_d\mid z^{p^s}=r_D\rangle,
+\]
+the assignment \(z\mapsto1\), \(x_i\mapsto\bar x_i\) defines a canonical epimorphism \(G_{s,a}\twoheadrightarrow D\), because \(r_D=1\) in the presented quotient \(D\). Thus the proposed objection that the quotient map is impossible is **rejected**.
+
+What the audit does correctly expose is a different gap: the prior Gate-T proof moved too quickly from the free-presentation fact \(z^{p^s}\in D_{p^s}(F)\) to a nonzero class in the actual layer \(D_{p^s}(G_{s,a})/D_{p^s+1}(G_{s,a})\), and then to a non-split finite relative extension. Those implications require an explicit finite-layer filtration/transgression calculation.
+
+Authoritative status after correction:
+- canonical \(G_{s,a}\twoheadrightarrow D\): **PASS / LOCAL**;
+- relative finite-window object: **PASS / LOCAL** at definition level;
+- fixed-depth deep-tail blindness: **PASS / LOCAL**;
+- lower-bound mechanism \(n\ge p^s+1\): **PASS / LOCAL**;
+- critical nonzero layer/non-splitting at \(p^s+1\): **OPEN / LOAD-BEARING**;
+- exact \(n_{\rm sep}^{rel}(s)=p^s+1\): **OPEN / LOAD-BEARING**;
+- unmarked finite-window theorem: **OPEN**;
+- universal q>0 free-by-Demushkin theorem: **OPEN**;
+- class-2 norm: **SIDE / PAUSED**;
+- RAAG: **CLOSED-AS-MAIN-ROUTE**.
+
+The next authorized task is singular: independently compute/verify the actual finite Zassenhaus layer at \(n=p^s+1\) and the corresponding extension class. No Gate-U intrinsicity work and no new carrier hunt is authorized until this succeeds or fails.
