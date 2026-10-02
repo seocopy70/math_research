@@ -1029,3 +1029,21 @@ Classification:
 - genuinely new finite-input carrier: OPEN / LOAD-BEARING.
 
 Detailed audit: research/PAPER3_POST_EXPLORATION_CRITICAL_REVIEW_2026-10-02.md
+
+
+## 2026-10-02 — TOP-DOWN ORIENTATION IDENTIFIABILITY REFRAME
+
+The post-Paper-3 search is deliberately reversed at framework level. Instead of inventing a finite carrier and testing whether it recovers orientation, first fix the target chi_k=chi mod p^k and ask whether it is identifiable from the declared finite input W_k at all.
+
+Define W_k-equivalence by finite-input isomorphism. The decisive gate is whether W_k(G)≅W_k(H) can occur with chi_G mod p^k != chi_H mod p^k. A positive counterexample is a carrier-independent no-go theorem: no carrier constructed solely from W_k can recover chi_k. If identifiability holds, define the target-induced observable partition as a benchmark and then search for an intrinsic realization that does not use chi in its definition.
+
+This is not a new O_k universal-property claim. It is a target-first inverse/observability formulation. The existing extension-fiber analysis becomes evidence for or against identifiability, while Mixed Fox becomes only one historical realization attempt.
+
+Classification:
+- top-down identifiability framework: PASS / LOCAL;
+- finite-window orientation identifiability: OPEN / LOAD-BEARING;
+- target-defined coarsest quotient: CONDITIONAL / specification;
+- observability depth: OPEN;
+- new carrier construction before identifiability: NOT AUTHORIZED.
+
+Detailed audit: research/PAPER3_POST_EXPLORATION_TOP_DOWN_ORIENTATION_IDENTIFIABILITY_2026-10-02.md
