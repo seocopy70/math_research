@@ -4948,3 +4948,20 @@ Authoritative correction:
 - previous Gate-T PASS: **HISTORICAL / SUPERSEDED**.
 
 The next task is verification of the existing Gate-T claim only: actual Zassenhaus layer + extension class at \(p^s+1\). No Gate-U attack or new carrier hunt is authorized before this gate is resolved.
+
+
+## 2026-10-02 — GATE T STATUS CORRECTION: CRITICAL LAYER IS VISIBLE, EXTENSION IDENTIFIABILITY OPEN
+
+The q>0 stress-family audit now separates two logically distinct claims. The class-2 detector \\(H_s\\) proves \\(z^{p^s}\\notin D_{p^s+1}(G_{s,a})\\), so the first critical scalar layer survives (**PASS / LOCAL**). It does not prove that the structured relative extension is nonsplit. The scalar \\(H^2\\)-shortcut is **FAIL / CLOSED** because lift changes can absorb a naive scalar defect.
+
+Authoritative frontier:
+- critical-layer visibility: **PASS / LOCAL**;
+- actual module-valued finite extension class: **OPEN / LOAD-BEARING**;
+- exact relative threshold \\(p^s+1\\): **OPEN / LOAD-BEARING**;
+- class-2/norm as a reduction: **CONDITIONAL**;
+- blind carrier search: **NOT AUTHORIZED**.
+
+The next calculation must follow
+\\[
+\\text{actual kernel}\\to\\text{kernel action}\\to\\text{lift-change/coboundary quotient}\\to\\text{extension class}\\to\\text{optional class-2/norm projection}.
+\\]
