@@ -4315,3 +4315,37 @@ Current classification:
 - intrinsic sinkhole recognition: OPEN/LOAD-BEARING;
 - exact orientation recovery from bare W_n: OPEN;
 - orientation no-go from phi_{a,c}: FAIL/CLOSED.
+
+## 2026-10-02 — NON-ABELIAN (W_q) BARRIER REFINED / SPECIAL-PLANE INCIDENCE GATE
+
+The general-RAAG Gate D has been narrowed again. The earlier statement that non-abelian (W_q) blocks the intrinsic extension carrier is superseded. What fails is only the global bilinear pairing (kappa_q) on all of (W_q).
+
+A canonical partial defect remains available on commuting pairs, and after restricting to independent degree-one directions this yields an intrinsic Grassmannian invariant:
+[
+ho(U)=min{n:	ext{an independent pair spanning }U	ext{ has first commutator survival at }n}.
+]
+The finite-window incidence family
+[
+mathscr S_n={Uinoperatorname{Gr}(2,L_1):ho(U)=n}
+]
+is presentation-free, lift-independent, functorial under filtered isomorphisms, and (q)-blind.
+
+The smallest non-abelian-origin special-line model
+[
+langle x,y,zmid xyx^{-1}=y^{1+q}, xzx^{-1}=z^{1+q}angle
+]
+passes this test: the (q)-special planes are exactly the planes spanned by the sinkhole line and a nonzero origin direction. Their intersection recovers the sinkhole line when the sinkhole has at least two independent special neighbors.
+
+Therefore the active generalization gate is no longer “define a carrier when (W_q) is non-abelian.” It is the sharper theorem:
+
+**Accidental-plane exclusion:** every independent (2)-plane with first commutator survival (q>2) in a specially oriented pro-(p) RAAG arises from a sinkhole direction and its special-neighbor span.
+
+Classification:
+- special-plane incidence carrier: PASS / LOCAL;
+- noncommuting-origin local model: PASS / LOCAL;
+- general accidental-plane exclusion: OPEN / LOAD-BEARING;
+- full sinkhole/source reconstruction: OPEN / LOAD-BEARING.
+
+Detailed audit: research/PAPER3_RAAG_SPECIAL_PLANE_INCIDENCE_AUDIT_2026-10-02.md.
+
+No reopening of Paper 3, Mixed Fox, (O_k), (W_{11}/W_{12}), Paper 2, or large computation.
