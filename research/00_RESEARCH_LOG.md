@@ -1732,3 +1732,27 @@ RP-5 retains the rank-1/rank-2 separating signal, and the mixed ordinary/special
 Classification: raw pairing **FAIL / CLOSED**; restricted origin extension **PASS / LOCAL**; canonical degree-one extraction **OPEN / LOAD-BEARING**; arbitrary directed incidence **OPEN / LOAD-BEARING**.
 
 Detailed audit: research/PAPER4_ORIGIN_CONDITIONED_DEFECT_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — PAPER 4 T1 LOCAL-UNIFORM NORMALIZATION CANDIDATE
+
+The T1 target has now produced a concrete target-first construction rather than another carrier search.
+
+Literature control: Blumer–Quadrelli–Weigel show that for a special edge (v,w), the 2-generator subgroup is locally uniform and its canonical orientation is determined by the locally uniform group structure; Proposition 4.11 extends this structural orientation determination to clique subgroups. Theorem 4.9 identifies the canonical orientation as the unique torsion-free Kummerian orientation for specially oriented graphs. citeturn5search0turn0search0
+
+Project transfer: define, from the adjacent finite window and the already established origin sector O_q, a q-blind set P_q in U_q=L_1/O_q consisting of classes admitting a finite special-edge local signature at the first nonzero extension-defect depth. The signature is intended to be intrinsic: rank-one first defect, special-edge semidirect type, and normalization against the restricted q-power class. The desired conclusion is P_q={special-vertex directions} and hence a unique functional omega_q with omega_q(P_q)=1.
+
+This is materially different from the failed J_q(u) != 0 criterion: arbitrary q-active linear directions are not automatically admitted; the test requires a compatible 2-generator special-edge signature. In the 2-generator, complete one-sink, and common-sink controls, the local mechanism yields the correct normalized quotient direction. These are PASS / LOCAL only.
+
+New audit: research/PAPER4_T1_LOCAL_UNIFORM_DIRECTION_AUDIT_2026-10-02.md.
+
+Classification:
+- literature method transfer: PASS / LOCAL;
+- T1 local-uniform finite signature: OPEN / LOAD-BEARING;
+- 2-generator normalization: PASS / LOCAL;
+- complete one-sink and common-sink normalization: PASS / LOCAL;
+- accidental-direction exclusion: OPEN / LOAD-BEARING;
+- finite-window naturality: OPEN / LOAD-BEARING;
+- T1: OPEN / LOAD-BEARING.
+
+The active question is now theorem-level and sharply bounded: does the finite window intrinsically recognize the normalized special-direction set without reconstructing the full directed graph? No new carrier family is authorized before this gate is resolved.
