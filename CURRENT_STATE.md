@@ -1,3 +1,42 @@
+## 2026-10-02 — PAPER 4 T1 OVERLAPPING MULTI-SINK: VERTEX-SET FORMULATION CLOSED, \(\omega_q\) REMAINS OPEN
+
+The smallest overlapping model
+\[
+G=\langle a,s,t\mid sas^{-1}=a^{1+q},\;tat^{-1}=a^{1+q}\rangle
+\]
+produces a decisive accidental normalized direction. For odd \(p\), choose \(m\in\mathbf F_p^\times\) with \(2m=1\). Then
+\[
+z=(st)^m,\qquad \bar z=m(\bar s+\bar t)
+\]
+is not a sink direction, but
+\[
+B_q(\bar z,\bar a)=P_E(\bar a).
+\]
+Hence the candidate theorem \(S_q=\{\bar w:\ w\text{ is a sink vertex}\}\) is **FAIL / CLOSED**.
+
+However, this does **not** close T1 itself. The target of T1 is the orientation functional \(\omega_q\), not literal vertex recognition. In this model all normalized directions satisfy the same affine equation
+\[
+\omega_q(\alpha\bar s+\beta\bar t)=\alpha+\beta=1.
+\]
+Thus the accidental vector lies on the same normalized affine hyperplane and does not change \(\omega_q\).
+
+The correct target-first refinement is:
+\[
+\mathcal S_E=\{\text{all intrinsic normalized rank-one signature directions}\},
+\qquad
+\operatorname{Aff}(\mathcal S_E)\stackrel{?}{=}\omega_q^{-1}(1).
+\]
+If this affine hull is a codimension-one affine hyperplane not containing \(0\), it determines the unique linear functional \(\omega_q\) normalized to \(1\) on it.
+
+Classification:
+- intrinsic q-power target: **PASS / LOCAL**;
+- literal sink-direction recognition: **FAIL / CLOSED**;
+- overlapping accidental direction: **PASS / LOCAL as counterexample to literal vertex-set recognition**;
+- normalized affine-hyperplane target: **OPEN / LOAD-BEARING**;
+- T1: **OPEN / LOAD-BEARING**.
+
+This preserves the top-down reset and does not authorize a new carrier search. Next authorized attack: prove or refute the affine-hull theorem for \(\mathcal S_E\).
+
 ## 2026-10-02 — PAPER 4 T1 INTRINSIC q-POWER TARGET: PASS / LOCAL
 
 The load-bearing bottleneck “define the intrinsic q-power target from \(W_q\leftarrow W_{q+1}\)” is now resolved locally.
