@@ -2831,3 +2831,43 @@ Current authoritative state:
 - RAAG carrier hunt — **CLOSED-AS-MAIN-ROUTE**.
 
 No claim is made that \(p^s+1\) is sharp until Gate T is proved.
+
+
+## 2026-10-02 — GATE T RESOLVED IN THE STRUCTURED RELATIVE-WINDOW CATEGORY
+
+The critical separation at the first possible depth was completed for the structured relative finite window
+\[
+W_n^{\mathrm{rel}}(G_{s,a})=
+\bigl(G_{s,a}/D_n(G_{s,a})\to D/D_n(D)\bigr),
+\]
+for the stress presentation
+\[
+G_{s,a}=\langle z,x_1,\ldots,x_d\mid z^{p^s}=r_D\rangle,
+\qquad r_D=x_1^{p^a}[x_1,x_2]\cdots[x_{d-1},x_d],
+\qquad s>a.
+\]
+
+For \(n\le p^s\), \(z^{p^s}\in D_n(F)\), so the relation reduces to \(r_D\), giving the same relative window for all \(t\ge s\). Hence no separation occurs through \(p^s\).
+
+At \(n=p^s+1\):
+- for \(t>s\), \(z^{p^t}\in D_n\), so the relation reduces to \(r_D=1\); the canonical \(x_i\)-lifts therefore give a section of the relative extension, so the extension is split;
+- for \(s\), the relation is \(r_D=z^{p^s}\), and the top surviving kernel layer contains \(\bar z^{p^s}\). Projecting to this top elementary-abelian layer gives the defining-relation class of the Demuškin quotient. Since the one-relator Demuškin relation generates the one-dimensional \(H^2(D,\mathbf F_p)\), this projected extension class is nonzero, hence the relative extension is non-split.
+
+Therefore:
+\[
+\boxed{n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1.}
+\]
+
+This is a threshold theorem in the structured relative-window category, not merely a lower bound. It is not yet an unmarked filtered-group theorem: after forgetting the natural map to \(D/D_n(D)\), the isomorphism problem remains **OPEN**. Likewise, no universal theorem for all free-by-Demushkin extensions is claimed; the stress presentation is the certified scope.
+
+Authoritative classification:
+- Gate O fixed-depth information no-go: **PASS / CLOSED**;
+- lower bound \(n_{\mathrm{sep}}\ge p^s+1\): **PASS / LOCAL**;
+- Gate T relative-window critical separation: **PASS / LOAD-BEARING**;
+- exact relative threshold \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\): **PASS / LOAD-BEARING**;
+- unmarked finite-window theorem: **OPEN**;
+- universal q>0 free-by-Demushkin theorem: **OPEN**;
+- class-2 norm: **SIDE / PAUSED**;
+- RAAG: **CLOSED-AS-MAIN-ROUTE**.
+
+Detailed audit: research/PAPER4_QPOS_GATE_T_CRITICAL_SEPARATION_AUDIT_2026-10-02.md.
