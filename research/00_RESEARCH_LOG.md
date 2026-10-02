@@ -2911,3 +2911,37 @@ The quotient relation may change the actual Zassenhaus filtration. Likewise, the
 
 ### Next authorized action
 Independently compute the actual finite Zassenhaus layer and extension class at \(n=p^s+1\). The task is verification of the existing Gate-T claim, not a new carrier search and not a Gate-U intrinsicity attack.
+
+
+## 2026-10-02 — GATE T FINAL RE-AUDIT: CRITICAL LAYER PASS / NON-SPLITTING STILL OPEN
+
+For the q>0 stress family
+\[
+G_{s,a}=\langle z,x_1,\ldots,x_d\mid z^{p^s}=r_D\rangle,\qquad
+r_D=x_1^{p^a}[x_1,x_2]\cdots[x_{d-1},x_d],\qquad s>a,
+\]
+at \(n=p^s+1\), the finite class-2 group
+\[
+H_s=\langle z,u,v\mid z\ {\rm central},\ z^{p^{s+1}}=1,\ u^{p^a}=1,\ v^{p^{s+1}}=1,\ [u,v]=z^{p^s}\rangle
+\]
+is a quotient of \(G_{s,a}\). It has \(D_{p^s+1}(H_s)=1\) and \(z^{p^s}\ne1\), so
+\[
+z^{p^s}\notin D_{p^s+1}(G_{s,a}).
+\]
+Thus critical-layer survival is **PASS / LOCAL**.
+
+However, the prior \(H^2(D,\mathbf F_p)\)-generator argument does not establish finite nonsplitting. For \(q=p^a>0\), the \(x_1^{p^a}\) term permits a lift-change/coboundary of size \(p^{s-a}\) that can absorb a naive \(p^s\)-scalar defect at the centralized level. Hence the scalar \(z^{p^s}\) is not by itself the finite relative extension invariant.
+
+Authoritative classification:
+- canonical \(G_{s,a}\twoheadrightarrow D\): **PASS / LOCAL**;
+- deep-tail blindness through \(p^s\): **PASS / LOCAL**;
+- critical-layer survival: **PASS / LOCAL**;
+- critical non-splitting at \(p^s+1\): **OPEN / LOAD-BEARING**;
+- exact relative threshold \(p^s+1\): **OPEN / LOAD-BEARING**;
+- unmarked filtered-group theorem: **OPEN**;
+- prior exact-threshold PASS: **HISTORICAL / SUPERSEDED**.
+
+Next authorized action: narrowly promote the class-2/norm-action calculation to determine the module-valued finite extension class after quotienting lift-change coboundaries. No Gate-U jump and no blind carrier hunt.
+
+Audit:
+research/PAPER4_QPOS_GATE_T_CRITICAL_SEPARATION_AUDIT_2026-10-02.md.
