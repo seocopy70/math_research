@@ -1,3 +1,27 @@
+## 2026-10-02 — TOP-DOWN T−1/T0 CLOSURE / ACTIVE GATE SHIFT
+
+The post-Paper-3 exploration is now formally target-first at the declared standard odd-p fixed-rank Demuškin scope.
+
+T−1 is closed: the target is the intrinsic canonical Demuškin orientation \(\chi_G\bmod p^k\), defined basis-free by the unique Labute/Kummerian orientation; the standard normal-form formula \(\chi_G(x_2)=(1-q)^{-1}\) is a theorem-level coordinate expression for that intrinsic target.
+
+T0 is also closed at this scope:
+\[
+W_k(G)\cong W_k(H)\Rightarrow[\chi_G\bmod p^k]=[\chi_H\bmod p^k].
+\]
+The proof combines the audited finite-window q reconstruction with the canonical orientation formula. The impossible q=N_k branch is removed.
+
+The research target therefore shifts from "is orientation observable?" to:
+\[
+\text{finite-window input}
+\to
+\text{coarsest/non-tautological intrinsic realization}
+\to
+[\chi_k].
+\]
+
+This does not reopen Mixed Fox; it remains redundant as a new recognition carrier. The next authorized branch is a genuinely different coarseness/realization question, with the standing Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop tests.
+
+
 ## 2026-10-01 — CRITICAL TRACK CORRECTION: PAPER 3 FROZEN / POST-PAPER-3 GENERALIZATION
 
 ## 2026-10-01 — MIXED (3,I)-ADIC FINITE BRIDGE ATTACK
