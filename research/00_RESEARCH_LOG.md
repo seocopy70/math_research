@@ -1,3 +1,38 @@
+## 2026-10-02 — RP-3 BOCKSTEIN AUDIT: LOCAL KERNEL RESULT, FINITE-WINDOW FACTORIZATION STILL OPEN
+
+The submitted RP-3 development was critically reviewed against the authoritative state and the higher-Bockstein literature.
+
+The following survives: for a specially oriented pro-p RAAG with sinkhole set S and q=p^f, the minimal presentation gives
+[
+G^{ab}cong mathbf Z_p^{Vsetminus S}oplus(mathbf Z/p^f)^S.
+]
+The higher Bockstein (eta_f) detects the obstruction to lifting a mod-p character to (mathbf Z/p^{f+1}). Hence
+[
+kereta_f
+=
+{chi:chi	ext{ lifts to }mathbf Z/p^{f+1}},
+]
+and this kernel is the annihilator of the sinkhole torsion sector. This is a valid local result.
+
+A typing error in the submitted (C_f) formula was corrected: since (H^1=L_1^*), its annihilator lies in (L_1), so
+[
+(kereta_f)^perp=operatorname{span}{ar s:sin S}subseteq L_1.
+]
+Writing (ar s^*) there is not intrinsic.
+
+The decisive correction concerns Step 5. The finite pair ((W_q,W_{q+1})) does not automatically determine the global class (eta_f(chi)in H^2(G,mathbf F_p)). The legitimate finite-window statement is only the liftability predicate: every homomorphism (G	omathbf Z/p^{f+1}) kills (D_{q+1}) in the cyclic target and therefore factors through (W_{q+1}). Thus the kernel can potentially be recognized from the adjacent window, but the required construction is not yet q-blind because the coefficient target (mathbf Z/p^{f+1}) explicitly uses f.
+
+Massey products are not currently a blocker for the kernel-recognition problem; they matter only if the actual (H^2)-class or richer higher structure is to be reconstructed.
+
+Classification:
+- local Bockstein kernel/liftability: PASS / LOCAL;
+- finite-window full-(eta_f) factorization: OPEN / NOT PROVED;
+- q-blind uniform carrier: OPEN / LOAD-BEARING;
+- RP-3 overall: OPEN / LOAD-BEARING.
+
+Detailed audit: research/RP3_FINITE_WINDOW_BOCKSTEIN_AUDIT_2026-10-02.md
+Next authorized action: define a uniform q-blind adjacent-window liftability object for arbitrary n and test its specialization at n=p^f. No Massey computation is authorized before this structural gate is resolved.
+
 ## 2026-10-02 — CRITICAL AUDIT OF RESTRICTED-POWER REFINEMENT: LOCAL LEMMA VALID, GENERAL CARRIER NOT YET LEGITIMATE
 
 Critical review identifies a genuine strengthening and several load-bearing gaps.
