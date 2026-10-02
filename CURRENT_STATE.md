@@ -2165,3 +2165,10 @@ Detailed audit: research/PAPER4_F1_MINIMAL_THRESHOLD_AND_DEMUSHKIN_STRESS_AUDIT_
 Pure abelianization saturates for extension depth beyond the quotient torsion level. No certified q>0 variable-depth free-by-Demushkin family was found in the literature audit. The higher filtered recovery problem remains OPEN / LOAD-BEARING, with an explicit gauge-invariance test now mandatory. No new carrier hunt is authorized.
 
 Detailed audit: research/PAPER4_QPOS_HIGHER_LAYER_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — E2 q>0 HOMOLOGY CORRECTION
+
+For standard odd-p Demushkin q_D=p^a>0, H_2(D,Z_p)=0 because the one-relator exponent-sum boundary is multiplication by p^a. Thus the untwisted q=0 E2 transgression source does not exist in q>0. In the stress extension z^{p^s}=r_D, the untwisted H_1/coinvariant extension class lies in Ext^1_{Z_p}(Z/p^a,Z_p) and is p^s mod p^a (up to convention), so it saturates for s>=a. Therefore the untwisted E2 homological layer is FAIL/CLOSED for deep q>0 tails. The next legitimate target is genuinely nonabelian relation-module/Zassenhaus data; a twisted-coefficient replacement is a separate OPEN pre-check, not a continuation of E2.
+
+Detailed audit: research/PAPER4_E2_QPOS_HOMOLOGY_CORRECTION_2026-10-02.md.
