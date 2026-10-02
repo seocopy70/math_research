@@ -2522,3 +2522,47 @@ Classification:
 - orientation recovery from E2: **OPEN**.
 
 Detailed audit: research/PAPER4_F1_KZ_ADAPTIVE_THRESHOLD_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — F1 EXACT MINIMAL THRESHOLD + HIGHER-RANK DEMUSHKIN STRESS TEST
+
+The K–Z threshold is now exact. Writing \(e(n)=\lceil\log_p n\rceil\),
+\[
+(G_s/D_n(G_s))^{ab}\simeq
+(\mathbf Z/p^{e(n)})^2\oplus\mathbf Z/p^{\min(s,e(n))}.
+\]
+For \(m\ge2\), uniform recovery of \(\min(s,m)\) requires and is achieved by \(e(n)\ge m\), hence the exact smallest integer depth is
+\[
+\boxed{n_m^{\mathrm{KZ}}=p^{m-1}+1}.
+\]
+The lower bound is reinforced by the same-window lemma: at any \(n\le p^{m-1}\), suitable \(s<t<m\) give identical full windows but different \(m\)-truncated valuations.
+
+A higher-rank q=0 Demushkin stress model was then tested:
+\[
+\widetilde G_{s,d}=\langle z,x_1,\dots,x_d\mid
+z^{p^s}=[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d]\rangle,
+\quad d\ge4\text{ even}.
+\]
+At the homological/abelianized level,
+\[
+\widetilde G_{s,d}^{ab}\simeq\mathbf Z_p^d\oplus\mathbf Z/p^s,
+\]
+so the same adaptive finite-window formula survives:
+\[
+(\widetilde G_{s,d}/D_{p^m})^{ab}
+\simeq(\mathbf Z/p^m)^d\oplus\mathbf Z/p^{\min(s,m)}.
+\]
+This shows the K–Z mechanism is not rank-2-specific. However, the normal closure of \(z\) has not yet been independently certified free pro-p in this higher-rank model, so it is a stress model, not a new theorem-level free-by-Demushkin example.
+
+For a standard Demushkin quotient with finite torsion invariant \(q=p^a\), the same construction has abelianized relation \(p^s z=p^a x_1\), whose Smith normal form yields torsion order \(p^{\min(a,s)}\). Thus abelianization saturates at the quotient's intrinsic q-depth and cannot see arbitrary extension depth once \(s>a\).
+
+Classification:
+- exact K–Z threshold \(p^{m-1}+1\): **PASS / CLOSED**;
+- q=0 higher-rank stress mechanism: **PASS / LOCAL**;
+- higher-rank kernel freeness: **OPEN**;
+- q>0 abelianization saturation: **PASS / LOCAL**;
+- general free-by-Demushkin finite-window extension-depth theorem: **OPEN / LOAD-BEARING**;
+- higher nonabelian finite scalar character: **OPEN**;
+- E2 → orientation: **OPEN**.
+
+Detailed audit: research/PAPER4_F1_MINIMAL_THRESHOLD_AND_DEMUSHKIN_STRESS_AUDIT_2026-10-02.md.
