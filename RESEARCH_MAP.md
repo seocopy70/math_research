@@ -1,3 +1,30 @@
+## 2026-10-02 — RP-3 Q-BLIND ADJACENT-WINDOW CARRIER: PASS/LOCAL
+
+The Bockstein branch now has a concrete q-blind intrinsic carrier for the declared specially oriented pro-p RAAG target.
+
+For an adjacent pair (X=W_n), (Y=W_{n+1}), define (e(Z)=log_pexp(Z^{ab})) and
+[
+mathcal L(X,Y)=
+egin{cases}
+operatorname{im}igl(operatorname{Hom}(Y,mathbf Z/p^{e(Y)})	ooperatorname{Hom}(Y,mathbf F_p)igr),&e(Y)>e(X),\
+0,&e(Y)=e(X).
+end{cases}
+]
+This is q-blind and intrinsic. At (n=q=p^f),
+[
+mathcal L(W_q,W_{q+1})=kereta_f,
+qquad
+mathcal L(W_q,W_{q+1})^perp
+=(kereta_f)^perp
+=operatorname{span}{ar s:sin S}subset L_1.
+]
+
+Thus RP-3 is **PASS / LOCAL** for sinkhole-sector recovery from the adjacent finite window. The earlier claim that the full (H^2)-valued map (eta_f) itself is reconstructed is rejected; that stronger statement remains OPEN and is not load-bearing.
+
+The remaining authorized tasks are independent model verification and the admissible-category/non-reencoding audit. The branch does not require Massey calculations unless those checks fail.
+
+Detailed audit: research/RP3_FINITE_WINDOW_BOCKSTEIN_AUDIT_2026-10-02.md
+
 ## 2026-10-02 — GATE D CORRECTION: GRASSMANNIAN CARRIER CLOSED, RESTRICTED-POWER REFINEMENT OPEN
 
 The complete specially oriented 3-vertex graph refutes the accidental-plane exclusion theorem and the sinkhole-recovery rule based only on the q-special 2-plane Grassmannian. The intermediate calculation (U_1\cap U_2=0) was erroneous, but the full intersection is still zero after including a third q-special plane.
