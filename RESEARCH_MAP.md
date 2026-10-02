@@ -4905,3 +4905,15 @@ Classification:
 - blind carrier hunt: STOP.
 
 Detailed audit: research/PAPER4_QPOS_MINIMAL_NONABELIAN_FINITE_EXTENSION_PRECHECK_2026-10-02.md.
+
+
+## 2026-10-02 — FIRST CONCRETE NONABELIAN COMPRESSION CANDIDATE
+
+The global map now has a first concrete candidate inside the strict-compression gate:
+\[
+C_n^{(2)}:
+1\to K_n/\gamma_3(K_n)\to W_n/\gamma_3(K_n)\to D/D_n(D)\to1.
+\]
+It is the relative class-2 kernel quotient. A1, A2, A3, A4, A5, A8 pass locally; strictness A6 and non-reencoding A7 remain open. T1 threshold separation remains open.
+
+This does not reopen any closed RAAG, E2, abelianization, or ordinary graded branch. The next task is the factor-through-closed-layers test for \(C_n^{(2)}\), followed by T1 only if genuinely new integral commutator information survives.
