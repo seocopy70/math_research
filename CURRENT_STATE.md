@@ -1,3 +1,28 @@
+## 2026-10-02 — PAPER 4 GATE D: SAME-WINDOW / DIFFERENT-ORIENTATION COUNTEREXAMPLE — FAIL / CLOSED
+
+A decisive structural counterexample has been found for the current admissible class of specially oriented pro-p RAAGs.
+
+Take any nontrivial specially oriented graph Γ0 with a special-edge q-layer, add an isolated vertex z, and form ΓA=Γ0⊔{z}_ordinary and ΓB=Γ0⊔{z}_special. Both are specially oriented. The isolated vertex contributes no defining relation in either case, so the underlying un-oriented pro-p groups are literally identical. Consequently W_n(ΓA)≅W_n(ΓB) for every n, in particular for the full adjacent window W_q←W_{q+1}.
+
+But the canonical orientations differ on z: θA(z)=1, θB(z)=λ(1)=1+q. For q=p^{k-1}, these remain distinct modulo p^k. Thus the same un-oriented finite adjacent window supports two different orientation targets.
+
+The construction is permitted by the literature: an oriented graph allows isolated special vertices, and the canonical orientation is 1 on ordinary vertices and λ(1) on special vertices. The source explicitly records the same geometric graph with an isolated vertex declared ordinary in one orientation and special in another (Remark 2.4); Definition 2.5 still regards both as specially oriented.
+
+This is stronger than a failed carrier: the target is not a function of the declared un-oriented finite input on the current class. Therefore no carrier functorially constructed solely from W_q←W_{q+1} can recover the orientation on this class.
+
+Detailed audit: research/PAPER4_GATE_D_SAME_WINDOW_DIFFERENT_ORIENTATION_AUDIT_2026-10-02.md.
+
+Classification:
+- Gate D, current specially oriented RAAG class: FAIL / CLOSED;
+- same underlying group: decisive PASS;
+- same finite windows: decisive PASS;
+- different canonical orientation mod p^k: decisive PASS;
+- un-oriented finite-window-only recovery on current class: FAIL / CLOSED;
+- restricted class excluding isolated special vertices: OPEN;
+- affine-hull T1 failure: remains valid but is now secondary, not the primary obstruction.
+
+Immediate consequence: stop the current T1 carrier search. The only legitimate continuation is to redefine the admissible class/input by an explicit orientation-rigidity hypothesis and then re-run Object → Input → Functoriality → Gauge → Orientation bridge → q-blindness → Separation → Novelty → Stop. The restriction “every special vertex is the terminus of a special edge” is a candidate boundary, not yet a sufficiency theorem.
+
 ## 2026-10-02 — PAPER 4 T1 AFFINE-HULL GATE: FAIL / CLOSED
 
 The proposed affine-hull rescue of T1 is refuted for the current existential local-uniform signature.
