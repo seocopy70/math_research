@@ -258,3 +258,126 @@ The current result should therefore not be advertised as a universal finite-wind
 - RAAG route: **CLOSED-AS-MAIN-ROUTE**.
 
 No claim is made that the unmarked finite window alone canonically recovers the Demuškin quotient map.
+# PAPER 4 — GATE T CRITICAL SEPARATION AUDIT / CORRECTION
+## 2026-10-02
+
+## Authoritative correction
+
+The earlier Gate-T audit is **not promoted as written**. A critical review correctly demanded an independent recheck of the relative-window construction and, more importantly, the distinction between the free presentation relator and its image in the Demuškin quotient. That review itself contains one decisive overcorrection:
+
+For
+\[
+D=\langle x_1,\ldots,x_d\mid r_D\rangle,
+\qquad
+G_{s,a}=\langle z,x_1,\ldots,x_d\mid z^{p^s}=r_D\rangle,
+\]
+the assignment
+\[
+z\mapsto1,\qquad x_i\mapsto\bar x_i\in D
+\]
+is in fact a well-defined epimorphism
+\[
+\pi_s:G_{s,a}\twoheadrightarrow D,
+\]
+because the image of the defining relation is
+\[
+1=r_D\quad\text{in }D.
+\]
+Thus the natural quotient map is **not** the obstruction claimed in the submitted T0 critique. The statement “\(r_D\) is only a free-group relator and is not 1 in \(D\)” confuses the word-level relator in the free group with its image in the presented quotient.
+
+Accordingly:
+
+- **T0 as ‘does \(G_{s,a}\to D\) exist?’: PASS / LOCAL.**
+- **T0 as a full finite-relative-window legitimacy theorem: OPEN.**
+
+The existence of \(\pi_s\) is elementary; what still needs proof is the precise induced finite extension and its filtration compatibility at the claimed critical depth.
+
+## 1. What remains unverified
+
+The genuinely load-bearing step is not the existence of \(\pi_s\), but the assertion that at
+\[
+n=p^s+1
+\]
+the relative extension
+\[
+1\to K_n\to G_{s,a}/D_n(G_{s,a})
+\xrightarrow{\bar\pi_s}
+D/D_n(D)\to1
+\]
+has a nonzero class for \(s\), while the corresponding extension for \(t>s\) splits.
+
+In particular, the following implication used by the previous audit is not automatic:
+\[
+z^{p^s}\in D_{p^s}(G_{s,a})
+\quad\Longrightarrow\quad
+\bar z^{p^s}\neq0\text{ in }D_{p^s}/D_{p^s+1}.
+\]
+The quotient relation can alter the actual Zassenhaus filtration. This must be proved in \(G_{s,a}\), not inferred from the free presentation alone.
+
+Likewise, identifying the surviving class with the defining relation class in
+\(H^2(D,\mathbf F_p)\) requires an explicit finite-layer transgression/extension-class lemma. The one-dimensionality of \(H^2(D,\mathbf F_p)\) by itself does not establish that the particular finite extension has nonzero class.
+
+## 2. Correct gate order
+
+The correct sequence is therefore
+\[
+\boxed{
+\text{T0: canonical }\pi_s:G_{s,a}\to D
+\;
+\longrightarrow\;
+\text{finite relative extension exists}
+\;
+\longrightarrow\;
+\text{critical-layer calculation}
+\;
+\longrightarrow\;
+\text{splitting/non-splitting}
+}
+\]
+
+The first arrow is PASS/LOCAL. The remaining arrows are not yet closed.
+
+## 3. Current threshold status
+
+The rigorous information-level lower bound remains:
+\[
+n\le p^s
+\Longrightarrow
+z^{p^s}\in D_n(F),
+\]
+so the **presentation-level deep-tail invisibility** argument gives the natural lower-bound mechanism. Its transfer to an exact relative-window theorem is still subject to the finite-extension verification above.
+
+Therefore the exact equality
+\[
+n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1
+\]
+must currently be classified
+\[
+\boxed{\textbf{OPEN / LOAD-BEARING}}.
+\]
+
+The previous **PASS / LOAD-BEARING** label is superseded.
+
+## 4. Authoritative classification
+
+- canonical epimorphism \(G_{s,a}\twoheadrightarrow D\): **PASS / LOCAL**;
+- relative finite-window object at the definition level: **PASS / LOCAL**;
+- fixed-depth deep-tail blindness: **PASS / LOCAL**;
+- lower-bound heuristic/information mechanism \(n\ge p^s+1\): **PASS / LOCAL**;
+- nonzero critical class at \(p^s+1\): **OPEN / LOAD-BEARING**;
+- critical non-splitting for \(G_{s,a}\): **OPEN / LOAD-BEARING**;
+- exact relative threshold \(p^s+1\): **OPEN / LOAD-BEARING**;
+- unmarked filtered-group theorem: **OPEN**;
+- universal q>0 free-by-Demushkin theorem: **OPEN**;
+- class-2 norm: **SIDE / PAUSED**;
+- RAAG: **CLOSED-AS-MAIN-ROUTE**.
+
+## 5. Next authorized task
+
+Do **not** jump to Gate U and do **not** start a new carrier hunt.
+
+The singular next task is:
+
+> **T0/T1 finite-layer verification:** compute the actual Zassenhaus layer and the induced extension class of \(G_{s,a}/D_{p^s+1}(G_{s,a})\to D/D_{p^s+1}(D)\), and independently verify whether the \(s\)-case is nonsplit while every \(t>s\) case splits.
+
+Only a proof of that finite-layer statement may restore the exact threshold claim.
