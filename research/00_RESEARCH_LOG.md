@@ -3153,3 +3153,34 @@ Classification: critical visibility PASS/LOCAL; scalar/coinvariant obstruction F
 Detailed audit: research/PAPER4_QPOS_GATE_T1C_NONABELIAN_KERNEL_BOUNDARY_AUDIT_2026-10-03.md.
 
 Next authorized action: compute the actual finite F_p[Q_s]-relation module A_s at n=p^s+1, then the first nonabelian kernel quotient if needed.
+
+## 2026-10-03 — GATE T1-C CRITICAL RE-AUDIT: THREE WORDING/LOGICAL BOUNDARY CORRECTIONS
+
+The latest referee-level review does not reverse Gate T1-C, but it tightens three load-bearing claims.
+
+**(1) Lift-change correction.** The change (x_1\mapsto z^{-p^{s-a}}x_1) must not be recorded as killing (z^{p^s}) in the full finite extension. The full change is governed by an action/norm term such as (N_{p^a}(T_{x_1})k); only its augmentation is (p^a\epsilon(k)). Hence the scalar/coinvariant defect is killable (**FAIL / CLOSED**), while the non-augmentation residual remains **OPEN**.
+
+**(2) (A_s) is not yet computed.** The next task is the actual chain
+[
+G_{s,a}\to W_s\to Q_s\to K_s\to A_s=K_s/[K_s,K_s],
+]
+including the genuine (mathbf F_p[Q_s])-action and quotient by all lift/section coboundaries. A Fox matrix is the relation-module differential used in this construction; it is not automatically (A_s) itself.
+
+**(3) (B_s) is a conditional fallback.** (B_s=\gamma_2(K_s)/\gamma_3(K_s)) is the next authorized diagnostic only if the (A_s)-level extension class vanishes. It is not asserted to be universally the first or unique nonabelian obstruction.
+
+The current hierarchy is therefore:
+[
+\text{visibility PASS/LOCAL}
+\to
+\text{coinvariant scalar FAIL/CLOSED}
+\to
+\text{critical norm FAIL/CLOSED}
+\to
+\text{actual }A_s\text{-level class OPEN/LOAD-BEARING}
+\to
+B_s\text{ only if needed}.
+]
+
+The formal inequality (2p^{s-a}<p^s+1) is to be used with (a\ge1) (equivalently (q=p^a>1)); this is a scope condition, not a new result.
+
+No Gate-T reversal, nonsplitting claim, exact-threshold claim, or new carrier search is authorized by this correction.
