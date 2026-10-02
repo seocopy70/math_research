@@ -1,3 +1,25 @@
+## 2026-10-02 — PAPER 4 CRITICAL CORRECTION + NONABELIAN FILTERED PROFILE GATE
+
+The previous whole-package kernel-shear no-go overclaimed: P_E is a genuine restricted-power map and cannot be treated as pointwise fixed under an arbitrary shear. The whole-linear-package closure is therefore HISTORICAL/SUPERSEDED.
+
+What remains closed:
+- omega_q does not descend through ker Phi in the chordal-tree model;
+- ker Phi alone is not an orientation carrier.
+
+A convention correction is also recorded: absence of an edge in an oriented pro-p RAAG does not mean commutation. Ordinary edges give commutation; special edges give wuw^{-1}=u^{1+q}. Thus the separated-model accidental-direction explanation must use lower-filtration contamination, not “t commutes with a”.
+
+The authorized next object is the full filtered commutator profile:
+[u,x] in D_q, followed by [u,x] = c_x(u)P_E(x) mod D_{q+1}.
+For specially oriented RAAGs, lower-degree vanishing forces support visibility from x, and the normalized q-defect measures the visible special coefficient sum.
+
+Classification:
+- kernel-only: FAIL / CLOSED;
+- previous whole-linear-package shear closure: HISTORICAL / SUPERSEDED;
+- lower-filtration + q-defect profile: OPEN / LOAD-BEARING;
+- Paper 4: OPEN.
+
+Detailed audit: research/PAPER4_NONABELIAN_FILTERED_PROFILE_GATE_2026-10-02.md.
+
 ## 2026-10-02 — PAPER 4 PAIRING/KERNEL SHEAR NO-GO: LINEAR PACKAGE CLOSED
 
 The \\(\\ker\\Phi) analysis strengthens to a no-go for the entire linear package \\(\\mathcal D=(U,O,A,P_E,\\Phi)\\).
