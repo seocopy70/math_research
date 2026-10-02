@@ -2326,3 +2326,55 @@ Crucial logical boundary: this does NOT prove that every individual G has no fin
 - carrier search before resolving threshold dependence: **STOP / NOT AUTHORIZED**.
 
 This is the first genuinely load-bearing Paper-4 negative theorem candidate and supersedes the weaker “K–Z alone is insufficient” boundary.
+
+
+## 2026-10-02 — EXACT FIRST SEPARATION: THE K–Z PAIR SPLITS AT p^s+1
+
+The previously open threshold question for the matched pair can now be closed.
+
+For odd p, let
+\\[
+G_s=\\langle x,y,z\\mid z^{p^s}=[x,y]\\rangle,
+\\qquad G_+=\\mathbf Z_p^3.
+\\]
+For every n\\le p^s, the earlier quotient-presentation argument gives
+\\[
+G_s/D_n(G_s)\\cong G_+/D_n(G_+).
+\\]
+
+To prove that the first separation occurs immediately after that range, construct the finite class-2 p-group
+\\[
+H_s=\\langle x,y,z\\mid z^{p^{s+1}}=x^{p^{s+1}}=y^{p^{s+1}}=1,\\ z\\text{ central},\\ [x,y]=z^{p^s}\\rangle.
+\\]
+This is a quotient of G_s. Its lower central series has \\gamma_2(H_s)=\\langle z^{p^s}\\rangle and \\gamma_3(H_s)=1. By the Lazard/Jennings description
+\\[
+D_n(H)=\\prod_{ip^j\\ge n}\\gamma_i(H)^{p^j},
+\\]
+for n=p^s+1 the i=1 contribution is H_s^{p^{s+1}}=1, while the i=2 contribution is \\gamma_2(H_s)^{p^s}=1; hence
+\\[
+D_{p^s+1}(H_s)=1.
+\\]
+Therefore z^{p^s} is nontrivial in H_s/D_{p^s+1}(H_s), so z^{p^s}\\notin D_{p^s+1}(G_s). Consequently
+\\[
+[x,y]=z^{p^s}\\notin D_{p^s+1}(G_s),
+\\]
+so G_s/D_{p^s+1}(G_s) is nonabelian. In contrast G_+=\\mathbf Z_p^3 is abelian, hence every quotient G_+/D_n(G_+) is abelian. Thus
+\\[
+G_s/D_{p^s+1}(G_s)\\not\\cong G_+/D_{p^s+1}(G_+).
+\\]
+
+Hence the matched pair has exact first separation depth
+\\[
+\\boxed{n_{\\rm sep}(G_s,G_+)=p^s+1}.
+\\]
+This is stronger than the previous lower-bound statement and does not require a mildness theorem or an associated-graded nonvanishing argument; the finite quotient H_s directly witnesses survival of the commutator at the critical depth.
+
+Combined with cd_p(G_s)=2 and cd_p(G_+)=3, this yields an explicit arbitrarily delayed separation family. For fixed odd p and d=3, any universal detector must accommodate thresholds at least p^s+1 on this family. Therefore no finite bound depending only on p and d exists, while the K–Z family provides a concrete relation-depth parameter producing exact pairwise separation thresholds.
+
+Classification:
+- exact pairwise first-separation depth p^s+1: **PASS / CLOSED**;
+- uniform finite-depth detector on the full finitely generated free-by-Demushkin class: **FAIL / CLOSED**;
+- individual/group-dependent detection threshold: **OPEN / LOAD-BEARING**;
+- identification of a canonical intrinsic threshold parameter from extension data: **OPEN**.
+
+Independent verification used the standard Zassenhaus/Lazard product formula and an explicit finite quotient, avoiding any appeal to unverified initial-form survival.
