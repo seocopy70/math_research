@@ -381,3 +381,133 @@ The singular next task is:
 > **T0/T1 finite-layer verification:** compute the actual Zassenhaus layer and the induced extension class of \(G_{s,a}/D_{p^s+1}(G_{s,a})\to D/D_{p^s+1}(D)\), and independently verify whether the \(s\)-case is nonsplit while every \(t>s\) case splits.
 
 Only a proof of that finite-layer statement may restore the exact threshold claim.
+
+
+---
+
+## 2026-10-02 — FINAL RE-AUDIT: CRITICAL LAYER SURVIVES, BUT NON-SPLITTING IS STILL OPEN
+
+The previous correction identified the right logical gap, but a further independent audit sharpens it in both directions.
+
+### 1. The critical class really does survive
+
+Set
+\[
+n=p^s+1,\qquad s>a,
+\]
+and consider the finite class-2 \(p\)-group
+\[
+H_s=
+\langle z,u,v\mid
+z\ {\rm central},\ z^{p^{s+1}}=1,\ u^{p^a}=1,\ v^{p^{s+1}}=1,\ [u,v]=z^{p^s}
+\rangle .
+\]
+Map
+\[
+z\mapsto z,\qquad x_1\mapsto u,\qquad x_2\mapsto v,\qquad
+x_i\mapsto1\ (i\ge3).
+\]
+Because
+\[
+r_D\mapsto u^{p^a}[u,v]=z^{p^s},
+\]
+the defining relation \(z^{p^s}=r_D\) is satisfied, so
+\[
+G_{s,a}\twoheadrightarrow H_s.
+\]
+
+The group \(H_s\) has class \(2\), exponent dividing \(p^{s+1}\), and
+\(\gamma_2(H_s)=\langle z^{p^s}\rangle\) of order \(p\). For odd \(p\),
+\[
+2p^{s-1}<p^s+1,
+\]
+so the Zassenhaus formula gives
+\[
+D_{p^s+1}(H_s)
+\subseteq H_s^{p^{s+1}}\gamma_2(H_s)^{p^s}=1.
+\]
+Hence \(H_s\) factors through \(G_{s,a}/D_{p^s+1}(G_{s,a})\), while
+\(z^{p^s}\ne1\) in \(H_s\). Therefore
+\[
+\boxed{z^{p^s}\notin D_{p^s+1}(G_{s,a}).}
+\]
+
+Classification:
+\[
+\boxed{\text{critical-layer survival at }p^s=\textbf{PASS / LOCAL}.}
+\]
+
+This is independent of any mildness/initial-form argument.
+
+### 2. But this still does NOT prove non-splitting
+
+There is a genuine \(q>0\) obstruction to the previous \(H^2\)-shortcut.
+
+The Demuškin relation is
+\[
+r_D=x_1^{p^a}[x_1,x_2]\cdots[x_{d-1},x_d].
+\]
+At coefficient level \(p^s\), the torsion term \(x_1^{p^a}\) can absorb a would-be scalar defect by changing a lift of \(x_1\) by a \(p^{s-a}\)-power of the kernel generator.
+
+At the centralized test level, put
+\[
+E'=\langle t,x_1,\ldots,x_d\mid
+t\ {\rm central},\ t^{p^{s+1}}=1,\ D_n(F)=1,\ r_D=t^{p^s}\rangle .
+\]
+The apparent defect \(t^{p^s}\) is not automatically a nonzero \(H^2\)-class: it can be altered by a coboundary coming from a homomorphism \(F\to\langle t\rangle\), because
+\[
+x_1^{p^a}\mapsto t^{p^s}
+\quad\text{when}\quad
+x_1\mapsto t^{p^{s-a}}.
+\]
+Thus the previous implication
+\[
+\text{“relation class generates }H^2\text{”}
+\Longrightarrow
+\text{“finite relative extension is nonsplit”}
+\]
+is invalid without controlling lift-change/coboundary terms.
+
+This is exactly the \(q>0\) phenomenon already seen in the closed untwisted \(H_1/E_2\) layer: the torsion term can absorb the naive scalar defect.
+
+### 3. What survives
+
+- \(G_{s,a}\twoheadrightarrow D\): **PASS / LOCAL**;
+- deep-tail blindness for \(n\le p^s\): **PASS / LOCAL**;
+- \(z^{p^s}\notin D_{p^s+1}(G_{s,a})\): **PASS / LOCAL**;
+- critical extension class at \(p^s+1\): **OPEN / LOAD-BEARING**;
+- non-splitting at \(p^s+1\): **OPEN / LOAD-BEARING**;
+- exact threshold \(n_{\rm sep}^{\rm rel}(s)=p^s+1\): **OPEN / LOAD-BEARING**;
+- unmarked filtered-group theorem: **OPEN**.
+
+The earlier **PASS / LOAD-BEARING** threshold claim is **HISTORICAL / SUPERSEDED**.
+
+### 4. The real next obstruction
+
+The remaining problem is now sharply formulated:
+
+> Determine the finite relative extension class in
+> \[
+> H^2\!\left(D/D_{p^s+1}(D),K_{p^s+1}^{\rm ab}\right)
+> \]
+> (or the appropriate first nonabelian quotient of the kernel), after quotienting all lift-change coboundaries.
+
+The scalar \(z^{p^s}\) alone is not the invariant. The relevant object is the **module-valued defect together with the \(D/D_n(D)\)-action**.
+
+Therefore the class-2/norm-action route is now the correct next finite-layer test. This is a narrowly targeted promotion, not a return to unrestricted carrier hunting.
+
+### 5. Authoritative status
+
+\[
+\boxed{
+\begin{array}{ll}
+\text{Gate O fixed-depth no-go} & \mathbf{PASS/CLOSED}\\
+\text{critical-layer survival at }p^s & \mathbf{PASS/LOCAL}\\
+\text{critical non-splitting at }p^s+1 & \mathbf{OPEN/LOAD-BEARING}\\
+\text{exact relative threshold }p^s+1 & \mathbf{OPEN/LOAD-BEARING}\\
+\text{unmarked theorem} & \mathbf{OPEN}\\
+\text{class-2 norm/action finite-layer test} & \mathbf{NEXT\ AUTHORIZED}
+\end{array}}
+\]
+
+No Gate-U jump and no blind carrier search is authorized.
