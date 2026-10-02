@@ -1,3 +1,24 @@
+## 2026-10-02 — GATE D CORRECTION: GRASSMANNIAN CARRIER CLOSED, RESTRICTED-POWER REFINEMENT OPEN
+
+The complete specially oriented 3-vertex graph refutes the accidental-plane exclusion theorem and the sinkhole-recovery rule based only on the q-special 2-plane Grassmannian. The intermediate calculation (U_1\cap U_2=0) was erroneous, but the full intersection is still zero after including a third q-special plane.
+
+This does **not** close the broader finite-window carrier program. The same counterexample has
+[
+\operatorname{im}B_q=\mathbf F_p\overline{s^q},
+qquad
+P_q^{-1}(\operatorname{im}B_q)=\mathbf F_p\bar s
+]
+in the complete 3-vertex model. The next authorized carrier is therefore the combination of extension-defect image and restricted-power structure.
+
+Current frontier:
+- special-plane Grassmannian: **FAIL / CLOSED**;
+- accidental-plane exclusion: **FAIL / CLOSED**;
+- restricted-power/extension-defect refinement: **OPEN / LOAD-BEARING**;
+- categorical no-go for all intrinsic finite-window carriers: **OPEN / NOT ESTABLISHED**.
+
+The next attack is cross-model verification of (P_q^{-1}(\operatorname{im}\kappa_q)), followed by an intrinsicity/gauge/functoriality audit. Do not reopen the failed Grassmannian computation or jump directly to a universal no-go.
+
+
 ## 2026-10-02 — 2-GENERATOR SPECIAL-EDGE GATE: THRESHOLD SURVIVES, ROLE-RECOGNITION CLAIM REJECTED AS WRITTEN
 
 The first 2-generator special-edge attack sharpens the adjacent-class boundary. The relation [w,v]=v^q gives a genuine first-survival threshold at q+1: the q-dependent term is invisible through W_q and survives in W_{q+1}.
