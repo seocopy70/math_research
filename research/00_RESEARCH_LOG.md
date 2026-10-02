@@ -2754,3 +2754,23 @@ T1 threshold detection remains **OPEN** for this candidate. Ordinary mod-p assoc
 No raw Magnus/Fox expansion was performed. Next authorized test: determine whether the class-2 quotient contains a gauge-invariant datum not factoring through the already closed abelian/E2/graded layers, then test the binary threshold \(s\ge m\). If it factors through the closed layers, classify FAIL/CLOSED; if a genuinely new integral commutator datum survives, continue to T1.
 
 Literature method check: Hamza 2023 treats lower-central/Zassenhaus filtrations and their module actions for finitely generated pro-p groups, supporting the naturality of this filtration-based construction; it does not prove the present compression theorem.
+
+
+## 2026-10-02 — P4-Q+ CLASS-2 FACTOR-THROUGH PRETEST
+
+The first authorized factor-through test for the relative class-2 kernel quotient was completed at the structural level.
+
+For \(A_n=K_n/\gamma_2(K_n)\) and \(B_n=\gamma_2(K_n)/\gamma_3(K_n)\), the candidate retains the intrinsic commutator pairing \(\beta_n:A_n\wedge A_n\to B_n\) and the induced \(D/D_n(D)\)-action. This is a genuinely different type of datum from the closed abelian/H1-extension package; that package has no formal reconstruction of an arbitrary class-2 commutator pairing. Likewise, ordinary mod-p Zassenhaus graded blindness does not imply factorization of the integral class-2 quotient through the graded object.
+
+This yields only **PASS / LOCAL** for structural non-factorization in the ambient class-2 extension category. It is not yet a theorem on the q>0 stress family \(G_{s,a}\): an explicit stress-family separation pair is still required.
+
+Therefore the candidate remains:
+- structural distinction from abelian/H1 layers: **PASS / LOCAL**;
+- factor-through stress test: **OPEN / LOAD-BEARING**;
+- T1 threshold separation: **OPEN / LOAD-BEARING**;
+- A6 strictness: **OPEN**;
+- A7 non-reencoding: **OPEN**.
+
+The next authorized computation is singular and targeted: compute only \((A_n,B_n,\beta_n,\text{class-2 power map},D\text{-action})\) for the q>0 stress family at the candidate threshold scale. No raw Magnus/Fox scalar search and no new carrier family are authorized.
+
+Detailed audit: research/PAPER4_QPOS_CLASS2_FACTOR_THROUGH_AUDIT_2026-10-02.md.
