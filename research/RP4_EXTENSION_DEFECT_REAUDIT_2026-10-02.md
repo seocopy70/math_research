@@ -1,3 +1,9 @@
+## 2026-10-02 — CONVENTION CORRECTION
+
+The special-edge convention used in the literature is: (v,w) has ordinary origin v, special terminus w, and relation wvw^{-1}=v^{1+q}. Hence v, not w, is q-torsion in abelianization. citeturn1search0turn1search1
+
+Accordingly, any occurrence in this audit of “sinkhole direction” as the torsion direction is historical/superseded. The extension-defect calculations themselves are unchanged; the corrected role labels are origin O for the q-torsion sector and special/sinkhole S for the terminus sector.
+
 # RP-4 Extension Defect Re-Audit — 2026-10-02
 
 ## Status
