@@ -1,3 +1,34 @@
+## 2026-10-02 — PAPER 4 TOP-DOWN TARGET SHARPENED: NORMALIZATION FUNCTIONAL GATE
+
+The top-down reset has now been carried through to a sharper mathematical target. For a specially oriented RAAG with (q=p^f), the first nontrivial orientation layer is a linear functional
+[
+omega_q:L_1	omathbf F_p
+]
+with kernel containing the intrinsic origin/torsion sector (O_q), and normalized by (omega_q(ar w)=1) on sinkhole generators. Thus the remaining finite-window problem is not full directed-incidence reconstruction but construction (or impossibility) of this normalized functional from (W_q\leftarrow W_{q+1}).
+
+The information decomposition is:
+[
+W_{q+1}Longrightarrow(q,O_q,omega_q)Longrightarrowchimod p^k.
+]
+Here q is locally visible as the first nonzero extension-defect degree; (O_q) is recovered locally by RP-3; and abelianization alone cannot normalize (omega_q). The nonabelian finite extension contains additional normalization data, as verified in the 2-generator semidirect model.
+
+A new local observation was verified in the complete 3-vertex one-sink model: the rank of (B_q(u,-)) is 1 on nonzero origin directions and 2 when the sink component of (u) is nonzero. This shows the failed (J_q(u)\neq0) predicate was too coarse, but rank-stratification is not universal: in the 2-generator model every nonzero direction has rank 1. Therefore no rank-only carrier is promoted.
+
+New load-bearing gate:
+[
+oxed{T1:quad W_q\leftarrow W_{q+1}\Longrightarrowomega_q ?}
+]
+Required: intrinsicity, lift/gauge independence, q-blindness, non-tautological definition, direct orientation bridge, and independent verification on the audited local models. If two admissible specially oriented RAAGs have isomorphic adjacent windows but different normalized (omega_q), T1 is FAIL/CLOSED at this window.
+
+Classification:
+- top-down reset: **PASS / ACTIVE**;
+- q recovery: **PASS / LOCAL**;
+- origin sector: **PASS / LOCAL**;
+- abelianization-only normalization: **FAIL / CLOSED**;
+- normalized finite-window orientation functional (omega_q): **OPEN / LOAD-BEARING**;
+- full incidence reconstruction as prerequisite: **NOT ESTABLISHED / NOT AUTHORIZED**.
+
+Detailed audit: research/PAPER4_TOP_DOWN_ORIENTATION_TARGET_AUDIT_2026-10-02.md.
 ## 2026-10-02 — PAPER 4 TOP-DOWN RESET / CARRIER-HUNTING BOUNDARY
 
 The latest complete-3-vertex counterexample closes the current arbitrary-linear-direction purity formulation for (J_q(u)): a non-origin linear direction can be q-active. This is not evidence that Paper 4 has returned to an unconstrained carrier search; it is evidence that the present bottom-up incidence target is too strong.
