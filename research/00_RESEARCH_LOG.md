@@ -2566,3 +2566,24 @@ Classification:
 - E2 → orientation: **OPEN**.
 
 Detailed audit: research/PAPER4_F1_MINIMAL_THRESHOLD_AND_DEMUSHKIN_STRESS_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — Q>0 HIGHER-FILTERED LAYER / GAUGE AUDIT
+
+The next authorized q>0 gate was audited before any carrier computation. For a standard odd-p Demushkin quotient with q_D=p^a and candidate extension relation z^{p^s}=r_D, abelianization gives torsion p^{min(a,s)}. Therefore pure abelianization cannot recover s once s>a: **FAIL / CLOSED for the pure abelian detector**.
+
+A literature search did not locate a theorem-level q_D>0 variable-depth free-by-Demushkin family certifying the proposed model for arbitrary s>a. Kochloukova–Zalesskii explicitly certify the variable-depth family z^{p^s}=[x,y] only with quotient D=Z_p^2 of q_D=0. General one-relator/free-by-Demushkin results in Quadrelli require additional hypotheses and do not certify the proposed q_D>0 family.
+
+Independent gauge control: Ben-Bassat–Gropper (2026), Proposition 4.7, exhibits a related PD^2-pair automorphism phenomenon for s_0=s_1 x^{p^r}[x,y]: for alpha congruent to 1 mod p^r, an automorphism fixes the s_1 boundary up to conjugacy and sends s_0 to a conjugate of s_0^alpha. This is not the present family, but it proves that raw p-adic relator/boundary coefficients are not automatically intrinsic. Any higher-layer scalar must therefore pass an explicit gauge-invariance test.
+
+Classification:
+- q>0 abelianization saturation: **PASS / LOCAL**;
+- pure abelianization recovery for s>a: **FAIL / CLOSED**;
+- q>0 higher filtered recovery of s: **OPEN / LOAD-BEARING**;
+- finite-window factorization of a gauge-invariant truncation: **OPEN**;
+- orientation bridge: **OPEN**;
+- new carrier hunt: **STOP / NOT AUTHORIZED**.
+
+Next authorized action: define the smallest gauge-invariant truncation of the full transgression/relation object and test finite-window factorization. If no scalar survives the gauge quotient without reintroducing q or the orientation, close this q>0 realization route.
+
+Detailed audit: research/PAPER4_QPOS_HIGHER_LAYER_AUDIT_2026-10-02.md.
