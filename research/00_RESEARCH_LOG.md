@@ -1,3 +1,32 @@
+## 2026-10-02 — CRITICAL AUDIT OF RESTRICTED-POWER REFINEMENT: LOCAL LEMMA VALID, GENERAL CARRIER NOT YET LEGITIMATE
+
+Critical review identifies a genuine strengthening and several load-bearing gaps.
+
+1. The complete 3-vertex counterexample correctly closes the first-survival Grassmannian carrier, after correcting (U_1\cap U_2=0) to (U_1\cap U_2=\mathbf F_p(\bar s+\bar a)). The full intersection is still zero using (U_3=\operatorname{span}(\bar s,\bar b)).
+
+2. The local claim
+[
+P_q^{-1}(\operatorname{im}B_q)=\mathbf F_p\bar s
+]
+is mathematically plausible and consistent with the complete-graph restricted structure, but the previous record overstated its proof status. Independence of (\bar s^{[q]},\bar a^{[q]},\bar b^{[q]}) must be established from the associated restricted Lie algebra/group model, not asserted.
+
+3. More importantly, (P_q) is not generally a linear map on a nonabelian degree-one restricted Lie algebra. In the complete graph (L_1) is abelian, so the local preimage is well behaved; this does not transfer automatically to non-complete graphs.
+
+4. The finite-window input must also be stated precisely. (P_q:L_1\to L_q=D_q/D_{q+1}) and the defect image in (L_q) require the window through (D_{q+1}), not merely (W_q=G/D_q). Thus any q-blind carrier must discover the first level q and then use the next quotient, or be defined as a family over all finite levels. The earlier wording "finite-window" was too loose.
+
+5. The orientation bridge is still absent. Recovering a distinguished line (\mathbf F_p\bar s) in one model does not yet produce source/sink incidence, nor a natural coefficient functional (\chi\).
+
+Classification:
+- Grassmannian carrier: FAIL / CLOSED.
+- Accidental-plane exclusion: FAIL / CLOSED.
+- Complete 3-vertex restricted-power preimage: PASS / LOCAL (subject to an explicit independence lemma).
+- General (P_q^{-1}(\operatorname{im}\delta_q)) carrier: OPEN.
+- Intrinsic/functorial restricted-power construction: OPEN / LOAD-BEARING.
+- Orientation reconstruction: OPEN.
+- Categorical no-go: OPEN / NOT ESTABLISHED.
+
+Authorized next action: first prove the complete-graph restricted-power independence lemma and define the exact finite-window input; only then test the candidate on the 2-generator and 3-vertex common-sink models. Do not claim a general carrier or orientation recovery before these gates pass.
+
 ## 2026-10-02 — SPECIAL-PLANE COUNTEREXAMPLE CORRECTED; RESTRICTED-POWER REFINEMENT REOPENS A LOCAL CARRIER GATE
 
 The complete specially oriented 3-vertex graph refutes the first-survival Grassmannian carrier. The earlier audit contained a concrete linear-algebra error: for
