@@ -1,3 +1,17 @@
+## 2026-10-02 — FULL-ORIENTATION COARSENESS / SAME-FAMILY CLOSURE
+
+The top-down program has now separated three levels that must not be conflated:
+1. finite-window identifiability of the canonical orientation — PASS/CLOSED;
+2. information-theoretically coarsest finite target partition — exactly k target values at level k;
+3. genuinely new intrinsic algebraic realization — not obtained at the standard Demuškin scope.
+
+The k-value count gives a carrier-independent lower bound. An exact k-class defect-index object can be read from the audited finite-window q-reconstruction, so the lower bound is sharp as an abstract finite observation. But that object is classification-equivalent to q and therefore closes as a new theorem under the project's non-redundancy rule.
+
+The frozen one-dimensional cup-line remains a selector/recognition carrier, not a full χ_k-encoding carrier for k>p by cardinality. This resolves a previously implicit ambiguity between recognition carrier and full orientation carrier.
+
+The same standard-family compression problem is now FAIL/CLOSED — classification re-encoding. The next authorized branch is an adjacent admissible class or a genuinely different target, beginning again with Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop.
+
+Detailed audit: research/PAPER3_TOP_DOWN_FULL_ORIENTATION_COARSE_REALIZATION_AUDIT_2026-10-02.md.
 ## 2026-10-02 — TOP-DOWN T−1/T0 CLOSURE / ACTIVE GATE SHIFT
 
 The post-Paper-3 exploration is now formally target-first at the declared standard odd-p fixed-rank Demuškin scope.
