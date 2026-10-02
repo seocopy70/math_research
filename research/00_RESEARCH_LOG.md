@@ -1,3 +1,28 @@
+## 2026-10-02 — 2-GENERATOR SPECIAL-EDGE RAAG AUDIT: TYPE MISMATCH + GAUGE BOUNDARY
+
+A critical audit of the 2-generator special-edge model G=<v,w | wvw^{-1}=v^{1+q}, q=p^f found a genuine first-survival boundary but rejected the stronger intrinsic role-recognition proof as written.
+
+Robust:
+- [w,v]=v^q lies in D_q, so the q-dependent deformation is invisible for n<=q;
+- v^q first survives in G/D_{q+1}, giving PASS/LOCAL first-survival evidence and preserving the candidate threshold q+1.
+
+Decisive correction: with L_i=D_i/D_{i+1}, the restricted-Lie bracket has target L_{i+j}. Thus [vbar,wbar] is in L_2, not L_q. For q>2 the relation makes the degree-2 bracket class zero, while the same element has a later class in L_q. Hence the proposed canonical map Lambda^2 L_1 -> L_q and the identity P_q^{-1}(Delta_q)=F_p vbar are not established. The missing object is a filtered relation-module/extension-class defect.
+
+Independent gauge stress test: phi_{a,c}(v)=v^a, phi_{a,c}(w)=v^c w preserves the defining relation and the characteristic Zassenhaus filtration, while changing the displayed character by (theta phi)(v)=(1+q)^a and (theta phi)(w)=(1+q)^c. This is a serious bare-window orientation obstruction. Before promoting it to a theorem-level no-go, the exact scope of the literature's orientation-uniqueness statement must be reconciled with this automorphism family.
+
+Classification:
+- deg_Z(v^q)=q: PASS/CLOSED.
+- q-dependent defect invisible for n<=q: PASS/LOCAL.
+- first survival at n=q+1: PASS/LOCAL.
+- Lambda^2 L_1 -> L_q as ordinary graded map: FAIL/CLOSED — TYPE MISMATCH.
+- intrinsic sinkhole-line recognition at q+1: OPEN/LOAD-BEARING; previous PASS/LOCAL claim superseded.
+- gauge automorphism family: PASS/LOCAL.
+- exact bare-window orientation recovery: STRONG NO-GO CANDIDATE; literature-scope check required.
+
+Detailed audit: research/PAPER3_RAAG_2GEN_SPECIAL_EDGE_AUDIT_2026-10-02.md
+
+Immediate next action: construct the intrinsic filtered relation-module/extension-class defect at degree q and resolve its automorphism/gauge behavior; simultaneously settle the precise scope of the RAAG orientation-uniqueness theorem. No larger RAAG computation is authorized before this gate is resolved.
+
 ## 2026-10-02 — ADJACENT CLASS SELECTED: SPECIAL ORIENTED PRO-p RAAG
 
 A literature-first adjacent-class search was completed. Free pro-p fails orientation rigidity at the object level, while locally-uniform/θ-abelian groups have canonical orientations but remain too close to a one-parameter p-power/q model. The stronger candidate is the class of **special oriented right-angled Artin pro-p groups**.
