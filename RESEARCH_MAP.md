@@ -1,3 +1,44 @@
+## 2026-10-02 — PAPER 4 \\(\\ker\\Phi) ORIENTATION TEST: KERNEL-RESCUE BRANCH CLOSED
+
+The proposed \\(\\ker\\Phi) rescue was tested on the smallest models.
+
+In the already audited chordal tree with ordinary a,b and special s,t,u,
+\\[
+\\Phi(s)=P_a,\\quad \\Phi(t)=P_b,\\quad \\Phi(u)=P_a+P_b,
+\\]
+so
+\\[
+\\ker\\Phi=\\mathbf F_p(u-s-t).
+\\]
+But
+\\[
+\\omega_q(u-s-t)=1-1-1=-1\\ne0
+\\]
+for odd p. Hence \\(\\omega_q) does not descend to \\(U/\\ker\\Phi) and is not in \\(\\operatorname{im}\\Phi^*=\\ker(\\Phi)^\\perp).
+
+The complementary separated two-sink model
+\\[
+G=\\langle a,b,s,t\\mid sas^{-1}=a^{1+q},\\ tbt^{-1}=b^{1+q}\\rangle
+\\]
+has
+\\[
+\\Phi(s)=P_a,\\quad \\Phi(t)=P_b,
+\\]
+so \\(\\ker\\Phi=0) while \\(\\omega_q(\\alpha s+\\beta t)=\\alpha+\\beta) remains nontrivial. This model also satisfies the natural Gate-D repair candidate “every special vertex is the terminus of a special edge.”
+
+Therefore the kernel is not an orientation carrier: it records incidence dependencies, not a canonical orientation normalization. The stronger factorization route through \\(U/\\ker\\Phi)\\) or \\(\\operatorname{im}\\Phi^*)\\) is structurally closed.
+
+Classification:
+- \\(\\ker\\Phi) intrinsic diagnostic: **PASS / LOCAL**;
+- nonzero \\(\\omega_q) on kernel in the tree model: **PASS / LOCAL**;
+- orientation recovery from \\(\\ker\\Phi) alone: **FAIL / CLOSED**;
+- orientation descent through \\(U/\\ker\\Phi): **FAIL / CLOSED**;
+- Paper 4 overall: **OPEN**.
+
+Detailed audit: research/PAPER4_KER_PHI_ORIENTATION_AUDIT_2026-10-02.md.
+
+Immediate next boundary: do not search for another functional on the same kernel. Any continuation must introduce a materially richer intrinsic datum and rerun the full pre-check.
+
 ## 2026-10-02 — PAPER 4 CREATIVE RE-EXAMINATION: GLOBAL PAIRING ROUTES — STRUCTURAL BOUNDARY
 
 After Gate D, the global-linear proposals were tested before any new carrier search.
