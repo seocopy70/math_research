@@ -4726,3 +4726,17 @@ Current D3 classification:
 - unrestricted class: **FAIL / CLOSED**.
 
 Stop rule: no blind new carrier computation. Any continuation must derive a specific finite scalar character of the normal-closure action from the target-first requirements and rerun the complete pre-check.
+
+
+## 2026-10-02 — PAPER 4 K–Z MATCHED-WINDOW CLAIM WITHDRAWN
+
+The proposed matched cd=2/cd=3 stress test using
+\[
+G_s=\langle x,y,z\mid z^{p^s}=[x,y]\rangle,
+\qquad G_+=\mathbf Z_p^3
+\]
+was critically rechecked and found invalid. For \(n\le p^s\), killing \(z^{p^s}\) forces only \([x,y]=1\), not the additional commutators needed to obtain the abelian quotient \(G_+ /D_n(G_+)\). In fact, for odd p, \([x,z]\) already separates at depth 3.
+
+Thus the previously recorded arbitrary-depth matched-window no-go and exact threshold \(p^s+1\) are **HISTORICAL / SUPERSEDED** and must not guide Paper 4. The valid K–Z contribution remains the deep-tail invisibility of the specific extension correction \(z^{p^s}\), plus the independent finite quotient witness that this correction survives at depth \(p^s+1\).
+
+The free-by-Demushkin branch therefore returns to **OPEN / LOAD-BEARING**: a genuine matched cd=3 control, or another valid structural no-go, must be established before making any uniform finite-window impossibility claim.
