@@ -4965,3 +4965,10 @@ The next calculation must follow
 \\[
 \\text{actual kernel}\\to\\text{kernel action}\\to\\text{lift-change/coboundary quotient}\\to\\text{extension class}\\to\\text{optional class-2/norm projection}.
 \\]
+
+
+## 2026-10-03 — GATE T1-A CLOSED THE ABELIANIZED SCALAR OBSTRUCTION
+
+At the critical layer \\(n=p^s+1\\), the surviving \\(z^{p^s}\\) is real (**PASS / LOCAL**) but its image in the abelianized/coinvariant kernel is removable by the torsion term \\(x_1^{p^a}\\): since \\(s>a\\), the lift change by \\(z^{-p^{s-a}}\\) supplies the required \\(p^s\\)-multiple. Therefore the scalar/coinvariant extension obstruction is **FAIL / CLOSED**.
+
+The frontier is now strictly non-coinvariant: \\(Q_s\\)-action on the kernel abelianization, the commutator layer, and the associated norm operator. Full extension splitting/non-splitting remains **OPEN / LOAD-BEARING**. Exact threshold \\(p^s+1\\) remains OPEN. This is a genuine narrowing of the problem, not a return to carrier hunting.
