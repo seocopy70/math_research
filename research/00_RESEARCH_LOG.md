@@ -1515,3 +1515,59 @@ Classification:
 Detailed audit: research/PAPER3_RAAG_SPECIAL_PLANE_INCIDENCE_AUDIT_2026-10-02.md.
 
 The carrier branch is frozen. No additional (mathscr S_q) computation is authorized.
+
+## 2026-10-02 — RP-3 NON-REENCODING AUDIT COMPLETED
+
+The q-blind adjacent-window carrier was subjected to the required non-reencoding audit.
+
+Definition:
+\[
+e(Z)=\log_p\exp(Z^{ab}),\qquad
+\mathcal L(X,Y)=
+\begin{cases}
+\operatorname{im}(\operatorname{Hom}(Y,\mathbf Z/p^{e(Y)})\to\operatorname{Hom}(Y,\mathbf F_p)),&e(Y)>e(X),\\
+0,&e(Y)=e(X).
+\end{cases}
+\]
+
+For the specially oriented RAAG jump at \(q=p^f\),
+\[
+W_q^{ab}\cong(\mathbf Z/q)^V,qquad
+W_{q+1}^{ab}\cong(\mathbf Z/pq)^{V\setminus S}\oplus(\mathbf Z/q)^S,
+\]
+so
+\[
+\mathcal L(W_q,W_{q+1})=\ker\beta_f,
+\qquad
+\mathcal L(W_q,W_{q+1})^\perp=\operatorname{span}\{\bar s:s\in S\}.
+\]
+
+The decisive non-reencoding test is that, for fixed p, rank |V|, and sinkhole count |S|, the abstract carrier has dimension |V|-|S| independent of f. Hence it cannot encode q or the full coefficient \((1-q)^{-1}\bmod p^k\). Distinct q-regimes therefore yield isomorphic carrier types. This is a genuine recognition carrier, not a q-labelled encoding.
+
+However, it is target-relative: on the declared family it is exactly the Bockstein-kernel predicate. It should not be advertised as a new independent invariant or a full-orientation carrier.
+
+Independent verification:
+1. Smallest non-complete model \(G=\langle a,s,b\mid sas^{-1}=a^{1+q}\rangle\):
+\[
+G^{ab}\cong\mathbf Z_p\langle s\rangle\oplus\mathbf Z_p\langle b\rangle\oplus(\mathbf Z/q)\langle a\rangle,
+\]
+hence \(\mathcal L=\operatorname{span}\{\bar s^*,\bar b^*\}\) and \(\mathcal L^\perp=\mathbf F_p\bar a\). PASS/LOCAL.
+2. Multiple sinks: \(\mathcal L\) is the free/non-sinkhole character subspace and its annihilator is the full sinkhole span. PASS/LOCAL.
+3. All-sinkhole case: no exponent jump, so \(\mathcal L=0=\ker\beta_f\). PASS/LOCAL.
+4. Full orientation from \(\mathcal L\) alone fails because the carrier type is q-independent. FAIL/CLOSED.
+5. Full arbitrary pair-morphism functoriality is not claimed; isomorphism covariance is sufficient for the present intrinsicity statement. OPEN/NOT LOAD-BEARING.
+6. Absolute minimality/coarseness is not established.
+
+Literature control: Blumer–Quadrelli–Weigel define oriented pro-\ell RAAGs from oriented graphs and give the canonical orientation as 1 on ordinary vertices and \(\lambda(1)\) on special vertices; this supports the declared special/sinkhole convention but does not state the project-specific finite-window carrier theorem. citeturn1view0
+
+Classification:
+- q-blind kernel/annihilator carrier: PASS / LOCAL;
+- q-non-reencoding: PASS / LOCAL;
+- smallest non-complete and multiple-sink checks: PASS / LOCAL;
+- full orientation from carrier alone: FAIL / CLOSED;
+- full \(\beta_f\) reconstruction: OPEN / NOT LOAD-BEARING;
+- arbitrary morphism-level functoriality: OPEN / NOT LOAD-BEARING;
+- absolute minimality: OPEN / NOT AUTHORIZED;
+- graph-directed incidence refinement: OPEN.
+
+Detailed audit: research/RP3_NONREENCODING_AUDIT_2026-10-02.md
