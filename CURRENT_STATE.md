@@ -2172,3 +2172,10 @@ Detailed audit: research/PAPER4_QPOS_HIGHER_LAYER_AUDIT_2026-10-02.md.
 For standard odd-p Demushkin q_D=p^a>0, H_2(D,Z_p)=0 because the one-relator exponent-sum boundary is multiplication by p^a. Thus the untwisted q=0 E2 transgression source does not exist in q>0. In the stress extension z^{p^s}=r_D, the untwisted H_1/coinvariant extension class lies in Ext^1_{Z_p}(Z/p^a,Z_p) and is p^s mod p^a (up to convention), so it saturates for s>=a. Therefore the untwisted E2 homological layer is FAIL/CLOSED for deep q>0 tails. The next legitimate target is genuinely nonabelian relation-module/Zassenhaus data; a twisted-coefficient replacement is a separate OPEN pre-check, not a continuation of E2.
 
 Detailed audit: research/PAPER4_E2_QPOS_HOMOLOGY_CORRECTION_2026-10-02.md.
+
+
+## 2026-10-02 — Q>0 ORDINARY ZASSENHAUS GRADED BOUNDARY
+
+The stress model z^{p^s}=r_D has p-Zassenhaus initial form equal to the degree-2 Demushkin commutator form, independent of s. The odd-p Schmidt/Gärtner mildness criterion applies with U=span{x_i}, V=span{z}, so the ordinary mod-p associated graded is controlled by that same quadratic initial form. Thus the ordinary associated-graded detector is FAIL/CLOSED for recovering s. This does not close full finite-window recovery; the remaining target is intrinsic integral p-adic Magnus/relation-module information beyond the mod-p graded object.
+
+Detailed audit: research/PAPER4_QPOS_ZASSENHAUS_GRADED_STRESS_AUDIT_2026-10-02.md.
