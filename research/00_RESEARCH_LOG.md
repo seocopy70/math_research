@@ -944,3 +944,24 @@ Detailed audit:
 research/PAPER3_MIXED_DEMUSHKIN_PAIR_DESCENT_NATURALITY_AUDIT_2026-10-02.md
 
 Next authorized action: formalize and independently verify the projective mixed-Fox covariance under extension-window isomorphism, Nielsen/generator change, relation-generator gauge, relator conjugation, and mixed maximal-ideal truncation. No W_11/W_12, large Fox, 45-dimensional, or Paper 2 reproof computation.
+
+
+## 2026-10-02 — MIXED FOX NATURALITY / REDUNDANCY FINAL DECISION
+
+The remaining Mixed Fox naturality attack was completed at the intrinsic scope.
+
+Critical correction: the earlier q=N_k case was vacuous. In the standard odd-p Demuškin family q=p^s or 0, whereas N_k=p^{k-1}+1 is not a p-power. The genuine cases are q<p^k, where q is detected below N_k, and q>=p^k (or q=0), where the q-term is invisible through the window and the truncated window collapses.
+
+For filtered finite-pair isomorphisms, Demuškin reconstruction plus classification gives extension-window isomorphism, and the projective mixed Fox construction is invariant under induced group-algebra transport, Fox/Lyndon relation-module equivalence, Nielsen Jacobians, relation-generator gauge, relator conjugation, and mixed truncation.
+
+Status:
+- pair -> extension-window reconstruction: PASS/CLOSED;
+- pair-isomorphism covariance: PASS/CLOSED;
+- finite-pair -> projective Mixed Fox object: PASS/LOCAL;
+- arbitrary non-invertible Pair_k functoriality: OPEN, not load-bearing for intrinsic isomorphism-class well-definedness;
+- Mixed Fox as genuinely new recognition carrier: FAIL/CLOSED — REDUNDANT;
+- genuinely new carrier: OPEN.
+
+The non-redundancy closure is category-relative: at fixed rank in the standard Demuškin family, the finite window carries the same q-regime information already used by the frozen orientation/Kummer selector. Recovering chi mod p^k through q/classification is not a new bridge. This closes only the Mixed Fox new-recognition branch, not the validity of the finite projective Fox object itself.
+
+Important: do not reopen q=N_k, W_11/W_12, large Fox scans, or Paper 2. Next authorized action is a genuinely different finite-input carrier search, beginning with Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop.
