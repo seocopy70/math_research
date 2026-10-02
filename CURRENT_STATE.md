@@ -1,3 +1,17 @@
+## 2026-10-02 — CONVENTION CORRECTION AUDIT COMPLETED
+
+Independent source verification confirms the controlling convention: special edge (v,w) has ordinary origin v, special terminus w, and wvw^{-1}=v^{1+q}. Thus the q-torsion direction is v, the origin, not the special/sinkhole terminus. citeturn1search0turn1search1
+
+Corrected RP-3 state:
+[
+G^{ab}cong(mathbf Z/q)^Ooplusmathbf Z_p^{Vsetminus O},
+qquad
+mathcal L(W_q,W_{q+1})^perp=operatorname{span}(O).
+]
+The prior span(S) statement is superseded. The carrier remains q-blind/intrinsic locally, but it recovers the origin/torsion sector; a separate origin-to-sinkhole bridge is required for any sinkhole/orientation conclusion.
+
+RP-5 remains PASS / LOCAL for same-abelianization separation, with its existing O/S notation already convention-correct. Grassmannian extraction remains FAIL / CLOSED.
+
 ## 2026-10-02 — RP-5 GRAPH-SENSITIVE SEPARATION
 
 RP-5 now has a decisive local separation result. Two four-vertex specially oriented graphs with no ordinary edges, A=(a,s),(b,s) and B=(a,s),(b,t), have isomorphic abelianizations but different first-q filtered extension defects. The q-power preimage of the defect image recovers the origin plane; in this control family the degree-2 centralizer recovers the special plane; the cross q-defect has rank 1 versus rank 2. Thus criterion B is PASS / LOCAL. Full incidence reconstruction remains OPEN / LOAD-BEARING.
