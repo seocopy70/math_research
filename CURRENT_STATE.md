@@ -1260,3 +1260,40 @@ The remaining load-bearing issue is linear-combination cancellation. Quadrelli's
 Classification: global W_2 ordinary quotient = **FAIL / CLOSED as primary abstraction**; exact-depth J_m = **PASS / LOCAL**; ordinary/special separation = **PASS / LOCAL**; RP-5 strengthened separation = **PASS / LOCAL**; q-blind local definition = **PASS / LOCAL**; linear-combination purity = **OPEN / LOAD-BEARING**; arbitrary incidence reconstruction = **OPEN**.
 
 Detailed record: research/PAPER4_EXACT_DEPTH_CENTRALIZER_JUMP_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — PAPER 4 JOINT (P_q,B_q) GATE CLOSED AS A NOVEL ORIGIN CARRIER
+
+The proposed joint restricted-power/extension-defect carrier was pursued through the complete 3-vertex, 2-generator, and non-abelian common-sink controls, followed by a structural reduction.
+
+Define, with the span correction required by nonlinearity,
+\[
+C_q=\operatorname{Span}_{\mathbf F_p}\{u\in L_1:P_q(u)\in\Delta_q\},
+\]
+where \(\Delta_q\) is the intrinsic degree-q extension-defect image.
+
+The local tests survive:
+- complete one-sink model: \(C_q=\mathbf F_p\bar s\);
+- 2-generator special-edge model: \(C_q=\mathbf F_p\bar v\);
+- common-sink non-abelian-origin model: \(C_q=\operatorname{span}\{\bar y,\bar z\}\).
+
+However, the structural role of \(P_q\) is now clear. Under the corrected literature convention, special edge \((v,w)\) has ordinary origin \(v\), special terminus \(w\), and \(wvw^{-1}=v^{1+q}\). Hence the origin sector is exactly the q-torsion sector in the abelianization. Since the degree-q extension defect lies in the commutator filtration, its image is invisible in abelianization; the condition \(P_q(u)\in\Delta_q\) therefore forces the q-th power of the abelianized \(u\) to vanish, hence \(u\) lies in the origin/torsion sector. Conversely every special-edge origin contributes its q-power to the degree-q defect. Thus the span-preimage is the same origin-sector recognition already supplied by the q-blind adjacent-window/Bockstein carrier, on the declared specially oriented RAAG class.
+
+Therefore:
+\[
+\boxed{P_q\text{-part = redundant recognition/cross-check, not a new carrier.}}
+\]
+
+The extension-defect component remains genuinely graph-sensitive: RP-5 separates two same-abelianization four-vertex graphs by rank 1 versus rank 2 of the cross q-defect. Hence the only potentially new mathematical content is an **origin-conditioned filtered defect**: first recognize the origin sector by the existing intrinsic carrier, then extract the degree-q extension defect relative to that sector without assuming \(W_q\) is abelian and without using the failed Grassmannian support/intersection construction.
+
+Classification:
+- \((P_q,B_q)\) local origin recognition: PASS / LOCAL;
+- \((P_q,B_q)\) as a novel independent origin carrier: **FAIL / CLOSED — REDUNDANT WITH RP-3**;
+- RP-5 same-abelianization separation: PASS / LOCAL;
+- origin-conditioned degree-q defect for arbitrary graphs: **OPEN / LOAD-BEARING**;
+- arbitrary directed-incidence reconstruction: OPEN / LOAD-BEARING;
+- full orientation reconstruction: OPEN.
+
+Detailed audit: research/PAPER4_JOINT_POWER_EXTENSION_CARRIER_GATE_2026-10-02.md.
+
+Decision: do not continue treating \((P_q,B_q)\) as one new invariant. The active Paper-4 problem is now sharply reduced to a canonical origin-conditioned filtered defect. If that object cannot be defined without a splitting/presentation choice, this branch should be closed as a carrier failure.
