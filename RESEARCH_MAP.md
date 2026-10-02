@@ -4694,3 +4694,19 @@ The remaining load-bearing issue is linear-combination cancellation. Quadrelli's
 Classification: global W_2 ordinary quotient = **FAIL / CLOSED as primary abstraction**; exact-depth J_m = **PASS / LOCAL**; ordinary/special separation = **PASS / LOCAL**; RP-5 strengthened separation = **PASS / LOCAL**; q-blind local definition = **PASS / LOCAL**; linear-combination purity = **OPEN / LOAD-BEARING**; arbitrary incidence reconstruction = **OPEN**.
 
 Detailed record: research/PAPER4_EXACT_DEPTH_CENTRALIZER_JUMP_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — D2 CRITICAL SCOPE CORRECTION
+
+The global architecture is corrected at the D2/D3 boundary. The D1 depth-signature route and the first coefficient-valued incidence quotient are closed, but the **full nonlinear/restricted finite-extension route remains open**. A first coefficient projection cannot be used as a no-go theorem for the full extension. Also, the isolated-ordinary linear-functional family does not by itself establish non-uniqueness of the canonical orientation because the canonical orientation axioms were not checked for the alternatives.
+
+Accordingly, the current frontier is not “all finite-window orientation recovery fails.” It is:
+\[
+\text{D1 depth} \;\Rightarrow\; \text{FAIL/CLOSED},
+\qquad
+\text{first coefficient incidence} \;\Rightarrow\; \text{FAIL/CLOSED},
+\qquad
+\text{full nonlinear extension} \;\Rightarrow\; \text{OPEN}.
+\]
+
+The separate same-window class-level no-go remains a distinct boundary for the unrestricted un-oriented input. No new carrier family is authorized; only a target-first, intrinsically defined nonlinear extension invariant may be tested next.
