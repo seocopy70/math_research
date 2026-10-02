@@ -133,3 +133,102 @@ The third condition is now the cleanest possible bottleneck.
 Do not return to 2-generator normalization or search for a new carrier.
 
 The next decisive calculation is to construct the smallest **overlapping multi-sink model**, where two sinkholes share one or more origin sectors, and determine whether the intrinsic q-power targets remain separable. If an accidental rank-one direction appears, T1 closes. If not, the next task is the q-blind intrinsic construction of the target set S_q itself.
+
+
+## 9. INTRINSIC q-POWER TARGET RECOVERED FROM THE ADJACENT WINDOW
+
+The load-bearing target-definition question is resolved at the level needed by the scale argument.
+
+Let an admissible adjacent window be
+\[
+E:\qquad 1\to A\to Y\xrightarrow{\pi}X\to1,
+\]
+with \(X=W_q,\;Y=W_{q+1}\) in the target class. Define \(e(X):=\exp(X)\). This is an intrinsic invariant of the finite group \(X\), so the construction does not insert the parameter \(q\).
+
+For the Zassenhaus window \(W_q=G/D_q\), \(D_1^q\le D_q\), hence \(\exp(W_q)\mid q\). In the declared specially oriented RAAG class the degree-one quotient contains elements of exact \(q\)-height, so at the relevant jump \(e(W_q)=q\).
+
+Put \(L(X):=X/\Phi(X)\cong D_1/D_2\) and \(A=\ker\pi\). Define
+\[
+\boxed{
+P_E:L(X)\longrightarrow A,\qquad
+P_E(\bar x)=\tilde x^{\,e(X)}
+}
+\]
+where \(\tilde x\in Y\) is any lift of \(x\in X\).
+
+### 9.1 Well-definedness
+
+If \(\tilde x'=\tilde x a\) with \(a\in A=D_q/D_{q+1}\), then \(A\) is central in \(Y\), \(A\) has exponent \(p\), and \(p\mid e(X)=q\). Hence \((\tilde x a)^q=\tilde x^q\).
+
+If \(x'=xd\) with \(d\in\Phi(X)=D_2/D_q\), choose a lift of \(d\) in \(D_2/D_{q+1}\). The Zassenhaus restricted-Lie \(p\)-operation gives the canonical iterated map
+\[
+L_1=D_1/D_2\longrightarrow L_q=D_q/D_{q+1},
+\qquad
+\bar x\longmapsto \bar x^{[q]},
+\]
+and by definition \(\bar x^{[q]}=x^qD_{q+1}\). Therefore changing the representative modulo \(D_2\) does not change the class.
+
+The underlying structural fact is standard: the Zassenhaus quotients \(D_n/D_{n+1}\) form a restricted \(\mathbf F_p\)-Lie algebra and the \(p\)-operation is induced by group \(p\)-th powers. citeturn6search12turn6search14
+
+Hence \(P_E\) is a well-defined intrinsic map determined by the adjacent finite pair.
+
+### 9.2 No hidden basis or generator choice
+
+The construction uses only the finite group \(X\), its Frattini quotient, the finite central kernel \(A=\ker(Y\to X)\), the intrinsic exponent \(e(X)\), and the group power operation in \(Y\). No generator, section, presentation, basis, orientation, or displayed \(q\) occurs in the definition.
+
+Thus the previous bottleneck has a concrete answer:
+\[
+\boxed{
+P_E(\bar x)=\tilde x^{\,\exp(X)}\in\ker(Y\to X).
+}
+\]
+
+### 9.3 Relation to the local targets
+
+In the 2-generator special-edge model,
+\[
+P_E(\bar v)=\overline{v^q},\qquad
+B_q(\bar w,\bar v)=\overline{v^q}.
+\]
+
+In the common-sink model,
+\[
+P_E(\bar v_i)=\overline{v_i^q},\qquad
+B_q(\bar w,\bar v_i)=\overline{v_i^q}.
+\]
+
+Therefore the scale equation is intrinsic:
+\[
+B_q(u,\bar v)=P_E(\bar v).
+\]
+For \(u=\lambda\bar w\), whenever \(P_E(\bar v)\ne0\),
+\[
+\lambda=1.
+\]
+
+### 9.4 Limitation
+
+This does **not** prove T1. It proves only that the required q-power target exists intrinsically. It does not yet prove accidental-direction exclusion, spanning/recognition of \(S_q\), or full adjacent-window naturality. Also, \(P_E\) need not be linear on arbitrary \(L_1\); it is the iterated restricted-power operation.
+
+## 10. Revised classification
+
+- intrinsic q-power target \(P_E\): **PASS / LOCAL**;
+- q-blind definition of \(P_E\) via \(\exp(X)\): **PASS / LOCAL**;
+- target equality with local extension defect: **PASS / LOCAL** in audited 2-generator/common-sink models;
+- scale fixing relative to \(P_E\): **PASS / LOCAL**;
+- overlapping multi-sink accidental direction: **OPEN / LOAD-BEARING**;
+- filtered-isomorphism invariance of \(S_q\): **OPEN / LOAD-BEARING**;
+- T1: **OPEN / LOAD-BEARING**.
+
+## 11. Immediate consequence
+
+The study is **not** returning to carrier hunting. The target-first chain is now
+\[
+W_q\leftarrow W_{q+1}
+\Longrightarrow O_q
+\Longrightarrow P_E
+\Longrightarrow S_q
+\Longrightarrow\omega_q.
+\]
+
+The next authorized attack is the smallest overlapping multi-sink configuration.
