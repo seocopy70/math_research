@@ -2871,3 +2871,43 @@ Authoritative classification:
 - RAAG: **CLOSED-AS-MAIN-ROUTE**.
 
 Detailed audit: research/PAPER4_QPOS_GATE_T_CRITICAL_SEPARATION_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — GATE T CRITICAL RE-AUDIT: MAP OBJECTION CORRECTED; NON-SPLITTING GAP REMAINS
+
+A critical review of the previous Gate-T proof triggered a mandatory independent re-audit.
+
+### Correction to the review itself
+For
+\[
+D=\langle x_1,\ldots,x_d\mid r_D\rangle,
+\qquad
+G_{s,a}=\langle z,x_1,\ldots,x_d\mid z^{p^s}=r_D\rangle,
+\]
+the map
+\[
+z\mapsto1,
+\qquad x_i\mapsto\bar x_i
+\]
+is well-defined and surjective onto \(D\): the defining relation of \(G_{s,a}\) maps to \(1=r_D\) in \(D\). Therefore the proposed claim that the “natural quotient map” cannot exist is **false**. The relative-window construction is not blocked at the map-existence level.
+
+### What the review correctly identifies
+The previous proof nevertheless overreached at the critical step. From
+\[
+z^{p^s}\in D_{p^s}(F)
+\]
+one cannot automatically infer
+\[
+\bar z^{p^s}\neq0\in D_{p^s}(G_{s,a})/D_{p^s+1}(G_{s,a}).
+\]
+The quotient relation may change the actual Zassenhaus filtration. Likewise, the statement that the surviving class is the defining generator of \(H^2(D,\mathbf F_p)\), and hence yields a nonsplit finite extension, needs an explicit finite-layer transgression/extension-class argument.
+
+### Result classification
+- canonical quotient \(G_{s,a}\twoheadrightarrow D\): **PASS / LOCAL**;
+- relative-window object definition: **PASS / LOCAL**;
+- deep-tail blindness through \(p^s\): **PASS / LOCAL** at the presentation/quotient level;
+- exact critical separation at \(p^s+1\): **OPEN / LOAD-BEARING**;
+- prior Gate-T PASS: **HISTORICAL / SUPERSEDED**.
+
+### Next authorized action
+Independently compute the actual finite Zassenhaus layer and extension class at \(n=p^s+1\). The task is verification of the existing Gate-T claim, not a new carrier search and not a Gate-U intrinsicity attack.
