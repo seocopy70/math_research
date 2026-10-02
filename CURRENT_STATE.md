@@ -1375,3 +1375,20 @@ Classification:
 - full orientation reconstruction: **OPEN**.
 
 Next authorized attack: construct a canonical relative extension-class quotient using \(O_n\) and intrinsic degree-2 bracket data, then test it first on the mixed ordinary/special model and RP-5. If a section/basis/presentation is unavoidable, close this carrier branch. Detailed audit: research/PAPER4_ORIGIN_CONDITIONED_DEFECT_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — ACTIVE T1 ATTACK: LOCAL-UNIFORM FINITE SIGNATURE
+
+The top-down T1 target has been sharpened using a literature-supported local mechanism. For a special edge, the 2-generator subgroup is locally uniform and its canonical orientation is structurally determined; this suggests recognizing special directions from an intrinsic finite 2-generator signature rather than from arbitrary q-activity. citeturn5search0turn0search0
+
+Candidate: let U_q=L_1/O_q. Define P_q as the classes admitting an intrinsic finite special-edge signature at the first nonzero extension-defect depth, with the q-defect normalized by the restricted-power origin class. If P_q equals the special-direction set and spans U_q, then omega_q is the unique functional taking value 1 on P_q.
+
+Current status:
+- T1 local-uniform signature: OPEN / LOAD-BEARING;
+- 2-generator / complete one-sink / common-sink checks: PASS / LOCAL;
+- accidental-direction exclusion: OPEN / LOAD-BEARING;
+- finite-window naturality: OPEN / LOAD-BEARING.
+
+Do not reopen J_q purity, Grassmannian, or search for unrelated carriers. The next authorized work is only the formal finite-signature definition and the accidental-direction/no-go test on the smallest multi-special models.
+
+Detailed audit: research/PAPER4_T1_LOCAL_UNIFORM_DIRECTION_AUDIT_2026-10-02.md.
