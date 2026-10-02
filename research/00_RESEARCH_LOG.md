@@ -1,3 +1,17 @@
+## 2026-10-02 — PAPER 4 T1 AFFINE-HULL GATE REFUTED / T1 CURRENT REALIZATION CLOSED
+
+The proposed final gate Aff(S_E)=omega_q^{-1}(1) fails for the current existential local-uniform signature.
+
+Separated two-sink graph: G=<a,b,s,t | sas^{-1}=a^(1+q), tbt^{-1}=b^(1+q)>. Modulo the origin sector O=span(a,b), U=span(s,t). Although omega_q(s)=omega_q(t)=1, u=s+t is accepted by the current signature because t commutes with a, so (st)a(st)^(-1)=a^(1+q) and B_q(u,a)=P_E(a). Hence u is in S_E but omega_q(u)=2 != 1 for odd p. Since s,t are also in S_E, Aff(S_E)=U and has codimension 0.
+
+This is stronger than the overlapping example, where (s+t)/2 happened to remain on omega_q=1. The separated model is a structural counterexample: local 2-generator recognition cannot constrain sink components invisible to the chosen origin.
+
+Classification: affine containment S_E subseteq omega_q^{-1}(1) = FAIL / CLOSED; codimension-one affine hull = FAIL / CLOSED; current T1 local-uniform realization = FAIL / CLOSED; intrinsic q-power target = PASS / LOCAL; Paper 4 overall = OPEN.
+
+No larger scan is authorized for this T1 branch. Any revival requires a materially different observable and a fresh pre-check.
+
+Detailed audit: research/PAPER4_T1_AFFINE_HULL_GATE_AUDIT_2026-10-02.md
+
 ## 2026-10-02 — PAPER 4 T1 OVERLAPPING MULTI-SINK RESULT / TARGET REFINEMENT
 
 The smallest overlapping multi-sink model was tested:
