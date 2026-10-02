@@ -284,3 +284,12 @@ No new graph/carrier family is authorized before this pre-check.
 - Nonlinear full-extension rigidity: **OPEN / LOAD-BEARING**.
 - Unrestricted Gate D: **FAIL / CLOSED**.
 - Paper 4: **OPEN**, but only if the next object passes the non-reencoding pre-check.
+
+
+## CORRECTION — 2026-10-02
+
+The separated two-sink discussion must respect the corrected oriented-RAAG convention: an absent edge does **not** imply commutation. Hence a generic mixed vector (alpha s+eta t) is not automatically q-flat against both origins; a component attached to the wrong origin can create a lower-degree obstruction.
+
+The coefficient-valued extension candidate still passes the rank-two scalar-normalization test. The decisive global failure remains the chordal-tree model, where the normalized coefficient equations have the nontrivial kernel direction (u-s-t) with nonzero orientation mass.
+
+Thus the chordal-tree obstruction, not the earlier separated-model calculation, is the controlling failure for the coefficient-valued carrier.
