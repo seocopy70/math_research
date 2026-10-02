@@ -1922,3 +1922,47 @@ New authoritative classification:
 - new carrier hunting: **STOP / NOT AUTHORIZED**.
 
 Important boundary: the result does not prove that an individual G lacks some finite detecting depth. It rules out a universal bound depending only on p and generator rank (already d=3 suffices).
+
+
+## 2026-10-02 — EXACT K–Z MATCHED-PAIR SEPARATION DEPTH
+
+The previous OPEN question “does the matched K–Z pair first separate at p^s+1?” is now resolved.
+
+For odd p,
+\\[
+G_s=\\langle x,y,z\\mid z^{p^s}=[x,y]\\rangle,
+\\qquad G_+=\\mathbf Z_p^3.
+\\]
+We already have
+\\[
+G_s/D_n(G_s)\\cong G_+/D_n(G_+)
+\\quad(n\\le p^s).
+\\]
+
+At n=p^s+1, use the explicit finite class-2 quotient
+\\[
+H_s=\\langle x,y,z\\mid x^{p^{s+1}}=y^{p^{s+1}}=z^{p^{s+1}}=1, z\\text{ central}, [x,y]=z^{p^s}\\rangle.
+\\]
+Here \\gamma_2(H_s)=\\langle z^{p^s}\\rangle, \\gamma_3(H_s)=1. Lazard/Jennings gives
+\\[
+D_{p^s+1}(H_s)=H_s^{p^{s+1}}\\gamma_2(H_s)^{p^s}=1.
+\\]
+Thus z^{p^s} survives in H_s/D_{p^s+1}(H_s), so it does not belong to D_{p^s+1}(G_s). Since [x,y]=z^{p^s}, the quotient G_s/D_{p^s+1}(G_s) is nonabelian, while every quotient of G_+=\\mathbf Z_p^3 is abelian. Therefore
+\\[
+G_s/D_{p^s+1}(G_s)\\not\\cong G_+/D_{p^s+1}(G_+).
+\\]
+
+Hence the exact first separation depth of this matched pair is
+\\[
+\\boxed{n_{\\rm sep}=p^s+1}.
+\\]
+
+Current authoritative classification:
+- matched cd=2/cd=3 windows for all n\\le p^s: **PASS / CLOSED**;
+- exact pairwise first separation at p^s+1: **PASS / CLOSED**;
+- uniform finite-depth detector on the full finitely generated free-by-Demushkin class: **FAIL / CLOSED**;
+- individual/group-dependent detector threshold: **OPEN / LOAD-BEARING**;
+- canonical intrinsic threshold parameter from extension data: **OPEN**;
+- new carrier search: **STOP / NOT AUTHORIZED**.
+
+The exact threshold proof is deliberately independent of any mildness/initial-form theorem: an explicit finite quotient witnesses survival of z^{p^s} at the critical depth. This closes the previous uncertainty about whether the first separation might occur later than p^s+1.
