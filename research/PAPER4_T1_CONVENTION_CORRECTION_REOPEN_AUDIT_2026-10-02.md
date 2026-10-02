@@ -131,3 +131,47 @@ No novelty claim is made.
 ## Stop condition
 
 Do not revive the old affine-hull theorem. The next authorized calculation is singular: the chordal-tree test for (mathcal S_E^{mathrm{flat}}). If it fails, construct the exact surviving kernel. If it passes, prove the spanning/uniqueness statement on the restricted class before introducing any larger nonlinear carrier.
+
+## 6. Chordal-tree computation and the mixed-ordinary obstruction
+
+The authorized chordal-tree test gives a useful local result.
+
+For the tree with ordinary origins (a,b) and special vertices (s,t,u), with special edges
+[
+a	o s,quad b	o t,quad a	o u,quad b	o u,
+]
+the corrected flatness condition eliminates the old shear direction. In (U=langle s,t,uangle):
+
+- testing against (a) forces the (t)-coefficient to vanish because ([t,a]) has lower degree, while the normalized q-defect is (alpha+gamma=1);
+- testing against (b) forces the (s)-coefficient to vanish, while the normalized q-defect is (eta+gamma=1).
+
+Hence (s,u,t) are all in the corrected normalized locus, and their affine hull is
+[
+alpha+eta+gamma=1,
+]
+which is exactly the canonical orientation hyperplane on this model.
+
+**Chordal-tree control: PASS / LOCAL.**
+
+But the mixed ordinary control now gives the decisive global boundary. Add an ordinary vertex (z) which has no special incidence with the recovered origin sector. Then (z) has no normalized q-flat witness: against a free/nonincident origin its commutator has lower degree, while against an ordinary commuting neighbor its q-defect is zero. Consequently the corrected normalized locus contains no (z)-direction, and its affine hull cannot equal the full hyperplane
+[
+omega_q^{-1}(1)
+]
+inside (U), because that hyperplane permits arbitrary (z)-coefficient.
+
+Thus the corrected affine-hull theorem is still **FAIL / CLOSED on the full orientation-rigid class OR**. The failure is no longer the erroneous separated (s+t) witness; it is the genuine invisibility of ordinary directions.
+
+This is a stronger and cleaner boundary: the full filtered local signature can recover the normalization on the special-incidence sector, but by itself it does not determine the zero extension on ordinary directions.
+
+## 7. Final T1 classification after correction
+
+- old separated (s+t) counterexample: **HISTORICAL / SUPERSEDED**;
+- corrected full-filtered local mechanism: **PASS / LOCAL** on separated/overlapping/rank-two/chordal-tree controls;
+- corrected chordal-tree affine reconstruction: **PASS / LOCAL**;
+- full affine equality on OR: **FAIL / CLOSED** because ordinary non-origin directions remain unconstrained;
+- special-incidence-sector reconstruction: **OPEN / LOAD-BEARING**;
+- full orientation recovery: **OPEN only through a richer nonlinear extension datum**.
+
+The result reinforces, rather than weakens, the D3 conclusion: after the local nonlinear profile has extracted the special-incidence normalization, the remaining problem is precisely the nonlinear mechanism needed to distinguish the zero ordinary sector from mixed directions. The normal-closure extension-action remains the authorized next structural object.
+
+No new blind carrier hunt is authorized.
