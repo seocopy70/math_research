@@ -1,3 +1,33 @@
+## 2026-10-02 — T1 CORRECTION COMPLETED / LOCAL PASS BUT GLOBAL AFFINE FAILURE RESTORED
+
+The corrected full-filtered normalized locus was tested to completion on the authorized controls.
+
+Chordal tree:
+[
+a	o s, b	o t, a	o u, b	o u
+]
+gives normalized directions (s,u,t) and hence affine hull
+[
+alpha+eta+gamma=1=omega_q^{-1}(1).
+]
+So the corrected lower-filtration + q-defect mechanism is **PASS / LOCAL** and the chordal-tree control no longer supplies a no-go.
+
+However, the mixed ordinary control supplies a genuine global obstruction. An ordinary non-origin direction (z) with no special incidence to the origin sector has no normalized q-flat witness: nonincident pairs have lower-degree commutator, while ordinary commuting pairs have zero q-defect. Thus the corrected normalized locus does not span arbitrary (z)-directions, whereas the full canonical hyperplane (omega_q^{-1}(1)) does.
+
+Therefore:
+- old separated (s+t) counterexample: **HISTORICAL / SUPERSEDED**;
+- corrected full-filtered local mechanism: **PASS / LOCAL**;
+- corrected chordal-tree affine reconstruction: **PASS / LOCAL**;
+- full affine-hull theorem on the orientation-rigid class OR: **FAIL / CLOSED**;
+- special-incidence-sector reconstruction: **OPEN / LOAD-BEARING**;
+- full orientation recovery: **OPEN**, requiring a richer nonlinear extension datum.
+
+This is a cleaner failure than the old one. The corrected local mechanism recovers the normalization on the special-incidence sector, but it does not encode the zero extension to ordinary directions or distinguish mixed directions carrying special mass from ordinary directions.
+
+The normal-closure conjugation action remains the authorized next structural object; the branch is not closed globally.
+
+Detailed audit: research/PAPER4_T1_CONVENTION_CORRECTION_REOPEN_AUDIT_2026-10-02.md.
+
 ## 2026-10-02 — T1 CONVENTION CORRECTION / AFFINE-HULL REOPENED
 
 A referee-level recheck found that the earlier separated two-sink counterexample to the T1 affine-hull theorem was invalid. The error was the assertion that the absent edge between (t) and (a) implied ([t,a]=1). In an oriented pro-(p) RAAG, absent edges impose no relation; only ordinary edges commute, while special edges impose (wuw^{-1}=u^{1+q}). The literature confirms this convention. citeturn15search0turn4search0
