@@ -1297,3 +1297,34 @@ Classification:
 Detailed audit: research/PAPER4_JOINT_POWER_EXTENSION_CARRIER_GATE_2026-10-02.md.
 
 Decision: do not continue treating \((P_q,B_q)\) as one new invariant. The active Paper-4 problem is now sharply reduced to a canonical origin-conditioned filtered defect. If that object cannot be defined without a splitting/presentation choice, this branch should be closed as a carrier failure.
+
+
+## 2026-10-02 — PAPER 4 ORIGIN-CONDITIONED DEFECT CANDIDATE: RAW PAIRING CLOSED, RESTRICTED EXTENSION OPEN
+
+The proposed raw pairing
+\[
+B_q|_{O\times L_1}:O\times L_1\to A_q
+\]
+is not intrinsically defined on the general nonabelian class: changing a degree-one lift by \(D_2\) changes the commutator by a term in \([D_2,D_1]\subseteq D_3\), which is not generally contained in \(D_{q+1}\). Thus the pairing cannot be promoted from the commuting/abelian control models to a general theorem without extra structure.
+
+The correct surviving object is the origin-conditioned restricted finite extension. For every adjacent window
+\[
+1\to A_n=D_n/D_{n+1}\to W_{n+1}\to W_n\to1,
+\]
+let \(O_n\subseteq L_1\) be the q-blind RP-3 origin carrier and \(H_n(O)=\pi^{-1}(O_n)\le W_n\). The canonical candidate is
+\[
+\mathfrak D_n(O):=[E_n|_{H_n(O)}],
+\]
+with its intrinsic extension-level commutator on the actual centralizer when defined. This removes the section/lift ambiguity at the level of the primary object.
+
+Control results: RP-5 separation remains rank 1 versus rank 2; mixed ordinary/special control shows ordinary-edge defect is zero while the special-edge defect survives. These are PASS / LOCAL only.
+
+Classification:
+- raw \(B_q|_{O\times L_1}\): **FAIL / CLOSED — not intrinsically defined as written**;
+- restricted origin extension \(E_n|_{H_n(O)}\): **PASS / LOCAL**;
+- extension-level centralizer defect: **PASS / LOCAL**;
+- canonical degree-one cross-defect extraction: **OPEN / LOAD-BEARING**;
+- arbitrary directed-incidence reconstruction: **OPEN / LOAD-BEARING**;
+- full orientation reconstruction: **OPEN**.
+
+Next authorized attack: construct a canonical relative extension-class quotient using \(O_n\) and intrinsic degree-2 bracket data, then test it first on the mixed ordinary/special model and RP-5. If a section/basis/presentation is unavoidable, close this carrier branch. Detailed audit: research/PAPER4_ORIGIN_CONDITIONED_DEFECT_AUDIT_2026-10-02.md.
