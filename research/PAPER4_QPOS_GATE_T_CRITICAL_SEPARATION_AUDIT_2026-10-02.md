@@ -511,3 +511,43 @@ Therefore the class-2/norm-action route is now the correct next finite-layer tes
 \]
 
 No Gate-U jump and no blind carrier search is authorized.
+
+
+---
+
+## 8. FINAL CORRECTION — VISIBILITY IS NOT IDENTIFIABILITY
+
+The previous sections are retained for provenance, but their claimed nonsplitting conclusion is superseded by the following correction.
+
+The class-2 quotient
+\\[
+H_s=\\langle z,u,v\\mid z\\text{ central},\\ z^{p^{s+1}}=1, u^{p^a}=1, v^{p^{s+1}}=1, [u,v]=z^{p^s}\\rangle
+\\]
+with \\(x_1\\mapsto u\\), \\(x_2\\mapsto v\\), and the remaining generators trivial, is a quotient of \\(G_{s,a}\\). Since \\(D_{p^s+1}(H_s)=1\\) while \\(z^{p^s}\\ne1\\), one rigorously obtains
+\\[
+z^{p^s}\\notin D_{p^s+1}(G_{s,a}).
+\\]
+Hence **critical-layer visibility = PASS / LOCAL**.
+
+But this does not identify the relative extension class. The naive scalar central extension test admits lift changes; specifically the \\(x_1^{p^a}\\) term can absorb a \\(p^s\\)-scalar defect after changing a lift by a \\(p^{s-a}\\)-power of the central kernel generator. Therefore the previous implication “surviving scalar layer + one-dimensional \\(H^2\\) = nonsplit finite extension” is not valid without an explicit coboundary quotient calculation.
+
+The correct decomposition is:
+
+1. **Visibility:** \\(z^{p^s}\\) survives the actual finite filtration — **PASS / LOCAL**.
+2. **Identifiability:** the finite relative extension class remains after all lift changes — **OPEN / LOAD-BEARING**.
+3. **Threshold:** \\(n_{\\rm sep}^{\\rm rel}(s)=p^s+1\\) — **OPEN / LOAD-BEARING** until (2) is proved.
+
+The next object is therefore the actual finite kernel
+\\[
+K_s=\\ker\\left(G_{s,a}/D_{p^s+1}(G_{s,a})\\to D/D_{p^s+1}(D)\\right),
+\\]
+its \\(D/D_{p^s+1}(D)\\)-action, the quotient by lift-change coboundaries, and the resulting module-valued extension class. A class-2/norm calculation is only a **CONDITIONAL reduction** after this kernel/action is established; it is not an independently authorized replacement for T1.
+
+**Authoritative classification:**
+- critical-layer survival: **PASS / LOCAL**;
+- scalar \\(H^2\\) nonsplitting shortcut: **FAIL / CLOSED**;
+- actual module-valued extension class: **OPEN / LOAD-BEARING**;
+- exact relative threshold: **OPEN / LOAD-BEARING**;
+- prior exact-threshold PASS: **HISTORICAL / SUPERSEDED**.
+
+No Gate-U jump and no blind carrier hunt is authorized.
