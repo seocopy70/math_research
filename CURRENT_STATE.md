@@ -2444,3 +2444,50 @@ The next authorized action is now sharply narrowed to the **module-valued finite
 
 Detailed audit:
 research/PAPER4_QPOS_GATE_T_CRITICAL_SEPARATION_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — GATE T CRITICAL-LAYER RE-AUDIT: VISIBILITY ≠ IDENTIFIABILITY
+
+The latest independent re-audit sharpens Gate T and supersedes any wording that treated critical-layer survival as a proof of relative non-splitting.
+
+For the certified q>0 stress family
+\\[
+G_{s,a}=\\langle z,x_1,\\ldots,x_d\\mid z^{p^s}=r_D\\rangle,
+\\qquad r_D=x_1^{p^a}[x_1,x_2]\\cdots[x_{d-1},x_d],\\qquad s>a,
+\\]
+the finite class-2 detector
+\\[
+H_s=\\langle z,u,v\\mid z\\text{ central},\\ z^{p^{s+1}}=1, u^{p^a}=1, v^{p^{s+1}}=1, [u,v]=z^{p^s}\\rangle
+\\]
+is a quotient of \\(G_{s,a}\\). Since \\(D_{p^s+1}(H_s)=1\\) and \\(z^{p^s}\\ne1\\),
+\\[
+z^{p^s}\\notin D_{p^s+1}(G_{s,a}).
+\\]
+Thus the critical scalar layer is genuinely visible:
+**PASS / LOCAL**.
+
+However, visibility of \\(z^{p^s}\\) is not the same as nontriviality of the relative extension class. The earlier scalar \\(H^2\\)-argument is **FAIL / CLOSED** as a proof of nonsplitting because the torsion term \\(x_1^{p^a}\\) permits lift changes such as \\(x_1\\mapsto t^{-p^{s-a}}x_1\\), which can absorb a naive scalar defect. This is a coboundary mechanism, not a proof that the full finite extension splits.
+
+Therefore Gate T is now decomposed into:
+
+- **Visibility:** \\(z^{p^s}\\notin D_{p^s+1}(G_{s,a})\\) — **PASS / LOCAL**;
+- **Identifiability:** whether the finite relative extension class is nonzero after all lift-change coboundaries — **OPEN / LOAD-BEARING**;
+- exact relative threshold \\(n_{\\rm sep}^{\\rm rel}(s)=p^s+1\\) — **OPEN / LOAD-BEARING**;
+- prior exact-threshold PASS — **HISTORICAL / SUPERSEDED**.
+
+The correct finite-layer question is the actual kernel and its quotient action:
+\\[
+1\\to K_s\\to G_{s,a}/D_{p^s+1}(G_{s,a})
+\\to D/D_{p^s+1}(D)\\to1,
+\\]
+followed by the lift-change/coboundary quotient and only then the extension class
+\\[
+[\\delta_s]\\in H^2(Q_s,K_s)
+\\]
+(or the appropriate first nonabelian quotient if the kernel is not adequately captured abelianly).
+
+Class-2/norm-action is therefore **CONDITIONAL**, not the uniquely justified mathematical object: first compute the actual finite kernel, its \\(Q_s\\)-action, and the extension class; only then project to class-2/norm data if that projection preserves the obstruction.
+
+This correction preserves the top-down program and does not reopen blind carrier hunting.
+
+Next authorized task: **T1 actual finite-kernel / module-valued extension-class computation at \\(n=p^s+1\\)**, with visibility and identifiability kept logically separate.
