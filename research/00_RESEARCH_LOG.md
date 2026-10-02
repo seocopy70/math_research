@@ -3235,3 +3235,12 @@ Updated classification:
 - exact (n_{\\mathrm{sep}}^{rel}(s)=p^s+1): **OPEN / LOAD-BEARING**.
 
 Next authorized computation remains the minimal (p=3,s=2,a=1,d=2,n=10) finite-kernel/module calculation, not a new carrier search.
+
+
+## 2026-10-03 — Gate T post-read scope correction
+
+Gate T is currently an extension-depth identifiability problem with a fixed Demushkin parameter a, not an orientation-recovery theorem. A successful relative-threshold result would not by itself recover orientation. The K-Z/F1/E2 chain is retained as abelianized/homological background rather than a new orientation carrier.
+
+Palaisti arXiv:2610.00021 was independently verified on the official arXiv record; the record states submission on 31 Aug 2026. It is background only and does not prove the present finite-window splitting question.
+
+Authorized computation: minimal case p=3, s=2, a=1, d=2, n=10. First compute the actual finite kernel, its mod-p abelianization and quotient action, and the full lift-change subspace. A zero diagnostic result is not a splitting certificate.
