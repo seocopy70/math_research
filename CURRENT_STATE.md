@@ -1,3 +1,26 @@
+## 2026-10-02 — SPECIAL ORIENTED PRO-p RAAG SELECTED AS ADJACENT OPEN GATE
+
+Literature-first search identifies special oriented right-angled Artin pro-p groups as the strongest current adjacent-class candidate. For special digraphs, the canonical orientation is uniquely characterized by the Kummerian lifting property and is given by 1+q on sinkholes and 1 elsewhere. The class contains independent finite graph structure in addition to the p-power q parameter. citeturn3search0turn5search0
+
+The candidate finite-window mechanism is:
+degree-2 relation structure -> underlying graph;
+degree-q correction in [w,u]=u^q -> special directed/sinkhole data and q;
+canonical orientation -> [theta mod p^k].
+The same N_k=p^{k-1}+1 threshold is plausible but remains CONDITIONAL.
+
+New load-bearing gate:
+**intrinsic directed/sinkhole separation from the abstract finite window**.
+Presentation-dependent relator reading is not admissible. An intrinsic relation-module/extension-class descent is required.
+
+Classification:
+- special oriented pro-p RAAG orientation rigidity: PASS/LOCAL;
+- non-q structural richness: PASS/LOCAL;
+- candidate threshold: CONDITIONAL;
+- full finite-window orientation identifiability: OPEN;
+- intrinsic directed/sinkhole separation: OPEN/LOAD-BEARING.
+
+Detailed gate: research/PAPER3_ORIENTATION_RIGID_ADJACENT_RAAG_GATE_2026-10-02.md.
+
 ## 2026-10-02 — ADMISSIBLE CATEGORY CRITIQUE / ADJACENT-CLASS ORIENTATION-RIGIDITY BOUNDARY
 
 The proposed A–D admissible-category sketch was audited. It is useful as a design checklist but is not yet a valid minimality category: functoriality + finiteness + intrinsicity do not prevent target re-encoding, and quotient closure alone does not define a coarsest realization. A factorization preorder on explicitly non-reencoding realizations is required.
