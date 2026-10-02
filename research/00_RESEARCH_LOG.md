@@ -1610,3 +1610,19 @@ RP-5 produced a four-vertex same-abelianization separation pair. Graph A has spe
 Important convention correction: in the audited literature, a special edge (v,w) has ordinary origin v, special terminus w, and relation w v w^{-1}=v^(1+q). Thus v is q-torsion in abelianization and w is free. Earlier RP-3 text identifying the torsion/annihilator sector with the special/sinkhole vertices is reversed under this convention and requires a separate correction audit.
 
 Detailed audit: research/RP5_NONABELIAN_EXTENSION_CLASS_AUDIT_2026-10-02.md
+
+
+## 2026-10-02 — CONVENTION CORRECTION AUDIT COMPLETED
+
+Independent literature verification confirms that for a special edge (v,w), v is the ordinary origin, w is the special terminus, and wvw^{-1}=v^{1+q}. Hence v^q=1 in abelianization. The earlier RP-3 use of the special/sinkhole set as the torsion/annihilator sector was reversed.
+
+Correction consequence:
+- O = ordinary origins of special edges = q-torsion directions;
+- S = special termini/sinkholes = non-torsion directions from the special-edge relation;
+- G^ab = (Z/q)^O ⊕ Z_p^(V\O);
+- at the first adjacent jump, the exponent-jump annihilator recovers span(O), not span(S).
+
+The RP-3 q-blind carrier architecture survives locally, but any bridge from the recovered origin sector to the special/sinkhole sector is a separate theorem and is not assumed. RP-5 is unaffected because its current notation already uses O for origins and S for special termini.
+
+Classification: CONDITIONAL CORRECTION / SUPERSEDES EARLIER LABELS.
+Detailed audit: research/CONVENTION_CORRECTION_AUDIT_2026-10-02.md.
