@@ -2587,3 +2587,23 @@ Classification:
 Next authorized action: define the smallest gauge-invariant truncation of the full transgression/relation object and test finite-window factorization. If no scalar survives the gauge quotient without reintroducing q or the orientation, close this q>0 realization route.
 
 Detailed audit: research/PAPER4_QPOS_HIGHER_LAYER_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — CRITICAL E2 q>0 HOMOLOGY CORRECTION
+
+A decisive correction was made to the q>0 gate. The untwisted q=0 E2 transgression source H_2(D,Z_p) does not persist for a standard Demushkin quotient with q_D=p^a>0. Using the one-relator Fox/cellular boundary, the exponent-sum vector is (p^a,0,...,0), so multiplication by p^a on Z_p is injective and H_2(D,Z_p)=0. For q=0 the exponent-sum vector is zero and H_2(D,Z_p)=Z_p.
+
+Therefore the previously proposed untwisted E2 transgression class cannot be continued to q>0: its source is zero. For the stress presentation z^{p^s}=r_D, the untwisted five-term sequence identifies (N^{ab})_D with ker(H_1(G)->H_1(D)); the associated rank-one abelian extension is classified on the quotient torsion summand by Ext^1_{Z_p}(Z/p^a,Z_p)=Z/p^a, and the relation gives class p^s mod p^a (up to sign/unit convention). Hence for s>=a the entire untwisted H_1/coinvariant extension layer is already saturated and cannot distinguish s>a.
+
+Reclassification:
+- untwisted E2 homological/transgression layer for q>0, s>a: **FAIL / CLOSED**;
+- pure abelianization detector: **FAIL / CLOSED**;
+- abelian H_1-extension class: **FAIL / CLOSED for s>a**;
+- BBG gauge warning: **PASS / LOCAL** only;
+- genuinely nonabelian higher relation data: **OPEN / LOAD-BEARING**;
+- twisted/dualizing-coefficient replacement: **OPEN / NOT YET DEFINED**;
+- finite-window factorization of a new nonabelian object: **OPEN**.
+
+This replaces the previous wording that 'q>0 higher filtered E2' remained open: the untwisted E2 route is now structurally exhausted. Any continuation must be a genuinely new nonabelian relation object, or a separately justified twisted-coefficient construction that passes a fresh pre-check.
+
+Detailed audit: research/PAPER4_E2_QPOS_HOMOLOGY_CORRECTION_2026-10-02.md.
