@@ -1,3 +1,22 @@
+## 2026-10-02 — FULL-ORIENTATION COARSE REALIZATION BOUNDARY
+
+T−1/T0 are closed at the declared standard odd-p fixed-rank Demuškin scope. The next attack asked for the coarsest intrinsic realization of the full target [χ_G mod p^k], rather than the weaker selector/recognition predicate.
+
+A target-cardinality calculation gives a sharp information bound. For q=0 or q=p^s with s≥k, χ_k=1. For 1≤s<k, the target values are (1-p^s)^(-1) mod p^k, and these are pairwise distinct. Hence the full target has exactly k values. Any full-orientation carrier determined by W_k must therefore have at least k isomorphism classes; an F_p-vector-space carrier must have dimension at least ceil(log_p k). In the active p=3 case, the frozen 1D cup-line cannot encode the full orientation for k≥4. It remains a valid recognition/selector carrier, not a full orientation carrier.
+
+The audited Demuškin window reconstruction yields an exact k-class defect-index carrier: read the first q-dependent Zassenhaus relation defect degree p^s for s<k, and use one stable symbol for q=0 or q≥p^k. This carrier reaches the information lower bound and factors to χ_k by the canonical formula. However, at the present standard-family scope it is classification-equivalent to q and therefore does not constitute a genuinely new theorem.
+
+Classification:
+- target cardinality |Ω_k|=k: PASS/CLOSED;
+- universal carrier lower bound: PASS/CLOSED;
+- vector-space dimension lower bound: PASS/CLOSED;
+- exact defect-index realization: PASS/LOCAL;
+- full-orientation factorization through defect index: PASS/LOCAL;
+- genuinely new coarsest carrier theorem: FAIL/CLOSED — classification re-encoding.
+
+Detailed audit: research/PAPER3_TOP_DOWN_FULL_ORIENTATION_COARSE_REALIZATION_AUDIT_2026-10-02.md
+
+Immediate next gate: adjacent-class/general-target test. Do not reopen Mixed Fox, O_k, q=N_k, W_11/W_12, Paper 2, or the frozen cup-line proof. A new branch must first pass Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop.
 ## 2026-10-02 — TOP-DOWN T−1/T0 CLOSURE: INTRINSIC DEMUŠKIN ORIENTATION IS NOW IDENTIFIED
 
 The target-identification defect found in the first top-down T0 attempt is repaired by an explicit literature theorem.
