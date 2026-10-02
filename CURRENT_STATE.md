@@ -1,3 +1,24 @@
+## 2026-10-02 — ADMISSIBLE CATEGORY CRITIQUE / ADJACENT-CLASS ORIENTATION-RIGIDITY BOUNDARY
+
+The proposed A–D admissible-category sketch was audited. It is useful as a design checklist but is not yet a valid minimality category: functoriality + finiteness + intrinsicity do not prevent target re-encoding, and quotient closure alone does not define a coarsest realization. A factorization preorder on explicitly non-reencoding realizations is required.
+
+A critical correction was also recorded: \\(\bigoplus_{n\le N_k}\operatorname{gr}_n(G)\\) is the associated graded Zassenhaus object, not an abelianization. If used as a carrier, degree labels/operations must be retained. Likewise, the earlier vector-space bound \\(p^{\dim V}\ge k\\) requires the carrier observation to retain distinguishable elements/marked data; for bare vector spaces up to isomorphism it is false. The invariant lower bound \\(|\\operatorname{Iso}(C_k)|\\ge k\\) remains valid.
+
+The first adjacent-class test was then completed using the free pro-p class. Literature states that for a free pro-p group, every orientation \\(\\theta:F\\to1+p\\mathbb Z_p\\) is 1-cyclotomic, whereas an infinite Demuškin group has a unique 1-cyclotomic orientation. Therefore, if the input remains the underlying un-oriented finite window \\(W_k(G)\\), orientation is not even a single-valued invariant on the free-pro-p class. No carrier constructed solely from that input can recover an arbitrary orientation.
+
+Classification:
+- A–D as complete admissible-category definition: FAIL/CLOSED — insufficient to exclude re-encoding.
+- minimal-sufficiency analogy: PASS/LOCAL — factorization preorder only.
+- proposed X_ab terminology: FAIL/CLOSED — associated graded, not abelianization.
+- same-family graded-piece carrier as new theorem: FAIL/CLOSED — q-classification re-encoding.
+- chi-twisted cohomological carrier: FAIL/CLOSED — target-circular.
+- free-pro-p un-oriented orientation identifiability: FAIL/CLOSED — object-level non-identifiability.
+- orientation-rigidity prerequisite: PASS/LOCAL.
+
+Detailed audit: research/PAPER3_ADMISSIBLE_CATEGORY_AND_ADJACENT_CLASS_AUDIT_2026-10-02.md
+
+Immediate next gate: find an adjacent class with a unique/canonical orientation but without Demuškin q-classification, then test finite-window identifiability. No new same-family compression, Mixed Fox, O_k, q=N_k, W_11/W_12, Paper 2, or large computation is authorized.
+
 ## 2026-10-02 — FULL-ORIENTATION COARSE REALIZATION BOUNDARY
 
 T−1/T0 are closed at the declared standard odd-p fixed-rank Demuškin scope. The next attack asked for the coarsest intrinsic realization of the full target [χ_G mod p^k], rather than the weaker selector/recognition predicate.
