@@ -1,3 +1,13 @@
+## 2026-10-02 — CONVENTION CORRECTION / RP-3 LABEL SUPERSESSION
+
+The literature convention is now independently verified: special edge (v,w) means ordinary origin v, special terminus w, with wvw^{-1}=v^{1+q}. Hence v^q=1 in abelianization. citeturn1search0turn1search1
+
+The active RP-3 carrier conclusion is corrected from “sinkhole sector” to origin/torsion sector:
+[
+mathcal L(W_q,W_{q+1})^perp=operatorname{span}(O).
+]
+No origin-to-sinkhole identification is inferred. Any orientation bridge using the sinkhole set is therefore a separate open problem. RP-5 is already convention-consistent and its separation result is unchanged.
+
 ## 2026-10-02 — RP-3 Q-BLIND ADJACENT-WINDOW CARRIER: PASS/LOCAL
 
 The Bockstein branch now has a concrete q-blind intrinsic carrier for the declared specially oriented pro-p RAAG target.
