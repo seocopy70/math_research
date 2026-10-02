@@ -4851,3 +4851,22 @@ Detailed audit: research/PAPER4_F1_MINIMAL_THRESHOLD_AND_DEMUSHKIN_STRESS_AUDIT_
 ## Paper 4 — 2026-10-02 q>0 boundary update
 
 The q>0 branch was narrowed decisively. For standard odd-p Demushkin quotient q_D=p^a, H_2(D,Z_p)=0 in the untwisted coefficient system, so the q=0 E2 transgression carrier does not continue to q>0. The untwisted H_1/coinvariant extension layer saturates at q-depth a. The ordinary mod-p p-Zassenhaus associated graded of the stress model z^{p^s}=r_D is also blind to s because its initial relation is the degree-2 Demushkin commutator form; mildness follows from the odd-p Schmidt criterion in the stress model. The remaining authorized frontier is intrinsic integral p-adic Magnus/relation-module data strictly richer than the ordinary associated graded. Full finite-window factorization remains OPEN; no new arbitrary carrier hunt is authorized.
+
+
+## 2026-10-02 — CRITICAL REVIEW / q>0 BOUNDARY AND NEXT-GATE DISCIPLINE
+
+The submitted critical review was accepted with one scope correction. The q>0 untwisted E2 closure is structurally correct: for standard odd-p Demushkin q=p^a>0, H_2(D,Z_p)=0, so the q=0 transgression source does not continue. The untwisted H_1/coinvariant extension saturates at p^a in the stated stress presentation, and the ordinary mod-p Zassenhaus associated graded is blind to s at the candidate stress-model level.
+
+The phrase “only remaining candidate” is narrowed: intrinsic integral, gauge-invariant, nonabelian relation data is the **only remaining primary route currently authorized**, not an exhaustive list of all conceivable mathematics. Twisted/dualizing coefficients or other nonlinear cohomological objects remain logically possible but require a fresh independent pre-check and are not E2 continuations.
+
+New active gate:
+**P4-Q+ / INTEGRAL-NONABELIAN-DEFINITION = OPEN / LOAD-BEARING.**
+
+Before any computation, the exact object must be fixed and pass Object/Input/Functoriality/Gauge/Orientation-bridge/q-blindness/Separation/Novelty/Stop. In particular, presentation coefficients, relator choices, lifts, sections, conjugacy, Nielsen changes, unit scaling, and quotient/kernel automorphisms must be explicitly quotiented or shown irrelevant. The object must not insert q or orientation and must not merely re-encode a chosen presentation coefficient.
+
+Scope corrections:
+- q>0 untwisted H_1-extension saturation is **LOCAL to the stress presentation**, not a theorem for all free-by-Demushkin extensions;
+- ordinary mod-p associated-graded blindness is **LOCAL to the stress candidate** and does not imply full finite-window blindness;
+- universal impossibility for q>0 deep tails remains **OPEN**.
+
+Detailed audit: research/PAPER4_QPOS_CRITICAL_REVIEW_NEXT_GATE_2026-10-02.md.
