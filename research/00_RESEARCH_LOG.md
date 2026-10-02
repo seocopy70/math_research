@@ -965,3 +965,22 @@ Status:
 The non-redundancy closure is category-relative: at fixed rank in the standard Demuškin family, the finite window carries the same q-regime information already used by the frozen orientation/Kummer selector. Recovering chi mod p^k through q/classification is not a new bridge. This closes only the Mixed Fox new-recognition branch, not the validity of the finite projective Fox object itself.
 
 Important: do not reopen q=N_k, W_11/W_12, large Fox scans, or Paper 2. Next authorized action is a genuinely different finite-input carrier search, beginning with Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop.
+
+
+## 2026-10-02 — POST-PAPER-3 EXPLORATION EXTERNAL-VERIFICATION LEDGER
+
+A referee-style verification ledger was added as:
+`research/PAPER3_POST_EXPLORATION_EXTERNAL_VERIFICATION_LEDGER_2026-10-02.md`.
+
+Purpose: replace status-only closure language with an externally checkable evidence chain. The ledger explicitly records the equations/counterexamples/literature controls behind the post-Paper-3 carrier exploration.
+
+Key corrections and boundaries:
+- O_k: the factorization O_k -> C is exactly the quotient/cokernel universal property and is therefore tautological as a new theorem; the proposed universal C -> O_k with uniqueness is explicitly false via C=O_k⊕O_k and the two projections. General existence C -> O_k remains unproved and is not claimed.
+- Mixed Fox: explicit local identities are recorded, including D(grg^{-1})=chi(g)D(r), Fox/Lyndon relation-module differential, Nielsen/Jacobian covariance, relation-generator gauge, and preservation of m=(3,I). These establish the standard structural mechanism but not a project-specific finite-pair theorem by themselves.
+- Broad extension descent: explicit same-(Q,A) examples C9×C3 and the exponent-3 Heisenberg extension show that arbitrary (Q,A) does not determine E.
+- Demuškin restriction: the reconstruction is only within the standard odd-p fixed-rank family. The earlier q=N_k case is explicitly removed as impossible because q is p^s or 0 whereas N_k=p^{k-1}+1 is not a p-power. The genuine ranges are q<N_k and q>N_k (including q=0).
+- Novelty boundary: Mixed Fox is closed only as a genuinely new recognition carrier under the project's non-redundancy criterion. It is not claimed to be mathematically false. A direct Fox-to-chi theorem beyond q-classification would be a separate result and was not established.
+
+Publication discipline is also recorded: the open post-Paper-3 generalization search is independent of the frozen publication candidates and should not delay their submission.
+
+Detailed ledger: `research/PAPER3_POST_EXPLORATION_EXTERNAL_VERIFICATION_LEDGER_2026-10-02.md`.
