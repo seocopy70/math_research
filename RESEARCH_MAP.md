@@ -4773,3 +4773,32 @@ Therefore:
 This is a genuine finite-window negative boundary, but it is not a cd=3 no-go and does not prove that any individual \(G_s\) lacks a finite detecting window.
 
 Detailed audit: research/PAPER4_F1_KZ_SAME_WINDOW_P_ADIC_NO_GO_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — F1 K–Z ADAPTIVE THRESHOLD: POSITIVE LOCAL RESULT
+
+The K–Z family admits an explicit intrinsic adaptive finite-window recovery of the E2 valuation truncation.
+
+Since
+\[
+G_s^{ab}\simeq\mathbf Z_p^2\oplus\mathbf Z/p^s,
+\]
+and the Zassenhaus filtration is functorial under abelianization, for \(e=\lceil\log_p n\rceil\),
+\[
+(G_s/D_n(G_s))^{ab}
+\simeq
+(\mathbf Z/p^e)^2\oplus\mathbf Z/p^{\min(s,e)}.
+\]
+Taking \(n=p^m\) gives \(e=m\), so the torsion exponent intrinsically recovers \(\min(s,m)\). Since E2 gives \(v_p(\epsilon_s)=s\), the finite window recovers \(\min(v_p(\epsilon_s),m)\), including the vanishing/nonvanishing of \(\epsilon_s\bmod p^m\).
+
+The same-window lemma gives a matching lower-bound scale: if \(s<t<m\) and \(p^s\ge n\), then the depth-\(n\) windows agree while the \(m\)-truncations differ. Hence a uniform K–Z-family threshold for \(m\)-digit valuation information must exceed \(p^{m-1}\) up to the integer boundary. The construction \(n=p^m\) gives the correct exponential scale, but exact minimality is not proved.
+
+Classification:
+- adaptive K–Z valuation recovery: **PASS / LOCAL**;
+- intrinsic realization via finite-window abelianization: **PASS / LOCAL**;
+- lower-bound scale \(n>p^{m-1}\): **PASS / LOCAL**;
+- exact minimal threshold: **OPEN**;
+- general free-by-Demushkin finite-window factorization: **OPEN / LOAD-BEARING**;
+- orientation recovery from E2: **OPEN**.
+
+Detailed audit: research/PAPER4_F1_KZ_ADAPTIVE_THRESHOLD_AUDIT_2026-10-02.md.
