@@ -1,3 +1,33 @@
+## 2026-10-02 — ADJACENT CLASS SELECTED: SPECIAL ORIENTED PRO-p RAAG
+
+A literature-first adjacent-class search was completed. Free pro-p fails orientation rigidity at the object level, while locally-uniform/θ-abelian groups have canonical orientations but remain too close to a one-parameter p-power/q model. The stronger candidate is the class of **special oriented right-angled Artin pro-p groups**.
+
+Literature establishes that for a special digraph Γ and p-power q, the oriented pro-p RAAG has a canonical orientation
+\\[
+\\theta_\\Gamma(v)=1+q\\text{ on sinkholes},\\qquad 1\\text{ otherwise},
+\\]
+and that this is the unique orientation satisfying the Kummerian lifting property. Special/elementary-type digraphs are also characterized through 1-cyclotomicity and related Galois-theoretic properties. citeturn3search0turn5search0
+
+This class is materially richer than the Demuškin q-family because the finite defining digraph contributes independent combinatorial data. The finite-window problem naturally splits into:
+1. degree-two graph recovery;
+2. degree-q deformation recovery for special directed edges;
+3. canonical orientation reconstruction from the sinkhole support and q.
+
+For a relation \\([w,u]=u^q\\), the commutator term has Zassenhaus degree 2 while the q-power term has degree q. Thus the same candidate threshold \\(N_k=p^{k-1}+1\\) is structurally plausible: if q=p^s<p^k then q<N_k, while q>=p^k gives trivial orientation mod p^k. But this is only a mechanism, not yet a theorem.
+
+Critical load-bearing gate:
+**intrinsic directed/sinkhole separation from the abstract finite window.**
+The proof must not choose the original digraph or relator basis. If the argument requires such a choice, classify FAIL/CLOSED — presentation-level re-encoding. If it descends to an intrinsic relation-module/extension-class object, the branch remains OPEN toward a genuine finite-window orientation theorem.
+
+Classification:
+- special oriented pro-p RAAG orientation rigidity: PASS/LOCAL;
+- non-q structural richness: PASS/LOCAL;
+- candidate threshold N_k: CONDITIONAL;
+- full finite-window orientation identifiability: OPEN;
+- intrinsic directed/sinkhole separation: OPEN / LOAD-BEARING.
+
+Detailed gate: research/PAPER3_ORIENTATION_RIGID_ADJACENT_RAAG_GATE_2026-10-02.md.
+
 ## 2026-10-02 — ADMISSIBLE CATEGORY / ADJACENT-CLASS AUDIT
 
 The proposed A–D admissible-category plan was critically checked. It is not yet a category-level minimality theorem: a functor \\(F:\\mathrm{Dem}\\to\\mathrm{Fin}\\) can still encode target data, condition C is only a family-level nonconstancy condition, and quotient closure does not by itself produce a coarsest object. The correct abstraction is an explicitly specified factorization preorder on non-reencoding admissible realizations. Classical minimal sufficiency supports this factorization viewpoint only by analogy; it depends on a statistical model and is not directly transferable. citeturn2search0turn2search8
