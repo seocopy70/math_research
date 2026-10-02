@@ -2344,3 +2344,40 @@ Compute only the intrinsic class-2 data
 for the q>0 stress family at the candidate threshold scale. No broad carrier search and no raw Magnus/Fox scalar expansion is authorized.
 
 Detailed audit: research/PAPER4_QPOS_CLASS2_FACTOR_THROUGH_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — GATE T RESOLVED / RELATIVE THRESHOLD EXACT
+
+Gate T has been resolved in the **structured relative-window category** for the certified stress presentation
+\[
+G_{s,a}=\langle z,x_1,\ldots,x_d\mid z^{p^s}=r_D\rangle,
+\qquad q_D=p^a>0,
+\qquad s>a.
+\]
+Define
+\[
+W_n^{\mathrm{rel}}(G_{s,a})=
+\bigl(G_{s,a}/D_n(G_{s,a})\to D/D_n(D)\bigr).
+\]
+For every \(n\le p^s\), the relation term \(z^{p^s}\) is killed by the depth quotient, so the relative window is independent of the deep parameter. At \(n=p^s+1\), the cases separate: for \(t>s\), \(z^{p^t}\) is already killed and the relative extension splits; for \(s\), the surviving class \(z^{p^s}\) carries the defining Demuškin relation class, giving a nonzero projected extension class and hence a nonsplit extension.
+
+Thus
+\[
+\boxed{n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1.}
+\]
+
+This is a **PASS / LOAD-BEARING** threshold theorem for the structured relative-window category. It is not yet a theorem for the unmarked filtered group after forgetting the natural map to \(D/D_n(D)\), and it is not a universal theorem for arbitrary free-by-Demushkin extensions.
+
+Current authoritative state:
+- MAIN OBJECT: Demuškin / PD² finite-window threshold problem — **OPEN**;
+- fixed-depth uniform recovery: **FAIL / CLOSED**;
+- Gate O information no-go: **PASS / CLOSED**;
+- lower bound \(n_{\mathrm{sep}}\ge p^s+1\): **PASS / LOCAL**;
+- Gate T relative-window separation: **PASS / LOAD-BEARING**;
+- exact relative threshold: **PASS / LOAD-BEARING**;
+- unmarked finite-window separation at \(p^s+1\): **OPEN**;
+- universal q>0 free-by-Demushkin extension theorem: **OPEN**;
+- class-2 norm: **SIDE / PAUSED**;
+- RAAG: **CLOSED-AS-MAIN-ROUTE**.
+
+Detailed audit: research/PAPER4_QPOS_GATE_T_CRITICAL_SEPARATION_AUDIT_2026-10-02.md.
