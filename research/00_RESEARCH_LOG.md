@@ -2264,3 +2264,26 @@ Classification:
 - free-by-Demuškin finite-window successor: OPEN / CONDITIONAL.
 
 RAAG carrier search is HOLD/SUPPRESSED while this literature-first branch is tested. Detailed audit: research/PAPER4_FREE_BY_DEMUSHKIN_PD3_LITERATURE_AUDIT_2026-10-02.md.
+
+## 2026-10-02 — K–Z ORIGINAL CONSTRUCTION AUDIT / FINITE-WINDOW OBSTRUCTION TEST
+
+Kochloukova–Zalesskii, *Free-by-Demushkin pro-p groups*, Math. Z. 249 (2005), 731–739, was independently verified from a full-text mirror/search extract. Their Theorem 2 gives, for
+\[
+G_s=\langle x,y,z\mid z^{p^s}=[x,y]\rangle,
+\qquad N_s=\overline{\langle z\rangle}^{\,G_s},
+\qquad D=G_s/N_s\simeq\mathbf Z_p^2,
+\]
+that cd_p(G_s)=2, G_s is finitely generated, N_s is free pro-p of infinite rank, and the inflation maps \(H^2(S/N_s,\mathbf Z/p^n)\to H^2(S,\mathbf Z/p^n)\) are isomorphisms for all closed \(S\supseteq N_s\) and all n. citeturn0search25turn0search0
+
+The decisive finite-window observation is filtration-theoretic: the defining relator has initial Zassenhaus degree 2, namely \([x,y]\), while the correction \(z^{p^s}\) occurs at degree \(p^s\). Hence for every fixed window depth \(n\le p^s\), the relation is indistinguishable from \([x,y]=1\) in \(G_s/D_n(G_s)\). Thus the family \(G_s\) supplies finitely generated cd=2 free-by-Demushkin examples with an arbitrarily long low-degree finite-window regime in which the genuinely extension-specific correction is invisible.
+
+This does **not** yet prove a finite-window no-go for cd=3: we still need a cd=3 free-by-Demushkin family whose first n Zassenhaus windows agree with the same low-window model. Therefore the correct classification is not FAIL/CLOSED but a sharper boundary:
+- K–Z deep-tail invisibility phenomenon: **PASS / LOCAL**;
+- “K–Z alone proves finite-window cd detection impossible”: **FAIL / CLOSED as an inference**;
+- finite-window detection of \(W^D\neq0\): **OPEN / LOAD-BEARING**;
+- direct use of \(H^3(G)\) as a quotient cohomology of \(G/D_n\): **NOT JUSTIFIED**;
+- relation-defect/Frattini data as finite-window target: **OPEN**.
+
+Methodological consequence: do not compute a carrier yet. The next authorized test is sharper: construct or rule out a **matched cd=3 control** with the same finite initial Zassenhaus data as the K–Z cd=2 model. If such a matched pair exists at arbitrary depth, finite-window detection closes negatively. If no such pair can be produced, the finite-window factorization question remains open and the K–Z example should be retained as the principal deep-tail stress test.
+
+Literature source: Kochloukova–Zalesskii, DOI 10.1007/s00209-004-0720-6; the accessible full-text extract explicitly states Theorem 2 and the presentation above. citeturn0search25turn0search1
