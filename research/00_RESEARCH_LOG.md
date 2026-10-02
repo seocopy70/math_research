@@ -1756,3 +1756,29 @@ Classification:
 - T1: OPEN / LOAD-BEARING.
 
 The active question is now theorem-level and sharply bounded: does the finite window intrinsically recognize the normalized special-direction set without reconstructing the full directed graph? No new carrier family is authorized before this gate is resolved.
+
+
+## 2026-10-02 — PAPER 4 T1 SCALE-FIXING / MULTI-SINK AUDIT
+
+Critical correction accepted: 2-generator coefficient observability does not by itself prove canonical normalization. The common-sink calculation sharpens the issue. In the model with origins v_i and one sink w, B_q(w,v_i)=overline{v_i^q}; replacing w by lambda w multiplies every target by lambda. Therefore, once the restricted-power target is intrinsically identified, lambda=1 is forced. This proves local scale fixing relative to an intrinsic q-power target, but not recovery of that target in an arbitrary abstract window.
+
+Separated multi-sink control: for u=sum alpha_j w_j, pairing against an origin attached only to sink j detects alpha_j. If at least two independent sink sectors occur, a generic sum has rank >=2 and is excluded from the rank-one special-edge signature. Sink permutation symmetry preserves the desired all-ones functional, while a shear w_1 -> w_1+c w_2 is detected by the origin-specific defect in the separated model.
+
+The T1 target is therefore reformulated as an intrinsic affine set S_q of normalized sink vectors, selected by rank-one special-edge defects whose targets are restricted-power classes of O_q. Then omega_q is defined by omega_q(s)=1 on S_q. No arbitrary projective/basis normalization is permitted.
+
+New bottlenecks:
+1. recover the intrinsic q-power target q-blindly from the adjacent window;
+2. exclude accidental rank-one directions in overlapping multi-sink configurations;
+3. prove filtered-isomorphism invariance of S_q.
+
+Detailed audit: research/PAPER4_T1_MULTI_SINK_SCALE_AUDIT_2026-10-02.md.
+
+Classification:
+- coefficient observability: PASS / LOCAL;
+- local scale fixing relative to intrinsic q-power target: PASS / LOCAL;
+- separated multi-sink rank test: PASS / LOCAL;
+- intrinsic q-power target: OPEN / LOAD-BEARING;
+- accidental-direction exclusion: OPEN / LOAD-BEARING;
+- T1: OPEN / LOAD-BEARING.
+
+Next authorized attack: smallest overlapping multi-sink model. No new carrier hunt.
