@@ -4417,3 +4417,20 @@ The branch is frozen. The active frontier is now:
 or prove a category-level no-go under an explicitly declared admissible category.
 
 No reopening of the failed relation-module, gauge-obstruction, Mixed Fox, (O_k), (W_{11}/W_{12}), Paper 2, or frozen Paper 3 branches.
+
+## 2026-10-02 — RP-3 NON-REENCODING + MODEL AUDIT: PASS/LOCAL
+
+The q-blind adjacent-window carrier has passed a stronger admissible audit. For fixed p, rank, and sinkhole count, its abstract isomorphism type is independent of q=p^f; therefore it does not re-encode the q-value or the full orientation coefficient. It is nevertheless exactly \(\ker\beta_f\) on the declared specially oriented RAAG family, so it is a recognition carrier for that target rather than a new independent global invariant.
+
+Independent checks:
+- smallest non-complete one-special-edge model: PASS/LOCAL;
+- multiple-sink sinkhole-sector recovery: PASS/LOCAL;
+- all-sinkhole degenerate case: PASS/LOCAL;
+- full orientation from carrier alone: FAIL/CLOSED;
+- arbitrary pair-morphism functoriality: OPEN/not load-bearing;
+- absolute minimality: OPEN/not authorized;
+- directed incidence refinement: OPEN.
+
+Detailed audit: research/RP3_NONREENCODING_AUDIT_2026-10-02.md
+
+The RP-3 status remains **PASS / LOCAL**. The next authorized work, if pursued, is a genuinely graph-sensitive refinement or a category-level no-go; first rerun the mandatory Object/Input/Functoriality/Gauge/Orientation-bridge/q-blindness/Separation/Novelty/Stop pre-check.
