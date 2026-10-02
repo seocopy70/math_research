@@ -1,3 +1,26 @@
+## 2026-10-02 — SPECIAL-PLANE FAILURE, BUT RESTRICTED-POWER REFINEMENT SURVIVES LOCALLY
+
+The complete 3-vertex special graph is a decisive counterexample to the **Grassmannian first-survival carrier**, not to all intrinsic finite-window carriers. The intermediate claim (U_1\cap U_2=0) was corrected to (U_1\cap U_2=\mathbf F_p(\bar s+\bar a)); the full intersection over all q-special planes is still zero after including (U_3=\operatorname{span}(\bar s,\bar b)).
+
+More importantly,
+[
+\operatorname{im}B_q=\mathbf F_p\overline{s^q},
+qquad
+P_q^{-1}(\operatorname{im}B_q)=\mathbf F_p\bar s.
+]
+So the Grassmannian loses the sinkhole line, while the extension-defect image together with restricted q-power structure recovers it in this model.
+
+Classification:
+- first-survival Grassmannian carrier: **FAIL / CLOSED**;
+- accidental-plane exclusion: **FAIL / CLOSED**;
+- corrected full-intersection computation: **PASS / LOCAL**;
+- restricted-power refinement in complete 3-vertex model: **PASS / LOCAL**;
+- general restricted-power/extension-defect carrier: **OPEN / LOAD-BEARING**;
+- categorical no-go for all intrinsic finite-window carriers: **OPEN / NOT ESTABLISHED**.
+
+Next gate: test (P_q^{-1}(\operatorname{im}\kappa_q)) across the previously audited 2-generator special-edge and 3-vertex common-sink models, then audit its intrinsic domain, q-blindness, gauge invariance, and separation on the smallest non-complete specially oriented graph.
+
+
 ## 2026-10-02 — 3-VERTEX COMMON-SINK TEST: ORIGIN PLANE RECOVERED
 
 The first multi-special-edge stress test was completed at the smallest commuting-origin model
