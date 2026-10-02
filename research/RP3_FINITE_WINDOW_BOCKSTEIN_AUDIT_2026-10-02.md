@@ -163,3 +163,87 @@ Higher Bockstein calculations for cyclic \(p\)-groups support the level indexing
 The Zassenhaus filtration is functorial and satisfies the standard power/commutator identities; in particular, maps to cyclic \(p\)-groups respect the filtration, which is the ingredient needed for the factorization of lifts through the adjacent finite quotient. citeturn1search0turn1search1
 
 For specially oriented pro-p RAAGs, the literature gives the canonical orientation as 1+q on sinkholes and 1 on ordinary vertices, and defines special edges with the terminus at a special/sinkhole vertex. This supports the presentation convention used in the local checks. citeturn3search0turn3search2
+
+
+## 10. Uniform q-blind adjacent-window carrier: local theorem
+
+The remaining q-blindness gap can be removed by using the exponent jump of the abelianizations of the adjacent windows rather than naming q.
+
+For a finite adjacent pair
+[
+Xleftarrow Y,qquad Y	o X,
+]
+set
+[
+e(Z)=log_pexp(Z^{ab}).
+]
+Define the intrinsic subspace
+[
+mathcal L(X,Y)=
+egin{cases}
+operatorname{im}!left(
+operatorname{Hom}(Y,mathbf Z/p^{e(Y)})
+	o
+operatorname{Hom}(Y,mathbf F_p)
+ight),&e(Y)>e(X),\
+0,&e(Y)=e(X).
+end{cases}
+]
+The map is reduction modulo p. This definition contains no q, no sinkhole labels, and no presentation data.
+
+For a specially oriented RAAG at the relevant p-power jump (n=q=p^f), the abelianization gives
+[
+W_q^{ab}cong
+(mathbf Z/q)^{Vsetminus S}oplus(mathbf Z/q)^S,
+]
+while
+[
+W_{q+1}^{ab}cong
+(mathbf Z/pq)^{Vsetminus S}oplus(mathbf Z/q)^S.
+]
+If (Vsetminus S
+eqarnothing), then (e(W_q)=f), (e(W_{q+1})=f+1), and reduction from (mathbf Z/pq) realizes exactly the characters vanishing on the ((mathbf Z/q)^S) summand. Hence
+[
+mathcal L(W_q,W_{q+1})
+=
+kereta_f.
+]
+If (Vsetminus S=arnothing), then both exponents are q, so by definition
+[
+mathcal L(W_q,W_{q+1})=0,
+]
+which again equals (kereta_f), because every degree-one character is then supported on q-torsion.
+
+Therefore the corrected carrier
+[
+F(W_q,W_{q+1})
+:=
+mathcal L(W_q,W_{q+1})^perp
+subseteq L_1
+]
+satisfies
+[
+oxed{
+F(W_q,W_{q+1})
+=
+(kereta_f)^perp
+=
+operatorname{span}{ar s:sin S}.
+}
+]
+
+This is the first genuinely q-blind adjacent-window construction for RP-3. It is functorial under isomorphisms of the adjacent filtered pair because abelianization, exponent, Hom, reduction, and annihilator are all intrinsic.
+
+The proof uses only the abelianization of the specially oriented RAAG and the cyclic p-power behavior of the Zassenhaus filtration; no (H^2(W_{q+1})cong H^2(G)) assertion and no Massey calculation is required.
+
+### Classification after the refinement
+
+- q-blind adjacent-window lift carrier: **PASS / LOCAL**;
+- intrinsic/functorial definition: **PASS / LOCAL**;
+- (mathcal L(W_q,W_{q+1})=kereta_f): **PASS / LOCAL** under the specially oriented RAAG abelianization theorem;
+- (F(W_q,W_{q+1})=(kereta_f)^perp): **PASS / LOCAL**;
+- full (eta_f) class reconstruction: **OPEN / NOT LOAD-BEARING**;
+- extension to non-special oriented graphs: **OPEN / separate branch**;
+- Massey interference: **NOT LOAD-BEARING for RP-3 kernel recognition**.
+
+The remaining work is no longer “find whether a q-blind carrier exists” but to perform the required independent verification across the smallest non-complete, multiple-sink, and degenerate (Vsetminus S=arnothing) cases and then audit whether the carrier is genuinely non-reencoding under the project's admissible-category rules.
