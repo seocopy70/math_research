@@ -2066,3 +2066,20 @@ Classification:
 - T1: OPEN / LOAD-BEARING.
 
 Next authorized attack: smallest overlapping multi-sink model. No new carrier hunt.
+
+
+## 2026-10-02 — PAPER 4 GATE D1 FORMALIZATION: GLOBAL LOWER-FILTRATION SIGNATURE
+
+The current D1 target was formalized without returning to carrier hunting.
+
+For an adjacent finite window E: 1→A=D_n/D_{n+1}→Y=W_{n+1}→X=W_n→1, with L_1=X/Φ(X), define the full attainable commutator-depth relation over all lifts. Equivalently, for u∈L_1, define the global signature L_E(u)=(R_m(u))_m, where R_m(u) is the set of all x∈L_1 admitting lifts whose commutator lies in D_m(Y).
+
+This is explicitly a global signature across all degree-one directions and all filtration depths, not a selected pairwise q-defect and not a bilinear map into D_q/D_{q+1}. Complete lift-fiber quantification gives presentation/lift/gauge independence; filtered isomorphisms transport it; no displayed q, basis, section, presentation, or orientation enters the definition. Hence D1 passes the definition-level Object/Input/Functoriality/Gauge/q-blindness/non-tautology checks.
+
+Independent controls confirm the intended boundary: the rank-two special edge has first special depth q; the long ordinary-chain profile distinguishes special from lower-degree-contaminated directions; the separated two-sink model shows that D1 can detect local q-defects without identifying literal sink directions; the isolated-special same-window obstruction remains a separate unrestricted Gate-D no-go.
+
+Classification: global lower-filtration signature = PASS / LOCAL; intrinsicity/gauge independence = PASS / LOCAL; filtered-isomorphism covariance = PASS / LOCAL; q-blindness = PASS / LOCAL; non-tautological definition = PASS / LOCAL; linearity/subspace structure = OPEN / LOAD-BEARING; canonical quotient N_q = OPEN / LOAD-BEARING; orientation bridge = OPEN / LOAD-BEARING; unrestricted Gate D = FAIL / CLOSED.
+
+Detailed audit: research/PAPER4_D1_GLOBAL_LOWER_FILTRATION_SIGNATURE_AUDIT_2026-10-02.md.
+
+Next authorized action: D2 only, extracting a quotient from relations among the full signatures. Do not define N_q as the span of q-invisible directions and do not reopen the closed affine/profile carriers.
