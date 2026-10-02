@@ -2676,3 +2676,35 @@ Classification:
 - blind carrier hunt: STOP.
 
 Detailed audit: research/PAPER4_QPOS_MINIMAL_NONABELIAN_FINITE_EXTENSION_PRECHECK_2026-10-02.md.
+
+
+## 2026-10-02 — P4-Q+ ADMISSIBLE COMPRESSION CATEGORY PRE-CHECK
+
+The previous frontier statement “strict intrinsic nonabelian compression” was made executable by fixing an admissible category before any further computation.
+
+Defined audit:
+\`research/PAPER4_QPOS_ADMISSIBLE_COMPRESSION_CATEGORY_PRECHECK_2026-10-02.md\`.
+
+The admissible compression is a functorial quotient of the finite relative Zassenhaus extension
+\[
+1\to N/(N\cap D_n(G))\to G/D_n(G)\to D/D_n(D)\to1
+\]
+subject to eight requirements: A1 intrinsicity; A2 functoriality; A3 gauge invariance; A4 q-blindness; A5 orientation-blind input; A6 strict information loss; A7 non-reencoding; A8 filtration compatibility.
+
+Two target levels were separated:
+- T1 weak target = distinguish deep-tail parameters \(s\ne t\) in the q>0 stress family with \(s,t>a\);
+- T2 strong target = recover \(T_m=\min(s,m)\), for fixed \(m>a\).
+
+T1 is the default next target; T2 is secondary.
+
+The re-encoding test is explicit: a candidate must have a certified pair of non-isomorphic admissible finite relative extensions with isomorphic compressed objects. A proper quotient that remains reconstructible is not counted as compression.
+
+Pre-check classification:
+- admissible compression category: **PASS / LOCAL**;
+- T1: **DEFINED**;
+- T2: **DEFINED / SECONDARY**;
+- existence of a strict intrinsic compression: **OPEN / LOAD-BEARING**;
+- universal no-compression theorem: **OPEN**;
+- carrier computation before A1–A8: **STOP / CLOSED**.
+
+No raw Fox/Magnus scalar computation is authorized until a specific quotient candidate and its gauge orbit are fixed.
