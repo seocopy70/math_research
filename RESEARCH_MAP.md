@@ -1,3 +1,15 @@
+## 2026-10-02 — 2-GENERATOR SPECIAL-EDGE GATE: THRESHOLD SURVIVES, ROLE-RECOGNITION CLAIM REJECTED AS WRITTEN
+
+The first 2-generator special-edge attack sharpens the adjacent-class boundary. The relation [w,v]=v^q gives a genuine first-survival threshold at q+1: the q-dependent term is invisible through W_q and survives in W_{q+1}.
+
+However, the proposed intrinsic extraction of the sinkhole line from P_q^{-1}(Delta_q) is not valid as written. The ordinary restricted-Lie bracket sends L_1 wedge L_1 to L_2, not L_q. The surviving q-term is a higher filtered relation/extension defect. Thus the adjacent-class role-recognition gate remains OPEN / LOAD-BEARING, not PASS/LOCAL.
+
+The explicit automorphism family v -> v^a, w -> v^c w provides a separate gauge stress test: it preserves the filtered group but changes the displayed orientation character. Exact bare-window orientation recovery is therefore a strong no-go candidate, pending reconciliation with the literature's precise orientation-uniqueness scope.
+
+Detailed audit: research/PAPER3_RAAG_2GEN_SPECIAL_EDGE_AUDIT_2026-10-02.md.
+
+Next authorized step: intrinsic filtered relation-module/extension-class construction for the 2-generator defect, together with a direct audit of the uniqueness theorem against the gauge automorphisms.
+
 ## 2026-10-02 — ADJACENT-CLASS ORIENTATION-RIGIDITY BOUNDARY
 
 The same-family full-orientation compression branch is closed as classification re-encoding. The proposed A–D admissible-category sketch was audited and is not sufficient to define coarseness because functorial finite intrinsic carriers can still encode the target; a factorization preorder with an explicit non-reencoding condition is required.
