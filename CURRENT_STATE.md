@@ -1,3 +1,17 @@
+## 2026-10-02 — CONVENTION CORRECTION TO D2/EXTENSION AUDITS
+
+A convention-sensitive overstatement in the separated two-sink discussion was corrected immediately. In the oriented pro-p RAAG convention, absence of an edge does not imply commutation. Therefore mixed vectors such as (s+t) may have lower-filtration contamination against the wrong origin; they are not automatically identical to a pure sink in the full D1 depth signature.
+
+This correction does not change the D2 verdict. The rank-two special-edge model alone gives the decisive scalar-fiber obstruction:
+\[
+S_E(\lambda\bar w)=S_E(\bar w),\qquad
+\omega_q(\lambda\bar w)=\lambda,
+\]
+for (\lambda\in\mathbf F_p^\times), (\lambda\ne1).
+
+The coefficient-valued extension audit is likewise controlled by the chordal-tree obstruction (u-s-t\in\ker\delta) with nonzero orientation mass; the earlier separated-model normalization claim is superseded.
+
+Detailed corrections are appended to the D2 and minimal-coefficient-extension audit documents.
 ## 2026-10-02 — PAPER 4 D2 SIGNATURE-RELATION QUOTIENT NO-GO
 
 The authorized D2 attack was completed.
