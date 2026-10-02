@@ -1,3 +1,21 @@
+## STATUS CORRECTION — 2026-10-02
+
+The prior gate document's claim that the 2-generator mechanism already established intrinsic sinkhole-line recognition is superseded.
+
+Corrected status:
+- q-defect first survival at q+1: PASS/LOCAL;
+- ordinary graded Lambda^2 L_1 -> L_q route: FAIL/CLOSED — TYPE MISMATCH;
+- intrinsic sinkhole-line recovery from the bare filtered window: OPEN/LOAD-BEARING;
+- exact bare-window orientation recovery: OPEN, with a strong no-go candidate pending scope reconciliation.
+
+Technical reason: the restricted-Lie bracket L_i x L_j -> L_{i+j}. Hence L_1 wedge L_1 maps to L_2, not L_q. The surviving v^q D_{q+1} in L_q is a higher filtered relation defect and requires a separate intrinsic relation-module/extension-class construction.
+
+Gauge stress test: phi_{a,c}(v)=v^a, phi_{a,c}(w)=v^c w preserves the defining relation and the characteristic Zassenhaus filtration, while changing the displayed orientation theta. This means the target cannot silently identify a presentation-normalized character with a characteristic abstract-group invariant. The exact scope of the literature's orientation-uniqueness theorem must be resolved before the gauge argument is promoted to a theorem-level no-go.
+
+Detailed corrected audit: research/PAPER3_RAAG_2GEN_SPECIAL_EDGE_AUDIT_2026-10-02.md.
+
+No larger RAAG computation is authorized until this 2-generator gate is resolved.
+
 # PAPER 3 — ORIENTATION-RIGID ADJACENT CLASS GATE: SPECIAL ORIENTED PRO-p RAAGs — 2026-10-02
 
 ## 0. Decision
