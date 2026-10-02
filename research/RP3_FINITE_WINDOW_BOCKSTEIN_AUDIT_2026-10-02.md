@@ -1,3 +1,17 @@
+## 2026-10-02 — CONVENTION CORRECTION (SUPERSEDING ACTIVE LABELS)
+
+The literature convention has now been independently rechecked. A special edge is (v,w), with ordinary origin v and special terminus w, and
+[
+wvw^{-1}=v^{1+q}.
+]
+Thus v^q=1 in abelianization. The torsion/annihilator sector is therefore the origin sector, not the sinkhole/special sector. citeturn1search0turn1search1
+
+The q-blind adjacent-window construction remains valid after this correction, but its precise conclusion is
+[
+mathcal L(W_q,W_{q+1})^perp=operatorname{span}(O),
+]
+where O is the ordinary-origin set of special edges. Any earlier statement identifying this subspace with span(S), where S denotes special/sinkhole vertices, is SUPERSEDED. No automatic origin-to-sinkhole identification is assumed.
+
 # RP-3 FINITE-WINDOW BOCKSTEIN AUDIT — 2026-10-02
 
 ## Verdict
