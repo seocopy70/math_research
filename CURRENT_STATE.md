@@ -1,4 +1,27 @@
 
+## 2026-10-02 — TOP-DOWN T0 CORRECTION: TARGET IDENTIFICATION IS LOAD-BEARING
+
+The external critical review found a substantive error in the first T0 audit draft. The carrier-independent top-down method is valid, but the attempted closure of T0 for the standard Demuškin family was invalid because it identified Labute's presentation-level crossed-derivation/coefficient value
+\[
+\theta(x_2)=(1-q)^{-1}
+\]
+with the intrinsic Demuškin orientation/cyclotomic character without an explicit theorem establishing that identification.
+
+Therefore:
+- previous T0 PASS/CLOSED: **HISTORICAL / SUPERSEDED — invalid inference**;
+- target identification (T-1): **OPEN / LOAD-BEARING**;
+- finite-window orientation identifiability T0: **OPEN / LOAD-BEARING**;
+- broad orientation no-go: **OPEN / NOT PROVED**;
+- broad extension reconstruction no-go: **FAIL / CLOSED** remains valid;
+- automatic observability-depth monotonicity: **FAIL / CLOSED**; monotonicity itself remains OPEN.
+
+The corrected audit is:
+research/PAPER3_TOP_DOWN_T0_CORRECTION_2026-10-02.md
+
+The literature gate already establishes that canonical Demuškin/Kummerian/cyclotomic orientation theory is known, while the project's finite-window factorization problem is distinct. The immediate task is therefore not to rediscover orientation existence, but to fix the exact target object and prove/cite the relation among Demuškin orientation, cyclotomic orientation, and the Labute coefficient twist under the declared hypotheses.
+
+No new carrier construction is authorized before T-1 and T0.
+
 
 ## 2026-10-02 — TOP-DOWN REFRAME: ORIENTATION IDENTIFIABILITY BEFORE CARRIER SEARCH
 
