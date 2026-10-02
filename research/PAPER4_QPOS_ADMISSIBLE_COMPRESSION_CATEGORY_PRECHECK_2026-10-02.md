@@ -228,3 +228,55 @@ No raw Magnus/Fox scalar computation is authorized before a candidate quotient a
 - existence of a strict intrinsic compression: **OPEN / LOAD-BEARING**
 - universal no-compression theorem: **OPEN**
 - carrier hunt without category definition: **STOP / CLOSED**
+
+
+## 7. First concrete admissible quotient candidate: relative class-2 kernel quotient
+
+The first authorized candidate is
+\[
+C_n^{(2)}(E_n):\quad
+1\to K_n/\gamma_3(K_n)\to W_n/\gamma_3(K_n)\to D/D_n(D)\to1,
+\]
+where
+\[
+K_n=N/(N\cap D_n(G)),\qquad W_n=G/D_n(G).
+\]
+Equivalently, quotient the finite relative extension by the third lower-central subgroup of its kernel.
+
+### A1–A8 pre-check
+
+- **A1 Intrinsicity: PASS / LOCAL.** The lower-central subgroup \(\gamma_3(K_n)\) is characteristic/functorial in \(K_n\); no presentation, relator, lift, q, or orientation enters the definition.
+- **A2 Functoriality: PASS / LOCAL.** Homomorphisms preserve the lower-central series, so extension morphisms induce maps on the quotient. This is standard for lower-central quotients. See Hamza 2023 for the role of lower-central/Zassenhaus filtrations in pro-p modules. 
+- **A3 Gauge invariance: PASS / LOCAL.** Presentation/lift changes that induce the same structured finite extension cannot change its characteristic subgroup quotient.
+- **A4 q-blindness: PASS.**
+- **A5 orientation-blind input: PASS.**
+- **A6 strictness: OPEN.** Strictness must be witnessed on the declared relevant test class; it cannot be certified merely by observing that a class-2 quotient is formally smaller.
+- **A7 non-reencoding: OPEN.** It is a proper quotient construction, but it has not yet been proved that it does not reconstruct the full finite relative extension on the relevant class.
+- **A8 filtration compatibility: PASS / LOCAL.** The natural maps \(W_{n+1}\to W_n\) restrict to kernel maps and preserve lower-central subgroups.
+
+### Why this candidate is genuinely new relative to the closed E2 layer
+
+The class-2 quotient retains the D-action on
+\[
+K_n/\gamma_3(K_n)
+\]
+and the commutator pairing
+\[
+(K_n/K_n')\times(K_n/K_n')\to K_n'/\gamma_3(K_n),
+\]
+whereas the closed E2/H1 layer retains only the corresponding abelianized kernel extension/coinvariant information.
+
+Therefore it is not automatically identical to the previously closed \(H_1\)-extension layer. This is a structural distinction, not yet a separation theorem.
+
+### T1 status
+
+The candidate has **not** yet been shown to detect the q>0 deep-tail threshold \(s\ge m\). In particular, the ordinary mod-p associated-graded blindness does not by itself decide the integral class-2 quotient: the latter retains extension-level integral p-power information discarded by the mod-p graded object.
+
+Hence:
+\[
+\boxed{C_n^{(2)}\text{ is OPEN / LOAD-BEARING, not PASS.}}
+\]
+
+### Stop boundary
+
+Do not immediately expand \(C_n^{(2)}\) in raw Magnus/Fox coordinates. First determine its gauge-orbit invariant content and whether the class-2 kernel quotient can distinguish the threshold \(s\ge m\). If its only surviving data factors through the already closed abelian/E2/graded layers, close it. Otherwise it becomes the first genuine nonabelian compression candidate.
