@@ -2774,3 +2774,60 @@ Therefore the candidate remains:
 The next authorized computation is singular and targeted: compute only \((A_n,B_n,\beta_n,\text{class-2 power map},D\text{-action})\) for the q>0 stress family at the candidate threshold scale. No raw Magnus/Fox scalar search and no new carrier family are authorized.
 
 Detailed audit: research/PAPER4_QPOS_CLASS2_FACTOR_THROUGH_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — RESEARCH PROCESS AUDIT / GOVERNANCE LOCK / RETURN TO DEMUSHKIN MAIN OBJECT
+
+A process-level audit was completed because the research had begun to drift into repeated candidate → counterexample → repair cycles and a previously closed RAAG branch had temporarily reappeared as a frontier. This is recorded as a **research-governance failure**, not merely a mathematical typo: branch status was recorded, but not enforced as a hard constraint during subsequent reasoning.
+
+Authoritative governance lock:
+- **MAIN OBJECT:** Demuškin / PD² finite-window problem, specifically Paper 4 finite-window threshold/recognition.
+- **RAAG:** past exploratory negative-test branch; **CLOSED-AS-MAIN-ROUTE**. Results remain historical/supporting evidence only.
+- **Class-2 norm:** **SIDE / CANDIDATE / PAUSED**; never main without explicit promotion.
+- **Research order:** information existence → intrinsic carrier → threshold.
+- **Blind carrier hunting:** paused until the declared information-level question is settled.
+- Every candidate must record: OBJECT, MAIN QUESTION, INPUT/WINDOW, CANDIDATE, WHAT IT PROVES, WHAT IT DOES NOT PROVE, STATUS.
+- **Object mismatch = TRANSFER UNJUSTIFIED** until an explicit connecting theorem is supplied.
+- SIDE → MAIN requires an explicit promotion gate.
+
+## 2026-10-02 — P4-Q+ GATE O / FIXED-DEPTH INFORMATION NO-GO
+
+For the declared q>0 free-by-Demushkin stress family
+\[
+G_s=F/\overline{\langle\!\langle z^{p^s}r_D^{-1}\rangle\!\rangle},
+\]
+with fixed Demuškin relation \(r_D\), use the p-Zassenhaus filtration \(D_n\). If \(p^s\ge n\), then \(z^{p^s}\in D_{p^s}(F)\subseteq D_n(F)\). By functoriality under quotients,
+\[
+G_s/D_n(G_s)\cong F/\bigl(D_n(F),z^{p^s}r_D^{-1}\bigr)=F/\bigl(D_n(F),r_D\bigr).
+\]
+Hence any \(s,t\) with \(p^s,p^t\ge n\) have identical depth-\(n\) quotient data, and the natural relative window over the fixed Demuškin quotient is likewise independent of the deep tail once the induced map is included.
+
+Classification:
+- fixed-depth uniform recovery of unbounded \(s\): **FAIL / CLOSED**;
+- deep-tail same-window phenomenon: **PASS**;
+- no separation for \(n\le p^s\), hence \(n_{\rm sep}(s)\ge p^s+1\): **PASS / LOCAL**;
+- adaptive threshold \(n=n(s)\): **OPEN / LOAD-BEARING**;
+- exact equality \(n_{\rm sep}(s)=p^s+1\): **OPEN / LOAD-BEARING**.
+
+This is an information-level boundary, not a carrier failure. The next authorized question is the critical separation at \(p^s+1\), not another carrier hunt.
+
+## 2026-10-02 — GATE T / CRITICAL SEPARATION AT THE FIRST POSSIBLE DEPTH
+
+The next singular target is
+\[
+W_{p^s}(G_s)\stackrel{?}{\cong}W_{p^s}(G_t),\qquad
+W_{p^s+1}(G_s)\stackrel{?}{\not\cong}W_{p^s+1}(G_t).
+\]
+A positive answer would establish the sharp threshold \(n_{\rm sep}(s)=p^s+1\) for this stress family. A negative answer does not authorize another blind carrier search; it requires identifying exactly what remains invisible at \(p^s+1\) and revising the threshold statement.
+
+Current authoritative state:
+- **MAIN OBJECT:** Demuškin / PD² finite-window threshold problem — OPEN;
+- fixed-depth uniform recovery — **FAIL / CLOSED**;
+- deep-tail same-window obstruction — **PASS**;
+- lower bound \(n_{\rm sep}(s)\ge p^s+1\) — **PASS / LOCAL**;
+- exact threshold \(n_{\rm sep}(s)=p^s+1\) — **OPEN / LOAD-BEARING**;
+- adaptive threshold — **OPEN**;
+- class-2 norm — **SIDE / PAUSED**;
+- RAAG carrier hunt — **CLOSED-AS-MAIN-ROUTE**.
+
+No claim is made that \(p^s+1\) is sharp until Gate T is proved.
