@@ -1,3 +1,49 @@
+## 2026-10-02 — PAPER 4 J_q ARBITRARY-LINEAR-DIRECTION PURITY FAILS
+
+The exact-depth centralizer jump
+\[
+J_q(u)=C_q(u)/C_{q+1}(u)
+\]
+does remove ordinary-edge contamination, but it is **not** a pure one-direction incidence detector for arbitrary linear \(u\).
+
+In the complete three-vertex model
+\[
+G=\langle s,a,b\mid[a,b]=1,\;sas^{-1}=a^{1+q},\;sbs^{-1}=b^{1+q}\rangle,
+\]
+the q-layer defect is
+\[
+B_q(u,x)
+=(\alpha\gamma'-\gamma\alpha')\overline{a^q}
+ +(\beta\gamma'-\gamma\beta')\overline{b^q}
+\]
+for \(u=\alpha\bar a+\beta\bar b+\gamma\bar s\). The form has zero radical. Since all degree-one commutators lie in \(D_q\) in this complete graph, \(C_q(u)=L_1\) and \(C_{q+1}(u)=\ker B_q(u,-)\). Therefore
+\[
+J_q(u)\neq0
+\]
+for every nonzero projective direction \([u]\in\mathbf P(L_1)\).
+
+Explicitly,
+\[
+u=\bar s+\bar a\notin O=\operatorname{span}(\bar a,\bar b),
+\qquad
+B_q(u,\bar a)=\pm\overline{a^q}\neq0.
+\]
+Thus a non-origin linear direction is q-active. The sinkhole direction \(\bar s\) is q-active as well.
+
+Current classification:
+- exact-depth \(J_m\): **PASS / LOCAL**;
+- ordinary/special depth separation: **PASS / LOCAL**;
+- RP-5 pairwise separation: **PASS / LOCAL**;
+- arbitrary-linear-direction purity \(J_q(u)\neq0\iff u\) is a genuine origin direction: **FAIL / CLOSED**;
+- the prior “linear-combination purity” formulation: **FAIL / CLOSED — false as stated**;
+- combined target-labelled/restricted-power carrier: **OPEN / LOAD-BEARING**;
+- full directed-incidence reconstruction: **OPEN**;
+- full orientation reconstruction: **OPEN**.
+
+This closes the current purity formulation, not the Paper-4 program. The next authorized branch is a fresh intrinsicity audit of a joint carrier such as \((P_q,B_q)\), or an equivalent extension-class object, with no large scan before Object/Input/Functoriality/Gauge/Orientation-bridge/q-blindness/Separation/Novelty/Stop are checked.
+
+Detailed audit: research/PAPER4_ARBITRARY_LINEAR_DIRECTION_JQ_AUDIT_2026-10-02.md.
+
 ## 2026-10-02 — CONVENTION CORRECTION AUDIT COMPLETED
 
 Independent source verification confirms the controlling convention: special edge (v,w) has ordinary origin v, special terminus w, and wvw^{-1}=v^{1+q}. Thus the q-torsion direction is v, the origin, not the special/sinkhole terminus. citeturn1search0turn1search1
