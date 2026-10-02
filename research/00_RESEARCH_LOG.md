@@ -1010,3 +1010,22 @@ Key corrections and boundaries:
 Publication discipline is also recorded: the open post-Paper-3 generalization search is independent of the frozen publication candidates and should not delay their submission.
 
 Detailed ledger: `research/PAPER3_POST_EXPLORATION_EXTERNAL_VERIFICATION_LEDGER_2026-10-02.md`.
+
+## 2026-10-02 — CRITICAL REVIEW OF EXTERNAL LEDGER INTERPRETATION
+
+The external critique was independently checked against the latest Mixed Fox and discovery-ladder records. It contains useful methodological discipline but also several stale or overstrong next-step suggestions.
+
+Accepted: the O_k quotient diagnosis; the need to distinguish quotient-initiality from any terminal/minimality claim; explicit evidence requirements; and the need to formalize any proposed carrier category before making categorical universal claims.
+
+Rejected/corrected: (i) direct Fox-jet -> chi is not the next Mixed Fox task because that bridge was already established locally; the branch closed later on category-relative redundancy; (ii) q-blindness should not be defined by replacing q with 0, since q=0 is itself an admissible Demushkin regime and substitution changes the object; (iii) p=2/non-standard Demushkin reopening is not currently authorized; (iv) status labels must remain, but may never substitute for equations, counterexamples, literature theorems, or reproducible computations.
+
+Classification:
+- ledger methodological review: PASS / LOCAL;
+- admissible-carrier category proposal: OPEN / NOT LOAD-BEARING;
+- direct Fox -> chi as next Mixed Fox task: HISTORICAL / SUPERSEDED;
+- q->0 definition of q-blindness: FAIL / CLOSED;
+- p=2/non-standard extension now: CONDITIONAL / NOT AUTHORIZED;
+- evidence-type rule: PASS / LOCAL;
+- genuinely new finite-input carrier: OPEN / LOAD-BEARING.
+
+Detailed audit: research/PAPER3_POST_EXPLORATION_CRITICAL_REVIEW_2026-10-02.md
