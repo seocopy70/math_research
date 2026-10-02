@@ -2158,3 +2158,10 @@ Classification:
 - E2 → orientation: **OPEN**.
 
 Detailed audit: research/PAPER4_F1_MINIMAL_THRESHOLD_AND_DEMUSHKIN_STRESS_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — Q>0 HIGHER-LAYER GATE
+
+Pure abelianization saturates for extension depth beyond the quotient torsion level. No certified q>0 variable-depth free-by-Demushkin family was found in the literature audit. The higher filtered recovery problem remains OPEN / LOAD-BEARING, with an explicit gauge-invariance test now mandatory. No new carrier hunt is authorized.
+
+Detailed audit: research/PAPER4_QPOS_HIGHER_LAYER_AUDIT_2026-10-02.md.
