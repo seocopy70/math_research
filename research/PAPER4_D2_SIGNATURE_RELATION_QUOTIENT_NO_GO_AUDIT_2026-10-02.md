@@ -250,3 +250,12 @@ This is a target-preserving refinement, not a return to unconstrained carrier hu
 \]
 
 The failure is structural: **depth remembers when a defect first appears, but not how much of the normalized orientation direction produced it.**
+
+
+## CORRECTION — 2026-10-02
+
+A convention-sensitive sentence in §4 is superseded. In the separated two-sink model, absence of an edge does **not** mean commutation. Therefore one must not claim that the full D1 signature of \(s+t\) equals that of \(s\).
+
+The D2 no-go does **not** depend on that claim. It is already decisive in the rank-two special-edge model, where nonzero scalar multiples \(\lambda\bar w\) have the same depth signature but different orientation values. In the separated model, mixed directions such as \(s+t\) instead carry lower-filtration contamination against the wrong origin; this is consistent with the corrected nonabelian filtered-profile analysis.
+
+The separated model remains an independent control for support/lower-obstruction detection, not a second proof of scalar-fiber equality.
