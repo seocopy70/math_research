@@ -1,3 +1,44 @@
+## 2026-10-02 — RP-3 BOCKSTEIN FINITE-WINDOW CLAIM CORRECTED: LIFTABILITY SURVIVES, FULL β-RECONSTRUCTION OPEN
+
+The proposed RP-3 finite-window Bockstein argument has been critically audited. The local algebraic conclusion is sound, but the draft overclaimed the finite-window factorization.
+
+For a specially oriented pro-p RAAG with sinkhole set S and q=p^f,
+[
+G^{ab}cong mathbf Z_p^{Vsetminus S}oplus(mathbf Z/p^f)^S,
+]
+and the higher Bockstein satisfies the liftability criterion
+[
+chiinkereta_f
+iff
+chi:H^1(G,mathbf F_p)	omathbf F_p
+	ext{ lifts to }mathbf Z/p^{f+1}.
+]
+Thus the kernel is exactly the annihilator of the sinkhole torsion sector. This is PASS/LOCAL.
+
+A type correction is mandatory:
+[
+H^1=L_1^*,quad(kereta_f)^perpsubseteq L_1,
+]
+so the sinkhole carrier is (operatorname{span}{ar s:sin S}), not a span of dual basis vectors unless an auxiliary identification (L_1cong L_1^*) is chosen.
+
+The key finite-window statement must be weakened. (W_{q+1}) does not automatically determine the full cohomology class (eta_f(chi)in H^2(G,mathbf F_p)), because no identification of global (H^2(G)) with (H^2(W_{q+1})) has been proved. What is locally established is that every lift to (mathbf Z/p^{f+1}) factors through (W_{q+1}), yielding a finite-window liftability predicate.
+
+The remaining load-bearing issue is **q-blind uniformization**: the liftability test currently names the coefficient group (mathbf Z/p^{f+1}), hence q indirectly. A valid RP-3 carrier must be defined uniformly from an arbitrary adjacent pair ((W_n,W_{n+1})), without inserting q, and then shown to specialize at (n=p^f) to ((kereta_f)^perp).
+
+Classification:
+- abelianization/free-vs-sinkhole decomposition: **PASS / LOCAL**;
+- higher-Bockstein kernel via liftability: **PASS / LOCAL**;
+- three local graph models: **PASS / LOCAL**;
+- dual-space typing of (C_f): **FAIL / CLOSED — TYPE ERROR**;
+- full (eta_f) reconstruction from ((W_q,W_{q+1})): **OPEN / NOT PROVED**;
+- finite-window liftability predicate: **PASS / LOCAL**;
+- q-blind uniform carrier: **OPEN / LOAD-BEARING**;
+- RP-3 overall: **OPEN / LOAD-BEARING**.
+
+Detailed audit: research/RP3_FINITE_WINDOW_BOCKSTEIN_AUDIT_2026-10-02.md
+
+Immediate next authorized attack: construct and test the uniform adjacent-window liftability object before any Massey-interference or non-special-graph expansion. If the uniform construction fails, seek a same-window counterexample and close RP-3. Do not reopen the closed Grassmannian carrier branch.
+
 ## 2026-10-02 — SPECIAL-PLANE FAILURE, BUT RESTRICTED-POWER REFINEMENT SURVIVES LOCALLY
 
 The complete 3-vertex special graph is a decisive counterexample to the **Grassmannian first-survival carrier**, not to all intrinsic finite-window carriers. The intermediate claim (U_1\cap U_2=0) was corrected to (U_1\cap U_2=\mathbf F_p(\bar s+\bar a)); the full intersection over all q-special planes is still zero after including (U_3=\operatorname{span}(\bar s,\bar b)).
