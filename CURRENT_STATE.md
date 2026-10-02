@@ -1,3 +1,36 @@
+## 2026-10-02 — T1 CONVENTION CORRECTION / AFFINE-HULL REOPENED
+
+A referee-level recheck found that the earlier separated two-sink counterexample to the T1 affine-hull theorem was invalid. The error was the assertion that the absent edge between (t) and (a) implied ([t,a]=1). In an oriented pro-(p) RAAG, absent edges impose no relation; only ordinary edges commute, while special edges impose (wuw^{-1}=u^{1+q}). The literature confirms this convention. citeturn15search0turn4search0
+
+Therefore the old calculation
+[
+(st)a(st)^{-1}=sas^{-1}
+]
+is false. The mixed element (s+t) has lower-filtration contamination from (t) against (a), so it is not a valid normalized witness for the full filtered signature.
+
+Consequently:
+- old T1 separated (s+t) affine-hull no-go: **HISTORICAL / SUPERSEDED**;
+- full-filtered normalized local locus (mathcal S_E^{flat}): **OPEN / LOAD-BEARING**;
+- rank-two special-edge control: **PASS / LOCAL**;
+- overlapping common-sink control: **PASS / LOCAL**;
+- chordal-tree control: **OPEN / LOAD-BEARING**;
+- unrestricted finite-window recovery: **FAIL / CLOSED** remains unchanged by the isolated-special same-window obstruction.
+
+The corrected T1 target is
+[
+mathcal S_E^{flat}
+={ar u:exists,ar xin O, [u,x]in D_q, [u,x]equiv P_E(x)pmod{D_{q+1}}},
+]
+with lower-filtration flatness imposed before the q-layer projection. The candidate affine theorem
+[
+operatorname{Aff}(mathcal S_E^{flat})stackrel{?}{=}omega_q^{-1}(1)
+]
+is reopened only on an orientation-rigid restricted class.
+
+This correction also weakens the previous claim that the repaired normal-closure nonlinear action is the unique next route. The authorized order is now: chordal-tree test of (mathcal S_E^{flat}) first; only if it fails, derive the exact surviving kernel and then return to the normal-closure action.
+
+Detailed audit: research/PAPER4_T1_CONVENTION_CORRECTION_REOPEN_AUDIT_2026-10-02.md.
+
 
 
 ## 2026-10-02 — D3 MINIMAL NONLINEAR EXTENSION-ACTION FRONTIER
