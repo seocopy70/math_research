@@ -4870,3 +4870,20 @@ Scope corrections:
 - universal impossibility for q>0 deep tails remains **OPEN**.
 
 Detailed audit: research/PAPER4_QPOS_CRITICAL_REVIEW_NEXT_GATE_2026-10-02.md.
+
+
+## 2026-10-02 — FINITE-COEFFICIENT E2 TOR CHECK / DEEP-TAIL CLOSURE
+
+A correction and subsequent explicit check were completed. The earlier statement that q>0 has no E2 continuation is literally true for Z_p coefficients, but finite coefficients A_m=Z/p^m produce a Tor source:
+H_2(D,A_m) ≅ Tor(Z/p^a,Z/p^m) ≅ Z/p^{min(a,m)}.
+
+For the stress presentation G_{s,a}=<z,x_i | z^{p^s}=r_D>, when m>a a generator is represented by p^{m-a} times the Demushkin relation cell. The lifted defect is z^{p^s}, so the transgression image is p^{m-a+s}z mod p^m. Therefore it vanishes whenever s>=a. Thus the finite-coefficient E2/Tor route does not recover the deep regime s>a.
+
+Classification:
+- finite-coefficient H2 Tor source: PASS / LOCAL;
+- finite-coefficient E2 transgression for s>a: FAIL / CLOSED in the stress model;
+- coefficient change as a rescue of E2: FAIL / CLOSED;
+- genuinely nonabelian relation/extension object: OPEN / LOAD-BEARING;
+- finite-window factorization of such an object: OPEN.
+
+Detailed audit: research/PAPER4_QPOS_FINITE_COEFFICIENT_E2_TOR_AUDIT_2026-10-02.md.
