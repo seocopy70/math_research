@@ -3047,3 +3047,54 @@ Important scope: this is a result for the stated stress presentation at the crit
 - class-2/norm obstruction: **OPEN / LOAD-BEARING** as the first genuinely remaining obstruction;
 - exact \\(n_{\\rm sep}^{rel}(s)=p^s+1\\): **OPEN / LOAD-BEARING**;
 - blind carrier search: **STOP / NOT AUTHORIZED**.
+
+
+## 2026-10-03 — GATE T1-B: CRITICAL NORM BOUNDARY
+
+The class-2/norm branch was pushed to its exact logical boundary. For
+\[
+G_{s,a}=\langle z,x_1,\ldots,x_d\mid z^{p^s}=r_D\rangle,
+\qquad r_D=x_1^{p^a}[x_1,x_2]\cdots[x_{d-1},x_d],
+\qquad s>a,
+\]
+and the critical window \(W_s=G_{s,a}/D_{p^s+1}(G_{s,a})\), the class-2 norm identity
+\[
+N_{p^s}(T_x)c_x(\bar z)=[r_D,x]
+\]
+holds. Since \(r_D=z^{p^s}\),
+\[
+[r_D,x]=[z^{p^s},x]\in[D_{p^s},D_1]\subseteq D_{p^s+1},
+\]
+so at the exact critical depth
+\[
+\boxed{N_{p^s}(T_x)c_x(\bar z)=0.}
+\]
+
+Therefore the norm equation itself is **not a nonzero nonsplitting witness at the critical depth**. This narrows the previous T1-A classification:
+- critical norm identity as a nonsplitting obstruction: **FAIL / CLOSED**;
+- non-coinvariant module action: **PASS / LOCAL**;
+- full finite module-valued extension class: **OPEN / LOAD-BEARING**.
+
+For a fixed external threshold \(m>a\), the same identity retains potential threshold information: \([z^{p^s},x]\) can survive in a \(p^m+1\) window when \(s<m\), while it is invisible when \(s\ge m\). But promotion requires an intrinsic characterization independent of the named kernel generator/lifts.
+
+Independent Fox check for the rank-two relation \(r_D=x^q[x,y]\), \(q=p^a\), gives in the Demuškin quotient
+\[
+\partial_x r_D=N_q(x)+x^q-y,
+\qquad
+\partial_y r_D=x^{q+1}-1.
+\]
+This explains the previous coinvariant cancellation and isolates the surviving \((y-1)\)-direction, but it is not itself a nonsplitting theorem. The actual finite module \(A_s\), its lift-change quotient, and the class in \(H^2(Q_s,A_s)\) remain to be computed.
+
+Authoritative classification:
+- critical-layer visibility: **PASS / LOCAL**;
+- scalar/coinvariant obstruction: **FAIL / CLOSED**;
+- critical norm shortcut: **FAIL / CLOSED**;
+- non-coinvariant module action: **PASS / LOCAL**;
+- full finite module-valued extension class: **OPEN / LOAD-BEARING**;
+- fixed-threshold norm visibility: **CONDITIONAL**;
+- exact \(n_{\mathrm{sep}}^{rel}(s)=p^s+1\): **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+Detailed audit: research/PAPER4_QPOS_GATE_T1B_CRITICAL_NORM_BOUNDARY_AUDIT_2026-10-03.md.
+
+Next authorized action: compute the actual finite abelianized kernel module and its relation-module presentation at \(n=p^s+1\), then determine whether the extension-defect class vanishes in \(H^2(Q_s,A_s)\) after all lift changes.
