@@ -3139,3 +3139,17 @@ Classification: critical visibility PASS/LOCAL; scalar/coinvariant obstruction F
 Detailed audit: research/PAPER4_QPOS_GATE_T1C_NONABELIAN_KERNEL_BOUNDARY_AUDIT_2026-10-03.md.
 
 Next authorized action: compute the actual finite F_p[Q_s]-relation module A_s at n=p^s+1, then the first nonabelian kernel quotient if needed.
+
+## 2026-10-03 — GATE T1-C: FIRST NONABELIAN KERNEL BOUNDARY
+
+The scalar/coinvariant and critical-norm shortcuts are now closed. The remaining Gate-T problem has been pushed to the actual finite kernel.
+
+For W_s=G_{s,a}/D_{p^s+1}(G_{s,a}), Q_s=D/D_{p^s+1}(D), and K_s=ker(W_s→Q_s), the correct hierarchy is K_s → A_s=K_s/[K_s,K_s] → B_s=gamma_2(K_s)/gamma_3(K_s) → ... . The abelianized coinvariant scalar defect is killable by the x_1→z^{-p^{s-a}}x_1 lift change, so it is FAIL/CLOSED as an obstruction. The class-2 critical norm identity is homogeneous, hence also FAIL/CLOSED as a nonzero witness.
+
+The lift correction is not known to kill the entire defect before coinvariants: the non-augmentation part of the relation-module differential produces a (y−1)-type contribution. Its survival is not yet proved. Thus the first genuinely load-bearing computation is the actual F_p[Q_s]-module A_s, with all lift-change coboundaries quotiented; if that vanishes, move to B_s. No claim of nonsplitting or exact threshold is restored.
+
+Classification: critical visibility PASS/LOCAL; scalar/coinvariant obstruction FAIL/CLOSED; critical norm shortcut FAIL/CLOSED; non-coinvariant kernel module OPEN/LOAD-BEARING; critical nonsplitting OPEN/LOAD-BEARING; exact n_sep^rel(s)=p^s+1 OPEN/LOAD-BEARING; blind carrier search STOP.
+
+Detailed audit: research/PAPER4_QPOS_GATE_T1C_NONABELIAN_KERNEL_BOUNDARY_AUDIT_2026-10-03.md.
+
+Next authorized action: compute the actual finite F_p[Q_s]-relation module A_s at n=p^s+1, then the first nonabelian kernel quotient if needed.
