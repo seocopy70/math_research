@@ -427,3 +427,31 @@ This closes the current carrier, but does **not** establish a general impossibil
 The research frontier therefore moves one level upward: the obstruction is no longer “non-abelian (W_q)” but **coarseness of the first-survival Grassmannian carrier even when (W_q) is abelian**.
 
 No further computation of this carrier is authorized.
+
+
+## 13. Restricted-power refinement after the counterexample
+
+The Grassmannian counterexample does **not** establish a no-go for all intrinsic finite-window carriers. In the same complete 3-vertex model,
+[
+operatorname{im}B_q=mathbf F_p,overline{s^q}.
+]
+The restricted (q)-power operation (P_q:L_1	o L_q) satisfies
+[
+P_q(ar s)=overline{s^q},quad
+P_q(ar a)=overline{a^q},quad
+P_q(ar b)=overline{b^q}.
+]
+These three degree-(q) power directions are independent in this model. Consequently
+[
+P_q^{-1}(operatorname{im}B_q)=mathbf F_par s.
+]
+
+Thus the failed Grassmannian carrier has discarded information that remains in the restricted structure: the defect image identifies a (q)-power line, and (P_q^{-1}) identifies its degree-one source.
+
+Classification:
+- corrected full Grassmannian intersection claim: **FAIL / CLOSED**;
+- restricted-power refinement (P_q^{-1}(operatorname{im}B_q)=mathbf F_par s) in the complete 3-vertex model: **PASS / LOCAL**;
+- categorical no-go for all intrinsic finite-window carriers: **OPEN / NOT ESTABLISHED**;
+- next load-bearing question: whether this refinement is intrinsically available and separating on a broader specially oriented class.
+
+No large computation is authorized before the refinement is tested against the already audited 2-generator and 3-vertex common-sink models.
