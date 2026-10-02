@@ -4917,3 +4917,34 @@ C_n^{(2)}:
 It is the relative class-2 kernel quotient. A1, A2, A3, A4, A5, A8 pass locally; strictness A6 and non-reencoding A7 remain open. T1 threshold separation remains open.
 
 This does not reopen any closed RAAG, E2, abelianization, or ordinary graded branch. The next task is the factor-through-closed-layers test for \(C_n^{(2)}\), followed by T1 only if genuinely new integral commutator information survives.
+
+
+## 2026-10-02 — GATE T CRITICAL RE-AUDIT / RELATIVE MAP EXISTS, THRESHOLD REOPENED
+
+The Gate-T critical review was independently audited. The proposed objection that the canonical map
+\[
+G_{s,a}\to D
+\]
+does not exist is **rejected**: for
+\[
+D=\langle x_1,\ldots,x_d\mid r_D\rangle,
+\qquad
+G_{s,a}=\langle z,x_1,\ldots,x_d\mid z^{p^s}=r_D\rangle,
+\]
+the assignment \(z\mapsto1\), \(x_i\mapsto\bar x_i\) is well-defined because \(r_D=1\) in \(D\). Hence the structured relative-window object is legitimate at the map-existence level.
+
+However, the review correctly exposed a load-bearing gap in the prior Gate-T proof: the free-level fact \(z^{p^s}\in D_{p^s}(F)\) does not by itself prove that the corresponding class survives in the actual layer of \(G_{s,a}\), nor that the induced finite relative extension is nonsplit. The claimed exact threshold
+\[
+n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1
+\]
+is therefore reopened pending an explicit finite-layer filtration/transgression calculation.
+
+Authoritative correction:
+- canonical \(G_{s,a}\twoheadrightarrow D\): **PASS / LOCAL**;
+- relative-window object definition: **PASS / LOCAL**;
+- deep-tail blindness/lower-bound mechanism: **PASS / LOCAL**;
+- critical nonzero layer and non-splitting: **OPEN / LOAD-BEARING**;
+- exact relative threshold \(p^s+1\): **OPEN / LOAD-BEARING**;
+- previous Gate-T PASS: **HISTORICAL / SUPERSEDED**.
+
+The next task is verification of the existing Gate-T claim only: actual Zassenhaus layer + extension class at \(p^s+1\). No Gate-U attack or new carrier hunt is authorized before this gate is resolved.
