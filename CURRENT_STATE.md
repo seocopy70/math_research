@@ -2254,3 +2254,27 @@ Current classification:
 - raw carrier/Magnus computation before category and gauge are fixed: **STOP / CLOSED**.
 
 Next authorized action: propose one specific quotient construction \(E_n\mapsto C_n(E_n)\), prove A1–A8, then test T1 separation and independently test non-reencoding. Do not broaden the carrier search.
+
+
+## 2026-10-02 — FIRST CONCRETE NONABELIAN COMPRESSION CANDIDATE
+
+After the admissibility-definition corrections, the first concrete candidate is now fixed:
+\[
+C_n^{(2)}:
+1\to K_n/\gamma_3(K_n)\to W_n/\gamma_3(K_n)\to D/D_n(D)\to1.
+\]
+It is the class-2 nilpotent quotient of the finite relative extension's kernel.
+
+Pre-check:
+- A1 intrinsicity: **PASS / LOCAL**;
+- A2 functoriality: **PASS / LOCAL**;
+- A3 gauge invariance: **PASS / LOCAL**;
+- A4 q-blindness: **PASS**;
+- A5 orientation-blind input: **PASS**;
+- A6 strictness: **OPEN**;
+- A7 non-reencoding: **OPEN**;
+- A8 filtration compatibility: **PASS / LOCAL**.
+
+This is the first candidate structurally beyond the closed H1/E2 layers. It retains kernel commutator data and quotient action. It has not been shown to detect the q>0 deep-tail threshold, so its overall status is **OPEN / LOAD-BEARING**.
+
+Next authorized test: determine whether its surviving data factors through already closed abelian/E2/graded layers. If yes, close it; if not, test T1 threshold detection. No raw Magnus/Fox scalar computation yet.
