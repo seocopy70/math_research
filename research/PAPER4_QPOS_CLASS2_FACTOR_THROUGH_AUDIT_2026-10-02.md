@@ -100,3 +100,90 @@ The next authorized computation is a targeted class-2 stress calculation for \(G
 
 If these data are constant for s>a up to the threshold, classify \(C_n^{(2)}\) **FAIL / CLOSED** for T1. If they separate s<m from s\ge m, independently verify gauge invariance and strictness before any promotion.
 
+
+
+### 7. Targeted class-2 reduction: the surviving nonabelian datum
+
+The stress relation
+[
+z^{p^s}=r_D
+]
+has a class-2 consequence that is invisible after passing to coinvariants but is not automatically invisible in the relative class-2 extension.
+
+Let
+[
+A_n=K_n/gamma_2(K_n),qquad B_n=gamma_2(K_n)/gamma_3(K_n).
+]
+The quotient (C_n^{(2)}) carries the (D/D_n(D))-action on (A_n) and (B_n). For (xin D), write (T_x) for the induced action on (A_n), and let (c_x(ar z)) denote the class of the kernel commutator/defect determined by ([z,x]) at the relevant class-2 level.
+
+The identity
+[
+[z^{r},x]
+=
+[z,x]^{,1+x+cdots+x^{r-1}}
+]
+becomes, after passing to the abelianized kernel layer, a norm-operator identity
+[
+[z^{p^s},x]
+=
+N_{p^s}(T_x),c_x(ar z),
+qquad
+N_{p^s}(T_x)=1+T_x+cdots+T_x^{p^s-1}.
+]
+On the other hand (z^{p^s}=r_D), so the same class-2 datum is constrained by
+[
+N_{p^s}(T_x)c_x(ar z)
+=
+[r_D,x].
+]
+
+This gives the precise boundary between the closed E2 layer and the surviving candidate.
+
+After taking (D)-coinvariants, (T_x) becomes (1), so
+[
+N_{p^s}(T_x)longmapsto p^s.
+]
+The previously established Ext/H1 calculation then sees only
+[
+p^smod p^a,
+]
+which is zero for every (sge a). Thus the untwisted E2/H1 saturation is recovered exactly.
+
+But (C_n^{(2)}) retains the full (D)-action, so the operator (N_{p^s}(T_x)) need not collapse to (p^s). Consequently the old H1 saturation argument does **not** prove factorization of (C_n^{(2)}) through the closed layers.
+
+This is the first concrete nonabelian obstruction that survives the earlier closures.
+
+### 8. Exact T1 reduction
+
+For a fixed external threshold (m>a), take the candidate window at a depth (n=n(m)) large enough that the Zassenhaus level (p^m) is represented. The T1 problem for (C_n^{(2)}) reduces to the following finite intrinsic question:
+
+> Does the isomorphism class of the (D/D_n(D))-module data
+> [
+> (A_n,B_n,eta_n,ho_n,	ext{class-2 power map})
+> ]
+> distinguish the norm operators (N_{p^s}(ho_n(x))) for (a<s<m) from the regime (sge m), after quotienting all admissible extension automorphisms?
+
+Equivalently, one must determine whether the deep-tail parameter survives in the **non-coinvariant norm action** while disappearing from the coinvariant quotient.
+
+This is a substantially narrower computation than a raw Magnus/Fox search. It has exactly the required input and gauge constraints and tests the first genuinely nonabelian layer.
+
+### 9. Independent literature/method check
+
+Hamza's treatment confirms that lower-central and Zassenhaus filtrations naturally carry group/module actions and that finitely presented pro-(p) groups are a natural setting for such equivariant filtered objects. It supports the legitimacy of the filtration/action framework, but does not prove the present T1 separation statement. citeturn1search0turn1search17
+
+Relation-module literature likewise treats the conjugation action on the relation module as intrinsic structure of a pro-(p) presentation, while warning that presentation-level coefficients must not be mistaken for intrinsic invariants. This supports using the action/extension class rather than a selected scalar coefficient. citeturn3search2turn3search3
+
+### 10. Classification after the reduction
+
+- A1 intrinsicity: **PASS / LOCAL**;
+- A2 functoriality: **PASS / LOCAL**;
+- A3 gauge invariance: **PASS / LOCAL** at the quotient-object level;
+- A4 q-blindness: **PASS**;
+- A5 orientation-blind input: **PASS**;
+- class-2 non-coinvariant norm defect: **PASS / LOCAL** as the first surviving structural datum;
+- factor-through H1/E2/ordinary graded layers: **NOT ESTABLISHED; prior closure does not apply**;
+- T1 threshold separation: **OPEN / LOAD-BEARING**;
+- A6 strictness: **OPEN**;
+- A7 non-reencoding: **OPEN**.
+
+No positive T1 theorem is claimed yet. The candidate remains alive, but the next computation is now uniquely specified: compute the norm-action orbit on (A_n) (with the induced (B_n,eta_n), and power map only as needed) for the smallest (a<s<m) and the first (sge m), then test whether the resulting compressed objects are non-isomorphic.
