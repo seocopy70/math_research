@@ -1,3 +1,21 @@
+## 2026-10-02 — PAPER 4 T1 AFFINE-HULL GATE: FAIL / CLOSED
+
+The proposed affine-hull rescue of T1 is refuted for the current existential local-uniform signature.
+
+In the separated two-sink model G=<a,b,s,t | sas^{-1}=a^(1+q), tbt^{-1}=b^(1+q)> with no other edges, let O=span(a,b) and U=L1/O=span(s,t). The canonical normalization has omega_q(s)=omega_q(t)=1.
+
+The accidental direction u=s+t passes the current local special-edge signature using origin a, because t commutes with a: (st)a(st)^(-1)=sas^(-1)=a^(1+q), hence B_q(u,a)=P_E(a). Thus u is in the current S_E, but omega_q(u)=2 != 1 for odd p.
+
+Since s,t,s+t all lie in S_E and dim U=2, Aff(S_E)=U, so the affine codimension is 0, not 1.
+
+This is structural: an existential 2-generator signature sees only the local incidence component tested by the chosen origin and cannot constrain sink components invisible to that origin. The intrinsic q-power target remains PASS / LOCAL, but the affine-hull T1 realization is FAIL / CLOSED.
+
+The overlapping model is non-decisive: its accidental direction (s+t)/2 happens to lie on omega_q=1. The separated model is decisive.
+
+No larger scan or another accidental-direction search is authorized for this T1 branch. Any revival requires a materially different observable and a fresh Object/Input/Functoriality/Gauge/Orientation-bridge/q-blindness/Separation/Novelty/Stop pre-check.
+
+Detailed audit: research/PAPER4_T1_AFFINE_HULL_GATE_AUDIT_2026-10-02.md
+
 ## 2026-10-02 — PAPER 4 T1 OVERLAPPING MULTI-SINK: VERTEX-SET FORMULATION CLOSED, \(\omega_q\) REMAINS OPEN
 
 The smallest overlapping model
