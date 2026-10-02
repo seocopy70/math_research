@@ -1,3 +1,33 @@
+## 2026-10-02 — SPECIAL-PLANE COUNTEREXAMPLE CORRECTED; RESTRICTED-POWER REFINEMENT REOPENS A LOCAL CARRIER GATE
+
+The complete specially oriented 3-vertex graph refutes the first-survival Grassmannian carrier. The earlier audit contained a concrete linear-algebra error: for
+[
+U_1=\operatorname{span}(\bar s,\bar a),qquad
+U_2=\operatorname{span}(\bar s+\bar a,\bar b),
+]
+one has (U_1\cap U_2=\mathbf F_p(\bar s+\bar a)), not zero. The full intersection is nevertheless zero after adding (U_3=\operatorname{span}(\bar s,\bar b)).
+
+A finer local invariant survives. The degree-(q) extension defect has image
+[
+\operatorname{im}B_q=\mathbf F_p\overline{s^q},
+]
+and the restricted q-power operation satisfies
+[
+P_q^{-1}(\operatorname{im}B_q)=\mathbf F_p\bar s
+]
+in this complete 3-vertex model.
+
+Classification:
+- special-plane Grassmannian: **FAIL / CLOSED**;
+- accidental-plane exclusion: **FAIL / CLOSED**;
+- corrected full-intersection computation: **PASS / LOCAL**;
+- restricted-power refinement: **PASS / LOCAL**;
+- general intrinsic restricted-power carrier: **OPEN / LOAD-BEARING**;
+- categorical no-go for all intrinsic finite-window carriers: **OPEN / NOT ESTABLISHED**.
+
+Next authorized action: test (P_q^{-1}(\operatorname{im}\kappa_q)) on the already audited 2-generator and 3-vertex common-sink models, then audit intrinsicity, q-blindness, gauge invariance, and separation. No categorical no-go is authorized yet.
+
+
 ## 2026-10-02 — 2-GENERATOR SPECIAL-EDGE RAAG AUDIT: TYPE MISMATCH + GAUGE BOUNDARY
 
 A critical audit of the 2-generator special-edge model G=<v,w | wvw^{-1}=v^{1+q}, q=p^f found a genuine first-survival boundary but rejected the stronger intrinsic role-recognition proof as written.
