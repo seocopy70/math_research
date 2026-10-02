@@ -3212,3 +3212,26 @@ A further critical review tightens the Gate T1-C object and obstruction logic wi
 - blind carrier search: **STOP / NOT AUTHORIZED**.
 
 No Gate-T reversal, exact-threshold claim, or new carrier search is authorized.
+
+
+## 2026-10-03 — POST-READ RE-AUDIT: GOAL SEPARATION + PALAISTI SOURCE VERIFIED
+
+The post-RAAG review identified a scope problem that must control the next Gate-T action: the current (G_{s,a}) stress family fixes the Demuškin parameter (a=v_p(q)) and varies the extension depth (s). Therefore Gate T/T1-C is presently a **relative extension-depth problem**, not an orientation-recovery problem. No implication from solving (n_{\\mathrm{sep}}^{rel}(s)) to orientation recovery is authorized. Orientation remains a separate OPEN bridge and must be justified independently.
+
+The K–Z/F1/E2 material is correspondingly classified as homological/abelianized threshold background rather than a new orientation carrier: the exact (p^{m-1}+1) threshold reads the (p^m)-truncated abelianization exponent, and the E2 module (M\\cong\\mathbf Z_p) does not by itself establish information beyond that layer.
+
+The Palaisti source audit was independently checked against arXiv. **arXiv:2610.00021 exists and its official record states “Submitted on 31 Aug 2026.”** Thus the apparent numerical/date mismatch is an arXiv metadata peculiarity, not evidence that the citation is invalid. The paper proves results about (H^3), Frattini-layer fixed points, and a relation-defect class in topological coinvariants for free-by-Demushkin extensions; it does **not** prove the present finite-window splitting/non-splitting or exact (p^s+1) threshold. Source is therefore **VERIFIED / BACKGROUND-RELEVANT**, not a Gate-T closure.
+
+The proposed (p=3,s=2,a=1,d=2,n=10) calculation is authorized only after one refinement: the truncated Magnus/Jennings model should first compute the actual kernel and its mod-(p) abelianization/module action and the full lift-change subspace. A raw linear section test is not automatically equivalent to group-extension splitting because the section equations are nonlinear; Magnus truncation is a finite certificate engine, not a substitute for the extension-class logic. If the (A_s/pA_s) obstruction is nonzero, Gate T closes negatively at the diagnostic level. If it vanishes, descend to the next kernel layer; no inference of splitting is allowed.
+
+Updated classification:
+- K–Z exact abelianized threshold: **PASS / CLOSED**, but homological background rather than new orientation theorem;
+- q>0 abelianization saturation: **PASS / LOCAL**;
+- Palaisti 2610.00021 bibliographic existence/date: **PASS / CLOSED**;
+- Palaisti as proof of Gate-T nonsplitting: **FAIL / CLOSED**;
+- orientation bridge from Gate T: **OPEN / NOT ESTABLISHED**;
+- actual finite (A_s)-level obstruction: **OPEN / LOAD-BEARING**;
+- full finite extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact (n_{\\mathrm{sep}}^{rel}(s)=p^s+1): **OPEN / LOAD-BEARING**.
+
+Next authorized computation remains the minimal (p=3,s=2,a=1,d=2,n=10) finite-kernel/module calculation, not a new carrier search.
