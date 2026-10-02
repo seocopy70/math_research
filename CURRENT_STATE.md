@@ -2233,3 +2233,24 @@ Classification:
 - blind carrier hunt: STOP.
 
 Detailed audit: research/PAPER4_QPOS_MINIMAL_NONABELIAN_FINITE_EXTENSION_PRECHECK_2026-10-02.md.
+
+
+## 2026-10-02 — P4-Q+ ADMISSIBLE COMPRESSION CATEGORY FIXED
+
+The phrase “strict intrinsic nonabelian compression” is now operational rather than heuristic. The new audit \`research/PAPER4_QPOS_ADMISSIBLE_COMPRESSION_CATEGORY_PRECHECK_2026-10-02.md\` fixes the admissible category and target tests before computation.
+
+An admissible compression must be a functorial quotient of the finite relative Zassenhaus extension and satisfy A1 intrinsicity, A2 functoriality, A3 gauge invariance, A4 q-blindness, A5 orientation-blind input, A6 strict information loss, A7 non-reencoding, and A8 filtration compatibility.
+
+Target hierarchy:
+- **T1:** distinguish deep-tail parameters \(s\ne t\) in the q>0 stress family for \(s,t>a\);
+- **T2:** recover \(\min(s,m)\) for fixed \(m>a\).
+
+T1 is the next authorized target. T2 remains secondary.
+
+Current classification:
+- admissible compression category: **PASS / LOCAL**;
+- strict intrinsic compression existence: **OPEN / LOAD-BEARING**;
+- universal no-compression theorem: **OPEN**;
+- raw carrier/Magnus computation before category and gauge are fixed: **STOP / CLOSED**.
+
+Next authorized action: propose one specific quotient construction \(E_n\mapsto C_n(E_n)\), prove A1–A8, then test T1 separation and independently test non-reencoding. Do not broaden the carrier search.
