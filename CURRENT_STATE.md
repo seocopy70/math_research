@@ -933,3 +933,41 @@ Current classification:
 - intrinsic sinkhole recognition: OPEN/LOAD-BEARING;
 - exact orientation recovery from bare W_n: OPEN;
 - orientation no-go from phi_{a,c}: FAIL/CLOSED.
+
+## 2026-10-02 — NON-ABELIAN (W_q): BILINEAR WALL REPLACED BY SPECIAL-PLANE INCIDENCE GATE
+
+The previous statement that non-abelian (W_q) blocks the intrinsic extension approach is too strong. It blocks the global bilinear pairing (kappa_q:W_q	imes W_q	o A_q), but a finite-window 2-plane first-survival invariant remains available.
+
+For each (2)-plane (Ule L_1=D_1/D_2), define (ho(U)) as the first Zassenhaus degree at which an independent pair spanning (U) has a nonzero commutator defect. Equivalently, define the intrinsic incidence family
+[
+mathscr S_n(G)={Uinoperatorname{Gr}(2,L_1):ho(U)=n}.
+]
+The construction is presentation/lift independent and (q)-blind.
+
+The smallest genuinely non-abelian-origin special model
+[
+G=langle x,y,zmid xyx^{-1}=y^{1+q}, xzx^{-1}=z^{1+q}angle
+]
+is (Vtimeslangle xangle) with (V=langle y,zangle) free pro-(p). In this model:
+- (2)-planes contained in (operatorname{span}{ar y,ar z}) have degree-2 commutator survival;
+- (2)-planes (operatorname{span}{ar x,u}), (0
+e uinoperatorname{span}{ar y,ar z}), have first survival degree (q);
+- planes (operatorname{span}{ar x+v,u}) with (v,u) independent in the free-origin plane already have degree-2 survival.
+
+Thus the (q)-special planes form the incidence family of the sinkhole line with its origin plane, and when the origin plane has dimension at least two their intersection recovers the sinkhole line intrinsically.
+
+This is the first local mechanism that survives the non-abelian-origin test.
+
+Classification:
+- commuting-pair defect on (W_q): PASS / LOCAL as a partial domain, not a global bilinear pairing;
+- special-plane first-survival invariant: PASS / LOCAL;
+- noncommuting-origin special-line model: PASS / LOCAL;
+- sinkhole recovery by incidence intersection when at least two independent special neighbors exist: PASS / LOCAL;
+- general special-graph incidence formula: OPEN / LOAD-BEARING;
+- exclusion of accidental (q)-special (2)-planes: OPEN / LOAD-BEARING;
+- general directed/sinkhole separation: OPEN / LOAD-BEARING.
+
+Detailed audit: research/PAPER3_RAAG_SPECIAL_PLANE_INCIDENCE_AUDIT_2026-10-02.md.
+
+Immediate next gate:
+**prove or refute the accidental-plane exclusion theorem**: every independent (2)-plane with first commutator survival at (q>2) must arise from a sinkhole direction together with its special-neighbor span. No large computation is authorized until this gate is resolved.
