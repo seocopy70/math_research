@@ -1,3 +1,26 @@
+## 2026-10-02 — RP-4 CRITICAL RE-AUDIT: EXTENSION DEFECT BRANCH REOPENED/CORRECTED
+
+The proposed RP-4 closure based on “\\(\\kappa_n\\) is an abelianization factor” is rejected. Two corrections are controlling.
+
+1. The Part-I equivalence “graph-sensitive iff not factoring through abelianization” is logically too strong. Criterion B (existence of two equal-abelianization graphs separated by the carrier) is the actual separation test; non-factorization is necessary but not sufficient.
+
+2. The extension commutator defect is genuine filtered extension data. In the rank-2 special-edge model, \\(G'\\subseteq D_q\\), so \\(\\operatorname{im}\\kappa_n=0\\) for \\(n<q\\) and \\(\\operatorname{im}\\kappa_q=\\mathbf F_p\\overline{v^q}\\). The draft's claimed nonzero element of \\(D_2/D_3\\) is false for odd \\(p\\): \\(v^q\\in D_q\\subseteq D_3\\).
+
+Therefore the prior RP-4 FAIL/CLOSED label is HISTORICAL/SUPERSEDED. The Grassmannian special-plane carrier remains FAIL/CLOSED, but the raw extension-defect object remains locally valid and is not abelianization-only.
+
+Current classification:
+- central extension / commutator defect: PASS / LOCAL;
+- rank-2 first defect at q: PASS / LOCAL;
+- common-sink local extension defect: PASS / LOCAL;
+- Grassmannian special-plane extraction: FAIL / CLOSED;
+- “\\(\\kappa_n\\) factors through abelianization”: FAIL / CLOSED — FALSE CLAIM;
+- full extension-class carrier: OPEN / LOAD-BEARING;
+- general graph-incidence separation: OPEN / LOAD-BEARING.
+
+Next authorized gate: RP-5 full extension class \\([E_n]\\in H^2(W_n,A_n)\\), but only after pre-checking the actual extension object \\(E_n=W_{n+1}\\to W_n\\), functoriality/gauge, q-blind first-defect detection, and same-abelianization separation. Do not begin with a bare \\(H^2(W_1,A_1)\\) computation as though it already captured the q-layer.
+
+Detailed correction: research/RP4_EXTENSION_DEFECT_REAUDIT_2026-10-02.md
+
 ## 2026-10-02 — RP-3 Q-BLIND ADJACENT-WINDOW CARRIER FOUND
 
 The RP-3 Bockstein branch has advanced beyond the previous OPEN q-blindness gap.
