@@ -3709,7 +3709,9 @@ This supersedes the stronger HA61-B wording that classified the independent \(B_
 
 ## 2026-09-20 — HA61-B5-14: GLOBAL ZERO-MAP QUANTIFIER CORRECTION
 
-The B5-13 fixed-(f) 27-point argument is superseded as a no-go for the actual selector problem. The target is a lift (ho_3) for which the entire connecting map (delta_{3,ho_3}) vanishes. Conditional on the universal variation identity and surjectivity of the mod-9-to-mod-3 (H^1) reduction, Demuškin cup nondegeneracy implies **global zero-map uniqueness: PASS / LOCAL (conditional)**. This does not prove existence or finite filtered factorization. The active decisive gates are universal variation, finite filtered/relation existence, factorization through (G/P_4\) / (D_{10}), and Serre/Kummer novelty separation. The (t_2), (t_2/\langle p\rangle), and diagonal ((t_2,\mu)) routes remain FAIL/CLOSED; HA61-C remains unopened.
+The B5-13 fixed-(f) 27-point argument is superseded as a no-go for the actual selector problem. The target is a lift (
+ho_3) for which the entire connecting map (delta_{3,
+ho_3}) vanishes. Conditional on the universal variation identity and surjectivity of the mod-9-to-mod-3 (H^1) reduction, Demuškin cup nondegeneracy implies **global zero-map uniqueness: PASS / LOCAL (conditional)**. This does not prove existence or finite filtered factorization. The active decisive gates are universal variation, finite filtered/relation existence, factorization through (G/P_4\) / (D_{10}), and Serre/Kummer novelty separation. The (t_2), (t_2/\langle p\rangle), and diagonal ((t_2,\mu)) routes remain FAIL/CLOSED; HA61-C remains unopened.
 
 Record: research/HA61_B5_14_GLOBAL_ZERO_MAP_QUANTIFIER_CORRECTION_2026-09-20.md
 
@@ -4617,17 +4619,20 @@ The general-RAAG Gate D has been narrowed again. The earlier statement that non-
 
 A canonical partial defect remains available on commuting pairs, and after restricting to independent degree-one directions this yields an intrinsic Grassmannian invariant:
 [
-ho(U)=min{n:	ext{an independent pair spanning }U	ext{ has first commutator survival at }n}.
+
+ho(U)=min{n:	ext{an independent pair spanning }U	ext{ has first commutator survival at }n}.
 ]
 The finite-window incidence family
 [
-mathscr S_n={Uinoperatorname{Gr}(2,L_1):ho(U)=n}
+mathscr S_n={Uinoperatorname{Gr}(2,L_1):
+ho(U)=n}
 ]
 is presentation-free, lift-independent, functorial under filtered isomorphisms, and (q)-blind.
 
 The smallest non-abelian-origin special-line model
 [
-langle x,y,zmid xyx^{-1}=y^{1+q}, xzx^{-1}=z^{1+q}angle
+langle x,y,zmid xyx^{-1}=y^{1+q}, xzx^{-1}=z^{1+q}
+angle
 ]
 passes this test: the (q)-special planes are exactly the planes spanned by the sinkhole line and a nonzero origin direction. Their intersection recovers the sinkhole line when the sinkhole has at least two independent special neighbors.
 
@@ -4649,7 +4654,8 @@ No reopening of Paper 3, Mixed Fox, (O_k), (W_{11}/W_{12}), Paper 2, or large co
 
 The special-plane incidence branch has now been driven to a concrete counterexample. The smallest complete specially oriented graph with one special/sinkhole vertex and two ordinary vertices yields
 [
-G=langle s,a,bmid asa^{-1}=s^{1+q},;bsb^{-1}=s^{1+q},;[a,b]=1angle.
+G=langle s,a,bmid asa^{-1}=s^{1+q},;bsb^{-1}=s^{1+q},;[a,b]=1
+angle.
 ]
 Here (W_q) is abelian, so the intrinsic extension defect is available, but its degree-(q) component is an alternating form with radical (mathbf F_p(a-b)). The q-special Grassmannian consists of planes avoiding that radical and does not recover (mathbf F_p s).
 
@@ -4972,3 +4978,11 @@ The next calculation must follow
 At the critical layer \\(n=p^s+1\\), the surviving \\(z^{p^s}\\) is real (**PASS / LOCAL**) but its image in the abelianized/coinvariant kernel is removable by the torsion term \\(x_1^{p^a}\\): since \\(s>a\\), the lift change by \\(z^{-p^{s-a}}\\) supplies the required \\(p^s\\)-multiple. Therefore the scalar/coinvariant extension obstruction is **FAIL / CLOSED**.
 
 The frontier is now strictly non-coinvariant: \\(Q_s\\)-action on the kernel abelianization, the commutator layer, and the associated norm operator. Full extension splitting/non-splitting remains **OPEN / LOAD-BEARING**. Exact threshold \\(p^s+1\\) remains OPEN. This is a genuine narrowing of the problem, not a return to carrier hunting.
+
+## 2026-10-03 — PAPER 4 GATE T1-C / NONABELIAN KERNEL BOUNDARY
+
+Gate T has reached the first genuine kernel-level boundary. The critical layer z^{p^s} is visible, but the scalar class can be removed in the abelianized/coinvariant layer by a lift change, and the critical norm identity is zero. Therefore the threshold proof cannot rest on scalar H^2 or the critical norm equation. The active object is now the actual finite kernel K_s of the relative window and its non-coinvariant relation module A_s=K_s/[K_s,K_s]; only if that obstruction vanishes should gamma_2(K_s)/gamma_3(K_s) be examined. This is a kernel-level extension problem, not a new carrier hunt.
+
+Classification: critical visibility PASS/LOCAL; scalar/coinvariant obstruction FAIL/CLOSED; critical norm shortcut FAIL/CLOSED; non-coinvariant kernel module OPEN/LOAD-BEARING; exact relative threshold OPEN/LOAD-BEARING. Blind carrier search STOP.
+
+Detailed audit: research/PAPER4_QPOS_GATE_T1C_NONABELIAN_KERNEL_BOUNDARY_AUDIT_2026-10-03.md.
