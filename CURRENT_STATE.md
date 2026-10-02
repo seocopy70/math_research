@@ -1,3 +1,21 @@
+## 2026-10-02 — 2-GENERATOR RAAG GATE CORRECTED: FIRST SURVIVAL YES, INTRINSIC ROLE RECOGNITION OPEN
+
+The first 2-generator special-edge stress test has been critically audited. The candidate threshold mechanism survives only at the Zassenhaus first-survival level: for [w,v]=v^q, the q-dependent term is invisible through W_q and first survives in W_{q+1}.
+
+The stronger intrinsic role-recognition proof is not closed. The displayed Delta_q=im(Lambda^2 L_1 -> L_q) is ill-typed: the ordinary graded bracket L_1 wedge L_1 -> L_2, while the q-power term survives in L_q. A genuine proof therefore requires an intrinsic filtered relation-module/extension-class defect connecting the degree-2 relation to its degree-q correction.
+
+An independent gauge family v -> v^a, w -> v^c w preserves the 2-generator group and its characteristic filtration while changing the displayed orientation character. This is a serious obstruction to recovering a generator-normalized theta from bare abstract-window data. Before calling this a theorem-level no-go, the exact scope of the literature's orientation-uniqueness statement must be reconciled with the automorphism family.
+
+Classification:
+- first q-defect survival at q+1: PASS/LOCAL;
+- intrinsic sinkhole-line recognition at q+1: OPEN/LOAD-BEARING;
+- ordinary graded Lambda^2 L_1 -> L_q construction: FAIL/CLOSED — TYPE MISMATCH;
+- bare-window exact orientation recovery: STRONG NO-GO CANDIDATE / OPEN pending literature-scope reconciliation.
+
+Detailed audit: research/PAPER3_RAAG_2GEN_SPECIAL_EDGE_AUDIT_2026-10-02.md.
+
+Next authorized action: resolve the 2-generator filtered extension-class defect and the orientation-uniqueness/gauge compatibility before any larger RAAG computation.
+
 ## 2026-10-02 — SPECIAL ORIENTED PRO-p RAAG SELECTED AS ADJACENT OPEN GATE
 
 Literature-first search identifies special oriented right-angled Artin pro-p groups as the strongest current adjacent-class candidate. For special digraphs, the canonical orientation is uniquely characterized by the Kummerian lifting property and is given by 1+q on sinkholes and 1 elsewhere. The class contains independent finite graph structure in addition to the p-power q parameter. citeturn3search0turn5search0
