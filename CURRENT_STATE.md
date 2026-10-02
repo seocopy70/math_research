@@ -1,3 +1,54 @@
+## 2026-10-02 — 2-GENERATOR FILTERED EXTENSION DEFECT: INTRINSIC CARRIER FOUND / GENERALIZATION OPEN
+
+The gauge correction is now incorporated, and the next filtered-carrier attack has produced a genuine local result.
+
+For
+\[
+G=\langle v,w\mid wvw^{-1}=v^{1+q}\rangle,
+\]
+the naive \(\operatorname{gr}(R)\) claim that the higher term \(v^q\) itself defines a degree-q relation-module class is rejected: the relator has initial degree 2, and \([w,v]\notin R\), so the subtraction argument is not an element of the relation subgroup.
+
+The correct intrinsic object is the finite central extension
+\[
+1\to A_n=D_n/D_{n+1}\to W_{n+1}\to W_n\to1
+\]
+together with its commutator defect \(\kappa_n\) whenever \(W_n\) is abelian. In the 2-generator special-edge model:
+\[
+\operatorname{im}\kappa_n=0\ (n<q),\qquad
+\operatorname{im}\kappa_q=\mathbf F_p\overline{v^q}\neq0.
+\]
+Thus q is recovered intrinsically as the first nonzero extension-commutator degree.
+
+Combining this defect line with the restricted q-power operation gives, in the rank-2 model,
+\[
+\{x\in L_1:P_q(x)\in\operatorname{im}\kappa_q\}
+=\mathbf F_p\bar v,
+\]
+so the ordinary/origin line is intrinsically recognized. The sinkhole direction is canonically the quotient
+\[
+L_1/\mathbf F_p\bar v,
+\]
+but a canonical complementary line in \(L_1\) has not been proved.
+
+The former gauge obstruction is fully CLOSED: with the standard convention the sinkhole is w and
+\[
+\theta(v)=1,\quad\theta(w)=1+q,
+\]
+and \(v\mapsto v^a,\ w\mapsto v^cw\) preserves this canonical orientation.
+
+Classification:
+- central extension commutator carrier \(\kappa_q\): **PASS / LOCAL**;
+- q as first nonzero defect degree: **PASS / LOCAL**;
+- intrinsic origin-line recognition: **PASS / LOCAL**;
+- literal canonical sinkhole line: **CONDITIONAL**;
+- naive \(\operatorname{gr}(R)\) q-correction: **FAIL / CLOSED — WRONG OBJECT**;
+- gauge orientation obstruction: **FAIL / CLOSED**;
+- standard 2-generator orientation bridge: **PASS / LOCAL**, but not a new theorem because it still uses the known canonical special-edge formula;
+- general RAAG directed/sinkhole separation: **OPEN / LOAD-BEARING**.
+
+Detailed audit: research/PAPER3_RAAG_2GEN_FILTERED_EXTENSION_DEFECT_AUDIT_2026-10-02.md.
+
+Immediate next gate: smallest genuinely multi-special-edge configuration; test whether the intrinsic extension-commutator defect separates multiple special sinks without presentation labels. No large computation, Paper 2, Mixed Fox, O_k, q=N_k, or W_11/W_12 reopening.
 ## 2026-10-02 — 2-GENERATOR RAAG GATE CORRECTED: FIRST SURVIVAL YES, INTRINSIC ROLE RECOGNITION OPEN
 
 The first 2-generator special-edge stress test has been critically audited. The candidate threshold mechanism survives only at the Zassenhaus first-survival level: for [w,v]=v^q, the q-dependent term is invisible through W_q and first survives in W_{q+1}.
