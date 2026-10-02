@@ -2287,3 +2287,42 @@ This does **not** yet prove a finite-window no-go for cd=3: we still need a cd=3
 Methodological consequence: do not compute a carrier yet. The next authorized test is sharper: construct or rule out a **matched cd=3 control** with the same finite initial Zassenhaus data as the K–Z cd=2 model. If such a matched pair exists at arbitrary depth, finite-window detection closes negatively. If no such pair can be produced, the finite-window factorization question remains open and the K–Z example should be retained as the principal deep-tail stress test.
 
 Literature source: Kochloukova–Zalesskii, DOI 10.1007/s00209-004-0720-6; the accessible full-text extract explicitly states Theorem 2 and the presentation above. citeturn0search25turn0search1
+
+## 2026-10-02 — DECISIVE MATCHED-WINDOW NO-GO: K–Z cd=2 VS ABELIAN cd=3
+
+A matched cd=3 control has been found, so the previous “OPEN/LOAD-BEARING” boundary sharpens substantially.
+
+Fix an odd prime p and let
+\[
+G_s=\langle x,y,z\mid z^{p^s}=[x,y]\rangle
+\]
+be the Kochloukova–Zalesskii example. Their theorem gives cd_p(G_s)=2, G_s finitely generated, and a free pro-p kernel N_s of infinite rank over the quotient D\simeq Z_p^2. citeturn0search36
+
+Let
+\[
+G_+=Z_p^3=\langle x,y,z\mid [x,y]=[x,z]=[y,z]=1\rangle,
+\]
+viewed as the split extension 1→N_+→G_+→D→1 with N_+=Z_p and D=Z_p^2. The quotient D=Z_p^2 is a Demushkin group (odd-p classification with d=2 and q=0, relation [x,y]); hence Palaisti applies and cd_p(G_+)=3, equivalently (N_+/Phi(N_+))^D≠0. citeturn1search17turn1search20
+
+For every n with n≤p^s,
+\[
+G_s/D_n(G_s)\cong G_+/D_n(G_+).
+\]
+Reason: in the quotient modulo D_n, the element z^{p^s} is trivial because D_{p^s}⊆D_n. The K–Z relation therefore forces [x,y]=1; the resulting quotient is exactly the Zassenhaus quotient of the abelian rank-3 pro-p group. This uses the standard Zassenhaus definition \(D_n=\prod_{ip^j\ge n}\gamma_i^{p^j}\) and functoriality under quotients. citeturn2search0turn4search5
+
+Thus for every prescribed finite depth n there are two finitely generated free-by-Demushkin pro-p groups with the same n-th Zassenhaus window but different values of
+\[
+\kappa=\dim H^3(G,F_p)=\dim (N/\Phi(N))^D:
+\quad \kappa(G_s)=0,\quad \kappa(G_+)=1.
+\]
+
+This is the decisive negative result for any **uniform finite-depth detector** on the full finitely generated free-by-Demushkin class: no bound n=n(p,d) depending only on p and the generator rank d can determine cd_p G or κ from G/D_n, since both examples have d=3 and s can be chosen with p^s≥n.
+
+Crucial logical boundary: this does NOT prove that every individual G has no finite detecting depth, nor that an adaptive threshold depending on the hidden relation/extension data cannot exist. Indeed the K–Z family itself has a finite parameter s, and deeper windows may reveal it. Therefore the correct classification is:
+- matched cd=2/cd=3 arbitrary-depth windows: **PASS / LOCAL**;
+- uniform finite-depth cd/κ detector on the full class: **FAIL / CLOSED**;
+- detector with group-dependent threshold: **OPEN / LOAD-BEARING**;
+- finite-window recovery of δ_G or W^D at a threshold controlled by extension defect depth: **OPEN**;
+- carrier search before resolving threshold dependence: **STOP / NOT AUTHORIZED**.
+
+This is the first genuinely load-bearing Paper-4 negative theorem candidate and supersedes the weaker “K–Z alone is insufficient” boundary.
