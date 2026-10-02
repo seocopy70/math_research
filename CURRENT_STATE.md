@@ -1392,3 +1392,12 @@ Current status:
 Do not reopen J_q purity, Grassmannian, or search for unrelated carriers. The next authorized work is only the formal finite-signature definition and the accidental-direction/no-go test on the smallest multi-special models.
 
 Detailed audit: research/PAPER4_T1_LOCAL_UNIFORM_DIRECTION_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — T1 SCALE-FIXING CORRECTION AND MULTI-SINK CONTROL
+
+The 2-generator objection is accepted and incorporated. The finite defect coefficient is observable, but canonical normalization requires an intrinsic q-power target. In the common-sink model, scaling the sink direction by lambda scales all defects by lambda, so equality with the intrinsic q-power target forces lambda=1. This is PASS / LOCAL only; recovery of the target in the general abstract window remains OPEN.
+
+Separated multi-sink controls show that origin-specific q-power targets detect sink coefficients independently; generic sums of distinct sink directions have rank >=2 and are excluded by the rank-one local signature. Permutation symmetry is harmless; the obvious shear gauge is detected.
+
+Active T1 bottleneck is now: recover the intrinsic q-power target, then test overlapping multi-sink configurations for accidental rank-one directions. Detailed audit: research/PAPER4_T1_MULTI_SINK_SCALE_AUDIT_2026-10-02.md.
