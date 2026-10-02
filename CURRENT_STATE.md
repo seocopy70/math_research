@@ -1,5 +1,23 @@
 
 
+## 2026-10-02 — TOP-DOWN REFRAME: ORIENTATION IDENTIFIABILITY BEFORE CARRIER SEARCH
+
+A genuinely different research direction is authorized at framework level: reverse the usual bottom-up search finite-window -> carrier -> chi into target-first orientation -> finite observability -> coarsest sufficient information -> intrinsic realization.
+
+The decisive first question is whether chi_k(G)=chi_G mod p^k is constant on every finite-input equivalence class W_k(G)≅W_k(H). If a same-W_k/different-chi pair exists, then no carrier functorially constructed solely from W_k can recover chi_k; this is a carrier-independent no-go theorem. If identifiability is proved, only then should an intrinsic carrier be sought as a realization of the target-defined observable quotient.
+
+This reframing does not reopen O_k minimality, Mixed Fox, q=N_k, W_11/W_12, Paper 2, or p=2. It creates a new load-bearing gate: T0 finite-window orientation identifiability. The earlier discovery-ladder idea of extension-fiber rigidity is retained as one possible mechanism for proving or refuting T0, not as the carrier itself.
+
+Classification:
+- top-down identifiability framework: PASS / LOCAL;
+- T0 finite-window orientation identifiability: OPEN / LOAD-BEARING;
+- carrier construction before T0: NOT AUTHORIZED;
+- target-defined coarsest quotient: CONDITIONAL / specification only;
+- observability-depth invariant: OPEN.
+
+Detailed audit: research/PAPER3_POST_EXPLORATION_TOP_DOWN_ORIENTATION_IDENTIFIABILITY_2026-10-02.md
+
+
 ## 2026-10-02 — CRITICAL REVIEW OF EXTERNAL LEDGER INTERPRETATION
 
 The external critique was audited against the authoritative state. It is accepted only in part.
