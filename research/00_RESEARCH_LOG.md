@@ -1,3 +1,21 @@
+## 2026-10-02 — FULL-ORIENTATION COARSE REALIZATION AUDIT
+
+After T−1/T0 closure, the target was strengthened from recognition to the full finite-level canonical orientation [χ_G mod p^k]. The target values in the standard odd-p fixed-rank Demuškin family are exactly 1, (1-p)^(-1), …, (1-p^(k-1))^(-1) mod p^k, with the stable value 1 covering q=0 and q≥p^k. Distinctness follows because equality of two inverse values implies equality of the corresponding p-powers modulo p^k. Therefore the target has exactly k values.
+
+This gives a carrier-independent lower bound: any full-orientation carrier determined by W_k must have at least k isomorphism classes; an F_p-linear carrier has dimension at least ceil(log_p k). Consequently the previously frozen 1D cup-line selector is not a full orientation carrier for k≥p+1 (in particular k≥4 for p=3); its theorem remains a recognition/selection result.
+
+The audited q-reconstruction suggests an exact k-class intrinsic defect-index carrier: the first q-dependent Zassenhaus relation defect degree p^s for s<k, with one stable class for q=0 or q≥p^k. It reaches the information bound and recovers χ_k by the canonical formula. But it is a re-encoding of the already-classified invariant q, not a new carrier theorem at the present scope.
+
+Classification:
+- target cardinality: PASS/CLOSED;
+- carrier lower bound: PASS/CLOSED;
+- exact defect-index realization: PASS/LOCAL;
+- full-orientation factorization: PASS/LOCAL;
+- novelty of same-family coarsest carrier: FAIL/CLOSED — classification re-encoding.
+
+Detailed audit: research/PAPER3_TOP_DOWN_FULL_ORIENTATION_COARSE_REALIZATION_AUDIT_2026-10-02.md.
+
+Next authorized action: move to an adjacent admissible class or a genuinely different global target. Same-family q-compressions are no longer authorized unless they yield a structural consequence beyond classification.
 ## 2026-10-02 — TOP-DOWN T−1/T0 CLOSURE: INTRINSIC DEMUŠKIN ORIENTATION IS NOW IDENTIFIED
 
 The target-identification defect found in the first top-down T0 attempt is repaired by an explicit literature theorem.
