@@ -262,3 +262,26 @@ Current classification:
 ]
 
 No claim is made yet that the finite-window theorem holds. The next authorized calculation/proof is only S1 → S2, with special attention to intrinsic relation-module descent and avoidance of presentation-level re-encoding.
+
+
+### 2026-10-02 correction: gauge obstruction withdrawn
+
+A direct check against Blumer–Quadrelli–Weigel, Example 4.3 and Theorem 4.9 shows that in the standard convention for a special edge (v,w), the relation is w v w^{-1}=v^{1+q}, but the special/sinkhole vertex is w and the canonical orientation is theta(v)=1, theta(w)=1+q. The earlier audit had reversed these labels.
+
+Therefore the automorphisms v->v^a, w->v^c w preserve the canonical orientation:
+(theta o phi)(v)=1 and (theta o phi)(w)=1+q.
+The previously claimed gauge/shear orientation no-go is superseded and is now FAIL/CLOSED as an argument.
+
+This also removes the apparent conflict with the literature's uniqueness theorem: for specially oriented graphs the canonical orientation is the unique torsion-free orientation yielding the Kummerian property. The full-group gauge family is compatible because it fixes that orientation.
+
+The remaining genuine issue is the filtered carrier: the q-dependent relator r=[w,v]v^{-q} has initial Zassenhaus degree 2, so H^2 / the ordinary degree-2 relation class does not directly encode the higher q-correction. The ordinary map Lambda^2 L_1 -> L_q remains type-invalid. The needed object is an intrinsic filtered relation-module/extension defect.
+
+Current classification:
+- q-defect first survival q+1: PASS/LOCAL;
+- ordinary Lambda^2 L_1 -> L_q: FAIL/CLOSED — TYPE MISMATCH;
+- P_q: PASS/CLOSED as a restricted-power map;
+- H^2 as direct q-defect carrier: FAIL/CLOSED;
+- filtered relation/extension defect: OPEN/LOAD-BEARING;
+- intrinsic sinkhole recognition: OPEN/LOAD-BEARING;
+- exact orientation recovery from bare W_n: OPEN;
+- orientation no-go from phi_{a,c}: FAIL/CLOSED.
