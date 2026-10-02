@@ -1,3 +1,29 @@
+## 2026-10-02 — POST-PAPER-3 DISCOVERY LADDER REVIEW
+
+The proposed “failure → boundary → axiom → adjacent class” strategy is accepted as a useful correction to the post-Paper-3 exploration program, but three repairs are required before authorization.
+
+First, the arbitrary-extension counterexample is a boundary marker: positive descent requires rigidity of the admissible extension-class fiber over the finite window. This is a better abstraction than the presentation-dependent phrase “relator coupling.”
+
+Second, rank variation is not a substantive first theorem: Demuškin rank is already visible through H^1 of the finite quotient, and the standard odd-p classification has rank constraints. The proposed T1 is therefore reformulated as a control/sanity check, not the main discovery target.
+
+Third, the proposed relator axiom (R) is not intrinsic as written, and T2 does not follow from it. The condition must first be expressed on an invariant relation-module/extension-class object. Likewise the proposed T3 for all mild pro-p groups is too strong: mildness controls initial forms/graded structure but does not by itself imply finite-window determination of the next extension layer. Literature confirms strong graded consequences of mildness, but not the proposed shallow-window rigidity theorem. citeturn0search3turn0search8
+
+Revised active gate:
+\[
+\mathfrak F(W)=\{[E]:E\text{ admissible and projects to }W\},\qquad |\mathfrak F(W)|=1?
+\]
+The next authorized attack is to identify the smallest higher-order deformation invisible to W_k, test whether it changes the extension class E_k, and then formulate the weakest intrinsic condition that removes that deformation. Only after such a rigidity class survives should a genuinely new q-free orientation carrier be defined.
+
+Classification:
+- failure-to-boundary reinterpretation: PASS / LOCAL;
+- original S1/T1: CONDITIONAL / REFORMULATE;
+- original R/T2: OPEN / NOT YET INTRINSIC;
+- T3 for all mild pro-p: FAIL / CLOSED as overstrong target;
+- nearest-class rigidity search: OPEN / LOAD-BEARING;
+- genuinely new q-free carrier: OPEN.
+
+Detailed audit: research/PAPER3_POST_EXPLORATION_DISCOVERY_LADDER_REVIEW_2026-10-02.md
+
 ## 2026-10-02 — MIXED FOX NATURALITY CLOSED AT INTRINSIC SCOPE / NEW-CARRIER BRANCH CLOSED
 
 The final naturality attack produced two corrections and one closure.
