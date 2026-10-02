@@ -160,3 +160,44 @@ after **all** lift changes.
 The rank-two Fox row above is the starting differential, not the conclusion.
 
 If that class vanishes, the critical relative extension may split and the exact-threshold claim must be downgraded. If it survives, the surviving class is the first rigorous candidate for a load-bearing threshold obstruction.
+
+
+## Critical re-audit correction — 2026-10-03 00:14 KST
+
+The preceding T1-B audit contains one overreach that must be corrected before using it as a load-bearing statement.
+
+### 1. The filtration calculation is sound only after fixing the filtration convention
+The implication
+\[
+[z^{p^s},x]\in[D_{p^s},D_1]\subseteq D_{p^s+1}
+\]
+is valid for the Zassenhaus filtration, provided \(z^{p^s}\) is being interpreted as an element of the actual group filtration \(D_{p^s}(G_{s,a})\). The critical-layer-survival argument supplies this visibility. Thus the conclusion that the displayed norm identity has zero right-hand side in the critical quotient is structurally sound once the class-2 identity itself is established in the chosen quotient.
+
+### 2. But “full extension class in H^2(Q_s,A_s)” was too strong
+The finite kernel \(K_s\) need not be abelian. Therefore the full extension
+\[
+1\to K_s\to W_s\to Q_s\to1
+\]
+does not automatically define a class in ordinary \(H^2(Q_s,A_s)\) with \(A_s=K_s/[K_s,K_s]\) that completely controls splitting. Passing to \(A_s\) is a projection, not necessarily a complete invariant of the original extension.
+
+Correct statement: the abelianized-kernel image of the extension class can be tested in the appropriate module-valued cohomology, but vanishing there does **not** prove that the original extension splits. A residual obstruction may live in the nonabelian kernel or in a higher lower-central layer.
+
+### 3. The “next step is uniquely specified” claim is therefore withdrawn
+The next authorized task is more precisely:
+\[
+\boxed{\text{determine the first nonabelian quotient of }K_s\text{ in which the extension defect survives, if any.}}
+\]
+The abelianized module \(A_s\) is the first diagnostic, not automatically the final obstruction space. If its extension class is nonzero, this is sufficient evidence for nonsplitting. If it vanishes, one must inspect \(\gamma_2(K_s)/\gamma_3(K_s)\) (or the appropriate next central layer), not declare splitting.
+
+### 4. Fox formulas require convention control
+The displayed rank-two Fox derivatives are convention-dependent. They must be recomputed from the explicitly fixed commutator convention and then independently checked after evaluation in the relevant quotient. They should remain supporting calculations, not authoritative evidence, until that check is recorded.
+
+### Corrected classification
+- critical-layer visibility: **PASS / LOCAL**;
+- critical norm equation as a nonzero witness: **FAIL / CLOSED**;
+- non-coinvariant module action: **PASS / LOCAL**;
+- abelianized-kernel obstruction: **OPEN / DIAGNOSTIC**, not complete;
+- full finite extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact relative threshold: **OPEN / LOAD-BEARING**;
+- fixed-threshold norm visibility: **CONDITIONAL**;
+- blind carrier search: **STOP**.
