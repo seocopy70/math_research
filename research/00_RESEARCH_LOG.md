@@ -1,3 +1,42 @@
+## 2026-10-02 — PAPER 4 T1: INTRINSIC q-POWER TARGET CLOSED LOCALLY
+
+The recommended attack “define the intrinsic q-power target from the adjacent finite window” was executed.
+
+For an adjacent finite extension
+\[
+1\to A\to Y\xrightarrow{\pi}X\to1
+\]
+at the target window \(X=W_q,\;Y=W_{q+1}\), define
+\[
+e(X)=\exp(X),\qquad L(X)=X/\Phi(X),\qquad A=\ker\pi,
+\]
+and
+\[
+P_E(\bar x)=\tilde x^{\,e(X)}.
+\]
+At the specially oriented RAAG jump, \(e(W_q)=q\). The kernel \(A=D_q/D_{q+1}\) is central and elementary abelian, so the value is independent of the lift in \(Y\). Independence of the degree-one representative is exactly the iterated Zassenhaus restricted \(p\)-operation \(D_1/D_2\to D_q/D_{q+1}\), hence \(P_E\) is intrinsic to the adjacent window. No basis, generator, presentation, orientation, or displayed \(q\) is used.
+
+Independent literature verification: the Zassenhaus graded quotients \(D_n/D_{n+1}\) carry the restricted Lie structure and \(p\)-operation induced by group powers. This is stated in standard treatments of Jennings–Lazard theory and in the cited sources. citeturn6search12turn6search14
+
+Local consistency:
+- 2-generator special edge: \(P_E(\bar v)=\overline{v^q}=B_q(\bar w,\bar v)\);
+- common-sink: \(P_E(\bar v_i)=\overline{v_i^q}=B_q(\bar w,\bar v_i)\).
+
+Therefore the scale condition is now intrinsic:
+\[
+B_q(\lambda\bar w,\bar v)=P_E(\bar v)\ne0\Rightarrow\lambda=1.
+\]
+
+Classification:
+- intrinsic q-power target: **PASS / LOCAL**;
+- q-blind adjacent-window definition: **PASS / LOCAL**;
+- scale fixing relative to target: **PASS / LOCAL**;
+- T1: **OPEN / LOAD-BEARING**.
+
+Important limitation: \(P_E\) is not asserted to be linear on arbitrary \(L_1\); it is the iterated restricted-power map. The remaining decisive problem is no longer target construction. It is recognition of the normalized sink set \(S_q\), beginning with the smallest overlapping multi-sink configuration, plus filtered-isomorphism naturality.
+
+Consequence for methodology: this confirms the top-down reset. No new carrier search is authorized.
+
 ## 2026-10-02 — PAPER 4 TOP-DOWN TARGET SHARPENED: NORMALIZATION FUNCTIONAL GATE
 
 The top-down reset has now been carried through to a sharper mathematical target. For a specially oriented RAAG with (q=p^f), the first nontrivial orientation layer is a linear functional
