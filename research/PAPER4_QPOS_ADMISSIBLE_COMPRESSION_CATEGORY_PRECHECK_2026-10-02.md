@@ -125,14 +125,13 @@ For the q>0 stress family
 G_{s,a}=\langle z,x_1,\ldots,x_d\mid z^{p^s}=r_D\rangle,
 \qquad q_D=p^a,
 \]
-with \(s,t>a\), the minimum target is merely
+the weak target must still be a **uniform finite-depth target on a declared finite test range**. For a fixed benchmark depth parameter \(m>a\), require a single depth bound \(n=n(m)\), independent of the hidden tail parameter \(s\), such that the compressed windows separate the distinct deep-tail values in the declared range
 \[
-s\ne t\quad\Longrightarrow\quad
-C_n(E_n(G_{s,a}))\not\cong C_n(E_n(G_{t,a}))
+a<s,t\le m.
 \]
-at some finite depth \(n=n(s,t)\).
+Equivalently, the target is not pairwise “some \(n(s,t)\)” separation; it is separation through one finite level chosen before seeing the particular pair.
 
-This asks only whether the compression can see that the deep relation tails differ.
+This prevents T1 from collapsing into the tautological fact that the full inverse system may eventually separate individual examples.
 
 ### T2. Strong target: truncated depth recovery
 
@@ -140,9 +139,11 @@ For fixed \(m>a\), define on this stress family the benchmark
 \[
 T_m(G_{s,a})=\min(s,m).
 \]
-A positive result would require a natural reconstruction statement for \(T_m\), without putting \(a\), s, or \(\chi\) into the definition of \(C_n\).
+A positive result would require a natural reconstruction statement for \(T_m\), without putting \(a\), \(s\), or \(\chi\) into the definition of \(C_n\).
 
 T2 is strictly stronger than T1.
+
+The benchmark parameter \(a\) belongs only to the external stress family. q-blindness applies to the definition of the compression, not to the choice of a test family used to challenge it.
 
 **Default target for the next gate is T1.** We should not demand exact s until a nontrivial strict compression survives T1.
 
@@ -231,8 +232,8 @@ No raw Magnus/Fox scalar computation is authorized before a candidate quotient a
 ### Current classification
 
 - admissible compression category: **PASS / LOCAL**
-- exact target T1: **DEFINED**
-- exact target T2: **DEFINED / SECONDARY**
+- T1 uniform finite-depth separation target: **DEFINED / CORRECTED**
+- T2 exact truncated-depth target: **DEFINED / SECONDARY**
 - existence of a strict intrinsic compression: **OPEN / LOAD-BEARING**
 - universal no-compression theorem: **OPEN**
 - carrier hunt without category definition: **STOP / CLOSED**
