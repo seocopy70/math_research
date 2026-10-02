@@ -1,3 +1,13 @@
+## 2026-10-02 — PAPER 4 CREATIVE RE-EXAMINATION: GLOBAL PAIRING ROUTES — STRUCTURAL BOUNDARY
+
+After Gate D, the global-linear proposals were tested before any new carrier search.
+
+Φ(u)=B_q(u,-) is retained as diagnostic packaging, but rank-one atoms, universal total-mass/trace, and the natural simultaneous normalized-signature affine hull all fail as general orientation-recovery mechanisms.
+
+Decisive model: specially oriented chordal tree s-a-u-b-t with special edges a→s, b→t, a→u, b→u. Its q-defect incidence columns satisfy Φ(s)=P_a, Φ(t)=P_b, Φ(u)=P_a+P_b. A trace assigning value 1 to all genuine sink columns is inconsistent for odd p. The simultaneous normalized equations give an affine line in U≅F_p^3, codimension 2.
+
+Three-window is OPEN/LOCAL only; projective-only recovery is CLOSED for exact χ mod p^k. Do not continue modifying the same rank-one/trace/affine-hull construction.
+
 ## 2026-10-02 — PAPER 4 GATE D: SAME-WINDOW / DIFFERENT-ORIENTATION NO-GO — FAIL / CLOSED
 
 The top-down Gate D attack has now produced the requested structural counterexample.
