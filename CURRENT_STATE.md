@@ -1685,3 +1685,15 @@ The 2-generator objection is accepted and incorporated. The finite defect coeffi
 Separated multi-sink controls show that origin-specific q-power targets detect sink coefficients independently; generic sums of distinct sink directions have rank >=2 and are excluded by the rank-one local signature. Permutation symmetry is harmless; the obvious shear gauge is detected.
 
 Active T1 bottleneck is now: recover the intrinsic q-power target, then test overlapping multi-sink configurations for accidental rank-one directions. Detailed audit: research/PAPER4_T1_MULTI_SINK_SCALE_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — PAPER 4 GATE D1 FORMALIZATION
+
+D1 is now formalized as an intrinsic global lower-filtration signature. For an adjacent filtered window E: 1→A→Y→X→1 and u∈L_1=X/Φ(X), the signature L_E(u) records, for every filtration depth m and every x∈L_1, whether some lifts of u and x have commutator in D_m(Y). This uses the complete lift fibers rather than a chosen section, so it is presentation/lift/gauge-independent and q-blind. It is a global relation profile, not a pairwise q-defect or bilinear map.
+
+Status: D1 definition/intrinsicity/functoriality/q-blindness/non-tautology = PASS / LOCAL. Linearity/subspace structure and extraction of N_q = OPEN / LOAD-BEARING. Orientation bridge = OPEN / LOAD-BEARING. The unrestricted Gate-D same-window orientation no-go remains FAIL / CLOSED.
+
+The separated two-sink model is retained as a boundary: the full profile can see local q-defects while allowing a sum direction to inherit a local profile. Therefore N_q must be extracted from relations among full signatures, not from the span of q-invisible directions.
+
+Detailed audit: research/PAPER4_D1_GLOBAL_LOWER_FILTRATION_SIGNATURE_AUDIT_2026-10-02.md.
+Next authorized action: D2 only; no reopening of closed affine/profile carriers.
