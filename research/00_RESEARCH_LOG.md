@@ -2708,3 +2708,21 @@ Pre-check classification:
 - carrier computation before A1–A8: **STOP / CLOSED**.
 
 No raw Fox/Magnus scalar computation is authorized until a specific quotient candidate and its gauge orbit are fixed.
+
+
+## 2026-10-02 — T1 TARGET STRENGTHENED AFTER CRITICAL REVIEW
+
+The first definition of T1 allowed pair-dependent depths \(n(s,t)\), which was too weak: it could collapse back toward the tautological fact that an inverse system may eventually separate individual examples.
+
+T1 is therefore corrected to a **uniform finite-depth separation target on a declared finite stress range**. For fixed \(m>a\), a single depth \(n=n(m)\), chosen independently of the hidden tail parameter \(s\), must separate all distinct deep-tail values \(a<s,t\le m\) after compression.
+
+Thus the next test is genuinely a finite-window factorization/compression test, not pairwise eventual separation.
+
+Audit updated:
+\`research/PAPER4_QPOS_ADMISSIBLE_COMPRESSION_CATEGORY_PRECHECK_2026-10-02.md\`.
+
+Classification remains:
+- admissible compression category: **PASS / LOCAL**;
+- T1: **DEFINED / CORRECTED**;
+- T2: **DEFINED / SECONDARY**;
+- strict intrinsic compression existence: **OPEN / LOAD-BEARING**.
