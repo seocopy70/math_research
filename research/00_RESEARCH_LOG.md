@@ -1601,3 +1601,12 @@ Therefore the previously written RP-4 FAIL/CLOSED conclusion is HISTORICAL / SUP
 - general graph-incidence separation: OPEN / LOAD-BEARING.
 
 A corrected audit was recorded as research/RP4_EXTENSION_DEFECT_REAUDIT_2026-10-02.md. RP-5 is therefore a legitimate next branch, but only after an explicit pre-check of the actual finite central extension \\(E_n=W_{n+1}\\to W_n\\), its extension class in \\(H^2(W_n,A_n)\\), q-blind first-defect detection, and same-abelianization separation. No large computation is authorized before that pre-check.
+
+
+## 2026-10-02 — RP-5 LOCAL SEPARATION RESULT
+
+RP-5 produced a four-vertex same-abelianization separation pair. Graph A has special edges (a,s),(b,s); Graph B has (a,s),(b,t); no ordinary edges. Both have abelianization (Z/q)^2 + Z_p^2. At the first q-defect layer, the intrinsic origin plane is recovered by the q-power preimage of the defect image. In this control family the complementary special plane is recovered from the degree-2 centralizer. The cross q-extension defect has rank 1 for A and rank 2 for B. Therefore criterion B is PASS / LOCAL: filtered extension data are genuinely graph-sensitive. Full directed-incidence recovery remains OPEN / LOAD-BEARING.
+
+Important convention correction: in the audited literature, a special edge (v,w) has ordinary origin v, special terminus w, and relation w v w^{-1}=v^(1+q). Thus v is q-torsion in abelianization and w is free. Earlier RP-3 text identifying the torsion/annihilator sector with the special/sinkhole vertices is reversed under this convention and requires a separate correction audit.
+
+Detailed audit: research/RP5_NONABELIAN_EXTENSION_CLASS_AUDIT_2026-10-02.md
