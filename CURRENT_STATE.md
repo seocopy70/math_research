@@ -625,7 +625,9 @@ W_q^{ab}cong(mathbf Z/q)^V,qquad
 W_{q+1}^{ab}cong(mathbf Z/pq)^{Vsetminus S}oplus(mathbf Z/q)^S.
 ]
 Thus, if (Vsetminus S
-eqarnothing), (mathcal L(W_q,W_{q+1})) is exactly the free/non-sinkhole character subspace, hence (kereta_f). If (Vsetminus S=arnothing), the exponent does not jump and the definition gives (mathcal L=0=kereta_f).
+eq
+arnothing), (mathcal L(W_q,W_{q+1})) is exactly the free/non-sinkhole character subspace, hence (kereta_f). If (Vsetminus S=
+arnothing), the exponent does not jump and the definition gives (mathcal L=0=kereta_f).
 
 Therefore the intrinsic carrier
 [
@@ -643,7 +645,8 @@ Classification:
 - intrinsic/functorial construction: **PASS / LOCAL**;
 - kernel identification: **PASS / LOCAL** under the specially oriented RAAG abelianization structure;
 - full (eta_f) class reconstruction: **OPEN / NOT LOAD-BEARING**;
-- RP-3 overall: **PASS / LOCAL** for the declared target (F(W_{m finite})=(kereta_f)^perp);
+- RP-3 overall: **PASS / LOCAL** for the declared target (F(W_{
+m finite})=(kereta_f)^perp);
 - non-special oriented graphs: separate OPEN branch;
 - non-reencoding/minimality: OPEN and not yet claimed.
 
@@ -1655,17 +1658,23 @@ Current classification:
 
 The previous statement that non-abelian (W_q) blocks the intrinsic extension approach is too strong. It blocks the global bilinear pairing (kappa_q:W_q	imes W_q	o A_q), but a finite-window 2-plane first-survival invariant remains available.
 
-For each (2)-plane (Ule L_1=D_1/D_2), define (ho(U)) as the first Zassenhaus degree at which an independent pair spanning (U) has a nonzero commutator defect. Equivalently, define the intrinsic incidence family
+For each (2)-plane (Ule L_1=D_1/D_2), define (
+ho(U)) as the first Zassenhaus degree at which an independent pair spanning (U) has a nonzero commutator defect. Equivalently, define the intrinsic incidence family
 [
-mathscr S_n(G)={Uinoperatorname{Gr}(2,L_1):ho(U)=n}.
+mathscr S_n(G)={Uinoperatorname{Gr}(2,L_1):
+ho(U)=n}.
 ]
 The construction is presentation/lift independent and (q)-blind.
 
 The smallest genuinely non-abelian-origin special model
 [
-G=langle x,y,zmid xyx^{-1}=y^{1+q}, xzx^{-1}=z^{1+q}angle
+G=langle x,y,zmid xyx^{-1}=y^{1+q}, xzx^{-1}=z^{1+q}
+angle
 ]
-is (Vtimeslangle xangle) with (V=langle y,zangle) free pro-(p). In this model:
+is (V
+timeslangle x
+angle) with (V=langle y,z
+angle) free pro-(p). In this model:
 - (2)-planes contained in (operatorname{span}{ar y,ar z}) have degree-2 commutator survival;
 - (2)-planes (operatorname{span}{ar x,u}), (0
 e uinoperatorname{span}{ar y,ar z}), have first survival degree (q);
@@ -1693,7 +1702,8 @@ Immediate next gate:
 
 The proposed accidental-plane exclusion theorem has been refuted by the smallest complete specially oriented graph with one sinkhole (s) and two ordinary vertices (a,b):
 [
-G=langle s,a,bmid asa^{-1}=s^{1+q},;bsb^{-1}=s^{1+q},;[a,b]=1angle.
+G=langle s,a,bmid asa^{-1}=s^{1+q},;bsb^{-1}=s^{1+q},;[a,b]=1
+angle.
 ]
 This graph is within the standard specially oriented class; the literature explicitly allows a complete special graph with one special vertex joined by special edges to all other vertices. citeturn0search0
 
@@ -1710,8 +1720,10 @@ otsubset U}.
 ]
 It does not recover the sinkhole. For instance
 [
-U_1=langlear s,ar aangle,qquad
-U_2=langlear s+ar a,ar bangle
+U_1=langlear s,ar a
+angle,qquad
+U_2=langlear s+ar a,ar b
+angle
 ]
 are both q-special but (U_1cap U_2=0). Therefore
 [
@@ -2582,3 +2594,11 @@ Independent rank-two Fox check:
 which isolates the non-coinvariant \((y-1)\)-direction but does not by itself prove nonsplitting. The next authorized computation is the actual finite module \(A_s=K_s/[K_s,K_s]\), its relation-module presentation, and the resulting class in \(H^2(Q_s,A_s)\) after all lift-change coboundaries.
 
 Detailed audit: research/PAPER4_QPOS_GATE_T1B_CRITICAL_NORM_BOUNDARY_AUDIT_2026-10-03.md.
+
+## 2026-10-03 — GATE T1-C CURRENT FRONTIER
+
+Gate T is not solved. The authoritative endpoint after T1-B re-audit is now refined by T1-C: critical-layer visibility is PASS/LOCAL, but scalar/coinvariant and critical-norm witnesses are closed. The remaining load-bearing object is the actual kernel K_s of the finite relative extension at n=p^s+1, beginning with its non-coinvariant module A_s=K_s/[K_s,K_s]. If the obstruction vanishes there, inspect gamma_2(K_s)/gamma_3(K_s); vanishing of the abelianized class never by itself proves splitting.
+
+The exact relative threshold p^s+1 remains OPEN/LOAD-BEARING. The unmarked filtered-group theorem remains OPEN. RAAG remains CLOSED-AS-MAIN-ROUTE; blind carrier hunting remains STOP. The next authorized calculation is the actual finite relation-module computation, with fixed commutator convention and an independent Fox check.
+
+Audit: research/PAPER4_QPOS_GATE_T1C_NONABELIAN_KERNEL_BOUNDARY_AUDIT_2026-10-03.md.
