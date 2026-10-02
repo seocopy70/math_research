@@ -1,3 +1,51 @@
+## 2026-10-02 — TOP-DOWN T−1/T0 CLOSURE: INTRINSIC DEMUŠKIN ORIENTATION IS NOW IDENTIFIED
+
+The target-identification defect found in the first top-down T0 attempt is repaired by an explicit literature theorem.
+
+For the declared standard odd-p fixed-rank Demuškin family, Labute's Theorem 4 gives a unique continuous character
+\[
+\chi_G:G\to U_p
+\]
+with the crossed-derivation/Kummerian property. In the standard odd-p normal form
+\[
+G=\langle x_1,\ldots,x_d\mid x_1^q[x_1,x_2][x_3,x_4]\cdots=1\rangle,
+\]
+the same theorem gives
+\[
+\chi_G(x_2)=(1-q)^{-1},\qquad \chi_G(x_i)=1\ (i\ne2).
+\]
+Modern literature identifies this character as the canonical Demuškin orientation and as the unique 1-cyclotomic/Kummerian orientation. Hence the previous objection that the \((1-q)^{-1}\) formula was merely a presentation-level coefficient twist is no longer valid at this scope.
+
+The target is defined basis-free as the isomorphism class of the canonical orientation \([\chi_G\bmod p^k]\). If \varphi:G\cong H\), then \chi_H\circ\varphi is a Kummerian orientation on G; uniqueness forces \chi_H\circ\varphi=\chi_G. Thus the target is functorial under abstract group isomorphism.
+
+Combining this with the independently audited Demuškin finite-window reconstruction gives the corrected T0 result. Let \(N_k=p^{k-1}+1\).
+
+- If \(q=p^s<p^k\), then \(s<k\) and \(q<N_k\); the intrinsic Zassenhaus graded defect below \(N_k\) recovers q.
+- If \(q\ge p^k\) or \(q=0\), then the q-term is beyond the finite window and \(q\equiv0\pmod{p^k}\); therefore \((1-q)^{-1}\equiv1\pmod{p^k}\), and q=0 gives exactly 1.
+- The previously used q=N_k case is impossible because standard odd-p Demuškin q is a p-power or 0, while \(p^{k-1}+1\) is not a p-power.
+
+Therefore
+\[
+W_k(G)\cong W_k(H)\Longrightarrow[\chi_G\bmod p^k]=[\chi_H\bmod p^k]
+\]
+for the standard odd-p fixed-rank Demuškin family.
+
+Classification:
+- T−1 target identification: **PASS/CLOSED** at declared standard scope.
+- Demuškin finite-window T0 orientation identifiability: **PASS/CLOSED** at declared standard scope.
+- Previous T0 PASS: **HISTORICAL/SUPERSEDED** (invalid inference repaired by theorem-level target identification).
+- Broad orientation non-identifiability: **OPEN/NOT PROVED**.
+- Observability-depth monotonicity: **OPEN**.
+- New carrier construction is no longer blocked by T0, but any candidate must still pass Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop.
+- Mixed Fox remains **FAIL/CLOSED — REDUNDANT** as a new recognition carrier; its finite projective object remains PASS/LOCAL.
+
+Detailed audit:
+research/PAPER3_TOP_DOWN_T1_T0_CLOSURE_2026-10-02.md
+
+Immediate next gate:
+**coarsest/non-tautological intrinsic realization of the already-forced finite-window map \(W_k\mapsto[\chi_k]\)**. No reopening of Mixed Fox, q=N_k, W_11/W_12, or Paper 2.
+
+
 ## 2026-10-02 — POST-PAPER-3 DISCOVERY LADDER REVIEW
 
 The proposed “failure → boundary → axiom → adjacent class” strategy is accepted as a useful correction to the post-Paper-3 exploration program, but three repairs are required before authorization.
