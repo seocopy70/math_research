@@ -1,3 +1,29 @@
+## 2026-10-02 — PAPER 4 GATE D DECISIVE NO-GO
+
+Gate D was tested exactly as required: before any new observable, search for two admissible oriented objects with the same un-oriented finite window but different orientation targets.
+
+A decisive counterexample exists inside the current specially oriented pro-p RAAG class.
+
+Choose a nontrivial specially oriented graph Γ0 with a visible special-edge q-layer and an isolated vertex z. Define ΓA=Γ0⊔{z}_ordinary and ΓB=Γ0⊔{z}_special. The literature permits isolated special vertices and explicitly distinguishes the ordinary/special designation even when the geometric graph is identical. Both graphs are specially oriented. Since z is isolated, its status contributes no relation, so GΓA,λ=GΓB,λ as un-oriented pro-p groups. Hence all Zassenhaus quotients, and in particular the entire adjacent pair W_q←W_{q+1}, are identical.
+
+The canonical orientation differs: θA(z)=1 and θB(z)=λ(1)=1+q. For q=p^{k-1}, 1+q is not congruent to 1 modulo p^k. Therefore the same finite window supports two different orientation targets.
+
+This closes Gate D at the current admissible class. It also proves a stronger statement than failure of any particular carrier: orientation is not a function of the un-oriented filtered group itself on this class, so no finite-window-only carrier can repair the problem.
+
+Literature control: Blumer–Quadrelli–Weigel, definition of oriented pro-ℓ RAAGs, Remark 2.4 (isolated vertex may be declared ordinary or special), Definition 2.5 (special graph condition), and canonical orientation definition. Independent web verification was performed on 2026-10-02.
+
+The recent T1 affine-hull failure remains valid but is now secondary. The current program must stop carrier search on this class.
+
+Boundary:
+- current specially oriented RAAG class: FAIL / CLOSED for Gate D;
+- class excluding isolated special vertices: OPEN;
+- enriching the finite input by an explicit orientation marking: OPEN;
+- positive finite-window theorem on a restricted orientation-rigid class: OPEN.
+
+Detailed audit: research/PAPER4_GATE_D_SAME_WINDOW_DIFFERENT_ORIENTATION_AUDIT_2026-10-02.md.
+
+Next authorized action: do not design another carrier. First define the restricted admissible class/input for any attempted positive continuation, then run the full pre-check from Object through Stop.
+
 ## 2026-10-02 — PAPER 4 T1 AFFINE-HULL GATE REFUTED / T1 CURRENT REALIZATION CLOSED
 
 The proposed final gate Aff(S_E)=omega_q^{-1}(1) fails for the current existential local-uniform signature.
