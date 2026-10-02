@@ -3098,3 +3098,24 @@ Authoritative classification:
 Detailed audit: research/PAPER4_QPOS_GATE_T1B_CRITICAL_NORM_BOUNDARY_AUDIT_2026-10-03.md.
 
 Next authorized action: compute the actual finite abelianized kernel module and its relation-module presentation at \(n=p^s+1\), then determine whether the extension-defect class vanishes in \(H^2(Q_s,A_s)\) after all lift changes.
+
+
+## 2026-10-03 — CRITICAL RE-AUDIT OF T1-B SCOPE
+
+A critical review found one overreach in the immediately preceding T1-B record. The filtration conclusion itself is retained: once \(z^{p^s}\in D_{p^s}(G_{s,a})\) is established and the class-2 norm identity is valid, \([z^{p^s},x]\in D_{p^s+1}\), so the critical norm equation has zero right-hand side. Hence it is **FAIL / CLOSED as a nonzero nonsplitting witness**.
+
+However, the statement that the remaining problem is automatically a class in ordinary \(H^2(Q_s,A_s)\), with \(A_s=K_s/[K_s,K_s]\), was too strong. The actual kernel \(K_s\) need not be abelian; abelianizing it gives only a projected module-valued diagnostic and does not necessarily control splitting of the original extension. If the abelianized obstruction vanishes, a higher/nonabelian obstruction may remain in \(\gamma_2(K_s)/\gamma_3(K_s)\) or another first surviving central layer.
+
+Also, the previously displayed rank-two Fox derivatives are convention-dependent and must be independently recomputed from the fixed commutator convention before being used as evidence.
+
+Correct classification:
+- critical-layer visibility: **PASS / LOCAL**;
+- critical norm equation as nonzero witness: **FAIL / CLOSED**;
+- non-coinvariant module action: **PASS / LOCAL**;
+- abelianized-kernel obstruction: **OPEN / DIAGNOSTIC**;
+- full finite extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact relative threshold: **OPEN / LOAD-BEARING**;
+- fixed-threshold norm visibility: **CONDITIONAL**;
+- blind carrier search: **STOP**.
+
+The next task is therefore not “compute \(H^2(Q_s,A_s)\) and decide everything”, but determine the **first nonabelian quotient of \(K_s\)** in which the extension defect survives, if any. The abelianized kernel is the first diagnostic layer; vanishing there does not close the branch.
