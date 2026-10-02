@@ -4846,3 +4846,8 @@ Classification:
 - E2 → orientation: **OPEN**.
 
 Detailed audit: research/PAPER4_F1_MINIMAL_THRESHOLD_AND_DEMUSHKIN_STRESS_AUDIT_2026-10-02.md.
+
+
+## Paper 4 — 2026-10-02 q>0 boundary update
+
+The q>0 branch was narrowed decisively. For standard odd-p Demushkin quotient q_D=p^a, H_2(D,Z_p)=0 in the untwisted coefficient system, so the q=0 E2 transgression carrier does not continue to q>0. The untwisted H_1/coinvariant extension layer saturates at q-depth a. The ordinary mod-p p-Zassenhaus associated graded of the stress model z^{p^s}=r_D is also blind to s because its initial relation is the degree-2 Demushkin commutator form; mildness follows from the odd-p Schmidt criterion in the stress model. The remaining authorized frontier is intrinsic integral p-adic Magnus/relation-module data strictly richer than the ordinary associated graded. Full finite-window factorization remains OPEN; no new arbitrary carrier hunt is authorized.
