@@ -1756,3 +1756,27 @@ The separated two-sink model is retained as a boundary: the full profile can see
 
 Detailed audit: research/PAPER4_D1_GLOBAL_LOWER_FILTRATION_SIGNATURE_AUDIT_2026-10-02.md.
 Next authorized action: D2 only; no reopening of closed affine/profile carriers.
+
+
+## 2026-10-02 — D2 CRITICAL RE-AUDIT / STATUS CORRECTION
+
+The D2 no-go has been narrowed after critical review.
+
+What remains closed:
+- D1 global depth signature cannot recover normalized orientation because nonzero scalar multiples have identical depth signatures in the rank-two special-edge model;
+- any quotient whose information is exhausted by D1 signatures cannot restore that scalar normalization;
+- the specific first-coefficient-valued incidence quotient fails as an orientation carrier by the chordal-tree kernel relation \(u-s-t\in\ker\Phi\) with nonzero \(\omega_q\).
+
+What is withdrawn/superseded:
+- the claim that the **full** restricted finite extension fails merely because its first coefficient projection fails;
+- the claim that the isolated-ordinary family \(\omega_c(\alpha s+\beta z)\) by itself proves non-uniqueness of the canonical orientation.
+
+The first is a projection-vs-full-extension distinction; the second lacks verification that the alternative functionals satisfy the canonical orientation's defining conditions.
+
+Current active boundary:
+- D2 linear/first-defect routes: **FAIL / CLOSED**;
+- full nonlinear/restricted finite-extension factorization: **OPEN / LOAD-BEARING**;
+- unrestricted same-window un-oriented class-level non-identifiability remains a separate negative boundary;
+- no unconstrained carrier hunting is authorized.
+
+Next authorized task: define the smallest intrinsically meaningful nonlinear extension invariant that retains information lost by D1 and the first coefficient quotient, then run the full pre-check before any computation. Detailed audit: research/PAPER4_D2_CRITICAL_REAUDIT_2026-10-02.md.
