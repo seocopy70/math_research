@@ -1,3 +1,7 @@
+## 2026-10-02 — D2 CONVENTION CORRECTION
+
+The separated two-sink discussion in the new D2/extension audits has been corrected: absence of an edge does not imply commutation in the oriented pro-p RAAG convention. Mixed vectors can therefore carry lower-filtration contamination. This does not change D2: the rank-two special-edge model alone proves that the D1 depth signature is scalar-blind while the canonical orientation is not. The coefficient-valued extension carrier remains closed by the chordal-tree kernel obstruction.
+
 ## 2026-10-02 — PAPER 4 D2 SIGNATURE-RELATION QUOTIENT NO-GO
 
 The authorized D2 attack was completed.
