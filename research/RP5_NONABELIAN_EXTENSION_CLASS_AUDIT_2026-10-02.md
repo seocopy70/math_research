@@ -343,3 +343,10 @@ The next authorized gate is therefore **not** another arbitrary H^2 computation.
 The key object to attack is a canonical filtered cross-defect that quotients out the ordinary degree-2 sector before extracting the degree-q special incidence.
 
 No Grassmannian support/intersection construction is to be reopened.
+
+
+## 12. Convention verification after RP-5
+
+The convention used in this audit is independently confirmed against the literature: special edge (v,w) has ordinary origin v, special terminus w, and relation wvw^{-1}=v^{1+q}. Hence v is the q-torsion direction in abelianization. citeturn1search0turn1search1
+
+This matches the RP-5 notation O=span(a,b), S=span(s,t). Therefore the RP-5 separation witness is convention-consistent and does not require relabeling.
