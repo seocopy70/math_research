@@ -1,3 +1,46 @@
+## 2026-10-02 — PAPER 4 FILTERED q-PROFILE QUOTIENT / UNIQUENESS BOUNDARY
+
+The dangerous-model attack was completed.
+
+The long ordinary chain
+\[
+r_1-r_2-a\to s
+\]
+confirms the lower-filtration mechanism: for the origin \(a\), \([s,a]\) first survives at degree \(q\), while \([r_1,a]\) has a degree-2 obstruction. Hence \([s+r_1,a]\notin D_q\). The q-layer projection can hide this obstruction, but the full filtered profile rejects it.
+
+However, the same model shows that the normalized filtered-profile locus need not affinely span the ambient \(U=L_1/O_q\): ordinary non-origin directions can remain in \(U\) while carrying canonical orientation value 0. Thus the ambient statement
+\[
+\operatorname{Aff}(\mathcal S_q)=\omega_q^{-1}(1)
+\]
+is **FAIL / CLOSED as stated**.
+
+A stronger mixed test uses the disjoint union
+\[
+(a\to s)\sqcup\{z\}_{\rm ordinary}.
+\]
+Modulo the recovered origin sector, \(s\) has the normalized q-profile, while \(z\) is blocked by a lower-degree commutator. The profile therefore sees \(s\) but imposes no value on the \(z\)-coordinate. The family
+\[
+\omega_c(\alpha s+\beta z)=\alpha+c\beta
+\]
+agrees on the normalized profile for every \(c\in\mathbf F_p\), whereas the canonical orientation has \(c=0\). Hence the filtered q-profile alone does **not** determine \(\omega_q\) on all of \(U\).
+
+This is not a return to carrier hunting. It proves that a genuine quotient \(U/N_q\) is necessary.
+
+A second boundary is decisive: an isolated special vertex has no q-profile witness but canonical orientation value 1. Therefore a naive \(N_q\) defined from profile-invisibility cannot satisfy \(N_q\subseteq\ker\omega_q\) on the unrestricted specially oriented class. The earlier Gate-D obstruction remains controlling there.
+
+The surviving local lemma is structural: in a specially oriented graph, once lower-degree contamination is absent, any adjacent special vertex is a special terminus, ordinary neighbors contribute no q-defect, and non-neighbors produce lower-degree obstruction. Thus the normalized q-defect equals the visible special coefficient sum.
+
+Current classification:
+- lower-filtration + q-defect mechanism: **PASS / LOCAL**;
+- ambient affine-hyperplane uniqueness: **FAIL / CLOSED**;
+- unrestricted quotient uniqueness: **FAIL / CLOSED**;
+- restricted quotient theorem on a class with no isolated special vertices: **OPEN / LOAD-BEARING**;
+- Paper 4: **OPEN**.
+
+The next authorized task is singular: define \(N_q\) non-tautologically from the *relations among lower-filtration obstructions* and test it on the long chain, mixed ordinary/special component, separated two-sink, and chordal-tree controls. It is explicitly forbidden to define \(N_q\) as the span of all q-invisible directions, because the separated two-sink vector \(s+t\) is q-invisible under full flatness but has \(\omega_q(s+t)=2\ne0\).
+
+Detailed audit: research/PAPER4_FILTERED_PROFILE_QUOTIENT_UNIQUENESS_AUDIT_2026-10-02.md.
+
 ## 2026-10-02 — PAPER 4 CRITICAL CORRECTION + NONABELIAN FILTERED PROFILE GATE
 
 The previous whole-package kernel-shear no-go overclaimed: P_E is a genuine restricted-power map and cannot be treated as pointwise fixed under an arbitrary shear. The whole-linear-package closure is therefore HISTORICAL/SUPERSEDED.
