@@ -232,3 +232,132 @@ W_q\leftarrow W_{q+1}
 \]
 
 The next authorized attack is the smallest overlapping multi-sink configuration.
+
+
+## 12. OVERLAPPING MULTI-SINK: ACCIDENTAL NORMALIZED DIRECTIONS EXIST — BUT THIS DOES NOT KILL \(\omega_q\)
+
+The smallest overlapping model is
+\[
+G=\langle a,s,t\mid sas^{-1}=a^{1+q},\;tat^{-1}=a^{1+q}\rangle,
+\]
+with \(a\) ordinary and \(s,t\) distinct special vertices. This is a valid specially oriented graph: both special edges have the same ordinary origin \(a\).
+
+Here
+\[
+O_q=\mathbf F_p\bar a,\qquad
+U_q=\mathbf F_p\bar s\oplus\mathbf F_p\bar t,
+\]
+and for
+\[
+u=\alpha\bar s+\beta\bar t
+\]
+the first q-defect against \(a\) is
+\[
+B_q(u,\bar a)=(\alpha+\beta)\,\overline{a^q}.
+\]
+
+For odd \(p\), choose \(m\in\mathbf F_p^\times\) with \(2m=1\). The group element
+\[
+z=(st)^m
+\]
+has degree-one class
+\[
+\bar z=m(\bar s+\bar t),
+\]
+which is not one of the sink directions. Yet
+\[
+zaz^{-1}=a^{(1+q)^{2m}}
+\equiv a^{1+q}\pmod{D_{q+1}},
+\]
+because \(2m\equiv1\pmod p\). Therefore
+\[
+B_q(\bar z,\bar a)=\overline{a^q}=P_E(\bar a).
+\]
+
+So the previously proposed statement
+\[
+P_q=\{\text{sink directions}\}
+\]
+is **FAIL / CLOSED** in the overlapping model.
+
+### Critical correction to the earlier failure criterion
+
+This accidental vector does **not**, by itself, imply that T1 itself fails.
+
+The actual T1 target is \(\omega_q\), not recovery of the literal set of graph vertices. In the overlapping model the accidental vector satisfies the same normalization equation as the genuine sink directions:
+\[
+\omega_q(\bar s)=\omega_q(\bar t)=\omega_q(\bar z)=1,
+\]
+where
+\[
+\omega_q(\alpha\bar s+\beta\bar t)=\alpha+\beta.
+\]
+
+Thus the accidental direction is not an orientation ambiguity; it lies on the same normalized affine hyperplane.
+
+The correct target-first replacement is therefore:
+
+\[
+\boxed{
+\mathcal S_E
+=
+\{\bar u\in U_q:\bar u\text{ admits an intrinsic normalized rank-one special-edge signature}\}
+}
+\]
+
+followed by the affine-hull test
+\[
+\boxed{
+\operatorname{Aff}(\mathcal S_E)
+\stackrel{?}{=}
+\omega_q^{-1}(1).
+}
+\]
+
+If this affine hull is a codimension-one affine hyperplane not containing \(0\), then it determines a unique linear functional \(\omega_q\) with value \(1\) on the whole hull. This is exactly the information needed by T1 and does not require identifying the literal sink-vertex set.
+
+In the overlapping model,
+\[
+\mathcal S_E=\{\alpha\bar s+\beta\bar t:\alpha+\beta=1\},
+\]
+so
+\[
+\operatorname{Aff}(\mathcal S_E)=\omega_q^{-1}(1).
+\]
+
+This is a genuine structural refinement, not a return to carrier hunting.
+
+## 13. Revised status after overlapping test
+
+- intrinsic q-power target \(P_E\): **PASS / LOCAL**;
+- local scale fixing relative to \(P_E\): **PASS / LOCAL**;
+- literal sink-direction recognition \(P_q=\{\bar w_i\}\): **FAIL / CLOSED**;
+- overlapping accidental direction: **PASS / LOCAL as a counterexample to literal sink-set recognition**;
+- normalized affine-hyperplane target \(\operatorname{Aff}(\mathcal S_E)\): **OPEN / LOAD-BEARING**;
+- T1 finite-window orientation functional \(\omega_q\): **OPEN / LOAD-BEARING**.
+
+### Important consequence
+
+The overlapping experiment did what it was supposed to do: it killed the too-strong vertex-level formulation. It did **not** kill the top-down orientation target.
+
+The correct remaining theorem is now narrower:
+
+\[
+\boxed{
+W_q\leftarrow W_{q+1}
+\Longrightarrow
+O_q
+\Longrightarrow
+P_E
+\Longrightarrow
+\operatorname{Aff}(\mathcal S_E)
+\Longrightarrow
+\omega_q.
+}
+\]
+
+The next authorized attack is **not another carrier**. It is the affine-hull theorem:
+
+> Does the intrinsic normalized-signature set \(\mathcal S_E\) always have affine hull equal to a codimension-one hyperplane, and is that hyperplane exactly \(\omega_q^{-1}(1)\)?
+
+Failure of codimension-one affine structure closes this T1 realization. Success gives the first genuine finite-window construction of \(\omega_q\).
