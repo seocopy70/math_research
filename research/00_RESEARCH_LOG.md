@@ -1348,3 +1348,39 @@ Classification:
 Detailed audit: research/PAPER3_RAAG_SPECIAL_PLANE_INCIDENCE_AUDIT_2026-10-02.md.
 
 Next authorized action: prove/refute the accidental-plane exclusion theorem for arbitrary specially oriented graphs. If it passes, reconstruct sinkhole/source incidence from the special-plane family; if it fails, retain the explicit counterexample as the new obstruction. No large computation or reopening of frozen branches.
+
+## 2026-10-02 — ACCIDENTAL-PLANE EXCLUSION REFUTED / SPECIAL-PLANE CARRIER CLOSED
+
+The active Gate D was pursued to completion. The theorem excluding accidental q-special 2-planes is false on the full specially oriented RAAG class.
+
+Counterexample:
+[
+G=langle s,a,bmid asa^{-1}=s^{1+q},;bsb^{-1}=s^{1+q},;[a,b]=1angle,
+]
+with (s) the unique special/sinkhole vertex and (a,b) ordinary. This is a complete specially oriented graph, a class explicitly allowed in the literature. citeturn0search0
+
+Since the underlying graph is complete, all degree-2 commutators vanish. Therefore the extension defect at degree (q) is represented intrinsically by an alternating form (B_q) on (L_1), with
+[
+B_q(a,s)=s^q,quad B_q(b,s)=s^q,quad B_q(a,b)=0.
+]
+Its radical is (mathbf F_p(a-b)). The q-special 2-planes are exactly those not containing this radical. In particular
+[
+U_1=langle s,aangle,qquad U_2=langle s+a,bangle
+]
+are both q-special while (U_1cap U_2=0). Hence the intersection of all q-special planes is zero, not the sinkhole line.
+
+This directly refutes the proposed accidental-plane exclusion and the claimed general sinkhole recovery from (mathscr S_q).
+
+The failure mechanism is structural: when the ordinary-neighbor sector is abelian, degree-2 separation disappears and the q-defect becomes an alternating form whose Grassmannian support detects its radical rather than the sinkhole.
+
+Classification:
+- accidental q-special-plane exclusion: **FAIL / CLOSED**;
+- special-plane first-survival carrier: **FAIL / CLOSED**;
+- sinkhole recovery by (mathscr S_q): **FAIL / CLOSED**;
+- noncommuting-origin local mechanism: **PASS / LOCAL** only under its explicit hypothesis;
+- general directed/sinkhole separation by this carrier: **FAIL / CLOSED**;
+- alternative intrinsic carrier: **OPEN**.
+
+Detailed audit: research/PAPER3_RAAG_SPECIAL_PLANE_INCIDENCE_AUDIT_2026-10-02.md.
+
+The carrier branch is frozen. No additional (mathscr S_q) computation is authorized.
