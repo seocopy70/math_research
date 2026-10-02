@@ -1,3 +1,6 @@
+## 2026-10-02 — D2 CONVENTION CORRECTION
+
+The separated two-sink discussion in the new D2/extension audits has been corrected: absence of an edge does not imply commutation in the oriented pro-p RAAG convention. Mixed vectors can therefore carry lower-filtration contamination. This does not change D2: the rank-two special-edge model alone proves that the D1 depth signature is scalar-blind while the canonical orientation is not. The coefficient-valued extension carrier remains closed by the chordal-tree kernel obstruction.
 ## 2026-10-02 — CONVENTION CORRECTION TO D2/EXTENSION AUDITS
 
 A convention-sensitive overstatement in the separated two-sink discussion was corrected immediately. In the oriented pro-p RAAG convention, absence of an edge does not imply commutation. Therefore mixed vectors such as (s+t) may have lower-filtration contamination against the wrong origin; they are not automatically identical to a pure sink in the full D1 depth signature.
