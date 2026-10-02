@@ -1294,3 +1294,20 @@ Classification:
 Detailed audit: research/PAPER3_RAAG_2GEN_FILTERED_EXTENSION_DEFECT_AUDIT_2026-10-02.md.
 
 Next authorized action: smallest genuinely multi-special-edge configuration, with no large computation until object/functoriality/gauge/orientation-bridge/q-blindness/separation/novelty/stop are rechecked.
+
+## 2026-10-02 — 3-VERTEX COMMON-SINK MULTI-EDGE TEST
+
+The smallest multi-special-edge commuting-origin model
+\[
+\langle v_1,v_2,w\mid[v_1,v_2]=1,;wv_iw^{-1}=v_i^{1+q}\rangle
+\]
+was checked directly. Its degree-q extension commutator defect has image
+\(\operatorname{span}\{v_1^q,v_2^q\}\), and the restricted q-power operation recovers the ordinary/origin plane. Since the ambient degree-one space has dimension three, the quotient is the one-dimensional sinkhole direction. Hence the filtered extension mechanism survives the first genuine multi-edge test.
+
+The critical failure boundary is now explicit: if ordinary origins have nontrivial degree-2 commutators, then \(W_q\) is not abelian and the simple extension commutator pairing on \(W_q\) cannot be used directly. The general problem is therefore a **degree-2 ordinary sector separation → degree-q extension defect** construction.
+
+Classification:
+- 3-vertex common-sink mechanism: PASS / LOCAL;
+- general RAAG directed/sinkhole separation: OPEN / LOAD-BEARING.
+
+Detailed audit: research/PAPER3_RAAG_3VERTEX_COMMON_SINK_AUDIT_2026-10-02.md.
