@@ -1,3 +1,17 @@
+## 2026-10-02 — PAPER 4 CREATIVE RE-EXAMINATION: Φ / TRACE / THREE-WINDOW / PROJECTIVE — STRUCTURAL CLOSURES
+
+The global pairing viewpoint was stress-tested after Gate D. Φ:U→Hom(O,A), u↦B_q(u,-), remains useful diagnostic data. Universal rank-one-atom extraction is not enough to recover ω_q.
+
+A decisive trace obstruction exists in the specially oriented chordal tree with ordinary a,b and special s,t,u, edges a→s, b→t, a→u, b→u. At the q-defect layer:
+Φ(s)=P_a, Φ(t)=P_b, Φ(u)=P_a+P_b.
+A linear total-mass functional τ with τ(Φ(s))=τ(Φ(t))=τ(Φ(u))=1 would force 1=2, impossible for odd p. Hence Tr_Φ normalization is FAIL/CLOSED.
+
+The simultaneous normalized-signature equations are α+γ=1 and β+γ=1 in U=span{s,t,u}; their affine hull is a line of codimension 2, so the naive codimension-one affine-hull theorem is FAIL/CLOSED.
+
+Three-window remains OPEN/LOCAL only. For q=p^{k-1}, k≥2, q²≡0 mod p^k, so extra filtration levels do not automatically expose the quadratic correction. Projective recovery is FAIL/CLOSED for exact χ mod p^k.
+
+Detailed audit: research/PAPER4_CREATIVE_REVIEW_PHI_TRACE_THREEWINDOW_PROJECTIVE_2026-10-02.md.
+
 ## 2026-10-02 — PAPER 4 GATE D: SAME-WINDOW / DIFFERENT-ORIENTATION COUNTEREXAMPLE — FAIL / CLOSED
 
 A decisive structural counterexample has been found for the current admissible class of specially oriented pro-p RAAGs.
