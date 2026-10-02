@@ -1,3 +1,48 @@
+## 2026-10-02 — PAPER 4 T1 INTRINSIC q-POWER TARGET: PASS / LOCAL
+
+The load-bearing bottleneck “define the intrinsic q-power target from \(W_q\leftarrow W_{q+1}\)” is now resolved locally.
+
+For an adjacent window
+\[
+1\to A\to Y\xrightarrow{\pi}X\to1,
+\]
+define the intrinsic exponent \(e(X)=\exp(X)\), and set
+\[
+L(X)=X/\Phi(X),\qquad A=\ker\pi.
+\]
+At the target jump \(X=W_q,\;Y=W_{q+1}\), \(e(X)=q\). The finite-window power map
+\[
+P_E:L(X)\to A,\qquad P_E(\bar x)=\tilde x^{e(X)}
+\]
+is well-defined: the kernel \(A=D_q/D_{q+1}\) is central of exponent \(p\), and representative-independence modulo \(D_2\) is the standard Zassenhaus restricted \(p^f\)-operation \(D_1/D_2\to D_q/D_{q+1}\). No generator, basis, presentation, orientation, or displayed \(q\) is used.
+
+Thus the previous OPEN gate “intrinsic q-power target” moves to **PASS / LOCAL**.
+
+In the audited 2-generator and common-sink models,
+\[
+P_E(\bar v)=\overline{v^q},\qquad B_q(\bar w,\bar v)=P_E(\bar v),
+\]
+so scale fixing becomes genuinely intrinsic:
+\[
+B_q(\lambda\bar w,\bar v)=P_E(\bar v)\ne0\Rightarrow\lambda=1.
+\]
+
+This does not close T1. Remaining load-bearing gates are:
+- overlapping multi-sink accidental rank-one direction;
+- spanning/recognition of the normalized sink set \(S_q\);
+- filtered-isomorphism naturality of \(S_q\);
+- direct orientation bridge from \(S_q\) to \(\omega_q\).
+
+Classification:
+- intrinsic q-power target: **PASS / LOCAL**;
+- q-blind adjacent-window definition: **PASS / LOCAL**;
+- local scale fixing relative to \(P_E\): **PASS / LOCAL**;
+- T1: **OPEN / LOAD-BEARING**.
+
+Detailed audit: research/PAPER4_T1_MULTI_SINK_SCALE_AUDIT_2026-10-02.md.
+
+Next authorized attack: **smallest overlapping multi-sink model**. No new carrier search.
+
 ## 2026-10-02 — PAPER 4 TOP-DOWN TARGET SHARPENED: NORMALIZATION FUNCTIONAL GATE
 
 The top-down reset has now been carried through to a sharper mathematical target. For a specially oriented RAAG with (q=p^f), the first nontrivial orientation layer is a linear functional
