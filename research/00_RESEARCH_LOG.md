@@ -2243,3 +2243,24 @@ Classification:
 - unrestricted class: **FAIL / CLOSED** by the isolated-special same-window obstruction.
 
 **Stop condition reached:** do not perform another blind computation. The next legitimate move is target-first derivation of a *specific finite scalar character* of the normal-closure action, with a full pre-check. If no such character can be defined without reintroducing the orientation or q, D3 closes as a finite-carrier realization failure while the negative Gate-D theorem remains a principal result.
+
+
+## 2026-10-02 — FREE-BY-DEMUSHKIN / PD3 LITERATURE GATE
+
+A primary-source audit of M. Palaisti, *Detecting Cohomological Dimension Three in Free-by-Demuškin Pro-p Groups*, arXiv:2610.00021v1, was completed.
+
+The paper proves, for 1→N→G→D→1 with N nontrivial free pro-p and D Demuškin, that H^3(G,F_p)^∨ ≅ (N/Φ(N))^D and cd_p G=3 iff (N/Φ(N))^D≠0. It also identifies the lower-dimensional branch through H^1(D,W^∨) and a relation-defect class δ_G∈W_D, with δ_G represented by a lift of the defining Demuškin relator in the coinvariants. The paper further proves the top-degree fixed-Frattini mechanism for arbitrary pro-p PD^n quotients.
+
+Critical scope correction: if G itself is pro-p PD^3, N is forced to be Z_p. Therefore the successor target is NOT “general PD3 free-by-Demuškin with arbitrary finite-rank free kernel.” The viable target is either (a) free-by-Demuškin extensions with cd_p G=3, or (b) the rank-one PD3 subfamily.
+
+Comparison with Paper 1–3: the paper confirms a genuine PD-duality extension mechanism, and Lemma 7.2 gives a strong relation-module/Fox/transgression contact. But it does not prove any finite-window factorization of W^D, W_D, δ_G, or the Demuškin orientation. Thus U1–U5 do not automatically extend. The unresolved bridge is precisely full extension → finite filtered window.
+
+Classification:
+- literature mechanism: PASS / CLOSED;
+- relation-module/Fox contact: PASS / LOCAL;
+- automatic U1–U5 extension: FAIL / CLOSED;
+- finite-window reconstruction of extension/orientation data: OPEN / LOAD-BEARING;
+- PD3 middle-group branch with arbitrary free rank: CLOSED by rank-one restriction;
+- free-by-Demuškin finite-window successor: OPEN / CONDITIONAL.
+
+RAAG carrier search is HOLD/SUPPRESSED while this literature-first branch is tested. Detailed audit: research/PAPER4_FREE_BY_DEMUSHKIN_PD3_LITERATURE_AUDIT_2026-10-02.md.
