@@ -2602,3 +2602,11 @@ Gate T is not solved. The authoritative endpoint after T1-B re-audit is now refi
 The exact relative threshold p^s+1 remains OPEN/LOAD-BEARING. The unmarked filtered-group theorem remains OPEN. RAAG remains CLOSED-AS-MAIN-ROUTE; blind carrier hunting remains STOP. The next authorized calculation is the actual finite relation-module computation, with fixed commutator convention and an independent Fox check.
 
 Audit: research/PAPER4_QPOS_GATE_T1C_NONABELIAN_KERNEL_BOUNDARY_AUDIT_2026-10-03.md.
+
+## 2026-10-03 — GATE T1-C CURRENT FRONTIER
+
+Gate T is not solved. The authoritative endpoint after T1-B re-audit is now refined by T1-C: critical-layer visibility is PASS/LOCAL, but scalar/coinvariant and critical-norm witnesses are closed. The remaining load-bearing object is the actual kernel K_s of the finite relative extension at n=p^s+1, beginning with its non-coinvariant module A_s=K_s/[K_s,K_s]. If the obstruction vanishes there, inspect gamma_2(K_s)/gamma_3(K_s); vanishing of the abelianized class never by itself proves splitting.
+
+The exact relative threshold p^s+1 remains OPEN/LOAD-BEARING. The unmarked filtered-group theorem remains OPEN. RAAG remains CLOSED-AS-MAIN-ROUTE; blind carrier hunting remains STOP. The next authorized calculation is the actual finite relation-module computation, with fixed commutator convention and an independent Fox check.
+
+Audit: research/PAPER4_QPOS_GATE_T1C_NONABELIAN_KERNEL_BOUNDARY_AUDIT_2026-10-03.md.
