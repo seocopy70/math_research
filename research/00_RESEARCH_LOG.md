@@ -2726,3 +2726,31 @@ Classification remains:
 - T1: **DEFINED / CORRECTED**;
 - T2: **DEFINED / SECONDARY**;
 - strict intrinsic compression existence: **OPEN / LOAD-BEARING**.
+
+
+## 2026-10-02 — FIRST CONCRETE STRICT-COMPRESSION CANDIDATE: RELATIVE CLASS-2 KERNEL QUOTIENT
+
+After correcting T1 and strictness, the first authorized candidate was fixed:
+\[
+C_n^{(2)}(E_n):
+1\to K_n/\gamma_3(K_n)\to W_n/\gamma_3(K_n)\to D/D_n(D)\to1.
+\]
+This is the finite relative extension with the kernel replaced by its class-2 nilpotent quotient.
+
+Pre-check:
+- A1 intrinsicity: **PASS / LOCAL**;
+- A2 functoriality: **PASS / LOCAL**;
+- A3 gauge invariance: **PASS / LOCAL**;
+- A4 q-blindness: **PASS**;
+- A5 orientation-blind input: **PASS**;
+- A6 strictness: **OPEN**;
+- A7 non-reencoding: **OPEN**;
+- A8 filtration compatibility: **PASS / LOCAL**.
+
+The candidate is structurally beyond the closed H1/E2 layer because it retains the kernel commutator pairing and D-action, rather than only the abelianized extension/coinvariant information. This is not yet a separation theorem.
+
+T1 threshold detection remains **OPEN** for this candidate. Ordinary mod-p associated-graded blindness does not by itself close the integral class-2 quotient, because the quotient retains integral extension information discarded by the mod-p graded object.
+
+No raw Magnus/Fox expansion was performed. Next authorized test: determine whether the class-2 quotient contains a gauge-invariant datum not factoring through the already closed abelian/E2/graded layers, then test the binary threshold \(s\ge m\). If it factors through the closed layers, classify FAIL/CLOSED; if a genuinely new integral commutator datum survives, continue to T1.
+
+Literature method check: Hamza 2023 treats lower-central/Zassenhaus filtrations and their module actions for finitely generated pro-p groups, supporting the naturality of this filtration-based construction; it does not prove the present compression theorem.
