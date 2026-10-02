@@ -90,7 +90,7 @@ C_n(E)\longrightarrow \text{target orientation data}.
 
 The compression must actually discard information. This is stronger than merely replacing E by an isomorphic encoding.
 
-Operationally, on the admissible test class there must exist \(E\not\cong E'\) such that
+Operationally, on the declared stress/test class there must exist \(E\not\cong E'\) such that
 \[
 C_n(E)\cong C_n(E').
 \]
@@ -118,20 +118,11 @@ must be induced functorially by the natural finite-window maps. No new presentat
 
 There are two logically distinct targets and they must not be conflated.
 
-### T1. Weak target: deep-tail separation
+### T1. Weak target: threshold detection
 
-For the q>0 stress family
-\[
-G_{s,a}=\langle z,x_1,\ldots,x_d\mid z^{p^s}=r_D\rangle,
-\qquad q_D=p^a,
-\]
-the weak target must still be a **uniform finite-depth target on a declared finite test range**. For a fixed benchmark depth parameter \(m>a\), require a single depth bound \(n=n(m)\), independent of the hidden tail parameter \(s\), such that the compressed windows separate the distinct deep-tail values in the declared range
-\[
-a<s,t\le m.
-\]
-Equivalently, the target is not pairwise “some \(n(s,t)\)” separation; it is separation through one finite level chosen before seeing the particular pair.
+For the q>0 stress family, fix an external threshold m>a. Require one finite depth n=n(m), chosen independently of the hidden tail parameter s, such that the compression distinguishes the two classes s<m and s>=m. The threshold m belongs only to the external stress test, not to the definition of the compression.
 
-This prevents T1 from collapsing into the tautological fact that the full inverse system may eventually separate individual examples.
+This is deliberately weaker than recovering the exact value of s. It also avoids the previous finite-range formulation, which was effectively equivalent to recovering a truncated parameter by a finite lookup table.
 
 ### T2. Strong target: truncated depth recovery
 
@@ -232,7 +223,7 @@ No raw Magnus/Fox scalar computation is authorized before a candidate quotient a
 ### Current classification
 
 - admissible compression category: **PASS / LOCAL**
-- T1 uniform finite-depth separation target: **DEFINED / CORRECTED**
+- T1 threshold-detection target: **DEFINED / CORRECTED AGAIN**
 - T2 exact truncated-depth target: **DEFINED / SECONDARY**
 - existence of a strict intrinsic compression: **OPEN / LOAD-BEARING**
 - universal no-compression theorem: **OPEN**
