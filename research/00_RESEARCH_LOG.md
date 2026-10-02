@@ -1,3 +1,26 @@
+## 2026-10-02 — ADMISSIBLE CATEGORY / ADJACENT-CLASS AUDIT
+
+The proposed A–D admissible-category plan was critically checked. It is not yet a category-level minimality theorem: a functor \\(F:\\mathrm{Dem}\\to\\mathrm{Fin}\\) can still encode target data, condition C is only a family-level nonconstancy condition, and quotient closure does not by itself produce a coarsest object. The correct abstraction is an explicitly specified factorization preorder on non-reencoding admissible realizations. Classical minimal sufficiency supports this factorization viewpoint only by analogy; it depends on a statistical model and is not directly transferable. citeturn2search0turn2search8
+
+Two technical corrections were recorded. First, \\(\\bigoplus_{n\\le N_k}\\mathrm{gr}_n(G)\\) is the associated graded Zassenhaus object, not an abelianization; degree labels and any retained restricted-Lie operations must be part of the carrier if they are used to detect the defect degree. Second, the earlier vector-space cardinality statement \\(p^{\\dim V}\\ge k\\) is not valid for a bare vector space considered up to isomorphism; the invariant lower bound is \\(|\\mathrm{Iso}(C_k)|\\ge k\\). A dimension bound requires marked/distinguished data or an underlying-state observation convention.
+
+The proposed cohomological carrier using a “\\chi-twisted part” is target-circular and therefore fails the target-blind/q-blind carrier test.
+
+An adjacent-class stress test was then completed. Published literature states that every orientation on a free pro-p group yields a 1-cyclotomic oriented pro-p group, while an infinite Demuškin group has a unique 1-cyclotomic orientation. citeturn1search0turn1search8 Hence, after enlarging the underlying class to free pro-p groups while retaining the un-oriented finite window as input, orientation is not a single-valued invariant of the underlying object. This gives an object-level no-go, stronger than a finite-window counterexample.
+
+Classification:
+- A–D complete admissible category: FAIL/CLOSED.
+- minimal-sufficiency transfer: PASS/LOCAL as factorization analogy only.
+- X_ab as terminology: FAIL/CLOSED.
+- X_ab as genuinely new same-family carrier: FAIL/CLOSED — q re-encoding.
+- chi-twisted cohomological carrier: FAIL/CLOSED — circular.
+- free-pro-p un-oriented orientation identifiability: FAIL/CLOSED.
+- orientation-rigidity prerequisite: PASS/LOCAL.
+
+Detailed audit: research/PAPER3_ADMISSIBLE_CATEGORY_AND_ADJACENT_CLASS_AUDIT_2026-10-02.md
+
+Next authorized action: identify an adjacent class with canonical/unique orientation but without Demuškin q-classification, then test finite-window identifiability. No large computation is authorized before the structural gates pass.
+
 ## 2026-10-02 — FULL-ORIENTATION COARSE REALIZATION AUDIT
 
 After T−1/T0 closure, the target was strengthened from recognition to the full finite-level canonical orientation [χ_G mod p^k]. The target values in the standard odd-p fixed-rank Demuškin family are exactly 1, (1-p)^(-1), …, (1-p^(k-1))^(-1) mod p^k, with the stable value 1 covering q=0 and q≥p^k. Distinctness follows because equality of two inverse values implies equality of the corresponding p-powers modulo p^k. Therefore the target has exactly k values.
