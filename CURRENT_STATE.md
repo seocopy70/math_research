@@ -1,3 +1,34 @@
+## 2026-10-03 — GATE T1-C CRITICAL WORDING CORRECTION / A_s FIRST DIAGNOSTIC, NOT YET COMPUTED
+
+A referee-level re-audit tightens three load-bearing statements without changing the Gate-T frontier.
+
+1. The scalar lift correction (x_1\mapsto z^{-p^{s-a}}x_1) is **not** an established cancellation in the full finite extension. Since (z) is not known central in (G_{s,a}), the exact lift-change term is governed by the action/norm operator (N_{p^a}(T_{x_1})), whose augmentation is (p^a). What is proved is only that the **coinvariant/augmentation scalar defect is killable**. The non-augmentation residual is OPEN.
+
+2. (A_s=K_s/[K_s,K_s]) is not yet “computed”. The authorized task is the actual finite-kernel construction (G_{s,a}\to W_s\to Q_s\to K_s\to A_s), followed by the genuine (mathbf F_p[Q_s])-module structure and quotient by all lift-change coboundaries. A Fox matrix is a presentation differential/input to this calculation; it is not automatically identical to (A_s).
+
+3. (B_s=\gamma_2(K_s)/\gamma_3(K_s)) is only the **next fallback diagnostic if the (A_s)-level obstruction vanishes**. It must not be called the universally first nonabelian obstruction.
+
+The clean current question is therefore:
+[
+1\to K_s\to W_s\to Q_s\to1
+\quad\rightsquigarrow\quad
+1\to A_s\to W_s/[K_s,K_s]\to Q_s\to1,
+]
+and whether the induced module-valued extension defect remains nonzero after all section/lift coboundaries are quotiented. If nonzero, nonsplitting follows. If zero, no splitting conclusion follows; only then inspect (B_s).
+
+Also record the formal scope condition (a\ge1) (equivalently (q=p^a>1)) whenever using (2p^{s-a}<p^s+1).
+
+Authoritative classification remains:
+- critical-layer visibility: PASS / LOCAL;
+- coinvariant scalar obstruction: FAIL / CLOSED;
+- critical norm as nonzero witness: FAIL / CLOSED;
+- actual (A_s)-level extension class: OPEN / LOAD-BEARING;
+- critical nonsplitting: OPEN / LOAD-BEARING;
+- exact (n_{\rm sep}^{rel}(s)=p^s+1): OPEN / LOAD-BEARING;
+- blind carrier search: STOP / NOT AUTHORIZED.
+
+No Gate-T reversal or new carrier branch is implied.
+
 ## 2026-10-02 — P4-Q+ CLASS-2 NORM-ACTION REDUCTION: FIRST SURVIVING NONABELIAN DATUM
 
 The first authorized strict-compression candidate
