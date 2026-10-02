@@ -1,3 +1,11 @@
+## 2026-10-02 — RP-5 GRAPH-SENSITIVE SEPARATION
+
+RP-5 now has a decisive local separation result. Two four-vertex specially oriented graphs with no ordinary edges, A=(a,s),(b,s) and B=(a,s),(b,t), have isomorphic abelianizations but different first-q filtered extension defects. The q-power preimage of the defect image recovers the origin plane; in this control family the degree-2 centralizer recovers the special plane; the cross q-defect has rank 1 versus rank 2. Thus criterion B is PASS / LOCAL. Full incidence reconstruction remains OPEN / LOAD-BEARING.
+
+Critical convention correction: the literature defines special edge (v,w) with ordinary origin v and special terminus w, relation w v w^{-1}=v^(1+q). Hence v, not w, is q-torsion in abelianization. Earlier RP-3 identification of the torsion/annihilator sector with special/sinkhole vertices is therefore reversed under the literature convention and requires a correction audit before reuse.
+
+Detailed audit: research/RP5_NONABELIAN_EXTENSION_CLASS_AUDIT_2026-10-02.md
+
 ## 2026-10-02 — RP-4 CRITICAL RE-AUDIT: EXTENSION DEFECT BRANCH REOPENED/CORRECTED
 
 The proposed RP-4 closure based on “\\(\\kappa_n\\) is an abelianization factor” is rejected. Two corrections are controlling.
