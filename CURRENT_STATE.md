@@ -1879,3 +1879,22 @@ Classification:
 - free-by-Demuškin finite-window successor: OPEN / CONDITIONAL.
 
 RAAG carrier search is HOLD/SUPPRESSED while this literature-first branch is tested. Detailed audit: research/PAPER4_FREE_BY_DEMUSHKIN_PD3_LITERATURE_AUDIT_2026-10-02.md.
+
+## 2026-10-02 — K–Z FINITE-WINDOW STRESS TEST
+
+Kochloukova–Zalesskii's original construction was independently checked. The family
+\[
+G_s=\langle x,y,z\mid z^{p^s}=[x,y]\rangle
+\]
+has cd_p G_s=2, is finitely generated, has free pro-p kernel N_s of infinite rank over D=G_s/N_s\simeq\mathbf Z_p^2, and satisfies the strong inflation property stated in their Theorem 2. citeturn0search25turn0search0
+
+For every fixed Zassenhaus depth n≤p^s, the correction z^{p^s} lies beyond the window, so the finite quotient sees the degree-2 initial relation [x,y]=1. Consequently the cd=2 family can hide its extension-specific tail arbitrarily far out.
+
+Current status:
+- K–Z deep-tail invisibility: **PASS / LOCAL**;
+- finite-window cd=3 detection no-go from K–Z alone: **FAIL / CLOSED as an inference**;
+- finite-window detection of W^D≠0 / cd_p G=3: **OPEN / LOAD-BEARING**;
+- quotient-cohomology shortcut H^3(G/D_n,F_p)≈H^3(G,F_p): **NOT JUSTIFIED**;
+- next authorized test: matched cd=3 control with the same finite initial Zassenhaus window, or a proof that such matching is impossible.
+
+Do not invent a new carrier before this separation test is settled. RAAG carrier search remains HOLD/SUPPRESSED.
