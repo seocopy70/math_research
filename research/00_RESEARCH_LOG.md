@@ -2378,3 +2378,22 @@ Classification:
 - identification of a canonical intrinsic threshold parameter from extension data: **OPEN**.
 
 Independent verification used the standard Zassenhaus/Lazard product formula and an explicit finite quotient, avoiding any appeal to unverified initial-form survival.
+
+
+## 2026-10-02 — CRITICAL CORRECTION: K–Z MATCHED-WINDOW / p^s+1 CLAIM SUPERSEDED
+
+A referee-level recheck found a fatal error in the preceding “matched cd=2/cd=3 window” argument.
+
+The invalid step was the assertion \(G_s/D_n(G_s)\cong G_+/D_n(G_+)\) for \(n\le p^s\), with \(G_+=\mathbf Z_p^3\). After \(z^{p^s}\) disappears, the K–Z relation gives only \([x,y]=1\); it does not impose \([x,z]=[y,z]=1\). Thus the quotient is not the abelian rank-3 quotient of \(G_+\).
+
+For odd p the error is already visible at depth 3: \([x,z]\) survives in \(G_s/D_3(G_s)\), whereas every quotient of \(G_+\) is abelian. An explicit exponent-p Heisenberg quotient on \(x,z\), with \(y\) central, satisfies the K–Z relation and has \([x,z]\ne1\) and \(D_3=1\).
+
+Therefore the “arbitrarily delayed matched separation” and the claimed pairwise threshold \(p^s+1\) are **HISTORICAL / SUPERSEDED**. The auxiliary \(H_s\) construction still correctly witnesses \(z^{p^s}\notin D_{p^s+1}(G_s)\), but it does not prove separation from \(\mathbf Z_p^3\), since that pair already separates through \([x,z]\).
+
+Current classification:
+- K–Z deep-tail invisibility of \(z^{p^s}\): **PASS / LOCAL**;
+- explicit survival witness at depth \(p^s+1\): **PASS / LOCAL**;
+- arbitrary-depth cd=2/cd=3 matched-window theorem: **FAIL / CLOSED — withdrawn**;
+- uniform finite-depth detector no-go based on that pair: **FAIL / CLOSED as unsupported**;
+- individual/group-dependent threshold: **OPEN**;
+- genuine matched cd=3 control: **OPEN / next authorized test**.
