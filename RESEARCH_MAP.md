@@ -4349,3 +4349,23 @@ Classification:
 Detailed audit: research/PAPER3_RAAG_SPECIAL_PLANE_INCIDENCE_AUDIT_2026-10-02.md.
 
 No reopening of Paper 3, Mixed Fox, (O_k), (W_{11}/W_{12}), Paper 2, or large computation.
+
+## 2026-10-02 — GATE D: SPECIAL-PLANE INCIDENCE CARRIER REFUTED
+
+The special-plane incidence branch has now been driven to a concrete counterexample. The smallest complete specially oriented graph with one special/sinkhole vertex and two ordinary vertices yields
+[
+G=langle s,a,bmid asa^{-1}=s^{1+q},;bsb^{-1}=s^{1+q},;[a,b]=1angle.
+]
+Here (W_q) is abelian, so the intrinsic extension defect is available, but its degree-(q) component is an alternating form with radical (mathbf F_p(a-b)). The q-special Grassmannian consists of planes avoiding that radical and does not recover (mathbf F_p s).
+
+Thus the proposed accidental-plane exclusion theorem is **FAIL / CLOSED**, and the first-survival Grassmannian carrier is **FAIL / CLOSED** for the full specially oriented category.
+
+This is stronger than the earlier non-abelian-(W_q) obstruction: even in a case where the original bilinear extension carrier is perfectly defined, the coarseness of its degree-(q) Grassmannian support loses the distinguished sinkhole.
+
+The branch is frozen. The active frontier is now:
+[
+	ext{find a genuinely finer intrinsic finite-window carrier}
+]
+or prove a category-level no-go under an explicitly declared admissible category.
+
+No reopening of the failed relation-module, gauge-obstruction, Mixed Fox, (O_k), (W_{11}/W_{12}), Paper 2, or frozen Paper 3 branches.
