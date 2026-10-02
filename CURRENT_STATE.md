@@ -1,3 +1,32 @@
+## 2026-10-02 — P4-Q+ CLASS-2 NORM-ACTION REDUCTION: FIRST SURVIVING NONABELIAN DATUM
+
+The first authorized strict-compression candidate
+\[
+C_n^{(2)}:1\to K_n/\gamma_3(K_n)\to W_n/\gamma_3(K_n)\to D/D_n(D)\to1
+\]
+was reduced to its first genuinely nonabelian stress datum.
+
+For \(A_n=K_n/\gamma_2(K_n)\), \(B_n=\gamma_2(K_n)/\gamma_3(K_n)\), the class-2 quotient retains the \(D/D_n(D)\)-action. For the stress relation \(z^{p^s}=r_D\), commutatoring with \(x\in D\) yields, at the kernel-abelianized class-2 level, the norm-action identity
+\[
+N_{p^s}(T_x)c_x(\bar z)=[r_D,x],
+\qquad N_{p^s}(T_x)=1+T_x+\cdots+T_x^{p^s-1}.
+\]
+After coinvariants \(T_x\mapsto1\), this becomes \(p^s\), reproducing the already CLOSED H1/E2 saturation modulo \(p^a\). Before coinvariants, the full norm operator remains available and is not forced to collapse by the earlier E2 no-go.
+
+Thus the class-2 candidate is **not closed** by the H1/E2/ordinary-graded results. The first surviving nonabelian datum is the norm-action orbit together with the induced \((A_n,B_n,\beta_n,\rho_n,\text{power map})\).
+
+Current classification:
+- class-2 A1–A5/A8: **PASS / LOCAL**;
+- non-coinvariant norm-action datum: **PASS / LOCAL**;
+- factor-through H1/E2/ordinary graded: **OPEN**;
+- T1 threshold separation: **OPEN / LOAD-BEARING**;
+- A6 strictness: **OPEN**;
+- A7 non-reencoding: **OPEN**.
+
+Next authorized action is singular: at the first depth \(n(m)\) containing the \(p^m\)-layer, compute the gauge-orbit of the norm-action data for the smallest \(a<s<m\) versus \(s\ge m\). No raw Magnus/Fox scalar search.
+
+Detailed audit: `research/PAPER4_QPOS_CLASS2_FACTOR_THROUGH_AUDIT_2026-10-02.md`.
+
 ## 2026-10-02 — T1 CORRECTION COMPLETED / LOCAL PASS BUT GLOBAL AFFINE FAILURE RESTORED
 
 The corrected full-filtered normalized locus was tested to completion on the authorized controls.
