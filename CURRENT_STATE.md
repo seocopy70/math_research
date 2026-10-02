@@ -1126,3 +1126,33 @@ Classification:
 - some other intrinsic finite-window carrier: **OPEN**.
 
 This closes the current carrier branch. Do not continue computing (mathscr S_q); the next research question must be a genuinely different carrier or a broader no-go theorem.
+
+## 2026-10-02 — RP-3 NON-REENCODING AUDIT / SMALLEST NON-COMPLETE + MULTIPLE-SINK CHECK
+
+The q-blind adjacent-window carrier
+\[
+\mathcal L(X,Y)=
+\begin{cases}
+\operatorname{im}\bigl(\operatorname{Hom}(Y,\mathbf Z/p^{e(Y)})\to\operatorname{Hom}(Y,\mathbf F_p)\bigr),&e(Y)>e(X),\\
+0,&e(Y)=e(X)
+\end{cases}
+\]
+has now passed the admissible non-reencoding audit at the declared recognition scope.
+
+The strong test is negative for q-reencoding: for fixed p, rank |V|, and sinkhole count |S|, the abstract carrier has dimension |V|-|S| (and annihilator dimension |S|), independent of q=p^f. Thus the carrier does not encode the q-value or the full orientation coefficient. Distinct q-regimes can have isomorphic carriers. The result should therefore be described as a kernel/annihilator recognition carrier, not as a full orientation carrier.
+
+Independent model checks:
+- smallest non-complete model \(\langle a,s,b\mid sas^{-1}=a^{1+q}\rangle\): PASS / LOCAL;
+- multiple-sink sinkhole-sector recovery: PASS / LOCAL;
+- all-sinkhole case: PASS / LOCAL;
+- full categorical functoriality for arbitrary non-isomorphic pair morphisms: OPEN / NOT LOAD-BEARING;
+- full \(\beta_f\) reconstruction: OPEN / NOT LOAD-BEARING;
+- full orientation reconstruction from \(\mathcal L\) alone: FAIL / CLOSED;
+- absolute minimality/coarseness: OPEN / NOT AUTHORIZED;
+- directed incidence recovery: OPEN.
+
+Important qualification: the carrier is exactly \(\ker\beta_f\) on the declared specially oriented RAAG family, so it is target-relative as a recognition device. The justified novelty claim is only that this target predicate has a q-blind intrinsic finite-window realization; no independent global invariant or absolute minimality claim is made.
+
+Detailed audit: research/RP3_NONREENCODING_AUDIT_2026-10-02.md
+
+Next authorized branch: if continuing RP-3, seek a genuinely graph-sensitive refinement of the abelianization carrier, starting again with Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop. No Massey calculation is load-bearing.
