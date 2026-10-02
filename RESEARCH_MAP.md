@@ -1,3 +1,45 @@
+## 2026-10-02 — PAPER 4 D2 SIGNATURE-RELATION QUOTIENT NO-GO
+
+The authorized D2 attack was completed.
+
+D1 defines the global lower-filtration depth signature
+\[
+S_E(u)=\mathcal L_E(u)=(\mathscr R_m(u))_m,
+\]
+which records attainable commutator depths but not the nonzero leading coefficient.
+
+The decisive rank-two special-edge model
+\[
+G=\langle v,w\mid wvw^{-1}=v^{1+q}\rangle
+\]
+shows that for every \(\lambda\in\mathbf F_p^\times\),
+\[
+S_E(\lambda\bar w)=S_E(\bar w),
+\]
+while
+\[
+\omega_q(\lambda\bar w)=\lambda\ne1=\omega_q(\bar w)
+\]
+for \(\lambda\ne1\). Hence the canonical orientation cannot factor through the D1 signature, nor through any quotient/relation object whose information is exhausted by those signature values.
+
+This is a stronger obstruction than the earlier chordal-tree kernel result: D1 already loses scalar normalization before any quotient is formed.
+
+Independent controls:
+- separated two-sink: nonzero scalar multiples of each sink direction have identical depth signatures, while their orientation values scale;
+- chordal tree: the coefficient-valued incidence relation \(u-s-t\) lies in the q-defect kernel but has \(\omega_q(u-s-t)=-1\ne0\), so simply restoring coefficients via the incidence package does not produce an orientation quotient.
+
+Therefore:
+- D1 depth signature: **PASS / LOCAL**;
+- D2 quotient from relations among D1 signatures: **FAIL / CLOSED**;
+- D2 orientation factorization through D1: **FAIL / CLOSED**;
+- coefficient-valued incidence quotient as orientation carrier: **FAIL / CLOSED**;
+- restricted-origin coefficient-valued extension datum: **OPEN / LOAD-BEARING**;
+- unrestricted Gate D: **FAIL / CLOSED**.
+
+The next authorized step is singular: define the smallest coefficient-valued intrinsic extension object that augments D1 enough to restore scalar normalization, then run a fresh full pre-check before computation. This is not authorization for a new unconstrained carrier hunt.
+
+Detailed audit: research/PAPER4_D2_SIGNATURE_RELATION_QUOTIENT_NO_GO_AUDIT_2026-10-02.md.
+
 ## 2026-10-02 — PAPER 4 FILTERED q-PROFILE QUOTIENT / UNIQUENESS BOUNDARY
 
 The dangerous-model attack was completed.
