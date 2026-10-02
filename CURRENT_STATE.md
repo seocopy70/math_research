@@ -1,5 +1,20 @@
 
 
+## 2026-10-02 — CRITICAL REVIEW OF EXTERNAL LEDGER INTERPRETATION
+
+The external critique was audited against the authoritative state. It is accepted only in part.
+
+- O_k diagnosis is correct: O_k -> C is the quotient universal property, while terminal-style unique C -> O_k fails by the direct-sum counterexample. However, an admissible carrier category is not yet a mathematical category until objects, morphisms, and closure are specified; this is not the immediate load-bearing target.
+- The proposed next step direct Fox jet -> chi is stale. That bridge was already established at PASS/LOCAL scope for the standard family. The Mixed Fox branch was later closed as a new-recognition carrier because its finite-pair information is redundant at the declared scope, not because the direct Fox bridge failed.
+- The proposed q-blindness definition by replacing q with 0 is rejected as a general definition. q=0 is a genuine Demushkin regime, and substitution can change the group/class. q-blindness should constrain the definition/input, while separation and output sensitivity are tested separately.
+- Reopening p=2/non-standard Demushkin cases is not authorized now; q=0 is already included in the odd-p standard family. Such cases may be future stress tests only after a genuinely new carrier survives the structural gates.
+- Evidence-type enforcement is accepted, but status labels remain mandatory protocol summaries. Correct rule: labels never substitute for explicit evidence and scope.
+
+Detailed audit: research/PAPER3_POST_EXPLORATION_CRITICAL_REVIEW_2026-10-02.md
+
+Current active gate remains: genuinely new finite-input carrier search, after Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop checks.
+
+
 ## 2026-10-02 — CRITICAL REVIEW OF POST-PAPER-3 EXTERNAL LEDGER INTERPRETATION
 
 The proposed external review was audited against the authoritative state. It is accepted only in part.
