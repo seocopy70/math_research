@@ -1,3 +1,40 @@
+## 2026-10-02 — RP-3 Q-BLIND CARRIER REFINEMENT: ADJACENT EXPONENT JUMP
+
+A uniform q-blind carrier was constructed from an adjacent finite Zassenhaus window. For (X=W_n) and (Y=W_{n+1}), let (e(Z)=log_pexp(Z^{ab})), and define the lift subspace by
+[
+mathcal L(X,Y)=
+operatorname{im}igl(operatorname{Hom}(Y,mathbf Z/p^{e(Y)})	ooperatorname{Hom}(Y,mathbf F_p)igr)
+]
+when (e(Y)>e(X)), and (0) otherwise.
+
+At (n=q=p^f) for a specially oriented RAAG,
+[
+W_q^{ab}cong(mathbf Z/q)^V,qquad
+W_{q+1}^{ab}cong(mathbf Z/pq)^{Vsetminus S}oplus(mathbf Z/q)^S.
+]
+Reduction from (mathbf Z/pq) therefore produces exactly the degree-one characters vanishing on the sinkhole torsion sector. If there is no free/non-sinkhole sector, the exponent does not jump and the carrier is zero, again matching (kereta_f).
+
+Hence
+[
+mathcal L(W_q,W_{q+1})=kereta_f,
+qquad
+mathcal L(W_q,W_{q+1})^perp
+=(kereta_f)^perp
+=operatorname{span}{ar s:sin S}subset L_1.
+]
+
+This resolves the earlier q-blindness gap at PASS/LOCAL level and makes Massey interference non-load-bearing for the stated kernel-recognition target. Full (H^2)-class reconstruction is still not claimed.
+
+Detailed audit: research/RP3_FINITE_WINDOW_BOCKSTEIN_AUDIT_2026-10-02.md
+
+Classification:
+- q-blind adjacent-window carrier: PASS / LOCAL;
+- RP-3 target: PASS / LOCAL;
+- non-reencoding/minimality: OPEN;
+- non-special graph extension: OPEN.
+
+Next authorized action: independent model verification and then the admissible-category/non-reencoding audit.
+
 ## 2026-10-02 — RP-3 BOCKSTEIN AUDIT: LOCAL KERNEL RESULT, FINITE-WINDOW FACTORIZATION STILL OPEN
 
 The submitted RP-3 development was critically reviewed against the authoritative state and the higher-Bockstein literature.
