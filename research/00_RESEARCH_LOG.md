@@ -1571,3 +1571,33 @@ Classification:
 - graph-directed incidence refinement: OPEN.
 
 Detailed audit: research/RP3_NONREENCODING_AUDIT_2026-10-02.md
+
+
+## 2026-10-02 — RP-4 CRITICAL RE-AUDIT: EXTENSION DEFECT NOT ABELIANIZATION-FACTOR
+
+The proposed RP-4 closure was critically rechecked against the authoritative filtered-extension results. Two claims in the draft are false.
+
+First, the working definition
+\\[
+\\mathcal C\\text{ graph-sensitive}\\iff \\mathcal C\\text{ does not factor through abelianization}
+\\]
+is too strong. Same-abelianization separation is the actual criterion B. Abelianization factorization implies failure of B, but non-factorization does not imply B.
+
+Second, the claim that the Zassenhaus extension commutator defect \\(\\kappa_n\\) is an abelianization factor is false. In the rank-2 special-edge model
+\\[
+G=\\langle v,w\\mid wvw^{-1}=v^{1+q}\\rangle,
+\\]
+\\(G'\\subseteq D_q\\), hence \\(\\operatorname{im}\\kappa_n=0\\) for \\(n<q\\) and
+\\[
+\\operatorname{im}\\kappa_q=\\mathbf F_p\\overline{v^q}\\ne0.
+\\]
+The draft's claimed nonzero class in \\(D_2/D_3\\) is wrong for odd \\(p\\), because \\(v^q\\in D_q\\subseteq D_3\\) for \\(q\\ge3\\). The extension class/commutator defect depends on the multiplication of \\(W_{n+1}\\), not only on \\(G^{ab}\\).
+
+Therefore the previously written RP-4 FAIL/CLOSED conclusion is HISTORICAL / SUPERSEDED. The correct boundary is:
+- raw central extension/commutator defect: PASS / LOCAL in the audited models;
+- Grassmannian special-plane extraction: FAIL / CLOSED;
+- claim that \\(\\kappa_n\\) is abelianization-only: FAIL / CLOSED — FALSE CLAIM;
+- full extension-class carrier: OPEN / LOAD-BEARING;
+- general graph-incidence separation: OPEN / LOAD-BEARING.
+
+A corrected audit was recorded as research/RP4_EXTENSION_DEFECT_REAUDIT_2026-10-02.md. RP-5 is therefore a legitimate next branch, but only after an explicit pre-check of the actual finite central extension \\(E_n=W_{n+1}\\to W_n\\), its extension class in \\(H^2(W_n,A_n)\\), q-blind first-defect detection, and same-abelianization separation. No large computation is authorized before that pre-check.
