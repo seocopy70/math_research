@@ -1966,3 +1966,26 @@ Current authoritative classification:
 - new carrier search: **STOP / NOT AUTHORIZED**.
 
 The exact threshold proof is deliberately independent of any mildness/initial-form theorem: an explicit finite quotient witnesses survival of z^{p^s} at the critical depth. This closes the previous uncertainty about whether the first separation might occur later than p^s+1.
+
+
+## 2026-10-02 — CRITICAL CORRECTION: FREE-BY-DEMUSHKIN MATCHED-WINDOW NO-GO WITHDRAWN
+
+A critical audit invalidated the immediately preceding K–Z matched-pair theorem. The asserted equality
+\[
+G_s/D_n(G_s)\cong \mathbf Z_p^3/D_n(\mathbf Z_p^3)\qquad(n\le p^s)
+\]
+is false: after the high-depth relation \(z^{p^s}=[x,y]\) disappears, only \([x,y]=1\) is forced; \([x,z]\) and \([y,z]\) remain visible. For odd p, \([x,z]\) already survives at depth 3 via an exponent-p Heisenberg quotient, while \(\mathbf Z_p^3\) is abelian.
+
+Therefore the following previous classifications are superseded:
+- matched cd=2/cd=3 arbitrary-depth windows: **HISTORICAL / SUPERSEDED**;
+- uniform finite-depth detector no-go on the full class from that pair: **HISTORICAL / SUPERSEDED**;
+- exact pairwise separation \(p^s+1\): **HISTORICAL / SUPERSEDED**.
+
+What remains current:
+- K–Z deep-tail relation correction invisibility: **PASS / LOCAL**;
+- \(z^{p^s}\notin D_{p^s+1}(G_s)\) via explicit finite quotient: **PASS / LOCAL**;
+- finite-window detection of \(cd_pG=3\) / \(W^D\ne0\): **OPEN / LOAD-BEARING**;
+- genuine matched cd=3 control: **OPEN / NEXT AUTHORIZED TEST**;
+- no carrier hunt until a valid matched-window or structural obstruction is established.
+
+This correction controls the current state and supersedes the preceding matched-window entries.
