@@ -1,3 +1,31 @@
+## 2026-10-02 — 3-VERTEX COMMON-SINK TEST: ORIGIN PLANE RECOVERED
+
+The first multi-special-edge stress test was completed at the smallest commuting-origin model
+\[
+G=\langle v_1,v_2,w\mid[v_1,v_2]=1,;wv_iw^{-1}=v_i^{1+q}\rangle.
+\]
+Here the intrinsic extension commutator defect at degree q has image
+\[
+\operatorname{im}\kappa_q
+=\operatorname{span}\{\overline{v_1^q},\overline{v_2^q}\}.
+\]
+The restricted q-power operation therefore recovers the entire ordinary/origin plane:
+\[
+P_q^{-1}(\operatorname{im}\kappa_q)
+=\operatorname{span}\{\bar v_1,\bar v_2\}.
+\]
+Since \(L_1\) has dimension three, the quotient by this plane is the one-dimensional sinkhole direction \(\bar w\). Thus the rank-2 quotient-line ambiguity disappears in this smallest common-sink multi-edge model.
+
+Classification:
+- common-sink extension defect: **PASS / LOCAL**;
+- origin-plane recognition: **PASS / LOCAL**;
+- sinkhole quotient direction: **PASS / LOCAL**;
+- standard-family orientation bridge: **PASS / LOCAL**;
+- general RAAG separation: **OPEN / LOAD-BEARING**.
+
+Critical boundary: if ordinary origin vertices do not commute, degree-2 ordinary commutators survive below q, so \(W_q\) is not abelian and the simple \(\kappa_q\) pairing on \(W_q\) is unavailable. The next real problem is therefore to quotient/separate the degree-2 ordinary relation sector and retain the degree-q extension defect. This is the first genuinely general carrier question.
+
+Detailed audit: research/PAPER3_RAAG_3VERTEX_COMMON_SINK_AUDIT_2026-10-02.md.
 ## 2026-10-02 — 2-GENERATOR FILTERED EXTENSION DEFECT: INTRINSIC CARRIER FOUND / GENERALIZATION OPEN
 
 The gauge correction is now incorporated, and the next filtered-carrier attack has produced a genuine local result.
