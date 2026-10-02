@@ -1047,3 +1047,39 @@ Classification:
 - new carrier construction before identifiability: NOT AUTHORIZED.
 
 Detailed audit: research/PAPER3_POST_EXPLORATION_TOP_DOWN_ORIENTATION_IDENTIFIABILITY_2026-10-02.md
+
+
+## 2026-10-02 — TOP-DOWN T0 CRITICAL CORRECTION / TARGET IDENTIFICATION GATE
+
+The external review found a substantive error in the first top-down T0 attempt. The carrier-independent no-go lemma and the \(I_k(w)\) identifiability criterion are correct, but the attempted Demuškin T0 closure was invalid.
+
+The invalid step was the implicit identification
+\[
+\theta(x_2)=(1-q)^{-1}
+\quad\Longrightarrow\quad
+\chi_G\bmod p^k=(1-q)^{-1}
+\]
+where \(\theta\) is a Labute crossed-derivation/coefficient twist attached to the chosen presentation, while \(\chi_G\) is intended as an intrinsic Demuškin/cyclotomic orientation target. No explicit theorem connecting these objects under the declared target convention had been supplied.
+
+Consequences:
+- previous Demuškin T0 PASS/CLOSED: **HISTORICAL / SUPERSEDED — invalid inference**;
+- target identification T-1: **OPEN / LOAD-BEARING**;
+- Demuškin finite-window T0: **OPEN / LOAD-BEARING**;
+- broad orientation identifiability: **OPEN / NOT PROVED**;
+- broad extension reconstruction: **FAIL / CLOSED** remains valid;
+- observability-depth monotonicity: **OPEN**;
+- automatic monotonicity from filtration functoriality: **FAIL / CLOSED**.
+
+The algebraic q-regime facts survive:
+\(q=p^s,\ s\ge k\Rightarrow q>N_k=p^{k-1}+1\), and \((1-q)^{-1}\equiv1\pmod{p^k}\). But this scalar congruence is not itself a statement about the intrinsic orientation character.
+
+The repository literature gate already records:
+- Labute: full-group crossed-derivation/Kummerian orientation criterion;
+- Efrat–Quadrelli: unique Kummerian orientation for torsion-free Demuškin groups;
+- Quadrelli–Weigel: cyclotomic/dualizing orientation results;
+- none of the audited results, by themselves, supplies the project's finite-window factorization \(\chi_k=\Phi_k\circ W_k\).
+
+A new correction audit was added:
+research/PAPER3_TOP_DOWN_T0_CORRECTION_2026-10-02.md
+
+Decision: do not construct a new carrier before T-1 and T0 are closed. The next mathematical task is to fix the target object basis-free/intrinsically and establish the exact relation, if any, among Demuškin orientation, cyclotomic orientation, and the Labute coefficient twist.
