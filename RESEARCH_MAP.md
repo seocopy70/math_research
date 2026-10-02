@@ -4740,3 +4740,36 @@ was critically rechecked and found invalid. For \(n\le p^s\), killing \(z^{p^s}\
 Thus the previously recorded arbitrary-depth matched-window no-go and exact threshold \(p^s+1\) are **HISTORICAL / SUPERSEDED** and must not guide Paper 4. The valid K–Z contribution remains the deep-tail invisibility of the specific extension correction \(z^{p^s}\), plus the independent finite quotient witness that this correction survives at depth \(p^s+1\).
 
 The free-by-Demushkin branch therefore returns to **OPEN / LOAD-BEARING**: a genuine matched cd=3 control, or another valid structural no-go, must be established before making any uniform finite-window impossibility claim.
+
+
+## 2026-10-02 — E2/F1 K–Z SAME-WINDOW p-ADIC FACTORIZATION NO-GO
+
+A new exact same-window lemma closes the uniform finite-depth factorization route for the E2 p-adic extension class without using the withdrawn \(\mathbf Z_p^3\) comparison.
+
+For
+\[
+G_s=F(x,y,z)/\overline{\langle\!\langle z^{p^s}[x,y]^{-1}\rangle\!\rangle},
+\]
+if \(p^s\ge n\), then \(z^{p^s}\in D_{p^s}(F)\subseteq D_n(F)\). Hence
+\[
+G_s/D_n(G_s)\cong F/(D_n(F),[x,y]),
+\]
+so for any \(s,t\) with \(p^s,p^t\ge n\),
+\[
+G_s/D_n(G_s)\cong G_t/D_n(G_t).
+\]
+This is the correct same-window statement; it does not claim an abelian quotient, and therefore avoids the previously withdrawn \(\mathbf Z_p^3\) error.
+
+E2 independently gives \(v_p(\epsilon_s)=s\), up to the unit ambiguity in the choice of the generator of \(H_2(D,\mathbf Z_p)\). Thus distinct sufficiently large \(s,t\) have identical depth-\(n\) windows but distinct p-adic extension-depth data. For \(s<t<m\) the truncations \(\epsilon_s\bmod p^m\) and \(\epsilon_t\bmod p^m\) are already different (the latter is zero, the former nonzero).
+
+Therefore:
+- K–Z same-window lemma: **PASS / CLOSED**;
+- uniform fixed-depth recovery of the E2 p-adic class across the whole K–Z family: **FAIL / CLOSED**;
+- uniform bound \(n=n(p,d,m)\) independent of hidden extension depth: **FAIL / CLOSED**;
+- group-dependent/adaptive threshold \(n=n(G,m)\): **OPEN / LOAD-BEARING**;
+- possibility that \(n=p^m\) or another relation-depth bound suffices for this family: **OPEN**;
+- orientation recovery from E2: **OPEN**.
+
+This is a genuine finite-window negative boundary, but it is not a cd=3 no-go and does not prove that any individual \(G_s\) lacks a finite detecting window.
+
+Detailed audit: research/PAPER4_F1_KZ_SAME_WINDOW_P_ADIC_NO_GO_AUDIT_2026-10-02.md.
