@@ -1,3 +1,53 @@
+## 2026-10-02 — RP-3 Q-BLIND ADJACENT-WINDOW CARRIER FOUND
+
+The RP-3 Bockstein branch has advanced beyond the previous OPEN q-blindness gap.
+
+For an adjacent finite pair (X=W_nleftarrow Y=W_{n+1}), define intrinsically
+[
+e(Z)=log_pexp(Z^{ab})
+]
+and
+[
+mathcal L(X,Y)=
+egin{cases}
+operatorname{im}igl(operatorname{Hom}(Y,mathbf Z/p^{e(Y)})	ooperatorname{Hom}(Y,mathbf F_p)igr),&e(Y)>e(X),\
+0,&e(Y)=e(X).
+end{cases}
+]
+This definition is q-blind: it uses only the adjacent finite groups, their abelianizations, exponent, Hom, reduction mod p, and the annihilator pairing.
+
+At the specially oriented RAAG jump (n=q=p^f),
+[
+W_q^{ab}cong(mathbf Z/q)^V,qquad
+W_{q+1}^{ab}cong(mathbf Z/pq)^{Vsetminus S}oplus(mathbf Z/q)^S.
+]
+Thus, if (Vsetminus S
+eqarnothing), (mathcal L(W_q,W_{q+1})) is exactly the free/non-sinkhole character subspace, hence (kereta_f). If (Vsetminus S=arnothing), the exponent does not jump and the definition gives (mathcal L=0=kereta_f).
+
+Therefore the intrinsic carrier
+[
+F(W_q,W_{q+1})=mathcal L(W_q,W_{q+1})^perpsubseteq L_1
+]
+recovers exactly the sinkhole sector:
+[
+F(W_q,W_{q+1})=(kereta_f)^perp=operatorname{span}{ar s:sin S}.
+]
+
+This also fixes the previous dual-space type error: the annihilator is a subspace of (L_1), not (L_1^*).
+
+Classification:
+- q-blind adjacent-window carrier: **PASS / LOCAL**;
+- intrinsic/functorial construction: **PASS / LOCAL**;
+- kernel identification: **PASS / LOCAL** under the specially oriented RAAG abelianization structure;
+- full (eta_f) class reconstruction: **OPEN / NOT LOAD-BEARING**;
+- RP-3 overall: **PASS / LOCAL** for the declared target (F(W_{m finite})=(kereta_f)^perp);
+- non-special oriented graphs: separate OPEN branch;
+- non-reencoding/minimality: OPEN and not yet claimed.
+
+Detailed audit: research/RP3_FINITE_WINDOW_BOCKSTEIN_AUDIT_2026-10-02.md
+
+Next authorized attack: independently verify the carrier in the smallest non-complete graph, multiple-sink graph, and the degenerate all-sinkhole case; then perform the admissible-category/non-reencoding audit. Do not switch to Massey calculations unless a verification failure makes them load-bearing.
+
 ## 2026-10-02 — RP-3 BOCKSTEIN FINITE-WINDOW CLAIM CORRECTED: LIFTABILITY SURVIVES, FULL β-RECONSTRUCTION OPEN
 
 The proposed RP-3 finite-window Bockstein argument has been critically audited. The local algebraic conclusion is sound, but the draft overclaimed the finite-window factorization.
