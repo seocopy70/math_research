@@ -971,3 +971,44 @@ Detailed audit: research/PAPER3_RAAG_SPECIAL_PLANE_INCIDENCE_AUDIT_2026-10-02.md
 
 Immediate next gate:
 **prove or refute the accidental-plane exclusion theorem**: every independent (2)-plane with first commutator survival at (q>2) must arise from a sinkhole direction together with its special-neighbor span. No large computation is authorized until this gate is resolved.
+
+## 2026-10-02 — GATE D RESOLVED NEGATIVELY: SPECIAL-PLANE CARRIER REFUTED
+
+The proposed accidental-plane exclusion theorem has been refuted by the smallest complete specially oriented graph with one sinkhole (s) and two ordinary vertices (a,b):
+[
+G=langle s,a,bmid asa^{-1}=s^{1+q},;bsb^{-1}=s^{1+q},;[a,b]=1angle.
+]
+This graph is within the standard specially oriented class; the literature explicitly allows a complete special graph with one special vertex joined by special edges to all other vertices. citeturn0search0
+
+Because the underlying graph is complete, the degree-2 commutator sector vanishes. Thus (W_q) is abelian and the intrinsic extension commutator pairing is available. Its first degree-(q) defect on (L_1) is the alternating form
+[
+B_q(ar a,ar s)=ar s^q,quad B_q(ar b,ar s)=ar s^q,quad B_q(ar a,ar b)=0
+]
+(up to global sign), with radical (mathbf F_p(ar a-ar b)).
+
+Hence the proposed special-plane family is
+[
+mathscr S_q={Uinoperatorname{Gr}(2,L_1):operatorname{rad}(B_q)
+otsubset U}.
+]
+It does not recover the sinkhole. For instance
+[
+U_1=langlear s,ar aangle,qquad
+U_2=langlear s+ar a,ar bangle
+]
+are both q-special but (U_1cap U_2=0). Therefore
+[
+igcap_{Uinmathscr S_q}U=0.
+]
+
+This is an intrinsic finite-window counterexample, not a presentation artifact.
+
+Classification:
+- special-plane first-survival carrier: **FAIL / CLOSED**;
+- accidental q-special-plane exclusion: **FAIL / CLOSED**;
+- sinkhole recovery by Grassmannian intersection: **FAIL / CLOSED**;
+- conditional special-plane mechanism when origin sector has degree-2 noncommutativity: **PASS / LOCAL**;
+- general directed/sinkhole separation via this carrier: **FAIL / CLOSED**;
+- some other intrinsic finite-window carrier: **OPEN**.
+
+This closes the current carrier branch. Do not continue computing (mathscr S_q); the next research question must be a genuinely different carrier or a broader no-go theorem.
