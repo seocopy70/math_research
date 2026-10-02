@@ -1,3 +1,44 @@
+## 2026-10-02 — PAPER 4 T1 OVERLAPPING MULTI-SINK RESULT / TARGET REFINEMENT
+
+The smallest overlapping multi-sink model was tested:
+\[
+G=\langle a,s,t\mid sas^{-1}=a^{1+q},\;tat^{-1}=a^{1+q}\rangle.
+\]
+For \(u=\alpha\bar s+\beta\bar t\),
+\[
+B_q(u,\bar a)=(\alpha+\beta)\overline{a^q}.
+\]
+For odd \(p\), choosing \(m\in\mathbf F_p^\times\) with \(2m=1\) gives
+\[
+z=(st)^m,\qquad \bar z=m(\bar s+\bar t),
+\]
+with
+\[
+zaz^{-1}\equiv a^{1+q}\pmod{D_{q+1}},
+\]
+hence
+\[
+B_q(\bar z,\bar a)=P_E(\bar a).
+\]
+Thus a non-vertex direction can satisfy the full normalized rank-one special-edge signature.
+
+This closes only the literal vertex-set formulation:
+\[
+S_q=\{\bar w:\ w\text{ is a special/sink vertex}\}
+\]
+is **FAIL / CLOSED**.
+
+A critical correction is recorded: an accidental normalized direction is not automatically a counterexample to T1, because T1 seeks the linear functional \(\omega_q\), not the literal set of graph vertices. In the overlapping model the accidental direction lies on the same normalized affine hyperplane
+\[
+\alpha+\beta=1=\omega_q(\alpha\bar s+\beta\bar t).
+\]
+Therefore the correct target is the affine hull of all intrinsically normalized signature directions:
+\[
+\operatorname{Aff}(\mathcal S_E)\stackrel{?}{=}\omega_q^{-1}(1).
+\]
+This remains OPEN / LOAD-BEARING and is now the precise next theorem.
+
+The top-down reset remains active: no new carrier search. The problem has narrowed from “find the right sink vectors” to “prove the normalized signature locus is an intrinsic affine hyperplane whose level-one functional is \(\omega_q\)”.
 ## 2026-10-02 — PAPER 4 T1: INTRINSIC q-POWER TARGET CLOSED LOCALLY
 
 The recommended attack “define the intrinsic q-power target from the adjacent finite window” was executed.
