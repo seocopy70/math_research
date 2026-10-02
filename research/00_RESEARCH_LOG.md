@@ -1311,3 +1311,40 @@ Classification:
 - general RAAG directed/sinkhole separation: OPEN / LOAD-BEARING.
 
 Detailed audit: research/PAPER3_RAAG_3VERTEX_COMMON_SINK_AUDIT_2026-10-02.md.
+
+## 2026-10-02 — NON-ABELIAN (W_q) WALL REFINED / SPECIAL-PLANE INCIDENCE CARRIER
+
+The previous critical boundary was refined. It is correct that a non-abelian (W_q) prevents defining a global bilinear commutator pairing
+[
+kappa_q:W_q	imes W_q	o D_q/D_{q+1},
+]
+but it is too strong to conclude that the intrinsic extension-defect method is unavailable.
+
+For commuting pairs in (W_n), the commutator lift is canonically defined modulo (D_{n+1}), because changing a lift by (D_n) changes the commutator by ([D_n,D_1]subseteq D_{n+1}). To remove contamination from pairs with the same degree-one direction and deep corrections, the defect is organized by (2)-planes (Ule L_1) and their first nonzero commutator-survival degree
+[
+ho(U).
+]
+
+The smallest non-abelian-origin special model
+[
+G=langle x,y,zmid xyx^{-1}=y^{1+q}, xzx^{-1}=z^{1+q}angle
+]
+was analyzed. The origin subgroup (langle y,zangle) is free pro-(p), so (2)-planes contained in its degree-one span have ordinary degree-2 commutator survival. By contrast, planes (operatorname{span}(ar x,u)) with (0
+e uinoperatorname{span}(ar y,ar z)) have first survival degree (q). If (operatorname{span}(ar x+v,u)) has independent (v,u) in the origin plane, its degree-2 commutator is nonzero, so it is not a (q)-special plane.
+
+Hence the local (q)-special Grassmannian is precisely the incidence family of the sinkhole line with its origin plane. If the origin plane has dimension at least two, its intersection is the sinkhole line.
+
+This is a genuine advance over the commuting-origin test because it survives the first model in which the degree-2 ordinary commutator sector is nontrivial.
+
+Classification:
+- global bilinear (kappa_q) on non-abelian (W_q): FAIL / CLOSED — wrong domain;
+- lift-independent commuting-pair defect: PASS / LOCAL;
+- (2)-plane first-survival carrier: PASS / LOCAL;
+- noncommuting-origin special-line test: PASS / LOCAL;
+- sinkhole incidence recovery for common sink with at least two independent origins: PASS / LOCAL;
+- general special-graph incidence theorem: OPEN / LOAD-BEARING;
+- accidental (q)-special plane exclusion: OPEN / LOAD-BEARING.
+
+Detailed audit: research/PAPER3_RAAG_SPECIAL_PLANE_INCIDENCE_AUDIT_2026-10-02.md.
+
+Next authorized action: prove/refute the accidental-plane exclusion theorem for arbitrary specially oriented graphs. If it passes, reconstruct sinkhole/source incidence from the special-plane family; if it fails, retain the explicit counterexample as the new obstruction. No large computation or reopening of frozen branches.
