@@ -1898,3 +1898,27 @@ Current status:
 - next authorized test: matched cd=3 control with the same finite initial Zassenhaus window, or a proof that such matching is impossible.
 
 Do not invent a new carrier before this separation test is settled. RAAG carrier search remains HOLD/SUPPRESSED.
+
+## 2026-10-02 — DECISIVE MATCHED-WINDOW RESULT
+
+The K–Z stress test now has a cd=3 matched control. For odd p, take
+\[
+G_s=\langle x,y,z\mid z^{p^s}=[x,y]\rangle,
+\qquad G_+=Z_p^3.
+\]
+The first is K–Z's finitely generated free-by-Demushkin group with cd_p=2; the second is the split free-by-Demushkin extension 1→Z_p→Z_p^3→Z_p^2→1 with cd_p=3. The quotient Z_p^2 is Demushkin. citeturn0search36turn1search17turn1search20
+
+For every n≤p^s,
+\[
+G_s/D_n(G_s)\cong G_+/D_n(G_+).
+\]
+Hence for every prescribed finite depth n, a same-d=3 pair exists with identical n-th Zassenhaus quotient but different κ=dim H^3(G,F_p) (0 versus 1).
+
+New authoritative classification:
+- arbitrary-depth matched cd=2/cd=3 windows: **PASS / LOCAL**;
+- uniform finite-depth detector on the full finitely generated free-by-Demushkin class: **FAIL / CLOSED**;
+- detector with a group/extension-dependent threshold: **OPEN / LOAD-BEARING**;
+- finite-window δ_G/W^D recovery at a threshold controlled by relation depth: **OPEN**;
+- new carrier hunting: **STOP / NOT AUTHORIZED**.
+
+Important boundary: the result does not prove that an individual G lacks some finite detecting depth. It rules out a universal bound depending only on p and generator rank (already d=3 suffices).
