@@ -1,3 +1,24 @@
+## 2026-10-02 — PAPER 4 CREATIVE RE-EXAMINATION: GLOBAL PAIRING / TRACE / AFFINE-HULL CLOSURES
+
+The global pairing proposal was tested as a structural alternative after Gate D.
+
+Retain Φ(u)=B_q(u,-) as diagnostic data. However:
+- rank-one atoms: FAIL/CLOSED as a universal orientation-normalization mechanism;
+- trace/total-mass functional on Im Φ: FAIL/CLOSED;
+- naive affine-hull normalization: FAIL/CLOSED;
+- three-window: OPEN/LOCAL only;
+- projective-only orientation target: FAIL/CLOSED for exact χ mod p^k.
+
+Decisive chordal tree: ordinary a,b; special s,t,u; special edges a→s, b→t, a→u, b→u. At first q-defect:
+Φ(s)=P_a, Φ(t)=P_b, Φ(u)=P_a+P_b.
+Thus τ(Φ(s))=τ(Φ(t))=τ(Φ(u))=1 would imply 1=2, impossible for odd p.
+
+For x=αs+βt+γu, simultaneous normalized equations are α+γ=1 and β+γ=1, giving an affine line in F_p^3, codimension 2. Thus the natural affine-hull claim is false for this signature.
+
+This is independent of the isolated-special Gate D obstruction. Gate D remains FAIL/CLOSED for the unrestricted class; this new result is a second structural boundary for restricted-class continuation.
+
+Detailed audit: research/PAPER4_CREATIVE_REVIEW_PHI_TRACE_THREEWINDOW_PROJECTIVE_2026-10-02.md.
+
 ## 2026-10-02 — PAPER 4 GATE D DECISIVE NO-GO
 
 Gate D was tested exactly as required: before any new observable, search for two admissible oriented objects with the same un-oriented finite window but different orientation targets.
