@@ -1,3 +1,18 @@
+## 2026-10-02 — ADJACENT-CLASS ORIENTATION-RIGIDITY BOUNDARY
+
+The same-family full-orientation compression branch is closed as classification re-encoding. The proposed A–D admissible-category sketch was audited and is not sufficient to define coarseness because functorial finite intrinsic carriers can still encode the target; a factorization preorder with an explicit non-reencoding condition is required.
+
+A technical correction is recorded: the graded direct sum \\(\\bigoplus gr_n(G)\\) is associated-graded Zassenhaus data, not an abelianization, and the vector-space cardinality bound requires marked/state-level observations rather than bare vector-space isomorphism classes.
+
+The first adjacent-class test gives a sharp boundary: free pro-p groups admit every orientation as a 1-cyclotomic orientation, unlike infinite Demuškin groups, which have a unique 1-cyclotomic orientation. Therefore an un-oriented finite window cannot determine an arbitrary orientation on the free-pro-p class. The missing structural hypothesis is **orientation rigidity**.
+
+Current program:
+1. standard Demuškin: finite-window orientation identifiability PASS/CLOSED; same-family coarsest information sharp but newness FAIL/CLOSED;
+2. free pro-p adjacent class: un-oriented orientation identifiability FAIL/CLOSED at object level;
+3. next authorized branch: find an orientation-rigid adjacent class not classified solely by q, then test finite-window observability.
+
+Detailed audit: research/PAPER3_ADMISSIBLE_CATEGORY_AND_ADJACENT_CLASS_AUDIT_2026-10-02.md.
+
 ## 2026-10-02 — FULL-ORIENTATION COARSENESS / SAME-FAMILY CLOSURE
 
 The top-down program has now separated three levels that must not be conflated:
