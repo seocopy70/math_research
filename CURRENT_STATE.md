@@ -48,3 +48,9 @@ Evidence quality is separate in research/02_EVIDENCE_INDEX.md: PASS, LOCAL, NONE
 6. research/03_CONVENTIONS_AND_IMPLEMENTATION.md — computational conventions.
 
 Rule: never reconstruct current state by reading the entire research log.
+
+## 2026-10-04 Paper 4 status correction
+- **Mathematical core:** CLOSED only for the explicitly certified claims: universal (n\le p^s) delayed-window blindness; quadratic critical-layer survival in the declared scope; stress-family coarse-package non-rigidity in the declared mild/odd-(p) scope; and own-critical-window ((s,a)) recovery for (1\le a<s).
+- **OPEN / LOAD-BEARING:** same numerical-window separation (W_{p^s+1}(G_s)\) vs. (W_{p^s+1}(G_t)); the (a=s) boundary; and any exact relative threshold statement requiring a non-splitting argument beyond survival.
+- **Scope rule:** survival is not non-splitting; own-critical recovery is not same-window (s\) vs. (t) separation; relative results do not become unmarked results by omission of the quotient map.
+- **Publication status:** Paper 4 is not yet FINAL. The next work is evidence-level packaging and resolution of the load-bearing OPEN questions, followed by manuscript freeze.
