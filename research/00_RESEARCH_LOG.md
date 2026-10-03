@@ -3541,3 +3541,12 @@ Classification:
 - blind carrier search: **STOP / NOT AUTHORIZED**.
 
 Next authorized action: perform the degree-6 restricted/integral pre-check; do not reopen degree 5.
+
+
+## 2026-10-03 — T1-C DEGREE-6 PRE-CHECK: RESTRICTED SYMBOL IS NOT YET AN INTEGRAL OBSTRUCTION
+
+The degree-6 pre-check shows an object mismatch. The restricted Lie p-operation is naturally mod-p graded, while the unresolved load-bearing object is the integral kernel abelianization A_s and its actual section-change quotient. For p=3, an integral element u has third power equal to 3u in the abelian group A_s. Thus a nonzero degree-6 restricted symbol modulo 3 is not, by itself, a new integral extension obstruction. It becomes relevant only if an integral lift survives the actual section-change image and exhibits a genuine 3-divisibility or torsion defect.
+
+Classification: degree-6 restricted symbol alone = FAIL/CLOSED as a standalone obstruction; degree-6 as a shadow of an integral divisibility defect = CONDITIONAL; integral section-change quotient of A_s = OPEN/LOAD-BEARING. No isolated degree-6 brute-force calculation is authorized yet.
+
+Next authorized action: construct the integral section-change map on the first potentially 3-divisible degree-2 kernel class and compute its integral cokernel/torsion before using any degree-6 restricted shadow.
