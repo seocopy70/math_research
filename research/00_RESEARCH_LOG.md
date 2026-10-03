@@ -1,3 +1,26 @@
+## 2026-10-03 — T1-C INTRINSIC FACTORIZATION PRE-CHECK / UNMARKED INPUT GATE
+
+After freezing the relative threshold theorem, a fresh target-first pre-check was run before any new carrier construction.
+
+The target
+\[
+\mathsf T(W_n\to D/D_n(D))
+\]
+is a property of the marked extension diagram, not automatically a function of the abstract finite group \(W_n\). Forgetting the quotient map \(\pi\) removes the distinguished quotient/kernel data unless that map is canonically reconstructible from the finite window.
+
+Consequently the unmarked Object/Input/Functoriality gates are not yet passed. This is not a no-go theorem: the proper next test is whether two admissible marked extension diagrams with different relative threshold data can have isomorphic unmarked finite windows at the same depth.
+
+Classification:
+- marked relative threshold: **PASS / CLOSED**;
+- unmarked factorization: **OPEN / LOAD-BEARING**;
+- unmarked same-window no-go: **OPEN**;
+- coarsest intrinsic realization: **OPEN**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+Next authorized action: same-window separation at the unmarked level, not another Fox/norm/degree-5 calculation.
+
+Detailed audit: research/PAPER4_T1C_INTRINSIC_FACTORIZATION_PRECHECK_2026-10-03.md.
+
 ## 2026-10-03 — T1-C POST-THRESHOLD CRITICAL RE-AUDIT
 
 The general integral Fox calculation is confirmed as a genuine relative threshold theorem for the declared stress family, with one proof-packaging refinement.
