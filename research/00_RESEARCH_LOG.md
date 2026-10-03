@@ -4136,3 +4136,18 @@ Updated status:
 - unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**.
 
 This correction supersedes any wording suggesting that H^1-level orbit collapse already established full quotient-map orbit uniqueness.
+
+
+## 2026-10-03 — GATE-B B-ATTACK RECONCILIATION / UNSUPPORTED NEGATIVE ENDPOINT WITHDRAWN
+
+A proposed “end-to-end” continuation claimed: (i) an exact two-factor structure for K_n, (ii) a corresponding Q_n-module automorphism calculation, (iii) H^2(Q_n,K_n) != 0, and hence (iv) likely multiple Q_n-quotient kernels and “Reconstruction FAIL”. It also claimed “Separation FAIL because the same W gives the same extension class”.
+
+Independent audit found these are not valid deductions. The kernel decomposition was not derived from the relation-module sequence; Q_n is nonabelian so the commutative group-ring/cyclotomic calculation used there is invalid; nonzero H^2 does not imply multiple quotient kernels; and an abstract isomorphism of underlying W does not identify the marked quotient maps. In particular, several epimorphisms W -> Q can exist on one fixed W, and their orbit is exactly the Gate-B question.
+
+The proposed negative conclusion is therefore **HISTORICAL / SUPERSEDED** and must not be cited as evidence for impossibility.
+
+What survives is the authoritative W10 correction: the intrinsic cup-radical line and H^1 quotient data are PASS / LOCAL, the explicit family pi_c(z)=c, pi_c(x)=x, pi_c(y)=y for c in D_2(Q_10) is PASS / LOCAL, and full quotient-map orbit uniqueness plus same-window separation remain OPEN.
+
+A valid next reduction is now isolated: compute the Aut(W_10) x Aut(Q_10) orbit of the pi_c family first on D_3(Q_10)/D_4(Q_10), including the image of radical-preserving IA shears. No transitivity or separation conclusion is assumed. This is the sole next authorized Gate-B calculation.
+
+Detailed reconciliation: research/PAPER4_GATEB_B_ATTACK_RECONCILIATION_2026-10-03.md.
