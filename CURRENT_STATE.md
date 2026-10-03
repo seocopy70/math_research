@@ -112,3 +112,21 @@ This correction controls over the earlier 5-dimensional/J_3\oplus J_1\oplus J_1 
 ## 2026-10-04 — intrinsic χ=z* Schreier SNF discrepancy RESOLVED
 
 Direct recomputation resolves the claimed (p,s)=(3,2) discrepancy. For χ(z)=1, χ(x)=χ(y)=0, the p-index kernel has generators u=z^p, a_i=z^i x z^{-i}, b_i=z^i y z^{-i}. In K^{ab}, the p conjugate relators give exactly p^{s-1}U-p^sA_i=0. Thus the relation matrix on (U,A_0,...,A_{p-1}) is [p^{s-1} | -p^s I_p], whose Smith factors are p^{s-1}, followed by p^s repeated p-1 times. Hence K^{ab} ≅ Z^{p+1} ⊕ Z/p^{s-1} ⊕ (Z/p^s)^{p-1}. In particular, (p,s)=(3,2) gives Z^4 ⊕ Z/3 ⊕ (Z/9)^2. This agrees with the already recorded SNF diag(3,9,9) in the corrected W10 audit. Therefore the alternative Z^4 ⊕ Z/3 ⊕ Z/9 is superseded; the supposed missing-Z/9 discrepancy is FAIL/CLOSED as a mathematical issue. The all-s transfer-defect separation remains OPEN/LOAD-BEARING.
+
+## 2026-10-04 — intrinsic transfer-defect boundary CLOSED
+
+The load-bearing identification is exact. In the a=s boundary, the canonical torsion-line generator is τ_s=zx_1^{-1}; the relevant transfer is V(τ_s), not V(a_0). Up to a unit from the choice of torsion generator,
+\[
+p^{s-1}V(τ_s)=p^{s-1}(p-N_σ)[A_0].
+\]
+With δ=σ−1,
+\[
+N_σ=p+\binom p2δ+\cdots+\binom p{p-1}δ^{p-2}+δ^{p-1}.
+\]
+For 1≤k≤p−2, p divides \(\binom pk\), while δ^k[A_0] is p^s-torsion; hence all intermediate terms vanish after multiplication by p^{s−1}. Thus
+\[
+p^{s-1}V(τ_s)=-p^{s-1}δ^{p-1}[A_0].
+\]
+The exact Schreier/SNF computation gives ord(δ^{p−1}[A_0])=p^s, so the defect is nonzero of order p. For a=∞, τ_∞=z and z^{p^s}∈[K,K], so the normalized transfer class vanishes in K^{ab}. Therefore the intrinsic transfer-defect predicate separates a=s from a=∞ in the declared stress-family scope s≥2.
+
+Classification: PASS/LOCAL for the boundary separator; H^3 secondary lift remains UNPROVEN and is not asserted. Do not identify V(τ_s) with V(a_0).
