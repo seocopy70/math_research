@@ -1,3 +1,24 @@
+## 2026-10-03 — T1-C INTRINSIC FACTORIZATION PRE-CHECK / UNMARKED INPUT GATE
+
+The post-threshold target-first pre-check has been completed. The relative obstruction is naturally a property of the marked extension diagram
+\[
+1\to K_n\to W_n\xrightarrow{\pi}D/D_n(D)\to1,
+\]
+not of \(W_n\) alone. After forgetting \(\pi\), the distinguished quotient and kernel are no longer part of the input unless they are canonically reconstructible.
+
+Therefore no intrinsic carrier may yet be constructed. Object/Input/Functoriality are not passed for the unmarked factorization as currently formulated. This is an input-category obstruction, not yet a same-window no-go theorem.
+
+The next authorized task is singular: design and test the unmarked same-window separation question—can two admissible marked extension diagrams with different relative threshold data have isomorphic underlying finite windows at the same depth? Only if this negative test fails should a positive intrinsic reconstruction be attempted.
+
+Classification:
+- marked relative extension threshold: **PASS / CLOSED**;
+- unmarked factorization: **OPEN / LOAD-BEARING**;
+- unmarked same-window no-go: **OPEN**;
+- coarsest intrinsic realization: **OPEN**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+Detailed audit: research/PAPER4_T1C_INTRINSIC_FACTORIZATION_PRECHECK_2026-10-03.md.
+
 ## 2026-10-03 — T1-C POST-THRESHOLD CRITICAL RE-AUDIT / THRESHOLD FROZEN
 
 The preceding general integral Fox calculation has now been critically re-audited. The declared rank-two stress-family relative threshold
