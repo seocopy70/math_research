@@ -80,7 +80,7 @@ have zero commutator contribution after abelianization and give, up to an overal
 \]
 The three conjugate \([x,y]\)-terms vanish in \(K^{ab}\).
 
-The additional \(D_{10}(F)\)-relations do not impose linear relations in \(K^{ab}/3K^{ab}\): for the index-3 subgroup, the standard Zassenhaus subgroup comparison sends \(D_{10}(F)\cap K\) into \(D_4(K)\subseteq D_2(K)=K^3[K,K]\). Thus they vanish in the mod-3 abelianization.
+The additional \(D_{10}(F)\)-relations do not impose linear relations in \(K^{ab}/3K^{ab}\). A direct augmentation-ideal check gives the needed comparison: in characteristic 3, three factors of \((z-1)\) collapse to \(z^3-1\in I(K)\), while \((x-1),(y-1)\in I(K)\); hence a degree-10 augmentation term whose group element lies in K has K-augmentation degree at least \(\lceil10/3\rceil=4\). Therefore \(D_{10}(F)\cap K\subseteq D_4(K)\subseteq D_2(K)=K^3[K,K]\), so the truncation relations vanish in the mod-3 abelianization. This is the only filtration-comparison input needed here.
 
 Consequently
 \[
@@ -126,6 +126,8 @@ Thus the critical transfer/Jacobson witness survives:
 \]
 
 ### Independent algebra check
+
+The calculation is independently encoded in `research/scripts/paper4_w10_schreier_transfer_check_2026-10-04.py`; the script checks the Schreier action matrix, Smith form, and integral lattice nonvanishing.
 
 For the relation matrix
 \[
