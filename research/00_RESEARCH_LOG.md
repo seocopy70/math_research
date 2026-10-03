@@ -98,3 +98,25 @@ is not in the integral row lattice (SNF \(\operatorname{diag}(9,27,27)\)); hence
 This is **PASS / LOCAL only**. It does not prove survival in the actual \(K^{ab}\) of \(W_{28}\), because the truncation image \(D_{28}(F)\cap K\to K^{ab}\) is still controlled by the unresolved subgroup-filtration comparison \((SC_s)\) (or a direct replacement). The next authorized attack is therefore the actual truncation image at \((p,s)=(3,3)\), not an all-\(s\) promotion.
 
 Evidence: `research/PAPER4_S3_MODEL_SCHREIER_TRANSFER_2026-10-04.md`, commit `f423bc41f7d41023fdeaf5e8de657229118e338a`.
+
+
+## 2026-10-04 — same-window order-jump correction / exact-threshold rollback
+
+A direct audit of the previously “CLOSED” same-window order-jump argument found a fatal subgroup-containment error. The proposed canonical epimorphism
+\[
+W_{p^s+1}(G_s)\twoheadrightarrow W_{p^s+1}(G_t)
+\]
+was justified by treating the defining normal subgroups as nested, but
+\(N_s=D_n\langle\!\langle z^{p^s}r^{-1}\rangle\!\rangle\) and
+\(N_t=D_n\langle\!\langle r\rangle\!\rangle\) are not nested in the required direction because \(z^{p^s}\notin D_{p^s+1}\). Hence the claimed order jump \(|W_s|=p|W_t|\) is invalid.
+
+A direct finite computation at the test case reported in the audit gives equal orders for the two compared windows, consistent with the structural objection. Therefore:
+
+- “same-window order jump” = **FAIL / CLOSED as a proof route**;
+- exact unmarked threshold \(n_{\mathrm{sep}}(s)=p^s+1\) = **OPEN**;
+- certified lower bound \(n_{\mathrm{sep}}(s)\ge p^s+1\) = **PASS / CLOSED in the stated scope**;
+- all-s same-window separation = **OPEN / LOAD-BEARING**;
+- the existing \((p,s)=(3,2)\) and \((3,3)\) transfer calculations remain **PASS / LOCAL** only;
+- a proof that \(G_s\not\cong G_t\) is also not currently certified and must not be inferred from the window calculation.
+
+This supersedes the earlier evidence-index wording that promoted the exact threshold to CLOSED. It does not invalidate the certified Paper 4 core below this boundary.
