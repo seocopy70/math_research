@@ -3670,3 +3670,19 @@ Consequences for the bounded Gate-B alternatives:
 - General \(W_{p^s+1}\) one-orbit theorem, general unmarked reconstruction, and coarsest intrinsic realization: **OPEN / LOAD-BEARING**.
 
 Interpretation: this is a genuine W10 theorem plus a generalization program, not a universal impossibility theorem for Paper 4. It closes the bounded intrinsic feasibility gate at the minimal model and shows that the useful compression object is the quotient-map orbit/category rather than a unique marked quotient map. It does not reopen the already closed scalar/norm/degree-5 routes and does not enlarge the certified relative theorem beyond its declared stress-family scope.
+
+
+## 2026-10-03 — GENERAL CRITICAL ORBIT TRANSITIVITY: W10 PHENOMENON GENERALIZED
+
+The W10 end-to-end closure has now been generalized to the declared critical window n=p^s+1. The universal p^s-power Magnus lemma proves that every D_2-valued radical shear z -> zc preserves the critical relation modulo D_{p^s+1}. Burnside's basis theorem makes the resulting IA endomorphism an automorphism. For any admissible epimorphism W_{p^s+1}->Q_{p^s+1} with H^1-kernel equal to the intrinsic cup-radical line, the Demushkin-generator images normalize by an automorphism of Q, and the residual radical component is exactly such a shear. Hence all admissible quotient maps form one Aut(W) x Aut(Q)-orbit.
+
+Current Gate-B status:
+- critical-window quotient-map orbit transitivity: PASS / CLOSED;
+- same-window separation by different quotient-map orbits: FAIL / CLOSED at the orbit level;
+- relative split/non-split Boolean on the admissible orbit: PASS / LOCAL;
+- unique literal marked quotient map: FAIL / CLOSED as a uniqueness target;
+- general unmarked reconstruction/coarsest intrinsic realization: OPEN / LOAD-BEARING.
+
+The next research target is therefore no longer W10 or full orbit classification. It is the intrinsic realization of the single orbit/category: determine whether the orbit of admissible quotient maps is canonically reconstructible from the unmarked filtered group W_{p^s+1}, and whether the relative Boolean factors through that intrinsic orbit object. This must be attacked as an Object/Input/Functoriality/Gauge problem before any new carrier construction.
+
+Detailed audit: research/PAPER4_GENERAL_CRITICAL_ORBIT_THEOREM_2026-10-03.md.
