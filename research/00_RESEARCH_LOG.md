@@ -3917,3 +3917,25 @@ Decision for continuation: do not reopen the frozen threshold, degree-5 residual
 The proposed independent a=1 witness H_s is a valid quotient of the abstract rank-two presentation and its critical Zassenhaus visibility calculation is valid. But it is not a Q-equivariant pushout over the reference Demushkin quotient: H_s has [x,y]=1, while D has [x,y]=x^{-p}, and x^p survives at the critical finite quotient. Therefore no compatible H_s -> D/D_{p^s+1}(D) sends x,y to the canonical reference generators. The witness cannot transport the section-defect class back to the marked relative extension.
 
 The earlier a=1 independent-closure wording is superseded. Correct status: a=1 marked finite-kernel survival OPEN; a=1 exact relative threshold OPEN. H_s remains diagnostic only. Gate B unmarked reconstruction/separation remains the main line; Gate A is an independent OPEN side branch.
+
+
+## 2026-10-03 — PAPER 4 REALISTIC-CLOSE / ORIGINAL-TARGET DECISION
+
+The current research state was reviewed as a decision point between a realistic paper-completion target and the original intrinsic/coarsest-realization target.
+
+Realistic completion target: freeze the relative stress-family theorem as the principal positive result, explicitly scoped to the certified subfamily (currently a>=2; a=1 remains open), and package the unmarked T1-C boundary as a structural realization limitation. The paper can be completed as a rigorously scoped relative extension-depth theorem plus a clearly separated intrinsic-realization program/negative-boundary section, without claiming an unmarked or coarsest carrier theorem.
+
+Original target: recover the relative obstruction from the unmarked finite window by canonical reconstruction/factorization, or prove an admissible same-window separation pair. This remains OPEN/LOAD-BEARING. No valid same-window pair with different relative splitting data has been established. The current p=3,n=4 four-class computation is only PASS/LOCAL pending a reproducible certificate and full relation+generation checks.
+
+Decision boundary: do not conflate “paper can be finished with a scoped theorem” with “original intrinsic target is solved.” The latter still requires a new structural theorem or a genuine same-window no-go.
+
+Methodological retrospective: the project reached this boundary late because the post-Paper-3 search inherited a bottom-up carrier mindset. Earlier successes made it natural to ask “what carrier detects the target?” before proving that the target is a function of the permitted input. The Object/Input/Functoriality gate existed in the continuity protocol but was not enforced early enough as a hard stop. In addition, the Demushkin Paper-3 success encouraged reuse of finite-window recognition patterns, while the decisive T1-C issue is an extension-fiber/marked-vs-unmarked problem. The later target-first reset exposed the mismatch.
+
+Forward methodological rule: for every new branch, test input sufficiency and same-window non-identifiability before constructing a carrier; treat “carrier search” as forbidden until the target factors through the allowed input category. A two-track decision (positive reconstruction vs negative separation) should be explicit from the start.
+
+Classification:
+- scoped relative Paper-4 completion: CONDITIONAL/PASS candidate, contingent on final proof packaging and explicit theorem scope;
+- original unmarked intrinsic reconstruction: OPEN/LOAD-BEARING;
+- original coarsest intrinsic compression: OPEN;
+- p=3,n=4 unmarked separation computation: PASS/LOCAL pending certificate;
+- methodology: target-first/input-sufficiency gate strengthened.
