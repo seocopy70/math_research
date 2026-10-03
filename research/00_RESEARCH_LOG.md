@@ -4939,3 +4939,32 @@ Classification:
 - all-\(s\ge2\) transfer-defect theorem: **OPEN**.
 
 Detailed audit: research/PAPER4_A_S_TRANSFER_SCHREIER_W10_AUDIT_2026-10-04.md.
+
+
+
+## 2026-10-04 — CRITICAL CORRECTION: the proposed intrinsic w_a-line argument uses a superseded W10 module
+
+A proposed continuation argued from
+M=K^{ab}/3K^{ab} \cong F_3^5, M \simeq J_3(1)\oplus J_1(1)\oplus J_1(1),
+with delta^2 M=<w_a>, and concluded that w_a defines an intrinsic/functorial line.
+
+This is not compatible with the corrected intrinsic-radical W10 calculation already certified locally in research/PAPER4_A_S_TRANSFER_SCHREIER_W10_AUDIT_2026-10-04.md. For G_{2,2}=<z,x,y | z^9=x^9[x,y]> the intrinsic cup-radical character is chi=z^*, so K=ker chi. The corrected Schreier calculation gives M=K^{ab}/3K^{ab} \cong F_3^7, with one trivial u-line and two 3-cycles, on the a_i- and b_i-triples. Consequently
+im(sigma-1)^2 = <a_0+a_1+a_2, b_0+b_1+b_2>,
+so dim_{F_3} delta^2 M=2, not 1.
+
+Therefore the following claims are rejected/superseded for the corrected W10 base case:
+- M \cong J_3\oplus J_1\oplus J_1;
+- delta^2M=<w_a>;
+- w_a is intrinsically determined as the unique nonzero line delta^2M;
+- “canonical generator of a 1-dimensional delta^2M” and the resulting functorial w_a-line.
+
+The individual line <a_0+a_1+a_2> is not selected by the module structure alone, because the a- and b-cycle summands are both present. Any attempt to distinguish the a-line therefore needs additional intrinsic structure (for example the defining symplectic/relator data) and must pass the gauge/functoriality tests. The transfer witness 3(a_0+a_1+a_2) != 0 in K^{ab} remains PASS / LOCAL as an explicit base-case witness, but it is not thereby an unmarked intrinsic line invariant.
+
+Classification:
+- corrected W10 module M \cong F_3^7: PASS / LOCAL;
+- dim delta^2M=2: PASS / LOCAL;
+- unique intrinsic w_a-line: FAIL / CLOSED for the corrected W10 module;
+- base-case transfer/Jacobson nonvanishing: PASS / LOCAL;
+- all-s intrinsic transfer-defect separation: OPEN / LOAD-BEARING.
+
+This correction controls over the earlier 5-dimensional/J_3\oplus J_1\oplus J_1 argument.
