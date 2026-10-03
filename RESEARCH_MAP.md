@@ -1,3 +1,19 @@
+## 2026-10-03 — PAPER 5 ORBIT-CATEGORY PROPOSAL CRITICAL REVIEW
+
+The proposed Aut(W_n)-orbit category is retained only as an auxiliary action/orbit formalism. The proposed minimality theorem is rejected as currently formulated: the mapping-space Hom definition lacks a declared enrichment, connectedness does not imply triviality, and “smaller than the realization groupoid” has no fixed comparison category/order. The two tested characteristic-kernel extremes remain closed no-go results, but they do not imply an absolute characteristic-compression no-go.
+
+Authoritative classification:
+- Aut(W_n)-action on admissible realizations: **PASS / LOCAL**;
+- established one-orbit theorem: **PASS / CLOSED**;
+- proposed orbit-category-as-minimal-object: **FAIL / CLOSED** as formulated;
+- general characteristic compression: **OPEN**;
+- coarsest intrinsic realization: **OPEN**;
+- absolute minimality: **OPEN**.
+
+Audit: research/PAPER5_ORBIT_CATEGORY_CRITICAL_REVIEW_2026-10-03.md.
+
+Next authorized action: define the admissible comparison category/order for “compression” before any genuine minimality/no-go attack. No new orbit-category computation is authorized merely to rescue the rejected minimality formulation.
+
 ## 2026-10-03 — PAPER 5 CHARACTERISTIC-SUBGROUP COMPRESSION BOUNDARY
 
 The authorized post-C2 compression test is complete. For the full admissible kernel orbit, the characteristic intersection quotient is strictly larger than the Demuškin target, while the characteristic quotient obtained by generating all admissible kernels is exactly the target abelianization. Therefore the first natural characteristic-subgroup constructions cannot produce the desired finite realization. This strengthens the C2 boundary: canonical marked quotient is **FAIL / CLOSED**, universal orbit-realization groupoid is **PASS / CLOSED**, first-level characteristic compression is **FAIL / CLOSED**, while coarsest intrinsic compression remains **OPEN**. Detailed audit: research/PAPER5_CHARACTERISTIC_SUBGROUP_COMPRESSION_AUDIT_2026-10-03.md.
