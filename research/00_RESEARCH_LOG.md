@@ -3728,3 +3728,23 @@ Classification:
 - exact \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\): **PASS / CLOSED** for the declared stress family;
 - universal free-by-Demuškin theorem beyond this stress family: **OPEN**;
 - blind carrier search: **STOP / NOT AUTHORIZED**.
+
+
+## 2026-10-03 — CRITICAL RE-AUDIT OF POST-THRESHOLD CRITIQUE / FINITE-KERNEL SURVIVAL STATUS
+
+A referee-style critique proposed downgrading the T1-C finite-kernel survival step to “PARTIAL (metabelian only)” and reopening an actual-class-2-kernel Gate 0. The authoritative post-threshold audit was rechecked. That downgrade is NOT current.
+
+The load-bearing statement is not that the metabelian quotient itself is the class-2 kernel. The point is functoriality of the section-defect/pushout class: the metabelian model is a Q-equivariant quotient of the relevant kernel/module, and section-change coboundaries map to section-change coboundaries. Therefore a nonzero pushed-out obstruction in the metabelian quotient implies the original abelianized-kernel pushout class is nonzero. This is the standard pushout/naturality bridge and is explicitly recorded in the post-threshold critical re-audit.
+
+Accordingly:
+- stress-family relative threshold n_sep^rel(s)=p^s+1: PASS / CLOSED;
+- integral Fox obstruction in the declared stress family: PASS / CLOSED as a theorem ingredient;
+- finite-kernel survival via the explicit equivariant pushout/naturality argument: PASS / CLOSED;
+- unmarked same-window no-go: OPEN;
+- canonical reconstruction of the marked quotient: OPEN / LOAD-BEARING;
+- intrinsic factorization/coarsest realization: OPEN / LOAD-BEARING;
+- universal free-by-Demushkin theorem: OPEN.
+
+The critique's broader methodological warning remains correct in a narrower sense: “metabelian survival” must never be phrased as though the metabelian quotient were literally the actual class-2 kernel, and the naturality lemma must be stated explicitly. But that is a proof-packaging requirement, not a remaining Gate-0 mathematical OPEN.
+
+The correct next gate is therefore the unmarked intrinsic-factorization problem, not another finite-kernel survival calculation. No recomputation of p^s+1, degree-5 reopening, scalar/norm shortcut, or blind carrier search is authorized.
