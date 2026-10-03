@@ -3375,3 +3375,26 @@ Current gate status:
 - unmarked reconstruction: **OPEN / LOAD-BEARING**.
 
 The critical degree-9 jet is now the correct finite invariant to test against this explicit (D_2(Q_{10}))-family. No carrier search is authorized.
+
+
+## 2026-10-03 — GATE-B B-ATTACK RECONCILIATION / UNSUPPORTED “FAIL” ENDPOINT WITHDRAWN
+
+A proposed continuation attempted to compute K_n globally, infer a two-factor module structure, use H^2(Q_n,K_n) != 0 to infer multiple Q_n-quotient kernels, and conclude “Reconstruction FAIL / Separation FAIL”. Independent audit rejects that endpoint as non-rigorous.
+
+Critical corrections:
+- the asserted exact K_n and K_n^{ab} decompositions were not derived from the actual relation-module sequence;
+- Q_n is nonabelian, so the displayed commutative group-ring/cyclotomic decomposition is invalid in that form;
+- H^2(Q_n,K_n) != 0 does not imply multiple normal subgroups N with W_n/N ~= Q_n;
+- an abstract isomorphism W_1 ~= W_2 does not identify their marked quotient maps, so “same W implies same obstruction” is false.
+
+Therefore no negative intrinsic theorem has been obtained. The authoritative W10 status remains:
+- cup-radical line: PASS / LOCAL;
+- H^1 quotient data: PASS / LOCAL;
+- explicit admissible family pi_c(z)=c, pi_c(x)=x, pi_c(y)=y for c in D_2(Q_10): PASS / LOCAL;
+- full quotient-map orbit uniqueness: OPEN / LOAD-BEARING;
+- same-window separation: OPEN;
+- unmarked reconstruction: OPEN / LOAD-BEARING.
+
+A stronger but still finite reduction is authorized: compute the Aut(W_10) x Aut(Q_10) orbit of the explicit pi_c family first in the graded layer D_3(Q_10)/D_4(Q_10), including the image of radical-preserving IA shears. The rank-two p=3 Demushkin associated restricted Lie algebra has initial quadratic relation [X,Y]=0, so this is the first nontrivial graded layer relevant to the family. No conclusion of transitivity/separation is assumed.
+
+The unsupported “FAIL (high probability)” endpoint is **HISTORICAL / SUPERSEDED**. Detailed reconciliation: research/PAPER4_GATEB_B_ATTACK_RECONCILIATION_2026-10-03.md.
