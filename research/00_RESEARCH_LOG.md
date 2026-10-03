@@ -135,3 +135,36 @@ Classification:
 - Direction 1 generator implementation: **DEFERRED**, not started.
 
 Decision consequence: stop the new general-theorem branch here and move to Paper 4 organization/writing. If later reopened as a separate generalization program, the first task must be a pre-check defining E_ψ intrinsically and proving functoriality/gauge invariance before any large computation.
+
+
+## 2026-10-04 — decision: bounded test-family generalization challenge
+
+The certified Paper 4 core is mathematically real but judged too narrow relative to the original generalization ambition. A bounded **test-family generalization challenge** is therefore authorized before organization/writing.
+
+This does not reopen the failed arbitrary-(r) degree-only theorem, the frozen core, or Paper 5 compression. The first broader family is
+[
+G_{s,a}(r_2)=langle z,x_1,ldots,x_dmid z^{p^s}=x_1^{p^a}r_2angle,
+qquad s>age2,
+]
+with odd (p) and a nonzero quadratic initial relation (r_2). The rank-two stress relation (r_2=[x_1,x_2]) is the control case; at least one genuinely different quadratic form must be tested.
+
+The target is to determine whether the critical relative-window mechanism at (n=p^s+1) is structural beyond the Demuškin-specific quadratic form.
+
+Pre-check obligations before computation:
+- Object: relative finite-window extension (W_n(G)	o D/D_n(D)) and its first intrinsic candidate obstruction.
+- Input: (p,s,a,d,r_2); (q=p^a) may parameterize the family but must not be inserted into the finite-window object.
+- Functoriality: quotient maps and admissible generator changes must induce the obstruction.
+- Gauge: quotient only by explicitly justified automorphisms/normalizations.
+- Orientation bridge: state the map from finite-window data to the relative extension/orientation datum before testing.
+- q-blindness: the candidate finite object is defined without (q).
+- Separation: compare the control stress case with a genuinely different quadratic form.
+- Novelty: distinguish any broader theorem from the already closed stress-family threshold.
+- Stop: if intrinsicity or the orientation bridge fails, stop rather than enlarging the family.
+
+Gate:
+- PASS = theorem-level factorization survives for the broader class, with an independent non-control example;
+- FAIL = the mechanism is essentially Demuškin-specific or admissible quadratic inputs exhibit incompatible behavior at the same critical window;
+- CONDITIONAL = survival requires an explicit nondegeneracy hypothesis on (r_2);
+- OPEN = coherent broader pattern appears but intrinsic factorization/general proof remains unresolved.
+
+Immediate next action: perform this pre-check, then test the smallest non-control quadratic cases before any large computation.
