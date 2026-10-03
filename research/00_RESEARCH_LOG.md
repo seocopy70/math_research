@@ -1,3 +1,35 @@
+## 2026-10-03 — T1-C A=1 WITNESS RE-AUDIT CONFIRMED / INDEPENDENT WITNESS DOES NOT CLOSE A=1
+
+The latest end-to-end re-audit confirms the previous apparent a=1 closure was invalid at the relative level. The proposed witness
+\[
+H_s: z^{p^{s+1}}=1,\quad x^p=z^{p^s},\quad yzy^{-1}=z^{1-p},\quad yxy^{-1}=x
+\]
+is a valid abstract quotient of the a=1 stress presentation and has genuine critical visibility, including
+\[
+(y-1)^s z=(-p)^s z\ne0.
+\]
+However, the required marked/relative transfer is through a \(Q_s=D/D_{p^s+1}(D)\)-equivariant pushout. The witness has \([x,y]=1\), whereas the reference Demuškin quotient has \([x,y]=x^{-p}\); since \(x^p\) is not killed at the critical window, the canonical images do not commute. Thus no compatible map \(H_s\to Q_s\) sending \(x,y\) to the canonical reference generators exists. The witness therefore cannot transport its section-defect class to the marked relative extension.
+
+This supersedes the earlier “a=1 independent closure” wording. It does not affect the certified nonboundary result.
+
+Authoritative status after this re-audit:
+- a=1 abstract witness: **PASS / LOCAL**;
+- a=1 critical visibility inside \(H_s\): **PASS / LOCAL**;
+- this witness as a \(Q_s\)-equivariant pushout: **FAIL / CLOSED**;
+- a=1 marked finite-kernel survival: **OPEN / LOAD-BEARING**;
+- a=1 exact relative threshold: **OPEN / LOAD-BEARING**;
+- a>=2, s>a relative threshold \(n_{\mathrm{sep}}^{\mathrm{rel}}=p^s+1\): **PASS / CLOSED**;
+- unmarked reconstruction/separation: **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+Methodological rule strengthened: every future witness must pass the pair
+\[
+G\twoheadrightarrow H\quad\text{and}\quad H\to Q_s
+\]
+with the required equivariance/compatibility before it can be counted as a relative survival witness. An abstract finite quotient alone is insufficient.
+
+No reopening of the frozen threshold, degree-5 route, scalar/norm shortcut, or RAAG orientation no-go is authorized. Gate A (a=1) and Gate B (unmarked reconstruction/separation) remain independent; Gate B is the main line.
+
 
 
 ## 2026-10-03 — T1-C END-OF-BRANCH AUDIT
