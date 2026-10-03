@@ -31,3 +31,16 @@ ot\cong W_{p^s+1}(G_t)) remains OPEN unless an explicit same-window invariant is
 - Direct same-window separation for the certified stress family is now **CLOSED**; the exact unmarked threshold is (n_{\mathrm{sep}}(s)=p^s+1) in that scope.
 - The remaining load-bearing boundary is (a=s) versus (a=\infty) for (s\ge2).
 - Evidence discipline remains mandatory, but exploratory research is not time-boxed or restricted to a single “authorized attack.” See `research/RESEARCH_GOVERNANCE.md`.
+
+
+## 2026-10-04 — W10 intrinsic radical / transfer witness evidence
+
+| Claim | State | Evidence | Where to verify |
+|---|---|---|---|
+| For G_{2,2}=<z,x,y | z^9=x^9[x,y]>, the intrinsic cup-radical character is z^* (chi(z)=1, chi(x)=chi(y)=0) | PASS / CLOSED | research/PAPER4_A_S_TRANSFER_SCHREIER_W10_AUDIT_2026-10-04.md | corrected degree-2 relation and cup-radical computation |
+| Corrected index-3 Schreier action on W_10 | PASS / LOCAL | research/PAPER4_A_S_TRANSFER_SCHREIER_W10_AUDIT_2026-10-04.md | 7-generator module matrix |
+| M=K^{ab}/3K^{ab} is F_3^7 in the corrected W_10 base case | PASS / LOCAL | same audit | RS relations + Zassenhaus subgroup comparison |
+| (sigma-1)^2[a_0] is nonzero in actual M | PASS / LOCAL | same audit | explicit 7x7 matrix |
+| 3(sigma-1)^2[a_0] is nonzero in actual K^{ab} | PASS / LOCAL | same audit | SNF/lattice calculation |
+| a=s transfer-defect nonvanishing at (p,s)=(3,2) | PASS / LOCAL | same audit | integral Schreier witness |
+| General a=s vs a=infinity separation for all s>=2 | OPEN | same audit + research/PAPER4_A_S_TRANSFER_DEFECT_ATTACK_2026-10-04.md | all-s generalization remains unproved |
