@@ -4992,3 +4992,17 @@ Detailed audit: research/PAPER4_QPOS_GATE_T1C_NONABELIAN_KERNEL_BOUNDARY_AUDIT_2
 The exact minimal finite-kernel test \((p,s,a)=(3,2,1)\) shows that the degree-5 mod-\(3\) abelianized-kernel Fox/lift-change cokernel is zero. Thus the previously isolated degree-5 commutator path is a gauge artifact at that layer. This does not settle the integral \(A_s\) obstruction or finite-extension splitting. The next authorized boundary is the degree-6 restricted/integral pre-check.
 
 Classification: **FAIL / CLOSED** for the degree-5 mod-p obstruction; **OPEN / LOAD-BEARING** for the integral/restricted extension obstruction. Blind carrier search remains **STOP / NOT AUTHORIZED**.
+
+
+## 2026-10-03 — CORRECTION / T1-C DEGREE-5 RESULT RESTORED TO OPEN
+
+A previous record incorrectly promoted the degree-5 finite-kernel mod-p Fox quotient to zero. That statement is superseded. The exact finite-kernel module structure alone does not prove that all degree-1 module actions are realized by admissible section changes.
+
+Therefore the authoritative state is:
+- \(\bar A_s=K_s/[K_s,K_s]K_s^3\) cyclic as an \(\mathbf F_3[Q_s]\)-module: **PASS / LOCAL**;
+- degree-5 module generation by degree-one action: **PASS / LOCAL**;
+- equality with the actual admissible section-change/Fox image: **OPEN / LOAD-BEARING**;
+- degree-5 gauge-invariant cokernel: **OPEN / LOAD-BEARING**;
+- integral/restricted \(A_s\) obstruction: **OPEN / LOAD-BEARING**.
+
+The degree-6 restricted-power layer is **NOT YET AUTHORIZED**. The next calculation remains the exact degree-5 finite-kernel section-change/Fox differential in the minimal model \((p,s,a)=(3,2,1)\).
