@@ -1,3 +1,22 @@
+## 2026-10-03 — PAPER 4 T1-C THRESHOLD FROZEN / RELATIVE THEOREM CLOSED
+
+Gate T1-C has crossed its previous boundary. For the declared rank-two stress family
+\[
+G_{s,a}=\langle z,x_1,\ldots,x_d\mid z^{p^s}=r_D\rangle,
+\quad q=p^a,\ s>a\ge1,
+\]
+the integral Fox-divisibility obstruction survives in the actual finite kernel and gives nonsplitting at \(n=p^s+1\); the generator-lift section gives splitting for every \(n\le p^s\). Hence
+\[
+\boxed{n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1}
+\]
+is **PASS / CLOSED** in the declared relative category.
+
+The critical audit separates the theorem from its realization problem. The result is not yet an intrinsic invariant of the unmarked filtered group, not a coarsest compression theorem, and not a universal free-by-Demushkin statement. A standard pushout/naturality lemma should be written explicitly so the metabelian survival control is a formal quotient argument rather than an informal “witness”.
+
+Global consequence: the threshold calculation is frozen. Do not reopen degree 5, the scalar/norm branches, or the same threshold computation. The next branch must be target-first: determine whether the relative extension-depth obstruction can factor through a genuinely intrinsic finite-window object after the map to the reference Demushkin quotient is forgotten.
+
+Detailed audit: research/PAPER4_T1C_POST_THRESHOLD_CRITICAL_REAUDIT_2026-10-03.md.
+
 ## 2026-10-02 — D2 CONVENTION CORRECTION
 
 The separated two-sink discussion in the new D2/extension audits has been corrected: absence of an edge does not imply commutation in the oriented pro-p RAAG convention. Mixed vectors can therefore carry lower-filtration contamination. This does not change D2: the rank-two special-edge model alone proves that the D1 depth signature is scalar-blind while the canonical orientation is not. The coefficient-valued extension carrier remains closed by the chordal-tree kernel obstruction.
