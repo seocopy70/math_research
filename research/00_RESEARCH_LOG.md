@@ -4698,3 +4698,35 @@ Classification:
 Independent literature control: Mináč–Pasini–Quadrelli–Tân, *Koszul algebras and quadratic duals in Galois cohomology*, and Pál–Quick, *A_3-formality for Demushkin groups at odd primes* (2026). These support the negative controls but do not settle the present stress-family boundary.
 
 Authorized next attack: construct a functorial one-step filtered extension invariant at degree p^s+1, preferably from the augmentation-algebra filtration or a relation-module lift, and test first at (p,s)=(3,1). No further graded-Lie or Gate T/U recomputation is authorized.
+
+
+## 2026-10-03 — PAPER 4 a=s BOUNDARY: p=3,s=1 FINITE-WINDOW SEPARATION CLOSED
+
+The remaining boundary (a=s) versus (a=\infty) is now separated in the base case
+[
+(p,s,n)=(3,1,4).
+]
+Here
+[
+G_{1,1}=\langle z,x_1,\ldots\mid z^3=x_1^3[x_1,x_2]\cdots\rangle,
+qquad
+G_{1,\infty}=\langle z,x_1,\ldots\mid z^3=[x_1,x_2]\cdots\rangle .
+]
+
+The key point is that the Benson–Krause–Schwede (A_3)-canonical obstruction used by Pál–Quick is already finite-window visible at (W_4=G/D_4(G)). The relevant (U_4(\mathbf F_3)) representation factors through the class-3 Zassenhaus quotient because (D_4(U_4(\mathbf F_3))=1). Thus the obstruction (kappa_3(\chi_1^{\otimes3})) is an invariant of the finite filtered group (W_4), not merely of the infinite source group.
+
+For (q=3), Pál–Quick explicitly compute
+[
+\kappa_3(\chi_1^{\otimes3})\ne0,
+]
+equivalently the cochain DGA is not (A_3)-formal. For (q=0), the same paper proves (A_3)-formality, hence the canonical class vanishes. Since the (H^1)-data used here is unchanged under passage to (G/D_4(G)), a nonzero canonical obstruction on (W_4) would inflate to a nonzero obstruction on (G); therefore the (q=0) window cannot carry the (q=3) obstruction. This gives a genuine intrinsic finite-window separation.
+
+Important logical boundary: this is a **base-case closure only**. It does not generalize automatically to (s\ge2): for (q=9,25,\ldots), the known (A_3) invariant is zero on both the (q=p^s) and (q=0) sides. A higher (A_n)-type filtered obstruction might separate them, but no such theorem has been established here. Ordinary Massey-vanishing remains unusable.
+
+Classification:
+- (a=s) versus (a=\infty), ((p,s)=(3,1)): **PASS / CLOSED**;
+- finite-window realization of the (A_3) obstruction at (W_4): **PASS / LOCAL** pending an explicit standalone factor-through-(D_4) lemma;
+- (a=s) versus (a=\infty), general (s\ge2): **OPEN / LOAD-BEARING**;
+- associated graded / ordinary Massey-vanishing routes: **FAIL / CLOSED**.
+
+Independent literature control: Pál–Quick, arXiv:2601.07551, proves (q=3) non-(A_3)-formality and (q=0) (A_3)-formality. citeturn1view0
