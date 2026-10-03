@@ -2827,3 +2827,10 @@ Classification:
 - exact (n_{mathrm{sep}}^{rel}(s)=p^s+1): **OPEN / LOAD-BEARING**.
 
 Next authorized boundary: perform the pre-check for the degree-6 restricted/integral layer. Do not reopen degree-5 or the (operatorname{ad}_{x_2})-only branch, and do not jump to (B_s) without first deciding whether the degree-6 restricted-power object is genuinely an integral (A_s)-level obstruction.
+
+
+## 2026-10-03 — CRITICAL RE-AUDIT: DEGREE-5 CLOSURE WAS OVERSTATED AGAIN
+
+The preceding claim that the actual finite-kernel mod-(3) degree-5 Fox quotient vanishes was downgraded. Cyclicity of (overline A_s=K_s/[K_s,K_s]K_s^3) as an (mathbf F_3[Q_s])-module proves module generation by the normal kernel class, but does not prove that all corresponding degree-one (Q_s)-actions are admissible section/lift-change coboundaries in the finite extension. The exact finite-kernel section-change/Fox map and its image remain uncomputed.
+
+Current frontier: degree-5 finite-kernel Fox/lift-change cokernel **OPEN / LOAD-BEARING**; degree-6 restricted/integral route is **NOT YET AUTHORIZED**. This supersedes the immediately preceding zero-quotient claim.
