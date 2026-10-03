@@ -150,7 +150,8 @@ The project now adopts the realistic completion target for Paper 4. The paper is
 
 Principal theorem target:
 [
-G_{s,a}=langle z,x_1,ldots,x_dmid z^{p^s}=r_Dangle,qquad s>age2,
+G_{s,a}=langle z,x_1,ldots,x_dmid z^{p^s}=r_D
+angle,qquad s>age2,
 ]
 in the declared rank-two stress-family / higher-rank reduction scope, with marked relative finite windows
 [
@@ -158,7 +159,9 @@ in the declared rank-two stress-family / higher-rank reduction scope, with marke
 ]
 The certified result is
 [
-n_{m sep}^{m rel}(s)=p^s+1:
+n_{
+m sep}^{
+m rel}(s)=p^s+1:
 quad nle p^sRightarrow	ext{split},qquad
 n=p^s+1Rightarrow	ext{nonsplit}.
 ]
@@ -3564,7 +3567,8 @@ The next authorized calculation is not a new carrier search. It is a single rela
 
 For the minimal critical model
 [
-G_{2,1}=langle z,x,ymid z^9=x^3[x,y]angle,qquad
+G_{2,1}=langle z,x,ymid z^9=x^3[x,y]
+angle,qquad
 W_{10}=G_{2,1}/D_{10}(G_{2,1}),
 ]
 and
@@ -3607,7 +3611,8 @@ a^9equiv b^9pmod{I^{10}}.
 
 ### 2. Group-theoretic consequence
 
-Take (cin D_2(W_{10})) and a lift (	ilde cin D_2(F)) to the free pro-3 presentation group (F=langle z,x,yangle). Under the Magnus embedding,
+Take (cin D_2(W_{10})) and a lift (	ilde cin D_2(F)) to the free pro-3 presentation group (F=langle z,x,y
+angle). Under the Magnus embedding,
 [
 M(z)=1+Z,qquad M(	ilde c)=1+C,qquad Cin I^2.
 ]
@@ -3638,7 +3643,8 @@ alpha_c(z)^9=(zc)^9=z^9=x^3[x,y].
 ]
 The Zassenhaus filtration is characteristic, so the map is well-defined on the finite quotient. It induces the identity on
 [
-W_{10}/D_2(W_{10})cong H^1(W_{10},mathbf F_3)^ee.
+W_{10}/D_2(W_{10})cong H^1(W_{10},mathbf F_3)^
+ee.
 ]
 Since (W_{10}) is a finite 3-group, Burnside's basis theorem implies that an endomorphism inducing the identity on the Frattini quotient is an automorphism. Hence
 [
@@ -3797,9 +3803,12 @@ Next authorized task: test internal universal/characteristic quotient constructi
 
 ## 2026-10-03 — PAPER 5 TARGET CLASS INTRINSIC CHARACTERIZATION CLOSED
 
-The target-class problem has now been solved for the declared odd-(p), even-rank Demushkin critical-window setting. Define (mathcal C_{d,n}) to consist of finite (p)-groups (H) admitting a one-relator pro-(p) lift (F_d/overline{langle!langle rangle!angle}) with (rin D_2(F_d)setminus D_3(F_d)), nondegenerate alternating degree-two initial form, and
+The target-class problem has now been solved for the declared odd-(p), even-rank Demushkin critical-window setting. Define (mathcal C_{d,n}) to consist of finite (p)-groups (H) admitting a one-relator pro-(p) lift (F_d/overline{langle!langle r
+angle!
+angle}) with (rin D_2(F_d)setminus D_3(F_d)), nondegenerate alternating degree-two initial form, and
 [
-H^{ab}cong(mathbf Z/p^{lceillog_p nceil})^d.
+H^{ab}cong(mathbf Z/p^{lceillog_p n
+ceil})^d.
 ]
 Then
 [
@@ -3866,3 +3875,7 @@ Result classification after correction:
 - nontrivial intermediate package: **OPEN**.
 
 No new computation is authorized by this correction. The structural stop remains in force.
+
+## 2026-10-03 — CRITICAL WINDOW RECOVERY OF a FROM UNMARKED ABELIANIZATION
+
+For the declared stress family with 1<=a<s and n=p^s+1, the abstract unmarked critical window already recovers a from its abelianization: W_n^ab is Z/p^a plus d copies of Z/p^{s+1}. For a=infinity it is Z/p^s plus d copies of Z/p^{s+1}. Thus a is PASS / CLOSED in the nonboundary range. This is independent of Gate T and does not recover the marked quotient or orientation. Detailed audit: research/PAPER4_CRITICAL_WINDOW_A_RECOVERY_AUDIT_2026-10-03.md.
