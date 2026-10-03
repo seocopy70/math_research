@@ -93,3 +93,25 @@ Combined with lower-window blindness, this closes the exact unmarked threshold a
 - (TF_s) itself: **OPEN / LOAD-BEARING**;
 - all-s transfer-defect separation: **OPEN / LOAD-BEARING**;
 - Paper 4 final freeze: blocked only by certification of (TF_s), plus independent verification and record synchronization.
+
+
+## 2026-10-04 — Literature/direct-proof review correction
+
+The missing bridge was re-tested by two routes.
+
+### Jennings route
+Jennings recursion at \(n=p^s+1\) gives a \(p\)-power contribution from \(D_{p^{s-1}+1}(F)\), but an element of its product can lie in \(K\) even when the underlying factor does not. Hence recursion alone does not imply \((SC_s)\).
+
+### Shalev route
+Shalev Proposition 1.2 was checked as a filtration identity for a single group. On the evidence currently verified it does **not** state the index-\(p\) subgroup comparison needed here. It must therefore not be cited as if it proves \((SC_s)\).
+
+### Counterexamples to stronger shortcuts
+The abelian example \(F=\mathbf Z, K=p\mathbf Z\) proves that \(I_F^n\cap\mathbf F_p[K]=I_K^n\) and \(D_n(F)\cap K\subseteq D_n(K)\) are invalid in general. These failures do not refute the degree-loss comparison \((SC_s)\), but they eliminate the previous augmentation-ideal shortcut.
+
+### Current exact status
+\[
+(SC_s):\quad D_{p^s+1}(F)\cap K\subseteq D_{p^{s-1}+1}(K)
+\]
+remains **OPEN / LOAD-BEARING**. Consequently \((TF_s)\) remains **OPEN / LOAD-BEARING**. The model Schreier order computation and the \((3,2)\) local transfer witness remain PASS / LOCAL.
+
+The all-s conclusion is therefore only **CONDITIONAL** on certifying \((SC_s)\) or directly proving \((TF_s)\). No all-s boundary closure is claimed.
