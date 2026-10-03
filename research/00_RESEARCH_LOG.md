@@ -120,3 +120,18 @@ A direct finite computation at the test case reported in the audit gives equal o
 - a proof that \(G_s\not\cong G_t\) is also not currently certified and must not be inferred from the window calculation.
 
 This supersedes the earlier evidence-index wording that promoted the exact threshold to CLOSED. It does not invalidate the certified Paper 4 core below this boundary.
+
+
+## 2026-10-04 — decision: do not start the general E_ψ generator as a Paper 4 step
+
+The proposed replacement of the Demuškin-specific test group E' by a universal twisted-character test family E_ψ is recognized as a potentially useful route toward a broader theorem, but it is **not authorized as the next Paper 4 computation**.
+
+Reason: the current Paper 4 mathematical core is to be treated as complete in its certified scope, while the exact all-s boundary remains an explicitly OPEN/CONDITIONAL extension rather than a publication-blocking task. Building E_ψ would therefore reopen a broader general theorem whose legitimacy, intrinsic definition, and separation mechanism are not yet established. In particular, the existence of a twisted character ψ annihilating a Fox-derivative expression is not by itself a proof that a canonical finite test group E_ψ exists or that it yields n_sep=p^s+1.
+
+Classification:
+- Paper 4 certified core: **PASS / CLOSED**.
+- all-s transfer-defect / exact-threshold boundary: **OPEN / intentionally left open**.
+- universal E_ψ test-group construction: **OPEN / future generalization**, not a Paper 4 dependency.
+- Direction 1 generator implementation: **DEFERRED**, not started.
+
+Decision consequence: stop the new general-theorem branch here and move to Paper 4 organization/writing. If later reopened as a separate generalization program, the first task must be a pre-check defining E_ψ intrinsically and proving functoriality/gauge invariance before any large computation.
