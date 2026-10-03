@@ -57,3 +57,41 @@ Classification:
 - Direction 1 generator implementation: **DEFERRED**, not started.
 
 Decision consequence: stop the new general-theorem branch here and move to Paper 4 organization/writing. If later reopened as a separate generalization program, the first task must be a pre-check defining E_ψ intrinsically and proving functoriality/gauge invariance before any large computation.
+
+
+## 2026-10-04 — decision: bounded test-family generalization challenge
+
+The user has decided that the certified Paper 4 core, while mathematically real, is too narrow relative to the original generalization ambition. Instead of moving directly to organization/writing, a **bounded test-family generalization challenge** is authorized.
+
+This is not a reopening of the closed core and not a return to the failed arbitrary-(r) theorem. The first test family is the narrowest genuinely broader class suggested by the surviving mechanism:
+
+[
+G_{s,a}(r_2)=langle z,x_1,ldots,x_dmid z^{p^s}=x_1^{p^a}r_2angle,
+qquad s>age2,
+]
+where (p) is odd and (r_2) is a nonzero quadratic initial relation, with the rank-two stress relation (r_2=[x_1,x_2]) as the control case.
+
+The challenge is to determine whether the critical relative-window mechanism (n=p^s+1) survives when the Demuškin-specific quadratic form is replaced by a broader quadratic class. The test must vary the quadratic input enough to be a real generalization, but remain bounded enough to distinguish a structural mechanism from accidental presentation-specific behavior.
+
+### Pre-check required before computation
+
+- **Object:** relative finite-window extension (W_n(G)	o D/D_n(D)), and its first intrinsic candidate obstruction.
+- **Input:** (p,s,a,d) and the quadratic initial form (r_2), with (q=p^a); (q) must not be inserted into the finite-window object itself.
+- **Functoriality:** quotient maps and admissible changes of generators must induce the obstruction map.
+- **Gauge:** normalize quadratic forms only modulo the explicitly allowed automorphism/gauge action; do not identify non-equivalent forms by presentation convenience.
+- **Orientation bridge:** the map from the finite-window data to the relative extension/orientation datum must be stated before testing.
+- **q-blindness:** the candidate finite object must be defined without (q=p^a).
+- **Separation:** at minimum compare the control stress case against a genuinely different quadratic form in the same parameter range.
+- **Novelty:** distinguish a theorem about the broader quadratic class from the already closed Demuškin stress-family threshold.
+- **Stop:** if intrinsicity or the orientation bridge fails, stop the generalization rather than enlarging the family.
+
+### PASS/FAIL gate
+
+- **PASS:** the same critical obstruction factors naturally for the broader quadratic test family, with a theorem-level statement and at least one independent non-control example.
+- **FAIL:** the mechanism depends essentially on the Demuškin quadratic form, or two admissible quadratic inputs produce incompatible obstruction behavior at the same critical window.
+- **CONDITIONAL:** the mechanism survives only under an explicit nondegeneracy condition on (r_2).
+- **OPEN:** computation reveals a coherent broader pattern but the intrinsic factorization or general proof is not yet closed.
+
+The existing arbitrary-(r) degree-only generalization remains **FAIL / CLOSED**, and the universal (E_\psi) branch remains deferred. No Paper 5 compression work is reopened.
+
+Immediate next action: perform the pre-check and then use the smallest non-control quadratic test cases before any large computation.
