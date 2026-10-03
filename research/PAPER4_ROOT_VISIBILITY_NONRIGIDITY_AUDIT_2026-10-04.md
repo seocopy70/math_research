@@ -4,10 +4,10 @@
 
 The two proposed upgrades do not have the same status.
 
-1. **General root-visibility theorem for arbitrary r with Zassenhaus order >=2: FAIL / CLOSED as stated.**
+1. **General root-visibility theorem for arbitrary r with Zassenhaus order >=2: OPEN; the hypothesis is insufficient for the full-relation claim.**
    Counterexample:
    G=<z,x,y | z^3=[x,y]^3>.
-   Here r=[x,y]^3 lies in D_6(F), while the critical window is W_4. Since D_6(F) is contained in D_4(F), the relation reduces in W_4 to z^3=1. Thus the proposed critical visibility fails. Merely assuming ord_Z(r)>=2 is insufficient.
+   Here r=[x,y]^3 lies in D_6(F), while the critical window is W_4. Since D_6(F) is contained in D_4(F), the relation reduces in W_4 to z^3=1. Thus the full-relation critical visibility claim is not established. Merely assuming ord_Z(r)>=2 is insufficient to ensure that r survives at the critical layer. Importantly, this example does not show that the root term z^3 itself is invisible: z^3 lies in D_3, so it can be visible in W_4.
 
 2. **Stress-family non-rigidity theorem: PASS / LOCAL, with a substantially stronger proof package than previously recorded.**
    For fixed odd p, d, and a, s>a,
@@ -77,7 +77,8 @@ This still needs a dedicated literature search before any novelty claim.
 
 ## Current classification
 
-- arbitrary-r root-visibility theorem from only ord_Z(r)>=2: **FAIL / CLOSED**;
+- arbitrary-r root-term visibility at p^s+1: **OPEN**;
+- full-relation critical visibility from only ord_Z(r)>=2: **OPEN / hypothesis insufficient for proof**;
 - universal delayed-window lemma n<=p^s: **PASS / CLOSED**;
 - stress-family G^{ab} independence of s: **PASS / CLOSED**;
 - stress-family H^*(G,F_p) independence of s: **PASS / LOCAL** pending citation-level lemma packaging;
@@ -99,5 +100,5 @@ The relevant literature confirms the mildness/cohomology/graded facts used above
 
 1. Make direction 2 the main Paper 4 branch: formalize the delayed-window/non-rigidity theorem for G_{s,a}, with a precise definition of the coarse infinite invariants.
 2. Do not claim the arbitrary-r theorem.
-3. For direction 1, replace arbitrary r by the narrowest non-tautological class where critical survival can be proved; first test quadratic Lie relators and identify the exact witness hypothesis.
+3. For direction 1, do not claim a counterexample to root-term visibility from the z^3=[x,y]^3 example. Instead identify the narrowest non-tautological class where the RHS r survives at the critical layer; first test quadratic relators and identify the exact witness hypothesis.
 4. Do not reopen frozen threshold calculations or Paper 5 compression routes.
