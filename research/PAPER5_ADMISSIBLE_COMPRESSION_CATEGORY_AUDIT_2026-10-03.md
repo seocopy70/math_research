@@ -149,3 +149,26 @@ A future nontrivial branch is authorized only if it begins by proposing an expli
 Do not reopen characteristic quotients merely to search for a “smaller” object.
 
 If continuing Paper 5, the only mathematically substantive next step is to test whether there exists a **canonical intermediate preserved-information package** forced by the existing realization groupoid and the relative extension class. If none is forced, the trichotomy/boundary is the structural endpoint.
+
+
+## 2026-10-03 — PAPER 5 DEFINITION RE-AUDIT: THREE LOGICAL CORRECTIONS
+
+The submitted comparison-category formulation was rechecked against the authoritative compression audit. The structural endpoint is retained, but three claims in the proposed formulation are too strong or order-theoretically reversed.
+
+1. **Factorization domain:** the relative Boolean is naturally a function (b:\mathfrak R^{ad}(W)\to\mathbf2), not merely a scalar (B(W)), unless one has already proved it is constant on the realization groupoid. On the present critical source it is constant, so the singleton conclusion is valid, but the definition should state the groupoid-level factorization first.
+
+2. **Order direction:** if ((C,e)\preceq(C',e')) means there is (u:C'\to C) with (e=u\circ e'), then (C) is **coarser/more compressed** than (C'). Under this convention the coarsest object is **minimal**, not maximal, in the preorder. The phrase “maximal coarsest object” is reversed and must be corrected.
+
+3. **Characteristic-invariant dichotomy is not proved:** the fact that (mathcal K(W)) is a single Aut(W)-orbit implies that an Aut(W)-invariant scalar function on the orbit is constant. It does **not** imply that every characteristic finite invariant either completely preserves all kernel-orbit information or collapses to (Q_n^{ab}). An invariant can retain orbit-level data such as stabilizer/action information without distinguishing individual orbit points. Therefore the proposed “complete preservation vs complete identification” theorem is not valid as stated. The authoritative status remains **OPEN** for universal characteristic-compression no-go.
+
+4. **q-blindness is not automatic:** the fact that the target class is q-blind does not by itself imply an arbitrary intrinsic finite invariant cannot recover q indirectly from W. q-blindness must remain an explicit restriction on admissible objects, or be proved for the particular construction.
+
+Result classification after correction:
+- admissible factorization category/order: **PASS / CLOSED**, after correcting the order language and groupoid-level Boolean definition;
+- Boolean-only endpoint: **PASS / CLOSED, trivial**;
+- full-realization endpoint: **PASS / CLOSED, tautological up to the declared equivalence notion**;
+- universal characteristic-compression dichotomy/no-go: **OPEN**;
+- absolute coarsest without preserved-information package: **FAIL / CLOSED (ill-posed)**;
+- nontrivial intermediate package: **OPEN**.
+
+No new computation is authorized by this correction. The structural stop remains in force.
