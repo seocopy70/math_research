@@ -4730,3 +4730,32 @@ Classification:
 - associated graded / ordinary Massey-vanishing routes: **FAIL / CLOSED**.
 
 Independent literature control: Pál–Quick, arXiv:2601.07551, proves (q=3) non-(A_3)-formality and (q=0) (A_3)-formality. citeturn1view0
+
+
+## 2026-10-03 — CRITICAL CORRECTION: p=3,s=1 A_3 WINDOW SEPARATION CLAIM REVOKED
+
+A critical audit found that the previous PASS/CLOSED claim for
+[
+W_4(G_{1,1})\not\cong W_4(G_{1,\infty})
+]
+was not justified.
+
+The error is a category/source mismatch. Pál–Quick prove the BKS (A_3)-canonical obstruction for **Demushkin groups**
+[
+D_q=\langle x_1,\ldots,x_d\mid x_1^q[x_1,x_2]\cdots=1\rangle,
+]
+with (q=3) non-(A_3)-formal and (q=0) (A_3)-formal. The stress groups
+[
+G_{1,a}=\langle z,x_1,\ldotsmid z^3=x_1^{3^a}[x_1,x_2]\cdots\rangle
+]
+are not themselves those Demushkin groups. They merely admit quotient maps obtained by setting (z=1), whose quotients are the corresponding Demushkin groups. The earlier argument implicitly transferred the Demushkin BKS class back to the stress windows without proving that transfer.
+
+Even if the relevant (U_4(\mathbf F_3))-representation factors through (W_4=G/D_4(G)), this only proves that a particular representation descends to the finite window. It does **not** by itself construct a BKS canonical class of (W_4), nor prove that the stress-window isomorphism type detects the non-(A_3)-formality of its Demushkin quotient. The missing step would require an intrinsic/functorial finite-window construction or a characteristic way to recover the Demushkin quotient. The latter is precisely problematic in the existing Paper 5 C2 analysis.
+
+Therefore the previous classification is revoked:
+- (a=s) vs (a=\infty), ((p,s)=(3,1)): **OPEN / LOAD-BEARING**, not PASS/CLOSED;
+- finite-window realization of the Demushkin (A_3) obstruction on the stress window: **NOT ESTABLISHED**;
+- Pál–Quick (A_3) theorem for the Demushkin quotients themselves: **PASS / CLOSED as literature fact**;
+- associated graded / ordinary Massey routes: **FAIL / CLOSED** remains valid.
+
+This correction supersedes the immediately preceding base-case closure entry. The next legitimate step remains a genuinely intrinsic filtered invariant of the stress window itself.
