@@ -4804,3 +4804,59 @@ Classification:
 - higher-Bockstein implementation: **OPEN**;
 - novelty of the coarse cohomology/graded package alone: **HISTORICAL / SUPERSEDED as novelty claim**;
 - novelty of delayed finite-window visibility + critical-window separation: **OPEN / literature check incomplete**.
+
+
+## 2026-10-04 — CRITICAL-WINDOW ATTACK: HIGHER-BOCKSTEIN FAILURE AND INTRINSIC INDEX-p SUBGROUP CANDIDATE
+
+A further critical attack was completed on the proposed radical-power invariant.
+
+### 1. Simple higher-Bockstein is not a separator
+For (G_{s,a}^{ab}cong mathbf Z_p^doplusmathbf Z/p^a), (s>a), the radical character dual to (z) can be lifted to (mathbf Z/p^{s+1}) by compensating (p^s z=p^a x_1) in abelianization: choose the (x_1)-coordinate (p^{s-a}) times the (z)-coordinate. Hence a naive higher-Bockstein/lifting obstruction of the radical character does not distinguish the critical and delayed windows. **FAIL / CLOSED as a separator.**
+
+### 2. Intrinsic index-p subgroup candidate
+If (L=operatorname{rad}(cup)subset H^1(W,mathbf F_p)) is one-dimensional, all nonzero (chiin L) have the same intrinsic kernel
+[
+K=ker(chi)	riangleleft W,qquad [W:K]=p.
+]
+For (g
+otin K), (g^{p^s}in K). The natural object is therefore the extension
+[
+1	o K	o W	o C_p	o1
+]
+together with the position of (g^{p^s}) relative to the intrinsic filtration of (K).
+
+### 3. Lift/gauge boundary
+The standard Zassenhaus restricted-Lie (p)-operation gives a well-defined map
+[
+D_1(W)/D_2(W)	o D_{p^s}(W)/D_{p^s+1}(W),
+qquad ar gmapsto g^{p^s}D_{p^s+1},
+]
+so (D_2)-lift ambiguity is controlled. But (Lsubset H^1) determines a hyperplane in (D_1/D_2), not a canonical complementary vector. Thus the raw radical power is not an invariant. The remaining ambiguity is an extension/lift defect through (K).
+
+### 4. Corrected extension-defect target
+A viable target is a quotient built from
+[
+Kcap D_{p^s}(W)
+]
+modulo the intrinsic (D_{p^s}(K)) and the exact Hall-Petresco/norm subgroup arising from changing the lift of the generator of (W/K).
+
+For the stress family, the critical relation puts the low-degree kernel relator into the ambient (D_{p^s}(W)); in the delayed window the corresponding power is the ordinary Schreier (p^s)-power. This is a genuine filtered extension/deformation distinction candidate.
+
+For (sge2), however, the Schreier generator (g^p) has intrinsic (K)-degree (1), so (g^{p^s}) naturally has (K)-degree (p^{s-1}). Therefore the naive criterion (g^{p^s}in D_{p^s}(K)) is not the right separator. The comparison must be normalized against the (p^{s-1})-power filtration of the Schreier generator.
+
+Classification:
+- naive higher-Bockstein separator: **FAIL / CLOSED**;
+- raw radical (p^s)-power invariant: **FAIL / CLOSED**;
+- radical line (L): **PASS / LOCAL**;
+- intrinsic (K=ker(L)): **PASS / LOCAL**, conditional on (L);
+- filtered index-p extension defect: **OPEN / LOAD-BEARING**;
+- general same-window separation: **OPEN / LOAD-BEARING**.
+
+Literature control: standard Zassenhaus/restricted-Lie (p)-operation and higher-filtration/Massey methodology are established (e.g. DDMS and Gärtner/Efrat); no located source directly supplies this finite-window critical-vs-delayed extension invariant. No novelty claim is upgraded.
+
+Next authorized attack:
+1. define the exact extension-defect quotient for the filtered pair ((W,K));
+2. prove lift-independence;
+3. compute critical vs delayed;
+4. if it collapses, close this route and rely on a certified same-window separation result;
+5. complete the p=3,n=4 enumeration certificate if feasible.
