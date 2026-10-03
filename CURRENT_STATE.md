@@ -1,3 +1,17 @@
+## 2026-10-03 — PAPER 5 CHARACTERISTIC-SUBGROUP COMPRESSION BOUNDARY
+
+The authorized characteristic-subgroup compression test is closed at the first natural universal constructions. For the full admissible kernel orbit \(\mathcal K(W_n)\), the intersection \(K_\cap\) is characteristic but is strictly smaller than the canonical admissible kernel \(K_0\), so \(W_n/K_\cap\) is strictly larger than \(Q_n\). The generated subgroup \(K_\vee\) is characteristic, contains \(K_0\), and its image in \(Q_n\) contains \(D_2(Q_n)\), hence \(W_n/K_\vee\cong Q_n^{ab}\). Thus neither universal characteristic operation realizes the target class: one retains extra kernel-orbit data, the other collapses to the abelian shadow.
+
+Authoritative status:
+- intersection characteristic quotient as target realization: **FAIL / CLOSED**;
+- generated-kernel characteristic quotient as target realization: **FAIL / CLOSED**;
+- characteristic-kernel realization of \(\mathcal C_{d,n}\): **FAIL / CLOSED**;
+- target-free one-component realization groupoid: **PASS / CLOSED**;
+- coarsest/characteristic compression: **OPEN**;
+- absolute minimality: **OPEN**.
+
+This is a bounded structural boundary, not an absolute no-go for every characteristic finite invariant. The next legitimate question is categorical: whether the action of \(\operatorname{Aut}(W_n)\) on the admissible realization orbit can itself be encoded by a smaller characteristic object without selecting a kernel. No carrier hunt, threshold recomputation, degree-5/scalar/norm route, or RAAG reopening is authorized.
+
 ## 2026-10-03 — PAPER 5 GATE C2 CLOSED
 
 Canonical characteristic-quotient reconstruction is closed: the admissible quotient kernels are moved by the certified radical-preserving IA orbit, so no admissible kernel is characteristic. The surviving object is the one-component quotient-realization orbit/category; fully target-free intrinsic realization remains OPEN / LOAD-BEARING. Detailed audit: research/PAPER5_GATE_C2_CHARACTERISTIC_QUOTIENT_NO_GO_AUDIT_2026-10-03.md.
