@@ -28,8 +28,8 @@ ot\cong W_{p^s+1}(G_t)) remains OPEN unless an explicit same-window invariant is
 - Exact canonical file paths above replace search-alias instructions for the load-bearing Paper 4 claims.
 
 ## 2026-10-04 boundary/governance update
-- Direct same-window separation for the certified stress family is now **CLOSED**; the exact unmarked threshold is (n_{\mathrm{sep}}(s)=p^s+1) in that scope.
-- The remaining load-bearing boundary is (a=s) versus (a=\infty) for (s\ge2).
+- The earlier label “Direct same-window separation … **CLOSED**” is **SUPERSEDED**: the purported order-jump/kernel argument is invalid because the relevant normal subgroups are not nested. Same-window separation at n=p^s+1 is therefore **OPEN**, and the exact unmarked threshold n_{\mathrm{sep}}(s)=p^s+1 is **OPEN**.
+- What is certified is only the lower bound n_{\mathrm{sep}}(s)\ge p^s+1 in the stated scope; the all-s critical separation remains blocked by the unresolved (TF_s)/(SC_s) bridge.
 - Evidence discipline remains mandatory, but exploratory research is not time-boxed or restricted to a single “authorized attack.” See `research/RESEARCH_GOVERNANCE.md`.
 
 
