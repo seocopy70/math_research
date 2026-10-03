@@ -95,3 +95,27 @@ The challenge is to determine whether the critical relative-window mechanism (n=
 The existing arbitrary-(r) degree-only generalization remains **FAIL / CLOSED**, and the universal (E_\psi) branch remains deferred. No Paper 5 compression work is reopened.
 
 Immediate next action: perform the pre-check and then use the smallest non-control quadratic test cases before any large computation.
+
+
+## 2026-10-04 — bounded generalization challenge: execution authorization
+
+The user's proposed broader-testing direction is **ACCEPTED with one governance correction**: the research will pursue a genuinely broader quadratic test family, but the universal arbitrary-(r) E_ψ generator is **not** the first computation. The authoritative active branch is the bounded family already defined above.
+
+### Scope
+- Object: relative finite-window extension W_n(G) -> D/D_n(D) and its first intrinsic obstruction.
+- Family: G_{s,a}(r_2)=<z,x_1,...,x_d | z^{p^s}=x_1^{p^a}r_2>, odd p, s>a>=2, nonzero quadratic initial form r_2.
+- Control: r_2=[x_1,x_2].
+- Non-control: a quadratic form genuinely outside the control orbit; the first meaningful comparison should use d>=4, e.g. a rank-4 quadratic form such as [x_1,x_2]+[x_3,x_4], rather than only rank-2 forms that are GL-equivalent in small rank.
+- q-blindness: q=p^a is a family parameter, not part of the finite-window object used for recognition/separation.
+
+### Pre-check decision
+Before any large computation, certify Object/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop. In particular, the obstruction must be defined intrinsically and the bridge to the relative extension/orientation datum must be explicit. If that fails, stop this branch rather than enlarging the family.
+
+### Evidence interpretation
+The reported p=3,s=1 experiments are **motivation only**, not evidence closing the new theorem: s=1 lies outside the authorized s>a>=2 family and the n=4 window is too small. The degree-3 example [[x,y],y] is also outside the first quadratic-input family. These experiments therefore do not alter the current classification.
+
+### Relation to E_psi
+The universal E_psi construction remains **OPEN / future generalization**. It may be revisited only after the bounded quadratic-family challenge establishes that the obstruction mechanism survives beyond the Demushkin control case and after an intrinsic E_psi object/functoriality pre-check is passed.
+
+### Immediate next action
+Execute the pre-check, then construct the smallest non-control quadratic test case and compare it with the control case at the first feasible stress parameters. No s=2 large-window computation is authorized until the pre-check passes.
