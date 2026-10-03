@@ -2851,3 +2851,17 @@ Active status:
 - blind carrier search: **STOP / NOT AUTHORIZED**.
 
 **Next authorized action:** perform only the degree-6 restricted/integral pre-check. No degree-5 reopening and no \(B_s\) promotion before that gate.
+
+
+## 2026-10-03 — CORRECTION / T1-C DEGREE-5 RESULT RESTORED TO OPEN
+
+A previous record incorrectly promoted the degree-5 finite-kernel mod-p Fox quotient to zero. That statement is superseded. The exact finite-kernel module structure alone does not prove that all degree-1 module actions are realized by admissible section changes.
+
+Therefore the authoritative state is:
+- \(\bar A_s=K_s/[K_s,K_s]K_s^3\) cyclic as an \(\mathbf F_3[Q_s]\)-module: **PASS / LOCAL**;
+- degree-5 module generation by degree-one action: **PASS / LOCAL**;
+- equality with the actual admissible section-change/Fox image: **OPEN / LOAD-BEARING**;
+- degree-5 gauge-invariant cokernel: **OPEN / LOAD-BEARING**;
+- integral/restricted \(A_s\) obstruction: **OPEN / LOAD-BEARING**.
+
+The degree-6 restricted-power layer is **NOT YET AUTHORIZED**. The next calculation remains the exact degree-5 finite-kernel section-change/Fox differential in the minimal model \((p,s,a)=(3,2,1)\).
