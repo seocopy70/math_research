@@ -2904,3 +2904,10 @@ Classification:
 - blind carrier search: **STOP / NOT AUTHORIZED**.
 
 Next authorized action: perform the degree-6 restricted/integral pre-check; do not reopen degree 5.
+
+
+## 2026-10-03 — T1-C DEGREE-6 PRE-CHECK
+
+Degree-6 restricted Lie theory is not yet an integral obstruction: the restricted p-operation is a mod-p graded operation, while the unresolved object is the integral A_s section-change quotient. For p=3, u^[3] has no independent integral meaning beyond 3u unless an integral lift survives the section-change image with a genuine divisibility/torsion defect.
+
+Status: degree-6 restricted symbol alone **FAIL/CLOSED**; integral divisibility diagnostic **CONDITIONAL**; integral A_s section-change quotient **OPEN/LOAD-BEARING**. Next: compute the integral section-change map/cokernel on the first potentially 3-divisible degree-2 kernel class.
