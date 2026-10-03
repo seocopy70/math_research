@@ -4423,3 +4423,16 @@ Therefore the bounded W10 same-window separation route is closed negatively, whi
 - general unmarked intrinsic reconstruction beyond this minimal model: **OPEN / LOAD-BEARING**.
 
 This is a closure of the bounded feasibility gate, not a theorem for all Paper-4 parameters. It does not enlarge the certified relative theorem for (age2,s>a), and it does not justify a universal intrinsic/coarsest-realization theorem.
+
+
+## 2026-10-03 — W10 BOUNDED INTRINSIC FEASIBILITY GATE: FINAL LOCAL CLOSURE
+
+The minimal critical model \((p,s,a,n)=(3,2,1,10)\) has now been closed end-to-end at the level actually tested. For every \(c\in D_2(Q_{10})\), the universal \(p^2\)-power/Magnus lemma gives \((zc)^9=z^9\pmod{D_{10}}\), so the radical shear \(z\mapsto zc\) is an automorphism of \(W_{10}\). Hence the explicit family \(\pi_c(z)=c,\ \pi_c(x)=x,\ \pi_c(y)=y\) is a single \(\operatorname{Aut}(W_{10})\times\operatorname{Aut}(Q_{10})\)-orbit. More generally, any admissible epimorphism \(\pi:W_{10}\twoheadrightarrow Q_{10}\) whose \(H^1\)-kernel is the intrinsic cup-radical line can be postcomposed by an automorphism of \(Q_{10}\) so that \(x,y\) are fixed, after which it is one of the \(\pi_c\). Thus full quotient-map orbit transitivity is **PASS / CLOSED for W10**.
+
+Consequences for the bounded Gate-B alternatives:
+- A (canonical marked-map reconstruction as a unique map): **FAIL / CLOSED at W10**; the same finite window admits a nontrivial family of quotient maps, but they are gauge-equivalent in one two-sided automorphism orbit.
+- B (same-window separation by different relative obstruction): **FAIL / CLOSED at W10**; no two admissible realizations in different obstruction orbits exist because there is only one admissible orbit.
+- W10 intrinsic Boolean determination of the relative split/non-split obstruction: **PASS / LOCAL**.
+- General \(W_{p^s+1}\) one-orbit theorem, general unmarked reconstruction, and coarsest intrinsic realization: **OPEN / LOAD-BEARING**.
+
+Interpretation: this is a genuine W10 theorem plus a generalization program, not a universal impossibility theorem for Paper 4. It closes the bounded intrinsic feasibility gate at the minimal model and shows that the useful compression object is the quotient-map orbit/category rather than a unique marked quotient map. It does not reopen the already closed scalar/norm/degree-5 routes and does not enlarge the certified relative theorem beyond its declared stress-family scope.
