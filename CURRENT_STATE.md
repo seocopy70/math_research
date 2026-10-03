@@ -1,3 +1,11 @@
+## 2026-10-04 — Paper 4 critical same-window correction
+
+- The previously claimed same-window order jump is **FAIL / CLOSED as a proof route**: the defining normal closures are not nested, so no canonical epimorphism follows and the claimed p-factor order jump is false.
+- Exact unmarked threshold n_sep(s)=p^s+1 is **OPEN**. The certified lower bound n_sep(s)>=p^s+1 remains **PASS / CLOSED** in the stated scope.
+- G_{s,a} not isomorphic to G_{t,a} is **OPEN**. Abelianization, W-critical-window order/abelianization, canonical index-p subgroup abelianization, mod-p cohomology, and gr do not separate s in the checked family.
+- Existing (p,s)=(3,2),(3,3) transfer/Schreier results remain **PASS / LOCAL** only; (SC_s)/(TF_s) remains **OPEN / LOAD-BEARING**.
+- Paper 4 certified core below this boundary remains **PASS / CLOSED**; no exact-threshold or all-s separation claim may be promoted.
+
 ## 2026-10-04 — TF_s / index-p Zassenhaus comparison review correction
 
 The latest direct proof attempt and literature review **do not certify** the subgroup-comparison lemma
