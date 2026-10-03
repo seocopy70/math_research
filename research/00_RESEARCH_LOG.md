@@ -4759,3 +4759,12 @@ Therefore the previous classification is revoked:
 - associated graded / ordinary Massey routes: **FAIL / CLOSED** remains valid.
 
 This correction supersedes the immediately preceding base-case closure entry. The next legitimate step remains a genuinely intrinsic filtered invariant of the stress window itself.
+
+
+## 2026-10-04 — Paper 4 root-visibility/non-rigidity attack
+
+Arbitrary-r critical visibility is FAIL/CLOSED as stated: the condition ord_Z(r)>=2 is insufficient. Example z^3=[x,y]^3 gives W_4 relation z^3=1 because [x,y]^3 lies in D_6, hence in D_4.
+
+The universal surviving statement is delayed-window invariance: for n<=p^s, W_n of <z,X | z^(p^s)=r> is the same quotient as W_n of <z,X | r>, hence independent of s. For the stress family G_(s,a), independent checks verify the Smith-normal-form formula W_(p^s+1)^ab = Z/p^a plus d copies of Z/p^(s+1). Mildness/cohomology/graded results from the cited literature support s-independence of the F_p cohomology and associated graded package because the quadratic initial relator is independent of s.
+
+Status: delayed-window/non-rigidity package PASS/LOCAL pending citation-level packaging; arbitrary-r theorem FAIL/CLOSED; same numerical-window separation for s<t remains OPEN. Detailed audit: research/PAPER4_ROOT_VISIBILITY_NONRIGIDITY_AUDIT_2026-10-04.md. Independent script: research/scripts/paper4_root_visibility_checks_2026-10-04.py.
