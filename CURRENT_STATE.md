@@ -70,3 +70,11 @@ Rule: never reconstruct current state by reading the entire research log.
 - CLOSED/FAILED routes should not be repeated mechanically, but may be reopened when a new invariant, changed hypothesis, new literature, new computation, or other material change alters the premises. Such reopening must cite the earlier closure and state what changed.
 - Discovery and certification are separated: exploratory work may remain LOCAL/provisional; only certified results change the authoritative CLOSED/PASS state.
 - Full policy: `research/RESEARCH_GOVERNANCE.md`.
+
+
+## 2026-10-04 — Paper 4 a=s boundary: transfer-defect reduction
+- New candidate: for the intrinsic radical kernel K and canonical short torsion line T=W^{ab}[p^s], the transfer defect p^{s-1}V(T) in K^{ab} is an unmarked, functorial candidate for separating a=s from a=infinity.
+- Reduction: in the a=s case the candidate reduces to the critical norm/Jacobson term p^{s-1}(p-N_sigma)[x_1]; the (sigma-1)^{p-1} component occurs at degree p^s.
+- OPEN / LOAD-BEARING: nonvanishing of this transfer defect in the actual K^{ab} for a=s. The a=infinity side is locally zero after passing to K^{ab}, but the full invariant proof requires the same intrinsic normalization.
+- This is a genuine new filtered-extension candidate, not a repeat of the closed scalar/coinvariant or ordinary graded routes.
+- Audit: research/PAPER4_A_S_TRANSFER_DEFECT_ATTACK_2026-10-04.md.
