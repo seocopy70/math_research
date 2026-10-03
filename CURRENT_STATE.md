@@ -1,3 +1,19 @@
+## 2026-10-03 — PAPER 5 ORBIT-CATEGORY PROPOSAL CRITICAL REVIEW
+
+The proposed Aut(W_n)-orbit category is retained only as an auxiliary action/orbit formalism. The proposed minimality theorem is rejected as currently formulated: the mapping-space Hom definition lacks a declared enrichment, connectedness does not imply triviality, and “smaller than the realization groupoid” has no fixed comparison category/order. The two tested characteristic-kernel extremes remain closed no-go results, but they do not imply an absolute characteristic-compression no-go.
+
+Authoritative classification:
+- Aut(W_n)-action on admissible realizations: **PASS / LOCAL**;
+- established one-orbit theorem: **PASS / CLOSED**;
+- proposed orbit-category-as-minimal-object: **FAIL / CLOSED** as formulated;
+- general characteristic compression: **OPEN**;
+- coarsest intrinsic realization: **OPEN**;
+- absolute minimality: **OPEN**.
+
+Audit: research/PAPER5_ORBIT_CATEGORY_CRITICAL_REVIEW_2026-10-03.md.
+
+Next authorized action: define the admissible comparison category/order for “compression” before any genuine minimality/no-go attack. No new orbit-category computation is authorized merely to rescue the rejected minimality formulation.
+
 ## 2026-10-03 — PAPER 5 CHARACTERISTIC-SUBGROUP COMPRESSION BOUNDARY
 
 The authorized characteristic-subgroup compression test is closed at the first natural universal constructions. For the full admissible kernel orbit \(\mathcal K(W_n)\), the intersection \(K_\cap\) is characteristic but is strictly smaller than the canonical admissible kernel \(K_0\), so \(W_n/K_\cap\) is strictly larger than \(Q_n\). The generated subgroup \(K_\vee\) is characteristic, contains \(K_0\), and its image in \(Q_n\) contains \(D_2(Q_n)\), hence \(W_n/K_\vee\cong Q_n^{ab}\). Thus neither universal characteristic operation realizes the target class: one retains extra kernel-orbit data, the other collapses to the abelian shadow.
