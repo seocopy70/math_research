@@ -102,3 +102,23 @@ The relevant literature confirms the mildness/cohomology/graded facts used above
 2. Do not claim the arbitrary-r theorem.
 3. For direction 1, do not claim a counterexample to root-term visibility from the z^3=[x,y]^3 example. Instead identify the narrowest non-tautological class where the RHS r survives at the critical layer; first test quadratic relators and identify the exact witness hypothesis.
 4. Do not reopen frozen threshold calculations or Paper 5 compression routes.
+
+
+## 2026-10-04 — SAME-WINDOW SEPARATION ATTACK / NOVELTY CONTROL
+
+The first direct attack on the unresolved comparison
+W_{p^s+1}(G_{s,a}) versus W_{p^s+1}(G_{t,a}), t>s,
+does not close the problem by abelianization: both windows have the same abstract abelianization type Z/p^a plus d copies of Z/p^{s+1}. The distinction, if present, must therefore be a filtered extension/lift invariant beyond abelianization and beyond the associated graded object.
+
+A concrete candidate is now isolated: the intrinsic cup-radical line L in H^1(W,F_p), together with its p^s-power/extension datum in the critical filtered layer. Conceptually, in the critical source the p^s-power of a lift of the radical direction is tied by the defining relation to the Demushkin quadratic part, whereas for t>s the defining relation is already invisible at the same window and the radical power is an independent lift datum. This is only a **candidate invariant**, not yet a theorem: one must define it functorially from the finite group and prove invariance under changing lifts and under abstract filtered-group isomorphism.
+
+A higher-Bockstein / augmentation-algebra formulation is a promising concrete implementation: the target should be a finite-window operation attached to the radical character whose first nonzero filtered value occurs at p^s+1. No claim of existence or nonvanishing is made yet.
+
+Novelty control was tightened by direct inspection of arXiv:2603.15464v2. That paper studies other Demushkin variations with presentations whose Zassenhaus graded relation is independent of the variation parameter, and proves quadratic/Koszul cohomology and graded-algebra properties while detecting the variation through finer 1-cyclotomic structure. Therefore the present project must not claim novelty for “same cohomology + same graded object” alone. The potentially novel component is the explicit delayed-window identity together with critical finite-window separation/non-rigidity.
+
+Classification:
+- same-window separation by abelianization: **FAIL / CLOSED** as a route;
+- same-window separation by intrinsic filtered radical-power datum: **OPEN / LOAD-BEARING**;
+- higher-Bockstein implementation: **OPEN**;
+- novelty of the coarse cohomology/graded package alone: **HISTORICAL / SUPERSEDED as novelty claim**;
+- novelty of delayed finite-window visibility + critical-window separation: **OPEN / literature check incomplete**.
