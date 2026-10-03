@@ -9,7 +9,7 @@ Paper 1 -> Paper 2 -> Paper 3 -> Paper 4 -> Paper 5
 - Paper 1: finite Kummer-selector recognition in the declared rank-4 pro-3 Demushkin setting.
 - Paper 2: affine successor/selector threshold results and corrected cyclotomic data.
 - Paper 3: finite-window recognition, selector minimality, and 1D cup carrier. FROZEN/COMPLETE.
-- Paper 4: delayed visibility of z^(p^s)=r, exact critical separation for quadratic initial relations, and stress-family non-rigidity. Core CLOSED in stated scope.
+- Paper 4: delayed visibility of z^(p^s)=r, exact critical separation for quadratic initial relations, and stress-family non-rigidity. Core is CLOSED in the certified scope; the all-s a=s vs. a=∞ boundary remains OPEN/LOAD-BEARING.
 - Paper 5: intrinsic realization/compression question built on Paper 4. Structural boundary established; further nontrivial compression remains a separate OPEN problem.
 
 ## 2. Paper 4 dependency
