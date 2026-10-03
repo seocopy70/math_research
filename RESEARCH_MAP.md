@@ -5272,3 +5272,12 @@ Consequences for the bounded Gate-B alternatives:
 - General \(W_{p^s+1}\) one-orbit theorem, general unmarked reconstruction, and coarsest intrinsic realization: **OPEN / LOAD-BEARING**.
 
 Interpretation: this is a genuine W10 theorem plus a generalization program, not a universal impossibility theorem for Paper 4. It closes the bounded intrinsic feasibility gate at the minimal model and shows that the useful compression object is the quotient-map orbit/category rather than a unique marked quotient map. It does not reopen the already closed scalar/norm/degree-5 routes and does not enlarge the certified relative theorem beyond its declared stress-family scope.
+
+
+## 2026-10-03 — PAPER 4 GENERAL CRITICAL ORBIT COMPRESSION THEOREM
+
+The W10 quotient-map orbit closure has generalized to the declared critical window W_{p^s+1}. Under the admissibility condition that the induced H^1-kernel is the intrinsic cup-radical line, every admissible epimorphism W_{p^s+1}->Q_{p^s+1} lies in a single Aut(W) x Aut(Q)-orbit. The proof is formal from the universal p^s-power Magnus congruence and normalization of the Demushkin generator images.
+
+This changes the main structural frontier: the quotient-map orbit/category is now a certified compression object at the critical window, while literal marked-map uniqueness is closed as a target. The remaining OPEN question is whether this single orbit/category is itself canonically reconstructible from the unmarked filtered group and whether the relative split/non-split Boolean factors through an explicitly defined intrinsic realization. The coarsest intrinsic realization problem therefore remains OPEN / LOAD-BEARING.
+
+No conclusion here is a universal impossibility theorem, and no frozen threshold, degree-5, scalar/norm, or RAAG branch is reopened.
