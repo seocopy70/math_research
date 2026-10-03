@@ -4490,3 +4490,27 @@ Classification:
 - coarsest intrinsic realization: **OPEN**.
 
 Audit: research/PAPER5_TARGET_CLASS_INTRINSIC_CHARACTERIZATION_AUDIT_2026-10-03.md.
+
+
+## 2026-10-03 — PAPER 5 TARGET-FREE REALIZATION GROUPoid / EXISTENCE GATE CLOSURE
+
+The target-class intrinsic characterization was followed through to the next load-bearing step. Define the intrinsic admissible realization groupoid \(\mathfrak R^{\mathrm{ad}}_{d,n}(W)\): objects are epimorphisms \(\pi:W\twoheadrightarrow H\) with \(H\in\mathcal C_{d,n}\) and with \(\ker H^1(\pi,\mathbf F_p)\) equal to the intrinsic cup-radical line; morphisms are source automorphisms and target isomorphisms intertwining the quotient maps. Because \(\mathcal C_{d,n}\) is now intrinsically characterized and isomorphism-invariant, this groupoid uses no external \(D\), \(q\), orientation, marked kernel, or canonical quotient map.
+
+For the declared critical source \(W_n\), existence is supplied by the already established admissible critical quotient, and the target-class theorem identifies its target with the unique abstract class \(\mathcal C_{d,n}\). For any other object, choose an isomorphism of its target with \(Q_n\); the established critical-window \(\operatorname{Aut}(W_n)\times\operatorname{Aut}(Q_n)\)-orbit theorem then puts it in the same realization orbit. Hence \(\mathfrak R^{\mathrm{ad}}_{d,n}(W_n)\) is nonempty and connected. The relative split/non-split Boolean is constant on this groupoid, so it factors through the intrinsic realization object.
+
+This closes the previous conditional “target-free realization groupoid after existence is supplied” for the declared critical source/class. It does NOT prove a non-existential characteristic quotient, a finite internal algorithm for constructing the groupoid, or coarsest/minimal intrinsic realization. The remaining structural frontier is therefore exactly the replacement of the existential realization groupoid by a smaller explicitly characteristic finite object, or a proof that such compression is impossible.
+
+Classification:
+- target-class intrinsic characterization: **PASS / CLOSED**;
+- target isomorphism-class uniqueness: **PASS / CLOSED**;
+- canonical marked quotient map/kernel: **FAIL / CLOSED**;
+- target-free admissible realization groupoid: **PASS / CLOSED** for the declared critical source/class;
+- existence for the declared \(W_n\): **PASS / CLOSED**;
+- connectedness / one realization orbit: **PASS / CLOSED** under the established critical-window orbit theorem;
+- relative Boolean factorization through the realization groupoid: **PASS / LOCAL**;
+- non-existential characteristic realization: **OPEN / LOAD-BEARING**;
+- coarsest intrinsic realization/minimality: **OPEN**.
+
+Detailed audit: research/PAPER5_TARGET_FREE_REALIZATION_GROUPoid_AUDIT_2026-10-03.md.
+
+Next authorized action: test characteristic subgroup constructions generated/intersected from all admissible kernels, determine whether they yield \(Q_n\), a larger quotient, or collapse trivially; if all fail, record the resulting minimality/no-go boundary. No new carrier search is authorized.
