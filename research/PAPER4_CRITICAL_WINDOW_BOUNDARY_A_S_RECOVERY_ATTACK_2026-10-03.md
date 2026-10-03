@@ -136,3 +136,36 @@ The only legitimate remaining target is a **filtered lift/deformation invariant 
 
 ### 4. Stop boundary
 Do not spend further effort on associated-graded constructions, ordinary restricted-Lie invariants, Gate T/U, or blind carrier searches. The next attack must retain extension data between consecutive filtration layers.
+
+
+## 2026-10-03 — BASE-CASE CLOSURE: (p,s)=(3,1)
+
+The previously open boundary (a=s) versus (a=\infty) is now separated for (p=3,s=1), hence at (W_4).
+
+### Finite-window obstruction
+
+For a pro-3 Demushkin source with (q=3), Pál–Quick compute a nonzero Benson–Krause–Schwede canonical class
+[
+\kappa_3(\chi_1^{\otimes3})\ne0,
+]
+while for (q=0) the continuous cochain DGA is (A_3)-formal and the canonical class vanishes. citeturn1view0
+
+The obstruction is detected through a homomorphism to (U_4(\mathbf F_3)/Z_4). The relevant class-3 unitriangular target has trivial fourth Zassenhaus term, so the representation and its lift obstruction factor through the source quotient (G/D_4(G)=W_4). Therefore the obstruction is genuinely available from the finite critical window, not only from the full source group.
+
+The (H^1)-classes involved are unchanged by passage to (G/D_4(G)). Consequently, if the (q=0) window (W_4) carried the nonzero (A_3) obstruction of the (q=3) window, inflation along (G_{0}\to W_4(G_0)) would produce the same nonzero obstruction on the (q=0) Demushkin source, contradicting its (A_3)-formality.
+
+Thus:
+[
+W_4(G_{1,1})\not\cong W_4(G_{1,\infty})
+]
+as filtered finite groups.
+
+### Classification
+
+- (a=s) vs (a=\infty), ((p,s)=(3,1)): **PASS / CLOSED**.
+- (W_4)-factorization of the (A_3) obstruction: **PASS / LOCAL** until the short standalone lemma (D_4(U_4(\mathbf F_3))=1) plus the exact naturality statement is written out.
+- General (s\ge2): **OPEN / LOAD-BEARING**.
+
+### What this does not prove
+
+It does not produce a general separator for (q=p^s) versus (q=0) when (s\ge2). The known (A_3) obstruction vanishes for (q=9,25,\ldots), so the next authorized target is a higher-order filtered obstruction at (W_{p^s+1}), beginning with (p=3,s=2,n=10). Ordinary Massey-vanishing and associated graded restricted-Lie invariants remain closed as separator routes.
