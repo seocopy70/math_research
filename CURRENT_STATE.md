@@ -2911,3 +2911,24 @@ Next authorized action: perform the degree-6 restricted/integral pre-check; do n
 Degree-6 restricted Lie theory is not yet an integral obstruction: the restricted p-operation is a mod-p graded operation, while the unresolved object is the integral A_s section-change quotient. For p=3, u^[3] has no independent integral meaning beyond 3u unless an integral lift survives the section-change image with a genuine divisibility/torsion defect.
 
 Status: degree-6 restricted symbol alone **FAIL/CLOSED**; integral divisibility diagnostic **CONDITIONAL**; integral A_s section-change quotient **OPEN/LOAD-BEARING**. Next: compute the integral section-change map/cokernel on the first potentially 3-divisible degree-2 kernel class.
+
+## 2026-10-03 — T1-C INTEGRAL FOX DIVISIBILITY BOUNDARY
+
+The degree-6 restricted-only route is closed as a standalone obstruction. The authorized integral section-change calculation in the minimal model \((3,2,1)\) was then pushed through augmentation order \(I^2/I^3\). With
+\[
+f_x=3+6X+4X^2+X^3-Y,\qquad f_y=4X+6X^2+4X^3+X^4,
+\]
+any attempt to remove the scalar defect \(9\bar z\) by the integral Fox image forces the constant coefficient of the \(f_x\)-multiplier to be \(3\), then its \(Y\)-coefficient to be \(1\), and finally leaves pure \(Y^2\)-coefficient \(-1+3c\), impossible for \(c\in\mathbf Z\). Thus a genuine integral divisibility residual \(Y^2\bar z\) appears at the associated-graded level.
+
+This is not yet promoted to the actual \(A_s\)-level obstruction: the only remaining load-bearing check is whether \(Y^2\bar z\) survives the finite-kernel/module relations. If it survives, the abelianized-kernel pushout is nonsplit and therefore the original finite extension is nonsplit. If it vanishes, continue the integral section-change quotient.
+
+Updated active status:
+- degree-5 mod-\(p\) Fox obstruction: **FAIL / CLOSED**;
+- degree-6 restricted-only obstruction: **FAIL / CLOSED**;
+- integral Fox divisibility residual in \(I^2/I^3\): **PASS / LOCAL**;
+- actual \(A_s\)-level obstruction: **OPEN / LOAD-BEARING**;
+- full finite-extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact \(n_{\mathrm{sep}}^{\mathrm{rel}}=p^s+1\): **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+**Next authorized action:** verify \(Y^2\bar z\neq0\) in the actual finite-kernel associated graded. No degree-5 reopening, no standalone degree-6 branch, and no \(B_s\) promotion.
