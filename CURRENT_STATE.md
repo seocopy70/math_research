@@ -3322,3 +3322,37 @@ Classification:
 - original coarsest intrinsic compression: OPEN;
 - p=3,n=4 unmarked separation computation: PASS/LOCAL pending certificate;
 - methodology: target-first/input-sufficiency gate strengthened.
+
+
+## 2026-10-03 — W10 END-TO-END FEASIBILITY GATE COMPLETED
+
+The bounded Intrinsic Reconstruction Feasibility Gate was executed end-to-end at the minimal critical model
+[
+(p,s,a,n)=(3,2,1,10).
+]
+
+The unmarked window (W_{10}) intrinsically recovers:
+- a rank-2 cup form on (H^1(W_{10},mathbf F_3));
+- its one-dimensional radical line (R);
+- the critical degree-9 jet only up to its natural Aut/gauge orbit.
+
+At the (H^1)-level, admissible quotient maps whose kernel has radical line (R) collapse to a single quotient-data orbit under the expected (SL_2(mathbf F_3)) action, radical scaling, and radical-valued shears. The relative split/non-split property is invariant on such an orbit.
+
+No valid same-window separation pair with different relative obstruction was found.
+
+The full intrinsic problem therefore reduces to one explicit remaining lemma:
+[
+	ext{all admissible }W_{10}	woheadrightarrow Q_{10}
+	ext{ with kernel radical line are in one }
+operatorname{Aut}(W_{10})	imesoperatorname{Aut}(Q_{10})	ext{-orbit}.
+]
+
+Current classifications:
+- W10 cup-radical reconstruction: **PASS / LOCAL**;
+- critical-jet orbit refinement: **PASS / LOCAL**;
+- H1-level quotient orbit: **PASS / LOCAL**;
+- full quotient-map orbit uniqueness: **OPEN / LOAD-BEARING**;
+- same-window separation: **OPEN**;
+- unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**.
+
+This does not alter the certified relative theorem (age2,s>a), and does not reopen the closed scalar/norm/degree-5 routes. The next authorized action is singular: attack the IA quotient-map transitivity lemma.
