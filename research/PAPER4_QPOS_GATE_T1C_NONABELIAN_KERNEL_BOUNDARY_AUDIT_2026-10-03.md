@@ -497,3 +497,10 @@ Classification:
 - blind carrier search: **STOP / NOT AUTHORIZED**.
 
 Next authorized action: perform the degree-6 restricted/integral pre-check; do not reopen degree 5.
+
+
+## 2026-10-03 — DEGREE-6 RESTRICTED/INTEGRAL PRE-CHECK
+
+The first restricted-power boundary was audited before computation. A restricted p-operation belongs to the mod-p associated graded, whereas the unresolved extension object is the integral kernel abelianization A_s modulo the actual section-change image. For p=3, an integral class u satisfies u^3=3u in the abelian kernel, so a nonzero restricted symbol is not automatically a new integral obstruction. It must lift to an integral defect surviving the section-change quotient and carrying a genuine 3-divisibility/torsion defect.
+
+Classification: standalone degree-6 restricted obstruction **FAIL/CLOSED**; restricted degree 6 as an integral-divisibility diagnostic **CONDITIONAL**; integral section-change quotient **OPEN/LOAD-BEARING**. The next authorized calculation is the integral section-change map on the first potentially 3-divisible degree-2 kernel class, not a standalone degree-6 restricted computation.
