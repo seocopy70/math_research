@@ -42,3 +42,18 @@ The next Paper 4 step is now fixed at the smallest unresolved continuation beyon
 under the untruncated relations, extending the local transfer-defect pattern. Classification: **PASS / LOCAL** only. The actual \(W_{28}\) statement remains **OPEN / LOAD-BEARING** until the image of \(D_{28}(F)\cap K\) in \(K^{ab}\) is controlled. No all-\(s\) theorem is promoted.
 
 Immediate target: certify or refute the actual truncation effect at \((p,s)=(3,3)\). If it is contained in \(27K^{ab}\), the \(s=3\) separator closes; if not, the transfer-defect mechanism fails at this next test.
+
+
+## 2026-10-04 — decision: do not start the general E_ψ generator as a Paper 4 step
+
+The proposed replacement of the Demuškin-specific test group E' by a universal twisted-character test family E_ψ is recognized as a potentially useful route toward a broader theorem, but it is **not authorized as the next Paper 4 computation**.
+
+Reason: the current Paper 4 mathematical core is to be treated as complete in its certified scope, while the exact all-s boundary remains an explicitly OPEN/CONDITIONAL extension rather than a publication-blocking task. Building E_ψ would therefore reopen a broader general theorem whose legitimacy, intrinsic definition, and separation mechanism are not yet established. In particular, the existence of a twisted character ψ annihilating a Fox-derivative expression is not by itself a proof that a canonical finite test group E_ψ exists or that it yields n_sep=p^s+1.
+
+Classification:
+- Paper 4 certified core: **PASS / CLOSED**.
+- all-s transfer-defect / exact-threshold boundary: **OPEN / intentionally left open**.
+- universal E_ψ test-group construction: **OPEN / future generalization**, not a Paper 4 dependency.
+- Direction 1 generator implementation: **DEFERRED**, not started.
+
+Decision consequence: stop the new general-theorem branch here and move to Paper 4 organization/writing. If later reopened as a separate generalization program, the first task must be a pre-check defining E_ψ intrinsically and proving functoriality/gauge invariance before any large computation.
