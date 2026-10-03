@@ -4896,3 +4896,46 @@ For a=s, the torsion class is represented by zx_1^{-1}; for a=infinity, by z. Wr
 However, the decisive nonvanishing of this term in the actual K^{ab} for a=s has not been proved. The earlier non-equivariant class-2 witnesses cannot simply be reused because a valid witness must preserve both the cyclic action W/K=C_p and the defining stress relation. Therefore the new transfer-defect predicate is PASS / LOCAL candidate, but the boundary remains OPEN / LOAD-BEARING.
 
 Audit: research/PAPER4_A_S_TRANSFER_DEFECT_ATTACK_2026-10-04.md.
+
+
+## 2026-10-04 — W10 intrinsic radical correction and Schreier transfer witness
+
+A mandatory pre-check found a correction to the proposed Step-A character. For
+\[
+G_{2,2}=\langle z,x,y\mid z^9=x^9[x,y]\rangle
+\]
+the degree-2 initial relation is \([x,y]\), so the cup-radical line is \(\langle z^*\rangle\), not \(\langle z^*+x^*\rangle\). Thus the intrinsic character is
+\[
+\chi(z)=1,\quad\chi(x)=\chi(y)=0.
+\]
+The originally proposed \(\chi(z)=\chi(x)=1\) is rejected as non-intrinsic.
+
+For the corrected kernel \(K=\ker\chi\), the transversal \(\{1,z,z^2\}\) gives
+\[
+u=z^3,\ a_i=z^i xz^{-i},\ b_i=z^i yz^{-i}\quad(i=0,1,2).
+\]
+In \(M=K^{ab}/3K^{ab}\), conjugation by z fixes u and cycles each of the a- and b-triples. The Reidemeister–Schreier relators from \(r=z^9x^{-9}[x,y]^{-1}\) give
+\[
+3u=9a_i\quad(i=0,1,2)
+\]
+in \(K^{ab}\); the \(D_{10}(F)\) relations lie in the Frattini subgroup of the index-3 free kernel by the standard Zassenhaus subgroup comparison, hence vanish in M. Therefore
+\[
+M\cong\mathbf F_3^7,
+\]
+and
+\[
+(\sigma-1)^2[a_0]=[a_0]+[a_1]+[a_2]\ne0.
+\]
+The integral relation lattice has Smith form \(\operatorname{diag}(3,9,9)\), and
+\[
+3(a_0+a_1+a_2)\ne0
+\]
+in \(K^{ab}\). Hence the \((p,s)=(3,2)\) critical norm/Jacobson transfer-defect witness survives in the actual Schreier abelianization, not merely in the free restricted-Lie shadow.
+
+Classification:
+- intrinsic radical correction: **PASS / CLOSED**;
+- corrected W10 Schreier/module calculation: **PASS / LOCAL**;
+- base-case transfer-defect nonvanishing at \((3,2)\): **PASS / LOCAL**;
+- all-\(s\ge2\) transfer-defect theorem: **OPEN**.
+
+Detailed audit: research/PAPER4_A_S_TRANSFER_SCHREIER_W10_AUDIT_2026-10-04.md.
