@@ -3703,3 +3703,28 @@ The load-bearing gap is now sharply isolated: the admissibility predicate itself
 - coarsest intrinsic realization: **OPEN**.
 
 Next authorized task: test internal universal/characteristic quotient constructions for the admissible target, starting from the intrinsic radical line and characteristic normal subgroups. No blind carrier search, threshold recomputation, or frozen-route reopening. Detailed audit: research/PAPER4_INTRINSIC_ORBIT_CATEGORY_GATE_C_AUDIT_2026-10-03.md.
+
+
+## 2026-10-03 — PAPER 5 TARGET CLASS INTRINSIC CHARACTERIZATION CLOSED
+
+The target-class problem has now been solved for the declared odd-(p), even-rank Demushkin critical-window setting. Define (mathcal C_{d,n}) to consist of finite (p)-groups (H) admitting a one-relator pro-(p) lift (F_d/overline{langle!langle rangle!angle}) with (rin D_2(F_d)setminus D_3(F_d)), nondegenerate alternating degree-two initial form, and
+[
+H^{ab}cong(mathbf Z/p^{lceillog_p nceil})^d.
+]
+Then
+[
+oxed{mathcal C_{d,n}={D^{(0)}_d/D_n(D^{(0)}_d)}}
+]
+up to abstract isomorphism.
+
+Proof: the nondegenerate one-relator lift is Demushkin; Labute's classification reduces it to rank (d) and torsion invariant (q). If (q<n), the finite abelianization has one shorter cyclic factor and violates the defining abelianization condition. If (qge n), the (x_1^q) term lies in (D_n), so the depth-(n) quotient is exactly the (q=0) target. Thus the finite target is uniquely determined up to isomorphism without naming the external (D), orientation, marked quotient map, or a characteristic kernel.
+
+Classification:
+- target-class intrinsic characterization: **PASS / CLOSED**;
+- target isomorphism-class uniqueness: **PASS / CLOSED**;
+- canonical marked quotient map: **FAIL / CLOSED** (C2);
+- target-free realization existence from (W_n) alone: **OPEN / LOAD-BEARING**;
+- target-free realization groupoid after existence is supplied: **CONDITIONAL / LOCAL**;
+- coarsest intrinsic realization/minimality: **OPEN**.
+
+Detailed audit: research/PAPER5_TARGET_CLASS_INTRINSIC_CHARACTERIZATION_AUDIT_2026-10-03.md.
