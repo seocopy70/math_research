@@ -5395,3 +5395,23 @@ This changes the Paper-5 frontier from “remove the external target” to “co
 ## 2026-10-03 — PAPER 4 CRITICAL-WINDOW a-RECOVERY
 
 A new elementary intrinsic parameter-recovery theorem has been established for the declared nonboundary stress family. At n=p^s+1 and 1<=a<s, the unmarked abelianization satisfies W_n(G_{s,a})^ab ~= Z/p^a ⊕ (Z/p^{s+1})^d, while a=infinity gives Z/p^s ⊕ (Z/p^{s+1})^d. Therefore a (equivalently q=p^a) is recoverable directly from W_n, independently of the relative quotient map and Gate T. Classification: a-recovery PASS / CLOSED for 1<=a<s; a=s remains OPEN by this invariant. This materially strengthens the unmarked parameter-identifiability line but does not establish orientation or marked-map reconstruction. Audit: research/PAPER4_CRITICAL_WINDOW_A_RECOVERY_AUDIT_2026-10-03.md.
+
+
+## 2026-10-03 — PAPER 4 a=s BOUNDARY PARTIALLY CLOSED
+
+The active unmarked critical-window boundary has been sharpened.
+
+For ((p,s)=(3,1)), (W_4) intrinsically separates the boundary cases (a=s=1) ((q=3)) and (a=\infty) ((q=0)) via the finite-window-visible (A_3) canonical obstruction. The relevant (U_4(\mathbf F_3)) obstruction factors through (D_4), while Pál–Quick prove the source obstruction nonzero for (q=3) and zero for (q=0).
+
+This is a base-case **PASS / CLOSED**, not a general (s)-theorem.
+
+Current Paper 4 identifiability boundary:
+- (s) recovery: **PASS / CLOSED**;
+- (a) recovery for (1\le a<s): **PASS / CLOSED**;
+- (a=\infty) versus finite (a<s): **PASS / CLOSED**;
+- (a=s) versus (a=\infty), (p=3,s=1): **PASS / CLOSED**;
+- (a=s) versus (a=\infty), general (s\ge2): **OPEN / LOAD-BEARING**;
+- marked quotient reconstruction: **OPEN**;
+- coarsest intrinsic realization: **OPEN**.
+
+Authorized next action: attack the first genuinely higher case ((p,s)=(3,2)), (n=10), using a finite-window higher-order filtered obstruction. No reopening of graded-Lie, ordinary Massey-vanishing, Gate T/U, or blind-carrier routes.
