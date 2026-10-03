@@ -1,3 +1,51 @@
+## 2026-10-03 — PAPER 4 REALISTIC COMPLETION TARGET FROZEN
+
+The project now adopts the realistic completion target for Paper 4. The paper is to be finished as a rigorously scoped positive theorem plus an explicit logical-boundary section, rather than waiting for the original unmarked/coarsest intrinsic-realization target.
+
+Principal theorem target:
+[
+G_{s,a}=langle z,x_1,ldots,x_dmid z^{p^s}=r_Dangle,qquad s>age2,
+]
+in the declared rank-two stress-family / higher-rank reduction scope, with marked relative finite windows
+[
+1	o K_n	o W_n	o Q_n=D/D_n(D)	o1.
+]
+The certified result is
+[
+n_{m sep}^{m rel}(s)=p^s+1:
+quad nle p^sRightarrow	ext{split},qquad
+n=p^s+1Rightarrow	ext{nonsplit}.
+]
+Classification: **PASS / CLOSED** for the currently certified nonboundary subfamily (age2, s>a).
+
+The proof must be packaged as explicit lemmas/propositions:
+1. low-window splitting;
+2. integral Fox divisibility obstruction;
+3. finite-kernel survival via the explicit (Q)-equivariant pushout/naturality bridge;
+4. higher-rank reduction;
+5. exact theorem with scope (age2).
+
+The (a=1) boundary remains **OPEN / LOAD-BEARING**. The recently proposed abstract witness is only PASS / LOCAL because it fails the required (Q_s)-equivariant pushout compatibility; it must not be used to close (a=1).
+
+The paper must explicitly separate:
+- marked/relative theorem: CLOSED in the certified scope;
+- unmarked (W_n)-only reconstruction: OPEN / LOAD-BEARING;
+- arbitrary free-by-Demushkin generalization: OPEN;
+- coarsest intrinsic compression: OPEN.
+
+The unmarked p=3,n=4 computation remains **PASS / LOCAL (provisional)** pending a reproducible enumeration certificate, complete relation checks, generation checks, and the (D_3)-coset reduction lemma. It is optional for the realistic paper closure and must not be promoted to a principal theorem without those checks.
+
+Frozen/not required for realistic completion: degree-5 reopening, scalar/norm shortcuts, blind carrier search, RAAG orientation branch, arbitrary-extension generalization, coarsest compression, and forcing (a=1) closed.
+
+Immediate completion work is proof packaging and manuscript reconstruction, not new carrier discovery.
+
+Classification:
+- realistic scoped Paper 4 completion: **CONDITIONAL** pending final proof audit/package and manuscript verification;
+- certified relative theorem: **PASS / CLOSED**;
+- (a=1): **OPEN / LOAD-BEARING**;
+- unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**;
+- coarsest intrinsic compression: **OPEN**.
+
 ## 2026-10-03 — T1-C UNMARKED n=4 / p=3 FULL ENUMERATION CLAIM RE-AUDIT
 
 A new reported computation claims that for p=3, n=4=p+1, rank 2, the unmarked windows of the stress family split into four abstract isomorphism classes:
