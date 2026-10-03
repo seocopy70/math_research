@@ -143,3 +143,44 @@ The next mathematical question is now:
 This requires a fresh Object/Input/Functoriality/Gauge/Orientation-bridge/q-blindness/Separation/Novelty/Stop pre-check before any new construction.
 
 No carrier is to be invented merely to encode the already-known threshold.
+
+
+## 2026-10-03 — CRITICAL REVIEW RECONCILIATION / PUSHOUT TARGET + INTRINSIC SUB-GATES
+
+The referee-style critique was rechecked against the authoritative T1-C audit.
+
+1. The metabelian survival witness is an actual Q-equivariant quotient/pushout target of the kernel/module, not an unrelated witness. For the rank-two stress group,
+\[
+G=\langle z,x,y\mid z^{p^s}=x^q[x,y]\rangle,
+\]
+the assignment \(x\mapsto1,\ z\mapsto z,\ y\mapsto y\) gives
+\[
+G\twoheadrightarrow H=C_{p^s}\rtimes C_{p^s},
+\qquad yzy^{-1}=z^{1+p},
+\]
+and induces a Q-equivariant kernel map to the cyclic kernel of H. Hence the nonzero-after-pushout implies nonzero-before-pushout direction is the required one. The remaining improvement is documentation: display the quotient diagram explicitly when citing the lemma.
+
+2. Therefore the actual finite-kernel survival classification remains PASS / CLOSED for the declared nonboundary subfamily \(a\ge2\). The \(a=1\) boundary remains OPEN. The critique's downgrade to “metabelian only” would apply only if the equivariant pushout bridge were absent.
+
+3. Intrinsic factorization is refined into three proof obligations:
+   (i) canonical reconstruction of the quotient/sufficient extension datum;
+   (ii) canonical and functorial definition of the extension class;
+   (iii) identification of the reconstructed class with the original relative obstruction.
+These are not necessarily three independent mathematical gates: a reconstruction theorem stated as an isomorphism of marked extension diagrams can make (ii) and (iii) formal consequences of functoriality.
+
+4. The carrier STOP remains correct, but its immediate reason is the Object/Input/Functoriality mismatch. A7/non-reencoding is not automatically violated merely by attempting a carrier construction; A7 becomes a candidate-level test once an intrinsic carrier is actually defined. A carrier that simply stores the forgotten marked map would fail that test, but no such carrier is authorized.
+
+5. Gate A (\(a=1\)) and Gate B (intrinsic reconstruction/separation) are independent. Gate B is the main line because it is the structural Paper 4 target, not because T1-C is merely “sufficiently closed”.
+
+Current exact status:
+- relative threshold \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\), declared nonboundary stress family \(a\ge2\): PASS / CLOSED;
+- finite-kernel survival bridge for \(a\ge2\): PASS / CLOSED;
+- \(a=1\) survival and exact threshold: OPEN;
+- unmarked reconstruction: OPEN / LOAD-BEARING;
+- same-window separation: OPEN;
+- intrinsic factorization: OPEN / LOAD-BEARING, with the three proof obligations above;
+- coarsest intrinsic compression: OPEN;
+- universal free-by-Demushkin theorem: OPEN;
+- blind carrier search: STOP / NOT AUTHORIZED.
+
+No reopening of degree 5, scalar/norm, or the frozen relative threshold is authorized.
