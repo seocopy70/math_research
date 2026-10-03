@@ -1,3 +1,7 @@
+## 2026-10-03 — PAPER 5 GATE C2: CHARACTERISTIC-QUOTIENT NO-GO
+
+The authorized internal universal/characteristic quotient attack is closed. The critical admissible quotient kernels form a nontrivial Aut(W_n)-orbit via radical-preserving IA shears, so no admissible kernel is characteristic. Therefore no presentation-free natural construction can uniquely select the desired Demushkin quotient from W_n alone. The surviving compression is the one-component quotient-realization orbit/category under the fixed admissibility class; fully target-free intrinsic realization and coarsest realization remain OPEN / LOAD-BEARING. Audit: research/PAPER5_GATE_C2_CHARACTERISTIC_QUOTIENT_NO_GO_AUDIT_2026-10-03.md.
+
 ## 2026-10-03 — PAPER 4 TARGET DECISION NOW PENDING / BOUNDED INTRINSIC FEASIBILITY GATE
 
 The realistic completion target remains mathematically safe, but the user has not yet permanently selected it over the original target. Before final packaging, a bounded **Intrinsic Reconstruction Feasibility Gate** may be run. Its sole first-order question is whether the critical unmarked window (W_{p^s+1}) canonically reconstructs sufficient marked quotient/extension data; in parallel, test for an admissible same-window separation pair. This is a decision gate, not authorization for blind carrier search or threshold recomputation.
