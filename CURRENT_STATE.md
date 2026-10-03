@@ -107,3 +107,8 @@ Classification:
 - all-s intrinsic transfer-defect separation: OPEN / LOAD-BEARING.
 
 This correction controls over the earlier 5-dimensional/J_3\oplus J_1\oplus J_1 argument.
+
+
+## 2026-10-04 — intrinsic χ=z* Schreier SNF discrepancy RESOLVED
+
+Direct recomputation resolves the claimed (p,s)=(3,2) discrepancy. For χ(z)=1, χ(x)=χ(y)=0, the p-index kernel has generators u=z^p, a_i=z^i x z^{-i}, b_i=z^i y z^{-i}. In K^{ab}, the p conjugate relators give exactly p^{s-1}U-p^sA_i=0. Thus the relation matrix on (U,A_0,...,A_{p-1}) is [p^{s-1} | -p^s I_p], whose Smith factors are p^{s-1}, followed by p^s repeated p-1 times. Hence K^{ab} ≅ Z^{p+1} ⊕ Z/p^{s-1} ⊕ (Z/p^s)^{p-1}. In particular, (p,s)=(3,2) gives Z^4 ⊕ Z/3 ⊕ (Z/9)^2. This agrees with the already recorded SNF diag(3,9,9) in the corrected W10 audit. Therefore the alternative Z^4 ⊕ Z/3 ⊕ Z/9 is superseded; the supposed missing-Z/9 discrepancy is FAIL/CLOSED as a mathematical issue. The all-s transfer-defect separation remains OPEN/LOAD-BEARING.
