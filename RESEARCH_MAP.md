@@ -5294,3 +5294,19 @@ The general critical-window orbit theorem now supports a precise partial intrins
 Classification: quotient-map orbit **PASS / CLOSED** under stated admissibility; realization-independence **PASS / LOCAL**; intrinsic target-free orbit/category **OPEN / LOAD-BEARING**; coarsest intrinsic realization **OPEN**.
 
 Next authorized branch: internal universal/characteristic quotient test from the intrinsic radical line and characteristic normal subgroups. Do not reopen closed threshold/carrier/RAAG routes.
+
+
+## 2026-10-03 — PAPER 5 TARGET CLASS ITSELF INTRINSICALLY CHARACTERIZED
+
+The target-class gate is now closed for the declared odd-(p), even-rank Demushkin critical-window family. Let (mathcal C_{d,n}) be the class of finite (p)-groups admitting a one-relator pro-(p) lift with nondegenerate alternating degree-two initial relation and with abelianization ((mathbf Z/p^{e(n)})^d), (e(n)=lceillog_p nceil). Labute classification implies every such lift is Demushkin with torsion invariant (q). The abelianization condition excludes (q<n); for (qge n), the (q)-power term vanishes modulo (D_n), so every member has the same depth-(n) quotient as the (q=0) Demushkin group. Therefore (mathcal C_{d,n}) is a singleton abstract isomorphism class, exactly the target (Q_n).
+
+This removes the external target label at the **target-class** level, while preserving the C2 no-go for a canonical marked quotient kernel/map.
+
+Authoritative classifications:
+- target-class intrinsic characterization: **PASS / CLOSED**;
+- target isomorphism-class uniqueness: **PASS / CLOSED**;
+- characteristic/canonical quotient kernel: **FAIL / CLOSED**;
+- target-free realization from (W_n) alone: **OPEN / LOAD-BEARING**;
+- coarsest intrinsic realization: **OPEN**.
+
+Detailed audit: research/PAPER5_TARGET_CLASS_INTRINSIC_CHARACTERIZATION_AUDIT_2026-10-03.md.
