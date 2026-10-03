@@ -1,3 +1,33 @@
+## 2026-10-03 — T1-C UNMARKED n=4 / p=3 FULL ENUMERATION CLAIM RE-AUDIT
+
+A new reported computation claims that for p=3, n=4=p+1, rank 2, the unmarked windows of the stress family split into four abstract isomorphism classes:
+- A: (s>=2,a=1) together with (s=∞,a=1);
+- B: (s>=2,a>=2) together with (s=∞,a>=2);
+- C: (s=1,a=1);
+- D: (s=1,a>=2).
+
+All have order 3^13, with cheap invariants agreeing within the tested comparisons; GAP IsomorphismGroups did not finish in the reported time. A finite exhaustive test is reported to distinguish the classes by enumerating candidate generator triples modulo D_3.
+
+Independent logical audit: the claimed four-class result is **not yet promoted to PASS / CLOSED** in the repository because the reproducible enumeration artifact/proof certificate is not yet recorded. In particular, the implication “a generating triple satisfying the presentation relation exists iff the two windows are isomorphic” requires all defining relations and generation to be checked, not merely the principal relator. The reduction from arbitrary elements of W_4 to D_3-coset representatives also requires an explicit lemma that changing lifts by D_3 changes every relevant relation value only by D_4, and the enumeration must verify generation rather than existence of a non-generating solution.
+
+Subject to those checks, the reported computation would establish a genuine **PASS / LOCAL** base-case unmarked separation result: the abstract W_4 distinguishes s=1 from s>=2 and a=1 from a>=2 in this rank-two p=3 family. It would not yet prove the general n=p^s+1 statement, nor “marked map reconstruction”.
+
+The earlier statement that Paper 3 still has a “candidate-free q=3 versus q=∞ reconstruction gap” is rejected: Paper 3 T0 is already closed. The present Gate B is strictly the unmarked finite-window problem.
+
+Authorized next step is therefore the proposed gr-level route, but in a weaker and more precise form:
+1. identify an intrinsic characteristic filtration/line/plane in W_{p^s+1};
+2. prove that every abstract isomorphism preserves that structure;
+3. express the stress relator/extension-depth predicate intrinsically relative to that structure;
+4. only then derive parameter recovery.
+Do not assume at the outset that an arbitrary isomorphism preserves the original marked generators.
+
+The computation also should be preserved as a base-case control, even if the general theorem fails.
+
+Classification:
+- reported p=3,n=4 unmarked four-class separation: **PASS / LOCAL (provisional; certificate pending)**;
+- general n=p^s+1 unmarked separation: **OPEN / LOAD-BEARING**;
+- canonical reconstruction of the marked quotient map: **OPEN**;
+- Paper 3 q=3 vs q=∞ candidate-free issue: **HISTORICAL / SUPERSEDED**.
 ## 2026-10-03 — T1-C A=1 WITNESS RE-AUDIT CONFIRMED / INDEPENDENT WITNESS DOES NOT CLOSE A=1
 
 The latest end-to-end re-audit confirms the previous apparent a=1 closure was invalid at the relative level. The proposed witness
