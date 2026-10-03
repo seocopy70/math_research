@@ -4115,3 +4115,24 @@ Classification:
 - unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**.
 
 Next authorized action: attack the single IA quotient-map transitivity lemma directly. Do not reopen radical/critical-jet/carrier sub-searches.
+
+
+## 2026-10-03 — W10 QUOTIENT-ORBIT CORRECTION: EXPLICIT ADMISSIBLE FAMILY
+
+A decisive refinement of the W10 end-to-end attack was obtained. For every (cin D_2(Q_{10})),
+[
+pi_c(z)=c,qquad pi_c(x)=x,qquad pi_c(y)=y
+]
+defines an epimorphism (W_{10}	woheadrightarrow Q_{10}), because (c^9=1) in (Q_{10}). All these maps have the same induced H^1 quotient and the same radical kernel line.
+
+Therefore H^1-level uniqueness is not enough. The full quotient-map orbit problem is genuinely nontrivial. The degree-9 critical jet is exactly the first place where degree-2 IA shears can re-enter through the iterated 3-power operation.
+
+Updated status:
+- cup-radical line: **PASS / LOCAL**;
+- H^1 quotient data: **PASS / LOCAL**;
+- explicit admissible quotient family: **PASS / LOCAL**;
+- full quotient-map orbit uniqueness: **OPEN / LOAD-BEARING**;
+- same-window separation with different obstruction: **OPEN**;
+- unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**.
+
+This correction supersedes any wording suggesting that H^1-level orbit collapse already established full quotient-map orbit uniqueness.
