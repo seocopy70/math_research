@@ -3168,3 +3168,14 @@ Current authoritative classification:
 - blind carrier search: STOP / NOT AUTHORIZED.
 
 Decision for continuation: do not reopen the frozen threshold, degree-5 residual, scalar/norm shortcut, or RAAG orientation counterexample. The main Paper 4 line is Gate B: either prove canonical reconstruction of sufficient marked extension data from the unmarked finite window, or produce an admissible same-window separation pair. Gate A (a=1 witness) remains an independent side branch.
+
+
+## 2026-10-03 — T1-C A=1 WITNESS RE-AUDIT: ABSTRACT QUOTIENT YES, Q-EQUIVARIANT PUSHOUT NO
+
+The proposed independent a=1 witness was checked at the level required by the extension-class argument. The finite group H_s with z^(p^(s+1))=1, x^p=z^(p^s), yzy^{-1}=z^(1-p), and yxy^{-1}=x is indeed a quotient of the abstract rank-two presentation G_{s,1}: the defining relation maps to x^p[x,y]=z^(p^s). Its Zassenhaus critical visibility calculation is therefore a valid abstract quotient calculation.
+
+However, it does NOT furnish the required Q-equivariant pushout over the reference Demushkin quotient D/D_{p^s+1}(D). The canonical quotient images x,y in H_s commute, whereas in D one has [x,y]=x^{-p}; at the critical window the class x^p (equivalently [x,y]) is not killed merely by D_{p^s+1}. Hence there is no compatible map H_s -> D/D_{p^s+1}(D) sending the displayed x,y to the canonical reference generators. The missing compatibility is exactly the load-bearing condition needed to transport a section-defect class from H_s back to the marked relative extension.
+
+Therefore the earlier a=1 independent-closure wording is superseded. The correct status is again: a=1 finite-kernel survival for the marked relative extension = OPEN; a=1 exact threshold = OPEN. The abstract H_s construction remains a useful diagnostic but is not a valid relative pushout witness.
+
+This closes the attempted a=1 rescue as a proof route, not the a=1 mathematical question. Gate B (unmarked reconstruction/separation) remains the main line; Gate A is an independent OPEN side branch.
