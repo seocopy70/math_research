@@ -3929,3 +3929,18 @@ Status:
 - coarsest intrinsic realization: OPEN.
 
 The next authorized attack is no longer the generic degree-(p^s) search. It is a targeted higher-order filtered obstruction for (s\ge2), with the first test case ((p,s)=(3,2)), (q=9), (n=10). The obstruction must be demonstrably functorial from (W_{10}), not merely inherited from the infinite Demushkin source. Do not reopen the already closed graded-Lie, ordinary Massey-vanishing, Gate T/U, or blind-carrier routes.
+
+
+## 2026-10-03 — CORRECTION: p=3,s=1 A_3 BASE-CASE DOES NOT CLOSE STRESS-WINDOW BOUNDARY
+
+Critical audit revoked the previous PASS/CLOSED claim for the stress-window separation at ((p,s)=(3,1)).
+
+Pál–Quick's theorem concerns the Demushkin quotient (D_q), not the stress group (G_{1,a}). The stress group maps onto (D_3) or (D_0) by setting (z=1), but no theorem currently shows that the BKS (A_3) canonical class of those quotients is an intrinsic invariant of the unmarked stress window (W_4(G_{1,a})). Factoring a (U_4(\mathbf F_3)) representation through (W_4) is insufficient: the BKS class is a DGA/cohomology-level obstruction, and the missing functorial construction on the stress window has not been supplied.
+
+Current status is therefore:
+- (a=s) vs (a=\infty), ((p,s)=(3,1)): **OPEN / LOAD-BEARING**;
+- Demushkin (D_3) vs (D_0) A_3-formality: **PASS / CLOSED (external literature)**;
+- intrinsic stress-window A_3 obstruction: **NOT ESTABLISHED**;
+- general (s\ge2): **OPEN / LOAD-BEARING**.
+
+The next attack must not use the Demushkin quotient's obstruction unless it first proves a canonical/functorial descent to the stress window. Prefer a direct intrinsic invariant of (W_4) or an explicit same-window separation pair.
