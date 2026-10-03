@@ -23,3 +23,14 @@ This supersedes the earlier log entry that labeled the intrinsic transfer-defect
 The newly proposed restricted-Lie induction does **not** certify \((TF_s)\). The lower-central graded object was incorrectly treated as a free restricted Lie algebra; the induction also controls \(\gamma_i(K)\), not the required ambient \(\gamma_i(F)\cap K\), and the Zassenhaus-weight implication used in the reduction is not reversible. Accordingly, the central divisibility bound remains **OPEN / LOAD-BEARING**.
 
 Paper 4 **certified core remains PASS / CLOSED**. The all-\(s\) \(a=s\) versus \(a=\infty\) boundary remains **OPEN / LOAD-BEARING** and is not promoted to FINAL by this attempt.
+
+
+## 2026-10-04 — next boundary attack: s=3 local witness
+
+The next Paper 4 step is now fixed at the smallest unresolved continuation beyond \((p,s)=(3,2)\): the \((p,s)=(3,3)\), \(W_{28}\) truncation audit. A model Schreier-lattice calculation gives
+\[
+9(\sigma-1)^2[a_0]\ne0
+\]
+under the untruncated relations, extending the local transfer-defect pattern. Classification: **PASS / LOCAL** only. The actual \(W_{28}\) statement remains **OPEN / LOAD-BEARING** until the image of \(D_{28}(F)\cap K\) in \(K^{ab}\) is controlled. No all-\(s\) theorem is promoted.
+
+Immediate target: certify or refute the actual truncation effect at \((p,s)=(3,3)\). If it is contained in \(27K^{ab}\), the \(s=3\) separator closes; if not, the transfer-defect mechanism fails at this next test.
