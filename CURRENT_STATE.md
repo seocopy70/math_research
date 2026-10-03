@@ -1,3 +1,21 @@
+## 2026-10-03 — T1-C UNMARKED SAME-WINDOW FINAL BOUNDARY
+
+The post-threshold unmarked same-window test has been pushed to its logical boundary. No valid pair of admissible marked extension diagrams with isomorphic underlying finite windows but different relative splitting data has been established. The earlier RAAG same-underlying-group/different-orientation no-go does not transfer to the present extension-class target, and postcomposition of the quotient map by an automorphism preserves split/non-split.
+
+Therefore the relative theorem is **not** to be downgraded merely because its proof uses the marked quotient map, but neither may it be promoted to an intrinsic theorem. The exact remaining alternatives are:
+1. prove the marked quotient map is canonically reconstructible from the unmarked finite window; or
+2. construct an admissible same-window pair with different relative obstruction data.
+
+Current frontier:
+- relative threshold (n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1): **PASS / CLOSED** for the declared stress family;
+- unmarked same-window no-go: **OPEN**;
+- canonical reconstruction of the marked quotient: **OPEN / LOAD-BEARING**;
+- intrinsic factorization/coarsest realization: **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+No recomputation of (p^s+1), no degree-5 reopening, and no scalar/norm shortcut reopening.
+Detailed audit: research/PAPER4_T1C_UNMARKED_SAME_WINDOW_FINAL_BOUNDARY_AUDIT_2026-10-03.md.
+
 ## 2026-10-03 — T1-C INTRINSIC FACTORIZATION PRE-CHECK / UNMARKED INPUT GATE
 
 The post-threshold target-first pre-check has been completed. The relative obstruction is naturally a property of the marked extension diagram
