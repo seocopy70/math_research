@@ -3911,3 +3911,21 @@ The only remaining load-bearing route is a genuinely filtered lift/deformation i
 - coarsest intrinsic realization: **OPEN**.
 
 Next authorized attack: one-step augmentation-algebra/relation-module filtered extension invariant, first at (p,s)=(3,1), then generalize. No further graded-Lie, Gate T/U, or blind carrier work.
+
+
+## 2026-10-03 — PAPER 4 ACTIVE BOUNDARY AFTER p=3,s=1 CLOSURE
+
+The load-bearing (a=s) versus (a=\infty) boundary has been partially closed.
+
+For the base case ((p,s)=(3,1)), the critical window (W_4) intrinsically separates (q=3) from (q=0) through the (A_3)-canonical obstruction: the relevant (U_4(\mathbf F_3)) obstruction factors through the class-3 Zassenhaus quotient, while Pál–Quick prove non-(A_3)-formality for (q=3) and (A_3)-formality for (q=0).
+
+Status:
+- (s) recovery: PASS / CLOSED;
+- (a) recovery for (1\le a<s): PASS / CLOSED;
+- (a=\infty) versus finite (a<s): PASS / CLOSED;
+- (a=s) versus (a=\infty), ((p,s)=(3,1)): PASS / CLOSED;
+- (a=s) versus (a=\infty), general (s\ge2): OPEN / LOAD-BEARING;
+- marked quotient reconstruction: OPEN;
+- coarsest intrinsic realization: OPEN.
+
+The next authorized attack is no longer the generic degree-(p^s) search. It is a targeted higher-order filtered obstruction for (s\ge2), with the first test case ((p,s)=(3,2)), (q=9), (n=10). The obstruction must be demonstrably functorial from (W_{10}), not merely inherited from the infinite Demushkin source. Do not reopen the already closed graded-Lie, ordinary Massey-vanishing, Gate T/U, or blind-carrier routes.
