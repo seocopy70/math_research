@@ -54,3 +54,11 @@ Rule: never reconstruct current state by reading the entire research log.
 - **OPEN / LOAD-BEARING:** same numerical-window separation (W_{p^s+1}(G_s)\) vs. (W_{p^s+1}(G_t)); the (a=s) boundary; and any exact relative threshold statement requiring a non-splitting argument beyond survival.
 - **Scope rule:** survival is not non-splitting; own-critical recovery is not same-window (s\) vs. (t) separation; relative results do not become unmarked results by omission of the quotient map.
 - **Publication status:** Paper 4 is not yet FINAL. The next work is evidence-level packaging and resolution of the load-bearing OPEN questions, followed by manuscript freeze.
+
+## 2026-10-04 Paper 4 boundary attack completion
+- **CLOSED:** direct same-window separation for the stress family \(G_{s,a}\), \(1\le a<s<t\): at \(n=p^s+1\), there is a canonical epimorphism \(W_n(G_{s,a})\twoheadrightarrow W_n(G_{t,a})\) with kernel of exact order \(p\). Hence the two windows are non-isomorphic.
+- **CLOSED:** combining lower-window blindness with the direct order jump gives the exact unmarked stress-family threshold \(n_{\mathrm{sep}}(s)=p^s+1\) within the certified scope.
+- **CLOSED:** the boundary \(a=s\) versus \(a=\infty\) for \((p,s)=(3,1)\), via the \(A_3\)-formality obstruction factoring through \(W_4\).
+- **OPEN / LOAD-BEARING:** \(W_{p^s+1}(G_{s,s})\stackrel{?}{\cong}W_{p^s+1}(G_{s,\infty})\) for \(s\ge2\). Ordinary \(gr_Z\), mod-\(p\) cohomology, naive \(p^s\)-power tests, and scalar coinvariant defects have been closed as non-load-bearing routes.
+- The earlier relative-extension/non-splitting formulation is no longer load-bearing for the exact unmarked threshold; direct same-window order separation suffices.
+- Full dated audit: `research/PAPER4_FINAL_BOUNDARY_ATTACK_2026-10-04.md`.
