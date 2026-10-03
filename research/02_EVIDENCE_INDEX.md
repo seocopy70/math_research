@@ -44,3 +44,6 @@ ot\cong W_{p^s+1}(G_t)) remains OPEN unless an explicit same-window invariant is
 | 3(sigma-1)^2[a_0] is nonzero in actual K^{ab} | PASS / LOCAL | same audit | SNF/lattice calculation |
 | a=s transfer-defect nonvanishing at (p,s)=(3,2) | PASS / LOCAL | same audit | integral Schreier witness |
 | General a=s vs a=infinity separation for all s>=2 | OPEN | same audit + research/PAPER4_A_S_TRANSFER_DEFECT_ATTACK_2026-10-04.md | all-s generalization remains unproved |
+
+
+| Unique intrinsic w_a-line in corrected W10 | FAIL / CLOSED | research/PAPER4_A_S_TRANSFER_SCHREIER_W10_AUDIT_2026-10-04.md + 2026-10-04 correction | corrected M is F_3^7 and dim delta^2M=2 |
