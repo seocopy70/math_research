@@ -4563,3 +4563,26 @@ Classification:
 Detailed audit: research/PAPER5_TARGET_FREE_REALIZATION_GROUPoid_AUDIT_2026-10-03.md.
 
 Next authorized action: test characteristic subgroup constructions generated/intersected from all admissible kernels, determine whether they yield \(Q_n\), a larger quotient, or collapse trivially; if all fail, record the resulting minimality/no-go boundary. No new carrier search is authorized.
+
+
+## 2026-10-03 — PAPER 5 ADMISSIBLE COMPRESSION CATEGORY / TRICHOTOMY BOUNDARY
+
+The missing comparison notion for “compression” has now been defined. An admissible compression is a functorial finite object C attached to the unmarked filtered source together with a natural factorization e:R_ad(W)->C of the intrinsic admissible realization groupoid. The comparison order is factorization order: C is at least as compressed as C' when C is a quotient/factor of C'. This order is meaningful only after a preserved-information package is fixed.
+
+Two extreme packages are decisive. If only the relative split/non-split Boolean is preserved, the Boolean object itself is the coarsest admissible compression; on the fixed critical source the Boolean is constant, so the result collapses to a singleton. If the full gauge-invariant realization orbit/groupoid is required to be preserved, the realization groupoid is already the canonical minimal object by definition. Thus neither extreme yields a nontrivial compression theorem.
+
+Consequently, an absolute “coarsest intrinsic compression” without a declared preserved-information package is **FAIL / CLOSED as an ill-posed minimality target**. A genuinely nontrivial compression can exist only relative to an explicitly declared intermediate information package I strictly between the Boolean and the full realization object.
+
+The first-level characteristic intersection/generated-kernel no-go results therefore remain candidate-specific boundaries, not a universal characteristic-compression no-go.
+
+Detailed audit: research/PAPER5_ADMISSIBLE_COMPRESSION_CATEGORY_AUDIT_2026-10-03.md.
+
+Classification:
+- admissible comparison category/order: **PASS / CLOSED**;
+- Boolean-only compression: **PASS / CLOSED but trivial**;
+- full-realization compression: **PASS / CLOSED but tautologically minimal**;
+- absolute coarsest intrinsic compression without preserved package: **FAIL / CLOSED**;
+- nontrivial intermediate compression: **OPEN**;
+- universal characteristic-compression no-go: **OPEN**.
+
+Next authorized action: only test a canonically forced intermediate preserved-information package, if one can be defined without re-encoding the target. Otherwise the compression trichotomy/boundary is the structural endpoint of Paper 5.
