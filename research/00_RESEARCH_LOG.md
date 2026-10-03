@@ -1,3 +1,25 @@
+## 2026-10-03 — T1-C POST-THRESHOLD CRITICAL RE-AUDIT
+
+The general integral Fox calculation is confirmed as a genuine relative threshold theorem for the declared stress family, with one proof-packaging refinement.
+
+For \(q=p^a\), \(s>a\), the pure-Y Fox row is \(q-Y\), so cancelling the scalar defect \(p^s\bar z\) requires \((q-Y)A(Y)=p^s\). The first nonintegral coefficient occurs at \(r=\lfloor s/a\rfloor\), giving the integral divisibility residual in the \(Y^r\bar z\) direction. The metabelian quotient \(C_{p^s}\rtimes C_{p^s}\) independently shows the corresponding finite-kernel residual is nonzero, while \(D_{p^s+1}\) is trivial there. The lower bound is closed because generator lifts give a section for every \(n\le p^s\).
+
+A critical audit isolates the only remaining formalization point: state the pushout/naturality lemma explicitly. Section-defect cocycles and their coboundaries map functorially under equivariant kernel quotients, so nonzero survival in the metabelian pushout implies nonzero class in the original abelianized-kernel pushout. The same quotient/naturality argument must be used for the higher-rank reduction.
+
+Classification:
+- integral Fox-divisibility obstruction, declared stress family: **PASS / CLOSED**;
+- finite-kernel survival: **PASS / CLOSED**;
+- splitting for all \(n\le p^s\): **PASS / CLOSED**;
+- exact \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\): **PASS / CLOSED**;
+- universal free-by-Demushkin theorem: **OPEN**;
+- intrinsic/unmarked finite-window realization: **OPEN**;
+- coarsest/strict compression: **OPEN**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+Next authorized action: target-first pre-check for factorization of the relative threshold obstruction through an intrinsic finite-window object, not another threshold or Fox computation.
+
+Detailed audit: research/PAPER4_T1C_POST_THRESHOLD_CRITICAL_REAUDIT_2026-10-03.md.
+
 ## 2026-10-02 — T1 CORRECTION COMPLETED / LOCAL PASS BUT GLOBAL AFFINE FAILURE RESTORED
 
 The corrected full-filtered normalized locus was tested to completion on the authorized controls.
