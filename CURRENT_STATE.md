@@ -3879,3 +3879,20 @@ No new computation is authorized by this correction. The structural stop remains
 ## 2026-10-03 — CRITICAL WINDOW RECOVERY OF a FROM UNMARKED ABELIANIZATION
 
 For the declared stress family with 1<=a<s and n=p^s+1, the abstract unmarked critical window already recovers a from its abelianization: W_n^ab is Z/p^a plus d copies of Z/p^{s+1}. For a=infinity it is Z/p^s plus d copies of Z/p^{s+1}. Thus a is PASS / CLOSED in the nonboundary range. This is independent of Gate T and does not recover the marked quotient or orientation. Detailed audit: research/PAPER4_CRITICAL_WINDOW_A_RECOVERY_AUDIT_2026-10-03.md.
+
+
+## 2026-10-03 — PAPER 4 CURRENT ACTIVE BOUNDARY AFTER a=s ATTACK
+
+The critical-window parameter theorem is now closed for 1≤a<s: the unmarked W_{p^s+1} recovers s from exp(W^{ab}) and a from the unique short invariant factor. The only remaining parameter-identifiability boundary is a=s versus a=∞, where abelianization agrees.
+
+A canonical short line L_s in abelianization and its p^s-power operation were tested. The Jacobson/Hall–Petrescu cross term prevents an unjustified shear-isomorphism argument, but the entire candidate lives in the associated restricted Lie algebra and is therefore not sufficient to separate the boundary. The active target is now strictly a filtered lifting/deformation invariant beyond the quadratic associated graded shadow.
+
+Status:
+- s recovery: PASS / CLOSED;
+- a recovery for 1≤a<s: PASS / CLOSED;
+- a=∞ versus finite a<s: PASS / CLOSED;
+- a=s versus a=∞: OPEN / LOAD-BEARING;
+- marked quotient reconstruction: OPEN;
+- coarsest intrinsic realization: OPEN.
+
+Next authorized attack: identify an intrinsic one-step filtered extension/lift invariant at degree p^s+1 (relation-module, augmentation-algebra extension, or genuinely defined higher operation), and test whether it separates the two boundary cases. Do not reopen Gate T/U for s-recovery and do not treat the restricted graded object as sufficient.
