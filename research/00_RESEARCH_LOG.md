@@ -289,7 +289,8 @@ Thus the correct conclusion is not a no-go and not an intrinsicity theorem. The 
 [
 W_{p^s+1}(G_{s,a})
 stackrel{?}{longrightarrow}
-left(W_{p^s+1}(G_{s,a})	o D/D_{p^s+1}(D)ight)
+left(W_{p^s+1}(G_{s,a})	o D/D_{p^s+1}(D)
+ight)
 stackrel{?}{longrightarrow}
 [	ext{extension class}].
 ]
@@ -4134,7 +4135,8 @@ The project now adopts the realistic completion target for Paper 4. The paper is
 
 Principal theorem target:
 [
-G_{s,a}=langle z,x_1,ldots,x_dmid z^{p^s}=r_Dangle,qquad s>age2,
+G_{s,a}=langle z,x_1,ldots,x_dmid z^{p^s}=r_D
+angle,qquad s>age2,
 ]
 in the declared rank-two stress-family / higher-rank reduction scope, with marked relative finite windows
 [
@@ -4142,7 +4144,9 @@ in the declared rank-two stress-family / higher-rank reduction scope, with marke
 ]
 The certified result is
 [
-n_{m sep}^{m rel}(s)=p^s+1:
+n_{
+m sep}^{
+m rel}(s)=p^s+1:
 quad nle p^sRightarrow	ext{split},qquad
 n=p^s+1Rightarrow	ext{nonsplit}.
 ]
@@ -4215,7 +4219,8 @@ Classification at this decision point:
 
 The bounded Gate-B attack was executed in the minimal critical model
 [
-(p,s,a,n)=(3,2,1,10),qquad G_{2,1}=langle z,x,ymid z^9=x^3[x,y]angle.
+(p,s,a,n)=(3,2,1,10),qquad G_{2,1}=langle z,x,ymid z^9=x^3[x,y]
+angle.
 ]
 
 The attack was deliberately performed as one package rather than as a sequence of indefinitely expanding subchecks:
@@ -4224,7 +4229,8 @@ W_{10}	ooperatorname{Aut}(W_{10})	o{	ext{quotient candidates}}	o{	ext{relative o
 ]
 
 Results:
-1. The mod-3 cup form on (H^1(W_{10},mathbf F_3)) has rank 2 and a one-dimensional intrinsic radical line (R=langlear zangle). **PASS / LOCAL.**
+1. The mod-3 cup form on (H^1(W_{10},mathbf F_3)) has rank 2 and a one-dimensional intrinsic radical line (R=langlear z
+angle). **PASS / LOCAL.**
 2. The critical degree-9 information refines the radical line only up to gauge/Aut orbit; a distinguished radical generator is not intrinsic. **PASS / LOCAL.**
 3. At the (H^1)-level, admissible quotient data with kernel radical line form one orbit after the expected (SL_2(mathbf F_3)), radical scaling, and radical-shear action. **PASS / LOCAL.**
 4. Split/non-split is invariant under the corresponding pre/post automorphism orbit, so quotient-map uniqueness is stronger than necessary; only orbit uniqueness is needed. **PASS / LOCAL.**
@@ -4329,7 +4335,8 @@ The next authorized calculation is not a new carrier search. It is a single rela
 
 For the minimal critical model
 [
-G_{2,1}=langle z,x,ymid z^9=x^3[x,y]angle,qquad
+G_{2,1}=langle z,x,ymid z^9=x^3[x,y]
+angle,qquad
 W_{10}=G_{2,1}/D_{10}(G_{2,1}),
 ]
 and
@@ -4372,7 +4379,8 @@ a^9equiv b^9pmod{I^{10}}.
 
 ### 2. Group-theoretic consequence
 
-Take (cin D_2(W_{10})) and a lift (	ilde cin D_2(F)) to the free pro-3 presentation group (F=langle z,x,yangle). Under the Magnus embedding,
+Take (cin D_2(W_{10})) and a lift (	ilde cin D_2(F)) to the free pro-3 presentation group (F=langle z,x,y
+angle). Under the Magnus embedding,
 [
 M(z)=1+Z,qquad M(	ilde c)=1+C,qquad Cin I^2.
 ]
@@ -4403,7 +4411,8 @@ alpha_c(z)^9=(zc)^9=z^9=x^3[x,y].
 ]
 The Zassenhaus filtration is characteristic, so the map is well-defined on the finite quotient. It induces the identity on
 [
-W_{10}/D_2(W_{10})cong H^1(W_{10},mathbf F_3)^ee.
+W_{10}/D_2(W_{10})cong H^1(W_{10},mathbf F_3)^
+ee.
 ]
 Since (W_{10}) is a finite 3-group, Burnside's basis theorem implies that an endomorphism inducing the identity on the Frattini quotient is an automorphism. Hence
 [
@@ -4563,9 +4572,12 @@ Detailed audit: research/PAPER4_INTRINSIC_ORBIT_CATEGORY_GATE_C_AUDIT_2026-10-03
 
 A new target-first result closes the target-class question itself in the declared odd-(p), even-rank Demushkin critical-window setting.
 
-Define the target-free class (mathcal C_{d,n}) by existence of a minimal one-relator pro-(p) lift (F_d/overline{langle!langle rangle!angle}), with (rin D_2\setminus D_3) and nondegenerate alternating initial form, whose depth-(n) quotient (H) has
+Define the target-free class (mathcal C_{d,n}) by existence of a minimal one-relator pro-(p) lift (F_d/overline{langle!langle r
+angle!
+angle}), with (rin D_2\setminus D_3) and nondegenerate alternating initial form, whose depth-(n) quotient (H) has
 [
-H^{ab}cong(mathbf Z/p^{e(n)})^d,qquad e(n)=lceillog_p nceil.
+H^{ab}cong(mathbf Z/p^{e(n)})^d,qquad e(n)=lceillog_p n
+ceil.
 ]
 The lift is Demushkin. By Labute classification it has rank (d) and torsion invariant (qin{0,p,p^2,ldots}). If (q<n), the truncated abelianization has one cyclic factor of exponent (p^{a}<p^{e(n)}), so it fails the intrinsic abelianization test. If (qge n), the power term (x_1^q) lies in (D_n), so the finite quotient agrees with the (q=0) quotient. Hence (mathcal C_{d,n}) is a singleton abstract isomorphism class.
 
@@ -4649,3 +4661,18 @@ Result classification after correction:
 - nontrivial intermediate package: **OPEN**.
 
 No new computation is authorized by this correction. The structural stop remains in force.
+
+## 2026-10-03 — CRITICAL WINDOW RECOVERY OF a FROM UNMARKED ABELIANIZATION
+
+A new hand proof closes the declared nonboundary a-identifiability problem without any new carrier construction. For G_{s,a} with 1<=a<s at n=p^s+1, the image of D_n(G) in the abelianization is p^{s+1}G^{ab}. Since G_{s,a}^{ab} is Z_p^{d+1}/<p^s z-p^a x_1>, Smith normal form gives W_n(G_{s,a})^{ab} = Z/p^a plus d copies of Z/p^{s+1}. Hence the unique invariant factor of exponent below s+1 is p^a, so the abstract unmarked critical window recovers a uniquely. For a=infinity (q=0), the abelianization is Z/p^s plus d copies of Z/p^{s+1}, so infinity is also separated from finite a<s.
+
+Independent Smith-form checks agree for representative tuples (3,2,1,2), (3,3,2,2), (5,2,1,4), and (3,5,2,2).
+
+This does not cover a=s, does not reconstruct the marked quotient map or orientation, and does not substitute for the independent audit of Gate T/U. Detailed audit: research/PAPER4_CRITICAL_WINDOW_A_RECOVERY_AUDIT_2026-10-03.md.
+
+Classification:
+- critical-window a recovery for 1<=a<s: **PASS / CLOSED**;
+- a=infinity versus finite a<s: **PASS / CLOSED**;
+- a=s via this invariant: **OPEN**;
+- simultaneous (s,a) recovery: **PASS / LOCAL** until the Gate-T/U s proof is independently audited;
+- marked quotient reconstruction: **OPEN**.
