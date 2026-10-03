@@ -1,3 +1,39 @@
+
+## 2026-10-03 — W10 DEGREE-9 IA ACTION: POSITIVE CRITICAL CALCULATION
+
+The final bounded degree-9 IA calculation was executed for the minimal critical model
+\[
+(p,s,a,n)=(3,2,1,10),\qquad G=\langle z,x,y\mid z^9=x^3[x,y]\rangle.
+\]
+For the explicit admissible quotient family
+\[
+\pi_c(z)=c,\quad \pi_c(x)=x,\quad \pi_c(y)=y,
+\qquad c\in D_2(Q_{10}),
+\]
+the radical-preserving IA shear \(\alpha_c(z)=zc\), \(\alpha_c(x)=x\), \(\alpha_c(y)=y\) was tested in the relation-aware truncated Magnus algebra through degree 9.
+
+The direct result is
+\[
+\boxed{(zc)^9=z^9\pmod{D_{10}}}
+\]
+for degree-\(\ge2\) radical corrections. Independent checks covered every monomial correction of degrees 2 through 6 and random full truncated augmentation corrections of degrees 2–4; all degree <10 coefficients cancel over \(\mathbf F_3\). In particular the critical degree-2 commutator correction produces no degree-9 defect.
+
+Because \(x,y\) are fixed, the Demuškin relator is fixed, so the shear is an actual filtered IA automorphism of \(W_{10}\), with \(\pi_1\circ\alpha_c=\pi_c\). Hence the entire explicit \(\pi_c\) family is one \(\operatorname{Aut}(W_{10})\times\operatorname{Aut}(Q_{10})\)-orbit, and the relative split/non-split obstruction is constant on that family.
+
+This closes the targeted degree-9 IA attack positively:
+- degree-9 radical-preserving IA action: **PASS / CLOSED**;
+- explicit \(\pi_c\) family: **PASS / CLOSED (single orbit)**;
+- obstruction variation inside the family: **FAIL / CLOSED** (none);
+- same-window separation from this family: **FAIL / CLOSED**.
+
+Important boundary: this does NOT yet prove that every admissible quotient map \(W_{10}\twoheadrightarrow Q_{10}\) lies in this orbit. Residual IA corrections to \(x,y\), or other relation-compatible quotient-map data, still require a full orbit-completeness lemma. Therefore:
+- full quotient-map orbit uniqueness: **OPEN / LOAD-BEARING**;
+- full unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**.
+
+The result is nevertheless a genuine positive structural reduction: the suspected degree-9 IA obstruction is gauge-trivial rather than a source of negative separation.
+
+Detailed audit: research/PAPER4_W10_DEGREE9_IA_ACTION_AUDIT_2026-10-03.md.
+
 ## 2026-10-03 — PAPER 4 TARGET DECISION REVIEW / A-B DISTINCTION AND BOUNDED GATE RETAINED
 
 A critical review of the preceding Paper 4 decision memo was reconciled against the authoritative state before any new decision was made.
