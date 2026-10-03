@@ -214,3 +214,143 @@ The bounded quadratic-family branch is no longer the sole next step. It becomes 
 **E_psi intrinsic definition → functoriality/gauge audit → minimal generator → p=3,s=2/3 stress tests → separation/factorization attempt → classify → record.**
 
 The Paper 4 certified core remains frozen. The old arbitrary-r degree-only theorem remains FAIL/CLOSED. No result from this exploratory branch may be back-propagated into Paper 4 without a separate theorem audit.
+
+
+## 2026-10-04 — E_psi intrinsic-definition attack: first closure and remaining boundary
+
+The universal E_psi branch was attacked from the definition rather than from computation.
+
+### Definition correction
+
+The earlier informal condition “twisted Fox derivative = 0” is not the correct detector for
+[
+z^{p^s}=r.
+]
+The correct affine condition is **nonzero critical translation**.
+
+Set
+[
+A_s=\mathbf Z/p^{s+1}\mathbf Z,qquad U_s=1+pA_s,qquad
+E_s=A_s\rtimes U_s.
+]
+For a character
+[
+\psi:F\to U_s
+]
+and a crossed homomorphism
+[
+\delta:F\to A_s,qquad
+\delta(gh)=\delta(g)+\psi(g)\delta(h),
+]
+the affine representation is
+[
+\rho_{\psi,\delta}(g)=(\delta(g),\psi(g)).
+]
+
+Define the twisted Fox evaluation ideal
+[
+I_\psi(r)=
+\sum_i A_s\,\psi\!\left(\frac{\partial r}{\partial x_i}\right)
+=
+\{\delta(r):\delta\in Z^1(F,A_{s,\psi})\}.
+]
+
+Then the critical relation admits an affine lift with
+[
+z\mapsto(1,1)
+]
+iff
+[
+\psi(r)=1,qquad p^s\in I_\psi(r).
+]
+
+This is the correct E_psi object: the finite affine target together with the twisted evaluation ideal. The group alone is not the invariant.
+
+### Definition/gauge/functoriality audit
+
+- **Object:** PASS / CLOSED for the affine test datum.
+- **Input:** PASS / CLOSED.
+- **Functoriality:** PASS / CLOSED in the marked free-presentation category; individual Fox coordinates change, but the evaluation ideal and affine-lift existence are invariant.
+- **Gauge:** PASS / CLOSED when \psi(r)=1; affine translation changes \delta by a coboundary and leaves \delta(r) unchanged, while unit rescaling preserves the valuation condition.
+- **q-blindness:** PASS / CLOSED. The target is indexed by the critical window s and does not insert an unknown q into the recognition object.
+- **Orientation bridge:** OPEN / LOAD-BEARING for unmarked finite windows. The affine representation has a canonical linear character \psi, but recovering that character intrinsically from the abstract finite window has not been proved.
+
+### Affine target depth
+
+For
+[
+E_s=A_s\rtimes U_s,
+]
+one has
+[
+D_{p^s}(E_s)=p^sA_s\ne1,qquad D_{p^s+1}(E_s)=1.
+]
+This follows from Lazard's product formula together with
+[
+[E_s,E_s]=pA_s,qquad
+\gamma_i(E_s)=p^{i-1}A_s (i\ge2)
+]
+until vanishing.
+
+Hence E_s is an exact finite detector for the p^s/p^s+1 boundary.
+
+### General quadratic input
+
+For every tested nonzero quadratic initial relation
+[
+r\in D_2(F)\setminus D_3(F),
+]
+there are explicit characters/cocycles producing
+[
+\psi(r)=1,qquad v_p(\delta(r))\le s.
+]
+Independent finite-word checks covered:
+- p=3,5;
+- s=1,2,3;
+- random quadratic words in rank 3;
+- all 26 nonzero canonical quadratic forms in rank 2 for p=3;
+- all 124 nonzero canonical quadratic forms in rank 2 for p=5.
+
+These are **PASS / LOCAL** only.
+
+The formal general lemma still needs a proof with the higher-order contribution audit closed. In particular, in the pure-commutator case the chosen order-p character isolates the quadratic commutator contribution at the p^s scale, but higher Zassenhaus terms must be bounded carefully; if they contribute at lower valuation that only helps, while an exact cancellation at the critical scale must be excluded algebraically.
+
+### Marked separation result
+
+The affine lift gives
+[
+\rho(z^{p^s})=(p^s,1)=\rho(r)\ne1,
+]
+while
+[
+\rho(z^{p^t})=1qquad(t>s).
+]
+Because
+[
+D_{p^s+1}(E_s)=1,
+]
+the representation factors through the marked critical window
+[
+W_{p^s+1}(G_s(r))
+]
+but not through the lower window.
+
+Thus the **marked affine/representation critical threshold is a theorem candidate at p^s+1 for arbitrary nonzero quadratic initial relation**.
+
+This does **not** prove
+[
+W_{p^s+1}(G_s(r))\not\cong W_{p^s+1}(G_t(r))
+]
+as abstract unmarked finite groups. The missing implication is precisely the intrinsic orientation/character bridge from the abstract window to the affine representation package.
+
+### Classification
+
+- universal arbitrary-degree E_psi theorem: **FAIL / CLOSED** in the old degree-only form;
+- affine E_psi definition: **PASS / CLOSED**;
+- functorial/gauge/q-blindness pre-check: **PASS / CLOSED** in the marked category;
+- quadratic affine separator: **OPEN / LOAD-BEARING theorem candidate**;
+- marked critical-window separation: **PASS / LOCAL → theorem candidate**;
+- unmarked orientation bridge: **OPEN / LOAD-BEARING**;
+- unmarked same-window separation: **OPEN**.
+
+Authoritative detail: `research/EPSI_INTRINSIC_DEFINITION_AUDIT_2026-10-04.md`.
