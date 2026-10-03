@@ -4436,3 +4436,21 @@ Consequences for the bounded Gate-B alternatives:
 - General \(W_{p^s+1}\) one-orbit theorem, general unmarked reconstruction, and coarsest intrinsic realization: **OPEN / LOAD-BEARING**.
 
 Interpretation: this is a genuine W10 theorem plus a generalization program, not a universal impossibility theorem for Paper 4. It closes the bounded intrinsic feasibility gate at the minimal model and shows that the useful compression object is the quotient-map orbit/category rather than a unique marked quotient map. It does not reopen the already closed scalar/norm/degree-5 routes and does not enlarge the certified relative theorem beyond its declared stress-family scope.
+
+
+## 2026-10-03 — GENERAL CRITICAL-WINDOW QUOTIENT-MAP ORBIT THEOREM
+
+The W10 orbit closure generalizes to the full declared critical window n=p^s+1 in the stress-family setting. The key point is a general Magnus/augmentation lemma: if a-b is in I^2 with a,b in I, then a^(p^s)-b^(p^s) is in I^(p^s+1). Induction uses the degree p^k of b^(p^k): from E_k in I^(p^k+1), the mixed terms in (b^(p^k)+E_k)^p lie in I^(p^(k+1)+1). Consequently every radical-valued shear z -> zc, c in D_2(W_{p^s+1}), preserves the critical defining relation and is an IA automorphism of the finite p-group.
+
+For any admissible epimorphism pi:W_{p^s+1}->Q_{p^s+1} whose H^1-kernel is the intrinsic cup-radical line, pi(z) is in D_2(Q). Hence pi(z)^(p^s)=1, because D_2(Q)^(p^s) is contained in D_{2p^s}(Q)=1. The images of the Demushkin generators satisfy the defining Demushkin relator and generate Q, so they differ from the canonical generators by an automorphism of Q. After this normalization, the remaining radical-valued component is exactly a shear of the canonical quotient map. Therefore all admissible quotient maps lie in one Aut(W_{p^s+1}) x Aut(Q_{p^s+1})-orbit.
+
+Authoritative classification:
+- general critical-window quotient-map orbit transitivity: PASS / CLOSED under the stated admissibility hypothesis;
+- same-window separation by different admissible quotient-map orbits: FAIL / CLOSED at the critical-window orbit level;
+- relative split/non-split Boolean constant on the admissible orbit: PASS / LOCAL;
+- literal marked-map reconstruction: FAIL / CLOSED as a uniqueness target at map level (nontrivial gauge family remains);
+- canonical unmarked reconstruction/coarsest intrinsic realization: OPEN / LOAD-BEARING.
+
+This is the first result that moves beyond W10 without reopening a frozen route. It shows that the useful compression object is not a unique marked map but its natural two-sided quotient-map orbit. It does not settle whether that orbit/category itself is canonically recoverable or coarsest from the unmarked filtered group.
+
+Detailed audit: research/PAPER4_GENERAL_CRITICAL_ORBIT_THEOREM_2026-10-03.md.
