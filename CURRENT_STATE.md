@@ -3686,3 +3686,16 @@ Current Gate-B status:
 The next research target is therefore no longer W10 or full orbit classification. It is the intrinsic realization of the single orbit/category: determine whether the orbit of admissible quotient maps is canonically reconstructible from the unmarked filtered group W_{p^s+1}, and whether the relative Boolean factors through that intrinsic orbit object. This must be attacked as an Object/Input/Functoriality/Gauge problem before any new carrier construction.
 
 Detailed audit: research/PAPER4_GENERAL_CRITICAL_ORBIT_THEOREM_2026-10-03.md.
+
+
+## 2026-10-03 — GATE C INTRINSIC ORBIT/CATEGORY FEASIBILITY AUDIT
+
+The general critical-window orbit theorem was followed by a target-first Gate C audit. A natural candidate is the admissible realization groupoid of quotient maps W_n -> H, modulo source automorphisms and target isomorphisms. The orbit theorem proves that, for the declared fixed-Q_n admissible class, this groupoid has one two-sided orbit; consequently the relative split/non-split Boolean is independent of the chosen marked quotient map. This is a **PASS / LOCAL** realization-independence result, not yet a full intrinsic reconstruction theorem.
+
+The load-bearing gap is now sharply isolated: the admissibility predicate itself still refers to the declared target class/radical-line realization and has not been replaced by a presentation-free universal property internal to W_n. Thus:
+- critical-window quotient-map orbit: **PASS / CLOSED** under stated admissibility;
+- Boolean realization-independence within that orbit: **PASS / LOCAL**;
+- canonical presentation-free orbit/category from W_n alone: **OPEN / LOAD-BEARING**;
+- coarsest intrinsic realization: **OPEN**.
+
+Next authorized task: test internal universal/characteristic quotient constructions for the admissible target, starting from the intrinsic radical line and characteristic normal subgroups. No blind carrier search, threshold recomputation, or frozen-route reopening. Detailed audit: research/PAPER4_INTRINSIC_ORBIT_CATEGORY_GATE_C_AUDIT_2026-10-03.md.
