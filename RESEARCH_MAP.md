@@ -43,3 +43,11 @@ One concept, one live home. Cross-link; do not duplicate.
 ## 2026-10-04 correction — critical same-window boundary
 
 The previous claim that W_(p^s+1)(G_s) and W_(p^s+1)(G_t) are separated by an order jump is superseded. The normal closures defining the two quotients are not nested, so the proposed canonical epimorphism and p-factor order jump are false. The exact threshold n_sep(s)=p^s+1 is OPEN. Only n_sep(s)>=p^s+1 is certified. Group-level non-isomorphism G_{s,a} \\not\\cong G_{t,a} is also OPEN.
+
+
+## 2026-10-04 — active post-core generalization challenge
+
+Paper 4 remains PASS/CLOSED in its certified core, while a bounded generalization challenge is now the active research branch. The branch tests whether the critical relative-window mechanism survives from the Demushkin control relation to a broader nonzero quadratic initial relation r_2 in
+G_{s,a}(r_2)=<z,x_1,...,x_d | z^{p^s}=x_1^{p^a}r_2>, s>a>=2.
+
+This does not reopen the failed arbitrary-r degree-only theorem or the universal E_psi construction. The latter remains a future branch pending an intrinsic E_psi/functoriality pre-check. First task: Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop pre-check, followed by the smallest genuinely non-control quadratic test.
