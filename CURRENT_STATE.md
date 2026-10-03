@@ -1,3 +1,18 @@
+## 2026-10-03 — SMALL ORBIT TWO-SIDED GATE-B COMPRESSION TEST
+
+The “one small orbit calculation for both directions” idea is now formalized as a labelled orbit problem on the admissible quotient-map set A of W_10 -> Q_10, with H=Aut(W_10) x Aut(Q_10) and each orbit labelled by the relative split/non-split obstruction. This is a valid single decision architecture: different orbit labels give same-window separation; one common label (even across multiple quotient-map orbits) gives intrinsic determination of the Boolean obstruction. Orbit multiplicity alone is not a no-go.
+
+A concrete admissible family remains: pi_c(z)=c, pi_c(x)=x, pi_c(y)=y for c in D_2(Q_10). H^1 data do not separate this family. A free Magnus/augmentation-algebra shadow check shows no degree<10 difference for degree>=2 radical corrections, but this is diagnostic only; the Demushkin relation must be imposed in the truncated relation algebra. The relation-aware D_3/D_4 IA orbit remains the sole load-bearing computation.
+
+Classification:
+- two-sided orbit-decision principle: **PASS / LOCAL**;
+- explicit pi_c family: **PASS / LOCAL**;
+- relation-aware full orbit decomposition: **OPEN / LOAD-BEARING**;
+- same-window separation: **OPEN**;
+- unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**.
+
+Next authorized action: compute the relation-aware radical-preserving IA action on pi_c first on D_3(Q_10)/D_4(Q_10), then propagate the orbit labels to the relative obstruction. No carrier search or frozen-route reopening.
+
 ## 2026-10-03 — PAPER 4 TARGET DECISION NOW PENDING / BOUNDED INTRINSIC FEASIBILITY GATE
 
 The realistic completion target remains mathematically safe, but the user has not yet permanently selected it over the original target. Before final packaging, a bounded **Intrinsic Reconstruction Feasibility Gate** may be run. Its sole first-order question is whether the critical unmarked window (W_{p^s+1}) canonically reconstructs sufficient marked quotient/extension data; in parallel, test for an admissible same-window separation pair. This is a decision gate, not authorization for blind carrier search or threshold recomputation.
