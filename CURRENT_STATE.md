@@ -2834,3 +2834,20 @@ Next authorized boundary: perform the pre-check for the degree-6 restricted/inte
 The preceding claim that the actual finite-kernel mod-(3) degree-5 Fox quotient vanishes was downgraded. Cyclicity of (overline A_s=K_s/[K_s,K_s]K_s^3) as an (mathbf F_3[Q_s])-module proves module generation by the normal kernel class, but does not prove that all corresponding degree-one (Q_s)-actions are admissible section/lift-change coboundaries in the finite extension. The exact finite-kernel section-change/Fox map and its image remain uncomputed.
 
 Current frontier: degree-5 finite-kernel Fox/lift-change cokernel **OPEN / LOAD-BEARING**; degree-6 restricted/integral route is **NOT YET AUTHORIZED**. This supersedes the immediately preceding zero-quotient claim.
+
+
+## 2026-10-03 — CURRENT FRONTIER: T1-C DEGREE-5 CLOSED, DEGREE-6 PRE-CHECK NEXT
+
+Gate T1 remains the active main-object calculation for the q>0 Demuškin stress family. The exact degree-5 finite-kernel mod-\(p\) Fox quotient vanishes in the minimal model, so the degree-5 commutator path is closed as a gauge-invariant obstruction. This is stronger than the earlier \(\operatorname{ad}_{x_2}\)-only no-go, but remains a mod-\(p\) statement.
+
+Active status:
+- critical-layer visibility: **PASS / LOCAL**;
+- scalar/coinvariant obstruction: **FAIL / CLOSED**;
+- first-order mod-\(p\) Fox cokernel: **FAIL / CLOSED**;
+- degree-5 finite-kernel mod-\(p\) Fox cokernel: **FAIL / CLOSED**;
+- integral/restricted \(A_s\)-obstruction: **OPEN / LOAD-BEARING**;
+- full finite-extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\): **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+**Next authorized action:** perform only the degree-6 restricted/integral pre-check. No degree-5 reopening and no \(B_s\) promotion before that gate.
