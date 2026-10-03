@@ -4885,3 +4885,14 @@ This is only a **root/relation survival lemma**, not an intrinsic root-recovery 
 - quadratic-relator survival: **PASS / LOCAL**;
 - arbitrary (operatorname{ord}_Z(r)ge2) full-relation visibility: **OPEN / hypothesis insufficient**;
 - intrinsic root recovery from the surviving class: **OPEN**.
+
+
+## 2026-10-04 — a=s vs a=infinity: intrinsic transfer-defect attack
+
+A new unmarked candidate was tested against the remaining boundary W_{p^s+1}(G_{s,s}) versus W_{p^s+1}(G_{s,infinity}), s>=2. The intrinsic cup-radical line gives an index-p subgroup K normal in W. The finite abelianization has a canonical short torsion subgroup T=W^{ab}[p^s]. The transfer V:W^{ab}->K^{ab} is canonical, so the zero/nonzero predicate p^{s-1}V(T) in K^{ab} is an unmarked, gauge-free candidate.
+
+For a=s, the torsion class is represented by zx_1^{-1}; for a=infinity, by z. Writing sigma for conjugation by the quotient generator and N_sigma=1+...+sigma^{p-1}, the boundary expression reduces to the critical norm/Jacobson term p^{s-1}(p-N_sigma)[x_1], with N_sigma=p+binom(p,2)(sigma-1)+...+(sigma-1)^{p-1}. The (sigma-1)^{p-1} term lies exactly at the critical filtered degree p^s. Thus the attack does not collapse to the already closed scalar/coinvariant invariant.
+
+However, the decisive nonvanishing of this term in the actual K^{ab} for a=s has not been proved. The earlier non-equivariant class-2 witnesses cannot simply be reused because a valid witness must preserve both the cyclic action W/K=C_p and the defining stress relation. Therefore the new transfer-defect predicate is PASS / LOCAL candidate, but the boundary remains OPEN / LOAD-BEARING.
+
+Audit: research/PAPER4_A_S_TRANSFER_DEFECT_ATTACK_2026-10-04.md.
