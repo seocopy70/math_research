@@ -4676,3 +4676,8 @@ Classification:
 - a=s via this invariant: **OPEN**;
 - simultaneous (s,a) recovery: **PASS / LOCAL** until the Gate-T/U s proof is independently audited;
 - marked quotient reconstruction: **OPEN**.
+
+
+## 2026-10-03 — PAPER 4 a=s BOUNDARY ATTACK: GRADED POWER DEFECT CLOSED, FILTERED LIFT REMAINS OPEN
+
+The remaining unmarked boundary a=s versus a=∞ was attacked through the canonical short abelian direction L_s=(A[p^s]+pA)/pA and its intrinsic p^s-power operation. The canonical short line is PASS/CLOSED, and the naive shear z↦zx_1^{-1} is not automatically valid because Hall–Petrescu/Jacobson cross terms can survive exactly in degree p^s. However, the resulting p^s-power/Jacobson datum belongs to the associated restricted Lie algebra, whose Demushkin-type quadratic shadow is q-blind; it therefore does not by itself separate the boundary. Classification: graded restricted-Lie candidate FAIL/CLOSED; a=s versus a=∞ remains OPEN. The remaining load-bearing target is a genuinely filtered lifting/deformation invariant beyond the associated graded object. Detailed audit: research/PAPER4_CRITICAL_WINDOW_BOUNDARY_A_S_RECOVERY_ATTACK_2026-10-03.md.
