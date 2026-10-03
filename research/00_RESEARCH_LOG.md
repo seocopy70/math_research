@@ -3819,3 +3819,14 @@ Current exact status:
 - blind carrier search: STOP / NOT AUTHORIZED.
 
 No reopening of degree 5, scalar/norm, or the frozen relative threshold is authorized.
+
+
+## 2026-10-03 — GATE T1-C A=1 INDEPENDENT CLOSURE
+
+The previously unresolved a=1 boundary is now closed for the declared marked/relative stress family. An independent finite metabelian pushout was constructed: an abelian kernel A with z^(p^(s+1))=1 and p x=p^s z, and y-action z -> z^(1-p), x -> x. Then x^p[x,y]=z^(p^s), giving a quotient of G_{s,1}. At n=p^s+1, the Jennings-Zassenhaus product formula gives D_n(H_s)=1, while (y-1)^s z=(-p)^s z !=0. This supplies the missing a=1 survival witness without the invalid cyclic-quotient argument.
+
+The integral Fox section-change equation is (p-Y)A(Y)=p^s, whose formal solution has nonintegral Y^s-coefficient p^(-1). Hence the critical defect cannot be killed by integral lift changes; the witness detects the residual. By pushout/naturality the relative extension is nonsplit at p^s+1. Together with the lower-bound splitting for n<=p^s, the exact relative threshold is n_sep^rel(s)=p^s+1 for the declared stress family.
+
+Classification: a=1 critical survival PASS/CLOSED; a=1 integral Fox obstruction PASS/CLOSED; a=1 critical nonsplitting PASS/CLOSED in the marked/relative stress family; exact relative threshold for all declared a>=1 PASS/CLOSED; unmarked filtered-group reconstruction OPEN/LOAD-BEARING; universal free-by-Demushkin theorem OPEN; blind carrier search STOP/NOT AUTHORIZED.
+
+Detailed audit: research/PAPER4_T1C_A1_INDEPENDENT_CLOSURE_AUDIT_2026-10-03.md. The older a=1 OPEN record is superseded, not deleted.
