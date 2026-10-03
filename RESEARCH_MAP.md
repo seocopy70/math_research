@@ -5310,3 +5310,20 @@ Authoritative classifications:
 - coarsest intrinsic realization: **OPEN**.
 
 Detailed audit: research/PAPER5_TARGET_CLASS_INTRINSIC_CHARACTERIZATION_AUDIT_2026-10-03.md.
+
+
+## 2026-10-03 — PAPER 5 TARGET CLASS → INTRINSIC REALIZATION GROUPOID
+
+The Paper-5 architecture has advanced one step. The target class \(\mathcal C_{d,n}\) is intrinsically characterized as a singleton abstract isomorphism class, and the admissible quotient-realization groupoid \(\mathfrak R^{\mathrm{ad}}_{d,n}(W_n)\) is therefore definable without naming the external Demuškin target. Objects are epimorphisms \(W_n\twoheadrightarrow H\) with \(H\in\mathcal C_{d,n}\) and intrinsic cup-radical \(H^1\)-kernel; gauge is source automorphism plus target isomorphism.
+
+For the declared critical source, existence follows from the established critical quotient and connectedness follows from the general critical-window orbit theorem. The relative Boolean is constant on the groupoid. Thus the useful compression object is now certified as a target-free, one-component realization groupoid, while literal marked-map uniqueness remains closed.
+
+Global classification:
+- target class: **PASS / CLOSED**;
+- target isomorphism class: **PASS / CLOSED**;
+- canonical marked quotient: **FAIL / CLOSED**;
+- intrinsic admissible realization groupoid: **PASS / CLOSED** for the declared critical source/class;
+- Boolean factorization through it: **PASS / LOCAL**;
+- characteristic/coarsest finite realization: **OPEN / LOAD-BEARING**.
+
+This changes the Paper-5 frontier from “remove the external target” to “compress the intrinsic realization groupoid further, or prove that such further compression is impossible.” No closed route is reopened.
