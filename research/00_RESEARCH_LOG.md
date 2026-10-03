@@ -4468,3 +4468,25 @@ This yields **PASS / LOCAL** for realization-independence, but not full intrinsi
 
 The next authorized attack is singular: search for an internal universal/characteristic quotient of W_n that realizes the admissible target, beginning with the intrinsic cup-radical line and characteristic normal subgroups. Stop if the target class remains externally imposed. No carrier hunt, threshold recomputation, degree-5/scalar/norm reopening, or RAAG reopening is authorized.
 Detailed audit: research/PAPER4_INTRINSIC_ORBIT_CATEGORY_GATE_C_AUDIT_2026-10-03.md.
+
+
+## 2026-10-03 — PAPER 5 TARGET CLASS INTRINSIC CHARACTERIZATION
+
+A new target-first result closes the target-class question itself in the declared odd-(p), even-rank Demushkin critical-window setting.
+
+Define the target-free class (mathcal C_{d,n}) by existence of a minimal one-relator pro-(p) lift (F_d/overline{langle!langle rangle!angle}), with (rin D_2\setminus D_3) and nondegenerate alternating initial form, whose depth-(n) quotient (H) has
+[
+H^{ab}cong(mathbf Z/p^{e(n)})^d,qquad e(n)=lceillog_p nceil.
+]
+The lift is Demushkin. By Labute classification it has rank (d) and torsion invariant (qin{0,p,p^2,ldots}). If (q<n), the truncated abelianization has one cyclic factor of exponent (p^{a}<p^{e(n)}), so it fails the intrinsic abelianization test. If (qge n), the power term (x_1^q) lies in (D_n), so the finite quotient agrees with the (q=0) quotient. Hence (mathcal C_{d,n}) is a singleton abstract isomorphism class.
+
+This is not a new classification of Demushkin groups; the novelty boundary is the finite-shadow factorization: the external target identity can be removed from the target class by an intrinsic finite-group criterion, while the marked quotient kernel remains non-canonical by C2.
+
+Classification:
+- target-class intrinsic characterization: **PASS / CLOSED**;
+- target isomorphism-class uniqueness: **PASS / CLOSED**;
+- canonical marked quotient: **FAIL / CLOSED**;
+- existence of such a realization from the unmarked source window (W_n): **OPEN / LOAD-BEARING**;
+- coarsest intrinsic realization: **OPEN**.
+
+Audit: research/PAPER5_TARGET_CLASS_INTRINSIC_CHARACTERIZATION_AUDIT_2026-10-03.md.
