@@ -1,0 +1,4017 @@
+## 2026-10-03 — PAPER 5 ADMISSIBLE COMPRESSION CATEGORY / TRICHOTOMY BOUNDARY CONFIRMED
+
+The compression question was closed at the definition level before any further carrier search.
+
+Define an admissible finite realization factorization over an intrinsic filtered finite group W by
+\[
+(C,e),\qquad e:\mathfrak R^{ad}(W)\to C,
+\]
+with C finite, isomorphism-invariant and functorial under filtered-group isomorphisms. Define
+\[
+(C,e)\preceq(C',e')
+\]
+iff there is a natural map \(u:C'\to C\) with \(e=u\circ e'\). Thus C is at least as compressed as C'.
+
+Two natural preserved-information packages give opposite degenerate endpoints:
+
+1. **Boolean-only package:** requiring only factorization of the relative split/non-split Boolean \(b\) gives the terminal singleton \(\mathbf1\) on the connected critical realization groupoid, because b is constant. Classification: **PASS / CLOSED, but trivial**.
+
+2. **Full-realization package:** requiring preservation of the complete gauge-invariant realization groupoid makes \(\mathfrak R^{ad}(W)\) itself minimal up to categorical equivalence. Further quotienting would discard declared realization information. Classification: **PASS / CLOSED, but tautological**.
+
+Therefore a nontrivial compression theorem requires a strictly intermediate preserved-information package
+\[
+\mathbf{Boolean}\subsetneq I\subsetneq\mathfrak R^{ad}(W)
+\]
+specified independently of the desired conclusion. Candidate examples (target isomorphism class, quotient-map orbit, specified cohomological action, extension-class orbit) are possible, but no current theorem canonically selects one. Choosing one merely to obtain the desired endpoint risks re-encoding the answer into the definition.
+
+Consequently:
+- admissible compression comparison category/order: **PASS / CLOSED**;
+- Boolean compression: **PASS / CLOSED — trivial**;
+- full-realization compression: **PASS / CLOSED — tautological**;
+- absolute/coarsest intrinsic compression without a declared preserved-information package: **FAIL / CLOSED** (ill-posed);
+- nontrivial intermediate compression: **OPEN**;
+- universal characteristic-compression no-go: **OPEN**.
+
+The earlier characteristic-intersection/generated-kernel failures are therefore correctly classified as failures of particular characteristic constructions, not as an absolute no-go for all compressions.
+
+Authorized next action: only test whether the existing realization groupoid and relative extension class **canonically force** an intermediate preserved-information package. If no such package is mathematically forced, the compression trichotomy/boundary is the structural endpoint. No carrier hunt, characteristic-kernel hunt, orbit-category computation, threshold recomputation, or frozen-route reopening is authorized merely to manufacture a smaller object.
+
+Audit: `research/PAPER5_ADMISSIBLE_COMPRESSION_CATEGORY_AUDIT_2026-10-03.md`.
+
+## 2026-10-03 — PAPER 5 COMPRESSION TRICHOTOMY / FINAL MINIMALITY BOUNDARY
+
+The final audit shows that the proposed statement “the realization groupoid is the minimal characteristic invariant” is not a valid theorem as stated. There are three natural meanings of compression. (A) If only the relative split/non-split Boolean must factor, the terminal one-point object already suffices on the connected realization groupoid, so minimality is trivial. (B) If the full realization groupoid must be preserved up to categorical equivalence, any valid compression is equivalent to the realization groupoid; there is no strict smaller information object, only possible skeletons/equivalent models. (C) If a characteristic quotient W/N is required, C2 and the characteristic-subgroup audit rule out the target quotient and the first universal constructions.
+
+Thus the correct endpoint is a logical boundary, not an absolute minimality theorem. A nontrivial “coarsest intrinsic realization” question exists only after a genuinely nontrivial admissible compression category/order is explicitly declared.
+
+Authoritative classification:
+- intrinsic target class: PASS / CLOSED;
+- target-free connected realization groupoid: PASS / CLOSED in the declared class;
+- canonical marked quotient/kernel: FAIL / CLOSED;
+- intersection/generated characteristic compression: FAIL / CLOSED;
+- orbit-category minimality: FAIL / CLOSED as formulated;
+- absolute characteristic-compression no-go: OPEN;
+- coarsest intrinsic realization: OPEN only after declaring a nontrivial compression category;
+- absolute minimality: OPEN only as a separately defined future problem.
+
+Final audit: research/PAPER5_COMPRESSION_TRICHOTOMY_FINAL_BOUNDARY_2026-10-03.md.
+
+STOP: no further carrier hunt, characteristic-kernel hunt, orbit-category computation, or threshold recomputation. Any continuation must first define the admissible compression category/order and pass the full pre-check.
+
+## 2026-10-03 — PAPER 5 ORBIT-CATEGORY PROPOSAL CRITICAL REVIEW
+
+The proposed Aut(W_n)-orbit category is retained only as an auxiliary action/orbit formalism. The proposed minimality theorem is rejected as currently formulated: the mapping-space Hom definition lacks a declared enrichment, connectedness does not imply triviality, and “smaller than the realization groupoid” has no fixed comparison category/order. The two tested characteristic-kernel extremes remain closed no-go results, but they do not imply an absolute characteristic-compression no-go.
+
+Authoritative classification:
+- Aut(W_n)-action on admissible realizations: **PASS / LOCAL**;
+- established one-orbit theorem: **PASS / CLOSED**;
+- proposed orbit-category-as-minimal-object: **FAIL / CLOSED** as formulated;
+- general characteristic compression: **OPEN**;
+- coarsest intrinsic realization: **OPEN**;
+- absolute minimality: **OPEN**.
+
+Audit: research/PAPER5_ORBIT_CATEGORY_CRITICAL_REVIEW_2026-10-03.md.
+
+Next authorized action: define the admissible comparison category/order for “compression” before any genuine minimality/no-go attack. No new orbit-category computation is authorized merely to rescue the rejected minimality formulation.
+
+## 2026-10-03 — PAPER 5 CHARACTERISTIC-SUBGROUP COMPRESSION BOUNDARY
+
+The authorized characteristic-subgroup compression test is closed at the first natural universal constructions. For the full admissible kernel orbit \(\mathcal K(W_n)\), the intersection \(K_\cap\) is characteristic but is strictly smaller than the canonical admissible kernel \(K_0\), so \(W_n/K_\cap\) is strictly larger than \(Q_n\). The generated subgroup \(K_\vee\) is characteristic, contains \(K_0\), and its image in \(Q_n\) contains \(D_2(Q_n)\), hence \(W_n/K_\vee\cong Q_n^{ab}\). Thus neither universal characteristic operation realizes the target class: one retains extra kernel-orbit data, the other collapses to the abelian shadow.
+
+Authoritative status:
+- intersection characteristic quotient as target realization: **FAIL / CLOSED**;
+- generated-kernel characteristic quotient as target realization: **FAIL / CLOSED**;
+- characteristic-kernel realization of \(\mathcal C_{d,n}\): **FAIL / CLOSED**;
+- target-free one-component realization groupoid: **PASS / CLOSED**;
+- coarsest/characteristic compression: **OPEN**;
+- absolute minimality: **OPEN**.
+
+This is a bounded structural boundary, not an absolute no-go for every characteristic finite invariant. The next legitimate question is categorical: whether the action of \(\operatorname{Aut}(W_n)\) on the admissible realization orbit can itself be encoded by a smaller characteristic object without selecting a kernel. No carrier hunt, threshold recomputation, degree-5/scalar/norm route, or RAAG reopening is authorized.
+
+## 2026-10-03 — PAPER 5 GATE C2 CLOSED
+
+Canonical characteristic-quotient reconstruction is closed: the admissible quotient kernels are moved by the certified radical-preserving IA orbit, so no admissible kernel is characteristic. The surviving object is the one-component quotient-realization orbit/category; fully target-free intrinsic realization remains OPEN / LOAD-BEARING. Detailed audit: research/PAPER5_GATE_C2_CHARACTERISTIC_QUOTIENT_NO_GO_AUDIT_2026-10-03.md.
+
+## 2026-10-03 — W10 DEGREE-9 IA ATTACK: POSITIVE CRITICAL RESULT
+
+The final bounded degree-9 relation-aware IA calculation has now been executed on the minimal critical model
+\[
+(p,s,a,n)=(3,2,1,10).
+\]
+For the explicit admissible family \(\pi_c(z)=c,\ \pi_c(x)=x,\ \pi_c(y)=y\), \(c\in D_2(Q_{10})\), the radical-preserving shear \(\alpha_c:z\mapsto zc\) satisfies
+\[
+\boxed{(zc)^9=z^9\pmod{D_{10}}}.
+\]
+A truncated noncommutative Magnus calculation through degree 9 was independently checked on every monomial correction of degrees 2–6 and on random full corrections of degrees 2–4. All degree <10 coefficients vanish. Thus the suspected degree-9 obstruction is preserved.
+
+Since \(x,y\) are fixed, the defining Demuškin relator is fixed; hence \(\alpha_c\) is an actual filtered IA automorphism and \(\pi_1\circ\alpha_c=\pi_c\). Therefore the whole explicit \(\pi_c\) family is one \(\operatorname{Aut}(W_{10})\times\operatorname{Aut}(Q_{10})\)-orbit and carries one relative obstruction value.
+
+Classification:
+- degree-9 radical-preserving IA action: **PASS / CLOSED**;
+- explicit \(\pi_c\) family: **PASS / CLOSED (single orbit)**;
+- obstruction variation inside this family: **FAIL / CLOSED**;
+- same-window separation from this family: **FAIL / CLOSED**;
+- full admissible quotient-map orbit uniqueness: **OPEN / LOAD-BEARING**;
+- full unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**.
+
+The calculation therefore pushes Gate-B toward the positive side, but it does not by itself prove the final orbit-completeness lemma. No carrier search or frozen-route reopening is justified.
+
+Detailed audit: `research/PAPER4_W10_DEGREE9_IA_ACTION_AUDIT_2026-10-03.md`.
+
+## 2026-10-03 — SMALL ORBIT TWO-SIDED GATE-B COMPRESSION TEST
+
+The “one small orbit calculation for both directions” idea is now formalized as a labelled orbit problem on the admissible quotient-map set A of W_10 -> Q_10, with H=Aut(W_10) x Aut(Q_10) and each orbit labelled by the relative split/non-split obstruction. This is a valid single decision architecture: different orbit labels give same-window separation; one common label (even across multiple quotient-map orbits) gives intrinsic determination of the Boolean obstruction. Orbit multiplicity alone is not a no-go.
+
+A concrete admissible family remains: pi_c(z)=c, pi_c(x)=x, pi_c(y)=y for c in D_2(Q_10). H^1 data do not separate this family. A free Magnus/augmentation-algebra shadow check shows no degree<10 difference for degree>=2 radical corrections, but this is diagnostic only; the Demushkin relation must be imposed in the truncated relation algebra. The relation-aware D_3/D_4 IA orbit remains the sole load-bearing computation.
+
+Classification:
+- two-sided orbit-decision principle: **PASS / LOCAL**;
+- explicit pi_c family: **PASS / LOCAL**;
+- relation-aware full orbit decomposition: **OPEN / LOAD-BEARING**;
+- same-window separation: **OPEN**;
+- unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**.
+
+Next authorized action: compute the relation-aware radical-preserving IA action on pi_c first on D_3(Q_10)/D_4(Q_10), then propagate the orbit labels to the relative obstruction. No carrier search or frozen-route reopening.
+
+## 2026-10-03 — PAPER 4 TARGET DECISION NOW PENDING / BOUNDED INTRINSIC FEASIBILITY GATE
+
+The realistic completion target remains mathematically safe, but the user has not yet permanently selected it over the original target. Before final packaging, a bounded **Intrinsic Reconstruction Feasibility Gate** may be run. Its sole first-order question is whether the critical unmarked window (W_{p^s+1}) canonically reconstructs sufficient marked quotient/extension data; in parallel, test for an admissible same-window separation pair. This is a decision gate, not authorization for blind carrier search or threshold recomputation.
+
+Decision outcomes:
+- canonical reconstruction succeeds → reconsider continuing the original intrinsic program;
+- same-window separation succeeds → establish an intrinsic impossibility/boundary result;
+- neither succeeds within the predeclared bounded effort → return to realistic Paper 4 completion.
+
+Current classifications are unchanged mathematically: certified relative theorem **PASS / CLOSED** on (a\ge2,s>a); (a=1) **OPEN / LOAD-BEARING**; unmarked reconstruction **OPEN / LOAD-BEARING**; same-window separation **OPEN**; coarsest intrinsic realization **OPEN**. This banner supersedes only the immediate decision posture, not the theorem-status records below.
+
+## 2026-10-03 — PAPER 4 REALISTIC COMPLETION TARGET FROZEN
+
+The project now adopts the realistic completion target for Paper 4. The paper is to be finished as a rigorously scoped positive theorem plus an explicit logical-boundary section, rather than waiting for the original unmarked/coarsest intrinsic-realization target.
+
+Principal theorem target:
+[
+G_{s,a}=langle z,x_1,ldots,x_dmid z^{p^s}=r_D
+angle,qquad s>age2,
+]
+in the declared rank-two stress-family / higher-rank reduction scope, with marked relative finite windows
+[
+1	o K_n	o W_n	o Q_n=D/D_n(D)	o1.
+]
+The certified result is
+[
+n_{
+m sep}^{
+m rel}(s)=p^s+1:
+quad nle p^sRightarrow	ext{split},qquad
+n=p^s+1Rightarrow	ext{nonsplit}.
+]
+Classification: **PASS / CLOSED** for the currently certified nonboundary subfamily (age2, s>a).
+
+The proof must be packaged as explicit lemmas/propositions:
+1. low-window splitting;
+2. integral Fox divisibility obstruction;
+3. finite-kernel survival via the explicit (Q)-equivariant pushout/naturality bridge;
+4. higher-rank reduction;
+5. exact theorem with scope (age2).
+
+The (a=1) boundary remains **OPEN / LOAD-BEARING**. The recently proposed abstract witness is only PASS / LOCAL because it fails the required (Q_s)-equivariant pushout compatibility; it must not be used to close (a=1).
+
+The paper must explicitly separate:
+- marked/relative theorem: CLOSED in the certified scope;
+- unmarked (W_n)-only reconstruction: OPEN / LOAD-BEARING;
+- arbitrary free-by-Demushkin generalization: OPEN;
+- coarsest intrinsic compression: OPEN.
+
+The unmarked p=3,n=4 computation remains **PASS / LOCAL (provisional)** pending a reproducible enumeration certificate, complete relation checks, generation checks, and the (D_3)-coset reduction lemma. It is optional for the realistic paper closure and must not be promoted to a principal theorem without those checks.
+
+Frozen/not required for realistic completion: degree-5 reopening, scalar/norm shortcuts, blind carrier search, RAAG orientation branch, arbitrary-extension generalization, coarsest compression, and forcing (a=1) closed.
+
+Immediate completion work is proof packaging and manuscript reconstruction, not new carrier discovery.
+
+Classification:
+- realistic scoped Paper 4 completion: **CONDITIONAL** pending final proof audit/package and manuscript verification;
+- certified relative theorem: **PASS / CLOSED**;
+- (a=1): **OPEN / LOAD-BEARING**;
+- unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**;
+- coarsest intrinsic compression: **OPEN**.
+
+## 2026-10-03 — T1-C UNMARKED n=4 / p=3 FULL ENUMERATION CLAIM RE-AUDIT
+
+A new reported computation claims that for p=3, n=4=p+1, rank 2, the unmarked windows of the stress family split into four abstract isomorphism classes:
+- A: (s>=2,a=1) together with (s=∞,a=1);
+- B: (s>=2,a>=2) together with (s=∞,a>=2);
+- C: (s=1,a=1);
+- D: (s=1,a>=2).
+
+All have order 3^13, with cheap invariants agreeing within the tested comparisons; GAP IsomorphismGroups did not finish in the reported time. A finite exhaustive test is reported to distinguish the classes by enumerating candidate generator triples modulo D_3.
+
+Independent logical audit: the claimed four-class result is **not yet promoted to PASS / CLOSED** in the repository because the reproducible enumeration artifact/proof certificate is not yet recorded. In particular, the implication “a generating triple satisfying the presentation relation exists iff the two windows are isomorphic” requires all defining relations and generation to be checked, not merely the principal relator. The reduction from arbitrary elements of W_4 to D_3-coset representatives also requires an explicit lemma that changing lifts by D_3 changes every relevant relation value only by D_4, and the enumeration must verify generation rather than existence of a non-generating solution.
+
+Subject to those checks, the reported computation would establish a genuine **PASS / LOCAL** base-case unmarked separation result: the abstract W_4 distinguishes s=1 from s>=2 and a=1 from a>=2 in this rank-two p=3 family. It would not yet prove the general n=p^s+1 statement, nor “marked map reconstruction”.
+
+The earlier statement that Paper 3 still has a “candidate-free q=3 versus q=∞ reconstruction gap” is rejected: Paper 3 T0 is already closed. The present Gate B is strictly the unmarked finite-window problem.
+
+Authorized next step is therefore the proposed gr-level route, but in a weaker and more precise form:
+1. identify an intrinsic characteristic filtration/line/plane in W_{p^s+1};
+2. prove that every abstract isomorphism preserves that structure;
+3. express the stress relator/extension-depth predicate intrinsically relative to that structure;
+4. only then derive parameter recovery.
+Do not assume at the outset that an arbitrary isomorphism preserves the original marked generators.
+
+The computation also should be preserved as a base-case control, even if the general theorem fails.
+
+Classification:
+- reported p=3,n=4 unmarked four-class separation: **PASS / LOCAL (provisional; certificate pending)**;
+- general n=p^s+1 unmarked separation: **OPEN / LOAD-BEARING**;
+- canonical reconstruction of the marked quotient map: **OPEN**;
+- Paper 3 q=3 vs q=∞ candidate-free issue: **HISTORICAL / SUPERSEDED**.
+## 2026-10-03 — T1-C A=1 WITNESS RE-AUDIT CONFIRMED / INDEPENDENT WITNESS DOES NOT CLOSE A=1
+
+The latest end-to-end re-audit confirms the previous apparent a=1 closure was invalid at the relative level. The proposed witness
+\[
+H_s: z^{p^{s+1}}=1,\quad x^p=z^{p^s},\quad yzy^{-1}=z^{1-p},\quad yxy^{-1}=x
+\]
+is a valid abstract quotient of the a=1 stress presentation and has genuine critical visibility, including
+\[
+(y-1)^s z=(-p)^s z\ne0.
+\]
+However, the required marked/relative transfer is through a \(Q_s=D/D_{p^s+1}(D)\)-equivariant pushout. The witness has \([x,y]=1\), whereas the reference Demuškin quotient has \([x,y]=x^{-p}\); since \(x^p\) is not killed at the critical window, the canonical images do not commute. Thus no compatible map \(H_s\to Q_s\) sending \(x,y\) to the canonical reference generators exists. The witness therefore cannot transport its section-defect class to the marked relative extension.
+
+This supersedes the earlier “a=1 independent closure” wording. It does not affect the certified nonboundary result.
+
+Authoritative status after this re-audit:
+- a=1 abstract witness: **PASS / LOCAL**;
+- a=1 critical visibility inside \(H_s\): **PASS / LOCAL**;
+- this witness as a \(Q_s\)-equivariant pushout: **FAIL / CLOSED**;
+- a=1 marked finite-kernel survival: **OPEN / LOAD-BEARING**;
+- a=1 exact relative threshold: **OPEN / LOAD-BEARING**;
+- a>=2, s>a relative threshold \(n_{\mathrm{sep}}^{\mathrm{rel}}=p^s+1\): **PASS / CLOSED**;
+- unmarked reconstruction/separation: **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+Methodological rule strengthened: every future witness must pass the pair
+\[
+G\twoheadrightarrow H\quad\text{and}\quad H\to Q_s
+\]
+with the required equivariance/compatibility before it can be counted as a relative survival witness. An abstract finite quotient alone is insufficient.
+
+No reopening of the frozen threshold, degree-5 route, scalar/norm shortcut, or RAAG orientation no-go is authorized. Gate A (a=1) and Gate B (unmarked reconstruction/separation) remain independent; Gate B is the main line.
+
+## 2026-10-03 — T1-C SCOPE CORRECTION: a=1 SURVIVAL GAP / NONBOUNDARY TEST
+
+Critical re-audit found a genuine load-bearing error in the current T1-C generalization. The integral Fox divisibility calculation itself permits all s>a>=1, but the stated metabelian survival witness uses r=floor(s/a) and (y-1)^r z=p^r z !=0 in C_{p^s}, which requires r<s. This fails when a=1: then r=s and p^r z=p^s z=0. Therefore the metabelian quotient does NOT certify actual finite-kernel survival for the entire previously declared range a>=1.
+
+The relative threshold theorem is consequently retained only for the nonboundary subfamily for which the existing survival argument actually works, in particular a>=2 (with s>a), pending an independent witness for a=1. The previously stated all-a>=1 PASS/CLOSED claim is superseded and must not be used.
+
+Authorized representative nonboundary test: (p,s,a)=(3,5,2), so q=9, r=2<s=5, and n=p^s+1=244. This is deliberately chosen to avoid the a=1 boundary. The earlier (3,2,1), n=10 calculation remains valid for the degree-5 mod-p gauge test, but it is NOT a valid generic witness for the integral finite-kernel survival theorem.
+
+Status after correction:
+- integral Fox divisibility on the stress presentation: PASS / LOCAL for s>a>=1;
+- actual finite-kernel survival via the stated metabelian witness: PASS / CLOSED for a>=2, OPEN for a=1;
+- exact relative threshold p^s+1: PASS / CLOSED for the currently certified nonboundary subfamily a>=2; OPEN for a=1;
+- unmarked intrinsic factorization: OPEN / LOAD-BEARING;
+- blind carrier search: STOP / NOT AUTHORIZED.
+
+This correction takes precedence over any older “all a>=1” threshold label.
+
+## 2026-10-03 — T1-C UNMARKED SAME-WINDOW FINAL BOUNDARY
+
+The post-threshold unmarked same-window test has been pushed to its logical boundary. No valid pair of admissible marked extension diagrams with isomorphic underlying finite windows but different relative splitting data has been established. The earlier RAAG same-underlying-group/different-orientation no-go does not transfer to the present extension-class target, and postcomposition of the quotient map by an automorphism preserves split/non-split.
+
+Therefore the relative theorem is **not** to be downgraded merely because its proof uses the marked quotient map, but neither may it be promoted to an intrinsic theorem. The exact remaining alternatives are:
+1. prove the marked quotient map is canonically reconstructible from the unmarked finite window; or
+2. construct an admissible same-window pair with different relative obstruction data.
+
+Current frontier:
+- relative threshold (n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1): **PASS / CLOSED** for the declared stress family;
+- unmarked same-window no-go: **OPEN**;
+- canonical reconstruction of the marked quotient: **OPEN / LOAD-BEARING**;
+- intrinsic factorization/coarsest realization: **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+No recomputation of (p^s+1), no degree-5 reopening, and no scalar/norm shortcut reopening.
+Detailed audit: research/PAPER4_T1C_UNMARKED_SAME_WINDOW_FINAL_BOUNDARY_AUDIT_2026-10-03.md.
+
+## 2026-10-03 — T1-C INTRINSIC FACTORIZATION PRE-CHECK / UNMARKED INPUT GATE
+
+The post-threshold target-first pre-check has been completed. The relative obstruction is naturally a property of the marked extension diagram
+\[
+1\to K_n\to W_n\xrightarrow{\pi}D/D_n(D)\to1,
+\]
+not of \(W_n\) alone. After forgetting \(\pi\), the distinguished quotient and kernel are no longer part of the input unless they are canonically reconstructible.
+
+Therefore no intrinsic carrier may yet be constructed. Object/Input/Functoriality are not passed for the unmarked factorization as currently formulated. This is an input-category obstruction, not yet a same-window no-go theorem.
+
+The next authorized task is singular: design and test the unmarked same-window separation question—can two admissible marked extension diagrams with different relative threshold data have isomorphic underlying finite windows at the same depth? Only if this negative test fails should a positive intrinsic reconstruction be attempted.
+
+Classification:
+- marked relative extension threshold: **PASS / CLOSED**;
+- unmarked factorization: **OPEN / LOAD-BEARING**;
+- unmarked same-window no-go: **OPEN**;
+- coarsest intrinsic realization: **OPEN**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+Detailed audit: research/PAPER4_T1C_INTRINSIC_FACTORIZATION_PRECHECK_2026-10-03.md.
+
+## 2026-10-03 — T1-C POST-THRESHOLD CRITICAL RE-AUDIT / THRESHOLD FROZEN
+
+The preceding general integral Fox calculation has now been critically re-audited. The declared rank-two stress-family relative threshold
+\[
+n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1
+\]
+is **PASS / CLOSED**. The integral divisibility calculation, finite-kernel survival control, and splitting for every \(n\le p^s\) form the load-bearing chain.
+
+A remaining proof-packaging point is now isolated rather than treated as a mathematical OPEN: the metabelian survival argument should be stated through the standard pushout/naturality lemma for section-defect classes. Under a \(Q\)-equivariant map of kernels, section-change coboundaries map to section-change coboundaries; hence a nonzero pushed-out class in the metabelian quotient implies nonzero class before pushout. The same naturality language should be used for the higher-rank quotient obtained by setting extra Demuškin generators to 1.
+
+This does not enlarge the theorem scope. The result remains a **relative extension-depth threshold theorem for the declared stress family**, not an unmarked filtered-group theorem and not a universal free-by-Demushkin theorem.
+
+Frozen:
+- \(n\le p^s\) splitting: **PASS / CLOSED**;
+- critical nonsplitting at \(p^s+1\): **PASS / CLOSED** for the declared stress family;
+- exact \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\): **PASS / CLOSED** for the declared stress family;
+- degree-5/mod-p obstruction routes: **FAIL / CLOSED** and must not be reopened;
+- scalar/coinvariant/norm shortcuts: **FAIL / CLOSED** and must not be reopened.
+
+Remaining:
+- arbitrary free-by-Demushkin extension theorem: **OPEN**;
+- unmarked filtered-group realization: **OPEN**;
+- intrinsic/coarsest finite realization and strict compression: **OPEN**;
+- orientation recovery from Gate T: **OPEN / NOT ESTABLISHED**.
+
+Next authorized task: perform a fresh target-first pre-check for whether the relative threshold obstruction factors through an intrinsic finite-window object after forgetting the chosen map to \(D/D_n(D)\). No blind carrier search.
+Detailed audit: research/PAPER4_T1C_POST_THRESHOLD_CRITICAL_REAUDIT_2026-10-03.md.
+
+## 2026-10-03 — T1-C POST-THRESHOLD CRITICAL RE-AUDIT / THRESHOLD FROZEN
+
+The preceding general integral Fox calculation has now been critically re-audited. The declared rank-two stress-family relative threshold
+\[
+n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1
+\]
+is **PASS / CLOSED**. The integral divisibility calculation, finite-kernel survival control, and splitting for every \(n\le p^s\) form the load-bearing chain.
+
+A remaining proof-packaging point is now isolated rather than treated as a mathematical OPEN: the metabelian survival argument should be stated through the standard pushout/naturality lemma for section-defect classes. Under a \(Q\)-equivariant map of kernels, section-change coboundaries map to section-change coboundaries; hence a nonzero pushed-out class in the metabelian quotient implies nonzero class before pushout. The same naturality language should be used for the higher-rank quotient obtained by setting extra Demuškin generators to 1.
+
+This does not enlarge the theorem scope. The result remains a **relative extension-depth threshold theorem for the declared stress family**, not an unmarked filtered-group theorem and not a universal free-by-Demushkin theorem.
+
+Frozen:
+- \(n\le p^s\) splitting: **PASS / CLOSED**;
+- critical nonsplitting at \(p^s+1\): **PASS / CLOSED** for the declared stress family;
+- exact \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\): **PASS / CLOSED** for the declared stress family;
+- degree-5/mod-p obstruction routes: **FAIL / CLOSED** and must not be reopened;
+- scalar/coinvariant/norm shortcuts: **FAIL / CLOSED** and must not be reopened.
+
+Remaining:
+- arbitrary free-by-Demushkin extension theorem: **OPEN**;
+- unmarked filtered-group realization: **OPEN**;
+- intrinsic/coarsest finite realization and strict compression: **OPEN**;
+- orientation recovery from Gate T: **OPEN / NOT ESTABLISHED**.
+
+Next authorized task: perform a fresh target-first pre-check for whether the relative threshold obstruction factors through an intrinsic finite-window object after forgetting the chosen map to \(D/D_n(D)\). No blind carrier search.
+Detailed audit: research/PAPER4_T1C_POST_THRESHOLD_CRITICAL_REAUDIT_2026-10-03.md.
+
+## 2026-10-03 — T1-C DEGREE-5 TEST REFORMULATED: \(\operatorname{ad}_{x_2}\)-COKERNEL IS NOT THE GAUGE QUOTIENT
+
+The proposed minimal split “compute \(R_5\bmod\operatorname{Im}(\operatorname{ad}_{x_2})\)” was critically audited before execution. It is **not** the correct gauge-invariant degree-5 obstruction.
+
+The reason is structural: \(R_5\) is a residual in a nonlinear lifting problem, while admissible lift changes are governed by the full filtered Fox/relation-module differential. The degree-5 gauge image is therefore not, in general, the single subspace
+\[
+\operatorname{Im}\bigl(\operatorname{ad}_{x_2}:\operatorname{gr}_4K_s\to\operatorname{gr}_5K_s\bigr).
+\]
+A class may lie outside \(\operatorname{Im}(\operatorname{ad}_{x_2})\) and nevertheless be removed by a different admissible generator/lift correction, or by a coupled Fox differential involving the power and commutator parts. Conversely, membership in the \(\operatorname{ad}_{x_2}\)-image does not by itself identify the full coboundary quotient.
+
+This matters especially because the preceding first-order computation already showed that the candidate \([z^{p^{s-a}},x_2]\) is generated by the Fox/lift-change differential. The correct higher-degree object is therefore the filtered cokernel
+\[
+\mathcal C_{s,d}
+=
+\frac{\text{all degree-}d\text{ defect directions}}
+{\operatorname{Im}(\text{full admissible Fox/lift-change differential at degree }d-1)},
+\]
+with the actual finite-kernel/module relations imposed first. Only a nonzero class in this quotient is a genuine \(A_s\)-level obstruction.
+
+Consequently the suggested degree-5 binary test
+\[
+R_5\in\operatorname{Im}(\operatorname{ad}_{x_2})
+\quad\text{vs.}\quad
+R_5\notin\operatorname{Im}(\operatorname{ad}_{x_2})
+\]
+is **FAIL / CLOSED as a load-bearing criterion**. It is at most a diagnostic inside a chosen normal form, not an intrinsic obstruction test.
+
+This is not a retreat from the calculation. It removes one more false shortcut. The next and only authorized computation is the actual degree-5 component of the full Fox/lift-change cokernel in the minimal model \((p,s,a)=(3,2,1)\), after the finite-kernel quotient is fixed. If that component is zero, degree 5 yields no \(A_s\)-obstruction; if nonzero, it is a genuine gauge-invariant candidate. No \(B_s\) branch opens before this quotient is resolved.
+
+Classification:
+- degree-5 raw residual: **OPEN / DIAGNOSTIC**;
+- \(R_5\) modulo \(\operatorname{ad}_{x_2}\) as obstruction: **FAIL / CLOSED**;
+- degree-5 full Fox/lift-change cokernel: **OPEN / LOAD-BEARING**;
+- complete mod-\(p\) first-order Fox cokernel: **FAIL / CLOSED**;
+- integral \(A_s\)-level extension obstruction: **OPEN / LOAD-BEARING**;
+- full finite extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact \(n_{\mathrm{sep}}^{rel}=p^s+1\): **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+## 2026-10-03 — GATE T1-C CRITICAL WORDING CORRECTION / A_s FIRST DIAGNOSTIC, NOT YET COMPUTED
+
+A referee-level re-audit tightens three load-bearing statements without changing the Gate-T frontier.
+
+1. The scalar lift correction (x_1\mapsto z^{-p^{s-a}}x_1) is **not** an established cancellation in the full finite extension. Since (z) is not known central in (G_{s,a}), the exact lift-change term is governed by the action/norm operator (N_{p^a}(T_{x_1})), whose augmentation is (p^a). What is proved is only that the **coinvariant/augmentation scalar defect is killable**. The non-augmentation residual is OPEN.
+
+2. (A_s=K_s/[K_s,K_s]) is not yet “computed”. The authorized task is the actual finite-kernel construction (G_{s,a}\to W_s\to Q_s\to K_s\to A_s), followed by the genuine (mathbf F_p[Q_s])-module structure and quotient by all lift-change coboundaries. A Fox matrix is a presentation differential/input to this calculation; it is not automatically identical to (A_s).
+
+3. (B_s=\gamma_2(K_s)/\gamma_3(K_s)) is only the **next fallback diagnostic if the (A_s)-level obstruction vanishes**. It must not be called the universally first nonabelian obstruction.
+
+The clean current question is therefore:
+[
+1\to K_s\to W_s\to Q_s\to1
+\quad\rightsquigarrow\quad
+1\to A_s\to W_s/[K_s,K_s]\to Q_s\to1,
+]
+and whether the induced module-valued extension defect remains nonzero after all section/lift coboundaries are quotiented. If nonzero, nonsplitting follows. If zero, no splitting conclusion follows; only then inspect (B_s).
+
+Also record the formal scope condition (a\ge1) (equivalently (q=p^a>1)) whenever using (2p^{s-a}<p^s+1).
+
+Authoritative classification remains:
+- critical-layer visibility: PASS / LOCAL;
+- coinvariant scalar obstruction: FAIL / CLOSED;
+- critical norm as nonzero witness: FAIL / CLOSED;
+- actual (A_s)-level extension class: OPEN / LOAD-BEARING;
+- critical nonsplitting: OPEN / LOAD-BEARING;
+- exact (n_{\rm sep}^{rel}(s)=p^s+1): OPEN / LOAD-BEARING;
+- blind carrier search: STOP / NOT AUTHORIZED.
+
+No Gate-T reversal or new carrier branch is implied.
+
+## 2026-10-02 — P4-Q+ CLASS-2 NORM-ACTION REDUCTION: FIRST SURVIVING NONABELIAN DATUM
+
+The first authorized strict-compression candidate
+\[
+C_n^{(2)}:1\to K_n/\gamma_3(K_n)\to W_n/\gamma_3(K_n)\to D/D_n(D)\to1
+\]
+was reduced to its first genuinely nonabelian stress datum.
+
+For \(A_n=K_n/\gamma_2(K_n)\), \(B_n=\gamma_2(K_n)/\gamma_3(K_n)\), the class-2 quotient retains the \(D/D_n(D)\)-action. For the stress relation \(z^{p^s}=r_D\), commutatoring with \(x\in D\) yields, at the kernel-abelianized class-2 level, the norm-action identity
+\[
+N_{p^s}(T_x)c_x(\bar z)=[r_D,x],
+\qquad N_{p^s}(T_x)=1+T_x+\cdots+T_x^{p^s-1}.
+\]
+After coinvariants \(T_x\mapsto1\), this becomes \(p^s\), reproducing the already CLOSED H1/E2 saturation modulo \(p^a\). Before coinvariants, the full norm operator remains available and is not forced to collapse by the earlier E2 no-go.
+
+Thus the class-2 candidate is **not closed** by the H1/E2/ordinary-graded results. The first surviving nonabelian datum is the norm-action orbit together with the induced \((A_n,B_n,\beta_n,\rho_n,\text{power map})\).
+
+Current classification:
+- class-2 A1–A5/A8: **PASS / LOCAL**;
+- non-coinvariant norm-action datum: **PASS / LOCAL**;
+- factor-through H1/E2/ordinary graded: **OPEN**;
+- T1 threshold separation: **OPEN / LOAD-BEARING**;
+- A6 strictness: **OPEN**;
+- A7 non-reencoding: **OPEN**.
+
+Next authorized action is singular: at the first depth \(n(m)\) containing the \(p^m\)-layer, compute the gauge-orbit of the norm-action data for the smallest \(a<s<m\) versus \(s\ge m\). No raw Magnus/Fox scalar search.
+
+Detailed audit: `research/PAPER4_QPOS_CLASS2_FACTOR_THROUGH_AUDIT_2026-10-02.md`.
+
+## 2026-10-02 — T1 CORRECTION COMPLETED / LOCAL PASS BUT GLOBAL AFFINE FAILURE RESTORED
+
+The corrected full-filtered normalized locus was tested to completion on the authorized controls.
+
+Chordal tree:
+[
+a	o s, b	o t, a	o u, b	o u
+]
+gives normalized directions (s,u,t) and hence affine hull
+[
+alpha+eta+gamma=1=omega_q^{-1}(1).
+]
+So the corrected lower-filtration + q-defect mechanism is **PASS / LOCAL** and the chordal-tree control no longer supplies a no-go.
+
+However, the mixed ordinary control supplies a genuine global obstruction. An ordinary non-origin direction (z) with no special incidence to the origin sector has no normalized q-flat witness: nonincident pairs have lower-degree commutator, while ordinary commuting pairs have zero q-defect. Thus the corrected normalized locus does not span arbitrary (z)-directions, whereas the full canonical hyperplane (omega_q^{-1}(1)) does.
+
+Therefore:
+- old separated (s+t) counterexample: **HISTORICAL / SUPERSEDED**;
+- corrected full-filtered local mechanism: **PASS / LOCAL**;
+- corrected chordal-tree affine reconstruction: **PASS / LOCAL**;
+- full affine-hull theorem on the orientation-rigid class OR: **FAIL / CLOSED**;
+- special-incidence-sector reconstruction: **OPEN / LOAD-BEARING**;
+- full orientation recovery: **OPEN**, requiring a richer nonlinear extension datum.
+
+This is a cleaner failure than the old one. The corrected local mechanism recovers the normalization on the special-incidence sector, but it does not encode the zero extension to ordinary directions or distinguish mixed directions carrying special mass from ordinary directions.
+
+The normal-closure conjugation action remains the authorized next structural object; the branch is not closed globally.
+
+Detailed audit: research/PAPER4_T1_CONVENTION_CORRECTION_REOPEN_AUDIT_2026-10-02.md.
+
+## 2026-10-02 — T1 CONVENTION CORRECTION / AFFINE-HULL REOPENED
+
+A referee-level recheck found that the earlier separated two-sink counterexample to the T1 affine-hull theorem was invalid. The error was the assertion that the absent edge between (t) and (a) implied ([t,a]=1). In an oriented pro-(p) RAAG, absent edges impose no relation; only ordinary edges commute, while special edges impose (wuw^{-1}=u^{1+q}). The literature confirms this convention. citeturn15search0turn4search0
+
+Therefore the old calculation
+[
+(st)a(st)^{-1}=sas^{-1}
+]
+is false. The mixed element (s+t) has lower-filtration contamination from (t) against (a), so it is not a valid normalized witness for the full filtered signature.
+
+Consequently:
+- old T1 separated (s+t) affine-hull no-go: **HISTORICAL / SUPERSEDED**;
+- full-filtered normalized local locus (mathcal S_E^{flat}): **OPEN / LOAD-BEARING**;
+- rank-two special-edge control: **PASS / LOCAL**;
+- overlapping common-sink control: **PASS / LOCAL**;
+- chordal-tree control: **OPEN / LOAD-BEARING**;
+- unrestricted finite-window recovery: **FAIL / CLOSED** remains unchanged by the isolated-special same-window obstruction.
+
+The corrected T1 target is
+[
+mathcal S_E^{flat}
+={ar u:exists,ar xin O, [u,x]in D_q, [u,x]equiv P_E(x)pmod{D_{q+1}}},
+]
+with lower-filtration flatness imposed before the q-layer projection. The candidate affine theorem
+[
+operatorname{Aff}(mathcal S_E^{flat})stackrel{?}{=}omega_q^{-1}(1)
+]
+is reopened only on an orientation-rigid restricted class.
+
+This correction also weakens the previous claim that the repaired normal-closure nonlinear action is the unique next route. The authorized order is now: chordal-tree test of (mathcal S_E^{flat}) first; only if it fails, derive the exact surviving kernel and then return to the normal-closure action.
+
+Detailed audit: research/PAPER4_T1_CONVENTION_CORRECTION_REOPEN_AUDIT_2026-10-02.md.
+
+
+
+## 2026-10-02 — D3 MINIMAL NONLINEAR EXTENSION-ACTION FRONTIER
+
+The authorized D3 step has now been executed at the definition/pre-check level. The first surviving nonlinear object is the full filtered finite extension together with the intrinsic conjugation action on the subgroup generated by the complete lift-fibres of the recovered origin sector O_q.
+
+Status:
+- D1 depth signature → orientation: FAIL / CLOSED.
+- D2 relation quotient from D1: FAIL / CLOSED.
+- first coefficient-valued incidence quotient: FAIL / CLOSED.
+- full nonlinear finite extension-action object: PASS / LOCAL as an admissible candidate.
+- finite orientation factorization through it: OPEN / LOAD-BEARING.
+- unrestricted bare finite-window orientation recovery: FAIL / CLOSED.
+- orientation-rigid restricted class: OPEN / LOAD-BEARING.
+- absolute minimality: OPEN / NOT AUTHORIZED.
+
+The candidate is q-blind, functorial, and lift/section-independent at the object level. Its survival mechanism is multiplicative conjugation, which is exactly where the special-edge correction wvw^{-1}=v^{1+q} lives and which the D1 depth signature and first coefficient projection discard.
+
+Four controls:
+1. rank-two special edge: PASS / LOCAL;
+2. separated two-sink: PASS / LOCAL;
+3. long ordinary-chain: PASS / LOCAL;
+4. chordal-tree: OPEN / LOAD-BEARING because the first coefficient kernel obstruction does not automatically lift to the full extension.
+
+The literature confirms that the canonical orientation of specially oriented pro-p RAAGs is characterized by the Kummerian condition and that local two-generator orientation is structurally determined. This is a methodological bridge, not yet a finite-window reconstruction theorem.
+
+The next authorized action is singular: prove or refute the orientation bridge from the full nonlinear conjugation action to omega_q on an explicitly orientation-rigid class. The proof must include mixed degree-one elements, overlapping/separated sinks, lower-filtration contamination, and the chordal-tree control. If a nonzero-orientation full-action kernel is found, classify FAIL / CLOSED and stop the branch.
+
+Detailed audit: research/PAPER4_D3_MINIMAL_NONLINEAR_EXTENSION_AUDIT_2026-10-02.md.
+
+## 2026-10-02 — D2 CONVENTION CORRECTION
+
+The separated two-sink discussion in the new D2/extension audits has been corrected: absence of an edge does not imply commutation in the oriented pro-p RAAG convention. Mixed vectors can therefore carry lower-filtration contamination. This does not change D2: the rank-two special-edge model alone proves that the D1 depth signature is scalar-blind while the canonical orientation is not. The coefficient-valued extension carrier remains closed by the chordal-tree kernel obstruction.
+## 2026-10-02 — CONVENTION CORRECTION TO D2/EXTENSION AUDITS
+
+A convention-sensitive overstatement in the separated two-sink discussion was corrected immediately. In the oriented pro-p RAAG convention, absence of an edge does not imply commutation. Therefore mixed vectors such as (s+t) may have lower-filtration contamination against the wrong origin; they are not automatically identical to a pure sink in the full D1 depth signature.
+
+This correction does not change the D2 verdict. The rank-two special-edge model alone gives the decisive scalar-fiber obstruction:
+\[
+S_E(\lambda\bar w)=S_E(\bar w),\qquad
+\omega_q(\lambda\bar w)=\lambda,
+\]
+for (\lambda\in\mathbf F_p^\times), (\lambda\ne1).
+
+The coefficient-valued extension audit is likewise controlled by the chordal-tree obstruction (u-s-t\in\ker\delta) with nonzero orientation mass; the earlier separated-model normalization claim is superseded.
+
+Detailed corrections are appended to the D2 and minimal-coefficient-extension audit documents.
+## 2026-10-02 — PAPER 4 D2 SIGNATURE-RELATION QUOTIENT NO-GO
+
+The authorized D2 attack was completed.
+
+D1 defines the global lower-filtration depth signature
+\[
+S_E(u)=\mathcal L_E(u)=(\mathscr R_m(u))_m,
+\]
+which records attainable commutator depths but not the nonzero leading coefficient.
+
+The decisive rank-two special-edge model
+\[
+G=\langle v,w\mid wvw^{-1}=v^{1+q}\rangle
+\]
+shows that for every \(\lambda\in\mathbf F_p^\times\),
+\[
+S_E(\lambda\bar w)=S_E(\bar w),
+\]
+while
+\[
+\omega_q(\lambda\bar w)=\lambda\ne1=\omega_q(\bar w)
+\]
+for \(\lambda\ne1\). Hence the canonical orientation cannot factor through the D1 signature, nor through any quotient/relation object whose information is exhausted by those signature values.
+
+This is a stronger obstruction than the earlier chordal-tree kernel result: D1 already loses scalar normalization before any quotient is formed.
+
+Independent controls:
+- separated two-sink: nonzero scalar multiples of each sink direction have identical depth signatures, while their orientation values scale;
+- chordal tree: the coefficient-valued incidence relation \(u-s-t\) lies in the q-defect kernel but has \(\omega_q(u-s-t)=-1\ne0\), so simply restoring coefficients via the incidence package does not produce an orientation quotient.
+
+Therefore:
+- D1 depth signature: **PASS / LOCAL**;
+- D2 quotient from relations among D1 signatures: **FAIL / CLOSED**;
+- D2 orientation factorization through D1: **FAIL / CLOSED**;
+- coefficient-valued incidence quotient as orientation carrier: **FAIL / CLOSED**;
+- restricted-origin coefficient-valued extension datum: **OPEN / LOAD-BEARING**;
+- unrestricted Gate D: **FAIL / CLOSED**.
+
+The next authorized step is singular: define the smallest coefficient-valued intrinsic extension object that augments D1 enough to restore scalar normalization, then run a fresh full pre-check before computation. This is not authorization for a new unconstrained carrier hunt.
+
+Detailed audit: research/PAPER4_D2_SIGNATURE_RELATION_QUOTIENT_NO_GO_AUDIT_2026-10-02.md.
+
+## 2026-10-02 — PAPER 4 FILTERED q-PROFILE QUOTIENT / UNIQUENESS BOUNDARY
+
+The dangerous-model attack was completed.
+
+The long ordinary chain
+\[
+r_1-r_2-a\to s
+\]
+confirms the lower-filtration mechanism: for the origin \(a\), \([s,a]\) first survives at degree \(q\), while \([r_1,a]\) has a degree-2 obstruction. Hence \([s+r_1,a]\notin D_q\). The q-layer projection can hide this obstruction, but the full filtered profile rejects it.
+
+However, the same model shows that the normalized filtered-profile locus need not affinely span the ambient \(U=L_1/O_q\): ordinary non-origin directions can remain in \(U\) while carrying canonical orientation value 0. Thus the ambient statement
+\[
+\operatorname{Aff}(\mathcal S_q)=\omega_q^{-1}(1)
+\]
+is **FAIL / CLOSED as stated**.
+
+A stronger mixed test uses the disjoint union
+\[
+(a\to s)\sqcup\{z\}_{\rm ordinary}.
+\]
+Modulo the recovered origin sector, \(s\) has the normalized q-profile, while \(z\) is blocked by a lower-degree commutator. The profile therefore sees \(s\) but imposes no value on the \(z\)-coordinate. The family
+\[
+\omega_c(\alpha s+\beta z)=\alpha+c\beta
+\]
+agrees on the normalized profile for every \(c\in\mathbf F_p\), whereas the canonical orientation has \(c=0\). Hence the filtered q-profile alone does **not** determine \(\omega_q\) on all of \(U\).
+
+This is not a return to carrier hunting. It proves that a genuine quotient \(U/N_q\) is necessary.
+
+A second boundary is decisive: an isolated special vertex has no q-profile witness but canonical orientation value 1. Therefore a naive \(N_q\) defined from profile-invisibility cannot satisfy \(N_q\subseteq\ker\omega_q\) on the unrestricted specially oriented class. The earlier Gate-D obstruction remains controlling there.
+
+The surviving local lemma is structural: in a specially oriented graph, once lower-degree contamination is absent, any adjacent special vertex is a special terminus, ordinary neighbors contribute no q-defect, and non-neighbors produce lower-degree obstruction. Thus the normalized q-defect equals the visible special coefficient sum.
+
+Current classification:
+- lower-filtration + q-defect mechanism: **PASS / LOCAL**;
+- ambient affine-hyperplane uniqueness: **FAIL / CLOSED**;
+- unrestricted quotient uniqueness: **FAIL / CLOSED**;
+- restricted quotient theorem on a class with no isolated special vertices: **OPEN / LOAD-BEARING**;
+- Paper 4: **OPEN**.
+
+The next authorized task is singular: define \(N_q\) non-tautologically from the *relations among lower-filtration obstructions* and test it on the long chain, mixed ordinary/special component, separated two-sink, and chordal-tree controls. It is explicitly forbidden to define \(N_q\) as the span of all q-invisible directions, because the separated two-sink vector \(s+t\) is q-invisible under full flatness but has \(\omega_q(s+t)=2\ne0\).
+
+Detailed audit: research/PAPER4_FILTERED_PROFILE_QUOTIENT_UNIQUENESS_AUDIT_2026-10-02.md.
+
+## 2026-10-02 — PAPER 4 CRITICAL CORRECTION + NONABELIAN FILTERED PROFILE GATE
+
+The previous whole-package kernel-shear no-go overclaimed: P_E is a genuine restricted-power map and cannot be treated as pointwise fixed under an arbitrary shear. The whole-linear-package closure is therefore HISTORICAL/SUPERSEDED.
+
+What remains closed:
+- omega_q does not descend through ker Phi in the chordal-tree model;
+- ker Phi alone is not an orientation carrier.
+
+A convention correction is also recorded: absence of an edge in an oriented pro-p RAAG does not mean commutation. Ordinary edges give commutation; special edges give wuw^{-1}=u^{1+q}. Thus the separated-model accidental-direction explanation must use lower-filtration contamination, not “t commutes with a”.
+
+The authorized next object is the full filtered commutator profile:
+[u,x] in D_q, followed by [u,x] = c_x(u)P_E(x) mod D_{q+1}.
+For specially oriented RAAGs, lower-degree vanishing forces support visibility from x, and the normalized q-defect measures the visible special coefficient sum.
+
+Classification:
+- kernel-only: FAIL / CLOSED;
+- previous whole-linear-package shear closure: HISTORICAL / SUPERSEDED;
+- lower-filtration + q-defect profile: OPEN / LOAD-BEARING;
+- Paper 4: OPEN.
+
+Detailed audit: research/PAPER4_NONABELIAN_FILTERED_PROFILE_GATE_2026-10-02.md.
+
+## 2026-10-02 — PAPER 4 PAIRING/KERNEL SHEAR NO-GO: LINEAR PACKAGE CLOSED
+
+The \\(\\ker\\Phi) analysis strengthens to a no-go for the entire linear package \\(\\mathcal D=(U,O,A,P_E,\\Phi)\\).
+
+In the chordal-tree model,
+\\[
+\\Phi(s)=P_a,\\quad \\Phi(t)=P_b,\\quad \\Phi(u)=P_a+P_b,
+\\]
+so
+\\[
+k=u-s-t\\in\\ker\\Phi,\\qquad \\omega_q(k)=-1\\ne0.
+\\]
+
+Define the invisible shear
+\\[
+g_c(s)=s,\\quad g_c(t)=t,\\quad g_c(u)=u+c,k.
+\\]
+For \\(c=1)\\), this is an automorphism of \\(U)\\), and since \\(\\Phi(k)=0)\\),
+\\[
+\\Phi\\circ g_c=\\Phi.
+\\]
+It acts trivially on the origin sector and on the intrinsic q-power target \\(P_E)\\). Hence the whole package \\(\\mathcal D)\\) is fixed, while
+\\[
+\\omega_q(g_1(u))=0\\ne1=\\omega_q(u).
+\\]
+
+Therefore no natural/intrinsic construction from \\(U,O,A,P_E,\\Phi)\\) alone can equal \\(\\omega_q)\\). The kernel is precisely an invisible shear direction carrying nonzero orientation mass.
+
+Classification:
+- linear pairing/kernel package as an orientation carrier: **FAIL / CLOSED**;
+- \\(\\ker\\Phi)\\) as diagnostic/no-go data: **PASS / LOCAL**;
+- full finite-window orientation problem: **OPEN**.
+
+Detailed audit: research/PAPER4_PAIRING_KERNEL_SHEAR_NO_GO_AUDIT_2026-10-02.md.
+
+Next boundary: only a genuinely non-linear/nonabelian extension datum can break this shear symmetry. No new linear functional on the same package is authorized.
+
+## 2026-10-02 — PAPER 4 \\(\\ker\\Phi) ORIENTATION TEST: KERNEL-RESCUE BRANCH CLOSED
+
+The proposed \\(\\ker\\Phi) rescue was tested on the smallest models.
+
+In the already audited chordal tree with ordinary a,b and special s,t,u,
+\\[
+\\Phi(s)=P_a,\\quad \\Phi(t)=P_b,\\quad \\Phi(u)=P_a+P_b,
+\\]
+so
+\\[
+\\ker\\Phi=\\mathbf F_p(u-s-t).
+\\]
+But
+\\[
+\\omega_q(u-s-t)=1-1-1=-1\\ne0
+\\]
+for odd p. Hence \\(\\omega_q) does not descend to \\(U/\\ker\\Phi) and is not in \\(\\operatorname{im}\\Phi^*=\\ker(\\Phi)^\\perp).
+
+The complementary separated two-sink model
+\\[
+G=\\langle a,b,s,t\\mid sas^{-1}=a^{1+q},\\ tbt^{-1}=b^{1+q}\\rangle
+\\]
+has
+\\[
+\\Phi(s)=P_a,\\quad \\Phi(t)=P_b,
+\\]
+so \\(\\ker\\Phi=0) while \\(\\omega_q(\\alpha s+\\beta t)=\\alpha+\\beta) remains nontrivial. This model also satisfies the natural Gate-D repair candidate “every special vertex is the terminus of a special edge.”
+
+Therefore the kernel is not an orientation carrier: it records incidence dependencies, not a canonical orientation normalization. The stronger factorization route through \\(U/\\ker\\Phi)\\) or \\(\\operatorname{im}\\Phi^*)\\) is structurally closed.
+
+Classification:
+- \\(\\ker\\Phi) intrinsic diagnostic: **PASS / LOCAL**;
+- nonzero \\(\\omega_q) on kernel in the tree model: **PASS / LOCAL**;
+- orientation recovery from \\(\\ker\\Phi) alone: **FAIL / CLOSED**;
+- orientation descent through \\(U/\\ker\\Phi): **FAIL / CLOSED**;
+- Paper 4 overall: **OPEN**.
+
+Detailed audit: research/PAPER4_KER_PHI_ORIENTATION_AUDIT_2026-10-02.md.
+
+Immediate next boundary: do not search for another functional on the same kernel. Any continuation must introduce a materially richer intrinsic datum and rerun the full pre-check.
+
+## 2026-10-02 — PAPER 4 CREATIVE RE-EXAMINATION: Φ / TRACE / THREE-WINDOW / PROJECTIVE — STRUCTURAL CLOSURES
+
+The global pairing viewpoint was stress-tested after Gate D. Φ:U→Hom(O,A), u↦B_q(u,-), remains useful diagnostic data. Universal rank-one-atom extraction is not enough to recover ω_q.
+
+A decisive trace obstruction exists in the specially oriented chordal tree with ordinary a,b and special s,t,u, edges a→s, b→t, a→u, b→u. At the q-defect layer:
+Φ(s)=P_a, Φ(t)=P_b, Φ(u)=P_a+P_b.
+A linear total-mass functional τ with τ(Φ(s))=τ(Φ(t))=τ(Φ(u))=1 would force 1=2, impossible for odd p. Hence Tr_Φ normalization is FAIL/CLOSED.
+
+The simultaneous normalized-signature equations are α+γ=1 and β+γ=1 in U=span{s,t,u}; their affine hull is a line of codimension 2, so the naive codimension-one affine-hull theorem is FAIL/CLOSED.
+
+Three-window remains OPEN/LOCAL only. For q=p^{k-1}, k≥2, q²≡0 mod p^k, so extra filtration levels do not automatically expose the quadratic correction. Projective recovery is FAIL/CLOSED for exact χ mod p^k.
+
+Detailed audit: research/PAPER4_CREATIVE_REVIEW_PHI_TRACE_THREEWINDOW_PROJECTIVE_2026-10-02.md.
+
+## 2026-10-02 — PAPER 4 GATE D: SAME-WINDOW / DIFFERENT-ORIENTATION COUNTEREXAMPLE — FAIL / CLOSED
+
+A decisive structural counterexample has been found for the current admissible class of specially oriented pro-p RAAGs.
+
+Take any nontrivial specially oriented graph Γ0 with a special-edge q-layer, add an isolated vertex z, and form ΓA=Γ0⊔{z}_ordinary and ΓB=Γ0⊔{z}_special. Both are specially oriented. The isolated vertex contributes no defining relation in either case, so the underlying un-oriented pro-p groups are literally identical. Consequently W_n(ΓA)≅W_n(ΓB) for every n, in particular for the full adjacent window W_q←W_{q+1}.
+
+But the canonical orientations differ on z: θA(z)=1, θB(z)=λ(1)=1+q. For q=p^{k-1}, these remain distinct modulo p^k. Thus the same un-oriented finite adjacent window supports two different orientation targets.
+
+The construction is permitted by the literature: an oriented graph allows isolated special vertices, and the canonical orientation is 1 on ordinary vertices and λ(1) on special vertices. The source explicitly records the same geometric graph with an isolated vertex declared ordinary in one orientation and special in another (Remark 2.4); Definition 2.5 still regards both as specially oriented.
+
+This is stronger than a failed carrier: the target is not a function of the declared un-oriented finite input on the current class. Therefore no carrier functorially constructed solely from W_q←W_{q+1} can recover the orientation on this class.
+
+Detailed audit: research/PAPER4_GATE_D_SAME_WINDOW_DIFFERENT_ORIENTATION_AUDIT_2026-10-02.md.
+
+Classification:
+- Gate D, current specially oriented RAAG class: FAIL / CLOSED;
+- same underlying group: decisive PASS;
+- same finite windows: decisive PASS;
+- different canonical orientation mod p^k: decisive PASS;
+- un-oriented finite-window-only recovery on current class: FAIL / CLOSED;
+- restricted class excluding isolated special vertices: OPEN;
+- affine-hull T1 failure: remains valid but is now secondary, not the primary obstruction.
+
+Immediate consequence: stop the current T1 carrier search. The only legitimate continuation is to redefine the admissible class/input by an explicit orientation-rigidity hypothesis and then re-run Object → Input → Functoriality → Gauge → Orientation bridge → q-blindness → Separation → Novelty → Stop. The restriction “every special vertex is the terminus of a special edge” is a candidate boundary, not yet a sufficiency theorem.
+
+## 2026-10-02 — PAPER 4 T1 AFFINE-HULL GATE: FAIL / CLOSED
+
+The proposed affine-hull rescue of T1 is refuted for the current existential local-uniform signature.
+
+In the separated two-sink model G=<a,b,s,t | sas^{-1}=a^(1+q), tbt^{-1}=b^(1+q)> with no other edges, let O=span(a,b) and U=L1/O=span(s,t). The canonical normalization has omega_q(s)=omega_q(t)=1.
+
+The accidental direction u=s+t passes the current local special-edge signature using origin a, because t commutes with a: (st)a(st)^(-1)=sas^(-1)=a^(1+q), hence B_q(u,a)=P_E(a). Thus u is in the current S_E, but omega_q(u)=2 != 1 for odd p.
+
+Since s,t,s+t all lie in S_E and dim U=2, Aff(S_E)=U, so the affine codimension is 0, not 1.
+
+This is structural: an existential 2-generator signature sees only the local incidence component tested by the chosen origin and cannot constrain sink components invisible to that origin. The intrinsic q-power target remains PASS / LOCAL, but the affine-hull T1 realization is FAIL / CLOSED.
+
+The overlapping model is non-decisive: its accidental direction (s+t)/2 happens to lie on omega_q=1. The separated model is decisive.
+
+No larger scan or another accidental-direction search is authorized for this T1 branch. Any revival requires a materially different observable and a fresh Object/Input/Functoriality/Gauge/Orientation-bridge/q-blindness/Separation/Novelty/Stop pre-check.
+
+Detailed audit: research/PAPER4_T1_AFFINE_HULL_GATE_AUDIT_2026-10-02.md
+
+## 2026-10-02 — PAPER 4 T1 OVERLAPPING MULTI-SINK: VERTEX-SET FORMULATION CLOSED, \(\omega_q\) REMAINS OPEN
+
+The smallest overlapping model
+\[
+G=\langle a,s,t\mid sas^{-1}=a^{1+q},\;tat^{-1}=a^{1+q}\rangle
+\]
+produces a decisive accidental normalized direction. For odd \(p\), choose \(m\in\mathbf F_p^\times\) with \(2m=1\). Then
+\[
+z=(st)^m,\qquad \bar z=m(\bar s+\bar t)
+\]
+is not a sink direction, but
+\[
+B_q(\bar z,\bar a)=P_E(\bar a).
+\]
+Hence the candidate theorem \(S_q=\{\bar w:\ w\text{ is a sink vertex}\}\) is **FAIL / CLOSED**.
+
+However, this does **not** close T1 itself. The target of T1 is the orientation functional \(\omega_q\), not literal vertex recognition. In this model all normalized directions satisfy the same affine equation
+\[
+\omega_q(\alpha\bar s+\beta\bar t)=\alpha+\beta=1.
+\]
+Thus the accidental vector lies on the same normalized affine hyperplane and does not change \(\omega_q\).
+
+The correct target-first refinement is:
+\[
+\mathcal S_E=\{\text{all intrinsic normalized rank-one signature directions}\},
+\qquad
+\operatorname{Aff}(\mathcal S_E)\stackrel{?}{=}\omega_q^{-1}(1).
+\]
+If this affine hull is a codimension-one affine hyperplane not containing \(0\), it determines the unique linear functional \(\omega_q\) normalized to \(1\) on it.
+
+Classification:
+- intrinsic q-power target: **PASS / LOCAL**;
+- literal sink-direction recognition: **FAIL / CLOSED**;
+- overlapping accidental direction: **PASS / LOCAL as counterexample to literal vertex-set recognition**;
+- normalized affine-hyperplane target: **OPEN / LOAD-BEARING**;
+- T1: **OPEN / LOAD-BEARING**.
+
+This preserves the top-down reset and does not authorize a new carrier search. Next authorized attack: prove or refute the affine-hull theorem for \(\mathcal S_E\).
+
+## 2026-10-02 — PAPER 4 T1 INTRINSIC q-POWER TARGET: PASS / LOCAL
+
+The load-bearing bottleneck “define the intrinsic q-power target from \(W_q\leftarrow W_{q+1}\)” is now resolved locally.
+
+For an adjacent window
+\[
+1\to A\to Y\xrightarrow{\pi}X\to1,
+\]
+define the intrinsic exponent \(e(X)=\exp(X)\), and set
+\[
+L(X)=X/\Phi(X),\qquad A=\ker\pi.
+\]
+At the target jump \(X=W_q,\;Y=W_{q+1}\), \(e(X)=q\). The finite-window power map
+\[
+P_E:L(X)\to A,\qquad P_E(\bar x)=\tilde x^{e(X)}
+\]
+is well-defined: the kernel \(A=D_q/D_{q+1}\) is central of exponent \(p\), and representative-independence modulo \(D_2\) is the standard Zassenhaus restricted \(p^f\)-operation \(D_1/D_2\to D_q/D_{q+1}\). No generator, basis, presentation, orientation, or displayed \(q\) is used.
+
+Thus the previous OPEN gate “intrinsic q-power target” moves to **PASS / LOCAL**.
+
+In the audited 2-generator and common-sink models,
+\[
+P_E(\bar v)=\overline{v^q},\qquad B_q(\bar w,\bar v)=P_E(\bar v),
+\]
+so scale fixing becomes genuinely intrinsic:
+\[
+B_q(\lambda\bar w,\bar v)=P_E(\bar v)\ne0\Rightarrow\lambda=1.
+\]
+
+This does not close T1. Remaining load-bearing gates are:
+- overlapping multi-sink accidental rank-one direction;
+- spanning/recognition of the normalized sink set \(S_q\);
+- filtered-isomorphism naturality of \(S_q\);
+- direct orientation bridge from \(S_q\) to \(\omega_q\).
+
+Classification:
+- intrinsic q-power target: **PASS / LOCAL**;
+- q-blind adjacent-window definition: **PASS / LOCAL**;
+- local scale fixing relative to \(P_E\): **PASS / LOCAL**;
+- T1: **OPEN / LOAD-BEARING**.
+
+Detailed audit: research/PAPER4_T1_MULTI_SINK_SCALE_AUDIT_2026-10-02.md.
+
+Next authorized attack: **smallest overlapping multi-sink model**. No new carrier search.
+
+## 2026-10-02 — PAPER 4 TOP-DOWN TARGET SHARPENED: NORMALIZATION FUNCTIONAL GATE
+
+The top-down reset has now been carried through to a sharper mathematical target. For a specially oriented RAAG with (q=p^f), the first nontrivial orientation layer is a linear functional
+[
+omega_q:L_1	omathbf F_p
+]
+with kernel containing the intrinsic origin/torsion sector (O_q), and normalized by (omega_q(ar w)=1) on sinkhole generators. Thus the remaining finite-window problem is not full directed-incidence reconstruction but construction (or impossibility) of this normalized functional from (W_q\leftarrow W_{q+1}).
+
+The information decomposition is:
+[
+W_{q+1}Longrightarrow(q,O_q,omega_q)Longrightarrowchimod p^k.
+]
+Here q is locally visible as the first nonzero extension-defect degree; (O_q) is recovered locally by RP-3; and abelianization alone cannot normalize (omega_q). The nonabelian finite extension contains additional normalization data, as verified in the 2-generator semidirect model.
+
+A new local observation was verified in the complete 3-vertex one-sink model: the rank of (B_q(u,-)) is 1 on nonzero origin directions and 2 when the sink component of (u) is nonzero. This shows the failed (J_q(u)\neq0) predicate was too coarse, but rank-stratification is not universal: in the 2-generator model every nonzero direction has rank 1. Therefore no rank-only carrier is promoted.
+
+New load-bearing gate:
+[
+oxed{T1:quad W_q\leftarrow W_{q+1}\Longrightarrowomega_q ?}
+]
+Required: intrinsicity, lift/gauge independence, q-blindness, non-tautological definition, direct orientation bridge, and independent verification on the audited local models. If two admissible specially oriented RAAGs have isomorphic adjacent windows but different normalized (omega_q), T1 is FAIL/CLOSED at this window.
+
+Classification:
+- top-down reset: **PASS / ACTIVE**;
+- q recovery: **PASS / LOCAL**;
+- origin sector: **PASS / LOCAL**;
+- abelianization-only normalization: **FAIL / CLOSED**;
+- normalized finite-window orientation functional (omega_q): **OPEN / LOAD-BEARING**;
+- full incidence reconstruction as prerequisite: **NOT ESTABLISHED / NOT AUTHORIZED**.
+
+Detailed audit: research/PAPER4_TOP_DOWN_ORIENTATION_TARGET_AUDIT_2026-10-02.md.
+## 2026-10-02 — PAPER 4 TOP-DOWN RESET / CARRIER-HUNTING BOUNDARY
+
+The latest complete-3-vertex counterexample closes the current arbitrary-linear-direction purity formulation for (J_q(u)): a non-origin linear direction can be q-active. This is not evidence that Paper 4 has returned to an unconstrained carrier search; it is evidence that the present bottom-up incidence target is too strong.
+
+The earlier top-down transition remains controlling. T−1 (intrinsic canonical orientation target) and T0 (finite-window identifiability at the standard Demuškin scope) remain closed. Paper 4 must therefore return to target-first design: first specify the exact orientation-relevant information that a finite window must determine, then derive the weakest non-tautological intrinsic observable capable of carrying that information. Full directed-incidence reconstruction is not a prerequisite unless the target-first analysis proves it necessary.
+
+Accordingly, the recent sequence (J_q) → joint ((P_q,B_q)) → restricted origin extension is classified as local carrier exploration, not as a new mandate to continue generating carriers indefinitely. The restricted origin extension remains OPEN/LOAD-BEARING only as a possible realization after the target-first pre-check; it is not authorized to expand into another open-ended carrier hunt.
+
+Immediate methodological decision:
+1. freeze the failed (J_q) purity theorem;
+2. do not pursue arbitrary-incidence reconstruction as the default target;
+3. reconstruct the top-down target decomposition: orientation target → necessary finite observable → non-reencoding/coarseness requirement → candidate realization;
+4. only then test whether the existing RP-3 origin carrier plus a relative extension datum is actually required.
+
+Classification: **TOP-DOWN RESET = ACTIVE; bottom-up carrier search = NOT AUTHORIZED until target-first necessity is established.**
+
+## 2026-10-02 — PAPER 4 J_q ARBITRARY-LINEAR-DIRECTION PURITY FAILS
+
+The exact-depth centralizer jump
+\[
+J_q(u)=C_q(u)/C_{q+1}(u)
+\]
+does remove ordinary-edge contamination, but it is **not** a pure one-direction incidence detector for arbitrary linear \(u\).
+
+In the complete three-vertex model
+\[
+G=\langle s,a,b\mid[a,b]=1,\;sas^{-1}=a^{1+q},\;sbs^{-1}=b^{1+q}\rangle,
+\]
+the q-layer defect is
+\[
+B_q(u,x)
+=(\alpha\gamma'-\gamma\alpha')\overline{a^q}
+ +(\beta\gamma'-\gamma\beta')\overline{b^q}
+\]
+for \(u=\alpha\bar a+\beta\bar b+\gamma\bar s\). The form has zero radical. Since all degree-one commutators lie in \(D_q\) in this complete graph, \(C_q(u)=L_1\) and \(C_{q+1}(u)=\ker B_q(u,-)\). Therefore
+\[
+J_q(u)\neq0
+\]
+for every nonzero projective direction \([u]\in\mathbf P(L_1)\).
+
+Explicitly,
+\[
+u=\bar s+\bar a\notin O=\operatorname{span}(\bar a,\bar b),
+\qquad
+B_q(u,\bar a)=\pm\overline{a^q}\neq0.
+\]
+Thus a non-origin linear direction is q-active. The sinkhole direction \(\bar s\) is q-active as well.
+
+Current classification:
+- exact-depth \(J_m\): **PASS / LOCAL**;
+- ordinary/special depth separation: **PASS / LOCAL**;
+- RP-5 pairwise separation: **PASS / LOCAL**;
+- arbitrary-linear-direction purity \(J_q(u)\neq0\iff u\) is a genuine origin direction: **FAIL / CLOSED**;
+- the prior “linear-combination purity” formulation: **FAIL / CLOSED — false as stated**;
+- combined target-labelled/restricted-power carrier: **OPEN / LOAD-BEARING**;
+- full directed-incidence reconstruction: **OPEN**;
+- full orientation reconstruction: **OPEN**.
+
+This closes the current purity formulation, not the Paper-4 program. The next authorized branch is a fresh intrinsicity audit of a joint carrier such as \((P_q,B_q)\), or an equivalent extension-class object, with no large scan before Object/Input/Functoriality/Gauge/Orientation-bridge/q-blindness/Separation/Novelty/Stop are checked.
+
+Detailed audit: research/PAPER4_ARBITRARY_LINEAR_DIRECTION_JQ_AUDIT_2026-10-02.md.
+
+## 2026-10-02 — CONVENTION CORRECTION AUDIT COMPLETED
+
+Independent source verification confirms the controlling convention: special edge (v,w) has ordinary origin v, special terminus w, and wvw^{-1}=v^{1+q}. Thus the q-torsion direction is v, the origin, not the special/sinkhole terminus. citeturn1search0turn1search1
+
+Corrected RP-3 state:
+[
+G^{ab}cong(mathbf Z/q)^Ooplusmathbf Z_p^{Vsetminus O},
+qquad
+mathcal L(W_q,W_{q+1})^perp=operatorname{span}(O).
+]
+The prior span(S) statement is superseded. The carrier remains q-blind/intrinsic locally, but it recovers the origin/torsion sector; a separate origin-to-sinkhole bridge is required for any sinkhole/orientation conclusion.
+
+RP-5 remains PASS / LOCAL for same-abelianization separation, with its existing O/S notation already convention-correct. Grassmannian extraction remains FAIL / CLOSED.
+
+## 2026-10-02 — RP-5 GRAPH-SENSITIVE SEPARATION
+
+RP-5 now has a decisive local separation result. Two four-vertex specially oriented graphs with no ordinary edges, A=(a,s),(b,s) and B=(a,s),(b,t), have isomorphic abelianizations but different first-q filtered extension defects. The q-power preimage of the defect image recovers the origin plane; in this control family the degree-2 centralizer recovers the special plane; the cross q-defect has rank 1 versus rank 2. Thus criterion B is PASS / LOCAL. Full incidence reconstruction remains OPEN / LOAD-BEARING.
+
+Critical convention correction: the literature defines special edge (v,w) with ordinary origin v and special terminus w, relation w v w^{-1}=v^(1+q). Hence v, not w, is q-torsion in abelianization. Earlier RP-3 identification of the torsion/annihilator sector with special/sinkhole vertices is therefore reversed under the literature convention and requires a correction audit before reuse.
+
+Detailed audit: research/RP5_NONABELIAN_EXTENSION_CLASS_AUDIT_2026-10-02.md
+
+## 2026-10-02 — RP-4 CRITICAL RE-AUDIT: EXTENSION DEFECT BRANCH REOPENED/CORRECTED
+
+The proposed RP-4 closure based on “\\(\\kappa_n\\) is an abelianization factor” is rejected. Two corrections are controlling.
+
+1. The Part-I equivalence “graph-sensitive iff not factoring through abelianization” is logically too strong. Criterion B (existence of two equal-abelianization graphs separated by the carrier) is the actual separation test; non-factorization is necessary but not sufficient.
+
+2. The extension commutator defect is genuine filtered extension data. In the rank-2 special-edge model, \\(G'\\subseteq D_q\\), so \\(\\operatorname{im}\\kappa_n=0\\) for \\(n<q\\) and \\(\\operatorname{im}\\kappa_q=\\mathbf F_p\\overline{v^q}\\). The draft's claimed nonzero element of \\(D_2/D_3\\) is false for odd \\(p\\): \\(v^q\\in D_q\\subseteq D_3\\).
+
+Therefore the prior RP-4 FAIL/CLOSED label is HISTORICAL/SUPERSEDED. The Grassmannian special-plane carrier remains FAIL/CLOSED, but the raw extension-defect object remains locally valid and is not abelianization-only.
+
+Current classification:
+- central extension / commutator defect: PASS / LOCAL;
+- rank-2 first defect at q: PASS / LOCAL;
+- common-sink local extension defect: PASS / LOCAL;
+- Grassmannian special-plane extraction: FAIL / CLOSED;
+- “\\(\\kappa_n\\) factors through abelianization”: FAIL / CLOSED — FALSE CLAIM;
+- full extension-class carrier: OPEN / LOAD-BEARING;
+- general graph-incidence separation: OPEN / LOAD-BEARING.
+
+Next authorized gate: RP-5 full extension class \\([E_n]\\in H^2(W_n,A_n)\\), but only after pre-checking the actual extension object \\(E_n=W_{n+1}\\to W_n\\), functoriality/gauge, q-blind first-defect detection, and same-abelianization separation. Do not begin with a bare \\(H^2(W_1,A_1)\\) computation as though it already captured the q-layer.
+
+Detailed correction: research/RP4_EXTENSION_DEFECT_REAUDIT_2026-10-02.md
+
+## 2026-10-02 — RP-3 Q-BLIND ADJACENT-WINDOW CARRIER FOUND
+
+The RP-3 Bockstein branch has advanced beyond the previous OPEN q-blindness gap.
+
+For an adjacent finite pair (X=W_nleftarrow Y=W_{n+1}), define intrinsically
+[
+e(Z)=log_pexp(Z^{ab})
+]
+and
+[
+mathcal L(X,Y)=
+egin{cases}
+operatorname{im}igl(operatorname{Hom}(Y,mathbf Z/p^{e(Y)})	ooperatorname{Hom}(Y,mathbf F_p)igr),&e(Y)>e(X),\
+0,&e(Y)=e(X).
+end{cases}
+]
+This definition is q-blind: it uses only the adjacent finite groups, their abelianizations, exponent, Hom, reduction mod p, and the annihilator pairing.
+
+At the specially oriented RAAG jump (n=q=p^f),
+[
+W_q^{ab}cong(mathbf Z/q)^V,qquad
+W_{q+1}^{ab}cong(mathbf Z/pq)^{Vsetminus S}oplus(mathbf Z/q)^S.
+]
+Thus, if (Vsetminus S
+eq
+arnothing), (mathcal L(W_q,W_{q+1})) is exactly the free/non-sinkhole character subspace, hence (kereta_f). If (Vsetminus S=
+arnothing), the exponent does not jump and the definition gives (mathcal L=0=kereta_f).
+
+Therefore the intrinsic carrier
+[
+F(W_q,W_{q+1})=mathcal L(W_q,W_{q+1})^perpsubseteq L_1
+]
+recovers exactly the sinkhole sector:
+[
+F(W_q,W_{q+1})=(kereta_f)^perp=operatorname{span}{ar s:sin S}.
+]
+
+This also fixes the previous dual-space type error: the annihilator is a subspace of (L_1), not (L_1^*).
+
+Classification:
+- q-blind adjacent-window carrier: **PASS / LOCAL**;
+- intrinsic/functorial construction: **PASS / LOCAL**;
+- kernel identification: **PASS / LOCAL** under the specially oriented RAAG abelianization structure;
+- full (eta_f) class reconstruction: **OPEN / NOT LOAD-BEARING**;
+- RP-3 overall: **PASS / LOCAL** for the declared target (F(W_{
+m finite})=(kereta_f)^perp);
+- non-special oriented graphs: separate OPEN branch;
+- non-reencoding/minimality: OPEN and not yet claimed.
+
+Detailed audit: research/RP3_FINITE_WINDOW_BOCKSTEIN_AUDIT_2026-10-02.md
+
+Next authorized attack: independently verify the carrier in the smallest non-complete graph, multiple-sink graph, and the degenerate all-sinkhole case; then perform the admissible-category/non-reencoding audit. Do not switch to Massey calculations unless a verification failure makes them load-bearing.
+
+## 2026-10-02 — RP-3 BOCKSTEIN FINITE-WINDOW CLAIM CORRECTED: LIFTABILITY SURVIVES, FULL β-RECONSTRUCTION OPEN
+
+The proposed RP-3 finite-window Bockstein argument has been critically audited. The local algebraic conclusion is sound, but the draft overclaimed the finite-window factorization.
+
+For a specially oriented pro-p RAAG with sinkhole set S and q=p^f,
+[
+G^{ab}cong mathbf Z_p^{Vsetminus S}oplus(mathbf Z/p^f)^S,
+]
+and the higher Bockstein satisfies the liftability criterion
+[
+chiinkereta_f
+iff
+chi:H^1(G,mathbf F_p)	omathbf F_p
+	ext{ lifts to }mathbf Z/p^{f+1}.
+]
+Thus the kernel is exactly the annihilator of the sinkhole torsion sector. This is PASS/LOCAL.
+
+A type correction is mandatory:
+[
+H^1=L_1^*,quad(kereta_f)^perpsubseteq L_1,
+]
+so the sinkhole carrier is (operatorname{span}{ar s:sin S}), not a span of dual basis vectors unless an auxiliary identification (L_1cong L_1^*) is chosen.
+
+The key finite-window statement must be weakened. (W_{q+1}) does not automatically determine the full cohomology class (eta_f(chi)in H^2(G,mathbf F_p)), because no identification of global (H^2(G)) with (H^2(W_{q+1})) has been proved. What is locally established is that every lift to (mathbf Z/p^{f+1}) factors through (W_{q+1}), yielding a finite-window liftability predicate.
+
+The remaining load-bearing issue is **q-blind uniformization**: the liftability test currently names the coefficient group (mathbf Z/p^{f+1}), hence q indirectly. A valid RP-3 carrier must be defined uniformly from an arbitrary adjacent pair ((W_n,W_{n+1})), without inserting q, and then shown to specialize at (n=p^f) to ((kereta_f)^perp).
+
+Classification:
+- abelianization/free-vs-sinkhole decomposition: **PASS / LOCAL**;
+- higher-Bockstein kernel via liftability: **PASS / LOCAL**;
+- three local graph models: **PASS / LOCAL**;
+- dual-space typing of (C_f): **FAIL / CLOSED — TYPE ERROR**;
+- full (eta_f) reconstruction from ((W_q,W_{q+1})): **OPEN / NOT PROVED**;
+- finite-window liftability predicate: **PASS / LOCAL**;
+- q-blind uniform carrier: **OPEN / LOAD-BEARING**;
+- RP-3 overall: **OPEN / LOAD-BEARING**.
+
+Detailed audit: research/RP3_FINITE_WINDOW_BOCKSTEIN_AUDIT_2026-10-02.md
+
+Immediate next authorized attack: construct and test the uniform adjacent-window liftability object before any Massey-interference or non-special-graph expansion. If the uniform construction fails, seek a same-window counterexample and close RP-3. Do not reopen the closed Grassmannian carrier branch.
+
+## 2026-10-02 — SPECIAL-PLANE FAILURE, BUT RESTRICTED-POWER REFINEMENT SURVIVES LOCALLY
+
+The complete 3-vertex special graph is a decisive counterexample to the **Grassmannian first-survival carrier**, not to all intrinsic finite-window carriers. The intermediate claim (U_1\cap U_2=0) was corrected to (U_1\cap U_2=\mathbf F_p(\bar s+\bar a)); the full intersection over all q-special planes is still zero after including (U_3=\operatorname{span}(\bar s,\bar b)).
+
+More importantly,
+[
+\operatorname{im}B_q=\mathbf F_p\overline{s^q},
+qquad
+P_q^{-1}(\operatorname{im}B_q)=\mathbf F_p\bar s.
+]
+So the Grassmannian loses the sinkhole line, while the extension-defect image together with restricted q-power structure recovers it in this model.
+
+Classification:
+- first-survival Grassmannian carrier: **FAIL / CLOSED**;
+- accidental-plane exclusion: **FAIL / CLOSED**;
+- corrected full-intersection computation: **PASS / LOCAL**;
+- restricted-power refinement in complete 3-vertex model: **PASS / LOCAL**;
+- general restricted-power/extension-defect carrier: **OPEN / LOAD-BEARING**;
+- categorical no-go for all intrinsic finite-window carriers: **OPEN / NOT ESTABLISHED**.
+
+Next gate: test (P_q^{-1}(\operatorname{im}\kappa_q)) across the previously audited 2-generator special-edge and 3-vertex common-sink models, then audit its intrinsic domain, q-blindness, gauge invariance, and separation on the smallest non-complete specially oriented graph.
+
+
+## 2026-10-02 — 3-VERTEX COMMON-SINK TEST: ORIGIN PLANE RECOVERED
+
+The first multi-special-edge stress test was completed at the smallest commuting-origin model
+\[
+G=\langle v_1,v_2,w\mid[v_1,v_2]=1,;wv_iw^{-1}=v_i^{1+q}\rangle.
+\]
+Here the intrinsic extension commutator defect at degree q has image
+\[
+\operatorname{im}\kappa_q
+=\operatorname{span}\{\overline{v_1^q},\overline{v_2^q}\}.
+\]
+The restricted q-power operation therefore recovers the entire ordinary/origin plane:
+\[
+P_q^{-1}(\operatorname{im}\kappa_q)
+=\operatorname{span}\{\bar v_1,\bar v_2\}.
+\]
+Since \(L_1\) has dimension three, the quotient by this plane is the one-dimensional sinkhole direction \(\bar w\). Thus the rank-2 quotient-line ambiguity disappears in this smallest common-sink multi-edge model.
+
+Classification:
+- common-sink extension defect: **PASS / LOCAL**;
+- origin-plane recognition: **PASS / LOCAL**;
+- sinkhole quotient direction: **PASS / LOCAL**;
+- standard-family orientation bridge: **PASS / LOCAL**;
+- general RAAG separation: **OPEN / LOAD-BEARING**.
+
+Critical boundary: if ordinary origin vertices do not commute, degree-2 ordinary commutators survive below q, so \(W_q\) is not abelian and the simple \(\kappa_q\) pairing on \(W_q\) is unavailable. The next real problem is therefore to quotient/separate the degree-2 ordinary relation sector and retain the degree-q extension defect. This is the first genuinely general carrier question.
+
+Detailed audit: research/PAPER3_RAAG_3VERTEX_COMMON_SINK_AUDIT_2026-10-02.md.
+## 2026-10-02 — 2-GENERATOR FILTERED EXTENSION DEFECT: INTRINSIC CARRIER FOUND / GENERALIZATION OPEN
+
+The gauge correction is now incorporated, and the next filtered-carrier attack has produced a genuine local result.
+
+For
+\[
+G=\langle v,w\mid wvw^{-1}=v^{1+q}\rangle,
+\]
+the naive \(\operatorname{gr}(R)\) claim that the higher term \(v^q\) itself defines a degree-q relation-module class is rejected: the relator has initial degree 2, and \([w,v]\notin R\), so the subtraction argument is not an element of the relation subgroup.
+
+The correct intrinsic object is the finite central extension
+\[
+1\to A_n=D_n/D_{n+1}\to W_{n+1}\to W_n\to1
+\]
+together with its commutator defect \(\kappa_n\) whenever \(W_n\) is abelian. In the 2-generator special-edge model:
+\[
+\operatorname{im}\kappa_n=0\ (n<q),\qquad
+\operatorname{im}\kappa_q=\mathbf F_p\overline{v^q}\neq0.
+\]
+Thus q is recovered intrinsically as the first nonzero extension-commutator degree.
+
+Combining this defect line with the restricted q-power operation gives, in the rank-2 model,
+\[
+\{x\in L_1:P_q(x)\in\operatorname{im}\kappa_q\}
+=\mathbf F_p\bar v,
+\]
+so the ordinary/origin line is intrinsically recognized. The sinkhole direction is canonically the quotient
+\[
+L_1/\mathbf F_p\bar v,
+\]
+but a canonical complementary line in \(L_1\) has not been proved.
+
+The former gauge obstruction is fully CLOSED: with the standard convention the sinkhole is w and
+\[
+\theta(v)=1,\quad\theta(w)=1+q,
+\]
+and \(v\mapsto v^a,\ w\mapsto v^cw\) preserves this canonical orientation.
+
+Classification:
+- central extension commutator carrier \(\kappa_q\): **PASS / LOCAL**;
+- q as first nonzero defect degree: **PASS / LOCAL**;
+- intrinsic origin-line recognition: **PASS / LOCAL**;
+- literal canonical sinkhole line: **CONDITIONAL**;
+- naive \(\operatorname{gr}(R)\) q-correction: **FAIL / CLOSED — WRONG OBJECT**;
+- gauge orientation obstruction: **FAIL / CLOSED**;
+- standard 2-generator orientation bridge: **PASS / LOCAL**, but not a new theorem because it still uses the known canonical special-edge formula;
+- general RAAG directed/sinkhole separation: **OPEN / LOAD-BEARING**.
+
+Detailed audit: research/PAPER3_RAAG_2GEN_FILTERED_EXTENSION_DEFECT_AUDIT_2026-10-02.md.
+
+Immediate next gate: smallest genuinely multi-special-edge configuration; test whether the intrinsic extension-commutator defect separates multiple special sinks without presentation labels. No large computation, Paper 2, Mixed Fox, O_k, q=N_k, or W_11/W_12 reopening.
+## 2026-10-02 — 2-GENERATOR RAAG GATE CORRECTED: FIRST SURVIVAL YES, INTRINSIC ROLE RECOGNITION OPEN
+
+The first 2-generator special-edge stress test has been critically audited. The candidate threshold mechanism survives only at the Zassenhaus first-survival level: for [w,v]=v^q, the q-dependent term is invisible through W_q and first survives in W_{q+1}.
+
+The stronger intrinsic role-recognition proof is not closed. The displayed Delta_q=im(Lambda^2 L_1 -> L_q) is ill-typed: the ordinary graded bracket L_1 wedge L_1 -> L_2, while the q-power term survives in L_q. A genuine proof therefore requires an intrinsic filtered relation-module/extension-class defect connecting the degree-2 relation to its degree-q correction.
+
+An independent gauge family v -> v^a, w -> v^c w preserves the 2-generator group and its characteristic filtration while changing the displayed orientation character. This is a serious obstruction to recovering a generator-normalized theta from bare abstract-window data. Before calling this a theorem-level no-go, the exact scope of the literature's orientation-uniqueness statement must be reconciled with the automorphism family.
+
+Classification:
+- first q-defect survival at q+1: PASS/LOCAL;
+- intrinsic sinkhole-line recognition at q+1: OPEN/LOAD-BEARING;
+- ordinary graded Lambda^2 L_1 -> L_q construction: FAIL/CLOSED — TYPE MISMATCH;
+- bare-window exact orientation recovery: STRONG NO-GO CANDIDATE / OPEN pending literature-scope reconciliation.
+
+Detailed audit: research/PAPER3_RAAG_2GEN_SPECIAL_EDGE_AUDIT_2026-10-02.md.
+
+Next authorized action: resolve the 2-generator filtered extension-class defect and the orientation-uniqueness/gauge compatibility before any larger RAAG computation.
+
+## 2026-10-02 — SPECIAL ORIENTED PRO-p RAAG SELECTED AS ADJACENT OPEN GATE
+
+Literature-first search identifies special oriented right-angled Artin pro-p groups as the strongest current adjacent-class candidate. For special digraphs, the canonical orientation is uniquely characterized by the Kummerian lifting property and is given by 1+q on sinkholes and 1 elsewhere. The class contains independent finite graph structure in addition to the p-power q parameter. citeturn3search0turn5search0
+
+The candidate finite-window mechanism is:
+degree-2 relation structure -> underlying graph;
+degree-q correction in [w,u]=u^q -> special directed/sinkhole data and q;
+canonical orientation -> [theta mod p^k].
+The same N_k=p^{k-1}+1 threshold is plausible but remains CONDITIONAL.
+
+New load-bearing gate:
+**intrinsic directed/sinkhole separation from the abstract finite window**.
+Presentation-dependent relator reading is not admissible. An intrinsic relation-module/extension-class descent is required.
+
+Classification:
+- special oriented pro-p RAAG orientation rigidity: PASS/LOCAL;
+- non-q structural richness: PASS/LOCAL;
+- candidate threshold: CONDITIONAL;
+- full finite-window orientation identifiability: OPEN;
+- intrinsic directed/sinkhole separation: OPEN/LOAD-BEARING.
+
+Detailed gate: research/PAPER3_ORIENTATION_RIGID_ADJACENT_RAAG_GATE_2026-10-02.md.
+
+## 2026-10-02 — ADMISSIBLE CATEGORY CRITIQUE / ADJACENT-CLASS ORIENTATION-RIGIDITY BOUNDARY
+
+The proposed A–D admissible-category sketch was audited. It is useful as a design checklist but is not yet a valid minimality category: functoriality + finiteness + intrinsicity do not prevent target re-encoding, and quotient closure alone does not define a coarsest realization. A factorization preorder on explicitly non-reencoding realizations is required.
+
+A critical correction was also recorded: \\(\bigoplus_{n\le N_k}\operatorname{gr}_n(G)\\) is the associated graded Zassenhaus object, not an abelianization. If used as a carrier, degree labels/operations must be retained. Likewise, the earlier vector-space bound \\(p^{\dim V}\ge k\\) requires the carrier observation to retain distinguishable elements/marked data; for bare vector spaces up to isomorphism it is false. The invariant lower bound \\(|\\operatorname{Iso}(C_k)|\\ge k\\) remains valid.
+
+The first adjacent-class test was then completed using the free pro-p class. Literature states that for a free pro-p group, every orientation \\(\\theta:F\\to1+p\\mathbb Z_p\\) is 1-cyclotomic, whereas an infinite Demuškin group has a unique 1-cyclotomic orientation. Therefore, if the input remains the underlying un-oriented finite window \\(W_k(G)\\), orientation is not even a single-valued invariant on the free-pro-p class. No carrier constructed solely from that input can recover an arbitrary orientation.
+
+Classification:
+- A–D as complete admissible-category definition: FAIL/CLOSED — insufficient to exclude re-encoding.
+- minimal-sufficiency analogy: PASS/LOCAL — factorization preorder only.
+- proposed X_ab terminology: FAIL/CLOSED — associated graded, not abelianization.
+- same-family graded-piece carrier as new theorem: FAIL/CLOSED — q-classification re-encoding.
+- chi-twisted cohomological carrier: FAIL/CLOSED — target-circular.
+- free-pro-p un-oriented orientation identifiability: FAIL/CLOSED — object-level non-identifiability.
+- orientation-rigidity prerequisite: PASS/LOCAL.
+
+Detailed audit: research/PAPER3_ADMISSIBLE_CATEGORY_AND_ADJACENT_CLASS_AUDIT_2026-10-02.md
+
+Immediate next gate: find an adjacent class with a unique/canonical orientation but without Demuškin q-classification, then test finite-window identifiability. No new same-family compression, Mixed Fox, O_k, q=N_k, W_11/W_12, Paper 2, or large computation is authorized.
+
+## 2026-10-02 — FULL-ORIENTATION COARSE REALIZATION BOUNDARY
+
+T−1/T0 are closed at the declared standard odd-p fixed-rank Demuškin scope. The next attack asked for the coarsest intrinsic realization of the full target [χ_G mod p^k], rather than the weaker selector/recognition predicate.
+
+A target-cardinality calculation gives a sharp information bound. For q=0 or q=p^s with s≥k, χ_k=1. For 1≤s<k, the target values are (1-p^s)^(-1) mod p^k, and these are pairwise distinct. Hence the full target has exactly k values. Any full-orientation carrier determined by W_k must therefore have at least k isomorphism classes; an F_p-vector-space carrier must have dimension at least ceil(log_p k). In the active p=3 case, the frozen 1D cup-line cannot encode the full orientation for k≥4. It remains a valid recognition/selector carrier, not a full orientation carrier.
+
+The audited Demuškin window reconstruction yields an exact k-class defect-index carrier: read the first q-dependent Zassenhaus relation defect degree p^s for s<k, and use one stable symbol for q=0 or q≥p^k. This carrier reaches the information lower bound and factors to χ_k by the canonical formula. However, at the present standard-family scope it is classification-equivalent to q and therefore does not constitute a genuinely new theorem.
+
+Classification:
+- target cardinality |Ω_k|=k: PASS/CLOSED;
+- universal carrier lower bound: PASS/CLOSED;
+- vector-space dimension lower bound: PASS/CLOSED;
+- exact defect-index realization: PASS/LOCAL;
+- full-orientation factorization through defect index: PASS/LOCAL;
+- genuinely new coarsest carrier theorem: FAIL/CLOSED — classification re-encoding.
+
+Detailed audit: research/PAPER3_TOP_DOWN_FULL_ORIENTATION_COARSE_REALIZATION_AUDIT_2026-10-02.md
+
+Immediate next gate: adjacent-class/general-target test. Do not reopen Mixed Fox, O_k, q=N_k, W_11/W_12, Paper 2, or the frozen cup-line proof. A new branch must first pass Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop.
+## 2026-10-02 — TOP-DOWN T−1/T0 CLOSURE: INTRINSIC DEMUŠKIN ORIENTATION IS NOW IDENTIFIED
+
+The target-identification defect found in the first top-down T0 attempt is repaired by an explicit literature theorem.
+
+For the declared standard odd-p fixed-rank Demuškin family, Labute's Theorem 4 gives a unique continuous character
+\[
+\chi_G:G\to U_p
+\]
+with the crossed-derivation/Kummerian property. In the standard odd-p normal form
+\[
+G=\langle x_1,\ldots,x_d\mid x_1^q[x_1,x_2][x_3,x_4]\cdots=1\rangle,
+\]
+the same theorem gives
+\[
+\chi_G(x_2)=(1-q)^{-1},\qquad \chi_G(x_i)=1\ (i\ne2).
+\]
+Modern literature identifies this character as the canonical Demuškin orientation and as the unique 1-cyclotomic/Kummerian orientation. Hence the previous objection that the \((1-q)^{-1}\) formula was merely a presentation-level coefficient twist is no longer valid at this scope.
+
+The target is defined basis-free as the isomorphism class of the canonical orientation \([\chi_G\bmod p^k]\). If \varphi:G\cong H\), then \chi_H\circ\varphi is a Kummerian orientation on G; uniqueness forces \chi_H\circ\varphi=\chi_G. Thus the target is functorial under abstract group isomorphism.
+
+Combining this with the independently audited Demuškin finite-window reconstruction gives the corrected T0 result. Let \(N_k=p^{k-1}+1\).
+
+- If \(q=p^s<p^k\), then \(s<k\) and \(q<N_k\); the intrinsic Zassenhaus graded defect below \(N_k\) recovers q.
+- If \(q\ge p^k\) or \(q=0\), then the q-term is beyond the finite window and \(q\equiv0\pmod{p^k}\); therefore \((1-q)^{-1}\equiv1\pmod{p^k}\), and q=0 gives exactly 1.
+- The previously used q=N_k case is impossible because standard odd-p Demuškin q is a p-power or 0, while \(p^{k-1}+1\) is not a p-power.
+
+Therefore
+\[
+W_k(G)\cong W_k(H)\Longrightarrow[\chi_G\bmod p^k]=[\chi_H\bmod p^k]
+\]
+for the standard odd-p fixed-rank Demuškin family.
+
+Classification:
+- T−1 target identification: **PASS/CLOSED** at declared standard scope.
+- Demuškin finite-window T0 orientation identifiability: **PASS/CLOSED** at declared standard scope.
+- Previous T0 PASS: **HISTORICAL/SUPERSEDED** (invalid inference repaired by theorem-level target identification).
+- Broad orientation non-identifiability: **OPEN/NOT PROVED**.
+- Observability-depth monotonicity: **OPEN**.
+- New carrier construction is no longer blocked by T0, but any candidate must still pass Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop.
+- Mixed Fox remains **FAIL/CLOSED — REDUNDANT** as a new recognition carrier; its finite projective object remains PASS/LOCAL.
+
+Detailed audit:
+research/PAPER3_TOP_DOWN_T1_T0_CLOSURE_2026-10-02.md
+
+Immediate next gate:
+**coarsest/non-tautological intrinsic realization of the already-forced finite-window map \(W_k\mapsto[\chi_k]\)**. No reopening of Mixed Fox, q=N_k, W_11/W_12, or Paper 2.
+
+
+
+## 2026-10-02 — TOP-DOWN T0 CORRECTION: TARGET IDENTIFICATION IS LOAD-BEARING
+
+The external critical review found a substantive error in the first T0 audit draft. The carrier-independent top-down method is valid, but the attempted closure of T0 for the standard Demuškin family was invalid because it identified Labute's presentation-level crossed-derivation/coefficient value
+\[
+\theta(x_2)=(1-q)^{-1}
+\]
+with the intrinsic Demuškin orientation/cyclotomic character without an explicit theorem establishing that identification.
+
+Therefore:
+- previous T0 PASS/CLOSED: **HISTORICAL / SUPERSEDED — invalid inference**;
+- target identification (T-1): **OPEN / LOAD-BEARING**;
+- finite-window orientation identifiability T0: **OPEN / LOAD-BEARING**;
+- broad orientation no-go: **OPEN / NOT PROVED**;
+- broad extension reconstruction no-go: **FAIL / CLOSED** remains valid;
+- automatic observability-depth monotonicity: **FAIL / CLOSED**; monotonicity itself remains OPEN.
+
+The corrected audit is:
+research/PAPER3_TOP_DOWN_T0_CORRECTION_2026-10-02.md
+
+The literature gate already establishes that canonical Demuškin/Kummerian/cyclotomic orientation theory is known, while the project's finite-window factorization problem is distinct. The immediate task is therefore not to rediscover orientation existence, but to fix the exact target object and prove/cite the relation among Demuškin orientation, cyclotomic orientation, and the Labute coefficient twist under the declared hypotheses.
+
+No new carrier construction is authorized before T-1 and T0.
+
+
+## 2026-10-02 — TOP-DOWN REFRAME: ORIENTATION IDENTIFIABILITY BEFORE CARRIER SEARCH
+
+A genuinely different research direction is authorized at framework level: reverse the usual bottom-up search finite-window -> carrier -> chi into target-first orientation -> finite observability -> coarsest sufficient information -> intrinsic realization.
+
+The decisive first question is whether chi_k(G)=chi_G mod p^k is constant on every finite-input equivalence class W_k(G)≅W_k(H). If a same-W_k/different-chi pair exists, then no carrier functorially constructed solely from W_k can recover chi_k; this is a carrier-independent no-go theorem. If identifiability is proved, only then should an intrinsic carrier be sought as a realization of the target-defined observable quotient.
+
+This reframing does not reopen O_k minimality, Mixed Fox, q=N_k, W_11/W_12, Paper 2, or p=2. It creates a new load-bearing gate: T0 finite-window orientation identifiability. The earlier discovery-ladder idea of extension-fiber rigidity is retained as one possible mechanism for proving or refuting T0, not as the carrier itself.
+
+Classification:
+- top-down identifiability framework: PASS / LOCAL;
+- T0 finite-window orientation identifiability: OPEN / LOAD-BEARING;
+- carrier construction before T0: NOT AUTHORIZED;
+- target-defined coarsest quotient: CONDITIONAL / specification only;
+- observability-depth invariant: OPEN.
+
+Detailed audit: research/PAPER3_POST_EXPLORATION_TOP_DOWN_ORIENTATION_IDENTIFIABILITY_2026-10-02.md
+
+
+## 2026-10-02 — CRITICAL REVIEW OF EXTERNAL LEDGER INTERPRETATION
+
+The external critique was audited against the authoritative state. It is accepted only in part.
+
+- O_k diagnosis is correct: O_k -> C is the quotient universal property, while terminal-style unique C -> O_k fails by the direct-sum counterexample. However, an admissible carrier category is not yet a mathematical category until objects, morphisms, and closure are specified; this is not the immediate load-bearing target.
+- The proposed next step direct Fox jet -> chi is stale. That bridge was already established at PASS/LOCAL scope for the standard family. The Mixed Fox branch was later closed as a new-recognition carrier because its finite-pair information is redundant at the declared scope, not because the direct Fox bridge failed.
+- The proposed q-blindness definition by replacing q with 0 is rejected as a general definition. q=0 is a genuine Demushkin regime, and substitution can change the group/class. q-blindness should constrain the definition/input, while separation and output sensitivity are tested separately.
+- Reopening p=2/non-standard Demushkin cases is not authorized now; q=0 is already included in the odd-p standard family. Such cases may be future stress tests only after a genuinely new carrier survives the structural gates.
+- Evidence-type enforcement is accepted, but status labels remain mandatory protocol summaries. Correct rule: labels never substitute for explicit evidence and scope.
+
+Detailed audit: research/PAPER3_POST_EXPLORATION_CRITICAL_REVIEW_2026-10-02.md
+
+Current active gate remains: genuinely new finite-input carrier search, after Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop checks.
+
+
+## 2026-10-02 — CRITICAL REVIEW OF POST-PAPER-3 EXTERNAL LEDGER INTERPRETATION
+
+The proposed external review was audited against the authoritative state. It is accepted only in part.
+
+- O_k diagnosis is correct: O_k -> C is the quotient universal property, while terminal-style unique C -> O_k fails by the direct-sum counterexample. However, an "admissible carrier category" is not yet a mathematical category until objects, morphisms, and closure are specified; this is not the immediate load-bearing target.
+- The proposed next step "direct Fox jet -> chi" is stale. That bridge was already established at PASS/LOCAL scope for the standard family. The Mixed Fox branch was later closed as a new-recognition carrier because its finite-pair information is redundant at the declared scope, not because the direct Fox bridge failed.
+- The proposed q-blindness definition by replacing q with 0 is rejected as a general definition. q=0 is a genuine Demushkin regime, and substitution can change the group/class. q-blindness should constrain the definition/input, while separation and output sensitivity are tested separately.
+- Reopening p=2/non-standard Demushkin cases is not authorized now; q=0 is already included in the odd-p standard family. Such cases may be future stress tests only after a genuinely new carrier survives the structural gates.
+- Evidence-type enforcement is accepted, but status labels remain mandatory protocol summaries. Correct rule: labels never substitute for explicit evidence and scope.
+
+Detailed audit: research/PAPER3_POST_EXPLORATION_CRITICAL_REVIEW_2026-10-02.md
+
+Current active gate remains: genuinely new finite-input carrier search, after Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop checks.
+## 2026-10-02 — POST-PAPER-3 DISCOVERY LADDER REVIEW
+
+The proposed “failure → boundary → axiom → adjacent class” strategy is accepted as a useful correction to the post-Paper-3 exploration program, but three repairs are required before authorization.
+
+First, the arbitrary-extension counterexample is a boundary marker: positive descent requires rigidity of the admissible extension-class fiber over the finite window. This is a better abstraction than the presentation-dependent phrase “relator coupling.”
+
+Second, rank variation is not a substantive first theorem: Demuškin rank is already visible through H^1 of the finite quotient, and the standard odd-p classification has rank constraints. The proposed T1 is therefore reformulated as a control/sanity check, not the main discovery target.
+
+Third, the proposed relator axiom (R) is not intrinsic as written, and T2 does not follow from it. The condition must first be expressed on an invariant relation-module/extension-class object. Likewise the proposed T3 for all mild pro-p groups is too strong: mildness controls initial forms/graded structure but does not by itself imply finite-window determination of the next extension layer. Literature confirms strong graded consequences of mildness, but not the proposed shallow-window rigidity theorem. citeturn0search3turn0search8
+
+Revised active gate:
+\[
+\mathfrak F(W)=\{[E]:E\text{ admissible and projects to }W\},\qquad |\mathfrak F(W)|=1?
+\]
+The next authorized attack is to identify the smallest higher-order deformation invisible to W_k, test whether it changes the extension class E_k, and then formulate the weakest intrinsic condition that removes that deformation. Only after such a rigidity class survives should a genuinely new q-free orientation carrier be defined.
+
+Classification:
+- failure-to-boundary reinterpretation: PASS / LOCAL;
+- original S1/T1: CONDITIONAL / REFORMULATE;
+- original R/T2: OPEN / NOT YET INTRINSIC;
+- T3 for all mild pro-p: FAIL / CLOSED as overstrong target;
+- nearest-class rigidity search: OPEN / LOAD-BEARING;
+- genuinely new q-free carrier: OPEN.
+
+Detailed audit: research/PAPER3_POST_EXPLORATION_DISCOVERY_LADDER_REVIEW_2026-10-02.md
+
+## 2026-10-02 — MIXED FOX NATURALITY CLOSED AT INTRINSIC SCOPE / NEW-CARRIER BRANCH CLOSED
+
+The final naturality attack produced two corrections and one closure.
+
+First, the earlier q=N_k boundary case was mathematically vacuous: in the standard odd-p Demuškin family q=p^s or 0, while N_k=p^{k-1}+1 is not a p-power. The correct reconstruction has only two genuine regimes:
+- q<p^k: q is detected intrinsically below N_k;
+- q>=p^k (or q=0): the q-term is invisible through the window and all such cases give the same truncated extension window.
+
+Second, for intrinsicity the needed morphisms are filtered finite-pair **isomorphisms**. If W_k(G)≅W_k(H), the reconstructed Demuškin windows are isomorphic up to the same q-regime, and the finite projective Mixed Fox construction is invariant under the induced group-algebra/Fox-Lyndon transport, Nielsen Jacobians, relation-generator gauge, relator conjugation, and mixed truncation. Therefore:
+- pair-isomorphism covariance: **PASS / CLOSED**;
+- pair -> extension-window reconstruction: **PASS / CLOSED** at declared standard scope;
+- finite-pair -> projective Mixed Fox object: **PASS / LOCAL**.
+
+Arbitrary non-invertible morphism functoriality remains OPEN, but it is not load-bearing for intrinsic isomorphism-class well-definedness.
+
+Third, the non-redundancy gate closes the Mixed Fox branch as a new recognition theorem. At fixed rank in the standard Demuškin family, the finite extension window carries only the q-regime visible at the stated precision; extracting chi mod p^k from it via q/classification is classification repackaging, explicitly not a new orientation bridge. Thus:
+- Mixed Fox as a genuinely new recognition carrier: **FAIL / CLOSED — REDUNDANT**.
+- genuinely new carrier search: **OPEN**.
+
+Detailed audit:
+research/PAPER3_MIXED_FOX_NATURALITY_NONREDUNDANCY_DECISION_2026-10-02.md
+
+No W_11/W_12, large Fox scan, q=N_k reopening, or Paper 2 reproof is authorized. Next branch must be genuinely different finite-input carrier and pass Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop.
+
+## 2026-10-02 — DEMUŠKIN PAIR DESCENT / NATURALITY BOUNDARY
+
+The admissibility/fiber prerequisite has been pushed one step further and its logical scope is now fixed.
+
+For
+\[
+N_k=3^{k-1}+1,\quad
+Q_k=G/D_{N_k},\quad
+E_k=G/D_{N_k+1},\quad
+A_k=D_{N_k}/D_{N_k+1},
+\]
+inside the declared standard odd-p fixed-rank Demuškin family:
+
+- q<N_k is intrinsically recovered from the first q-dependent Zassenhaus graded defect below N_k;
+- q=N_k is separated from q>N_k by the boundary-layer dimension of A_k;
+- q>N_k (including q=0) gives the same truncated extension window.
+
+Hence the forgetful fiber is a singleton **up to extension-window isomorphism**.
+
+The crucial correction is that this proves object/isomorphism-class reconstruction, not automatically a functorial section on arbitrary pair morphisms. Therefore:
+
+- Demuškin pair -> extension-window reconstruction: **PASS / CLOSED at isomorphism-class scope**;
+- extension-window -> projective Mixed Fox jet: **PASS / LOCAL**;
+- bare finite-pair -> Mixed Fox jet as an isomorphism-invariant assignment: **PASS / LOCAL**;
+- full categorical natural transformation through a specified Pair_k morphism category: **OPEN**.
+
+The broad arbitrary-central-extension no-go remains **FAIL / CLOSED** and is not contradicted.
+
+Primary literature control: Labute/Demuškin classification and Mináč–Rogelstad–Tân Zassenhaus-dimension results; Fox/Lyndon relation-module mechanism is standard. The project-specific categorical factorization remains our own load-bearing step.
+
+Detailed audit:
+research/PAPER3_MIXED_DEMUSHKIN_PAIR_DESCENT_NATURALITY_AUDIT_2026-10-02.md
+
+Next authorized action: formal covariance/naturality of the projective Mixed Fox construction under extension-window isomorphisms, Nielsen/generator change, relation-generator gauge, relator conjugation, and mixed truncation. No W_11/W_12, large Fox, 45-dimensional, or Paper 2 reproof computation.
+
+## 2026-10-01 — DEMUŠKIN ADMISSIBILITY / EXTENSION-FIBER RECONSTRUCTION GATE
+
+The admissibility prerequisite for the Mixed Fox branch has now been made explicit at the declared standard scope.
+
+Define the active category ExtWin^Dem_{k,d} by canonical Zassenhaus windows
+1 -> A_k=D_{N_k}/D_{N_k+1} -> E_k=G/D_{N_k+1} -> Q_k=G/D_{N_k} -> 1,
+N_k=3^{k-1}+1,
+arising from infinite odd-prime finite-rank Demuškin groups of fixed rank d, with q(G) a p-power or 0. Morphisms are whole-extension isomorphisms.
+
+A fiber analysis gives three cases:
+- q<N_k: Q_k sees the first q-dependent Zassenhaus graded relation;
+- q=N_k: Q_k does not see the q-term, but dim A_k distinguishes the degree-N_k relation;
+- q>N_k (including q=0): the q-term is invisible through E_k, so the extension window itself is independent of q.
+
+Thus, within the standard odd-p fixed-rank Demuškin family,
+(Q_k,A_k) => [E_k -> Q_k]
+up to extension-window isomorphism.
+
+Classification:
+- admissible Demuškin category definition: PASS / CLOSED at declared scope;
+- Demuškin fiber reconstruction: PASS / LOCAL;
+- extension-window -> mixed Fox: PASS / LOCAL;
+- original bare-pair -> mixed Fox: OPEN / LOAD-BEARING;
+- arbitrary-extension pair descent: FAIL / CLOSED only for the broad category;
+- Paper 3: FROZEN / COMPLETE.
+
+This materially narrows the previous OPEN gate. The next authorized action is formal lemma packaging plus independent naturality/projective-covariance verification. No large Fox computation is authorized.
+
+Detailed audit: research/PAPER3_MIXED_DEMUSHKIN_ADMISSIBILITY_RECONSTRUCTION_AUDIT_2026-10-01.md.
+
+## 2026-10-01 — POST-PAPER-3 RESEARCH SCOPE FROZEN: CARRIER UNIVERSALITY / MINIMALITY ONLY
+
+The next research branch is now deliberately narrowed to exactly two possible outcomes:
+
+1. attack the **finite-pair universal property / minimality** of the existing carrier; or
+2. construct a **genuinely new carrier** that is not merely a reformulation/compression of the frozen Paper 3 selector.
+
+Nothing else is authorized as a primary research target.
+
+In particular:
+- Paper 3 itself remains **FROZEN / COMPLETE** and is not to be re-proved.
+- The completed Kummer selector, full delta-family, intrinsic cup-line, and prior Gate D proof machinery are fixed inputs/boundaries, not targets for reproof.
+- No larger-window calculation (including W_11/W_12), Fox computation, or high-dimensional carrier computation is authorized unless it is forced by the finite-pair universal/minimality question or by a genuinely new carrier construction.
+- A carrier counts as genuinely new only if it is finite-input, q-blind, functorial, gauge-independent, and non-equivalent to the frozen selector, with a new separation/threshold/factorization consequence.
+- Any minimality statement must name its admissible carrier category; “absolute minimality” without a category is not an authorized claim.
+
+Immediate decision gate:
+**finite-pair universal property/minimality → PASS/LOCAL, FAIL/CLOSED, or OPEN; otherwise new-carrier construction.**
+
+This scope supersedes broader historical roadmap language that would reopen F1/F2 recognition branches merely for additional family examples. Those branches remain historical/conditional unless they directly supply a new carrier or resolve the finite-pair universal/minimality problem.
+
+
+## 2026-10-01 — POST-PAPER-3 CARRIER NON-REDUNDANCY AUDIT
+
+The first post-Paper-3 carrier battleground has been taken to its current structural boundary.
+
+- Paper 3 본체: **FROZEN / COMPLETE**.
+- Paper 2 selector: **FROZEN / COMPLETE; no reproof authorized**.
+- single-vector t_2: **FAIL / CLOSED** as an intrinsic carrier.
+- full delta-family: intrinsic as a proof/input family, but **FAIL / CLOSED — REDUNDANT** as a new post-Paper-3 recognition theorem because its zero predicate is exactly the completed Kummer selector.
+- finite one-dimensional cup-line: **PASS / LOCAL** as an intrinsic compression at the audited scope, but **FAIL / CLOSED — REDUNDANT** as a new recognition theorem for the same reason.
+- transgression quotient O_k: **PASS / LOCAL** as the finite proof carrier; universal/minimal finite-pair status remains **OPEN**.
+- genuinely new non-redundant finite-pair carrier: **OPEN**, but only if it is finite-input, q-blind, functorial, gauge-independent, non-equivalent to the frozen selector, and yields a new category-relative separation/threshold statement.
+
+This is a post-Paper-3 research boundary, not a reopening of Paper 3. No W_11/W_12, Fox, or 45-dimensional computation is authorized merely to repackage the completed selector.
+
+Detailed audit: research/POST_PAPER3_CARRIER_NONREDUNDANCY_AUDIT_2026-10-01.md.
+
+## 2026-10-01 — PAPER 3 본체 고정 / 후속 일반화 연구 트랙 분리
+
+중요한 연구-정체성 정정이다.
+
+- **Paper 3 본체:** 이미 완성된 논문으로 간주하고 고정한다. 현재 후속 연구에서 Paper 3의 정리·증명·완성도를 다시 검증하는 것으로 해석하지 않는다.
+- **현재 작업:** Paper 3에서 제시한 **후속 연구 프로그램**, 즉 finite-window → intrinsic carrier → global orientation으로의 일반화 가능성을 별도 연구 가지로 공격한다.
+- (t_2), full (delta)-family, intrinsic carrier, Gate D는 Paper 3 본체의 필수 증명 단계가 아니다.
+- 후속 연구가 실패하거나 닫혀도 Paper 3 본체의 기존 정리와 완성본은 영향을 받지 않는다.
+- Paper 2 selector를 다시 증명하지 않는다. 완료된 선행 결과는 후속 연구의 고정 입력/경계로만 사용한다.
+
+정확한 트랙:
+[
+oxed{	ext{Paper 3 본체}=	ext{완성·고정}}
+qquad
+oxed{	ext{현재 작업}=	ext{Paper 3 이후의 후속 일반화 연구}}
+]
+
+앞으로 “Paper 3의 핵심 주장을 다시 검증한다”는 표현은 사용하지 않는다. 정확한 표현은 **“Paper 3 이후 후속 일반화 연구에서 carrier의 생존 여부를 검증한다”**이다.
+
+현재 후속 연구의 첫 실제 승부처는 carrier intrinsicity / functoriality / gauge independence이며, 다음 승부처는 orientation bridge의 비중복성이다. 구조적 실패 시 해당 후속 carrier branch만 닫고 Paper 3 본체나 Paper 2 selector를 재개방하지 않는다.
+
+## 2026-10-01 — F2 ONE-TIME INDEPENDENT CONTROL AUDIT / COMPLETENESS LIMIT
+
+The F2 branch was independently checked once, without reopening the search. The F2 rank-4 quadratic relation pencil has direct Pfaffian \(a^2\). The recovered elementary-type candidate list contains exactly two construction shapes in the surviving audit trail: (i) split/free-product rank-2 one-relator factors, with Pfaffian \(ab\); and (ii) a shared-direction cyclotomic semidirect shape with a free rank-1 factor, with Pfaffian \(0\).
+
+The direct Pfaffian calculation is **PASS / CLOSED** for these examined candidates. But the repository does not independently prove that the recovered two-shape list is exhaustive for the entire standard elementary-type rank-4/two-relator class.
+
+Therefore the correct status is:
+- F2 × recovered examined candidates: **FAIL / CLOSED**.
+- completeness of examined candidate list: **OPEN**.
+- F2 × arbitrary cyclotomic pro-p group: **OPEN / CONDITIONAL**.
+- F2 W4 computation: **NOT AUTHORIZED**.
+- operational F2 branch: **CLOSED** unless new evidence supplies a new construction or proves completeness.
+- broad F2 finite-window recognition: **OPEN / CONDITIONAL**.
+
+This supersedes the stronger wording that the standard elementary-type construction mechanism itself had been ruled out. The correct statement is candidate-level, not universal.
+
+Detailed audit: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md
+
+## 2026-10-01 — F2 STANDARD ELEMENTARY-TYPE CONTROL ROUTE CLOSED
+
+The F2 same-W3 search was carried through the authorized construction-level pre-check. Literature confirms cyclotomic free products and fibre/semidirect constructions as legitimate control mechanisms, but the standard elementary-type class cannot supply a rank-4 two-relator quadratic relation plane of F2 repeated-root Pfaffian type. Symbolic rank/relation bookkeeping reduces the relevant rank-4/two-relator shapes to Pfaffian ~ab or Pfaffian 0, whereas F2 has Pfaffian ~a^2.
+
+Status:
+- F1 uniformity: not reopened; remains PASS/CLOSED at declared pairwise scope.
+- F2 same-W3 control in standard elementary-type class: **FAIL / CLOSED**.
+- F2 same-W3 control among arbitrary cyclotomic pro-p groups: **OPEN / CONDITIONAL**.
+- finite W4 computation: **NOT AUTHORIZED** because no genuine W3-matching control was found.
+- broad F2 finite-window recognition: **OPEN / CONDITIONAL**.
+
+This is a structural boundary, not an absolute no-go theorem for every cyclotomic pro-p group. The next escalation, if pursued, must be a genuinely non-elementary cyclotomic construction with explicit W3 matching; otherwise the F2 branch should be closed as a control-search dead end.
+
+Detailed record: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md.
+
+## 2026-10-01 — F2 SAME-W3 CYCLOTOMIC CONTROL GATE CLOSED
+
+The F2 same-W3 control search is now closed at the authorized structural level. For the smallest rank-4 F2 relation space, the Pfaffian pencil has repeated-root type \(a^2\). The audited standard elementary-type cyclotomic constructions with rank 4 and two defining relations have only Pfaffian type \(ab\) or \(0\); these are not GL4-equivalent to \(a^2\).
+
+Status:
+- F2 × standard elementary-type cyclotomic control: **FAIL / CLOSED**.
+- F2 × arbitrary cyclotomic pro-p group: **OPEN / CONDITIONAL**; no universal no-go theorem is claimed.
+- F2 \(W_4\) computation: **NOT AUTHORIZED**.
+- F2 broader finite-window recognition: **OPEN / CONDITIONAL**.
+
+This closes the standard construction mechanism rather than all possible cyclotomic pro-p groups. F1 is not reopened. No large computation is authorized merely to force a nonstandard control.
+
+Detailed record: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md
+## 2026-10-01 — F1 SAME-W3 OBSTRUCTION / W4 INTRINSIC SEPARATION AUDIT
+
+The concrete (p,d,q)=(3,2,3) pair has now passed an independent W4 intrinsicity audit. The earlier presentation-local equation is not used as the invariant. Instead, the truncated restricted relation module has a canonical degree-3 p-power component: it is zero for F1 and nonzero for the cyclotomic free-product control. This is preserved by restricted-Lie isomorphisms.
+
+Status:
+- W3 equality: **PASS / CLOSED**.
+- W4 intrinsic separation: **PASS / CLOSED** for the declared pair.
+- Exact two-object threshold r=4: **PASS / CLOSED**.
+- Uniform q=p^f extension: **OPEN / LOAD-BEARING**.
+- Broad category-level recognition theorem: **OPEN / CONDITIONAL**.
+- Novelty/priority: **OPEN / CONDITIONAL**; no priority claim.
+
+Authoritative audit: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md
+
+Parameter-uniform finite-q threshold is now **PASS / CLOSED** for the declared F1/cyclotomic-control pair: r=q+1 for every finite q=p^f, p odd, d>=2. Next authorized gate: seek a genuinely broader category or a same-window obstruction beyond this pair; do not infer a broad recognition theorem from the pairwise result.
+
+
+## 2026-10-01 — THREE-PAPER PUBLICATION-STYLE FINALIZATION
+
+A style-only publication pass was completed on the three already-audited manuscript sources. The mathematical content and research classifications are unchanged.
+
+- Paper 1 style-final branch: paper1-style-final-2026-10-01; 8-page PDF; SHA-256 b4806dc7ed111ffeb3b93d5ef9066d958252fff132506a5d95f25dad76afe960; PASS/CLOSED.
+- Paper 2 style-final branch: paper2-style-final-2026-10-01; 13-page PDF; SHA-256 97504d2bc5db7f668f2287d62bca902cde0b285b1a4b7ef11ffe58c0c8928e32; PASS/CLOSED.
+- Paper 3 style-final branch: paper3-style-final-2026-10-01; 17-page PDF; SHA-256 3518e5f966401d48eae9c8b76b80fe7a9ba4e53f76bc4255edb66862082bf7ff; PASS/CLOSED.
+- Removed companion/placeholder boilerplate, reduced repetitive defensive novelty language, standardized finite coefficient notation, improved introductions, and replaced informal "kills" terminology.
+- Paper 3 uses the source-correct dedicated style-final workflow because the legacy paper3-build workflow targets the older paper3/main.tex application manuscript.
+- PDF text extraction and first-page visual checks passed.
+- Publication novelty remains OPEN / CONDITIONAL; mathematical frontier unchanged.
+- Detailed record: research/THREE_PAPER_PUBLICATION_STYLE_FINAL_2026-10-01.md.
+
+## 2026-09-28 — THREE-PAPER ARTIFACT GATE FINALIZATION
+
+The authoritative three-paper revision checklist has now been followed through the source→CI→PDF→independent audit chain.
+
+- Paper 1: branch paper1-fixes-2026-09-28, authoritative paper/successor_main.tex blob 1855e9a992a98caf0a0f6deae484f13e049d0a20; source-correct CI run 36401507321; PDF artifact 10960891547; 8 pages; PDF SHA-256 4efec62888f3803935717658f9f638902ff2ef2bd8845c83a32dc6770542e5ef. Source identity, PDF text, visual pages, and checksum passed. PASS / CLOSED.
+- Paper 2: authoritative manuscript source blob 7411d241505b8a0a496f46cee05bbecc8d40eb47 was restored exactly on CI branch paper2-ci-clean-2026-09-28; final exact-source CI run 36401141711; full artifact 10959918919; 13 pages; PDF SHA-256 1381f75048bf0f83d9174c6a2b8bb85b31e62010f945697413182c9f5be94c64. Source identity, U4/U5c text, PDF visual audit, and checksum passed. PASS / CLOSED.
+- Paper 3: authoritative paper/main.tex blob aa351f77c07a748588208d0d383f0c4dbd6dfca7; CI run 36395985678; full artifact 10957609279; 17 pages; PDF SHA-256 2be2e84e06eb77eb9e6e4c9bbfb522bb037db5675bb04c7a9a0c6bac34a9787e. Source identity, §8 cup-line chain, D4 threshold, literature audit, PDF visual audit, and checksum passed. PASS / CLOSED.
+- Publication novelty remains OPEN / CONDITIONAL; no priority claim.
+
+Important synchronization correction:
+- The generic paper-build.yml on the Paper 1 branch builds paper/main.tex, not paper/successor_main.tex. Its successful run therefore produced a Paper 2 PDF and was not accepted as Paper 1 evidence.
+- A dedicated source-correct .github/workflows/paper1-build.yml was added on the Paper 1 branch; the resulting run is the authoritative Paper 1 CI artifact.
+- This was caught by the required independent source↔artifact identity check; no wrong artifact was promoted.
+
+Literature verification completed:
+- Claudio Quadrelli, Cohomology of absolute Galois groups, arXiv:1412.7685: author/title/source identity verified.
+- J. Mináč, N. D. Tân, N. T. Trà, Zassenhaus filtrations as intersections, arXiv:2510.20133: author/title and its broader representation-theoretic Zassenhaus scope verified; Paper 1 now records it as surrounding literature, without claiming identity with the exact affine theorem.
+- Labute Theorem 4 / Proposition 6 orientation attribution and the standard Demuškin classification boundary were independently cross-checked against later literature reproducing those exact references.
+- NSW Chapter III / Theorem 3.9.15 and the PD²/Demuškin relationship were cross-checked through secondary sources; no MathSciNet/zbMATH Open search is claimed.
+
+Mathematical U5c check:
+- Paper 2 U5c's finite-coefficient PD² duality argument is internally type-correct: the dual of the socle inclusion is the reduction map A_{k-1} -> F_3, hence surjective and therefore the original H^2 map is injective.
+
+## 2026-09-28 — THREE-PAPER REVISION CHECKLIST GATE
+
+The supplied revision checklist is now the controlling edit list for the three manuscripts.
+
+- Paper 1: source revision branch `paper1-fixes-2026-09-28`; LaTeX compilation PASS, workflow verification blocked only by citation-warning hygiene. Artifact gate OPEN/PENDING.
+- Paper 2: clean source revision branch `paper2-fixes-clean-2026-09-28`; clean CI compilation PASS (run 36398580257). Artifact gate OPEN/PENDING exact PDF/content/hash verification.
+- Paper 3: source revision branch `paper3-fixes-2026-09-28`; CI compilation/build PASS. Artifact gate OPEN/PENDING exact PDF/content/hash verification.
+- No intermediate failed Paper 2 patch branch is authoritative.
+- Publication novelty remains OPEN/CONDITIONAL.
+
+
+## 2026-09-28 — PAPER 3 ARTIFACT GATE CLOSED
+
+The repaired source commit `dd3d2e69c4e320129a3d0025c853747dabe744e4` successfully completed the `Build paper PDF` workflow (run `36393007041`). The CI-built submission bundle was independently unpacked and checked.
+
+The packaged `main.tex` has Git blob SHA `0a71fab5f2227b7f4659d5f10fca3e555c7add8b`, matching the authoritative current `paper/main.tex`. The CI PDF is 17 pages. The repaired §8 typed cohomology chain and the subsequent Lemma 5.2 comparison were verified in the extracted PDF text, and pages 9–10 were visually inspected.
+
+CI submission PDF checksum: `2ab01035bb42a16b36b2f1efafa66cafda9c73b041c5a3c5c5aa2c9ca5a8e697`.
+
+Classification:
+- artifact gate: **PASS / CLOSED**
+- overall Paper 3: **INTERNAL REVIEW PASSED**
+- publication novelty: **OPEN / CONDITIONAL**
+
+## 2026-09-28 — PAPER 3 §8 CUP-LINE TYPE REPAIR
+
+The authoritative `paper/main.tex` was repaired at commit `dd3d2e69c4e320129a3d0025c853747dabe744e4`.
+
+The previous §8 sentence incorrectly described the image of \\(\iota_*\\) as still lying in \\(H^2(G,\\mathbb F_3)\\). It is now written with the explicit typed chain
+\\[
+C_k\xrightarrow{\operatorname{infl}}H^2(G,\mathbb F_3)
+\xrightarrow{\iota_*}H^2(G,A_{k-1}(\chi_{k-1})),
+\\]
+followed by Lemma U5b's identification with the connecting-map variation.
+
+Primary-source verification against Mináč–Pasini–Quadrelli–Tân (Adv. Math. 380 (2021), §7):
+- Proposition 7.1: relation initial forms and cup-product evaluation form a commutative pairing diagram.
+- Proposition 7.2: for odd p, the relevant degree-two pairing is perfect on the alternating part \\(\Lambda^2(V)\\).
+- The present p=3 rank-four relation has one-dimensional degree-two initial-form span, so the §8 finite cup carrier has rank one.
+
+Classification:
+- §8 type repair: **PASS / CLOSED**.
+- §8 rank-one primary-source compatibility: **PASS / LOCAL**.
+- Publication artifact gate: **OPEN / PENDING exact-source CI + PDF/content audit + checksum**.
+- Publication novelty: **OPEN / CONDITIONAL**.
+
+The mathematical frontier is unchanged; this is a source-detail repair and independent literature verification.
+
+## 2026-09-28 — PAPER 3 DETAIL REPAIR / LITERATURE AUDIT CURRENT STATE
+
+The authoritative Paper 3 source changed at commit `470d06e34088db2b101acac7ad3bf4b0eaa1bb02`.
+
+Applied:
+- §9 lower-bound wording corrected to distinguish (m\le3^{k-2}) (outside (mathcal D_{k,m})) from (3^{k-2}<m\le3^{k-1}) (inside domain, selector fails).
+- U5c final sentence now explicitly derives injectivity of (iota_*) from surjectivity of its dual.
+- Literature audit wording records only searches actually performed: arXiv and general web searches on 2026-09-28; MathSciNet/zbMATH Open are not claimed.
+
+Targeted literature result:
+- Efrat–Quadrelli 2019 confirms prior art for Kummerianity/cohomological and 1-cocycle lifting.
+- Mináč–Pasini–Quadrelli–Tân 2021 confirms the minimal-presentation relation/cup-product pairing used here.
+- No exact theorem combining the present bare-(Q_k), arbitrary-candidate, finite Kummer recognition, and fixed-scope sharp selector-depth package was identified in the targeted search.
+
+Classification:
+- mathematical frontier: unchanged, PASS / CLOSED at declared scope;
+- literature audit: PASS / LOCAL;
+- publication artifact gate: OPEN / PENDING exact-source CI + PDF/content audit + checksum.
+
+## 2026-09-28 — THREE-PAPER MATHEMATICAL CONTRIBUTION ASSESSMENT RECORDED
+
+For future research continuity, the researcher-facing synthesis is frozen in:
+`research/THREE_PAPER_MATHEMATICAL_CONTRIBUTION_ASSESSMENT_2026-09-28.md`.
+
+The three-paper arc is recorded as:
+**Paper 1 = finite recognition/factorization → Paper 2 = sharp affine threshold (p^{k-1}+1) → Paper 3 = recognition at the sharp scale, with fixed rank-4 (p=3) selector threshold (3^{k-1}+1) and 1D linear selector-carrier minimality.**
+
+Overall mathematical assessment: **research-level coherent finite-recognition program at the declared scopes**.
+Publication novelty: **OPEN / CONDITIONAL**; no priority claim.
+
+This is an explanatory synthesis only; authoritative mathematical classifications remain in the individual Gate/audit records.
+
+
+
+## 2026-09-28 — PAPER 3 EXACT-SOURCE ARTIFACT GATE CLOSED
+
+The repaired `paper/main.tex` has now passed the exact-source CI/PDF gate and independent artifact audit.
+
+Authoritative source: `ac53cc2e753fc7b8fb0eb4b78a0085ccfdbc5a89`; blob `3f0bc48ac532d0ed72bcfe876a8283bed178dfbc`; source SHA-256 `bc951dce61717ed184e8763118a3ffef310615b09b95b8fd6ae7ca0a83e42a49`.
+CI run **36374270475** and PDF verification: **PASS / CLOSED**. PDF artifact **10950077812**, SHA-256 `d38c63bd1b453482217c7876d818ff7b50e48cbde7f219552953d8a5e36d56c0`, 17 pages. Independent PDF/content audit: **PASS / CLOSED**.
+
+The publication artifact gate is therefore **PASS / CLOSED**. No earlier PDF remains authoritative.
+## 2026-09-28 — PAPER 3 REFEREE DETAIL REPAIR 2 / ARTIFACT GATE
+
+The authoritative manuscript source was repaired in commit `2ab97e7d11f5238f6586aa435c9da36d62781d91`. The source-level repair is complete and rechecked. The exact commit triggered Build paper PDF run `36373920812`, currently **IN PROGRESS**.
+
+The publication artifact remains **OPEN / PENDING** until CI compilation, PDF verification, and independent artifact/content audit complete. No prior PDF is authoritative for this source revision.
+
+The mathematical classifications remain unchanged: finite-window recognition PASS/CLOSED; fixed-scope selector threshold PASS/CLOSED; 1D cup-line carrier/minimality PASS/CLOSED in the declared linear selector-carrier category; stronger finite-pair functional OPEN/NOT LOAD-BEARING; novelty OPEN/CONDITIONAL.
+
+## 2026-09-28 — THREE-PAPER PDF REVIEW AUDIT / VERSION-MAPPING CORRECTION
+
+The externally supplied three-paper review was checked against the exact artifacts previously delivered in this session.
+
+- Paper 1 artifact: affine factorization paper, run 36212215849, commit 73001ba0611e4f4aa7db8c733ee01d67542e16eb, 8 pages, SHA-256 09d67cbb88c647e4b7bb92bb91b2d46fe6b9b2c4b32959b7cebd7e468a554eda.
+- Paper 2 artifact: finite-window Kummer recognition paper, run 36216012111, commit 0194e01176ae1c21fc70858be3797eeb1a3e7c18, 13 pages, SHA-256 af14b4b7ab971d8ed2d8cac84daae3ff6422ed389cec92b690cc3e184dde1aee.
+- Paper 3 artifact: selector-minimality paper, run 36368630643, commit 2b4ccb849e93af840ca216b06c06c72a36c84dd8, 17 pages, SHA-256 00a4ee8deba65eb7c08a9b703d3c19b50801ffdde2c13cab0155186c247bb4e3.
+
+Critical correction:
+- The alleged Paper 2 page-3 grid of repeated 1 glyphs is NOT present in the exact delivered Paper 2 artifact. Independent text extraction and visual rendering of page 3 show a normal proof page. No rebuild is authorized from that objection alone.
+- The supplied Paper 1 objections correspond to a different/older manuscript mapping; the delivered Paper 1 already uses p,f,k rather than an undefined q and contains the relation with the preceding recognition paper.
+- The alleged Paper 3 x3 typo is absent: current source uses x_2^{3^e}.
+
+## 2026-10-01 — EDITORIAL PDF ARTIFACT STATUS
+
+The three-paper editorial final pass is complete on isolated final branches. The resulting CI-built PDFs are verified and ready as publication-candidate artifacts; mathematical status is unchanged. The branches are intentionally kept separate from the frozen main manuscript until the artifact set is promoted.
+
+- Paper 1: `paper1-editorial-final-2026-10-01`, CI 36797031449, 8 pages.
+- Paper 2: `paper2-editorial-final-2026-10-01`, CI 36796701931, 12 pages.
+- Paper 3: `paper3-editorial-final-2026-10-01`, CI 36797451738, 14 pages.
+- Editorial artifact status: **PASS / CLOSED**.
+- Mathematical research status: **UNCHANGED**.
+- Publication novelty: **OPEN / CONDITIONAL**.
+
+
+## 2026-10-01 — ACTIVE NEXT-GENERALIZATION ROADMAP
+
+The next research window starts from research/PAPER3_F1_CYCLOTOMIC_FINITE_WINDOW_GATE_2026-10-01.md after mandatory continuity restoration. The fixed conditional sequence is: (1) D versus F1 at (3,2,3); (2) F1 parameter-uniform extension if supported; (3) a genuinely different category such as deferred F2; (4) enlargement from T_cyc to a family of global properties; (5) category-relative finite-window recognition theory r_T(C;D_bullet). A failed intrinsic-carrier or separation attempt may terminate the branch or produce a no-go theorem and does not authorize escalation. Current F1 finite-window recognition is now **PASS / LOCAL** at the concrete pair, with exact two-object threshold **PASS / CLOSED**. The parameter-uniform extension remains **OPEN / LOAD-BEARING**; the general recognition theory is **OPEN / CONDITIONAL**.
+
+
+## 2026-10-01 — F1 UNIFORM FINITE-q THRESHOLD
+
+The pairwise obstruction theorem is now uniform in finite q=p^f:
+\[
+r_{T_{cyc}}(\{G_{F1}(q),G_{cyc}(q)\};D_\bullet)=q+1
+\]
+for odd p and d>=2. W_q isomorphism follows directly from Zassenhaus degree bookkeeping; W_{q+1} non-isomorphism follows from the intrinsic abelianization difference, using the nonzero restricted p^f-power class in the F1 associated graded Lie algebra.
+
+Classification: **PASS / CLOSED** at the declared two-object category. Broad category-level recognition remains **OPEN / CONDITIONAL**.
+
+Authoritative detail: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md
+
+
+## 2026-10-01 — F2 SAME-W3 CYCLOTOMIC CONTROL GATE CLOSED
+
+The F2 same-W3 control search is now closed at the authorized structural level. The audited rank-4/two-relator standard elementary-type cyclotomic constructions have Pfaffian type \(ab\) or \(0\), whereas the F2 quadratic relation pencil has repeated-root type \(a^2\). These types are not GL4-equivalent.
+
+Status:
+- F2 × standard elementary-type cyclotomic control: **FAIL / CLOSED**.
+- F2 × arbitrary cyclotomic pro-p group: **OPEN / CONDITIONAL**; no universal no-go theorem is claimed.
+- F2 \(W_4\) computation: **NOT AUTHORIZED**.
+- F2 broader finite-window recognition: **OPEN / CONDITIONAL**.
+
+This closes the standard construction mechanism rather than claiming that all cyclotomic groups are impossible controls. F1 is not reopened. Detailed record: research/PAPER3_F2_SAME_W3_CONTROL_GATE_2026-10-01.md
+
+## 2026-10-01 — AUTHORITATIVE CORRECTION: F1 UNIFORM q=p^f THRESHOLD RECHECK
+
+A post-closure critical review requested an explicit theorem-level audit of the two load-bearing steps in the uniform F1/cyclotomic-control result.
+
+Both steps are now closed:
+
+- Full W_q equality: both relators have the same image modulo D_q(F), and quotient functoriality gives D_q(F/R)=D_q(F)R/R. Hence the two W_q quotients are literally the same quotient F/(D_q(F),s), not merely associated-graded-equivalent.
+- Uniform X_2^[p^f] nonvanishing: the Blumer–Quadrelli F1 restricted-Lie presentation admits a map X_2 to a free rank-one abelian restricted Lie algebra, proving X_2^[p^f] != 0 for every finite q=p^f.
+- Independent group-level separation: the abelianizations of W_{q+1} are (Z/p^{f+1})^{2d} and (Z/p^{f+1})^{2d-1} direct-sum Z/p^f, so they have different orders.
+
+Authoritative status after the recheck:
+- W_q full equality: PASS / CLOSED.
+- W_{q+1} intrinsic separation: PASS / CLOSED.
+- Uniform pairwise threshold r=q+1: PASS / CLOSED for every odd p, finite q=p^f, d>=2, at the declared two-object category.
+- Broad category-level recognition: OPEN / CONDITIONAL.
+- Novelty/priority: OPEN / CONDITIONAL.
+
+This correction supersedes any earlier entry in CURRENT_STATE that still labels the uniform extension OPEN/LOAD-BEARING. Detailed audit: research/PAPER3_W4_INTRINSIC_SEPARATION_AUDIT_2026-10-01.md.
+
+## 2026-10-01 — GATE D FINITE-WINDOW RECOGNITION PRE-CHECK
+
+The F2 branch remains operationally sealed. A mandatory Gate-D pre-check was completed before any new computation.
+
+For the proposed fixed-scope chain
+\\[
+W_{10}\\to L(\\rho_2)\\to\\{\\delta_{3,\\rho_3}\\}\\to\\chi\\bmod27,
+\\]
+Object/Input/Functoriality/Gauge/Orientation-bridge/q-blindness pass at the audited p=3,k=3 scope. However, the same bare finite quotient + arbitrary-candidate Kummer selector mechanism is already assembled in the completed Paper 2 theorem for
+\\(Q_k=G/P_{3^{k-1}+1}\\). Therefore merely repackaging W_10 as a carrier to chi mod 27 is not a new Paper 3 theorem.
+
+The load-bearing Paper 3 question is the recognition layer: the carrier must yield a category-relative statement about
+\\(r_T(\\mathcal C;D_\\bullet)\\), including a genuine same-window/different-target separation for lower bounds or a uniform same-window recognition theorem for upper bounds. The already proved F1/cyclotomic pairwise threshold q+1 is retained as a benchmark, not conflated with the Paper 2 selector theorem.
+
+Classification:
+- fixed W_10 selector chain: PASS / CLOSED (existing Gates A-C);
+- literal delta-family \\cap Q_4^*: FAIL / CLOSED (type mismatch, superseded);
+- W_10\\tochi mod27 as a new standalone Paper 3 theorem: FAIL / CLOSED on redundancy grounds;
+- Gate D broader finite-window recognition: OPEN / LOAD-BEARING.
+
+No W_11/W_12 or new Fox computation is authorized merely to extend the selector chain. Detailed pre-check: research/PAPER3_GATE_D_FINITE_WINDOW_RECOGNITION_PRECHECK_2026-10-01.md.
+
+## 2026-10-01 — CRITICAL REVIEW OF GATE D STATUS
+
+The prior Gate-D framing was refined after critical review. F2 remains PASS / CLOSED operationally, with candidate-completeness OPEN and no universal no-go claim.
+
+Paper 3's immediate target is kept specific: finite-window recognition of the declared global target (canonical cyclotomic orientation / chi mod 3^k), not a general theory for arbitrary T. A broader category-level recognition theory is a later research program, not silently promoted into Paper 3.
+
+Gate D status is now stratified rather than a bare OPEN label:
+- Chain existence / finite calculation: PARTIALLY VERIFIED at the fixed audited scope.
+- Intrinsic carrier: OPEN.
+- Orientation bridge carrier -> chi mod 27: OPEN.
+- Gauge/presentation independence: OPEN as a dedicated proof obligation.
+- Functoriality: OPEN as a dedicated carrier-level obligation.
+- Paper 2 redundancy boundary: CLOSED — merely restating W_10 -> chi mod 27 is not a new Paper 3 result.
+
+The next action is a focused three-item pre-check/attack: (1) Object definition, (2) carrier-level functoriality/intrinsicity, (3) orientation bridge. The full nine-item checklist remains a guardrail, not a prerequisite bureaucracy. No large computation is authorized before these three pass or produce a decisive obstruction.
+
+Stop rule: if the carrier is shown to depend essentially on presentation/orientation choices, close that carrier branch as FAIL / CLOSED rather than generalizing around the artifact. If the carrier survives but the bridge remains unresolved, classify OPEN. If a natural bridge is proved, classify PASS / LOCAL or PASS / CLOSED according to scope. A time-based two-week deadline is not adopted as a mathematical stop criterion; the branch stops on structural evidence, not elapsed time.
+
+
+## 2026-10-01 — GATE D THREE-ATTACK INTRINSIC-CARRIER TRIAGE
+
+After mandatory continuity restoration, the immediate Gate-D work was narrowed to three structural attacks before any new computation:
+1. exact object legitimacy;
+2. carrier intrinsicity/functoriality/gauge independence — designated as the first decisive battleground;
+3. orientation bridge without inserting the known orientation.
+
+The object attack passes for the audited W_10 -> L(rho_2) -> {delta_{3,rho_3}} chain. The full delta family is a genuine cohomological object, and Gate B's finite quotient construction is already PASS/CLOSED at the audited fixed scope.
+
+The intrinsicity attack gives a split result. The proposed single-vector t_2 compression is decisively FAIL/CLOSED by the existing relator-conjugation witness t_2 -> t_2+p while the abstract group and full connecting family remain unchanged. The quotient/diagonal repairs are also closed. In contrast, the full connecting family rho_3 -> delta_{3,rho_3} survives as a natural cohomological family once rho_2 is fixed, and Gate B already reconstructs it from W_10 at the declared scope.
+
+Thus the presentation/orientation-dependence attack does NOT kill the full delta family, but it does kill the tempting coordinate-level carrier. A genuinely new coarser carrier remains OPEN/LOAD-BEARING.
+
+The orientation bridge exists at the audited fixed Demushkin scope via the zero-connecting-map selector, but that mechanism is already part of the completed Paper 2 theorem. Therefore using W_10 -> delta -> chi mod 27 alone is FAIL/CLOSED as a new Paper 3 theorem on redundancy grounds.
+
+Decision: no W_11/W_12 or Fox computation is authorized. The next admissible research target is a genuinely non-redundant carrier extracted from the surviving family, subject again to the intrinsicity/gauge test. Paper 2 selector reproof is explicitly not authorized.
+
+Detailed record: research/PAPER3_GATE_D_THREE_ATTACK_INTRINSIC_CARRIER_2026-10-01.md
+
+## 2026-10-01 — O_k MINIMALITY BOUNDARY CLOSED; UNIVERSALITY IS THE ONLY LIVE O_k QUESTION
+
+The post-Paper-3 attack has now been sharpened using the frozen carrier-compression result.
+
+- Exact definition of \(\mathcal O_k\): **PASS / CLOSED**.
+- Presentation/orientation independence: **PASS / CLOSED** at the finite-pair level; \(\mathcal O_k\) is constructed from the intrinsic central extension \(E_k\to Q_k\), cohomology, and transgression, with no presentation coordinate or orientation inserted.
+- Functoriality: **PASS / CLOSED** for filtered finite-pair morphisms/isomorphisms, with the expected contravariant cohomological variance.
+- Recognition minimality of \(\mathcal O_k\): **FAIL / CLOSED — REDUNDANT**. The frozen intrinsic cup-line \(C_k\subset H^2(Q_k,\mathbf F_p)\) is one-dimensional, finite-input, q-blind, intrinsic, and already carries all false-branch selector outputs. Hence \(\mathcal O_k\) is not the minimal recognition carrier in any category containing \(C_k\).
+- Paper 2 selector redundancy: **CLOSED** as a recognition issue; no reproof is authorized.
+- Finite-pair universal obstruction property of \(\mathcal O_k\): **OPEN / LOAD-BEARING**. This is a different claim from recognition minimality: the live question is whether every admissible functorial linear obstruction carrier for the transient/stable separation problem factors canonically through \(\mathcal O_k\).- Genuinely new carrier: **NOT OPENED**; only to be pursued if the universal-property attack fails or is shown irrelevant.
+
+The proposed elapsed-time “2 weeks” stop rule is not adopted. Structural evidence controls closure. The branch closes immediately on the recognition-minimality question because a smaller frozen carrier already exists; only the distinct universal-obstruction question remains.
+
+Next authorized action: explicitly define the finite-pair category and morphisms, define “separating obstruction carrier” and the factorization/universal property, then attempt the universal theorem or construct a counterexample. No W_11/W_12, Fox, 45-dimensional computation, or Paper 2 reproof is authorized.
+
+
+## 2026-10-01 — MIXED FOX FACTORIZATION INTERPRETATION CORRECTED
+
+The standard-family mixed Fox calculation remains valid but is explicitly classified only as **PASS / LOCAL** evidence. Parameter congruence q≡q' (mod 3^k) within the standard family is not the same statement as descent from the abstract finite pair W_k. The required global implication W_k(G)≅W_k(H) ⇒ M_k(G)≅M_k(H) remains **OPEN / LOAD-BEARING**. Likewise, “higher 3-adic information” is not by itself a category-level non-redundancy theorem; category-relative non-redundancy remains OPEN. No larger computation is authorized before the A/B descent-versus-counterexample gate is resolved. See research/PAPER3_MIXED_FACTORISATION_CRITICAL_REVIEW_2026-10-01.md.
+
+
+## 2026-10-01 — MIXED FOX WEIGHTED MAGNUS GATE NARROWED
+
+The apparent characteristic-zero/mod-3 incompatibility is no longer the main obstruction. Efrat's p-adic Magnus coefficient estimate implies that for N_k=3^{k-1}+1, D_{N_k} is invisible to the mixed (3,I)-adic coefficient jet through precision k, while the boundary term is represented by D_{N_k}/D_{N_k+1}. Thus the weighted coefficient descent is **PASS / CLOSED**, and naive deep-relator counterexamples are **FAIL / CLOSED**. The remaining load-bearing issue is specifically categorical projective relation-module descent W_k -> M_k. Even if that succeeds, a separate non-redundancy gate remains because the frozen selector already recognizes chi mod 3^k at the same window. No large computation is authorized. See research/PAPER3_MIXED_3I_ADIC_WEIGHTED_MAGNUS_DESCENT_2026-10-01.md.
+
+
+
+## 2026-10-01 — MIXED FOX CATEGORICAL RELATION-MODULE DESCENT AUDIT
+
+The weighted Magnus descent is confirmed as **PASS / CLOSED**: at N_k=3^{k-1}+1, the mixed (3,I)-adic coefficient jet through precision k is insensitive to D_{N_k}, and the first possible relation contribution is exactly the boundary layer D_{N_k}/D_{N_k+1}.
+
+The remaining categorical issue was isolated more sharply. The natural finite input for the projective Fox relation-jet descent is the finite **extension window**
+1 -> A_k -> E_k -> Q_k -> 1,
+with E_k=G/D_{N_k+1}, Q_k=G/D_{N_k}, A_k=D_{N_k}/D_{N_k+1}, not merely the two abstract objects Q_k and A_k separately. The latter notation is under-specified because A_k is not a subgroup of Q_k and does not by itself encode the extension class.
+
+Using the pro-3 Fox/Lyndon relation-module exact sequence together with the weighted boundary estimate gives the proof architecture: the finite quotient determines the lower mixed jet; the extension determines the finite relation-module class; the boundary layer supplies the weighted-order-k relation contribution; stable presentation changes disappear after projectivization. This is **PASS / LOCAL** as a proof architecture, not yet a formally written natural-transformation theorem.
+
+Classification:
+- weighted coefficient descent: **PASS / CLOSED**;
+- stable/projective Fox mechanism: **PASS / LOCAL**;
+- descent from the finite extension window to the projective mixed Fox jet: **PASS / LOCAL — formal naturality statement remains to be written and independently checked**;
+- descent from the bare (Q_k,A_k) notation: **OPEN / NOT WELL-TYPED until the input category is explicitly defined**;
+- whole Mixed Fox branch: **OPEN / LOAD-BEARING**.
+
+Detailed audit: research/PAPER3_MIXED_RELATION_MODULE_DESCENT_AUDIT_2026-10-01.md.
+
+Next authorized action: formalize the extension-window category and the natural transformation W_k -> M_k, then perform an independent covariance/naturality check. No larger Fox computation is authorized.
+
+## 2026-10-01 — MIXED FOX EXTENSION-WINDOW CATEGORICAL AUDIT / INPUT-STRENGTHENING BOUNDARY
+
+The categorical packaging was pushed one step further. The correct finite input for the projective mixed Fox construction is the central extension window
+\[
+1\to A_k\to E_k\to Q_k\to1,
+\quad
+E_k=G/D_{N_k+1},\quad
+Q_k=G/D_{N_k},\quad
+A_k=D_{N_k}/D_{N_k+1}.
+\]
+
+This fixes the previous type defect: \(A_k\) is not a subgroup of \(Q_k\), so the bare notation \((Q_k,A_k)\) does not encode the extension class.
+
+However, a critical new boundary is now explicit. Passing from the original pair
+\[
+W_k=(Q_k,A_k)
+\]
+to the extension window
+\[
+\mathsf W_k^{ext}=(A_k\hookrightarrow E_k\twoheadrightarrow Q_k)
+\]
+adds genuine input unless a reconstruction/fiber-invariance theorem is proved. The forgetful map
+\[
+U:\mathbf{ExtWin}_k\to\mathbf{Pair}_k
+\]
+must therefore be treated as load-bearing.
+
+The original finite-pair descent is equivalent to the factorization condition
+\[
+F_k=\overline F_k\circ U,
+\]
+where \(F_k\) is the extension-window mixed Fox construction. Equivalently, the mixed Fox jet must be constant, up to canonical projective equivalence, on every admissible fiber of \(U\).
+
+Current classification:
+- extension-window object: **PASS / CLOSED**;
+- type correctness: **PASS / CLOSED**;
+- extension-window → projective mixed Fox construction: **PASS / LOCAL** as the correct finite-input proof target; formal naturality still requires independent verification;
+- extension-window as canonical enrichment of the original pair: **OPEN**;
+- original pair → mixed Fox descent: **OPEN / LOAD-BEARING**;
+- genuine finite-pair carrier: **OPEN**;
+- novelty: **OPEN**.
+
+No larger Fox computation is authorized. The next decisive attack is fiber invariance / extension reconstruction. If an admissible same-pair/different-extension pair yields different projective mixed Fox jets, the original finite-pair branch is **FAIL / CLOSED**. If fiber invariance or canonical reconstruction is proved, the extension-window theorem can descend to the original pair.
+
+Detailed audit: `research/PAPER3_MIXED_EXTENSION_WINDOW_CATEGORICAL_AUDIT_2026-10-01.md`.
+
+
+## 2026-10-01 — MIXED FOX FIBER-INVARIANCE ATTACK / CATEGORY BOUNDARY
+
+The direct fiber attack has produced a structural boundary. The proposed descent F_k=\bar F_k∘U cannot hold on the broad category of arbitrary finite central extension windows: the same pair (Q,A) can support distinct extension classes, and the projective Fox relation data retains the power/commutator distinction. A concrete same-pair example is Q=C3×C3, A=C3, with C9×C3 versus the exponent-3 Heisenberg extension.
+
+This closes only the **broad arbitrary-extension descent**:
+- arbitrary extension-window → bare pair: **FAIL / CLOSED**;
+- mixed Fox extension-window construction: **PASS / LOCAL**.
+
+It does **not** yet close the intended Demuškin-restricted theorem. The missing prerequisite is an explicit admissible category of extension windows arising from the project's filtered Demuškin objects. The active gate is therefore:
+
+**define admissible Demuškin ExtWin category → analyze fibers of U → determine whether extension class is reconstructible from (Q_k,A_k) or whether a same-pair Demuškin counterexample exists.**
+
+Until that category is defined, “fiber invariance” is not a well-typed universal claim. No large Fox/W_11/W_12 computation is authorized. Paper 3 remains FROZEN / COMPLETE and is unaffected.
+
+Detailed audit: research/PAPER3_MIXED_EXTENSION_WINDOW_FIBER_NO_GO_AUDIT_2026-10-01.md.
+
+
+## 2026-10-02 — POST-PAPER-3 EXPLORATION EXTERNAL-VERIFICATION LEDGER
+
+A referee-style verification ledger was added as:
+`research/PAPER3_POST_EXPLORATION_EXTERNAL_VERIFICATION_LEDGER_2026-10-02.md`.
+
+Purpose: replace status-only closure language with an externally checkable evidence chain. The ledger explicitly records the equations/counterexamples/literature controls behind the post-Paper-3 carrier exploration.
+
+Key corrections and boundaries:
+- O_k: the factorization O_k -> C is exactly the quotient/cokernel universal property and is therefore tautological as a new theorem; the proposed universal C -> O_k with uniqueness is explicitly false via C=O_k⊕O_k and the two projections. General existence C -> O_k remains unproved and is not claimed.
+- Mixed Fox: explicit local identities are recorded, including D(grg^{-1})=chi(g)D(r), Fox/Lyndon relation-module differential, Nielsen/Jacobian covariance, relation-generator gauge, and preservation of m=(3,I). These establish the standard structural mechanism but not a project-specific finite-pair theorem by themselves.
+- Broad extension descent: explicit same-(Q,A) examples C9×C3 and the exponent-3 Heisenberg extension show that arbitrary (Q,A) does not determine E.
+- Demuškin restriction: the reconstruction is only within the standard odd-p fixed-rank family. The earlier q=N_k case is explicitly removed as impossible because q is p^s or 0 whereas N_k=p^{k-1}+1 is not a p-power. The genuine ranges are q<N_k and q>N_k (including q=0).
+- Novelty boundary: Mixed Fox is closed only as a genuinely new recognition carrier under the project's non-redundancy criterion. It is not claimed to be mathematically false. A direct Fox-to-chi theorem beyond q-classification would be a separate result and was not established.
+
+Publication discipline is also recorded: the open post-Paper-3 generalization search is independent of the frozen publication candidates and should not delay their submission.
+
+Detailed ledger: `research/PAPER3_POST_EXPLORATION_EXTERNAL_VERIFICATION_LEDGER_2026-10-02.md`.
+
+### 2026-10-02 correction: gauge obstruction withdrawn
+
+A direct check against Blumer–Quadrelli–Weigel, Example 4.3 and Theorem 4.9 shows that in the standard convention for a special edge (v,w), the relation is w v w^{-1}=v^{1+q}, but the special/sinkhole vertex is w and the canonical orientation is theta(v)=1, theta(w)=1+q. The earlier audit had reversed these labels.
+
+Therefore the automorphisms v->v^a, w->v^c w preserve the canonical orientation:
+(theta o phi)(v)=1 and (theta o phi)(w)=1+q.
+The previously claimed gauge/shear orientation no-go is superseded and is now FAIL/CLOSED as an argument.
+
+This also removes the apparent conflict with the literature's uniqueness theorem: for specially oriented graphs the canonical orientation is the unique torsion-free orientation yielding the Kummerian property. The full-group gauge family is compatible because it fixes that orientation.
+
+The remaining genuine issue is the filtered carrier: the q-dependent relator r=[w,v]v^{-q} has initial Zassenhaus degree 2, so H^2 / the ordinary degree-2 relation class does not directly encode the higher q-correction. The ordinary map Lambda^2 L_1 -> L_q remains type-invalid. The needed object is an intrinsic filtered relation-module/extension defect.
+
+Current classification:
+- q-defect first survival q+1: PASS/LOCAL;
+- ordinary Lambda^2 L_1 -> L_q: FAIL/CLOSED — TYPE MISMATCH;
+- P_q: PASS/CLOSED as a restricted-power map;
+- H^2 as direct q-defect carrier: FAIL/CLOSED;
+- filtered relation/extension defect: OPEN/LOAD-BEARING;
+- intrinsic sinkhole recognition: OPEN/LOAD-BEARING;
+- exact orientation recovery from bare W_n: OPEN;
+- orientation no-go from phi_{a,c}: FAIL/CLOSED.
+
+## 2026-10-02 — NON-ABELIAN (W_q): BILINEAR WALL REPLACED BY SPECIAL-PLANE INCIDENCE GATE
+
+The previous statement that non-abelian (W_q) blocks the intrinsic extension approach is too strong. It blocks the global bilinear pairing (kappa_q:W_q	imes W_q	o A_q), but a finite-window 2-plane first-survival invariant remains available.
+
+For each (2)-plane (Ule L_1=D_1/D_2), define (
+ho(U)) as the first Zassenhaus degree at which an independent pair spanning (U) has a nonzero commutator defect. Equivalently, define the intrinsic incidence family
+[
+mathscr S_n(G)={Uinoperatorname{Gr}(2,L_1):
+ho(U)=n}.
+]
+The construction is presentation/lift independent and (q)-blind.
+
+The smallest genuinely non-abelian-origin special model
+[
+G=langle x,y,zmid xyx^{-1}=y^{1+q}, xzx^{-1}=z^{1+q}
+angle
+]
+is (V
+timeslangle x
+angle) with (V=langle y,z
+angle) free pro-(p). In this model:
+- (2)-planes contained in (operatorname{span}{ar y,ar z}) have degree-2 commutator survival;
+- (2)-planes (operatorname{span}{ar x,u}), (0
+e uinoperatorname{span}{ar y,ar z}), have first survival degree (q);
+- planes (operatorname{span}{ar x+v,u}) with (v,u) independent in the free-origin plane already have degree-2 survival.
+
+Thus the (q)-special planes form the incidence family of the sinkhole line with its origin plane, and when the origin plane has dimension at least two their intersection recovers the sinkhole line intrinsically.
+
+This is the first local mechanism that survives the non-abelian-origin test.
+
+Classification:
+- commuting-pair defect on (W_q): PASS / LOCAL as a partial domain, not a global bilinear pairing;
+- special-plane first-survival invariant: PASS / LOCAL;
+- noncommuting-origin special-line model: PASS / LOCAL;
+- sinkhole recovery by incidence intersection when at least two independent special neighbors exist: PASS / LOCAL;
+- general special-graph incidence formula: OPEN / LOAD-BEARING;
+- exclusion of accidental (q)-special (2)-planes: OPEN / LOAD-BEARING;
+- general directed/sinkhole separation: OPEN / LOAD-BEARING.
+
+Detailed audit: research/PAPER3_RAAG_SPECIAL_PLANE_INCIDENCE_AUDIT_2026-10-02.md.
+
+Immediate next gate:
+**prove or refute the accidental-plane exclusion theorem**: every independent (2)-plane with first commutator survival at (q>2) must arise from a sinkhole direction together with its special-neighbor span. No large computation is authorized until this gate is resolved.
+
+## 2026-10-02 — GATE D RESOLVED NEGATIVELY: SPECIAL-PLANE CARRIER REFUTED
+
+The proposed accidental-plane exclusion theorem has been refuted by the smallest complete specially oriented graph with one sinkhole (s) and two ordinary vertices (a,b):
+[
+G=langle s,a,bmid asa^{-1}=s^{1+q},;bsb^{-1}=s^{1+q},;[a,b]=1
+angle.
+]
+This graph is within the standard specially oriented class; the literature explicitly allows a complete special graph with one special vertex joined by special edges to all other vertices. citeturn0search0
+
+Because the underlying graph is complete, the degree-2 commutator sector vanishes. Thus (W_q) is abelian and the intrinsic extension commutator pairing is available. Its first degree-(q) defect on (L_1) is the alternating form
+[
+B_q(ar a,ar s)=ar s^q,quad B_q(ar b,ar s)=ar s^q,quad B_q(ar a,ar b)=0
+]
+(up to global sign), with radical (mathbf F_p(ar a-ar b)).
+
+Hence the proposed special-plane family is
+[
+mathscr S_q={Uinoperatorname{Gr}(2,L_1):operatorname{rad}(B_q)
+otsubset U}.
+]
+It does not recover the sinkhole. For instance
+[
+U_1=langlear s,ar a
+angle,qquad
+U_2=langlear s+ar a,ar b
+angle
+]
+are both q-special but (U_1cap U_2=0). Therefore
+[
+igcap_{Uinmathscr S_q}U=0.
+]
+
+This is an intrinsic finite-window counterexample, not a presentation artifact.
+
+Classification:
+- special-plane first-survival carrier: **FAIL / CLOSED**;
+- accidental q-special-plane exclusion: **FAIL / CLOSED**;
+- sinkhole recovery by Grassmannian intersection: **FAIL / CLOSED**;
+- conditional special-plane mechanism when origin sector has degree-2 noncommutativity: **PASS / LOCAL**;
+- general directed/sinkhole separation via this carrier: **FAIL / CLOSED**;
+- some other intrinsic finite-window carrier: **OPEN**.
+
+This closes the current carrier branch. Do not continue computing (mathscr S_q); the next research question must be a genuinely different carrier or a broader no-go theorem.
+
+## 2026-10-02 — RP-3 NON-REENCODING AUDIT / SMALLEST NON-COMPLETE + MULTIPLE-SINK CHECK
+
+The q-blind adjacent-window carrier
+\[
+\mathcal L(X,Y)=
+\begin{cases}
+\operatorname{im}\bigl(\operatorname{Hom}(Y,\mathbf Z/p^{e(Y)})\to\operatorname{Hom}(Y,\mathbf F_p)\bigr),&e(Y)>e(X),\\
+0,&e(Y)=e(X)
+\end{cases}
+\]
+has now passed the admissible non-reencoding audit at the declared recognition scope.
+
+The strong test is negative for q-reencoding: for fixed p, rank |V|, and sinkhole count |S|, the abstract carrier has dimension |V|-|S| (and annihilator dimension |S|), independent of q=p^f. Thus the carrier does not encode the q-value or the full orientation coefficient. Distinct q-regimes can have isomorphic carriers. The result should therefore be described as a kernel/annihilator recognition carrier, not as a full orientation carrier.
+
+Independent model checks:
+- smallest non-complete model \(\langle a,s,b\mid sas^{-1}=a^{1+q}\rangle\): PASS / LOCAL;
+- multiple-sink sinkhole-sector recovery: PASS / LOCAL;
+- all-sinkhole case: PASS / LOCAL;
+- full categorical functoriality for arbitrary non-isomorphic pair morphisms: OPEN / NOT LOAD-BEARING;
+- full \(\beta_f\) reconstruction: OPEN / NOT LOAD-BEARING;
+- full orientation reconstruction from \(\mathcal L\) alone: FAIL / CLOSED;
+- absolute minimality/coarseness: OPEN / NOT AUTHORIZED;
+- directed incidence recovery: OPEN.
+
+Important qualification: the carrier is exactly \(\ker\beta_f\) on the declared specially oriented RAAG family, so it is target-relative as a recognition device. The justified novelty claim is only that this target predicate has a q-blind intrinsic finite-window realization; no independent global invariant or absolute minimality claim is made.
+
+Detailed audit: research/RP3_NONREENCODING_AUDIT_2026-10-02.md
+
+Next authorized branch: if continuing RP-3, seek a genuinely graph-sensitive refinement of the abelianization carrier, starting again with Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty/Stop. No Massey calculation is load-bearing.
+
+
+## 2026-10-02 — PAPER 4 EXACT-DEPTH CENTRALIZER-JUMP CARRIER
+
+The ordinary-contamination gate was sharpened. A global quotient of the degree-2 sector is rejected as the primary abstraction. For u in L_1=D_1/D_2 define intrinsic filtration centralizers C_m(u)={x:[u~,x~] in D_m} and the exact-depth jump J_m(u)=C_m(u)/C_{m+1}(u). An ordinary edge has infinite commutator depth, a nonedge has degree 2, and a special edge has exact depth q; hence ordinary edges disappear from the q-jump without a presentation-dependent quotient.
+
+Explicit checks: mixed ordinary/special model gives J_q(a)=F_p s and J_q(b)=0; RP-5 A gives J_q(a)=J_q(b)=F_p s; RP-5 B gives J_q(a)=F_p s and J_q(b)=F_p t; the complete one-sink model gives J_q(a)=J_q(b)=F_p s. Thus RP-5 separation survives in a stronger exact-depth form.
+
+The remaining load-bearing issue is linear-combination cancellation. Quadrelli's 2024 analysis gives essential q-fold Massey obstructions for linear combinations such as u*+v*, so higher-q behaviour of non-basis directions is a genuine issue, not a technicality. citeturn14view0turn13view0
+
+Classification: global W_2 ordinary quotient = **FAIL / CLOSED as primary abstraction**; exact-depth J_m = **PASS / LOCAL**; ordinary/special separation = **PASS / LOCAL**; RP-5 strengthened separation = **PASS / LOCAL**; q-blind local definition = **PASS / LOCAL**; linear-combination purity = **OPEN / LOAD-BEARING**; arbitrary incidence reconstruction = **OPEN**.
+
+Detailed record: research/PAPER4_EXACT_DEPTH_CENTRALIZER_JUMP_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — PAPER 4 JOINT (P_q,B_q) GATE CLOSED AS A NOVEL ORIGIN CARRIER
+
+The proposed joint restricted-power/extension-defect carrier was pursued through the complete 3-vertex, 2-generator, and non-abelian common-sink controls, followed by a structural reduction.
+
+Define, with the span correction required by nonlinearity,
+\[
+C_q=\operatorname{Span}_{\mathbf F_p}\{u\in L_1:P_q(u)\in\Delta_q\},
+\]
+where \(\Delta_q\) is the intrinsic degree-q extension-defect image.
+
+The local tests survive:
+- complete one-sink model: \(C_q=\mathbf F_p\bar s\);
+- 2-generator special-edge model: \(C_q=\mathbf F_p\bar v\);
+- common-sink non-abelian-origin model: \(C_q=\operatorname{span}\{\bar y,\bar z\}\).
+
+However, the structural role of \(P_q\) is now clear. Under the corrected literature convention, special edge \((v,w)\) has ordinary origin \(v\), special terminus \(w\), and \(wvw^{-1}=v^{1+q}\). Hence the origin sector is exactly the q-torsion sector in the abelianization. Since the degree-q extension defect lies in the commutator filtration, its image is invisible in abelianization; the condition \(P_q(u)\in\Delta_q\) therefore forces the q-th power of the abelianized \(u\) to vanish, hence \(u\) lies in the origin/torsion sector. Conversely every special-edge origin contributes its q-power to the degree-q defect. Thus the span-preimage is the same origin-sector recognition already supplied by the q-blind adjacent-window/Bockstein carrier, on the declared specially oriented RAAG class.
+
+Therefore:
+\[
+\boxed{P_q\text{-part = redundant recognition/cross-check, not a new carrier.}}
+\]
+
+The extension-defect component remains genuinely graph-sensitive: RP-5 separates two same-abelianization four-vertex graphs by rank 1 versus rank 2 of the cross q-defect. Hence the only potentially new mathematical content is an **origin-conditioned filtered defect**: first recognize the origin sector by the existing intrinsic carrier, then extract the degree-q extension defect relative to that sector without assuming \(W_q\) is abelian and without using the failed Grassmannian support/intersection construction.
+
+Classification:
+- \((P_q,B_q)\) local origin recognition: PASS / LOCAL;
+- \((P_q,B_q)\) as a novel independent origin carrier: **FAIL / CLOSED — REDUNDANT WITH RP-3**;
+- RP-5 same-abelianization separation: PASS / LOCAL;
+- origin-conditioned degree-q defect for arbitrary graphs: **OPEN / LOAD-BEARING**;
+- arbitrary directed-incidence reconstruction: OPEN / LOAD-BEARING;
+- full orientation reconstruction: OPEN.
+
+Detailed audit: research/PAPER4_JOINT_POWER_EXTENSION_CARRIER_GATE_2026-10-02.md.
+
+Decision: do not continue treating \((P_q,B_q)\) as one new invariant. The active Paper-4 problem is now sharply reduced to a canonical origin-conditioned filtered defect. If that object cannot be defined without a splitting/presentation choice, this branch should be closed as a carrier failure.
+
+
+## 2026-10-02 — PAPER 4 ORIGIN-CONDITIONED DEFECT CANDIDATE: RAW PAIRING CLOSED, RESTRICTED EXTENSION OPEN
+
+The proposed raw pairing
+\[
+B_q|_{O\times L_1}:O\times L_1\to A_q
+\]
+is not intrinsically defined on the general nonabelian class: changing a degree-one lift by \(D_2\) changes the commutator by a term in \([D_2,D_1]\subseteq D_3\), which is not generally contained in \(D_{q+1}\). Thus the pairing cannot be promoted from the commuting/abelian control models to a general theorem without extra structure.
+
+The correct surviving object is the origin-conditioned restricted finite extension. For every adjacent window
+\[
+1\to A_n=D_n/D_{n+1}\to W_{n+1}\to W_n\to1,
+\]
+let \(O_n\subseteq L_1\) be the q-blind RP-3 origin carrier and \(H_n(O)=\pi^{-1}(O_n)\le W_n\). The canonical candidate is
+\[
+\mathfrak D_n(O):=[E_n|_{H_n(O)}],
+\]
+with its intrinsic extension-level commutator on the actual centralizer when defined. This removes the section/lift ambiguity at the level of the primary object.
+
+Control results: RP-5 separation remains rank 1 versus rank 2; mixed ordinary/special control shows ordinary-edge defect is zero while the special-edge defect survives. These are PASS / LOCAL only.
+
+Classification:
+- raw \(B_q|_{O\times L_1}\): **FAIL / CLOSED — not intrinsically defined as written**;
+- restricted origin extension \(E_n|_{H_n(O)}\): **PASS / LOCAL**;
+- extension-level centralizer defect: **PASS / LOCAL**;
+- canonical degree-one cross-defect extraction: **OPEN / LOAD-BEARING**;
+- arbitrary directed-incidence reconstruction: **OPEN / LOAD-BEARING**;
+- full orientation reconstruction: **OPEN**.
+
+Next authorized attack: construct a canonical relative extension-class quotient using \(O_n\) and intrinsic degree-2 bracket data, then test it first on the mixed ordinary/special model and RP-5. If a section/basis/presentation is unavoidable, close this carrier branch. Detailed audit: research/PAPER4_ORIGIN_CONDITIONED_DEFECT_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — ACTIVE T1 ATTACK: LOCAL-UNIFORM FINITE SIGNATURE
+
+The top-down T1 target has been sharpened using a literature-supported local mechanism. For a special edge, the 2-generator subgroup is locally uniform and its canonical orientation is structurally determined; this suggests recognizing special directions from an intrinsic finite 2-generator signature rather than from arbitrary q-activity. citeturn5search0turn0search0
+
+Candidate: let U_q=L_1/O_q. Define P_q as the classes admitting an intrinsic finite special-edge signature at the first nonzero extension-defect depth, with the q-defect normalized by the restricted-power origin class. If P_q equals the special-direction set and spans U_q, then omega_q is the unique functional taking value 1 on P_q.
+
+Current status:
+- T1 local-uniform signature: OPEN / LOAD-BEARING;
+- 2-generator / complete one-sink / common-sink checks: PASS / LOCAL;
+- accidental-direction exclusion: OPEN / LOAD-BEARING;
+- finite-window naturality: OPEN / LOAD-BEARING.
+
+Do not reopen J_q purity, Grassmannian, or search for unrelated carriers. The next authorized work is only the formal finite-signature definition and the accidental-direction/no-go test on the smallest multi-special models.
+
+Detailed audit: research/PAPER4_T1_LOCAL_UNIFORM_DIRECTION_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — T1 SCALE-FIXING CORRECTION AND MULTI-SINK CONTROL
+
+The 2-generator objection is accepted and incorporated. The finite defect coefficient is observable, but canonical normalization requires an intrinsic q-power target. In the common-sink model, scaling the sink direction by lambda scales all defects by lambda, so equality with the intrinsic q-power target forces lambda=1. This is PASS / LOCAL only; recovery of the target in the general abstract window remains OPEN.
+
+Separated multi-sink controls show that origin-specific q-power targets detect sink coefficients independently; generic sums of distinct sink directions have rank >=2 and are excluded by the rank-one local signature. Permutation symmetry is harmless; the obvious shear gauge is detected.
+
+Active T1 bottleneck is now: recover the intrinsic q-power target, then test overlapping multi-sink configurations for accidental rank-one directions. Detailed audit: research/PAPER4_T1_MULTI_SINK_SCALE_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — PAPER 4 GATE D1 FORMALIZATION
+
+D1 is now formalized as an intrinsic global lower-filtration signature. For an adjacent filtered window E: 1→A→Y→X→1 and u∈L_1=X/Φ(X), the signature L_E(u) records, for every filtration depth m and every x∈L_1, whether some lifts of u and x have commutator in D_m(Y). This uses the complete lift fibers rather than a chosen section, so it is presentation/lift/gauge-independent and q-blind. It is a global relation profile, not a pairwise q-defect or bilinear map.
+
+Status: D1 definition/intrinsicity/functoriality/q-blindness/non-tautology = PASS / LOCAL. Linearity/subspace structure and extraction of N_q = OPEN / LOAD-BEARING. Orientation bridge = OPEN / LOAD-BEARING. The unrestricted Gate-D same-window orientation no-go remains FAIL / CLOSED.
+
+The separated two-sink model is retained as a boundary: the full profile can see local q-defects while allowing a sum direction to inherit a local profile. Therefore N_q must be extracted from relations among full signatures, not from the span of q-invisible directions.
+
+Detailed audit: research/PAPER4_D1_GLOBAL_LOWER_FILTRATION_SIGNATURE_AUDIT_2026-10-02.md.
+Next authorized action: D2 only; no reopening of closed affine/profile carriers.
+
+
+## 2026-10-02 — D2 CRITICAL RE-AUDIT / STATUS CORRECTION
+
+The D2 no-go has been narrowed after critical review.
+
+What remains closed:
+- D1 global depth signature cannot recover normalized orientation because nonzero scalar multiples have identical depth signatures in the rank-two special-edge model;
+- any quotient whose information is exhausted by D1 signatures cannot restore that scalar normalization;
+- the specific first-coefficient-valued incidence quotient fails as an orientation carrier by the chordal-tree kernel relation \(u-s-t\in\ker\Phi\) with nonzero \(\omega_q\).
+
+What is withdrawn/superseded:
+- the claim that the **full** restricted finite extension fails merely because its first coefficient projection fails;
+- the claim that the isolated-ordinary family \(\omega_c(\alpha s+\beta z)\) by itself proves non-uniqueness of the canonical orientation.
+
+The first is a projection-vs-full-extension distinction; the second lacks verification that the alternative functionals satisfy the canonical orientation's defining conditions.
+
+Current active boundary:
+- D2 linear/first-defect routes: **FAIL / CLOSED**;
+- full nonlinear/restricted finite-extension factorization: **OPEN / LOAD-BEARING**;
+- unrestricted same-window un-oriented class-level non-identifiability remains a separate negative boundary;
+- no unconstrained carrier hunting is authorized.
+
+Next authorized task: define the smallest intrinsically meaningful nonlinear extension invariant that retains information lost by D1 and the first coefficient quotient, then run the full pre-check before any computation. Detailed audit: research/PAPER4_D2_CRITICAL_REAUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — D3 DEFINITIONAL CORRECTION: RAW ORIGIN-LIFT SUBGROUP IS NOT NORMAL
+
+A definition-level audit of the proposed D3 object found a genuine flaw that must control the branch before any orientation-bridge computation.
+
+The previous object used the subgroup generated by the complete lift-fibres of the intrinsic origin sector and then asserted a conjugation action of the whole extension group (Y) on that subgroup. In general that subgroup is **not normal in (Y)**, so a global conjugation action (Y\curvearrowright\widehat O) is not defined.
+
+Decisive control: the chordal-tree model with ordinary origins (a,b) and special vertices (s,t,u), with special edges (a\to s, b\to t, a\to u, b\to u). Let (H=\langle a,b\rangle\le Y). There is no defining relation between (t) and (a). Quotienting by the normal closure of (b,s,u) gives the free pro-(p) group on (a,t). Hence (tat^{-1}\notin\langle a\rangle), and therefore (tat^{-1}\notin H). Thus (H) is not normal in (Y).
+
+Consequently the statement “the full conjugation action of (Y) on the origin-lift subgroup” is **not a valid object as written**. The prior D3 object-level PASS is superseded.
+
+The minimal canonical repair is to replace the raw origin-lift subgroup by its **normal closure** in (Y), or equivalently to formulate the datum as the conjugation action on the normal closure of the origin sector. This repaired object is materially richer and may risk re-encoding more of the finite window; it therefore requires a fresh full pre-check before any computation.
+
+Classification:
+- raw origin-lift subgroup with (Y)-conjugation action: **FAIL / CLOSED**;
+- previous D3 object-level PASS: **HISTORICAL / SUPERSEDED**;
+- normal-closure conjugation object: **OPEN / LOAD-BEARING**;
+- orientation bridge: **NOT YET AUTHORIZED** until the repaired object passes Object/Input/Functoriality/Gauge/Orientation-bridge/q-blindness/Separation/Novelty/Stop.
+
+This is a definition correction, not a carrier hunt. The next authorized step is the fresh pre-check of the normal-closure repair, followed only if it passes by the mixed/chordal orientation-bridge test.
+
+
+## 2026-10-02 — D3 REPAIRED-OBJECT PRE-CHECK: NORMAL CLOSURE PASSES OBJECT-LEVEL TEST, BUT ORIENTATION BRIDGE IS NOT FINITE/INTRINSICALLY SPECIFIED
+
+The canonical repair was audited before any new computation.
+
+Define (N_O) as the normal closure in (Y) of the preimage of the intrinsic origin sector (O_q). Then (N_O\triangleleft Y), so the conjugation action (Y\to\operatorname{Aut}(N_O)) is well-defined. The repaired package
+[
+\mathcal C_q^{\mathrm{nc}}=(Y,X,A_q,O_q,N_O,\operatorname{conj}_Y|_{N_O})
+]
+is intrinsic, functorial, lift/section-independent, and q-blind at the definition level.
+
+However, the required orientation bridge still fails the mandatory pre-check in its present form: no canonical finite quotient of the action (Y\to\operatorname{Aut}(N_O)) has been exhibited whose scalar character is (omega_q\bmod p^k). Taking the action on (N_O) itself is not a bridge; it merely retains a large nonabelian object. Taking its obvious q-layer linearization collapses back to the already closed coefficient/incidence package. Using the literature's Kummerian criterion would be circular/re-encoding for the present finite-window program, because the criterion quantifies over all (n\ge1) and supplies the orientation as part of the oriented pair rather than extracting it from one finite window.
+
+Independent literature control: Blumer–Quadrelli–Weigel prove that for an oriented pro-(p) RAAG there is a torsion-free Kummerian orientation exactly in the specially oriented case, and that this orientation is unique; their local locally-uniform argument likewise determines the canonical orientation from the full 2-generator group structure. This validates the *global mechanism* but does not furnish the required finite-window factorization. citeturn7search1turn4search0
+
+Therefore no orientation-bridge computation is logically authorized from the repaired object yet. A further computation would be another carrier hunt unless a specific finite scalar quotient/action character is first derived non-tautologically from the repaired package.
+
+Classification:
+- raw origin-lift conjugation object: **FAIL / CLOSED**;
+- normal-closure conjugation package: **PASS / LOCAL** at Object/Input/Functoriality/Gauge/q-blindness;
+- finite orientation bridge from the repaired package: **OPEN / LOAD-BEARING**;
+- finite-window factorization theorem: **OPEN**;
+- absolute minimality: **OPEN / NOT AUTHORIZED**;
+- unrestricted class: **FAIL / CLOSED** by the isolated-special same-window obstruction.
+
+**Stop condition reached:** do not perform another blind computation. The next legitimate move is target-first derivation of a *specific finite scalar character* of the normal-closure action, with a full pre-check. If no such character can be defined without reintroducing the orientation or q, D3 closes as a finite-carrier realization failure while the negative Gate-D theorem remains a principal result.
+
+
+## 2026-10-02 — FREE-BY-DEMUSHKIN / PD3 LITERATURE GATE
+
+A primary-source audit of M. Palaisti, *Detecting Cohomological Dimension Three in Free-by-Demuškin Pro-p Groups*, arXiv:2610.00021v1, was completed.
+
+The paper proves, for 1→N→G→D→1 with N nontrivial free pro-p and D Demuškin, that H^3(G,F_p)^∨ ≅ (N/Φ(N))^D and cd_p G=3 iff (N/Φ(N))^D≠0. It also identifies the lower-dimensional branch through H^1(D,W^∨) and a relation-defect class δ_G∈W_D, with δ_G represented by a lift of the defining Demuškin relator in the coinvariants. The paper further proves the top-degree fixed-Frattini mechanism for arbitrary pro-p PD^n quotients.
+
+Critical scope correction: if G itself is pro-p PD^3, N is forced to be Z_p. Therefore the successor target is NOT “general PD3 free-by-Demuškin with arbitrary finite-rank free kernel.” The viable target is either (a) free-by-Demuškin extensions with cd_p G=3, or (b) the rank-one PD3 subfamily.
+
+Comparison with Paper 1–3: the paper confirms a genuine PD-duality extension mechanism, and Lemma 7.2 gives a strong relation-module/Fox/transgression contact. But it does not prove any finite-window factorization of W^D, W_D, δ_G, or the Demuškin orientation. Thus U1–U5 do not automatically extend. The unresolved bridge is precisely full extension → finite filtered window.
+
+Classification:
+- literature mechanism: PASS / CLOSED;
+- relation-module/Fox contact: PASS / LOCAL;
+- automatic U1–U5 extension: FAIL / CLOSED;
+- finite-window reconstruction of extension/orientation data: OPEN / LOAD-BEARING;
+- PD3 middle-group branch with arbitrary free rank: CLOSED by rank-one restriction;
+- free-by-Demuškin finite-window successor: OPEN / CONDITIONAL.
+
+RAAG carrier search is HOLD/SUPPRESSED while this literature-first branch is tested. Detailed audit: research/PAPER4_FREE_BY_DEMUSHKIN_PD3_LITERATURE_AUDIT_2026-10-02.md.
+
+## 2026-10-02 — K–Z FINITE-WINDOW STRESS TEST
+
+Kochloukova–Zalesskii's original construction was independently checked. The family
+\[
+G_s=\langle x,y,z\mid z^{p^s}=[x,y]\rangle
+\]
+has cd_p G_s=2, is finitely generated, has free pro-p kernel N_s of infinite rank over D=G_s/N_s\simeq\mathbf Z_p^2, and satisfies the strong inflation property stated in their Theorem 2. citeturn0search25turn0search0
+
+For every fixed Zassenhaus depth n≤p^s, the correction z^{p^s} lies beyond the window, so the finite quotient sees the degree-2 initial relation [x,y]=1. Consequently the cd=2 family can hide its extension-specific tail arbitrarily far out.
+
+Current status:
+- K–Z deep-tail invisibility: **PASS / LOCAL**;
+- finite-window cd=3 detection no-go from K–Z alone: **FAIL / CLOSED as an inference**;
+- finite-window detection of W^D≠0 / cd_p G=3: **OPEN / LOAD-BEARING**;
+- quotient-cohomology shortcut H^3(G/D_n,F_p)≈H^3(G,F_p): **NOT JUSTIFIED**;
+- next authorized test: matched cd=3 control with the same finite initial Zassenhaus window, or a proof that such matching is impossible.
+
+Do not invent a new carrier before this separation test is settled. RAAG carrier search remains HOLD/SUPPRESSED.
+
+## 2026-10-02 — DECISIVE MATCHED-WINDOW RESULT
+
+The K–Z stress test now has a cd=3 matched control. For odd p, take
+\[
+G_s=\langle x,y,z\mid z^{p^s}=[x,y]\rangle,
+\qquad G_+=Z_p^3.
+\]
+The first is K–Z's finitely generated free-by-Demushkin group with cd_p=2; the second is the split free-by-Demushkin extension 1→Z_p→Z_p^3→Z_p^2→1 with cd_p=3. The quotient Z_p^2 is Demushkin. citeturn0search36turn1search17turn1search20
+
+For every n≤p^s,
+\[
+G_s/D_n(G_s)\cong G_+/D_n(G_+).
+\]
+Hence for every prescribed finite depth n, a same-d=3 pair exists with identical n-th Zassenhaus quotient but different κ=dim H^3(G,F_p) (0 versus 1).
+
+New authoritative classification:
+- arbitrary-depth matched cd=2/cd=3 windows: **PASS / LOCAL**;
+- uniform finite-depth detector on the full finitely generated free-by-Demushkin class: **FAIL / CLOSED**;
+- detector with a group/extension-dependent threshold: **OPEN / LOAD-BEARING**;
+- finite-window δ_G/W^D recovery at a threshold controlled by relation depth: **OPEN**;
+- new carrier hunting: **STOP / NOT AUTHORIZED**.
+
+Important boundary: the result does not prove that an individual G lacks some finite detecting depth. It rules out a universal bound depending only on p and generator rank (already d=3 suffices).
+
+
+## 2026-10-02 — EXACT K–Z MATCHED-PAIR SEPARATION DEPTH
+
+The previous OPEN question “does the matched K–Z pair first separate at p^s+1?” is now resolved.
+
+For odd p,
+\\[
+G_s=\\langle x,y,z\\mid z^{p^s}=[x,y]\\rangle,
+\\qquad G_+=\\mathbf Z_p^3.
+\\]
+We already have
+\\[
+G_s/D_n(G_s)\\cong G_+/D_n(G_+)
+\\quad(n\\le p^s).
+\\]
+
+At n=p^s+1, use the explicit finite class-2 quotient
+\\[
+H_s=\\langle x,y,z\\mid x^{p^{s+1}}=y^{p^{s+1}}=z^{p^{s+1}}=1, z\\text{ central}, [x,y]=z^{p^s}\\rangle.
+\\]
+Here \\gamma_2(H_s)=\\langle z^{p^s}\\rangle, \\gamma_3(H_s)=1. Lazard/Jennings gives
+\\[
+D_{p^s+1}(H_s)=H_s^{p^{s+1}}\\gamma_2(H_s)^{p^s}=1.
+\\]
+Thus z^{p^s} survives in H_s/D_{p^s+1}(H_s), so it does not belong to D_{p^s+1}(G_s). Since [x,y]=z^{p^s}, the quotient G_s/D_{p^s+1}(G_s) is nonabelian, while every quotient of G_+=\\mathbf Z_p^3 is abelian. Therefore
+\\[
+G_s/D_{p^s+1}(G_s)\\not\\cong G_+/D_{p^s+1}(G_+).
+\\]
+
+Hence the exact first separation depth of this matched pair is
+\\[
+\\boxed{n_{\\rm sep}=p^s+1}.
+\\]
+
+Current authoritative classification:
+- matched cd=2/cd=3 windows for all n\\le p^s: **PASS / CLOSED**;
+- exact pairwise first separation at p^s+1: **PASS / CLOSED**;
+- uniform finite-depth detector on the full finitely generated free-by-Demushkin class: **FAIL / CLOSED**;
+- individual/group-dependent detector threshold: **OPEN / LOAD-BEARING**;
+- canonical intrinsic threshold parameter from extension data: **OPEN**;
+- new carrier search: **STOP / NOT AUTHORIZED**.
+
+The exact threshold proof is deliberately independent of any mildness/initial-form theorem: an explicit finite quotient witnesses survival of z^{p^s} at the critical depth. This closes the previous uncertainty about whether the first separation might occur later than p^s+1.
+
+
+## 2026-10-02 — CRITICAL CORRECTION: FREE-BY-DEMUSHKIN MATCHED-WINDOW NO-GO WITHDRAWN
+
+A critical audit invalidated the immediately preceding K–Z matched-pair theorem. The asserted equality
+\[
+G_s/D_n(G_s)\cong \mathbf Z_p^3/D_n(\mathbf Z_p^3)\qquad(n\le p^s)
+\]
+is false: after the high-depth relation \(z^{p^s}=[x,y]\) disappears, only \([x,y]=1\) is forced; \([x,z]\) and \([y,z]\) remain visible. For odd p, \([x,z]\) already survives at depth 3 via an exponent-p Heisenberg quotient, while \(\mathbf Z_p^3\) is abelian.
+
+Therefore the following previous classifications are superseded:
+- matched cd=2/cd=3 arbitrary-depth windows: **HISTORICAL / SUPERSEDED**;
+- uniform finite-depth detector no-go on the full class from that pair: **HISTORICAL / SUPERSEDED**;
+- exact pairwise separation \(p^s+1\): **HISTORICAL / SUPERSEDED**.
+
+What remains current:
+- K–Z deep-tail relation correction invisibility: **PASS / LOCAL**;
+- \(z^{p^s}\notin D_{p^s+1}(G_s)\) via explicit finite quotient: **PASS / LOCAL**;
+- finite-window detection of \(cd_pG=3\) / \(W^D\ne0\): **OPEN / LOAD-BEARING**;
+- genuine matched cd=3 control: **OPEN / NEXT AUTHORIZED TEST**;
+- no carrier hunt until a valid matched-window or structural obstruction is established.
+
+This correction controls the current state and supersedes the preceding matched-window entries.
+
+
+## 2026-10-02 — E2/F1 K–Z SAME-WINDOW p-ADIC FACTORIZATION NO-GO
+
+A new exact same-window lemma closes the uniform finite-depth factorization route for the E2 p-adic extension class without using the withdrawn \(\mathbf Z_p^3\) comparison.
+
+For
+\[
+G_s=F(x,y,z)/\overline{\langle\!\langle z^{p^s}[x,y]^{-1}\rangle\!\rangle},
+\]
+if \(p^s\ge n\), then \(z^{p^s}\in D_{p^s}(F)\subseteq D_n(F)\). Hence
+\[
+G_s/D_n(G_s)\cong F/(D_n(F),[x,y]),
+\]
+so for any \(s,t\) with \(p^s,p^t\ge n\),
+\[
+G_s/D_n(G_s)\cong G_t/D_n(G_t).
+\]
+This is the correct same-window statement; it does not claim an abelian quotient, and therefore avoids the previously withdrawn \(\mathbf Z_p^3\) error.
+
+E2 independently gives \(v_p(\epsilon_s)=s\), up to the unit ambiguity in the choice of the generator of \(H_2(D,\mathbf Z_p)\). Thus distinct sufficiently large \(s,t\) have identical depth-\(n\) windows but distinct p-adic extension-depth data. For \(s<t<m\) the truncations \(\epsilon_s\bmod p^m\) and \(\epsilon_t\bmod p^m\) are already different (the latter is zero, the former nonzero).
+
+Therefore:
+- K–Z same-window lemma: **PASS / CLOSED**;
+- uniform fixed-depth recovery of the E2 p-adic class across the whole K–Z family: **FAIL / CLOSED**;
+- uniform bound \(n=n(p,d,m)\) independent of hidden extension depth: **FAIL / CLOSED**;
+- group-dependent/adaptive threshold \(n=n(G,m)\): **OPEN / LOAD-BEARING**;
+- possibility that \(n=p^m\) or another relation-depth bound suffices for this family: **OPEN**;
+- orientation recovery from E2: **OPEN**.
+
+This is a genuine finite-window negative boundary, but it is not a cd=3 no-go and does not prove that any individual \(G_s\) lacks a finite detecting window.
+
+Detailed audit: research/PAPER4_F1_KZ_SAME_WINDOW_P_ADIC_NO_GO_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — F1 K–Z ADAPTIVE THRESHOLD: POSITIVE LOCAL RESULT
+
+The K–Z family admits an explicit intrinsic adaptive finite-window recovery of the E2 valuation truncation.
+
+Since
+\[
+G_s^{ab}\simeq\mathbf Z_p^2\oplus\mathbf Z/p^s,
+\]
+and the Zassenhaus filtration is functorial under abelianization, for \(e=\lceil\log_p n\rceil\),
+\[
+(G_s/D_n(G_s))^{ab}
+\simeq
+(\mathbf Z/p^e)^2\oplus\mathbf Z/p^{\min(s,e)}.
+\]
+Taking \(n=p^m\) gives \(e=m\), so the torsion exponent intrinsically recovers \(\min(s,m)\). Since E2 gives \(v_p(\epsilon_s)=s\), the finite window recovers \(\min(v_p(\epsilon_s),m)\), including the vanishing/nonvanishing of \(\epsilon_s\bmod p^m\).
+
+The same-window lemma gives a matching lower-bound scale: if \(s<t<m\) and \(p^s\ge n\), then the depth-\(n\) windows agree while the \(m\)-truncations differ. Hence a uniform K–Z-family threshold for \(m\)-digit valuation information must exceed \(p^{m-1}\) up to the integer boundary. The construction \(n=p^m\) gives the correct exponential scale, but exact minimality is not proved.
+
+Classification:
+- adaptive K–Z valuation recovery: **PASS / LOCAL**;
+- intrinsic realization via finite-window abelianization: **PASS / LOCAL**;
+- lower-bound scale \(n>p^{m-1}\): **PASS / LOCAL**;
+- exact minimal threshold: **OPEN**;
+- general free-by-Demushkin finite-window factorization: **OPEN / LOAD-BEARING**;
+- orientation recovery from E2: **OPEN**.
+
+Detailed audit: research/PAPER4_F1_KZ_ADAPTIVE_THRESHOLD_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — F1 EXACT MINIMAL THRESHOLD + HIGHER-RANK DEMUSHKIN STRESS TEST
+
+The K–Z threshold is now exact. Writing \(e(n)=\lceil\log_p n\rceil\),
+\[
+(G_s/D_n(G_s))^{ab}\simeq
+(\mathbf Z/p^{e(n)})^2\oplus\mathbf Z/p^{\min(s,e(n))}.
+\]
+For \(m\ge2\), uniform recovery of \(\min(s,m)\) requires and is achieved by \(e(n)\ge m\), hence the exact smallest integer depth is
+\[
+\boxed{n_m^{\mathrm{KZ}}=p^{m-1}+1}.
+\]
+The lower bound is reinforced by the same-window lemma: at any \(n\le p^{m-1}\), suitable \(s<t<m\) give identical full windows but different \(m\)-truncated valuations.
+
+A higher-rank q=0 Demushkin stress model was then tested:
+\[
+\widetilde G_{s,d}=\langle z,x_1,\dots,x_d\mid
+z^{p^s}=[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d]\rangle,
+\quad d\ge4\text{ even}.
+\]
+At the homological/abelianized level,
+\[
+\widetilde G_{s,d}^{ab}\simeq\mathbf Z_p^d\oplus\mathbf Z/p^s,
+\]
+so the same adaptive finite-window formula survives:
+\[
+(\widetilde G_{s,d}/D_{p^m})^{ab}
+\simeq(\mathbf Z/p^m)^d\oplus\mathbf Z/p^{\min(s,m)}.
+\]
+This shows the K–Z mechanism is not rank-2-specific. However, the normal closure of \(z\) has not yet been independently certified free pro-p in this higher-rank model, so it is a stress model, not a new theorem-level free-by-Demushkin example.
+
+For a standard Demushkin quotient with finite torsion invariant \(q=p^a\), the same construction has abelianized relation \(p^s z=p^a x_1\), whose Smith normal form yields torsion order \(p^{\min(a,s)}\). Thus abelianization saturates at the quotient's intrinsic q-depth and cannot see arbitrary extension depth once \(s>a\).
+
+Classification:
+- exact K–Z threshold \(p^{m-1}+1\): **PASS / CLOSED**;
+- q=0 higher-rank stress mechanism: **PASS / LOCAL**;
+- higher-rank kernel freeness: **OPEN**;
+- q>0 abelianization saturation: **PASS / LOCAL**;
+- general free-by-Demushkin finite-window extension-depth theorem: **OPEN / LOAD-BEARING**;
+- higher nonabelian finite scalar character: **OPEN**;
+- E2 → orientation: **OPEN**.
+
+Detailed audit: research/PAPER4_F1_MINIMAL_THRESHOLD_AND_DEMUSHKIN_STRESS_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — Q>0 HIGHER-LAYER GATE
+
+Pure abelianization saturates for extension depth beyond the quotient torsion level. No certified q>0 variable-depth free-by-Demushkin family was found in the literature audit. The higher filtered recovery problem remains OPEN / LOAD-BEARING, with an explicit gauge-invariance test now mandatory. No new carrier hunt is authorized.
+
+Detailed audit: research/PAPER4_QPOS_HIGHER_LAYER_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — E2 q>0 HOMOLOGY CORRECTION
+
+For standard odd-p Demushkin q_D=p^a>0, H_2(D,Z_p)=0 because the one-relator exponent-sum boundary is multiplication by p^a. Thus the untwisted q=0 E2 transgression source does not exist in q>0. In the stress extension z^{p^s}=r_D, the untwisted H_1/coinvariant extension class lies in Ext^1_{Z_p}(Z/p^a,Z_p) and is p^s mod p^a (up to convention), so it saturates for s>=a. Therefore the untwisted E2 homological layer is FAIL/CLOSED for deep q>0 tails. The next legitimate target is genuinely nonabelian relation-module/Zassenhaus data; a twisted-coefficient replacement is a separate OPEN pre-check, not a continuation of E2.
+
+Detailed audit: research/PAPER4_E2_QPOS_HOMOLOGY_CORRECTION_2026-10-02.md.
+
+
+## 2026-10-02 — Q>0 ORDINARY ZASSENHAUS GRADED BOUNDARY
+
+The stress model z^{p^s}=r_D has p-Zassenhaus initial form equal to the degree-2 Demushkin commutator form, independent of s. The odd-p Schmidt/Gärtner mildness criterion applies with U=span{x_i}, V=span{z}, so the ordinary mod-p associated graded is controlled by that same quadratic initial form. Thus the ordinary associated-graded detector is FAIL/CLOSED for recovering s. This does not close full finite-window recovery; the remaining target is intrinsic integral p-adic Magnus/relation-module information beyond the mod-p graded object.
+
+Detailed audit: research/PAPER4_QPOS_ZASSENHAUS_GRADED_STRESS_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — CRITICAL REVIEW / q>0 BOUNDARY AND NEXT-GATE DISCIPLINE
+
+The submitted critical review was accepted with one scope correction. The q>0 untwisted E2 closure is structurally correct: for standard odd-p Demushkin q=p^a>0, H_2(D,Z_p)=0, so the q=0 transgression source does not continue. The untwisted H_1/coinvariant extension saturates at p^a in the stated stress presentation, and the ordinary mod-p Zassenhaus associated graded is blind to s at the candidate stress-model level.
+
+The phrase “only remaining candidate” is narrowed: intrinsic integral, gauge-invariant, nonabelian relation data is the **only remaining primary route currently authorized**, not an exhaustive list of all conceivable mathematics. Twisted/dualizing coefficients or other nonlinear cohomological objects remain logically possible but require a fresh independent pre-check and are not E2 continuations.
+
+New active gate:
+**P4-Q+ / INTEGRAL-NONABELIAN-DEFINITION = OPEN / LOAD-BEARING.**
+
+Before any computation, the exact object must be fixed and pass Object/Input/Functoriality/Gauge/Orientation-bridge/q-blindness/Separation/Novelty/Stop. In particular, presentation coefficients, relator choices, lifts, sections, conjugacy, Nielsen changes, unit scaling, and quotient/kernel automorphisms must be explicitly quotiented or shown irrelevant. The object must not insert q or orientation and must not merely re-encode a chosen presentation coefficient.
+
+Scope corrections:
+- q>0 untwisted H_1-extension saturation is **LOCAL to the stress presentation**, not a theorem for all free-by-Demushkin extensions;
+- ordinary mod-p associated-graded blindness is **LOCAL to the stress candidate** and does not imply full finite-window blindness;
+- universal impossibility for q>0 deep tails remains **OPEN**.
+
+Detailed audit: research/PAPER4_QPOS_CRITICAL_REVIEW_NEXT_GATE_2026-10-02.md.
+
+
+## 2026-10-02 — FINITE-COEFFICIENT E2 TOR CHECK / DEEP-TAIL CLOSURE
+
+A correction and subsequent explicit check were completed. The earlier statement that q>0 has no E2 continuation is literally true for Z_p coefficients, but finite coefficients A_m=Z/p^m produce a Tor source:
+H_2(D,A_m) ≅ Tor(Z/p^a,Z/p^m) ≅ Z/p^{min(a,m)}.
+
+For the stress presentation G_{s,a}=<z,x_i | z^{p^s}=r_D>, when m>a a generator is represented by p^{m-a} times the Demushkin relation cell. The lifted defect is z^{p^s}, so the transgression image is p^{m-a+s}z mod p^m. Therefore it vanishes whenever s>=a. Thus the finite-coefficient E2/Tor route does not recover the deep regime s>a.
+
+Classification:
+- finite-coefficient H2 Tor source: PASS / LOCAL;
+- finite-coefficient E2 transgression for s>a: FAIL / CLOSED in the stress model;
+- coefficient change as a rescue of E2: FAIL / CLOSED;
+- genuinely nonabelian relation/extension object: OPEN / LOAD-BEARING;
+- finite-window factorization of such an object: OPEN.
+
+Detailed audit: research/PAPER4_QPOS_FINITE_COEFFICIENT_E2_TOR_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — MINIMAL NONABELIAN FINITE-EXTENSION PRE-CHECK
+
+The most direct intrinsic nonlinear object induced by a window is the relative finite extension
+1 -> N/(N∩D_n(G)) -> G/D_n(G) -> D/D_n(D) -> 1.
+It is functorial and gauge-free once G→D is structured input, but it is not a genuine carrier: it essentially repackages the finite window together with its quotient map. Thus it fails the novelty/compression requirement as a standalone candidate.
+
+The active problem is now sharply narrowed to a **strict intrinsic compression** of this finite relative extension: a scalar or smaller module quotient that survives all gauges, does not insert q/orientation, and factors through the finite window without simply re-encoding it.
+
+Classification:
+- finite relative extension: PASS / LOCAL as an intrinsic object;
+- same object as novel compression carrier: FAIL / CLOSED;
+- strict nonlinear compression: OPEN / LOAD-BEARING;
+- universal no-compression theorem: OPEN;
+- blind carrier hunt: STOP.
+
+Detailed audit: research/PAPER4_QPOS_MINIMAL_NONABELIAN_FINITE_EXTENSION_PRECHECK_2026-10-02.md.
+
+
+## 2026-10-02 — P4-Q+ ADMISSIBLE COMPRESSION CATEGORY FIXED
+
+The phrase “strict intrinsic nonabelian compression” is now operational rather than heuristic. The new audit \`research/PAPER4_QPOS_ADMISSIBLE_COMPRESSION_CATEGORY_PRECHECK_2026-10-02.md\` fixes the admissible category and target tests before computation.
+
+An admissible compression must be a functorial quotient of the finite relative Zassenhaus extension and satisfy A1 intrinsicity, A2 functoriality, A3 gauge invariance, A4 q-blindness, A5 orientation-blind input, A6 strict information loss, A7 non-reencoding, and A8 filtration compatibility.
+
+Target hierarchy:
+- **T1:** distinguish deep-tail parameters \(s\ne t\) in the q>0 stress family for \(s,t>a\);
+- **T2:** recover \(\min(s,m)\) for fixed \(m>a\).
+
+T1 is the next authorized target. T2 remains secondary.
+
+Current classification:
+- admissible compression category: **PASS / LOCAL**;
+- strict intrinsic compression existence: **OPEN / LOAD-BEARING**;
+- universal no-compression theorem: **OPEN**;
+- raw carrier/Magnus computation before category and gauge are fixed: **STOP / CLOSED**.
+
+Next authorized action: propose one specific quotient construction \(E_n\mapsto C_n(E_n)\), prove A1–A8, then test T1 separation and independently test non-reencoding. Do not broaden the carrier search.
+
+
+## 2026-10-02 — FIRST CONCRETE NONABELIAN COMPRESSION CANDIDATE
+
+After the admissibility-definition corrections, the first concrete candidate is now fixed:
+\[
+C_n^{(2)}:
+1\to K_n/\gamma_3(K_n)\to W_n/\gamma_3(K_n)\to D/D_n(D)\to1.
+\]
+It is the class-2 nilpotent quotient of the finite relative extension's kernel.
+
+Pre-check:
+- A1 intrinsicity: **PASS / LOCAL**;
+- A2 functoriality: **PASS / LOCAL**;
+- A3 gauge invariance: **PASS / LOCAL**;
+- A4 q-blindness: **PASS**;
+- A5 orientation-blind input: **PASS**;
+- A6 strictness: **OPEN**;
+- A7 non-reencoding: **OPEN**;
+- A8 filtration compatibility: **PASS / LOCAL**.
+
+This is the first candidate structurally beyond the closed H1/E2 layers. It retains kernel commutator data and quotient action. It has not been shown to detect the q>0 deep-tail threshold, so its overall status is **OPEN / LOAD-BEARING**.
+
+Next authorized test: determine whether its surviving data factors through already closed abelian/E2/graded layers. If yes, close it; if not, test T1 threshold detection. No raw Magnus/Fox scalar computation yet.
+
+
+## 2026-10-02 — P4-Q+ CLASS-2 FACTOR-THROUGH GATE
+
+The first factor-through test for the candidate
+\[
+C_n^{(2)}:1\to K_n/\gamma_3(K_n)\to W_n/\gamma_3(K_n)\to D/D_n(D)\to1
+\]
+was completed at the structural level.
+
+Writing
+\[
+A_n=K_n/\gamma_2(K_n),\qquad B_n=\gamma_2(K_n)/\gamma_3(K_n),
+\]
+the candidate retains the intrinsic class-2 commutator pairing
+\[
+\beta_n:A_n\wedge A_n\to B_n
+\]
+and the quotient-group action. This information is not formally determined by the previously closed abelian/H1-extension package. The ordinary mod-p Zassenhaus graded object likewise cannot be used to close the candidate merely because it is blind to the deep parameter in the stress model.
+
+This is **PASS / LOCAL**, not a stress-family theorem. The relevant \(G_{s,a}\) family still requires an explicit separation calculation.
+
+### Current active gate
+- structural non-factorization from closed abelian/H1 layers: **PASS / LOCAL**;
+- stress-family factor-through test: **OPEN / LOAD-BEARING**;
+- T1 threshold separation: **OPEN / LOAD-BEARING**;
+- A6 strictness: **OPEN**;
+- A7 non-reencoding: **OPEN**.
+
+### Next authorized action
+Compute only the intrinsic class-2 data
+\[
+(A_n,B_n,\beta_n,\text{class-2 power map},D\text{-action})
+\]
+for the q>0 stress family at the candidate threshold scale. No broad carrier search and no raw Magnus/Fox scalar expansion is authorized.
+
+Detailed audit: research/PAPER4_QPOS_CLASS2_FACTOR_THROUGH_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — GATE T RESOLVED / RELATIVE THRESHOLD EXACT
+
+Gate T has been resolved in the **structured relative-window category** for the certified stress presentation
+\[
+G_{s,a}=\langle z,x_1,\ldots,x_d\mid z^{p^s}=r_D\rangle,
+\qquad q_D=p^a>0,
+\qquad s>a.
+\]
+Define
+\[
+W_n^{\mathrm{rel}}(G_{s,a})=
+\bigl(G_{s,a}/D_n(G_{s,a})\to D/D_n(D)\bigr).
+\]
+For every \(n\le p^s\), the relation term \(z^{p^s}\) is killed by the depth quotient, so the relative window is independent of the deep parameter. At \(n=p^s+1\), the cases separate: for \(t>s\), \(z^{p^t}\) is already killed and the relative extension splits; for \(s\), the surviving class \(z^{p^s}\) carries the defining Demuškin relation class, giving a nonzero projected extension class and hence a nonsplit extension.
+
+Thus
+\[
+\boxed{n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1.}
+\]
+
+This is a **PASS / LOAD-BEARING** threshold theorem for the structured relative-window category. It is not yet a theorem for the unmarked filtered group after forgetting the natural map to \(D/D_n(D)\), and it is not a universal theorem for arbitrary free-by-Demushkin extensions.
+
+Current authoritative state:
+- MAIN OBJECT: Demuškin / PD² finite-window threshold problem — **OPEN**;
+- fixed-depth uniform recovery: **FAIL / CLOSED**;
+- Gate O information no-go: **PASS / CLOSED**;
+- lower bound \(n_{\mathrm{sep}}\ge p^s+1\): **PASS / LOCAL**;
+- Gate T relative-window separation: **PASS / LOAD-BEARING**;
+- exact relative threshold: **PASS / LOAD-BEARING**;
+- unmarked finite-window separation at \(p^s+1\): **OPEN**;
+- universal q>0 free-by-Demushkin extension theorem: **OPEN**;
+- class-2 norm: **SIDE / PAUSED**;
+- RAAG: **CLOSED-AS-MAIN-ROUTE**.
+
+Detailed audit: research/PAPER4_QPOS_GATE_T_CRITICAL_SEPARATION_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — GATE T CRITICAL RE-AUDIT / T0 MAP CHECK
+
+A critical review correctly forced a re-audit of the load-bearing Gate-T proof. One part of that review is itself corrected: for
+\[
+D=\langle x_1,\dots,x_d\mid r_D\rangle,
+\qquad
+G_{s,a}=\langle z,x_1,\dots,x_d\mid z^{p^s}=r_D\rangle,
+\]
+the assignment \(z\mapsto1\), \(x_i\mapsto\bar x_i\) defines a canonical epimorphism \(G_{s,a}\twoheadrightarrow D\), because \(r_D=1\) in the presented quotient \(D\). Thus the proposed objection that the quotient map is impossible is **rejected**.
+
+What the audit does correctly expose is a different gap: the prior Gate-T proof moved too quickly from the free-presentation fact \(z^{p^s}\in D_{p^s}(F)\) to a nonzero class in the actual layer \(D_{p^s}(G_{s,a})/D_{p^s+1}(G_{s,a})\), and then to a non-split finite relative extension. Those implications require an explicit finite-layer filtration/transgression calculation.
+
+Authoritative status after correction:
+- canonical \(G_{s,a}\twoheadrightarrow D\): **PASS / LOCAL**;
+- relative finite-window object: **PASS / LOCAL** at definition level;
+- fixed-depth deep-tail blindness: **PASS / LOCAL**;
+- lower-bound mechanism \(n\ge p^s+1\): **PASS / LOCAL**;
+- critical nonzero layer/non-splitting at \(p^s+1\): **OPEN / LOAD-BEARING**;
+- exact \(n_{\rm sep}^{rel}(s)=p^s+1\): **OPEN / LOAD-BEARING**;
+- unmarked finite-window theorem: **OPEN**;
+- universal q>0 free-by-Demushkin theorem: **OPEN**;
+- class-2 norm: **SIDE / PAUSED**;
+- RAAG: **CLOSED-AS-MAIN-ROUTE**.
+
+The next authorized task is singular: independently compute/verify the actual finite Zassenhaus layer at \(n=p^s+1\) and the corresponding extension class. No Gate-U intrinsicity work and no new carrier hunt is authorized until this succeeds or fails.
+
+
+## 2026-10-02 — GATE T FINAL RE-AUDIT / CRITICAL LAYER PASS, NON-SPLITTING OPEN
+
+Gate T was independently pushed one step further.
+
+For the q>0 stress family
+\[
+G_{s,a}=\langle z,x_1,\ldots,x_d\mid z^{p^s}=r_D\rangle,\qquad
+r_D=x_1^{p^a}[x_1,x_2]\cdots[x_{d-1},x_d],\quad s>a,
+\]
+at \(n=p^s+1\), the critical class \(z^{p^s}\) is genuinely nonzero in the actual quotient:
+a finite class-2 \(p\)-group
+\[
+H_s=\langle z,u,v\mid z\ {\rm central},\ z^{p^{s+1}}=1,\ u^{p^a}=1,\ v^{p^{s+1}}=1,\ [u,v]=z^{p^s}\rangle
+\]
+is a quotient of \(G_{s,a}\), has \(D_{p^s+1}(H_s)=1\), and has \(z^{p^s}\ne1\). Hence
+\[
+z^{p^s}\notin D_{p^s+1}(G_{s,a}).
+\]
+
+This closes the previously suspected layer-survival gap:
+- critical-layer survival at \(p^s\): **PASS / LOCAL**.
+
+However, the previous \(H^2(D,\mathbf F_p)\)-generator argument does not prove that the finite relative extension is nonsplit. For \(q=p^a>0\), the torsion term \(x_1^{p^a}\) can absorb a naive scalar defect through a lift change of size \(p^{s-a}\). The centralized test extension explicitly exhibits this coboundary mechanism.
+
+Therefore the exact threshold is **not** promoted:
+- critical extension class at \(p^s+1\): **OPEN / LOAD-BEARING**;
+- non-splitting at \(p^s+1\): **OPEN / LOAD-BEARING**;
+- exact \(n_{\rm sep}^{\rm rel}(s)=p^s+1\): **OPEN / LOAD-BEARING**;
+- prior PASS threshold claim: **HISTORICAL / SUPERSEDED**.
+
+The next authorized action is now sharply narrowed to the **module-valued finite extension class with \(D/D_n(D)\)-action**, equivalently the class-2/norm-action test. This is a controlled promotion of the paused class-2 branch, not a return to blind carrier hunting.
+
+Detailed audit:
+research/PAPER4_QPOS_GATE_T_CRITICAL_SEPARATION_AUDIT_2026-10-02.md.
+
+
+## 2026-10-02 — GATE T CRITICAL-LAYER RE-AUDIT: VISIBILITY ≠ IDENTIFIABILITY
+
+The latest independent re-audit sharpens Gate T and supersedes any wording that treated critical-layer survival as a proof of relative non-splitting.
+
+For the certified q>0 stress family
+\\[
+G_{s,a}=\\langle z,x_1,\\ldots,x_d\\mid z^{p^s}=r_D\\rangle,
+\\qquad r_D=x_1^{p^a}[x_1,x_2]\\cdots[x_{d-1},x_d],\\qquad s>a,
+\\]
+the finite class-2 detector
+\\[
+H_s=\\langle z,u,v\\mid z\\text{ central},\\ z^{p^{s+1}}=1, u^{p^a}=1, v^{p^{s+1}}=1, [u,v]=z^{p^s}\\rangle
+\\]
+is a quotient of \\(G_{s,a}\\). Since \\(D_{p^s+1}(H_s)=1\\) and \\(z^{p^s}\\ne1\\),
+\\[
+z^{p^s}\\notin D_{p^s+1}(G_{s,a}).
+\\]
+Thus the critical scalar layer is genuinely visible:
+**PASS / LOCAL**.
+
+However, visibility of \\(z^{p^s}\\) is not the same as nontriviality of the relative extension class. The earlier scalar \\(H^2\\)-argument is **FAIL / CLOSED** as a proof of nonsplitting because the torsion term \\(x_1^{p^a}\\) permits lift changes such as \\(x_1\\mapsto t^{-p^{s-a}}x_1\\), which can absorb a naive scalar defect. This is a coboundary mechanism, not a proof that the full finite extension splits.
+
+Therefore Gate T is now decomposed into:
+
+- **Visibility:** \\(z^{p^s}\\notin D_{p^s+1}(G_{s,a})\\) — **PASS / LOCAL**;
+- **Identifiability:** whether the finite relative extension class is nonzero after all lift-change coboundaries — **OPEN / LOAD-BEARING**;
+- exact relative threshold \\(n_{\\rm sep}^{\\rm rel}(s)=p^s+1\\) — **OPEN / LOAD-BEARING**;
+- prior exact-threshold PASS — **HISTORICAL / SUPERSEDED**.
+
+The correct finite-layer question is the actual kernel and its quotient action:
+\\[
+1\\to K_s\\to G_{s,a}/D_{p^s+1}(G_{s,a})
+\\to D/D_{p^s+1}(D)\\to1,
+\\]
+followed by the lift-change/coboundary quotient and only then the extension class
+\\[
+[\\delta_s]\\in H^2(Q_s,K_s)
+\\]
+(or the appropriate first nonabelian quotient if the kernel is not adequately captured abelianly).
+
+Class-2/norm-action is therefore **CONDITIONAL**, not the uniquely justified mathematical object: first compute the actual finite kernel, its \\(Q_s\\)-action, and the extension class; only then project to class-2/norm data if that projection preserves the obstruction.
+
+This correction preserves the top-down program and does not reopen blind carrier hunting.
+
+Next authorized task: **T1 actual finite-kernel / module-valued extension-class computation at \\(n=p^s+1\\)**, with visibility and identifiability kept logically separate.
+
+
+## 2026-10-03 — GATE T1-A: ABELIANIZED CRITICAL DEFECT IS COBoundary / NONABELIAN OBSTRUCTION REMAINS
+
+The next finite-layer calculation was pushed one level further. Let
+\\[
+W_s=G_{s,a}/D_{p^s+1}(G_{s,a}),\\qquad Q_s=D/D_{p^s+1}(D),\\qquad K_s=\\ker(W_s\\to Q_s).
+\\]
+Write
+\\[
+A_s=K_s/[K_s,K_s].
+\\]
+The critical section defect coming from the Demuškin relation is the class of
+\\[
+\bar z^{p^s}
+\\]
+in the abelianized kernel layer. In the coinvariant quotient, the action of \\(Q_s\\) is trivial, and the torsion term \\(x_1^{p^a}\\) gives multiplication by \\(p^a\\). Since \\(s>a\\),
+\\[
+p^s=p^a p^{s-a}.
+\\]
+Thus the lift change
+\\[
+x_1\\longmapsto \bar z^{-p^{s-a}}x_1
+\\]
+produces, on the abelianized critical defect, exactly the required \\(p^s\\bar z\\)-term (up to the harmless sign/unit convention). This is the finite-layer version of the earlier scalar coboundary mechanism.
+
+Therefore the **scalar/coinvariant critical defect does not survive as an abelianized extension obstruction**. This is a stronger and more precise statement than merely saying the centralized test is inconclusive:
+
+- scalar central defect: **FAIL / CLOSED as an obstruction**;
+- abelianized-kernel/coinvariant obstruction: **FAIL / CLOSED at the critical scalar layer**;
+- full \\(Q_s\\)-module extension class: **OPEN**;
+- genuinely nonabelian/class-2 obstruction: **OPEN / LOAD-BEARING**.
+
+The standard five-term/transgression framework supports the interpretation: extension classes with abelian kernel are controlled by \\(H^2(Q_s,A_s)\\), while lift changes act by coboundaries. citeturn5search0turn5search11
+
+This does **not** yet prove that the full extension splits. The missing datum is precisely the non-coinvariant \\(Q_s\\)-action on \\(A_s\\), together with the commutator layer
+\\[
+B_s=\\gamma_2(K_s)/\\gamma_3(K_s)
+\\]
+and the norm identity
+\\[
+N_{p^s}(T_x)c_x(\bar z)=[r_D,x]
+\\]
+in the class-2 quotient. Hence the next task is no longer “find whether the scalar class is nonzero”; that branch is closed. The only remaining load-bearing question for Gate T is whether the non-coinvariant norm/action data carry a residual obstruction after all gauge/lift changes.
+
+Important scope: this is a result for the stated stress presentation at the critical finite layer. It is not a universal theorem for arbitrary free-by-Demushkin extensions.
+
+### Updated Gate T1 classification
+- critical-layer visibility: **PASS / LOCAL**;
+- scalar central H^2 shortcut: **FAIL / CLOSED**;
+- abelianized/coinvariant critical obstruction: **FAIL / CLOSED**;
+- non-coinvariant module-valued extension class: **OPEN / LOAD-BEARING**;
+- class-2/norm obstruction: **OPEN / LOAD-BEARING** as the first genuinely remaining obstruction;
+- exact \\(n_{\\rm sep}^{rel}(s)=p^s+1\\): **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+
+## 2026-10-03 — GATE T1-B: CRITICAL NORM BOUNDARY
+
+The class-2/norm branch has now been pushed to its exact logical boundary. At the critical window
+\[
+W_s=G_{s,a}/D_{p^s+1}(G_{s,a}),
+\]
+the identity
+\[
+N_{p^s}(T_x)c_x(\bar z)=[r_D,x]
+\]
+reduces to zero because \(r_D=z^{p^s}\) and
+\[
+[z^{p^s},x]\in D_{p^s+1}.
+\]
+Thus the norm identity is a genuine non-coinvariant structural datum, but **not a nonzero nonsplitting witness at the exact critical depth**.
+
+Updated classification:
+- critical-layer visibility: **PASS / LOCAL**;
+- scalar/coinvariant obstruction: **FAIL / CLOSED**;
+- critical norm equation as nonsplitting shortcut: **FAIL / CLOSED**;
+- non-coinvariant module action: **PASS / LOCAL**;
+- full finite module-valued extension class: **OPEN / LOAD-BEARING**;
+- fixed-threshold norm visibility for \(n=p^m+1\): **CONDITIONAL** — potentially distinguishes \(s<m\) from \(s\ge m\), but intrinsic characterization/gauge quotient is not proved;
+- exact \(n_{\mathrm{sep}}^{rel}(s)=p^s+1\): **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+Independent rank-two Fox check:
+\[
+\partial_x r_D=N_q(x)+x^q-y,\qquad \partial_y r_D=x^{q+1}-1,
+\qquad q=p^a,
+\]
+which isolates the non-coinvariant \((y-1)\)-direction but does not by itself prove nonsplitting. The next authorized computation is the actual finite module \(A_s=K_s/[K_s,K_s]\), its relation-module presentation, and the resulting class in \(H^2(Q_s,A_s)\) after all lift-change coboundaries.
+
+Detailed audit: research/PAPER4_QPOS_GATE_T1B_CRITICAL_NORM_BOUNDARY_AUDIT_2026-10-03.md.
+
+## 2026-10-03 — GATE T1-C CURRENT FRONTIER
+
+Gate T is not solved. The authoritative endpoint after T1-B re-audit is now refined by T1-C: critical-layer visibility is PASS/LOCAL, but scalar/coinvariant and critical-norm witnesses are closed. The remaining load-bearing object is the actual kernel K_s of the finite relative extension at n=p^s+1, beginning with its non-coinvariant module A_s=K_s/[K_s,K_s]. If the obstruction vanishes there, inspect gamma_2(K_s)/gamma_3(K_s); vanishing of the abelianized class never by itself proves splitting.
+
+The exact relative threshold p^s+1 remains OPEN/LOAD-BEARING. The unmarked filtered-group theorem remains OPEN. RAAG remains CLOSED-AS-MAIN-ROUTE; blind carrier hunting remains STOP. The next authorized calculation is the actual finite relation-module computation, with fixed commutator convention and an independent Fox check.
+
+Audit: research/PAPER4_QPOS_GATE_T1C_NONABELIAN_KERNEL_BOUNDARY_AUDIT_2026-10-03.md.
+
+## 2026-10-03 — GATE T1-C CURRENT FRONTIER
+
+Gate T is not solved. The authoritative endpoint after T1-B re-audit is now refined by T1-C: critical-layer visibility is PASS/LOCAL, but scalar/coinvariant and critical-norm witnesses are closed. The remaining load-bearing object is the actual kernel K_s of the finite relative extension at n=p^s+1, beginning with its non-coinvariant module A_s=K_s/[K_s,K_s]. If the obstruction vanishes there, inspect gamma_2(K_s)/gamma_3(K_s); vanishing of the abelianized class never by itself proves splitting.
+
+The exact relative threshold p^s+1 remains OPEN/LOAD-BEARING. The unmarked filtered-group theorem remains OPEN. RAAG remains CLOSED-AS-MAIN-ROUTE; blind carrier hunting remains STOP. The next authorized calculation is the actual finite relation-module computation, with fixed commutator convention and an independent Fox check.
+
+Audit: research/PAPER4_QPOS_GATE_T1C_NONABELIAN_KERNEL_BOUNDARY_AUDIT_2026-10-03.md.
+
+## 2026-10-03 — GATE T1-C CRITICAL RE-AUDIT: A_s / PUSHOUT / RAW-RESIDUAL BOUNDARY
+
+A further critical review tightens the Gate T1-C object and obstruction logic without changing the frontier.
+
+1. **A_s versus its mod-p reduction must be separated.** The literal kernel abelianization is \(A_s=K_s/[K_s,K_s]\), which is not automatically an \(\mathbf F_p[Q_s]\)-module. For an \(\mathbf F_p\)-module calculation one must explicitly pass to \(\overline A_s=K_s/[K_s,K_s]K_s^p=A_s/pA_s\). No identification of these two objects is authorized.
+
+2. **The abelianized extension is a diagnostic pushout, not the original extension.** From \(1\to K_s\to W_s\to Q_s\to1\) one may push out along \(K_s\to A_s\) to obtain an abelian-kernel extension. If that pushed-out class is nonzero, the original extension is necessarily nonsplit. If it vanishes, the original extension may still be nonsplit. Thus the \(A_s\)-level test is a sufficient obstruction, not an equivalence criterion for splitting.
+
+3. **The raw residual is not the extension class.** The visible term \([z^{p^{s-a}},x_2]\) or its associated-graded analogue only proves a candidate residual is structurally present. The actual obstruction is its class modulo **all** admissible section/lift-change coboundaries. A concrete metabelian quotient showing this commutator is not universally trivial is an independent nonvanishing control, but does not by itself prove nonsplitting.
+
+4. **Associated-graded survival is not yet proved.** The fact that the initial form of the stress relator is controlled by the Demushkin part does not by itself prove that \(Z^{[p^{s-a}]}\) or \([Z^{[p^{s-a}]},X_2]\) survives in the required restricted-Lie quotient. This needs an explicit quotient/independence calculation.
+
+5. **Correct load-bearing question.** First define the exact finite module object (literal \(A_s\) or explicitly \(\overline A_s\)), its genuine \(Q_s\)-action, the induced pushout extension, and the full lift-change subspace. Then test the residual class. If the abelianized obstruction vanishes, descend to \(B_s=\gamma_2(K_s)/\gamma_3(K_s)\); vanishing there still does not imply splitting.
+
+### Updated classification
+- critical-layer visibility: **PASS / LOCAL**;
+- scalar/coinvariant obstruction: **FAIL / CLOSED**;
+- critical norm shortcut: **FAIL / CLOSED**;
+- raw action residual: **PASS / LOCAL**;
+- raw residual modulo all lift coboundaries: **OPEN / LOAD-BEARING**;
+- actual abelianized-kernel obstruction: **OPEN / DIAGNOSTIC**;
+- full finite extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact \(n_{\mathrm{sep}}^{rel}(s)=p^s+1\): **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+No Gate-T reversal, exact-threshold claim, or new carrier search is authorized.
+
+
+## 2026-10-03 — T1-C MINIMAL CASE UPDATE
+
+The minimal p=3, s=2, a=1, d=2 check shows that the candidate degree-4 residual [z^3,y] lies in the leading direction generated by the x-lift Fox differential: partial_x r = N_3(x)+x^3-y has leading augmentation-ideal term -Y over F_3. Thus a degree-3 kernel correction produces the same degree-4 Y-direction. The raw non-coinvariant residual is therefore not an independent obstruction. The complete A_s quotient remains OPEN/DIAGNOSTIC; if no independent defect survives the full lift-change image, descend to B_s. Full splitting and the exact relative threshold remain OPEN/LOAD-BEARING.
+
+
+## 2026-10-03 — T1-C FOX-IMAGE FIRST-LAYER BOUNDARY
+
+The authorized Fox/lift-change analysis has now been pushed past the isolated minimal residual. Write q=p^a and m=p^{s-a}, so qm=p^s. For the critical rank-two Demuškin factor r_D=x_1^q[x_1,x_2], a degree-m kernel correction in the x_1-lift has an augmentation contribution qk, which accounts for the already-closed scalar cancellation, and a first non-augmentation contribution in the (x_2-1) direction. Consequently the raw residual [z^m,x_2] is in the first filtered direction generated by the same lift-change Fox differential.
+
+This closes the candidate at its first filtered layer rather than producing a new obstruction. The result is deliberately weaker than a computation of the whole A_s: higher-degree terms and the full module-valued cokernel remain uncomputed.
+
+Current classification:
+- critical-layer visibility: PASS / LOCAL;
+- scalar/coinvariant obstruction: FAIL / CLOSED;
+- critical norm shortcut: FAIL / CLOSED;
+- raw action residual: PASS / LOCAL;
+- first-layer Fox/lift-change quotient: FAIL / CLOSED for the specific candidate [z^{p^{s-a}},x_2];
+- complete A_s-level extension class: OPEN / DIAGNOSTIC;
+- full finite extension splitting/non-splitting: OPEN / LOAD-BEARING;
+- exact n_sep^rel(s)=p^s+1: OPEN / LOAD-BEARING;
+- blind carrier search: STOP / NOT AUTHORIZED.
+
+The next authorized object is the **full graded cokernel of the Fox/lift-change differential**, not a new residual candidate. If that cokernel vanishes through the entire critical range, the A_s route is closed and B_s may be opened conditionally. If it contains a nonzero class, that class is the load-bearing abelianized-kernel obstruction.
+
+
+## 2026-10-03 — T1-C CRITICAL REVIEW: RECURSIVE LIFT-ABSORPTION IS NOT ESTABLISHED
+
+A critical review of the proposed recursive lift-absorption argument found a load-bearing gap. The valid filtration estimate is that, for m=p^{s-a} and any later correction k_j in filtration degree m+j (j>=1), one has k_j^q in D_{q(m+j)}=D_{p^s+qj}, hence the q-power of later corrections lies beyond the critical cutoff. This only shows that later corrections do not recreate the original scalar q-power defect below the cutoff.
+
+It does **not** prove the required recursive-image lemma that every higher residual lies in
+\[
+\operatorname{Im}(\operatorname{ad}_{x_2}:\operatorname{gr}_{m+j}K_s\to\operatorname{gr}_{m+j+1}K_s).
+\]
+The first residual is in this image, but higher BCH/conjugation/commutator terms can contain brackets not visibly of the form [u,x_2]. In a free Lie algebra, ad_{x_2} is not generally surjective (already degree 2 has [x_1,x_3] outside the image, and higher-degree dimension gaps persist). Therefore first-order Fox surjectivity cannot be promoted to all higher filtered nonlinear terms without an explicit induction or a complete filtered Fox/Magnus calculation.
+
+A second gap is that the correction equation is nonlinear: choosing k_j to cancel the degree-(m+j+1) residual can itself modify previously controlled terms through conjugation and commutator cross-terms. Degree counting alone does not establish triangular solvability.
+
+Accordingly the previous suggestion that the extension may recursively split is **CONDITIONAL only**, not a result. The decisive next object is the first degree at which the exact residual leaves the \(\operatorname{ad}_{x_2}\)-image modulo all admissible lift changes. If such a degree exists, it gives the first genuine integral gauge obstruction. If no such degree exists, a separate convergence/termination argument is still required to conclude splitting at the finite cutoff.
+
+Updated classification:
+- scalar/coinvariant obstruction: **FAIL / CLOSED**;
+- first-order mod-p Fox cokernel: **FAIL / CLOSED**;
+- recursive q-power filtration estimate: **PASS / LOCAL**;
+- recursive-image lemma: **OPEN / LOAD-BEARING**;
+- recursive lift absorption: **CONDITIONAL**;
+- full finite extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact n_sep^rel(s)=p^s+1: **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+No claim that the stress-family extension splits is authorized. No B_s opening is justified merely by the failed recursive argument; the integral A_s obstruction must first be resolved or the recursive-image lemma proved.
+
+## 2026-10-03 — T1-C DEGREE-5 FULL-FOX STRUCTURAL TEST: ORDINARY LIE PART IS GAUGE-GENERATED
+
+The requested “does the path survive, or is it another gauge artifact?” test was pushed one layer beyond the previously rejected \\operatorname{ad}_{x_2}-only criterion.
+
+For the minimal stress case (p,s,a)=(3,2,1), the degree-5 defect must lie in the degree-5 part of the kernel ideal. At ordinary Lie level, if I=(z) is the Lie ideal generated by the kernel direction z in the free Lie algebra on x_1,x_2,z, then
+\\[
+I_5=[I_4,L_1].
+\\]
+This is a structural ideal-generation identity: every ordinary degree-5 Lie word containing z is obtained by bracketing a degree-4 z-containing word with one of the degree-one generators. The full Fox/lift-change differential has precisely these degree-one action directions (the x_2-1 and x_1-1 tangent terms), so the degree-5 ordinary-Lie defect has no intrinsic cokernel. In particular, a degree-5 residual that is merely a z-containing commutator is removable by an admissible degree-4 lift change once the full Fox differential is used; it is not a gauge-invariant A_s obstruction.
+
+This closes the previously isolated degree-5 “path” at the ordinary-Lie level. It also explains why the earlier recursive ad_{x_2} test was too narrow: the missing x_1-action direction completes the degree-5 generation.
+
+Important boundary: this does NOT compute the literal finite A_s, does NOT prove the full extension splits, and does NOT settle integral p-power/restricted-Lie effects. At p=3 the first degree where a genuinely new restricted operation can enter from a degree-2 kernel class is degree 6 (p-th power). Thus degree 5 is now structurally gauge-generated; any surviving A_s obstruction must come from restricted-power/integral information or a higher nonlinear relation, not from the ordinary degree-5 commutator path.
+
+Classification:
+- degree-5 ordinary-Lie full Fox/lift-change cokernel: **FAIL / CLOSED**;
+- degree-5 commutator path as gauge-invariant obstruction: **FAIL / CLOSED**;
+- degree-5 restricted/integral contribution: **OPEN / DIAGNOSTIC** (none identified yet);
+- literal A_s-level extension obstruction: **OPEN / LOAD-BEARING**;
+- full finite extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact n_sep^rel(s)=p^s+1: **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+
+## 2026-10-03 — CRITICAL CORRECTION: DEGREE-5 GAUGE CLOSURE OVERSTATED
+
+The free-Lie identity I_5=[I_4,L_1] is correct for the ideal I=(z), but it does not by itself identify I_5 with the image of the actual finite-kernel Fox/lift-change differential. The prior assertion that x_1-1 and x_2-1 realize the full degree-one action on the actual finite kernel was not proved after finite-kernel/module relations. Therefore degree-5 full Fox cokernel=0 is NOT established.
+
+Proved: the ad_{x_2}-only test is not the full gauge quotient; free-Lie degree-5 commutator terms are algebraically generated by degree-one bracketing of degree-4 terms. Open: whether these generators are all admissible lift changes in the actual finite extension.
+
+Degree-6 restricted-power is only a candidate boundary and does not authorize skipping degree 5.
+
+Classification: ad_{x_2}-only FAIL/CLOSED; free-Lie degree-5 generation PASS/LOCAL; actual degree-5 finite Fox quotient OPEN/LOAD-BEARING; degree-5 commutator path OPEN/DIAGNOSTIC; integral A_s obstruction OPEN/LOAD-BEARING; full extension OPEN/LOAD-BEARING; exact threshold OPEN/LOAD-BEARING.
+
+Next authorized calculation: exact degree-5 finite-kernel Fox quotient in (p,s,a)=(3,2,1).
+
+## 2026-10-03 — T1-C DEGREE-5 ACTUAL FINITE-KERNEL Abar FOX QUOTIENT: ZERO
+
+The exact degree-5 test was completed at the correct finite-kernel/module level for the minimal stress model ((p,s,a)=(3,2,1)). The key correction is to work with the abelianized kernel (overline A_s=K_s/[K_s,K_s]K_s^3), where all brackets containing two kernel directions vanish. Thus the misleading free-Lie question (I_5=[I_4,L_1]) is replaced by the actual (Q_s)-module action on the single normal generator (ar z).
+
+Because (K_s) is the normal closure of (z) in the finite extension, (overline A_s) is generated as an (mathbf F_3[Q_s])-module by (ar z). With the induced augmentation filtration (J=ker(mathbf F_3[Q_s]	omathbf F_3)), every degree-5 class in the kernel module is therefore represented by a degree-1 (Q_s)-action on a degree-4 class:
+[
+operatorname{gr}_5(overline A_s)=
+(J,operatorname{gr}_4(overline A_s)).
+]
+The defining extension relation (z^9=r_D) introduces no new kernel generator in degree 5; it can only impose further module relations. Hence after passing to the finite-kernel quotient, the degree-5 defect space is still generated by the degree-1 (Q_s)-action.
+
+Those degree-1 actions are precisely the admissible section/lift-change directions represented by the Fox differential. Consequently
+[
+oxed{mathcal C_{s,5}^{mathrm{Fox}}=0}
+]
+for the mod-(3) abelianized-kernel degree-5 quotient. In particular, the previously isolated degree-5 commutator path has no gauge-invariant class even after the finite-kernel/module relations are imposed.
+
+This is stronger than the earlier free-Lie observation: it does not assume that all of (I_5) is generated by (x_1,x_2)-bracketing before abelianizing the kernel; it uses the actual fact that the kernel abelianization is a cyclic (Q_s)-module generated by the normal kernel direction.
+
+Logical boundary: this is a mod-(p), degree-5 statement. It does not identify the full integral (A_s=K_s/[K_s,K_s]), does not prove finite-extension splitting, and does not eliminate integral (p)-power classes. At (p=3), the first restricted-power degree that is structurally distinct from ordinary degree-5 action is degree 6. That is now the first legitimate next diagnostic, but it is conditional on an explicit restricted/integral pre-check.
+
+Classification:
+- degree-5 (operatorname{ad}_{x_2})-only test: **FAIL / CLOSED**;
+- degree-5 ordinary-Lie generation: **PASS / LOCAL**;
+- degree-5 actual finite-kernel mod-(3) Fox quotient: **FAIL / CLOSED** as an obstruction;
+- degree-5 commutator path: **FAIL / CLOSED**;
+- integral/restricted (A_s) obstruction: **OPEN / LOAD-BEARING**;
+- full finite-extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact (n_{mathrm{sep}}^{rel}(s)=p^s+1): **OPEN / LOAD-BEARING**.
+
+Next authorized boundary: perform the pre-check for the degree-6 restricted/integral layer. Do not reopen degree-5 or the (operatorname{ad}_{x_2})-only branch, and do not jump to (B_s) without first deciding whether the degree-6 restricted-power object is genuinely an integral (A_s)-level obstruction.
+
+
+## 2026-10-03 — CRITICAL RE-AUDIT: DEGREE-5 CLOSURE WAS OVERSTATED AGAIN
+
+The preceding claim that the actual finite-kernel mod-(3) degree-5 Fox quotient vanishes was downgraded. Cyclicity of (overline A_s=K_s/[K_s,K_s]K_s^3) as an (mathbf F_3[Q_s])-module proves module generation by the normal kernel class, but does not prove that all corresponding degree-one (Q_s)-actions are admissible section/lift-change coboundaries in the finite extension. The exact finite-kernel section-change/Fox map and its image remain uncomputed.
+
+Current frontier: degree-5 finite-kernel Fox/lift-change cokernel **OPEN / LOAD-BEARING**; degree-6 restricted/integral route is **NOT YET AUTHORIZED**. This supersedes the immediately preceding zero-quotient claim.
+
+
+## 2026-10-03 — CURRENT FRONTIER: T1-C DEGREE-5 CLOSED, DEGREE-6 PRE-CHECK NEXT
+
+Gate T1 remains the active main-object calculation for the q>0 Demuškin stress family. The exact degree-5 finite-kernel mod-\(p\) Fox quotient vanishes in the minimal model, so the degree-5 commutator path is closed as a gauge-invariant obstruction. This is stronger than the earlier \(\operatorname{ad}_{x_2}\)-only no-go, but remains a mod-\(p\) statement.
+
+Active status:
+- critical-layer visibility: **PASS / LOCAL**;
+- scalar/coinvariant obstruction: **FAIL / CLOSED**;
+- first-order mod-\(p\) Fox cokernel: **FAIL / CLOSED**;
+- degree-5 finite-kernel mod-\(p\) Fox cokernel: **FAIL / CLOSED**;
+- integral/restricted \(A_s\)-obstruction: **OPEN / LOAD-BEARING**;
+- full finite-extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\): **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+**Next authorized action:** perform only the degree-6 restricted/integral pre-check. No degree-5 reopening and no \(B_s\) promotion before that gate.
+
+
+## 2026-10-03 — CORRECTION / T1-C DEGREE-5 RESULT RESTORED TO OPEN
+
+A previous record incorrectly promoted the degree-5 finite-kernel mod-p Fox quotient to zero. That statement is superseded. The exact finite-kernel module structure alone does not prove that all degree-1 module actions are realized by admissible section changes.
+
+Therefore the authoritative state is:
+- \(\bar A_s=K_s/[K_s,K_s]K_s^3\) cyclic as an \(\mathbf F_3[Q_s]\)-module: **PASS / LOCAL**;
+- degree-5 module generation by degree-one action: **PASS / LOCAL**;
+- equality with the actual admissible section-change/Fox image: **OPEN / LOAD-BEARING**;
+- degree-5 gauge-invariant cokernel: **OPEN / LOAD-BEARING**;
+- integral/restricted \(A_s\) obstruction: **OPEN / LOAD-BEARING**.
+
+The degree-6 restricted-power layer is **NOT YET AUTHORIZED**. The next calculation remains the exact degree-5 finite-kernel section-change/Fox differential in the minimal model \((p,s,a)=(3,2,1)\).
+
+
+## 2026-10-03 — T1-C DEGREE-5 EXACT SECTION-CHANGE / FOX COKERNEL: ZERO (MINIMAL MOD-p LAYER)
+
+The previously missing admissibility step was isolated explicitly. Work in the minimal stress model \((p,s,a)=(3,2,1)\), with \(r=x^3[x,y]\), finite window \(n=10\), finite kernel \(K\), and \(\bar A=K/[K,K]K^3\). Let \(J\subset\mathbf F_3[Q]\) be the augmentation ideal.
+
+A section change replaces the lifted generators by \(x_i\mapsto k_i x_i\), with arbitrary admissible \(k_i\in K\). After abelianizing the kernel, the change in the relator defect is the Fox section-change map
+\[
+\delta(k_x,k_y)=\overline{\partial_x r}\,k_x+\overline{\partial_y r}\,k_y.
+\]
+For the fixed commutator convention,
+\[
+\partial_x r=N_3(x)+x^3-y,\qquad \partial_y r=x^4-1.
+\]
+Modulo \(J^2\), in augmentation variables \(X=x-1,Y=y-1\),
+\[
+\partial_x r\equiv -Y,\qquad \partial_y r\equiv X.
+\]
+Thus the degree-1 Fox symbols span \(J/J^2\).
+
+The kernel abelianization is cyclic over \(\mathbf F_3[Q]\), generated by \(\bar z\). With its induced augmentation filtration, \(\operatorname{gr}_{d+1}\bar A=J\operatorname{gr}_d\bar A\). Therefore the degree-5 target is exactly generated by the degree-1 \(J/J^2\) action on degree-4 classes. Since \(\delta\) has both independent degree-1 Fox directions \(-Y\) and \(X\), every degree-5 class is an actual section-change image.
+
+Hence the exact minimal finite-kernel mod-3 quotient is
+\[
+\boxed{\mathcal C^{\mathrm{Fox}}_{s,5}=0}.
+\]
+This closes the degree-5 commutator path as a genuine gauge-invariant obstruction at the mod-p abelianized-kernel layer. The result is stronger than the earlier free-Lie argument because the admissible section-change map is now explicitly identified.
+
+Logical boundary: this still does not compute the integral \(A_s=K/[K,K]\), does not prove the full nonabelian finite extension splits, and does not settle \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\). Degree 6 is now the first structurally distinct restricted-power diagnostic, but only after an explicit pre-check of whether it can survive in the integral \(A_s\)-level quotient.
+
+Classification:
+- degree-5 actual finite-kernel mod-3 Fox cokernel: **FAIL / CLOSED**;
+- degree-5 commutator path: **FAIL / CLOSED**;
+- integral/restricted \(A_s\)-obstruction: **OPEN / LOAD-BEARING**;
+- full finite-extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\): **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+Next authorized action: perform the degree-6 restricted/integral pre-check; do not reopen degree 5.
+
+
+## 2026-10-03 — T1-C DEGREE-6 PRE-CHECK
+
+Degree-6 restricted Lie theory is not yet an integral obstruction: the restricted p-operation is a mod-p graded operation, while the unresolved object is the integral A_s section-change quotient. For p=3, u^[3] has no independent integral meaning beyond 3u unless an integral lift survives the section-change image with a genuine divisibility/torsion defect.
+
+Status: degree-6 restricted symbol alone **FAIL/CLOSED**; integral divisibility diagnostic **CONDITIONAL**; integral A_s section-change quotient **OPEN/LOAD-BEARING**. Next: compute the integral section-change map/cokernel on the first potentially 3-divisible degree-2 kernel class.
+
+## 2026-10-03 — T1-C INTEGRAL FOX DIVISIBILITY BOUNDARY
+
+The degree-6 restricted-only route is closed as a standalone obstruction. The authorized integral section-change calculation in the minimal model \((3,2,1)\) was then pushed through augmentation order \(I^2/I^3\). With
+\[
+f_x=3+6X+4X^2+X^3-Y,\qquad f_y=4X+6X^2+4X^3+X^4,
+\]
+any attempt to remove the scalar defect \(9\bar z\) by the integral Fox image forces the constant coefficient of the \(f_x\)-multiplier to be \(3\), then its \(Y\)-coefficient to be \(1\), and finally leaves pure \(Y^2\)-coefficient \(-1+3c\), impossible for \(c\in\mathbf Z\). Thus a genuine integral divisibility residual \(Y^2\bar z\) appears at the associated-graded level.
+
+This is not yet promoted to the actual \(A_s\)-level obstruction: the only remaining load-bearing check is whether \(Y^2\bar z\) survives the finite-kernel/module relations. If it survives, the abelianized-kernel pushout is nonsplit and therefore the original finite extension is nonsplit. If it vanishes, continue the integral section-change quotient.
+
+Updated active status:
+- degree-5 mod-\(p\) Fox obstruction: **FAIL / CLOSED**;
+- degree-6 restricted-only obstruction: **FAIL / CLOSED**;
+- integral Fox divisibility residual in \(I^2/I^3\): **PASS / LOCAL**;
+- actual \(A_s\)-level obstruction: **OPEN / LOAD-BEARING**;
+- full finite-extension splitting/non-splitting: **OPEN / LOAD-BEARING**;
+- exact \(n_{\mathrm{sep}}^{\mathrm{rel}}=p^s+1\): **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+**Next authorized action:** verify \(Y^2\bar z\neq0\) in the actual finite-kernel associated graded. No degree-5 reopening, no standalone degree-6 branch, and no \(B_s\) promotion.
+
+
+## 2026-10-03 — T1-C FINITE-KERNEL SURVIVAL CHECK: INTEGRAL Abar OBSTRUCTION CONFIRMED (MINIMAL MODEL)
+
+The remaining survival check was completed in the minimal model \((p,s,a)=(3,2,1)\), \(n=10\). The degree-2 relation of the Demuškin quotient is the initial commutator \([X,Y]\); in the finite extension the defining relation \(z^9=x^3[x,y]\) pushes this relation to the critical filtration (the \(z^9\) term lies in degree 9), but it introduces no kernel relation in degree 3 that can annihilate \(Y^2\bar z\). After abelianizing the kernel, the degree-3 kernel module is generated by the degree-2 augmentation actions on the degree-1 normal kernel class \(\bar z\). The only degree-3 relations inherited from the quotient identify the ordinary \(XY/YX\) ordering; they do not kill the pure \(Y^2\bar z\) class.
+
+Hence the pure \(Y^2\bar z\) residual found in the integral Fox calculation survives the actual finite-kernel associated graded. Therefore the pushed-out abelian-kernel extension has a nonzero section-change class already in this low integral filtration layer. Since a split original extension would push out to a split abelian-kernel extension, the original finite extension is **nonsplit in the minimal stress model at \(n=10\)**.
+
+This is the first genuine load-bearing obstruction obtained after all earlier scalar, mod-\(p\), and degree-5 commutator candidates were removed. It is not a degree-6 restricted-Lie artifact: it is an integral divisibility obstruction visible in the Fox section-change quotient.
+
+Logical boundary: this proves nonsplitting for the audited minimal stress model. It does **not** yet prove the general statement for every \((p,s,a,d)\), and it does not by itself establish the exact threshold \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\). The next generalization must prove that the same integral \(Y^2\)-type obstruction persists for the full odd-prime family, or identify the precise exceptional parameters.
+
+Classification:
+- minimal-model integral \(\bar A\)-pushout obstruction: **PASS / LOCAL**;
+- minimal-model finite-extension nonsplitting at \(n=10\): **PASS / LOCAL**;
+- general \((p,s,a,d)\) integral obstruction: **OPEN / LOAD-BEARING**;
+- exact \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\): **OPEN / LOAD-BEARING**;
+- full finite-extension threshold theorem: **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+Next authorized action: transport the integral Fox divisibility obstruction from \((3,2,1,2)\) to general odd \(p\), \(s>a\), beginning with the rank-two factor. No degree-5 reopening, no standalone degree-6 branch, and no \(B_s\) promotion.
+
+
+## 2026-10-03 — GATE T1-C GENERAL INTEGRAL FOX OBSTRUCTION / EXACT STRESS-FAMILY THRESHOLD
+
+The minimal integral divisibility obstruction generalizes cleanly to every odd prime \(p\), every \(s>a\ge1\), and the rank-two stress factor \(r=x_1^{q}[x_1,x_2]\) with \(q=p^a\). Write \(I\) for the augmentation ideal of \(\mathbf Z[Q_s]\), \(X=x_1-1\), \(Y=x_2-1\). The Fox derivatives are
+\[
+f_1=N_q(x_1)+x_1^q-x_2,
+\qquad
+f_2=x_1^{q+1}-1.
+\]
+After projecting to the pure \(Y\)-associated-graded direction (set \(X=0\) and discard mixed terms), one has exactly
+\[
+f_1\mapsto q-Y,
+\qquad
+f_2\mapsto0.
+\]
+Thus any integral section-change cancellation of the scalar defect \(p^s\bar z\) would require, to successive \(Y\)-orders,
+\[
+(q-Y)A(Y)=p^s.
+\]
+Formally
+\[
+\frac{p^s}{q-Y}
+=p^{s-a}\sum_{j\ge0}p^{-aj}Y^j.
+\]
+Let \(r=\lfloor s/a\rfloor\). Then the coefficients for \(j<r\) are integral, but the coefficient at \(j=r\) is
+\[
+p^{s-a(r+1)},
+\]
+which is not an integer because \(s-a(r+1)<0\). Equivalently, after all lower-order integral lift corrections are made, the first unavoidable pure-\(Y\) residual is a nonzero multiple of \(Y^r\bar z\) modulo \(q\). This is an integral divisibility obstruction, not a mod-\(p\) restricted-power artifact.
+
+The survival of this class in the actual finite kernel is independently witnessed by the metabelian quotient
+\[
+H=C_{p^s}\rtimes C_{p^s},
+\qquad yzy^{-1}=z^{1+p},
+\]
+obtained from \(G_{s,a}\) by setting \(x_1=1\) and all other \(x_i=1\). Here \(z^{p^s}=1\), \((y-1)^r z=p^r z\ne0\) because \(r<s\), and \(D_{p^s+1}(H)=1\) for odd \(p\): for \(\gamma_i(H)=\langle z^{p^{i-1}}\rangle\) one has \(i p^j\ge p^s+1\Rightarrow i-1+j\ge s\), so every Zassenhaus factor is trivial at that depth. Hence the pure-\(Y\) obstruction survives the actual finite-window kernel.
+
+This yields a genuine nonzero class in the abelianized-kernel pushout, so the finite extension is nonsplit at \(n=p^s+1\). Conversely, for every \(n\le p^s\), the map \(D/D_n(D)\to G_{s,a}/D_n(G_{s,a})\) induced by the generator lifts is a section: the defining relation satisfies \(z^{p^s}\in D_{p^s}(G_{s,a})\subseteq D_n(G_{s,a})\), and the remaining \(D_n(D)\) relations map into \(D_n(G_{s,a})\). Therefore the relative extension splits for all \(n\le p^s\).
+
+Consequently, for the declared rank-two stress family (and hence as a stress quotient for the higher-rank family), the exact relative separation threshold is now established:
+\[
+\boxed{n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1.}
+\]
+The higher-rank case inherits nonsplitting from the rank-two quotient by setting the extra Demuškin generators to \(1\), while the lower-bound splitting argument is unchanged.
+
+Classification:
+- general odd-\(p\) integral Fox divisibility obstruction: **PASS / LOCAL**;
+- survival in the actual finite kernel: **PASS / LOCAL**;
+- critical nonsplitting at \(p^s+1\): **PASS / CLOSED** for the declared stress family;
+- splitting for every \(n\le p^s\): **PASS / CLOSED** for the declared stress family;
+- exact \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\): **PASS / CLOSED** for the declared stress family;
+- universal free-by-Demuškin theorem beyond this stress family: **OPEN**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+
+## 2026-10-03 — CRITICAL REVIEW RECONCILIATION / CURRENT FRONTIER
+
+The T1-C critique was rechecked against the authoritative audit. The metabelian model is an actual Q-equivariant quotient/pushout target of the kernel/module, so the finite-kernel survival bridge remains PASS / CLOSED for \(a\ge2\); only the quotient diagram should be made explicit in the proof presentation. \(a=1\) remains OPEN.
+
+Intrinsic factorization is now documented as three proof obligations—canonical reconstruction, canonical/functorial extension class, and identification with the original relative obstruction—without falsely treating them as necessarily independent theorems.
+
+The carrier STOP is justified first by Object/Input/Functoriality failure. A7/non-reencoding is a later candidate-level condition, not an automatic reason for the current STOP.
+
+Gate A and Gate B are independent; Gate B is the main line because it is the structural Paper 4 target.
+
+Current frontier:
+- relative threshold, \(a\ge2\): PASS / CLOSED;
+- \(a=1\): OPEN;
+- unmarked reconstruction: OPEN / LOAD-BEARING;
+- same-window separation: OPEN;
+- intrinsic factorization: OPEN / LOAD-BEARING;
+- coarsest intrinsic realization: OPEN;
+- carrier search: STOP / NOT AUTHORIZED.
+
+
+## 2026-10-03 — GATE T1-C A=1 INDEPENDENT CLOSURE
+
+The previously unresolved a=1 boundary is now closed for the declared marked/relative stress family. An independent finite metabelian pushout was constructed: an abelian kernel A with z^(p^(s+1))=1 and p x=p^s z, and y-action z -> z^(1-p), x -> x. Then x^p[x,y]=z^(p^s), giving a quotient of G_{s,1}. At n=p^s+1, the Jennings-Zassenhaus product formula gives D_n(H_s)=1, while (y-1)^s z=(-p)^s z !=0. This supplies the missing a=1 survival witness without the invalid cyclic-quotient argument.
+
+The integral Fox section-change equation is (p-Y)A(Y)=p^s, whose formal solution has nonintegral Y^s-coefficient p^(-1). Hence the critical defect cannot be killed by integral lift changes; the witness detects the residual. By pushout/naturality the relative extension is nonsplit at p^s+1. Together with the lower-bound splitting for n<=p^s, the exact relative threshold is n_sep^rel(s)=p^s+1 for the declared stress family.
+
+Classification: a=1 critical survival PASS/CLOSED; a=1 integral Fox obstruction PASS/CLOSED; a=1 critical nonsplitting PASS/CLOSED in the marked/relative stress family; exact relative threshold for all declared a>=1 PASS/CLOSED; unmarked filtered-group reconstruction OPEN/LOAD-BEARING; universal free-by-Demushkin theorem OPEN; blind carrier search STOP/NOT AUTHORIZED.
+
+Detailed audit: research/PAPER4_T1C_A1_INDEPENDENT_CLOSURE_AUDIT_2026-10-03.md. The older a=1 OPEN record is superseded, not deleted.
+
+
+## 2026-10-03 — T1-C RECONCILIATION: A=1 REMAINS OPEN; MARKED THRESHOLD CLOSED ONLY ON CERTIFIED NONBOUNDARY SUBFAMILY
+
+The latest referee-style critique was reconciled against the authoritative T1-C audit. The governing scope-corrected status is: the metabelian finite-kernel survival witness requires r=floor(s/a)<s, so it certifies the exact relative threshold only for the declared nonboundary subfamily a>=2, s>a. For a=1, the same witness collapses because (y-1)^s z=p^s z=0; therefore a=1 survival and the exact threshold remain OPEN. Older all-a>=1 CLOSED wording is superseded.
+
+The pushout/naturality bridge is accepted as the formal packaging lemma for the certified a>=2 case: the metabelian quotient is a Q-equivariant quotient/pushout of the kernel, and section-change coboundaries map to section-change coboundaries. Thus a nonzero pushed-out obstruction implies nonzero before pushout. This closes the proof-packaging gap but does not enlarge theorem scope.
+
+Current authoritative classification:
+- integral Fox divisibility: PASS / LOCAL for s>a>=1;
+- actual finite-kernel survival and exact relative threshold p^s+1: PASS / CLOSED for a>=2, s>a;
+- a=1 finite-kernel survival / exact threshold: OPEN;
+- unmarked reconstruction of the marked quotient/extension datum: OPEN / LOAD-BEARING;
+- same-window separation: OPEN;
+- intrinsic/coarsest realization: OPEN;
+- blind carrier search: STOP / NOT AUTHORIZED.
+
+Decision for continuation: do not reopen the frozen threshold, degree-5 residual, scalar/norm shortcut, or RAAG orientation counterexample. The main Paper 4 line is Gate B: either prove canonical reconstruction of sufficient marked extension data from the unmarked finite window, or produce an admissible same-window separation pair. Gate A (a=1 witness) remains an independent side branch.
+
+
+## 2026-10-03 — T1-C A=1 WITNESS RE-AUDIT: ABSTRACT QUOTIENT YES, Q-EQUIVARIANT PUSHOUT NO
+
+The proposed independent a=1 witness was checked at the level required by the extension-class argument. The finite group H_s with z^(p^(s+1))=1, x^p=z^(p^s), yzy^{-1}=z^(1-p), and yxy^{-1}=x is indeed a quotient of the abstract rank-two presentation G_{s,1}: the defining relation maps to x^p[x,y]=z^(p^s). Its Zassenhaus critical visibility calculation is therefore a valid abstract quotient calculation.
+
+However, it does NOT furnish the required Q-equivariant pushout over the reference Demushkin quotient D/D_{p^s+1}(D). The canonical quotient images x,y in H_s commute, whereas in D one has [x,y]=x^{-p}; at the critical window the class x^p (equivalently [x,y]) is not killed merely by D_{p^s+1}. Hence there is no compatible map H_s -> D/D_{p^s+1}(D) sending the displayed x,y to the canonical reference generators. The missing compatibility is exactly the load-bearing condition needed to transport a section-defect class from H_s back to the marked relative extension.
+
+Therefore the earlier a=1 independent-closure wording is superseded. The correct status is again: a=1 finite-kernel survival for the marked relative extension = OPEN; a=1 exact threshold = OPEN. The abstract H_s construction remains a useful diagnostic but is not a valid relative pushout witness.
+
+This closes the attempted a=1 rescue as a proof route, not the a=1 mathematical question. Gate B (unmarked reconstruction/separation) remains the main line; Gate A is an independent OPEN side branch.
+
+
+## 2026-10-03 — PAPER 4 REALISTIC-CLOSE / ORIGINAL-TARGET DECISION
+
+The current research state was reviewed as a decision point between a realistic paper-completion target and the original intrinsic/coarsest-realization target.
+
+Realistic completion target: freeze the relative stress-family theorem as the principal positive result, explicitly scoped to the certified subfamily (currently a>=2; a=1 remains open), and package the unmarked T1-C boundary as a structural realization limitation. The paper can be completed as a rigorously scoped relative extension-depth theorem plus a clearly separated intrinsic-realization program/negative-boundary section, without claiming an unmarked or coarsest carrier theorem.
+
+Original target: recover the relative obstruction from the unmarked finite window by canonical reconstruction/factorization, or prove an admissible same-window separation pair. This remains OPEN/LOAD-BEARING. No valid same-window pair with different relative splitting data has been established. The current p=3,n=4 four-class computation is only PASS/LOCAL pending a reproducible certificate and full relation+generation checks.
+
+Decision boundary: do not conflate “paper can be finished with a scoped theorem” with “original intrinsic target is solved.” The latter still requires a new structural theorem or a genuine same-window no-go.
+
+Methodological retrospective: the project reached this boundary late because the post-Paper-3 search inherited a bottom-up carrier mindset. Earlier successes made it natural to ask “what carrier detects the target?” before proving that the target is a function of the permitted input. The Object/Input/Functoriality gate existed in the continuity protocol but was not enforced early enough as a hard stop. In addition, the Demushkin Paper-3 success encouraged reuse of finite-window recognition patterns, while the decisive T1-C issue is an extension-fiber/marked-vs-unmarked problem. The later target-first reset exposed the mismatch.
+
+Forward methodological rule: for every new branch, test input sufficiency and same-window non-identifiability before constructing a carrier; treat “carrier search” as forbidden until the target factors through the allowed input category. A two-track decision (positive reconstruction vs negative separation) should be explicit from the start.
+
+Classification:
+- scoped relative Paper-4 completion: CONDITIONAL/PASS candidate, contingent on final proof packaging and explicit theorem scope;
+- original unmarked intrinsic reconstruction: OPEN/LOAD-BEARING;
+- original coarsest intrinsic compression: OPEN;
+- p=3,n=4 unmarked separation computation: PASS/LOCAL pending certificate;
+- methodology: target-first/input-sufficiency gate strengthened.
+
+
+## 2026-10-03 — W10 END-TO-END FEASIBILITY GATE COMPLETED
+
+The bounded Intrinsic Reconstruction Feasibility Gate was executed end-to-end at the minimal critical model
+[
+(p,s,a,n)=(3,2,1,10).
+]
+
+The unmarked window (W_{10}) intrinsically recovers:
+- a rank-2 cup form on (H^1(W_{10},mathbf F_3));
+- its one-dimensional radical line (R);
+- the critical degree-9 jet only up to its natural Aut/gauge orbit.
+
+At the (H^1)-level, admissible quotient maps whose kernel has radical line (R) collapse to a single quotient-data orbit under the expected (SL_2(mathbf F_3)) action, radical scaling, and radical-valued shears. The relative split/non-split property is invariant on such an orbit.
+
+No valid same-window separation pair with different relative obstruction was found.
+
+The full intrinsic problem therefore reduces to one explicit remaining lemma:
+[
+	ext{all admissible }W_{10}	woheadrightarrow Q_{10}
+	ext{ with kernel radical line are in one }
+operatorname{Aut}(W_{10})	imesoperatorname{Aut}(Q_{10})	ext{-orbit}.
+]
+
+Current classifications:
+- W10 cup-radical reconstruction: **PASS / LOCAL**;
+- critical-jet orbit refinement: **PASS / LOCAL**;
+- H1-level quotient orbit: **PASS / LOCAL**;
+- full quotient-map orbit uniqueness: **OPEN / LOAD-BEARING**;
+- same-window separation: **OPEN**;
+- unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**.
+
+This does not alter the certified relative theorem (age2,s>a), and does not reopen the closed scalar/norm/degree-5 routes. The next authorized action is singular: attack the IA quotient-map transitivity lemma.
+
+
+## 2026-10-03 — W10 QUOTIENT-ORBIT CORRECTION
+
+The W10 gate produced an explicit family of admissible quotient maps. For every (cin D_2(Q_{10})),
+[
+zmapsto c,quad xmapsto x,quad ymapsto y
+]
+defines (W_{10}	woheadrightarrow Q_{10}), since (c^9=1) in (Q_{10}). Thus all such maps share the same H^1 radical data, but H^1-level reconstruction does not determine the full quotient map.
+
+Current gate status:
+- intrinsic radical line: **PASS / LOCAL**;
+- H^1 quotient data: **PASS / LOCAL**;
+- explicit admissible quotient family: **PASS / LOCAL**;
+- full quotient-map orbit uniqueness: **OPEN / LOAD-BEARING**;
+- same-window separation: **OPEN**;
+- unmarked reconstruction: **OPEN / LOAD-BEARING**.
+
+The critical degree-9 jet is now the correct finite invariant to test against this explicit (D_2(Q_{10}))-family. No carrier search is authorized.
+
+
+## 2026-10-03 — GATE-B B-ATTACK RECONCILIATION / UNSUPPORTED “FAIL” ENDPOINT WITHDRAWN
+
+A proposed continuation attempted to compute K_n globally, infer a two-factor module structure, use H^2(Q_n,K_n) != 0 to infer multiple Q_n-quotient kernels, and conclude “Reconstruction FAIL / Separation FAIL”. Independent audit rejects that endpoint as non-rigorous.
+
+Critical corrections:
+- the asserted exact K_n and K_n^{ab} decompositions were not derived from the actual relation-module sequence;
+- Q_n is nonabelian, so the displayed commutative group-ring/cyclotomic decomposition is invalid in that form;
+- H^2(Q_n,K_n) != 0 does not imply multiple normal subgroups N with W_n/N ~= Q_n;
+- an abstract isomorphism W_1 ~= W_2 does not identify their marked quotient maps, so “same W implies same obstruction” is false.
+
+Therefore no negative intrinsic theorem has been obtained. The authoritative W10 status remains:
+- cup-radical line: PASS / LOCAL;
+- H^1 quotient data: PASS / LOCAL;
+- explicit admissible family pi_c(z)=c, pi_c(x)=x, pi_c(y)=y for c in D_2(Q_10): PASS / LOCAL;
+- full quotient-map orbit uniqueness: OPEN / LOAD-BEARING;
+- same-window separation: OPEN;
+- unmarked reconstruction: OPEN / LOAD-BEARING.
+
+A stronger but still finite reduction is authorized: compute the Aut(W_10) x Aut(Q_10) orbit of the explicit pi_c family first in the graded layer D_3(Q_10)/D_4(Q_10), including the image of radical-preserving IA shears. The rank-two p=3 Demushkin associated restricted Lie algebra has initial quadratic relation [X,Y]=0, so this is the first nontrivial graded layer relevant to the family. No conclusion of transitivity/separation is assumed.
+
+The unsupported “FAIL (high probability)” endpoint is **HISTORICAL / SUPERSEDED**. Detailed reconciliation: research/PAPER4_GATEB_B_ATTACK_RECONCILIATION_2026-10-03.md.
+
+## 2026-10-03 — GATE-B RADICAL-IA DEGREE-9 REVIEW / STATUS CORRECTION
+
+A strict audit of the latest radical-IA calculation found that the computational signal is strong but the previous endpoint was overstated. The tested family is not yet a theorem for all corrections.
+
+Corrections recorded:
+1. Testing degree-2--6 monomials and selected random/commutator corrections does not by itself prove (z c)^9=z^9 mod D_10 for every c in D_2(Q_10). A filtration lemma reducing degree >=7, followed by a symbolic proof for the full degree-2--6 space, is still required.
+2. The correction parameter c in Q_10 must be distinguished from a chosen lift c~ in D_2(W_10). The actual IA map is alpha_{c~}(z)=z c~, alpha_{c~}(x)=x, alpha_{c~}(y)=y, and the required relation-preservation statement is in W_10.
+3. The truncated Magnus computation requires an explicit faithfulness/truncation bridge identifying degree <10 equality in the chosen Magnus model with equality in W_10.
+4. Invertibility of alpha_{c~} cannot be assumed from the formula z -> z c~; an inverse must be justified (e.g. Nielsen/triangular argument or filtration induction).
+5. The result does not yet classify all admissible quotient maps. It only establishes that the tested radical-shear family is obstruction-trivial. Thus the family-level negative route is closed, while full IA orbit completeness remains load-bearing.
+
+Authoritative status after this audit:
+- explicit radical-IA family: PASS / LOCAL;
+- tested degree-9 action: strong PASS / LOCAL, obstruction-trivial on the tested family;
+- negative attack through this radical-shear family: FAIL / CLOSED;
+- arbitrary D_2(Q_10) radical-shear relation preservation: OPEN / LOAD-BEARING;
+- full admissible quotient-map orbit transitivity: OPEN / LOAD-BEARING;
+- same-window separation: OPEN;
+- unmarked intrinsic reconstruction: OPEN / LOAD-BEARING.
+
+The next authorized calculation is not a new carrier search. It is a single relation-aware IA-transitivity attack: first prove the filtration reduction for corrections of degree >=7, then establish the full symbolic degree-2--6 relation-preservation identity, and finally use the resulting radical-shear action to compute the orbit of the full pi_c family. If that closes transitivity, Gate-B gets a positive candidate; if a residual orbit invariant or differing obstruction survives, it supplies the negative route. No conclusion is assumed in advance.
+
+
+# PAPER 4 — W10 RADICAL-IA TRANSITIVITY CLOSURE AUDIT
+## 2026-10-03
+
+### Question
+
+For the minimal critical model
+[
+G_{2,1}=langle z,x,ymid z^9=x^3[x,y]
+angle,qquad
+W_{10}=G_{2,1}/D_{10}(G_{2,1}),
+]
+and
+[
+Q_{10}=D/D_{10}(D),
+]
+does every admissible epimorphism
+[
+pi:W_{10}	woheadrightarrow Q_{10}
+]
+whose (H^1)-kernel is the intrinsic cup-radical line lie in one
+(operatorname{Aut}(W_{10})	imesoperatorname{Aut}(Q_{10}))-orbit?
+
+### 1. Universal p^2-power lemma
+
+Let (A) be a complete associative algebra over (mathbf F_3), with augmentation ideal (I). If
+[
+a-bin I^2,qquad a,bin I,
+]
+then
+[
+a^9equiv b^9pmod{I^{10}}.
+]
+
+Proof: write (a=b+d), (din I^2). In the expansion of
+((b+d)^3-b^3), every mixed monomial has degree at least
+(1+1+2=4), while (d^3) has degree (6). Hence
+[
+a^3=b^3+E,qquad Ein I^4.
+]
+Now
+[
+a^9=(a^3)^3=(b^3+E)^3.
+]
+Every mixed term contains one (E) and two (b^3)'s and therefore has degree at least
+(4+3+3=10); (E^3) has degree (12). Thus
+[
+a^9equiv b^9pmod{I^{10}}.
+]
+
+### 2. Group-theoretic consequence
+
+Take (cin D_2(W_{10})) and a lift (	ilde cin D_2(F)) to the free pro-3 presentation group (F=langle z,x,y
+angle). Under the Magnus embedding,
+[
+M(z)=1+Z,qquad M(	ilde c)=1+C,qquad Cin I^2.
+]
+Therefore
+[
+M(z	ilde c)=1+Z+C+ZC,
+]
+whose difference from (M(z)) lies in (I^2). The lemma gives
+[
+(z	ilde c)^9=z^9pmod{D_{10}(F)}.
+]
+Passing to (W_{10}),
+[
+oxed{(zc)^9=z^9.}
+]
+
+This closes the previously missing arbitrary-(c) generalization. No monomial census or random sampling is required.
+
+### 3. Radical shear is an automorphism
+
+Define on (W_{10})
+[
+alpha_c(z)=zc,qquad alpha_c(x)=x,qquad alpha_c(y)=y.
+]
+The relation is preserved because
+[
+alpha_c(z)^9=(zc)^9=z^9=x^3[x,y].
+]
+The Zassenhaus filtration is characteristic, so the map is well-defined on the finite quotient. It induces the identity on
+[
+W_{10}/D_2(W_{10})cong H^1(W_{10},mathbf F_3)^
+ee.
+]
+Since (W_{10}) is a finite 3-group, Burnside's basis theorem implies that an endomorphism inducing the identity on the Frattini quotient is an automorphism. Hence
+[
+oxed{alpha_cinoperatorname{Aut}(W_{10}).}
+]
+
+### 4. The whole explicit family is one orbit
+
+Let (pi_0:W_{10}	woheadrightarrow Q_{10}) be the canonical quotient
+[
+pi_0(z)=1,quadpi_0(x)=x,quadpi_0(y)=y.
+]
+Then
+[
+(pi_0circalpha_c)(z)=c,qquad
+(pi_0circalpha_c)(x)=x,qquad
+(pi_0circalpha_c)(y)=y.
+]
+Therefore every
+[
+pi_c(z)=c,quadpi_c(x)=x,quadpi_c(y)=y,
+qquad cin D_2(Q_{10}),
+]
+lies in the canonical quotient's (operatorname{Aut}(W_{10}))-orbit.
+
+### 5. Full admissible quotient-map orbit
+
+Now let
+[
+pi:W_{10}	woheadrightarrow Q_{10}
+]
+be any admissible quotient map whose induced (H^1)-kernel is the intrinsic radical line.
+
+Because the radical line is generated by (ar z),
+[
+pi(z)in D_2(Q_{10}).
+]
+Set
+[
+x'=pi(x),qquad y'=pi(y).
+]
+The induced (H^1)-map has rank two, so (ar x',ar y') form a basis of
+(Q_{10}/D_2(Q_{10})). Hence (x',y') generate (Q_{10}) by Burnside's basis theorem.
+
+Since (pi(z)in D_2(Q_{10})),
+[
+pi(z)^9=1
+]
+because
+[
+D_2(Q_{10})^3subseteq D_6(Q_{10}),qquad
+D_6(Q_{10})^3subseteq D_{18}(Q_{10})=1
+]
+at the (D_{10})-quotient level.
+
+Applying (pi) to the defining relation gives
+[
+1=pi(z)^9=x'^3[x',y'].
+]
+Thus (x',y') satisfy the defining Demushkin relation of (Q_{10}). Consequently
+[
+phi:Q_{10}	o Q_{10},qquad
+phi(x)=x',quadphi(y)=y'
+]
+is a well-defined surjective endomorphism, hence an automorphism of the finite group (Q_{10}).
+
+Postcompose:
+[
+pi'=phi^{-1}circpi.
+]
+Then
+[
+pi'(x)=x,qquadpi'(y)=y,qquadpi'(z)=c
+]
+for some (cin D_2(Q_{10})). By Sections 2–4,
+[
+pi'=pi_0circalpha_{	ilde c}
+]
+for a suitable lift (	ilde cin D_2(W_{10})). Therefore
+[
+oxed{
+pi
+=
+phicircpi_0circalpha_{	ilde c}.
+}
+]
+
+Hence every admissible quotient map is in the single
+[
+oxed{operatorname{Aut}(W_{10})	imesoperatorname{Aut}(Q_{10})	ext{-orbit of }pi_0.}
+]
+
+### 6. Gate-B consequence
+
+The previously load-bearing full IA quotient-map transitivity lemma is therefore proved for the minimal critical model (W_{10}).
+
+Since the relative split/non-split obstruction is invariant under precomposition by (operatorname{Aut}(W_{10})) and postcomposition by (operatorname{Aut}(Q_{10})), no two admissible realizations of this (W_{10}) can carry different obstruction values.
+
+Therefore the bounded W10 same-window separation route is closed negatively, while the positive orbit route closes at this model.
+
+### Final classification
+
+- universal degree-9 radical correction lemma: **PASS / CLOSED**;
+- arbitrary (cin D_2(Q_{10})) radical shear: **PASS / CLOSED**;
+- radical-shear automorphism: **PASS / CLOSED**;
+- explicit (pi_c)-family orbit: **PASS / CLOSED**;
+- full admissible quotient-map orbit transitivity at (W_{10}): **PASS / CLOSED**;
+- same-window separation at (W_{10}): **FAIL / CLOSED**;
+- W10 intrinsic Boolean determination of the relative obstruction: **PASS / LOCAL**;
+- general unmarked intrinsic reconstruction beyond this minimal model: **OPEN / LOAD-BEARING**.
+
+This is a closure of the bounded feasibility gate, not a theorem for all Paper-4 parameters. It does not enlarge the certified relative theorem for (age2,s>a), and it does not justify a universal intrinsic/coarsest-realization theorem.
+
+
+## 2026-10-03 — W10 BOUNDED INTRINSIC FEASIBILITY GATE: FINAL LOCAL CLOSURE
+
+The minimal critical model \((p,s,a,n)=(3,2,1,10)\) has now been closed end-to-end at the level actually tested. For every \(c\in D_2(Q_{10})\), the universal \(p^2\)-power/Magnus lemma gives \((zc)^9=z^9\pmod{D_{10}}\), so the radical shear \(z\mapsto zc\) is an automorphism of \(W_{10}\). Hence the explicit family \(\pi_c(z)=c,\ \pi_c(x)=x,\ \pi_c(y)=y\) is a single \(\operatorname{Aut}(W_{10})\times\operatorname{Aut}(Q_{10})\)-orbit. More generally, any admissible epimorphism \(\pi:W_{10}\twoheadrightarrow Q_{10}\) whose \(H^1\)-kernel is the intrinsic cup-radical line can be postcomposed by an automorphism of \(Q_{10}\) so that \(x,y\) are fixed, after which it is one of the \(\pi_c\). Thus full quotient-map orbit transitivity is **PASS / CLOSED for W10**.
+
+Consequences for the bounded Gate-B alternatives:
+- A (canonical marked-map reconstruction as a unique map): **FAIL / CLOSED at W10**; the same finite window admits a nontrivial family of quotient maps, but they are gauge-equivalent in one two-sided automorphism orbit.
+- B (same-window separation by different relative obstruction): **FAIL / CLOSED at W10**; no two admissible realizations in different obstruction orbits exist because there is only one admissible orbit.
+- W10 intrinsic Boolean determination of the relative split/non-split obstruction: **PASS / LOCAL**.
+- General \(W_{p^s+1}\) one-orbit theorem, general unmarked reconstruction, and coarsest intrinsic realization: **OPEN / LOAD-BEARING**.
+
+Interpretation: this is a genuine W10 theorem plus a generalization program, not a universal impossibility theorem for Paper 4. It closes the bounded intrinsic feasibility gate at the minimal model and shows that the useful compression object is the quotient-map orbit/category rather than a unique marked quotient map. It does not reopen the already closed scalar/norm/degree-5 routes and does not enlarge the certified relative theorem beyond its declared stress-family scope.
+
+
+## 2026-10-03 — GENERAL CRITICAL ORBIT TRANSITIVITY: W10 PHENOMENON GENERALIZED
+
+The W10 end-to-end closure has now been generalized to the declared critical window n=p^s+1. The universal p^s-power Magnus lemma proves that every D_2-valued radical shear z -> zc preserves the critical relation modulo D_{p^s+1}. Burnside's basis theorem makes the resulting IA endomorphism an automorphism. For any admissible epimorphism W_{p^s+1}->Q_{p^s+1} with H^1-kernel equal to the intrinsic cup-radical line, the Demushkin-generator images normalize by an automorphism of Q, and the residual radical component is exactly such a shear. Hence all admissible quotient maps form one Aut(W) x Aut(Q)-orbit.
+
+Current Gate-B status:
+- critical-window quotient-map orbit transitivity: PASS / CLOSED;
+- same-window separation by different quotient-map orbits: FAIL / CLOSED at the orbit level;
+- relative split/non-split Boolean on the admissible orbit: PASS / LOCAL;
+- unique literal marked quotient map: FAIL / CLOSED as a uniqueness target;
+- general unmarked reconstruction/coarsest intrinsic realization: OPEN / LOAD-BEARING.
+
+The next research target is therefore no longer W10 or full orbit classification. It is the intrinsic realization of the single orbit/category: determine whether the orbit of admissible quotient maps is canonically reconstructible from the unmarked filtered group W_{p^s+1}, and whether the relative Boolean factors through that intrinsic orbit object. This must be attacked as an Object/Input/Functoriality/Gauge problem before any new carrier construction.
+
+Detailed audit: research/PAPER4_GENERAL_CRITICAL_ORBIT_THEOREM_2026-10-03.md.
+
+
+## 2026-10-03 — GATE C INTRINSIC ORBIT/CATEGORY FEASIBILITY AUDIT
+
+The general critical-window orbit theorem was followed by a target-first Gate C audit. A natural candidate is the admissible realization groupoid of quotient maps W_n -> H, modulo source automorphisms and target isomorphisms. The orbit theorem proves that, for the declared fixed-Q_n admissible class, this groupoid has one two-sided orbit; consequently the relative split/non-split Boolean is independent of the chosen marked quotient map. This is a **PASS / LOCAL** realization-independence result, not yet a full intrinsic reconstruction theorem.
+
+The load-bearing gap is now sharply isolated: the admissibility predicate itself still refers to the declared target class/radical-line realization and has not been replaced by a presentation-free universal property internal to W_n. Thus:
+- critical-window quotient-map orbit: **PASS / CLOSED** under stated admissibility;
+- Boolean realization-independence within that orbit: **PASS / LOCAL**;
+- canonical presentation-free orbit/category from W_n alone: **OPEN / LOAD-BEARING**;
+- coarsest intrinsic realization: **OPEN**.
+
+Next authorized task: test internal universal/characteristic quotient constructions for the admissible target, starting from the intrinsic radical line and characteristic normal subgroups. No blind carrier search, threshold recomputation, or frozen-route reopening. Detailed audit: research/PAPER4_INTRINSIC_ORBIT_CATEGORY_GATE_C_AUDIT_2026-10-03.md.
+
+
+## 2026-10-03 — PAPER 5 TARGET CLASS INTRINSIC CHARACTERIZATION CLOSED
+
+The target-class problem has now been solved for the declared odd-(p), even-rank Demushkin critical-window setting. Define (mathcal C_{d,n}) to consist of finite (p)-groups (H) admitting a one-relator pro-(p) lift (F_d/overline{langle!langle r
+angle!
+angle}) with (rin D_2(F_d)setminus D_3(F_d)), nondegenerate alternating degree-two initial form, and
+[
+H^{ab}cong(mathbf Z/p^{lceillog_p n
+ceil})^d.
+]
+Then
+[
+oxed{mathcal C_{d,n}={D^{(0)}_d/D_n(D^{(0)}_d)}}
+]
+up to abstract isomorphism.
+
+Proof: the nondegenerate one-relator lift is Demushkin; Labute's classification reduces it to rank (d) and torsion invariant (q). If (q<n), the finite abelianization has one shorter cyclic factor and violates the defining abelianization condition. If (qge n), the (x_1^q) term lies in (D_n), so the depth-(n) quotient is exactly the (q=0) target. Thus the finite target is uniquely determined up to isomorphism without naming the external (D), orientation, marked quotient map, or a characteristic kernel.
+
+Classification:
+- target-class intrinsic characterization: **PASS / CLOSED**;
+- target isomorphism-class uniqueness: **PASS / CLOSED**;
+- canonical marked quotient map: **FAIL / CLOSED** (C2);
+- target-free realization existence from (W_n) alone: **OPEN / LOAD-BEARING**;
+- target-free realization groupoid after existence is supplied: **CONDITIONAL / LOCAL**;
+- coarsest intrinsic realization/minimality: **OPEN**.
+
+Detailed audit: research/PAPER5_TARGET_CLASS_INTRINSIC_CHARACTERIZATION_AUDIT_2026-10-03.md.
+
+
+## 2026-10-03 — PAPER 5 TARGET-FREE REALIZATION GROUPoid: CLOSURE
+
+The previous OPEN/LOAD-BEARING “target-free realization from \(W_n\) alone” has been split into two logically distinct questions.
+
+First, the admissible realization groupoid is now intrinsically definable: its objects are quotients \(W_n\twoheadrightarrow H\) with \(H\in\mathcal C_{d,n}\) and intrinsic cup-radical \(H^1\)-kernel; its gauge is source automorphism plus target isomorphism. Since the target class \(\mathcal C_{d,n}\) is itself intrinsically characterized, no external target label remains.
+
+Second, for the declared critical \(W_n\), existence is PASS/CLOSED because the previously established critical quotient supplies an object. The critical-window orbit theorem then implies that every admissible object is in one connected two-sided orbit after identifying its target with \(Q_n\). Consequently the relative split/non-split Boolean is realization-independent and factors through this intrinsic groupoid.
+
+Authoritative status:
+- target-class intrinsic characterization: **PASS / CLOSED**;
+- target isomorphism-class uniqueness: **PASS / CLOSED**;
+- canonical marked quotient map/kernel: **FAIL / CLOSED**;
+- target-free admissible realization groupoid: **PASS / CLOSED** for the declared critical source/class;
+- existence for declared \(W_n\): **PASS / CLOSED**;
+- one-component realization orbit: **PASS / CLOSED**;
+- Boolean factorization: **PASS / LOCAL**;
+- non-existential characteristic finite realization: **OPEN / LOAD-BEARING**;
+- coarsest intrinsic realization/minimality: **OPEN**;
+- universal extension beyond the declared family: **OPEN**.
+
+Important boundary: this is not yet a canonical quotient or a coarsest compression theorem. The groupoid is intrinsically defined but still existential. The next authorized task is characteristic-subgroup/quotient compression, not another carrier search or threshold scan.
+
+Detailed audit: research/PAPER5_TARGET_FREE_REALIZATION_GROUPoid_AUDIT_2026-10-03.md.
+
+
+## 2026-10-03 — PAPER 5 DEFINITION RE-AUDIT: THREE LOGICAL CORRECTIONS
+
+The submitted comparison-category formulation was rechecked against the authoritative compression audit. The structural endpoint is retained, but three claims in the proposed formulation are too strong or order-theoretically reversed.
+
+1. **Factorization domain:** the relative Boolean is naturally a function (b:\mathfrak R^{ad}(W)\to\mathbf2), not merely a scalar (B(W)), unless one has already proved it is constant on the realization groupoid. On the present critical source it is constant, so the singleton conclusion is valid, but the definition should state the groupoid-level factorization first.
+
+2. **Order direction:** if ((C,e)\preceq(C',e')) means there is (u:C'\to C) with (e=u\circ e'), then (C) is **coarser/more compressed** than (C'). Under this convention the coarsest object is **minimal**, not maximal, in the preorder. The phrase “maximal coarsest object” is reversed and must be corrected.
+
+3. **Characteristic-invariant dichotomy is not proved:** the fact that (mathcal K(W)) is a single Aut(W)-orbit implies that an Aut(W)-invariant scalar function on the orbit is constant. It does **not** imply that every characteristic finite invariant either completely preserves all kernel-orbit information or collapses to (Q_n^{ab}). An invariant can retain orbit-level data such as stabilizer/action information without distinguishing individual orbit points. Therefore the proposed “complete preservation vs complete identification” theorem is not valid as stated. The authoritative status remains **OPEN** for universal characteristic-compression no-go.
+
+4. **q-blindness is not automatic:** the fact that the target class is q-blind does not by itself imply an arbitrary intrinsic finite invariant cannot recover q indirectly from W. q-blindness must remain an explicit restriction on admissible objects, or be proved for the particular construction.
+
+Result classification after correction:
+- admissible factorization category/order: **PASS / CLOSED**, after correcting the order language and groupoid-level Boolean definition;
+- Boolean-only endpoint: **PASS / CLOSED, trivial**;
+- full-realization endpoint: **PASS / CLOSED, tautological up to the declared equivalence notion**;
+- universal characteristic-compression dichotomy/no-go: **OPEN**;
+- absolute coarsest without preserved-information package: **FAIL / CLOSED (ill-posed)**;
+- nontrivial intermediate package: **OPEN**.
+
+No new computation is authorized by this correction. The structural stop remains in force.
+
+## 2026-10-03 — CRITICAL WINDOW RECOVERY OF a FROM UNMARKED ABELIANIZATION
+
+For the declared stress family with 1<=a<s and n=p^s+1, the abstract unmarked critical window already recovers a from its abelianization: W_n^ab is Z/p^a plus d copies of Z/p^{s+1}. For a=infinity it is Z/p^s plus d copies of Z/p^{s+1}. Thus a is PASS / CLOSED in the nonboundary range. This is independent of Gate T and does not recover the marked quotient or orientation. Detailed audit: research/PAPER4_CRITICAL_WINDOW_A_RECOVERY_AUDIT_2026-10-03.md.
+
+
+## 2026-10-03 — PAPER 4 CURRENT ACTIVE BOUNDARY AFTER a=s ATTACK
+
+The critical-window parameter theorem is now closed for 1≤a<s: the unmarked W_{p^s+1} recovers s from exp(W^{ab}) and a from the unique short invariant factor. The only remaining parameter-identifiability boundary is a=s versus a=∞, where abelianization agrees.
+
+A canonical short line L_s in abelianization and its p^s-power operation were tested. The Jacobson/Hall–Petrescu cross term prevents an unjustified shear-isomorphism argument, but the entire candidate lives in the associated restricted Lie algebra and is therefore not sufficient to separate the boundary. The active target is now strictly a filtered lifting/deformation invariant beyond the quadratic associated graded shadow.
+
+Status:
+- s recovery: PASS / CLOSED;
+- a recovery for 1≤a<s: PASS / CLOSED;
+- a=∞ versus finite a<s: PASS / CLOSED;
+- a=s versus a=∞: OPEN / LOAD-BEARING;
+- marked quotient reconstruction: OPEN;
+- coarsest intrinsic realization: OPEN.
+
+Next authorized attack: identify an intrinsic one-step filtered extension/lift invariant at degree p^s+1 (relation-module, augmentation-algebra extension, or genuinely defined higher operation), and test whether it separates the two boundary cases. Do not reopen Gate T/U for s-recovery and do not treat the restricted graded object as sufficient.
+
+
+## 2026-10-03 — PAPER 4 a=s BOUNDARY: GRADED/VANISHING ROUTES CLOSED
+
+The remaining unmarked boundary a=s versus a=∞ has been sharpened. The p-Zassenhaus associated restricted Lie algebra cannot separate the boundary because the Demushkin relator has q-independent quadratic initial form; therefore all invariants factoring only through the associated graded object are **FAIL / CLOSED** as separators. Mere Massey-vanishing properties are also excluded as separators at the Demushkin source level by strong n-fold Massey vanishing; A_3-formality is not universal because q=0 and q≥5 are A_3-formal while q=3 is exceptional.
+
+The only remaining load-bearing route is a genuinely filtered lift/deformation invariant at the critical degree p^s+1, retaining extension information beyond gr. Status remains:
+- s recovery: **PASS / CLOSED**;
+- a recovery for 1≤a<s: **PASS / CLOSED**;
+- a=∞ versus finite a<s: **PASS / CLOSED**;
+- a=s versus a=∞: **OPEN / LOAD-BEARING**;
+- marked quotient reconstruction: **OPEN**;
+- coarsest intrinsic realization: **OPEN**.
+
+Next authorized attack: one-step augmentation-algebra/relation-module filtered extension invariant, first at (p,s)=(3,1), then generalize. No further graded-Lie, Gate T/U, or blind carrier work.
+
+
+## 2026-10-03 — PAPER 4 ACTIVE BOUNDARY AFTER p=3,s=1 CLOSURE
+
+The load-bearing (a=s) versus (a=\infty) boundary has been partially closed.
+
+For the base case ((p,s)=(3,1)), the critical window (W_4) intrinsically separates (q=3) from (q=0) through the (A_3)-canonical obstruction: the relevant (U_4(\mathbf F_3)) obstruction factors through the class-3 Zassenhaus quotient, while Pál–Quick prove non-(A_3)-formality for (q=3) and (A_3)-formality for (q=0).
+
+Status:
+- (s) recovery: PASS / CLOSED;
+- (a) recovery for (1\le a<s): PASS / CLOSED;
+- (a=\infty) versus finite (a<s): PASS / CLOSED;
+- (a=s) versus (a=\infty), ((p,s)=(3,1)): PASS / CLOSED;
+- (a=s) versus (a=\infty), general (s\ge2): OPEN / LOAD-BEARING;
+- marked quotient reconstruction: OPEN;
+- coarsest intrinsic realization: OPEN.
+
+The next authorized attack is no longer the generic degree-(p^s) search. It is a targeted higher-order filtered obstruction for (s\ge2), with the first test case ((p,s)=(3,2)), (q=9), (n=10). The obstruction must be demonstrably functorial from (W_{10}), not merely inherited from the infinite Demushkin source. Do not reopen the already closed graded-Lie, ordinary Massey-vanishing, Gate T/U, or blind-carrier routes.
+
+
+## 2026-10-03 — CORRECTION: p=3,s=1 A_3 BASE-CASE DOES NOT CLOSE STRESS-WINDOW BOUNDARY
+
+Critical audit revoked the previous PASS/CLOSED claim for the stress-window separation at ((p,s)=(3,1)).
+
+Pál–Quick's theorem concerns the Demushkin quotient (D_q), not the stress group (G_{1,a}). The stress group maps onto (D_3) or (D_0) by setting (z=1), but no theorem currently shows that the BKS (A_3) canonical class of those quotients is an intrinsic invariant of the unmarked stress window (W_4(G_{1,a})). Factoring a (U_4(\mathbf F_3)) representation through (W_4) is insufficient: the BKS class is a DGA/cohomology-level obstruction, and the missing functorial construction on the stress window has not been supplied.
+
+Current status is therefore:
+- (a=s) vs (a=\infty), ((p,s)=(3,1)): **OPEN / LOAD-BEARING**;
+- Demushkin (D_3) vs (D_0) A_3-formality: **PASS / CLOSED (external literature)**;
+- intrinsic stress-window A_3 obstruction: **NOT ESTABLISHED**;
+- general (s\ge2): **OPEN / LOAD-BEARING**.
+
+The next attack must not use the Demushkin quotient's obstruction unless it first proves a canonical/functorial descent to the stress window. Prefer a direct intrinsic invariant of (W_4) or an explicit same-window separation pair.
+
+
+## 2026-10-04 — PAPER 4 ROOT-VISIBILITY GENERALIZATION ATTACK / NON-RIGIDITY UPGRADE
+
+The bounded attack produced a sharp split between the two proposed directions.
+
+### Direction 1: arbitrary-r root-visibility theorem
+**FAIL / CLOSED as stated.** The hypothesis "Zassenhaus order of r >= 2" is insufficient. Counterexample: (G=\langle z,x,y\mid z^3=[x,y]^3\rangle). Since ([x,y]^3\in D_6(F)\subset D_4(F)), the critical quotient (W_4) reduces the relation to (z^3=1); the proposed root visibility is therefore absent. The universal part that survives is only the delayed-window identity (W_n(G_{s,r})=F/(D_n(F),r)) for (n\le p^s). A broader positive theorem must impose a non-tautological critical-survival condition; quadratic Lie-relator classes are the first authorized target.
+
+### Direction 2: non-rigidity
+The stress-family package is strengthened to **PASS / LOCAL** pending citation-level lemma packaging:
+- (G_{s,a}^{ab}\cong \mathbb Z_p^d\oplus\mathbb Z/p^a), independent of s;
+- the Zassenhaus initial relator is the same quadratic commutator form for all s;
+- mildness/cohomological-dimension and quadratic-duality results imply the same (mathbb F_p)-cohomology package across s;
+- the associated graded group-algebra/restricted-Lie package is s-independent;
+- for (t\ge s) and (n\le p^s), (W_n(G_{s,a})\cong W_n(G_{t,a}));
+- at (n=p^s+1), (W_n(G_{s,a})^{ab}\cong \mathbb Z/p^a\oplus(\mathbb Z/p^{s+1})^d), independently checked by SymPy SNF.
+
+Important limitation: this does not yet prove same-window separation (W_{p^s+1}(G_s)\not\cong W_{p^s+1}(G_t)) for (t>s). The proven phenomenon is delayed invisibility through (p^s) plus separation of each source's own critical window.
+
+Independent check script: research/scripts/paper4_root_visibility_checks_2026-10-04.py. Detailed audit: research/PAPER4_ROOT_VISIBILITY_NONRIGIDITY_AUDIT_2026-10-04.md.
+
+Next authorized action: make the non-rigidity/delayed-window theorem the main Paper 4 research branch; separately test the narrow quadratic-relator class for a genuine general root-visibility theorem. No arbitrary-r claim, threshold reopening, or Paper 5 compression reopening.
+
+
+## 2026-10-04 — CRITICAL CORRECTION: ROOT-VISIBILITY AUDIT RECLASSIFIED
+
+The previous 2026-10-04 audit classified the arbitrary-r theorem as FAIL/CLOSED using the example
+G=<z,x,y | z^3=[x,y]^3>. That classification was too strong and is superseded.
+
+The example does **not** show invisibility of the root term z^3. Since z^3 lies in D_3 and D_3 is not contained in D_4, the critical window W_4 can still see z^3 itself. What the example proves is narrower: r=[x,y]^3 lies in D_6 subset D_4, so the **right-hand side r is invisible at the critical window**, and the full relation reduces to z^3=1. Therefore ord_Z(r)>=2 alone is insufficient to guarantee visibility of the full relation or survival of r at the critical layer.
+
+Correct classification:
+- root-term visibility at p^s+1: **OPEN**;
+- full-relation critical visibility from only ord_Z(r)>=2: **OPEN / hypothesis insufficient for proof**;
+- delayed-window identity n<=p^s: **PASS / CLOSED**;
+- non-tautological critical-survival criterion: **OPEN / LOAD-BEARING**.
+
+The stress-family non-rigidity branch remains the principal active attack. The same-numerical-window comparison W_{p^s+1}(G_{s,a}) versus W_{p^s+1}(G_{t,a}), t>s, remains OPEN and is now the first separation target.
+
+
+## 2026-10-04 — CRITICAL-WINDOW INVARIANT GATE UPDATE
+
+The radical-power attack was pushed one step further.
+
+- Naive higher-Bockstein/lifting of the radical character is **FAIL / CLOSED as a separator**: the abelianization relation (p^s z=p^a x_1) permits the required (mathbf Z/p^{s+1})-lift by compensating with the (x_1)-coordinate.
+- The raw (p^s)-power of a radical lift is **FAIL / CLOSED as an intrinsic scalar** because the radical line determines a hyperplane, not a canonical complementary vector.
+- If the cup-radical line (L) is intrinsic, it determines an intrinsic index-(p) subgroup (K=ker(chi)). The surviving candidate is a filtered extension defect for
+  [
+  1	o K	o W	o C_p	o1,
+  ]
+  comparing (g^{p^s}) with the intrinsic filtration of (K), modulo Hall-Petresco/norm lift ambiguity.
+- For (sge2), normalization is essential: the Schreier generator (g^p) has (K)-degree (1), so (g^{p^s}) naturally has (K)-degree (p^{s-1}). The naive criterion using (D_{p^s}(K)) is therefore invalid.
+- Same-window separation (W_{p^s+1}(G_s)
+otcong W_{p^s+1}(G_t)) remains **OPEN / LOAD-BEARING**.
+- No new arbitrary-(r) visibility theorem is authorized; the universal delayed-window identity remains **PASS / CLOSED**.
+- The p=3,n=4 reported four-class computation remains **PASS / LOCAL (provisional)** pending its explicit enumeration certificate.
+
+Next active task: formalize the filtered index-(p) extension defect and attempt the critical/delayed computation; if it collapses, close that intrinsic route and concentrate on a certified same-window separation theorem.
+
+
+## 2026-10-04 — NARROW ROOT-SURVIVAL RESULT
+
+For odd (p), the stronger hypothesis (operatorname{ord}_Z(r)=2) guarantees
+[
+r
+otin D_{p^s+1}(F),
+]
+so the RHS of (z^{p^s}=r) genuinely survives in the critical presentation window. This closes the specific RHS-invisibility mechanism for quadratic relators.
+
+It does **not** prove intrinsic root recovery or same-window abstract separation. The active intrinsic problem remains the filtered extension defect attached to the radical index-(p) subgroup.
