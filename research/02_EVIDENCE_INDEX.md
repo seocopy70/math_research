@@ -56,3 +56,15 @@ ot\cong W_{p^s+1}(G_t)) remains OPEN unless an explicit same-window invariant is
 | Remaining boundary reduces to filtration lemma (TF_s) | PASS / LOCAL | same audit | exact reduction recorded there |
 | (TF_s) integral truncation-relations lemma | OPEN / LOAD-BEARING | NONE yet | must be proved or independently sourced |
 | all-s a=s vs. a=infinity separation | OPEN / LOAD-BEARING | pending (TF_s) | Paper 4 boundary |
+
+
+## 2026-10-04 — TF_s / subgroup-comparison literature audit
+| Claim | State | Evidence | Where to verify |
+|---|---|---|---|
+| Lazard product formula for Zassenhaus filtration | PASS | literature verified | standard Zassenhaus/Lazard references; Paper 4 TF audit |
+| Jennings recursion | PASS | literature verified | standard Jennings/Zassenhaus references; Paper 4 TF audit |
+| Shalev Proposition 1.2 gives the needed index-p subgroup intersection theorem | **NOT ESTABLISHED** | Shalev result verified, applicability not verified | research/00_RESEARCH_LOG.md, 2026-10-04 TF_s audit |
+| \(I_F^n\cap\mathbf F_p[K]=I_K^n\) | FAIL / CLOSED | explicit \(F=\mathbf Z,K=p\mathbf Z\) counterexample | 2026-10-04 TF_s log entry |
+| \(D_n(F)\cap K\subseteq D_n(K)\) | FAIL / CLOSED | explicit \(F=\mathbf Z,K=p\mathbf Z\) counterexample | 2026-10-04 TF_s log entry |
+| \((SC_s):D_{p^s+1}(F)\cap K\subseteq D_{p^{s-1}+1}(K)\) | OPEN / LOAD-BEARING | NONE | research/PAPER4_ALL_S_TRANSFER_DEFECT_REDUCTION_2026-10-04.md |
+| \((TF_s)\) integral truncation-image bound | OPEN / LOAD-BEARING | NONE | research/PAPER4_ALL_S_TRANSFER_DEFECT_REDUCTION_2026-10-04.md |
