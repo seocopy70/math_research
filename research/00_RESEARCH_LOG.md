@@ -4860,3 +4860,28 @@ Next authorized attack:
 3. compute critical vs delayed;
 4. if it collapses, close this route and rely on a certified same-window separation result;
 5. complete the p=3,n=4 enumeration certificate if feasible.
+
+
+## 2026-10-04 — NARROW POSITIVE ROOT-SURVIVAL LEMMA
+
+A useful correction to the arbitrary-(r) direction is now isolated.
+
+If (p) is odd and
+[
+operatorname{ord}_Z(r)=2,
+]
+then for every (sge1),
+[
+r
+otin D_{p^s+1}(F),
+]
+because (p^s+1ge4) while (rin D_2(F)setminus D_3(F)). Hence in the critical presentation quotient
+[
+F/(D_{p^s+1}(F),z^{p^s}r^{-1})
+]
+the right-hand side (r) survives as a nontrivial filtered relation; the earlier obstruction (rin D_{p^s+1}) cannot occur.
+
+This is only a **root/relation survival lemma**, not an intrinsic root-recovery theorem: an abstract isomorphism of the finite windows need not identify the surviving class with the original (z)-direction. Therefore:
+- quadratic-relator survival: **PASS / LOCAL**;
+- arbitrary (operatorname{ord}_Z(r)ge2) full-relation visibility: **OPEN / hypothesis insufficient**;
+- intrinsic root recovery from the surviving class: **OPEN**.
