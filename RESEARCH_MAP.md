@@ -5281,3 +5281,12 @@ The W10 quotient-map orbit closure has generalized to the declared critical wind
 This changes the main structural frontier: the quotient-map orbit/category is now a certified compression object at the critical window, while literal marked-map uniqueness is closed as a target. The remaining OPEN question is whether this single orbit/category is itself canonically reconstructible from the unmarked filtered group and whether the relative split/non-split Boolean factors through an explicitly defined intrinsic realization. The coarsest intrinsic realization problem therefore remains OPEN / LOAD-BEARING.
 
 No conclusion here is a universal impossibility theorem, and no frozen threshold, degree-5, scalar/norm, or RAAG branch is reopened.
+
+
+## 2026-10-03 — PAPER 4 GATE C: ORBIT CATEGORY IS UNIQUE RELATIVE TO THE DECLARED TARGET CLASS
+
+The general critical-window orbit theorem now supports a precise partial intrinsic result. For the declared admissible class, the quotient-realization groupoid of W_{p^s+1} has a single two-sided orbit, so the relative Boolean obstruction is independent of the chosen marked quotient map. This does **not** yet make the orbit/category intrinsic: the admissibility predicate still refers to the external target class/reference Demuškin quotient. The remaining load-bearing problem is therefore not gauge ambiguity but presentation-free internal characterization of the target/quotient class.
+
+Classification: quotient-map orbit **PASS / CLOSED** under stated admissibility; realization-independence **PASS / LOCAL**; intrinsic target-free orbit/category **OPEN / LOAD-BEARING**; coarsest intrinsic realization **OPEN**.
+
+Next authorized branch: internal universal/characteristic quotient test from the intrinsic radical line and characteristic normal subgroups. Do not reopen closed threshold/carrier/RAAG routes.
