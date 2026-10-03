@@ -1,3 +1,31 @@
+## 2026-10-03 — T1-C UNMARKED SAME-WINDOW FINAL BOUNDARY
+
+After the relative threshold was frozen, the required unmarked same-window separation test was taken as far as the current data permit.
+
+No valid pair of admissible marked extension diagrams with isomorphic underlying finite windows but different relative split/non-split data has been established. The earlier RAAG same-underlying-group/different-orientation obstruction is not transferable: it changes orientation data, not the splitting class of a quotient extension. Postcomposition of the quotient map by a quotient automorphism also cannot separate split from non-split.
+
+The stress-family pair (G_{s,a},G_{t,a}) is not a same-window counterexample at (n=p^s+1): the relative theorem detects a genuine finite-layer difference there. For (nle p^s) the windows agree and the relative extensions are both split.
+
+Thus the correct conclusion is not a no-go and not an intrinsicity theorem. The remaining theorem is exactly the reconstruction/separation dichotomy:
+[
+W_{p^s+1}(G_{s,a})
+stackrel{?}{longrightarrow}
+left(W_{p^s+1}(G_{s,a})	o D/D_{p^s+1}(D)ight)
+stackrel{?}{longrightarrow}
+[	ext{extension class}].
+]
+
+Classification:
+- relative threshold (n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1): **PASS / CLOSED** for the declared stress family;
+- unmarked same-window no-go: **OPEN**;
+- canonical reconstruction of the marked quotient: **OPEN / LOAD-BEARING**;
+- intrinsic factorization/coarsest realization: **OPEN / LOAD-BEARING**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
+
+No threshold recomputation, degree-5 reopening, scalar/norm shortcut, or blind carrier search is authorized.
+
+Detailed audit: research/PAPER4_T1C_UNMARKED_SAME_WINDOW_FINAL_BOUNDARY_AUDIT_2026-10-03.md.
+
 ## 2026-10-03 — T1-C INTRINSIC FACTORIZATION PRE-CHECK / UNMARKED INPUT GATE
 
 After freezing the relative threshold theorem, a fresh target-first pre-check was run before any new carrier construction.
