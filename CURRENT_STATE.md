@@ -1,3 +1,14 @@
+## 2026-10-03 — PAPER 4 TARGET DECISION NOW PENDING / BOUNDED INTRINSIC FEASIBILITY GATE
+
+The realistic completion target remains mathematically safe, but the user has not yet permanently selected it over the original target. Before final packaging, a bounded **Intrinsic Reconstruction Feasibility Gate** may be run. Its sole first-order question is whether the critical unmarked window (W_{p^s+1}) canonically reconstructs sufficient marked quotient/extension data; in parallel, test for an admissible same-window separation pair. This is a decision gate, not authorization for blind carrier search or threshold recomputation.
+
+Decision outcomes:
+- canonical reconstruction succeeds → reconsider continuing the original intrinsic program;
+- same-window separation succeeds → establish an intrinsic impossibility/boundary result;
+- neither succeeds within the predeclared bounded effort → return to realistic Paper 4 completion.
+
+Current classifications are unchanged mathematically: certified relative theorem **PASS / CLOSED** on (a\ge2,s>a); (a=1) **OPEN / LOAD-BEARING**; unmarked reconstruction **OPEN / LOAD-BEARING**; same-window separation **OPEN**; coarsest intrinsic realization **OPEN**. This banner supersedes only the immediate decision posture, not the theorem-status records below.
+
 ## 2026-10-03 — PAPER 4 REALISTIC COMPLETION TARGET FROZEN
 
 The project now adopts the realistic completion target for Paper 4. The paper is to be finished as a rigorously scoped positive theorem plus an explicit logical-boundary section, rather than waiting for the original unmarked/coarsest intrinsic-realization target.
