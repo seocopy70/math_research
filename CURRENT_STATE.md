@@ -2953,3 +2953,57 @@ Classification:
 - blind carrier search: **STOP / NOT AUTHORIZED**.
 
 Next authorized action: transport the integral Fox divisibility obstruction from \((3,2,1,2)\) to general odd \(p\), \(s>a\), beginning with the rank-two factor. No degree-5 reopening, no standalone degree-6 branch, and no \(B_s\) promotion.
+
+
+## 2026-10-03 — GATE T1-C GENERAL INTEGRAL FOX OBSTRUCTION / EXACT STRESS-FAMILY THRESHOLD
+
+The minimal integral divisibility obstruction generalizes cleanly to every odd prime \(p\), every \(s>a\ge1\), and the rank-two stress factor \(r=x_1^{q}[x_1,x_2]\) with \(q=p^a\). Write \(I\) for the augmentation ideal of \(\mathbf Z[Q_s]\), \(X=x_1-1\), \(Y=x_2-1\). The Fox derivatives are
+\[
+f_1=N_q(x_1)+x_1^q-x_2,
+\qquad
+f_2=x_1^{q+1}-1.
+\]
+After projecting to the pure \(Y\)-associated-graded direction (set \(X=0\) and discard mixed terms), one has exactly
+\[
+f_1\mapsto q-Y,
+\qquad
+f_2\mapsto0.
+\]
+Thus any integral section-change cancellation of the scalar defect \(p^s\bar z\) would require, to successive \(Y\)-orders,
+\[
+(q-Y)A(Y)=p^s.
+\]
+Formally
+\[
+\frac{p^s}{q-Y}
+=p^{s-a}\sum_{j\ge0}p^{-aj}Y^j.
+\]
+Let \(r=\lfloor s/a\rfloor\). Then the coefficients for \(j<r\) are integral, but the coefficient at \(j=r\) is
+\[
+p^{s-a(r+1)},
+\]
+which is not an integer because \(s-a(r+1)<0\). Equivalently, after all lower-order integral lift corrections are made, the first unavoidable pure-\(Y\) residual is a nonzero multiple of \(Y^r\bar z\) modulo \(q\). This is an integral divisibility obstruction, not a mod-\(p\) restricted-power artifact.
+
+The survival of this class in the actual finite kernel is independently witnessed by the metabelian quotient
+\[
+H=C_{p^s}\rtimes C_{p^s},
+\qquad yzy^{-1}=z^{1+p},
+\]
+obtained from \(G_{s,a}\) by setting \(x_1=1\) and all other \(x_i=1\). Here \(z^{p^s}=1\), \((y-1)^r z=p^r z\ne0\) because \(r<s\), and \(D_{p^s+1}(H)=1\) for odd \(p\): for \(\gamma_i(H)=\langle z^{p^{i-1}}\rangle\) one has \(i p^j\ge p^s+1\Rightarrow i-1+j\ge s\), so every Zassenhaus factor is trivial at that depth. Hence the pure-\(Y\) obstruction survives the actual finite-window kernel.
+
+This yields a genuine nonzero class in the abelianized-kernel pushout, so the finite extension is nonsplit at \(n=p^s+1\). Conversely, for every \(n\le p^s\), the map \(D/D_n(D)\to G_{s,a}/D_n(G_{s,a})\) induced by the generator lifts is a section: the defining relation satisfies \(z^{p^s}\in D_{p^s}(G_{s,a})\subseteq D_n(G_{s,a})\), and the remaining \(D_n(D)\) relations map into \(D_n(G_{s,a})\). Therefore the relative extension splits for all \(n\le p^s\).
+
+Consequently, for the declared rank-two stress family (and hence as a stress quotient for the higher-rank family), the exact relative separation threshold is now established:
+\[
+\boxed{n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1.}
+\]
+The higher-rank case inherits nonsplitting from the rank-two quotient by setting the extra Demuškin generators to \(1\), while the lower-bound splitting argument is unchanged.
+
+Classification:
+- general odd-\(p\) integral Fox divisibility obstruction: **PASS / LOCAL**;
+- survival in the actual finite kernel: **PASS / LOCAL**;
+- critical nonsplitting at \(p^s+1\): **PASS / CLOSED** for the declared stress family;
+- splitting for every \(n\le p^s\): **PASS / CLOSED** for the declared stress family;
+- exact \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\): **PASS / CLOSED** for the declared stress family;
+- universal free-by-Demuškin theorem beyond this stress family: **OPEN**;
+- blind carrier search: **STOP / NOT AUTHORIZED**.
