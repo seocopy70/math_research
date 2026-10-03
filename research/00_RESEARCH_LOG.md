@@ -3848,3 +3848,10 @@ Current authoritative classification:
 - blind carrier search: STOP / NOT AUTHORIZED.
 
 Decision for continuation: do not reopen the frozen threshold, degree-5 residual, scalar/norm shortcut, or RAAG orientation counterexample. The main Paper 4 line is Gate B: either prove canonical reconstruction of sufficient marked extension data from the unmarked finite window, or produce an admissible same-window separation pair. Gate A (a=1 witness) remains an independent side branch.
+
+
+## 2026-10-03 — T1-C A=1 WITNESS RE-AUDIT: ABSTRACT QUOTIENT YES, Q-EQUIVARIANT PUSHOUT NO
+
+The proposed independent a=1 witness H_s is a valid quotient of the abstract rank-two presentation and its critical Zassenhaus visibility calculation is valid. But it is not a Q-equivariant pushout over the reference Demushkin quotient: H_s has [x,y]=1, while D has [x,y]=x^{-p}, and x^p survives at the critical finite quotient. Therefore no compatible H_s -> D/D_{p^s+1}(D) sends x,y to the canonical reference generators. The witness cannot transport the section-defect class back to the marked relative extension.
+
+The earlier a=1 independent-closure wording is superseded. Correct status: a=1 marked finite-kernel survival OPEN; a=1 exact relative threshold OPEN. H_s remains diagnostic only. Gate B unmarked reconstruction/separation remains the main line; Gate A is an independent OPEN side branch.
