@@ -130,3 +130,10 @@ p^{s-1}V(τ_s)=-p^{s-1}δ^{p-1}[A_0].
 The exact Schreier/SNF computation gives ord(δ^{p−1}[A_0])=p^s, so the defect is nonzero of order p. For a=∞, τ_∞=z and z^{p^s}∈[K,K], so the normalized transfer class vanishes in K^{ab}. Therefore the intrinsic transfer-defect predicate separates a=s from a=∞ in the declared stress-family scope s≥2.
 
 Classification: PASS/LOCAL for the boundary separator; H^3 secondary lift remains UNPROVEN and is not asserted. Do not identify V(τ_s) with V(a_0).
+
+
+## 2026-10-04 — Paper 4 next-step reduction: all-s transfer defect
+- The remaining a=s vs. a=infinity, s>=2 boundary has been reduced to one precise integral filtration lemma (TF_s): im(D_{p^s+1}(F) cap K -> K^ab) subset p^s K^ab, for the intrinsic index-p radical kernel K.
+- The model Schreier lattice calculation is now general in odd p: (sigma-1)^(p-1) A_0 has exact order p^s, hence p^(s-1)(sigma-1)^(p-1) A_0 != 0, before truncation relations.
+- If (TF_s) is certified using the index-p Zassenhaus comparison and the product description of the Zassenhaus filtration, the transfer-defect separator closes the remaining boundary for all s>=2 in the declared scope.
+- **Current load-bearing task:** prove/cite (TF_s) as a self-contained lemma and independently verify the passage from the transfer class to the Schreier generator expression. Audit: research/PAPER4_ALL_S_TRANSFER_DEFECT_REDUCTION_2026-10-04.md.
