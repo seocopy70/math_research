@@ -4768,3 +4768,19 @@ Arbitrary-r critical visibility is FAIL/CLOSED as stated: the condition ord_Z(r)
 The universal surviving statement is delayed-window invariance: for n<=p^s, W_n of <z,X | z^(p^s)=r> is the same quotient as W_n of <z,X | r>, hence independent of s. For the stress family G_(s,a), independent checks verify the Smith-normal-form formula W_(p^s+1)^ab = Z/p^a plus d copies of Z/p^(s+1). Mildness/cohomology/graded results from the cited literature support s-independence of the F_p cohomology and associated graded package because the quadratic initial relator is independent of s.
 
 Status: delayed-window/non-rigidity package PASS/LOCAL pending citation-level packaging; arbitrary-r theorem FAIL/CLOSED; same numerical-window separation for s<t remains OPEN. Detailed audit: research/PAPER4_ROOT_VISIBILITY_NONRIGIDITY_AUDIT_2026-10-04.md. Independent script: research/scripts/paper4_root_visibility_checks_2026-10-04.py.
+
+
+## 2026-10-04 — CRITICAL CORRECTION: ROOT-VISIBILITY AUDIT RECLASSIFIED
+
+The previous 2026-10-04 audit classified the arbitrary-r theorem as FAIL/CLOSED using the example
+G=<z,x,y | z^3=[x,y]^3>. That classification was too strong and is superseded.
+
+The example does **not** show invisibility of the root term z^3. Since z^3 lies in D_3 and D_3 is not contained in D_4, the critical window W_4 can still see z^3 itself. What the example proves is narrower: r=[x,y]^3 lies in D_6 subset D_4, so the **right-hand side r is invisible at the critical window**, and the full relation reduces to z^3=1. Therefore ord_Z(r)>=2 alone is insufficient to guarantee visibility of the full relation or survival of r at the critical layer.
+
+Correct classification:
+- root-term visibility at p^s+1: **OPEN**;
+- full-relation critical visibility from only ord_Z(r)>=2: **OPEN / hypothesis insufficient for proof**;
+- delayed-window identity n<=p^s: **PASS / CLOSED**;
+- non-tautological critical-survival criterion: **OPEN / LOAD-BEARING**.
+
+The stress-family non-rigidity branch remains the principal active attack. The same-numerical-window comparison W_{p^s+1}(G_{s,a}) versus W_{p^s+1}(G_{t,a}), t>s, remains OPEN and is now the first separation target.
