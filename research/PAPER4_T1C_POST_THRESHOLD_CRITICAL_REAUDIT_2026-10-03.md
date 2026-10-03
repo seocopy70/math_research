@@ -1,3 +1,20 @@
+## 2026-10-03 — T1-C SCOPE CORRECTION: a=1 SURVIVAL GAP / NONBOUNDARY TEST
+
+Critical re-audit found a genuine load-bearing error in the current T1-C generalization. The integral Fox divisibility calculation itself permits all s>a>=1, but the stated metabelian survival witness uses r=floor(s/a) and (y-1)^r z=p^r z !=0 in C_{p^s}, which requires r<s. This fails when a=1: then r=s and p^r z=p^s z=0. Therefore the metabelian quotient does NOT certify actual finite-kernel survival for the entire previously declared range a>=1.
+
+The relative threshold theorem is consequently retained only for the nonboundary subfamily for which the existing survival argument actually works, in particular a>=2 (with s>a), pending an independent witness for a=1. The previously stated all-a>=1 PASS/CLOSED claim is superseded and must not be used.
+
+Authorized representative nonboundary test: (p,s,a)=(3,5,2), so q=9, r=2<s=5, and n=p^s+1=244. This is deliberately chosen to avoid the a=1 boundary. The earlier (3,2,1), n=10 calculation remains valid for the degree-5 mod-p gauge test, but it is NOT a valid generic witness for the integral finite-kernel survival theorem.
+
+Status after correction:
+- integral Fox divisibility on the stress presentation: PASS / LOCAL for s>a>=1;
+- actual finite-kernel survival via the stated metabelian witness: PASS / CLOSED for a>=2, OPEN for a=1;
+- exact relative threshold p^s+1: PASS / CLOSED for the currently certified nonboundary subfamily a>=2; OPEN for a=1;
+- unmarked intrinsic factorization: OPEN / LOAD-BEARING;
+- blind carrier search: STOP / NOT AUTHORIZED.
+
+This correction takes precedence over any older “all a>=1” threshold label.
+
 # PAPER 4 — T1-C POST-THRESHOLD CRITICAL RE-AUDIT — 2026-10-03
 
 ## Purpose
