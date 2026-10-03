@@ -1,3 +1,7 @@
+## 2026-10-03 — PAPER 5 GATE C2 CHARACTERISTIC-QUOTIENT RECONSTRUCTION CLOSED
+
+The critical-window admissible quotient-map orbit is now known to contain moved kernels: the radical-preserving IA shear sends the canonical kernel to a distinct admissible kernel. Hence no admissible kernel is characteristic. Any internal, isomorphism-natural universal property selecting a unique admissible quotient would necessarily produce a characteristic kernel, so canonical marked quotient reconstruction is FAIL / CLOSED. The quotient-realization orbit/category remains the correct map-independent relative object and is PASS / CLOSED under the declared fixed admissibility class. Fully target-free orbit/category characterization remains OPEN / LOAD-BEARING; coarsest intrinsic realization remains OPEN. Detailed audit: research/PAPER5_GATE_C2_CHARACTERISTIC_QUOTIENT_NO_GO_AUDIT_2026-10-03.md.
+
 
 ## 2026-10-03 — W10 DEGREE-9 IA ACTION: POSITIVE CRITICAL CALCULATION
 
