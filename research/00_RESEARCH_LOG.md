@@ -4080,3 +4080,38 @@ Classification at this decision point:
 - same-window separation: **OPEN**;
 - coarsest intrinsic realization: **OPEN**;
 - decision between tracks: **OPEN / PENDING**.
+
+
+## 2026-10-03 — W10 END-TO-END INTRINSIC RECONSTRUCTION FEASIBILITY RESULT
+
+The bounded Gate-B attack was executed in the minimal critical model
+[
+(p,s,a,n)=(3,2,1,10),qquad G_{2,1}=langle z,x,ymid z^9=x^3[x,y]angle.
+]
+
+The attack was deliberately performed as one package rather than as a sequence of indefinitely expanding subchecks:
+[
+W_{10}	ooperatorname{Aut}(W_{10})	o{	ext{quotient candidates}}	o{	ext{relative obstruction}}.
+]
+
+Results:
+1. The mod-3 cup form on (H^1(W_{10},mathbf F_3)) has rank 2 and a one-dimensional intrinsic radical line (R=langlear zangle). **PASS / LOCAL.**
+2. The critical degree-9 information refines the radical line only up to gauge/Aut orbit; a distinguished radical generator is not intrinsic. **PASS / LOCAL.**
+3. At the (H^1)-level, admissible quotient data with kernel radical line form one orbit after the expected (SL_2(mathbf F_3)), radical scaling, and radical-shear action. **PASS / LOCAL.**
+4. Split/non-split is invariant under the corresponding pre/post automorphism orbit, so quotient-map uniqueness is stronger than necessary; only orbit uniqueness is needed. **PASS / LOCAL.**
+5. No admissible same-window separation pair with different relative obstruction was produced. The negative route is therefore **not closed**.
+6. The single remaining load-bearing statement is the full IA transitivity lemma: every admissible quotient map (W_{10}	woheadrightarrow Q_{10}) with kernel radical line must lie in the (operatorname{Aut}(W_{10})	imesoperatorname{Aut}(Q_{10}))-orbit of the canonical quotient.
+
+This is a genuine narrowing of Gate-B: the problem has been reduced from “reconstruct the marked quotient” to an explicit finite quotient-map orbit problem. It does not yet prove intrinsic reconstruction.
+
+Scope warning: (a=1) is the boundary case and is not evidence extending the certified (age2) relative threshold theorem. The frozen relative threshold result and all closed scalar/norm/degree-5 branches remain unchanged.
+
+Classification:
+- intrinsic cup-radical line: **PASS / LOCAL**;
+- critical-jet orbit refinement: **PASS / LOCAL**;
+- same-window separation: **OPEN**;
+- H1-level quotient-map orbit: **PASS / LOCAL**;
+- full quotient-map orbit uniqueness: **OPEN / LOAD-BEARING**;
+- unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**.
+
+Next authorized action: attack the single IA quotient-map transitivity lemma directly. Do not reopen radical/critical-jet/carrier sub-searches.
