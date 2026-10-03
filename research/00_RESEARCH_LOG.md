@@ -4205,3 +4205,25 @@ Authoritative classification after this test:
 - unmarked intrinsic reconstruction: OPEN / LOAD-BEARING.
 
 Next authorized action: compute the relation-aware radical-preserving IA action on the pi_c family at D_3(Q_10)/D_4(Q_10), then propagate the orbit labels to the relative obstruction. No carrier/threshold/degree-5/scalar-norm/RAAG reopening.
+
+## 2026-10-03 — GATE-B RADICAL-IA DEGREE-9 REVIEW / STATUS CORRECTION
+
+A strict audit of the latest radical-IA calculation found that the computational signal is strong but the previous endpoint was overstated. The tested family is not yet a theorem for all corrections.
+
+Corrections recorded:
+1. Testing degree-2--6 monomials and selected random/commutator corrections does not by itself prove (z c)^9=z^9 mod D_10 for every c in D_2(Q_10). A filtration lemma reducing degree >=7, followed by a symbolic proof for the full degree-2--6 space, is still required.
+2. The correction parameter c in Q_10 must be distinguished from a chosen lift c~ in D_2(W_10). The actual IA map is alpha_{c~}(z)=z c~, alpha_{c~}(x)=x, alpha_{c~}(y)=y, and the required relation-preservation statement is in W_10.
+3. The truncated Magnus computation requires an explicit faithfulness/truncation bridge identifying degree <10 equality in the chosen Magnus model with equality in W_10.
+4. Invertibility of alpha_{c~} cannot be assumed from the formula z -> z c~; an inverse must be justified (e.g. Nielsen/triangular argument or filtration induction).
+5. The result does not yet classify all admissible quotient maps. It only establishes that the tested radical-shear family is obstruction-trivial. Thus the family-level negative route is closed, while full IA orbit completeness remains load-bearing.
+
+Authoritative status after this audit:
+- explicit radical-IA family: PASS / LOCAL;
+- tested degree-9 action: strong PASS / LOCAL, obstruction-trivial on the tested family;
+- negative attack through this radical-shear family: FAIL / CLOSED;
+- arbitrary D_2(Q_10) radical-shear relation preservation: OPEN / LOAD-BEARING;
+- full admissible quotient-map orbit transitivity: OPEN / LOAD-BEARING;
+- same-window separation: OPEN;
+- unmarked intrinsic reconstruction: OPEN / LOAD-BEARING.
+
+The next authorized calculation is not a new carrier search. It is a single relation-aware IA-transitivity attack: first prove the filtration reduction for corrections of degree >=7, then establish the full symbolic degree-2--6 relation-preservation identity, and finally use the resulting radical-shear action to compute the orbit of the full pi_c family. If that closes transitivity, Gate-B gets a positive candidate; if a residual orbit invariant or differing obstruction survives, it supplies the negative route. No conclusion is assumed in advance.
