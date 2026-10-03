@@ -1,3 +1,30 @@
+
+
+## 2026-10-03 — PAPER 5 CHARACTERISTIC-SUBGROUP COMPRESSION BOUNDARY
+
+The authorized post-C2 characteristic-compression test was completed. Let \(\mathcal K(W_n)\) be the full admissible kernel orbit. Both
+\[
+K_{\cap}=\bigcap_{K\in\mathcal K(W_n)}K,\qquad K_{\vee}=\langle K:K\in\mathcal K(W_n)\rangle
+\]
+are characteristic.
+
+For the intersection, \(z\in K_0\) but \(z\notin K_c\) for any nontrivial radical value \(c\), so \(K_{\cap}\subsetneq K_0\). Hence the characteristic quotient \(W_n/K_{\cap}\) is strictly larger than \(Q_n\); it does not compress to the target class.
+
+For the generated kernel, \(K_0\subset K_{\vee}\), while for every \(c\in D_2(Q_n)\) a standard generator-word lift \(\widetilde c\) gives \(z\widetilde c^{-1}\in K_c\) and \(\pi_0(z\widetilde c^{-1})=c^{-1}\). Thus the image of \(K_{\vee}\) in \(Q_n\) is \(D_2(Q_n)\), giving
+\[
+W_n/K_{\vee}\cong Q_n/D_2(Q_n)=Q_n^{ab}.
+\]
+So the opposite universal characteristic operation collapses to the degree-one shadow and loses the nonabelian extension information.
+
+Classification:
+- intersection-of-all-admissible-kernels quotient: **FAIL / CLOSED** as a realization of \(\mathcal C_{d,n}\);
+- generated-all-admissible-kernels quotient: **FAIL / CLOSED** as a realization of \(\mathcal C_{d,n}\);
+- characteristic-kernel target realization: **FAIL / CLOSED**;
+- one-component admissible realization groupoid: **PASS / CLOSED**;
+- characteristic/coarsest compression: **OPEN**;
+- absolute minimality: **OPEN**.
+
+This is a bounded structural no-go, not an absolute theorem that every characteristic finite invariant is impossible. No new carrier, threshold, degree-5, scalar/norm, or RAAG route is reopened. Detailed audit: research/PAPER5_CHARACTERISTIC_SUBGROUP_COMPRESSION_AUDIT_2026-10-03.md.
 ## 2026-10-03 — PAPER 5 GATE C2 CHARACTERISTIC-QUOTIENT RECONSTRUCTION CLOSED
 
 The critical-window admissible quotient-map orbit is now known to contain moved kernels: the radical-preserving IA shear sends the canonical kernel to a distinct admissible kernel. Hence no admissible kernel is characteristic. Any internal, isomorphism-natural universal property selecting a unique admissible quotient would necessarily produce a characteristic kernel, so canonical marked quotient reconstruction is FAIL / CLOSED. The quotient-realization orbit/category remains the correct map-independent relative object and is PASS / CLOSED under the declared fixed admissibility class. Fully target-free orbit/category characterization remains OPEN / LOAD-BEARING; coarsest intrinsic realization remains OPEN. Detailed audit: research/PAPER5_GATE_C2_CHARACTERISTIC_QUOTIENT_NO_GO_AUDIT_2026-10-03.md.
