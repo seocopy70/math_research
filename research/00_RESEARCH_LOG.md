@@ -168,3 +168,29 @@ Gate:
 - OPEN = coherent broader pattern appears but intrinsic factorization/general proof remains unresolved.
 
 Immediate next action: perform this pre-check, then test the smallest non-control quadratic cases before any large computation.
+
+
+## 2026-10-04 — bounded generalization challenge: user proposal reviewed and execution plan fixed
+
+The user proposed replacing the Demushkin-only test group by a universal E_psi generator for arbitrary relations r, motivated by small p=3,s=1 experiments showing split at n=3 and non-split at n=4 for several relations. This proposal was reviewed against the authoritative research state.
+
+### Decision
+**ACCEPT the broader research ambition, but do not jump directly to the universal E_psi generator.** The current authorized branch is the bounded quadratic test-family challenge recorded in CURRENT_STATE.md. This is the correct middle ground between the narrow certified Paper 4 core and the previously failed arbitrary-(r), degree-only theorem.
+
+### Why the correction is necessary
+The s=1 experiments are too weak for the intended test (the active family requires s>a>=2), and the degree-3 relation [[x,y],y] is not a quadratic initial relation. Thus they cannot by themselves establish that the critical p^s+1 mechanism is structural. The universal claim “psi exists => n_sep=p^s+1” also requires an intrinsic definition of E_psi, functoriality/gauge invariance, and a proved separation mechanism before it can be treated as a theorem program.
+
+### Authorized experiment
+Use G_{s,a}(r_2)=<z,x_1,...,x_d | z^{p^s}=x_1^{p^a}r_2>, with odd p and s>a>=2, nonzero quadratic initial r_2. Keep r_2=[x_1,x_2] as the control and test a genuinely non-equivalent quadratic form, preferably first at d>=4 where rank-2 versus rank-4 quadratic forms give a real comparison. The finite-window object must remain q-blind.
+
+### Required pre-check
+Object / Input / Functoriality / Gauge / Orientation bridge / q-blindness / Separation / Novelty / Stop must be discharged before substantial computation. If intrinsicity or the orientation bridge fails, the branch stops.
+
+### Classification
+- arbitrary-r degree-only theorem: **FAIL / CLOSED**;
+- Paper 4 certified core: **PASS / CLOSED**;
+- all-s exact-threshold/transfer-defect boundary: **OPEN / intentionally not a blocker for this challenge**;
+- bounded quadratic-family generalization: **OPEN — active challenge**;
+- universal E_psi generator: **OPEN / future generalization, DEFERRED**.
+
+Immediate next action: pre-check, then smallest genuinely non-control quadratic test case; no large s=2 computation before that gate passes.
