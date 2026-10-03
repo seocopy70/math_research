@@ -26,6 +26,34 @@ Remaining:
 Next authorized task: perform a fresh target-first pre-check for whether the relative threshold obstruction factors through an intrinsic finite-window object after forgetting the chosen map to \(D/D_n(D)\). No blind carrier search.
 Detailed audit: research/PAPER4_T1C_POST_THRESHOLD_CRITICAL_REAUDIT_2026-10-03.md.
 
+## 2026-10-03 — T1-C POST-THRESHOLD CRITICAL RE-AUDIT / THRESHOLD FROZEN
+
+The preceding general integral Fox calculation has now been critically re-audited. The declared rank-two stress-family relative threshold
+\[
+n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1
+\]
+is **PASS / CLOSED**. The integral divisibility calculation, finite-kernel survival control, and splitting for every \(n\le p^s\) form the load-bearing chain.
+
+A remaining proof-packaging point is now isolated rather than treated as a mathematical OPEN: the metabelian survival argument should be stated through the standard pushout/naturality lemma for section-defect classes. Under a \(Q\)-equivariant map of kernels, section-change coboundaries map to section-change coboundaries; hence a nonzero pushed-out class in the metabelian quotient implies nonzero class before pushout. The same naturality language should be used for the higher-rank quotient obtained by setting extra Demuškin generators to 1.
+
+This does not enlarge the theorem scope. The result remains a **relative extension-depth threshold theorem for the declared stress family**, not an unmarked filtered-group theorem and not a universal free-by-Demushkin theorem.
+
+Frozen:
+- \(n\le p^s\) splitting: **PASS / CLOSED**;
+- critical nonsplitting at \(p^s+1\): **PASS / CLOSED** for the declared stress family;
+- exact \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\): **PASS / CLOSED** for the declared stress family;
+- degree-5/mod-p obstruction routes: **FAIL / CLOSED** and must not be reopened;
+- scalar/coinvariant/norm shortcuts: **FAIL / CLOSED** and must not be reopened.
+
+Remaining:
+- arbitrary free-by-Demushkin extension theorem: **OPEN**;
+- unmarked filtered-group realization: **OPEN**;
+- intrinsic/coarsest finite realization and strict compression: **OPEN**;
+- orientation recovery from Gate T: **OPEN / NOT ESTABLISHED**.
+
+Next authorized task: perform a fresh target-first pre-check for whether the relative threshold obstruction factors through an intrinsic finite-window object after forgetting the chosen map to \(D/D_n(D)\). No blind carrier search.
+Detailed audit: research/PAPER4_T1C_POST_THRESHOLD_CRITICAL_REAUDIT_2026-10-03.md.
+
 ## 2026-10-03 — T1-C DEGREE-5 TEST REFORMULATED: \(\operatorname{ad}_{x_2}\)-COKERNEL IS NOT THE GAUGE QUOTIENT
 
 The proposed minimal split “compute \(R_5\bmod\operatorname{Im}(\operatorname{ad}_{x_2})\)” was critically audited before execution. It is **not** the correct gauge-invariant degree-5 obstruction.
