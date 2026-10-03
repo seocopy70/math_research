@@ -62,3 +62,11 @@ Rule: never reconstruct current state by reading the entire research log.
 - **OPEN / LOAD-BEARING:** \(W_{p^s+1}(G_{s,s})\stackrel{?}{\cong}W_{p^s+1}(G_{s,\infty})\) for \(s\ge2\). Ordinary \(gr_Z\), mod-\(p\) cohomology, naive \(p^s\)-power tests, and scalar coinvariant defects have been closed as non-load-bearing routes.
 - The earlier relative-extension/non-splitting formulation is no longer load-bearing for the exact unmarked threshold; direct same-window order separation suffices.
 - Full dated audit: `research/PAPER4_FINAL_BOUNDARY_ATTACK_2026-10-04.md`.
+
+## 2026-10-04 Research governance correction
+- Previous audit-era restrictions were too rigid when treated as permanent research rules: phrases such as “next authorized attack is singular,” “stop if...,” or blanket no-reopening instructions are now **historical guidance**, not standing prohibitions.
+- **No artificial deadline:** OPEN mathematical questions have no time limit unless explicitly chosen for project management.
+- **LOAD-BEARING means priority, not exclusive permission.** Exploratory side attacks, literature checks, counterexamples, and alternative formulations remain allowed when plausibly informative.
+- CLOSED/FAILED routes should not be repeated mechanically, but may be reopened when a new invariant, changed hypothesis, new literature, new computation, or other material change alters the premises. Such reopening must cite the earlier closure and state what changed.
+- Discovery and certification are separated: exploratory work may remain LOCAL/provisional; only certified results change the authoritative CLOSED/PASS state.
+- Full policy: `research/RESEARCH_GOVERNANCE.md`.
