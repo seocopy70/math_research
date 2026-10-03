@@ -4681,3 +4681,20 @@ Classification:
 ## 2026-10-03 — PAPER 4 a=s BOUNDARY ATTACK: GRADED POWER DEFECT CLOSED, FILTERED LIFT REMAINS OPEN
 
 The remaining unmarked boundary a=s versus a=∞ was attacked through the canonical short abelian direction L_s=(A[p^s]+pA)/pA and its intrinsic p^s-power operation. The canonical short line is PASS/CLOSED, and the naive shear z↦zx_1^{-1} is not automatically valid because Hall–Petrescu/Jacobson cross terms can survive exactly in degree p^s. However, the resulting p^s-power/Jacobson datum belongs to the associated restricted Lie algebra, whose Demushkin-type quadratic shadow is q-blind; it therefore does not by itself separate the boundary. Classification: graded restricted-Lie candidate FAIL/CLOSED; a=s versus a=∞ remains OPEN. The remaining load-bearing target is a genuinely filtered lifting/deformation invariant beyond the associated graded object. Detailed audit: research/PAPER4_CRITICAL_WINDOW_BOUNDARY_A_S_RECOVERY_ATTACK_2026-10-03.md.
+
+
+## 2026-10-03 — PAPER 4 a=s BOUNDARY: FILTERED-LIFT GATE SHARPENED
+
+Independent literature control now closes the associated-graded route as a separator: for odd-p Demushkin groups the p-Zassenhaus initial relation is the quadratic commutator form, while the higher q-power term is absent from the initial form. Thus any invariant factoring only through the associated restricted Lie algebra / ordinary graded group algebra is **FAIL / CLOSED** for separating a=s from a=∞.
+
+A second negative control is available for mere Massey-vanishing properties: pro-p Demushkin groups satisfy strong n-fold Massey vanishing for every n≥3, so nonvanishing of a Massey product cannot be the separator at the Demushkin source level. Pál–Quick further show q=0 and q≥5 are both A_3-formal at odd p, with q=3 exceptional; hence A_3-formality is not a general q=0 versus q=p^s separator. The remaining load-bearing possibility is a genuinely filtered lift/deformation invariant beyond the associated graded object.
+
+Classification:
+- associated graded / restricted-Lie factorization: **FAIL / CLOSED**;
+- mere Massey-vanishing-property factorization: **FAIL / CLOSED** at source level;
+- a=s versus a=∞ by an intrinsic filtered lift/extension defect: **OPEN / LOAD-BEARING**;
+- s and a for 1≤a<s: **PASS / CLOSED**.
+
+Independent literature control: Mináč–Pasini–Quadrelli–Tân, *Koszul algebras and quadratic duals in Galois cohomology*, and Pál–Quick, *A_3-formality for Demushkin groups at odd primes* (2026). These support the negative controls but do not settle the present stress-family boundary.
+
+Authorized next attack: construct a functorial one-step filtered extension invariant at degree p^s+1, preferably from the augmentation-algebra filtration or a relation-module lift, and test first at (p,s)=(3,1). No further graded-Lie or Gate T/U recomputation is authorized.
