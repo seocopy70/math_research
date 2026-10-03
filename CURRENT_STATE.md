@@ -3356,3 +3356,22 @@ Current classifications:
 - unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**.
 
 This does not alter the certified relative theorem (age2,s>a), and does not reopen the closed scalar/norm/degree-5 routes. The next authorized action is singular: attack the IA quotient-map transitivity lemma.
+
+
+## 2026-10-03 — W10 QUOTIENT-ORBIT CORRECTION
+
+The W10 gate produced an explicit family of admissible quotient maps. For every (cin D_2(Q_{10})),
+[
+zmapsto c,quad xmapsto x,quad ymapsto y
+]
+defines (W_{10}	woheadrightarrow Q_{10}), since (c^9=1) in (Q_{10}). Thus all such maps share the same H^1 radical data, but H^1-level reconstruction does not determine the full quotient map.
+
+Current gate status:
+- intrinsic radical line: **PASS / LOCAL**;
+- H^1 quotient data: **PASS / LOCAL**;
+- explicit admissible quotient family: **PASS / LOCAL**;
+- full quotient-map orbit uniqueness: **OPEN / LOAD-BEARING**;
+- same-window separation: **OPEN**;
+- unmarked reconstruction: **OPEN / LOAD-BEARING**.
+
+The critical degree-9 jet is now the correct finite invariant to test against this explicit (D_2(Q_{10}))-family. No carrier search is authorized.
