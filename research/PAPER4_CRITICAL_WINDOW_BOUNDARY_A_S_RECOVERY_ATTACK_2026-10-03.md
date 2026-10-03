@@ -119,3 +119,20 @@ The standard Demushkin presentation/classification and the fact that its graded 
 \boxed{a=s\text{ versus }a=\infty:\ OPEN}
 \]
 with the graded restricted-Lie candidate closed as a no-go, not as a solution.
+
+
+## 2026-10-03 — SHARPENED NEGATIVE CONTROL: GRADED AND VANISHING ROUTES CLOSED
+
+### 1. Associated graded route
+Standard Demushkin p-Zassenhaus theory shows that the initial form of the defining relator is the quadratic commutator form; the higher q-power term is absent from the initial form. Hence any proposed separator that factors through the associated restricted Lie algebra is **FAIL / CLOSED** for a=s versus a=∞.
+
+The tempting shear z↦zx_1^{-1} is therefore not accepted as an isomorphism proof: Hall–Petrescu/Jacobson cross terms occur at the critical p^s layer, so the filtered lift must be computed explicitly.
+
+### 2. Massey route: negative control
+All pro-p Demushkin groups satisfy strong n-fold Massey vanishing for n≥3. Thus “find a nonzero Massey product” cannot separate q=p^s from q=0 at the Demushkin source level. Pál–Quick additionally show at odd p that q=0 and q≥5 are A_3-formal, while q=3 is exceptional. Hence A_3-formality is not a general separator for the present boundary.
+
+### 3. Remaining load-bearing object
+The only legitimate remaining target is a **filtered lift/deformation invariant beyond gr**, attached intrinsically to W_{p^s+1}. Candidate realizations are an augmentation-algebra extension class, a relation-module lift class modulo filtered automorphisms, or a genuinely functorial higher operation on the finite window. No candidate has yet been proved to separate a=s from a=∞.
+
+### 4. Stop boundary
+Do not spend further effort on associated-graded constructions, ordinary restricted-Lie invariants, Gate T/U, or blind carrier searches. The next attack must retain extension data between consecutive filtration layers.
