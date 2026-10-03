@@ -3896,3 +3896,18 @@ Status:
 - coarsest intrinsic realization: OPEN.
 
 Next authorized attack: identify an intrinsic one-step filtered extension/lift invariant at degree p^s+1 (relation-module, augmentation-algebra extension, or genuinely defined higher operation), and test whether it separates the two boundary cases. Do not reopen Gate T/U for s-recovery and do not treat the restricted graded object as sufficient.
+
+
+## 2026-10-03 — PAPER 4 a=s BOUNDARY: GRADED/VANISHING ROUTES CLOSED
+
+The remaining unmarked boundary a=s versus a=∞ has been sharpened. The p-Zassenhaus associated restricted Lie algebra cannot separate the boundary because the Demushkin relator has q-independent quadratic initial form; therefore all invariants factoring only through the associated graded object are **FAIL / CLOSED** as separators. Mere Massey-vanishing properties are also excluded as separators at the Demushkin source level by strong n-fold Massey vanishing; A_3-formality is not universal because q=0 and q≥5 are A_3-formal while q=3 is exceptional.
+
+The only remaining load-bearing route is a genuinely filtered lift/deformation invariant at the critical degree p^s+1, retaining extension information beyond gr. Status remains:
+- s recovery: **PASS / CLOSED**;
+- a recovery for 1≤a<s: **PASS / CLOSED**;
+- a=∞ versus finite a<s: **PASS / CLOSED**;
+- a=s versus a=∞: **OPEN / LOAD-BEARING**;
+- marked quotient reconstruction: **OPEN**;
+- coarsest intrinsic realization: **OPEN**.
+
+Next authorized attack: one-step augmentation-algebra/relation-module filtered extension invariant, first at (p,s)=(3,1), then generalize. No further graded-Lie, Gate T/U, or blind carrier work.
