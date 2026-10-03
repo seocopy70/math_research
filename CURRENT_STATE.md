@@ -119,3 +119,29 @@ The universal E_psi construction remains **OPEN / future generalization**. It ma
 
 ### Immediate next action
 Execute the pre-check, then construct the smallest non-control quadratic test case and compare it with the control case at the first feasible stress parameters. No s=2 large-window computation is authorized until the pre-check passes.
+
+
+## 2026-10-04 — strategic correction: universal E_psi challenge explicitly authorized
+
+The prior decision to defer the universal E_psi branch is **superseded as a strategic restriction**. The continuity protocol is a guard against unrecorded scope drift and invalid promotion of exploratory work; it is not a prohibition on deliberately opening a high-risk generalization branch. The user explicitly chooses to pursue the universal E_psi direction as a bold exploratory challenge.
+
+### Status and boundary
+- Universal E_psi branch: **OPEN / ACTIVE EXPLORATORY GENERALIZATION**.
+- This branch is not silently promoted to the Paper 4 theorem core. Paper 4's certified core remains **PASS / CLOSED**.
+- The arbitrary-r degree-only theorem remains **FAIL / CLOSED** and must not be revived in its old form.
+- The new target is conditional: determine whether an intrinsically defined twisted-character test object E_psi exists for a broad class of relations r, and whether its critical-window separation mechanism can be proved. Failure is a legitimate research result.
+
+### First gate (mandatory, but not a veto on exploration)
+The first task is the E_psi pre-check:
+1. Object — define E_psi without circularly inserting the unknown q/orientation into the finite-window object.
+2. Input — specify exactly what data from (r,p,s) are allowed.
+3. Functoriality — prove or falsify invariance under admissible generator changes/presentation equivalence.
+4. Gauge — identify the character/lift normalization and quotient the gauge action explicitly.
+5. Orientation bridge — state the exact map from the finite-window obstruction to psi and then to the relation z^(p^s)=r.
+6. q-blindness — test whether q can be recovered rather than encoded in E_psi.
+7. Separation — first test control cases, then genuinely non-Demushkin relations.
+8. Novelty — compare against known Fox/Koch/cyclotomic constructions before calling the mechanism new.
+9. Stop/branch rule — if the canonical object fails, record FAIL/CLOSED for this E_psi formulation and redesign; do not quietly substitute a presentation-dependent object.
+
+### Computation policy
+No large s=2/3 sweep is required before the pre-check. Once the object survives the pre-check, a minimal finite generator should be implemented and immediately tested at p=3,s=2 and p=3,s=3 on both control and non-control relations. The earlier s=1 experiments remain motivating evidence only.
