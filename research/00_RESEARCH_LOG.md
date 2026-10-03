@@ -4151,3 +4151,21 @@ What survives is the authoritative W10 correction: the intrinsic cup-radical lin
 A valid next reduction is now isolated: compute the Aut(W_10) x Aut(Q_10) orbit of the pi_c family first on D_3(Q_10)/D_4(Q_10), including the image of radical-preserving IA shears. No transitivity or separation conclusion is assumed. This is the sole next authorized Gate-B calculation.
 
 Detailed reconciliation: research/PAPER4_GATEB_B_ATTACK_RECONCILIATION_2026-10-03.md.
+
+
+## 2026-10-03 — SMALL ORBIT TWO-SIDED GATE-B COMPRESSION TEST
+
+The proposed “one small orbit calculation for both directions” was formalized as a labelled orbit problem on the admissible quotient-map set A of W_10 -> Q_10 with intrinsic radical-line kernel data. The action is Aut(W_10) x Aut(Q_10), and each orbit is labelled by the relative split/non-split obstruction.
+
+This is a valid two-sided decision architecture: distinct quotient-map orbits with different obstruction labels give an admissible same-window separation; one orbit, or several orbits with one common obstruction label, gives intrinsic determination of the Boolean obstruction. Orbit multiplicity alone is not a no-go.
+
+The explicit family pi_c(z)=c, pi_c(x)=x, pi_c(y)=y for c in D_2(Q_10) remains PASS / LOCAL and shows why H^1 data alone are insufficient. A reduced free Magnus/augmentation-algebra shadow calculation found no degree<10 difference in the p^2-power shadow after a degree>=2 radical correction, but this is only a diagnostic: the Demushkin relation x^3[x,y]=1 must be imposed in the truncated relation algebra, and the degree-9 IA action remains load-bearing.
+
+Authoritative classification after this test:
+- two-sided orbit-decision principle: PASS / LOCAL;
+- explicit pi_c family: PASS / LOCAL;
+- relation-aware full orbit decomposition: OPEN / LOAD-BEARING;
+- same-window separation: OPEN;
+- unmarked intrinsic reconstruction: OPEN / LOAD-BEARING.
+
+Next authorized action: compute the relation-aware radical-preserving IA action on the pi_c family at D_3(Q_10)/D_4(Q_10), then propagate the orbit labels to the relative obstruction. No carrier/threshold/degree-5/scalar-norm/RAAG reopening.
