@@ -4986,3 +4986,9 @@ Gate T has reached the first genuine kernel-level boundary. The critical layer z
 Classification: critical visibility PASS/LOCAL; scalar/coinvariant obstruction FAIL/CLOSED; critical norm shortcut FAIL/CLOSED; non-coinvariant kernel module OPEN/LOAD-BEARING; exact relative threshold OPEN/LOAD-BEARING. Blind carrier search STOP.
 
 Detailed audit: research/PAPER4_QPOS_GATE_T1C_NONABELIAN_KERNEL_BOUNDARY_AUDIT_2026-10-03.md.
+
+## 2026-10-03 — T1-C DEGREE-5 GATE CLOSED AT THE MOD-p FINITE-KERNEL FOX LAYER
+
+The exact minimal finite-kernel test \((p,s,a)=(3,2,1)\) shows that the degree-5 mod-\(3\) abelianized-kernel Fox/lift-change cokernel is zero. Thus the previously isolated degree-5 commutator path is a gauge artifact at that layer. This does not settle the integral \(A_s\) obstruction or finite-extension splitting. The next authorized boundary is the degree-6 restricted/integral pre-check.
+
+Classification: **FAIL / CLOSED** for the degree-5 mod-p obstruction; **OPEN / LOAD-BEARING** for the integral/restricted extension obstruction. Blind carrier search remains **STOP / NOT AUTHORIZED**.
