@@ -132,3 +132,13 @@ The remaining Paper 5 question is narrower and categorical:
 > Can the admissible target class itself be characterized by a presentation-free internal property of (W_n), without selecting a characteristic kernel, so that the one-component realization groupoid becomes genuinely target-free?
 
 If not, the mathematically correct endpoint is the relative intrinsic orbit-category theorem together with the canonical-reconstruction no-go.
+
+
+## Addendum — 2026-10-03: target-class question subsequently closed
+
+The final paragraph of this audit is superseded only in its last open question. The target class itself has now been characterized without selecting a characteristic kernel: see `research/PAPER5_TARGET_CLASS_INTRINSIC_CHARACTERIZATION_AUDIT_2026-10-03.md`.
+
+The C2 no-go remains fully valid for **marked quotient reconstruction**. What is now closed is the weaker but decisive target-side question: the abstract finite target is the unique isomorphism class satisfying the finite Demushkin-shadow criterion (mathcal C_{d,n}).
+
+Thus the remaining open problem is narrower:
+whether (W_n) itself intrinsically admits a quotient whose target lies in (mathcal C_{d,n}), and whether the resulting existence/realization groupoid can be defined from (W_n) alone.
