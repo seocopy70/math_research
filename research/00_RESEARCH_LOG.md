@@ -4454,3 +4454,13 @@ Authoritative classification:
 This is the first result that moves beyond W10 without reopening a frozen route. It shows that the useful compression object is not a unique marked map but its natural two-sided quotient-map orbit. It does not settle whether that orbit/category itself is canonically recoverable or coarsest from the unmarked filtered group.
 
 Detailed audit: research/PAPER4_GENERAL_CRITICAL_ORBIT_THEOREM_2026-10-03.md.
+
+
+## 2026-10-03 — PAPER 4 GATE C INTRINSIC ORBIT/CATEGORY FEASIBILITY AUDIT
+
+Following the general critical-window orbit theorem, a target-first Gate C audit tested whether the unique admissible two-sided orbit can itself serve as the intrinsic finite realization. The natural candidate is the groupoid of admissible quotient realizations of W_n, with morphisms given by source automorphisms and target isomorphisms. The orbit theorem gives one component for the declared fixed-target admissible class, so the relative split/non-split Boolean is realization-independent within that class.
+
+This yields **PASS / LOCAL** for realization-independence, but not full intrinsic reconstruction. The remaining load-bearing issue is definitional: admissibility is still specified using the external target class/reference Demuškin quotient and has not been replaced by a presentation-free universal property internal to W_n. Therefore canonical unmarked orbit/category reconstruction remains **OPEN / LOAD-BEARING**; coarsest realization remains **OPEN**.
+
+The next authorized attack is singular: search for an internal universal/characteristic quotient of W_n that realizes the admissible target, beginning with the intrinsic cup-radical line and characteristic normal subgroups. Stop if the target class remains externally imposed. No carrier hunt, threshold recomputation, degree-5/scalar/norm reopening, or RAAG reopening is authorized.
+Detailed audit: research/PAPER4_INTRINSIC_ORBIT_CATEGORY_GATE_C_AUDIT_2026-10-03.md.
