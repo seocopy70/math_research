@@ -3150,3 +3150,21 @@ The integral Fox section-change equation is (p-Y)A(Y)=p^s, whose formal solution
 Classification: a=1 critical survival PASS/CLOSED; a=1 integral Fox obstruction PASS/CLOSED; a=1 critical nonsplitting PASS/CLOSED in the marked/relative stress family; exact relative threshold for all declared a>=1 PASS/CLOSED; unmarked filtered-group reconstruction OPEN/LOAD-BEARING; universal free-by-Demushkin theorem OPEN; blind carrier search STOP/NOT AUTHORIZED.
 
 Detailed audit: research/PAPER4_T1C_A1_INDEPENDENT_CLOSURE_AUDIT_2026-10-03.md. The older a=1 OPEN record is superseded, not deleted.
+
+
+## 2026-10-03 — T1-C RECONCILIATION: A=1 REMAINS OPEN; MARKED THRESHOLD CLOSED ONLY ON CERTIFIED NONBOUNDARY SUBFAMILY
+
+The latest referee-style critique was reconciled against the authoritative T1-C audit. The governing scope-corrected status is: the metabelian finite-kernel survival witness requires r=floor(s/a)<s, so it certifies the exact relative threshold only for the declared nonboundary subfamily a>=2, s>a. For a=1, the same witness collapses because (y-1)^s z=p^s z=0; therefore a=1 survival and the exact threshold remain OPEN. Older all-a>=1 CLOSED wording is superseded.
+
+The pushout/naturality bridge is accepted as the formal packaging lemma for the certified a>=2 case: the metabelian quotient is a Q-equivariant quotient/pushout of the kernel, and section-change coboundaries map to section-change coboundaries. Thus a nonzero pushed-out obstruction implies nonzero before pushout. This closes the proof-packaging gap but does not enlarge theorem scope.
+
+Current authoritative classification:
+- integral Fox divisibility: PASS / LOCAL for s>a>=1;
+- actual finite-kernel survival and exact relative threshold p^s+1: PASS / CLOSED for a>=2, s>a;
+- a=1 finite-kernel survival / exact threshold: OPEN;
+- unmarked reconstruction of the marked quotient/extension datum: OPEN / LOAD-BEARING;
+- same-window separation: OPEN;
+- intrinsic/coarsest realization: OPEN;
+- blind carrier search: STOP / NOT AUTHORIZED.
+
+Decision for continuation: do not reopen the frozen threshold, degree-5 residual, scalar/norm shortcut, or RAAG orientation counterexample. The main Paper 4 line is Gate B: either prove canonical reconstruction of sufficient marked extension data from the unmarked finite window, or produce an admissible same-window separation pair. Gate A (a=1 witness) remains an independent side branch.
