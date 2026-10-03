@@ -21,8 +21,13 @@ For exact correction chains, search 00_RESEARCH_LOG.md first.
 
 A summary line here is a pointer only. The dated audit/result remains the evidence record.
 
-## 2026-10-04 scope-audit correction
+## 2026-10-04 scope-audit correction (historical correction chain)
 - Historical PASS wording for a universal/relative critical separation is not authoritative unless the cited record proves non-splitting; survival alone is insufficient.
 - Same numerical-window separation (W_{p^s+1}(G_s)
 ot\cong W_{p^s+1}(G_t)) remains OPEN unless an explicit same-window invariant is cited.
 - Exact canonical file paths above replace search-alias instructions for the load-bearing Paper 4 claims.
+
+## 2026-10-04 boundary/governance update
+- Direct same-window separation for the certified stress family is now **CLOSED**; the exact unmarked threshold is (n_{\mathrm{sep}}(s)=p^s+1) in that scope.
+- The remaining load-bearing boundary is (a=s) versus (a=\infty) for (s\ge2).
+- Evidence discipline remains mandatory, but exploratory research is not time-boxed or restricted to a single “authorized attack.” See `research/RESEARCH_GOVERNANCE.md`.
