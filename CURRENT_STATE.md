@@ -3983,3 +3983,23 @@ Correct classification:
 - non-tautological critical-survival criterion: **OPEN / LOAD-BEARING**.
 
 The stress-family non-rigidity branch remains the principal active attack. The same-numerical-window comparison W_{p^s+1}(G_{s,a}) versus W_{p^s+1}(G_{t,a}), t>s, remains OPEN and is now the first separation target.
+
+
+## 2026-10-04 — CRITICAL-WINDOW INVARIANT GATE UPDATE
+
+The radical-power attack was pushed one step further.
+
+- Naive higher-Bockstein/lifting of the radical character is **FAIL / CLOSED as a separator**: the abelianization relation (p^s z=p^a x_1) permits the required (mathbf Z/p^{s+1})-lift by compensating with the (x_1)-coordinate.
+- The raw (p^s)-power of a radical lift is **FAIL / CLOSED as an intrinsic scalar** because the radical line determines a hyperplane, not a canonical complementary vector.
+- If the cup-radical line (L) is intrinsic, it determines an intrinsic index-(p) subgroup (K=ker(chi)). The surviving candidate is a filtered extension defect for
+  [
+  1	o K	o W	o C_p	o1,
+  ]
+  comparing (g^{p^s}) with the intrinsic filtration of (K), modulo Hall-Petresco/norm lift ambiguity.
+- For (sge2), normalization is essential: the Schreier generator (g^p) has (K)-degree (1), so (g^{p^s}) naturally has (K)-degree (p^{s-1}). The naive criterion using (D_{p^s}(K)) is therefore invalid.
+- Same-window separation (W_{p^s+1}(G_s)
+otcong W_{p^s+1}(G_t)) remains **OPEN / LOAD-BEARING**.
+- No new arbitrary-(r) visibility theorem is authorized; the universal delayed-window identity remains **PASS / CLOSED**.
+- The p=3,n=4 reported four-class computation remains **PASS / LOCAL (provisional)** pending its explicit enumeration certificate.
+
+Next active task: formalize the filtered index-(p) extension defect and attempt the critical/delayed computation; if it collapses, close that intrinsic route and concentrate on a certified same-window separation theorem.
