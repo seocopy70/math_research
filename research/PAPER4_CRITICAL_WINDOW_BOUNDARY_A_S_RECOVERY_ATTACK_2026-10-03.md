@@ -77,3 +77,45 @@ Current boundary classification:
 \[
 \boxed{a=s\text{ versus }a=\infty:\ OPEN}
 \]
+
+
+## 2026-10-03 — BOUNDARY ATTACK: CANONICAL p^s-POWER DEFECT REDUCES TO GRADED GAUGE DATA
+
+A bounded attack was made on the remaining boundary a=s versus a=∞.
+
+### 1. Intrinsic candidate
+Let W=W_{p^s+1}(G_{s,a}) and A=W^{ab}. In the boundary cases
+A ≅ Z/p^s ⊕ (Z/p^{s+1})^d.
+The subgroup
+L_s := (A[p^s]+pA)/pA
+is canonically one-dimensional over F_p. Thus the “short” abelian direction is intrinsic; it is not legitimate to refer to z or z x_1^{-1} as marked generators.
+
+For a lift g of a generator of L_s, its p^s-th power lies in D_{p^s}(W), and changing the lift by D_2 or by a p-divisible abelian correction changes the p^s-power only modulo D_{p^s+1}. Hence the first candidate is the intrinsic restricted p^s-power operation on the short line.
+
+### 2. Shear calculation
+For a=s, the short direction is represented by z x_1^{-1}; for a=∞ it is represented by z. Hall–Petrescu/Jacobson gives
+(Z-X)^{[p^s]} = Z^{[p^s]}-X^{[p^s]}+J_{p^s}(Z,-X),
+where J_{p^s} is the non-additive Jacobson cross polynomial. It is genuinely nonzero in the free restricted Lie algebra. Already for p=3,
+(X+Y)^{[3]}=X^{[3]}+Y^{[3]}+2[X,[Y,X]]+[Y,[Y,X]].
+Thus the naive shear equivalence cannot be declared an isomorphism of critical windows merely by cancelling p^s-powers.
+
+### 3. Decisive limitation
+However, this does NOT separate a=s from a=∞. The operation above is part of the intrinsic restricted Lie algebra associated to the Zassenhaus filtration. For Demushkin-type one-relator groups the associated graded algebra is controlled by the quadratic initial relator and loses the higher q-term; the literature explicitly gives the same quadratic initial form for the q-family. Therefore the Jacobson cross term changes the coordinate representative of the short direction, but does not by itself produce a new filtered-group isomorphism invariant.
+
+This is a genuine candidate closure:
+- canonical short line L_s: PASS / CLOSED;
+- intrinsic p^s-power operation on L_s: PASS / LOCAL;
+- naive shear-isomorphism claim: FAIL / CLOSED (not justified);
+- separation of a=s and a=∞ by the restricted graded object: FAIL / CLOSED;
+- separation by the full filtered extension/lifting defect: OPEN.
+
+The remaining problem is therefore sharper than before: one must detect a difference in the filtered lift of the common quadratic restricted Lie algebra, not in its associated graded restricted Lie algebra. Equivalently, the required invariant must retain extension/deformation data one filtration level beyond the quadratic shadow.
+
+### Literature control
+The standard Demushkin presentation/classification and the fact that its graded algebra is determined by the quadratic initial form are documented in Mináč–Pasini–Quadrelli–Tân. The Zassenhaus/restricted-Lie and higher-Massey framework of Gärtner and Efrat confirms that relation information can be encoded in higher operations, but it does not supply the required intrinsic filtered deformation invariant for this exact boundary.
+
+### Classification after this attack
+\[
+\boxed{a=s\text{ versus }a=\infty:\ OPEN}
+\]
+with the graded restricted-Lie candidate closed as a no-go, not as a solution.
