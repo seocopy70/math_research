@@ -3119,3 +3119,23 @@ Classification:
 - exact \(n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1\): **PASS / CLOSED** for the declared stress family;
 - universal free-by-Demuškin theorem beyond this stress family: **OPEN**;
 - blind carrier search: **STOP / NOT AUTHORIZED**.
+
+
+## 2026-10-03 — CRITICAL REVIEW RECONCILIATION / CURRENT FRONTIER
+
+The T1-C critique was rechecked against the authoritative audit. The metabelian model is an actual Q-equivariant quotient/pushout target of the kernel/module, so the finite-kernel survival bridge remains PASS / CLOSED for \(a\ge2\); only the quotient diagram should be made explicit in the proof presentation. \(a=1\) remains OPEN.
+
+Intrinsic factorization is now documented as three proof obligations—canonical reconstruction, canonical/functorial extension class, and identification with the original relative obstruction—without falsely treating them as necessarily independent theorems.
+
+The carrier STOP is justified first by Object/Input/Functoriality failure. A7/non-reencoding is a later candidate-level condition, not an automatic reason for the current STOP.
+
+Gate A and Gate B are independent; Gate B is the main line because it is the structural Paper 4 target.
+
+Current frontier:
+- relative threshold, \(a\ge2\): PASS / CLOSED;
+- \(a=1\): OPEN;
+- unmarked reconstruction: OPEN / LOAD-BEARING;
+- same-window separation: OPEN;
+- intrinsic factorization: OPEN / LOAD-BEARING;
+- coarsest intrinsic realization: OPEN;
+- carrier search: STOP / NOT AUTHORIZED.
