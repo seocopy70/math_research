@@ -1,3 +1,9 @@
+## 2026-10-03 — PAPER 5 COMPRESSION TRICHOTOMY FINAL BOUNDARY
+
+The proposed orbit-category minimality endpoint was critically audited and rejected as a theorem in its present form. Boolean-only preservation has a terminal carrier because the realization groupoid is connected; full realization preservation gives only categorical equivalence; characteristic quotient preservation is blocked by C2 and the universal-kernel audits. Therefore a nontrivial minimality theorem requires an explicitly declared admissible compression category/order. See research/PAPER5_COMPRESSION_TRICHOTOMY_FINAL_BOUNDARY_2026-10-03.md.
+
+Classification: PASS / CLOSED for the trichotomy/boundary statement; OPEN only for a future compression problem under a newly declared category.
+
 ## 2026-10-03 — PAPER 5 ORBIT-CATEGORY PROPOSAL CRITICAL REVIEW
 
 The proposed Aut(W_n)-orbit category is retained only as an auxiliary action/orbit formalism. The proposed minimality theorem is rejected as currently formulated: the mapping-space Hom definition lacks a declared enrichment, connectedness does not imply triviality, and “smaller than the realization groupoid” has no fixed comparison category/order. The two tested characteristic-kernel extremes remain closed no-go results, but they do not imply an absolute characteristic-compression no-go.
