@@ -1,3 +1,16 @@
+
+
+## 2026-10-03 — T1-C END-OF-BRANCH AUDIT
+
+T1-C is now at its present logical boundary. Relative Fox divisibility is established on the declared rank-two stress family; the existing finite-kernel survival witness is valid when r=floor(s/a)<s, hence in particular a>=2. Therefore the exact relative threshold p^s+1 is certified for a>=2, s>a. The a=1 boundary remains OPEN because r=s and the witness becomes p^s z=0.
+
+The intrinsic unmarked problem remains OPEN/LOAD-BEARING. The obstruction is defined on the marked extension 1->K_n->W_n->D/D_n(D)->1; canonical reconstruction from abstract W_n has not been proved, and no admissible same-window separation pair has been found. Thus neither intrinsic factorization nor no-go is established.
+
+Closed routes are not to be reopened: degree-5 residual modulo ad_x2, scalar/coinvariant/norm collapse, blind carrier construction, and transfer of the RAAG orientation counterexample.
+
+Next authorized gates: (A) an independent actual finite-kernel witness for a=1, or (B) an unmarked reconstruction/separation theorem. No repeat of closed Fox calculations.
+
+Classification: relative threshold PASS/CLOSED for a>=2,s>a; a=1 OPEN; intrinsic reconstruction OPEN/LOAD-BEARING; same-window separation OPEN; coarsest intrinsic compression OPEN; universal theorem OPEN; blind carrier search STOP.
 ## 2026-10-03 — T1-C SCOPE CORRECTION: a=1 SURVIVAL GAP / NONBOUNDARY TEST
 
 Critical re-audit found a genuine load-bearing error in the current T1-C generalization. The integral Fox divisibility calculation itself permits all s>a>=1, but the stated metabelian survival witness uses r=floor(s/a) and (y-1)^r z=p^r z !=0 in C_{p^s}, which requires r<s. This fails when a=1: then r=s and p^r z=p^s z=0. Therefore the metabelian quotient does NOT certify actual finite-kernel survival for the entire previously declared range a>=1.
