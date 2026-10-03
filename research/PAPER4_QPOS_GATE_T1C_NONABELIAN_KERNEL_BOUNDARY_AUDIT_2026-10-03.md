@@ -444,3 +444,17 @@ must be downgraded. What remains proved is only:
 - full finite-extension splitting/non-splitting: **OPEN / LOAD-BEARING**.
 
 This correction supersedes the immediately preceding “degree-5 actual finite-kernel Fox quotient = zero” claim. The research does NOT authorize jumping to degree 6 yet. The correct next calculation remains the exact degree-5 finite-kernel section-change/Fox differential and its cokernel in the minimal model ((p,s,a)=(3,2,1)).
+
+
+## 2026-10-03 — CORRECTION / T1-C DEGREE-5 RESULT RESTORED TO OPEN
+
+A previous record incorrectly promoted the degree-5 finite-kernel mod-p Fox quotient to zero. That statement is superseded. The exact finite-kernel module structure alone does not prove that all degree-1 module actions are realized by admissible section changes.
+
+Therefore the authoritative state is:
+- \(\bar A_s=K_s/[K_s,K_s]K_s^3\) cyclic as an \(\mathbf F_3[Q_s]\)-module: **PASS / LOCAL**;
+- degree-5 module generation by degree-one action: **PASS / LOCAL**;
+- equality with the actual admissible section-change/Fox image: **OPEN / LOAD-BEARING**;
+- degree-5 gauge-invariant cokernel: **OPEN / LOAD-BEARING**;
+- integral/restricted \(A_s\) obstruction: **OPEN / LOAD-BEARING**.
+
+The degree-6 restricted-power layer is **NOT YET AUTHORIZED**. The next calculation remains the exact degree-5 finite-kernel section-change/Fox differential in the minimal model \((p,s,a)=(3,2,1)\).
