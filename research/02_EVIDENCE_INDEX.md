@@ -47,3 +47,12 @@ ot\cong W_{p^s+1}(G_t)) remains OPEN unless an explicit same-window invariant is
 
 
 | Unique intrinsic w_a-line in corrected W10 | FAIL / CLOSED | research/PAPER4_A_S_TRANSFER_SCHREIER_W10_AUDIT_2026-10-04.md + 2026-10-04 correction | corrected M is F_3^7 and dim delta^2M=2 |
+
+
+## 2026-10-04 — all-s transfer-defect reduction
+| Claim | State | Evidence | Where to verify |
+|---|---|---|---|
+| General model lattice: ord((sigma-1)^(p-1)A_0)=p^s | PASS / LOCAL | research/PAPER4_ALL_S_TRANSFER_DEFECT_REDUCTION_2026-10-04.md | quotient by U=0 gives (Z/p^s)^p and endpoint coefficient is a unit |
+| Remaining boundary reduces to filtration lemma (TF_s) | PASS / LOCAL | same audit | exact reduction recorded there |
+| (TF_s) integral truncation-relations lemma | OPEN / LOAD-BEARING | NONE yet | must be proved or independently sourced |
+| all-s a=s vs. a=infinity separation | OPEN / LOAD-BEARING | pending (TF_s) | Paper 4 boundary |
