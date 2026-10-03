@@ -4003,3 +4003,15 @@ otcong W_{p^s+1}(G_t)) remains **OPEN / LOAD-BEARING**.
 - The p=3,n=4 reported four-class computation remains **PASS / LOCAL (provisional)** pending its explicit enumeration certificate.
 
 Next active task: formalize the filtered index-(p) extension defect and attempt the critical/delayed computation; if it collapses, close that intrinsic route and concentrate on a certified same-window separation theorem.
+
+
+## 2026-10-04 — NARROW ROOT-SURVIVAL RESULT
+
+For odd (p), the stronger hypothesis (operatorname{ord}_Z(r)=2) guarantees
+[
+r
+otin D_{p^s+1}(F),
+]
+so the RHS of (z^{p^s}=r) genuinely survives in the critical presentation window. This closes the specific RHS-invisibility mechanism for quadratic relators.
+
+It does **not** prove intrinsic root recovery or same-window abstract separation. The active intrinsic problem remains the filtered extension defect attached to the radical index-(p) subgroup.
