@@ -1,3 +1,29 @@
+## 2026-10-03 — W10 DEGREE-9 IA ATTACK: POSITIVE CRITICAL RESULT
+
+The final bounded degree-9 relation-aware IA calculation has now been executed on the minimal critical model
+\[
+(p,s,a,n)=(3,2,1,10).
+\]
+For the explicit admissible family \(\pi_c(z)=c,\ \pi_c(x)=x,\ \pi_c(y)=y\), \(c\in D_2(Q_{10})\), the radical-preserving shear \(\alpha_c:z\mapsto zc\) satisfies
+\[
+\boxed{(zc)^9=z^9\pmod{D_{10}}}.
+\]
+A truncated noncommutative Magnus calculation through degree 9 was independently checked on every monomial correction of degrees 2–6 and on random full corrections of degrees 2–4. All degree <10 coefficients vanish. Thus the suspected degree-9 obstruction is preserved.
+
+Since \(x,y\) are fixed, the defining Demuškin relator is fixed; hence \(\alpha_c\) is an actual filtered IA automorphism and \(\pi_1\circ\alpha_c=\pi_c\). Therefore the whole explicit \(\pi_c\) family is one \(\operatorname{Aut}(W_{10})\times\operatorname{Aut}(Q_{10})\)-orbit and carries one relative obstruction value.
+
+Classification:
+- degree-9 radical-preserving IA action: **PASS / CLOSED**;
+- explicit \(\pi_c\) family: **PASS / CLOSED (single orbit)**;
+- obstruction variation inside this family: **FAIL / CLOSED**;
+- same-window separation from this family: **FAIL / CLOSED**;
+- full admissible quotient-map orbit uniqueness: **OPEN / LOAD-BEARING**;
+- full unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**.
+
+The calculation therefore pushes Gate-B toward the positive side, but it does not by itself prove the final orbit-completeness lemma. No carrier search or frozen-route reopening is justified.
+
+Detailed audit: `research/PAPER4_W10_DEGREE9_IA_ACTION_AUDIT_2026-10-03.md`.
+
 ## 2026-10-03 — SMALL ORBIT TWO-SIDED GATE-B COMPRESSION TEST
 
 The “one small orbit calculation for both directions” idea is now formalized as a labelled orbit problem on the admissible quotient-map set A of W_10 -> Q_10, with H=Aut(W_10) x Aut(Q_10) and each orbit labelled by the relative split/non-split obstruction. This is a valid single decision architecture: different orbit labels give same-window separation; one common label (even across multiple quotient-map orbits) gives intrinsic determination of the Boolean obstruction. Orbit multiplicity alone is not a no-go.
