@@ -3988,3 +3988,37 @@ Classification:
 - (a=1): **OPEN / LOAD-BEARING**;
 - unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**;
 - coarsest intrinsic compression: **OPEN**.
+
+
+## 2026-10-03 — PAPER 4 REALISTIC VS ORIGINAL TARGET: DECISION MEMO / INTRINSIC FEASIBILITY GATE
+
+The post-threshold decision analysis distinguishes two genuinely different targets.
+
+**Realistic Paper 4 completion:** finish the certified marked/relative extension-depth theorem as a rigorously scoped positive result, with explicit logical-boundary statements. This is a proof-packaging/manuscript-completion problem whose mathematical core is already closed on the certified nonboundary scope (a\ge2, s>a). The remaining (a=1) boundary is independent and remains OPEN / LOAD-BEARING.
+
+**Original Paper 4 target:** after forgetting the marked quotient map 
+\(\pi_n:W_n\to Q_n\), determine whether the relative obstruction factors through the unmarked finite window itself, and only subsequently ask for a coarsest intrinsic realization/compression. This is a qualitatively different structural theorem, not a routine extension of the threshold calculation.
+
+The current decision analysis identifies the decisive dichotomy:
+\[
+W_{p^s+1}\ \stackrel{?}{\Longrightarrow}\ \pi_{p^s+1}\ \Longrightarrow\ \mathcal O
+\]
+versus an admissible same-window separation pair
+\[
+W_n(G_1)\cong W_n(G_2),\qquad \mathcal O_1\ne\mathcal O_2.
+\]
+No valid same-window counterexample has yet been established, and no canonical reconstruction theorem has yet been established. Therefore the intrinsic target remains **OPEN / LOAD-BEARING**, not impossible and not solved.
+
+Strategic conclusion of the memo: do not blindly continue carrier construction and do not assume the original target is nearly solved. If the original target is to be tested further, use a **bounded Intrinsic Reconstruction Feasibility Gate** first. The first question is whether the critical finite window itself canonically reconstructs the sufficient marked quotient/extension datum. Positive and negative routes must be run in parallel: (i) canonical reconstruction of a quotient/subgroup/filtration sufficient to recover the relative obstruction; (ii) same-window separation search. Only after existence of intrinsic reconstruction is established should coarsest/minimal compression be attacked.
+
+Required candidate tests before any intrinsic object is accepted: Object, Input, Functoriality, Gauge, Orientation bridge, q-blindness, Separation, Novelty, and Stop. In particular, merely re-encoding the forgotten marked map is not intrinsic. Computation may generate candidates but cannot substitute for an intrinsic theorem.
+
+Decision remains **PENDING** between the realistic completion track and the bounded feasibility attack. This memo does **not** reopen the frozen relative threshold, degree-5 route, scalar/norm shortcuts, RAAG orientation branch, or blind carrier search. If the feasibility gate does not yield a structural result within a predeclared bounded effort, return to realistic Paper 4 completion.
+
+Classification at this decision point:
+- certified relative theorem: **PASS / CLOSED** on (a\ge2, s>a);
+- realistic scoped Paper 4 completion: **CONDITIONAL** pending final proof audit/package;
+- unmarked canonical reconstruction: **OPEN / LOAD-BEARING**;
+- same-window separation: **OPEN**;
+- coarsest intrinsic realization: **OPEN**;
+- decision between tracks: **OPEN / PENDING**.
