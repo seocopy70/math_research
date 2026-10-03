@@ -3728,3 +3728,28 @@ Classification:
 - coarsest intrinsic realization/minimality: **OPEN**.
 
 Detailed audit: research/PAPER5_TARGET_CLASS_INTRINSIC_CHARACTERIZATION_AUDIT_2026-10-03.md.
+
+
+## 2026-10-03 — PAPER 5 TARGET-FREE REALIZATION GROUPoid: CLOSURE
+
+The previous OPEN/LOAD-BEARING “target-free realization from \(W_n\) alone” has been split into two logically distinct questions.
+
+First, the admissible realization groupoid is now intrinsically definable: its objects are quotients \(W_n\twoheadrightarrow H\) with \(H\in\mathcal C_{d,n}\) and intrinsic cup-radical \(H^1\)-kernel; its gauge is source automorphism plus target isomorphism. Since the target class \(\mathcal C_{d,n}\) is itself intrinsically characterized, no external target label remains.
+
+Second, for the declared critical \(W_n\), existence is PASS/CLOSED because the previously established critical quotient supplies an object. The critical-window orbit theorem then implies that every admissible object is in one connected two-sided orbit after identifying its target with \(Q_n\). Consequently the relative split/non-split Boolean is realization-independent and factors through this intrinsic groupoid.
+
+Authoritative status:
+- target-class intrinsic characterization: **PASS / CLOSED**;
+- target isomorphism-class uniqueness: **PASS / CLOSED**;
+- canonical marked quotient map/kernel: **FAIL / CLOSED**;
+- target-free admissible realization groupoid: **PASS / CLOSED** for the declared critical source/class;
+- existence for declared \(W_n\): **PASS / CLOSED**;
+- one-component realization orbit: **PASS / CLOSED**;
+- Boolean factorization: **PASS / LOCAL**;
+- non-existential characteristic finite realization: **OPEN / LOAD-BEARING**;
+- coarsest intrinsic realization/minimality: **OPEN**;
+- universal extension beyond the declared family: **OPEN**.
+
+Important boundary: this is not yet a canonical quotient or a coarsest compression theorem. The groupoid is intrinsically defined but still existential. The next authorized task is characteristic-subgroup/quotient compression, not another carrier search or threshold scan.
+
+Detailed audit: research/PAPER5_TARGET_FREE_REALIZATION_GROUPoid_AUDIT_2026-10-03.md.
