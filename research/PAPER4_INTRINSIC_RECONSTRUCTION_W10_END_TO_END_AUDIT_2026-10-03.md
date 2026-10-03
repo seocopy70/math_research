@@ -116,3 +116,48 @@ The test ((p,s,a,n)=(3,2,1,10)) is the (a=1) boundary. It is therefore a feasibi
 
 ### Decision
 The end-to-end W10 attack has reached its intended bounded boundary. It has **not** produced the desired FAIL/CLOSED separation. It has reduced the positive route to one explicit IA-orbit/transitivity lemma. Further work should attack that lemma directly; no return to radical/critical-jet/carrier sub-searches is warranted.
+
+## 2026-10-03 — CRITICAL CORRECTION: EXPLICIT IA QUOTIENT-MAP FAMILY
+
+A stronger end-to-end check shows why the remaining orbit lemma is genuinely load-bearing.
+
+Let
+[
+Q_{10}=D/D_{10}(D),qquad cin D_2(Q_{10}).
+]
+Since (c) has Zassenhaus degree at least (2),
+[
+c^9in D_{18}(D)subseteq D_{10}(D),
+]
+hence (c^9=1) in (Q_{10}). Therefore, keeping (x,y) fixed and setting
+[
+pi_c(z)=c,qquad pi_c(x)=x,qquad pi_c(y)=y
+]
+satisfies the defining relation
+[
+pi_c(z)^9=c^9=1
+=
+x^3[x,y]
+quad	ext{in }Q_{10}.
+]
+So there is an explicit family of admissible epimorphisms
+[
+pi_c:W_{10}	woheadrightarrow Q_{10}
+]
+all inducing the same H^1 map and all having the same radical kernel line at the first layer.
+
+This decisively shows that H^1-level orbit uniqueness is not enough. The full question is whether the entire family ({pi_c}_{cin D_2(Q_{10})}) is one orbit under precomposition by (operatorname{Aut}(W_{10})) and postcomposition by (operatorname{Aut}(Q_{10})), or whether distinct critical-jet/IA orbits occur.
+
+The degree-9 critical jet is precisely where this distinction can first appear: a degree-2 shear in the radical lift can contribute through the (3)-power operation at degree (3), and a second (3)-power reaches degree (9). Thus the critical jet cannot be discarded.
+
+Most importantly, no claim of quotient-map orbit uniqueness is now promoted. The previous H^1-level PASS remains only a first-layer statement.
+
+### Updated classification
+- cup-radical line: **PASS / LOCAL**;
+- H^1 quotient data: **PASS / LOCAL**;
+- explicit family of admissible quotient maps (pi_c): **PASS / LOCAL**;
+- full quotient-map orbit uniqueness: **OPEN / LOAD-BEARING**;
+- same-window separation by different obstruction: **OPEN**;
+- unmarked intrinsic reconstruction: **OPEN / LOAD-BEARING**.
+
+The bounded W10 attack therefore ends at a sharply defined finite orbit problem, not at a positive reconstruction theorem and not at a no-go theorem.
