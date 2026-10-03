@@ -1,3 +1,7 @@
+## 2026-10-03 — PAPER 5 CHARACTERISTIC-SUBGROUP COMPRESSION BOUNDARY
+
+The authorized post-C2 compression test is complete. For the full admissible kernel orbit, the characteristic intersection quotient is strictly larger than the Demuškin target, while the characteristic quotient obtained by generating all admissible kernels is exactly the target abelianization. Therefore the first natural characteristic-subgroup constructions cannot produce the desired finite realization. This strengthens the C2 boundary: canonical marked quotient is **FAIL / CLOSED**, universal orbit-realization groupoid is **PASS / CLOSED**, first-level characteristic compression is **FAIL / CLOSED**, while coarsest intrinsic compression remains **OPEN**. Detailed audit: research/PAPER5_CHARACTERISTIC_SUBGROUP_COMPRESSION_AUDIT_2026-10-03.md.
+
 ## 2026-10-03 — PAPER 5 GATE C2: CHARACTERISTIC-QUOTIENT NO-GO
 
 The authorized internal universal/characteristic quotient attack is closed. The critical admissible quotient kernels form a nontrivial Aut(W_n)-orbit via radical-preserving IA shears, so no admissible kernel is characteristic. Therefore no presentation-free natural construction can uniquely select the desired Demushkin quotient from W_n alone. The surviving compression is the one-component quotient-realization orbit/category under the fixed admissibility class; fully target-free intrinsic realization and coarsest realization remain OPEN / LOAD-BEARING. Audit: research/PAPER5_GATE_C2_CHARACTERISTIC_QUOTIENT_NO_GO_AUDIT_2026-10-03.md.
