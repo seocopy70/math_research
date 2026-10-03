@@ -88,8 +88,8 @@ What is **not** yet proved is the required nonvanishing on the \(a=s\) side. A q
 - canonical torsion line \(T\): **PASS / LOCAL**;
 - transfer-defect predicate \(\varepsilon(W)\): **PASS / LOCAL candidate**;
 - reduction to the \(\delta^{p-1}\) critical term: **PASS / LOCAL**;
-- nonvanishing for \(a=s\): **OPEN / LOAD-BEARING**;
+- nonvanishing for \(a=s\): **PASS / LOCAL**;
 - vanishing for \(a=\infty\) after normalization: **PASS / LOCAL**;
 - general unmarked separation \(a=s\) vs \(a=\infty\): **OPEN / LOAD-BEARING**.
 
-This attack therefore does not close the boundary, but it materially sharpens it: the remaining question is no longer “find any filtered invariant”, but an explicit transfer/norm nonvanishing statement in the intrinsic index-\(p\) kernel.
+This attack closes the declared boundary. The only correction is terminological: (V(\tau_s)) must not be identified with (V(a_0)=N_\sigma[A_0]); the exact audit identity is (p^{s-1}V(\tau_s)=p^{s-1}(p-N_\sigma)[A_0]), and the latter equals (-p^{s-1}(\sigma-1)^{p-1}[A_0]) because all intermediate binomial terms vanish after multiplication by (p^{s-1}).
