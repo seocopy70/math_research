@@ -1,3 +1,61 @@
+## 2026-10-03 — PAPER 4 TARGET DECISION REVIEW / A-B DISTINCTION AND BOUNDED GATE RETAINED
+
+A critical review of the preceding Paper 4 decision memo was reconciled against the authoritative state before any new decision was made.
+
+The review is accepted with the following corrections:
+
+1. **A and B are qualitatively distinct.**  
+   A is the already substantially closed marked/relative mathematical asset; B is the new structural problem of intrinsic/unmarked identifiability. They must remain logically isolated.
+
+2. **A is not “80% complete / kernel survival remains”.**  
+   The certified nonboundary result
+   \[
+   n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1
+   \]
+   is already **PASS / CLOSED** for the declared subfamily \(a\ge2,\ s>a\). Remaining work is proof packaging, explicit pushout/naturality documentation, audit, and manuscript verification. The \(a=1\) boundary remains **OPEN / LOAD-BEARING**.
+
+3. **A is not merely a calculation.**  
+   Its mathematical content includes integral Fox obstruction, finite-kernel survival, equivariant pushout/naturality, and higher-rank reduction. The tools are standard, but the theorem is not a mere numerical computation.
+
+4. **No unsupported percentage estimates are authoritative.**  
+   Statements such as “A 90% / B 20–40%” are removed from the decision basis. The valid qualitative comparison is that A has substantially lower mathematical uncertainty within its certified scope, whereas B is a new structural OPEN problem.
+
+5. **B failure is not automatically a publishable theorem.**  
+   Failure to find a reconstruction is not itself a result. A genuine negative result would require an admissible same-window separation pair with
+   \[
+   W_n(G_1)\cong W_n(G_2),\qquad \mathcal O(G_1)\ne\mathcal O(G_2),
+   \]
+   within a precisely declared category/family, followed by the corresponding no-go theorem.
+
+6. **Do not begin B with \(\operatorname{Aut}(W_n)\) in full generality.**  
+   The authorized structural route is cheaper first: search for characteristic subgroups/filtrations/lines/planes or other canonical structures, while running the same-window separation test in parallel.
+
+7. **Negative scope must be explicit.**  
+   Any no-go obtained in B would initially apply only to the declared admissible category/family. It must not be promoted to an arbitrary-extension theorem without a separate proof.
+
+8. **A provides leverage for B but does not solve B.**  
+   The central unresolved question remains whether the relative obstruction is a function of the forgotten unmarked input:
+   \[
+   \boxed{\text{Does the relative obstruction factor through }W_n\text{ itself?}}
+   \]
+   The obstruction formula being known does not imply that it is intrinsically recoverable.
+
+9. **Coarsest/minimal realization is downstream.**  
+   First establish intrinsic reconstruction/factorization (or a genuine separation no-go); only then attack coarseness/minimality.
+
+Methodological consequence: the useful surviving strategy is the previously authorized **bounded Intrinsic Reconstruction Feasibility Gate**, with positive reconstruction and same-window separation pursued in parallel. This is a decision gate, not a commitment to continue the original Paper 4 target.
+
+Current classifications after this review:
+- certified relative theorem for \(a\ge2,s>a\): **PASS / CLOSED**;
+- \(a=1\) relative survival / exact threshold: **OPEN / LOAD-BEARING**;
+- unmarked canonical reconstruction: **OPEN / LOAD-BEARING**;
+- same-window separation: **OPEN**;
+- intrinsic/coarsest realization: **OPEN**;
+- realistic scoped Paper 4 completion: **CONDITIONAL** pending final audit/package;
+- decision between realistic completion and original intrinsic target: **OPEN / PENDING**.
+
+No threshold recomputation, degree-5 reopening, scalar/norm shortcut, RAAG orientation reopening, or blind carrier search is authorized by this review.
+
 ## 2026-10-03 — T1-C UNMARKED n=4 / p=3 FULL ENUMERATION CLAIM RE-AUDIT
 
 A new reported computation claims that for p=3, n=4=p+1, rank 2, the unmarked windows of the stress family split into four abstract isomorphism classes:
