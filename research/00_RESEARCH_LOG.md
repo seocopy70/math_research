@@ -1,3 +1,43 @@
+## 2026-10-03 — PAPER 5 ADMISSIBLE COMPRESSION CATEGORY / TRICHOTOMY BOUNDARY CONFIRMED
+
+The compression question was closed at the definition level before any further carrier search.
+
+Define an admissible finite realization factorization over an intrinsic filtered finite group W by
+\[
+(C,e),\qquad e:\mathfrak R^{ad}(W)\to C,
+\]
+with C finite, isomorphism-invariant and functorial under filtered-group isomorphisms. Define
+\[
+(C,e)\preceq(C',e')
+\]
+iff there is a natural map \(u:C'\to C\) with \(e=u\circ e'\). Thus C is at least as compressed as C'.
+
+Two natural preserved-information packages give opposite degenerate endpoints:
+
+1. **Boolean-only package:** requiring only factorization of the relative split/non-split Boolean \(b\) gives the terminal singleton \(\mathbf1\) on the connected critical realization groupoid, because b is constant. Classification: **PASS / CLOSED, but trivial**.
+
+2. **Full-realization package:** requiring preservation of the complete gauge-invariant realization groupoid makes \(\mathfrak R^{ad}(W)\) itself minimal up to categorical equivalence. Further quotienting would discard declared realization information. Classification: **PASS / CLOSED, but tautological**.
+
+Therefore a nontrivial compression theorem requires a strictly intermediate preserved-information package
+\[
+\mathbf{Boolean}\subsetneq I\subsetneq\mathfrak R^{ad}(W)
+\]
+specified independently of the desired conclusion. Candidate examples (target isomorphism class, quotient-map orbit, specified cohomological action, extension-class orbit) are possible, but no current theorem canonically selects one. Choosing one merely to obtain the desired endpoint risks re-encoding the answer into the definition.
+
+Consequently:
+- admissible compression comparison category/order: **PASS / CLOSED**;
+- Boolean compression: **PASS / CLOSED — trivial**;
+- full-realization compression: **PASS / CLOSED — tautological**;
+- absolute/coarsest intrinsic compression without a declared preserved-information package: **FAIL / CLOSED** (ill-posed);
+- nontrivial intermediate compression: **OPEN**;
+- universal characteristic-compression no-go: **OPEN**.
+
+The earlier characteristic-intersection/generated-kernel failures are therefore correctly classified as failures of particular characteristic constructions, not as an absolute no-go for all compressions.
+
+Authorized next action: only test whether the existing realization groupoid and relative extension class **canonically force** an intermediate preserved-information package. If no such package is mathematically forced, the compression trichotomy/boundary is the structural endpoint. No carrier hunt, characteristic-kernel hunt, orbit-category computation, threshold recomputation, or frozen-route reopening is authorized merely to manufacture a smaller object.
+
+Audit: `research/PAPER5_ADMISSIBLE_COMPRESSION_CATEGORY_AUDIT_2026-10-03.md`.
+
 ## 2026-10-03 — PAPER 5 COMPRESSION TRICHOTOMY FINAL BOUNDARY
 
 The proposed orbit-category minimality endpoint was critically audited and rejected as a theorem in its present form. Boolean-only preservation has a terminal carrier because the realization groupoid is connected; full realization preservation gives only categorical equivalence; characteristic quotient preservation is blocked by C2 and the universal-kernel audits. Therefore a nontrivial minimality theorem requires an explicitly declared admissible compression category/order. See research/PAPER5_COMPRESSION_TRICHOTOMY_FINAL_BOUNDARY_2026-10-03.md.
