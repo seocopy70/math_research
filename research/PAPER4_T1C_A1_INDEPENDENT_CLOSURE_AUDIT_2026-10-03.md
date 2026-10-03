@@ -133,3 +133,8 @@ The proof does **not** use the invalid cyclic-quotient argument. The depth state
 - blind carrier search: **STOP / NOT AUTHORIZED**.
 
 This supersedes the older a=1 OPEN status, while preserving it as historical provenance.
+
+
+## Independent standard-filtration check
+
+The only external structural input in the depth calculation is the standard Jennings-Lazard formula for the p-Zassenhaus filtration, D_n(G)=product_{i p^j >= n} gamma_i(G)^{p^j}. This is stated in the modern literature on the p-Zassenhaus filtration and follows from Lazard/Jennings theory. For the present witness, the required inequality reduces to max_{i>=2, i-1+j<=s} i p^j <= p^s for odd p, which is elementary; hence D_{p^s+1}(H_s)=1 follows directly from the displayed lower-central bounds.
