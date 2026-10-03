@@ -3944,3 +3944,26 @@ Current status is therefore:
 - general (s\ge2): **OPEN / LOAD-BEARING**.
 
 The next attack must not use the Demushkin quotient's obstruction unless it first proves a canonical/functorial descent to the stress window. Prefer a direct intrinsic invariant of (W_4) or an explicit same-window separation pair.
+
+
+## 2026-10-04 — PAPER 4 ROOT-VISIBILITY GENERALIZATION ATTACK / NON-RIGIDITY UPGRADE
+
+The bounded attack produced a sharp split between the two proposed directions.
+
+### Direction 1: arbitrary-r root-visibility theorem
+**FAIL / CLOSED as stated.** The hypothesis "Zassenhaus order of r >= 2" is insufficient. Counterexample: (G=\langle z,x,y\mid z^3=[x,y]^3\rangle). Since ([x,y]^3\in D_6(F)\subset D_4(F)), the critical quotient (W_4) reduces the relation to (z^3=1); the proposed root visibility is therefore absent. The universal part that survives is only the delayed-window identity (W_n(G_{s,r})=F/(D_n(F),r)) for (n\le p^s). A broader positive theorem must impose a non-tautological critical-survival condition; quadratic Lie-relator classes are the first authorized target.
+
+### Direction 2: non-rigidity
+The stress-family package is strengthened to **PASS / LOCAL** pending citation-level lemma packaging:
+- (G_{s,a}^{ab}\cong \mathbb Z_p^d\oplus\mathbb Z/p^a), independent of s;
+- the Zassenhaus initial relator is the same quadratic commutator form for all s;
+- mildness/cohomological-dimension and quadratic-duality results imply the same (mathbb F_p)-cohomology package across s;
+- the associated graded group-algebra/restricted-Lie package is s-independent;
+- for (t\ge s) and (n\le p^s), (W_n(G_{s,a})\cong W_n(G_{t,a}));
+- at (n=p^s+1), (W_n(G_{s,a})^{ab}\cong \mathbb Z/p^a\oplus(\mathbb Z/p^{s+1})^d), independently checked by SymPy SNF.
+
+Important limitation: this does not yet prove same-window separation (W_{p^s+1}(G_s)\not\cong W_{p^s+1}(G_t)) for (t>s). The proven phenomenon is delayed invisibility through (p^s) plus separation of each source's own critical window.
+
+Independent check script: research/scripts/paper4_root_visibility_checks_2026-10-04.py. Detailed audit: research/PAPER4_ROOT_VISIBILITY_NONRIGIDITY_AUDIT_2026-10-04.md.
+
+Next authorized action: make the non-rigidity/delayed-window theorem the main Paper 4 research branch; separately test the narrow quadratic-relator class for a genuine general root-visibility theorem. No arbitrary-r claim, threshold reopening, or Paper 5 compression reopening.
