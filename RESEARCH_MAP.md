@@ -81,7 +81,8 @@ The project now adopts the realistic completion target for Paper 4. The paper is
 
 Principal theorem target:
 [
-G_{s,a}=langle z,x_1,ldots,x_dmid z^{p^s}=r_Dangle,qquad s>age2,
+G_{s,a}=langle z,x_1,ldots,x_dmid z^{p^s}=r_D
+angle,qquad s>age2,
 ]
 in the declared rank-two stress-family / higher-rank reduction scope, with marked relative finite windows
 [
@@ -89,7 +90,9 @@ in the declared rank-two stress-family / higher-rank reduction scope, with marke
 ]
 The certified result is
 [
-n_{m sep}^{m rel}(s)=p^s+1:
+n_{
+m sep}^{
+m rel}(s)=p^s+1:
 quad nle p^sRightarrow	ext{split},qquad
 n=p^s+1Rightarrow	ext{nonsplit}.
 ]
@@ -5358,7 +5361,8 @@ Next authorized branch: internal universal/characteristic quotient test from the
 
 ## 2026-10-03 — PAPER 5 TARGET CLASS ITSELF INTRINSICALLY CHARACTERIZED
 
-The target-class gate is now closed for the declared odd-(p), even-rank Demushkin critical-window family. Let (mathcal C_{d,n}) be the class of finite (p)-groups admitting a one-relator pro-(p) lift with nondegenerate alternating degree-two initial relation and with abelianization ((mathbf Z/p^{e(n)})^d), (e(n)=lceillog_p nceil). Labute classification implies every such lift is Demushkin with torsion invariant (q). The abelianization condition excludes (q<n); for (qge n), the (q)-power term vanishes modulo (D_n), so every member has the same depth-(n) quotient as the (q=0) Demushkin group. Therefore (mathcal C_{d,n}) is a singleton abstract isomorphism class, exactly the target (Q_n).
+The target-class gate is now closed for the declared odd-(p), even-rank Demushkin critical-window family. Let (mathcal C_{d,n}) be the class of finite (p)-groups admitting a one-relator pro-(p) lift with nondegenerate alternating degree-two initial relation and with abelianization ((mathbf Z/p^{e(n)})^d), (e(n)=lceillog_p n
+ceil). Labute classification implies every such lift is Demushkin with torsion invariant (q). The abelianization condition excludes (q<n); for (qge n), the (q)-power term vanishes modulo (D_n), so every member has the same depth-(n) quotient as the (q=0) Demushkin group. Therefore (mathcal C_{d,n}) is a singleton abstract isomorphism class, exactly the target (Q_n).
 
 This removes the external target label at the **target-class** level, while preserving the C2 no-go for a canonical marked quotient kernel/map.
 
@@ -5387,3 +5391,7 @@ Global classification:
 - characteristic/coarsest finite realization: **OPEN / LOAD-BEARING**.
 
 This changes the Paper-5 frontier from “remove the external target” to “compress the intrinsic realization groupoid further, or prove that such further compression is impossible.” No closed route is reopened.
+
+## 2026-10-03 — PAPER 4 CRITICAL-WINDOW a-RECOVERY
+
+A new elementary intrinsic parameter-recovery theorem has been established for the declared nonboundary stress family. At n=p^s+1 and 1<=a<s, the unmarked abelianization satisfies W_n(G_{s,a})^ab ~= Z/p^a ⊕ (Z/p^{s+1})^d, while a=infinity gives Z/p^s ⊕ (Z/p^{s+1})^d. Therefore a (equivalently q=p^a) is recoverable directly from W_n, independently of the relative quotient map and Gate T. Classification: a-recovery PASS / CLOSED for 1<=a<s; a=s remains OPEN by this invariant. This materially strengthens the unmarked parameter-identifiability line but does not establish orientation or marked-map reconstruction. Audit: research/PAPER4_CRITICAL_WINDOW_A_RECOVERY_AUDIT_2026-10-03.md.
