@@ -1,3 +1,23 @@
+## 2026-10-03 — PAPER 5 COMPRESSION TRICHOTOMY / FINAL MINIMALITY BOUNDARY
+
+The final audit shows that the proposed statement “the realization groupoid is the minimal characteristic invariant” is not a valid theorem as stated. There are three natural meanings of compression. (A) If only the relative split/non-split Boolean must factor, the terminal one-point object already suffices on the connected realization groupoid, so minimality is trivial. (B) If the full realization groupoid must be preserved up to categorical equivalence, any valid compression is equivalent to the realization groupoid; there is no strict smaller information object, only possible skeletons/equivalent models. (C) If a characteristic quotient W/N is required, C2 and the characteristic-subgroup audit rule out the target quotient and the first universal constructions.
+
+Thus the correct endpoint is a logical boundary, not an absolute minimality theorem. A nontrivial “coarsest intrinsic realization” question exists only after a genuinely nontrivial admissible compression category/order is explicitly declared.
+
+Authoritative classification:
+- intrinsic target class: PASS / CLOSED;
+- target-free connected realization groupoid: PASS / CLOSED in the declared class;
+- canonical marked quotient/kernel: FAIL / CLOSED;
+- intersection/generated characteristic compression: FAIL / CLOSED;
+- orbit-category minimality: FAIL / CLOSED as formulated;
+- absolute characteristic-compression no-go: OPEN;
+- coarsest intrinsic realization: OPEN only after declaring a nontrivial compression category;
+- absolute minimality: OPEN only as a separately defined future problem.
+
+Final audit: research/PAPER5_COMPRESSION_TRICHOTOMY_FINAL_BOUNDARY_2026-10-03.md.
+
+STOP: no further carrier hunt, characteristic-kernel hunt, orbit-category computation, or threshold recomputation. Any continuation must first define the admissible compression category/order and pass the full pre-check.
+
 ## 2026-10-03 — PAPER 5 ORBIT-CATEGORY PROPOSAL CRITICAL REVIEW
 
 The proposed Aut(W_n)-orbit category is retained only as an auxiliary action/orbit formalism. The proposed minimality theorem is rejected as currently formulated: the mapping-space Hom definition lacks a declared enrichment, connectedness does not imply triviality, and “smaller than the realization groupoid” has no fixed comparison category/order. The two tested characteristic-kernel extremes remain closed no-go results, but they do not imply an absolute characteristic-compression no-go.
