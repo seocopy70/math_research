@@ -75,3 +75,6 @@ QUIT;
 # CI trigger: execution requested 2026-10-04.
 
 # Audit trigger: 2026-10-04 Paper 5 takeover.
+
+# CI trigger: 2026-10-04 16:58 KST — execute authoritative IA/GL gate.
+# Audit trigger: Paper 5 takeover; no order-arithmetic promotion without runtime verification.
