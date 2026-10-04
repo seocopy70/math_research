@@ -19,18 +19,18 @@ end;
 valuation:=function(N,p) local v; v:=0; while N mod p=0 do N:=N/p; v:=v+1; od; return v; end;
 
 run:=function(s,a)
-  local R,W,gens,A,V,frnat,elsV,glperms,L,IA,agtriv,GLorder,Autorder,
+  local R,W,gens,A,V,frnat,gensV,glperms,L,IA,agtriv,GLorder,Autorder,
         alpha,d,report,GLsize;
   R:=winW(mkG(s,a),4,4); W:=R[1]; gens:=R[2];
   A:=AutomorphismGroupPGroup(W);
   frnat:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
-  V:=Image(frnat); elsV:=AsSortedList(V); d:=Log(Size(V),3);
+  V:=Image(frnat); gensV:=GeneratorsOfGroup(V); elsV:=AsSortedList(V); d:=Log(Size(V),3);
   GLsize:=Size(GL(d,3));
 
   agtriv:=ForAll(A.agAutos,
     alpha->ForAll(gens,g->Image(frnat,Image(alpha,g))=Image(frnat,g)));
 
-  glperms:=List(A.glAutos,alpha->permOnV(alpha,frnat,elsV));
+  glperms:=List(A.glAutos,alpha->GroupHomomorphismByImages(V,V,gensV,List(gensV,g->Image(frnat,Image(alpha,g)))));
   L:=Group(glperms);
   IA:=Product(A.agOrder);
   Autorder:=A.size; GLorder:=Size(L);
