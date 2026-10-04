@@ -529,3 +529,35 @@ Direction 2 is **PASS / CLOSED** at theorem level for the declared odd-p stress 
 This closes only the ordinary-cohomology route. It does not imply group-level or finite-window isomorphism, nor equality of Massey/Bockstein/A_infinity or filtered extension data. No further ordinary H^* computation is authorized as a route to the remaining finite-window boundary.
 
 Authoritative audit: research/PAPER4_DIRECTION2_COHOMOLOGY_BLINDNESS_CLOSURE_2026-10-04.md.
+
+
+## 2026-10-04 — active direction after ordinary-cohomology closure: filtered extension/lift
+
+Direction 2 is closed. Ordinary mod-p cohomology is now treated as a **blind invariant and a finished negative result**, not as an active computational route.
+
+The remaining research target is the filtered extension/lift layer of the Zassenhaus tower. The first candidate object is the structured one-step lift
+\[
+1\to D_n/D_{n+1}\to W_{n+1}\to W_n\to1,
+\]
+retaining the filtration layer and p-power/commutator lift data rather than collapsing to the ordinary cohomology ring.
+
+### Active gate
+
+- **Object:** define the admissible filtered lift groupoid over an abstract finite window.
+- **Input:** retain only finite-window/filtration/lift data; do not insert q=p^a.
+- **Functoriality:** establish invariance under window isomorphism and admissible presentation changes.
+- **Gauge:** quotient lift and generator choices.
+- **Orientation bridge:** determine whether the lift package carries the affine/orientation information without selecting a character.
+- **q-blindness:** q must not occur in the recognition object.
+- **Separation:** test the a=s versus a=infinity boundary and, where meaningful, s versus t.
+- **Novelty:** do not merely rename an ordinary H^2 extension class; the target is the filtered lift package.
+- **Stop:** if the candidate is non-intrinsic or collapses to ordinary cohomology, close it and redesign.
+
+### Classification
+
+- ordinary cohomology route: **PASS / CLOSED; STOPPED**;
+- filtered extension/lift object: **OPEN / LOAD-BEARING**;
+- intrinsic extension defect: **OPEN**;
+- abstract same-window separation: **OPEN**.
+
+No exact-threshold or all-s separation claim is promoted by this strategic shift.
