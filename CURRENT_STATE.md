@@ -351,3 +351,22 @@ not a failure of the affine E_psi definition itself.
 The surviving bridge must therefore be orbit-valued: an automorphism/gauge-invariant set or groupoid of successful affine representations, or an orbit-invariant evaluation/defect functional. The next authorized attack is to construct such an orbit-level defect and test whether it separates s from t. If it cannot be made intrinsic, the E_psi formulation ends at the marked theorem.
 
 Authoritative detail: research/EPSI_ORIENTATION_BRIDGE_AUDIT_2026-10-04.md.
+
+
+## 2026-10-04 — intrinsic carrier salvage after the single-psi no-go
+
+A canonical replacement for a distinguished psi was found:
+
+\[
+\mathcal A(W)=\operatorname{Ann}_{H^1(W,\mathbf F_p)}(\operatorname{Tor}(W^{ab})).
+\]
+
+This is intrinsic to the abstract finite window. For the critical quadratic family, the marked separator can be chosen with its character in this subspace: if \bar r=p^k a, choose a nonzero character direction alpha with alpha(a)=0 and with nonzero contraction against the quadratic alternating form B. Such an alpha exists because a nonzero alternating form cannot vanish on all of a^perp.
+
+**PASS / CLOSED:** canonical character carrier \mathcal A(W).
+
+**PASS / CLOSED:** existence of a successful marked affine character inside \mathcal A(W) for r in D_2\\D_3.
+
+**OPEN / LOAD-BEARING:** the carrier does not itself distinguish s from t. The remaining object must be an orbit-invariant extension defect attached to the power relation, not merely a canonical character subspace.
+
+Authoritative detail: research/EPSI_ORIENTATION_BRIDGE_AUDIT_2026-10-04.md.
