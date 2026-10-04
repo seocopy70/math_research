@@ -520,3 +520,12 @@ Status:
 - general \(Q_3\to W_4\)-classification: **OPEN / LOAD-BEARING**.
 
 The next computation must target an invariant sensitive to the filtered extension class rather than the ordinary cubic associated-graded dimension.
+
+
+## 2026-10-04 — Direction 2 ordinary mod-p cohomology blindness CLOSED
+
+Direction 2 is **PASS / CLOSED** at theorem level for the declared odd-p stress family. For every s>=1, finite a>=1, and a=infinity, the power terms lie in the third p-Zassenhaus term, so the relator has the same quadratic commutator initial form. Quadrelli, arXiv:2011.03233v3, Proposition 2.1 gives the full ordinary mod-p cohomology algebra: it is quadratic, H^k=0 for k>=3, and the H^1 cup product is determined entirely by the common commutator form. Thus ordinary H^bullet(-,F_p) is completely blind to s and a, including the a=s versus a=infinity boundary.
+
+This closes only the ordinary-cohomology route. It does not imply group-level or finite-window isomorphism, nor equality of Massey/Bockstein/A_infinity or filtered extension data. No further ordinary H^* computation is authorized as a route to the remaining finite-window boundary.
+
+Authoritative audit: research/PAPER4_DIRECTION2_COHOMOLOGY_BLINDNESS_CLOSURE_2026-10-04.md.
