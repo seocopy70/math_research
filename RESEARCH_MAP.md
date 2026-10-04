@@ -124,3 +124,8 @@ The immediate gate is:
 Object -> Input -> Functoriality -> Gauge -> Orientation bridge -> q-blindness -> Separation -> Novelty -> Stop.
 
 The research question is whether this filtered extension/lift layer detects the hidden p^s-power relation that ordinary H^\bullet(-,\mathbf F_p) provably misses. No further ordinary-cohomology calculation is authorized unless a later structural result explicitly shows that it is needed to identify an extension/lift obstruction.
+
+
+## 2026-10-04 — filtered-extension extraction boundary
+
+The post-cohomology filtered-extension branch has been structurally audited. The one-step Zassenhaus extension is the correct intrinsic next layer, but an unmarked p-power/commutator defect does not survive section/lift gauge as a canonical scalar or orientation carrier. After gauge quotient, the full extension-equivalence class is simply the structured finite-window extension-isomorphism problem itself. Therefore the branch is **FAIL / CLOSED as an extraction/compression method**; the exact critical finite-window classification remains a separate **OPEN** boundary. No new candidate hunt is authorized to replace this result.
