@@ -39,12 +39,12 @@ end;
 
 E:=function(i,j,a)
   local m;
-  m:=IdentityMat(3,Fld); m[i][j]:=Fld!a; return m;
+  m:=IdentityMat(3,Fld); m[i][j]:=a*One(Fld); return m;
 end;
 
 D:=function(i,a)
   local m;
-  m:=IdentityMat(3,Fld); m[i][i]:=Fld!a; return m;
+  m:=IdentityMat(3,Fld); m[i][i]:=a*One(Fld); return m;
 end;
 
 CandidateGroups:=function()
