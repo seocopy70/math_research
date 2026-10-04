@@ -67,3 +67,16 @@ Orbit multiplicity is not itself a no-go. The \(p^2\) factor is not yet a theore
 - IA/GL decomposition: **OPEN / ACTIVE**.
 - p^2 source theorem: **OPEN / LOAD-BEARING**.
 - orientation-recovery dichotomy: **DEFERRED / HIGH-RISK** until the concrete automorphism theorem is obtained.
+
+
+## 2026-10-04 — Follow-up orbit evidence incorporated
+
+User-supplied logs now report a finer orbit picture: 9+9+54 at (p,s,a)=(3,1,1), one orbit at (3,1,2), and one orbit at (3,2,1,n=10), with 3^10 complements per kernel in the latter case. These remain PASS / LOCAL pending source-artifact reproduction.
+
+The IA/GL gate is unchanged but its diagnostic payload is sharpened. For p=3,n=4, record not only |IA(W)| and |Im Aut(W)->GL(V)|, but also for each admissible-kernel orbit:
+- the induced orbit of pi(z) relative to Phi(Q);
+- the stabilizer size in Aut(W);
+- whether the orbit invariant is visible in the linear image or only in IA/shear directions;
+- the induced Aut(Q) image/kernel for one representative of each orbit type.
+
+The purpose is to test whether the 9+9+54 phenomenon is an IA-level, GL-level, or quotient-action phenomenon, while still respecting the pre-registered order: p=3,n=4 decomposition first; only then cross-prime p=5 and the larger n=10 family.
