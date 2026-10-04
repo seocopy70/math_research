@@ -1,0 +1,11 @@
+Paper 5 rank-2 computation, 2026-10-04
+
+p=3, n=4, |W|=729 in both tests.
+s=0,a=1: |Aut(W)|=78732=2^2*3^9.
+s=1,a=1: |Aut(W)|=26244=2^2*3^8.
+
+Observed gap: one factor 3, not 3^2.
+
+Implementation note: AutPGrp agAutos is a soluble normal subgroup, not the IA kernel. The actual IA kernel must be computed from the action of the converted full automorphism group on W/Phi(W).
+
+Status: rank-2 order result reproduced; actual IA/GL kernel decomposition remains open.
