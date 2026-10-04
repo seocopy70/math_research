@@ -60,7 +60,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y gap
-          wget -q https://kr.archive.ubuntu.com/ubuntu/pool/universe/g/gap-anupq/gap-anupq_3.3.3-1_amd64.deb
-          sudo apt-get install -y ./gap-anupq_3.3.3-1_amd64.deb
+          echo 'deb http://archive.ubuntu.com/ubuntu resolute universe' | sudo tee /etc/apt/sources.list.d/resolute-universe.list
+          sudo apt-get update
+          sudo apt-get install -y gap-anupq
       - name: Run Paper 4 Theorem OD API probe
         run: gap -q research/scripts/paper4_od_gap_probe.g
