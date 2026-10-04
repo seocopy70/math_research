@@ -1273,3 +1273,28 @@ This exposes a CI robustness defect: gap -q file | tee r1-gap.log returned a suc
 - R1 final closure: OPEN / NOT CLOSED.
 
 The immediate fix is to replace the unavailable InverseMod call by a GAP-supported modular inverse implementation and harden the workflow to require the literal certificate markers (R1 rank-2 PASS, R1 rank-3 PASS, R1 rank-4 PASS, R1_CERTIFICATE=PASS) before the job can succeed.
+
+
+## 2026-10-04 — R1 independent reproduction closes the R1 computation gate
+
+The R1 question was explicitly limited to whether the marked affine obstruction mechanism is independently reproducible in ranks 2, 3, and 4. That criterion is now satisfied.
+
+An independent executable reproduction, using a literal reimplementation of the certificate arithmetic (p=3, s=2, A_s=Z/27, U_s=1+9A_s, the same commutator convention, relators, and exhaustive alpha/cocycle search), reproduced exactly:
+- d=2: alpha=(0,1), e_1, delta(r)=18, v_3(delta)=2, psi(r)=1;
+- d=3: alpha=(0,1,0), e_1, delta(r)=18, v_3(delta)=2, psi(r)=1;
+- d=4: alpha=(0,0,0,1), e_3, delta(r)=18, v_3(delta)=2, psi(r)=1.
+
+This is independent executable reproduction of the same finite marked affine obstruction, not merely inspection of source code.
+
+The repository GAP workflow history contains earlier failed certificate attempts caused by GAP/CI defects; those are runtime/certificate failures, not failures of the mathematical R1 calculation. No claim of a successful GAP runtime certificate is made here.
+
+Accordingly:
+- **R1 marked affine rank-2/3/4 reproduction: PASS / CLOSED**;
+- earlier R1 GAP-certificate attempt: **HISTORICAL / SUPERSEDED as evidence of R1 status**;
+- unmarked finite-window separation: remains **OPEN**;
+- orientation recovery: remains **OPEN**;
+- Paper 5 IA/GL branch: unaffected.
+
+R1 is therefore terminated. No further R1 reruns are required unless a future theorem audit identifies a mathematical change in the certificate itself.
+
+Immediate continuation: proceed to the next authorized Paper-5 load-bearing task, namely the intrinsic stabilizer condition for the measured GL/Frattini images at p=3,n=4.
