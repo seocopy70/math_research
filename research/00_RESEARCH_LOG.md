@@ -873,3 +873,19 @@ Representability will be used only after defining the category of admissible fil
 - no arbitrary candidate hunt authorized.
 
 Authoritative pre-registration: research/PAPER4_REPRESENTATION_LAYER_PREREGISTRATION_2026-10-04.md.
+
+
+## 2026-10-04 — representation-layer gate reaches its boundary
+
+The pre-registered two-step filtered-tower feasibility gate has now been executed. The intrinsic object is
+\(W_{p^s+2}\to W_{p^s+1}\to W_{p^s}\), with central extension classes, induced module structure, restricted p-power/commutator operations, and adjacent-layer compatibility.
+
+- Object/Input/Functoriality/Gauge: **PASS / CLOSED**.
+- Distinguished single-character orientation bridge: **FAIL / CLOSED**, consistent with the earlier symmetry no-go.
+- An affine representation **groupoid/orbit construction** is legitimate and functorial from the full declared tower, but at this level it is only a canonical reformulation of the structured finite-window problem, not a strictly smaller carrier.
+- No comparison theorem currently shows that the groupoids differ for (a=s) versus (a=\infty), and none shows that they coincide.
+- Therefore the remaining obstruction is classified as **detector failure / OPEN**, not information failure.
+
+This closes the bounded representation-layer branch at its pre-registered stop rule. No new carrier, character, lift decoration, or ad hoc representation hunt is authorized. The exact unmarked same-window separation remains **OPEN / LOAD-BEARING** and now requires a genuinely new factorization/compression theorem rather than another candidate search.
+
+Authoritative audit: research/PAPER4_REPRESENTATION_LAYER_GATE_RESULT_2026-10-04.md.
