@@ -1,3 +1,15 @@
+## 2026-10-04 — Paper 4 TeX consolidation started
+
+A dedicated branch `paper4-tex-2026-10-04` has been created to convert the certified Paper 4 mathematics into a manuscript. The first `paper4/main.tex` consolidates only claims supported by the current authoritative state:
+
+- universal delayed-window lemma for (n\\le p^s);
+- exact marked/relative critical threshold (p^s+1) for the declared stress family;
+- stress-family coarse non-rigidity (abelianization, quadratic initial relation, ordinary mod-(p) cohomology);
+- explicit failure of the arbitrary-(r), degree-only visibility upgrade;
+- explicit separation of the marked relative theorem from the still-open unmarked same-window reconstruction problem.
+
+The manuscript deliberately does **not** promote the superseded same-window order-jump claim, the unresolved (a=s) versus (a=\\infty) boundary for (s\\ge2), or the universal (E_\\psi) programme. This TeX pass is an organization/manuscript step, not a FINAL/PDF certification. Next audit: theorem-by-theorem source reconciliation, bibliography/literature check, then CI/PDF/hash audit.
+
 undefined
 
 ## 2026-10-04 — TF_s literature review and subgroup-comparison correction
