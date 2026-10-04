@@ -1,0 +1,663 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{booktabs}
+
+\title{Finite-Window Visibility and Non-Rigidity in\\
+Power-Deformed Pro-\texorpdfstring{$p$}{p} Presentations}
+\author{Seo Seongkyo}
+\date{October 2026}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Fp}{\mathbb F_p}
+\newcommand{\Zp}{\mathbb Z_p}
+\newcommand{\D}{D}
+\newcommand{\F}{F}
+\newcommand{\Dn}{D_n}
+\newcommand{\Wn}{W_n}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\ordz}{\operatorname{ord}_{Z}}
+\newcommand{\ab}{\mathrm{ab}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study a finite-window recognition problem for pro-$p$ groups presented by
+\[
+G_{s,a}=
+\left\langle z,x_1,\ldots,x_d\ \middle|\
+z^{p^s}
+=
+x_1^{p^a}r_D
+\right\rangle ,
+\]
+where $p$ is odd, $s>a\ge 1$, and
+\[
+r_D=[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d]
+\]
+is the standard quadratic Demushkin relation; the case $a=\infty$
+means that the power term $x_1^{p^a}$ is absent.
+Writing
+\[
+\Wn(G)=G/\Dn(G)
+\]
+for the $n$th finite Zassenhaus window, we prove a delayed-visibility
+phenomenon: for every relation $r$ the parameter $s$ is invisible in
+all windows of depth $n\le p^s$, while for the declared stress family
+the corresponding \emph{marked relative} extension has exact critical
+threshold
+\[
+n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1.
+\]
+The proof is uniform in the finite parameter $a$, including the
+boundary $a=1$.
+
+We then prove a non-rigidity theorem for the stress family.  Abelianization,
+ordinary mod-$p$ cohomology, and the quadratic Zassenhaus initial relation
+are independent of the hidden depth parameter $s$ in the stated family,
+while the own-critical finite window retains $s$ through its abelianization
+exponent.  In particular, ordinary cohomology is a certified blind
+invariant for this problem.
+
+The distinction between marked relative recognition and unmarked abstract
+finite-window reconstruction is essential.  The relative critical
+threshold is proved, but an abstract isomorphism invariant separating
+\[
+\W_{p^s+1}(G_{s,a})
+\quad\text{from}\quad
+\W_{p^s+1}(G_{t,a}),\qquad t>s,
+\]
+at the same numerical window is not claimed here.  Likewise, no theorem
+is asserted for arbitrary defining relations merely from their
+Zassenhaus order.  The paper isolates these boundaries rather than
+promoting them to false generality.
+\end{abstract}
+
+\section{Introduction}
+
+A recurring question in the preceding finite-window work is whether a
+parameter hidden in a pro-$p$ presentation can be recovered from a finite
+quotient
+\[
+\Wn(G)=G/\Dn(G).
+\]
+The basic model is a root relation
+\[
+z^{p^s}=r,
+\]
+where the right-hand side is fixed while the exponent $p^s$ varies.
+The first phenomenon is elementary but fundamental: the relation
+\(z^{p^s}\) has Zassenhaus depth \(p^s\).  Consequently the parameter
+cannot be seen before the window reaches depth \(p^s+1\).
+
+The second phenomenon is subtler.  At the critical depth one must
+distinguish three questions:
+\begin{enumerate}[label=(\roman*)]
+\item does the root relation survive in the finite window?
+\item does it survive in a \emph{marked relative} extension over a fixed
+quotient?
+\item can the resulting information be recovered from the abstract
+finite group after the marking is forgotten?
+\end{enumerate}
+The first two questions can be answered in the stress family considered
+here.  The third is a different reconstruction problem and remains open
+in the unresolved cases.
+
+The purpose of this paper is therefore not to claim a universal
+classification theorem.  Its contribution is a controlled finite-window
+theorem together with a sharp description of what the finite window does
+and does not remember.
+
+The paper has four main results.
+
+\begin{enumerate}
+\item A universal delayed-window lemma shows that for
+\(n\le p^s\),
+\[
+\Wn(G_{s,r})\cong \F/(\Dn(\F),r),
+\]
+independently of $s$.
+\item For the standard quadratic stress family, the marked relative
+extension has exact critical threshold \(p^s+1\).
+\item The same family is non-rigid with respect to several coarse
+invariants: its abelianization, quadratic initial relation, and ordinary
+mod-$p$ cohomology do not recover $s$.
+\item The assumption \(\ordz(r)\ge2\) alone is insufficient for a
+general root-visibility theorem.  Thus the quadratic stress theorem is
+a genuine scoped theorem, not merely the first case of a degree-only
+universal statement.
+\end{enumerate}
+
+\section{Notation and the finite-window problem}
+
+Fix an odd prime \(p\).  Let \(\F\) be a finitely generated free pro-$p$
+group and let \(\Dn(\F)\) denote its Zassenhaus filtration.  For a
+pro-$p$ group \(G\),
+\[
+\Dn(G)=\prod_{ij\ge n}\gamma_i(G)^{p^j},
+\qquad
+\Wn(G)=G/\Dn(G).
+\]
+We use the standard functoriality
+\[
+\varphi(\Dn(G))\subseteq \Dn(H)
+\]
+for every continuous homomorphism \(\varphi:G\to H\).
+
+For a word \(r\in\F\), define
+\[
+G_{s,r}=\F/\overline{\langle\!\langle z^{p^s}r^{-1}\rangle\!\rangle}.
+\]
+When
+\[
+r=r_D=[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d],
+\]
+we use the stress family
+\[
+G_{s,a}
+=
+\left\langle z,x_1,\ldots,x_d
+\ \middle|\
+z^{p^s}=x_1^{p^a}r_D
+\right\rangle ,
+\qquad 1\le a<s,
+\]
+and
+\[
+G_{s,\infty}
+=
+\left\langle z,x_1,\ldots,x_d
+\ \middle|\
+z^{p^s}=r_D
+\right\rangle .
+\]
+
+The map
+\[
+\pi_{s,a}:G_{s,a}\longrightarrow D_a
+\]
+to the Demushkin quotient obtained by killing the $z$-direction will be
+called the \emph{marked relative quotient map}.  The exact form of
+\(D_a\) is not needed for the delayed-window lemma; it matters only for
+the relative critical theorem.
+
+\begin{definition}[Relative finite-window separation]
+Let
+\[
+\pi_n:\Wn(G)\longrightarrow Q_n
+\]
+be a finite-window quotient map induced by a fixed marked quotient
+\(\pi:G\to D\).  We say that relative separation occurs at depth \(n\)
+if the corresponding filtered extension over \(Q_n=D/\Dn(D)\) is
+non-split, whereas it is split at all smaller depths in the range under
+consideration.
+\end{definition}
+
+\begin{remark}
+Relative separation is a marked notion.  It remembers the specified
+map to \(D/\Dn(D)\).  It is therefore strictly weaker than a theorem
+saying that the abstract finite groups \(\Wn(G)\) are non-isomorphic.
+This distinction will be maintained throughout.
+\end{remark}
+
+\section{Universal delayed visibility}
+
+The first result does not use the Demushkin relation.
+
+\begin{lemma}[Delayed root visibility]
+Let \(r\in\F\), and let
+\[
+G_{s,r}=\F/
+\overline{\langle\!\langle z^{p^s}r^{-1}\rangle\!\rangle}.
+\]
+If \(n\le p^s\), then
+\[
+\boxed{
+\Wn(G_{s,r})
+\cong
+\F/\bigl(\Dn(\F),r\bigr).
+}
+\]
+In particular, for fixed \(r\), the windows of all parameters \(t\ge s\)
+are canonically identified for every \(n\le p^s\).
+\end{lemma}
+
+\begin{proof}
+Since \(z\in\Dn(\F)\) only at depth $1$ and the $p^s$-power has
+Zassenhaus weight $p^s$,
+\[
+z^{p^s}\in\Dn(\F)
+\qquad\text{for }n\le p^s.
+\]
+Hence the relation
+\(z^{p^s}r^{-1}\) reduces to \(r^{-1}\) in
+\(\F/\Dn(\F)\), giving the displayed quotient.  The construction is
+natural in the presentation and does not depend on $s$ once
+\(n\le p^s\).
+\end{proof}
+
+\begin{corollary}[Universal lower bound]
+Any finite-window procedure that is required to distinguish the root
+depth \(s\) from larger root depths using only the quotient
+\(\Wn(G_{s,r})\) must have
+\[
+n\ge p^s+1.
+\]
+This is a lower bound only; it does not assert that the critical window
+actually separates the corresponding abstract finite groups.
+\end{corollary}
+
+\section{The quadratic stress family}
+
+We now specialize to
+\[
+r_D=[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d].
+\]
+Its image in the degree-two Zassenhaus quotient is the nonzero quadratic
+form
+\[
+\rho_D=[X_1,X_2]+[X_3,X_4]+\cdots+[X_{d-1},X_d].
+\]
+The power terms \(z^{p^s}\) and \(x_1^{p^a}\) have Zassenhaus degree at
+least \(p\ge3\).  Thus the quadratic initial relation is independent of
+$s$ and $a$.
+
+\begin{proposition}[Coarse invariance of the quadratic jet]
+For fixed odd \(p\) and fixed rank \(d\), all groups \(G_{s,a}\) in the
+declared stress family have the same degree-two Zassenhaus initial
+relation \(\rho_D\).  In particular, the parameter \(s\) is not visible
+in the quadratic initial form.
+\end{proposition}
+
+\begin{proof}
+For odd \(p\), every $p$-power of a degree-one generator lies in the
+third Zassenhaus term.  Hence the degree-two component of the relator is
+exactly the commutator product \(r_D\), independent of both power
+parameters.
+\end{proof}
+
+\section{The critical relative theorem}
+
+The critical depth is
+\[
+n_s=p^s+1.
+\]
+
+\begin{theorem}[Exact marked relative threshold]
+For the declared odd-$p$ stress family, the marked relative finite-window
+extension is split for every
+\[
+n\le p^s
+\]
+and is non-split at
+\[
+n=p^s+1.
+\]
+Equivalently,
+\[
+\boxed{
+n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1.
+}
+\]
+This statement includes the finite parameters \(a\ge1\) and the
+power-free case \(a=\infty\) in the declared stress-family scope.
+\end{theorem}
+
+\begin{proof}[Proof architecture]
+The proof has two independent parts.
+
+\emph{Lower bound.}
+For \(n\le p^s\), Lemma 3.1 identifies the finite window with the
+quotient in which the root term \(z^{p^s}\) has disappeared.  The
+generator-lift map therefore gives a section of the marked relative
+quotient.
+
+\emph{Critical survival.}
+At \(n=p^s+1\), the root term can no longer be discarded.  For
+\(a\ge2\), an explicit metabelian quotient detects the surviving
+\(p^s\)-power and the associated integral Fox divisibility obstruction.
+For \(a=1\), a finite semidirect-product pushout gives an independent
+witness:
+\[
+A=\langle x,z\mid z^{p^{s+1}}=1,\;x^p=z^{p^s}\rangle
+\]
+with an element $y$ acting by
+\[
+yzy^{-1}=z^{1-p},
+\qquad
+yxy^{-1}=x.
+\]
+The relation \(x^p[x,y]=z^{p^s}\) then gives a quotient of
+\(G_{s,1}\).  Jennings' formula shows
+\[
+\Dn(H_s)=1
+\qquad(n=p^s+1)
+\]
+for the relevant finite witness, while \(z^{p^s}\ne1\).  The Fox
+derivative calculation
+\[
+f_x=N_p(x)+x^p-y,\qquad f_y=x^{p+1}-1
+\]
+reduces in the pure $Y$-direction to
+\[
+(p-Y)A(Y)=p^s.
+\]
+Its formal solution has coefficient \(p^{-1}\) in degree $s$, so no
+integral section change kills the residual class.  Hence the marked
+extension is non-split.
+
+The case \(a=\infty\) is the corresponding power-free stress quotient.
+The same critical-depth argument is the base root case.  Thus the
+lower and upper bounds agree at \(p^s+1\).
+\end{proof}
+
+\begin{remark}
+The theorem is deliberately stated as a \emph{marked relative} theorem.
+It does not assert
+\[
+\W_{p^s+1}(G_{s,a})
+\not\cong
+\W_{p^s+1}(G_{t,a})
+\]
+for \(t>s\).  Such a same-numerical-window abstract separation problem is
+a strictly stronger reconstruction question.
+\end{remark}
+
+\section{Stress-family non-rigidity}
+
+The delayed-visibility theorem would be much less informative if the
+parameter $s$ were already encoded in elementary invariants.  The next
+results show that this is not the case.
+
+\subsection{Abelianization}
+
+\begin{proposition}[Abelianization is blind to the root depth]
+For finite \(a\),
+\[
+G_{s,a}^{\ab}
+\cong
+\Zp^d\oplus\Z/p^a\Z,
+\]
+independently of \(s\).
+At the own-critical window
+\[
+n_s=p^s+1,
+\]
+one has
+\[
+\boxed{
+\W_{n_s}(G_{s,a})^{\ab}
+\cong
+(\Z/p^{s+1}\Z)^d\oplus\Z/p^a\Z.
+}
+\]
+\end{proposition}
+
+\begin{proof}
+Abelianization replaces the defining relation by
+\[
+p^s z=p^a x_1.
+\]
+Smith normal form gives
+\[
+\Zp^{d+1}/\langle p^s e_z-p^a e_1\rangle
+\cong
+\Zp^d\oplus\Z/p^a\Z
+\]
+when \(a<s\).  In the finite window \(n_s=p^s+1\), the abelian
+Zassenhaus filtration contributes \(p^{s+1}\)-torsion in the free
+directions, giving the displayed finite abelianization.
+\end{proof}
+
+\begin{remark}
+The own-critical abelianization separates the sequence of critical
+windows indexed by their \emph{own} depths.  It does not solve the
+same-numerical-window comparison with a group whose own critical depth
+lies later.
+\end{remark}
+
+\subsection{Ordinary mod-$p$ cohomology}
+
+\begin{theorem}[Ordinary cohomology blindness]
+Within the declared odd-$p$ stress family, including finite
+\(a\ge1\) and \(a=\infty\),
+\[
+\boxed{
+H^\bullet(G_{s,a},\Fp)
+\cong
+H^\bullet(G_{t,b},\Fp)
+}
+\]
+as graded \(\Fp\)-algebras for all allowed parameter choices.
+
+More explicitly,
+\[
+H^0\cong\Fp,\qquad
+H^1\cong\Fp^{d+1},\qquad
+H^2\cong\Fp,\qquad
+H^k=0\quad(k\ge3),
+\]
+and the cup product in degree one is determined by the common quadratic
+form \(\rho_D\).
+\end{theorem}
+
+\begin{proof}
+For odd $p$, the power terms \(z^{p^s}\) and \(x_1^{p^a}\) lie in the
+third Zassenhaus term.  Hence every relator in the family has the same
+quadratic commutator initial form
+\[
+[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d].
+\]
+The one-relator cohomology theorem for this quadratic-commutator
+congruence gives a quadratic mod-$p$ cohomology algebra, concentrated
+in degrees at most two, with degree-one cup product determined by the
+displayed commutator form.  Thus no $s$- or $a$-dependence remains in
+ordinary graded cohomology.
+\end{proof}
+
+\begin{remark}
+The cohomology theorem is a blindness theorem, not an isomorphism
+theorem for the groups.  In particular it says nothing about higher
+Bockstein data, Massey products, filtered extension data, or the
+abstract finite-window isomorphism problem.
+\end{remark}
+
+\section{A failed degree-only generalization}
+
+It is tempting to replace the quadratic stress hypothesis by the single
+condition
+\[
+\ordz(r)\ge2.
+\]
+That generalization is not justified.
+
+\begin{proposition}[The Zassenhaus order alone is insufficient]
+There is no theorem of the form
+\[
+\ordz(r)\ge2
+\quad\Longrightarrow\quad
+\text{the full relation }z^{p^s}=r
+\text{ is visible at }p^s+1
+\]
+without an additional critical-survival hypothesis.
+
+\end{proposition}
+
+\begin{proof}
+Consider
+\[
+G=\langle z,x,y\mid z^3=[x,y]^3\rangle .
+\]
+The right-hand side has Zassenhaus degree \(6\), while the critical
+window for the root term \(z^3\) is \(W_4\).  Since
+\[
+[x,y]^3\in D_6(\F)\subseteq D_4(\F),
+\]
+the defining relation in \(W_4\) reduces to
+\[
+z^3=1.
+\]
+Thus the hypothesis \(\ordz(r)\ge2\) by itself does not ensure that the
+right-hand side survives in the critical layer.  The root term may
+still be visible; what fails is the claimed \emph{full-relation}
+visibility criterion based only on the order of \(r\).
+\end{proof}
+
+\begin{remark}
+This counterexample does not disprove all possible arbitrary-$r$
+theorems.  It shows that the correct hypothesis must control the
+critical survival of the right-hand side in a non-tautological way.
+In particular, a degree-only theorem is not the right generalization.
+\end{remark}
+
+\section{What the finite window does not yet reconstruct}
+
+The preceding results leave a precise boundary.
+
+\subsection{Relative versus unmarked information}
+
+The marked theorem controls a diagram
+\[
+\W_{p^s+1}(G_{s,a})
+\longrightarrow
+D/\Dn(D).
+\]
+The abstract finite group
+\(\W_{p^s+1}(G_{s,a})\), by contrast, comes without the distinguished
+quotient map, the generator $z$, or a chosen orientation character.
+
+A section change in a central Zassenhaus extension changes a cocycle by
+a coboundary.  Consequently a scalar defect extracted from one chosen
+lift is not automatically an intrinsic invariant of the abstract
+finite group.  The natural object after quotienting this gauge freedom
+is the extension-equivalence class itself, which is essentially the
+structured finite-window isomorphism problem.
+
+This explains why the successful marked theorem cannot simply be
+relabelled as an unmarked reconstruction theorem.
+
+\subsection{The unresolved same-window problem}
+
+For \(t>s\), the critical window of \(G_{s,a}\) is
+\[
+\W_{p^s+1}(G_{s,a}),
+\]
+while the defining \(p^t\)-power of \(G_{t,a}\) is still invisible at
+that same numerical depth.  The lower-window identity therefore gives
+the correct blindness range, but it does not by itself produce an
+abstract invariant at the first visible level.
+
+Accordingly, the statement
+\[
+\W_{p^s+1}(G_{s,a})
+\not\cong
+\W_{p^s+1}(G_{t,a})
+\qquad(t>s)
+\]
+is \emph{not} asserted here.  Likewise, the exact reconstruction of
+the hidden parameter from an unmarked critical window is left open.
+
+\subsection{The boundary \(a=s\) versus \(a=\infty\)}
+
+At the critical depth the cases
+\[
+G_{s,s}
+\qquad\text{and}\qquad
+G_{s,\infty}
+\]
+have the same finite-window abelianization
+\[
+\Z/p^s\Z\oplus(\Z/p^{s+1}\Z)^d.
+\]
+Ordinary cohomology is also blind to this distinction.  The case
+\((p,s)=(3,1)\) is distinguishable by an $A_3$-formality obstruction
+that factors through the critical finite window, but the general
+boundary for \(s\ge2\) remains open.
+
+\section{Scope, novelty boundary, and future generalization}
+
+The theorem proved here has three deliberate scope restrictions.
+
+\begin{enumerate}
+\item The exact critical threshold is a theorem for the declared
+stress family and its marked relative finite-window problem.
+\item The ordinary cohomology blindness result concerns the full
+graded ring \(H^\bullet(-,\Fp)\), not higher operations or filtered
+integral data.
+\item No claim is made that an arbitrary relation \(r\) with
+\(\ordz(r)\ge2\) satisfies the same critical theorem.
+\end{enumerate}
+
+The natural next generalization is therefore not another degree-only
+search.  A meaningful broader theorem would need a filtered initial
+or lift invariant that controls critical survival of \(r\).  Any such
+theorem must be functorial under changes of presentation and invariant
+under the relevant gauge action.
+
+The present paper intentionally stops before that point.  This makes
+the logical status of the result explicit:
+\[
+\boxed{
+\text{quadratic stress-family relative theorem}
+\quad+\quad
+\text{coarse non-rigidity}
+\quad+\quad
+\text{precise open reconstruction boundary}.
+}
+\]
+
+\section{Conclusion}
+
+The finite-window picture established here is a two-stage phenomenon.
+
+First, a root relation \(z^{p^s}=r\) is universally invisible through
+depth \(p^s\).  In the standard quadratic stress family, the marked
+relative extension becomes non-split exactly one step later:
+\[
+n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1.
+\]
+
+Second, the hidden depth is not already encoded in the usual coarse
+invariants.  Abelianization, the quadratic Zassenhaus initial relation,
+and ordinary mod-$p$ cohomology can remain unchanged while the critical
+finite-window mechanism detects the parameter in the marked setting.
+
+The remaining mathematical question is therefore not another routine
+cohomology computation.  It is whether the information retained by the
+critical filtered extension can be compressed into a genuinely
+unmarked invariant of the finite group.  That is a reconstruction
+problem, not part of the theorem proved in this paper.
+
+\begin{thebibliography}{9}
+
+\bibitem{Quadrelli}
+M. Quadrelli,
+\emph{One-relator pro-$p$ groups with quadratic cohomology},
+arXiv:2011.03233, version 3.
+
+\bibitem{Lazard}
+M. Lazard,
+\emph{Groupes analytiques $p$-adiques},
+Publ. Math. IH\'ES \textbf{26} (1965), 389--603.
+
+\bibitem{Jennings}
+S. A. Jennings,
+\emph{The structure of the group ring of a $p$-group},
+Trans. Amer. Math. Soc. \textbf{50} (1941), 175--185.
+
+\end{thebibliography}
+
+\end{document}
