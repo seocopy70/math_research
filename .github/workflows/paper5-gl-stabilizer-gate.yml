@@ -19,5 +19,13 @@ jobs:
       - name: Run stabilizer equality gate
         run: |
           set -euo pipefail
-          gap -q research/scripts/paper5_gl_stabilizer_gate.g | tee paper5_gl_stabilizer_runtime.log
-          grep -q 'embedded equality in basis (x,y,z) = true' paper5_gl_stabilizer_runtime.log
+          set +e
+          gap -q research/scripts/paper5_gl_stabilizer_gate.g > paper5_gl_stabilizer_runtime.log 2>&1
+          rc=$?
+          set -e
+          cat paper5_gl_stabilizer_runtime.log
+          test "$rc" -eq 0
+          for pair in "s=0 a=1" "s=1 a=1" "s=0 a=2" "s=1 a=2"; do
+            grep -q "STABILIZER $pair PASS" paper5_gl_stabilizer_runtime.log
+          done
+          grep -q 'STABILIZER_CERTIFICATE=PASS' paper5_gl_stabilizer_runtime.log
