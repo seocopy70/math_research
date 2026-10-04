@@ -910,3 +910,16 @@ The local audited PDF is `/mnt/data/Paper4_final_2026-10-04.pdf`.
 Classification: **PASS / CLOSED — manuscript artifact complete**.
 This closes the writing/PDF-production task only; the mathematical OPEN boundary
 (G_{s,s}) versus (G_{s,\infty}) for (s\ge2) remains unchanged.
+
+
+## 2026-10-04 — Paper 5 redefined around Aut(W_n)
+
+The compression formulation of Paper 5 was judged too tautological to carry the intended mathematical contribution. The active branch is therefore redefined as concrete finite-group structure: Aut(W_n), its IA kernel, its image on W_n/Phi(W_n), induced action on admissible quotients Q_n, and radical/shear effects.
+
+The user supplied completed calculations reporting exact automorphism orders for (p,n)=(3,4) and (5,6). The p-parts exhibit the same factor p^2 deficit from split to non-split cases at both primes. The p=3,n=4 admissible-kernel enumeration reports 81/9/72 kernels with orbit pattern 1/1/3 respectively.
+
+Because the current repository did not yet contain the supplied scripts/logs for these new calculations, the evidence is recorded as PASS / LOCAL, user-reported rather than independently certified. No structural theorem is promoted from the order comparison alone.
+
+The next authorized computation is the IA/GL decomposition for all p=3,n=4 cases, followed by the induced Aut(W) -> Aut(Q) image/kernel. The aim is to identify the exact layer responsible for the p^2 gap. Only after independent closure at p=3 will the same measurement be run at p=5.
+
+Audit: research/PAPER5_AUT_STRUCTURE_IA_GL_PRECHECK_2026-10-04.md.
