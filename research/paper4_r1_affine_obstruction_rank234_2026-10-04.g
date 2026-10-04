@@ -118,3 +118,5 @@ else
   Error("R1 certificate failed.");
 fi;
 QUIT;
+
+# R1 final trigger marker
