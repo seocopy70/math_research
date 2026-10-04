@@ -73,3 +73,6 @@ The Zassenhaus/Jennings--Lazard formula used in the finite-witness arguments is 
 A dedicated GitHub Actions workflow `.github/workflows/paper4-tex-build.yml` compiles `paper4/main.tex`, runs `pdfinfo`, computes SHA-256, and uploads the PDF audit artifact.
 
 **FINAL is prohibited until the build succeeds and the PDF artifact/hash are inspected.**
+
+
+_Last branch audit update._
