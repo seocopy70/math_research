@@ -1183,3 +1183,24 @@ In particular, the k=1 argument conflates ambient leading degree with internal S
 Separate scope warning: the phrase “rank >=2, nonzero quadratic initial relation” does not by itself guarantee a unique one-dimensional cup-radical line; the broader quadratic-family statement needs an explicit radical hypothesis or restriction to the audited control/stress scope.
 
 Classification: model lattice **PASS / LOCAL**; proposed Step 7 proof route **FAIL / CLOSED**; (TF_s) **OPEN / LOAD-BEARING**; all-s a=s vs. a=infinity separation **OPEN / LOAD-BEARING**; Paper 4 certified core **PASS / CLOSED — FROZEN**. Detailed audit: `research/PAPER4_ALL_S_TRANSFER_DEFECT_PROOF_AUDIT_2026-10-04.md`.
+
+
+## 2026-10-04 — Paper 4 freeze clarified: bounded s=3 boundary audit remains reopenable
+
+The Paper 4 manuscript remains **PASS / CLOSED — FROZEN** as a publication artifact, but the freeze is now explicitly understood as a production freeze caused by the unresolved truncation boundary, not as a prohibition on a bounded mathematical boundary audit. A small load-bearing breakthrough may justify reopening the manuscript if it materially strengthens the mathematical result.
+
+For the existing (p,s)=(3,3), W_28 model witness, the proposed S3 quotient idea was audited. The suggested homomorphism λ:K^ab→C_3 with λ(9N_a)≠0 is impossible, because every homomorphism to C_3 kills 3K^ab and hence 9N_a. Thus the C_3 formulation is **FAIL / CLOSED as stated**.
+
+The corrected target retains the 9-layer, e.g. K^ab/27K^ab → C_27 with N_a↦1, so 9N_a↦9≠0, or equivalently a C_3 functional defined only after passing to the layer 9K^ab/27K^ab and dividing by 9. This correction preserves the intended strategy: detect only the norm-direction witness rather than prove the full subgroup comparison.
+
+Authoritative detailed audit: research/PAPER4_S3_BOUNDARY_QUOTIENT_AUDIT_2026-10-04.md.
+
+Classification:
+- s=3 model Schreier witness: **PASS / LOCAL**;
+- original C_3-on-K^ab detector: **FAIL / CLOSED as stated**;
+- corrected 9-layer/C_27 projection: **OPEN / LOAD-BEARING**;
+- actual W_28 separation: **OPEN / LOAD-BEARING**;
+- general SC_s/TF_s: **OPEN / LOAD-BEARING**;
+- Paper 4 manuscript: **PASS / CLOSED — FROZEN, reopenable only on a bounded load-bearing mathematical result**.
+
+Next authorized action: test the corrected 9-layer projection against im(D_28(F)∩K→K^ab). If it annihilates the truncation image while detecting 9N_a, this yields the desired s=3 PASS/LOCAL separator; otherwise record the obstruction and stop.
