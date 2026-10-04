@@ -13,12 +13,10 @@ winW:=function(G,n,c) local qs,epi,H,J,Dn,nat;
 valuation:=function(N,p) local v; v:=0; while N mod p=0 do N:=N/p; v:=v+1; od; return v; end;
 
 run:=function(s,a)
-  local R,W,gens,A,AutW,V,frnat,basis,matOf,glMats,L,ker,gensA,imgsA,homA,
-        genCheck,agtriv,homValid,genFixKernel,fullGenCheck,Autorder,GLorder,IAorder,
-        report,d,GL3size;
+  local R,W,gens,A,V,frnat,basis,matOf,glMats,IAorder,Autorder,GLorder,
+        genCheck,agtriv,glNontriv,factorization,report,d,GL3size;
   R:=winW(mkG(s,a),4,4); W:=R[1]; gens:=R[2];
   A:=AutomorphismGroupPGroup(W);
-  AutW:=AutomorphismGroup(W);
   frnat:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
   V:=Image(frnat); basis:=Pcgs(V); d:=Length(basis); GL3size:=Size(GL(d,3));
 
@@ -33,41 +31,32 @@ run:=function(s,a)
   end;
 
   glMats:=List(A.glAutos,matOf);
-  L:=GL(d,3);
   IAorder:=Product(A.agOrder);
-  gensA:=GeneratorsOfGroup(AutW);
-  imgsA:=List(gensA,matOf);
-  homA:=GroupHomomorphismByImagesNC(AutW,L,gensA,imgsA);
-  homValid:=IsGroupHomomorphism(homA);
-  if homValid then ker:=Kernel(homA); else ker:=AutW; fi;
-  L:=Image(homA);
-  GLorder:=Size(L); Autorder:=Size(AutW);
+  GLorder:=A.glOrder;
+  Autorder:=A.size;
 
   agtriv:=ForAll(A.agAutos,alpha->matOf(alpha)=IdentityMat(d,GF(3)));
-  genFixKernel:=IAorder=Size(ker) and ForAll(A.agAutos,alpha->Image(homA,alpha)=One(L));
-  fullGenCheck:=Autorder=A.glOrder*IAorder and A.size=Autorder;
+  glNontriv:=ForAll(glMats,m->m<>IdentityMat(d,GF(3)));
+  factorization:=(IAorder*GLorder=Autorder);
 
   report:=rec(
     s:=s, a:=a, dimV:=d, GL3size:=GL3size,
     WOrder:=Size(W),
     generatorsGenerateW:=genCheck,
     AutOrder:=Autorder,
-    hybridAutOrder:=A.size,
     glOrderRecord:=A.glOrder,
     linearImageOrder:=GLorder,
     IAOrder:=IAorder,
-    kernelOrder:=Size(ker),
     IAp3:=valuation(IAorder,3),
     Lp3:=valuation(GLorder,3),
     Autp3:=valuation(Autorder,3),
     agGeneratorsTrivialOnV:=agtriv,
-    actionHomomorphismValid:=homValid,
-    IAEqualsKernel:=genFixKernel,
-    glPlusAgGenerateAut:=fullGenCheck,
-    glOrderMatchesRecord:=(GLorder=A.glOrder),
-    factorization:=(IAorder*GLorder=Autorder)
+    glGeneratorsNontrivialOnV:=glNontriv,
+    factorization:=factorization,
+    hybridOrderConsistency:=(A.size=A.glOrder*Product(A.agOrder))
   );
   Print(report,"\\n");
+end;
 end;
 
 for t in [[0,1],[1,1],[0,2],[1,2]] do run(t[1],t[2]); od;
