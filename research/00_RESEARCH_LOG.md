@@ -989,3 +989,29 @@ Required next execution checks remain:
 - |IA| |L| = |Aut(W)|.
 
 The available runtime cannot certify these until GAP/AutPGrp is executed in a suitable GAP environment. Classification: **OPEN / REPRODUCTION PENDING**. p=5 remains deferred.
+
+
+## 2026-10-04 — Paper 5 rank-2 negative control: p^2 universality closed
+
+A new rank-2 control computation was recorded and independently reproduced at p=3,n=4. Both windows have |W|=729, with
+
+- s=0,a=1: |Aut(W)|=2^2 3^9=78732;
+- s=1,a=1: |Aut(W)|=2^2 3^8=26244.
+
+Thus the exact automorphism-order ratio is 3, not 3^2.
+
+This closes the earlier conjecture that the observed p^2 split/non-split deficit is universal across rank. The p=3,n=4 rank-3 family may still have a genuine 3^2 defect; the rank-2 result is a negative control, not a refutation of that local phenomenon.
+
+The computation also confirms an important implementation correction: AutPGrp's agAutos are a soluble normal subgroup, not by definition the IA kernel. The IA kernel must be computed as ker(Aut(W)->Aut(W/Phi(W))) from the actual full automorphism group. A dedicated script exists at research/scripts/paper5_rank2_actual_ia_kernel.g; its numerical kernel/image output remains unrecorded and therefore OPEN.
+
+Classification:
+- rank-2 total-order computation: PASS / LOCAL;
+- universal p^2 gap: FAIL / CLOSED;
+- rank-2 IA/GL decomposition: OPEN / REPRODUCTION PENDING;
+- rank-3 p=3,n=4 IA localization: OPEN / LOAD-BEARING;
+- quotient action Aut(W)->Aut(Q): OPEN;
+- p=5 structural theorem: DEFERRED.
+
+Audit: research/PAPER5_RANK2_GAP_AUDIT_2026-10-04.md.
+
+Immediate next action: certify the actual Frattini kernel/image for the rank-3 p=3,n=4 four-case family, using the rank-2 result as a negative control.
