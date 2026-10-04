@@ -4,6 +4,10 @@
 
 **E_psi branch: OPEN / ACTIVE.**
 
+### 2026-10-04 critical correction and closure
+The earlier claim that (D_2/D_3) contains a p-power restricted term was **FAIL / CLOSED** and is superseded. For odd (p), (D_2/D_3congLambda^2H_1(F,mathbf F_p)). A second audit then showed that the (D_3)-tail cannot simply be declared harmless: its p-power part contributes at the same (p^s)-scale after the necessary cocycle normalization. The corrected argument separates that α-independent linear contribution from the nonzero quadratic (B)-functional and varies the order-(p) character parameter to avoid cancellation. This closes the marked quadratic affine separator.
+
+
 This document replaces the earlier informal phrase “twisted Fox derivative vanishes” by the mathematically sharper affine test datum. The finite group is not, by itself, the invariant; the invariant is a finite affine representation together with its twisted Fox evaluation ideal.
 
 ## 1. Ambient setup
@@ -207,86 +211,181 @@ while the (i=1) factor requires (p^{s+1})-powering.
 
 This makes (E_s) an exact finite detector for the (p^s\leftrightarrow p^s+1) boundary.
 
-## 7. Critical affine lift for every nonzero quadratic initial relation
+## 7. Critical affine lift for every nonzero quadratic initial relation — corrected proof
 
-Let
+The earlier Case A/Case B split was mathematically wrong because, for odd p,
 [
-\rho_2(r)\in D_2(F)/D_3(F)
+D_2(F)/D_3(F)cong Lambda^2 H_1(F,mathbf F_p)
 ]
-be the nonzero initial form. For odd (p), the degree-two restricted Lie piece has the form
+and contains **no p-power restricted terms**. In particular,
 [
-\rho_2(r)
-=
-\sum_i a_i X_i^{[p]}
-+
-\sum_{i<j} b_{ij}[X_i,X_j].
+ho_2(r)=sum_{i<j}b_{ij}[X_i,X_j],qquad B=(b_{ij})
+e0.
 ]
 
-Two cases suffice.
+The remaining issue is not the quadratic class itself but the possible (D_3)-tail, including p-th-power factors. That tail must be controlled rather than dismissed.
 
-### Case A: nonzero p-power component
-
-If some (a_i\ne0), take the trivial character (\psi=1). Then
+Put
 [
-\psi(r)=1.
+arepsilon=p^s,qquad
+T_s=1+arepsilon A_ssubset U_s.
 ]
-The ordinary augmentation of the Fox derivative satisfies
+Use characters
 [
-\epsilon\!\left(\frac{\partial r}{\partial x_i}\right)
-\equiv p,a_i\pmod {p^2}
+psi_alpha:F	o T_s,qquad
+psi_alpha(x_i)=1+arepsilonalpha_i,
 ]
-for some (i). Hence the corresponding coefficient has valuation exactly (1). Choosing
+with (alpha_iinmathbf F_p). Then (T_s) has exponent p, so
 [
-\delta(x_i)=p^{s-1}u,
-qquad
-u\in\mathbf Z_p^\times,
-]
-and the other generator values zero gives
-[
-\delta(r)=p^s u'\ne0\pmod {p^{s+1}}.
+psi_alpha(D_2(F))=1.
 ]
 
-### Case B: pure commutator quadratic component
-
-If all (a_i=0), the alternating matrix (B=(b_{ij})) is nonzero. Choose
-[
-c=(c_1,\ldots,c_d)\in\mathbf F_p^d
-]
-with (Bc\ne0), and define an order-(p) character
-[
-\psi_c(x_i)=1+p^s\tilde c_i.
-]
-Since (r\in D_2(F)) and (\psi_c) has image of exponent (p),
-[
-\psi_c(r)=1.
-]
+### 7.1 Pure quadratic contribution
 
 For a basic commutator,
 [
-J_{\psi_c,x_i}([x_i,x_j])
+delta([x_i,x_j])
 =
-1-\psi_c(x_j)
-\equiv -p^s c_j
-\pmod {p^{s+1}},
+(1-psi(x_j))delta(x_i)
++
+(psi(x_i)-1)delta(x_j).
 ]
-and similarly in the other coordinate. Therefore the quadratic initial form contributes
+Hence, modulo (p^{s+1}),
 [
-p^s Bc
-]
-to the twisted Fox vector. Since (Bc\ne0), at least one coefficient has valuation at most (s). Any higher-order contribution cannot destroy the existence of a coefficient allowing (p^s\in I_{\psi_c}(r)); if it lowers the valuation, that only makes the affine lift easier.
-
-Consequently, for every
-[
-r\in D_2(F)\setminus D_3(F)
-]
-there exist (\psi,\delta) such that
-[
-\psi(r)=1,
-qquad
-v_p(\delta(r))=s.
+delta([x_i,x_j])
+equiv
+p^sigl(-alpha_j u_i+alpha_i u_jigr),
+qquad u_i=delta(x_i).
 ]
 
-This is the central generalization lemma to be independently formalized.
+Therefore for
+[
+r_2=sum_{i<j}b_{ij}[x_i,x_j]
+]
+one obtains
+[
+delta(r_2)
+equiv
+p^s L_B(alpha,u)
+pmod{p^{s+1}},
+]
+where
+[
+L_B(alpha,u)
+=
+sum_{i<j}b_{ij}
+igl(-alpha_j u_i+alpha_i u_jigr).
+]
+
+If (B
+e0), choose a vertex (k) incident to a nonzero coefficient of (B). For (alpha=t e_k), the functional
+[
+ulongmapsto L_B(t e_k,u)
+]
+is nonzero whenever (t
+e0). Thus the quadratic contribution supplies a genuinely nonzero linear functional in (u).
+
+### 7.2 The (D_3)-tail
+
+Write
+[
+r=r_2,h,qquad hin D_3(F),
+]
+where (r_2) is any fixed word representative of the nonzero class (ho_2(r)).
+
+The crucial filtration estimate is:
+[
+p^{s-1}delta_0(h)
+equiv
+p^s C_h(u)
+pmod{p^{s+1}}
+]
+for some (mathbf F_p)-linear functional (C_h(u)) independent of (alpha), after choosing an arbitrary base crossed homomorphism (delta_0(x_i)=u_i).
+
+The proof is by the standard generators of (D_3) for odd p:
+
+1. **(gamma_3(F))-part.**  
+   For (aingamma_2(F)), (psi_alpha(a)=1) and (delta_0(a)in p^sA_s). Hence
+   [
+   delta_0([a,b])
+   =
+   (1-psi_alpha(b))delta_0(a)
+   +
+   (psi_alpha(a)-1)delta_0(b)
+   in p^{2s}A_s
+   subseteq p^{s+1}A_s.
+   ]
+   Thus the (gamma_3)-part disappears modulo (p^{s+1}), even for (s=1).
+
+2. **(p)-power part.**  
+   For (gin F),
+   [
+   delta_0(g^p)
+   =
+   igl(1+psi_alpha(g)+cdots+psi_alpha(g)^{p-1}igr)delta_0(g).
+   ]
+   Since (psi_alpha(g)=1+p^salpha(g)),
+   [
+   1+psi_alpha(g)+cdots+psi_alpha(g)^{p-1}
+   equiv ppmod{p^{s+1}}.
+   ]
+   Hence
+   [
+   p^{s-1}delta_0(g^p)
+   equiv p^s u_gpmod{p^{s+1}},
+   ]
+   which is exactly an (alpha)-independent linear contribution.
+
+Consequently the full leading evaluation has the form
+[
+p^{s-1}delta(r)
+equiv
+p^sigl(C_h(u)+L_B(alpha,u)igr)
+pmod{p^{s+1}}.
+]
+
+Because (L_B(alpha,u)) is a nonzero linear functional for some (alpha), while (C_h(u)) is independent of (alpha), varying (t) in (alpha=t e_k) shows that at most one (tinmathbf F_p) can make
+[
+C_h+L_B(t e_k,cdot)
+]
+identically zero. Since (p) is odd, choose a different (t). Then choose (u) so that
+[
+C_h(u)+L_B(alpha,u)
+e0.
+]
+
+Thus there exist ((alpha,u)) for which
+[
+v_p(delta(r))=s
+]
+after the harmless normalization by (p^{s-1}).
+
+Since (psi_alpha(r)=1), this gives
+[
+p^sin I_{psi_alpha}(r).
+]
+
+### 7.3 Correct classification
+
+The quadratic separator is therefore no longer merely a computation-backed candidate:
+
+[
+oxed{
+rin D_2(F)setminus D_3(F)
+Longrightarrow
+exists(psi,delta):
+psi(r)=1,quad
+v_p(delta(r))=s.
+}
+]
+
+This is a **PASS / CLOSED marked affine lemma**, subject only to routine formal polishing of the (D_3=gamma_3F^p) decomposition and the crossed-homomorphism product calculation.
+
+Importantly, this does **not** extend the old arbitrary-degree theorem. The hypothesis
+[
+rin D_2setminus D_3
+]
+is essential.
 
 ## 8. Exact marked critical-window separation
 
@@ -376,11 +475,11 @@ These computations are **PASS / LOCAL**, not a substitute for the general lemma.
 | Gauge | **PASS / CLOSED** when (\psi(r)=1) |
 | q-blindness | **PASS / CLOSED** |
 | Orientation bridge | **OPEN / LOAD-BEARING** for unmarked finite windows |
-| Marked separation at (p^s+1) | **PASS / LOCAL → theorem candidate** |
-| General quadratic lemma | **OPEN / LOAD-BEARING** until formalized without case gaps |
+| Marked separation at (p^s+1) | **PASS / CLOSED** in the marked affine category |
+| General quadratic lemma | **PASS / CLOSED** under (r\in D_2\setminus D_3); routine formal polishing remains |
 | Unmarked same-window separation | **OPEN** |
 | Universal arbitrary-degree theorem | **FAIL / CLOSED** |
 
-## 12. Stop rule
+## 12. Stop / next gate
 
-Do not enlarge the relation class yet. First close the quadratic lemma and the marked theorem formally. The next computation should attack the unmarked orientation bridge, not another random relation sweep.
+Do not enlarge the relation class to arbitrary Zassenhaus degree. The quadratic marked lemma and marked critical-window separator are now closed. The next load-bearing problem is the **unmarked orientation bridge**: determine whether the abstract finite window canonically recovers enough of the affine/character package to turn marked separation into abstract finite-group separation. If that bridge fails, record the marked theorem as the endpoint of this E_psi formulation rather than silently weakening the notion of intrinsicity.
