@@ -745,3 +745,62 @@ This does **not** prove G_{s,a} isomorphic to G_{t,b}, equality of finite window
 The route is closed. The remaining finite-window boundary must use information beyond the ordinary cohomology ring, if it is pursued at all. No repetition of ordinary H^* calculations is authorized.
 
 Authoritative audit: research/PAPER4_DIRECTION2_COHOMOLOGY_BLINDNESS_CLOSURE_2026-10-04.md.
+
+
+## 2026-10-04 — Direction 3 decision: ordinary cohomology is now discarded; filtered extension/lift becomes the active invariant layer
+
+The completed Direction 2 audit establishes **PASS / CLOSED** for ordinary mod-p cohomology in the declared odd-p stress family: the full ordinary cohomology ring is s/a-blind. Repeating H^*, cup-product, or ordinary quadratic-cohomology calculations is therefore no longer an authorized route to the hidden finite-window parameter.
+
+### Strategic conclusion
+
+**Ordinary cohomology is no longer a research target.** The remaining information must be sought one layer above the ordinary cohomology ring, in the **filtered extension/lift structure** of the finite Zassenhaus tower.
+
+The working object is not a new cohomology ring. The first intrinsic candidate is the filtered extension/lift groupoid over a critical window:
+[
+mathsf{Lift}_n(W_n)
+=
+left{
+widetilde W	woheadrightarrow W_n:
+widetilde W	ext{ is an admissible }(n+1)	ext{-level filtered lift}
+ight}/cong,
+]
+together with the kernel
+[
+K_n=D_n/D_{n+1}
+]
+and the induced conjugation/trivial-action data and extension class. Since
+([D_n,G]subseteq D_{n+1}), the successive Zassenhaus layer is central; however, the research target is the **actual filtered lift/extension package**, not merely its abstract class in ordinary (H^2).
+
+For the present problem the decisive question is:
+
+> Does the critical filtered lift/extension fiber over (W_{p^s}(G_s)) versus (W_{p^s+1}(G_s)) retain the hidden (p^s)-power relation even though the ordinary cohomology ring does not?
+
+### Required next gate
+
+Before computation, audit:
+1. **Object:** define the admissible filtered lift groupoid independently of the hidden q/s parameter.
+2. **Input:** specify exactly which filtration/layer/lift data are retained.
+3. **Functoriality:** prove invariance under finite-window isomorphism and admissible presentation changes.
+4. **Gauge:** quotient lift choices and generator changes correctly.
+5. **Orientation bridge:** determine whether the lift package carries the affine/orientation information without choosing a distinguished character.
+6. **q-blindness:** the recognition object must not contain q=p^a.
+7. **Separation:** test whether the extension/lift package differs for the a=s versus a=infinity boundary or for s versus t at the critical level.
+8. **Novelty:** distinguish the actual filtered lift invariant from merely restating an ordinary cohomology extension class.
+9. **Stop:** if the lift object collapses to the already-blind ordinary ring or is not intrinsic, close that formulation rather than adding ad hoc decorations.
+
+### Immediate research target
+
+The first concrete construction is the **one-step filtered extension**
+[
+1	o D_n/D_{n+1}	o W_{n+1}	o W_n	o1
+]
+viewed as a structured lift, with its p-power/commutator lifting data retained. The next attack should determine whether the hidden relation contributes a nontrivial, gauge-invariant defect to this lift package at (n=p^s).
+
+Classification:
+- ordinary cohomology route: **PASS / CLOSED and STOPPED**;
+- filtered extension/lift object: **OPEN / LOAD-BEARING**;
+- intrinsic extension defect: **OPEN**;
+- abstract same-window separation: **OPEN**;
+- arbitrary-degree degree-only theorem: **FAIL / CLOSED** and remains closed.
+
+This entry is the controlling decision for the next research branch.
