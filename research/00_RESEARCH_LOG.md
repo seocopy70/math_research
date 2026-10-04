@@ -1,3 +1,9 @@
+## 2026-10-04 — Paper 4 TeX reconciliation / build gate
+
+The manuscript branch now incorporates the final 2026-10-04 boundary correction: for the declared stress family (1\\le a<s<t), direct same-window order separation is CLOSED and gives the exact unmarked threshold (p^s+1). The remaining critical (a=s) versus (a=\\infty) boundary is OPEN for (s\\ge2), with ((p,s)=(3,1)) CLOSED. Ordinary mod-(p) cohomology blindness remains CLOSED. The degree-only arbitrary-relation upgrade remains FAIL/CLOSED as a target.
+
+A draft PR #11 is open for the TeX consolidation. A dedicated `paper4-tex-build` workflow compiles the manuscript, audits PDF metadata, computes SHA-256, and uploads the artifact. FINAL remains blocked until a successful build and PDF/hash inspection are obtained. The repository-wide citation-hygiene workflow is currently failing on pre-existing private-use Unicode characters in historical research files; this is not a Paper 4 TeX failure and is tracked separately.
+
 ## 2026-10-04 — Paper 4 TeX consolidation started
 
 A dedicated branch `paper4-tex-2026-10-04` has been created to convert the certified Paper 4 mathematics into a manuscript. The first `paper4/main.tex` consolidates only claims supported by the current authoritative state:
