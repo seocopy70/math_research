@@ -118,3 +118,5 @@ else
   Error("R1 certificate failed.");
 fi;
 QUIT;
+
+# CI retrigger marker: 2026-10-04T19:04+09:00
