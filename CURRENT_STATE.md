@@ -642,3 +642,8 @@ Classification:
 - IA/GL structural decomposition: OPEN / ACTIVE;
 - source of the p^2 gap: OPEN / LOAD-BEARING;
 - orientation-recovery dichotomy: DEFERRED / HIGH-RISK.
+
+
+## 2026-10-04 — Paper 5 Aut-orbit follow-up (user-reported)
+
+New supplied logs report a 9+9+54 Aut(W)-orbit split at (p,s,a)=(3,1,1), a single orbit at (3,1,2), and a single orbit with 3^10 complements at (3,2,1,n=10), plus a p=5 cross-prime Aut-order pattern. Classification: PASS / LOCAL pending repository reproduction. These results sharpen the invariant list but do not supersede the authorized p=3,n=4 IA/GL decomposition gate.
