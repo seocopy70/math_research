@@ -30,15 +30,15 @@ EvalWord := function(word,xs)
   return out;
 end;
 
-Comm := function(i,j)
+MyComm := function(i,j)
   return [-i,-j,i,j];
 end;
 
 Relator := function(d)
   local r;
-  r := Comm(1,2);
+  r := MyComm(1,2);
   if d = 4 then
-    r := Concatenation(r,Comm(3,4));
+    r := Concatenation(r,MyComm(3,4));
   fi;
   return r;
 end;
