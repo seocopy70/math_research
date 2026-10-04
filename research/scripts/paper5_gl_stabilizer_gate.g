@@ -22,8 +22,9 @@ Coord:=function(v,b)
 end;
 
 ImageMatrix:=function(alpha,frnat,basis)
-  local cols;
-  cols:=List(basis,i->Coord(Image(frnat,Image(alpha,basis[i])),basis));
+  local cols,j;
+  cols:=List([1..Length(basis)],j->
+    Coord(Image(frnat,Image(alpha,basis[j])),basis));
   return TransposedMat(Matrix(GF(3),cols));
 end;
 
