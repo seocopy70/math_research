@@ -923,3 +923,14 @@ Because the current repository did not yet contain the supplied scripts/logs for
 The next authorized computation is the IA/GL decomposition for all p=3,n=4 cases, followed by the induced Aut(W) -> Aut(Q) image/kernel. The aim is to identify the exact layer responsible for the p^2 gap. Only after independent closure at p=3 will the same measurement be run at p=5.
 
 Audit: research/PAPER5_AUT_STRUCTURE_IA_GL_PRECHECK_2026-10-04.md.
+
+
+## 2026-10-04 — Paper 5 Aut-orbit follow-up evidence (user-supplied logs)
+
+The user supplied three computational artifacts/results for the active Aut(W_n) branch (aut_common.g, aut3.log, p5aut.log). The artifacts are not yet committed to the current repository, so the following is recorded as USER-REPORTED / REPRODUCTION PENDING, not theorem-level evidence.
+
+Reported p=3 orbit structure: (3,1,1) has 72 admissible kernels in Aut-orbits 9+9+54; (3,1,2) has 9 kernels in one orbit; (3,2,1), n=10, has 81 kernels in one Aut(W_10)-orbit, with reported |Aut(W_10)|=2*3^30, |K|=3^9, and 3^10 complements per kernel. The two size-9 orbits in (3,1,1) are reported to be distinguished by pi(z) in Phi(Q) versus outside Phi(Q); a complete invariant explanation of 9/9/54 is still open.
+
+Reported p=5,n=6 orders: s=0,a=1 -> 2^2 5^109; s=1,a=1 -> 2^2 5^107; s=2,a=1 -> 2^2 5^109; s=1,a=2 -> 2^5 3 5^107; s=0,a=2 -> 2^7 3 5^109. This reproduces the reported p^2 p-primary split/non-split gap and shows s-dependence in total Aut order, but remains observational pending independent rerun.
+
+Interpretation: Aut-orbit structure is now a strong candidate structural layer, but the authoritative Paper 5 gate still requires the p=3,n=4 IA/GL decomposition and fixed-quotient action analysis before the larger n=10 orbit result is promoted. Classification: PASS / LOCAL candidate evidence; reproduction and structural factorization OPEN. Audit: research/PAPER5_AUT_ORBIT_FOLLOWUP_AUDIT_2026-10-04.md.
