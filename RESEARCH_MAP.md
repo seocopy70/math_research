@@ -129,3 +129,17 @@ The research question is whether this filtered extension/lift layer detects the 
 ## 2026-10-04 — filtered-extension extraction boundary
 
 The post-cohomology filtered-extension branch has been structurally audited. The one-step Zassenhaus extension is the correct intrinsic next layer, but an unmarked p-power/commutator defect does not survive section/lift gauge as a canonical scalar or orientation carrier. After gauge quotient, the full extension-equivalence class is simply the structured finite-window extension-isomorphism problem itself. Therefore the branch is **FAIL / CLOSED as an extraction/compression method**; the exact critical finite-window classification remains a separate **OPEN** boundary. No new candidate hunt is authorized to replace this result.
+
+
+## 2026-10-04 — Paper 5 architecture correction
+
+Paper 5 is no longer centered on abstract compression. The active program is concrete finite-group automorphism theory of W_n:
+
+Aut(W_n) -> GL(W_n/Phi(W_n)), with IA(W_n) as kernel,
+and, for admissible realizations, Aut(W_n) -> Aut(Q_n), together with radical/shear subgroups and kernel orbits.
+
+The former compression/trichotomy work remains historical boundary material: it showed why minimality/compression is category-dependent or tautological without a declared preserved-information package. It is not the main Paper 5 contribution.
+
+Current candidate contribution: identify the structural source of the observed p^2 automorphism-order gap between split and non-split windows. User-reported computations show the same p^2 gap at p=3,n=4 and p=5,n=6. This is PASS / LOCAL only until the IA/GL decomposition is independently reproduced.
+
+Next gate: p=3,n=4 IA kernel and GL-image decomposition; then fixed-quotient Aut(W)->Aut(Q) image/kernel; then cross-prime p=5,n=6 replication. Orientation-recovery dichotomy is deferred until this concrete theorem is obtained.
