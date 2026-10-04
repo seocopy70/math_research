@@ -1,0 +1,20 @@
+name: Paper 5 GL image structure
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/scripts/paper5_gl_image_structure.g'
+jobs:
+  gl-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and AutPGrp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-autpgrp
+      - name: Run GL image structure
+        run: |
+          gap -q research/scripts/paper5_gl_image_structure.g > paper5_gl_image_runtime.log 2>&1
+          cat paper5_gl_image_runtime.log
