@@ -210,3 +210,17 @@ For (s,a)=(1,2), the measured image is GL_2(3) of order 48. The correct interpre
 The next audit must reconstruct the actual matrices on V=W/Phi(W), identify a preserved line/flag/form or equivalent intrinsic datum, derive that datum from the defining power relation, and compare the resulting stabilizer as an embedded subgroup (equality/conjugacy), not only by order or abstract isomorphism. The p=5,n=6 test remains deferred until this gate closes.
 
 Classification: **OPEN / LOAD-BEARING** for the exact intrinsic stabilizer; the IA/GL localization itself is **PASS / LOCAL**.
+
+
+## 2026-10-04 — cross-prime stabilizer representation audit
+The p=5,n=6 gate is now using a unified representation pipeline in commit `ac98d279ed18b43da63f50fac665e88419971c43`. The previous ad-hoc `MatPerm` map is removed from the decisive comparison.
+
+The actual Frattini matrices are first coerced into the `GL(3,5)` matrix family. The actual and candidate matrix subgroups are then compared directly as a diagnostic. Independently, both are mapped by GAP's native faithful action homomorphism on `Elements(GF(5)^3)` with `OnRight`, and those permutation images are compared.
+
+This is intended specifically to resolve the (s,a)=(1,1) anomaly where order 20 and the printed generator matrices looked correct but the previous permutation equality was false.
+
+Status:
+- representation audit implementation: **PASS / REPOSITORY**;
+- (1,1) mathematical stabilizer equality: **OPEN / LOAD-BEARING** pending CI;
+- a=2 W_6 generation: **OPEN / EXECUTION BLOCKED**;
+- p=5 structural promotion: **PROHIBITED** until these gates close.
