@@ -823,3 +823,16 @@ The next load-bearing computation is the intrinsic GL/Frattini stabilizer gate a
 These are hypotheses, not yet certified structural formulas. Runtime equality/conjugacy is the required next evidence. The workflow has been extended to execute the gate. p=5,n=6 remains deferred.
 
 Classification: Paper 5 IA/GL localization PASS/LOCAL; intrinsic stabilizer OPEN/LOAD-BEARING; stabilizer execution PENDING.
+
+
+## 2026-10-04 — Paper 5 GL stabilizer gate: runtime defect corrected
+
+The first CI execution (run 37198757315) did not reach the mathematical equality test. GAP failed in `ImageMatrix` because `Coord` was called with `basis[i]` rather than the full basis list. This is classified **FAIL / CLOSED as a runtime attempt**, not as a mathematical counterexample. The script was corrected and committed as `f48c185c8086728aa1942f41315e102048aa23db`.
+
+Current status remains:
+- candidate intrinsic stabilizer formulas: **OPEN / LOAD-BEARING**;
+- actual embedded equality: **OPEN / EXECUTION PENDING**;
+- p=5,n=6: **DEFERRED**;
+- no stabilizer theorem is promoted from run 37198757315.
+
+Next action: rerun the corrected gate and classify the four exact embedded-equality tests.
