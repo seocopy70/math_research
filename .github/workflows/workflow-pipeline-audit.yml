@@ -50,3 +50,18 @@ jobs:
           name: finite-window-kummer-recognition-pdf
           path: paper/main.pdf
           if-no-files-found: error
+
+
+  paper4-od-gap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and ANUPQ
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap
+          echo 'deb http://archive.ubuntu.com/ubuntu resolute universe' | sudo tee /etc/apt/sources.list.d/resolute-universe.list
+          sudo apt-get update
+          sudo apt-get install -y gap-anupq
+      - name: Run Paper 4 Theorem OD API probe
+        run: gap -q research/scripts/paper4_od_gap_probe.g
