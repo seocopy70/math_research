@@ -27,5 +27,14 @@ jobs:
           Print("AutPGrp=", LoadPackage("autpgrp"), "\n");
           QUIT;
           EOF
+      - name: Patch permutation indexing for GAP 4.12
+        run: |
+          python3 - <<'PY'
+          p = "research/scripts/paper5_ia_gl_decomposition.g"
+          s = open(p).read()
+          s = s.replace("PositionSorted(elsV,v)", "Position(elsV,v)")
+          s = s.replace("L:=Group(glperms);", "if Length(glperms)=0 then L:=TrivialSubgroup(SymmetricGroup(Length(elsV))); else L:=Group(glperms); fi;")
+          open(p, "w").write(s)
+          PY
       - name: Run IA/GL decomposition
         run: gap -q research/scripts/paper5_ia_gl_decomposition.g
