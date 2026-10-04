@@ -647,3 +647,22 @@ Classification:
 ## 2026-10-04 — Paper 5 Aut-orbit follow-up (user-reported)
 
 New supplied logs report a 9+9+54 Aut(W)-orbit split at (p,s,a)=(3,1,1), a single orbit at (3,1,2), and a single orbit with 3^10 complements at (3,2,1,n=10), plus a p=5 cross-prime Aut-order pattern. Classification: PASS / LOCAL pending repository reproduction. These results sharpen the invariant list but do not supersede the authorized p=3,n=4 IA/GL decomposition gate.
+
+
+## 2026-10-04 — Paper 5 rank-2 negative control
+
+A reproduced p=3,n=4 rank-2 control gives |Aut(W)|=2^2*3^9 for the split case and 2^2*3^8 for the non-split case, hence an exact factor-3 gap.
+
+This **FAIL / CLOSED** the universality of the previously observed p^2 gap across ranks. It does not close the rank-3 p=3,n=4 case, where the p^2 pattern remains a local candidate.
+
+Implementation correction: AutPGrp agAutos is not identical by definition to the IA kernel. The actual IA kernel is the kernel of the full automorphism action on W/Phi(W). A dedicated rank-2 kernel audit exists, but its numerical output is still OPEN.
+
+Current Paper 5 gates:
+- rank-2 total-order negative control: **PASS / LOCAL**;
+- universal p^2-gap claim: **FAIL / CLOSED**;
+- rank-2 actual IA/GL decomposition: **OPEN / REPRODUCTION PENDING**;
+- rank-3 p=3,n=4 actual IA/GL decomposition: **OPEN / LOAD-BEARING**;
+- Aut(W)->Aut(Q) image/kernel: **OPEN**;
+- p=5 structural theorem: **DEFERRED**.
+
+Next action: certify the actual Frattini kernel/image for the rank-3 p=3,n=4 four-case family before any p=5 promotion.
