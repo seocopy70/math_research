@@ -86,3 +86,13 @@ The orientation-bridge no-go for a distinguished character is now refined. The a
 and the marked quadratic affine separator can be chosen inside it. Thus the correct intrinsic bridge is not a single orientation character.
 
 The remaining target is the orbit-invariant extension defect on this carrier. The carrier alone is redundant as a separator; it supplies the intrinsic domain on which the defect functional should live.
+
+
+## 2026-10-04 — correction: E_psi carrier proposal closed
+
+The previously proposed torsion-annihilator carrier
+\(\operatorname{Ann}_{H^1(W,\mathbf F_p)}(\operatorname{Tor}(W^{ab}))\)
+is **FAIL/CLOSED**: for a finite p-group window, W^{ab} is entirely torsion, so the annihilator is zero.
+
+Therefore no intrinsic nonzero character carrier has yet been established. The active E_psi boundary is:
+marked quadratic theorem PASS/CLOSED -> single-character bridge FAIL/CLOSED -> intrinsic carrier OPEN -> orbit-invariant extension defect OPEN.
