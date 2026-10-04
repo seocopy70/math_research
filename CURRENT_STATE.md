@@ -332,3 +332,22 @@ W_{p^s+1}(G_s(r))\not\cong W_{p^s+1}(G_t(r))
 as abstract unmarked finite groups. The sole remaining structural obstacle in this E_psi formulation is the **unmarked orientation/character bridge** from the abstract finite window to the affine representation package.
 
 Do not enlarge to arbitrary Zassenhaus degree. If the orientation bridge fails, the correct endpoint is a PASS/CLOSED marked theorem plus OPEN unmarked reconstruction.
+
+
+## 2026-10-04 — E_psi orientation-bridge audit
+
+The next load-bearing E_psi gate was attacked directly.
+
+- **Canonical single-character orientation bridge: FAIL / CLOSED.**
+- **Orbit/groupoid-valued affine package: OPEN / LOAD-BEARING.**
+- **Abstract unmarked same-window separation for general r in D_2\\D_3: OPEN.**
+
+For the rank-two control relation r=[x_1,x_2], determinant-one Nielsen automorphisms preserve the commutator relator up to conjugacy and induce the standard SL_2(F_p)-action on the order-p character space. The successful affine characters form the nonzero orbit. Since SL_2(F_p) is transitive on nonzero vectors, no individual nonzero psi can be canonically recovered from the abstract finite window.
+
+This is a genuine no-go for the route
+abstract window -> distinguished psi -> affine separator,
+not a failure of the affine E_psi definition itself.
+
+The surviving bridge must therefore be orbit-valued: an automorphism/gauge-invariant set or groupoid of successful affine representations, or an orbit-invariant evaluation/defect functional. The next authorized attack is to construct such an orbit-level defect and test whether it separates s from t. If it cannot be made intrinsic, the E_psi formulation ends at the marked theorem.
+
+Authoritative detail: research/EPSI_ORIENTATION_BRIDGE_AUDIT_2026-10-04.md.
