@@ -1048,3 +1048,30 @@ This is an execution trigger, **not yet a runtime PASS**: the available connecto
 An independent GAP documentation check confirms the hybrid automorphism representation semantics used by the audit: `glAutos` together with `agAutos` generate the automorphism group, `agAutos` form a soluble normal subgroup, and `glOrder` records the complementary order factor. This validates the intended decomposition interface, but does not replace execution of the kernel calculation.
 
 Classification: IA/GL execution **OPEN / REPRODUCTION PENDING**; execution trigger **PASS / REPOSITORY**. Next authorized evidence is the actual CI runtime log.
+
+
+## 2026-10-04 — Paper 5 decisive p=3,n=4 IA/GL runtime result
+
+The corrected IA/GL computation was executed in GitHub Actions with GAP 4.12.1 + AutPGrp (run 37188599141, commit 17b52825318478339d125de7dc099a7737913474). The calculation uses all hybrid automorphism generators (A.glAutos\cup A.agAutos) to form the actual Frattini image, rather than treating (A.glAutos) alone as the linear image.
+
+Results:
+
+- (s,a)=(0,1): |Aut(W)|=2^2 3^30, |Im|=108=2^2 3^3, |IA|=3^27.
+- (s,a)=(1,1): |Aut(W)|=2 3^28, |Im|=6=2 3, |IA|=3^27.
+- (s,a)=(0,2): |Aut(W)|=2^5 3^30, |Im|=864=2^5 3^3, |IA|=3^27.
+- (s,a)=(1,2): |Aut(W)|=2^4 3^28, |Im|=48=2^4 3, |IA|=3^27.
+
+W-generation, exact Frattini dimension, and |IA||Im|=|Aut(W)| all pass.
+
+This **reverses the previous IA-localization prediction**. The p^2 deficit is entirely on the GL/Frattini-image side: v3(|Im|) drops from 3 to 1 in the non-split cases, while v3(|IA|)=27 remains constant.
+
+The runtime also records agGeneratorsTrivialOnV=false in every case, so (agAutos\neq IA) and the earlier identification is FAIL/CLOSED. This agrees with the AutPGrp hybrid documentation: glAutos and agAutos jointly generate the automorphism group, and glOrder is a complementary hybrid factor, not the full Frattini-image order. citeturn2search0turn2search8
+
+Classification:
+- actual p=3 IA/GL localization: **PASS / LOCAL**;
+- p^2 gap = GL/Frattini-image defect: **PASS / LOCAL**;
+- IA as source: **FAIL / CLOSED**;
+- previous IA prediction 3^27 vs 3^25: **HISTORICAL / SUPERSEDED**;
+- structural explanation of image-order drop: **OPEN / LOAD-BEARING**.
+
+Next authorized action: compute/identify the actual image subgroups (L_{s,a}\le GL_3(3)), determine the stabilizer condition imposed by the defining relation, and only after that test p=5,n=6.
