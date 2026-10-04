@@ -647,3 +647,8 @@ Classification:
 ## 2026-10-04 — Paper 5 Aut-orbit follow-up (user-reported)
 
 New supplied logs report a 9+9+54 Aut(W)-orbit split at (p,s,a)=(3,1,1), a single orbit at (3,1,2), and a single orbit with 3^10 complements at (3,2,1,n=10), plus a p=5 cross-prime Aut-order pattern. Classification: PASS / LOCAL pending repository reproduction. These results sharpen the invariant list but do not supersede the authorized p=3,n=4 IA/GL decomposition gate.
+
+
+## 2026-10-04 — Paper 4 external roadmap Phase 1 active gate
+
+The external handoff roadmap is controlling this continuation. The active gate is Theorem OD GAP verification. The hand proof has passed an independent logical audit but remains PROVED-HAND / VERIFY. GAP/ANUPQ reproduction is OPEN / REPRODUCTION PENDING; Phase 2 and all later phases are blocked until this gate is resolved. The current CI branch/PR is paper4-general-phase1-od-gap / #13. No theorem-level promotion is allowed from the hand proof alone.
