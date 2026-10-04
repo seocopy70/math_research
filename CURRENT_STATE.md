@@ -285,3 +285,50 @@ as abstract unmarked finite groups. The missing implication is precisely the int
 - unmarked same-window separation: **OPEN**.
 
 Authoritative detail: `research/EPSI_INTRINSIC_DEFINITION_AUDIT_2026-10-04.md`.
+
+
+## 2026-10-04 — E_psi quadratic separator CLOSED after second audit
+
+The E_psi branch has now passed the previously load-bearing quadratic proof gate.
+
+### Correction
+For odd p,
+\[
+D_2(F)/D_3(F)\cong\Lambda^2H_1(F,\mathbf F_p),
+\]
+so the earlier inclusion of \(X_i^{[p]}\) terms in the degree-two initial form was **FAIL / CLOSED** and is superseded.
+
+### Closed lemma
+For every
+\[
+r\in D_2(F)\setminus D_3(F),
+\]
+write its nonzero quadratic class as
+\[
+\rho_2(r)=\sum_{i<j}b_{ij}[X_i,X_j],\qquad B\ne0.
+\]
+With \(A_s=\mathbf Z/p^{s+1}\), choose an order-p character \(\psi_\alpha:F\to1+p^sA_s\) and a crossed homomorphism. The quadratic contribution is
+\[
+\delta(r_2)\equiv p^sL_B(\alpha,u)\pmod{p^{s+1}},
+\]
+with \(L_B\) a nonzero linear functional for a suitable \(\alpha\).
+
+The \(D_3\)-tail cannot simply be discarded: its \(\gamma_3\)-part is \(0\pmod{p^{s+1}}\), while its p-power part contributes an \(\alpha\)-independent linear functional at the same normalized \(p^s\)-scale. Varying the character parameter \(\alpha=t e_k\) makes the nonzero quadratic functional avoid cancellation with that fixed tail. Hence there exist \((\psi,\delta)\) with
+\[
+\psi(r)=1,\qquad v_p(\delta(r))=s,
+\]
+so \(p^s\in I_\psi(r)\).
+
+Classification: **PASS / CLOSED** for the marked affine quadratic separator. This is strictly narrower than the failed arbitrary-degree theorem; no degree-only generalization is revived.
+
+### Consequence
+Because \(D_{p^s+1}(E_s)=1\), the affine representation gives a marked critical-window detector at \(n=p^s+1\), and it does not descend to \(W_{p^s}\). Thus the marked affine critical threshold is now a theorem-level result for all nonzero quadratic initial relations.
+
+### Remaining load-bearing boundary
+This still does **not** imply
+\[
+W_{p^s+1}(G_s(r))\not\cong W_{p^s+1}(G_t(r))
+\]
+as abstract unmarked finite groups. The sole remaining structural obstacle in this E_psi formulation is the **unmarked orientation/character bridge** from the abstract finite window to the affine representation package.
+
+Do not enlarge to arbitrary Zassenhaus degree. If the orientation bridge fails, the correct endpoint is a PASS/CLOSED marked theorem plus OPEN unmarked reconstruction.
