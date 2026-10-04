@@ -13,7 +13,7 @@ winW:=function(G,n,c) local qs,epi,H,J,Dn,nat;
 permOnV:=function(alpha,frnat,elsV)
   local imgs;
   imgs:=List(elsV,v->Image(frnat,Image(alpha,PreImagesRepresentative(frnat,v))));
-  return PermList(List(imgs,v->PositionSorted(elsV,v)));
+  return PermList(List(imgs,v->Position(elsV,v)));
 end;
 
 valuation:=function(N,p) local v; v:=0; while N mod p=0 do N:=N/p; v:=v+1; od; return v; end;
