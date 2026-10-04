@@ -37,7 +37,7 @@ MatPerm:=function(m)
   return PermList(List(Vecs,v->Position(Vecs,v*m)));
 end;
 
-E:=function(i,j,a)
+EMat:=function(i,j,a)
   local m;
   m:=IdentityMat(3,Fld); m[i][j]:=a*One(Fld); return m;
 end;
@@ -50,10 +50,10 @@ end;
 CandidateGroups:=function()
   local G,G02,G01,G12,G11;
   G:=GL(3,P);
-  G02:=Group(List([E(1,2,1),E(2,1,1),D(1,2),E(1,3,1),E(2,3,1),D(3,2)],MatPerm));
-  G01:=Group(List([D(1,2),E(1,2,1),E(1,3,1),E(2,3,1),D(3,2)],MatPerm));
-  G12:=Group(List([E(1,2,1),E(2,1,1),D(1,2),D(3,2)],MatPerm));
-  G11:=Group(List([D(1,2),E(1,2,1),D(3,2)],MatPerm));
+  G02:=Group(List([EMat(1,2,1),EMat(2,1,1),D(1,2),EMat(1,3,1),EMat(2,3,1),D(3,2)],MatPerm));
+  G01:=Group(List([D(1,2),EMat(1,2,1),EMat(1,3,1),EMat(2,3,1),D(3,2)],MatPerm));
+  G12:=Group(List([EMat(1,2,1),EMat(2,1,1),D(1,2),D(3,2)],MatPerm));
+  G11:=Group(List([D(1,2),EMat(1,2,1),D(3,2)],MatPerm));
   return [G01,G11,G02,G12];
 end;
 
