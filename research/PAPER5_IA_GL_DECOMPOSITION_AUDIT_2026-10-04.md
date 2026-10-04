@@ -197,3 +197,16 @@ Classification:
 - “split a=2 image is the full line stabilizer”: **OPEN / LOAD-BEARING** (order/structure match only);
 - exact intrinsic description of the non-split image: **OPEN / LOAD-BEARING**;
 - next gate: identify the defining-relation stabilizer condition inside (GL_3(3)), then test whether it explains the index-18 drop uniformly in a and p.
+
+
+## 2026-10-04 — structural gate after actual image computation
+
+The actual Frattini-image computation is now certified locally. The remaining question is no longer IA localization but an **embedded subgroup/stabilizer identification inside GL_3(3)**.
+
+For (s,a)=(0,2), the measured group has order 864 and abstract structure C_2×((C_3×C_3):GL_2(3)), matching the standard 1-space parabolic of GL_3(3). This is only an order/abstract-structure match: the computation has not yet proved that the actual embedded image is conjugate to that specific line stabilizer.
+
+For (s,a)=(1,2), the measured image is GL_2(3) of order 48. The correct interpretation is therefore a stronger linear restriction, but its intrinsic preserved datum is not yet identified.
+
+The next audit must reconstruct the actual matrices on V=W/Phi(W), identify a preserved line/flag/form or equivalent intrinsic datum, derive that datum from the defining power relation, and compare the resulting stabilizer as an embedded subgroup (equality/conjugacy), not only by order or abstract isomorphism. The p=5,n=6 test remains deferred until this gate closes.
+
+Classification: **OPEN / LOAD-BEARING** for the exact intrinsic stabilizer; the IA/GL localization itself is **PASS / LOCAL**.
