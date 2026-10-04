@@ -14,7 +14,7 @@ valuation:=function(N,p) local v; v:=0; while N mod p=0 do N:=N/p; v:=v+1; od; r
 
 run:=function(s,a)
   local R,W,gens,A,AutW,V,frnat,basis,matOf,glMats,L,ker,gensA,imgsA,homA,
-        genCheck,agtriv,genFixKernel,fullGenCheck,Autorder,GLorder,IAorder,
+        genCheck,agtriv,homValid,genFixKernel,fullGenCheck,Autorder,GLorder,IAorder,
         report,d,GL3size;
   R:=winW(mkG(s,a),4,4); W:=R[1]; gens:=R[2];
   A:=AutomorphismGroupPGroup(W);
@@ -37,9 +37,10 @@ run:=function(s,a)
   IAorder:=Product(A.agOrder);
   gensA:=GeneratorsOfGroup(AutW);
   imgsA:=List(gensA,matOf);
-  homA:=GroupHomomorphismByImages(A,L,gensA,imgsA);
+  homA:=GroupHomomorphismByImagesNC(AutW,L,gensA,imgsA);
+  homValid:=IsGroupHomomorphism(homA);
+  if homValid then ker:=Kernel(homA); else ker:=AutW; fi;
   L:=Image(homA);
-  ker:=Kernel(homA);
   GLorder:=Size(L); Autorder:=Size(AutW);
 
   agtriv:=ForAll(A.agAutos,alpha->matOf(alpha)=IdentityMat(d,GF(3)));
@@ -60,6 +61,7 @@ run:=function(s,a)
     Lp3:=valuation(GLorder,3),
     Autp3:=valuation(Autorder,3),
     agGeneratorsTrivialOnV:=agtriv,
+    actionHomomorphismValid:=homValid,
     IAEqualsKernel:=genFixKernel,
     glPlusAgGenerateAut:=fullGenCheck,
     glOrderMatchesRecord:=(GLorder=A.glOrder),
