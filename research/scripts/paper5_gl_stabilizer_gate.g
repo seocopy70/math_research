@@ -65,13 +65,16 @@ run:=function(s,a)
   basis:=[gens[2],gens[3],gens[1]];
   autGens:=Concatenation(A.glAutos,A.agAutos);
   Mats:=List(autGens,alpha->ImageMatrix(alpha,frnat,basis));
+  Print("matrix determinants = ",List(Mats,DeterminantMat),"\n");
+  if ForAny(Mats,m->DeterminantMat(m)=0) then
+    Error("non-invertible Frattini action matrix");
+  fi;
   actual:=Group(Mats);
   Cands:=CandidateGroups();
   expected:=[[0,1],[1,1],[0,2],[1,2]];
   i:=Position(expected,[s,a]); eq:=actual=Cands[i];
   Print("=== Paper5 GL stabilizer gate s=",s," a=",a," ===\n");
   Print("actual image order = ",Size(actual)," candidate order = ",Size(Cands[i]),"\n");
-  Print("actual structure = ",StructureDescription(actual),"\n");
   Print("candidate structure = ",StructureDescription(Cands[i]),"\n");
   Print("embedded equality in basis (x,y,z) = ",eq,"\n");
   if not eq then
