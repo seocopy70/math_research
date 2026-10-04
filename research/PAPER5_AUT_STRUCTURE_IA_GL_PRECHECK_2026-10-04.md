@@ -16,7 +16,7 @@ User-reported completed calculations:
 - \(p=5,n=6\): split \(a=1\): \(2^4 5^{109}\); non-split \((s=1,a=1)\): \(2^2 5^{107}\); split \(a=2\): \(2^7\,3\,5^{109}\); non-split \((s=1,a=2)\): \(2^5\,3\,5^{107}\).
 - \(p=3,n=4\): reported admissible-kernel counts/orbits: 81 in one split orbit; 9 in one \((1,2)\) non-split orbit; 72 in the \((1,1)\) non-split family, split into orbit sizes 9,9,54.
 
-These are **USER-REPORTED / NOT YET REPRODUCED FROM THE CURRENT REPOSITORY**. They are not theorem-level evidence until scripts/logs and an independent rerun are in the repository.
+The source scripts/logs are now repository-visible under `research/external/paper5_aut/`. They are **REPOSITORY ARTIFACT / REPRODUCTION PENDING**: the recorded outputs are preserved, but the new IA/GL decomposition has not yet been independently rerun in the current environment. No structural theorem is promoted from total orders alone.
 
 ## Pre-check
 
@@ -71,7 +71,7 @@ Orbit multiplicity is not itself a no-go. The \(p^2\) factor is not yet a theore
 
 ## 2026-10-04 — Follow-up orbit evidence incorporated
 
-User-supplied logs now report a finer orbit picture: 9+9+54 at (p,s,a)=(3,1,1), one orbit at (3,1,2), and one orbit at (3,2,1,n=10), with 3^10 complements per kernel in the latter case. These remain PASS / LOCAL pending source-artifact reproduction.
+The recovered repository logs report a finer orbit picture: 9+9+54 at (p,s,a)=(3,1,1), one orbit at (3,1,2), and one orbit at (3,2,1,n=10), with 3^10 complements per kernel in the latter case. These remain PASS / LOCAL pending source-artifact reproduction.
 
 The IA/GL gate is unchanged but its diagnostic payload is sharpened. For p=3,n=4, record not only |IA(W)| and |Im Aut(W)->GL(V)|, but also for each admissible-kernel orbit:
 - the induced orbit of pi(z) relative to Phi(Q);
