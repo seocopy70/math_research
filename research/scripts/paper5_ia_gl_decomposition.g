@@ -33,17 +33,17 @@ run:=function(s,a)
 
   glMats:=List(A.glAutos,matOf);
   L:=GL(d,3);
-  IA:=Subgroup(A,A.agAutos);
+  IAorder:=Product(A.agOrder);
   gensA:=GeneratorsOfGroup(A);
   imgsA:=List(gensA,matOf);
   homA:=GroupHomomorphismByImages(A,L,gensA,imgsA);
   L:=Image(homA);
   ker:=Kernel(homA);
-  IAorder:=Size(IA); GLorder:=Size(L); Autorder:=Size(A);
+  GLorder:=Size(L); Autorder:=Size(A);
 
   agtriv:=ForAll(A.agAutos,alpha->matOf(alpha)=IdentityMat(d,GF(3)));
-  genFixKernel:=Size(IA)=Size(ker) and ForAll(A.agAutos,alpha->Image(homA,alpha)=One(L));
-  fullGenCheck:=Size(Group(Concatenation(A.glAutos,A.agAutos)))=Autorder;
+  genFixKernel:=IAorder=Size(ker) and ForAll(A.agAutos,alpha->Image(homA,alpha)=One(L));
+  fullGenCheck:=Autorder=A.glOrder*IAorder;
 
   report:=rec(
     s:=s, a:=a, dimV:=d, GL3size:=GL3size,
