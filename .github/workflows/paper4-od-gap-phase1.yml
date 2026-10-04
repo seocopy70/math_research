@@ -1,0 +1,15 @@
+name: paper4-od-gap-phase1
+on:
+  push:
+    branches: [paper4-general-phase1-od-gap]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and ANUPQ
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-anupq
+      - name: Run API probe
+        run: gap -q research/scripts/paper4_od_gap_probe.g
