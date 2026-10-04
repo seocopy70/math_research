@@ -677,3 +677,21 @@ Classification:
 The exact intended intrinsic restriction on H must be recovered before Q can be reopened. Required tests are Object, functoriality, gauge invariance, non-redundancy versus exponent/abelianization, and a genuine link to transformed-relator data. If no such restriction exists, return to a genuinely nonabelian extension/orbit invariant rather than continuing Q enumeration.
 
 Detailed correction: research/00_RESEARCH_LOG.md, 2026-10-04 Q pre-check correction.
+
+
+## 2026-10-04 — Paper 4 explicit freeze / Paper 5 takeover
+
+By explicit research decision, **Paper 4 is now FROZEN**. Its certified core and all recorded negative/open boundaries remain valid, but no further Paper 4 computation is authorized in the current research cycle. In particular, the exact unmarked same-window separation and all-s transfer-defect boundary remain OPEN/LOAD-BEARING but are intentionally deferred; they are not silently promoted to CLOSED or FINAL.
+
+**Paper 5 is now the sole active branch.** The active target is the concrete automorphism structure of finite windows W_n: first independently certify
+1 -> IA(W) -> Aut(W) -> L <= GL(W/Phi(W)) -> 1,
+then localize the observed p^2 order gap, then analyze the fixed admissible quotient action Aut(W) -> Aut(Q). The 9+9+54 decomposition remains an orbit detector and must not be identified with the p^2 gap without proof.
+
+Immediate gate: execute and independently audit research/scripts/paper5_ia_gl_decomposition.g for all four p=3,n=4 cases. Required checks are agGeneratorsTrivialOnV=true, glOrderMatchesRecord=true, exact IA/kernel agreement, and |IA||L|=|Aut(W)|. Only after this gate passes is the quotient-action layer authorized, followed by the p=5,n=6 cross-prime check. The recorded agOrder values are predictions until the actual kernel/order calculation is certified.
+
+Classification:
+- Paper 4 certified core: **PASS / CLOSED — FROZEN**;
+- Paper 4 exact unmarked/all-s boundary: **OPEN / intentionally deferred**;
+- Paper 5 IA/GL decomposition: **OPEN / LOAD-BEARING**;
+- Paper 5 p^2-gap source: **OPEN**;
+- Paper 5 quotient-action layer: **DEFERRED pending IA/GL closure**.
