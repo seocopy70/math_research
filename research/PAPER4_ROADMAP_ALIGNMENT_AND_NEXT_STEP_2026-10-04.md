@@ -98,7 +98,7 @@ H∩D_k(W)
 **로드맵의 원래 구현 방식 L4/L5:** FAIL / 우선순위 낮음
 > 현재 상태에서 그대로 재개하는 것은 중복 가능성이 높다.
 
-**현재 최적 구현:** Q-invariant → p=3,s=1,r=x^3의 exhaustive transformed-tuple/Frattini-lift audit → nonabelian Magnus/PBW obstruction 추출 → Root-Capture 대체정리 정식화.
+**수정된 판단:** 현재 기록된 unrestricted Q는 nonabelian detector로 부적합하므로 위 계획을 즉시 실행하지 않는다. 먼저 Q의 H에 대한 intrinsic restriction을 복원해야 하며, 복원되지 않으면 Q는 폐쇄하고 L4/L5 또는 다른 genuinely nonabelian invariant로 돌아간다.
 
 즉, Q는 로드맵의 Theorem C를 폐기하는 것이 아니라 **현재까지의 실패를 반영해 Theorem C를 더 정확한 finite-group formulation으로 재구성한 것**이다.
 
@@ -120,9 +120,14 @@ H∩D_k(W)
 - Paper 4 certified core: **PASS / CLOSED**
 - marked quadratic affine detector: **PASS / CLOSED**
 - unmarked same-window separation: **OPEN / LOAD-BEARING**
-- Q invariant: **PASS / LOCAL evidence; OPEN as theorem**
+- Q invariant: **PASS / LOCAL as computation; FAIL / CLOSED as intended nonabelian separator under current unrestricted H definition**
 - Q nonabelian obstruction / Root-Capture: **OPEN / LOAD-BEARING**
 - external roadmap's unmarked Theorem C direction: **VALID at strategic level, superseded at implementation level**
-- next action: **p=3,s=1,r=x^3 transformed-tuple/Frattini-lift audit**
+- next action: **Q definition audit; if no intrinsic H restriction exists, close Q and resume genuinely nonabelian extension/orbit route**
 
 This document is a dated alignment record; it does not promote any local computation to theorem status.
+
+
+## 2026-10-04 — Q definition pre-check correction
+
+The planned transformed-tuple computation was stopped before execution. Under the current definition, Q-positive already implies an element of order greater than p^s, while H is otherwise unrestricted. Hence Q does not force a nonabelian obstruction and may collapse to coarse exponent information. The current Q is therefore FAIL / CLOSED as a nonabelian separator unless an intrinsic restriction on H is recovered. This correction supersedes the earlier immediate-Q execution plan.
