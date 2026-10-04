@@ -989,3 +989,23 @@ Required next execution checks remain:
 - |IA| |L| = |Aut(W)|.
 
 The available runtime cannot certify these until GAP/AutPGrp is executed in a suitable GAP environment. Classification: **OPEN / REPRODUCTION PENDING**. p=5 remains deferred.
+
+
+## 2026-10-04 — Paper 4 roadmap alignment and Q-direction decision
+
+External handoff roadmap `research/external/GENERAL_THEOREM_ROADMAP_HANDOFF_2026-10-04.md` was compared against `RESEARCH_MAP.md`, `CURRENT_STATE.md`, and the continuity protocol.
+
+- Roadmap-level next target remains correct: **unmarked same-window separation** in the S/hard region, beginning with the smallest control case and then generalization.
+- The roadmap's original L4/L5 implementation (extension-class/orbit separation) is no longer the best immediate route. One-step extension extraction, distinguished-single-psi bridge, naive Sp-orbit bridge, and two-step representation compression have already reached their recorded boundaries.
+- Current best implementation is the intrinsic finite-group predicate
+  \(Q(W):\exists(g,H),\ \langle g,H\rangle=W,\ 1\ne g^{p^s}\in H\).
+- Q evidence is **PASS / LOCAL**: p=3,s=1,r=x^3 was exhaustively tested (52,488 positive generating pairs in W_s, 0 in W_t); p=5,s=1,r=x^5,n=6 has 10,226 positives in W_s and 0 in W_t among 200,000 random pairs. The latter is sample evidence, not proof.
+- Frattini-lift reformulation gives a natural transformed-relator problem \(r'=\alpha^{-1}(r)\). Killing x yields the necessary abelian z-exponent condition \(v_p(\epsilon(r'))\le s\), reproducing the easy/high-valuation obstruction.
+- The remaining hard boundary is nonabelian: rule out all relevant transformed relators in the \(v_p(\bar r)\le s\) region. The earlier restricted-Lie root-capture attempt is invalid without control of the induced filtration \(H\cap D_k(W)\); a Root-Capture lemma or equivalent Magnus/PBW statement is still **OPEN / LOAD-BEARING**.
+
+**Decision:** the roadmap's Theorem-C direction is retained at the strategic level, but its implementation is updated to **Q-invariant → p=3,s=1,r=x^3 transformed-tuple/Frattini-lift audit → nonabelian Magnus/PBW obstruction → general lemma if possible**. Do not restart the already-closed L4/L5 extraction as a standalone carrier hunt.
+
+Detailed alignment record: `research/PAPER4_ROADMAP_ALIGNMENT_AND_NEXT_STEP_2026-10-04.md`.
+Classification: Q = **PASS / LOCAL**; Q theorem and nonabelian obstruction = **OPEN / LOAD-BEARING**.
+
+Immediate next authorized action: classify Q-positive p=3,s=1,r=x^3 pairs up to the relevant automorphism/Frattini-lift structure and inspect the transformed relator at the minimal Magnus/PBW degree needed to isolate the common obstruction.
