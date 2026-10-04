@@ -1,0 +1,56 @@
+name: Paper 5 matrix IA GL audit
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/paper5-ia-gl-matrix.yml'
+      - 'research/scripts/paper5_ia_gl_decomposition.g'
+  workflow_dispatch:
+
+jobs:
+  matrix-audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and AutPGrp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-autpgrp
+      - name: Run matrix IA/GL audit
+        run: |
+          cat > /tmp/p5matrix.g <<'GAP'
+          LoadPackage("autpgrp");
+          mkG:=function(s,a) local F; F:=FreeGroup("z","x","y");
+            if s=0 then return F/[(F.2^(3^a)*Comm(F.2,F.3))]; fi;
+            return F/[F.1^(3^s)*(F.2^(3^a)*Comm(F.2,F.3))^-1]; end;
+          winW:=function(G,n,c) local qs,epi,H,J,Dn,nat;
+            qs:=PQuotient(G,3,c); epi:=EpimorphismQuotientSystem(qs); H:=Image(epi);
+            J:=JenningsSeries(H); Dn:=TrivialSubgroup(H); if Length(J)>=n then Dn:=J[n]; fi;
+            nat:=NaturalHomomorphismByNormalSubgroup(H,Dn);
+            return [Image(nat),List(GeneratorsOfGroup(G),g->Image(nat,Image(epi,g)))]; end;
+          valuation:=function(N,p) local v; v:=0; while N mod p=0 do N:=N/p; v:=v+1; od; return v; end;
+          run:=function(s,a)
+            local R,W,gens,A,frnat,V,basis,mats,L,IA,agtriv,alpha,img,M,Autorder,GLorder;
+            R:=winW(mkG(s,a),4,4); W:=R[1]; gens:=R[2];
+            A:=AutomorphismGroupPGroup(W);
+            frnat:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
+            V:=Image(frnat); basis:=GeneratorsOfGroup(V);
+            mats:=List(A.glAutos,alpha->
+              Matrix(GF(3),List(basis,v->
+                ExponentsOfPcElement(V,Image(frnat,Image(alpha,PreImagesRepresentative(frnat,v)))))));
+            if Length(mats)=0 then L:=TrivialSubgroup(GL(Length(basis),3)); else L:=Group(mats); fi;
+            IA:=Group(A.agAutos);
+            agtriv:=ForAll(A.agAutos,alpha->
+              ForAll(gens,g->Image(frnat,Image(alpha,g))=Image(frnat,g)));
+            Autorder:=A.size; GLorder:=Size(L);
+            Print("CASE ",s,",",a," dim=",Length(basis),
+              " |Aut|=",Autorder," |IA|=",Size(IA),
+              " |L|=",GLorder," agTriv=",agtriv,
+              " v3(IA)=",valuation(Size(IA),3),
+              " v3(L)=",valuation(GLorder,3),
+              " factor=",Size(IA)*GLorder=Autorder,"\n");
+          end;
+          for t in [[0,1],[1,1],[0,2],[1,2]] do run(t[1],t[2]); od;
+          QUIT;
+          GAP
+          gap -q /tmp/p5matrix.g
