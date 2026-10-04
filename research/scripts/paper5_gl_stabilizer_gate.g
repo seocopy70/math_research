@@ -23,8 +23,11 @@ end;
 
 ImageMatrix:=function(alpha,frnat,basis)
   local cols,j;
+  # basis is a basis of V=W/Phi(W), so alpha must act on W-lifts,
+  # then be projected by frnat.  Applying alpha directly to V caused
+  # the GAP family mismatch in run 37199037517.
   cols:=List([1..Length(basis)],j->
-    Coord(Image(frnat,Image(alpha,basis[j])),basis));
+    Coord(Image(frnat,Image(alpha,basis[j])),List(basis,k->Image(frnat,k))));
   return TransposedMat(Matrix(GF(3),cols));
 end;
 
@@ -59,7 +62,7 @@ run:=function(s,a)
   A:=AutomorphismGroupPGroup(W);
   frnat:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
   # Work in the presentation basis (x,y,z), not an arbitrary PC basis.
-  basis:=[Image(frnat,gens[2]),Image(frnat,gens[3]),Image(frnat,gens[1])];
+  basis:=[gens[2],gens[3],gens[1]];
   autGens:=Concatenation(A.glAutos,A.agAutos);
   Mats:=List(autGens,alpha->ImageMatrix(alpha,frnat,basis));
   actual:=Group(Mats);
@@ -71,7 +74,12 @@ run:=function(s,a)
   Print("actual structure = ",StructureDescription(actual),"\n");
   Print("candidate structure = ",StructureDescription(Cands[i]),"\n");
   Print("embedded equality in basis (x,y,z) = ",eq,"\n");
+  if not eq then
+    Error("STABILIZER equality failure");
+  fi;
+  Print("STABILIZER s=",s," a=",a," PASS\n");
 end;
 
 for t in [[0,1],[1,1],[0,2],[1,2]] do run(t[1],t[2]); od;
+Print("STABILIZER_CERTIFICATE=PASS\n");
 QUIT;
