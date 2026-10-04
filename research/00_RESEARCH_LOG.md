@@ -1354,3 +1354,28 @@ Classification:
 - IA/GL decomposition already established previously: **unchanged, PASS / LOCAL**.
 
 Immediate next action: repair the GAP family mismatch by constructing the Frattini quotient action in a type-compatible way (or use the induced linear transformation supplied by AutPGrp), then enforce a hard certificate marker and nonzero GAP exit status so a runtime abort cannot produce a green CI run. Rerun all four embedded-equality tests before any p=5,n=6 promotion.
+
+
+## 2026-10-04 — Paper 5 GL stabilizer gate CLOSED
+
+The corrected GL/Frattini stabilizer gate was executed successfully in GitHub Actions run **37199751358**, commit `9a2eceb22b72b9d90711afa5e94f09cd7c44261c`.
+
+The gate used a faithful permutation action on the full vector space (V=mathbf F_3^3) to avoid GAP matrix-family incompatibilities. All four measured Frattini images were compared with the candidate embedded stabilizers, not merely by order:
+
+- ((s,a)=(0,1)): actual order (108), candidate order (108), embedded equality **true**.
+- ((s,a)=(1,1)): actual order (6), candidate order (6), embedded equality **true**.
+- ((s,a)=(0,2)): actual order (864), candidate order (864), embedded equality **true**.
+- ((s,a)=(1,2)): actual order (48), candidate order (48), embedded equality **true**.
+
+The runtime emitted all four PASS markers and `STABILIZER_CERTIFICATE=PASS`; CI conclusion was **Success**.
+
+The preceding runs 37199242472, 37199258667, 37199341484, 37199398512, and 37199468120 are historical runtime/debugging attempts and do not affect the mathematical status.
+
+Classification:
+- p=3,n=4 intrinsic embedded stabilizer equality: **PASS / CLOSED**.
+- candidate stabilizer formulas: **PASS / CLOSED** in the audited presentation basis.
+- p² gap localization remains **PASS / LOCAL**; this gate identifies the exact embedded GL-image subgroup responsible for the measured image-order drop, but does not by itself prove the general p- or parameter-uniform formula.
+- p=5,n=6 cross-prime replication: **AUTHORIZED / NEXT**.
+- no p=5 conclusion is promoted before its own executable gate.
+
+Implementation note: the stabilizer script now uses the faithful permutation action on (mathbf F_3^3), and the CI requires explicit four-case PASS markers plus `STABILIZER_CERTIFICATE=PASS`.
