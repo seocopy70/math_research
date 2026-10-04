@@ -1,6 +1,6 @@
 LoadPackage("autpgrp");
 
-P:=5; N:=6; C:=6; Fld:=GF(P);
+P:=5; N:=6; C:=7; Fld:=GF(P);
 
 mkG:=function(s,a) local F;
   F:=FreeGroup("z","x","y");
@@ -32,11 +32,6 @@ ImageMatrix:=function(alpha,frnat,basis)
   return List([1..3],i->List([1..3],j->M[i][j]));
 end;
 
-Vecs:=Elements(Fld^3);
-MatPerm:=function(m)
-  return PermList(List(Vecs,v->Position(Vecs,v*m)));
-end;
-
 EMat:=function(i,j,a)
   local m;
   m:=IdentityMat(3,Fld); m[i][j]:=a*One(Fld); return m;
@@ -50,15 +45,15 @@ end;
 CandidateGroups:=function()
   local G,G02,G01,G12,G11;
   G:=GL(3,P);
-  G02:=Group(List([EMat(1,2,1),EMat(2,1,1),D(1,2),EMat(1,3,1),EMat(2,3,1),D(3,2)],MatPerm));
-  G01:=Group(List([D(1,2),EMat(1,2,1),EMat(1,3,1),EMat(2,3,1),D(3,2)],MatPerm));
-  G12:=Group(List([EMat(1,2,1),EMat(2,1,1),D(1,2),D(3,2)],MatPerm));
-  G11:=Group(List([D(1,2),EMat(1,2,1)],MatPerm));
+  G02:=Group(EMat(1,2,1),EMat(2,1,1),D(1,2),EMat(1,3,1),EMat(2,3,1),D(3,2));
+  G01:=Group(D(1,2),EMat(1,2,1),EMat(1,3,1),EMat(2,3,1),D(3,2));
+  G12:=Group(EMat(1,2,1),EMat(2,1,1),D(1,2),D(3,2));
+  G11:=Group(D(1,2),EMat(1,2,1));
   return [G01,G11,G02,G12];
 end;
 
 run:=function(s,a)
-  local R,W,gens,A,frnat,basis,autGens,Mats,actual,Cands,expected,i,eq;
+  local R,W,gens,A,frnat,basis,autGens,Mats,actual,Cands,expected,i,eq,nontriv;
   R:=winW(mkG(s,a)); W:=R[1]; gens:=R[2];
   A:=AutomorphismGroupPGroup(W);
   frnat:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
@@ -68,18 +63,15 @@ run:=function(s,a)
   if ForAny(Mats,m->DeterminantMat(m)=0) then
     Error("non-invertible Frattini action matrix");
   fi;
-  actual:=Group(List(Mats,MatPerm));
+  nontriv:=Filtered(Mats,m->m<>IdentityMat(3,Fld));
+  actual:=CallFuncList(Group,nontriv);
   Cands:=CandidateGroups();
   expected:=[[0,1],[1,1],[0,2],[1,2]];
   i:=Position(expected,[s,a]); eq:=actual=Cands[i];
   Print("=== Paper5 p=5,n=6 GL stabilizer gate s=",s," a=",a," ===\n");
   Print("actual image order = ",Size(actual)," candidate order = ",Size(Cands[i]),"\n");
   Print("embedded equality in basis (x,y,z) = ",eq,"\n");
-  Print("actual structure = ",StructureDescription(actual),"\n");
-  Print("candidate structure = ",StructureDescription(Cands[i]),"\n");
-  Print("actual vector orbit sizes = ",List(Orbits(actual,[1..Length(Vecs)]),Length),"\n");
-  if s=1 and a=1 then Print("actual generator matrices = ",Mats,"\n"); fi;
-  Print("candidate vector orbit sizes = ",List(Orbits(Cands[i],[1..Length(Vecs)]),Length),"\n");
+  if not eq then Error("STABILIZER equality failure"); fi;
   Print("STABILIZER p=5 s=",s," a=",a," PASS\n");
 end;
 
