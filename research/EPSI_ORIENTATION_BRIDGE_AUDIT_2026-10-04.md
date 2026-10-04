@@ -126,3 +126,48 @@ Therefore the marked quadratic separator can be chosen inside the intrinsic carr
 **Classification:** intrinsic character carrier \mathcal A(W): **PASS / CLOSED** as a canonical object; existence of a successful marked affine character inside \mathcal A(W): **PASS / CLOSED** for r\in D_2\\D_3, modulo routine linear-algebra formalization.
 
 This is not yet unmarked separation. For t>s the carrier itself is also present, so the missing information is the orbit-invariant *defect attached to the extension relation*, not the character carrier alone.
+
+
+## 8. Critical correction — the proposed Tor-annihilator carrier is invalid as stated
+
+The preceding Section 7 is **FAIL / CLOSED and superseded**.
+
+The proposed object
+\[
+\mathcal A(W)=\operatorname{Ann}_{H^1(W,\mathbf F_p)}(\operatorname{Tor}(W^{ab}))
+\]
+cannot serve as a nonzero carrier when W is a finite p-group. Indeed W^{ab} is itself a finite p-group, hence
+\[
+\operatorname{Tor}(W^{ab})=W^{ab}.
+\]
+But
+\[
+H^1(W,\mathbf F_p)\cong\operatorname{Hom}(W^{ab},\mathbf F_p),
+\]
+and the evaluation pairing between H^1(W,F_p) and W^{ab} is nondegenerate on the finite elementary-p quotient. Therefore a character that annihilates all of Tor(W^{ab}) is the zero character:
+\[
+\operatorname{Ann}_{H^1(W,\mathbf F_p)}(W^{ab})=0.
+\]
+
+So the earlier claim
+
+> intrinsic character carrier A(W): PASS / CLOSED
+
+is false.
+
+The abelianization calculation written above does not rescue it. At the critical window the abelianization is finite, so every class is torsion in the ordinary abelian-group sense. The intended distinction was evidently between different pieces of a presentation-level or pro-p abelianization before finite truncation; that distinction was not encoded in the stated abstract finite-window object.
+
+### Consequence
+
+The successful marked character cannot currently be promoted to an intrinsic character carrier by this construction.
+
+The valid result remains only:
+
+- marked E_psi quadratic separator: **PASS / CLOSED**;
+- distinguished single-psi abstract bridge: **FAIL / CLOSED**;
+- proposed Tor-annihilator carrier: **FAIL / CLOSED**;
+- orbit/groupoid-valued extension defect: **OPEN / LOAD-BEARING**.
+
+A replacement carrier must be built from an actually nontrivial intrinsic structure of the finite window (for example a canonical filtration quotient, Bockstein/extension datum, or a functorially defined character subset), not from ordinary torsion annihilation of W^{ab}.
+
+This correction is a substantive mathematical correction, not merely a wording change.
