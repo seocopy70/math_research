@@ -523,3 +523,68 @@ This is a valid **PASS / CLOSED Zassenhaus-critical higher-jet separation**.
 However, it does not compare \(G_s(r)\) and \(G_t(r)\) for one fixed relation \(r\). It therefore does not close the exact unmarked same-window problem of the control family. Its significance is narrower: a finite window can intrinsically detect a higher filtered tail at its first visible degree, even when the quadratic initial form is unchanged.
 
 The earlier claim that this proves or disproves recovery of the marked E_\psi parameter \(s\) is not valid. The marked parameter is target-indexed; the higher-tail degree \(m\) is a property of the chosen relator.
+
+
+## 2026-10-04 — E_psi / critical-separation audit: proposed closure rejected
+
+A full audit of the session-level claim that the E_psi branch is now closed found a decisive filtration error and an unsupported automorphism-orbit step.
+
+### Decisive correction
+
+For the Zassenhaus filtration, if (c\in D_3\setminus D_4) and (p^m>3), then
+[
+D_{p^m}\subset D_3,
+]
+not (D_3\subset D_{p^m}). Hence for
+[
+r_A=[x_1,x_2],qquad r_B=r_Ac,qquad c\in D_3\setminus D_4,
+]
+the two relators do **not** have the same image modulo (D_{p^m}). Therefore the assertion that
+[
+W_{p^m}(G_A)\cong W_{p^m}(G_B)
+]
+follows from the filtration degree of (c) is false.
+
+What is valid is only the formal low-window statement: if (c\in D_k), then the two defining relators have the same image in (F/D_k(F)), so the corresponding presented quotients have the same presentation modulo (D_k). This does **not** imply non-isomorphism at (k+1); an abstract isomorphism may come from an automorphism of the free quotient.
+
+### Second correction: automorphism argument
+
+The statement “an automorphism preserves degree, therefore it cannot send a degree-2 element to degree-2 plus degree-3” is invalid. IA automorphisms act trivially on abelianization while changing higher filtered terms; Magnus generators include commutator transvections (x_i\mapsto x_i[x_j,x_k]). Thus preservation of the leading graded class does not rule out adding higher Zassenhaus/lower-central terms. Any claimed separation of (r_A) from (r_Ac) therefore requires an actual orbit calculation, not a degree argument.
+
+### Consequence
+
+The proposed general statement
+[
+c\in D_k\setminus D_{k+1}\Longrightarrow
+W_k(G_A)\cong W_k(G_B),W_{k+1}(G_A)\not\cong W_{k+1}(G_B)
+]
+is **FAIL/CLOSED as stated**. The first implication is presentation-level and valid; the second is not automatic.
+
+The specific pair
+[
+[x_1,x_2],quad [x_1,x_2][x_1,[x_1,x_2]]
+]
+does not establish a critical (p^m+1) separation. In particular, for (p^m>3) it is already different modulo (D_{p^m}) at the presentation level, and its abstract orbit under automorphisms remains a separate question.
+
+### E_psi boundary correction
+
+The statement “marked E_psi theorem has abstract content exactly equal to the intrinsic quadratic invariant B” is also too strong. What is established is only:
+- the marked theorem depends on a quadratic initial relation and an externally chosen target (E_s);
+- (s) is not extracted from (r_2);
+- no intrinsic single-character bridge has been constructed;
+- therefore the marked theorem does not currently supply an unmarked recovery of (s).
+
+This is **OPEN**, not FAIL/CLOSED. The possibility of an independent abstract invariant of the family (G_s(r)) remains unresolved.
+
+### Current classification after audit
+
+- marked quadratic E_psi theorem: **PASS/CLOSED (marked scope)**;
+- single canonical psi bridge: **FAIL/CLOSED**;
+- Tor-annihilator carrier: **FAIL/CLOSED**;
+- Sp-orbit universal bridge: **FAIL/CLOSED as stated**;
+- quadratic kernel-rank separation: **PASS/CLOSED**;
+- generic (D_k/D_{k+1}) critical separation theorem: **FAIL/CLOSED as stated**;
+- specific (G_s(r)\) vs (G_t(r)) abstract same-window separation: **OPEN/LOAD-BEARING**;
+- abstract unmarked shadow of the marked E_psi theorem: **OPEN**.
+
+This correction does not reopen the failed arbitrary-degree theorem. It restores the authoritative boundary that exact unmarked same-window separation is unresolved.
