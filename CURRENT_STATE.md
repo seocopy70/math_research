@@ -695,3 +695,11 @@ Classification:
 - Paper 5 IA/GL decomposition: **OPEN / LOAD-BEARING**;
 - Paper 5 p^2-gap source: **OPEN**;
 - Paper 5 quotient-action layer: **DEFERRED pending IA/GL closure**.
+
+## 2026-10-04 — Paper 5 IA/GL CI execution trigger
+
+The p=3,n=4 IA/GL decomposition gate has now been actively triggered on `main` (commit `573ad39e233208c880978b3bc2e85566f7d84d7c`) through the repository's GAP+AutPGrp workflow. The workflow definition is verified to execute the four-case script and upload the runtime log.
+
+No runtime result is promoted yet: the current GitHub connector cannot directly retrieve the push-triggered workflow run/log. Thus **IA/GL remains OPEN / REPRODUCTION PENDING**. The prior order-arithmetic localization remains **PASS / LOCAL-PREDICTED**, not theorem-level.
+
+Next evidence: actual CI runtime log. Only after it passes may the fixed-quotient `Aut(W) -> Aut(Q)` layer be opened.
