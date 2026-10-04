@@ -91,3 +91,38 @@ This is the correct next gate.
 Do not search for a preferred generator/character inside the rank-two control class. That would be presentation-dependent and mathematically non-intrinsic.
 
 The next authorized attack is orbit-level: formulate the affine defect as an automorphism/gauge-invariant object of the abstract finite window and test whether that object separates s from t. If no such orbit-level defect exists, close the E_psi formulation at the marked theorem.
+
+
+## 7. Intrinsic carrier salvage: torsion-annihilator subspace
+
+The single-character no-go suggests replacing a distinguished psi by the canonical subspace
+\[
+\mathcal A(W)=\operatorname{Ann}_{H^1(W,\mathbf F_p)}(T_W),
+\qquad
+T_W=\operatorname{Tor}(W^{ab}).
+\]
+
+This object is intrinsic to the abstract finite window and contains no presentation label or chosen generator.
+
+For the critical window of G_s(r), write the abelianization of r as
+\[
+\bar r=p^k a
+\]
+with a primitive vector a when \bar r\ne0, and k=\infty when \bar r=0. Since r\in D_2, k\ge1.
+
+At n=p^s+1,
+\[
+W_n(G_s(r))^{ab}
+\cong
+(\mathbf Z/p^{s+1})^{d+1}/\langle p^s z-p^k a\rangle.
+\]
+
+An order-p character with psi(z)=1 on the additive character coordinates replaced by alpha(z)=0 and alpha(a)=0 annihilates T_W in every case k<s, k=s, k>s, and k=\infty. The remaining question is whether alpha can also be chosen so that the nonzero quadratic alternating form B=\rho_2(r) is detected.
+
+Because B\ne0 is alternating, there exists a nonzero alpha in a^perp with B(alpha,-)\ne0. Otherwise a^perp would lie in rad(B), forcing the radical to have codimension at most one, impossible for a nonzero alternating form.
+
+Therefore the marked quadratic separator can be chosen inside the intrinsic carrier \mathcal A(W).
+
+**Classification:** intrinsic character carrier \mathcal A(W): **PASS / CLOSED** as a canonical object; existence of a successful marked affine character inside \mathcal A(W): **PASS / CLOSED** for r\in D_2\\D_3, modulo routine linear-algebra formalization.
+
+This is not yet unmarked separation. For t>s the carrier itself is also present, so the missing information is the orbit-invariant *defect attached to the extension relation*, not the character carrier alone.
