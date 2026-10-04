@@ -1,12 +1,6 @@
 # Paper 4 R1 independent GAP certificate
 # Verifies the same marked affine E_s obstruction mechanism in ranks 2,3,4.
 # Convention: [x,y] = x^-1*y^-1*x*y.
-#
-# E_s = A_s semidirect U_s, A_s=Z/p^(s+1), U_s=<1+p^s>.
-# A generator x_i is sent to (u_i, 1+p^s*alpha_i).
-# We search alpha and the coordinate cocycles u=e_i. Since the relator
-# evaluation is linear in the cocycle coordinates, one successful basis
-# vector proves existence of a cocycle with v_p(delta(r))=s.
 
 p := 3;
 s := 2;
@@ -64,22 +58,23 @@ VP := function(x)
 end;
 
 CheckRank := function(d)
-  local r,alpha,units,xs,j,u,ev,coeff,found, witness, target;
+  local r,alpha,units,xs,j,u,ev,found,witness,target,k;
   r := Relator(d);
   found := false;
   witness := fail;
 
   for alpha in Tuples([0..p-1],d) do
     units := List([1..d],j->(1+P*alpha[j]) mod M);
-    # psi(r)=1 is the multiplicative/unit-coordinate condition.
     xs := List([1..d],j->[0,units[j]]);
     ev := EvalWord(r,xs);
+
     if ev[2] = 1 then
       for j in [1..d] do
-        u := List([1..d],k->Int(k=j));
+        u := List([1..d],k->if k=j then 1 else 0 fi);
         xs := List([1..d],k->[u[k],units[k]]);
         ev := EvalWord(r,xs);
         target := ev[1] mod M;
+
         if target mod P = 0 and VP(target) = s then
           found := true;
           witness := rec(
@@ -95,6 +90,7 @@ CheckRank := function(d)
         fi;
       od;
     fi;
+
     if found then break; fi;
   od;
 
@@ -107,19 +103,17 @@ CheckRank := function(d)
         ", cocycle=e_",String(witness.cocycle_basis_index),
         ", delta(r)=",String(witness.delta_r),
         ", v_p=",String(witness.valuation),
-        ", psi(r)=",String(witness.psi_r),"
-");
+        ", psi(r)=",String(witness.psi_r),"\n");
   return witness;
 end;
 
-Print("Paper 4 R1 independent GAP certificate
-");
-Print("p=",p,", s=",s,", A=Z/",M,", critical translation p^s=",P,"
-");
+Print("Paper 4 R1 independent GAP certificate\n");
+Print("p=",p,", s=",s,", A=Z/",M,", critical translation p^s=",P,"\n");
+
 results := List([2,3,4],CheckRank);
+
 if ForAll(results,r->r.valuation=s and r.psi_r=1) then
-  Print("R1_CERTIFICATE=PASS
-");
+  Print("R1_CERTIFICATE=PASS\n");
 else
   Error("R1 certificate failed.");
 fi;
