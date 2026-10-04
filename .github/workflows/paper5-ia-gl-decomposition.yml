@@ -21,6 +21,7 @@ jobs:
         run: |
           gap -q research/scripts/paper5_ia_gl_decomposition.g > paper5_ia_gl_runtime.log 2>&1
           cat paper5_ia_gl_runtime.log
+          test -s paper5_ia_gl_runtime.log
       - name: Upload runtime log
         if: always()
         uses: actions/upload-artifact@v4
