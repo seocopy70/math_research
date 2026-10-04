@@ -804,3 +804,33 @@ Classification:
 - arbitrary-degree degree-only theorem: **FAIL / CLOSED** and remains closed.
 
 This entry is the controlling decision for the next research branch.
+
+
+## 2026-10-04 — filtered-extension extraction/no-go boundary CLOSED
+
+The post-cohomology Direction 3 was executed at the structural level rather than by another candidate hunt. The canonical one-step Zassenhaus extension
+\[
+1\to K_n=D_n/D_{n+1}\to W_{n+1}\to W_n\to1
+\]
+was fixed as the only active object.
+
+### Gate result
+- Object: **PASS / CLOSED**. The extension is canonical, q-blind, and functorial under filtered finite-window isomorphism.
+- Input: **PASS / CLOSED**. No hidden q=p^a, marked character, or presentation choice is inserted.
+- Gauge: **PASS / CLOSED**. Since [D_n,G]⊂D_{n+1}, the kernel is central. A section produces a 2-cocycle, and changing the section changes it by a coboundary. Hence a defect computed from a selected lift is not intrinsic unless it descends through this gauge action.
+- Orientation bridge: **FAIL / CLOSED** for the proposed scalar/carrier extraction. The unmarked extension contains no distinguished character/orientation. The marked E_psi construction does not supply an intrinsic bridge after the marking is forgotten.
+- q-blindness: **PASS / CLOSED**.
+- Separation: the full extension-equivalence class is not a new lower-level invariant; it is exactly the structured isomorphism class of W_{n+1}->W_n. Thus using the full package to separate the critical cases is equivalent to solving the original finite-window extension-isomorphism problem.
+
+### Independent structural check
+Standard central-extension theory identifies section changes with coboundaries and the intrinsic extension with its cohomology class. Zassenhaus layers additionally carry canonical restricted-Lie p-power/commutator operations. These facts validate the gauge analysis, but neither supplies the missing unmarked orientation bridge.
+
+### Classification
+**Filtered-extension extraction as a new canonical defect = FAIL / CLOSED.**
+
+This is a method-level no-go, not a proof that the critical a=s and a=infinity windows are isomorphic. The latter remains **OPEN** if one insists on exact finite-window classification. No further candidate hunting is authorized merely to avoid that boundary.
+
+Authoritative audit: research/PAPER4_FILTERED_EXTENSION_EXTRACTION_NO_GO_2026-10-04.md.
+
+### Stop decision
+Do not reopen ordinary cohomology, search for another carrier, invent another E_psi variant, or add ad hoc lift decorations. Further progress would require a genuinely new theorem giving a canonical quotient/factorization of the full extension-equivalence class. The current extraction branch is therefore closed at its legitimate boundary.
