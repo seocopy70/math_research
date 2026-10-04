@@ -613,3 +613,8 @@ Status:
 Immediate consequence: do not search for another carrier. The next legitimate mathematical step is a new factorization theorem, or a deliberate decision to leave the exact boundary open and formalize the certified Paper 4 theorem.
 
 Authoritative audit: research/PAPER4_REPRESENTATION_LAYER_GATE_RESULT_2026-10-04.md.
+
+
+## 2026-10-04 — Paper 4 manuscript/PDF freeze
+
+The certified Paper 4 results have been organized into a publication-style manuscript. The PDF artifact is verified at 11 pages with SHA-256 `e8de056175161ea8fe71e4f2c31c047f3f97cac7abdc21de81eb6df4584f446d`. The manuscript does not promote the superseded same-window order-jump argument. Mathematical status remains unchanged: certified core PASS/CLOSED; arbitrary-r degree-only theorem FAIL/CLOSED; marked quadratic affine detector PASS/CLOSED; unmarked same-window separation and the all-s a=s versus a=infinity boundary OPEN/LOAD-BEARING; s=2,3 Schreier witnesses PASS/LOCAL. Writing/PDF production is PASS/CLOSED.
