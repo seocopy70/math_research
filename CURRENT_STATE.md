@@ -809,3 +809,17 @@ The earlier GAP workflow failures are retained as historical runtime/certificate
 R1 is terminated. No further R1 reruns are required unless the mathematical certificate changes. This closure does not promote the marked result to unmarked finite-window separation, orientation recovery, or a general theorem.
 
 Next active Paper 5 task: derive the intrinsic stabilizer condition imposed by the defining relation on the GL/Frattini image at p=3,n=4, then compute its exact stabilizer and compare it with the measured image subgroup before any p=5,n=6 promotion.
+
+## 2026-10-04 — Paper 5 active gate after R1 closure
+
+R1 is PASS / CLOSED at the defined independent-reproduction level. Paper 5 is now the sole active branch.
+
+The next load-bearing computation is the intrinsic GL/Frattini stabilizer gate at p=3,n=4. A new GAP script, research/scripts/paper5_gl_stabilizer_gate.g, reconstructs the actual Frattini image in the presentation basis (x,y,z) and tests exact embedded equality against candidate stabilizers suggested by the defining relation:
+- (0,2): plane stabilizer <x,y>, order 864;
+- (0,1): flag <x> subset <x,y> with the mixed x^[3]/[x,y] scaling constraint, order 108;
+- (1,2): root relation z^[3]=[x,y], order 48;
+- (1,1): root relation z^[3]=x^[3][x,y], candidate S_3, order 6.
+
+These are hypotheses, not yet certified structural formulas. Runtime equality/conjugacy is the required next evidence. The workflow has been extended to execute the gate. p=5,n=6 remains deferred.
+
+Classification: Paper 5 IA/GL localization PASS/LOCAL; intrinsic stabilizer OPEN/LOAD-BEARING; stabilizer execution PENDING.
