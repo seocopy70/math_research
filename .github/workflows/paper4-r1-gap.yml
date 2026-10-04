@@ -22,8 +22,8 @@ jobs:
           sudo apt-get install -y gap
       - name: Run independent R1 certificate
         run: |
-          set -o pipefail
-gap -q research/paper4_r1_affine_obstruction_rank234_2026-10-04.g | tee r1-gap.log
+          set -euo pipefail
+          gap -q research/paper4_r1_affine_obstruction_rank234_2026-10-04.g | tee r1-gap.log
       - name: Upload certificate log
         uses: actions/upload-artifact@v4
         with:
