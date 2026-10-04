@@ -618,3 +618,27 @@ Authoritative audit: research/PAPER4_REPRESENTATION_LAYER_GATE_RESULT_2026-10-04
 ## 2026-10-04 — Paper 4 manuscript/PDF freeze
 
 The certified Paper 4 results have been organized into a publication-style manuscript. The PDF artifact is verified at 11 pages with SHA-256 `e8de056175161ea8fe71e4f2c31c047f3f97cac7abdc21de81eb6df4584f446d`. The manuscript does not promote the superseded same-window order-jump argument. Mathematical status remains unchanged: certified core PASS/CLOSED; arbitrary-r degree-only theorem FAIL/CLOSED; marked quadratic affine detector PASS/CLOSED; unmarked same-window separation and the all-s a=s versus a=infinity boundary OPEN/LOAD-BEARING; s=2,3 Schreier witnesses PASS/LOCAL. Writing/PDF production is PASS/CLOSED.
+
+
+## 2026-10-04 — Paper 5 redefinition: concrete Aut(W_n) structure
+
+The previous Paper 5 compression formalism is no longer the active research target: its trichotomy showed that compression is tautological until the preserved-information category is fixed. Paper 5 is now redefined as a concrete finite-group theory of Aut(W_n): IA kernel, image in GL(W_n/Phi(W_n)), induced action on Aut(Q_n), and the role of radical/shear automorphisms.
+
+User-reported computations give exact Aut(W) orders at (p,n)=(3,4) and (5,6). In both primes the non-split cases have p-part smaller by exactly p^2 than the corresponding split cases. At p=3,n=4, the reported admissible-kernel orbit counts are 81 (one split orbit), 9 (one (1,2) non-split orbit), and 72 (three (1,1) non-split orbits of sizes 9,9,54).
+
+These numerical results are PASS / LOCAL (user-reported, repository reproduction pending). They are not yet a theorem. Orbit multiplicity is not a no-go and the p^2 ratio is only an observed pattern.
+
+### Active Paper 5 gate
+The next authorized calculation is the IA/GL decomposition at p=3,n=4:
+1 -> IA(W) -> Aut(W) -> L <= GL(W/Phi(W)) -> 1,
+followed, for a fixed admissible quotient realization, by the image/kernel of Aut(W) -> Aut(Q). The decisive question is where the observed p^2 loss lives: IA, the linear image, or the quotient-action kernel/image.
+
+Only after the p=3,n=4 layer decomposition is independently closed will the same structural measurement be repeated at p=5,n=6. Full p=5 kernel enumeration is not authorized.
+
+Authoritative audit: research/PAPER5_AUT_STRUCTURE_IA_GL_PRECHECK_2026-10-04.md.
+
+Classification:
+- Paper 5 Aut-order evidence: PASS / LOCAL;
+- IA/GL structural decomposition: OPEN / ACTIVE;
+- source of the p^2 gap: OPEN / LOAD-BEARING;
+- orientation-recovery dichotomy: DEFERRED / HIGH-RISK.
