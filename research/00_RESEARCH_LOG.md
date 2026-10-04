@@ -1260,3 +1260,16 @@ The independent executable reproduction returned exactly:
 Therefore the finite marked affine calculation is independently reproducible and the rank-2/3/4 numerical witnesses are **PASS / LOCAL**. This is not a GAP-runtime certificate: GAP is not available in the current execution environment, and the connected GitHub Actions interface still has not exposed a successful corrected R1 workflow run. Hence the independent GAP certificate gate remains **OPEN**, and R1 as a repository-certified closure remains **OPEN / NOT CLOSED**.
 
 No unmarked finite-window separation, orientation recovery, or Paper 5 IA/GL conclusion is inferred from this computation.
+
+
+## 2026-10-04 — R1 GAP workflow audit: run 37197040921 is NOT a certificate PASS
+
+The supplied GitHub Actions run 37197040921 was inspected at job-log and artifact level. The workflow job itself reports success, but the GAP certificate did not complete. GAP 4.12.1 aborted at line 16 with: Error, Variable: 'InverseMod' must have an assigned value during AffInv, so no rank-2/3/4 PASS lines and no R1_CERTIFICATE=PASS were produced. The uploaded artifact contains only the header and p=3, s=2, A=Z/27, critical translation p^s=9 followed by the GAP error.
+
+This exposes a CI robustness defect: gap -q file | tee r1-gap.log returned a successful shell status despite GAP entering its read-eval loop and aborting the file, so set -o pipefail did not turn the GAP semantic failure into a failed workflow. Therefore:
+- run 37197040921: FAIL / CLOSED as a GAP certificate attempt (runtime source defect);
+- mathematical/local rank-2/3/4 reproduction: PASS / LOCAL;
+- corrected GAP certificate: OPEN / EXECUTION PENDING;
+- R1 final closure: OPEN / NOT CLOSED.
+
+The immediate fix is to replace the unavailable InverseMod call by a GAP-supported modular inverse implementation and harden the workflow to require the literal certificate markers (R1 rank-2 PASS, R1 rank-3 PASS, R1 rank-4 PASS, R1_CERTIFICATE=PASS) before the job can succeed.
