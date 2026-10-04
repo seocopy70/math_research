@@ -1246,3 +1246,17 @@ Classification at this recording point:
 - marked rank-2/3/4 local affine computation: **PASS / LOCAL**;
 - corrected CI certificate: **OPEN / EXECUTION PENDING**;
 - R1 closure: **OPEN / NOT CLOSED**.
+
+
+## 2026-10-04 — R1 independent executable cross-check (local runtime)
+
+The R1 finite affine certificate was independently re-executed outside the repository GAP runtime using a literal reimplementation of the certificate's arithmetic: p=3, s=2, M=27, affine multiplication/inversion modulo 27, the same commutator convention [x,y]=x^-1 y^-1 x y, the same relators in ranks d=2,3,4, and the same exhaustive search over alpha in F_3^d and cocycle basis vectors e_j.
+
+The independent executable reproduction returned exactly:
+- d=2: alpha=(0,1), e_1, delta(r)=18, v_3(delta)=2, psi(r)=1;
+- d=3: alpha=(0,1,0), e_1, delta(r)=18, v_3(delta)=2, psi(r)=1;
+- d=4: alpha=(0,0,0,1), e_3, delta(r)=18, v_3(delta)=2, psi(r)=1.
+
+Therefore the finite marked affine calculation is independently reproducible and the rank-2/3/4 numerical witnesses are **PASS / LOCAL**. This is not a GAP-runtime certificate: GAP is not available in the current execution environment, and the connected GitHub Actions interface still has not exposed a successful corrected R1 workflow run. Hence the independent GAP certificate gate remains **OPEN**, and R1 as a repository-certified closure remains **OPEN / NOT CLOSED**.
+
+No unmarked finite-window separation, orientation recovery, or Paper 5 IA/GL conclusion is inferred from this computation.
