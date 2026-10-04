@@ -32,11 +32,12 @@ run:=function(s,a)
   projPos:=function(i) return Position(projReps,i); end;
   projPerms:=[];
   for p in autImages do
-    Add(projPerms,PermList(List(projReps,i->
+    Add(projPerms,PermList(List(projReps,function(i)
+      local j,k;
       j:=Position(elsV,Image(p,elsV[i]));
       k:=Position(elsV,elsV[j]^-1);
-      projPos(if j<k then j else k fi)
-    )));
+      if j<k then return projPos(j); else return projPos(k); fi;
+    end)));
   od;
   PP:=Group(projPerms);
   porb:=Orbits(PP,[1..Length(projReps)]);
