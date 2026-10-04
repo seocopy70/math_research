@@ -1,6 +1,7 @@
 name: Paper 5 IA/GL decomposition
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
