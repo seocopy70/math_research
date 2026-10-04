@@ -724,3 +724,17 @@ Classification:
 - Paper 4 manuscript: **PASS / CLOSED — FROZEN, reopenable only on a bounded load-bearing mathematical result**.
 
 Next authorized action: test the corrected 9-layer projection against im(D_28(F)∩K→K^ab). If it annihilates the truncation image while detecting 9N_a, this yields the desired s=3 PASS/LOCAL separator; otherwise record the obstruction and stop.
+
+
+## 2026-10-04 — Paper 4 R1 closure audit: rank-2/3/4 obstruction gate is not independently closed
+
+A requested R1 framing was audited against the authoritative Paper 4 state. The repository does not currently contain a certified Paper 4 gate proving that one identical obstruction mechanism has been independently GAP-verified in ranks 2, 3, and 4. The marked affine E_psi quadratic separator is theorem-level for every nonzero quadratic initial relation, but that is a marked representation result and does not supply the missing unmarked finite-window separation. Existing GAP material is concentrated in the separate Paper 5 automorphism program and historical rank-4 branches; it cannot be reused as Paper 4 R1 evidence.
+
+Classification:
+- rank-2/3/4 identical-obstruction R1: **OPEN / NOT CLOSED**;
+- marked quadratic E_psi obstruction: **PASS / CLOSED**;
+- unmarked same-window separation: **OPEN / LOAD-BEARING**;
+- Paper 4 certified core: **PASS / CLOSED — FROZEN**;
+- Paper 5 IA/GL: remains separate **OPEN / LOAD-BEARING**.
+
+No Paper 5 IA/GL computation is used to close Paper 4. No claim of rank-4 unification is promoted without an actual independent GAP certificate. This audit therefore does not justify a Paper 4 CLOSED/FINAL label; it preserves the existing authoritative boundary.
