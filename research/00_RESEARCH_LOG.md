@@ -1379,3 +1379,22 @@ Classification:
 - no p=5 conclusion is promoted before its own executable gate.
 
 Implementation note: the stabilizer script now uses the faithful permutation action on (mathbf F_3^3), and the CI requires explicit four-case PASS markers plus `STABILIZER_CERTIFICATE=PASS`.
+
+
+## 2026-10-04 — Paper 5 p=5,n=6 cross-prime gate: first audit boundary
+
+The authorized p=5,n=6 cross-prime stabilizer replication was executed, but it is **not closed**.
+
+Observed executable results:
+- In the first p=5,n=6 run (run 37199860256), the ((s,a)=(0,1)) case gave actual image order (2000), candidate order (2000), and embedded equality **true**.
+- The ((s,a)=(1,1)) case gave actual image order (20), candidate order (20), but the permutation-action equality test returned false. A subsequent diagnostic printed the nontrivial actual generator matrices as the expected diagonal/shear matrices, exposing an inconsistency between the raw matrix evidence and the permutation comparison. Therefore this is **not yet a mathematical failure**; it is an implementation/convention audit point.
+- The p=5,n=6 p-quotient computation for the (a=2) cases encountered the GAP collector limit when requesting class 6/7. A class-5 run is able to reach the first case but direct matrix-group construction then reports infinite size because of GAP matrix-family representation issues. No a=2 conclusion is promoted.
+
+Classification:
+- p=5,n=6 split (a=1) stabilizer replication: **PASS / LOCAL** (executable run).
+- p=5,n=6 non-split (a=1): **OPEN / LOAD-BEARING**; order (20) is reproduced, but embedded equality needs an independent representation check.
+- p=5,n=6 (a=2): **OPEN / EXECUTION BLOCKED** by p-quotient/collector and matrix-family runtime issues.
+- cross-prime uniform stabilizer theorem: **OPEN**.
+- p=5 promotion beyond this bounded gate: **DEFERRED**.
+
+Immediate next action: replace the ad hoc p=5 matrix/permutation conversion by a single faithful representation pipeline (preferably a GAP-native action homomorphism from the actual matrix group), and separately obtain W_6 for the (a=2) cases with an explicitly controlled p-quotient collector/order bound. Do not promote a p=5 structural theorem from the present partial run.
