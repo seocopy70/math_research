@@ -556,25 +556,21 @@ without an additional critical-survival hypothesis.
 \end{proposition}
 
 \begin{proof}
-Consider
-\[
-G=\langle z,x,y\mid z^3=[x,y]^3\rangle .
-\]
-The right-hand side has Zassenhaus degree \(6\), while the critical
-window for the root term \(z^3\) is \(W_4\).  Since
-\[
-[x,y]^3\in D_6(\F)\subseteq D_4(\F),
-\]
-the defining relation in \(W_4\) reduces to
-\[
-z^3=1.
-\]
-Thus the hypothesis \(\ordz(r)\ge2\) by itself does not ensure that the
-right-hand side survives in the critical layer.  The root term may
-still be visible; what fails is the claimed \emph{full-relation}
-visibility criterion based only on the order of \(r\).
+Take (r=z^p), which has Zassenhaus order (p).  Then
+[
+z^{p^s}=z^p
+]
+simplifies to
+[
+z^{p^s-p}=1.
+]
+The actual relator therefore has a lower (p)-power scale than the
+nominal root depth (p^s).  Its first nontrivial filtered contribution
+is already controlled by the degree-(p) term (z^p).  Hence the
+critical threshold cannot be inferred from the single datum
+(ordz(r)=p).  This gives the obstruction to the proposed
+degree-only arbitrary-(r) theorem.
 \end{proof}
-
 \begin{remark}
 This counterexample does not disprove all possible arbitrary-$r$
 theorems.  It shows that the correct hypothesis must control the
