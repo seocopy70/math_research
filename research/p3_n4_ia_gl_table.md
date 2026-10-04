@@ -69,3 +69,16 @@ The authoritative external interface has now been recovered at `research/externa
 Executable follow-up: `research/scripts/paper5_ia_gl_decomposition.g`.
 
 The table remains OPEN until that script is independently rerun and the four p=3,n=4 decompositions are certified.
+
+
+## 2026-10-04 — IA/GL gate closed locally; stabilizer gate remains active
+
+The four p=3,n=4 cases now have independently executed actual Frattini images and IA kernels. Replace the earlier prediction status as follows:
+
+- actual L_{s,a} and IA(W): **PASS / LOCAL**;
+- |IA|=3^27 in all four cases: **PASS / LOCAL**;
+- p^2 gap on GL/Frattini-image side: **PASS / LOCAL**;
+- agAutos = IA: **FAIL / CLOSED**;
+- exact intrinsic stabilizer/embedding: **OPEN / LOAD-BEARING**.
+
+Do not infer the line-stabilizer claim from order alone. The next table columns to populate are the actual matrices, preserved linear datum, computed stabilizer, and embedded-subgroup comparison. Cross-prime p=5,n=6 remains deferred.
