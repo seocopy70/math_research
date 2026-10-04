@@ -22,13 +22,12 @@ Coord:=function(v,b)
 end;
 
 ImageMatrix:=function(alpha,frnat,basis)
-  local cols,j;
+  local cols,j,M;
   # basis is a basis of V=W/Phi(W), so alpha must act on W-lifts,
   # then be projected by frnat.  Applying alpha directly to V caused
   # the GAP family mismatch in run 37199037517.
   cols:=List([1..Length(basis)],j->
     Coord(Image(frnat,Image(alpha,basis[j])),List(basis,k->Image(frnat,k))));
-  local M;
   M:=TransposedMat(Matrix(GF(3),cols));
   return List([1..3],i->List([1..3],j->M[i][j]));
 end;
