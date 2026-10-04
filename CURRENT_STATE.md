@@ -792,3 +792,8 @@ Classification:
 - Paper 5 IA/GL: completely separate and unchanged.
 
 No Paper 5 IA/GL evidence is used here.
+
+
+## 2026-10-04 — R1 GAP run 37197040921 audit correction
+
+The supplied GitHub Actions run 37197040921 was inspected directly. Although the job conclusion is success, the GAP certificate is not valid: GAP 4.12.1 aborts at line 16 because InverseMod is unassigned. The artifact contains no rank-2/3/4 PASS lines and no R1_CERTIFICATE=PASS. The shell workflow also lacks semantic-output validation, so GAP's read-eval abort did not fail the job. Classification: run 37197040921 = FAIL/CLOSED as certificate attempt; rank-2/3/4 local affine reproduction = PASS/LOCAL; corrected GAP certificate = OPEN; R1 = OPEN/NOT CLOSED.
