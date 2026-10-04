@@ -1,0 +1,31 @@
+name: Paper 5 p=5 n=6 GL stabilizer cross-prime gate
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/scripts/paper5_gl_stabilizer_p5n6_gate.g'
+      - '.github/workflows/paper5-gl-stabilizer-p5n6-gate.yml'
+jobs:
+  gl-stabilizer-p5n6:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and AutPGrp
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y gap gap-autpgrp
+      - name: Run p=5 n=6 stabilizer gate
+        run: |
+          set -euo pipefail
+          set +e
+          gap -q research/scripts/paper5_gl_stabilizer_p5n6_gate.g > paper5_gl_stabilizer_p5n6_runtime.log 2>&1
+          rc=$?
+          set -e
+          cat paper5_gl_stabilizer_p5n6_runtime.log
+          test "$rc" -eq 0
+          for pair in "s=0 a=1" "s=1 a=1" "s=0 a=2" "s=1 a=2"; do
+            grep -q "STABILIZER p=5 $pair PASS" paper5_gl_stabilizer_p5n6_runtime.log
+          done
+          grep -q 'STABILIZER_P5_CERTIFICATE=PASS' paper5_gl_stabilizer_p5n6_runtime.log
