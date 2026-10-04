@@ -75,3 +75,14 @@ marked quadratic E_psi theorem -> intrinsic orientation bridge -> abstract finit
 The marked quadratic E_psi theorem is now closed, but the first proposed unmarked bridge is also closed negatively. In the rank-two control relation r=[x_1,x_2], the automorphism group acts transitively on the nonzero order-p character directions used by the affine separator. Hence no individual character psi can be intrinsically selected from the abstract window.
 
 The surviving structural target is an **orbit-valued affine defect/groupoid**, not a distinguished orientation character. The abstract same-window separation question remains OPEN until such an orbit-level invariant is constructed or ruled out.
+
+
+## 2026-10-04 — E_psi carrier refinement
+
+The orientation-bridge no-go for a distinguished character is now refined. The abstract critical window has a canonical character carrier
+\[
+\mathcal A(W)=\operatorname{Ann}_{H^1(W,\mathbf F_p)}(\operatorname{Tor}(W^{ab})),
+\]
+and the marked quadratic affine separator can be chosen inside it. Thus the correct intrinsic bridge is not a single orientation character.
+
+The remaining target is the orbit-invariant extension defect on this carrier. The carrier alone is redundant as a separator; it supplies the intrinsic domain on which the defect functional should live.
