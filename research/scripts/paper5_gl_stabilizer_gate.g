@@ -43,7 +43,7 @@ CandidateGroups:=function()
   # (s,a)=(1,2): preserve <x,y>, <z>, and impose z^[3]=[x,y]:
   # z-scalar equals determinant of the 2x2 block.
   G12:=Group(Filtered(els,function(m)
-    detA:=DeterminantMat(Submatrix(m,[1,2],[1,2]));
+    detA:=m[1][1]*m[2][2]-m[1][2]*m[2][1];
     return m[3][1]=0 and m[3][2]=0 and m[1][3]=0 and
            m[2][3]=0 and m[3][3]=detA;
   end),One(G));
