@@ -103,3 +103,8 @@ marked quadratic theorem PASS/CLOSED -> single-character bridge FAIL/CLOSED -> i
 The proposed Sp-orbit closure of the unmarked orientation bridge is **FAIL/CLOSED as stated**. Nonzero quadratic initial form does not imply nondegeneracy; rank-4 r_2=[x_1,x_2] is an explicit degenerate counterexample. The exponent parameter s is also unrelated to quadratic-form rank. Even in the nondegenerate symplectic subcase, transitivity only removes representative choice and does not provide an intrinsic defect separating s,t, while recovery of B from the abstract finite window remains unproved.
 
 Therefore abstract same-window separation remains **OPEN**. The correct next gate is an intrinsic filtration/extension/groupoid object of the abstract window, tested first on the degenerate rank-4 example.
+
+
+## 2026-10-04 — Direction 2 closed: ordinary cohomology blindness
+
+Direction 2 is now **PASS / CLOSED** at theorem level for the declared odd-p stress family. For every s>=1, finite a>=1, and a=infinity, the defining power terms lie in the third p-Zassenhaus term, so the quadratic commutator initial form is unchanged. Quadrelli, arXiv:2011.03233v3, Proposition 2.1 gives the full ordinary mod-p cohomology algebra: it is quadratic, H^k=0 for k>=3, and the H^1 cup product is determined entirely by the common commutator form. Thus ordinary H^bullet(-,F_p) is completely blind to s and a, including the a=s versus a=infinity boundary. This closes only the ordinary-cohomology route; group/window separation and higher filtered operations remain separate questions.
