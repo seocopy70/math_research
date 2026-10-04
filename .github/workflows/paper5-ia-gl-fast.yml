@@ -1,0 +1,31 @@
+name: Paper 5 IA GL fast audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/paper5-ia-gl-fast.yml'
+
+jobs:
+  fast:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-autpgrp
+      - name: Run reduced IA GL audit
+        run: |
+          python3 - <<'PY'
+          src="research/scripts/paper5_ia_gl_decomposition.g"
+          s=open(src).read()
+          s=s.replace("IAkernel,AutG,act,agtriv,", "agtriv,")
+          s=s.replace("GLorder,Autorder,alpha,d,report,GLsize,pred,dimVok,genCheck,fullGenCheck", "GLorder,Autorder,d,report,GLsize,pred,dimVok,genCheck")
+          s=s.replace("  AutG:=Group(Concatenation(A.glAutos,A.agAutos));\n  fullGenCheck:=(Size(AutG)=A.size);\n  act:=GroupHomomorphismByImagesNC(AutG,L,Concatenation(A.glAutos,A.agAutos),Concatenation(glperms,List(A.agAutos,alpha->permOnV(alpha,frnat,elsV))));\n  IAkernel:=Kernel(act);\n", "")
+          s=s.replace("    IAKernelOrder:=Size(IAkernel),\n    IAKernelMatchesAG:=(Size(IA)=Size(IAkernel)),\n", "")
+          s=s.replace("    fullAutGeneration:=fullGenCheck,\n", "")
+          s=s.replace("for t in [[0,1],[1,1],[0,2],[1,2]] do run(t[1],t[2]); od;", "for t in [[0,1],[1,1],[0,2],[1,2]] do run(t[1],t[2]); od;")
+          open("/tmp/p5fast.g","w").write(s)
+          PY
+          timeout 300 gap -q /tmp/p5fast.g
