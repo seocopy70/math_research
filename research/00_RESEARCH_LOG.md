@@ -834,3 +834,42 @@ Authoritative audit: research/PAPER4_FILTERED_EXTENSION_EXTRACTION_NO_GO_2026-10
 
 ### Stop decision
 Do not reopen ordinary cohomology, search for another carrier, invent another E_psi variant, or add ad hoc lift decorations. Further progress would require a genuinely new theorem giving a canonical quotient/factorization of the full extension-equivalence class. The current extraction branch is therefore closed at its legitimate boundary.
+
+
+## 2026-10-04 — correction: filtered-extension no-go was method-level, not tower-wide
+
+Adversarial review identified a real overreach in the immediately preceding stop. The prior result correctly closes the attempt to extract a canonical scalar defect from a chosen section/lift of the **unmarked one-step extension**, because section changes act by coboundaries and no distinguished orientation is present. But that does not justify a blanket no-go for all canonical representations of the same extension, nor for multi-step compatible tower data.
+
+### Corrected failure taxonomy
+A negative result must distinguish:
+1. **representation failure** — a chosen coordinate cannot expose information present in the fixed structure;
+2. **information failure** — the full declared structure itself lacks the target information;
+3. **detector failure** — the information may be present, but no functorial extraction operator has yet been found.
+Only (2) is a structural no-go for the declared object.
+
+### Pre-registered bounded reopening
+The branch is reopened only as a representation-layer feasibility gate, not as candidate hunting. The admissible structure layers are fixed in advance:
+- extension class;
+- induced module/conjugation structure;
+- canonical restricted p-power and commutator operations;
+- their adjacent-layer compatibility;
+- two-step/full finite tower extension compatibility.
+
+The minimum multi-step object is W_{p^s+2}->W_{p^s+1}->W_{p^s}. No new carrier, character, or ad hoc lift decoration may be introduced merely because one layer fails.
+
+### E_psi mechanism audit
+The marked affine detector succeeds through a combination of:
+- **filtered depth**: D_{p^s}(E_s) nontrivial but D_{p^s+1}(E_s)=1;
+- **orientation/representation**: psi and delta provide the directed affine evaluation of the hidden relation.
+
+Thus the one-step unmarked extension cannot be expected to reproduce the marked detector merely from filtered depth. The intrinsic target, if it exists, should be an affine representation **orbit/groupoid**, not a canonically selected single psi.
+
+Representability will be used only after defining the category of admissible filtered tower structures and the functor to affine representation groupoids; it will not be assumed as a slogan.
+
+### Classification
+- one-step scalar defect from unmarked extension: **FAIL / CLOSED**;
+- one-step/tower representation-layer feasibility: **OPEN / LOAD-BEARING**;
+- exact unmarked same-window separation: **OPEN**;
+- no arbitrary candidate hunt authorized.
+
+Authoritative pre-registration: research/PAPER4_REPRESENTATION_LAYER_PREREGISTRATION_2026-10-04.md.
