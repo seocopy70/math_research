@@ -219,3 +219,39 @@ This is a valid **PASS / CLOSED Zassenhaus-critical higher-jet separation**.
 However, it does not compare \(G_s(r)\) and \(G_t(r)\) for one fixed relation \(r\). It therefore does not close the exact unmarked same-window problem of the control family. Its significance is narrower: a finite window can intrinsically detect a higher filtered tail at its first visible degree, even when the quadratic initial form is unchanged.
 
 The earlier claim that this proves or disproves recovery of the marked E_\psi parameter \(s\) is not valid. The marked parameter is target-indexed; the higher-tail degree \(m\) is a property of the chosen relator.
+
+
+## 2026-10-04 — critical audit correction: higher-jet argument does not close the unmarked problem
+
+The exploratory conclusion was over-promoted in the final session analysis.
+
+1. For (r_A=[x_1,x_2]), (r_B=r_Ac) with (c\in D_3\setminus D_4), one cannot infer (W_{p^m}(G_A)cong W_{p^m}(G_B)) for (p^m>3). The filtration is descending:
+[
+D_{p^m}\subset D_3,
+]
+so (c\in D_3) does not imply (c\in D_{p^m}).
+
+2. The valid generic observation is only:
+[
+c\in D_k Longrightarrow 	ext{the two relators have the same image in }F/D_k.
+]
+This yields equality of the corresponding quotient presentations modulo (D_k), but not automatic abstract non-isomorphism at (k+1).
+
+3. The argument that an automorphism cannot send a leading degree-2 relator to degree-2 plus degree-3 is invalid. IA automorphisms act trivially on abelianization while changing higher commutator terms; Magnus' commutator-transvection generators provide explicit higher-term modifications. Therefore a separation claim must compute the actual automorphism orbit, not merely compare filtered degrees. External verification: standard descriptions of IA generators (x_imapsto x_i[x_j,x_k]) confirm this mechanism. 
+
+4. Consequently the proposed theorem
+[
+c\in D_k\setminus D_{k+1}
+Rightarrow W_k	ext{ same and }W_{k+1}	ext{ non-isomorphic}
+]
+is **FAIL/CLOSED as stated**.
+
+5. The claim that the marked E_psi theorem has abstract content “exactly (B)” is also too strong. The verified statement is weaker: the marked theorem supplies a quadratic marked separator; the target parameter (s) is externally chosen in (E_s), and no intrinsic bridge from an abstract finite window to that marked package has been established.
+
+### Correct boundary
+
+- marked quadratic E_psi theorem: **PASS/CLOSED (marked)**;
+- higher-tail pair (r_A=[x_1,x_2]), (r_B=[x_1,x_2]x_1^{p^m}): **PASS/CLOSED** for its stated abelianization separation;
+- generic filtered-tail critical separation theorem: **FAIL/CLOSED as stated**;
+- abstract recovery of (s) / (G_s(r)) versus (G_t(r)) same-window separation: **OPEN/LOAD-BEARING**;
+- intrinsic orbit/groupoid affine defect: **OPEN/LOAD-BEARING**.
