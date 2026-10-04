@@ -35,24 +35,24 @@ CandidateGroups:=function()
   local G,els,G02,G01,G12,G11,m,detA;
   G:=GL(3,3); els:=Elements(G);
   # (s,a)=(0,2): preserve the plane <x,y>.
-  G02:=Group(Filtered(els,m->m[3][1]=0 and m[3][2]=0 and m[3][3]<>0));
+  G02:=Group(Filtered(els,m->m[3][1]=0 and m[3][2]=0 and m[3][3]<>0),One(G));
   # (s,a)=(0,1): preserve <x> inside <x,y> and impose the mixed
   # x^[3] / [x,y] scaling condition, giving y-coefficient 1.
   G01:=Group(Filtered(els,m->m[2][1]=0 and m[3][1]=0 and
-                           m[3][2]=0 and m[2][2]=1));
+                           m[3][2]=0 and m[2][2]=1),One(G));
   # (s,a)=(1,2): preserve <x,y>, <z>, and impose z^[3]=[x,y]:
   # z-scalar equals determinant of the 2x2 block.
   G12:=Group(Filtered(els,function(m)
     detA:=DeterminantMat(Submatrix(m,[1,2],[1,2]));
     return m[3][1]=0 and m[3][2]=0 and m[1][3]=0 and
            m[2][3]=0 and m[3][3]=detA;
-  end));
+  end),One(G));
   # (s,a)=(1,1): impose the stronger root relation
   # x -> a x, y -> b x+y, z -> a z.
   G11:=Group(Filtered(els,m->m[2][1]=0 and m[3][1]=0 and
                            m[3][2]=0 and m[2][2]=1 and
                            m[1][3]=0 and m[2][3]=0 and
-                           m[3][3]=m[1][1]));
+                           m[3][3]=m[1][1]),One(G));
   return [G01,G11,G02,G12];
 end;
 
