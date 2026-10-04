@@ -27,7 +27,7 @@ run:=function(s,a)
   autImages:=List(autGens,alpha->permOnV(alpha,frnat,elsV));
   L:=Group(autImages);
   orb:=Orbits(L,[1..Length(elsV)]);
-  localProj:=Filtered([1..Length(elsV)],i->elsV[i]<>One(V) and i<=Position(elsV,-elsV[i]));
+  localProj:=Filtered([1..Length(elsV)],i->elsV[i]<>One(V) and i<=Position(elsV,elsV[i]^-1));
   projRep:=function(i) local j; j:=Position(elsV,-elsV[i]); if i<j then return i; else return j; fi; end;
   projSet:=Set(List(nonzero,projRep));
   projOrbits:=Orbits(L,projSet);
