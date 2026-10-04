@@ -1171,3 +1171,15 @@ No $p=5$ promotion is authorized before the intrinsic stabilizer gate closes.
 - $p=5,n=6$: **DEFERRED**.
 
 This entry supersedes any remaining order-arithmetic interpretation that places the $3^2$ deficit in IA.
+
+## 2026-10-04 — audit of proposed all-s a=s vs. a=∞ transfer-defect proof
+
+The proposed all-s proof was audited against the authoritative TF_s/SC_s boundary. It does **not** close the boundary. The model Schreier-lattice computation remains PASS / LOCAL: the class p^{s-1}(sigma-1)^{p-1}a_0 has the claimed nonzero model value. The fatal gap is Step 7: the bi-degree case split does not prove the required ambient-to-subgroup filtration comparison or the direct bound
+\[
+(TF_s):\quad \operatorname{im}(D_{p^s+1}(F)\cap K\to K^{ab})\subseteq p^sK^{ab}.
+\]
+In particular, the k=1 argument conflates ambient leading degree with internal Schreier degree and does not control cancellation or the associated-graded map for D_{p^s+1}(F)∩K. Step 8 only explains the internal abelianization consequence after this missing bridge has effectively been assumed. The fact that u^{p^{s-1}} has ambient weight p^s is valid for that element but does not constrain an arbitrary element of D_{p^s+1}(F)∩K.
+
+Separate scope warning: the phrase “rank >=2, nonzero quadratic initial relation” does not by itself guarantee a unique one-dimensional cup-radical line; the broader quadratic-family statement needs an explicit radical hypothesis or restriction to the audited control/stress scope.
+
+Classification: model lattice **PASS / LOCAL**; proposed Step 7 proof route **FAIL / CLOSED**; (TF_s) **OPEN / LOAD-BEARING**; all-s a=s vs. a=infinity separation **OPEN / LOAD-BEARING**; Paper 4 certified core **PASS / CLOSED — FROZEN**. Detailed audit: `research/PAPER4_ALL_S_TRANSFER_DEFECT_PROOF_AUDIT_2026-10-04.md`.
