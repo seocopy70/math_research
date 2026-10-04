@@ -588,3 +588,87 @@ This is **OPEN**, not FAIL/CLOSED. The possibility of an independent abstract in
 - abstract unmarked shadow of the marked E_psi theorem: **OPEN**.
 
 This correction does not reopen the failed arbitrary-degree theorem. It restores the authoritative boundary that exact unmarked same-window separation is unresolved.
+
+
+## 2026-10-04 — d=3, p=3 cubic-jet audit: Q3 computation and W4 separation
+
+A direct linear-algebra audit of the proposed rank-2 quadratic control case
+\[
+F=F(x_1,x_2,x_3),\qquad r_2=[x_1,x_2]
+\]
+confirms the following.
+
+1. The degree-3 free Lie space has dimension 8 over \(\mathbf F_3\). For
+\[
+\Delta:L_2\oplus L_2\to L_3,\qquad
+\Delta(u_1,u_2)=[u_1,x_2]+[x_1,u_2],
+\]
+one obtains \(\dim\operatorname{im}\Delta=6\). Moreover
+\[
+[r_2,V]\subseteq\operatorname{im}\Delta,
+\]
+so
+\[
+Q_3(r_2)=L_3/([r_2,V]+\operatorname{im}\Delta)
+\]
+has dimension 2. A valid quotient basis is represented by
+\[
+c_1=[x_3,[x_1,x_3]],\qquad c_2=[x_3,[x_2,x_3]].
+\]
+Independent tensor-model row reduction over \(\mathbf F_3\) gives rank 6 for \(\operatorname{im}\Delta\) and rank 8 after adjoining \(c_1,c_2\).
+
+2. The stabilizer of \(e_1\wedge e_2\) in \(GL_3(\mathbf F_3)\) has order
+\[
+|SL_2(\mathbf F_3)|\,|\mathbf F_3^\times|\,|\mathbf F_3^2|
+=24\cdot2\cdot9=432.
+\]
+The earlier 432 value is correct; the 864 value would correspond to incorrectly using \(GL_2\) rather than the determinant-one condition forced by fixing \(e_1\wedge e_2\).
+
+3. On \(Q_3\), the unipotent radical and the scalar \(\lambda\in\mathbf F_3^\times\) act trivially, while the \(SL_2\)-part acts naturally on \(\langle c_1,c_2\rangle\cong\mathbf F_3^2\). Hence the stabilizer has exactly two orbits:
+\[
+\{0\},\qquad Q_3\setminus\{0\}.
+\]
+
+4. The proposed \(W_4\)-separation is valid for the specific zero/nonzero comparison, but the original proof contained a filtration error. It is false that
+\[
+\gamma_3(F)^3\subseteq\gamma_4(F).
+\]
+The correct statement is
+\[
+D_4(F)=\gamma_4(F)\,\gamma_2(F)^3\,\gamma_3(F)^3\,F^9,
+\]
+so the lower-central degree-3 layer of the \(W_4\) quotient is taken modulo the appropriate 3-power relations; equivalently its relevant cubic layer is an \(\mathbf F_3\)-quotient of \(L_3\), not the integral \(L_3\) used in the draft argument.
+
+For
+\[
+r_A=[x_1,x_2],\qquad
+r_B=[x_1,x_2]c_1,
+\]
+the degree-3 normal-closure contribution is respectively
+\[
+\langle [[x_1,x_2],x_i]:i=1,2,3\rangle
+\]
+of dimension 3, and that same 3-space plus \(\langle c_1\rangle\), of dimension 4. Thus the corresponding cubic lower-central quotient has dimensions 5 and 4 (over \(\mathbf F_3\)). Therefore
+\[
+W_4(G_A)\not\cong W_4(G_B).
+\]
+At \(W_3\), both relators have the same image modulo the degree-3 tail, so
+\[
+W_3(G_A)\cong W_3(G_B).
+\]
+
+Classification: **PASS / CLOSED (specific \(d=3,p=3\), zero-vs-nonzero cubic orbit separation)**.
+
+Important boundary: this does **not** prove that every pair of distinct \(Q_3\)-orbits gives distinct \(W_4\)-isomorphism classes in general. In the present \(d=3,p=3\) example there are only two stabilizer orbits, and the zero/nonzero pair is separated by the cubic-layer dimension.
+
+The broad criterion
+\[
+W_n\text{-iso}\iff \operatorname{Aut}(F/D_n)\text{-orbit of the truncated relator}
+\]
+remains **OPEN**. An isomorphism between two quotient groups does not automatically imply that their defining kernels are conjugate under an automorphism of the universal truncated free group; this is a Nielsen/lifting issue and requires a separate theorem.
+
+Next authorized attack: formulate the general cubic-layer map
+\[
+Q_3(r_2)\longrightarrow \text{isomorphism invariants of }W_4
+\]
+carefully, first for arbitrary odd \(p\) and rank \(d\), before attempting the full \(Q_k\) tower.
