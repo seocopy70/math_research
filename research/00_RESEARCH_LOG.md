@@ -1227,3 +1227,22 @@ Therefore the correct promotion line is:
 **rank-2/3/4 local computation = PASS/LOCAL; GAP execution = OPEN; R1 closure = OPEN/NOT CLOSED.**
 
 No unmarked finite-window conclusion is inferred from these marked computations.
+
+
+## 2026-10-04 — R1 CI audit correction and executable rerun
+
+The previous R1 workflow result was re-audited directly at the GitHub Actions job-log level. Run 37194298028 did **not** certify the GAP calculation. The GAP source failed to parse because the certificate contained invalid GAP expression syntax at the inline conditional
+`List([1..d],k->if k=j then 1 else 0 fi)`, and the CI command block had an indentation error: the GAP pipeline command was outside the `run:` block. Therefore the apparent workflow success was not evidence of a GAP certificate.
+
+Corrections committed to `main`:
+- `research/paper4_r1_affine_obstruction_rank234_2026-10-04.g`: replaced the invalid inline conditional by explicit list initialization followed by `u[j] := 1`; commit `f8e462b0cefdeae286942e68e9214885cb66d364`.
+- `.github/workflows/paper4-r1-gap.yml`: corrected YAML indentation and enforced `set -euo pipefail` so GAP failure propagates through `tee`; commit `7e016a9b099161fdc1e05246e7122608e07129ec`.
+
+The corrected commits trigger a fresh R1 workflow. No PASS is promoted until the new run is independently inspected and the log contains the actual lines
+`R1 rank-2 PASS`, `R1 rank-3 PASS`, `R1 rank-4 PASS`, and `R1_CERTIFICATE=PASS` with a successful workflow conclusion.
+
+Classification at this recording point:
+- previous run 37194298028: **FAIL / CLOSED as a certificate attempt** (runtime source/CI defect; not a mathematical R1 failure);
+- marked rank-2/3/4 local affine computation: **PASS / LOCAL**;
+- corrected CI certificate: **OPEN / EXECUTION PENDING**;
+- R1 closure: **OPEN / NOT CLOSED**.
