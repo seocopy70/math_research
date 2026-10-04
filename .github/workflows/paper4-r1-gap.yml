@@ -1,0 +1,26 @@
+name: Paper 4 R1 rank-2/3/4 GAP certificate
+
+on:
+  push:
+    paths:
+      - research/paper4_r1_affine_obstruction_rank234_2026-10-04.g
+      - .github/workflows/paper4-r1-gap.yml
+  workflow_dispatch:
+
+jobs:
+  gap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap
+      - name: Run independent R1 certificate
+        run: |
+          gap -q research/paper4_r1_affine_obstruction_rank234_2026-10-04.g | tee r1-gap.log
+      - name: Upload certificate log
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper4-r1-gap-certificate
+          path: r1-gap.log
