@@ -1,6 +1,10 @@
 name: Paper 4 R1 rank-2/3/4 GAP certificate
 
 on:
+  pull_request:
+    paths:
+      - research/paper4_r1_affine_obstruction_rank234_2026-10-04.g
+      - .github/workflows/paper4-r1-gap.yml
   push:
     paths:
       - research/paper4_r1_affine_obstruction_rank234_2026-10-04.g
