@@ -370,3 +370,20 @@ This is intrinsic to the abstract finite window. For the critical quadratic fami
 **OPEN / LOAD-BEARING:** the carrier does not itself distinguish s from t. The remaining object must be an orbit-invariant extension defect attached to the power relation, not merely a canonical character subspace.
 
 Authoritative detail: research/EPSI_ORIENTATION_BRIDGE_AUDIT_2026-10-04.md.
+
+
+## 2026-10-04 — critical correction to E_psi carrier proposal
+
+The proposed carrier
+\[
+\mathcal A(W)=\operatorname{Ann}_{H^1(W,\mathbf F_p)}(\operatorname{Tor}(W^{ab}))
+\]
+is **FAIL / CLOSED** as stated.
+
+Reason: the finite window W is a finite p-group, so W^{ab} is finite p-primary torsion and therefore Tor(W^{ab})=W^{ab}. Since
+\[
+H^1(W,\mathbf F_p)\cong\operatorname{Hom}(W^{ab},\mathbf F_p),
+\]
+the annihilator of all W^{ab} is zero. Thus the earlier PASS/CLOSED claim for a nonzero intrinsic carrier was false.
+
+The marked E_psi theorem and the single-character symmetry no-go remain valid. The replacement intrinsic carrier is now OPEN and must use a genuinely nontrivial filtered/extension/Bockstein structure of W rather than ordinary torsion annihilation.
