@@ -1398,3 +1398,24 @@ Classification:
 - p=5 promotion beyond this bounded gate: **DEFERRED**.
 
 Immediate next action: replace the ad hoc p=5 matrix/permutation conversion by a single faithful representation pipeline (preferably a GAP-native action homomorphism from the actual matrix group), and separately obtain W_6 for the (a=2) cases with an explicitly controlled p-quotient collector/order bound. Do not promote a p=5 structural theorem from the present partial run.
+
+
+## 2026-10-04 — p=5,n=6 (1,1) stabilizer pipeline audit: unified GAP-native faithful action
+The previous p=5 gate showed a specific implementation inconsistency: for (s,a)=(1,1), the measured order was 20 and the printed generator matrices appeared to have the expected diagonal/shear form, but the ad-hoc permutation comparison returned false. This was therefore treated as an implementation audit point, not as a stabilizer failure.
+
+The comparison pipeline has now been changed in commit `ac98d279ed18b43da63f50fac665e88419971c43`:
+- convert every computed Frattini matrix explicitly with `Matrix(GF(5),m)` into the same matrix family as `GL(3,5)`;
+- form the actual matrix subgroup and candidate matrix subgroup before any permutation conversion;
+- record direct matrix-group equality separately as a diagnostic;
+- replace the hand-built `MatPerm` conversion by GAP's native `ActionHomomorphism(G, Elements(GF(5)^3), OnRight)`;
+- compare the resulting faithful permutation images on the same full vector set.
+
+The natural action on all vectors is faithful for a subgroup of GL_3(5), and GAP documents `OnRight` as the standard right action of matrix groups on vectors. This makes the new representation pipeline independent of the previous vector-indexing/permutation construction. The direct matrix-group equality is diagnostic; the faithful permutation equality is the decisive embedded comparison.
+
+Classification:
+- p=5,n=6 (1,1) stabilizer: **OPEN / LOAD-BEARING** until the new executable gate passes;
+- p=5,n=6 (0,1): **PASS / LOCAL** remains unchanged;
+- p=5,n=6 a=2 cases: **OPEN / EXECUTION BLOCKED** remains unchanged;
+- p=5 cross-prime structural theorem: **OPEN**.
+
+Immediate action: execute the updated CI gate and inspect both direct matrix-group equality and GAP-native faithful-action equality, with no theorem promotion from order alone.
