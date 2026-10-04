@@ -474,3 +474,30 @@ otin D_{p^m}) in general. The claim that (r_A=[x_1,x_2]) and (r_B=r_Ac) define i
 - The claim that the marked E_psi theorem has abstract content exactly equal to the quadratic invariant (B) is also not established. What is established is only markedness and the absence of a current intrinsic single-character bridge.
 
 **Current boundary:** marked quadratic E_psi theorem = **PASS/CLOSED (marked)**; abstract unmarked same-window separation and recovery of (s) = **OPEN/LOAD-BEARING**. This restores the authoritative unresolved boundary and does not reopen the failed arbitrary-degree theorem.
+
+
+## 2026-10-04 — new closed local result: d=3, p=3 cubic jet
+
+The rank-2 quadratic control case \(r_2=[x_1,x_2]\) was independently audited at the next window.
+
+- \(Q_3(r_2)=L_3/([r_2,V]+\operatorname{im}\Delta)\) has dimension 2, with representatives
+  \(c_1=[x_3,[x_1,x_3]]\), \(c_2=[x_3,[x_2,x_3]]\).
+- The stabilizer of \(e_1\wedge e_2\) has order 432 and acts on \(Q_3\) with exactly two orbits: zero and nonzero.
+- For \(r_A=r_2\) and \(r_B=r_2c_1\),
+  \[
+  W_3(G_A)\cong W_3(G_B),\qquad
+  W_4(G_A)\not\cong W_4(G_B).
+  \]
+  The \(W_4\) separation is certified by the cubic lower-central layer: dimensions 5 versus 4 over \(\mathbf F_3\).
+
+Correction to the draft proof: \(\gamma_3^3\subseteq\gamma_4\) is false. The argument must be made through the \(D_4\)-quotient / mod-3 cubic layer, not integral \(L_3\).
+
+Classification: **PASS / CLOSED**, but only for this specific \(d=3,p=3\), zero-vs-nonzero cubic-orbit comparison. It does not establish the general statement “distinct \(Q_3\)-orbits imply distinct \(W_4\)-isomorphism classes.”
+
+The broad equivalence
+\[
+W_n\text{-iso}\iff \operatorname{Aut}(F/D_n)\text{-orbit of the truncated relator}
+\]
+remains **OPEN** and requires a separate lifting/Nielsen argument.
+
+Immediate next target: generalize the cubic-layer calculation to arbitrary odd \(p\) and rank \(d\), starting with the intrinsic map from \(Q_3(r_2)\) to a \(W_4\)-isomorphism invariant.
