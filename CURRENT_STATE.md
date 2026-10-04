@@ -662,3 +662,18 @@ The Frattini-lift reformulation converts a Q-positive pair into a transformed-re
 Perform the p=3,s=1,r=x^3 Q-positive transformed-tuple/Frattini-lift audit, compress the positive pairs by the relevant automorphism structure, and inspect alpha^{-1}(x^3) at the minimal Magnus/PBW degree needed to identify the common nonabelian obstruction. If no presentation-independent obstruction emerges, stop and classify this Q formulation accordingly rather than expanding the search blindly.
 
 Detailed alignment record: research/PAPER4_ROADMAP_ALIGNMENT_AND_NEXT_STEP_2026-10-04.md.
+
+
+## 2026-10-04 — Paper 4 Q pre-check correction
+
+The planned p=3,s=1,r=x^3 Q-positive transformed-tuple audit was stopped at the Object/Gauge/Novelty pre-check. Under the currently recorded definition Q(W): exists (g,H) with <g,H>=W and 1 != g^(p^s) in H, Q-positive immediately implies ord(g)>p^s. With H otherwise arbitrary, the predicate can be realized as an exponent-type witness and does not intrinsically force the intended nonabelian transformed-relator obstruction.
+
+Classification:
+- computation of the stated Q predicate: **PASS / LOCAL**;
+- Q as the intended nonabelian separator: **FAIL / CLOSED** under the current unrestricted H definition;
+- any p=3/p=5 separation observed by this Q: not promoted beyond local computation;
+- transformed-tuple/Magnus audit under unrestricted Q: **STOPPED / UNAUTHORIZED**.
+
+The exact intended intrinsic restriction on H must be recovered before Q can be reopened. Required tests are Object, functoriality, gauge invariance, non-redundancy versus exponent/abelianization, and a genuine link to transformed-relator data. If no such restriction exists, return to a genuinely nonabelian extension/orbit invariant rather than continuing Q enumeration.
+
+Detailed correction: research/00_RESEARCH_LOG.md, 2026-10-04 Q pre-check correction.
