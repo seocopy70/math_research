@@ -577,3 +577,22 @@ Classification:
 No further carrier hunt, ordinary-cohomology repetition, new E_psi variant, or ad hoc lift decoration is authorized. The method-level branch is closed. Exact same-window classification remains a separate OPEN problem and is not to be relabeled FINAL.
 
 Authoritative audit: research/PAPER4_FILTERED_EXTENSION_EXTRACTION_NO_GO_2026-10-04.md.
+
+
+## 2026-10-04 — bounded representation-layer gate reopened
+
+The prior filtered-extension extraction stop was too broad. It remains valid that an unmarked one-step extension does not canonically select a scalar defect or distinguished single character: this is **FAIL / CLOSED**. It is not valid to promote that to a tower-wide information no-go, because a failure of one coordinate/extraction may be representation failure or detector failure rather than information failure.
+
+A bounded representation-layer feasibility gate is now active. The admissible structures are preregistered: extension class, module/conjugation action, restricted p-power/commutator operations, adjacent-layer compatibility, and the two-step tower W_{p^s+2}->W_{p^s+1}->W_{p^s}. The target is an intrinsic affine representation orbit/groupoid, not a distinguished psi. No ad hoc carrier hunting is authorized.
+
+E_psi is now explicitly decomposed into two ingredients: filtered depth supplies the p^s/p^s+1 threshold, while psi/delta supplies orientation and affine evaluation. The next question is whether the latter can be represented functorially by the preregistered tower structure without selecting one psi.
+
+Classification:
+- ordinary cohomology blindness: **PASS / CLOSED**;
+- marked quadratic E_psi theorem: **PASS / CLOSED**;
+- distinguished single-psi bridge: **FAIL / CLOSED**;
+- unmarked one-step scalar extraction: **FAIL / CLOSED**;
+- representation-layer/two-step feasibility: **OPEN / LOAD-BEARING**;
+- exact unmarked same-window separation: **OPEN**.
+
+Authoritative pre-registration: research/PAPER4_REPRESENTATION_LAYER_PREREGISTRATION_2026-10-04.md.
