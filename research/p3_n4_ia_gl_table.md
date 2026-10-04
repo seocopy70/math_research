@@ -64,4 +64,8 @@ These remain **PASS / LOCAL** pending repository reproduction.
 
 ## GAP interface note
 
-No authoritative aut_common.g interface was found in the current repository search at record time. Therefore no executable GAP script is committed here that invents function names or quotient conventions. The next executable script must bind to the actual repository artifact/interface when it is committed or recovered.
+The authoritative external interface has now been recovered at `research/external/paper5_aut/aut_common.g`, with the companion `aut3.g` and `p5aut.g` runners and their logs. The IA/GL decomposition audit is therefore bound to the actual recovered AutPGrp interface rather than invented function names or quotient conventions.
+
+Executable follow-up: `research/scripts/paper5_ia_gl_decomposition.g`.
+
+The table remains OPEN until that script is independently rerun and the four p=3,n=4 decompositions are certified.
