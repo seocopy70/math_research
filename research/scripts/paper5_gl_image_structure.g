@@ -27,16 +27,15 @@ run:=function(s,a)
   autImages:=List(autGens,alpha->permOnV(alpha,frnat,elsV));
   L:=Group(autImages);
   orb:=Orbits(L,[1..Length(elsV)]);
-  localProj:=Filtered([1..Length(elsV)],i->elsV[i]<>One(V) and i<=Position(elsV,elsV[i]^-1));
-  projRep:=function(i) local j; j:=Position(elsV,-elsV[i]); if i<j then return i; else return j; fi; end;
+  nonzero:=Filtered([1..Length(elsV)],i->elsV[i]<>One(V));
+  projRep:=function(i) local j; j:=Position(elsV,elsV[i]^-1); if i<j then return i; else return j; fi; end;
   projSet:=Set(List(nonzero,projRep));
   projOrbits:=Orbits(L,projSet);
-  nonzero:=Filtered([1..Length(elsV)],i->elsV[i]<>One(V));
   nonzeroOrbits:=Orbits(L,nonzero);
   Print("=== GL image structure s=",s," a=",a," ===\n");
   Print("order=",Size(L)," structure=",StructureDescription(L)," id=",IdGroup(L),"\n");
   Print("centerOrder=",Size(Centre(L))," derivedOrder=",Size(DerivedSubgroup(L))," exponent=",Exponent(L),"\n");
-  Print("allOrbitSizes=",List(orb,Length)," nonzeroOrbitSizes=",List(nonzeroOrbits,Length),"\n");
+  Print("allOrbitSizes=",List(orb,Length)," nonzeroOrbitSizes=",List(nonzeroOrbits,Length)," projectiveLineOrbitSizes=",List(projOrbits,Length),"\n");
   for rep in List(nonzeroOrbits,o->o[1]) do
     stab:=Stabilizer(L,rep);
     Print("repIndex=",rep," stabilizerOrder=",Size(stab),"\n");
