@@ -24,6 +24,7 @@ jobs:
           rc=$?
           set -e
           cat paper5_gl_stabilizer_p5n6_runtime.log
+          echo "TESTED_COMMIT=$(git rev-parse HEAD)"
           test "$rc" -eq 0
           for pair in "s=0 a=1" "s=1 a=1" "s=0 a=2" "s=1 a=2"; do
             grep -q "STABILIZER p=5 $pair PASS" paper5_gl_stabilizer_p5n6_runtime.log
