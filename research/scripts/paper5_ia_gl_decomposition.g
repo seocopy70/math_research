@@ -20,7 +20,8 @@ valuation:=function(N,p) local v; v:=0; while N mod p=0 do N:=N/p; v:=v+1; od; r
 
 run:=function(s,a)
   local R,W,gens,A,V,frnat,elsV,glperms,L,IA,IAkernel,AutG,act,agtriv,
-        GLorder,Autorder,alpha,d,report,GLsize,pred,dimVok,genCheck,fullGenCheck;
+        GLorder,Autorder,alpha,d,report,GLsize,pred,dimVok,genCheck,fullGenCheck,
+        autGens,autImages;
   R:=winW(mkG(s,a),4,4); W:=R[1]; gens:=R[2];
   A:=AutomorphismGroupPGroup(W);
   frnat:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
@@ -38,7 +39,9 @@ run:=function(s,a)
   IA:=Group(A.agAutos);
   AutG:=Group(Concatenation(A.glAutos,A.agAutos));
   fullGenCheck:=(Size(AutG)=A.size);
-  act:=GroupHomomorphismByImagesNC(AutG,L,Concatenation(A.glAutos,A.agAutos),Concatenation(glperms,List(A.agAutos,alpha->permOnV(alpha,frnat,elsV))));
+  autGens:=GeneratorsOfGroup(AutG);
+  autImages:=List(autGens,alpha->permOnV(alpha,frnat,elsV));
+  act:=GroupHomomorphismByImages(AutG,L,autGens,autImages);
   IAkernel:=Kernel(act);
   Autorder:=A.size; GLorder:=Size(L);
 
@@ -53,13 +56,16 @@ run:=function(s,a)
     IAKernelOrder:=Size(IAkernel),
     IAKernelMatchesAG:=(Size(IA)=Size(IAkernel)),
     IAp3:=valuation(Size(IA),3),
+    IAKernelp3:=valuation(Size(IAkernel),3),
     Lp3:=valuation(GLorder,3),
     Autp3:=valuation(Autorder,3),
     agGeneratorsTrivialOnV:=agtriv,
     glOrderMatchesRecord:=(GLorder=A.glOrder),
     fullAutGeneration:=fullGenCheck,
-    factorization:=(Size(IA)*GLorder=Autorder)
+    factorization:=(Size(IAkernel)*GLorder=Autorder),
+    candidateAGequalsKernel:=(Size(IA)=Size(IAkernel))
   );
+  Print("=== Paper5 IA/GL audit s=",s," a=",a," ===\n");
   Print(report,"\n");
 end;
 
