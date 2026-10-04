@@ -672,3 +672,44 @@ Next authorized attack: formulate the general cubic-layer map
 Q_3(r_2)\longrightarrow \text{isomorphism invariants of }W_4
 \]
 carefully, first for arbitrary odd \(p\) and rank \(d\), before attempting the full \(Q_k\) tower.
+
+
+## 2026-10-04 — correction: the d=3,p=3 cubic W4 separation is NOT certified
+
+The immediately preceding audit over-promoted the pair
+\[
+r_A=[x_1,x_2],\qquad r_B=[x_1,x_2]c_1,qquad c_1=[x_3,[x_1,x_3]]
+\]
+to PASS/CLOSED. That promotion is **superseded and withdrawn**.
+
+The error is more fundamental than the earlier \(\gamma_3^3\subseteq\gamma_4\) mistake. For the inhomogeneous relator \(r_B=r_2+c_1\), the leading lower-central term is still \(r_2\) in degree 2. Passing to the associated lower-central graded object therefore initially imposes the degree-2 relation \(r_2\), whose degree-3 consequences are \([r_2,V]\). One cannot simply add \(c_1\) as an independent degree-3 relation in \(\gamma_3(W_4)/\gamma_4(W_4)\).
+
+Equivalently: the fact that the normal closures of \(r_2\) and \(r_2c_1\) are different in the universal truncated presentation does **not** imply that \(c_1\) contributes an additional independent relation to the cubic lower-central layer of the quotient. The relation \(r_2c_1=1\) identifies the degree-2 word \(r_2\) with a degree-3 correction; it does not separately kill \(c_1\).
+
+Therefore the claimed dimensions
+\[
+\dim \gamma_3(W_4(G_A))/\gamma_4=5,\qquad
+\dim \gamma_3(W_4(G_B))/\gamma_4=4
+\]
+are not established and should not be used.
+
+What remains valid from the computation:
+- \(Q_3(r_2)\) has dimension 2 with representatives \(c_1,c_2\);
+- the stabilizer of \(e_1\wedge e_2\) has order 432;
+- its action on \(Q_3\) has zero and nonzero orbits;
+- \(Q_3\) therefore contains genuinely non-removable cubic directions at the presentation/jet level.
+
+What is **not** established:
+\[
+W_3(G_A)\cong W_3(G_B),\qquad
+W_4(G_A)\not\cong W_4(G_B)
+\]
+for the zero/nonzero cubic pair. The \(W_3\) equality is still presentation-level and safe; the \(W_4\) non-isomorphism is **OPEN**.
+
+The next correct attack is not another dimension count based on the same lower-central layer. It must test an invariant that sees the *extension class/filtered lift* of the cubic jet, e.g. a canonical p-power/commutator extension datum in \(W_4\), or directly compute the full finite 3-group isomorphism type for the smallest case. The \(Q_3\) orbit remains a candidate input, not yet a certified \(W_4\)-classification invariant.
+
+Classification of the cubic result after correction:
+- \(Q_3\) computation: **PASS / LOCAL**;
+- nonzero cubic directions modulo IA gauge: **PASS / LOCAL**;
+- zero-vs-nonzero \(Q_3\) orbit \(\Rightarrow W_4\) non-isomorphism: **OPEN**;
+- general \(Q_3\to W_4\)-isomorphism classification: **OPEN / LOAD-BEARING**.
