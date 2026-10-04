@@ -934,3 +934,41 @@ Reported p=3 orbit structure: (3,1,1) has 72 admissible kernels in Aut-orbits 9+
 Reported p=5,n=6 orders: s=0,a=1 -> 2^2 5^109; s=1,a=1 -> 2^2 5^107; s=2,a=1 -> 2^2 5^109; s=1,a=2 -> 2^5 3 5^107; s=0,a=2 -> 2^7 3 5^109. This reproduces the reported p^2 p-primary split/non-split gap and shows s-dependence in total Aut order, but remains observational pending independent rerun.
 
 Interpretation: Aut-orbit structure is now a strong candidate structural layer, but the authoritative Paper 5 gate still requires the p=3,n=4 IA/GL decomposition and fixed-quotient action analysis before the larger n=10 orbit result is promoted. Classification: PASS / LOCAL candidate evidence; reproduction and structural factorization OPEN. Audit: research/PAPER5_AUT_ORBIT_FOLLOWUP_AUDIT_2026-10-04.md.
+
+
+## 2026-10-04 — Paper 5 IA/GL decomposition gate advanced
+
+The five Paper 5 external calculation artifacts have now been restored under `research/external/paper5_aut/`: `aut_common.g`, `aut3.g`, `aut3.log`, `p5aut.g`, and `p5aut.log`. The earlier provenance label “user-reported / artifacts not in repository” is superseded.
+
+The recovered p=3,n=4 calculation gives exact reported automorphism orders:
+- s=0,a=1: (|Aut(W)|=2^2 3^{30});
+- s=1,a=1: (|Aut(W)|=2,3^{28}), with 72 admissible kernels in orbits 9+9+54;
+- s=0,a=2: (|Aut(W)|=2^5 3^{30});
+- s=1,a=2: (|Aut(W)|=2^4 3^{28}), with one orbit of size 9;
+- s=2,a=1: (|Aut(W)|=2^2 3^{30}), one orbit of size 81 and (3^{10}) complements.
+
+Exact order arithmetic gives the following prediction, not yet a certified decomposition:
+[
+(0,1): (|IA|,|L|)=(3^{27},2^2 3^3),quad
+(1,1): (3^{25},2,3^3),
+]
+[
+(0,2): (3^{27},2^5 3^3),quad
+(1,2): (3^{25},2^4 3^3).
+]
+Thus the p-primary (3^2) loss is predicted to lie entirely in the IA layer, while the linear image keeps (3^3) in all four cases.
+
+A new executable audit was added at `research/scripts/paper5_ia_gl_decomposition.g`. It directly checks the Frattini action, the AutPGrp linear-image order, the IA factor from `agOrder`, and the exact factorization (|Aut(W)|=|IA||L|).
+
+The GAP AutPGrp documentation confirms that `glAutos` are the automorphisms acting nontrivially on the Frattini quotient and that `agAutos` generate the normal solvable part, so this script targets the intended IA/GL split rather than introducing an ad hoc layer.
+
+### Classification
+
+- external artifacts: **PASS / REPOSITORY**
+- total-order and orbit data: **PASS / REPOSITORY**
+- IA-defect localization by order arithmetic: **PASS / LOCAL-PREDICTED**
+- executable IA/GL decomposition: **OPEN / REPRODUCTION PENDING**
+- quotient-action image/kernel: **OPEN**
+- p=5 structural theorem: **DEFERRED until p=3 closure**
+
+Audit: `research/PAPER5_IA_GL_DECOMPOSITION_AUDIT_2026-10-04.md`.
