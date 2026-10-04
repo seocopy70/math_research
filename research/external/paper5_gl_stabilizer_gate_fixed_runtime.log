@@ -1,0 +1,20 @@
+=== Paper5 GL stabilizer gate s=0 a=1 ===
+actual image order = 108 candidate order = 108
+actual structure = ((C3 x C3) : C3) : (C2 x C2)
+candidate structure = ((C3 x C3) : C3) : (C2 x C2)
+embedded equality in basis (x,y,z) = true
+=== Paper5 GL stabilizer gate s=1 a=1 ===
+actual image order = 6 candidate order = 6
+actual structure = S3
+candidate structure = S3
+embedded equality in basis (x,y,z) = true
+=== Paper5 GL stabilizer gate s=0 a=2 ===
+actual image order = 864 candidate order = 864
+actual structure = C2 x ((C3 x C3) : GL(2,3))
+candidate structure = C2 x ((C3 x C3) : GL(2,3))
+embedded equality in basis (x,y,z) = true
+=== Paper5 GL stabilizer gate s=1 a=2 ===
+actual image order = 48 candidate order = 48
+actual structure = GL(2,3)
+candidate structure = GL(2,3)
+embedded equality in basis (x,y,z) = true
