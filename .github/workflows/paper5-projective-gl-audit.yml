@@ -1,0 +1,20 @@
+name: Paper 5 projective GL audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/scripts/paper5_projective_gl_audit.g'
+jobs:
+  projective-gl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and AutPGrp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-autpgrp
+      - name: Run projective GL audit
+        run: |
+          set -e
+          gap -q research/scripts/paper5_projective_gl_audit.g > paper5_projective_gl_runtime.log 2>&1
+          cat paper5_projective_gl_runtime.log
