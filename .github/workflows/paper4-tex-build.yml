@@ -1,0 +1,31 @@
+name: paper4-tex-build
+on:
+  push:
+    branches:
+      - paper4-tex-2026-10-04
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile Paper 4
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: paper4/main.tex
+          working_directory: .
+      - name: Audit PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          pdfinfo paper4/main.pdf | tee paper4/pdfinfo.txt
+          sha256sum paper4/main.pdf | tee paper4/main.pdf.sha256
+          test -s paper4/main.pdf
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper4-pdf
+          path: |
+            paper4/main.pdf
+            paper4/main.pdf.sha256
+            paper4/pdfinfo.txt
