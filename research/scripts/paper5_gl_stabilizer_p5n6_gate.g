@@ -53,7 +53,7 @@ CandidateGroups:=function()
 end;
 
 run:=function(s,a)
-  local R,W,gens,A,frnat,basis,autGens,Mats,actual,Cands,expected,i,eq,nontriv;
+  local R,W,gens,A,frnat,basis,autGens,Mats,actualM,actual,Cands,expected,i,eq,matEq,actHom;
   R:=winW(mkG(s,a)); W:=R[1]; gens:=R[2];
   A:=AutomorphismGroupPGroup(W);
   frnat:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
@@ -63,13 +63,25 @@ run:=function(s,a)
   if ForAny(Mats,m->DeterminantMat(m)=0) then
     Error("non-invertible Frattini action matrix");
   fi;
-  nontriv:=Filtered(Mats,m->m<>IdentityMat(3,Fld));
-  actual:=CallFuncList(Group,nontriv);
+  # Convert all computed matrices into the same GAP matrix family as GL(3,5).
+  # Then use one GAP-native faithful action on the full vector set for both
+  # actual and candidate groups.  This removes the ad-hoc permutation map
+  # that gave the (1,1) equality mismatch in the previous run.
+  actualM:=Group(List(Mats,m->Matrix(Fld,m)));
   Cands:=CandidateGroups();
   expected:=[[0,1],[1,1],[0,2],[1,2]];
-  i:=Position(expected,[s,a]); eq:=actual=Cands[i];
+  i:=Position(expected,[s,a]);
+  matEq:=actualM=Cands[i];
+  # Natural right action on all vectors is faithful for a matrix subgroup.
+  actHom:=ActionHomomorphism(actualM,Elements(Fld^3),OnRight);
+  actual:=Image(actHom);
+  actHom:=ActionHomomorphism(Cands[i],Elements(Fld^3),OnRight);
+  Cands[i]:=Image(actHom);
+  eq:=actual=Cands[i];
   Print("=== Paper5 p=5,n=6 GL stabilizer gate s=",s," a=",a," ===\n");
-  Print("actual image order = ",Size(actual)," candidate order = ",Size(Cands[i]),"\n");
+  Print("actual matrix-group order = ",Size(actualM)," candidate order = ",Size(Cands[i]),"\n");
+  Print("direct matrix-group equality = ",matEq,"\n");
+  Print("faithful permutation image order = ",Size(actual)," candidate order = ",Size(Cands[i]),"\n");
   Print("embedded equality in basis (x,y,z) = ",eq,"\n");
   if not eq then Error("STABILIZER equality failure"); fi;
   Print("STABILIZER p=5 s=",s," a=",a," PASS\n");
