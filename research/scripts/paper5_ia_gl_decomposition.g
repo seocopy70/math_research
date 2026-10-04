@@ -19,9 +19,8 @@ end;
 valuation:=function(N,p) local v; v:=0; while N mod p=0 do N:=N/p; v:=v+1; od; return v; end;
 
 run:=function(s,a)
-  local R,W,gens,A,V,frnat,elsV,glperms,L,IA,IAkernel,AutG,act,agtriv,
-        GLorder,Autorder,alpha,d,report,GLsize,pred,dimVok,genCheck,fullGenCheck,
-        autGens,autImages;
+  local R,W,gens,A,V,frnat,elsV,AutG,autGens,autImages,L,IAkernel,act,agtriv,
+        GLorder,Autorder,report,GLsize,pred,dimVok,genCheck,fullGenCheck;
   R:=winW(mkG(s,a),4,4); W:=R[1]; gens:=R[2];
   A:=AutomorphismGroupPGroup(W);
   frnat:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
@@ -34,45 +33,38 @@ run:=function(s,a)
   agtriv:=ForAll(A.agAutos,
     alpha->ForAll(gens,g->Image(frnat,Image(alpha,g))=Image(frnat,g)));
 
-  Print("glAutos=",A.glAutos,"\n");
-  Print("agAutos=",A.agAutos,"\n");
-  Print("glOrder=",A.glOrder," agOrder=",A.agOrder,"\n");
-  glperms:=List(A.glAutos,alpha->permOnV(alpha,frnat,elsV));
-  Print("glPermCount=",Length(glperms)," bad=",Filtered([1..Length(glperms)],i->glperms[i]=fail),"\n");
-  Print("glPermTypes=",Set(List(glperms,p->IsPerm(p))),"\n");
-  if ForAny(glperms,p->p=fail) then Error("permOnV produced fail"); fi;
-  L:=Group(glperms);
-  IA:=Group(A.agAutos);
   AutG:=Group(Concatenation(A.glAutos,A.agAutos));
   fullGenCheck:=(Size(AutG)=A.size);
   autGens:=GeneratorsOfGroup(AutG);
   autImages:=List(autGens,alpha->permOnV(alpha,frnat,elsV));
+  if ForAny(autImages,p->p=fail) then Error("induced Frattini action produced fail"); fi;
+  L:=Group(autImages);
+  GLorder:=Size(L);
   act:=GroupHomomorphismByImages(AutG,L,autGens,autImages);
   IAkernel:=Kernel(act);
-  Autorder:=A.size; GLorder:=Size(L);
+  Autorder:=A.size;
 
   report:=rec(
     s:=s, a:=a, dimV:=d, GL3size:=GLsize,
     AutOrder:=Autorder,
+    glAutosCount:=Length(A.glAutos),
+    agAutosCount:=Length(A.agAutos),
     glOrderRecord:=A.glOrder,
+    agOrder:=A.agOrder,
     linearImageOrder:=GLorder,
     WGeneratorCheck:=genCheck,
     dimVExact:=dimVok,
-    IAOrder:=Size(IA),
     IAKernelOrder:=Size(IAkernel),
-    IAKernelMatchesAG:=(Size(IA)=Size(IAkernel)),
-    IAp3:=valuation(Size(IA),3),
     IAKernelp3:=valuation(Size(IAkernel),3),
     Lp3:=valuation(GLorder,3),
     Autp3:=valuation(Autorder,3),
     agGeneratorsTrivialOnV:=agtriv,
-    glOrderMatchesRecord:=(GLorder=A.glOrder),
+    glOrderMatchesLinearImage:=(GLorder=A.glOrder),
     fullAutGeneration:=fullGenCheck,
-    factorization:=(Size(IAkernel)*GLorder=Autorder),
-    candidateAGequalsKernel:=(Size(IA)=Size(IAkernel))
+    factorization:=(Size(IAkernel)*GLorder=Autorder)
   );
-  Print("=== Paper5 IA/GL audit s=",s," a=",a," ===\n");
-  Print(report,"\n");
+  Print("=== Paper5 IA/GL audit s=",s," a=",a," ===\\n");
+  Print(report,"\\n");
 end;
 
 for t in [[0,1],[1,1],[0,2],[1,2]] do run(t[1],t[2]); od;
