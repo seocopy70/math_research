@@ -738,3 +738,35 @@ Classification:
 - Paper 5 IA/GL: remains separate **OPEN / LOAD-BEARING**.
 
 No Paper 5 IA/GL computation is used to close Paper 4. No claim of rank-4 unification is promoted without an actual independent GAP certificate. This audit therefore does not justify a Paper 4 CLOSED/FINAL label; it preserves the existing authoritative boundary.
+
+
+## 2026-10-04 — Paper 4 R1 execution attempt: independent rank-2/3/4 affine calculation
+
+The requested R1 computation was actually constructed rather than merely audited. A fresh, Paper-4-only GAP certificate was added at:
+`research/paper4_r1_affine_obstruction_rank234_2026-10-04.g`
+with a dedicated workflow:
+`.github/workflows/paper4-r1-gap.yml`.
+
+The certificate uses the same finite affine target
+[
+E_s=(\mathbf Z/3^{3})\rtimes(1+9\mathbf Z/27)
+]
+at ((p,s)=(3,2)), evaluates the same commutator-based quadratic obstruction, and searches independently in ranks 2, 3, and 4.
+
+An independent local reimplementation of exactly the same finite calculation produced witnesses:
+- rank 2: (alpha=(0,1)), cocycle (e_1), (delta(r)=18), (v_3=2), (psi(r)=1);
+- rank 3: (alpha=(0,1,0)), cocycle (e_1), (delta(r)=18), (v_3=2), (psi(r)=1);
+- rank 4: (alpha=(0,0,0,1)), cocycle (e_3), (delta(r)=18), (v_3=2), (psi(r)=1).
+
+Thus the **finite computation itself reproduces the same marked affine obstruction mechanism in ranks 2/3/4**.
+
+However, the repository-connected GitHub Actions execution did not expose a runnable check for the newly added GAP workflow (the PR status endpoint remained empty and no R1 workflow run was returned by the connected GitHub workflow-run interface). Therefore this calculation cannot honestly be promoted to an **independently GAP-executed certificate** yet.
+
+Classification remains:
+- marked quadratic E_psi theorem: **PASS / CLOSED**;
+- rank-2/3/4 independent local reproduction: **PASS / LOCAL**;
+- independent GAP runtime certificate: **OPEN / EXECUTION BLOCKED**;
+- R1 closure gate: **OPEN / NOT CLOSED**;
+- unmarked same-window separation: **OPEN / LOAD-BEARING**.
+
+No Paper 5 computation was used.
