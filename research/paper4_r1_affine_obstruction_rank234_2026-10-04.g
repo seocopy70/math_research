@@ -70,7 +70,8 @@ CheckRank := function(d)
 
     if ev[2] = 1 then
       for j in [1..d] do
-        u := List([1..d],k->if k=j then 1 else 0 fi);
+        u := List([1..d],k->0);
+        u[j] := 1;
         xs := List([1..d],k->[u[k],units[k]]);
         ev := EvalWord(r,xs);
         target := ev[1] mod M;
