@@ -53,7 +53,7 @@ CandidateGroups:=function()
   G02:=Group(List([EMat(1,2,1),EMat(2,1,1),D(1,2),EMat(1,3,1),EMat(2,3,1),D(3,2)],MatPerm));
   G01:=Group(List([D(1,2),EMat(1,2,1),EMat(1,3,1),EMat(2,3,1),D(3,2)],MatPerm));
   G12:=Group(List([EMat(1,2,1),EMat(2,1,1),D(1,2),D(3,2)],MatPerm));
-  G11:=Group(List([D(1,2),EMat(1,2,1),D(3,2)],MatPerm));
+  G11:=Group(List([D(1,2),EMat(1,2,1)],MatPerm));
   return [G01,G11,G02,G12];
 end;
 
