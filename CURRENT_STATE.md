@@ -460,3 +460,17 @@ This is a valid **PASS / CLOSED Zassenhaus-critical higher-jet separation**.
 However, it does not compare \(G_s(r)\) and \(G_t(r)\) for one fixed relation \(r\). It therefore does not close the exact unmarked same-window problem of the control family. Its significance is narrower: a finite window can intrinsically detect a higher filtered tail at its first visible degree, even when the quadratic initial form is unchanged.
 
 The earlier claim that this proves or disproves recovery of the marked E_\psi parameter \(s\) is not valid. The marked parameter is target-indexed; the higher-tail degree \(m\) is a property of the chosen relator.
+
+
+## 2026-10-04 — E_psi critical-separation audit correction
+
+A proposed closure of the universal E_psi/abstract-separation branch was rejected.
+
+- For (c\in D_3\setminus D_4) and (p^m>3), (D_{p^m}\subset D_3), so (c
+otin D_{p^m}) in general. The claim that (r_A=[x_1,x_2]) and (r_B=r_Ac) define isomorphic (W_{p^m}) merely because (cin D_3) is false.
+- More generally, (c\in D_k) gives equality of the two relator images modulo (D_k), but does **not** by itself give abstract non-isomorphism at (W_{k+1}).
+- The attempted automorphism no-go is invalid: IA automorphisms can alter higher filtered terms while fixing the leading abelianization/graded data. A genuine orbit calculation is required.
+- Therefore the proposed generic “(D_k)-jet implies (W_k) same and (W_{k+1}) different” theorem is **FAIL/CLOSED as stated**.
+- The claim that the marked E_psi theorem has abstract content exactly equal to the quadratic invariant (B) is also not established. What is established is only markedness and the absence of a current intrinsic single-character bridge.
+
+**Current boundary:** marked quadratic E_psi theorem = **PASS/CLOSED (marked)**; abstract unmarked same-window separation and recovery of (s) = **OPEN/LOAD-BEARING**. This restores the authoritative unresolved boundary and does not reopen the failed arbitrary-degree theorem.
