@@ -29,3 +29,10 @@ No superseded same-window order-jump argument is used.
 **PASS / CLOSED — manuscript artifact complete.**
 
 This closes the writing/PDF-production task, not the mathematical OPEN boundaries recorded in CURRENT_STATE.md.
+
+
+## Freeze interpretation correction — 2026-10-04
+
+The manuscript/PDF freeze is a **publication-artifact freeze**, not a permanent mathematical no-go. The certified manuscript remains unchanged while the all-s truncation boundary is unresolved. A bounded boundary audit may continue without reopening the manuscript; only a material load-bearing mathematical result (for example, a certified s=3 finite-window separator) authorizes a later manuscript revision.
+
+The current bounded audit is recorded in `research/PAPER4_S3_BOUNDARY_QUOTIENT_AUDIT_2026-10-04.md`. The originally proposed C_3-valued functional on all of K^ab cannot detect the witness 9N_a and is closed as stated; the corrected 9-layer/C_27 projection remains open.
