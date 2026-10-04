@@ -58,3 +58,13 @@ This does not reopen the failed arbitrary-r degree-only theorem or the universal
 The project deliberately opens a high-risk generalization branch: seek an intrinsic twisted-character test object E_psi for broad relations r and test whether the critical p^s+1 mechanism extends beyond the Demushkin/quadratic control families. This is an exploratory Paper 5/generalization branch, not a revision of the certified Paper 4 core.
 
 Governance distinction: the continuity protocol blocks silent scope drift and invalid theorem promotion; it does not block deliberate high-risk exploration. The universal branch must therefore be explicitly labeled OPEN/ACTIVE and must pass the same Object/Input/Functoriality/Gauge/Orientation bridge/q-blindness/Separation/Novelty checks. The bounded quadratic family remains the benchmark/control family, while arbitrary-r degree-only remains FAIL/CLOSED.
+
+
+## 2026-10-04 — E_psi marked quadratic closure
+
+The active E_psi branch has crossed its first theorem gate. For every nonzero quadratic initial relation r in D_2\D_3, the affine test object E_s admits a marked critical lift with v_p(delta(r))=s; the proof explicitly controls the D_3-tail, including its p-power contribution. Thus the marked critical-window threshold p^s+1 is PASS/CLOSED for the quadratic class.
+
+This does not change the global boundary: abstract unmarked same-window separation remains OPEN because the orientation/character bridge from an abstract finite window to the affine package is not intrinsic yet. The old arbitrary-degree degree-only theorem remains FAIL/CLOSED.
+
+Active dependency is now:
+marked quadratic E_psi theorem -> intrinsic orientation bridge -> abstract finite-window separation.
