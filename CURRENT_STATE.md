@@ -902,3 +902,25 @@ Classification:
 - p=5 promotion beyond this bounded gate: **DEFERRED**.
 
 Immediate next action: replace the ad hoc p=5 matrix/permutation conversion by a single faithful representation pipeline (preferably a GAP-native action homomorphism from the actual matrix group), and separately obtain W_6 for the (a=2) cases with an explicitly controlled p-quotient collector/order bound. Do not promote a p=5 structural theorem from the present partial run.
+
+
+## 2026-10-04 — Paper 5 p=5,n=6 stabilizer pipeline unified
+The previous p=5,n=6 gate left (s,a)=(1,1) **OPEN / LOAD-BEARING** because order 20 was reproduced and the displayed generator matrices looked correct, but the hand-built permutation equality was false. The implementation has now been audited and replaced in commit `ac98d279ed18b43da63f50fac665e88419971c43`.
+
+The new gate:
+1. converts computed Frattini matrices into the same `GF(5)) matrix family as `GL(3,5)`;
+2. forms the actual and candidate matrix subgroups directly;
+3. records direct matrix-group equality as a diagnostic;
+4. uses GAP-native `ActionHomomorphism(G, Elements(GF(5)^3), OnRight)` for both groups;
+5. compares the resulting faithful permutation images on the same full vector set.
+
+Thus the decisive comparison is now a single, representation-consistent faithful action, rather than the previous ad-hoc `MatPerm` construction.
+
+Current classification:
+- p=3,n=4 embedded stabilizer equality: **PASS / CLOSED**.
+- p=5,n=6 (0,1): **PASS / LOCAL**.
+- p=5,n=6 (1,1): **OPEN / LOAD-BEARING — rerun pending**.
+- p=5,n=6 (a=2): **OPEN / EXECUTION BLOCKED** by the W_6 collector/order-bound issue.
+- p=5 uniform stabilizer theorem: **OPEN**; no promotion.
+
+Next authorized computation: run the updated p=5 gate. If (1,1) closes, move to the a=2 W_6 generation/collector problem with an explicit class/order bound. If the new faithful-action equality still fails, localize the discrepancy using the direct matrix-group equality before touching a=2.
