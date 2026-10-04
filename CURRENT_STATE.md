@@ -561,3 +561,19 @@ retaining the filtration layer and p-power/commutator lift data rather than coll
 - abstract same-window separation: **OPEN**.
 
 No exact-threshold or all-s separation claim is promoted by this strategic shift.
+
+
+## 2026-10-04 — filtered-extension extraction boundary
+
+Direction 3 has now been executed to its structural stop. The canonical one-step extension 1 -> D_n/D_{n+1} -> W_{n+1} -> W_n is intrinsic and q-blind, but the gauge audit shows that a p-power/commutator defect attached to a chosen section or lift is not canonical: section changes act by coboundaries. After quotienting this gauge, the only remaining full object is the extension-equivalence class itself, i.e. the structured isomorphism class of W_{n+1} -> W_n. Thus the proposed filtered-extension extraction does not reduce the original finite-window separation problem.
+
+Classification:
+- canonical one-step filtered extension: **PASS / CLOSED**;
+- section/lift gauge analysis: **PASS / CLOSED**;
+- intrinsic scalar/orientation defect from the unmarked extension alone: **FAIL / CLOSED**;
+- full extension-equivalence class as exact separator: **OPEN**, but equivalent to the original structured finite-window isomorphism problem;
+- ordinary cohomology: **PASS / CLOSED and STOPPED**.
+
+No further carrier hunt, ordinary-cohomology repetition, new E_psi variant, or ad hoc lift decoration is authorized. The method-level branch is closed. Exact same-window classification remains a separate OPEN problem and is not to be relabeled FINAL.
+
+Authoritative audit: research/PAPER4_FILTERED_EXTENSION_EXTRACTION_NO_GO_2026-10-04.md.
