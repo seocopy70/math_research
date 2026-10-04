@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'research/scripts/paper5_ia_gl_decomposition.g'
+      - 'research/scripts/paper5_gl_stabilizer_gate.g'
       - '.github/workflows/paper5-ia-gl-decomposition.yml'
 
 jobs:
@@ -22,6 +23,11 @@ jobs:
           gap -q research/scripts/paper5_ia_gl_decomposition.g > paper5_ia_gl_runtime.log 2>&1
           cat paper5_ia_gl_runtime.log
           test -s paper5_ia_gl_runtime.log
+      - name: Run Paper 5 GL stabilizer gate
+        run: |
+          gap -q research/scripts/paper5_gl_stabilizer_gate.g > paper5_gl_stabilizer_runtime.log 2>&1
+          cat paper5_gl_stabilizer_runtime.log
+          test -s paper5_gl_stabilizer_runtime.log
       - name: Upload runtime log
         if: always()
         uses: actions/upload-artifact@v4
