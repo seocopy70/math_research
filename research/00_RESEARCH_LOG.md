@@ -1038,3 +1038,13 @@ Paper 5 is now the sole active research branch. The immediate load-bearing task 
 Execution order fixed: (1) p=3,n=4 IA/GL reproduction; (2) if PASS, fixed-quotient Aut(W)->Aut(Q) image/kernel; (3) if PASS, cross-prime p=5,n=6 structural replication; (4) only then analyze the 9+9+54 orbit decomposition and the n=10/3^10 complement phenomenon as downstream structure. The 9+9+54 split is an Aut(W)-orbit detector, not itself an IA/GL filtration statement.
 
 Classification: Paper 4 **PASS/CLOSED — FROZEN**; Paper 5 IA/GL **OPEN/LOAD-BEARING**; p^2-gap source **OPEN**.
+
+## 2026-10-04 — Paper 5 IA/GL gate execution triggered
+
+The authoritative IA/GL audit script was committed to `main` with a CI-trigger comment (commit `573ad39e233208c880978b3bc2e85566f7d84d7c`). The repository workflow `.github/workflows/paper5-ia-gl-decomposition.yml` is configured to install GAP + AutPGrp and execute `research/scripts/paper5_ia_gl_decomposition.g` on pushes touching the script.
+
+This is an execution trigger, **not yet a runtime PASS**: the available connector does not expose the resulting push-triggered workflow run in a directly retrievable form, so no IA/kernel equality is promoted until the runtime log is independently inspected.
+
+An independent GAP documentation check confirms the hybrid automorphism representation semantics used by the audit: `glAutos` together with `agAutos` generate the automorphism group, `agAutos` form a soluble normal subgroup, and `glOrder` records the complementary order factor. This validates the intended decomposition interface, but does not replace execution of the kernel calculation.
+
+Classification: IA/GL execution **OPEN / REPRODUCTION PENDING**; execution trigger **PASS / REPOSITORY**. Next authorized evidence is the actual CI runtime log.
