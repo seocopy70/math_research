@@ -1,6 +1,6 @@
 LoadPackage("autpgrp");
 
-P:=5; N:=6; C:=7; Fld:=GF(P);
+P:=5; N:=6; C:=5; Fld:=GF(P);
 
 mkG:=function(s,a) local F;
   F:=FreeGroup("z","x","y");
