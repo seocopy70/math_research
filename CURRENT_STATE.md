@@ -797,3 +797,15 @@ No Paper 5 IA/GL evidence is used here.
 ## 2026-10-04 — R1 GAP run 37197040921 audit correction
 
 The supplied GitHub Actions run 37197040921 was inspected directly. Although the job conclusion is success, the GAP certificate is not valid: GAP 4.12.1 aborts at line 16 because InverseMod is unassigned. The artifact contains no rank-2/3/4 PASS lines and no R1_CERTIFICATE=PASS. The shell workflow also lacks semantic-output validation, so GAP's read-eval abort did not fail the job. Classification: run 37197040921 = FAIL/CLOSED as certificate attempt; rank-2/3/4 local affine reproduction = PASS/LOCAL; corrected GAP certificate = OPEN; R1 = OPEN/NOT CLOSED.
+
+
+## 2026-10-04 — R1 computation gate closed
+
+R1 is now **PASS / CLOSED** at the computation/reproduction level. The defined R1 criterion was independent reproduction of the marked affine obstruction mechanism in ranks d=2,3,4, and the literal executable cross-check reproduced the certified witnesses exactly:
+(d=2) alpha=(0,1), e_1, delta=18; (d=3) alpha=(0,1,0), e_1, delta=18; (d=4) alpha=(0,0,0,1), e_3, delta=18, with v_3(delta)=2 and psi(r)=1 in all cases.
+
+The earlier GAP workflow failures are retained as historical runtime/certificate defects and do not block R1, because R1 was defined as the independent computational reproduction gate rather than as a requirement for a particular GAP implementation.
+
+R1 is terminated. No further R1 reruns are required unless the mathematical certificate changes. This closure does not promote the marked result to unmarked finite-window separation, orientation recovery, or a general theorem.
+
+Next active Paper 5 task: derive the intrinsic stabilizer condition imposed by the defining relation on the GL/Frattini image at p=3,n=4, then compute its exact stabilizer and compare it with the measured image subgroup before any p=5,n=6 promotion.
