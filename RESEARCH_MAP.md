@@ -108,3 +108,19 @@ Therefore abstract same-window separation remains **OPEN**. The correct next gat
 ## 2026-10-04 — Direction 2 closed: ordinary cohomology blindness
 
 Direction 2 is now **PASS / CLOSED** at theorem level for the declared odd-p stress family. For every s>=1, finite a>=1, and a=infinity, the defining power terms lie in the third p-Zassenhaus term, so the quadratic commutator initial form is unchanged. Quadrelli, arXiv:2011.03233v3, Proposition 2.1 gives the full ordinary mod-p cohomology algebra: it is quadratic, H^k=0 for k>=3, and the H^1 cup product is determined entirely by the common commutator form. Thus ordinary H^bullet(-,F_p) is completely blind to s and a, including the a=s versus a=infinity boundary. This closes only the ordinary-cohomology route; group/window separation and higher filtered operations remain separate questions.
+
+
+## 2026-10-04 — strategic shift after Direction 2 closure
+
+Ordinary mod-p cohomology is now **PASS / CLOSED as a blind invariant** for the declared stress family and is no longer an active research route. The next structural layer is the **filtered extension/lift package** of the Zassenhaus tower.
+
+The active candidate is the intrinsic one-step filtered lift
+\[
+1\to D_n/D_{n+1}\to W_{n+1}\to W_n\to1,
+\]
+with its kernel, filtration position, p-power/commutator lifting data, and gauge-equivalence retained. The target is not merely the associated ordinary H^2-class: the full filtered lift package is the object to test.
+
+The immediate gate is:
+Object -> Input -> Functoriality -> Gauge -> Orientation bridge -> q-blindness -> Separation -> Novelty -> Stop.
+
+The research question is whether this filtered extension/lift layer detects the hidden p^s-power relation that ordinary H^\bullet(-,\mathbf F_p) provably misses. No further ordinary-cohomology calculation is authorized unless a later structural result explicitly shows that it is needed to identify an extension/lift obstruction.
