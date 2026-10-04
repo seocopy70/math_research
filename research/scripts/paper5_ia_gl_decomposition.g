@@ -29,7 +29,7 @@ run:=function(s,a)
       img:=Image(frnat,Image(alpha,PreImagesRepresentative(frnat,b)));
       Add(rows,ExponentsOfPcElement(basis,img));
     od;
-    return Matrix(GF(3),rows);
+    return Matrix(GF(3),TransposedMat(rows));
   end;
 
   glMats:=List(A.glAutos,matOf);
