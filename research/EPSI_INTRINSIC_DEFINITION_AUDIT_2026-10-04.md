@@ -483,3 +483,34 @@ These computations are **PASS / LOCAL**, not a substitute for the general lemma.
 ## 12. Stop / next gate
 
 Do not enlarge the relation class to arbitrary Zassenhaus degree. The quadratic marked lemma and marked critical-window separator are now closed. The next load-bearing problem is the **unmarked orientation bridge**: determine whether the abstract finite window canonically recovers enough of the affine/character package to turn marked separation into abstract finite-group separation. If that bridge fails, record the marked theorem as the endpoint of this E_psi formulation rather than silently weakening the notion of intrinsicity.
+
+
+## 2026-10-04 — critical correction: marked (s) is target-indexed, not an invariant of (r_2)
+
+The proposed next gate “does (v_p(\delta(r))) depend only on (r_2)?” was audited against the actual marked E_\psi construction. That question was ill-posed.
+
+In the closed marked lemma, (s) is fixed **before** constructing the affine target:
+\[
+A_s=\mathbf Z/p^{s+1}\mathbf Z,qquad E_s=A_s\rtimes(1+p^sA_s).
+\]
+The lemma then asserts that for every nonzero quadratic initial relation (r\in D_2\setminus D_3), after choosing the order-(p) character and cocycle in that (E_s), one can arrange
+\[
+\psi(r)=1,qquad v_p(\delta(r))=s.
+\]
+Thus (s) is not extracted from (r), and there is no single (\delta) whose valuation is an invariant attached to (r_2). The cocycle takes values in the (s)-dependent module (A_s).
+
+For (r_A=[x_1,x_2]), this is explicit for every (s\ge1): take \(\psi(x_1)=1+p^s\), \(\psi(x_i)=1\) for (i>1), and choose the normalized cocycle with (u_2=1) and the other relevant coordinate zero. Then
+\[
+\delta([x_1,x_2])\equiv p^s\pmod{p^{s+1}},
+\]
+so the same fixed relation admits a critical affine lift at every target index (s).
+
+Therefore:
+- “marked (s) is determined by (r_2)” = **FAIL / CLOSED as a formulation**;
+- “same (r_2) implies same marked (s)” = **FAIL / CLOSED**;
+- the deduction that marked (s) is not an abstract invariant from that premise is **superseded**;
+- the genuine unmarked orientation/orbit-level problem remains **OPEN / LOAD-BEARING**.
+
+This also separates two notions previously conflated: (i) the Zassenhaus degree of a higher tail inserted into a relator, and (ii) the externally indexed critical depth of the affine detector. They are different parameters and must not be identified.
+
+For the exploratory pair (r_A) versus (r_B=r_Ax_1^{p^m}), any separation caused by the added degree-(p^m) tail is therefore a filtered-relator/quotient statement, not evidence that the marked E_\psi exponent parameter is encoded by the quadratic initial form.
