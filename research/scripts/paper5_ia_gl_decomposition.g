@@ -13,11 +13,12 @@ winW:=function(G,n,c) local qs,epi,H,J,Dn,nat;
 valuation:=function(N,p) local v; v:=0; while N mod p=0 do N:=N/p; v:=v+1; od; return v; end;
 
 run:=function(s,a)
-  local R,W,gens,A,V,frnat,basis,matOf,glMats,L,IA,ker,gensA,imgsA,homA,
+  local R,W,gens,A,AutW,V,frnat,basis,matOf,glMats,L,ker,gensA,imgsA,homA,
         genCheck,agtriv,genFixKernel,fullGenCheck,Autorder,GLorder,IAorder,
         report,d,GL3size;
   R:=winW(mkG(s,a),4,4); W:=R[1]; gens:=R[2];
   A:=AutomorphismGroupPGroup(W);
+  AutW:=AutomorphismGroup(W);
   frnat:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
   V:=Image(frnat); basis:=Pcgs(V); d:=Length(basis); GL3size:=Size(GL(d,3));
 
@@ -34,22 +35,23 @@ run:=function(s,a)
   glMats:=List(A.glAutos,matOf);
   L:=GL(d,3);
   IAorder:=Product(A.agOrder);
-  gensA:=GeneratorsOfGroup(A);
+  gensA:=GeneratorsOfGroup(AutW);
   imgsA:=List(gensA,matOf);
   homA:=GroupHomomorphismByImages(A,L,gensA,imgsA);
   L:=Image(homA);
   ker:=Kernel(homA);
-  GLorder:=Size(L); Autorder:=Size(A);
+  GLorder:=Size(L); Autorder:=Size(AutW);
 
   agtriv:=ForAll(A.agAutos,alpha->matOf(alpha)=IdentityMat(d,GF(3)));
   genFixKernel:=IAorder=Size(ker) and ForAll(A.agAutos,alpha->Image(homA,alpha)=One(L));
-  fullGenCheck:=Autorder=A.glOrder*IAorder;
+  fullGenCheck:=Autorder=A.glOrder*IAorder and A.size=Autorder;
 
   report:=rec(
     s:=s, a:=a, dimV:=d, GL3size:=GL3size,
     WOrder:=Size(W),
     generatorsGenerateW:=genCheck,
     AutOrder:=Autorder,
+    hybridAutOrder:=A.size,
     glOrderRecord:=A.glOrder,
     linearImageOrder:=GLorder,
     IAOrder:=IAorder,
