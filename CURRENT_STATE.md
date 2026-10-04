@@ -596,3 +596,20 @@ Classification:
 - exact unmarked same-window separation: **OPEN**.
 
 Authoritative pre-registration: research/PAPER4_REPRESENTATION_LAYER_PREREGISTRATION_2026-10-04.md.
+
+
+## 2026-10-04 — current boundary after representation-layer gate
+
+The pre-registered representation-layer attack is complete. The two-step tower \(W_{p^s+2}\to W_{p^s+1}\to W_{p^s}\) passes intrinsicity, functoriality, and gauge checks. A functorial affine representation orbit/groupoid can be attached to the full tower, but without an additional factorization theorem this is a reformulation of the original structured finite-window problem, not a coarser carrier.
+
+Status:
+- representation-layer object: **PASS / CLOSED**;
+- single-psi bridge: **FAIL / CLOSED**;
+- affine orbit/groupoid: **PASS / CLOSED as reformulation**;
+- smaller intrinsic compression/detector: **OPEN / LOAD-BEARING**;
+- exact unmarked \(a=s\) versus \(a=\infty\) same-window separation: **OPEN / LOAD-BEARING**;
+- arbitrary candidate hunting: **STOPPED**.
+
+Immediate consequence: do not search for another carrier. The next legitimate mathematical step is a new factorization theorem, or a deliberate decision to leave the exact boundary open and formalize the certified Paper 4 theorem.
+
+Authoritative audit: research/PAPER4_REPRESENTATION_LAYER_GATE_RESULT_2026-10-04.md.
