@@ -32,28 +32,28 @@ ImageMatrix:=function(alpha,frnat,basis)
   return List([1..3],i->List([1..3],j->M[i][j]));
 end;
 
+Vecs:=Elements(GF(3)^3);
+
+MatPerm:=function(m)
+  return PermList(List(Vecs,v->Position(Vecs,v*m)));
+end;
+
 CandidateGroups:=function()
   local G,els,G02,G01,G12,G11,m,detA;
   G:=GL(3,3); els:=Elements(G);
-  # (s,a)=(0,2): preserve the plane <x,y>.
-  G02:=Subgroup(G,Filtered(els,m->IsZero(m[3][1]) and IsZero(m[3][2]) and not IsZero(m[3][3])));
-  # (s,a)=(0,1): preserve <x> inside <x,y> and impose the mixed
-  # x^[3] / [x,y] scaling condition, giving y-coefficient 1.
-  G01:=Subgroup(G,Filtered(els,m->IsZero(m[2][1]) and IsZero(m[3][1]) and
-                           IsZero(m[3][2]) and IsOne(m[2][2])));
-  # (s,a)=(1,2): preserve <x,y>, <z>, and impose z^[3]=[x,y]:
-  # z-scalar equals determinant of the 2x2 block.
-  G12:=Subgroup(G,Filtered(els,function(m)
+  # Candidate groups are transported to a faithful permutation action on GF(3)^3.
+  G02:=Group(List(Filtered(els,m->IsZero(m[3][1]) and IsZero(m[3][2]) and not IsZero(m[3][3])),MatPerm));
+  G01:=Group(List(Filtered(els,m->IsZero(m[2][1]) and IsZero(m[3][1]) and
+                           IsZero(m[3][2]) and IsOne(m[2][2])),MatPerm));
+  G12:=Group(List(Filtered(els,function(m)
     detA:=m[1][1]*m[2][2]-m[1][2]*m[2][1];
     return IsZero(m[3][1]) and IsZero(m[3][2]) and IsZero(m[1][3]) and
            IsZero(m[2][3]) and m[3][3]=detA;
-  end));
-  # (s,a)=(1,1): impose the stronger root relation
-  # x -> a x, y -> b x+y, z -> a z.
-  G11:=Subgroup(G,Filtered(els,m->IsZero(m[2][1]) and IsZero(m[3][1]) and
+  end),MatPerm));
+  G11:=Group(List(Filtered(els,m->IsZero(m[2][1]) and IsZero(m[3][1]) and
                            IsZero(m[3][2]) and IsOne(m[2][2]) and
                            IsZero(m[1][3]) and IsZero(m[2][3]) and
-                           m[3][3]=m[1][1]));
+                           m[3][3]=m[1][1]),MatPerm));
   return [G01,G11,G02,G12];
 end;
 
@@ -66,11 +66,11 @@ run:=function(s,a)
   basis:=[gens[2],gens[3],gens[1]];
   autGens:=Concatenation(A.glAutos,A.agAutos);
   Mats:=List(autGens,alpha->ImageMatrix(alpha,frnat,basis));
-  Print("matrix determinants = ",List(Mats,DeterminantMat),"\n");
+
   if ForAny(Mats,m->DeterminantMat(m)=0) then
     Error("non-invertible Frattini action matrix");
   fi;
-  actual:=Subgroup(GL(3,3),Mats);
+  actual:=Group(List(Mats,MatPerm));
   Cands:=CandidateGroups();
   expected:=[[0,1],[1,1],[0,2],[1,2]];
   i:=Position(expected,[s,a]); eq:=actual=Cands[i];
