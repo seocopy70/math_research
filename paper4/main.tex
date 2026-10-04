@@ -7,8 +7,8 @@
 \usepackage{enumitem}
 \usepackage{booktabs}
 
-\title{Finite-Window Visibility and Non-Rigidity in\\
-Power-Deformed Pro-\texorpdfstring{$p$}{p} Presentations}
+\title{Delayed Finite-Window Visibility and Non-Rigidity of\\
+Power-Root One-Relator Pro-\texorpdfstring{$p$}{p} Groups}
 \author{Seo Seongkyo}
 \date{October 2026}
 
@@ -552,20 +552,20 @@ without an additional critical-survival hypothesis.
 \end{proposition}
 
 \begin{proof}
-Take (r=z^p), which has Zassenhaus order (p).  Then
-[
+Take $r=z^p$, which has Zassenhaus order $p$.  Then
+\[
 z^{p^s}=z^p
-]
+\]
 simplifies to
-[
+\[
 z^{p^s-p}=1.
-]
-The actual relator therefore has a lower (p)-power scale than the
-nominal root depth (p^s).  Its first nontrivial filtered contribution
-is already controlled by the degree-(p) term (z^p).  Hence the
-critical threshold cannot be inferred from the single datum
-(ordz(r)=p).  This gives the obstruction to the proposed
-degree-only arbitrary-(r) theorem.
+\]
+The actual relator therefore has a lower $p$-power scale than the
+nominal root depth $p^s$.  Its first nontrivial filtered contribution is
+already controlled by the degree-$p$ term $z^p$.  Hence the critical
+threshold cannot be inferred from the single datum
+$\ordz(r)=p$.  This gives the obstruction to the proposed
+degree-only arbitrary-$r$ theorem.
 \end{proof}
 \begin{remark}
 This counterexample does not disprove all possible arbitrary-$r$
@@ -693,6 +693,24 @@ critical filtered extension can be compressed into a genuinely
 unmarked invariant of the finite group.  That is a reconstruction
 problem, not part of the theorem proved in this paper.
 
+\section{Reproducibility and verification record}
+
+This manuscript was assembled from the authoritative Paper~4 research
+records dated 2026-10-04.  The manuscript preserves the required
+logical boundary: the universal delayed-window lemma is PASS/CLOSED;
+the arbitrary-$r$ degree-only generalization is FAIL/CLOSED; the marked
+quadratic critical theorem is PASS/CLOSED; direct same-window separation
+for $1\le a<s<t$ is PASS/CLOSED; and the boundary
+$G_{s,s}$ versus $G_{s,\infty}$ for $s\ge2$ remains
+OPEN/LOAD-BEARING.
+
+The final artifact is checked by a two-pass \LaTeX{} build, PDF text
+extraction, page-count/reference checks, and SHA-256 hashing.  The
+independent root-visibility and boundary-witness computations are
+recorded in the dated Paper~4 audit documents and repository scripts.
+Computation is used only as independent verification and not as a
+substitute for the proofs.
+
 \begin{thebibliography}{9}
 
 \bibitem{Quadrelli}
@@ -700,6 +718,16 @@ C. Quadrelli,
 \emph{Two families of pro-$p$ groups that are not absolute Galois groups},
 J. Group Theory \textbf{25} (2022), no.~1, 25--62.
 See also arXiv:2011.03233v3.
+
+\bibitem{MinacRogelstadTan}
+J. Mináč, M. Rogelstad and N. D. Tân,
+\emph{Dimensions of Zassenhaus filtration subquotients of some pro-$p$-groups},
+Israel J. Math. \textbf{212} (2016), 825--855.
+
+\bibitem{MinacPasiniQuadrelliTan}
+J. Mináč, F. W. Pasini, C. Quadrelli and N. D. Tân,
+\emph{Koszul algebras and quadratic duals in Galois cohomology},
+Adv. Math. \textbf{380} (2021), 107569.
 
 \bibitem{Lazard}
 M. Lazard,
