@@ -1298,3 +1298,24 @@ Accordingly:
 R1 is therefore terminated. No further R1 reruns are required unless a future theorem audit identifies a mathematical change in the certificate itself.
 
 Immediate continuation: proceed to the next authorized Paper-5 load-bearing task, namely the intrinsic stabilizer condition for the measured GL/Frattini images at p=3,n=4.
+
+## 2026-10-04 — Paper 5 next gate: intrinsic GL stabilizer test implemented
+
+With R1 closed, Paper 5 proceeds directly to the authorized load-bearing stabilizer gate.
+
+The p=3,n=4 image orders now admit concrete candidate intrinsic descriptions in the presentation basis (x,y,z):
+
+- (s,a)=(0,2): preserve the plane P=<x,y>; candidate stabilizer has order 864.
+- (s,a)=(0,1): preserve the flag <x> subset P=<x,y> and impose the mixed degree-3 scaling condition from x^[3] versus [x,y]; candidate stabilizer has order 108.
+- (s,a)=(1,2): preserve P and the complementary root line <z>, with z^[3]=[x,y] forcing the z-scalar to equal det of the 2x2 action on P; candidate stabilizer has order 48.
+- (s,a)=(1,1): the stronger root relation gives candidate matrices x -> a x, y -> b x+y, z -> a z, with a in F_3^× and b in F_3; candidate order 6 and structure S_3.
+
+A new executable GAP gate was added at research/scripts/paper5_gl_stabilizer_gate.g. It reconstructs the actual Frattini action in the presentation basis (x,y,z), constructs the four candidate embedded subgroups inside GL_3(3), and tests exact embedded equality rather than only order or abstract isomorphism. The existing Paper 5 workflow was extended to execute this gate.
+
+Important status distinction: the four candidate formulas are a structural hypothesis backed by the observed orders/structures, not yet a theorem. The decisive result is the runtime equality test.
+
+Classification:
+- candidate intrinsic stabilizer formulas: OPEN / LOAD-BEARING;
+- executable gate: PASS / REPOSITORY;
+- actual embedded equality: OPEN / EXECUTION PENDING;
+- p=5,n=6: DEFERRED until this gate closes.
