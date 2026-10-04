@@ -713,3 +713,35 @@ Classification of the cubic result after correction:
 - nonzero cubic directions modulo IA gauge: **PASS / LOCAL**;
 - zero-vs-nonzero \(Q_3\) orbit \(\Rightarrow W_4\) non-isomorphism: **OPEN**;
 - general \(Q_3\to W_4\)-isomorphism classification: **OPEN / LOAD-BEARING**.
+
+
+## 2026-10-04 — DIRECTION 2 CLOSED: ordinary mod-p cohomology is s/a-blind
+
+The requested Direction 2 attack was completed to the full ordinary cohomology-ring level rather than stopping at H^1, H^2, or the associated graded.
+
+### Target
+For odd p, stress family G_{s,a}=<z,x_1,...,x_d | z^{p^s}=x_1^{p^a}[x_1,x_2][x_3,x_4]...>, with s>=1, finite a>=1, and a=infinity meaning the power term is absent.
+
+### Core proof
+Because p^s,p^a>=3, both power terms lie in the third p-Zassenhaus term. Therefore the relator is congruent modulo the third term to the same quadratic commutator product for every s,a.
+
+Quadrelli, arXiv:2011.03233v3, Proposition 2.1, applies directly: the mod-p cohomology algebra is quadratic; H^k(G,F_p)=0 for k>=3; and the cup product in H^1 is exactly the common symplectic commutator form. Thus the complete ordinary graded algebra H^bullet(G_{s,a},F_p) is independent of s and a in the declared family.
+
+### Independent verification
+- filtration check: PASS;
+- minimal one-relator presentation: PASS;
+- complete H^bullet determination: PASS;
+- a=s versus a=infinity: PASS;
+- q-blindness: PASS.
+
+The literature source is stronger than the earlier internal associated-graded observation: it closes the whole ordinary cohomology ring, not merely gr_Z.
+
+### Boundary
+This does **not** prove G_{s,a} isomorphic to G_{t,b}, equality of finite windows, or equality of higher operations such as Massey/Bockstein/A_infinity data. It proves only that ordinary mod-p cohomology cannot recover the hidden s or a in this family.
+
+### Classification
+**Direction 2 = PASS / CLOSED.**
+
+The route is closed. The remaining finite-window boundary must use information beyond the ordinary cohomology ring, if it is pursued at all. No repetition of ordinary H^* calculations is authorized.
+
+Authoritative audit: research/PAPER4_DIRECTION2_COHOMOLOGY_BLINDNESS_CLOSURE_2026-10-04.md.
