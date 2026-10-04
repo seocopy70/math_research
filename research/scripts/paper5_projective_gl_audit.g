@@ -34,7 +34,7 @@ run:=function(s,a)
   for p in autImages do
     Add(projPerms,PermList(List(projReps,function(i)
       local j,k;
-      j:=Position(elsV,Image(p,elsV[i]));
+      j:=Image(p,i);
       k:=Position(elsV,elsV[j]^-1);
       if j<k then return projPos(j); else return projPos(k); fi;
     end)));
