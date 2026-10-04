@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - paper4-tex-2026-10-04
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 jobs:
   build:
