@@ -64,3 +64,6 @@ run:=function(s,a)
   );
   Print(report,"\\n");
 end;
+
+for t in [[0,1],[1,1],[0,2],[1,2]] do run(t[1],t[2]); od;
+QUIT;
