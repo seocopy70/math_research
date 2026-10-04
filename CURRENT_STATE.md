@@ -501,3 +501,22 @@ W_n\text{-iso}\iff \operatorname{Aut}(F/D_n)\text{-orbit of the truncated relato
 remains **OPEN** and requires a separate lifting/Nielsen argument.
 
 Immediate next target: generalize the cubic-layer calculation to arbitrary odd \(p\) and rank \(d\), starting with the intrinsic map from \(Q_3(r_2)\) to a \(W_4\)-isomorphism invariant.
+
+
+## 2026-10-04 — correction: cubic Q3 result remains local; W4 separation reopened
+
+The proposed \(d=3,p=3\) conclusion
+\[
+W_3(G_A)\cong W_3(G_B),\qquad W_4(G_A)\not\cong W_4(G_B)
+\]
+for \(r_B=r_2c_1\) was over-promoted.
+
+The \(Q_3(r_2)\) calculation itself remains valid: \(\dim Q_3=2\), with zero/nonzero stabilizer orbits. But the claimed 5-versus-4 cubic lower-central dimensions are not valid because an inhomogeneous relation \(r_2+c_1\) has degree-2 initial form \(r_2\); \(c_1\) cannot simply be counted as an additional independent degree-3 relation.
+
+Status:
+- \(Q_3\) dimension/basis: **PASS / LOCAL**.
+- non-removable cubic jet directions: **PASS / LOCAL**.
+- zero/nonzero cubic orbit gives \(W_4\) non-isomorphism: **OPEN**.
+- general \(Q_3\to W_4\)-classification: **OPEN / LOAD-BEARING**.
+
+The next computation must target an invariant sensitive to the filtered extension class rather than the ordinary cubic associated-graded dimension.
