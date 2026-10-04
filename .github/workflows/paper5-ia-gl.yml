@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'research/scripts/paper5_ia_gl_decomposition.g'
+      - 'research/scripts/paper5_rank2_ia_gl_check.g'
       - '.github/workflows/paper5-ia-gl.yml'
   pull_request:
     paths:
@@ -60,3 +61,15 @@ jobs:
           open("/tmp/p5fast.g","w").write(s)
           PY
           timeout 300 gap -q /tmp/p5fast.g
+
+
+  rank2-fast:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and AutPGrp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-autpgrp
+      - name: Run rank-2 x^3 IA/GL check
+        run: timeout 120 gap -q research/scripts/paper5_rank2_ia_gl_check.g
