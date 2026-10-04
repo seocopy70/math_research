@@ -171,3 +171,18 @@ The valid result remains only:
 A replacement carrier must be built from an actually nontrivial intrinsic structure of the finite window (for example a canonical filtration quotient, Bockstein/extension datum, or a functorially defined character subset), not from ordinary torsion annihilation of W^{ab}.
 
 This correction is a substantive mathematical correction, not merely a wording change.
+
+
+## 2026-10-04 — critical review: proposed Sp-orbit closure is NOT certified
+
+The proposed conclusion r in D_2\D_3 -> Sp-orbit of psi is a single intrinsic orbit -> abstract same-window separation is **FAIL / CLOSED as a proof route**. Four independent gaps were identified.
+
+1. **Degenerate quadratic forms exist.** For odd p, D_2/D_3 is the alternating square. r_2=[x_1,x_2] in rank 4 is nonzero but rank 2, with radical <X_3,X_4>. Its stabilizer is not full Sp_4 and is not transitive on all nonzero character directions. Thus r in D_2\D_3 does not imply a nondegenerate symplectic space, and the exponent s is unrelated to the rank of B.
+
+2. **Transitivity is insufficient for separation.** Even for a nondegenerate 2m-dimensional B, Sp_{2m} transitivity on nonzero vectors only removes a representative choice. It does not construct an intrinsic defect whose value differs for s and t.
+
+3. **B is not shown to be recoverable from W.** The quotient map G_s(r)->W does not canonically retain the original free presentation, generators, or r_2 in D_2/D_3. Intrinsic recovery must be constructed from canonical data of W itself and proved to factor the marked B.
+
+4. **Equivariance does not compare unrelated windows.** Sp-equivariance of marked constructions under automorphisms of one presentation does not establish equality of an intrinsic defect across the s and t windows.
+
+Correct classification: marked affine quadratic separator **PASS / CLOSED**; single-character intrinsic bridge **FAIL / CLOSED**; torsion-annihilator carrier **FAIL / CLOSED**; nondegenerate symplectic special case **CONDITIONAL** and still insufficient for unmarked separation; general Sp-orbit bridge **FAIL / CLOSED as stated**; intrinsic orbit/groupoid defect **OPEN / LOAD-BEARING**; abstract same-window separation **OPEN**.
