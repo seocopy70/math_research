@@ -38,3 +38,25 @@ jobs:
           PY
       - name: Run IA/GL decomposition
         run: gap -q research/scripts/paper5_ia_gl_decomposition.g
+
+  fast-localization:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and AutPGrp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-autpgrp
+      - name: Run reduced IA/GL localization
+        run: |
+          python3 - <<'PY'
+          src="research/scripts/paper5_ia_gl_decomposition.g"
+          s=open(src).read()
+          s=s.replace("IAkernel,AutG,act,agtriv,", "agtriv,")
+          s=s.replace("GLorder,Autorder,alpha,d,report,GLsize,pred,dimVok,genCheck,fullGenCheck", "GLorder,Autorder,d,report,GLsize,pred,dimVok,genCheck")
+          s=s.replace("  AutG:=Group(Concatenation(A.glAutos,A.agAutos));\n  fullGenCheck:=(Size(AutG)=A.size);\n  act:=GroupHomomorphismByImagesNC(AutG,L,Concatenation(A.glAutos,A.agAutos),Concatenation(glperms,List(A.agAutos,alpha->permOnV(alpha,frnat,elsV))));\n  IAkernel:=Kernel(act);\n", "")
+          s=s.replace("    IAKernelOrder:=Size(IAkernel),\n    IAKernelMatchesAG:=(Size(IA)=Size(IAkernel)),\n", "")
+          s=s.replace("    fullAutGeneration:=fullGenCheck,\n", "")
+          open("/tmp/p5fast.g","w").write(s)
+          PY
+          timeout 300 gap -q /tmp/p5fast.g
