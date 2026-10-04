@@ -1,6 +1,8 @@
 name: Paper 5 IA/GL decomposition
 
 on:
+  pull_request:
+    branches: [main]
   push:
     branches: [main]
     paths:
