@@ -1,0 +1,31 @@
+name: Paper 5 IA/GL decomposition
+
+on:
+  push:
+    paths:
+      - 'research/scripts/paper5_ia_gl_decomposition.g'
+      - '.github/workflows/paper5-ia-gl.yml'
+  pull_request:
+    paths:
+      - 'research/scripts/paper5_ia_gl_decomposition.g'
+      - '.github/workflows/paper5-ia-gl.yml'
+  workflow_dispatch:
+
+jobs:
+  ia-gl:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and AutPGrp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-autpgrp
+      - name: Verify GAP package
+        run: |
+          gap -q <<'EOF'
+          Print("GAP=", GAPInfo.Version, "\n");
+          Print("AutPGrp=", LoadPackage("autpgrp"), "\n");
+          QUIT;
+          EOF
+      - name: Run IA/GL decomposition
+        run: gap -q research/scripts/paper5_ia_gl_decomposition.g
