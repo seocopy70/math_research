@@ -96,3 +96,10 @@ is **FAIL/CLOSED**: for a finite p-group window, W^{ab} is entirely torsion, so 
 
 Therefore no intrinsic nonzero character carrier has yet been established. The active E_psi boundary is:
 marked quadratic theorem PASS/CLOSED -> single-character bridge FAIL/CLOSED -> intrinsic carrier OPEN -> orbit-invariant extension defect OPEN.
+
+
+## 2026-10-04 — E_psi Sp-orbit claim rejected
+
+The proposed Sp-orbit closure of the unmarked orientation bridge is **FAIL/CLOSED as stated**. Nonzero quadratic initial form does not imply nondegeneracy; rank-4 r_2=[x_1,x_2] is an explicit degenerate counterexample. The exponent parameter s is also unrelated to quadratic-form rank. Even in the nondegenerate symplectic subcase, transitivity only removes representative choice and does not provide an intrinsic defect separating s,t, while recovery of B from the abstract finite window remains unproved.
+
+Therefore abstract same-window separation remains **OPEN**. The correct next gate is an intrinsic filtration/extension/groupoid object of the abstract window, tested first on the degenerate rank-4 example.
