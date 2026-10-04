@@ -387,3 +387,12 @@ H^1(W,\mathbf F_p)\cong\operatorname{Hom}(W^{ab},\mathbf F_p),
 the annihilator of all W^{ab} is zero. Thus the earlier PASS/CLOSED claim for a nonzero intrinsic carrier was false.
 
 The marked E_psi theorem and the single-character symmetry no-go remain valid. The replacement intrinsic carrier is now OPEN and must use a genuinely nontrivial filtered/extension/Bockstein structure of W rather than ordinary torsion annihilation.
+
+
+## 2026-10-04 — correction: Sp-orbit orientation bridge does not close
+
+The proposed PASS/CLOSED conclusion for the abstract E_psi orientation bridge via an Sp-orbit is **superseded and rejected**. Nonzero quadratic initial form does not imply nondegeneracy; rank-4 r_2=[x_1,x_2] is an explicit degenerate counterexample. The exponent s is also unrelated to quadratic-form rank. Even in the nondegenerate symplectic subcase, transitivity only removes representative choice and does not provide an intrinsic extension defect separating s from t, while recovery of B from the abstract finite window remains unproved.
+
+Current status: marked quadratic E_psi separator **PASS / CLOSED**; single-character bridge **FAIL / CLOSED**; Sp-orbit bridge in general D_2\D_3 **FAIL / CLOSED as stated**; nondegenerate symplectic subcase **CONDITIONAL**; intrinsic orbit/groupoid defect **OPEN / LOAD-BEARING**; abstract same-window separation **OPEN**.
+
+Immediate next task: test a genuinely intrinsic filtration/extension object on the degenerate rank-4 example r_2=[x_1,x_2], without importing the presentation-level B or psi.
