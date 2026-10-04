@@ -68,3 +68,10 @@ This does not change the global boundary: abstract unmarked same-window separati
 
 Active dependency is now:
 marked quadratic E_psi theorem -> intrinsic orientation bridge -> abstract finite-window separation.
+
+
+## 2026-10-04 — E_psi orientation bridge: symmetry boundary
+
+The marked quadratic E_psi theorem is now closed, but the first proposed unmarked bridge is also closed negatively. In the rank-two control relation r=[x_1,x_2], the automorphism group acts transitively on the nonzero order-p character directions used by the affine separator. Hence no individual character psi can be intrinsically selected from the abstract window.
+
+The surviving structural target is an **orbit-valued affine defect/groupoid**, not a distinguished orientation character. The abstract same-window separation question remains OPEN until such an orbit-level invariant is constructed or ruled out.
