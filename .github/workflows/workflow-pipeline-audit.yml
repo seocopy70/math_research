@@ -50,3 +50,43 @@ jobs:
           name: finite-window-kummer-recognition-pdf
           path: paper/main.pdf
           if-no-files-found: error
+
+
+  paper4-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile Paper 4
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: paper4/main.tex
+          working_directory: .
+      - name: Verify Paper 4 PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet pypdf
+          python - <<'PY'
+from pypdf import PdfReader
+from pathlib import Path
+p=Path('paper4/main.pdf')
+r=PdfReader(str(p))
+text='\n'.join((page.extract_text() or '') for page in r.pages)
+assert len(r.pages) > 0
+assert 'Delayed Finite-Window Visibility' in text
+assert 'Zassenhaus order alone is insufficient' in text
+assert 'remaining critical boundary' in text
+Path('paper4/pdfinfo.txt').write_text(f'Pages: {len(r.pages)}\nSize: {p.stat().st_size}\n', encoding='utf-8')
+Path('paper4/main.txt').write_text(text, encoding='utf-8')
+PY
+          sha256sum paper4/main.pdf | tee paper4/main.pdf.sha256
+          test -s paper4/main.pdf
+          test -s paper4/main.txt
+      - name: Upload Paper 4 PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper4-final-pdf
+          path: |
+            paper4/main.pdf
+            paper4/main.pdf.sha256
+            paper4/pdfinfo.txt
