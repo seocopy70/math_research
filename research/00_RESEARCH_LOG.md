@@ -1319,3 +1319,16 @@ Classification:
 - executable gate: PASS / REPOSITORY;
 - actual embedded equality: OPEN / EXECUTION PENDING;
 - p=5,n=6: DEFERRED until this gate closes.
+
+
+## 2026-10-04 — Paper 5 GL stabilizer gate: first CI run fails at coordinate extraction
+
+GitHub Actions run 37198757315 (commit d74cb0f) was audited. The environment setup and GAP/AutPGrp installation completed successfully, but the stabilizer script failed before any equality result was computed. The immediate runtime error is in `ImageMatrix`: `Coord(...,basis[i])` passes a single basis vector as the coordinate basis, whereas `Coord` expects the full three-element basis list. GAP therefore raises `NoMethodFound` on the vector indexing inside `Coord`. The preceding `DeterminantMat` warning is a static warning, not the terminating cause.
+
+Accordingly:
+- run 37198757315: **FAIL / CLOSED as a runtime attempt**;
+- candidate stabilizer formulas: **OPEN / LOAD-BEARING**;
+- actual embedded equality: **OPEN / NOT COMPUTED**;
+- no mathematical stabilizer conclusion is inferred from the failed run.
+
+The script was corrected so that `ImageMatrix` maps each basis vector through `Coord(...,basis)`, preserving the full coordinate basis. The correction was committed as `f48c185c8086728aa1942f41315e102048aa23db`. The next authorized action is to rerun the corrected GL stabilizer gate and inspect all four exact embedded-equality results before any p=5,n=6 promotion.
