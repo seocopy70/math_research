@@ -490,3 +490,36 @@ Therefore:
 This also separates two notions previously conflated: (i) the Zassenhaus degree of a higher tail inserted into a relator, and (ii) the externally indexed critical depth of the affine detector. They are different parameters and must not be identified.
 
 For the exploratory pair (r_A) versus (r_B=r_Ax_1^{p^m}), any separation caused by the added degree-(p^m) tail is therefore a filtered-relator/quotient statement, not evidence that the marked E_\psi exponent parameter is encoded by the quadratic initial form.
+
+
+## 2026-10-04 — refinement: the higher-jet critical pair is genuinely separated, but is not exponent-same-family separation
+
+For the exploratory pair
+\[
+r_A=[x_1,x_2],\qquad r_B=[x_1,x_2]x_1^{p^m},
+\]
+the previously proposed \(\operatorname{Aut}(F)\)-orbit argument is unnecessary and too strong. The separation at the first window where the added tail becomes visible has a direct intrinsic certificate from abelianization.
+
+Indeed, for \(n=p^m\), the added factor \(x_1^{p^m}\) lies in \(D_{p^m}(F)\), so
+\[
+W_{p^m}(G_A)\cong W_{p^m}(G_B).
+\]
+At \(n=p^m+1\), the abelianization of the free truncated quotient retains the class of \(x_1^{p^m}\):
+\[
+W_{p^m+1}(G_A)^{ab}\cong(\mathbf Z/p^{m+1})^4,
+\]
+whereas the relation for \(G_B\) imposes \(p^m x_1=0\), giving
+\[
+W_{p^m+1}(G_B)^{ab}\cong
+\mathbf Z/p^m\oplus(\mathbf Z/p^{m+1})^3
+\]
+(up to the displayed choice of basis). Hence
+\[
+W_{p^m}(G_A)\cong W_{p^m}(G_B),qquad
+W_{p^m+1}(G_A)\not\cong W_{p^m+1}(G_B).
+\]
+This is a valid **PASS / CLOSED Zassenhaus-critical higher-jet separation**.
+
+However, it does not compare \(G_s(r)\) and \(G_t(r)\) for one fixed relation \(r\). It therefore does not close the exact unmarked same-window problem of the control family. Its significance is narrower: a finite window can intrinsically detect a higher filtered tail at its first visible degree, even when the quadratic initial form is unchanged.
+
+The earlier claim that this proves or disproves recovery of the marked E_\psi parameter \(s\) is not valid. The marked parameter is target-indexed; the higher-tail degree \(m\) is a property of the chosen relator.
