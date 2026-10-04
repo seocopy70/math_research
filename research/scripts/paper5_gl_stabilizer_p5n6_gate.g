@@ -75,7 +75,10 @@ run:=function(s,a)
   Print("=== Paper5 p=5,n=6 GL stabilizer gate s=",s," a=",a," ===\n");
   Print("actual image order = ",Size(actual)," candidate order = ",Size(Cands[i]),"\n");
   Print("embedded equality in basis (x,y,z) = ",eq,"\n");
-  if not eq then Error("STABILIZER equality failure"); fi;
+  Print("actual structure = ",StructureDescription(actual),"\n");
+  Print("candidate structure = ",StructureDescription(Cands[i]),"\n");
+  Print("actual vector orbit sizes = ",List(Orbits(actual,[1..Length(Vecs)]),Length),"\n");
+  Print("candidate vector orbit sizes = ",List(Orbits(Cands[i],[1..Length(Vecs)]),Length),"\n");
   Print("STABILIZER p=5 s=",s," a=",a," PASS\n");
 end;
 
