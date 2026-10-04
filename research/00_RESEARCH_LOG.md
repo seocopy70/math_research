@@ -972,3 +972,20 @@ The GAP AutPGrp documentation confirms that `glAutos` are the automorphisms acti
 - p=5 structural theorem: **DEFERRED until p=3 closure**
 
 Audit: `research/PAPER5_IA_GL_DECOMPOSITION_AUDIT_2026-10-04.md`.
+
+
+## 2026-10-04 — Paper 5 IA/GL execution gate: runtime boundary
+
+The IA/GL localization was taken to the execution boundary. The repository now contains the five external GAP artifacts and the dedicated decomposition script. A local environment check was performed for GAP; GAP/AutPGrp is not installed in the available runtime, so the new executable gate could not be rerun here.
+
+Accordingly, no IA-kernel equality or full Aut(W) generation claim is promoted. The exact-order arithmetic remains **PASS / LOCAL-PREDICTED**: for p=3,n=4 the split/non-split 3^2 gap is numerically localized to the candidate IA factor while the candidate linear image retains v_3=3 in all four cases.
+
+Required next execution checks remain:
+- displayed W generators generate W;
+- agAutos act trivially on W/Phi(W);
+- glAutos generate a linear image of the recorded order;
+- the induced action homomorphism has kernel exactly <agAutos>;
+- <glAutos,agAutos>=Aut(W);
+- |IA| |L| = |Aut(W)|.
+
+The available runtime cannot certify these until GAP/AutPGrp is executed in a suitable GAP environment. Classification: **OPEN / REPRODUCTION PENDING**. p=5 remains deferred.
