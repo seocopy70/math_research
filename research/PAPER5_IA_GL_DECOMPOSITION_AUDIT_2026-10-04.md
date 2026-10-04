@@ -155,3 +155,45 @@ The field `glOrderMatchesLinearImage` is therefore intentionally false in these 
 - p=5 cross-prime theorem: **DEFERRED**
 
 Next authorized gate: identify the precise structural difference between the split and non-split subgroups of (GL(V)), starting with their orders (108	o6) and (864	o48), and determine whether this is controlled by the defining power relation at the level of the induced linear stabilizer.
+
+
+## 2026-10-04 — GL-image structure audit
+
+A dedicated GAP/AutPGrp audit (run 37188778566 / corrected rerun 37189030445) computed the actual Frattini-image group (L\leq GL_3(3)) for all four p=3,n=4 cases.
+
+Verified group structures:
+
+| (s,a) | |L| | StructureDescription | SmallGroup ID |
+|---|---:|---|---|
+| (0,1) | 108 | (((C_3\times C_3):C_3):(C_2\times C_2)) | [108,17] |
+| (1,1) | 6 | (S_3) | [6,1] |
+| (0,2) | 864 | (C_2\times((C_3\times C_3):GL(2,3))) | [864,4661] |
+| (1,2) | 48 | (GL(2,3)) | [48,29] |
+
+Additional verified invariants:
+- split (s=0) cases have (v_3(|L|)=3);
+- non-split (s=1) cases have (v_3(|L|)=1);
+- derived subgroup orders are 27, 3, 216, 24 respectively;
+- center orders are 1, 1, 2, 2 respectively;
+- vector-orbit sizes on (V\setminus\{0\}) are:
+  - (0,1): 18,2,3,3;
+  - (1,1): 2,2,3,2,6,3,2,6;
+  - (0,2): 18,8;
+  - (1,2): 2,8,16.
+
+The (a=2,s=0) image has order 864, exactly the order of the standard 1-dimensional-subspace parabolic in (GL_3(3)); its abstract structure is also the corresponding (C_2\times((C_3^2):GL_2(3))) form. This is strong local evidence that the split (a=2) image is a full line-stabilizer, but the actual embedding/conjugacy statement has not yet been independently certified and remains OPEN.
+
+The (a=2,s=1) image is (GL_2(3)) of order 48, suggesting a much stronger preservation/splitting condition than mere line stabilization. This is a structural lead, not yet a theorem about the canonical embedding.
+
+The common index is
+[
+108/6=864/48=18.
+]
+Thus the non-split linear image is smaller than the corresponding split image by an index-18 factor in both (a=1,2) tests; the observed p^2 gap is the 3-primary part of this same index-18 loss.
+
+Classification:
+- GL-image group structure: **PASS / LOCAL**;
+- exact p^2 localization to GL-image: **PASS / LOCAL**;
+- “split a=2 image is the full line stabilizer”: **OPEN / LOAD-BEARING** (order/structure match only);
+- exact intrinsic description of the non-split image: **OPEN / LOAD-BEARING**;
+- next gate: identify the defining-relation stabilizer condition inside (GL_3(3)), then test whether it explains the index-18 drop uniformly in a and p.
