@@ -1027,3 +1027,14 @@ This does not invalidate the numerical Q evidence as a computation; it changes i
 Next authorized action is therefore to audit the exact intended definition of H. A valid refinement must specify: (1) what H is intrinsically, (2) why it is invariant under W-isomorphism and Frattini/Nielsen changes, (3) why the refinement is not simply an exponent/abelianization test, and (4) how it retains the transformed-relator obstruction. If no such restriction exists, Q is closed and the research must return to the external roadmap's L4/L5/extension-class problem or another genuinely nonabelian invariant.
 
 This correction supersedes the immediately preceding plan to compute transformed tuples under the unrestricted Q definition.
+
+
+## 2026-10-04 — explicit Paper 4 freeze and Paper 5 takeover
+
+The user explicitly froze Paper 4 and authorized continuation of Paper 5 until a concrete structural result is obtained. Paper 4 is therefore no longer an active computation branch. Its certified core remains PASS/CLOSED; its exact unmarked same-window and all-s transfer-defect boundaries remain OPEN/LOAD-BEARING but intentionally deferred. No Paper 4 claim is promoted by this freeze.
+
+Paper 5 is now the sole active research branch. The immediate load-bearing task is independent certification of the p=3,n=4 IA/GL decomposition. The repository already contains the recovered AutPGrp artifacts and the executable script `research/scripts/paper5_ia_gl_decomposition.g`. The recorded `agOrder` values are predictions only. The script must certify the actual kernel of Aut(W)->Sym(V), the linear image order, triviality of the ag-generators on V, and exact order factorization before the p^2 gap is localized structurally.
+
+Execution order fixed: (1) p=3,n=4 IA/GL reproduction; (2) if PASS, fixed-quotient Aut(W)->Aut(Q) image/kernel; (3) if PASS, cross-prime p=5,n=6 structural replication; (4) only then analyze the 9+9+54 orbit decomposition and the n=10/3^10 complement phenomenon as downstream structure. The 9+9+54 split is an Aut(W)-orbit detector, not itself an IA/GL filtration statement.
+
+Classification: Paper 4 **PASS/CLOSED — FROZEN**; Paper 5 IA/GL **OPEN/LOAD-BEARING**; p^2-gap source **OPEN**.
