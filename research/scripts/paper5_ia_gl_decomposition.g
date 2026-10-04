@@ -35,6 +35,9 @@ run:=function(s,a)
     alpha->ForAll(gens,g->Image(frnat,Image(alpha,g))=Image(frnat,g)));
 
   glperms:=List(A.glAutos,alpha->permOnV(alpha,frnat,elsV));
+  Print("glPermCount=",Length(glperms)," bad=",Filtered([1..Length(glperms)],i->glperms[i]=fail),"\n");
+  Print("glPermTypes=",Set(List(glperms,p->IsPerm(p))),"\n");
+  if ForAny(glperms,p->p=fail) then Error("permOnV produced fail"); fi;
   L:=Group(glperms);
   IA:=Group(A.agAutos);
   AutG:=Group(Concatenation(A.glAutos,A.agAutos));
