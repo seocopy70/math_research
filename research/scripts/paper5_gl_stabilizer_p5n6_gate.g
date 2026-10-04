@@ -78,6 +78,7 @@ run:=function(s,a)
   Print("actual structure = ",StructureDescription(actual),"\n");
   Print("candidate structure = ",StructureDescription(Cands[i]),"\n");
   Print("actual vector orbit sizes = ",List(Orbits(actual,[1..Length(Vecs)]),Length),"\n");
+  if s=1 and a=1 then Print("actual generator matrices = ",Mats,"\n"); fi;
   Print("candidate vector orbit sizes = ",List(Orbits(Cands[i],[1..Length(Vecs)]),Length),"\n");
   Print("STABILIZER p=5 s=",s," a=",a," PASS\n");
 end;
