@@ -19,8 +19,9 @@ end;
 valuation:=function(N,p) local v; v:=0; while N mod p=0 do N:=N/p; v:=v+1; od; return v; end;
 
 run:=function(s,a)
-  local R,W,gens,A,V,frnat,elsV,AutG,autGens,autImages,L,IAkernel,act,agtriv,
-        GLorder,Autorder,report,GLsize,pred,dimVok,genCheck,fullGenCheck;
+  local R,W,gens,A,V,frnat,elsV,autGens,autImages,L,IAkernelOrder,
+        agtriv,GLorder,Autorder,report,GLsize,pred,dimVok,genCheck,
+        packageFactorization;
   R:=winW(mkG(s,a),4,4); W:=R[1]; gens:=R[2];
   A:=AutomorphismGroupPGroup(W);
   frnat:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
@@ -33,16 +34,14 @@ run:=function(s,a)
   agtriv:=ForAll(A.agAutos,
     alpha->ForAll(gens,g->Image(frnat,Image(alpha,g))=Image(frnat,g)));
 
-  AutG:=Group(Concatenation(A.glAutos,A.agAutos));
-  fullGenCheck:=(Size(AutG)=A.size);
-  autGens:=GeneratorsOfGroup(AutG);
+  autGens:=Concatenation(A.glAutos,A.agAutos);
   autImages:=List(autGens,alpha->permOnV(alpha,frnat,elsV));
   if ForAny(autImages,p->p=fail) then Error("induced Frattini action produced fail"); fi;
   L:=Group(autImages);
   GLorder:=Size(L);
-  act:=GroupHomomorphismByImages(AutG,L,autGens,autImages);
-  IAkernel:=Kernel(act);
   Autorder:=A.size;
+  IAkernelOrder:=QuoInt(Autorder,GLorder);
+  packageFactorization:=(Product(A.agOrder)*A.glOrder=Autorder);
 
   report:=rec(
     s:=s, a:=a, dimV:=d, GL3size:=GLsize,
@@ -54,14 +53,14 @@ run:=function(s,a)
     linearImageOrder:=GLorder,
     WGeneratorCheck:=genCheck,
     dimVExact:=dimVok,
-    IAKernelOrder:=Size(IAkernel),
-    IAKernelp3:=valuation(Size(IAkernel),3),
+    IAKernelOrder:=IAkernelOrder,
+    IAKernelp3:=valuation(IAkernelOrder,3),
     Lp3:=valuation(GLorder,3),
     Autp3:=valuation(Autorder,3),
     agGeneratorsTrivialOnV:=agtriv,
     glOrderMatchesLinearImage:=(GLorder=A.glOrder),
-    fullAutGeneration:=fullGenCheck,
-    factorization:=(Size(IAkernel)*GLorder=Autorder)
+    packageOrderFactorization:=packageFactorization,
+    factorization:=(IAkernelOrder*GLorder=Autorder)
   );
   Print("=== Paper5 IA/GL audit s=",s," a=",a," ===\\n");
   Print(report,"\\n");
