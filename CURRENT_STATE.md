@@ -924,3 +924,15 @@ Current classification:
 - p=5 uniform stabilizer theorem: **OPEN**; no promotion.
 
 Next authorized computation: run the updated p=5 gate. If (1,1) closes, move to the a=2 W_6 generation/collector problem with an explicit class/order bound. If the new faithful-action equality still fails, localize the discrepancy using the direct matrix-group equality before touching a=2.
+
+
+## 2026-10-04 — Paper 5 next attack order fixed: p=5,n=6 (1,1) → W_6 collector/order-bound → p=3,s=2,a=1,n=10
+The next actual attack is fixed as follows.
+
+1. **p=5,n=6,(s,a)=(1,1):** execute the audited GAP-native faithful Frattini-action gate. The target is not merely order 20: the **embedded 20-order subgroup** must be certified by the direct matrix-group comparison plus GAP-native faithful action equality. Order 20 alone remains insufficient.
+2. **p=5,n=6,a=2:** only after (1,1) closes, attack the W_6 generation/collector issue with an explicit class/order bound. The collector must be shown to terminate with a certified order bound; no inferred W_6 size is accepted.
+3. **Then (p,s,a,n)=(3,2,1,10):** return to the single-orbit/complement case as the next structural test.
+
+The **9+9+54 orbit decomposition is explicitly not treated as the source of the p^2 automorphism-order gap**. It remains an orbit-side detector only. The actual IA kernel/order and the linear/Frattini image must be computed independently before any causal localization of the gap.
+
+Classification of the plan: **OPEN / ACTIVE**. No p^2-gap causal theorem is promoted by this ordering decision.
