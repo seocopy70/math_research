@@ -1075,3 +1075,28 @@ Classification:
 - structural explanation of image-order drop: **OPEN / LOAD-BEARING**.
 
 Next authorized action: compute/identify the actual image subgroups (L_{s,a}\le GL_3(3)), determine the stabilizer condition imposed by the defining relation, and only after that test p=5,n=6.
+
+
+## 2026-10-04 — Paper 5 GL-image structure
+
+After the decisive IA/GL localization, a dedicated GAP audit computed the actual Frattini-image groups (L_{s,a}\le GL_3(3)).
+
+Results:
+- (0,1): |L|=108, StructureDescription (((C_3\times C_3):C_3):(C_2\times C_2)), Id=[108,17].
+- (1,1): |L|=6, (S_3), Id=[6,1].
+- (0,2): |L|=864, (C_2\times((C_3\times C_3):GL(2,3))), Id=[864,4661].
+- (1,2): |L|=48, (GL(2,3)), Id=[48,29].
+
+The nonzero-vector orbit sizes are respectively:
+(0,1) 18,2,3,3; (1,1) 2,2,3,2,6,3,2,6; (0,2) 18,8; (1,2) 2,8,16.
+
+The split/non-split image-order ratio is exactly 18 for both a=1 and a=2. Its 3-primary part is the observed p^2 gap. The IA kernel remains (3^{27}) in all four cases.
+
+The a=2 split image has order 864 and the abstract structure of the standard 1-space parabolic in GL_3(3), giving strong local evidence for a line-stabilizer interpretation; the embedding is not yet certified. The a=2 non-split image is GL_2(3), suggesting a stronger preservation/splitting condition. Both are structural leads only.
+
+Classification:
+- GL-image structure: **PASS / LOCAL**;
+- p^2 localization: **PASS / LOCAL**;
+- exact stabilizer formula from the defining relation: **OPEN / LOAD-BEARING**.
+
+Next authorized action: derive the relation-induced condition on the linear Frattini action and compute its stabilizer in GL_3(3), then compare exactly with the measured image groups before any p=5 promotion.
