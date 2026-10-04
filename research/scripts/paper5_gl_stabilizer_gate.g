@@ -35,24 +35,24 @@ CandidateGroups:=function()
   local G,els,G02,G01,G12,G11,m,detA;
   G:=GL(3,3); els:=Elements(G);
   # (s,a)=(0,2): preserve the plane <x,y>.
-  G02:=CallFuncList(Group,[Filtered(els,m->IsZero(m[3][1]) and IsZero(m[3][2]) and not IsZero(m[3][3])),One(G)]);
+  G02:=Subgroup(G,Filtered(els,m->IsZero(m[3][1]) and IsZero(m[3][2]) and not IsZero(m[3][3])));
   # (s,a)=(0,1): preserve <x> inside <x,y> and impose the mixed
   # x^[3] / [x,y] scaling condition, giving y-coefficient 1.
-  G01:=CallFuncList(Group,[Filtered(els,m->IsZero(m[2][1]) and IsZero(m[3][1]) and
-                           IsZero(m[3][2]) and IsOne(m[2][2])),One(G)]);
+  G01:=Subgroup(G,Filtered(els,m->IsZero(m[2][1]) and IsZero(m[3][1]) and
+                           IsZero(m[3][2]) and IsOne(m[2][2])));
   # (s,a)=(1,2): preserve <x,y>, <z>, and impose z^[3]=[x,y]:
   # z-scalar equals determinant of the 2x2 block.
-  G12:=CallFuncList(Group,[Filtered(els,function(m)
+  G12:=Subgroup(G,Filtered(els,function(m)
     detA:=m[1][1]*m[2][2]-m[1][2]*m[2][1];
     return IsZero(m[3][1]) and IsZero(m[3][2]) and IsZero(m[1][3]) and
            IsZero(m[2][3]) and m[3][3]=detA;
-  end),One(G)]);
+  end));
   # (s,a)=(1,1): impose the stronger root relation
   # x -> a x, y -> b x+y, z -> a z.
-  G11:=CallFuncList(Group,[Filtered(els,m->IsZero(m[2][1]) and IsZero(m[3][1]) and
+  G11:=Subgroup(G,Filtered(els,m->IsZero(m[2][1]) and IsZero(m[3][1]) and
                            IsZero(m[3][2]) and IsOne(m[2][2]) and
                            IsZero(m[1][3]) and IsZero(m[2][3]) and
-                           m[3][3]=m[1][1]),One(G)]);
+                           m[3][3]=m[1][1]));
   return [G01,G11,G02,G12];
 end;
 
@@ -69,7 +69,7 @@ run:=function(s,a)
   if ForAny(Mats,m->DeterminantMat(m)=0) then
     Error("non-invertible Frattini action matrix");
   fi;
-  actual:=CallFuncList(Group,Mats);
+  actual:=Subgroup(GL(3,3),Mats);
   Cands:=CandidateGroups();
   expected:=[[0,1],[1,1],[0,2],[1,2]];
   i:=Position(expected,[s,a]); eq:=actual=Cands[i];
