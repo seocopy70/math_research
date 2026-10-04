@@ -1,0 +1,11 @@
+LoadPackage("anupq");
+Print("GAP=", GAPInfo.Version, "\n");
+Print("ANUPQ loaded=", LoadPackage("anupq"), "\n");
+F:=FreeGroup("z","x");;
+z:=F.1;; x:=F.2;;
+G:=F/[x^3];;
+q:=PQuotient(G,3,3);;
+Print("PQuotient type=", TypeObj(q), "\n");
+Print("q length=", Length(q), "\n");
+for i in [1..Length(q)] do Print(i,": ",TypeObj(q[i])," ",IsGroup(q[i]),"\n"); od;
+QUIT;
