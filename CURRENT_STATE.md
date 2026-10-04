@@ -647,3 +647,18 @@ Classification:
 ## 2026-10-04 — Paper 5 Aut-orbit follow-up (user-reported)
 
 New supplied logs report a 9+9+54 Aut(W)-orbit split at (p,s,a)=(3,1,1), a single orbit at (3,1,2), and a single orbit with 3^10 complements at (3,2,1,n=10), plus a p=5 cross-prime Aut-order pattern. Classification: PASS / LOCAL pending repository reproduction. These results sharpen the invariant list but do not supersede the authorized p=3,n=4 IA/GL decomposition gate.
+
+
+## 2026-10-04 — Paper 4 roadmap alignment / current next action correction
+
+The external handoff roadmap was re-audited against the current Paper 4 state. The roadmap's strategic target—unmarked same-window separation—is still correct, but its original L4/L5 extension-orbit implementation is no longer the best immediate route because the one-step extension extraction, single-character bridge, Sp-orbit bridge, and two-step representation-layer compression have already reached recorded boundaries.
+
+The active unmarked candidate is now the abstract finite-group predicate Q(W): exists (g,H) with <g,H>=W and 1 != g^(p^s) in H. Evidence is PASS / LOCAL: p=3,s=1,r=x^3 was exhaustively tested with 52,488 Q-positive generating pairs in W_s and 0 in W_t; p=5,s=1,r=x^5,n=6 produced 10,226 positives in W_s and 0 in W_t among 200,000 random pairs. The p=5 result remains sample evidence only.
+
+The Frattini-lift reformulation converts a Q-positive pair into a transformed-relator problem r'=alpha^{-1}(r). Killing x yields the necessary abelian z-exponent condition v_p(epsilon(r')) <= s, explaining the high-valuation region. The remaining v_p(rbar) <= s boundary is genuinely nonabelian. The prior restricted-Lie root-capture attempt is not valid because D_j(H)=H intersect D_j(W) is not automatic; the required induced-filtration Root-Capture/Magnus-PBW statement remains OPEN / LOAD-BEARING.
+
+### Current next action
+
+Perform the p=3,s=1,r=x^3 Q-positive transformed-tuple/Frattini-lift audit, compress the positive pairs by the relevant automorphism structure, and inspect alpha^{-1}(x^3) at the minimal Magnus/PBW degree needed to identify the common nonabelian obstruction. If no presentation-independent obstruction emerges, stop and classify this Q formulation accordingly rather than expanding the search blindly.
+
+Detailed alignment record: research/PAPER4_ROADMAP_ALIGNMENT_AND_NEXT_STEP_2026-10-04.md.
