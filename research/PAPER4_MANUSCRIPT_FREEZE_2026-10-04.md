@@ -20,7 +20,7 @@ No superseded same-window order-jump argument is used.
 - Pages: 12
 - PDF build: pdflatex, two-pass
 - SHA-256: 39937e753368e4cb8c06dfaf2f7808727c3d88e14b75669c937ab0d06520b536
-- Manuscript commit: 83ca616c538bd91eb5f6bdcb68ca27306389084f
+- Manuscript commit: 2c378bb767d9203e18934cf3dd215cfe965462bf
 - CI run: 37172461426 (paper4-tex-build, PASS)
 - GitHub Actions artifact: `paper4-pdf`, id 11292160916
 - Audited local copy: `/mnt/data/Paper4_final_2026-10-04.pdf`
