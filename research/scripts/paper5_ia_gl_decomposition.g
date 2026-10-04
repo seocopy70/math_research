@@ -34,6 +34,9 @@ run:=function(s,a)
   agtriv:=ForAll(A.agAutos,
     alpha->ForAll(gens,g->Image(frnat,Image(alpha,g))=Image(frnat,g)));
 
+  Print("glAutos=",A.glAutos,"\n");
+  Print("agAutos=",A.agAutos,"\n");
+  Print("glOrder=",A.glOrder," agOrder=",A.agOrder,"\n");
   glperms:=List(A.glAutos,alpha->permOnV(alpha,frnat,elsV));
   Print("glPermCount=",Length(glperms)," bad=",Filtered([1..Length(glperms)],i->glperms[i]=fail),"\n");
   Print("glPermTypes=",Set(List(glperms,p->IsPerm(p))),"\n");
