@@ -1009,3 +1009,21 @@ Detailed alignment record: `research/PAPER4_ROADMAP_ALIGNMENT_AND_NEXT_STEP_2026
 Classification: Q = **PASS / LOCAL**; Q theorem and nonabelian obstruction = **OPEN / LOAD-BEARING**.
 
 Immediate next authorized action: classify Q-positive p=3,s=1,r=x^3 pairs up to the relevant automorphism/Frattini-lift structure and inspect the transformed relator at the minimal Magnus/PBW degree needed to isolate the common obstruction.
+
+
+## 2026-10-04 — Paper 4 Q pre-check: current Q definition is too weak
+
+Before executing the planned p=3,s=1,r=x^3 transformed-tuple audit, the current Q definition itself was rechecked under the continuity protocol.
+
+The recorded predicate is:
+Q(W): there exist g and H with <g,H>=W and 1 != g^(p^s) in H.
+
+Immediate structural consequence: Q-positive implies ord(g)>p^s. Thus Q necessarily contains an exponent witness. More importantly, if H is allowed to be an arbitrary subgroup subject only to <g,H>=W, then H can be chosen after an element g with nontrivial p^s-th power; the predicate therefore does not by itself encode the intended nonabelian transformed-relator/Frattini-lift obstruction. It is at best an exponent-type detector unless additional restrictions on H are part of the definition.
+
+Therefore the previously planned step “enumerate Q-positive pairs and extract a common Magnus/PBW obstruction” is NOT authorized yet. The Object/Gauge/Novelty pre-check fails at the current Q formulation: the subgroup H carries insufficient intrinsic structure to force a nonabelian obstruction. Any observed Q separation may be explained by exponent data already visible at a much coarser level.
+
+This does not invalidate the numerical Q evidence as a computation; it changes its interpretation. Classification of the current Q predicate: **FAIL / CLOSED as a proposed nonabelian separator** unless an explicit, intrinsic restriction on H is supplied and independently justified. The reported p=3 exhaustive and p=5 sampled Q counts remain **PASS / LOCAL as computations of the stated predicate**, but they cannot be promoted to evidence for a nonabelian theorem.
+
+Next authorized action is therefore to audit the exact intended definition of H. A valid refinement must specify: (1) what H is intrinsically, (2) why it is invariant under W-isomorphism and Frattini/Nielsen changes, (3) why the refinement is not simply an exponent/abelianization test, and (4) how it retains the transformed-relator obstruction. If no such restriction exists, Q is closed and the research must return to the external roadmap's L4/L5/extension-class problem or another genuinely nonabelian invariant.
+
+This correction supersedes the immediately preceding plan to compute transformed tuples under the unrestricted Q definition.
