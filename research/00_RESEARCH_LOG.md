@@ -1100,3 +1100,74 @@ Classification:
 - exact stabilizer formula from the defining relation: **OPEN / LOAD-BEARING**.
 
 Next authorized action: derive the relation-induced condition on the linear Frattini action and compute its stabilizer in GL_3(3), then compare exactly with the measured image groups before any p=5 promotion.
+
+
+## 2026-10-04 — Paper 5: GL/Frattini-image structural localization strengthened
+
+The decisive p=3,n=4 IA/GL result was re-audited at the level of the actual image subgroups, and the previous IA-localization hypothesis is definitively superseded.
+
+### Exact IA/GL decomposition
+
+For all four cases,
+\[
+|\operatorname{IA}(W)|=3^{27},\qquad |\operatorname{IA}(W)|\,|L_{s,a}|=|\operatorname{Aut}(W)|,
+\]
+with
+\[
+|L_{0,1}|=108=2^2 3^3,\quad |L_{1,1}|=6=2\cdot3,
+\]
+\[
+|L_{0,2}|=864=2^5 3^3,\quad |L_{1,2}|=48=2^4 3.
+\]
+Hence the split/non-split ratio is
+\[
+108/6=864/48=18=2\cdot3^2.
+\]
+The observed $p^2=3^2$ gap is therefore the 3-primary part of an actual index-18 loss in the linear Frattini image.
+
+The runtime also gives \\texttt{agGeneratorsTrivialOnV=false} in every case. Thus \(agAutos\) is not IA, and the identification \(agAutos=IA\) is **FAIL / CLOSED**.
+
+### Actual image-group structures
+
+\[
+L_{0,1}\cong ((C_3\times C_3):C_3):(C_2\times C_2),\qquad |L_{0,1}|=108,
+\]
+\[
+L_{1,1}\cong S_3,qquad |L_{1,1}|=6,
+\]
+\[
+L_{0,2}\cong C_2\times((C_3\times C_3):GL_2(3)),qquad |L_{0,2}|=864,
+\]
+\[
+L_{1,2}\cong GL_2(3),qquad |L_{1,2}|=48.
+\]
+
+The $a=2$, split image has exactly the order and abstract structure of the standard 1-space parabolic in \(GL_3(3)\). This is strong local evidence for a line-stabilizer interpretation, but the actual embedding/conjugacy to a specific stabilizer is **not yet proved**. The $a=2$, non-split image is abstractly \(GL_2(3)\), indicating a substantially stronger linear restriction than mere line stabilization; its intrinsic embedding remains OPEN.
+
+### New load-bearing gate
+
+The active question is now the exact intrinsic subgroup condition induced by the defining power relation. The authorized calculation is:
+
+1. Fix \(V=W/\Phi(W)\) and a concrete basis \((z,x,y)\) (or the repository's certified equivalent basis).
+2. Recover the actual matrices in \(GL_3(3)\) induced by the complete automorphism group, using all hybrid generators rather than identifying \(glAutos\) with the full image.
+3. Identify the preserved line/flag/form or other linear datum common to the measured split image.
+4. Derive that datum directly from the defining relation, not from the observed subgroup order.
+5. Compute its exact stabilizer in \(GL_3(3)\).
+6. Compare the stabilizer with the measured \(L_{s,a}\), including equality or conjugacy as an embedded subgroup, not merely abstract isomorphism/order.
+7. Only if this closes should the same construction be tested at \(p=5,n=6\).
+
+No $p=5$ promotion is authorized before the intrinsic stabilizer gate closes.
+
+### Classification
+
+- actual p=3,n=4 IA/GL decomposition: **PASS / LOCAL**;
+- $p^2$ gap = GL/Frattini-image defect: **PASS / LOCAL**;
+- IA as source of the gap: **FAIL / CLOSED**;
+- $agAutos=IA$: **FAIL / CLOSED**;
+- GL-image abstract structures: **PASS / LOCAL**;
+- common index-18 structure: **PASS / LOCAL**;
+- split $a=2$ = a specific line stabilizer: **OPEN / LOAD-BEARING**;
+- exact intrinsic stabilizer formula and embedding: **OPEN / LOAD-BEARING**;
+- $p=5,n=6$: **DEFERRED**.
+
+This entry supersedes any remaining order-arithmetic interpretation that places the $3^2$ deficit in IA.
