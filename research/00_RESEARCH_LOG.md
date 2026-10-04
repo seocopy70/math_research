@@ -354,3 +354,64 @@ as abstract unmarked finite groups. The missing implication is precisely the int
 - unmarked same-window separation: **OPEN**.
 
 Authoritative detail: `research/EPSI_INTRINSIC_DEFINITION_AUDIT_2026-10-04.md`.
+
+
+## 2026-10-04 — E_psi quadratic separator audit closes the marked theorem
+
+The E_psi branch was subjected to a second, adversarial audit of the proposed quadratic lemma.
+
+### Correction 1: degree-two Zassenhaus piece
+The previously used expression
+\[
+\rho_2(r)=\sum_i a_iX_i^{[p]}+\sum_{i<j}b_{ij}[X_i,X_j]
+\]
+was wrong for odd-p Zassenhaus filtration. Since F^p is contained in D_p and hence D_3,
+\[
+D_2/D_3\cong\Lambda^2H_1(F,\mathbf F_p),
+\]
+and the degree-two initial form is purely alternating.
+Classification: FAIL / CLOSED for the p-power-term formulation; superseded.
+
+### Correction 2: higher terms are not automatically negligible
+The earlier statement that the D_3-tail is harmless without calculation was also rejected. The p-power part of D_3=gamma_3 F^p contributes at order p before cocycle normalization and therefore at the same normalized p^s-scale. The gamma_3-part, in contrast, contributes only at order p^(2s) and vanishes modulo p^(s+1).
+
+### Closed argument
+Let r=r_2 h, h in D_3, and write epsilon=p^s. Use order-p characters
+\[
+\psi_\alpha(x_i)=1+\varepsilon\alpha_i.
+\]
+For
+\[
+r_2=\sum_{i<j}b_{ij}[x_i,x_j],
+\]
+the crossed-homomorphism calculation gives
+\[
+\delta(r_2)\equiv p^sL_B(\alpha,u)\pmod{p^{s+1}},
+\]
+where for a basic commutator
+\[
+L_{ij}(\alpha,u)=-\alpha_j u_i+\alpha_i u_j.
+\]
+If B is nonzero, choose a vertex k incident to a nonzero edge. Then L_B(t e_k, dot) is a nonzero linear functional for t nonzero.
+
+After scaling the cocycle by p^(s-1), the p-power part of h contributes an alpha-independent linear functional C_h(u) at the same p^s-scale; the gamma_3-part is zero modulo p^(s+1). Varying t in F_p, at most one value can make C_h+L_B(t e_k, dot) identically zero. Since p is odd, choose another value and then choose u with nonzero total functional.
+
+Hence
+\[
+\exists(\psi,\delta):\quad \psi(r)=1,\quad v_p(\delta(r))=s,
+\]
+and therefore p^s is in I_psi(r).
+
+### Classification
+- affine E_psi object: PASS / CLOSED;
+- marked functoriality/gauge/q-blindness: PASS / CLOSED;
+- quadratic affine separator for every r in D_2\D_3: PASS / CLOSED;
+- marked critical-window detection at p^s+1: PASS / CLOSED;
+- abstract unmarked orientation/character bridge: OPEN / LOAD-BEARING;
+- abstract same-window separation: OPEN;
+- arbitrary-degree degree-only theorem: FAIL / CLOSED.
+
+### Research boundary
+This closes the marked quadratic E_psi theorem candidate without reviving the old arbitrary-degree claim. The next authorized attack is the intrinsic orientation bridge, not another random quadratic sweep or an enlargement of the relation class.
+
+Authoritative detailed audit: research/EPSI_INTRINSIC_DEFINITION_AUDIT_2026-10-04.md.
