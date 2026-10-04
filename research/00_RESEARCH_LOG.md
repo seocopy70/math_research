@@ -1332,3 +1332,25 @@ Accordingly:
 - no mathematical stabilizer conclusion is inferred from the failed run.
 
 The script was corrected so that `ImageMatrix` maps each basis vector through `Coord(...,basis)`, preserving the full coordinate basis. The correction was committed as `f48c185c8086728aa1942f41315e102048aa23db`. The next authorized action is to rerun the corrected GL stabilizer gate and inspect all four exact embedded-equality results before any p=5,n=6 promotion.
+
+
+## 2026-10-04 — Paper 5 GL stabilizer gate CI audit: run 37199037517
+
+The corrected GL stabilizer gate was executed in GitHub Actions run **37199037517**, commit `f48c185c8086728aa1942f41315e102048aa23db`. The workflow is displayed as **Success**, but the decisive GAP stabilizer computation did **not** complete.
+
+The IA/GL decomposition stage did execute and reproduced the already-established p=3,n=4 data, including exact IA kernel order (3^{27}) and the four Frattini-image orders (108,6,864,48). Thus this run adds no new IA/GL structural theorem.
+
+The subsequent stabilizer gate aborted in `ImageMatrix` with:
+`Error, the families of the element or collection <elm> and Source(<map>) don't match`
+at `Image(alpha,basis[j])`. The problem is a GAP family/type mismatch in applying the automorphism to the chosen Frattini basis; the later `DeterminantMat` message is only a static syntax warning and is not the terminating error.
+
+Critically, GAP entered its read/eval loop after the error, so the shell command still returned success and the GitHub job was marked green. Therefore **workflow Success is not mathematical PASS** here.
+
+Classification:
+- run 37199037517 as GL stabilizer certificate: **FAIL / CLOSED** (runtime/CI attempt; no equality result);
+- candidate embedded stabilizers: **OPEN / LOAD-BEARING**;
+- actual embedded equality: **OPEN / NOT COMPUTED**;
+- p=5,n=6: **DEFERRED**;
+- IA/GL decomposition already established previously: **unchanged, PASS / LOCAL**.
+
+Immediate next action: repair the GAP family mismatch by constructing the Frattini quotient action in a type-compatible way (or use the induced linear transformation supplied by AutPGrp), then enforce a hard certificate marker and nonzero GAP exit status so a runtime abort cannot produce a green CI run. Rerun all four embedded-equality tests before any p=5,n=6 promotion.
