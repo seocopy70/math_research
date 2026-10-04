@@ -889,3 +889,24 @@ The pre-registered two-step filtered-tower feasibility gate has now been execute
 This closes the bounded representation-layer branch at its pre-registered stop rule. No new carrier, character, lift decoration, or ad hoc representation hunt is authorized. The exact unmarked same-window separation remains **OPEN / LOAD-BEARING** and now requires a genuinely new factorization/compression theorem rather than another candidate search.
 
 Authoritative audit: research/PAPER4_REPRESENTATION_LAYER_GATE_RESULT_2026-10-04.md.
+
+
+## 2026-10-04 — Paper 4 manuscript/PDF final artifact audit
+
+Paper 4 manuscript was finalized from the certified research state and built from
+the dedicated `paper4-tex-2026-10-04` branch. The four manuscript corrections
+were applied: direct same-window order separation for (1\le a<s<t);
+the (a=s) versus (a=\infty), (s\ge2) boundary remains OPEN;
+the arbitrary-(r) degree-only generalization is explicitly closed using
+the (r=z^p) counterexample; and the Zassenhaus/Jennings--Lazard and
+quadratic-cohomology literature boundary was recorded in the manuscript.
+
+Final CI result: `paper4-tex-build` run 37172461426 = PASS.
+PDF: 12 pages.
+SHA-256: `39937e753368e4cb8c06dfaf2f7808727c3d88e14b75669c937ab0d06520b536`.
+GitHub Actions artifact: `paper4-pdf`, id 11292160916.
+The local audited PDF is `/mnt/data/Paper4_final_2026-10-04.pdf`.
+
+Classification: **PASS / CLOSED — manuscript artifact complete**.
+This closes the writing/PDF-production task only; the mathematical OPEN boundary
+(G_{s,s}) versus (G_{s,\infty}) for (s\ge2) remains unchanged.
