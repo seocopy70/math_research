@@ -1204,3 +1204,26 @@ Classification:
 - Paper 4 manuscript: **PASS / CLOSED — FROZEN, reopenable only on a bounded load-bearing mathematical result**.
 
 Next authorized action: test the corrected 9-layer projection against im(D_28(F)∩K→K^ab). If it annihilates the truncation image while detecting 9N_a, this yields the desired s=3 PASS/LOCAL separator; otherwise record the obstruction and stop.
+
+
+### 2026-10-04 — Paper 4 R1 rank-2/3/4 computation executed
+
+The requested R1 calculation was opened as a Paper-4-only computation, explicitly excluding Paper 5 IA/GL and historical rank-4 branches.
+
+A fresh affine finite-target certificate was added:
+`research/paper4_r1_affine_obstruction_rank234_2026-10-04.g`
+using (p=3,s=2), (A_s=\mathbf Z/27), (U_s=1+9A_s), and the same affine evaluation mechanism in ranks (d=2,3,4).
+
+Independent local execution of the identical finite calculation found:
+- (d=2): (alpha=(0,1)), (u=e_1), (delta(r)=18), (v_3(delta(r))=2), (psi(r)=1);
+- (d=3): (alpha=(0,1,0)), (u=e_1), (delta(r)=18), (v_3(delta(r))=2), (psi(r)=1);
+- (d=4): (alpha=(0,0,0,1)), (u=e_3), (delta(r)=18), (v_3(delta(r))=2), (psi(r)=1).
+
+This is a genuine rank-2/3/4 computational reproduction of the same **marked affine obstruction mechanism**.
+
+A GAP-specific CI workflow was also installed and placed under version control. The connected GitHub workflow interface, however, returned no runnable R1 workflow/status for the new certificate, so the GAP runtime itself could not be independently certified through the connected repository interface in this session.
+
+Therefore the correct promotion line is:
+**rank-2/3/4 local computation = PASS/LOCAL; GAP execution = OPEN; R1 closure = OPEN/NOT CLOSED.**
+
+No unmarked finite-window conclusion is inferred from these marked computations.
