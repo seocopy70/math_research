@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/workflows/**'
       - 'research/WORKFLOW_PIPELINE_AUDIT_2026-09-17.py'
+      - 'research/scripts/paper5_gl_stabilizer_p5n6_matrix_diag.g'
   pull_request:
     paths:
       - '.github/workflows/**'
