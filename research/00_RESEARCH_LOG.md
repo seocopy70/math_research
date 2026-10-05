@@ -2925,3 +2925,39 @@ Classification:
 - Paper 5 arbitrary-n END: **OPEN**.
 
 Authorized next action: no blind numerical sweep. Define the U_n-action intrinsically, derive the exact B,theta transformation law, and prove or refute the invariant flag/normal-form consequence. Record the result immediately.
+
+
+## 2026-10-06 — Proposed Zassenhaus stabilization lemma audited and rejected
+
+A proposed closure of the arbitrary-(n) boundary asserted
+[
+W_{p+1}=W_p Longrightarrow W_n=W_pquadorall nge p
+]
+using the restricted Lie algebra of the free pro-(p) group and an induction on (M_k=D_k(F)R).
+
+Independent audit finds a decisive error in the (p)-power branch. For
+(c=lceil(k+1)/pceilge p), the proof uses
+[
+D_csubseteq D_psubseteq M_{p+1}.
+]
+But
+[
+D_p(W_p)=M_p/M_{p+1}congmathbf F_p^3
+]
+is nonzero. Hence (D_p
+otsubseteq M_{p+1}). The surviving (x^p,y^p,z^p) classes are precisely the nonzero quotient (M_p/M_{p+1}). Therefore the containment of (D_c^p) in (M_{p+1}), which is load-bearing for the induction, is not proved.
+
+The additional statement that the degree-(p) Lie component lies in the initial restricted ideal (J) is also insufficient for all-(k) stabilization: a restricted ideal containing that degree-(p) component does not automatically contain later independent restricted layers, e.g. (p)-power layers arising from lower-degree components. Thus (M_{p+2}=M_{p+1}) does not propagate by the displayed argument.
+
+Standard Jennings/Lazard facts remain valid and provide the restricted-filtration identities, but they do not by themselves imply one-step stabilization of (M_k).
+
+Classification:
+- proposed stabilization proof: **FAIL / CLOSED as submitted**;
+- (W_{p+1}=W_pRightarrow W_n=W_p) for all (nge p): **OPEN / LOAD-BEARING**;
+- (n<p): **PASS / CLOSED** with (W_ncongmathbf F_p^3), (Aut(W_n)=GL_3(mathbf F_p));
+- (n=p,p+1): **PASS / CLOSED / GENERAL** with (Im=S'_{11}(p)), (|Aut|=p^{11}(p-1)^2);
+- Run 37381098677: **PASS / LOCAL**.
+
+The final arbitrary-(n) table is therefore not promoted. No (B,	heta) shortcut is used to bypass this missing stabilization theorem. The next authorized task is a genuine stabilization proof or a counterexample/witness, followed by independent verification and immediate recording.
+
+Detailed audit: `research/PAPER5_ZASSENHAUS_STABILIZATION_AUDIT_2026-10-06.md`.
