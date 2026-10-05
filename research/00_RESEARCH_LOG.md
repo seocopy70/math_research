@@ -1565,3 +1565,22 @@ Classification: p=3,s=2,a=1,n=10 orbit structure = **PASS / LOCAL**; exact Aut-o
 The newly authorized fixed-quotient `Stab_{Aut(W)}(K) -> Aut(Q)` gate (run 37251989683) did not finish in the observed execution window. A v2 implementation replaced the expensive explicit preimage step by direct point-stabilizer computation on the exact admissible-kernel action. Run **37252335078** remains in progress after several minutes.
 
 Classification: **OPEN / EXECUTION BLOCKED** for the quotient-action layer. No image/kernel theorem is promoted. This is not a mathematical counterexample.
+
+
+## 2026-10-05 — Paper 5 p=5 Frattini action independent certificate: PASS/CLOSED for all four cases
+
+The remaining p=5 representation ambiguity is resolved. A direct action on the 125-element Frattini quotient was constructed from the actual automorphisms, while the candidate stabilizers were represented independently by their action on \(\mathbf F_5^3\). The correct coordinate conversion is the **transpose** of the printed Frattini matrix (GAP's row/right action versus the declared column/basis convention). CI run **37252889495** (commit `dcf305ef7dd00d95084d44c8ce84b4444fb93883`) gives:
+- (0,1): actual order 2000 = candidate order 2000, embedded equality true;
+- (1,1): actual order 20 = candidate order 20, embedded equality true;
+- (0,2): actual order 48000 = candidate order 48000, embedded equality true;
+- (1,2): actual order 480 = candidate order 480, embedded equality true;
+- `P5_COSET_STABILIZER_CERTIFICATE=PASS`.
+
+Thus the p=5,n=6 embedded stabilizer formulas are **PASS / CLOSED** for these four tested cases. The earlier direct matrix permutation mismatch was a convention/representation defect and is now superseded. The coupled diagonal structure is confirmed independently: (1,1) uses a common scalar on x and z; (1,2) uses determinant coupling on the z-coordinate.
+
+Combining this with the exact Aut(W_6) order reproduction (run 37252036371), the p-primary IA/GL factorization is now exact for p=5:
+- a=1: IA order = 5^106 in both s=0 and s=1; GL orders 2000 and 20 give a p-primary ratio 5^2.
+- a=2: IA order = 5^106 in both s=0 and s=1; GL orders 48000 and 480 give a p-primary ratio 5^2.
+Therefore, for the tested p=5 cases, the observed p^2 automorphism-order gap is **PASS / CLOSED as a localization statement**: it is entirely on the GL/Frattini-image side, not the IA kernel.
+
+The remaining theorem question is no longer computational localization at p=5; it is whether these stabilizer formulas admit a clean odd-p intrinsic derivation and/or a p-uniform theorem. Current status for that generalization: **OPEN / LOAD-BEARING**.
