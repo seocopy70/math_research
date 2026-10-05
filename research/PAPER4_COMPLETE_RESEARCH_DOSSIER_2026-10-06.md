@@ -1838,3 +1838,923 @@ is not in the row lattice of \(A\). This independently verifies the nonzero inte
 ### Logical boundary
 
 This calculation does **not** justify the original \(\chi(z)=\chi(x)=1\) claim; that branch is rejected as non-intrinsic. It also does not by itself prove the all-\(s\) transfer formula. The result is a certified base-case witness for the exact remaining boundary, subject to the standard subgroup-filtration comparison lemma being written out in the final proof.
+
+
+---
+
+# SOURCE: research/PAPER4_REPRESENTATION_LAYER_GATE_RESULT_2026-10-04.md
+
+<!-- blob-sha: eb34b150fe7d7178288e4a8bf2ba6ad1d23bfb88 -->
+
+# PAPER4_REPRESENTATION_LAYER_GATE_RESULT_2026-10-04.md
+
+## Scope
+
+This audit executes the pre-registered bounded representation-layer feasibility gate. It does not reopen arbitrary candidate hunting, ordinary cohomology, the failed arbitrary-degree theorem, or the marked single-character E_psi theorem.
+
+Fixed object:
+\[
+W_{p^s+2}\to W_{p^s+1}\to W_{p^s},
+\]
+together with the pre-registered adjacent-layer extension, module, restricted p-power/commutator, and compatibility data.
+
+## Gate execution
+
+### 1. Object — PASS / CLOSED
+
+The two-step filtered tower is intrinsic and q-blind. Its morphisms are filtered isomorphisms. The canonical central extension classes and restricted operations are determined by the finite filtered groups.
+
+### 2. Input — PASS / CLOSED
+
+No hidden q=p^a, distinguished character, presentation-dependent generator, or chosen section is inserted.
+
+### 3. Functoriality — PASS / CLOSED
+
+A filtered isomorphism of tower objects transports extension classes, module structures, restricted operations, and adjacent-layer compatibility. Hence any construction made solely from the pre-registered data is functorial.
+
+### 4. Gauge — PASS / CLOSED
+
+Section/lift choices act by the usual coboundary equivalence. The two-step tower therefore supports an affine representation *groupoid* only after quotienting the auxiliary choices. A chosen scalar evaluation is not intrinsic.
+
+### 5. Orientation bridge — FAIL / CLOSED for a distinguished coordinate
+
+The one-character bridge remains impossible by the established symmetry argument. The two-step tower does not canonically select a representative psi. Passing from a representative to its full orbit/groupoid removes the coordinate choice, but does not itself produce a scalar or canonical affine coordinate.
+
+### 6. Orbit/groupoid construction — PASS / CLOSED as a reformulation, not as compression
+
+For a fixed admissible affine target, the groupoid of filtered representations/crossed-derivation data can be defined functorially from the tower. This resolves the representability question at the level needed for a legitimate formulation.
+
+However, this groupoid is a functor of the *entire declared tower*. Without a further factorization theorem, it is equivalent in information content to a structured representation of the original finite-window isomorphism problem. It is therefore not yet a coarser intrinsic carrier.
+
+### 7. Separation — OPEN / LOAD-BEARING
+
+The orbit/groupoid formulation does not, by itself, prove that the a=s and a=infinity critical windows have different groupoids. Conversely, no theorem currently proves that the groupoids coincide. Establishing either statement requires an actual comparison theorem for the tower objects.
+
+Thus the remaining issue is a **detector failure**, not an information-failure theorem.
+
+## Independent structural check
+
+The supplied literature on higher cohomological structure confirms the general methodological point: ordinary cohomology can be blind while a higher canonical obstruction class detects extra structure. This does not transfer automatically to the present finite-window problem, because a finite-window factorization through such a higher operation has not been proved. Therefore no literature result is promoted as a solution here.
+
+## Final classification
+
+- one-step scalar defect: **FAIL / CLOSED**;
+- distinguished single-psi orientation bridge: **FAIL / CLOSED**;
+- two-step affine representation groupoid: **PASS / CLOSED as a canonical reformulation**;
+- compression of that groupoid to a smaller intrinsic carrier: **OPEN**;
+- exact unmarked same-window separation a=s versus a=infinity: **OPEN / LOAD-BEARING**;
+- arbitrary candidate hunting: **STOPPED**.
+
+## Consequence
+
+The pre-registered representation-layer branch has reached its legitimate boundary. Further progress requires a genuinely new factorization theorem showing that the affine representation groupoid, or the full tower extension structure, descends to a strictly smaller intrinsic invariant that separates the critical cases.
+
+No additional carrier, character, lift decoration, or ad hoc representation is authorized merely to continue the search.
+
+
+---
+
+# SOURCE: research/PAPER4_GENERAL_SC_ARBITRARY_PROP_A1_CLOSURE_2026-10-05.md
+
+<!-- blob-sha: e9581628b1e582836b475a62c590df87b2cfe4ed -->
+
+# Paper 4 — A1 arbitrary pro-p SC closure audit — 2026-10-05
+
+## Claim
+
+For every pro-p group G, every open subgroup K <= G with [G:K]=p^s,
+\[
+D_n(G)\cap K\subseteq D_{\lceil n/p^s\rceil}(K).
+\tag{A1}
+\]
+
+Here D_n denotes the p-Zassenhaus filtration.
+
+## Verdict
+
+**PASS / CLOSED.**
+
+The earlier augmentation-ideal equality route was false and remains rejected. The corrected proof uses a weighted normal-form filtration on the completed group algebra and does not require G to be free.
+
+## Index-p proof
+
+Let [G:K]=p and choose a in G with G/K=<aK>. Put
+\[
+A=\mathbf F_p[[K]],\qquad B=\mathbf F_p[[G]],\qquad J=I_K,\qquad t=a-1.
+\]
+As a left A-module,
+\[
+B=\bigoplus_{r=0}^{p-1}At^r.
+\]
+Because a^p in K and char(F_p)=p,
+\[
+t^p=a^p-1\in J.
+\]
+Normality of K gives aJa^{-1}=J.
+
+The crucial point is NOT the false identity
+\[
+I_G^n=\sum_j J^{n-j}t^jB.
+\]
+Instead define, for m>=1,
+\[
+E_m=
+\bigoplus_{r=0}^{p-1}
+J^{\max(0,\lceil(m-r)/p\rceil)}t^r.
+\tag{E_m}
+\]
+For (m\le r) we use the convention (J^0=A); equivalently, the exponent in (E_m) is always interpreted as (max(0,\lceil(m-r)/p\rceil)). Thus (E_m) is well-defined for all (m\ge1).
+
+The normal-form multiplication rules imply
+\[
+E_mE_\ell\subseteq E_{m+\ell}.
+\tag{*}
+\]
+More explicitly, define the weight of a normal-form monomial (c t^r), with (c\in J^q) and (0\le r<p), to be (pq+r). If \(\sigma(c)=aca^{-1}\), then
+\[
+tc=\sigma(c)t+(\sigma(c)-c),
+\]
+and, because \(\sigma(J^q)=J^q\), both coefficients on the right lie in (J^q). Iterating gives (t^rJ^q\subseteqsum_{j=0}^rJ^qt^j). On multiplying by a further (t^s), every resulting (t^{j+s}) is written as
+\[
+t^{j+s}=(t^p)^u t^v,
+\qquad j+s=up+v,quad0\le v<p,
+\]
+and (t^p=a^p-1\in J). Thus the weight (pq+r) is not decreased by multiplication. Hence products of terms of weights at least (m) and \(\ell\) have weight at least (m+\ell), proving (*).
+
+Since
+\[
+I_G=JB+tB\subseteq E_1,
+\]
+multiplicativity gives
+\[
+I_G^n\subseteq E_n
+=
+\bigoplus_{r=0}^{p-1}
+J^{\max(0,\lceil(n-r)/p\rceil)}t^r.
+\tag{NF}
+\]
+The decomposition is direct. Hence
+\[
+I_G^n\cap A\subseteq J^{\lceil n/p\rceil}.
+\tag{AI}
+\]
+Using the dimension-subgroup identity
+\[
+D_n(H)=H\cap(1+I_H^n)
+\]
+for pro-p groups, (AI) gives
+\[
+D_n(G)\cap K\subseteq D_{\lceil n/p\rceil}(K).
+\tag{SC}
+\]
+
+This proof explicitly handles the previously missed terms t^rBt: they are normalized inside the direct-sum E_m decomposition rather than discarded.
+
+## Index-p^s extension
+
+Since (G/K) is a finite (p)-group, it admits a composition series with successive quotients of order (p). Pulling this series back to (G) gives a subnormal chain
+\[
+G=K_0>K_1>\cdots>K_s=K,
+\qquad [K_{i-1}:K_i]=p.
+\]
+For [G:K]=p^s choose this chain
+\[
+G=K_0>K_1>\cdots>K_s=K,
+\qquad [K_{i-1}:K_i]=p.
+\]
+Applying (SC) successively gives
+\[
+D_n(G)\cap K\subseteq D_{\lceil n/p^s\rceil}(K),
+\tag{SC_s}
+\]
+because
+\[
+\left\lceil\frac{\lceil m/p\rceil}{p}\right\rceil
+=
+\left\lceil\frac m{p^2}\right\rceil
+\]
+and hence the ceiling operation composes exactly. The elementary identity follows by writing (m=pq+r), (0\le r<p), and checking the two cases (r=0) and (r>0).
+
+## Consequences
+
+1. **A1 is arbitrary-pro-p, not free-pro-p.** No freeness assumption enters the group-algebra normal-form argument.
+2. The previously certified free-pro-p SC/SC_s results remain valid.
+3. At the Paper-4 critical index n=p^s+1,
+\[
+D_{p^s+1}(G)\cap K
+\subseteq
+D_{p^{s-1}+1}(K),
+\]
+which supplies the subgroup-depth bound used in the transfer truncation argument.
+4. The separate free-pro-p sharpness witness remains the correct sharpness statement for SC_s. A1 does not enlarge that sharpness claim to arbitrary pro-p groups.
+5. The old augmentation-ideal equality, the Heisenberg counterexample, and the old Lemma-2/Lemma-3 route remain **FAIL / CLOSED / SUPERSEDED**. They are not part of the proof.
+
+## Audit status
+
+- A1 index-p arbitrary pro-p: **PASS / CLOSED**.
+- A1 index-p^s arbitrary pro-p: **PASS / CLOSED**.
+- Pointwise sharpness for every n: **OPEN / not needed**.
+- Uniform sharpness in the free-pro-p witness family: **PASS / CLOSED**.
+- Paper-4 downstream transfer obstruction and exact critical-window theorem: unchanged and remain PASS / CLOSED in the declared stress-family scope.
+
+## Publication wording
+
+Do not claim a new foundational theorem about augmentation ideals. The defensible statement is:
+
+> We prove the precise index-p Zassenhaus subgroup-depth comparison needed for the finite-window argument for arbitrary pro-p groups, by a weighted normal-form filtration of the completed group algebra; iterating along an index-p^s chain yields the corresponding p^s comparison. The result is used as filtration infrastructure for the intrinsic transfer obstruction and sharp finite-window separation.
+
+
+## Sharpness scope (explicit)
+
+The statement proved here is **uniform optimality of the factor (p^s) in the free-pro-(p) class**, not pointwise optimality for every (n) and not optimality for every arbitrary pro-(p) group.
+
+For the one-step case, (F=\langle a,b\rangle) and the standard index-(p) kernel give witnesses (g_m=a^{p^m}) with
+[
+\nu_F(g_m)=p^m,qquad \nu_K(g_m)=p^{m-1}
+=left\lceil\frac{p^m}{p}\right\rceil.
+]
+For index (p^s), take the corresponding kernel (K_s) and
+[
+g_{m,s}=a^{p^{m+s-1}},
+]
+so
+[
+\nu_F(g_{m,s})=p^{m+s-1},qquad
+\nu_{K_s}(g_{m,s})=p^{m-1}
+=left\lceil\frac{p^{m+s-1}}{p^s}\right\rceil.
+]
+Letting (m) vary gives arbitrarily large witness degrees and proves that the factor (p^s) cannot be uniformly improved in the free-pro-(p) class.
+
+No claim is made that equality occurs for every integer (n), and no claim is made that the bound is sharp for every arbitrary pro-(p) group. Such pointwise or groupwise sharpness is outside the Paper-4 theorem and is not a gate for closure.
+
+
+---
+
+# SOURCE: research/PAPER4_SC_SHARPNESS_AND_INDEX_PS_AUDIT_2026-10-05.md
+
+<!-- blob-sha: 9a83975dda555bfe6640f03aa9df2ef1b4c21da7 -->
+
+# Paper 4 — SC Sharpness and Index-p^s Strengthening Audit — 2026-10-05
+
+## Gate
+
+**Target:** strengthen the certified subgroup-depth comparison
+\[
+D_n(F)\cap K\subseteq D_{\lceil n/p^s\rceil}(K),\qquad [F:K]=p^s,
+\]
+by (i) proving the factor \(p^s\) is uniformly sharp and (ii) isolating the exact index-\(p^s\) generalization.
+
+**Classification: PASS / CLOSED** for both theorem statements below.
+
+## 1. Index-p^s generalization
+
+Let \(F\) be a finitely generated free pro-p group and let \(K\le F\) be open of index \(p^s\). Since \(F/K\) is a finite p-group, choose a subnormal chain
+\[
+F=K_0>K_1>\cdots>K_s=K,\qquad [K_{i-1}:K_i]=p.
+\]
+Every \(K_i\) is again free pro-p.
+
+Applying the certified index-p comparison successively gives
+\[
+D_n(K_{i-1})\cap K_i
+\subseteq D_{\lceil n/p\rceil}(K_i).
+\]
+Induction therefore yields
+\[
+\boxed{D_n(F)\cap K\subseteq D_{\lceil n/p^s\rceil}(K).}
+\tag{SC_s}
+\]
+
+The ceiling identity needed at each step is, for integer \(m\ge1\),
+\[
+\left\lceil\frac{\lceil m/p\rceil}{p}\right\rceil
+=\left\lceil\frac{m}{p^2}\right\rceil,
+\]
+and hence iteratively
+\[
+\left\lceil\frac{\cdots\lceil m/p\rceil\cdots}{p}\right\rceil
+=\left\lceil\frac{m}{p^s}\right\rceil.
+\]
+This is an elementary integer identity.
+
+## 2. Sharpness
+
+The correct sharpness statement is **uniform sharpness**, not pointwise sharpness for every integer n.
+
+Let \(F=\langle a,b\rangle\) be free pro-p and
+\[
+K=\ker\bigl(F\to C_{p^s}\bigr),
+\qquad a\mapsto1,\quad b\mapsto0.
+\]
+A Schreier basis for \(K\) contains
+\[
+c_0=a^{p^s}.
+\]
+Thus \(c_0\) is a free generator of \(K\), so by the exact Zassenhaus degree of a free generator and its p-power tower,
+\[
+c_0^{p^{m-1}}\in D_{p^{m-1}}(K)\setminus D_{p^{m-1}+1}(K).
+\]
+Set
+\[
+g_m=a^{p^{m+s-1}}=c_0^{p^{m-1}},
+\qquad n_m=p^{m+s-1}.
+\]
+Then
+\[
+g_m\in D_{n_m}(F)\cap K
+\]
+and
+\[
+g_m\notin D_{\lceil n_m/p^s\rceil+1}(K),
+\qquad
+\lceil n_m/p^s\rceil=p^{m-1}.
+\]
+Hence the replacement
+\[
+D_n(F)\cap K\subseteq D_{\lceil n/p^s\rceil+1}(K)
+\]
+is false in general, already on the infinite sequence \(n=n_m\).
+
+For \(s=1\), this specializes to the simpler witness \(a^{p^m}\), with \(K=\ker(F\to C_p)\).
+
+### Important scope correction
+
+The stronger sentence sometimes proposed for arbitrary
+\(n=p(m-1)+r\) — namely that suitable commutator corrections produce a sharp witness for every n — is **not needed and is not promoted**. It has not been independently proved here. The infinite family \(n=p^{m+s-1}\) is sufficient to establish optimality of the uniform factor \(p^s\).
+
+## 3. What this proves for Paper 4
+
+The universal theorem package is now:
+
+1. **SC (index p):**
+\[
+D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K).
+\]
+
+2. **SC_s (index p^s):**
+\[
+D_n(F)\cap K\subseteq D_{\lceil n/p^s\rceil}(K).
+\]
+
+3. **Uniform sharpness:** the factor \(p^s\) cannot be replaced uniformly by a stronger depth bound \(\lceil n/p^s\rceil+1\).
+
+4. **Critical transfer consequence:** combining SC_s with Jennings–Lazard gives the corresponding depth compression needed for the Paper-4 stress family; at \(n=p^s+1\) the previously certified transfer exponent is exactly \(s\).
+
+The distinction is important: SC/SC_s are universal filtration infrastructure; the genuinely Paper-4-specific theorem remains the intrinsic transfer obstruction and the exact critical-window separation in the declared nondegenerate quadratic stress-family scope.
+
+## 4. Result classification
+
+- Index-p SC: **PASS / CLOSED**.
+- Index-p^s SC_s: **PASS / CLOSED**.
+- Uniform sharpness of SC_s: **PASS / CLOSED**.
+- Pointwise sharpness for every n: **OPEN / not required**.
+- SC as standalone literature novelty: **not claimed**; the audited weighted-Schreier literature supplies the component machinery.
+- Paper-4 downstream intrinsic separation: **PASS / CLOSED** in the declared scope.
+
+## 5. Publication wording
+
+Do **not** write “we discovered the subgroup-depth inequality from scratch.” The defensible statement is:
+
+> The paper isolates and proves the precise index-p subgroup-depth comparison needed for the finite-window argument, extends it functorially along index-p^s chains, and proves that the resulting p^s compression factor is uniformly optimal. The subsequent intrinsic transfer obstruction and critical-window separation are the Paper-4-specific contribution.
+
+
+
+---
+
+# SOURCE: research/PAPER4_WEIGHTED_SCHREIER_DERIVATION_AUDIT_2026-10-05.md
+
+<!-- blob-sha: 6c7295da53c2dae21e121a156d12f714111966bc -->
+
+# Paper 4 — weighted-Schreier derivation gate — 2026-10-05
+
+## Classification
+
+**SC novelty: CONDITIONAL -> likely not independent novelty.**
+
+The uploaded source \`arXiv-1007.1489v3\` is the full TeX source of *Groups of positive weighted deficiency and their applications*. Direct inspection of the relevant Section 2.4 / Section 3 material shows that its weighted-Schreier machinery is strong enough to derive the Paper-4 subgroup comparison
+\[
+D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K)
+\]
+for a free pro-p group F and an index-p subgroup K, after specializing the uniform weight to the ordinary Zassenhaus filtration.
+
+This does **not** invalidate the Paper-4 theorem. It changes the novelty boundary: the SC statement itself should not be presented as a new standalone theorem until an independent obstruction is found.
+
+## 1. Relevant statements in the source
+
+The source explicitly establishes:
+
+1. **Uniform weight = Zassenhaus order.** Its Proposition \`uniform2\` states that for a finitely generated free pro-p group with a uniform weight function W there is beta in (0,1) such that
+\[
+W(f)=\beta^{d_F(f)},
+\]
+where \(d_F(f)\) is the Zassenhaus degree.
+
+2. **Restriction to a closed subgroup remains a weight function.** Its Corollary \`weight_preserve\` states that if W is a weight function on free pro-p F, then its restriction to any closed subgroup H is again a weight function.
+
+3. **Index-p weighted Schreier basis.** Its Lemma \`index_p0\` gives, for an index-p subgroup H and suitable generator x,
+\[
+X'=\bigcup_{y\ne x}\{y,[y,x],\ldots,[y,\underbrace{x,\ldots,x}_{p-1}],x^p\},
+\]
+and states that X' is W-optimal when F is free and W is a weight function.
+
+4. **Exact weights of the Schreier generators.** In the proof of its Lemma \`indexp\`, the source states
+\[
+W(x^p)\le W(x)^p,\qquad
+W([y,\underbrace{x,\ldots,x}_{k}])\le W(y)W(x)^k,
+\]
+with equality in the free/weight-function case.
+
+5. **No-cancellation property.** Its Proposition \`cor1\` characterizes weight functions by power-commutator factorization: the weight of an element is determined by the largest weight of its nonzero power-commutator terms. Thus the weighted filtration is not merely a generator-by-generator upper bound.
+
+## 2. Specialization to the Paper-4 SC
+
+Choose the uniform weight on F with every free generator of weight beta. By \`uniform2\`,
+\[
+W_F(g)=\beta^{d_F(g)}.
+\]
+
+Choose the index-p kernel K and the Schreier basis X' from \`index_p0\`, with the transversal generator z outside K.
+
+The Schreier generators have Zassenhaus/weight exponents at most
+\[
+1,2,\ldots,p-1,p.
+\]
+Equivalently, after writing \(W_K=\left.W_F\right|_K\), every generator of X' has W_K-weight exponent at most p.
+
+Because \(W_K\) is again a weight function, the power-series/power-commutator characterization implies that a nontrivial K-element whose ordinary K-Zassenhaus degree is \ell has some nonzero K-coordinate monomial of length \ell, and that monomial has weighted exponent at most \(p\ell\). Hence
+\[
+d_F(g)\le p\,d_K(g).
+\]
+Therefore
+\[
+d_F(g)\ge n\quad\Longrightarrow\quad
+d_K(g)\ge\left\lceil\frac np\right\rceil,
+\]
+which is exactly
+\[
+D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K).
+\]
+
+The key point is that this derivation is not merely heuristic: the source's weight-function characterization supplies the required non-cancellation statement.
+
+## 3. Consequence for the Paper-4 prefix-code proof
+
+The Paper-4 Magnus prefix-code proof remains mathematically valid, but its role changes.
+
+It should **not** be advertised as a new general index-p Zassenhaus comparison theorem unless a genuinely stronger statement is isolated.
+
+Its safer role is:
+
+- an explicit self-contained Magnus-coordinate derivation of the comparison in the precise notation needed by Paper 4;
+- a transparent bridge from the free-presentation coordinates to the transfer calculation;
+- an independent verification/alternative proof of a consequence already accessible from weighted-Schreier theory.
+
+The previous wording “strongest novelty candidate = SC” should therefore be downgraded.
+
+## 4. What remains potentially novel
+
+The literature threat is substantially weaker for the downstream Paper-4 objects:
+
+### (a) The finite-window transfer obstruction
+\[
+\varepsilon_s(W)
+=p^{s-1}V(t)\pmod{p^sK^{ab}}.
+\]
+
+The uploaded weighted-Schreier source does not contain this finite-window torsion-line construction.
+
+### (b) The exact \(a=s\) versus \(a=\infty\) separation
+
+The source contains no theorem matching the Paper-4 stress family
+\[
+z^{p^s}=x_1^{p^a}r_2^{-1}
+\]
+and no finite-window comparison proving non-isomorphism at \(n=p^s+1\).
+
+### (c) The exact threshold
+\[
+n_{\mathrm{sep}}(s)=p^s+1
+\]
+for the declared stress family.
+
+The weighted-Schreier machinery explains the subgroup-filtration estimate needed for the proof, but does not by itself produce the Paper-4 torsion defect or the separation theorem.
+
+## 5. Novelty classification after the source audit
+
+- General index-p Zassenhaus comparison SC: **CONDITIONAL / likely standard corollary of weighted-Schreier theory**.
+- Paper-4 Magnus prefix-code implementation: **PASS / mathematically valid; novelty not claimed**.
+- Transfer bound TF_s: **PASS / CLOSED mathematically; novelty dependent on downstream construction**.
+- Intrinsic finite-window \(\varepsilon_s\): **OPEN / strongest current novelty candidate**.
+- \(a=s\) versus \(a=\infty\) separation at \(p^s+1\): **OPEN / strong theorem-level novelty candidate**.
+- Exact threshold \(p^s+1\): **OPEN / strong application-level novelty candidate**.
+- Paper-4 mathematical result overall: **PASS / CLOSED** in the declared scope.
+- Publication novelty overall: **CONDITIONAL / OPEN**.
+
+## 6. Governance consequence
+
+Do not reopen the mathematical Paper-4 proof merely because SC has a close prior derivation.
+
+The correct response is to **move the novelty center of gravity downstream**:
+weighted-Schreier comparison -> transfer bound -> intrinsic \(\varepsilon_s\) -> exact finite-window separation.
+
+The next literature search should therefore target the exact \(\varepsilon_s\), finite-window torsion-line obstruction, and the \(a=s\) versus \(a=\infty\) family, not generic index-p Schreier theory.
+
+
+## 2026-10-05 — direct source recheck: SC derivation is genuinely covered by the weighted-Schreier chain
+
+The uploaded source was decompressed and the cited statements were inspected line-by-line, rather than inferred from the earlier summary. The relevant chain is exact:
+
+`uniform2` gives (W_F(g)=\beta^{d_F(g)}) for the uniform weight on free (F).
+
+`weight_preserve` says the restriction (W_K=W_F|_K) is again a weight function on the closed subgroup (K).
+
+`index_p0) gives the standard index-(p) Schreier generating set
+[
+X'={y,[y,z],ldots,[y,z,ldots,z],z^p}
+]
+and says it is (W_K)-optimal in the free case.
+
+The proof of `indexp` gives equality of weights in the free/weight-function case:
+[
+W_K([y,z,ldots,z]_j)=W_F(y)W_F(z)^j=\beta^{j+1},
+qquad
+W_K(z^p)=W_F(z)^p=\beta^p.
+]
+Thus every Schreier generator has ambient Zassenhaus exponent at most (p).
+
+Finally, `cor1`(ii) is explicitly a **global no-cancellation statement for every (fin K)** in its power-commutator factorization in (X'):
+[
+W_K(f)=max{W_K(c)^{p^k}:\alpha_{c,k}
+e0}.
+]
+This is the precise missing logical step needed to turn generator weight bounds into an elementwise comparison.
+
+Hence, if (d_K(f)=ell), a nonzero K-power-commutator term of K-degree at most (ell) has ambient exponent at most (pell), and `cor1` prevents cancellation at the maximal (W_K)-weight. Since (W_K(f)=W_F(f)=\beta^{d_F(f)}), one gets
+[
+d_F(f)le p,d_K(f).
+]
+Therefore
+[
+D_n(F)cap Ksubseteq D_{lceil n/pceil}(K).
+]
+
+### Review verdict
+
+The earlier caution about “is cor1 strong enough?” is now resolved **YES**: `cor1` is stated for arbitrary (fin F), not merely for generators or selected optimal words, and its proof explicitly rules out cancellation in the relevant power-commutator factorization.
+
+The correct novelty statement is consequently stronger than “the SC proof resembles prior work”:
+
+- **SC itself is a derivable consequence of prior weighted-Schreier machinery under the Paper-4 hypotheses.**
+- The Magnus prefix-code proof is a valid self-contained reproof/coordinate realization, but should not be presented as the novel theorem.
+- The novelty audit must move downstream to the intrinsic transfer obstruction (arepsilon_s), the (a=s) versus (a=\infty) finite-window separation, and the exact threshold (p^s+1).
+
+This is a literature-method transfer result, not a negative result about Paper 4's mathematics.
+
+
+## 2026-10-05 — SC literature audit CLOSED by decision
+
+The project now treats the SC audit as closed. The distinction is:
+
+**Prior literature:** supplies the weighted-Schreier/Zassenhaus ingredients.
+
+**Paper-4 deduction:** assembles those ingredients into the exact depth-comparison
+\[
+D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K),
+\]
+in the form required for the finite-window transfer argument.
+
+No audited source was found stating this exact subgroup-depth comparison as the Paper-4 lemma, although the weighted-Schreier machinery is sufficient to derive it. Therefore the safe novelty language is **new logical deduction/assembly**, not “new underlying Zassenhaus/Schreier theory.”
+
+Classification:
+- SC mathematical validity: **PASS / CLOSED**.
+- SC literature audit: **PASS / CLOSED**.
+- SC as independent foundational theorem: **not claimed**.
+- SC as a new Paper-4 logical step in the proof chain: **YES — claimable**.
+- Further generic SC literature search: **STOPPED**.
+- Novelty audit moves downstream to \(\varepsilon_s\), intrinsic finite-window separation, and the exact threshold \(p^s+1\).
+
+The Magnus prefix-code proof remains as an independent self-contained verification and should be presented as such.
+
+
+---
+
+# SOURCE: research/PAPER4_FINAL_BOUNDARY_ATTACK_2026-10-04.md
+
+<!-- blob-sha: 1acec9422ba303e6d7f79fb365eb98e2439bdd3d -->
+
+# Paper 4 — Final Boundary Attack (2026-10-04)
+
+## Purpose
+
+This record closes the two remaining boundary attacks from the 2026-10-04 Paper 4 audit. It records only results that survived the final attack; unresolved cases remain explicitly OPEN.
+
+## 1. Same numerical-window separation: CLOSED
+
+For the stress family
+\[
+G_{s,a}=\langle z,x_1,\ldots,x_d\mid
+z^{p^s}=x_1^{p^a}[x_1,x_2]\cdots[x_{d-1},x_d]\rangle,
+\qquad 1\le a<s<t,
+\]
+put \(n_s=p^s+1\).
+
+Because \(p^t>n_s\), the defining relation of \(G_{t,a}\) is invisible in the \(n_s\)-window, whereas the relation of \(G_{s,a}\) survives at its critical layer:
+\[
+W_{n_s}(G_{t,a})=F/(D_{n_s},r_D),
+\]
+\[
+W_{n_s}(G_{s,a})=F/(D_{n_s},z^{p^s}r_D^{-1}).
+\]
+
+There is a canonical epimorphism
+\[
+W_{n_s}(G_{s,a})\twoheadrightarrow W_{n_s}(G_{t,a})
+\]
+whose kernel is generated by the image of \(z^{p^s}\), hence has order at most \(p\). A class-2 finite \(p\)-group witness establishes that \(z^{p^s}\notin D_{p^s+1}(G_{s,a})\); therefore the kernel has order exactly \(p\). Consequently
+\[
+|W_{p^s+1}(G_{s,a})|
+=p\,|W_{p^s+1}(G_{t,a})|,
+\]
+so the two finite windows are not isomorphic.
+
+This supersedes the earlier relative-extension/non-splitting formulation as the load-bearing separation argument: direct same-window order separation is sufficient.
+
+### Exact threshold
+
+Combined with the already-closed universal blindness result
+\[
+W_n(G_s(r))\cong F/(D_n(F),r)\qquad(n\le p^s),
+\]
+the stress family has the exact unmarked separation threshold
+\[
+\boxed{n_{\mathrm{sep}}(s)=p^s+1}.
+\]
+
+## 2. Boundary \(a=s\) versus \(a=\infty\)
+
+At \(n=p^s+1\), the two cases have the same finite-window abelianization:
+\[
+W_n^{ab}\cong \mathbb Z/p^s\oplus(\mathbb Z/p^{s+1})^d.
+\]
+Ordinary associated-graded/restricted-Lie data, naive short-line \(p^s\)-power tests, and scalar abelianized/coinvariant extension defects were attacked and do not provide a general separator. These routes are CLOSED as non-load-bearing approaches.
+
+For \(p=3,s=1\), the \(A_3\)-formality obstruction distinguishes the two cases, and the obstruction factors through the critical finite window \(W_4\). Thus
+\[
+W_4(G_{1,1})\not\cong W_4(G_{1,\infty}).
+\]
+This case is CLOSED.
+
+For \(s\ge2\), the general boundary
+\[
+\boxed{W_{p^s+1}(G_{s,s})\stackrel{?}{\cong}W_{p^s+1}(G_{s,\infty})}
+\]
+remains OPEN. The existing \(A_3\)-formality route does not resolve it in general, since the relevant odd-\(p\) Demushkin cases with \(q\ne3\) are \(A_3\)-formal.
+
+The remaining problem is therefore genuinely narrower: find a functorial invariant of the finite group \(W_{p^s+1}\) (or an explicit finite-window isomorphism) that resolves the \(q=p^s\) versus \(q=0\) boundary for \(s\ge2\). Re-running mod-\(p\) cohomology, ordinary \(gr_Z\), ordinary Bockstein, or scalar coinvariant defects is not expected to advance this boundary.
+
+## Status ledger
+
+- lower-window blindness: **CLOSED**
+- critical survival: **CLOSED**
+- direct same-window order jump: **CLOSED**
+- exact unmarked stress-family threshold \(p^s+1\): **CLOSED**
+- \(a=s\) vs \(a=\infty\), \((p,s)=(3,1)\): **CLOSED**
+- \(a=s\) vs \(a=\infty\), \(s\ge2\): **OPEN / LOAD-BEARING**
+
+## Record discipline
+
+This file records the 2026-10-04 attack outcome. It does not claim a universal theorem beyond the stated stress-family scope, and it does not close the remaining \(s\ge2\) boundary.
+
+
+---
+
+# SOURCE: research/PAPER4_D1_GLOBAL_LOWER_FILTRATION_SIGNATURE_AUDIT_2026-10-02.md
+
+<!-- blob-sha: fdddba4089fbda9571aa5dd4c8129c56110b58f9 -->
+
+# PAPER 4 — GATE D1 FORMALIZATION: GLOBAL LOWER-FILTRATION SIGNATURE — 2026-10-02
+
+## Decision
+
+A definition-level D1 candidate survives the intrinsicity pre-check:
+
+\[
+\boxed{\Lambda_E(u,x):=
+\max\{m\le n+1:\exists\ \tilde u,\tilde x\in Y,
+\ \tilde u\mapsto u,\ \tilde x\mapsto x,\ [\tilde u,\tilde x]\in D_m(Y)\}}
+\]
+
+for an adjacent finite window
+\[
+E:\quad 1\to A=D_n/D_{n+1}\to Y=W_{n+1}\xrightarrow{\pi}X=W_n\to1,
+\qquad L_1=X/\Phi(X),
+\]
+with \(u,x\in L_1\). The value \(n+1\) is assigned when the commutator is trivial in \(Y\); equivalently one may regard \(\Lambda_E(u,x)\) as the full set of attainable filtration depths rather than a single maximum.
+
+The associated **global lower-filtration signature** of \(u\) is
+\[
+\boxed{
+\mathcal L_E(u)=\bigl(\Lambda_E(u,x)\bigr)_{x\in L_1},
+}
+\]
+or, without choosing a scalar encoding,
+\[
+\mathscr R_m(u)=\{x\in L_1:\exists\text{ lifts with }[\tilde u,\tilde x]\in D_m(Y)\},
+\qquad
+\mathcal L_E(u)=(\mathscr R_m(u))_{m=2}^{n+1}.
+\]
+
+This is deliberately a **global signature**, not a distinguished pair \((u,x)\), and not a bilinear map \(L_1\times L_1\to A\).
+
+## 1. Object
+
+The input is only the abstract filtered adjacent pair \((Y\twoheadrightarrow X)\), with its characteristic filtration and the induced degree-one quotient \(L_1=X/\Phi(X)\).
+
+For each \(u\in L_1\), all lifts of \(u\) in \(Y\) are allowed. For each \(x\in L_1\), all lifts are allowed. The signature records which lower-filtration depths can be achieved simultaneously for that pair.
+
+No presentation, generator, section, displayed \(q\), or orientation is part of the definition.
+
+## 2. Why the definition is gauge/lift-independent
+
+The crucial point is the existential quantifier over the **entire lift fiber**.
+
+If an automorphism of the presentation or a change of section replaces a chosen lift by another lift in the same fiber, that new lift is already included in the defining set. Thus \(\mathscr R_m(u)\) is defined by the finite group extension itself, not by a selected representative.
+
+This avoids the false step
+\[
+[\tilde u,\tilde x]\bmod D_{q+1}
+\quad\text{is automatically independent of arbitrary }D_2\text{-lift changes}.
+\]
+That step was closed in the raw origin-restricted pairing audit.
+
+## 3. Functoriality
+
+A filtered isomorphism of adjacent windows transports:
+- the filtration \(D_m\);
+- the projection \(Y\to X\);
+- the Frattini quotient \(L_1\);
+- the complete lift fibers;
+- the commutator relation.
+
+Therefore
+\[
+\mathcal L_E(u)
+\longmapsto
+\mathcal L_{E'}(f(u))
+\]
+naturally under filtered isomorphism.
+
+No claim is made yet for arbitrary non-isomorphic graph morphisms.
+
+## 4. q-blindness
+
+The definition contains no distinguished \(q\). It is defined simultaneously at every filtration depth available in the finite window.
+
+The number \(q\) may later appear as the first exceptional depth in a particular target class, but that is an **output interpretation**, not an input to \(\mathcal L_E\).
+
+This satisfies the required q-blindness test at the definition level.
+
+## 5. Relation to the lower-obstruction problem
+
+The previous failed formulation asked whether a particular pair satisfies
+\[
+[\tilde u,\tilde x]\notin D_q.
+\]
+That is too local and is unstable as a purported canonical degree-q value.
+
+The present object instead records the entire depth profile
+\[
+m\longmapsto \mathscr R_m(u)
+\]
+against **all** degree-one directions simultaneously.
+
+Thus a direction with one lower-degree contaminating origin is not merely assigned a yes/no label; the obstruction is part of its full global signature.
+
+This directly addresses the current D1 requirement.
+
+## 6. Independent model checks
+
+### (a) Rank-two special edge
+
+For
+\[
+G=\langle v,w\mid wvw^{-1}=v^{1+q}\rangle,
+\]
+the canonical special direction satisfies
+\[
+\Lambda_E(\bar w,\bar v)=q,
+\]
+because the first nontrivial commutator survives in \(D_q/D_{q+1}\).
+
+The same depth is visible in the reverse pair up to the usual convention/sign/inverse:
+\[
+\Lambda_E(\bar v,\bar w)=q.
+\]
+
+This confirms that the signature retains the intended higher-depth defect without introducing \(q\) into its definition.
+
+### (b) Long ordinary-chain contamination
+
+In the audited chain
+\[
+r_1-r_2-a\to s,
+\]
+the special direction has q-depth against the relevant origin, whereas an ordinary contaminated direction has a degree-2 obstruction. Hence
+\[
+\mathcal L_E(\bar s)\neq \mathcal L_E(\bar s+\bar r_1)
+\]
+already at the lower part of the filtration profile.
+
+This is the precise local phenomenon the scalar q-layer projection lost.
+
+### (c) Separated two-sink model
+
+For
+\[
+G=\langle a,b,s,t\mid sas^{-1}=a^{1+q},\;
+tbt^{-1}=b^{1+q}\rangle,
+\]
+the signature detects
+\[
+\Lambda_E(\bar s,\bar a)=q,
+\qquad
+\Lambda_E(\bar t,\bar b)=q.
+\]
+
+However,
+\[
+\Lambda_E(\bar s+\bar t,\bar a)=q
+\]
+because the \(t\)-component is invisible to the \(a\)-sector in this model. Therefore D1 does **not** itself imply that q-active directions are literal sink directions.
+
+This is not a failure of D1. It is an explicit warning that D2 must extract a quotient/kernel from the **relations among the full signatures**, rather than declaring the q-active locus to be \(N_q^\perp\).
+
+### (d) Isolated special direction
+
+The isolated-special counterexample remains controlling for the unrestricted class: an isolated special vertex can have orientation value 1 while contributing no special-edge lower-filtration signature. Thus no D1 object built solely from special-edge defects can recover the unrestricted orientation without an additional admissibility restriction or marked input.
+
+D1 therefore does not reopen the already CLOSED unrestricted Gate-D no-go.
+
+## 7. Non-tautology test
+
+The construction does not reference \(\chi\), \(\omega_q\), Kummerianity, or a declared special-vertex set.
+
+It is therefore not a disguised definition of the desired orientation.
+
+The possible objection is different: the signature may be **too rich** because it records a large portion of the filtered multiplication. This is a coarseness/novelty question for D2/D3, not a definition-level failure.
+
+## 8. Precise D1 theorem target
+
+The load-bearing D1 statement is:
+
+> For every admissible adjacent window, the family \(\mathcal L_E(u)\) is an intrinsic, presentation-independent, lift-independent, filtered-isomorphism-covariant global lower-filtration signature of \(u\in L_1\).
+
+This statement is now defensible at the definition level.
+
+What is **not** proved:
+1. \(\mathcal L_E\) is linear in \(u\);
+2. the sets \(\mathscr R_m(u)\) are always subspaces;
+3. \(\mathcal L_E\) alone determines \(\omega_q\);
+4. a canonical \(N_q\) can already be extracted;
+5. the unrestricted specially oriented class admits positive orientation recovery.
+
+## 9. Classification
+
+- global lower-filtration signature definition \(\mathcal L_E\): **PASS / LOCAL**;
+- presentation/lift/gauge independence: **PASS / LOCAL**;
+- filtered-isomorphism covariance: **PASS / LOCAL**;
+- q-blindness: **PASS / LOCAL**;
+- non-tautological definition: **PASS / LOCAL**;
+- linearity/subspace structure: **OPEN / LOAD-BEARING**;
+- canonical quotient extraction \(N_q\): **OPEN / LOAD-BEARING**;
+- orientation bridge \(N_q\to\omega_q\): **OPEN / LOAD-BEARING**;
+- unrestricted Gate D: **FAIL / CLOSED** remains controlling;
+- Paper 4: **OPEN / LOAD-BEARING** only on a declared restricted admissible class/input.
+
+## 10. Stop rule for the next step
+
+Do **not** immediately define
+\[
+N_q:=\operatorname{span}\{u:\mathcal L_E(u)\text{ is q-invisible}\}.
+\]
+The current separated two-sink examples already show why that would be too coarse.
+
+The authorized D2 attack is narrower:
+
+> Determine whether the **relations among the signatures**
+> \[
+> \{\mathcal L_E(u):u\in L_1\}
+> \]
+> canonically define a linear quotient \(U/N_q\), without inserting \(q\), \(\omega_q\), a graph, or a chosen basis.
+
+The first test must be the smallest separated two-sink and the chordal-tree controls. If the resulting quotient still admits an orientation-changing automorphism, D2 closes for that signature.
+
+## Final status
+
+\[
+\boxed{
+\text{D1: intrinsic global lower-filtration signature = PASS / LOCAL}
+}
+\]
+
+The result is a **definition-level advance**, not yet an orientation theorem. The next legitimate gate is D2, but only through relations among the full signatures, not through a q-visible locus or a pairwise obstruction.
