@@ -1,5 +1,5 @@
 # Archive Index — preserved records and retrieval map
-Last reviewed: 2026-10-04
+Last reviewed: 2026-10-05
 
 > Nothing was discarded in the documentation refactor. The pre-refactor overview documents are preserved. Archive records are provenance, not current truth.
 
@@ -17,7 +17,7 @@ Contains root/delayed visibility, quadratic critical-window audits, stress-famil
 
 ### Paper 5
 Search: PAPER5, COMPRESSION, CHARACTERISTIC, ORBIT, TRICHOTOMY, TARGET_CLASS.
-Contains target-class intrinsic characterization, realization groupoid, C2 characteristic-kernel boundary, orbit-category corrections, compression order, and final trichotomy.
+Contains the former target-class intrinsic characterization, realization groupoid, C2 characteristic-kernel boundary, orbit-category corrections, compression order, and final trichotomy. These are retained as HISTORICAL/SUPERSEDED main-line work; the active Paper 5 direction is now Aut(W_n) -> GL(W_n/Phi(W_n)) and intrinsic relation-jet factorization.
 
 ### Older research
 Search: PAPER1, PAPER2, PAPER3, A3, B1, O2, RAAG, ORIENTATION.
