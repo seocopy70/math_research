@@ -282,3 +282,13 @@ g_{m,s}=a^{p^{m+s-1}}
 realize equality at arbitrarily large power degrees and therefore rule out any uniform improvement of the factor (p^s). General-(n) pointwise sharpness would require additional commutator/Lie-word witnesses and is outside Paper 4.
 
 A1 proof wording is also finalized: (J^0=A) is explicitly the convention for the truncated exponent in (E_m); the index-(p^s) chain is justified by a composition series of the finite (p)-group (G/K); and the ceiling-composition identity is reduced to the elementary (m=pq+r) check. The previously incorrect “(r=0) component” wording is not used.
+
+## 2026-10-05 — final manuscript synchronization
+
+The current manuscript `paper4/Paper4_strengthened_2026-10-05.tex` has been synchronized with the latest certified proofs. The obsolete Section-8 “proof architecture” placeholder and all superseded proof routes are excluded from the current manuscript.
+
+Current publication-manuscript audit:
+`research/PAPER4_FINAL_MANUSCRIPT_REAUDIT_2026-10-05.md`.
+
+Mathematical proof content and manuscript synchronization: **PASS / CLOSED**. Remaining work is artifact-level compilation/PDF/source/checksum/bibliography/metadata audit only.
+
