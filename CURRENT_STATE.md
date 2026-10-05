@@ -1110,3 +1110,20 @@ Classification:
 - p=3/p=5 finite realization certificates: **PASS / LOCAL**;
 - general odd-(p) finite-window factorization: **OPEN / LOAD-BEARING**;
 - uniform (p^2) automorphism-order theorem: **OPEN**.
+
+
+## 2026-10-05 — Paper 5 intrinsic filtered relation-module correction
+
+The factorization proof has been audited at the definition level. The raw mixed pair (pi_2(r),pi_p(r)) is not intrinsically defined when r in D_2\D_3, because pi_p(r) is not defined on such an element. The earlier BCH/degree-separation shortcut is therefore rejected.
+
+The correct load-bearing object is the filtered relation module M_n=R_n/[F,R_n], with filtration M_n^(k)=((R_n cap D_k)[F,R_n])/[F,R_n], truncated through degree p, together with its distinguished degree-2 relation line. The secondary datum is the resulting filtered extension, not a chosen L_p-vector. Automorphisms of W_n act intrinsically on this object, so no free-group lift theorem is required.
+
+Classification:
+- raw pair (pi_2(r),pi_p(r)) for mixed r: FAIL / CLOSED as an intrinsic definition;
+- filtered relation-module jet: OPEN / LOAD-BEARING as the corrected definition;
+- B-1 lift-from-Hopfian shortcut: FAIL / CLOSED as a proof shortcut; underlying lift problem remains OPEN;
+- degree-2 correction vanishing under an established [R_n,F] correction: PASS / LOCAL;
+- general odd-p finite-window factorization: OPEN / LOAD-BEARING;
+- no new GAP prime sweep authorized before the intrinsic filtered object and its gauge-quotient stabilizer are proved.
+
+Immediate next proof target: prove the intrinsic filtered-relation-module functoriality, then identify its gauge quotient with the four abstract projective jet stabilizers. Detailed audit: research/PAPER5_FILTERED_RELATION_MODULE_FACTORIZATION_AUDIT_2026-10-05.md.
