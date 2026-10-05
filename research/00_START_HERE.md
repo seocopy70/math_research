@@ -169,6 +169,14 @@ Recognition → Sharp information threshold → Recognition at the sharp window
 
 Phase 0 → Phase 1 → Phase 2 → Track B → orientation reconstruction으로 이어지는 기술적 경로를 보여준다.
 
+## 10.5. 해설·이해·평가 기록을 한곳에서 찾을 때
+
+연구를 증명하기 위한 문서가 아니라, 연구 과정을 이해하거나 쉽게 풀어보거나 연구 수준·의미를 평가하기 위해 만든 기록은:
+
+**`research/90_RESEARCH_GUIDE/README.md`**
+
+에서 한곳에 모아 찾을 수 있다. 기존 기록은 원래 경로에 그대로 보존하며, 이 Guide는 공통 목차 역할을 한다.
+
 ## 11. 현재 상태를 정확히 확인할 때
 
 여기부터는 authoritative 영역이다.
