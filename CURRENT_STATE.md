@@ -144,13 +144,13 @@ The intrinsic object gate is **FRM-0**.
 
 ### Immediate next gate
 
-**FRM-0.2:** explicitly compute the \(W_3\) central extension/transgression and independently verify the Bockstein comparison.
+**Paper 5 Step 3 equality/lifting:** prove genuine kernel preservation / relation preservation for the lower-bound lifts. The proposed shortcut (D_{p+1}(F)\subseteq R) has been disproved; see the Paper 5 current file and dated Step 3 audit.
 
 Until that is resolved:
 
 - no uniform odd-\(p\) \(p^2\) theorem;
-- no general factorization theorem;
-- no new blind prime sweep as a substitute for the intrinsic proof.
+- no equality theorem for the Frattini/GL image;
+- no new blind prime sweep as a substitute for the kernel-invariance proof.
 
 **Detailed current state:** [PAPER5_CURRENT_2026-10-05.md](research/PAPER5_CURRENT_2026-10-05.md)
 
