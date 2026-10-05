@@ -200,3 +200,8 @@ The dedicated Paper current files are the **single live homes for Paper-specific
 ## 2026-10-05 — Paper 4 exact stress-family boundary closed
 
 The Magnus prefix-code audit (research/PAPER4_MAGNUS_PREFIX_CODE_AUDIT_2026-10-05.md) closes the former all-s load-bearing boundary. The programme-level status is now PASS / CLOSED for Paper 4's declared stress-family theorem, with broader generalization explicitly out of scope.
+
+
+## 2026-10-05 — Paper 5 Step 2 audit correction
+
+The Hall–Petrescu sublemma for the p-power component passes in the odd-p range, but it does not close the secondary relation map. A D_2 change of lifts leaves x^p unchanged modulo D_{p+1}, while [x,y] changes by D_3; since there is no canonical D_3→D_p/D_{p+1} projection, the proposed θ is not yet intrinsic. Classification: **OPEN / LOAD-BEARING**. Next gate is either a canonical normalization/projection killing this ambiguity or a counterexample to the naive θ.
