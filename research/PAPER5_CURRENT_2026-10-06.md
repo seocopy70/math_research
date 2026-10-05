@@ -143,3 +143,8 @@ The authoritative p=3 stabilizer gate was audited against CI run 37199037517. Th
 The corrected gate also tests the intrinsic line candidate Z(W)D_2/D_2 directly and compares the actual embedded image against both the repository candidate and the user's proposed (z,x,y) subgroup after basis conversion.
 
 Current status: the correction is committed, but post-correction runtime output has not yet been independently recovered. Therefore the exact embedded subgroup and intrinsic z-line remain OPEN / LOAD-BEARING. No Paper 5 END classification is authorized.
+
+
+## 2026-10-06 — Explicit-R audit correction
+
+The concrete relation subgroup is explicit, and its full degree-two initial layer closes the one-step boundary \(W_{p+1}=W_p\). The proposed reduction of all-n stabilization to \(F^p\subseteq R\) is rejected because the Zassenhaus graded object has restricted p-power contributions; \(L_{k+1}=[L_k,L_1]\) is not a general identity. All-n stabilization remains **OPEN / LOAD-BEARING**.
