@@ -1719,3 +1719,14 @@ The proposed W3/FRM-0 closure was audited and is **not promoted**. The audit con
 4. **Universal/free-window versus realization-specific relation jet.** Even if (e_2,e_3^(p)) were intrinsic to W3, it is universal free-window data. The realization-specific jet J_{s,a}=(q_{s,a},ell_{s,a}^p) still requires an intrinsic finite-window realization map/factorization. Thus the implication from W_p to the stabilizer of the actual relation jet remains **OPEN / LOAD-BEARING**. Abstract stabilizer formulas do not close finite-window realization.
 
 Current FRM-0 classification remains **OPEN / LOAD-BEARING**. General odd-p factorization remains **OPEN**. The authorized immediate subgate is **FRM-0.2: explicit W3 central-extension/transgression computation, with Bockstein comparison and independent verification**. Do not promote FRM-0, do not declare a canonical V^(1)-projection, and do not start a new GAP scan for the general factorization before this proof gate is settled.
+
+
+## 2026-10-05 — explanation/guide records given a dedicated navigation layer
+
+The repository contains a second class of records that are not mathematical evidence but are useful for human understanding: easy-language explanations, research-story summaries, methodological reflections, midterm summaries, and contribution/level assessments. These had accumulated across several paths.
+
+A dedicated navigation layer is now established at **research/90_RESEARCH_GUIDE/README.md**. Existing explanatory records are **not deleted, moved, or overwritten**; the new guide indexes their original paths and defines their role separately from authoritative state/evidence documents.
+
+Documentation rule: \`CURRENT_STATE\` / \`RESEARCH_MAP\` / \`PAPER*_CURRENT\` / audit-evidence remain authoritative for mathematical status; \`00_RESEARCH_LOG\` remains chronological; \`archive\` preserves historical material; \`90_RESEARCH_GUIDE\` is the human-understanding/explanation/evaluation layer.
+
+Classification: **PASS/CLOSED — documentation architecture only**. No mathematical claim or research status changed.
