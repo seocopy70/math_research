@@ -3056,3 +3056,36 @@ The proposed Lemma D is also circular: its induction uses an inclusion of the fo
 - \(n=p,p+1\) boundary theorem: PASS / CLOSED / GENERAL.
 
 The same-session proposal to label stabilization CLOSED is superseded by this audit. No arbitrary-n theorem is to be promoted until the reverse inclusion is independently proved.
+
+
+## 2026-10-06 — Third audit: \(W_p\)-special \(L(p,t)\) remains open
+
+The attempted specialization to \(W_p\) narrows the target correctly but does not yet prove
+\[
+L(p,t):\quad J_{p+2}I^t\subseteq J_{p+2+t}R+J_{p+2}I^{t+1}.
+\]
+
+The decisive remaining gap is the step
+\[
+I^{pb}\subseteq J_{pb}+J_{pb}I
+\]
+used to turn \((y-1)^p\in I^{pb}\) into a \(J\)-filtration statement. This inclusion is not a standard consequence of the Zassenhaus filtration and is another unproved \(I\)-versus-\(J\) comparison.
+
+Likewise, \(x\in D_{p+2}\) and \([x,g]\in D_{p+3}\) do not by themselves put the residual \(g(x-1)\) term into \(J_{p+2}I^2\). The asserted intermediate inclusion
+\[
+J_{p+2+t}\subseteq J_{p+2}I^t+J_{p+2+t+1}
+\]
+is also unproved and is essentially the same missing comparison.
+
+Finally, \(I^N=0\) for finite \(W_p\) only kills an error term once it has been shown to enter a sufficiently high \(I\)-power. It does not imply that \(J_{p+2}I^{k-p}\subseteq J_{k+1}R\), so the proposed finite-nilpotence absorption remains circular.
+
+### Classification
+
+- \(W_p\) finite and \(I^N=0\): **PASS**;
+- \(D_{p+1}\subseteq J_{p+2}R\): **PASS**;
+- general \(J_aI\subseteq J_{a+1}+J_aI^2\): **FAIL / CLOSED**;
+- \(W_p\)-special \(L(p,t)\): **OPEN / LOAD-BEARING**;
+- \(M_{p+1}\subseteq M_{k+1}\): **OPEN / LOAD-BEARING**;
+- \(W_n=W_p\) for all \(n\ge p\): **OPEN / LOAD-BEARING**.
+
+The proposed \(W_p\)-special closure is therefore not promoted. The correct next task remains a genuine proof or disproof of \(L(p,t)\), or a different non-circular stabilization route.
