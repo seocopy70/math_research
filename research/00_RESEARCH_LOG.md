@@ -1914,3 +1914,29 @@ Classification:
 - Overall publication novelty: **CONDITIONAL / OPEN**.
 
 The novelty center of gravity is moved downstream to the intrinsic transfer obstruction (arepsilon_s), the unmarked (a=s) versus (a=\infty) separation at the critical window, and the exact threshold (p^s+1). No Paper-4 mathematical result is reopened or downgraded by this audit.
+
+
+## 2026-10-05 — bounded external literature audit after weighted-Schreier source discovery
+
+A second literature audit was run after the direct source inspection.
+
+### Findings
+
+1. Ershov–Jaikin-Zapirain, *Groups of positive weighted deficiency and their applications*, J. Reine Angew. Math. 677 (2013), 71–134, DOI 10.1515/crelle.2012.013, independently corroborates the uploaded TeX source: its published text contains the explicit index-(p) weighted Schreier construction (Lemma 3.10) and the surrounding weight-function/free-restricted-Lie machinery. Thus SC is safely treated as a prior weighted-Schreier consequence, not a new theorem.
+
+2. Later Zassenhaus/Magnus literature (including Mináč–Rogelstad–Nguyễn and Efrat) confirms that augmentation/Magnus/word methods and finite Zassenhaus quotients are established infrastructure. Magnus/prefix-code language therefore cannot itself carry the novelty claim.
+
+3. Efrat's transfer/intersection literature is an important neighboring threat: transfer principles connect cohomology, finite quotients, unitriangular representations, and Zassenhaus intersections. This must be cited and discussed.
+
+4. Targeted searches for the **specific downstream Paper-4 combination** — intrinsic (epsilon_s), the stress family (z^{p^s}=x_1^{p^a}r_2^{-1}), unmarked (a=s) versus (a=\infty) separation, and exact threshold (p^s+1) — produced no matching result in the retrieved literature.
+
+### Classification
+
+- SC: **PASS/CLOSED mathematically; not standalone novelty**.
+- Magnus proof: **PASS/CLOSED as self-contained reproof/bridge**.
+- (epsilon_s): **OPEN — strongest novelty candidate**.
+- Exact (a=s) vs (a=\infty) separation: **OPEN — strong novelty candidate**.
+- Exact threshold (p^s+1): **OPEN — strong sharpness candidate**.
+- Overall publication novelty: **CONDITIONAL / OPEN**.
+
+This is a bounded negative search, not a proof of priority. The next authorized audit is narrowly targeted at transfer on index-(p) kernels, Bockstein/cup-product relation data, and finite-quotient separation at a prescribed Zassenhaus depth.
