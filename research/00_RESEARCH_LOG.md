@@ -2035,3 +2035,44 @@ Therefore:
 - the already certified free-pro-p SC/SC_s and Paper-4 theorem are **unchanged**.
 
 A targeted literature search did not locate an immediately usable theorem giving this exact arbitrary-pro-p comparison. No arbitrary-pro-p promotion is authorized without a different proof. Full audit: research/PAPER4_GENERAL_SC_ARBITRARY_PROP_A1_AUDIT_2026-10-05.md.
+
+
+## 2026-10-05 — A1 arbitrary pro-p SC closed and promoted into Paper 4
+
+The earlier A1 audit rejected the first augmentation-ideal equality proof because the claimed decomposition was false. That rejection is retained as a proof-route failure only.
+
+A corrected weighted normal-form argument is now independently audited and **PASS / CLOSED**. For arbitrary pro-p (G), an index-(p) open subgroup (K), (A=\mathbf F_p[[K]]), (J=I_K), and (t=a-1) for a lift of a generator of (G/K), use
+[
+\mathbf F_p[[G]]=\bigoplus_{r=0}^{p-1}At^r,qquad t^p\in J,
+]
+and the weighted filtration
+[
+E_m=\bigoplus_{r=0}^{p-1}
+J^{\max(0,\lceil(m-r)/p\rceil)}t^r.
+]
+The normal-form multiplication rules give (E_mE_\ell\subseteq E_{m+\ell}), including the previously problematic (t^rBt) terms. Hence
+[
+I_G^n\subseteq E_n,qquad
+I_G^n\cap A\subseteq I_K^{\lceil n/p\rceil},
+]
+and therefore
+[
+D_n(G)\cap K\subseteq D_{\lceil n/p\rceil}(K).
+]
+Iteration along an index-(p^s) chain yields
+[
+D_n(G)\cap K\subseteq D_{\lceil n/p^s\rceil}(K).
+]
+
+Thus:
+- A1 index-(p) arbitrary pro-p: **PASS / CLOSED**;
+- A1 index-(p^s) arbitrary pro-p: **PASS / CLOSED**;
+- free-pro-p SC/SC_s: unchanged and subsumed;
+- uniform sharpness: retained only in the already certified free-pro-p witness family;
+- pointwise sharpness for every (n): not claimed.
+
+The old false equality route, Heisenberg witness, and Lemma-2/Lemma-3 route remain **FAIL / CLOSED / SUPERSEDED** and are not evidence against A1.
+
+Paper 4 is therefore strengthened by A1 as universal filtration infrastructure. The theorem-specific contribution remains the intrinsic transfer obstruction, exact unmarked separation (W_{p^s+1}(G_{s,s})\not\cong W_{p^s+1}(G_{s,\infty})), and the sharp threshold (n_{\rm sep}(s)=p^s+1) in the declared stress-family scope.
+
+Evidence: `research/PAPER4_GENERAL_SC_ARBITRARY_PROP_A1_CLOSURE_2026-10-05.md`.
