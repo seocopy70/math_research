@@ -1445,3 +1445,24 @@ GitHub Actions run **37246103653** (`Paper 4 R1 rank-2/3/4 GAP certificate`) was
 Therefore the previously pending GAP-runtime layer is now **PASS / CLOSED**. This is an executable certification of the already-defined R1 marked affine obstruction reproduction; it does not prove abstract unmarked same-window separation, orientation recovery, or an all-s exact-threshold theorem. Those remain **OPEN / LOAD-BEARING**. The artifact `paper4-r1-gap-certificate` was finalized as artifact ID 11319182263.
 
 No Paper 5 computation was used. The next active Paper 5 gate remains p=5,n=6,(s,a)=(1,1), using the audited GAP-native faithful Frattini-action pipeline.
+
+
+## 2026-10-05 — Paper 5 p=5,n=6 direct MatPerm gate audit: execution/representation failure, no mathematical FAIL
+
+GitHub Actions run **37246954086** executed commit `e6e64350300ed4a000391a5e6ac634bce2be4fd2` with GAP 4.12.1 + AutPGrp. The focused direct MatPerm gate failed immediately at **(s,a)=(0,1)**:
+
+- actual faithful permutation order = 2000;
+- candidate order = 2000;
+- faithful permutation equality = false;
+- the required PASS marker was therefore not emitted.
+
+This result is **not** a mathematical counterexample. The failure already occurs for (0,1), where the previous GAP-native ActionHomomorphism pipeline also reported equal order 2000, while its matrix-group conversion showed the impossible diagnostic `actual matrix-group order = infinity`. The new direct permutation test therefore exposes an unresolved coordinate/representation mismatch in the computed Frattini matrices or their comparison with the hand-built candidate subgroup. In particular, the old (1,1) mismatch cannot be promoted to FAIL/CLOSED.
+
+Classification:
+- direct MatPerm gate as implemented: **FAIL / CLOSED as a validation route**;
+- p=5,n=6,(0,1) embedded stabilizer equality: **OPEN / LOAD-BEARING**;
+- p=5,n=6,(1,1) embedded stabilizer equality: **OPEN / LOAD-BEARING**;
+- p=5,n=6,a=2: **OPEN / EXECUTION BLOCKED**;
+- p=5 uniform stabilizer theorem: **OPEN**.
+
+Immediate authorized action: localize the matrix-coordinate defect before any a=2 computation. The diagnostic must compare the computed Frattini action against the candidate under the declared basis, transpose/inverse/right-vs-left action conventions, and (if needed) basis conjugacies. Do not infer a stabilizer theorem from order equality alone.
