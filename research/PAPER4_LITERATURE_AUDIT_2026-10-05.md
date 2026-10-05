@@ -1,121 +1,86 @@
-# Paper 4 — Literature / novelty audit — 2026-10-05
+# Paper 4 — literature audit: weighted-Schreier / transfer / finite-window novelty — 2026-10-05
 
-## Classification
+## Verdict
 
-**Literature audit status: CONDITIONAL / no prior source located that directly states the full Paper-4 theorem.**
+**SC is not a safe standalone novelty claim.** The uploaded Ershov–Jaikin-Zapirain source directly contains the machinery needed to derive it for the Paper-4 free pro-p / index-p setting.
 
-The audit confirms that the ingredients used by Paper 4 are classical or closely related in the literature, while the exact combination below was not located in the searched literature:
+The downstream result remains substantially less threatened: this audit found no source matching the specific Paper-4 combination of the intrinsic torsion-line obstruction `epsilon_s`, the stress family (z^{p^s}=x_1^{p^a}r_2^{-1}), the unmarked separation (a=s) versus (a=\infty), and the exact finite-window threshold (p^s+1).
 
-1. for a free pro-p group F and an index-p kernel K,
-   D_n(F) ∩ K ⊆ D_{ceil(n/p)}(K);
-2. the resulting all-s critical transfer-boundary consequence;
-3. the intrinsic torsion-line predicate ε_s on the finite Zassenhaus window;
-4. the exact unmarked separation threshold n_sep(s)=p^s+1 for the declared stress family.
+This is **not a proof of novelty**. It is a bounded negative literature search, and the downstream claims remain **CONDITIONAL / OPEN for publication novelty**.
 
-This is **not a publication-level novelty proof**. It is a strong negative-search result within the searched literature and terminology.
+## 1. Primary prior source
 
-## 1. Directly relevant classical literature
+Ershov–Jaikin-Zapirain, *Groups of positive weighted deficiency and their applications*, J. Reine Angew. Math. 677 (2013), 71–134, DOI 10.1515/crelle.2012.013.
 
-### Zassenhaus/Jennings/Lazard filtration
+The arXiv record confirms the paper's subject and publication identity. The published/source text contains the weighted free-pro-(p) machinery used below.
 
-Efrat's 2023 JIMJ paper recalls the p-Zassenhaus filtration and its product formula, and records the inductive formula
-D_n(G)=D_{ceil(n/p)}(G)^p · product_{i+j=n}[D_i(G),D_j(G)].
-It also develops Magnus-coefficient restrictions for elements of the Zassenhaus filtration.
+Relevant chain:
 
-Relevant source: I. Efrat, *The p-Zassenhaus filtration of a free profinite group and shuffle relations*, J. Inst. Math. Jussieu 22 (2023), 961–983, DOI 10.1017/S1474748021000426.
+- uniform weight / standard Zassenhaus degree;
+- restriction of a weight function;
+- explicit index-(p) Schreier generating set;
+- W-optimality of that generating set in the free case;
+- power-commutator characterization/no-cancellation.
 
-### Magnus expansion / initial forms
+The published text also contains Lemma 3.10 with the index-(p) Schreier generators and its proof via the free restricted Lie algebra. This independently confirms that the mechanism is not an artifact of the uploaded TeX version.
 
-The standard identification of the completed group algebra of a free pro-p group with a noncommutative formal power-series algebra, and the use of Magnus expansions and initial forms, are classical and appear throughout the pro-p Zassenhaus literature.
+## 2. Independent corroboration of the underlying Zassenhaus/Magnus framework
 
-### Weighted valuations and index-p Schreier generators
+The later literature continues to treat the Zassenhaus filtration as the standard augmentation/Magnus filtration of free pro-(p) groups. Mináč–Rogelstad–Nguyễn compute graded dimensions for free pro-(p), Demuškin, and related groups and explicitly use the Magnus isomorphism.
 
-Jaikin-Zapirain et al., *Groups of positive weighted deficiency and their applications*, develops weight functions on free pro-p groups and proves an index-p weighted Schreier result: for an index-p subgroup H, a Schreier generating set consisting of
-y, [y,x], ..., [y,x,...,x], x^p
-is W-optimal when W is a weight function. It also proves the weighted Schreier formula.
+Efrat's 2023 JIMJ paper / 2024 NYJM paper develops further word-combinatorial and Magnus methods for the (p)-Zassenhaus filtration and (H^2). This confirms that Magnus/word methods are established infrastructure, not by themselves evidence of novelty.
 
-This is the closest conceptual precedent found for the present subgroup-comparison argument.
+## 3. Search for the exact Paper-4 downstream construction
 
-## 2. Important near-precedent
+Searches targeted:
 
-The weighted-Schreier literature shows that index-p passage changes generator weights in precisely the pattern relevant here: iterated commutators acquire weights up to p-1 and the distinguished p-th power has weight p.
+- finite-window / Zassenhaus + transfer;
+- (p^s)-torsion in abelianized index-(p) kernels;
+- (D_{p^s+1}) transfer behavior;
+- the stress relation (z^{p^s}=x_1^{p^a}r_2^{-1});
+- exact threshold (p^s+1);
+- intrinsic/unmarked finite-window transfer defects.
 
-However, the searched source does **not** state the Paper-4 comparison
-D_n(F)∩K ⊆ D_{ceil(n/p)}(K)
-as a theorem, nor does it state the corresponding all-s transfer-kernel bound used here.
+No retrieved source matched the complete construction.
 
-Therefore the Paper-4 Magnus prefix-code proof should be presented as an explicit derivation, while citing weighted Schreier theory as background/precedent.
+The literature does contain important adjacent transfer/cohomological results. In particular, Efrat's work on the Zassenhaus filtration and representations, and later work on Magnus formations, studies finite quotients, cohomology, unitriangular representations, and transfer principles. These are relevant background and must be cited/positioned, but the retrieved material does not state the Paper-4 `epsilon_s) invariant or the exact (a=s) versus (a=\infty) separation at (p^s+1).
 
-## 3. Cohomology / intrinsic radical precedent
+## 4. Important literature threat that must be acknowledged
 
-The pro-p literature standardly identifies the degree-2 cup product with the quadratic/initial-form data of the defining relations. For one-relator groups with commutator-type initial relation, the radical of the cup pairing is therefore a standard intrinsic object.
+Efrat's transfer/intersection framework is a real neighboring theory. His work explains that cohomological transfer principles can recover several intersection theorems for Zassenhaus-type filtrations and connects finite quotients with cohomology and representations.
 
-The Mináč–Pasini–Quadrelli–Tân literature on mild pro-p groups and Koszul duality gives explicit formulas relating Demushkin/one-relator initial forms, cup products, and the Zassenhaus graded algebra.
+Therefore the manuscript must **not** claim that Paper 4 is the first work to connect transfer, finite quotients, Magnus methods, or Zassenhaus filtration.
 
-This validates the use of the cup-radical line as an intrinsic construction in the declared nondegenerate scope, but no source located in the audit defines the Paper-4 ε_s invariant.
+The defensible claim is narrower:
 
-## 4. Finite-quotient recognition precedent
+> the Paper-4 contribution is the specific intrinsic finite-window obstruction and the resulting sharp separation theorem for the declared stress family, if the full literature audit remains negative.
 
-Quadrelli's 2015 *Finite quotients of Galois pro-p groups and rigid fields* proves that equality of certain canonical finite quotients can force strong structural conclusions for finitely generated Bloch–Kato pro-p groups. This is conceptually close to the Paper-4 philosophy that finite canonical quotients can detect structure.
+## 5. Novelty classification
 
-However, that theorem concerns different canonical quotients and a different structural target. It does not give the Paper-4 finite-window separation theorem or the p^s+1 threshold.
+| Object | Current classification |
+|---|---|
+| SC (D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K)) | **PASS/CLOSED mathematically; not standalone novelty** |
+| Magnus prefix-code proof of SC | **PASS/CLOSED; self-contained reproof/bridge** |
+| TF_s | **PASS/CLOSED mathematically; novelty downstream** |
+| intrinsic (epsilon_s) | **OPEN — strongest novelty candidate** |
+| unmarked (a=s) vs (a=\infty) separation | **OPEN — strong theorem-level novelty candidate** |
+| exact threshold (p^s+1) | **OPEN — strong sharpness/application candidate** |
+| overall Paper-4 publication novelty | **CONDITIONAL / OPEN** |
 
-Efrat's work on the Zassenhaus filtration and Massey products likewise establishes deep finite-quotient/cohomological recognition results, but not the present stress-family invariant.
+## 6. Required next literature audit
 
-## 5. Transfer literature
+The next search should be narrower rather than broader:
 
-Classical transfer/Schreier theory is of course extensive. The search also located Efrat's cohomological transfer/intersection-theorem program, where transfer principles connect Zassenhaus layers with cohomological kernels.
+1. Search Efrat/Mináč/Matzri/Quadrelli literature for **transfer maps on (H^1) or (K^{ab})** attached to index-(p) kernels at a prescribed Zassenhaus depth.
+2. Search for **Bockstein + cup-product / relation-class combinations** producing a one-dimensional (p^s)-torsion line.
+3. Search for **finite quotient separation by transfer**, especially where lower windows are provably identical and only a critical window separates two presentations.
+4. Search citations to Ershov–Jaikin-Zapirain and to the relevant Zassenhaus intersection/transfer papers for any later use of the exact inequality or an equivalent finite-window form.
+5. Only after these searches remain negative should the manuscript use language such as “apparently new” or “to the best of our knowledge”.
 
-No searched source was found that uses the specific finite-window invariant
-ε_s(W) = p^{s-1}V(t) mod p^s K^ab
-or the a=s versus a=∞ comparison in the present family.
+## 7. Bottom line
 
-The word “transfer” should therefore not be presented as a new invention. The novelty claim should instead concern the particular filtered finite-window obstruction and its intrinsic normalization.
+The literature audit strengthens, rather than weakens, the current Paper-4 strategy:
 
-## 6. Closest potential threat to novelty
+**remove SC from the novelty headline; retain it as the established filtration-comparison input; concentrate the novelty claim on the intrinsic transfer obstruction and the sharp finite-window separation.**
 
-The main threat is **not** a paper stating the final theorem verbatim. It is that the general subgroup-comparison theorem might be derivable quickly from existing weighted-Schreier/valuation machinery.
-
-The strongest precedent found is the weighted-Schreier result for index-p subgroups of free pro-p groups. It constructs optimal generators with exactly the commutator/p-power pattern used by Paper 4.
-
-Accordingly, the manuscript must not claim that the Magnus prefix-code argument is novel merely because no exact sentence was found. A publication-level novelty claim should first compare the Paper-4 SC proof line-by-line against the weighted-Schreier machinery and determine whether SC follows as a short corollary.
-
-## 7. Current novelty assessment
-
-- Basic Zassenhaus/Jennings/Lazard facts: **HISTORICAL / STANDARD**.
-- Magnus embedding and leading-term methods: **HISTORICAL / STANDARD**.
-- Index-p Schreier and transfer formulas: **HISTORICAL / STANDARD**.
-- Weighted-Schreier treatment of index-p subgroups: **HISTORICAL / CLOSE PRECEDENT**.
-- Exact SC theorem in Paper-4 form: **OPEN as a novelty question; not located directly**.
-- TF_s consequence: **OPEN as a novelty question, but structurally close to standard Jennings + SC**.
-- ε_s intrinsic finite-window invariant: **OPEN / strongest apparent novelty candidate**.
-- a=s versus a=∞ finite-window non-isomorphism: **OPEN / strongest apparent application-level novelty candidate**.
-- exact threshold n_sep(s)=p^s+1: **OPEN / candidate theorem-level novelty, conditional on no stronger derivation in the weighted-Schreier literature**.
-
-## 8. Required next literature check before a strong novelty claim
-
-The next audit should inspect the full weighted-Schreier paper around Lemmas 3.10, 3.16 and Theorem 3.12, and explicitly test whether the standard Zassenhaus weight valuation yields SC immediately.
-
-If it does, SC should be cited as a corollary/rediscovery rather than claimed as the novel contribution.
-
-The novelty candidate would then move upward to the intrinsic ε_s construction and the exact finite-window separation theorem.
-
-## Sources checked
-
-- Efrat, *The p-Zassenhaus Filtration of a Free Profinite Group and Shuffle Relations*, JIMJ 22 (2023), 961–983.
-- Efrat, *The Zassenhaus Filtration, Massey Products, and Representations of Profinite Groups*, Advances in Mathematics 263 (2014), 389–411.
-- Chapman–Efrat, *Filtrations of free groups arising from the lower central series* (2016).
-- Mináč–Rogelstad–Tân, *Dimensions of Zassenhaus filtration subquotients of some pro-p-groups* (2014/2016).
-- Jaikin-Zapirain et al., *Groups of positive weighted deficiency and their applications*.
-- Mináč–Pasini–Quadrelli–Tân, *Koszul algebras and quadratic duals in Galois cohomology*, Advances in Mathematics 380 (2021), 107569.
-- Quadrelli, *Finite quotients of Galois pro-p groups and rigid fields*, Ann. Math. Québec 39 (2015), 113–120.
-
-## Bottom line
-
-The search did **not** find the Paper-4 final theorem in the literature. But it did find a sufficiently close weighted-Schreier framework that prevents an unconditional novelty claim for SC itself until that framework is checked as a possible derivation.
-
-The safest current classification is:
-
-**Paper-4 mathematical result: PASS / CLOSED in the declared scope.**
-
-**Publication novelty: CONDITIONAL / OPEN pending the weighted-Schreier derivation check and a broader database-level literature search.**
+No mathematical Paper-4 result is reopened by this audit.
