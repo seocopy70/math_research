@@ -1127,3 +1127,19 @@ Classification:
 - no new GAP prime sweep authorized before the intrinsic filtered object and its gauge-quotient stabilizer are proved.
 
 Immediate next proof target: prove the intrinsic filtered-relation-module functoriality, then identify its gauge quotient with the four abstract projective jet stabilizers. Detailed audit: research/PAPER5_FILTERED_RELATION_MODULE_FACTORIZATION_AUDIT_2026-10-05.md.
+
+
+## 2026-10-05 — critical correction: filtered relation module does not by itself solve B-1
+
+A further audit caught an important overclaim in the first corrected formulation. The presentation-level module M_n=R_n/[F,R_n] is associated with the chosen free presentation. An arbitrary alpha in Aut(W_n) does not automatically induce an automorphism of M_n unless alpha lifts to a compatible automorphism of the presentation. Thus replacing the raw jet by M_n does **not** by itself remove the B-1 lift problem.
+
+The distinction is intrinsic H_2 versus presentation-associated relation module: Hopf's formula gives H_2(G,Z)=(R cap [F,F])/[F,R], while the full relation module is attached to a chosen free presentation. Therefore the next load-bearing definition gate is now **FRM-0**: construct an object from W_n alone (for example through characteristic Zassenhaus quotients, H_2/H^2/transgression data, or a canonical extension object) whose degree-2/p data maps naturally to the presentation-level filtered relation module and is Aut(W_n)-equivariant.
+
+Classification:
+- presentation-level filtered relation module as a candidate container: **CONDITIONAL**;
+- intrinsic Aut(W_n)-equivariant filtered jet: **OPEN / LOAD-BEARING**;
+- raw mixed pair (pi_2(r),pi_p(r)): **FAIL / CLOSED as an intrinsic definition**;
+- Hopficity-to-lift shortcut: **FAIL / CLOSED as a proof shortcut**;
+- general odd-p finite-window factorization: **OPEN / LOAD-BEARING**.
+
+No new GAP scan is authorized before FRM-0 is settled.
