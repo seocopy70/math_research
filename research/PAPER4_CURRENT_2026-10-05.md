@@ -228,3 +228,45 @@ Local artifacts: `/mnt/data/Paper4_revised_2026-10-05.tex` and `/mnt/data/Paper4
 PDF SHA-256: `8b400f16ff1e3a0cfe7501dbc2b771279b3917f63f18cddb77f67ec9a695a25d`.
 
 Classification remains **PASS / CLOSED** in the declared scope.
+
+## 2026-10-05 — A1 arbitrary pro-p closure
+
+A1 is now **PASS / CLOSED** by a corrected weighted normal-form argument; see `research/PAPER4_GENERAL_SC_ARBITRARY_PROP_A1_CLOSURE_2026-10-05.md`.
+
+For arbitrary pro-p (G) and open (Kle G) of index (p), with
+(A=\mathbf F_p[[K]]), (J=I_K), (t=a-1), the completed group algebra has the left (A)-decomposition
+[
+\mathbf F_p[[G]]=\bigoplus_{r=0}^{p-1}At^r,
+qquad t^p=a^p-1\in J.
+]
+Define
+[
+E_m=\bigoplus_{r=0}^{p-1}
+J^{\max(0,\lceil(m-r)/p\rceil)}t^r.
+]
+The normal-form multiplication rules, including the previously problematic (t^rBt) terms, give (E_mE_\ell\subseteq E_{m+\ell}). Since (I_G\subseteq E_1),
+[
+I_G^n\subseteq E_n,
+]
+and therefore
+[
+I_G^n\cap A\subseteq J^{\lceil n/p\rceil}.
+]
+Using (D_n(H)=H\cap(1+I_H^n)) gives
+[
+\boxed{D_n(G)\cap K\subseteq D_{\lceil n/p\rceil}(K).}
+]
+Iteration along an index-(p^s) chain gives
+[
+\boxed{D_n(G)\cap K\subseteq D_{\lceil n/p^s\rceil}(K).}
+]
+
+This **supersedes the earlier 2026-10-05 A1 audit that rejected the first augmentation-ideal proof**. The false equality route and Heisenberg counterexample remain correctly classified as failures of that old proof, not counterexamples to A1 itself.
+
+Scope distinction:
+- A1/SC/SC_s validity: **PASS / CLOSED for arbitrary pro-p groups**.
+- Uniform sharpness: **PASS / CLOSED in the free-pro-p witness family**; no arbitrary-pro-p sharpness claim is made.
+- Pointwise sharpness for every n: **OPEN / not required**.
+- Paper-4 transfer obstruction, intrinsic separation, and exact threshold: **unchanged PASS / CLOSED** in the declared odd-p, (s\ge2), even-d, nondegenerate alternating stress-family scope.
+
+Publication interpretation: A1 is filtration infrastructure. The Paper-4-specific contribution remains the transfer obstruction, exact unmarked (a=s) versus (a=\infty) separation, and sharp threshold (n_{\mathrm{sep}}(s)=p^s+1).
