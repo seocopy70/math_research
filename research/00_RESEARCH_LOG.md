@@ -1626,3 +1626,14 @@ so in both fixed-a pairs the p-primary ratio is exactly p^2:
 The mechanism is visible directly from the two-level jet: the same scalar must multiply the degree-2 and degree-p components. For (0,1), preservation of x^[p] forces the x-line and then det(x,y)=a, forcing the y-diagonal coefficient to be 1. For (1,1), the p-power difference forces the x/z scalars to coincide. For (1,2), the bracket scales by det(A) while z^[p] scales by the z scalar, forcing z-scaling = det(A). For (0,2), only the quadratic line remains, giving the full parabolic stabilizer.
 
 This is a **structural derivation candidate**, not yet a theorem: the remaining proof obligations are to formalize the exact relation-jet functor, prove that no additional degree-p components enter under arbitrary GL substitution, and prove that the finite-window automorphism image equals the jet stabilizer for general odd p. Status: **OPEN / LOAD-BEARING**, but the mechanism is now substantially constrained and explains the four certified finite computations.
+
+
+## 2026-10-05 — Paper 5 abstract two-level relation-jet stabilizer theorem closed
+
+The current load-bearing structural hypothesis was separated into its intrinsic algebraic part and its finite-window realization part. For odd p, the projective stabilizers of the four two-level relation jets [x,y]+x^[p], [x,y]+z^[p]-x^[p], [x,y], and [x,y]+z^[p] were derived directly from the bracket and restricted-power transformation laws. Their stabilizers are respectively S01={ upper triangular matrices with diagonal pattern (a,1,e) and a,e nonzero }, S11={ matrices with diagonal pattern (a,1,a) and arbitrary x-y shear }, S02={ block upper parabolic with A in GL2(Fp), arbitrary 2-vector, and e nonzero }, and S12={diag(A,det A)}. The orders give |S01|/|S11|=|S02|/|S12|=p^2(p-1), hence p-primary ratio p^2.
+
+Classification: PASS / CLOSED for the abstract projective relation-jet stabilizer theorem under the declared odd-p marked definitions. This is not yet a theorem about the actual finite-window automorphism image: the factorization/equality Im(Aut(W_n)->GL(V))=S_{s,a} is still OPEN / LOAD-BEARING in general, with p=3 and p=5 finite certificates only PASS / LOCAL. No uniform p^2 automorphism-order theorem is promoted.
+
+The detailed proof audit is recorded in research/PAPER5_RELATION_JET_AUDIT.md.
+
+Immediate next gate: prove the finite-window Frattini action factors through the degree-(2,p) relation jet, then seek equality for general odd p or a genuinely new-prime independent certificate. If factorization fails, record the counterexample; do not repair the jet ad hoc.
