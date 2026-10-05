@@ -1063,3 +1063,12 @@ The v2 run **37252335078** is still in progress after several minutes in the GAP
 - no conclusion about the QA layer or its relation to the p^2 gap is permitted.
 
 This is a runtime boundary, not a mathematical FAIL. The already closed IA/GL and stabilizer results remain unchanged.
+
+
+## 2026-10-05 — p=5 stabilizer gate CLOSED; p^2 gap localized
+
+The independent 125-point Frattini quotient action gate now passes all four p=5,n=6 cases (0,1), (1,1), (0,2), (1,2), after resolving the GAP row/right-action transpose convention. CI run 37252889495 is the decisive independent certificate. Therefore the p=5 embedded stabilizer formulas are **PASS / CLOSED** at n=6.
+
+Together with the independently reproduced exact Aut(W_6) orders, the IA/GL factorization gives IA order 5^106 on both sides for fixed a=1 and fixed a=2, while the GL image ratios are 2000/20=100 and 48000/480=100. Hence the p-primary p^2 automorphism-order gap is **PASS / CLOSED as a p=5 localization result** and is entirely a GL/Frattini-image phenomenon in the tested cases.
+
+The next load-bearing question is now structural: derive the four stabilizer formulas intrinsically and determine whether the pattern is genuinely uniform for odd p, rather than merely verified at p=3 and p=5.
