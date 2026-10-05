@@ -2871,3 +2871,18 @@ This is an authorized execution correction, not a result. The corrected script i
 - Paper 5 END: NOT AUTHORIZED.
 
 No general odd-p claim is promoted.
+
+## 2026-10-06 — p=5,n=6 matrix diagnostic recorded and generic Step-3 upper-bound proposal rejected
+
+Run 37381098677 was independently rechecked from the GitHub Actions job log. It is the single case (p,n,s,a)=(5,6,0,1), with 113 computed automorphism generators. The direct MatrixGroup comparison reports actual=infinity and candidate inequality, while the direct permutation comparison reports actual=2000, candidate=2000, equal=true.
+
+Classification of the computation: PASS / LOCAL. It verifies the candidate image order for this one case and is consistent with 2000=5^3(5-1)^2 and the observed 5^2 localization ratio. It does not prove a general upper bound.
+
+The submitted generic intrinsic proof of Im(Aut(W_n)->GL(V_n)) subseteq S'_11(p) was then audited. It is FAIL / CLOSED as submitted. The proposed S'_11 definition is not yet intrinsic because an arbitrary M in GL(V_n) does not canonically determine a free-pro-p lift; the proof assumes relation preservation for an arbitrary automorphism of the finite window before supplying the required lifting/factorization theorem. In addition, the asserted block-matrix count |S'_11(p)|=p^(n-3)(p-1)^2 is not derived from the displayed free parameters and conflicts with the number of apparent unipotent parameters. The Jacobson/restricted-power correction also prevents treating the relation expansion as automatically linear in matrix entries.
+
+Therefore the current load-bearing boundary is unchanged:
+- local p=5,n=6 permutation equality: PASS / LOCAL;
+- generic upper bound Im subseteq S'_11(p): OPEN / LOAD-BEARING;
+- generic equality and uniform automorphism-order theorem: OPEN / CONDITIONAL.
+
+Detailed audit: research/PAPER5_STEP3_INTRINSIC_UPPER_BOUND_REAUDIT_2026-10-06.md.
