@@ -64,3 +64,12 @@ were audited and are **NOT CLOSED**. The intrinsic line \(L=Z(W_p)D_2/D_2\) is a
 A second type error occurs in the proposed relation condition \(b(\pi(x),y)\): the established \(b\) has type \(b:\wedge^2V\to D_p\), while \(\pi(x)\in D_p\), so this expression is undefined without introducing a new action/pairing. Consequently the claimed \(3\to2\) dimension cut and \(Z^1_{\mathcal J_p}(V,L)\cong\mathbf F_p^2\) remain **OPEN / LOAD-BEARING**.
 
 The CLOSED \(W_p\) intrinsic stabilizer result is unchanged. Detailed audit: research/PAPER5_P2_GAP_COMPARISON_WINDOW_AUDIT_2026-10-06.md.
+
+
+## 2026-10-06 — Addendum 3: reverse-pi/kernel-cut mechanism rejected
+
+The proposed reverse map \(\pi:D_p\to V\) and the resulting \(3\to2\) IA-kernel cut are **FAIL / CLOSED as a mechanism**. The authoritative intrinsic p-power map is \(\pi_0:V\to D_p\). No canonical reverse map is induced by the p-power operation; moreover \(D_p\) is central of exponent \(p\), so the assignment \(d_{z1}\mapsto v_z\) is extra structure.
+
+There is a stronger obstruction to the proposed second factor \(p\): every IA modification by \(f:V\to D_p\) is invisible to the established intrinsic jet data. If \(d\in D_p\), then \((gd)^p=g^p\) and \([gd,h]=[g,h]\), because \(D_p\le Z(W_p)\) and \(D_p^p=1\). Hence preserving \(\pi_0\), \(b\), \(L\), and the relation cannot cut \(\operatorname{Hom}(V,D_p)\) from dimension 9 to dimension 8.
+
+Therefore \(K_b/K_{\mathcal J}\cong\mathbf F_p\) and the resulting \(p^2\) decomposition are **FAIL / CLOSED for this proposed mechanism**. The exact \(p^2\) automorphism-order theorem remains **OPEN / LOAD-BEARING**. No new CLOSED comparison window has been identified.
