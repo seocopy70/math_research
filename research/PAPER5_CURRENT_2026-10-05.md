@@ -304,3 +304,30 @@ The (p) and (p^2) exceptional-layer discussion cannot repair this missing first 
 Detailed audit: `research/PAPER5_STEP3_SECOND_ORDER_LIFTING_AUDIT_2026-10-05.md`.
 
 This supersedes the immediately preceding claim that the second-order law closed Step 3. It does **not** reopen the independently audited Step 2 filtered-extension result.
+
+
+## 2026-10-05 — Step 3 second-jet re-audit
+
+**FAIL / CLOSED as submitted proof; Step 3 equality remains OPEN / LOAD-BEARING.**
+
+The formal second-jet (J_k^2(r)=[r]\in D_k/D_{k+2}) is a valid repair of the previous type error for (k\ge2), and a fixed Magnus embedding supplies homogeneous coefficients (R_k,R_{k+1}). However, the load-bearing claim
+[
+sec_{k+1}(\widetilde g(r))\in gr_{k+1}(R)
+]
+has not been proved.
+
+The asserted identity (C_k(R_k)=[V,R_k]) is not automatic. The nonlinear Magnus substitution (X\mapsto aX+\binom a2X^2+\cdots) produces degree-raising insertion/substitution operators on a homogeneous word (R_k). Such an operator is not generally identical to an inner derivation (R_k\mapsto[V,R_k]). Restricted-ideal closure under brackets and restricted powers therefore does not by itself imply that the correction lies in (gr_{k+1}(R)).
+
+Thus:
+- (D_k/D_{k+2}) abelian for (k\ge2): **PASS / GENERAL**;
+- (J_k^2(r)=[r]): **PASS / GENERAL**;
+- fixed-Magnus second coefficient: **PASS / COORDINATE**;
+- (sec_{k+1}(\widetilde g(r))\in gr_{k+1}(R)): **OPEN / LOAD-BEARING**;
+- strengthened (L_k): **OPEN / LOAD-BEARING**;
+- (\widetilde g(R)\subseteq R): **OPEN / LOAD-BEARING**;
+- Step 3 equality (\operatorname{Im}=S_{11}(p)): **OPEN / LOAD-BEARING**;
+- (p^2(p-1)) theorem: **CONDITIONAL**.
+
+The (p^2) layer discussion remains useful only after the complete induced operator on the (p^2)-graded relation space is explicitly computed.
+
+Detailed audit: `research/PAPER5_STEP3_SECOND_JET_REAUDIT_2026-10-05.md`.
