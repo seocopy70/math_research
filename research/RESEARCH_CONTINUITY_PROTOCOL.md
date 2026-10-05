@@ -148,3 +148,19 @@ Important definitions, corrections, PASS/FAIL decisions, frozen boundaries, next
 
 Research-changing evidence is a write-trigger. After any material literature finding, theorem/lemma verification or correction, computation result, gate-status change, novelty-boundary change, branch decision, or next-action change, immediately update the appropriate repository artifact without waiting for a separate user request. The default order is: `00_RESEARCH_LOG.md` for chronology; `CURRENT_STATE.md` when active status/next action changes; `RESEARCH_MAP.md` only when the global architecture changes; and the relevant stage/audit document for load-bearing branch details. A record is considered complete only after the repository write succeeds. Literature audits must record what the source proves, what it does not prove, independent verification, classification, and next authorized action. If a write fails, report the failure and retry safely rather than silently deferring it.
 
+## 12. Current-state ownership rule
+
+To prevent `CURRENT_STATE.md` from becoming a duplicate Paper 4/5 log:
+
+- `CURRENT_STATE.md` is the **whole-program control tower only**. It may contain programme-level classification, active-gate pointers, and links, but not detailed Paper-specific calculations, chronology, or repeated audit evidence.
+- `research/PAPER4_CURRENT_*.md` is the **single live home for Paper 4 current status**. `research/PAPER5_CURRENT_*.md` is the **single live home for Paper 5 current status**.
+- When Paper 4/5 details change, update the relevant `PAPER*_CURRENT` file first. Do **not** copy the detail into `CURRENT_STATE.md` merely for synchronization.
+- Update `CURRENT_STATE.md` only when a **programme-level status, active load-bearing gate, dependency, navigation link, or control-tower classification** changes.
+- `00_RESEARCH_LOG.md` remains the chronological record; dated audit/stage files remain the evidence-bearing detailed records.
+- If a Paper-specific current file and `CURRENT_STATE.md` appear inconsistent, the Paper-specific current file controls the Paper detail; then reconcile the control-tower summary rather than duplicating the detail.
+
+Operationally, the canonical navigation is:
+
+`RESEARCH_MAP.md → CURRENT_STATE.md → PAPER*_CURRENT → audit/log`.
+
+This ownership rule is mandatory for future research continuation and supersedes any older habit of keeping a detailed Paper 4/5 status copy inside `CURRENT_STATE.md`.
