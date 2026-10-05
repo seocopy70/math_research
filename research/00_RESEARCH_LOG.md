@@ -1690,3 +1690,14 @@ The corrected intrinsic object is the truncated filtered relation module M_n=R_n
 The statement [R_n,F] subset D_3 is retained only conditionally when R_n subset D_2, and is PASS / LOCAL. The Hopficity-to-lift shortcut is FAIL / CLOSED as a proof shortcut. The intrinsic filtered-jet construction and its identification with the four projective marked stabilizers are OPEN / LOAD-BEARING. No new GAP scan is authorized until this definition/factorization gate is settled.
 
 Classification: OPEN / LOAD-BEARING for the general odd-p finite-window factorization; raw mixed jet definition FAIL / CLOSED.
+
+
+## 2026-10-05 — critical correction: presentation-level relation module is not automatically Aut(W)-functorial
+
+A second audit caught an overclaim in the proposed filtered-relation-module repair. Although M=R/[F,R] is a natural presentation-level relation object, an arbitrary automorphism of W=F/R does not automatically induce an automorphism of M unless it lifts to a compatible automorphism of the free presentation. Thus the filtered relation module does not itself eliminate B-1.
+
+This matches the standard distinction between presentation-associated relation modules and intrinsic H_2: Hopf's formula identifies H_2(G,Z) with (R cap [F,F])/[F,R], whereas the full relation module is attached to a chosen free presentation. The next target is therefore an intrinsic object of W_n alone, with an Aut(W_n)-equivariant map to the presentation-level filtered relation data.
+
+New load-bearing gate: **FRM-0 — intrinsic replacement/factorization carrier**. Candidate sources include characteristic Zassenhaus quotients, H_2/H^2/transgression data, or a canonical extension object. Until FRM-0 is closed, the four abstract projective stabilizer formulas cannot be promoted to a finite-window factorization theorem.
+
+Classification: **OPEN / LOAD-BEARING**. No new GAP scan authorized.
