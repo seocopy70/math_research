@@ -52,7 +52,7 @@ run:=function(s,a)
   Phi:=FrattiniSubgroup(W); basis:=[gens[2],gens[3],gens[1]];
   autGens:=Concatenation(A.glAutos,A.agAutos);
   actual:=Group(List(autGens,alpha->CosetPerm(alpha,W,Phi,basis)));
-  if s=0 then Cand:=Group(D(1,2),ShearMat(1,2,1),ShearMat(1,3,1),ShearMat(2,3,1),D(3,2)); else Cand:=Group([[2*One(Fld),0*One(Fld),0*One(Fld)],[0*One(Fld),One(Fld),0*One(Fld)],[0*One(Fld),0*One(Fld),2*One(Fld)]],ShearMat(1,2,1)); fi;
+  if a=1 then if s=0 then Cand:=Group(D(1,2),ShearMat(1,2,1),ShearMat(1,3,1),ShearMat(2,3,1),D(3,2)); else Cand:=Group([[2*One(Fld),0*One(Fld),0*One(Fld)],[0*One(Fld),One(Fld),0*One(Fld)],[0*One(Fld),0*One(Fld),2*One(Fld)]],ShearMat(1,2,1)); fi; else if s=0 then Cand:=Group(ShearMat(1,2,1),ShearMat(2,1,1),D(1,2),ShearMat(1,3,1),ShearMat(2,3,1),D(3,2)); else Cand:=Group(ShearMat(1,2,1),ShearMat(2,1,1),[[2*One(Fld),0*One(Fld),0*One(Fld)],[0*One(Fld),One(Fld),0*One(Fld)],[0*One(Fld),0*One(Fld),2*One(Fld)]]); fi; fi;
   pmats:=List(GeneratorsOfGroup(Cand),m->MatPerm(TransposedMat(m)));
   Cand:=Group(pmats);
   eq:=actual=Cand;
@@ -65,7 +65,7 @@ run:=function(s,a)
   Print("P5_COSET_STABILIZER s=",s," a=",a," PASS\n");
 end;
 
-run(0,1); run(1,1);
+run(0,1); run(1,1); run(0,2); run(1,2);
 Print("P5_COSET_STABILIZER_CERTIFICATE=PASS\n");
 QUIT;
 
