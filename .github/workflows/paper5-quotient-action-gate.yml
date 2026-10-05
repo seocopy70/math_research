@@ -1,0 +1,28 @@
+name: Paper 5 fixed quotient Aut(W) to Aut(Q) gate
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/scripts/paper5_quotient_action_gate.g'
+      - 'research/external/paper5_aut/aut_common.g'
+      - '.github/workflows/paper5-quotient-action-gate.yml'
+jobs:
+  quotient-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and AutPGrp
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y gap gap-autpgrp
+      - name: Run quotient action gate
+        run: |
+          set -euo pipefail
+          gap -q research/scripts/paper5_quotient_action_gate.g > paper5_quotient_action_runtime.log 2>&1
+          cat paper5_quotient_action_runtime.log
+          grep -Fq 'P5_QUOTIENT_ACTION_CASE s=1 a=1 PASS' paper5_quotient_action_runtime.log
+          grep -Fq 'P5_QUOTIENT_ACTION_CASE s=1 a=2 PASS' paper5_quotient_action_runtime.log
+          grep -Fq 'P5_QUOTIENT_ACTION_CASE s=2 a=1 PASS' paper5_quotient_action_runtime.log
+          grep -Fq 'P5_QUOTIENT_ACTION_CERTIFICATE=PASS' paper5_quotient_action_runtime.log
