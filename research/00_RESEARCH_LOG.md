@@ -1466,3 +1466,19 @@ Classification:
 - p=5 uniform stabilizer theorem: **OPEN**.
 
 Immediate authorized action: localize the matrix-coordinate defect before any a=2 computation. The diagnostic must compare the computed Frattini action against the candidate under the declared basis, transpose/inverse/right-vs-left action conventions, and (if needed) basis conjugacies. Do not infer a stabilizer theorem from order equality alone.
+
+
+## 2026-10-05 — Paper 5 p=5,n=6 Frattini convention audit: (1,1) candidate is mathematically wrong in the declared basis
+
+The convention diagnostic run **37249366924** (commit `217dca0cde11739fc65f048e61f53fcf2c45605a`) printed the actual Frattini-action generators in the declared basis `(x,y,z)`. For (s,a)=(0,1), the nontrivial generators generate the same 2000-element matrix subgroup as the previously proposed candidate `<D_1(2),E_{12},E_{13},E_{23},D_3(2)>`; the two ad-hoc permutation comparisons were false, so the permutation representation remains an invalid decisive route.
+
+For (s,a)=(1,1), however, the actual nontrivial matrices generate
+`<diag(2,1,2), E_{12}(2)>`, of order 20. The proposed candidate was `<diag(2,1,1),E_{12}(1)>`, also order 20. Independent finite-matrix enumeration gives both order 20 but **different subgroups**; moreover they are not conjugate in GL_3(5), since the order-4 semisimple generator has eigenvalue multiplicities 2+1 in the actual group versus 1+1+1 in the candidate. Thus the (1,1) discrepancy is no longer a mere representation artifact.
+
+Classification:
+- p=5,n=6,(0,1): **PASS / LOCAL** for the candidate subgroup at the matrix-generator level; exact GAP permutation certificate remains unusable and needs replacement by a matrix-family equality test.
+- p=5,n=6,(1,1) proposed embedded stabilizer formula: **FAIL / CLOSED** in the declared presentation basis, and not rescued by basis conjugacy.
+- p=5,n=6,a=2: **OPEN / EXECUTION BLOCKED**.
+- p=5 uniform stabilizer theorem: **FAIL / CLOSED as currently formulated**.
+
+Consequence: the p=5 cross-prime uniform stabilizer candidate cannot be promoted. The next structural task is to derive the correct intrinsic (1,1) GL-image subgroup from the actual automorphism action, rather than forcing the p=3 candidate formula onto p=5. The a=2 W_6 collector attack is **not yet authorized** until this corrected (1,1) structural formula is identified and independently verified.
