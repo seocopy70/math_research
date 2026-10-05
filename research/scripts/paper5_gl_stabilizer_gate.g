@@ -21,13 +21,14 @@ Coord:=function(v,b)
   Error("coordinate not found");
 end;
 
-ImageMatrix:=function(alpha,frnat,basis)
-  local cols,j,M;
-  # basis is a basis of V=W/Phi(W), so alpha must act on W-lifts,
-  # then be projected by frnat.  Applying alpha directly to V caused
-  # the GAP family mismatch in run 37199037517.
-  cols:=List([1..Length(basis)],j->
-    Coord(Image(frnat,Image(alpha,basis[j])),List(basis,k->Image(frnat,k))));
+ImageMatrix:=function(alpha,frnat,basisW)
+  local vbasis,cols,j,M;
+  # A.glAutos/A.agAutos may have a source copy of W.  Therefore recover
+  # each Frattini-basis element through frnat before applying alpha.
+  vbasis:=List(basisW,k->Image(frnat,k));
+  cols:=List([1..Length(vbasis)],j->
+    Coord(Image(frnat,Image(alpha,PreImagesRepresentative(frnat,vbasis[j]))),
+          vbasis));
   M:=TransposedMat(Matrix(GF(3),cols));
   return List([1..3],i->List([1..3],j->M[i][j]));
 end;
@@ -78,6 +79,17 @@ run:=function(s,a)
   Print("actual image order = ",Size(actual)," candidate order = ",Size(Cands[i]),"\n");
   Print("candidate structure = ",StructureDescription(Cands[i]),"\n");
   Print("embedded equality in basis (x,y,z) = ",eq,"\n");
+  if [s,a]=[1,1] then
+    Print("ACTUAL_MATRICES_XYZ=",Set(Mats),"\n");
+    # Convert the user-proposed subgroup from (z,x,y) to (x,y,z).
+    # It is {[[e,h,0],[0,e^-1,0],[0,0,1]] : e in F3^*, h in F3}.
+    Print("USER_EXPECTED_XYZ=",
+      Set(List(Filtered(Elements(GL(3,3)),m->
+        m[1][1] in [1,2] and
+        m[1][1]<>0 and m[2][2]=Inverse(m[1][1]) and m[3][3]=1 and
+        m[1][3]=0 and m[2][3]=0 and m[3][1]=0 and m[3][2]=0 and
+        m[2][1]=0),m->m)),"\n");
+  fi;
   if not eq then
     Error("STABILIZER equality failure");
   fi;
@@ -87,3 +99,5 @@ end;
 for t in [[0,1],[1,1],[0,2],[1,2]] do run(t[1],t[2]); od;
 Print("STABILIZER_CERTIFICATE=PASS\n");
 QUIT;
+
+# CI retrigger after source-family correction: 2026-10-06.
