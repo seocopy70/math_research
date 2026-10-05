@@ -1940,3 +1940,29 @@ A second literature audit was run after the direct source inspection.
 - Overall publication novelty: **CONDITIONAL / OPEN**.
 
 This is a bounded negative search, not a proof of priority. The next authorized audit is narrowly targeted at transfer on index-(p) kernels, Bockstein/cup-product relation data, and finite-quotient separation at a prescribed Zassenhaus depth.
+
+
+## 2026-10-05 — SC literature audit CLOSED; downstream strengthening authorized
+
+Decision: **SC = PASS / CLOSED; literature audit = PASS / CLOSED.**
+
+The final position is:
+- Zassenhaus/Magnus/weighted-Schreier literature provides the component machinery.
+- The exact Paper-4 subgroup-depth comparison \(D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K)\) was not located as a directly stated theorem in the audited sources.
+- Paper 4 therefore may claim this comparison as a **new logical deduction/assembly step**, while explicitly crediting the prior machinery from which it can be derived.
+- The standalone novelty claim is not “we invented weighted Schreier theory” and not “no prior result could imply SC”; it is that the Paper-4 proof identifies and packages the precise subgroup-depth comparison needed to force the finite-window transfer bound.
+
+The SC search is now stopped. No more generic literature time should be spent here.
+
+### Next research gate — theorem strengthening using SC
+
+The next task is to derive the strongest clean theorem that SC supports, in this order:
+
+1. formulate the exact general marked-kernel consequence of SC and Jennings after abelianization;
+2. specialize it at \(n=p^s+1\) to obtain the sharp transfer truncation bound;
+3. separate the universal SC/TF layer from the family-specific intrinsic \(\varepsilon_s\) layer;
+4. test whether the nondegenerate quadratic hypothesis can be weakened while retaining an unmarked canonical kernel;
+5. state the final theorem with the strongest valid scope, explicitly distinguishing marked and intrinsic versions.
+
+No theorem is to be broadened by analogy; each scope enlargement requires an independent proof.
+
