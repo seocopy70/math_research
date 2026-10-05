@@ -1559,3 +1559,9 @@ The recovered AutPGrp orbit runner was isolated and executed in CI. GAP produced
 The old external note reporting |Aut(W_10)|=2*3^30 is therefore **SUPERSEDED** by the current executable reproduction. The first CI run failed only because the shell grep used an invalid regex; the GAP computation itself completed. The corrected wrapper was committed and the same GAP output re-executed; the remaining workflow failure was shell-quoting only, not mathematical output.
 
 Classification: p=3,s=2,a=1,n=10 orbit structure = **PASS / LOCAL**; exact Aut-order reproduction = **PASS / LOCAL**; old 2*3^30 value = **HISTORICAL / SUPERSEDED**. The one-orbit result still does not by itself explain the p^2 gap or prove a fixed-quotient factorization.
+
+## 2026-10-05 — Paper 5 quotient-action runtime boundary
+
+The newly authorized fixed-quotient `Stab_{Aut(W)}(K) -> Aut(Q)` gate (run 37251989683) did not finish in the observed execution window. A v2 implementation replaced the expensive explicit preimage step by direct point-stabilizer computation on the exact admissible-kernel action. Run **37252335078** remains in progress after several minutes.
+
+Classification: **OPEN / EXECUTION BLOCKED** for the quotient-action layer. No image/kernel theorem is promoted. This is not a mathematical counterexample.
