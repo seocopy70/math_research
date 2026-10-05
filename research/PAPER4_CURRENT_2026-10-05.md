@@ -270,3 +270,15 @@ Scope distinction:
 - Paper-4 transfer obstruction, intrinsic separation, and exact threshold: **unchanged PASS / CLOSED** in the declared odd-p, (s\ge2), even-d, nondegenerate alternating stress-family scope.
 
 Publication interpretation: A1 is filtration infrastructure. The Paper-4-specific contribution remains the transfer obstruction, exact unmarked (a=s) versus (a=\infty) separation, and sharp threshold (n_{\mathrm{sep}}(s)=p^s+1).
+
+
+## 2026-10-05 — Sharpness scope (final)
+
+The Paper-4 sharpness claim is explicitly **uniform optimality of the factor (p^s) in the free-pro-(p) class**, not pointwise equality for every integer (n), and not sharpness for every arbitrary pro-(p) group. The witnesses
+[
+g_m=a^{p^m},qquad
+g_{m,s}=a^{p^{m+s-1}}
+]
+realize equality at arbitrarily large power degrees and therefore rule out any uniform improvement of the factor (p^s). General-(n) pointwise sharpness would require additional commutator/Lie-word witnesses and is outside Paper 4.
+
+A1 proof wording is also finalized: (J^0=A) is explicitly the convention for the truncated exponent in (E_m); the index-(p^s) chain is justified by a composition series of the finite (p)-group (G/K); and the ceiling-composition identity is reduced to the elementary (m=pq+r) check. The previously incorrect “(r=0) component” wording is not used.
