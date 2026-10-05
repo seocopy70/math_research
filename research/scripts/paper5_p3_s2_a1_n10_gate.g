@@ -10,4 +10,9 @@ run:=function(s,a)
   for i in [1..nk] do imgs:=reps[i]; pi:=GroupHomomorphismByImagesNC(W2,Q,gens,imgs); for al in gensA do newt:=List(gens,g->Image(pi,Image(al,g))); j:=kid[key(newt)]; if j=0 then Print("  action left admissible set?!\n"); else if find(i)<>find(j) then parent[find(i)]:=find(j); fi; fi; od; od;
   orbits:=Collected(List([1..nk],i->find(i))); Print("   Aut(W)-orbits on admissible kernels: sizes ",List(orbits,o->o[2]),"\n"); Print("   |Aut W|=",A.size,"  stabilizer orders: ",List(orbits,o->A.size/o[2]),"\n");
   for o in orbits do i:=Position(List([1..nk],x->find(x)),o[1]); imgs:=reps[i]; pi:=GroupHomomorphismByImagesNC(W2,Q,gens,imgs); K:=Kernel(pi); comp:=ComplementClassesRepresentatives(W,K); Print("   orbit of size ",o[2],": |K|=3^",Log(Size(K),3),"  K abelian: ",IsAbelian(K),"  complements(classes)=",Length(comp),"\n"); od;
+  if nk=81 and Length(orbits)=1 and orbits[1][2]=81 and Length(AsList(ComplementClassesRepresentatives(W,Kernel(GroupHomomorphismByImagesNC(W2,Q,gens,reps[1])))))=59049 then
+    Print("P5_N10_ORBIT_CERTIFICATE=PASS\n");
+  else
+    Error("P5_N10_ORBIT_CERTIFICATE_FAILURE");
+  fi;
 end; run(2,1); QUIT;
