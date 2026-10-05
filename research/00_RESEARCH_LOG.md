@@ -2454,3 +2454,14 @@ is not automatic and has not been derived. Restricted-ideal closure under bracke
 Therefore the second-jet itself **PASS / GENERAL**, but its preservation of the relation ideal is **OPEN / LOAD-BEARING**. The strengthened (L_k), kernel preservation, and (operatorname{Im}=S_{11}(p)) equality remain OPEN / LOAD-BEARING; the (p^2(p-1)) theorem remains CONDITIONAL.
 
 Detailed audit: research/PAPER5_STEP3_SECOND_JET_REAUDIT_2026-10-05.md.
+
+
+## 2026-10-06 — Paper 5 Step 3 second-jet substitution-order audit
+
+The submitted (T_{a,b,k}) repair was independently checked. The raw associative derivation claims are valid: (D_X,D_Z,D_{Y,1},D_{Y,2}) preserve the two-sided commutator ideal, and the Leibniz degree count gives (D(u^p)\in I_{p^2+1}) in the mod-(p) graded layer. The (X^{p^2}-Z^{p^2}) vanishing is likewise a mod-(p) statement and requires explicit coefficient-field notation.
+
+A load-bearing error remains in the second-order substitution formula. For (x\mapsto x^a, y\mapsto yx^b, z\mapsto z^a), the linear Magnus map is (L(X)=aX, L(Y)=Y+bX, L(Z)=aZ), so the quadratic correction acts after (L). The actual correction is schematically (T_{a,b,k}(L(R_k))), not (T_{a,b,k}(R_k)). For (R_2=[X,Y]), the actual degree-3 correction has coefficients (ab, c, -(ab+c)) on (XYX,XXY,YXX), while the submitted (T) gives (b,c,-(b+c)). Hence the displayed (sec_{k+1}) formula is **FAIL/CLOSED as written**.
+
+The finite-stage residual factorization does not need the claimed equality (D_j=(R\cap D_j)(R\cap D_{j+1})D_{j+2}). From (r^{(j)}\in R\cap D_j), its initial class is automatically in (gr_j(R)); choose a representative in (R\cap D_j) and the residual lies in (R\cap D_{j+1}). Thus this part can survive, including at exceptional (j=p,p^2).
+
+Classification: raw (T(I_k)\subseteq I_{k+1}) PASS/GENERAL; corrected actual second-order operator (C_{a,b}) OPEN/LOAD-BEARING; strengthened (L_k), kernel preservation, and (operatorname{Im}(Aut(W_n)\to GL(V))=S_{11}(p)) remain OPEN/LOAD-BEARING; (p^2(p-1)) remains CONDITIONAL. Detailed audit: `research/PAPER5_STEP3_SECOND_JET_AUDIT_ADDENDUM_2026-10-06.md`.
