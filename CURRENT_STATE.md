@@ -1072,3 +1072,10 @@ The independent 125-point Frattini quotient action gate now passes all four p=5,
 Together with the independently reproduced exact Aut(W_6) orders, the IA/GL factorization gives IA order 5^106 on both sides for fixed a=1 and fixed a=2, while the GL image ratios are 2000/20=100 and 48000/480=100. Hence the p-primary p^2 automorphism-order gap is **PASS / CLOSED as a p=5 localization result** and is entirely a GL/Frattini-image phenomenon in the tested cases.
 
 The next load-bearing question is now structural: derive the four stabilizer formulas intrinsically and determine whether the pattern is genuinely uniform for odd p, rather than merely verified at p=3 and p=5.
+
+
+## 2026-10-05 — New structural target: two-level relation-jet stabilizer theorem
+
+The four p=3/p=5 stabilizer formulas are now organized by a common two-level relation jet in degrees 2 and p. The resulting candidate stabilizers have order ratios p^2(p-1) for both a=1 and a=2, explaining the observed p^2 p-primary gap whenever the IA order is unchanged. This is the current load-bearing structural hypothesis.
+
+Status: **OPEN / LOAD-BEARING**. The next proof task is not another blind GAP scan. It is to formalize the relation-jet object in the truncated restricted Lie algebra, prove its GL stabilizer formulas, and then prove (or find a counterexample to) the factorization of the actual Frattini image through this jet stabilizer for general odd p.
