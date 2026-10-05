@@ -205,3 +205,8 @@ The Magnus prefix-code audit (research/PAPER4_MAGNUS_PREFIX_CODE_AUDIT_2026-10-0
 ## 2026-10-05 — Paper 5 Step 2 audit correction
 
 The Hall–Petrescu sublemma for the p-power component passes in the odd-p range, but it does not close the secondary relation map. A D_2 change of lifts leaves x^p unchanged modulo D_{p+1}, while [x,y] changes by D_3; since there is no canonical D_3→D_p/D_{p+1} projection, the proposed θ is not yet intrinsic. Classification: **OPEN / LOAD-BEARING**. Next gate is either a canonical normalization/projection killing this ambiguity or a counterexample to the naive θ.
+
+
+## 2026-10-05 — Step 2 D_3-ambiguity correction
+
+The proposed final split “p=3 PASS / p≥5 FAIL” is **not established**. Two errors were found: (i) D_3 is not equal to γ_3 for p≥5; it contains p-power factors such as G^p and γ_2^p, and (ii) for u=[r,s]∈γ_2 the leading correction [[r,s],y] is in γ_3, not γ_4. Hence the proposed negative witness is invalid. The p=3 claim also needs a direct Zassenhaus calculation of [x,D_2] and [D_2,y] modulo D_4. Current status: **OPEN / LOAD-BEARING**. Next gate is the exact lift-change map D_2×D_2→D_3/D_{p+1} and its interaction with the relation constraint.
