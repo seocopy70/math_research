@@ -98,3 +98,28 @@ This resolves the apparent conflict with the certified p=3,n=4 Frattini-image co
 
 ### Correct next gate
 Return to the actual GAP presentation G=<z,x,y | z^3=x^3[x,y]> (and its general p,s,a analogue), reconstruct its finite-window intrinsic relation jet, and identify the embedded Frattini stabilizer that changes from order 108 to 6 in the certified p=3,n=4 split/non-split comparison. The previously proposed central-model IA no-go does not settle this actual problem.
+
+
+## 2026-10-06 — Addendum 5: proposed actual-model 108→6 stabilizer derivation rejected
+
+The proposed closure via the matrix condition M(R) in <R> is FAIL / CLOSED as a derivation, and the exact actual-model p^2 mechanism remains OPEN / LOAD-BEARING.
+
+Two independent defects were found.
+
+1. The split comparison was misstated. The authoritative research/external/paper5_aut/aut_common.g defines s=0 by G_{0,a}=<z,x,y | x^(p^a)[x,y]=1>, not a relation-free G_{0,0}. The certified split case is (s,a)=(0,1), hence it already has the relation x^p[x,y]=1.
+
+2. The induced action on the degree-p power layer was linearized incorrectly. From an arbitrary M in GL(V), one cannot in general substitute M(d_z)=a d_z+b d_x+c d_y for the image of z^p. If a lift has initial form z -> az+bx+cy, its restricted p-power contains Jacobson/polarization cross terms; v -> v^[p] is not an ordinary linear map V -> <d_z,d_x,d_y>. Therefore the displayed equations c=f, fg=di, dh=eg, etc. have not been established as the actual finite-window automorphism conditions.
+
+The additional assertion that the presentation occurrence of z intrinsically forces b=c=0 is also not a proof: an intrinsic distinguished line in V must be identified from the finite group/window, not from the chosen presentation alone.
+
+### Current classification
+
+- actual GAP data |L_{0,1}|=108, |L_{1,1}|=6, and |IA|=3^27: PASS / LOCAL;
+- model mismatch with the centralized boundary model: PASS / CLOSED;
+- proposed M(R) derivation of the actual stabilizer: FAIL / CLOSED;
+- p^2 gap localized to the Frattini/GL image: PASS / LOCAL;
+- exact intrinsic stabilizer for the actual G_{1,1}/D_5: OPEN / LOAD-BEARING.
+
+### Authorized next gate
+
+Reconstruct the actual induced action on V=W/Phi(W) from the certified GAP automorphism generators, express the defining relation as the correct restricted-Lie/Jacobson degree-p relation jet, and only then identify the embedded subgroup of GL_3(3). No 108→6 theorem or Paper 5 END classification is authorized yet.
