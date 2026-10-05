@@ -2,8 +2,7 @@
 
 ## Classification
 
-**PASS / CLOSED — certified core.**  
-**OPEN / LOAD-BEARING — exact same-window/all-s extension boundary.**
+**PASS / CLOSED — certified core and exact all-s boundary in the declared stress-family scope.**
 
 This file is a navigation summary. The dated audits and `00_RESEARCH_LOG.md` remain the evidence record.
 
@@ -46,7 +45,7 @@ Retain, but do not treat as current:
 - transfer boundary: `research/PAPER4_ALL_S_TRANSFER_DEFECT_REDUCTION_2026-10-04.md`
 - root visibility audit: `research/PAPER4_ROOT_VISIBILITY_NONRIGIDITY_AUDIT_2026-10-04.md`
 
-**Do not call Paper 4 FINAL without explicitly resolving the OPEN all-(s) boundary or intentionally freezing the paper with that boundary stated.**
+**Paper 4's previously load-bearing all-s boundary is now mathematically closed in the declared stress-family scope. Final manuscript promotion still requires the normal independent manuscript/evidence audit; no old order-jump argument is revived.**
 
 
 ## 2026-10-05 — active SC_s attack: Magnus prefix-code route
@@ -62,3 +61,20 @@ D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K),
 and hence (SC_s) at \(n=p^s+1\).
 
 Status: **OPEN / LOAD-BEARING candidate proof; local symbolic prefix-code checks PASS / LOCAL.** The TF_s truncation/nonzero-transfer step remains a separate open gate even if this lemma closes.
+
+
+## 2026-10-05 — Magnus prefix-code closure and transfer-boundary resolution
+
+See `research/PAPER4_MAGNUS_PREFIX_CODE_AUDIT_2026-10-05.md`.
+
+The completed Magnus-coordinate argument proves, for every index-p kernel K of a finitely generated free group F,
+\[
+D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K).
+\]
+The proof uses the invertible finite-difference coordinate change, the initial terms (X_0^kX_i) and (X_0^p), and the prefix-free code of initial monomials. Independent p=3 sparse Magnus checks confirm the critical examples.
+
+Consequently (SC_s) and (TF_s) are PASS / CLOSED. The stress-family Schreier relation gives the same model lattice already audited, and the truncation image lies in (p^sK^{ab}), so the critical (a=s) transfer witness survives.
+
+The intrinsic transfer predicate is corrected to a line in (W^{ab}[p^s]) modulo (pW^{ab}), evaluated in (K^{ab}/p^sK^{ab}). This removes the lift ambiguity in the earlier shorthand (T=W^{ab}[p^s]).
+
+**Current classification: PASS / CLOSED for the exact unmarked threshold (n_{\rm sep}(s)=p^s+1) in the declared stress-family scope.**
