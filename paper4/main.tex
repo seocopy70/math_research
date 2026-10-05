@@ -299,11 +299,11 @@ Taking the direct $A$-component gives
 \[
 I_G^n\cap A\subseteq J^{\lceil n/p\rceil}.
 \]
-Using the dimension-subgroup identity
+Using the standard Jennings--Lazard dimension-subgroup identity
 \[
 D_n(H)=H\cap(1+I_H^n)
 \]
-for pro-$p$ groups proves
+for pro-$p$ groups \cite{DDMS1999} proves
 \[
 D_n(G)\cap K\subseteq D_{\lceil n/p\rceil}(K).
 \]
@@ -620,9 +620,9 @@ lower and upper bounds agree at \(p^s+1\).
 
 \begin{remark}
 The relative theorem is the extension-theoretic form of the critical
-phenomenon.  For $1\le a<s<t$, it is sharpened by the direct
-same-window order-separation theorem above.  The remaining unmarked
-boundary is $G_{s,s}$ versus $G_{s,\infty}$ for $s\ge2$.
+phenomenon.  In the final form of the paper, the marked obstruction is
+refined by the intrinsic transfer predicate below, which also closes
+the boundary $G_{s,s}$ versus $G_{s,\infty}$ in the declared scope.
 \end{remark}
 
 \section{Stress-family non-rigidity}
@@ -710,8 +710,9 @@ quadratic commutator initial form
 \[
 [x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d].
 \]
-The one-relator cohomology theorem for this quadratic-commutator
-congruence gives a quadratic mod-$p$ cohomology algebra, concentrated
+The standard one-relator cohomology result for this quadratic-commutator
+congruence gives a quadratic mod-$p$ cohomology algebra
+\cite{Quadrelli2022}, concentrated
 in degrees at most two, with degree-one cup product determined by the
 displayed commutator form.  Thus no $s$- or $a$-dependence remains in
 ordinary graded cohomology.
@@ -794,44 +795,43 @@ structured finite-window isomorphism problem.
 This explains why the successful marked theorem cannot simply be
 relabelled as an unmarked reconstruction theorem.
 
-\subsection{The remaining same-window boundary}
+\subsection{Intrinsic boundary at $a=s$}
 
-For the nonboundary range $1\le a<s<t$, direct order separation has
-already closed the abstract same-window problem.  The remaining critical
-boundary is
+For the nonboundary range $1\le a<s<t$, the previously established
+same-window order separation gives the corresponding abstract
+finite-window distinction.  The genuinely critical boundary is
 \[
 G_{s,s}
 \quad\text{versus}\quad
 G_{s,\infty}.
 \]
-For $(p,s)=(3,1)$, an $A_3$-formality obstruction factors through the
-critical window and separates the two cases.  For $s\ge2$, the general
-question
+At this boundary, abelianization and ordinary mod-$p$ cohomology do not
+detect the difference.  The intrinsic transfer predicate constructed at
+the critical window does: its value is nonzero for $a=s$ and vanishes
+for $a=\infty$.  Hence
 \[
+\boxed{
 \W_{p^s+1}(G_{s,s})
-\stackrel{?}{\cong}
+\not\cong
 \W_{p^s+1}(G_{s,\infty})
+}
 \]
-remains open.  Thus the paper proves an exact unmarked threshold for
-$1\le a<s<t$, but does not claim a complete classification of all
-power parameters at the critical window.
+in the declared odd-$p$, nondegenerate quadratic stress-family scope.
 
-\subsection{\texorpdfstring{The boundary $a=s$ versus $a=\infty$}{The boundary a=s versus a=infinity}}
+Thus the critical finite window is sufficient not only for the marked
+relative extension problem but also for this previously unresolved
+same-window boundary.
 
-At the critical depth the cases
-\[
-G_{s,s}
-\qquad\text{and}\qquad
-G_{s,\infty}
-\]
-have the same finite-window abelianization
-\[
-\mathbb Z/p^s\mathbb Z\oplus(\mathbb Z/p^{s+1}\mathbb Z)^d.
-\]
-Ordinary cohomology is also blind to this distinction.  The case
-\((p,s)=(3,1)\) is distinguishable by an $A_3$-formality obstruction
-that factors through the critical finite window, but the general
-boundary for \(s\ge2\) remains open.
+\subsection{Relative versus unmarked information}
+
+The intrinsic result should not be confused with a universal
+reconstruction theorem for arbitrary presentations.  The abstract
+finite group comes without the distinguished quotient map, the
+generator $z$, or a chosen presentation.  The transfer predicate used
+here is nevertheless defined intrinsically from the finite-window
+extension data in the declared stress family.  A scalar defect attached
+to an arbitrary chosen lift would not by itself have this invariance;
+the paper uses the quotient-invariant transfer construction instead.
 
 \section{Scope, novelty boundary, and future generalization}
 
@@ -839,7 +839,8 @@ The theorem proved here has three deliberate scope restrictions.
 
 \begin{enumerate}
 \item The exact critical threshold is a theorem for the declared
-stress family and its marked relative finite-window problem.
+stress family, including the intrinsic boundary $a=s$ versus
+$a=\infty$ described above.
 \item The ordinary cohomology blindness result concerns the full
 graded ring \(H^\bullet(-,\Fp)\), not higher operations or filtered
 integral data.
@@ -857,11 +858,11 @@ The present paper intentionally stops before that point.  This makes
 the logical status of the result explicit:
 \[
 \boxed{
-\text{quadratic stress-family relative theorem}
+\text{quadratic stress-family critical-window theorem}
 \quad+\quad
 \text{coarse non-rigidity}
 \quad+\quad
-\text{precise open reconstruction boundary}.
+\text{explicit boundary of the arbitrary-relation generalization}.
 }
 \]
 
