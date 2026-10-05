@@ -2642,3 +2642,40 @@ Classification:
 
 This supersedes the previous (S_{11})-based Step 3 target. Detailed audit:
 `research/PAPER5_STEP3_S11_UPPER_BOUND_COUNTEREXAMPLE_AUDIT_2026-10-06.md`.
+
+
+## 2026-10-06 — W_p relation-package consistency audit
+
+**FAIL / CLOSED as submitted.**
+
+The proposed (n=p) upper-bound proof simultaneously assumes
+[
+D_p(W_p)=\mathbf F_p^2=\langle x^{[p]},y^{[p]}\rangle,qquad x^{[p]}=z^{[p]},
+]
+and the defining relation
+[
+[x,y]=x^p z^{-p}.
+]
+Since (D_{p+1}(W_p)=1), these are equalities in (W_p), so they imply
+[
+[x,y]=1.
+]
+The subsequent coefficient comparison
+[
+x^{p(mv-bu)}z^{-p(mv-bu)}
+=x^{pm}y^{pu}z^{p(c-a)}
+]
+cannot then extract (mv=m): that step requires (x^p) and (z^p) to be independent, contradicting (x^p=z^p).
+
+Therefore the submitted deductions (m_{y,x}=0, m_{y,y}=1, c=a-m), the equality (operatorname{Im}=S'_{11}(p)), and the exact (IA(W_p)\cong\mathbf F_p^6) / automorphism-order claims are **not closed** and are **FAIL / CLOSED as submitted**.
+
+The actual presentation-level relation
+[
+[x,y]=x^p z^{-p}
+]
+does not itself imply (x^p=z^p). Hence the correct next gate is to recompute (D_2(W_p),D_p(W_p),Z(W_p),W_p^{ab}), and (IA(W_p)) directly from
+[
+W_p=F/(R D_{p+1}).
+]
+
+Audit: `research/PAPER5_WP_BOUNDARY_CONSISTENCY_AUDIT_2026-10-06.md`.
