@@ -3089,3 +3089,14 @@ Finally, \(I^N=0\) for finite \(W_p\) only kills an error term once it has been 
 - \(W_n=W_p\) for all \(n\ge p\): **OPEN / LOAD-BEARING**.
 
 The proposed \(W_p\)-special closure is therefore not promoted. The correct next task remains a genuine proof or disproof of \(L(p,t)\), or a different non-circular stabilization route.
+
+
+## 2026-10-06 — Stabilization fourth audit: (F^p,gamma_{p+1}subseteq R) premise rejected
+
+The latest proposed stabilization proof is **FAIL / CLOSED as submitted**. With the actual Paper 5 definition
+[
+W_p=F/(R D_{p+1}),
+]
+exponent (p) yields only (F^psubseteq R D_{p+1}), and class (p) yields only (gamma_{p+1}subseteq R D_{p+1}). Neither implication upgrades to containment in (R). The literature audit does not contain the claimed stronger definition. Hence the proposed proof of (D_{p+1}subseteq D_{k+1}R), and therefore the reverse inclusion (M_{p+1}subseteq M_{k+1}), does not close. Stabilization (W_n=W_p) for all (nge p) remains **OPEN / LOAD-BEARING**.
+
+Detailed audit: `research/PAPER5_ZASSENHAUS_STABILIZATION_AUDIT_2026-10-06.md`.
