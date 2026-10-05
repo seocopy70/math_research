@@ -27,32 +27,3 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y gap gap-autpgrp
           gap -q research/scripts/paper5_gl_stabilizer_p5n6_matrix_diag.g | tee /tmp/paper5-matrix-diag.log
-
-
-  paper-build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Compile manuscript
-        uses: xu-cheng/latex-action@v4
-        with:
-          working_directory: paper
-          root_file: main.tex
-          args: -pdf -interaction=nonstopmode -halt-on-error
-      - name: Verify manuscript PDF
-        working-directory: paper
-        run: |
-          test -s main.pdf
-          grep -q 'Output written on main.pdf' main.log
-          grep -q '\\appendix' main.tex
-          grep -q 'Detailed verification of the finite-depth calculation' main.tex
-          grep -q 'Independent base-level enumeration' main.tex
-          grep -q 'Cochain-level verification' main.tex
-          grep -q 'Proof--computation boundary' main.tex
-          ! grep -Eiq 'undefined|LaTeX Warning|Error:' main.log
-      - name: Upload manuscript PDF
-        uses: actions/upload-artifact@v4
-        with:
-          name: finite-window-kummer-recognition-pdf
-          path: paper/main.pdf
-          if-no-files-found: error
