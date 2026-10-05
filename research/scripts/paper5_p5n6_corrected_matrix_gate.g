@@ -99,14 +99,12 @@ run:=function(s,a)
   i:=Position(expected,[s,a]);
   Print("=== Paper5 p=5,n=6 corrected matrix gate s=",s," a=",a," ===\n");
   Print("candidate order = ",Size(Cands[i]),"\n");
-  ok:=ForAll(Mats,m->m in Cands[i]);
-  Print("all computed generator matrices lie in candidate = ",ok,"\n");
-  if not ok then
-    for m in Mats do
-      if not m in Cands[i] then Print("OUTSIDE: ",m,"\n"); fi;
-    od;
-    Error("STABILIZER generator membership failure");
-  fi;
+  actualKeys:=ClosureKeys(Mats);
+  candKeys:=Set(List(Elements(Cands[i]),m->ReplacedString(KeyM(m),",","_")));
+  ok:=actualKeys=candKeys;
+  Print("custom entrywise subgroup equality = ",ok,"\\n");
+  Print("actual subgroup size = ",Length(actualKeys)," candidate size = ",Length(candKeys),"\\n");
+  if not ok then Error("ENTRYWISE STABILIZER EQUALITY FAILURE"); fi;
   Print("CORRECTED_STABILIZER s=",s," a=",a," PASS\n");
 end;
 
