@@ -215,3 +215,9 @@ The proposed final split “p=3 PASS / p≥5 FAIL” is **not established**. Two
 ## 2026-10-06 — Paper 5 arbitrary-n stabilization CLOSED
 
 The repaired Zassenhaus stabilization theorem is PASS / CLOSED / GENERAL in the declared odd-p presentation scope. From W_{p+1}=W_p and the established D_p(W_p)=<x^p,y^p,z^p>, the repaired proof gives W_n=W_p for every n >= p. Therefore the arbitrary-n image theorem is closed: n < p has W_n = F_p^3 and Aut = GL_3(F_p); n >= p has Im_n = S'_11(p) and |Aut(W_n)| = p^11(p-1)^2. The original B,theta route remains FAIL / CLOSED and is no longer load-bearing. Next work is independent proof verification and manuscript/source/PDF/CI audit.
+
+## 2026-10-06 — Paper 5 stabilization gate reopened after second audit
+
+A second audit found a decisive gap in the repaired stabilization proof. The repaired lemmas do establish D_{k+1} <= M_{p+1}, but this yields only M_{k+1} <= M_k. The claimed reverse inclusion was incorrectly attributed to filtration monotonicity. Equality requires a separate proof that M_{p+1} <= D_{k+1}R for every k >= p+1.
+
+Therefore the repaired stabilization theorem is reverted to OPEN / LOAD-BEARING. The n<p and n=p,p+1 boundary theorems remain closed. The B,theta route remains non-load-bearing while this stabilization question is unresolved.
