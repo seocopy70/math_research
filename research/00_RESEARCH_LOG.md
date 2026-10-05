@@ -1431,3 +1431,17 @@ The next actual attack is fixed as follows.
 The **9+9+54 orbit decomposition is explicitly not treated as the source of the p^2 automorphism-order gap**. It remains an orbit-side detector only. The actual IA kernel/order and the linear/Frattini image must be computed independently before any causal localization of the gap.
 
 Classification of the plan: **OPEN / ACTIVE**. No p^2-gap causal theorem is promoted by this ordering decision.
+
+
+## 2026-10-05 — Paper 4 R1 corrected GAP runtime certificate PASS
+
+GitHub Actions run **37246103653** (`Paper 4 R1 rank-2/3/4 GAP certificate`) was inspected directly. It executed commit `e1f6b233b4b5a0e8ce990709463fee16c3f42e12` with GAP 4.12.1. The corrected workflow uses `set -euo pipefail`, and the job completed with conclusion `success`. The actual GAP log contains:
+
+- R1 rank-2 PASS: alpha=[0,1], cocycle=e_1, delta(r)=18, v_3=2, psi(r)=1;
+- R1 rank-3 PASS: alpha=[0,1,0], cocycle=e_1, delta(r)=18, v_3=2, psi(r)=1;
+- R1 rank-4 PASS: alpha=[0,0,0,1], cocycle=e_3, delta(r)=18, v_3=2, psi(r)=1;
+- `R1_CERTIFICATE=PASS`.
+
+Therefore the previously pending GAP-runtime layer is now **PASS / CLOSED**. This is an executable certification of the already-defined R1 marked affine obstruction reproduction; it does not prove abstract unmarked same-window separation, orientation recovery, or an all-s exact-threshold theorem. Those remain **OPEN / LOAD-BEARING**. The artifact `paper4-r1-gap-certificate` was finalized as artifact ID 11319182263.
+
+No Paper 5 computation was used. The next active Paper 5 gate remains p=5,n=6,(s,a)=(1,1), using the audited GAP-native faithful Frattini-action pipeline.
