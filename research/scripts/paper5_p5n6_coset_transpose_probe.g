@@ -68,3 +68,5 @@ end;
 run(0,1);
 Print("P5_COSET_STABILIZER_CERTIFICATE=PASS\n");
 QUIT;
+
+# transpose convention probe
