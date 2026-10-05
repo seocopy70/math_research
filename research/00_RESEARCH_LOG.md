@@ -2016,3 +2016,22 @@ lies in D_{p^{m+s-1}}(F)\cap K but not in D_{p^{m-1}+1}(K). Hence the universal 
 4. **Paper-4 interpretation.** SC/SC_s are universal filtration infrastructure. The Paper-4-specific theorem-level contribution remains the intrinsic transfer obstruction, exact unmarked critical-window separation, and threshold n_sep(s)=p^s+1 in the declared odd-p, s>=2, even-d, nondegenerate alternating quadratic stress-family scope.
 
 Evidence: research/PAPER4_SC_SHARPNESS_AND_INDEX_PS_AUDIT_2026-10-05.md.
+
+
+## 2026-10-05 — General SC arbitrary-pro-p A1 audit: proposed proof rejected
+
+The proposed strengthening of D_n(G) cap K subseteq D_{ceil(n/p^s)}(K) from free pro-p groups to arbitrary pro-p groups was audited before promotion.
+
+**Classification: FAIL / CLOSED as the proposed proof; arbitrary-pro-p theorem remains OPEN.**
+
+The fatal error is Lemma 2. For an index-p extension, the identity I_G^n = sum_{j=0}^n I_K^{n-j} t^j B does not hold in general because t=a-1 does not commute with I_K. Normality only gives conjugation invariance. A concrete counterexample to Lemma 2 is the odd-p exponent-p Heisenberg group G=<x,y,z | x^p=y^p=z^p=1,[x,y]=z,z central>, with K=<x,z> and t=y-1. Then t(x-1) lies in I_G^2 and has an A-component containing x(z-1), which has I_K-degree 1 because K is abelian, while the proposed n=2 right-hand side has A-component contained in I_K^2.
+
+There is also a second gap in Lemma 3: the coefficient y_j in I_K^{n-j}B itself can contain t-powers in its B-basis expansion, so the claim that only j divisible by p can contribute to the A-component is not justified.
+
+Therefore:
+- Lemma 2 = **FAIL / CLOSED**;
+- Lemma 3 via this route = **FAIL / CLOSED**;
+- arbitrary-pro-p SC = **OPEN**;
+- the already certified free-pro-p SC/SC_s and Paper-4 theorem are **unchanged**.
+
+A targeted literature search did not locate an immediately usable theorem giving this exact arbitrary-pro-p comparison. No arbitrary-pro-p promotion is authorized without a different proof. Full audit: research/PAPER4_GENERAL_SC_ARBITRARY_PROP_A1_AUDIT_2026-10-05.md.
