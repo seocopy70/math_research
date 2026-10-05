@@ -1,6 +1,6 @@
 LoadPackage("autpgrp");
 
-P:=5; N:=6; C:=5; Fld:=GF(P);
+P:=5; N:=6; C:=6; Fld:=GF(P);
 
 mkG:=function(s,a) local F;
   F:=FreeGroup("z","x","y");
@@ -9,7 +9,7 @@ mkG:=function(s,a) local F;
 end;
 
 winW:=function(G) local qs,epi,H,J,Dn,nat;
-  qs:=PQuotient(G,P,C); epi:=EpimorphismQuotientSystem(qs); H:=Image(epi);
+  qs:=PQuotient(G,P,C,2000); epi:=EpimorphismQuotientSystem(qs); H:=Image(epi);
   J:=JenningsSeries(H); Dn:=TrivialSubgroup(H); if Length(J)>=N then Dn:=J[N]; fi;
   nat:=NaturalHomomorphismByNormalSubgroup(H,Dn);
   return [Image(nat),List(GeneratorsOfGroup(G),g->Image(nat,Image(epi,g)))];
