@@ -1991,3 +1991,28 @@ Scope remains: odd p, s\ge2, even d, nondegenerate alternating r_2. The nondegen
 Interpretation: SC is now infrastructure/engine. The theorem-level contribution is the finite-window transfer obstruction and the complete critical-window classification of the hidden power parameter. The arbitrary-r degree-only theorem remains FAIL / CLOSED.
 
 Evidence anchors: research/PAPER4_CURRENT_2026-10-05.md, research/PAPER4_MAGNUS_PREFIX_CODE_AUDIT_2026-10-05.md, and the SC literature audit in research/PAPER4_WEIGHTED_SCHREIER_DERIVATION_AUDIT_2026-10-05.md.
+
+
+## 2026-10-05 — Paper 4 SC_s strengthening: index-p^s and sharpness
+
+**Result classification: PASS / CLOSED.**
+
+The authorized theorem-strengthening step is complete.
+
+1. **Index-p^s generalization.** For an open subgroup K of a finitely generated free pro-p group F with [F:K]=p^s, choose a subnormal chain F=K_0>K_1>...>K_s=K with [K_{i-1}:K_i]=p. Repeated application of the certified index-p comparison gives
+\[
+D_n(F)\cap K\subseteq D_{\lceil n/p^s\rceil}(K).
+\]
+The ceiling identity composes exactly, so no extra rounding loss appears.
+
+2. **Uniform sharpness.** Let F=<a,b> be free pro-p and K=ker(F -> C_{p^s}), with a mapping to a generator and b to 0. A Schreier basis contains c_0=a^{p^s}. For m>=1,
+\[
+g_m=a^{p^{m+s-1}}=c_0^{p^{m-1}}
+\]
+lies in D_{p^{m+s-1}}(F)\cap K but not in D_{p^{m-1}+1}(K). Hence the universal replacement of the bound by D_{\lceil n/p^s\rceil+1}(K) is false. This proves the p^s compression factor is uniformly optimal.
+
+3. **Scope correction.** The stronger proposed claim that a commutator correction gives sharp witnesses for every integer n is not independently proved and is not promoted. Pointwise sharpness for every n is unnecessary; the infinite equality family already establishes optimality of the uniform theorem.
+
+4. **Paper-4 interpretation.** SC/SC_s are universal filtration infrastructure. The Paper-4-specific theorem-level contribution remains the intrinsic transfer obstruction, exact unmarked critical-window separation, and threshold n_sep(s)=p^s+1 in the declared odd-p, s>=2, even-d, nondegenerate alternating quadratic stress-family scope.
+
+Evidence: research/PAPER4_SC_SHARPNESS_AND_INDEX_PS_AUDIT_2026-10-05.md.
