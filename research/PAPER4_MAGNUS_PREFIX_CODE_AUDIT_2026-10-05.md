@@ -284,4 +284,4 @@ This does not by itself establish publication-level novelty; a fuller literature
 - a=s Schreier critical witness: **PASS / LOCAL -> promoted by TF_s to the declared finite-window conclusion**.
 - corrected intrinsic transfer invariant: **PASS / CLOSED in the declared stress-family scope**.
 - a=s versus a=∞: **PASS / CLOSED**.
-- exact threshold n_sep(s)=p^s+1: **PASS / CLOSED** for the declared stress-family scope.
+- exact critical boundary threshold n_sep(s)=p^s+1: **PASS / CLOSED** for the declared stress-family scope.
