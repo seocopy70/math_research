@@ -1090,3 +1090,751 @@ This does not by itself establish publication-level novelty; a fuller literature
 - corrected intrinsic transfer invariant: **PASS / CLOSED in the declared stress-family scope**.
 - a=s versus a=∞: **PASS / CLOSED**.
 - exact critical boundary threshold n_sep(s)=p^s+1: **PASS / CLOSED** for the declared stress-family scope.
+
+
+---
+
+# SOURCE: research/PAPER4_ALL_S_TRANSFER_DEFECT_PROOF_AUDIT_2026-10-04.md
+
+<!-- blob-sha: 12b008dc44b88244350fc2994f927a758c754d7b -->
+
+# Paper 4 — all-s transfer-defect proof audit — 2026-10-04
+
+Proposed proof does not close the all-s boundary. The model Schreier-lattice calculation remains PASS / LOCAL, but the proposed Step 7 does not prove the load-bearing truncation-image bound TF_s: im(D_{p^s+1}(F)∩K -> K^ab) subset p^s K^ab.
+
+The missing bridge remains SC_s: D_{p^s+1}(F)∩K subset D_{p^{s-1}+1}(K), or an independent direct proof of TF_s. The k=1 argument conflates ambient leading degree with internal Schreier degree and does not control cancellation or the associated-graded map for the subgroup intersection. Step 8 only explains the internal abelianization consequence after that missing bridge has effectively been assumed.
+
+The identity u^{p^{s-1}} having ambient weight p^s is valid for that element, but does not imply that every g in D_{p^s+1}(F)∩K has u-coordinate divisible by p^s. The proposed bi-degree substitution also lacks a theorem comparing ambient and subgroup filtrations.
+
+Separate scope warning: a general nonzero quadratic initial relation need not have a unique one-dimensional cup-radical line. The broader quadratic-family statement therefore needs an explicit radical hypothesis or restriction to the audited control/stress scope.
+
+Classification: model lattice PASS / LOCAL; Step 7 proof route FAIL / CLOSED; TF_s OPEN / LOAD-BEARING; all-s a=s versus a=infinity OPEN / LOAD-BEARING; Paper 4 certified core PASS / CLOSED — FROZEN. No all-s promotion and no new Paper 4 computation is authorized.
+
+
+---
+
+# SOURCE: research/PAPER4_ALL_S_TRANSFER_DEFECT_REDUCTION_2026-10-04.md
+
+<!-- blob-sha: bdf00d39e35d8713e490a4afd3825951bc7ad6ea -->
+
+# Paper 4 — all-s transfer-defect reduction (2026-10-04)
+
+## Target
+
+For the remaining boundary
+\[
+W_{p^s+1}(G_{s,s}) \stackrel{?}{\cong} W_{p^s+1}(G_{s,\infty}),\qquad s\ge2,
+\]
+prove the intrinsic transfer defect is nonzero on the \(a=s\) side and zero on the \(a=\infty\) side.
+
+## Pre-check
+
+- **Object:** \(W=W_{p^s+1}\), its intrinsic cup-radical line, \(K=\ker\chi\), and the canonical transfer \(V:W^{ab}\to K^{ab}\).
+- **Input:** only the unmarked finite group \(W\); no chosen \(z\), marked quotient, or external orientation.
+- **Functoriality:** the radical line determines \(K\); \(T=W^{ab}[p^s]\) is characteristic; transfer is natural.
+- **Gauge:** the generator of \(T\) is only defined up to a unit, harmless for the zero/nonzero predicate.
+- **Orientation bridge:** none is inserted; the candidate is a finite-group invariant.
+- **q-blindness:** the definition uses only \(W\), its cup product, \(W^{ab}\), and transfer.
+- **Separation:** the \(a=s\) side is reduced to a single critical norm/Jacobson class; the \(a=\infty\) side vanishes after the same normalization.
+- **Novelty:** this is not the closed scalar/coinvariant route; it uses the cyclic action on \(K^{ab}\).
+- **Stop condition:** the only remaining load-bearing issue is the effect of the finite-window truncation relations on the integral Schreier class.
+
+## New reduction
+
+Let \(A_i\) denote the conjugate Schreier generators for \(x_1\), \(U=z^p\), and \(\sigma(A_i)=A_{i+1}\). The relation coming from
+\[
+z^{p^s}=x_1^{p^s}[x_1,x_2]\cdots
+\]
+gives in the abelianized index-\(p\) kernel
+\[
+p^{s-1}U-p^sA_i=0\qquad(0\le i<p).
+\]
+Ignoring the truncation relations for the moment, put
+\[
+L_s=\mathbb Z U\oplus\bigoplus_{i=0}^{p-1}\mathbb Z A_i\,
+/\langle p^{s-1}U-p^sA_i\rangle.
+\]
+Then
+\[
+\delta^{p-1}A_0=(\sigma-1)^{p-1}A_0
+=\sum_{j=0}^{p-1}(-1)^{p-1-j}\binom{p-1}{j}A_j.
+\]
+The class has exponent exactly \(p^s\) in \(L_s\): after quotienting by \(U=0\), the relations become \(p^sA_i=0\), so the image is the nonzero vector
+\[
+\bigl((-1)^{p-1-j}\binom{p-1}{j}\bigr)_{j=0}^{p-1}
+\in (\mathbb Z/p^s)^p,
+\]
+whose first and last coefficients are units. Hence
+\[
+\operatorname{ord}_{L_s}(\delta^{p-1}A_0)=p^s,
+\qquad
+p^{s-1}\delta^{p-1}A_0\ne0.
+\]
+Therefore the desired transfer defect follows once the actual truncation relations do not alter this class modulo the order-\(p\) witness.
+
+## Exact remaining lemma
+
+It is enough to prove the following integral filtration statement for the index-\(p\) kernel \(K\):
+\[
+\operatorname{im}\bigl(D_{p^s+1}(F)\cap K\to K^{ab}\bigr)
+\subseteq p^s K^{ab}.
+\tag{TF_s}
+\]
+Indeed, the standard index-\(p\) Zassenhaus comparison reduces the source to
+\[
+D_{p^s+1}(F)\cap K\subseteq D_{p^{s-1}+1}(K),
+\]
+and every element of \(D_{p^{s-1}+1}(K)\) maps into \(p^sK^{ab}\) by the defining Zassenhaus product description: all commutator factors vanish in \(K^{ab}\), while the first possible pure-power exponent at filtration index \(p^{s-1}+1\) is \(p^s\).
+
+Thus (TF_s), once written as a self-contained lemma with its subgroup-comparison input explicitly cited/proved, prevents the truncation relations from killing the order-\(p\) class
+\[
+p^{s-1}\delta^{p-1}A_0.
+\]
+
+## Consequence if (TF_s) is certified
+
+The intrinsic transfer predicate
+\[
+\varepsilon(W):\quad p^{s-1}V(T)\ne0\in K^{ab}
+\]
+is true for \(a=s\) and false for \(a=\infty\). Hence
+\[
+W_{p^s+1}(G_{s,s})\not\cong W_{p^s+1}(G_{s,\infty})
+\]
+for every odd \(p\) and \(s\ge2\) in the declared stress-family scope.
+
+Combined with lower-window blindness, this closes the exact unmarked threshold at \(p^s+1\) for the full stress-family parameter range \(1\le a\le s\) (with \(a=s\) handled by this boundary lemma).
+
+## Classification
+
+- model Schreier lattice order computation: **PASS / LOCAL**;
+- reduction of the general boundary to (TF_s): **PASS / LOCAL**;
+- (TF_s) itself: **OPEN / LOAD-BEARING**;
+- all-s transfer-defect separation: **OPEN / LOAD-BEARING**;
+- Paper 4 final freeze: blocked only by certification of (TF_s), plus independent verification and record synchronization.
+
+
+## 2026-10-04 — Literature/direct-proof review correction
+
+The missing bridge was re-tested by two routes.
+
+### Jennings route
+Jennings recursion at \(n=p^s+1\) gives a \(p\)-power contribution from \(D_{p^{s-1}+1}(F)\), but an element of its product can lie in \(K\) even when the underlying factor does not. Hence recursion alone does not imply \((SC_s)\).
+
+### Shalev route
+Shalev Proposition 1.2 was checked as a filtration identity for a single group. On the evidence currently verified it does **not** state the index-\(p\) subgroup comparison needed here. It must therefore not be cited as if it proves \((SC_s)\).
+
+### Counterexamples to stronger shortcuts
+The abelian example \(F=\mathbf Z, K=p\mathbf Z\) proves that \(I_F^n\cap\mathbf F_p[K]=I_K^n\) and \(D_n(F)\cap K\subseteq D_n(K)\) are invalid in general. These failures do not refute the degree-loss comparison \((SC_s)\), but they eliminate the previous augmentation-ideal shortcut.
+
+### Current exact status
+\[
+(SC_s):\quad D_{p^s+1}(F)\cap K\subseteq D_{p^{s-1}+1}(K)
+\]
+remains **OPEN / LOAD-BEARING**. Consequently \((TF_s)\) remains **OPEN / LOAD-BEARING**. The model Schreier order computation and the \((3,2)\) local transfer witness remain PASS / LOCAL.
+
+The all-s conclusion is therefore only **CONDITIONAL** on certifying \((SC_s)\) or directly proving \((TF_s)\). No all-s boundary closure is claimed.
+
+
+---
+
+# SOURCE: research/PAPER4_DIRECTION2_COHOMOLOGY_BLINDNESS_CLOSURE_2026-10-04.md
+
+<!-- blob-sha: b1ffc48922062927c288ec1b5701d1dfddb3a102 -->
+
+# PAPER 4 — DIRECTION 2: MOD-p COHOMOLOGY BLINDNESS — CLOSURE AUDIT — 2026-10-04
+
+## Target
+
+Close Direction 2 at the strongest justified level:
+
+> For the declared odd-p stress family
+> \[
+> G_{s,a}=\langle z,x_1,\ldots,x_d\mid
+> z^{p^s}=x_1^{p^a}[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d]\rangle,
+> \]
+> with \(p\) odd, \(s\ge1\), and finite \(a\ge1\), together with the \(a=\infty\) case in which the \(x_1^{p^a}\) term is absent, the ordinary mod-p cohomology algebra \(H^\bullet(G_{s,a},\mathbf F_p)\) is independent of \(s\) and \(a\) within this declared family.
+
+This is a blindness theorem for the ordinary graded cohomology ring. It is not a claim that the groups, finite windows, higher operations, or filtered extension data are isomorphic.
+
+## 1. Definition / scope audit
+
+Write the defining relator in the free pro-p group as
+\[
+r_{s,a}=z^{p^s}x_1^{-p^a}
+([x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d])^{-1}
+\]
+for finite \(a\), with the \(x_1^{-p^a}\) factor omitted for \(a=\infty\).
+
+For odd \(p\),
+\[
+z^{p^s}\in F^p\subseteq F_{(3)},\qquad
+x_1^{p^a}\in F^p\subseteq F_{(3)}
+\]
+for every \(s,a\ge1\). Hence
+\[
+r_{s,a}\equiv
+[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d]
+\pmod{F_{(3)}}
+\]
+up to sign/unit convention.
+
+Thus the degree-2 Zassenhaus initial relation is independent of both \(s\) and \(a\).
+
+Classification: PASS / CLOSED.
+
+## 2. Literature theorem controlling the whole cohomology ring
+
+Quadrelli, arXiv:2011.03233v3, Proposition 2.1 states that for a finitely generated one-relator pro-p group
+\[
+G=\langle x_1,\ldots,x_d\mid r\rangle
+\]
+whose relator satisfies
+\[
+r\equiv [x_1,x_2][x_3,x_4]\cdots[x_{n-1},x_n]
+\pmod{G_{(3)}},
+\]
+the mod-p cohomology algebra is quadratic; the indicated degree-one cup products give the generator of \(H^2\), all other basis products vanish (apart from graded-commutativity), and
+\[
+H^k(G,\mathbf F_p)=0\quad(k\ge3).
+\]
+
+This theorem applies directly because the only \(s,a\)-dependent terms in \(r_{s,a}\) lie in \(F_{(3)}\).
+
+Independent literature control is therefore stronger than a mere associated-graded calculation: it determines the entire ordinary cohomology ring.
+
+## 3. Explicit cohomology algebra
+
+Let
+\[
+V=H^1(G_{s,a},\mathbf F_p)
+=\langle\chi_z,\chi_1,\ldots,\chi_d\rangle.
+\]
+Then
+\[
+H^0\cong\mathbf F_p,\qquad
+H^1\cong V,\qquad
+H^2\cong\mathbf F_p\omega,\qquad
+H^k=0\ (k\ge3).
+\]
+
+With the dual basis to \(z,x_1,\ldots,x_d\),
+\[
+\chi_1\cup\chi_2
+=\chi_3\cup\chi_4
+=\cdots
+=\chi_{d-1}\cup\chi_d
+=\omega
+\]
+up to the global sign/unit convention for the relator, while
+\[
+\chi_z\cup\chi_i=0,\qquad
+\chi_i\cup\chi_j=0
+\]
+for all other unordered pairs not appearing in the displayed commutators. Since \(p\) is odd, graded commutativity supplies the reverse-order signs.
+
+Consequently the algebra is determined solely by the quadratic commutator form and contains no \(s\)- or \(a\)-parameter.
+
+Classification: PASS / CLOSED.
+
+## 4. Why this closes the "all H*" question
+
+There is no hidden higher ordinary cohomology degree in which \(s\) or \(a\) could reappear:
+\[
+H^k(G_{s,a},\mathbf F_p)=0\quad(k\ge3).
+\]
+Therefore the full graded ring
+\[
+H^\bullet(G_{s,a},\mathbf F_p)
+\]
+is already exhausted by \(H^0,H^1,H^2\) and the degree-one cup product.
+
+Hence, for every two allowed parameter choices,
+\[
+\boxed{
+H^\bullet(G_{s,a},\mathbf F_p)
+\cong
+H^\bullet(G_{t,b},\mathbf F_p)
+}
+\]
+as graded \(\mathbf F_p\)-algebras.
+
+For the fixed marked presentation there is an evident parameter-independent identification sending the degree-one dual basis to the corresponding degree-one dual basis and the common degree-two generator to the common generator. As an abstract graded algebra, the conclusion is even presentation-independent.
+
+Classification: PASS / CLOSED.
+
+## 5. What is NOT proved by this closure
+
+This closure does **not** imply any of the following:
+
+1. \(G_{s,a}\cong G_{t,b}\).
+2. \(W_n(G_{s,a})\cong W_n(G_{t,b})\) for all \(n\).
+3. The critical finite windows at \(n=p^s+1\) are isomorphic.
+4. Higher Bockstein, Massey, \(A_\infty\), integral Magnus, relation-module, or filtered extension data are equal.
+5. The \(a=s\) and \(a=\infty\) groups/windows are indistinguishable by every cohomological operation.
+
+In particular, ordinary \(H^\bullet(-,\mathbf F_p)\) is now certified as a **blind invariant**, not as a proof of group-level non-rigidity.
+
+## 6. Independent verification / adversarial checks
+
+### Check A — filtration degree
+
+For odd \(p\), \(p^m\ge3\) for every \(m\ge1\), so every power term \(z^{p^s}\) and \(x_1^{p^a}\) lies in the third Zassenhaus term. Thus no parameter-dependent term survives in \(D_2/D_3\).
+
+PASS.
+
+### Check B — one-relator hypothesis
+
+The family has one defining relator, and the relator lies in the Frattini subgroup because its lowest term is a commutator. Hence the presentation is minimal and \(H^2\) has dimension one.
+
+PASS.
+
+### Check C — higher ordinary cohomology
+
+The cited Proposition 2.1 gives \(H^k=0\) for \(k\ge3\) under precisely the required quadratic commutator congruence.
+
+PASS.
+
+### Check D — no accidental use of \(q=p^a\)
+
+The cohomology object and its identification use only the degree-two initial commutator form. No \(q\)-dependent coefficient is inserted.
+
+PASS.
+
+### Check E — boundary \(a=s\) versus \(a=\infty\)
+
+Both satisfy exactly the same congruence modulo \(F_{(3)}\), so the same conclusion applies:
+\[
+H^\bullet(G_{s,s},\mathbf F_p)
+\cong
+H^\bullet(G_{s,\infty},\mathbf F_p).
+\]
+
+PASS.
+
+## 7. Literature boundary
+
+The cited result is stronger than the earlier internal statement "the associated graded is s-blind": it gives the full ordinary mod-p cohomology algebra and its vanishing above degree two for this one-relator quadratic-commutator family.
+
+This also corrects the methodological wording that had suggested a separate mildness argument was required to close Direction 2. Mildness is compatible with the conclusion, and Gärtner's one-relator/mildness results provide independent background, but Proposition 2.1 already closes the exact cohomology-ring claim directly.
+
+## 8. Final classification
+
+\[
+\boxed{\text{DIRECTION 2: PASS / CLOSED}}
+\]
+
+Precise theorem-level content:
+
+> For odd \(p\), within the declared stress family with \(s\ge1\), finite \(a\ge1\), and \(a=\infty\), the ordinary mod-p cohomology algebra \(H^\bullet(G_{s,a},\mathbf F_p)\) is independent of \(s\) and \(a\). The common algebra is concentrated in degrees \(0,1,2\), with \(H^2\) generated by the common quadratic commutator cup class.
+
+The route is closed. No further computation of ordinary \(H^\bullet(-,\mathbf F_p)\) is authorized as a route to the remaining \(a=s\) versus \(a=\infty\) finite-window separation.
+
+## 9. Consequence for Paper 4
+
+The remaining boundary is now sharply isolated:
+\[
+\text{ordinary }H^\bullet(-,\mathbf F_p)
+\quad\text{blind}
+\qquad\Longrightarrow\qquad
+\text{look beyond ordinary cohomology}.
+\]
+
+The load-bearing problem, if pursued, must retain information not present in the ordinary graded cohomology ring: filtered extension/deformation data, integral p-adic relation data, or another genuinely higher structure. The closed Direction 2 route must not be reopened merely by recomputing the same \(H^1/H^2/H^\ast\) invariants.
+
+
+---
+
+# SOURCE: research/PAPER4_FILTERED_EXTENSION_EXTRACTION_NO_GO_2026-10-04.md
+
+<!-- blob-sha: b07c21e02e737c76ac19af99c6a8102085cb8d09 -->
+
+# PAPER4_FILTERED_EXTENSION_EXTRACTION_NO_GO_2026-10-04.md
+
+## Target
+
+Test whether the intrinsic one-step Zassenhaus extension
+\[
+1\to K_n:=D_n(G)/D_{n+1}(G)\to W_{n+1}(G)\to W_n(G)\to1
+\]
+provides a new canonical defect that extracts the hidden \(p^s\)-power relation, without introducing a marked orientation/character.
+
+The active boundary is the unresolved critical case \(n=p^s\), especially the \(a=s\) versus \(a=\infty\) stress comparison.
+
+## Pre-check
+
+### Object — PASS
+
+The extension above is canonical and q-blind: it is determined by the Zassenhaus filtration of the finite window and contains the kernel, its filtration degree, conjugation action, and the extension itself.
+
+Since \([D_n,G]\subseteq D_{n+1}\), the kernel \(K_n\) is central.
+
+### Input — PASS
+
+Allowed input is only the filtered finite extension. The hidden \(q=p^a\), a chosen character, and a chosen presentation are not inserted into the object.
+
+### Functoriality — PASS
+
+An isomorphism of filtered finite windows induces an isomorphism of the corresponding one-step extensions. Thus the extension is an intrinsic object over the finite-window isomorphism class.
+
+### Gauge — PASS, with a decisive boundary
+
+Choose a section \(s:W_n\to W_{n+1}\). Because the kernel is central, the section defines a 2-cocycle
+\[
+c_s(g,h)=s(g)s(h)s(gh)^{-1}\in K_n.
+\]
+Replacing \(s\) by another section changes \(c_s\) by a coboundary. Hence any proposed p-power/commutator defect computed from a particular lift or section is not canonical unless it descends through this gauge action.
+
+This is standard central-extension theory. The intrinsic datum is the extension-equivalence class \([c_s]\in H^2(W_n,K_n)\), not an individual lift formula. The Zassenhaus setting additionally identifies the graded layer with restricted-Lie p-power/commutator data, but that does not remove the section gauge.
+
+### Orientation bridge — FAIL / CLOSED for a scalar defect
+
+The one-step extension has no distinguished generator, character, or affine direction. A p-power/commutator formula for a selected lift therefore depends on a section/lift choice unless an additional canonical orientation bridge is supplied.
+
+The previously explored marked \(E_\psi\) construction supplies such an orientation only in the marked presentation category; the present object intentionally forgets that marking. No intrinsic map from the abstract extension to a distinguished \(\psi\) has been established.
+
+Therefore the proposed route
+\[
+\text{unmarked extension}\to\text{distinguished lift defect}
+\]
+fails the mandatory orientation/gauge test.
+
+### q-blindness — PASS
+
+The extension itself contains no inserted \(q=p^a\).
+
+### Separation — NOT A NEW TESTABLE INVARIANT
+
+After quotienting section/lift gauge, the remaining canonical object is the extension-equivalence class itself. But this is precisely the isomorphism class of the structured map
+\[
+W_{n+1}\twoheadrightarrow W_n.
+\]
+Therefore asking whether this full package separates two cases is equivalent to the original finite-window extension-isomorphism problem; it is not a lower-complexity extraction theorem.
+
+In particular, the filtered-extension package does not produce a new scalar/carrier automatically. Any genuine separation would require classifying the extension class (or an explicitly declared quotient of it), which is the same structural problem in different language.
+
+This does **not** prove that the two critical windows are isomorphic. It proves that the proposed 'extension extraction' strategy does not reduce that question unless an additional intrinsic quotient/factorization theorem is supplied.
+
+## Independent structural verification
+
+The central-extension interpretation agrees with standard extension theory: central extensions with fixed action are classified by \(H^2\), with changes of section changing cocycles by coboundaries. The Zassenhaus filtration also has canonical restricted-Lie p-power and commutator operations on \(D_n/D_{n+1}\). These facts confirm the gauge analysis, but they do not provide the missing orientation bridge.
+
+## Result
+
+**Filtered-extension extraction as a new canonical defect: FAIL / CLOSED.**
+
+More precisely:
+
+- canonical one-step filtered extension: **PASS / CLOSED**;
+- section/lift gauge analysis: **PASS / CLOSED**;
+- intrinsic scalar/orientation defect from the unmarked extension alone: **FAIL / CLOSED**;
+- full extension-equivalence class as a separator: **OPEN**, but it is exactly the original structured finite-window isomorphism problem, not a new extraction method;
+- ordinary mod-p cohomology route: **PASS / CLOSED and STOPPED**;
+- arbitrary degree-only theorem: **FAIL / CLOSED**.
+
+## Stop decision
+
+Do not return to carrier hunting, new \(E_\psi\) variants, ordinary cohomology, or ad hoc lift decorations.
+
+The research branch has reached its legitimate boundary. Any further progress would require a genuinely new theorem proving a canonical quotient/factorization of the full extension-equivalence class, not another candidate invariant search.
+
+The bounded research objective is therefore closed at the method level: **the existing one-step filtered extension is the correct next structural layer, but it does not by itself yield a new intrinsic compression/extraction map.**
+
+
+---
+
+# SOURCE: research/PAPER4_ROOT_VISIBILITY_NONRIGIDITY_AUDIT_2026-10-04.md
+
+<!-- blob-sha: cd9dbe5eb9b9f515a811569a3eda4c2457c9742a -->
+
+# PAPER 4 — Root-visibility generalization / non-rigidity audit — 2026-10-04
+
+## Executive conclusion
+
+The two proposed upgrades do not have the same status.
+
+1. **General root-visibility theorem for arbitrary r with Zassenhaus order >=2: OPEN; the hypothesis is insufficient for the full-relation claim.**
+   Counterexample:
+   G=<z,x,y | z^3=[x,y]^3>.
+   Here r=[x,y]^3 lies in D_6(F), while the critical window is W_4. Since D_6(F) is contained in D_4(F), the relation reduces in W_4 to z^3=1. Thus the full-relation critical visibility claim is not established. Merely assuming ord_Z(r)>=2 is insufficient to ensure that r survives at the critical layer. Importantly, this example does not show that the root term z^3 itself is invisible: z^3 lies in D_3, so it can be visible in W_4.
+
+2. **Stress-family non-rigidity theorem: PASS / LOCAL, with a substantially stronger proof package than previously recorded.**
+   For fixed odd p, d, and a, s>a,
+   G_{s,a}=<z,x_1,...,x_d | z^{p^s}=x_1^{p^a}[x_1,x_2]...[x_{d-1},x_d]>
+   has:
+   - G_{s,a}^{ab} = Z_p^d + Z/p^a, independent of s;
+   - the same quadratic Zassenhaus initial form rho=[X_1,X_2]+...+[X_{d-1},X_d], hence the same mild quadratic package and the same F_p-cohomology ring;
+   - the same associated graded restricted Lie algebra / graded group-algebra package;
+   - identical windows W_n(G_{s,a}) for all t>=s whenever n<=p^s;
+   - at its own critical window n_s=p^s+1, abelianization Z/p^a + (Z/p^{s+1})^d.
+
+## Generalization attack
+
+The universal presentation identity is
+W_n(G_{s,r}) = F/(D_n(F), z^{p^s} r^{-1}).
+Hence if n<=p^s,
+W_n(G_{s,r}) = F/(D_n(F),r),
+independently of s. This is a genuine universal delayed-visibility lemma.
+
+At n=p^s+1, visibility is not automatic: it depends on whether r survives at that level and on a nontrivial filtered extension defect. The counterexample above shows that ord_Z(r)>=2 does not guarantee survival.
+
+The viable theorem shape is therefore not arbitrary r. A candidate replacement is a root-visibility theorem under a specified critical-survival hypothesis, where the hypothesis must be intrinsic and non-tautological.
+
+## Non-rigidity proof package
+
+### A. Abelianization
+
+Abelianizing gives
+G_{s,a}^{ab} = Z_p^{d+1}/<(p^s,-p^a,0,...,0)>
+= Z_p^d + Z/p^a.
+At n=p^s+1,
+W_n^{ab} = Z/p^a + (Z/p^{s+1})^d.
+The SNF script independently verifies representative cases.
+
+### B. Cohomology
+
+The defining relator has Zassenhaus invariant 2 for odd p, since the quadratic commutator part is nonzero and all p^a,p^s power terms have degree at least p>=3.
+
+For a one-relator pro-p group with Zassenhaus invariant prime to p, Gartner's Corollary 5.10 gives mildness. Mild groups have cd=2, and in the quadratic one-relator case the F_p-cohomology algebra is controlled by the quadratic initial relation. The initial relation is the same rho for every s. Therefore the full F_p-cohomology ring is s-independent in this family.
+
+### C. Associated graded
+
+By mildness, the graded group algebra is the quotient by the ideal generated by rho. Since rho is independent of s, the associated graded algebra and restricted-Lie package are s-independent.
+
+### D. Delayed finite-window identity
+
+For t>=s and n<=p^s, both z^{p^s} and z^{p^t} are in D_n(F). Therefore
+W_n(G_{s,a}) is isomorphic to W_n(G_{t,a})
+as filtered quotients of the same free group.
+
+### E. Critical-window separation
+
+At n_s=p^s+1,
+exp(W_{n_s}(G_{s,a})^{ab}) = p^{s+1}.
+Thus the sequence of own-critical windows is pairwise separated by abelianization exponent.
+
+Qualification: this does not prove that W_{p^s+1}(G_{s,a}) is separated from every G_{t,a} at the same numerical window for t>s. That comparison remains OPEN.
+
+## Novelty control
+
+The ingredients themselves are established: Demushkin classification, Zassenhaus initial forms, mildness, quadratic cohomology, and finite quotient abelianization.
+
+The potentially new package is the explicit delayed finite-window visibility theorem for the stress family, combining:
+same abelianization + same F_p-cohomology + same gr + same windows through p^s + own-critical-window separation at p^s+1.
+
+This still needs a dedicated literature search before any novelty claim.
+
+## Current classification
+
+- arbitrary-r root-term visibility at p^s+1: **OPEN**;
+- full-relation critical visibility from only ord_Z(r)>=2: **OPEN / hypothesis insufficient for proof**;
+- universal delayed-window lemma n<=p^s: **PASS / CLOSED**;
+- stress-family G^{ab} independence of s: **PASS / CLOSED**;
+- stress-family H^*(G,F_p) independence of s: **PASS / LOCAL** pending citation-level lemma packaging;
+- stress-family associated graded independence: **PASS / LOCAL** pending the same packaging;
+- own-critical-window exponent separation: **PASS / CLOSED**;
+- full same-window W_{p^s+1}(G_s) vs W_{p^s+1}(G_t), t>s: **OPEN**;
+- broader non-tautological root-visibility theorem: **OPEN**.
+
+## Independent check
+
+Script: research/scripts/paper4_root_visibility_checks_2026-10-04.py
+Executed independently with SymPy. Representative SNF cases passed, and the delayed-window filtration inequalities passed.
+
+## Literature control
+
+The relevant literature confirms the mildness/cohomology/graded facts used above. No source located in this audit directly states the exact combined delayed-window package. This is not a novelty certification.
+
+## Next authorized attack
+
+1. Make direction 2 the main Paper 4 branch: formalize the delayed-window/non-rigidity theorem for G_{s,a}, with a precise definition of the coarse infinite invariants.
+2. Do not claim the arbitrary-r theorem.
+3. For direction 1, do not claim a counterexample to root-term visibility from the z^3=[x,y]^3 example. Instead identify the narrowest non-tautological class where the RHS r survives at the critical layer; first test quadratic relators and identify the exact witness hypothesis.
+4. Do not reopen frozen threshold calculations or Paper 5 compression routes.
+
+
+## 2026-10-04 — SAME-WINDOW SEPARATION ATTACK / NOVELTY CONTROL
+
+The first direct attack on the unresolved comparison
+W_{p^s+1}(G_{s,a}) versus W_{p^s+1}(G_{t,a}), t>s,
+does not close the problem by abelianization: both windows have the same abstract abelianization type Z/p^a plus d copies of Z/p^{s+1}. The distinction, if present, must therefore be a filtered extension/lift invariant beyond abelianization and beyond the associated graded object.
+
+A concrete candidate is now isolated: the intrinsic cup-radical line L in H^1(W,F_p), together with its p^s-power/extension datum in the critical filtered layer. Conceptually, in the critical source the p^s-power of a lift of the radical direction is tied by the defining relation to the Demushkin quadratic part, whereas for t>s the defining relation is already invisible at the same window and the radical power is an independent lift datum. This is only a **candidate invariant**, not yet a theorem: one must define it functorially from the finite group and prove invariance under changing lifts and under abstract filtered-group isomorphism.
+
+A higher-Bockstein / augmentation-algebra formulation is a promising concrete implementation: the target should be a finite-window operation attached to the radical character whose first nonzero filtered value occurs at p^s+1. No claim of existence or nonvanishing is made yet.
+
+Novelty control was tightened by direct inspection of arXiv:2603.15464v2. That paper studies other Demushkin variations with presentations whose Zassenhaus graded relation is independent of the variation parameter, and proves quadratic/Koszul cohomology and graded-algebra properties while detecting the variation through finer 1-cyclotomic structure. Therefore the present project must not claim novelty for “same cohomology + same graded object” alone. The potentially novel component is the explicit delayed-window identity together with critical finite-window separation/non-rigidity.
+
+Classification:
+- same-window separation by abelianization: **FAIL / CLOSED** as a route;
+- same-window separation by intrinsic filtered radical-power datum: **OPEN / LOAD-BEARING**;
+- higher-Bockstein implementation: **OPEN**;
+- novelty of the coarse cohomology/graded package alone: **HISTORICAL / SUPERSEDED as novelty claim**;
+- novelty of delayed finite-window visibility + critical-window separation: **OPEN / literature check incomplete**.
+
+
+---
+
+# SOURCE: research/PAPER4_A_S_TRANSFER_SCHREIER_W10_AUDIT_2026-10-04.md
+
+<!-- blob-sha: 452c27862bfc83d3fad6b6e9978190b43e3092b3 -->
+
+# Paper 4 — corrected intrinsic radical Schreier/transfer calculation at W_10
+## 2026-10-04
+
+### Executive correction
+
+The proposed character
+\[
+\chi(z)=\chi(x)=1,\qquad \chi(y)=0
+\]
+is **not** the cup-radical character for
+\[
+G_{2,2}=\langle z,x,y\mid z^9=x^9[x,y]\rangle.
+\]
+Modulo \(D_3\), the defining relation has initial form \([x,y]\). Hence the cup pairing has \(\langle x^*,y^*\rangle\ne0\) and radical line \(\langle z^*\rangle\). Therefore the intrinsic radical character is
+\[
+\boxed{\chi(z)=1,\quad\chi(x)=\chi(y)=0.}
+\]
+The same statement holds for \(W_{10}\), because passing to \(W_{10}\) does not change the degree-2 relation data.
+
+This correction is load-bearing: the Schreier calculation must use \(K=\ker(z^*)\), not the kernel of \(z^*+x^*\).
+
+### Corrected Schreier system
+
+Use transversal \(\{1,z,z^2\}\). Put
+\[
+u=z^3,
+\quad a_0=x,\ a_1=zxz^{-1},\ a_2=z^2xz^{-2},
+\quad b_0=y,\ b_1=zyz^{-1},\ b_2=z^2yz^{-2}.
+\]
+Thus there are seven Schreier generators.
+
+Conjugation \(\sigma=\operatorname{Ad}(z)\) gives in \(K^{ab}\):
+\[
+\sigma(u)=u,
+\qquad
+\sigma(a_0)=a_1,\ \sigma(a_1)=a_2,\ \sigma(a_2)=u a_0u^{-1}\equiv a_0,
+\]
+and similarly
+\[
+\sigma(b_0)=b_1,\quad \sigma(b_1)=b_2,\quad \sigma(b_2)\equiv b_0.
+\]
+Therefore, with basis
+\[
+(u,a_0,a_1,a_2,b_0,b_1,b_2),
+\]
+the actual mod-3 action is
+\[
+P=
+\begin{pmatrix}
+1&0&0&0&0&0&0\\
+0&0&0&1&0&0&0\\
+0&1&0&0&0&0&0\\
+0&0&1&0&0&0&0\\
+0&0&0&0&0&0&1\\
+0&0&0&0&1&0&0\\
+0&0&0&0&0&1&0
+\end{pmatrix}.
+\]
+Hence
+\[
+(P-I)^2
+\]
+is zero on \(u\), and on each 3-cycle is the all-ones map. In particular
+\[
+(\sigma-1)^2[a_0]=[a_0]+[a_1]+[a_2]\ne0
+\]
+provided these classes survive in \(M\).
+
+### Actual \(M=K^{ab}/3K^{ab}\)
+
+The Reidemeister–Schreier relators coming from
+\[
+r=z^9x^{-9}[x,y]^{-1}
+\]
+have zero commutator contribution after abelianization and give, up to an overall sign convention,
+\[
+3u-9a_0=0,\qquad
+3u-9a_1=0,\qquad
+3u-9a_2=0.
+\]
+The three conjugate \([x,y]\)-terms vanish in \(K^{ab}\).
+
+The additional \(D_{10}(F)\)-relations do not impose linear relations in \(K^{ab}/3K^{ab}\). A direct augmentation-ideal check gives the needed comparison: in characteristic 3, three factors of \((z-1)\) collapse to \(z^3-1\in I(K)\), while \((x-1),(y-1)\in I(K)\); hence a degree-10 augmentation term whose group element lies in K has K-augmentation degree at least \(\lceil10/3\rceil=4\). Therefore \(D_{10}(F)\cap K\subseteq D_4(K)\subseteq D_2(K)=K^3[K,K]\), so the truncation relations vanish in the mod-3 abelianization. This is the only filtration-comparison input needed here.
+
+Consequently
+\[
+M\cong \mathbf F_3^7
+\]
+with the displayed basis. Equivalently, the Smith form of the three abelianization relations is
+\[
+\operatorname{SNF}=\operatorname{diag}(3,9,9),
+\]
+so after tensoring with \(\mathbf F_3\) no generator class is killed.
+
+### Transfer/Jacobson consequence
+
+For the corrected intrinsic kernel, the short torsion class in \(W^{ab}\) is represented by
+\[
+\tau_s=zx^{-1}
+\]
+in the \(a=s=2\) case, while \(\tau_\infty=z\) on the \(a=\infty\) side. Both map nontrivially to \(W/K\cong C_3\), as required for the transfer computation.
+
+The critical norm expansion is
+\[
+N_\sigma=3+3(\sigma-1)+(\sigma-1)^2
+\]
+over \(\mathbf F_3\) at the level of the last filtered term, so the new contribution is the \((\sigma-1)^2\)-term. The corrected Schreier calculation gives
+\[
+(\sigma-1)^2[a_0]=a_0+a_1+a_2\ne0
+\quad\text{in }M.
+\]
+
+More strongly, the \(a=s\) Schreier abelianization has relations
+\[
+3u=9a_i\quad(i=0,1,2),
+\]
+and no further relation from \(D_{10}(F)\) survives in \(K^{ab}\). Therefore
+\[
+3(a_0+a_1+a_2)\ne0
+\]
+in \(K^{ab}\): if it vanished, the vector \(3(a_0+a_1+a_2)\) would lie in the lattice generated by \((3u-9a_i)_{i=0}^2\), which it does not. This is the actual integral lift needed for the \(s=2\) transfer defect, not merely a mod-3 shadow.
+
+Thus the critical transfer/Jacobson witness survives:
+\[
+\boxed{3(\sigma-1)^2[a_0]\ne0\ \text{in }K^{ab}.}
+\]
+
+### Independent algebra check
+
+The calculation is independently encoded in `research/scripts/paper4_w10_schreier_transfer_check_2026-10-04.py`; the script checks the Schreier action matrix, Smith form, and integral lattice nonvanishing.
+
+For the relation matrix
+\[
+A=
+\begin{pmatrix}
+3&-9&0&0&0&0&0\\
+3&0&-9&0&0&0&0\\
+3&0&0&-9&0&0&0
+\end{pmatrix},
+\]
+the Smith normal form is \(\operatorname{diag}(3,9,9)\), with four free factors. The vector
+\[
+3(0,1,1,1,0,0,0)
+\]
+is not in the row lattice of \(A\). This independently verifies the nonzero integral class used above.
+
+### Classification
+
+- intrinsic cup-radical character correction: **PASS / CLOSED**;
+- corrected Schreier presentation and 7-generator action: **PASS / LOCAL**;
+- \(M=K^{ab}/3K^{ab}\cong\mathbf F_3^7\): **PASS / LOCAL**, subject to the stated standard Zassenhaus subgroup-comparison lemma;
+- \((\sigma-1)^2[a_0]\ne0\) in actual \(M\): **PASS / LOCAL**;
+- integral nonvanishing \(3(\sigma-1)^2[a_0]\ne0\) in actual \(K^{ab}\): **PASS / LOCAL** under the same filtration-comparison input;
+- \(a=s\) transfer-defect separator at \((p,s)=(3,2)\): **PASS / LOCAL**, not yet promoted to a general \(s\ge2\) theorem;
+- general \(a=s\) vs. \(a=\infty\) separation for all \(s\ge2\): **OPEN**.
+
+### Logical boundary
+
+This calculation does **not** justify the original \(\chi(z)=\chi(x)=1\) claim; that branch is rejected as non-intrinsic. It also does not by itself prove the all-\(s\) transfer formula. The result is a certified base-case witness for the exact remaining boundary, subject to the standard subgroup-filtration comparison lemma being written out in the final proof.
