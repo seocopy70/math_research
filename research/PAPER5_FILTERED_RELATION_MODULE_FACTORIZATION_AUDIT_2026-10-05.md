@@ -44,3 +44,17 @@ Only after these lemmas may one conclude that Im rho_n is contained in the stabi
 
 ## 6. Stop condition
 If the filtered relation-module object is intrinsic but its gauge-quotient stabilizer is strictly larger than the four computed projective groups, the current factorization target fails as formulated. Do not repair the jet ad hoc. Classify the boundary and record it as FAIL/CLOSED or CONDITIONAL as appropriate.
+
+
+## Critical correction to Section 3 — 2026-10-05
+
+The preceding sentence saying that an automorphism of W_n induces an automorphism of M_n is **not justified in general**. The relation module R_n/[F,R_n] is associated to the chosen free presentation; an arbitrary alpha in Aut(W_n) need not lift to an automorphism of F preserving R_n. Thus replacing the raw jet by M_n does not, by itself, solve B-1.
+
+The corrected status is:
+- filtered relation module: **CONDITIONAL**, a presentation-level candidate container;
+- functorial Aut(W_n)-action on that module: **OPEN**, unless a specific lifting theorem or presentation-independent construction is supplied;
+- intrinsic alternatives must be built from W_n itself (for example characteristic Zassenhaus quotients, H_2/H^2/transgression data, or a canonical extension object) and then related back to the presentation-level relation module.
+
+Hopf's formula gives the intrinsic H_2 quotient (R cap [F,F])/[F,R], whereas the full relation module is presentation-associated. Therefore the next gate is **FRM-0**: construct an object from W_n alone whose filtered degree-2/p extension data maps naturally to the presentation-level filtered relation data and is Aut(W_n)-equivariant.
+
+Until FRM-0 is closed, no factorization through the four concrete projective stabilizers is established.
