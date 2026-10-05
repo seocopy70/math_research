@@ -145,7 +145,8 @@ The certified Paper 4 core is mathematically real but judged too narrow relative
 
 This does not reopen the failed arbitrary-(r) degree-only theorem, the frozen core, or Paper 5 compression. The first broader family is
 [
-G_{s,a}(r_2)=langle z,x_1,ldots,x_dmid z^{p^s}=x_1^{p^a}r_2angle,
+G_{s,a}(r_2)=langle z,x_1,ldots,x_dmid z^{p^s}=x_1^{p^a}r_2
+angle,
 qquad s>age2,
 ]
 with odd (p) and a nonzero quadratic initial relation (r_2). The rank-two stress relation (r_2=[x_1,x_2]) is the control case; at least one genuinely different quadratic form must be tested.
@@ -764,7 +765,8 @@ mathsf{Lift}_n(W_n)
 left{
 widetilde W	woheadrightarrow W_n:
 widetilde W	ext{ is an admissible }(n+1)	ext{-level filtered lift}
-ight}/cong,
+
+ight}/cong,
 ]
 together with the kernel
 [
@@ -1662,7 +1664,8 @@ The current Paper 5 bottleneck was reviewed against the authoritative relation-j
 The immediate theorem to attack is:
 
 [
-operatorname{Im}ho_nsubseteq
+operatorname{Im}
+ho_nsubseteq
 operatorname{Stab}_{GL(V)}(mathcal J_{s,a}),
 ]
 
@@ -1835,3 +1838,50 @@ so the critical class is
 5. **s=1:** the exact separation statement remains intentionally scoped to s\ge2 and is not promoted here.
 
 Classification: **PASS / CLOSED** for odd p, s\ge2, d even, r_2 nondegenerate. Novelty remains a separate literature audit.
+
+## 2026-10-05 — uploaded weighted-Schreier source: SC novelty derivation gate
+
+The user supplied the full TeX source \`arXiv-1007.1489v3\`, *Groups of positive weighted deficiency and their applications*. Direct inspection of the source materially changes the Paper-4 novelty assessment.
+
+The source contains the following relevant chain:
+
+1. Proposition \`uniform2\`: for a uniform weight W on a finitely generated free pro-p group F, there is beta in (0,1) with
+\[
+W(f)=\beta^{d_F(f)},
+\]
+where d_F is ordinary Zassenhaus degree.
+
+2. Corollary \`weight_preserve\`: the restriction of a weight function to any closed subgroup K of F is again a weight function.
+
+3. Lemma \`index_p0\`: for an index-p subgroup K, the standard index-p Schreier generating set
+\[
+y,[y,z],\ldots,[y,\underbrace{z,\ldots,z}_{p-1}],z^p
+\]
+is W-optimal in the free/weight-function case.
+
+4. In the proof of Lemma \`indexp\`, the weights of these Schreier generators are exactly controlled by
+\[
+W(z^p)=W(z)^p,\qquad
+W([y,\underbrace{z,\ldots,z}_{k}])=W(y)W(z)^k
+\]
+in the free weight-function case.
+
+5. Proposition \`cor1\` gives the required no-cancellation characterization of weight functions via power-commutator factorization.
+
+Specializing the uniform weight to the ordinary Zassenhaus degree therefore gives the Paper-4 comparison
+\[
+D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K).
+\]
+Indeed, every K-Schreier generator has ambient weight exponent at most p, while a nonzero K-element of K-Zassenhaus degree ell has a nonzero K-coordinate term of length ell, hence ambient weighted exponent at most p ell. Since the restricted weight is still a weight function, the source's no-cancellation characterization gives d_F(g)<=p d_K(g). Thus d_F(g)>=n implies d_K(g)>=ceil(n/p).
+
+Classification:
+- weighted-Schreier derivation of SC: **PASS / CLOSED as a derivation from prior machinery**;
+- SC as an independent novelty claim: **CONDITIONAL / likely not novel**;
+- Paper-4 Magnus prefix-code proof: **PASS / mathematically valid, but no standalone novelty claim**;
+- downstream intrinsic epsilon_s and exact a=s versus a=infinity separation: **OPEN / strongest current novelty candidates**;
+- Paper-4 mathematical theorem in declared scope: **PASS / CLOSED**;
+- publication novelty overall: **CONDITIONAL / OPEN**.
+
+The detailed source comparison is recorded in \`research/PAPER4_WEIGHTED_SCHREIER_DERIVATION_AUDIT_2026-10-05.md\`.
+
+Governance consequence: do not reopen the Paper-4 mathematics. Move the novelty audit downstream to epsilon_s, the finite-window torsion obstruction, the a=s versus a=infinity family, and the exact threshold p^s+1.
