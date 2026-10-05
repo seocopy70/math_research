@@ -769,6 +769,46 @@ same-numerical-window comparison with a group whose own critical depth
 lies later.
 \end{remark}
 
+\subsection{Complete critical-window classification of $a$}
+\begin{proposition}[Critical-window $a$-classification]
+For fixed $s\ge2$ in the declared stress-family scope, the critical
+windows satisfy the following trichotomy:
+\begin{enumerate}
+\item if $1\le a<s$, then
+\[
+\W_{p^s+1}(G_{s,a})^{\ab}
+\cong
+(\mathbb Z/p^{s+1}\mathbb Z)^d\oplus\mathbb Z/p^a\mathbb Z,
+\]
+so distinct values of $a<s$ are separated by abelianization;
+\item if $a>s$, then
+\[
+\W_{p^s+1}(G_{s,a})\cong
+\W_{p^s+1}(G_{s,\infty});
+\]
+\item if $a=s$, then the abelianizations agree with the power-free
+case, but
+\[
+\varepsilon_s(\W_{p^s+1}(G_{s,s}))\ne0,
+\qquad
+\varepsilon_s(\W_{p^s+1}(G_{s,\infty}))=0,
+\]
+so the two critical windows are non-isomorphic.
+\end{enumerate}
+Thus the only nontrivial critical boundary after abelianization is
+$a=s$ versus $a=\infty$.
+\end{proposition}
+
+\begin{proof}
+The first statement is the Smith-normal-form calculation in the preceding
+abelianization proposition.  If $a>s$, then $p^a\ge p^{s+1}$, so the
+term $x_1^{p^a}$ vanishes in the quotient at depth $p^s+1$, giving the
+second statement.  When $a=s$, the same abelianization as the power-free
+case occurs, while the intrinsic transfer calculation above gives the
+displayed nonzero/zero values of $\varepsilon_s$.  Hence the final
+boundary is separated.
+\end{proof}
+
 \subsection{\texorpdfstring{Ordinary mod-$p$ cohomology}{Ordinary mod-p cohomology}}
 
 \begin{theorem}[Ordinary cohomology blindness]
@@ -963,22 +1003,22 @@ controlled stress family.
 J.~Dixon, M.~du~Sautoy, A.~Mann, and D.~Segal,
 \emph{Analytic Pro-$p$ Groups}, 2nd ed.,
 Cambridge Studies in Advanced Mathematics 61,
-Cambridge University Press, 1999.
+Cambridge University Press, 1999. doi:\href{https://doi.org/10.1017/CBO9780511470882}{10.1017/CBO9780511470882}.
 
 \bibitem{Quadrelli2021}
 C.~Quadrelli,
 One-relator maximal pro-$p$ Galois groups and the Koszulity conjectures,
-\emph{The Quarterly Journal of Mathematics} 72 (2021), 835--854.
+\emph{The Quarterly Journal of Mathematics} 72 (2021), 835--854. doi:\href{https://doi.org/10.1093/qmath/haaa049}{10.1093/qmath/haaa049}.
 
 \bibitem{Quadrelli2022}
 C.~Quadrelli,
 Two families of pro-$p$ groups that are not absolute Galois groups,
-\emph{Journal of Group Theory} 25 (2022), 25--62.
+\emph{Journal of Group Theory} 25 (2022), 25--62. doi:\href{https://doi.org/10.1515/jgth-2020-0186}{10.1515/jgth-2020-0186}.
 
 \bibitem{Hamza2023}
 O.~Hamza,
 Zassenhaus and lower central filtrations of pro-$p$ groups considered as modules,
-\emph{Journal of Algebra} 633 (2023), 172--204.
+\emph{Journal of Algebra} 633 (2023), 172--204. doi:\href{https://doi.org/10.1016/j.jalgebra.2023.06.016}{10.1016/j.jalgebra.2023.06.016}.
 
 \end{thebibliography}
 
