@@ -18,17 +18,34 @@ Paper 5 is currently an automorphism-structure program, not the former compressi
 
 ## What is NOT closed
 
-The key missing theorem is the realization/factorization statement:
+The key remaining theorem is the realization/factorization statement:
 [
 \operatorname{Im}(\operatorname{Aut}(W_n)\to GL(W_n/\Phi(W_n)))
 =
-S_{s,a}
+S_{11}(p)
 ]
 (or the correct intrinsic replacement) for general odd (p).
 
-The current relation-jet definition gate is **P5-JET**, followed by the intrinsic-definition gate **FRM-0**. The presentation-level filtered relation module is only **CONDITIONAL**, because an arbitrary automorphism of (W_n) need not lift to the chosen free presentation.
+**Step 2 is now CLOSED/GENERAL.** In the actual relation quotient
+(W_n=\overline L/\langle\rho\rangle), with
+(ho=[x,y]+z^{[p]}-x^{[p]}), the auxiliary restricted-abelianization lemma is combined with the relation itself to obtain
+[
+D_2(W_n)=V^{[p]}+D_{p+1}(W_n),
+]
+and the higher part of (J=\langle[x,y]\rangle_{\rm res}) satisfies
+[
+[V,J]\subseteq D_{p+1}(W_n),\qquad
+J\subseteq\langle x^{[p]}-z^{[p]}\rangle+D_{p+1}(W_n).
+]
+Consequently, for (u,v\in D_2(W_n)),
+[
+\Phi(u,v)=[xu,yv][x,y]^{-1}\in D_{p+1}(W_n),
+]
+so the degree-(p) secondary relation class (	heta) is lift-independent and canonical in (W_n).
 
-The immediate sub-gates are: (1) close **P5-JET** by deriving S_11 with the Jacobson correction for general odd p; then (2) **FRM-0.2** for the intrinsic W_3 transgression/Bockstein object. No general factorization theorem or uniform (p^2) theorem may be promoted before these gates.
+Important precision: **do not claim (J\subseteq D_{p+1}(W_n))**. The degree-(p) generator ([x,y]=x^{[p]}-z^{[p]}) can survive modulo (D_{p+1}); what is killed is the higher (J)-part / commutator ambiguity.
+
+The presentation-level filtered relation module remains separate from the intrinsic theorem. The next gate is therefore Step 3: prove the lower-bound/equality construction and relation preservation for the (S_{11}(p)) image. No uniform (p^2(p-1)) theorem may be promoted before that gate.
 
 ## Superseded/failed routes
 
@@ -41,12 +58,14 @@ The immediate sub-gates are: (1) close **P5-JET** by deriving S_11 with the Jaco
 
 ## Current execution order
 
-1. **P5-JET:** derive the (1,1) S_11 stabilizer from the genuine restricted-Lie/Jacobson model for general odd p.
-2. FRM-0.2 (W_3) transgression/Bockstein computation and independent verification.
-3. Decide whether an intrinsic Aut((W_n))-equivariant filtered relation jet exists.
-4. Prove factorization to the corrected relation-jet stabilizer, or produce a counterexample.
-4. Only then pursue a uniform odd-(p) theorem or further prime scans.
-5. Quotient-action (\operatorname{Aut}(W)\to\operatorname{Aut}(Q)) remains auxiliary and must not be used to bypass FRM-0.
+1. **Step 3 equality/lifting:** prove the lower-bound construction and relation preservation giving
+[
+\operatorname{Im}(\operatorname{Aut}(W_n)\to GL(V))=S_{11}(p).
+]
+2. Independently verify the lift construction in the free pro-(p) presentation and show the defining relation/kernel is preserved.
+3. Only after equality is closed, test the resulting (p^2(p-1)) automorphism-order ratio as a general theorem.
+4. FRM-0 / intrinsic factorization remains a separate structural route if needed; it must not be conflated with the now-closed Step 2.
+5. Quotient-action (\operatorname{Aut}(W)\to\operatorname{Aut}(Q)) remains auxiliary and must not bypass the intrinsic/equality gate.
 
 ## Repository anchors
 
@@ -167,3 +186,49 @@ when lifted back to \(\overline L\), not \(\Phi(u,v)\in D_{p+1}(\overline L)\). 
 This is a decisive gap. The statement \(\Phi\in D_{p+1}\) and hence the canonicality of \(\theta\) remain **OPEN / LOAD-BEARING**. The proposed Step-2 CLOSED classification is rejected. The restricted-abelianization lemma becomes a useful auxiliary lemma, not the final gate.
 
 The next authorized task is to retain enough of the \(J\)-adic/filtered extension data to distinguish \(D_{p+1}\) from \(J+D_{p+1}\), and to compute the lift-change map in \(\overline L\) itself (or construct an exact transgression sequence whose kernel is known to contain no degree-\(<p\) contribution). No equality theorem or \(p^2(p-1)\) theorem is promoted.
+
+
+## 2026-10-05 — Step 2 closure: filtered-extension/J-adic gate
+
+**Result classification: CLOSED / GENERAL (Step 2).**
+
+The earlier gap was correctly identified: the auxiliary quotient \(\overline L/J\) proves only \(\Phi\in J+D_{p+1}(\overline L)\), not \(\Phi\in D_{p+1}\). The missing filtered-extension calculation is now supplied in the actual relation quotient
+\[
+W_n=\overline L/\langle\rho\rangle,\qquad \rho=[x,y]+z^{[p]}-x^{[p]}.
+\]
+
+In \(W_n\),
+\[
+[x,y]=x^{[p]}-z^{[p]}\in D_p(W_n).
+\]
+Combining this relation with the auxiliary restricted-abelianization lemma gives
+\[
+D_2(W_n)=V^{[p]}+D_{p+1}(W_n).
+\]
+Moreover the higher restricted-ideal part satisfies
+\[
+[V,J]\subseteq D_{p+1}(W_n),
+\qquad
+J\subseteq\langle x^{[p]}-z^{[p]}\rangle+D_{p+1}(W_n).
+\]
+In particular the apparently dangerous \(J\)-commutator terms fall into \(D_{p+1}\):
+\[
+[x,[x,y]]=0,
+\qquad
+[y,[x,y]]=(ad\,x)^p(y)\in D_{p+1},
+\]
+using centrality of \(z\).
+
+Hence for \(u,v\in D_2(W_n)\), writing \(u=t^{[p]}w\), \(w\in D_{p+1}\), one obtains
+\[
+[x,u]\in D_{p+1},\qquad [u,y]\in D_{p+1},
+\]
+and therefore
+\[
+\boxed{\Phi(u,v)=[xu,yv][x,y]^{-1}\in D_{p+1}(W_n).}
+\]
+Thus the secondary degree-\(p\) class \(\theta\) is independent of the chosen \(D_2\)-lifts and is canonical in \(W_n\).
+
+**Precision boundary:** the statement is not \(J\subseteq D_{p+1}\). The degree-(p\) generator \([x,y]=x^{[p]}-z^{[p]}\) may survive modulo \(D_{p+1}\); only the higher \(J\)-part relevant to lift ambiguity is absorbed into \(D_{p+1}\).
+
+**Downstream status:** Step 3 equality and the \(p^2(p-1)\) theorem remain **CONDITIONAL**. The next authorized gate is the explicit lower-bound/lifting construction proving the corrected \(S_{11}(p)\) image, with independent relation-preservation verification.
