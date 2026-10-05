@@ -131,3 +131,54 @@ The correct response is to **move the novelty center of gravity downstream**:
 weighted-Schreier comparison -> transfer bound -> intrinsic \(\varepsilon_s\) -> exact finite-window separation.
 
 The next literature search should therefore target the exact \(\varepsilon_s\), finite-window torsion-line obstruction, and the \(a=s\) versus \(a=\infty\) family, not generic index-p Schreier theory.
+
+
+## 2026-10-05 — direct source recheck: SC derivation is genuinely covered by the weighted-Schreier chain
+
+The uploaded source was decompressed and the cited statements were inspected line-by-line, rather than inferred from the earlier summary. The relevant chain is exact:
+
+`uniform2` gives (W_F(g)=\beta^{d_F(g)}) for the uniform weight on free (F).
+
+`weight_preserve` says the restriction (W_K=W_F|_K) is again a weight function on the closed subgroup (K).
+
+`index_p0) gives the standard index-(p) Schreier generating set
+[
+X'={y,[y,z],ldots,[y,z,ldots,z],z^p}
+]
+and says it is (W_K)-optimal in the free case.
+
+The proof of `indexp` gives equality of weights in the free/weight-function case:
+[
+W_K([y,z,ldots,z]_j)=W_F(y)W_F(z)^j=\beta^{j+1},
+qquad
+W_K(z^p)=W_F(z)^p=\beta^p.
+]
+Thus every Schreier generator has ambient Zassenhaus exponent at most (p).
+
+Finally, `cor1`(ii) is explicitly a **global no-cancellation statement for every (fin K)** in its power-commutator factorization in (X'):
+[
+W_K(f)=max{W_K(c)^{p^k}:\alpha_{c,k}
+e0}.
+]
+This is the precise missing logical step needed to turn generator weight bounds into an elementwise comparison.
+
+Hence, if (d_K(f)=ell), a nonzero K-power-commutator term of K-degree at most (ell) has ambient exponent at most (pell), and `cor1` prevents cancellation at the maximal (W_K)-weight. Since (W_K(f)=W_F(f)=\beta^{d_F(f)}), one gets
+[
+d_F(f)le p,d_K(f).
+]
+Therefore
+[
+D_n(F)cap Ksubseteq D_{lceil n/pceil}(K).
+]
+
+### Review verdict
+
+The earlier caution about “is cor1 strong enough?” is now resolved **YES**: `cor1` is stated for arbitrary (fin F), not merely for generators or selected optimal words, and its proof explicitly rules out cancellation in the relevant power-commutator factorization.
+
+The correct novelty statement is consequently stronger than “the SC proof resembles prior work”:
+
+- **SC itself is a derivable consequence of prior weighted-Schreier machinery under the Paper-4 hypotheses.**
+- The Magnus prefix-code proof is a valid self-contained reproof/coordinate realization, but should not be presented as the novel theorem.
+- The novelty audit must move downstream to the intrinsic transfer obstruction (arepsilon_s), the (a=s) versus (a=\infty) finite-window separation, and the exact threshold (p^s+1).
+
+This is a literature-method transfer result, not a negative result about Paper 4's mathematics.
