@@ -57,14 +57,7 @@ MatPerm:=function(m)
 end;
 
 MatVariants:=function(m)
-  local out;
-  out:=[
-    m,
-    TransposedMat(m),
-    InverseMat(m),
-    TransposedMat(InverseMat(m))
-  ];
-  return out;
+  return [m,TransposedMat(m)];
 end;
 
 GroupFromVariant:=function(Mats,which)
@@ -87,7 +80,7 @@ run:=function(s,a)
   i:=Position(expected,[s,a]);
   Print("=== Paper5 p=5,n=6 convention diagnostic s=",s," a=",a," ===\n");
   Print("candidate order = ",Size(Cands[i]),"\n");
-  for j in [1..4] do
+  for j in [1..2] do
     actual:=GroupFromVariant(Mats,j);
     Print("variant ",j," order = ",Size(actual)," equality = ",actual=Cands[i],"\n");
   od;
