@@ -331,3 +331,26 @@ Thus:
 The (p^2) layer discussion remains useful only after the complete induced operator on the (p^2)-graded relation space is explicitly computed.
 
 Detailed audit: `research/PAPER5_STEP3_SECOND_JET_REAUDIT_2026-10-05.md`.
+
+
+## 2026-10-06 — Step 3 second-jet substitution-order correction
+
+**FAIL / CLOSED as submitted proof; Step 3 equality remains OPEN / LOAD-BEARING.**
+
+The proposed (T_{a,b,k}) repair does establish raw associative-derivation preservation of the commutator ideal, but the displayed second-order formula applies (T) directly to (R_k). For the lift (x\mapsto x^a, y\mapsto yx^b, z\mapsto z^a), the linear Magnus part is (L(X)=aX, L(Y)=Y+bX, L(Z)=aZ), while the quadratic part is (Q(X)=\binom a2X^2, Q(Y)=bYX+\binom b2X^2, Q(Z)=\binom a2Z^2). The actual degree-((k+1)) correction is therefore the quadratic insertion operator after the linear substitution, schematically (C_{a,b}(R_k)=T_{a,b,k}(L(R_k))), not (T_{a,b,k}(R_k)) unless (T) is redefined accordingly.
+
+A degree-2 witness (R_2=[X,Y]) gives actual correction (ab,XYX+c,XXY-(ab+c)YXX), (c=\binom a2), whereas the submitted (T([X,Y])) gives (b,XYX+c,XXY-(b+c)YXX). Thus the displayed sec formula is false with the submitted operator for general (a,b).
+
+The finite-stage residual factorization idea itself is sound after deleting the unnecessary equality (D_j=(R\cap D_j)(R\cap D_{j+1})D_{j+2}): since (r^{(j)}\in R\cap D_j), its initial class is automatically in (gr_j(R)), so a representative (r_j\in R\cap D_j) can be chosen and the residual lies in (R\cap D_{j+1}), including at (j=p,p^2).
+
+The (D(u^p)\in I_{p^2+1}) and (X^{p^2}-Z^{p^2}\mapsto0) calculations survive only in the explicitly mod-(p) Magnus/restricted-Lie layer; the earlier (mathbf Z_p)-ambient notation must not be used to claim (p^2=0).
+
+Detailed evidence: `research/PAPER5_STEP3_SECOND_JET_AUDIT_ADDENDUM_2026-10-06.md`.
+
+Current gate:
+- raw (T(I_k)\subseteq I_{k+1}): **PASS / GENERAL**;
+- corrected actual second-order operator (C_{a,b}): **OPEN / LOAD-BEARING**;
+- strengthened (L_k): **OPEN / LOAD-BEARING**;
+- (~tilde g(R)\subseteq R): **OPEN / LOAD-BEARING**;
+- (\operatorname{Im}(Aut(W_n)\to GL(V))=S_{11}(p)): **OPEN / LOAD-BEARING**;
+- (p^2(p-1)) theorem: **CONDITIONAL**.
