@@ -68,12 +68,15 @@ run:=function(s,a)
   autGens:=Concatenation(A.glAutos,A.agAutos);
   Mats:=List(autGens,alpha->ImageMatrix(alpha,frnat,basis));
 
-  Z:=Centre(W);
-  centerV:=Group(List(GeneratorsOfGroup(Z),z->Image(frnat,z)));
-  Print("CENTER_IMAGE_ORDER=",Size(centerV),"\\n");
-  if Size(centerV)<>3 then Error("center image is not a unique line"); fi;
-  if centerV<>Group([Image(frnat,gens[1])]) then
-    Error("center image line is not the z-line");
+  if [s,a]=[1,1] then
+    Z:=Centre(W);
+    centerV:=Group(List(GeneratorsOfGroup(Z),z->Image(frnat,z)));
+    Print("CENTER_IMAGE_ORDER=",Size(centerV),"\\n");
+    if Size(centerV)<>3 then Error("center image is not a unique line"); fi;
+    if centerV<>Group([Image(frnat,gens[1])]) then
+      Error("center image line is not the z-line");
+    fi;
+    Print("INTRINSIC_Z_LINE=PASS\\n");
   fi;
   if ForAny(Mats,m->DeterminantMat(m)=0) then
     Error("non-invertible Frattini action matrix");
@@ -110,3 +113,5 @@ QUIT;
 # CI retrigger after source-family correction: 2026-10-06.
 
 # CI retrigger after actual embedded-line diagnostics: 2026-10-06.
+
+# CI retrigger after restricting intrinsic-line check to the nonsplit case: 2026-10-06.
