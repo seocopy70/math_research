@@ -68,3 +68,18 @@ ot\cong W_{p^s+1}(G_t)) remains OPEN unless an explicit same-window invariant is
 | \(D_n(F)\cap K\subseteq D_n(K)\) | FAIL / CLOSED | explicit \(F=\mathbf Z,K=p\mathbf Z\) counterexample | 2026-10-04 TF_s log entry |
 | \((SC_s):D_{p^s+1}(F)\cap K\subseteq D_{p^{s-1}+1}(K)\) | OPEN / LOAD-BEARING | NONE | research/PAPER4_ALL_S_TRANSFER_DEFECT_REDUCTION_2026-10-04.md |
 | \((TF_s)\) integral truncation-image bound | OPEN / LOAD-BEARING | NONE | research/PAPER4_ALL_S_TRANSFER_DEFECT_REDUCTION_2026-10-04.md |
+
+
+## 2026-10-05 — Paper 5 automorphism-structure evidence
+
+| Claim | State | Evidence | Where to verify |
+|---|---|---|---|
+| p=3,n=4 actual IA order is 3^27 in all four audited cases | PASS / LOCAL | decisive CI runtime | `research/PAPER5_IA_GL_DECOMPOSITION_AUDIT_2026-10-04.md` |
+| p^2 automorphism-order gap is a Frattini/GL-image defect in the audited p=3,n=4 cases | PASS / LOCAL | exact IA/GL factorization | same audit; `CURRENT_STATE.md` |
+| p=5,n=6 corrected Frattini-image formulas pass the independent faithful-action gate | PASS / LOCAL | CI run 37252889495 | `CURRENT_STATE.md`; related Paper 5 gate records |
+| p=5 fixed-a ratios are 2000/20 and 48000/480, with unchanged tested IA 5-primary order | PASS / LOCAL | exact Aut/GL audits | `CURRENT_STATE.md` |
+| p=3,s=2,a=1,n=10: 81 admissible kernels form one Aut-orbit with 3^10 complement classes | PASS / LOCAL | CI run 37251652694 | `CURRENT_STATE.md`; n=10 orbit gate |
+| abstract degree-(2,p) projective relation-jet stabilizer formulas | PASS / CLOSED | direct algebraic derivation | `research/PAPER5_RELATION_JET_AUDIT.md` |
+| actual finite-window Frattini image factors through the intrinsic relation jet for general odd p | OPEN / LOAD-BEARING | none yet | FRM-0 / current Paper 5 audits |
+| intrinsic Aut(W_n)-equivariant filtered relation object | OPEN / LOAD-BEARING | FRM-0.2 pending | `research/PAPER5_FILTERED_RELATION_MODULE_FACTORIZATION_AUDIT_2026-10-05.md` |
+| uniform p^2 automorphism-order theorem | OPEN | local p=3,p=5 only | Paper 5 current summary |
