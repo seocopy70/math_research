@@ -62,3 +62,21 @@ The correct current boundary remains: Im(Aut(W_n) -> GL(V_n)) subseteq S'_11(p) 
 Do not run another prime sweep merely to compensate for the missing proof.
 
 The next task is to derive an intrinsic upper-bound constraint directly from the corrected finite-window relation package, without assuming an automorphism of W_n lifts to an automorphism of F/R. If that cannot be done, the correct outcome is a counterexample or a narrower theorem scope—not promotion of the local equality.
+## 2026-10-06 addendum — correction to the audit
+
+The earlier audit overstated the lifting objection. For an actual g in Aut(W_n), the free-presentation lift does exist: choose, for every free generator x, any word lifting g(pi(x)); freeness extends these choices to an endomorphism tilde-g:F_n->F_n, and pi(tilde-g(r))=1 for r in R_n, hence tilde-g(R_n) subseteq R_n. Therefore the lift bridge is NOT the obstruction for an actual finite-window automorphism. The objection applies only to defining an intrinsic subgroup from an arbitrary M in GL(V_n) without first knowing that M comes from an automorphism.
+
+The remaining objection is algebraic: the proposed B/theta argument does not derive the stated S'_11 constraints or its order. In particular, B is an equivariant commutator pairing whose target U_n is itself transported by g; saying that B is preserved does not by itself force the displayed flag or the claimed P=lambda_s I+N. The theta statements lambda_s^p=lambda_s and lambda_a^p=lambda_a are automatic over F_p and do not imply the asserted restriction on P. The required radical/flag computation and the complete theta-induced matrix constraints are not supplied.
+
+Importantly, the repository already contains a stronger and correct intrinsic Step-3 closure for the declared boundary n=p (and, via W_{p+1}=W_p, the n=p+1 window): research/PAPER5_WP_CORRECTED_STRUCTURE_STEP3_CLOSURE_2026-10-06.md. There the crucial structural fact is D_p(W_p) ~= F_p^3 with independent X=x^p, Y=y^p, Z=z^p. Direct comparison of [g(x),g(y)] with g(x)^p g(z)^(-p) then forces u=0, v=1, c=a-m, giving exactly S'_11(p), and explicit realization gives the reverse inclusion. This is the valid intrinsic proof route.
+
+Therefore the correct status is narrower than the proposed all-(p,n) B/theta proof: the n=p structural Step-3 equality is PASS / CLOSED / GENERAL within the declared odd-p, n=p scope; the proposed extension to arbitrary n via B/theta remains OPEN unless the missing invariant calculation is supplied. The p=5,n=6 computation is consistent because W_6=W_5 in the already-closed boundary identification, but it is not itself the general proof.
+
+## Corrected classification
+
+- Free-presentation lift for an actual g in Aut(W_n): available by freeness; previous objection removed.
+- B/theta proof of Im subseteq S'_11 for arbitrary n: FAIL / CLOSED as submitted; the displayed constraints are not derived.
+- n=p intrinsic upper bound using D_p(W_p)=F_p^3: PASS / CLOSED / GENERAL within declared scope.
+- n=p equality Im=S'_11(p): PASS / CLOSED / GENERAL within declared scope.
+- |Aut(W_p)|=p^11(p-1)^2: PASS / CLOSED / GENERAL within declared scope.
+- extension to arbitrary n beyond the W_{p+1}=W_p identification: OPEN / LOAD-BEARING.
