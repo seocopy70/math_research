@@ -2854,3 +2854,20 @@ For p=3, R=z^[3]-x^[3]-[x,y] is a filtered-inhomogeneous relation in W=G_{1,1}/D
 The intrinsic z-line is still not proved. Presentation support alone does not imply Aut(W)-invariance. The b=c=0 restriction and exact embedded stabilizer remain OPEN / LOAD-BEARING pending an intrinsic characterization or direct extraction and equality check of the actual six GAP Frattini matrices. The p=3 argument is not promoted to general odd p.
 
 Paper 5 END remains NOT AUTHORIZED.
+
+
+## 2026-10-06 — Final actual-model stabilizer gate: runtime correction and status
+
+The final p=3 gate was rechecked against the actual GitHub Actions runtime. The prior stabilizer CI run 37199037517 did not compute the embedded subgroup: the GAP job aborted at the Frattini matrix extraction step with a source-family mismatch in Image(alpha,basis[j]). Therefore that run is FAIL / CLOSED as a runtime attempt, not evidence for the six-matrix equality.
+
+The canonical gate research/scripts/paper5_gl_stabilizer_gate.g was corrected so that each Frattini basis vector is recovered through PreImagesRepresentative(frnat,v) before applying the AutPGrp automorphism, matching the successful pattern already used by the certified IA/GL audit. The gate now also records, for the actual (s,a)=(1,1) window: the six induced matrices in the presentation basis (x,y,z); direct equality with the candidate embedded subgroup; a direct comparison with the user's proposed subgroup after the (z,x,y) -> (x,y,z) basis permutation; and the intrinsic center-image test Z(W)D_2/D_2, requiring it to be a unique order-3 line equal to the image of z.
+
+This is an authorized execution correction, not a result. The corrected script is committed, but no post-correction GAP runtime output has yet been independently recovered in this session. Hence:
+- actual six-matrix equality: OPEN / LOAD-BEARING;
+- user's exact embedded subgroup equality: OPEN / LOAD-BEARING;
+- intrinsic z-line via Z(W)D_2/D_2: OPEN / LOAD-BEARING;
+- p=3 Jacobson absorption: PASS / LOCAL;
+- observed 108 -> 6 Frattini-image gap and common 3^27 IA kernel: PASS / LOCAL;
+- Paper 5 END: NOT AUTHORIZED.
+
+No general odd-p claim is promoted.
