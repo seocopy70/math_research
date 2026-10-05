@@ -106,3 +106,8 @@ If uniform U_n-control fails, classify that route FAIL / CLOSED rather than weak
 - previous Step 3 failure audit: research/PAPER5_STEP3_EQUALITY_AUDIT_2026-10-05.md
 - P5-JET correction: research/PAPER5_JET_S11_JACOBSON_CORRECTION_AUDIT_2026-10-05.md
 - IA/GL gate and runtime audits: research/PAPER5_IA_GL_*.md
+
+
+## 2026-10-06 — Fourth stabilization audit: R-containment premise rejected
+
+The latest proposed closure assumes that (W_p=F/(R D_{p+1})) being exponent (p) and class (p) forces (F^p,gamma_{p+1}subseteq R). This is false from the Paper 5 definition: the conclusions are only (F^p,gamma_{p+1}subseteq R D_{p+1}). The literature audit does not add the stronger containments as hypotheses. Therefore the proposed (M_{p+1}subseteq M_{k+1}) argument remains **OPEN / LOAD-BEARING**, and (W_n=W_p) for all (nge p) remains **OPEN / LOAD-BEARING**.
