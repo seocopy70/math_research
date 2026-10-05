@@ -3418,3 +3418,643 @@ Classification:
 - matched cd=3 search: NOT YET AUTHORIZED.
 
 The remaining bottleneck is sharply isolated: prove or refute that epsilon_s modulo p^m, or an equivalent finite truncation, factors through a finite Zassenhaus window of G_s. The current result is not such a factorization theorem.
+
+
+---
+
+# SOURCE: research/PAPER4_E2_QPOS_HOMOLOGY_CORRECTION_2026-10-02.md
+
+<!-- blob-sha: b17ad7e8ceaebe219a452a1f6cae2c858829bb5b -->
+
+# PAPER 4 — E2 q>0 HOMOLOGICAL CARRIER CORRECTION — 2026-10-02
+
+## Critical correction
+
+The previous gate treated q>0 as if the q=0 E2 transgression source H_2(D,Z_p) remained available. That is not correct.
+
+For an infinite Demushkin group with q=p^a>0 and standard odd-p relation
+r_D=x_1^{p^a}[x_1,x_2]...[x_{d-1},x_d],
+the one-relator Fox/cellular boundary after tensoring with the trivial Z_p-module is the exponent-sum vector
+(p^a,0,...,0). Multiplication by p^a on Z_p is injective. Hence
+H_2(D,Z_p)=0.
+For q=0 the exponent-sum vector is zero and the same calculation gives H_2(D,Z_p)≅Z_p.
+
+Therefore the E2 transgression class
+H_2(D,Z_p) -> (N^{ab})_D
+that carried the K–Z q=0 depth signal has no nonzero source in q>0.
+
+## Intrinsic abelian extension check
+
+For the stress presentation
+G_{s,a}=<z,x_1,...,x_d | z^{p^s}=r_D>,
+the abelianized relation is
+p^s z=p^a x_1.
+The quotient map G_{s,a}->D induces a surjection on H_1. Its kernel contains the free rank-one z-direction; the untwisted five-term sequence now starts with H_2(D,Z_p)=0, so
+(N^{ab})_D -> ker(H_1(G)->H_1(D))
+is an isomorphism.
+
+The resulting short exact sequence of Z_p-modules
+0 -> Z_p -> H_1(G) -> H_1(D) -> 0
+is classified on the torsion summand by an Ext^1 class in
+Ext^1_Zp(Z/p^a,Z_p) ≅ Z/p^a.
+The relation p^s z=p^a x_1 represents the class p^s mod p^a (up to sign/unit convention). Hence for s>=a the abelian homological extension class is already zero and cannot distinguish s>a.
+
+This is stronger than the earlier statement 'abelianization saturates': the entire untwisted H_1/coinvariant extension layer is saturated at q-depth a.
+
+## Consequence
+
+The previous 'q>0 higher filtered E2' target must be split:
+
+- untwisted E2 homological/transgression object: **FAIL / CLOSED for s>a**;
+- pure abelianization detector: **FAIL / CLOSED**;
+- abelian H_1-extension class: **FAIL / CLOSED for s>a**;
+- BBG-type gauge warning: **PASS / LOCAL stress control only**;
+- genuinely nonabelian higher relation data: **OPEN / LOAD-BEARING**;
+- twisted/dualizing-coefficient replacement: **OPEN / NOT YET DEFINED**, but it is a different object and cannot be called E2 continuation without a new pre-check;
+- finite-window factorization of a new nonabelian object: **OPEN**.
+
+## Methodological consequence
+
+Do NOT continue searching for a 'higher filtered truncation of E2' in the untwisted Z_p homology. That route is structurally exhausted for q>0 beyond a.
+
+The only legitimate successor is a genuinely nonabelian relation object (e.g. relation-module/Magnus/Zassenhaus layer) whose definition is intrinsic and whose finite-window factorization is proved. A twisted coefficient construction may be investigated separately, but it must first pass Object/Input/Gauge/q-blindness and must not smuggle the quotient orientation into the input.
+
+## Sources
+
+Demushkin standard q>0 relations and orientation: Labute classification / Souza–Zalesskii 2026.
+Pro-p Fox/relation-module calculus: NSW-style relation module and Fox derivative framework.
+PD^2 dualizing-module framework: Ben-Bassat–Gropper 2026.
+
+
+---
+
+# SOURCE: research/PAPER4_F1_KZ_ADAPTIVE_THRESHOLD_AUDIT_2026-10-02.md
+
+<!-- blob-sha: f367ffafeb57011f67767a099da85884e6825b47 -->
+
+# PAPER 4 — F1 ADAPTIVE THRESHOLD ON THE K–Z FAMILY — 2026-10-02
+
+## Result
+
+The K–Z family does not merely give a negative fixed-depth example. Its abelianization gives an explicit positive adaptive bound for the p-adic valuation truncation.
+
+Let
+\[
+G_s^{ab}\simeq \mathbf Z_p^2\oplus \mathbf Z/p^s.
+\]
+For the Zassenhaus quotient
+\[
+Q_n^{(s)}=G_s/D_n(G_s),
+\]
+functoriality gives
+\[
+(Q_n^{(s)})^{ab}
+\simeq
+G_s^{ab}/D_n(G_s^{ab}).
+\]
+
+Since \(G_s^{ab}\) is abelian, if \(e=\lceil\log_p n\rceil\), then
+\[
+D_n(G_s^{ab})=(G_s^{ab})^{p^e},
+\]
+and hence
+\[
+(Q_n^{(s)})^{ab}
+\simeq
+(\mathbf Z/p^e)^2\oplus\mathbf Z/p^{\min(s,e)}.
+\]
+
+Take
+\[
+n=p^m.
+\]
+Then \(e=m\), so the torsion exponent in the finite-window abelianization is exactly
+\[
+p^{\min(s,m)}.
+\]
+Therefore the intrinsic quantity
+\[
+\tau_m(Q_{p^m})
+:=
+\min\{s,m\}
+\]
+is recoverable from the finite quotient itself.
+
+Because E2 gives \(v_p(\epsilon_s)=s\), this recovers the truncated valuation
+\[
+\min(v_p(\epsilon_s),m).
+\]
+Equivalently, it determines whether \(\epsilon_s\equiv0\pmod{p^m}\), and if nonzero, determines its exact valuation below \(m\).
+
+The calculation uses only intrinsic finite-group data (the abelianization and its exponent), not the presentation parameter \(s\).
+
+## Sharpness within the K–Z family
+
+The previous same-window lemma shows that a depth \(n\) cannot uniformly recover \(\epsilon_s\bmod p^m\) across all \(s\) if there exist
+\[
+s<t<m,qquad p^s\ge n.
+\]
+Thus any universal K–Z-family threshold for \(m\)-digit valuation information must satisfy, up to the integer boundary,
+\[
+n>p^{m-1}
+\]
+when \(m\ge2\).
+
+The explicit construction \(n=p^m\) therefore gives the correct exponential scale, although this audit does not prove that \(p^m\) is the absolutely minimal threshold.
+
+## Classification
+
+- adaptive K–Z valuation recovery from a finite window: **PASS / LOCAL**;
+- explicit intrinsic realization via \((G/D_{p^m}(G))^{ab}\): **PASS / LOCAL**;
+- lower-bound scale \(n>p^{m-1}\) for uniform K–Z-family valuation recovery: **PASS / LOCAL**;
+- exact minimal threshold \(n=p^{m-1}+1\) or similar: **OPEN**;
+- general free-by-Demushkin finite-window factorization: **OPEN / LOAD-BEARING**;
+- orientation recovery from the E2 class: **OPEN**.
+
+This positive result prevents overclaiming the preceding F1 no-go: the K–Z family kills a fixed-depth/uniform-in-extension-depth detector, but it does not kill an \(m\)-dependent finite-window factorization.
+
+
+---
+
+# SOURCE: research/PAPER4_F1_KZ_SAME_WINDOW_P_ADIC_NO_GO_AUDIT_2026-10-02.md
+
+<!-- blob-sha: 547486e95f187a46a0c06ef4833553ae32b42c41 -->
+
+# PAPER 4 — F1 FINITE-WINDOW FACTORIZATION STRESS TEST FOR THE K–Z p-ADIC EXTENSION CLASS — 2026-10-02
+
+## 1. Target
+
+For the K–Z family
+\[
+G_s=\langle x,y,z\mid z^{p^s}=[x,y]\rangle,
+\qquad
+N_s=\overline{\langle z\rangle}^{G_s},
+\qquad
+D\simeq \mathbf Z_p^2,
+\]
+E2 gives a full-extension p-adic transgression class \(\epsilon_s\) whose valuation is
+\[
+v_p(\epsilon_s)=s
+\]
+up to the unit ambiguity from the choice of generator of \(H_2(D,\mathbf Z_p)\).
+
+The F1 question is whether a finite Zassenhaus window can determine finite truncations of this class.
+
+## 2. Pre-check
+
+- **Object:** finite truncation \(\epsilon_s\bmod p^m\), with intrinsic content at least its valuation when nonzero.
+- **Input:** the bare finite Zassenhaus quotient \(G/D_n(G)\); no presentation, lift, or hidden parameter \(s\).
+- **Functoriality:** the quotient is functorial under pro-p homomorphisms preserving the filtration.
+- **Gauge:** the scalar representative is only defined up to a \(\mathbf Z_p^\times\)-unit; valuation is the invariant tested here.
+- **Orientation bridge:** none is assumed. This is a test of the E2 extension object itself.
+- **q-blindness:** the K–Z family has fixed quotient \(D\simeq\mathbf Z_p^2\); no q-parameter is inserted.
+- **Separation:** test whether distinct \(s\) can have the same finite window but different \(\epsilon_s\bmod p^m\).
+- **Novelty:** this is not a new homological calculation; the possible new content is the finite-window non-factorization boundary.
+- **Stop:** if the same finite window supports different E2 valuations, factorization at that depth is impossible.
+
+## 3. Exact same-window lemma
+
+Let \(F=F(x,y,z)\) be the free pro-p group and let \(D_n(F)\) be its Zassenhaus filtration. For
+\[
+r_s=z^{p^s}[x,y]^{-1},
+\qquad
+G_s=F/\overline{\langle\!\langle r_s\rangle\!\rangle},
+\]
+functoriality gives
+\[
+D_n(G_s)=D_n(F)\,\overline{\langle\!\langle r_s\rangle\!\rangle}/\overline{\langle\!\langle r_s\rangle\!\rangle}.
+\]
+If \(p^s\ge n\), then
+\[
+z^{p^s}\in D_{p^s}(F)\subseteq D_n(F).
+\]
+Therefore, modulo \(D_n(F)\), the relator \(r_s\) reduces to \([x,y]^{-1}\). Hence
+\[
+\boxed{
+G_s/D_n(G_s)
+\cong
+F/\bigl(D_n(F),[x,y]\bigr)
+}
+\qquad(p^s\ge n).
+\]
+In particular, for any \(s,t\) satisfying \(p^s\ge n\) and \(p^t\ge n\),
+\[
+\boxed{G_s/D_n(G_s)\cong G_t/D_n(G_t).}
+\]
+
+This is the correct K–Z same-window statement. It does **not** identify the quotient with \(\mathbf Z_p^3/D_n\); the surviving commutators \([x,z]\), \([y,z]\) remain, exactly as found in the earlier critical correction.
+
+## 4. Separation of the E2 invariant
+
+E2 independently gives
+\[
+v_p(\epsilon_s)=s.
+\]
+Thus for \(s\ne t\), the full-extension p-adic invariants have different valuations.
+
+More strongly, if
+\[
+1\le s<t<m
+\]
+and \(p^s\ge n\), then
+\[
+\epsilon_s\not\equiv0\pmod{p^m},
+\qquad
+\epsilon_t\equiv0\pmod{p^m},
+\]
+up to the harmless unit ambiguity. Yet the same finite window occurs:
+\[
+G_s/D_n(G_s)\cong G_t/D_n(G_t).
+\]
+
+Therefore no map
+\[
+F_{n,m}\colon G/D_n(G)\longrightarrow
+\text{(finite data determining }\epsilon_G\bmod p^m)
+\]
+can exist uniformly on the K–Z family at a fixed depth \(n\) whenever the family contains two such parameters \(s,t<m\) with \(p^s\ge n\).
+
+Equivalently: **there is no uniform finite depth, independent of the hidden extension-depth parameter, that recovers the E2 p-adic class on the whole K–Z family.**
+
+## 5. Exact logical boundary
+
+This is deliberately weaker than the previously withdrawn cd=2/cd=3 matched-window theorem.
+
+It proves:
+
+- fixed-depth factorization uniformly across the K–Z family: **FAIL / CLOSED**;
+- uniform bound \(n=n(p,d,m)\) for recovering \(\epsilon\bmod p^m\) across all such extensions: **FAIL / CLOSED**;
+- a group-dependent depth \(n=n(G,m)\): **OPEN**;
+- the possibility that \(n=p^m\) (or another relation-depth bound) suffices for this particular family: **OPEN**;
+- a bare finite window canonically identifying the extension decomposition \(1\to N\to G\to D\to1\): **OPEN**;
+- orientation recovery from the E2 object: **OPEN**.
+
+The counterexample does not show that an individual \(G_s\) lacks a finite detecting window. Indeed, once the window reaches the relation depth, the tail may become visible.
+
+## 6. Independent check against the withdrawn argument
+
+The proof uses only the free presentation and functoriality of the Zassenhaus filtration. It never compares \(G_s\) with \(\mathbf Z_p^3\). Thus the earlier error involving surviving \([x,z]\) and \([y,z]\) cannot enter.
+
+The correct conceptual picture is:
+
+\[
+\text{same finite window for all }s\text{ with }p^s\ge n
+\quad\not\Rightarrow\quad
+\text{same full extension class}.
+\]
+
+The deep-tail parameter is genuinely invisible to any fixed lower window, even though the ambient nonabelian quotient itself changes relative to the abelian control.
+
+## 7. Consequence for Paper 4
+
+E2 is now a genuine negative finite-window boundary, but not yet a full Paper-4 theorem about cd=3 or orientation.
+
+The remaining load-bearing question is adaptive thresholding:
+\[
+\boxed{
+\text{Can an intrinsic finite window of depth controlled by }m
+\text{ recover }\epsilon\bmod p^m
+\text{ for each individual extension?}
+}
+\]
+
+No carrier computation is authorized before that question is answered. In particular, do not return to the withdrawn \(\mathbf Z_p^3\) matched pair.
+
+## Classification
+
+- E2 full-extension p-adic valuation \(v_p(\epsilon_s)=s\): **PASS / LOCAL**.
+- K–Z same-window lemma for \(p^s\ge n\): **PASS / CLOSED**.
+- uniform finite-depth factorization of E2 across the K–Z family: **FAIL / CLOSED**.
+- group-dependent/adaptive finite-window factorization: **OPEN / LOAD-BEARING**.
+- orientation recovery from E2: **OPEN**.
+- previous K–Z vs \(\mathbf Z_p^3\) matched-window no-go: **HISTORICAL / SUPERSEDED**.
+
+
+
+---
+
+# SOURCE: research/PAPER4_F1_MINIMAL_THRESHOLD_AND_DEMUSHKIN_STRESS_AUDIT_2026-10-02.md
+
+<!-- blob-sha: 5fb3648562d21fc88c10ad8403d962892b612578 -->
+
+# PAPER 4 — F1 MINIMAL THRESHOLD AND STANDARD DEMUSHKIN EXTENSION TEST — 2026-10-02
+
+## A. Exact K–Z threshold
+
+For
+\[
+G_s^{ab}\simeq \mathbf Z_p^2\oplus\mathbf Z/p^s
+\]
+and \(Q_n=G_s/D_n(G_s)\), put \(e(n)=\lceil\log_p n\rceil\). Then
+\[
+Q_n^{ab}\simeq(\mathbf Z/p^{e(n)})^2\oplus
+\mathbf Z/p^{\min(s,e(n))}.
+\]
+
+To recover \(\min(s,m)\) uniformly for all \(s\), one must have \(e(n)\ge m\). For \(m\ge2\), this is equivalent to
+\[
+n>p^{m-1}.
+\]
+Thus the exact smallest integer depth is
+\[
+\boxed{n_m^{\mathrm{KZ}}=p^{m-1}+1}.
+\]
+
+Sufficiency: at this depth \(e(n)=m\), so the finite abelianization recovers \(\min(s,m)\).
+
+Necessity: if \(n\le p^{m-1}\), then \(e(n)\le m-1\), and the two parameters
+\[
+s=e(n),\qquad t=m
+\]
+have identical \(\min(s,e(n))=e(n)\), while \(\min(s,m)=e(n)\ne m=\min(t,m)\). Hence no invariant extracted solely from this abelianization can uniformly recover \(\min(s,m)\) at that depth. More strongly, the same-window lemma gives identical full Zassenhaus windows whenever \(p^s\ge n\), so for suitable \(s<t<m\) no full-window factorization can recover the m-truncation.
+
+Boundary: \(m=1\) is trivial for the K–Z family with \(s\ge1\), since every \(\epsilon_s\) is divisible by \(p\).
+
+## B. Standard higher-rank q=0 Demushkin stress model
+
+For odd p and even \(d\ge4\), let
+\[
+D_d=\langle x_1,\ldots,x_d\mid
+r_D=[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d]\rangle,
+\]
+the standard q=0 Demushkin group. Consider the one-relator extension candidate
+\[
+\widetilde G_{s,d}
+=
+\langle z,x_1,\ldots,x_d
+\mid
+z^{p^s}=r_D
+\rangle,
+\]
+with N the normal closure of z and quotient \(D_d\).
+
+The initial Zassenhaus form of the defining relation is exactly the Demushkin quadratic relation \(r_D\). Since q=0 Demushkin groups are mild, the candidate presentation has the same quadratic initial form and is a natural mild test model; mildness gives cd_p \(\widetilde G_{s,d}=2\). However, a general theorem that this particular N is free pro-p is not being asserted here without an explicit kernel theorem. Therefore this is a **stress model for the homological mechanism, not yet a certified free-by-Demushkin example**.
+
+Its abelianization is nevertheless immediate:
+\[
+\widetilde G_{s,d}^{ab}
+\simeq
+\mathbf Z_p^d\oplus\mathbf Z/p^s.
+\]
+Thus the same finite-window calculation yields
+\[
+(\widetilde G_{s,d}/D_{p^m})^{ab}
+\simeq
+(\mathbf Z/p^m)^d\oplus\mathbf Z/p^{\min(s,m)}.
+\]
+
+So the K–Z adaptive abelianization mechanism is not rank-2-specific: it persists for the standard q=0 Demushkin relation at the level of this one-relator extension model.
+
+## C. q != 0 boundary
+
+For a standard Demushkin quotient with finite torsion invariant \(q=p^a\), the defining relation has an abelianized \(p^a x_1\) component. Replacing it by
+\[
+z^{p^s}=r_D
+\]
+gives, at the abelianized level, one relation
+\[
+p^s z=p^a x_1.
+\]
+Smith normal form therefore produces a torsion factor of order
+\[
+p^{\min(a,s)}
+\]
+rather than \(p^s\).
+
+Hence the simple abelianization detector saturates at the quotient's own Demushkin q-invariant. It cannot recover arbitrarily deep extension depth once \(s>a\).
+
+This is a genuine structural warning: the K–Z/q=0 mechanism is not a universal abelianization theorem. For q>0, higher nonabelian/filtered relation data would be required to see the tail beyond the intrinsic quotient torsion.
+
+## D. Current frontier
+
+- exact K–Z minimal valuation threshold \(p^{m-1}+1\): **PASS / CLOSED**;
+- q=0 higher-rank standard-relation stress model: **PASS / LOCAL** at abelianized homological level;
+- certification that the stress model's kernel N is free: **OPEN**;
+- q>0 abelianization saturation at \(\min(a,s)\): **PASS / LOCAL**;
+- general free-by-Demushkin finite-window recovery of extension depth: **OPEN / LOAD-BEARING**;
+- general finite scalar character beyond abelianization: **OPEN**;
+- E2 -> orientation: **OPEN**.
+
+## E. Stop / next authorized test
+
+Do not claim a general theorem from the stress model. The next decisive test is kernel certification for \(\widetilde G_{s,d}\), or alternatively an independently sourced free-by-Demushkin family with q>0 and variable extension depth. If the kernel is certified free and q>0 still exhibits saturation, then the program obtains a genuine positive/negative dichotomy:
+q=0: abelianization may detect arbitrary depth;
+q>0: abelianization alone cannot.
+
+
+
+---
+
+# SOURCE: research/PAPER4_GATE_D_SAME_WINDOW_DIFFERENT_ORIENTATION_AUDIT_2026-10-02.md
+
+<!-- blob-sha: 6d853f6813c65f78421a23233e2c7f980c4c81c0 -->
+
+# PAPER 4 GATE D — SAME-WINDOW / DIFFERENT-ORIENTATION COUNTEREXAMPLE — 2026-10-02
+
+## Decision
+
+Gate D is **FAIL / CLOSED** for the current admissible class of specially oriented pro-p RAAGs if the finite input is the un-oriented adjacent Zassenhaus window
+[
+W_q(G)\leftarrow W_{q+1}(G),
+]
+because the class contains isolated vertices whose ordinary/special status changes the canonical orientation without changing the underlying pro-p group at all.
+
+This is stronger than a same-window counterexample: the two oriented objects have the **same underlying group**, hence identical (W_n) for every (n), but different canonical orientations.
+
+## 1. Literature-controlled construction
+
+The definition of oriented pro-ℓ RAAGs permits a vertex to be special when it is isolated or is the terminus of a special edge. In particular, the source explicitly gives two oriented graphs on the same isolated vertices with identical geometric realization, one declaring a vertex ordinary and the other declaring it special (Remark 2.4). A specially oriented graph requires only that the terminus of every special edge be special, so an isolated special vertex is allowed.
+
+For a linear orientation λ, the canonical orientation is
+[
+\theta_{\Gamma,\lambda}(v)=1 quad(v\in V^o),
+qquad
+\theta_{\Gamma,\lambda}(v)=\lambda(1) quad(v\in V^s).
+]
+These are definition-level statements in Blumer–Quadrelli–Weigel.
+
+## 2. Counterexample with nontrivial q-layer retained
+
+To avoid the objection that a completely edgeless graph does not exhibit a visible q-defect, fix any nontrivial specially oriented graph Γ_0 containing at least one special edge, with (q=p^f) and
+[
+\lambda(1)=1+q.
+]
+Let (z) be a new isolated vertex and form two disjoint unions:
+[
+\Gamma_A=\Gamma_0\sqcup\{z\}_{\mathrm{ordinary}},
+qquad
+\Gamma_B=\Gamma_0\sqcup\{z\}_{\mathrm{special}}.
+]
+Both are specially oriented; if Γ_0 is chordal, both are chordal as well.
+
+Crucially, the presentation relation contributed by (z) is empty in either case. Therefore
+[
+G_{\Gamma_A,\lambda}=G_{\Gamma_B,\lambda}
+\cong G_{\Gamma_0,\lambda}\;\widehat{*}\;\mathbf Z_p
+]
+as **un-oriented pro-p groups**.
+
+Hence, for every (n),
+[
+W_n(\Gamma_A)\cong W_n(\Gamma_B),
+]
+and in fact the filtered groups can be identified through the identity on the common underlying group. In particular the adjacent windows at the q-jump are identical:
+[
+W_q(\Gamma_A)\leftarrow W_{q+1}(\Gamma_A)
+=
+W_q(\Gamma_B)\leftarrow W_{q+1}(\Gamma_B).
+]
+
+## 3. Orientation discrepancy
+
+On the common subgroup (G_{\Gamma_0,\lambda}), the canonical orientations agree. On the isolated factor generated by (z),
+[
+\theta_A(z)=1,
+qquad
+\theta_B(z)=1+q.
+]
+Modulo (p^k), with (q=p^{k-1}),
+[
+1+q\not\equiv1\pmod{p^k}.
+]
+Thus
+[
+[\theta_A\bmod p^k]\ne[\theta_B\bmod p^k].
+]
+
+At the degree-one level, if (\bar z\) denotes the isolated direction, the induced orientation functional differs by
+[
+\omega_A(\bar z)=0,
+qquad
+\omega_B(\bar z)=1
+]
+after the usual normalization (\lambda(1)=1+p^{k-1}).
+
+Therefore the same un-oriented finite adjacent window supports two distinct orientation targets.
+
+## 4. Why this is a genuine Gate D no-go
+
+This is not a failure of the proposed affine-hull observable, and it is not a carrier-specific failure.
+
+The counterexample has:
+
+- **same Object:** the underlying pro-p group is literally the same;
+- **same Input:** every finite Zassenhaus window is the same;
+- **same Functoriality:** the identity identifies the filtered objects;
+- **different Target:** the canonical orientations differ;
+- **no Gauge rescue:** this is not a presentation or lift change; the ordinary/special status of (z) is part of the oriented structure;
+- **q-blindness is irrelevant to the obstruction:** even an arbitrarily sophisticated functor of the complete un-oriented filtered group cannot distinguish the two targets;
+- **Separation is exact:** the two targets differ already on the isolated degree-one direction (z);
+- **Novelty boundary:** the negative result is a class-level observability obstruction, not a failed carrier;
+- **Stop:** no further carrier search can repair the statement on this admissible class.
+
+## 5. Relation to the earlier T1 work
+
+The recent T1 affine-hull failure remains valid but is now demoted from the primary obstruction to a **secondary realization failure**.
+
+The decisive hierarchy is:
+
+[
+\text{Gate D fails}
+\Longrightarrow
+\text{no }W_q\text{-only carrier can recover orientation on the current class}
+\Longrightarrow
+\text{T1 carrier construction is impossible without extra input}.
+]
+
+Thus the failure of the affine-hull construction was not the deepest obstruction. The deeper obstruction is that the target orientation is not a function of the declared un-oriented finite input on the current class.
+
+## 6. Exact boundary
+
+The result does **not** say that finite-window orientation recovery is impossible for every restricted class.
+
+It says:
+
+[
+\boxed{
+\text{For specially oriented pro-p RAAGs allowing isolated special vertices,}
+\quad
+W_q\leftarrow W_{q+1}
+\not\Rightarrow
+\theta\bmod p^k.
+}
+]
+
+A positive Paper 4 theorem can therefore only survive after adding a rigidity hypothesis that makes the ordinary/special status of isolated directions observable from the declared input, or after changing the input to include the missing orientation marking.
+
+The most natural restriction is to require every special vertex to be the terminus of at least one special edge. That restriction is **not yet proved sufficient**; it is a new admissibility boundary, not a rescue theorem.
+
+## Classification
+
+**Gate D: FAIL / CLOSED — current specially oriented RAAG class.**
+
+- same underlying group: PASS / decisive;
+- same finite windows: PASS / decisive;
+- different canonical orientation mod (p^k): PASS / decisive;
+- class-level no-go for un-oriented finite-window carriers: PASS / CLOSED;
+- restricted class with no isolated special vertices: OPEN;
+- Paper 4 general finite-window orientation theorem: OPEN only after redefining the admissible class/input.
+
+## Source
+
+Blumer, Quadrelli, Weigel, *Oriented right-angled Artin pro-ℓ groups and maximal pro-ℓ Galois groups*, especially the definition of oriented graphs/RAAGs and Remark 2.4 / Definition 2.5 / the canonical orientation definition. 
+
+
+---
+
+# SOURCE: research/PAPER4_GATE_T_GENERAL_PROOF_CLAIM_AUDIT_2026-10-03.md
+
+<!-- blob-sha: 19312712b60ff8e31cdd764814bd480b0d10e9ec -->
+
+# GATE T — GENERALIZATION CLAIM / INDEPENDENT REVIEW REQUIRED — 2026-10-03
+
+## Reported new result
+
+A new hand proof is reported for the relative relation-window threshold in the stress family, extending to general odd prime p, a>=1, and even rank d>=2:
+n_sep^rel(s)=p^s+1.
+
+The reported proof replaces the earlier generator-by-generator survival argument with an explicit test group E'. In E', z has order p^(s+1), y acts on z by u=1-q with q=p^a, and the defining relation is realized as z^(p^s)=r. The claimed consequences are:
+1. no choice of lift can make r trivial, hence the pushed-out finite extension is nonsplit;
+2. z^(p^s) has exact Zassenhaus depth p^s, so it survives at depth p^s+1;
+3. nonsplitting descends back to the original marked extension by quotient/pushout naturality;
+4. higher even rank is reduced by sending extra Demushkin generators to 1.
+
+GAP cross-checks are reported for 10 cases with p=3,5,7 and s<=4, including the previously unresolved s=3,n=28 boundary, and agree with earlier direct W computations.
+
+## Correction from critical review (2026-10-03)
+
+The following points are now explicitly corrected in this audit.
+
+1. The suggestion that exact depth of z^(p^s) can be proved by a cyclic quotient is **withdrawn**. In the proposed E', the relation [z,y]=z^(-q) puts z^q in the commutator subgroup; when a<=s, z^(p^s) dies in the abelianization. Hence there need not be a cyclic quotient in which z has order p^(s+1). The exact-depth step must instead be established by the filtered-algebra calculation used in the proof, with its coefficient ring and filtration stated precisely.
+2. The proof's use of F_p[[E']] must not be conflated with the Z_p[[G]] I-adic filtration. The relevant standard identification is the mod-p completed group-algebra augmentation filtration for the p-Zassenhaus series; the proof should name the exact theorem rather than saying vaguely “I-adic = normal-word degree.”
+3. The concrete E' construction and the calculation phi(r)=z^(p^s) are reported to be present in the proof note. They still need line-by-line verification, but their absence is no longer an identified gap.
+4. A Q-equivariance requirement is unnecessary. It is enough to exhibit the stated surjective homomorphism Psi and the commutative diagram with D, and then prove the extension/nonsplitting implication.
+5. The lift-independence calculation is reported complete: since ker(E' -> D)=<z>, lifts differ by z-powers (z^i x, z^j y), so the section obstruction must be checked against exactly those changes.
+6. The d>=4 reduction is not justified by the false general slogan “a split extension remains split under every quotient.” The actual proof uses the fact that the extra generators map into the abelian kernel <z>, so their mutual commutators become trivial. That specific argument is the one to audit.
+
+## Current classification before independent proof audit
+
+- Reported general relative threshold: CONDITIONAL / pending independent proof audit.
+- Computational cross-checks: PASS / LOCAL.
+- Orientation recovery: OPEN; the result separates s with a fixed a and does not by itself recover a or chi.
+- p=2, q=0, s=0: OUT OF SCOPE.
+- Unmarked/abstract-group realization: OPEN.
+- Novelty: OPEN / literature audit required.
+
+## Load-bearing proof point
+
+The critical hand-proof step is the assertion that the relevant I-adic filtration agrees with the required normal/Zassenhaus word depth. This must be stated with the exact coefficient ring and filtration theorem used. No promotion to PASS/CLOSED is authorized until this identification, the construction of E', and the quotient/pushout implication are independently checked.
+
+## Governance
+
+Do not replace the older a=1 correction by this report merely because the claim is stronger. The older a=1 OPEN status remains authoritative until the new proof survives independent audit. If the proof closes the gap, supersede the older correction explicitly with a dated correction and preserve the historical record.
+
+## Immediate next checks
+
+1. Verify the exact definition and presentation of E'.
+2. Verify the Q-equivariant quotient/pushout map from the original finite extension to E'.
+3. Verify nonsplitting in E' by a lift-independent argument.
+4. Verify exact Zassenhaus depth of z^(p^s), including the coefficient/filtration theorem.
+5. Verify the d>=4 reduction.
+6. Independently compare GAP cases, including p=3,s=3,a=1,n=28.
+7. Perform novelty/literature search only after the theorem statement is fixed.
