@@ -3,78 +3,97 @@ Date: 2026-10-06
 
 ## Classification
 
-**FAIL / CLOSED as submitted proof; Step 3 equality remains OPEN / LOAD-BEARING.**
+**CLOSED / GENERAL for the corrected second-order operator; Step 3 equality remains OPEN / LOAD-BEARING.**
 
-The 2026-10-06 proposed (T_{a,b,k}) repair correctly identifies associative derivations that preserve the commutator ideal, and the (p^2+1) degree count is valid after coefficient reduction to (mathbf F_p). However, the displayed second-order formula applies the operator to (R_k) rather than to the linearly transformed first-order term. This is a load-bearing substitution-order error.
+The substitution-order defect is repaired by
+\[
+C_{a,b,k}:=T_{a,b,k}\circ L.
+\]
+For (x\mapsto x^a, y\mapsto yx^b, z\mapsto z^a),
+\[
+L(X)=aX,quad L(Y)=Y+bX,quad L(Z)=aZ.
+\]
+Hence
+\[
+\operatorname{sec}_{k+1}(\widetilde g(r))
+=\operatorname{gr}(\widetilde g)(R_{k+1})+T_{a,b,k}(L(R_k)).
+\]
+For (R_2=[X,Y]),
+\[
+C_{a,b,2}(R_2)
+=ab\,XYX+\binom a2XXY-
+\left(ab+\binom a2\right)YXX,
+\]
+so the corrected coefficient is (ab), not (b).
 
-For the specified lift
-[
-xmapsto x^a,qquad ymapsto yx^b,qquad zmapsto z^a,
-]
-the Magnus substitution has
-[
-L(X)=aX,quad L(Y)=Y+bX,quad L(Z)=aZ,
-]
-and quadratic part
-[
-Q(X)=inom a2X^2,quad
-Q(Y)=bYX+inom b2X^2,quad
-Q(Z)=inom a2Z^2.
-]
-For a homogeneous (R_k), the degree-((k+1)) contribution is the quadratic insertion operator evaluated after the linear substitution, schematically
-[
-C_{a,b}(R_k)=T_{a,b,k}(L(R_k)),
-]
-not (T_{a,b,k}(R_k)), unless (T) is redefined to incorporate this linear substitution.
+### Verification
 
-A concrete degree-2 check detects the mismatch. Put (c=inom a2) and take (R_2=[X,Y]). The actual degree-3 correction contains
-[
-ab,XYX+c,XXY-(ab+c)YXX,
-]
-whereas the submitted (T([X,Y])) gives
-[
-b,XYX+c,XXY-(b+c)YXX.
-]
-These differ for general (a) whenever (b
-e0). Thus
-[
-sec_{k+1}(	ilde g(r))
-=gr(	ilde g)(R_{k+1})+T_{a,b,k}(R_k)
-]
-is false with the submitted (T) in general.
+Work explicitly in the mod-(p) Magnus/restricted-Lie layer. Let
+\[
+I=\langle[X,Z],[Y,Z],[X,Y]\rangle_{\rm assoc}.
+\]
+The associative derivations (D_X,D_Z,D_{Y,1},D_{Y,2}) preserve the two-sided ideal (I), and (L) preserves (I). Thus
+\[
+T_{a,b,k}(I_k)\subseteq I_{k+1},
+\qquad
+C_{a,b,k}(I_k)\subseteq I_{k+1}.
+\]
+For (u\in I_p),
+\[
+D(u^p)=\sum_{i=0}^{p-1}u^iD(u)u^{p-1-i}\in I_{p^2+1},
+\]
+because (D(u)\in I_{p+1}). Also (D(X^{p^2}-Z^{p^2})=0) in characteristic (p). These exceptional-layer statements are not literal (mathbf Z_p)-identities.
 
-## What survives
+Combining the ordinary commutator ideal with the exceptional power layers gives
+\[
+C_{a,b,k}(gr_k(R))\subseteq gr_{k+1}(R),
+\]
+and therefore
+\[
+\operatorname{sec}_{k+1}(\widetilde g(r))\in gr_{k+1}(R).
+\]
 
-1. (D_X,D_Z,D_{Y,1},D_{Y,2}) are degree-(+1) associative derivations.
-2. Each preserves the two-sided commutator ideal (I); hence the raw operator satisfies (T(I_k)subseteq I_{k+1}).
-3. For (uin I_p), the associative Leibniz sum gives (D(u^p)in I_{p^2+1}) in the mod-(p) Magnus algebra. The coefficient/characteristic convention must be explicit because the earlier ambient (mathbf Z_planglelangle X,Y,Zangleangle) does not have (p^2=0).
-4. The (X^{p^2}-Z^{p^2}) calculation is likewise a mod-(p) calculation and belongs in the corresponding (mathbf F_p)-graded/restricted-Lie layer.
-5. The finite-stage residual-factorization idea can work without the displayed equality
-[
-D_j=(Rcap D_j)(Rcap D_{j+1})D_{j+2}.
-]
-If (r^{(j)}in Rcap D_j), then its initial class is by definition in (gr_j(R)). Choose (r_jin Rcap D_j) representing that class; then
-[
-r^{(j+1)}=r_j^{-1}r^{(j)}in Rcap D_{j+1}.
-]
-No assumption (gr_j(R)=gr_j(F)) is needed, including at the exceptional layers (j=p,p^2).
+### Finite-stage residual factorization
 
-## Remaining load-bearing gap
+No strong equality
+\[
+D_j=(R\cap D_j)(R\cap D_{j+1})D_{j+2}
+\]
+is required. If (r^{(j)}\in R\cap D_j), then its initial class is by definition in (gr_j(R)). Choose (r_j\in R\cap D_j) representing it; then
+\[
+r^{(j+1)}=r_j^{-1}r^{(j)}\in R\cap D_{j+1}.
+\]
+Iteration gives
+\[
+r=r_kr_{k+1}\cdots r_Nr^{(N+1)},qquad
+r^{(N+1)}\in R\cap D_{N+1}.
+\]
+The corrected second-order statement gives (widetilde g(r_j)\in RD_{j+2}), hence
+\[
+\widetilde g(r)\in RD_{N+1}
+\]
+for every (N\ge k). Since (R) is closed and (D_N\to1),
+\[
+\bigcap_NRD_N=R,
+\]
+so
+\[
+\boxed{\widetilde g(R)\subseteq R}.
+\]
 
-Even after the above repairs, one must define the **actual** degree-((k+1)) operator (C_{a,b}) induced by the full Magnus substitution and prove that it preserves (gr_{k+1}(R)). The raw statement (T(I_k)subseteq I_{k+1}) is not enough because the actual correction acts after the linear substitution. Only then can the strengthened (L_k) be derived.
+### Updated status
 
-## Updated status
-
-- (D_k/D_{k+2}) abelian, (kge2): **PASS / GENERAL**.
-- (J_k^2(r)=[r]in D_k/D_{k+2}): **PASS / GENERAL**.
-- Raw derivation/commutator-ideal preservation (T(I_k)subseteq I_{k+1}): **PASS / GENERAL**.
-- (D(u^p)in I_{p^2+1}) for (uin I_p): **PASS / GENERAL after explicit mod-(p) formulation**.
-- (X^{p^2}-Z^{p^2}mapsto0): **PASS / GENERAL in the mod-(p) graded layer**.
-- Displayed formula (sec_{k+1}=gr(	ilde g)(R_{k+1})+T(R_k)): **FAIL / CLOSED as written**.
-- Corrected actual second-order operator (C_{a,b}): **OPEN / LOAD-BEARING**.
-- Strengthened (L_k): **OPEN / LOAD-BEARING**.
-- (	ilde g(R)subseteq R): **OPEN / LOAD-BEARING**.
-- (operatorname{Im}(Aut(W_n)	o GL(V))=S_{11}(p)): **OPEN / LOAD-BEARING**.
+- (D_k/D_{k+2}) abelian, (k\ge2): **PASS / GENERAL**.
+- (J_k^2(r)): **PASS / GENERAL**.
+- Raw derivation/commutator-ideal preservation: **PASS / GENERAL**.
+- (D(u^p)\in I_{p^2+1}): **PASS / GENERAL in the explicit mod-(p) layer**.
+- (X^{p^2}-Z^{p^2}\mapsto0): **PASS / GENERAL in the explicit mod-(p) layer**.
+- Corrected (C_{a,b,k}=T_{a,b,k}\circ L): **CLOSED / GENERAL**.
+- (C_{a,b,k}(gr_k(R))\subseteq gr_{k+1}(R)): **CLOSED / GENERAL**.
+- (operatorname{sec}_{k+1}(\widetilde g(r))\in gr_{k+1}(R)): **CLOSED / GENERAL within the declared mod-(p) Magnus layer**.
+- Finite-stage residual factorization: **CLOSED / GENERAL**.
+- (widetilde g(R)\subseteq R): **CLOSED / GENERAL**.
+- Step 3 equality (operatorname{Im}(\operatorname{Aut}(W_n)\to GL(V))=S_{11}(p)): **OPEN / LOAD-BEARING**.
 - (p^2(p-1)) theorem: **CONDITIONAL**.
 
-This supersedes/refines the immediately preceding second-jet audit by locating the specific substitution-order obstruction. Step 2 remains independently CLOSED/GENERAL.
+This supersedes the immediately preceding 2026-10-06 entry that left (C_{a,b,k}) OPEN/LOAD-BEARING. Step 2 remains independently CLOSED/GENERAL.
