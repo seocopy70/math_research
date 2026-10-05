@@ -98,3 +98,23 @@ The independent review confirms the Magnus (SC) proof and the resulting separati
 - **s=1:** deliberately not promoted; the certified exact-separation scope remains s\ge2.
 
 Classification remains **PASS / CLOSED** for the corrected declared stress-family scope; novelty remains a separate literature-audit question.
+
+
+## 2026-10-05 — weighted-Schreier source audit changes the novelty boundary
+
+The uploaded *Groups of positive weighted deficiency and their applications* TeX source was directly inspected. The source's `uniform2` + `weight_preserve` + `index_p0` + `cor1` chain derives
+[
+D_n(F)cap Ksubseteq D_{lceil n/pceil}(K)
+]
+for free pro-(p) (F) and index-(p) (K), after specializing the uniform weight to ordinary Zassenhaus degree. The no-cancellation step is explicit in `cor1` for arbitrary power-commutator factorizations, so there is no remaining gap at the SC derivation level.
+
+Accordingly:
+
+- SC mathematical validity: **PASS / CLOSED**.
+- SC as standalone novelty: **CONDITIONAL / likely not novel; do not claim novelty**.
+- Magnus prefix-code proof: **PASS / CLOSED as a self-contained reproof/coordinate bridge; no standalone novelty claim**.
+- Paper-4 certified theorem: **PASS / CLOSED** in the declared scope.
+- Publication novelty: **CONDITIONAL / OPEN**.
+- Authorized novelty target: intrinsic (arepsilon_s), exact (a=s) versus (a=\infty) separation, and the sharp threshold (n_{\rm sep}(s)=p^s+1).
+
+The source audit does **not** reopen or weaken the Paper-4 theorem. It narrows the claim about where the contribution is new.
