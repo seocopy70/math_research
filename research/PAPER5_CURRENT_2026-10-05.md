@@ -111,3 +111,24 @@ If uniform U_n-control fails, classify that route FAIL / CLOSED rather than weak
 ## 2026-10-06 — Fourth stabilization audit: R-containment premise rejected
 
 The latest proposed closure assumes that (W_p=F/(R D_{p+1})) being exponent (p) and class (p) forces (F^p,gamma_{p+1}subseteq R). This is false from the Paper 5 definition: the conclusions are only (F^p,gamma_{p+1}subseteq R D_{p+1}). The literature audit does not add the stronger containments as hypotheses. Therefore the proposed (M_{p+1}subseteq M_{k+1}) argument remains **OPEN / LOAD-BEARING**, and (W_n=W_p) for all (nge p) remains **OPEN / LOAD-BEARING**.
+
+
+## 2026-10-06 — Explicit-R Lie-induction proposal rejected
+
+The explicit relation subgroup
+[
+R=langle[x,z],[y,z],[x,y]^{-1}x^pz^{-p}angle^F
+]
+does give
+[
+operatorname{gr}_2(R)=operatorname{gr}_2(F)
+]
+and closes the one-step boundary (W_{p+1}=W_p). However, the attempted extension to all (k) via
+[
+operatorname{gr}_{k+1}(F)=[operatorname{gr}_k(F),operatorname{gr}_1(F)]
+]
+is invalid for the full Zassenhaus graded object: (operatorname{gr}(F)) is a free **restricted** Lie algebra, with independent (p)-power layers. The bracket induction controls only the ordinary Lie-bracket part and does not establish equality of all restricted layers.
+
+The separate (D_{p+1}) calculation does not supply arbitrary-degree restricted (p)-power control. Hence the all-(n) stabilization implication remains **OPEN / LOAD-BEARING**.
+
+This supersedes the session-level proposal to promote (W_n=W_p) from the explicit-R argument.
