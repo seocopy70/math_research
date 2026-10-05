@@ -2811,3 +2811,10 @@ Therefore:
 - exact \(p^2\) automorphism-order theorem: OPEN/LOAD-BEARING.
 
 Detailed audit: research/PAPER5_P2_GAP_COMPARISON_WINDOW_AUDIT_2026-10-06.md.
+
+
+## 2026-10-06 — Addendum 3: reverse-pi and IA-kernel cut rejected
+
+The proposed reverse map \(\pi:D_p\to V\) and the resulting \(3\to2\) IA-kernel cut were audited and rejected. The authoritative intrinsic package has the p-power map \(\pi_0:V\to D_p\); no canonical reverse map is induced by the p-power operation. Since \(D_p^p=1\) and \(D_p\le Z(W_p)\), IA modifications by \(f:V\to D_p\) leave both p-powers and commutators unchanged. Hence the established \(\mathcal J_p\) cannot impose a codimension-one condition on \(\operatorname{Hom}(V,D_p)\).
+
+Classification: reverse \(\pi:D_p\to V\) as p-power-derived structure = **FAIL / CLOSED**; \(K_b/K_{\mathcal J}\cong\mathbf F_p\) = **FAIL / CLOSED for this mechanism**; exact \(p^2\) automorphism-order theorem = **OPEN / LOAD-BEARING**.
