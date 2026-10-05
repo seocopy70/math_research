@@ -25,7 +25,7 @@ The former all-s transfer-defect boundary is now closed by the Magnus prefix-cod
 \[
 W_{p^s+1}(G_{s,s})\not\cong W_{p^s+1}(G_{s,\infty})
 \]
-for every odd p and s>=2 in the declared scope.
+for every odd p and s>=2 in the declared scope, with d even and r_2 nondegenerate.
 - Combined with lower-window blindness, the exact critical-boundary threshold is
 \[
 n_{\rm sep}(s)=p^s+1.
@@ -85,3 +85,16 @@ Consequently (SC_s) and (TF_s) are PASS / CLOSED. The stress-family Schreier rel
 The intrinsic transfer predicate is corrected to a line in (W^{ab}[p^s]) modulo (pW^{ab}), evaluated in (K^{ab}/p^sK^{ab}). This removes the lift ambiguity in the earlier shorthand (T=W^{ab}[p^s]).
 
 **Current classification: PASS / CLOSED for the exact unmarked threshold (n_{\rm sep}(s)=p^s+1) in the declared stress-family scope.**
+
+
+## 2026-10-05 — §9–§11 independent review corrections incorporated
+
+The independent review confirms the Magnus (SC) proof and the resulting separation mechanism, while correcting several statements in the first closure write-up.
+
+- **§9 survival:** nonzero order in the untruncated lattice is not enough. Modulo p^s, the a=s relation gives p^{s-1}U=0 and \((\sigma-1)^{p-1}A_0\equiv\sum_jA_j\pmod p\), hence the critical class is explicitly nonzero in the model quotient. The TF_s image lies in p^sK^ab and cannot kill it.
+- **§11 direct representatives:** for a=s, t=z-x_1 and \(\varepsilon_s=-p^{s-1}\sum_jA_j\ne0\); for a=∞, t=z and \(\varepsilon_s=0\) because p^{s-1}U lies in the relator image.
+- **Intrinsic scope:** d is even and the alternating quadratic form defined by r_2 is nondegenerate (basic example d=2, r_2=[x_1,x_2]). Because the defining power relation lies in D_3, the degree-2 cup form is unchanged on W_n (n\ge3), so the radical line \(\langle z^*\rangle\) is intrinsic.
+- **Schreier indexing:** 0\le j\le p-1.
+- **s=1:** deliberately not promoted; the certified exact-separation scope remains s\ge2.
+
+Classification remains **PASS / CLOSED** for the corrected declared stress-family scope; novelty remains a separate literature-audit question.
