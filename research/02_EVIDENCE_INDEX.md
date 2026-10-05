@@ -83,3 +83,17 @@ ot\cong W_{p^s+1}(G_t)) remains OPEN unless an explicit same-window invariant is
 | actual finite-window Frattini image factors through the intrinsic relation jet for general odd p | OPEN / LOAD-BEARING | none yet | FRM-0 / current Paper 5 audits |
 | intrinsic Aut(W_n)-equivariant filtered relation object | OPEN / LOAD-BEARING | FRM-0.2 pending | `research/PAPER5_FILTERED_RELATION_MODULE_FACTORIZATION_AUDIT_2026-10-05.md` |
 | uniform p^2 automorphism-order theorem | OPEN | local p=3,p=5 only | Paper 5 current summary |
+
+
+## 2026-10-05 — Magnus prefix-code closure of the Paper 4 transfer boundary
+| Claim | State | Evidence | Where to verify |
+|---|---|---|---|
+| General index-p comparison (D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K)) for free F | PASS / CLOSED | Magnus prefix-code proof + independent sparse checks | research/PAPER4_MAGNUS_PREFIX_CODE_AUDIT_2026-10-05.md |
+| (SC_s): (D_{p^s+1}(F)\cap K\subseteq D_{p^{s-1}+1}(K)) | PASS / CLOSED | consequence of general comparison | same audit |
+| (TF_s): image in (K^{ab}) lies in (p^sK^{ab}) | PASS / CLOSED | Jennings product formula + SC_s | same audit |
+| Stress-family (N\cap K=N) and quadratic commutator tail vanishes in (K^{ab}) | PASS / CLOSED in declared scope | Schreier/relator calculation | same audit |
+| Correct intrinsic transfer line and gauge-independent defect in (K^{ab}/p^sK^{ab}) | PASS / CLOSED in declared stress-family scope | corrected torsion-line formulation | same audit |
+| a=s vs a=infinity separation for all odd p,s>=2 | PASS / CLOSED in declared stress-family scope | TF_s + Schreier critical witness + intrinsic transfer invariant | same audit |
+| Exact stress-family threshold (n_{sep}(s)=p^s+1) | PASS / CLOSED in declared stress-family scope | lower-window blindness + critical separation | same audit |
+
+The 2026-10-04 rows declaring (SC_s), (TF_s), and the a=s/a=infinity boundary OPEN are **SUPERSEDED** by this 2026-10-05 proof audit. The historical order-jump route remains FAIL/CLOSED and is not restored.
