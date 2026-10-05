@@ -1772,3 +1772,41 @@ For \(n=p^s+1\), this is exactly (SC_s).
 No all-s transfer-defect theorem is promoted yet. The subsequent TF_s/truncation step remains separately OPEN / LOAD-BEARING.
 
 Classification: **OPEN / LOAD-BEARING candidate route; local symbolic checks PASS / LOCAL.**
+
+
+## 2026-10-05 — Magnus prefix-code proof closes (SC_s), (TF_s), and the all-s stress-family boundary
+
+A full proof audit of the new Magnus-coordinate attack is now complete. The finite-difference variables (w_{k,i}=\delta^kY_{0,i}) are augmentation-algebra coordinates, not group generators; the change from the Schreier augmentation generators is invertible over \(\mathbf F_p\). With (X_0=z-1) ordered largest in degree-lex, the initial terms are
+\[
+\operatorname{in}(w_{k,i})=X_0^kX_i,\qquad \operatorname{in}(U)=X_0^p.
+\]
+The set \(\{X_0^kX_i:0\le k<p\}\cup\{X_0^p\}\) is prefix-free, so distinct coordinate words have distinct leading monomials. This gives the completed-algebra lemma
+\[
+\operatorname{ord}_F(f)=\min_W d(W)
+\]
+for every nonzero completed augmentation series (f\) in the Schreier coordinates. Since every coordinate has ambient weight at most p, one obtains the general theorem
+\[
+\boxed{D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K)}
+\]
+for every index-p kernel (K) of a finitely generated free group (F). In particular (SC_s) is PASS / CLOSED.
+
+Independent sparse Magnus checks over \(\mathbf F_3\) found F-order/K-order (10/4) for \([z^9,x]\), \(\operatorname{ad}_z^9(x)\), and \(\operatorname{ad}_{z^3}^3(x)); 30 random products/inverses of these witnesses had K-order at least 4. Finite-difference determinants are 1 for p=3,5,7,11, and prefix-code collision tests through coordinate-word length 4 pass for p=3,5,7. The sharpness witness (z^{p^s}) has ambient/K order ratio p.
+
+From the Jennings product formula, (SC_s) immediately implies
+\[
+\operatorname{im}(D_{p^s+1}(F)\cap K\to K^{ab})\subseteq p^sK^{ab},
+\]
+so (TF_s) is PASS / CLOSED. For the stress relator, (R\subseteq K) and (D_{p^s+1}(F)\subseteq K), hence (N=D_{p^s+1}(F)R=N\cap K). The quadratic commutator tail lies in \([K,K]\), so its K-abelianization contribution vanishes; the resulting Schreier relation is the previously audited (p^{s-1}U-p^sA_i=0) at a=s.
+
+The intrinsic transfer formulation was corrected: (T=W^{ab}[p^s]) is not itself a single canonical line. The canonical line is the image (S_s(W)=\operatorname{im}(W^{ab}[p^s]\to W^{ab}/pW^{ab})), which is one-dimensional in the declared stress-family scope. The invariant is the class of (p^{s-1}V(t)) in (K^{ab}/p^sK^{ab}) for any lift t spanning (S_s(W)); changing the lift by pW changes the result by (p^sK^{ab}). Thus the predicate is genuinely unmarked and isomorphism-invariant.
+
+Combining (TF_s) with the model Schreier lattice nonvanishing closes the critical a=s transfer witness; the a=infinity side has no corresponding power relation in the U-direction and the normalized transfer defect vanishes. Therefore
+\[
+\boxed{W_{p^s+1}(G_{s,s})\not\cong W_{p^s+1}(G_{s,\infty})}
+\]
+for every odd p and s>=2 in the declared stress-family scope. Together with the already certified lower-window blindness, the exact threshold is
+\[
+\boxed{n_{\rm sep}(s)=p^s+1}.
+\]
+
+Classification: Magnus coordinate lemma **PASS / CLOSED**; (SC) and (SC_s) **PASS / CLOSED**; (TF_s) **PASS / CLOSED**; corrected intrinsic transfer invariant **PASS / CLOSED in scope**; a=s versus a=infinity **PASS / CLOSED**; exact stress-family threshold **PASS / CLOSED**. Detailed proof/evidence: `research/PAPER4_MAGNUS_PREFIX_CODE_AUDIT_2026-10-05.md`.
