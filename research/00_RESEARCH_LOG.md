@@ -2743,3 +2743,12 @@ Classification:
 - Previous (D_p\cong\mathbf F_p^2), (IA\cong\mathbf F_p^6), and (p^8(p-1)^2) claims: **FAIL / CLOSED / SUPERSEDED**.
 
 Detailed audit: `research/PAPER5_WP_CORRECTED_STRUCTURE_STEP3_CLOSURE_2026-10-06.md`.
+
+
+## 2026-10-06 — Paper 5 four-gate literature audit
+
+The four-gate literature audit (finite Zassenhaus windows / relation modules and initial forms / IA-Frattini image / p^2 automorphism-order phenomenon) closes the **literature novelty gate within the searched scope**. Jennings–Lazard, free pro-p/Magnus–Zassenhaus, Labute relation-ideal machinery, and general IA/Frattini facts are established prior art. No identified source gives the specific intrinsic finite-window calculation for the present W_p=F/(R D_{p+1}), nor the factorization of Aut(W_n) -> GL(W_n/Phi(W_n)) through the mixed degree-(2,p) relation-jet stabilizer with the observed p^2 order phenomenon.
+
+**Critical consistency correction:** the current corrected W_p result is D_p(W_p) isomorphic to F_p^3, IA(W_p) isomorphic to F_p^9, and |Aut(W_p)|=p^{11}(p-1)^2. Any literature-audit note stating D_p isomorphic to F_p^2, IA isomorphic to F_p^6, or |Aut|=p^8(p-1)^2 is historical/superseded and must not be propagated.
+
+Classification: **PASS / CLOSED for literature novelty boundary; OPEN / LOAD-BEARING for the W_{p+1} intrinsic factorization and p^2 theorem.** Detailed audit: research/PAPER5_LITERATURE_AUDIT_2026-10-06.md.
