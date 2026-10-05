@@ -170,3 +170,8 @@ D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K)
 for free F and index-p kernel K. Therefore (SC_s) and the abelianized transfer bound (TF_s) are PASS / CLOSED. The corrected intrinsic transfer invariant, defined using the canonical line im(W^{ab}[p^s] -> W^{ab}/pW^{ab}) and evaluated in K^{ab}/p^sK^{ab}, closes the a=s versus a=infinity boundary in the declared stress-family scope. Hence the exact critical-boundary threshold is now PASS / CLOSED: n_sep(s)=p^s+1.
 
 Evidence: research/PAPER4_MAGNUS_PREFIX_CODE_AUDIT_2026-10-05.md. The old order-jump proof remains FAIL/CLOSED/SUPERSEDED and is not revived.
+
+
+## 2026-10-05 — Paper 5 Step 2 audit correction
+
+The Hall–Petrescu p-power sublemma for odd p passes: for u∈D_2, (xu)^p≡x^p mod D_{p+1}. But this controls only the p-power component. Under x'=xu, y'=yv, the commutator [x,y] changes by D_3, and there is no canonical projection D_3→D_p/D_{p+1}. Therefore the proposed θ:J_2→D_p/D_{p+1} is not yet shown well-defined. Step 2 remains **OPEN / LOAD-BEARING**; no equality or uniform p^2(p−1) theorem is promoted.
