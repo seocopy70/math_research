@@ -1090,3 +1090,23 @@ Classification: PASS / CLOSED for the abstract projective relation-jet stabilize
 The detailed proof audit is recorded in research/PAPER5_RELATION_JET_AUDIT.md.
 
 Immediate next gate: prove the finite-window Frattini action factors through the degree-(2,p) relation jet, then seek equality for general odd p or a genuinely new-prime independent certificate. If factorization fails, record the counterexample; do not repair the jet ad hoc.
+
+
+## 2026-10-05 — Paper 5 factorization lemma Step-B audit correction
+
+The current load-bearing gate remains the **general odd-(p) factorization of the finite-window Frattini image through the two-level relation jet**. The proposed proof skeleton is accepted as the right target, but three shortcuts are rejected.
+
+1. **B-1 lift shortcut:** Hopficity/finite (p)-group status of (W_n) does not imply that every (Aut(W_n)) element lifts to (Aut(F)) stabilizing (R_n). The lift problem is a separate theorem. Status: **FAIL / CLOSED as a proof shortcut; underlying lift question OPEN**.
+2. **B-2b raw mixed jet:** for a mixed relation (rin D_2setminus D_3), (pi_p(r)) is not defined unless (rin D_p). The secondary degree-(p) datum must be defined intrinsically through a filtered relation module/extension, not by simply writing ((pi_2(r),pi_p(r))). Status: **OPEN / LOAD-BEARING**.
+3. **B-3 scalar:** relation preservation naturally gives a projective relation line and hence an arbitrary scalar (lambdainmathbf F_p^	imes), not automatically only (pm1). The fixed-vector versus line-stabilizer distinction must remain explicit.
+
+Conditional local fact retained: if a correction (cin[R_n,F]) is established and (R_nsubseteq D_2), then (cin D_3), so it is invisible in (D_2/D_3).
+
+### Current decision
+The next authorized mathematical task is now **definition + factorization proof of an intrinsic filtered relation jet**. Do not start another prime sweep or resume `37252335078` as a substitute for this proof. The quotient-action computation remains a separate auxiliary gate.
+
+Classification:
+- abstract marked/projective stabilizer formulas: **PASS / CLOSED**;
+- p=3/p=5 finite realization certificates: **PASS / LOCAL**;
+- general odd-(p) finite-window factorization: **OPEN / LOAD-BEARING**;
+- uniform (p^2) automorphism-order theorem: **OPEN**.
