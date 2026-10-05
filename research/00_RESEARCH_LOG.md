@@ -1,4 +1,6 @@
-undefined
+# Research Log — Active/Post-Paper-3 Chronology
+
+> **Scope:** This chronological ledger is for active research after Papers 1–3 were frozen. Papers 1–3 historical provenance is indexed at `research/archive/PAPERS1-3_RESEARCH_HISTORY.md` and remains in their dated proof/audit records. Do not re-copy frozen Paper 1–3 history into this file.
 
 ## 2026-10-04 — TF_s literature review and subgroup-comparison correction
 
