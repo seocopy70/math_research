@@ -264,3 +264,43 @@ Therefore the claimed implication (\tilde g(R)\subseteq RD_{p+1}=R) is invalid. 
 \(​operatorname{Im}(\operatorname{Aut}(W_n)\to GL(V))=S_{11}(p)\) remains OPEN/LOAD-BEARING and the uniform (p^2(p-1)) theorem remains CONDITIONAL.
 
 Detailed audit: `research/PAPER5_STEP3_Dp1_SUBSET_R_AUDIT_2026-10-05.md`.
+
+
+## 2026-10-05 — Step 3 second-order lifting closure rejected
+
+**Result classification: FAIL / CLOSED as submitted proof; Step 3 equality remains OPEN / LOAD-BEARING.**
+
+The proposed (k\ge2) “second-order lifting law” does not close the kernel-preservation problem.
+
+The decisive type error is the assertion
+[
+in_{k+1}(r_k)=in_{k+1}(\widetilde g(r))=0
+]
+while (r_k,\widetilde g(r)\in D_k\setminus D_{k+1}). Their canonical initial forms live in (D_k/D_{k+1}), not (D_{k+1}/D_{k+2}). A degree-((k+1)) secondary class requires a chosen filtered section/jet or an equivalent intrinsic relation-module construction. None is supplied.
+
+The BCH display
+[
+a=\exp(X+A+\cdots),qquad b=\exp(X+B+\cdots)
+]
+is also not an intrinsic representation of arbitrary elements of a free pro-(p) group with respect to the Zassenhaus filtration. (X\in gr_k) and (A\in gr_{k+1}) are graded classes, not canonical Lie-algebra logarithms. Thus the BCH calculation cannot serve as a general Zassenhaus lifting lemma without an independently constructed filtered Lie/Magnus model and compatible section.
+
+For (k\ge2), it is true that ([D_k,D_k]\subseteq D_{2k}\subseteq D_{k+2}), so (D_k/D_{k+2}) is abelian. But the exact sequence
+[
+0\to D_{k+1}/D_{k+2}\to D_k/D_{k+2}\to D_k/D_{k+1}\to0
+]
+has no canonical splitting supplied by the argument. Therefore equality of first-order initial forms does not imply equality of second-order jets.
+
+Consequently:
+- (r_k^{-1}\widetilde g(r)\in D_{k+1}): **PASS / LOCAL**, conditional on first-order graded invariance and the chosen (r_k);
+- claimed BCH second-order law: **FAIL / CLOSED**;
+- canonical second-order lifting law: **OPEN / LOAD-BEARING**;
+- strengthened (L_m): **OPEN / LOAD-BEARING**;
+- (widetilde g(R)\subseteq R): **OPEN / LOAD-BEARING**;
+- Step 3 equality (operatorname{Im}=S_{11}(p)): **OPEN / LOAD-BEARING**;
+- (p^2(p-1)) theorem: **CONDITIONAL**.
+
+The (p) and (p^2) exceptional-layer discussion cannot repair this missing first lift. It can only be used after a correctly defined residual class reaches those layers.
+
+Detailed audit: `research/PAPER5_STEP3_SECOND_ORDER_LIFTING_AUDIT_2026-10-05.md`.
+
+This supersedes the immediately preceding claim that the second-order law closed Step 3. It does **not** reopen the independently audited Step 2 filtered-extension result.
