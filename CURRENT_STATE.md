@@ -1079,3 +1079,14 @@ The next load-bearing question is now structural: derive the four stabilizer for
 The four p=3/p=5 stabilizer formulas are now organized by a common two-level relation jet in degrees 2 and p. The resulting candidate stabilizers have order ratios p^2(p-1) for both a=1 and a=2, explaining the observed p^2 p-primary gap whenever the IA order is unchanged. This is the current load-bearing structural hypothesis.
 
 Status: **OPEN / LOAD-BEARING**. The next proof task is not another blind GAP scan. It is to formalize the relation-jet object in the truncated restricted Lie algebra, prove its GL stabilizer formulas, and then prove (or find a counterexample to) the factorization of the actual Frattini image through this jet stabilizer for general odd p.
+
+
+## 2026-10-05 — Paper 5 abstract two-level relation-jet stabilizer theorem closed
+
+The current load-bearing structural hypothesis was separated into its intrinsic algebraic part and its finite-window realization part. For odd p, the projective stabilizers of the four two-level relation jets [x,y]+x^[p], [x,y]+z^[p]-x^[p], [x,y], and [x,y]+z^[p] were derived directly from the bracket and restricted-power transformation laws. Their stabilizers are respectively S01={ upper triangular matrices with diagonal pattern (a,1,e) and a,e nonzero }, S11={ matrices with diagonal pattern (a,1,a) and arbitrary x-y shear }, S02={ block upper parabolic with A in GL2(Fp), arbitrary 2-vector, and e nonzero }, and S12={diag(A,det A)}. The orders give |S01|/|S11|=|S02|/|S12|=p^2(p-1), hence p-primary ratio p^2.
+
+Classification: PASS / CLOSED for the abstract projective relation-jet stabilizer theorem under the declared odd-p marked definitions. This is not yet a theorem about the actual finite-window automorphism image: the factorization/equality Im(Aut(W_n)->GL(V))=S_{s,a} is still OPEN / LOAD-BEARING in general, with p=3 and p=5 finite certificates only PASS / LOCAL. No uniform p^2 automorphism-order theorem is promoted.
+
+The detailed proof audit is recorded in research/PAPER5_RELATION_JET_AUDIT.md.
+
+Immediate next gate: prove the finite-window Frattini action factors through the degree-(2,p) relation jet, then seek equality for general odd p or a genuinely new-prime independent certificate. If factorization fails, record the counterexample; do not repair the jet ad hoc.
