@@ -1730,3 +1730,45 @@ A dedicated navigation layer is now established at **research/90_RESEARCH_GUIDE/
 Documentation rule: \`CURRENT_STATE\` / \`RESEARCH_MAP\` / \`PAPER*_CURRENT\` / audit-evidence remain authoritative for mathematical status; \`00_RESEARCH_LOG\` remains chronological; \`archive\` preserves historical material; \`90_RESEARCH_GUIDE\` is the human-understanding/explanation/evaluation layer.
 
 Classification: **PASS/CLOSED — documentation architecture only**. No mathematical claim or research status changed.
+
+
+## 2026-10-05 — Magnus prefix-code attack on (SC_s): first independent verification
+
+A new attack on the load-bearing comparison
+\[
+(SC_s):\qquad D_{p^s+1}(F)\cap K\subseteq D_{p^{s-1}+1}(K)
+\]
+was independently audited. The central idea is to work in the completed Magnus algebra of K rather than compare individual group-level factors.
+
+### Critical correction to the proposed proof
+The finite-difference objects \(w_{k,i}=\delta^k(Y_{0,i})\), with \(Y_{j,i}=z^j x_i z^{-j}-1\), are **not group elements/free group generators** when \(\delta=\sigma-1\) is applied linearly in the augmentation algebra. The correct statement is that \(w_{k,i}\) are new **topological augmentation-algebra coordinates**: the transformation from \(Y_{j,i}\) to \(w_{k,i}\) is lower unitriangular over \(\mathbf F_p\), hence an invertible continuous linear change of generators of \(\mathbf F_p[[K]]\).
+
+This correction is essential. It does not invalidate the Magnus argument; it changes its algebraic formulation.
+
+### Independent computation
+For \(p=3,5\), direct truncated noncommutative Magnus expansion gives
+\[
+\operatorname{in}(w_{k,i})=X_0^kX_i,\qquad 0\le k<p,
+\]
+with F-degree \(k+1\), and \(u=z^p-1\) has initial monomial \(X_0^p\). The finite-difference coefficient matrix has determinant 1 for \(p=3,5,7,11\).
+
+The set
+\[
+\{X_0^kX_i:0\le k<p,\ i\ge1\}\cup\{X_0^p\}
+\]
+is a prefix code. Exhaustive concatenation tests through word length 3 for \(p=3,5,7\) found no collisions of leading monomials.
+
+### Current assessment
+The corrected Magnus-coordinate/prefix-code route is therefore **OPEN / PROMISING**, not yet PASS. The remaining proof obligation is to formalize the completed-algebra coordinate change and the leading-term multiplicativity for arbitrary infinite series, then deduce
+\[
+\operatorname{ord}_F(f)=\min_W d(W)
+\]
+for nonzero \(f\in\mathbf F_p[[K]]\). Once this is established, every word of K-length \(\ell\) has F-degree at most \(p\ell\), giving
+\[
+D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K).
+\]
+For \(n=p^s+1\), this is exactly (SC_s).
+
+No all-s transfer-defect theorem is promoted yet. The subsequent TF_s/truncation step remains separately OPEN / LOAD-BEARING.
+
+Classification: **OPEN / LOAD-BEARING candidate route; local symbolic checks PASS / LOCAL.**
