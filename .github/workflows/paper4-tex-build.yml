@@ -39,10 +39,21 @@ jobs:
           assert 'uniformly optimal for every' in text
           assert 'n' in text and 'sep' in text and 'p' in text
           assert 'References' in text
+          assert 'Seo Seongkyo' in text
+          assert 'direct order jump' not in text
+          assert 'order-jump separation' not in text
           assert '?' not in text
           Path('pdfinfo.txt').write_text(f'Pages: {len(r.pages)}\nSize: {p.stat().st_size}\n', encoding='utf-8')
           PY
           sha256sum main.pdf | tee main.pdf.sha256
+          sha256sum paper4/main.tex | tee main.tex.sha256
+          {
+            echo "commit=$(git rev-parse HEAD)"
+            echo "source_blob_sha=$(git hash-object paper4/main.tex)"
+            echo "source_sha256=$(cut -d' ' -f1 main.tex.sha256)"
+            echo "pdf_sha256=$(cut -d' ' -f1 main.pdf.sha256)"
+            cat pdfinfo.txt
+          } > publication-manifest.txt
           test -s main.pdf
           test -s main.txt
       - name: Upload PDF artifact
@@ -53,3 +64,5 @@ jobs:
             main.pdf
             main.pdf.sha256
             pdfinfo.txt
+            publication-manifest.txt
+            main.tex.sha256
