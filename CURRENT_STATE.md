@@ -936,3 +936,24 @@ The next actual attack is fixed as follows.
 The **9+9+54 orbit decomposition is explicitly not treated as the source of the p^2 automorphism-order gap**. It remains an orbit-side detector only. The actual IA kernel/order and the linear/Frattini image must be computed independently before any causal localization of the gap.
 
 Classification of the plan: **OPEN / ACTIVE**. No p^2-gap causal theorem is promoted by this ordering decision.
+
+
+## 2026-10-05 — Paper 4 R1 corrected GAP runtime certificate PASS
+
+The corrected GitHub Actions execution **37246103653** was independently inspected. It ran commit `e1f6b233b4b5a0e8ce990709463fee16c3f42e12` with GAP 4.12.1, used `set -euo pipefail`, and the GAP job completed successfully. The decisive log contains all three required rank witnesses and the hard marker `R1_CERTIFICATE=PASS`:
+
+- rank 2: alpha=(0,1), cocycle=e_1, delta(r)=18, v_3(delta)=2, psi(r)=1;
+- rank 3: alpha=(0,1,0), cocycle=e_1, delta(r)=18, v_3(delta)=2, psi(r)=1;
+- rank 4: alpha=(0,0,0,1), cocycle=e_3, delta(r)=18, v_3(delta)=2, psi(r)=1.
+
+This closes the previously OPEN GAP-runtime certification layer. It does **not** strengthen R1 beyond its defined scope: R1 certifies the marked affine obstruction reproduction in ranks 2/3/4, not abstract unmarked same-window separation, orientation recovery, or the all-s threshold theorem.
+
+Classification:
+- corrected GAP runtime certificate: **PASS / CLOSED**;
+- R1 marked affine rank-2/3/4 computation/reproduction: **PASS / CLOSED**;
+- abstract unmarked same-window separation: **OPEN / LOAD-BEARING**;
+- all-s a=s versus a=infinity boundary: **OPEN / LOAD-BEARING**.
+
+Artifact: `paper4-r1-gap-certificate`, artifact ID 11319182263. No Paper 5 computation is used as evidence.
+
+Immediate active branch remains Paper 5; next gate is p=5,n=6,(s,a)=(1,1) with the audited GAP-native faithful Frattini-action pipeline.
