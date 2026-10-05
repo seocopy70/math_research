@@ -111,3 +111,13 @@ The intrinsic p-power map already fixed in the W_p audit has type \(\pi_0:V\to D
 More decisively, the proposed kernel cut cannot work even if an arbitrary reverse map were artificially supplied. For \(f\in\operatorname{Hom}(V,D_p)\), the corresponding IA modification changes a lift \(g\) to \(g f(\bar g)\). Since \(D_p\le Z(W_p)\) and \(D_p^p=1\), \((gd)^p=g^p\) and commutators with \(D_p\) are unchanged. Hence IA acts trivially on the established intrinsic data \(\pi_0:V\to D_p\), \(b:\wedge^2V\to D_p\), and the relation package. Thus preservation of \(\mathcal J_p\) does not impose \(f(v_z)\in\ker(\text{reverse-}\pi)\), and no \(3\to2\) cut of \(\operatorname{Hom}(L,D_p)\) follows.
 
 Consequently \(|K_b:K_{\mathcal J}|=p\) is **FAIL / CLOSED for this mechanism**. The proposed \(p^2=p\cdot p\) comparison via \(\operatorname{Aut}_b/\operatorname{Aut}_{\mathcal J}\) is rejected. The exact observed \(p^2\) automorphism-order gap remains **OPEN / LOAD-BEARING** and must be sought in a different comparison object or a higher filtered/extension-level action genuinely visible to IA.
+
+## 2026-10-06 — Addendum 4: model-identity correction
+
+The previous discussion implicitly identified two different groups. This is rejected.
+
+The central Step-3 model is [x,z]=[y,z]=1, [x,y]=x^p z^{-p}, whereas the actual GAP model used in the certified p=3,n=4 calculation is G=<z,x,y | z^3=x^3[x,y]>, with no centrality relations for z. Consequently the central-model S'_{11}(p), D_p-centrality, and its IA-blind no-go do not directly address the observed p=3,n=4 p^2 gap.
+
+Classification: model identification = **FAIL / CLOSED / SUPERSEDED**; actual p=3,n=4 p^2 gap mechanism = **OPEN / LOAD-BEARING**; actual gap remains locally a Frattini/GL-image defect, not an IA defect, by certified runtime.
+
+Next gate: audit the actual mkG(s,a) window, beginning with (s,a)=(1,1), and derive its intrinsic embedded stabilizer in GL_3(3).
