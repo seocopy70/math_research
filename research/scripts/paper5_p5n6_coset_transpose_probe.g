@@ -52,7 +52,7 @@ run:=function(s,a)
   Phi:=FrattiniSubgroup(W); basis:=[gens[2],gens[3],gens[1]];
   autGens:=Concatenation(A.glAutos,A.agAutos);
   actual:=Group(List(autGens,alpha->CosetPerm(alpha,W,Phi,basis)));
-  Cand:=Group(D(1,2),ShearMat(1,2,1),ShearMat(1,3,1),ShearMat(2,3,1),D(3,2));
+  if s=0 then Cand:=Group(D(1,2),ShearMat(1,2,1),ShearMat(1,3,1),ShearMat(2,3,1),D(3,2)); else Cand:=Group([[2*One(Fld),0*One(Fld),0*One(Fld)],[0*One(Fld),One(Fld),0*One(Fld)],[0*One(Fld),0*One(Fld),2*One(Fld)]],ShearMat(1,2,1)); fi;
   pmats:=List(GeneratorsOfGroup(Cand),m->MatPerm(TransposedMat(m)));
   Cand:=Group(pmats);
   eq:=actual=Cand;
