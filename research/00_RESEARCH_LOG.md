@@ -2589,3 +2589,56 @@ with order (p^2(p-1)^2). This is only a lower bound; equality with (S'_{11}(p)) 
 while the exact order remains **OPEN**.
 
 Detailed audit: `research/PAPER5_STEP3_S11_UPPER_BOUND_COUNTEREXAMPLE_AUDIT_2026-10-06.md`.
+
+
+## 2026-10-06 — Paper 5 Step 3 corrected image target S'11
+
+The previous (S_{11}(p)) target is permanently rejected. The finite-window calculation at (n=p) gives the explicit automorphisms
+\[
+g_{m,a}:x\mapsto x^m z^{a-m},\qquad y\mapsto y,\qquad z\mapsto z^a,
+\qquad m,a\in\mathbf F_p^\times,
+\]
+and
+\[
+[x^m z^{a-m},y]=x^{pm}z^{-pm}
+=(x^m z^{a-m})^p(z^a)^{-p}.
+\]
+On
+\[
+A=W_p^{ab}=\mathbf Z_p^3/\langle p(e_x-e_z)\rangle,
+\]
+the torsion generator satisfies
+\[
+g_*(e_x-e_z)=m(e_x-e_z),
+\]
+so torsion preservation allows (m\ne a). Thus the scalar-equality step is **FAIL / CLOSED**.
+
+The corrected explicit image subgroup is
+\[
+S'_{11}(p)=
+\left\{
+\begin{pmatrix}
+m&b&0\\
+0&1&0\\
+a-m&d&a
+\end{pmatrix}
+:
+m,a\in\mathbf F_p^\times, b,d\in\mathbf F_p
+\right\},
+\]
+with
+\[
+|S'_{11}(p)|=p^2(p-1)^2.
+\]
+
+Classification:
+- (n<p: W_n\cong(\mathbf F_p)^3, IA(W_n)=1, \operatorname{Aut}(W_n)=GL_3(\mathbf F_p)): **PASS / CLOSED**.
+- (IA(W_p)\cong\operatorname{Hom}(\mathbf F_p^3,\mathbf F_p^2)\cong\mathbf F_p^6): **PASS / CLOSED**.
+- (S_{11}(p)) with order (p^2(p-1)): **FAIL / CLOSED**.
+- (S'_{11}(p)\subseteq\operatorname{Im}(\operatorname{Aut}(W_p)\to GL(V))): **PASS / CLOSED**.
+- Exact equality \(\operatorname{Im}=S'_{11}(p)\): **OPEN / LOAD-BEARING**; an upper-bound proof is still required.
+- Consequently \(|\operatorname{Aut}(W_p)|\ge p^8(p-1)^2\), while the exact order remains **OPEN**.
+- The already audited (J_k^2), corrected (C_{a,b,k}=T_{a,b,k}\circ L), and kernel-preservation route remain **PASS / CLOSED / GENERAL** within their declared scope.
+
+This supersedes the previous (S_{11})-based Step 3 target. Detailed audit:
+`research/PAPER5_STEP3_S11_UPPER_BOUND_COUNTEREXAMPLE_AUDIT_2026-10-06.md`.
