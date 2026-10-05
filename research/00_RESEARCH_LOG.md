@@ -2197,3 +2197,8 @@ Authorized next sequence:
 5. only afterward, pre-registered same-prime falsification computations and \(n=p+2\) checks.
 
 Evidence: `research/PAPER5_NEXT_STEP_AUDIT_2026-10-05.md`.
+
+
+## 2026-10-05 — Paper 5 Step 2 audit correction
+
+The Hall–Petrescu p-power sublemma for odd p passes: for u∈D_2, (xu)^p≡x^p mod D_{p+1}. But this controls only the p-power component. Under x'=xu, y'=yv, the commutator [x,y] changes by D_3, and there is no canonical projection D_3→D_p/D_{p+1}. Therefore the proposed θ:J_2→D_p/D_{p+1} is not yet shown well-defined. Step 2 remains **OPEN / LOAD-BEARING**; no equality or uniform p^2(p−1) theorem is promoted.
