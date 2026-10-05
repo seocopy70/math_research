@@ -406,3 +406,71 @@ But all-(n) stabilization remains
 - (W_n=W_p) for all (nge p): **OPEN / LOAD-BEARING**.
 
 No arbitrary-(n) promotion is authorized from this proposal.
+
+
+## 2026-10-06 — The decisive ((*)) test: FAIL / CLOSED
+
+The proposed final test
+[
+(*)qquad F^psubseteq R,D_{p+1}(F)
+]
+can be rejected directly for the explicit
+[
+R=langle[x,z],[y,z],[x,y]^{-1}x^pz^{-p}angle^F.
+]
+
+Define a homomorphism
+[
+phi:F=langle x,y,zanglelongrightarrow C
+]
+to the procyclic pro-(p) group (Ccongmathbb Z_p) by
+[
+phi(x)=t,qquad phi(z)=t,qquad phi(y)=1.
+]
+Every generator of (R) maps to (1):
+[
+[x,z]mapsto1,quad [y,z]mapsto1,quad
+[x,y]^{-1}x^pz^{-p}mapsto t^pt^{-p}=1.
+]
+Hence
+[
+phi(R)=1.
+]
+Also
+[
+phi(D_{p+1}(F))subseteq D_{p+1}(C).
+]
+But
+[
+phi(x^p)=t^p
+otin D_{p+1}(C),
+]
+since for (Ccongmathbb Z_p),
+[
+D_p(C)=C^p,qquad D_{p+1}(C)=C^{p^2}
+]
+(and (t^p) represents the nonzero degree-(p) class).
+
+Therefore
+[
+x^p
+otin R,D_{p+1}(F),
+]
+so
+[
+oxed{F^p
+otsubseteq R,D_{p+1}(F).}
+]
+
+This is stronger and cleaner than a Magnus-expansion computation: it is a quotient obstruction. Equivalently, the degree-(p) (p)-power class of (x) survives after killing (R).
+
+Consequently the proposed sufficient condition ((*)) is not available for this explicit (R), and the restricted-(p)-power obstruction is genuine.
+
+Important logical correction: failure of ((*)) by itself does **not** prove that all-(n) stabilization fails. It proves that the attempted restricted-Lie induction cannot be repaired by imposing ((*)), and that any proof of (W_n=W_p) would need a different mechanism. A strict-shrinkage witness such as (x^{p^2}
+otin R D_{p^2+1}) is a separate claim and remains to be proved.
+
+Classification:
+- ((*)): **FAIL / CLOSED** for the explicit (R);
+- degree-(p) restricted obstruction: **PASS / CLOSED**;
+- all-(n) stabilization: **OPEN / LOAD-BEARING**;
+- strict shrinkage at (2p) or (p^2): **OPEN**.
