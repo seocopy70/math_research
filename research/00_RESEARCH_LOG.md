@@ -2157,3 +2157,25 @@ Latest workflow-audit commit:
 `639b0c9f84307570970bec884b5eb7290ecad5c9`.
 
 CI artifact verification is still pending/not directly exposed by the available workflow-run connector (which only returns pull-request-triggered runs). Therefore no new PDF SHA is declared yet. The prior Paper 4 PDF build remains historical; final status awaits the current source's CI PDF artifact audit.
+
+
+## 2026-10-05 — Paper 4 publication artifact freeze
+
+**Result classification: PASS / CLOSED.**
+
+The final Paper 4 manuscript source was reconciled with the authoritative theorem state. The stale abstract order-jump sentence was removed; the critical-window (a)-classification was included; bibliography metadata was checked against publisher records; LaTeX tag/text-mode errors and the CI PDF path error were repaired.
+
+Final publication build:
+- manuscript commit: `b3e0e3cd85f17ab038815030b2643e6be002c4fd`
+- workflow: `paper4-tex-build`
+- CI run: `37291334999` — PASS
+- PDF: 17 pages, 423897 bytes
+- PDF SHA-256: `85d5bd7793a8ba271c6a883ed4e0f7ca1849fc283c821a6cf92c84d56a4601ad`
+- source blob SHA: `13f50f4ff38f528d17f1cbaaa737bf12af2c5084`
+- source SHA-256: `b5169596ab6a84d693e66fb0138ceecbd10eda925cf341ef44a4a677674b65ab`
+- CI artifact: `paper4-pdf`, id `11337135583`
+- artifact ZIP digest: `sha256:13d97ff0e3a9cbf762906a610e51cb9068d03a4d9b07dfc827448b792b0d5885`
+
+The final CI audit verifies compilation, PDF extraction, author/title/reference presence, absence of the superseded order-jump wording, and source/PDF checksum manifest generation. Earlier local PDF artifacts are HISTORICAL / SUPERSEDED.
+
+**Paper 4 publication artifact is now frozen. No mathematical gate was reopened by this audit.**
