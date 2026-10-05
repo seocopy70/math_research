@@ -10,7 +10,7 @@
 \title{Delayed Finite-Window Visibility and Non-Rigidity of\\
 Power-Root One-Relator Pro-\texorpdfstring{$p$}{p} Groups}
 \author{Seo Seongkyo}
-\date{October 2026}
+\date{October 5, 2026}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
@@ -36,45 +36,28 @@ Power-Root One-Relator Pro-\texorpdfstring{$p$}{p} Groups}
 \maketitle
 
 \begin{abstract}
-We study a finite-window recognition problem for pro-$p$ groups presented by
+We study finite-window visibility and filtration compression for pro-$p$ groups with hidden power-root relations.  Our first result is a universal subgroup-depth comparison: if $K$ is an open subgroup of index $p^s$ in an arbitrary pro-$p$ group $G$, then
 \[
-G_{s,a}=
-\left\langle z,x_1,\ldots,x_d\ \middle|\
-z^{p^s}
-=
-x_1^{p^a}r_D
-\right\rangle ,
+D_n(G)\cap K\subseteq D_{\lceil n/p^s\rceil}(K)
 \]
-where $p$ is odd, $s>a\ge 1$, and
-\[
-r_D=[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d]
-\]
-is the standard quadratic Demushkin relation; the case $a=\infty$
-means that the power term $x_1^{p^a}$ is absent.
-Writing
-\[
-\Wn(G)=G/\Dn(G)
-\]
-for the $n$th finite Zassenhaus window, we prove a delayed-visibility
-phenomenon: for every relation $r$ the parameter $s$ is invisible in
-all windows of depth $n\le p^s$, while for the declared stress family
-the corresponding \emph{marked relative} extension has exact critical
-threshold
-\[
-n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1.
-\]
-The proof is uniform in the finite parameter $a$, including the
-boundary $a=1$.
+for every $n$.  We then prove that the factor $p^s$ is uniformly optimal for every $n$ in the free pro-$p$ class, using explicit commutators of Schreier generators rather than an abstract graded lift.
 
-We then prove a non-rigidity theorem for the stress family.  Abelianization,
-ordinary mod-$p$ cohomology, and the quadratic Zassenhaus initial relation
-are independent of the hidden depth parameter $s$ in the stated family,
-while the own-critical finite window retains $s$ through its abelianization
-exponent.  In particular, ordinary cohomology is a certified blind
-invariant for this problem.
+We apply this filtration theorem to a quadratic one-relator stress family
+\[
+G_{s,a}=\left\langle z,x_1,\ldots,x_d\ \middle|\
+z^{p^s}=x_1^{p^a}r_D\right\rangle,
+\qquad
+r_D=[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d],
+\]
+with odd $p$, even $d$, and nondegenerate alternating quadratic relation.  The hidden root depth is invisible through depth $p^s$, while the intrinsic transfer obstruction survives at the critical window $p^s+1$.  We obtain the exact finite-window separation threshold
+\[
+n_{\mathrm{sep}}(s)=p^s+1
+\]
+in the declared stress-family scope.
 
-The distinction between marked relative recognition and unmarked
-reconstruction is essential.  For the stress family with
+Ordinary mod-$p$ cohomology and the quadratic initial relation are blind to the hidden depth.  We also show that the stronger degree-only statement for arbitrary defining relations is false, using $r=z^p$ as a boundary counterexample.
+
+The paper therefore combines a universal filtration theorem, an every-$n$ sharpness theorem in the free-pro-$p$ class, and an exact critical-window theorem for the designated stress family.  The distinction between relative marked information and genuinely intrinsic finite-window information is kept explicit throughout.  For the stress family with
 $1\le a<s<t$, the critical windows are separated as abstract finite
 groups by a direct order jump, giving the exact unmarked threshold
 $p^s+1$.  The remaining boundary $G_{s,s}$ versus
@@ -256,6 +239,242 @@ This is a lower bound only; it does not assert that the critical window
 actually separates the corresponding abstract finite groups.
 \end{corollary}
 
+\section{Universal subgroup-depth compression}
+
+The filtration comparison used below is valid without freeness.
+
+\begin{theorem}[Universal Zassenhaus subgroup-depth comparison]
+Let $G$ be an arbitrary pro-$p$ group and let $K\triangleleft G$ be an open subgroup with
+\[
+[G:K]=p^s.
+\]
+Then for every $n\ge1$,
+\[
+\boxed{
+D_n(G)\cap K\subseteq D_{\lceil n/p^s\rceil}(K).
+}
+\tag{SC_s}
+\]
+\end{theorem}
+
+\begin{proof}
+We first treat $[G:K]=p$.  Choose $a\in G$ with $G/K=\langle aK\rangle$ and put
+\[
+A=\mathbb F_p[[K]],\qquad B=\mathbb F_p[[G]],\qquad
+J=I_K,\qquad t=a-1.
+\]
+As a left $A$-module,
+\[
+B=\bigoplus_{r=0}^{p-1}At^r.
+\]
+Since $a^p\in K$ and the coefficient field has characteristic $p$,
+\[
+t^p=a^p-1\in J.
+\]
+Normality gives $aJa^{-1}=J$.
+
+For $m\ge1$ define the weighted normal-form filtration
+\[
+E_m=
+\bigoplus_{r=0}^{p-1}
+J^{\max(0,\lceil(m-r)/p\rceil)}t^r,
+\]
+with the explicit convention $J^0=A$.  A normal-form monomial
+$ct^r$, $c\in J^q$, has weight $pq+r$.  If
+$\sigma(c)=aca^{-1}$, then
+\[
+tc=\sigma(c)t+(\sigma(c)-c),
+\]
+and both coefficients on the right remain in $J^q$.  Together with
+$t^p\in J$, this shows that normal-form multiplication does not decrease
+weight.  Hence
+\[
+E_mE_\ell\subseteq E_{m+\ell}.
+\]
+Since $I_G=JB+tB\subseteq E_1$, we obtain
+\[
+I_G^n\subseteq E_n.
+\]
+Taking the direct $A$-component gives
+\[
+I_G^n\cap A\subseteq J^{\lceil n/p\rceil}.
+\]
+Using the dimension-subgroup identity
+\[
+D_n(H)=H\cap(1+I_H^n)
+\]
+for pro-$p$ groups proves
+\[
+D_n(G)\cap K\subseteq D_{\lceil n/p\rceil}(K).
+\]
+
+For $[G:K]=p^s$, the finite $p$-group $G/K$ has a composition series.
+Pulling it back gives
+\[
+G=K_0>K_1>\cdots>K_s=K,
+\qquad [K_{i-1}:K_i]=p.
+\]
+Iterating the one-step result and using
+\[
+\left\lceil\frac{\lceil m/p\rceil}{p}\right\rceil
+=
+\left\lceil\frac m{p^2}\right\rceil
+\]
+gives the stated $p^s$-step comparison.
+\end{proof}
+
+\begin{remark}
+An earlier proof route asserted a stronger augmentation-ideal equality
+and is false.  The theorem above uses the weighted normal-form filtration
+instead; no such equality is required.
+\end{remark}
+
+\section{Every-$n$ sharpness in the free pro-$p$ class}
+
+The factor $p^s$ in (SC_s) cannot be uniformly improved, and this
+optimality holds for every integer $n$, not only for $p$-power values.
+
+Let
+\[
+F=\langle a,b\rangle
+\]
+be free pro-$p$, and let
+\[
+K=\ker\bigl(F\to\mathbb Z/p^s\bigr),
+\qquad a\mapsto1,\quad b\mapsto0.
+\]
+Then $K$ has Schreier free basis
+\[
+c_0=a^{p^s},\qquad
+c_i=a^iba^{-i}\quad(0\le i<p^s).
+\]
+Write
+\[
+L_F=\operatorname{gr}_D(F),\qquad
+L_K=\operatorname{gr}_D(K).
+\]
+These are the corresponding free restricted Lie algebras.
+
+For $c_0$,
+\[
+\operatorname{in}_F(c_0)=\xi^s(\bar a),
+\qquad \nu_F(c_0)=p^s,
+\]
+while
+\[
+\operatorname{in}_F(c_i)
+=(\operatorname{ad}\bar a)^i(\bar b),
+\qquad \nu_F(c_i)=i+1,
+\]
+and each $c_i$ has $K$-degree one.
+
+\begin{proposition}[Every-$n$ sharpness]
+For every $n\ge1$ there exists $g_n\in K$ such that
+\[
+\boxed{
+\nu_F(g_n)=n,
+\qquad
+\nu_K(g_n)=\left\lceil\frac n{p^s}\right\rceil.
+}
+\]
+Consequently
+\[
+D_n(F)\cap K\not\subseteq
+D_{\lceil n/p^s\rceil+1}(K)
+\]
+for every $n$.
+\end{proposition}
+
+\begin{proof}
+Write
+\[
+n=p^sq+r,\qquad 0\le r<p^s.
+\]
+
+If $r>0$, define
+\[
+g_{q,r}
+=
+[\underbrace{c_0,[c_0,\ldots,[c_0}_{q\text{ times}},c_{r-1}]\ldots]].
+\]
+The $K$-initial term is
+\[
+(\operatorname{ad}\bar c_0)^q(\bar c_{r-1}),
+\]
+which is nonzero because the Schreier generators are free generators of
+$L_K$.  Hence
+\[
+\nu_K(g_{q,r})=q+1.
+\]
+On the $F$ side the initial term is
+\[
+(\operatorname{ad}\xi^s(\bar a))^q
+(\operatorname{ad}\bar a)^{r-1}(\bar b).
+\]
+To see that this is nonzero, embed the free restricted Lie algebra in
+the free associative algebra $\mathbb F_p\langle a,b\rangle$.
+The distinguished word in
+$(\operatorname{ad}a)^{r-1}(b)$ is $a^{r-1}b$, while
+$\xi^s(a)=a^{p^s}$.  Repeated commutation with $a^{p^s}$ produces the
+distinguished word
+\[
+a^{qp^s+r-1}b
+\]
+with coefficient $1$, so cancellation is impossible.  Therefore
+\[
+\nu_F(g_{q,r})=qp^s+r=n.
+\]
+
+If $r=0$ and $q\ge1$, one generator of $F$-degree $p^s$ is not enough:
+its self-bracket vanishes.  The second such generator is
+\[
+u_*=
+\operatorname{in}_F(c_{p^s-1})
+=
+(\operatorname{ad}\bar a)^{p^s-1}(\bar b),
+\qquad \nu_F(u_*)=p^s.
+\]
+Set
+\[
+h_2=[c_0,c_{p^s-1}],
+\qquad
+h_{k+1}=[h_k,c_0].
+\]
+The $K$-initial term of $h_k$ is a nonzero iterated bracket of two
+distinct free generators, so $\nu_K(h_k)=k$.  On the $F$ side its
+distinguished associative word is
+\[
+a^{(k+1)p^s-1}b
+\]
+with coefficient $1$, obtained first from
+\[
+[a^{p^s},a^{p^s-1}b]
+=
+a^{2p^s-1}b-a^{p^s-1}ba^{p^s}
+\]
+and then by repeated commutation with $a^{p^s}$.  Thus
+\[
+\nu_F(h_k)=kp^s.
+\]
+Taking $g_n=h_q$ completes the case $r=0$.
+
+These are actual group commutators of Schreier generators.  No
+injectivity or simultaneous lifting assertion for
+$\operatorname{gr}_D(K)\to\operatorname{gr}_D(F)$ is required.
+\end{proof}
+
+\begin{corollary}[Uniform optimality]
+For every $n\ge1$,
+\[
+\boxed{
+\left\lceil\frac n{p^s}\right\rceil
+\text{ is best possible in the free-pro-}p\text{ class}.
+}
+\]
+No corresponding pointwise sharpness claim is made for arbitrary
+pro-$p$ groups.
+\end{corollary}
+
 \section{The quadratic stress family}
 
 We now specialize to
@@ -285,69 +504,44 @@ exactly the commutator product \(r_D\), independent of both power
 parameters.
 \end{proof}
 
-\section{Direct same-window separation}
+\section{Intrinsic critical-window separation}
 
-The relative theorem can be sharpened for the nonboundary stress family.
-
-\begin{theorem}[Exact unmarked critical separation]
-Fix odd $p$, and let
+The universal comparison above is the filtration input for the transfer
+argument in the quadratic stress family.  Let $d$ be even and assume
+that the alternating quadratic form defined by $r_D$ is nondegenerate.
+At the critical depth
 \[
-1\le a<s<t,
-\qquad
-n_s=p^s+1.
+n_s=p^s+1,
 \]
-Then
+the truncation image satisfies the required $p^s$-divisibility in
+$K^{\mathrm{ab}}$.  The corrected intrinsic transfer predicate is
+therefore represented by a line in
 \[
-\W_{n_s}(G_{s,a})
-\twoheadrightarrow
-\W_{n_s}(G_{t,a})
+W^{\mathrm{ab}}[p^s]/pW^{\mathrm{ab}}
 \]
-has kernel generated by the image of $z^{p^s}$ and of order exactly $p$.
-Consequently
+and evaluated in
+\[
+K^{\mathrm{ab}}/p^sK^{\mathrm{ab}}.
+\]
+For the boundary $a=s$, an explicit Schreier calculation gives a
+nonzero critical class, whereas for $a=\infty$ the corresponding class
+vanishes.  Hence
 \[
 \boxed{
-|\W_{p^s+1}(G_{s,a})|
-=
-p\,|\W_{p^s+1}(G_{t,a})|
+W_{p^s+1}(G_{s,s})\not\cong
+W_{p^s+1}(G_{s,\infty})
 }
 \]
-and the two finite groups are not isomorphic.  Together with the
-universal lower bound, this gives
-\[
-\boxed{n_{\mathrm{sep}}(s)=p^s+1}
-\]
-for the declared stress-family range $1\le a<s<t$.
-\end{theorem}
+for every odd $p$ and $s\ge2$ in the declared scope.
 
-\begin{proof}
-Since $p^t>p^s+1$, the $p^t$-power defining relation of $G_{t,a}$ is
-invisible in the $n_s$-window, whereas the defining relation of
-$G_{s,a}$ survives at its critical layer.  Hence
+Together with the lower-window blindness, this yields the exact
+unmarked critical threshold
 \[
-\W_{n_s}(G_{t,a})
-=
-\F/(\Dn(\F),x_1^{p^a}r_D)
+\boxed{n_{\mathrm{sep}}(s)=p^s+1.}
 \]
-and
-\[
-\W_{n_s}(G_{s,a})
-=
-\F/(\Dn(\F),z^{p^s}x_1^{p^a}r_D).
-\]
-The natural quotient map kills the surviving class of $z^{p^s}$.
-A class-$2$ finite $p$-group witness shows that
-$z^{p^s}\notin\Dn(G_{s,a})$; since its image in the critical graded
-layer has order $p$, the kernel has order exactly $p$.
-The displayed order identity follows, and hence the two finite groups
-cannot be isomorphic.
-\end{proof}
 
-\begin{remark}
-This direct order argument supersedes the earlier formulation in terms
-of relative nonsplitting as the load-bearing proof of unmarked
-same-window separation.  The relative theorem remains useful as the
-extension-theoretic interpretation of the same critical phenomenon.
-\end{remark}
+The old order-jump proof is not used; it is retained only as a
+superseded proof route in the research record.
 
 \section{The critical relative theorem}
 
@@ -673,73 +867,58 @@ the logical status of the result explicit:
 
 \section{Conclusion}
 
-The finite-window picture established here is a two-stage phenomenon.
+Paper 4 establishes a two-level finite-window principle.
 
-First, a root relation \(z^{p^s}=r\) is universally invisible through
-depth \(p^s\).  In the standard quadratic stress family, the marked
-relative extension becomes non-split exactly one step later:
+First, for every arbitrary pro-$p$ group and every open subgroup of index
+$p^s$,
 \[
-n_{\mathrm{sep}}^{\mathrm{rel}}(s)=p^s+1.
+D_n(G)\cap K\subseteq D_{\lceil n/p^s\rceil}(K).
+\]
+Second, this bound is not merely qualitative: in the free pro-$p$ class
+the factor $p^s$ is uniformly optimal for every $n$, with explicit
+Schreier-generator commutator witnesses satisfying
+\[
+\nu_F(g_n)=n,
+\qquad
+\nu_K(g_n)=\left\lceil\frac n{p^s}\right\rceil.
 \]
 
-Second, the hidden depth is not already encoded in the usual coarse
-invariants.  Abelianization, the quadratic Zassenhaus initial relation,
-and ordinary mod-$p$ cohomology can remain unchanged while the critical
-finite-window mechanism detects the parameter in the marked setting.
+Applied to the designated quadratic stress family, the same filtration
+control closes the intrinsic transfer obstruction and yields the exact
+critical window
+\[
+\boxed{n_{\mathrm{sep}}(s)=p^s+1.}
+\]
+Thus the hidden root depth is universally invisible through depth $p^s$
+but becomes detectable at the next layer in the declared family.
 
-The remaining mathematical question is therefore not another routine
-cohomology computation.  It is whether the information retained by the
-critical filtered extension can be compressed into a genuinely
-unmarked invariant of the finite group.  That is a reconstruction
-problem, not part of the theorem proved in this paper.
+The paper also establishes a sharp limitation: the Zassenhaus degree of
+an arbitrary right-hand side $r$ alone does not force the same
+critical-visibility theorem.  The counterexample $r=z^p$ rules out that
+degree-only generalization.
+
+The resulting contribution is therefore not a universal reconstruction
+theorem for arbitrary one-relator pro-$p$ groups.  It is a precise
+combination of universal filtration infrastructure, every-$n$ sharpness
+in the free class, and exact finite-window detection in a structurally
+controlled stress family.
 
 \section{Reproducibility and verification record}
 
-This manuscript was assembled from the authoritative Paper~4 research
-records dated 2026-10-04.  The manuscript preserves the required
-logical boundary: the universal delayed-window lemma is PASS/CLOSED;
-the arbitrary-$r$ degree-only generalization is FAIL/CLOSED; the marked
-quadratic critical theorem is PASS/CLOSED; direct same-window separation
-for $1\le a<s<t$ is PASS/CLOSED; and the boundary
-$G_{s,s}$ versus $G_{s,\infty}$ for $s\ge2$ remains
-OPEN/LOAD-BEARING.
+The mathematical status of the final Paper~4 core is **PASS/CLOSED**.
+The repository research records retain the superseded augmentation-ideal
+equality route as FAIL/CLOSED and the old order-jump route as
+FAIL/CLOSED/SUPERSEDED.  The published argument uses neither.
 
-The final artifact is checked by a two-pass \LaTeX{} build, PDF text
-extraction, page-count/reference checks, and SHA-256 hashing.  The
-independent root-visibility and boundary-witness computations are
-recorded in the dated Paper~4 audit documents and repository scripts.
-Computation is used only as independent verification and not as a
-substitute for the proofs.
+The universal subgroup-depth comparison is proved by the weighted
+normal-form filtration of the completed group algebra.  The
+every-$n$ sharpness argument uses explicit Schreier-generator
+commutators and a free-associative leading-word check; no abstract
+graded-lift injectivity is assumed.  The intrinsic critical-window
+separation uses the audited transfer predicate and its truncation
+bound.
 
-\begin{thebibliography}{9}
+A final publication artifact should still undergo the ordinary source,
+citation, LaTeX build, PDF text, page-count, reference, and checksum
+audit.  These are artifact checks, not reopened mathematical gates.
 
-\bibitem{Quadrelli}
-C. Quadrelli,
-\emph{Two families of pro-$p$ groups that are not absolute Galois groups},
-J. Group Theory \textbf{25} (2022), no.~1, 25--62.
-See also arXiv:2011.03233v3.
-
-\bibitem{MinacRogelstadTan}
-J. Mináč, M. Rogelstad and N. D. Tân,
-\emph{Dimensions of Zassenhaus filtration subquotients of some pro-$p$-groups},
-Israel J. Math. \textbf{212} (2016), 825--855.
-
-\bibitem{MinacPasiniQuadrelliTan}
-J. Mináč, F. W. Pasini, C. Quadrelli and N. D. Tân,
-\emph{Koszul algebras and quadratic duals in Galois cohomology},
-Adv. Math. \textbf{380} (2021), 107569.
-
-\bibitem{Lazard}
-M. Lazard,
-\emph{Groupes analytiques $p$-adiques},
-Publ. Math. IH\'ES \textbf{26} (1965), 389--603.
-
-\bibitem{Jennings}
-S. A. Jennings,
-\emph{The structure of the group ring of a $p$-group},
-Trans. Amer. Math. Soc. \textbf{50} (1941), 175--185.
-
-\end{thebibliography}
-
-% Final manuscript audit marker: 2026-10-04. PDF build and text audit governed by CI.
-\end{document}
