@@ -3143,3 +3143,39 @@ may close the already-established one-step equality (W_{p+1}=W_p), but it does n
 - (W_n=W_p) for all (nge p): **OPEN / LOAD-BEARING**.
 
 The immediately proposed arbitrary-(n) promotion is therefore rejected. Next authorized task: either control the restricted (p)-power layers intrinsically for the explicit (R), or produce a strict-shrinkage witness. No blind numerical sweep is authorized.
+
+
+## 2026-10-06 — Decisive explicit-(R) (p)-power obstruction
+
+The proposed condition
+[
+(*)qquad F^psubseteq R D_{p+1}(F)
+]
+was tested directly and is **FALSE** for the explicit
+[
+R=langle[x,z],[y,z],[x,y]^{-1}x^pz^{-p}angle^F.
+]
+
+Take (phi:F	omathbb Z_p=langle tangle) with
+[
+phi(x)=t,qquadphi(z)=t,qquadphi(y)=1.
+]
+Then every defining generator of (R) maps to (1), so (phi(R)=1). Yet
+[
+phi(x^p)=t^p
+otin D_{p+1}(mathbb Z_p)=mathbb Z_p^{p^2}.
+]
+Therefore (x^p
+otin R D_{p+1}(F)), and
+[
+oxed{F^p
+otsubseteq R D_{p+1}(F).}
+]
+
+Classification:
+- explicit (R) fails ((*)): **FAIL / CLOSED**;
+- restricted-(p)-power obstruction: **PASS / CLOSED**;
+- all-(n) stabilization: **OPEN / LOAD-BEARING**;
+- strict shrinkage witness at (2p) or (p^2): **OPEN**.
+
+This is a decisive failure of the current Lie-induction repair, but not yet a proof that (W_n) strictly shrinks.
