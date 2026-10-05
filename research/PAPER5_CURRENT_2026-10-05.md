@@ -96,3 +96,25 @@ Therefore:
 - Step 2: **OPEN / LOAD-BEARING**.
 
 No equality theorem or p^2(p−1) automorphism-order ratio may be promoted. Next authorized task: determine whether a canonical normalization/projection kills the D_3 ambiguity, or construct a counterexample to the naive θ.
+
+
+## 2026-10-05 — D_3-ambiguity review: proposed p=3 / p≥5 split is NOT yet proved
+
+**Classification: OPEN / LOAD-BEARING.**
+
+A critical recheck finds two errors in the proposed closure of Step 2.
+
+1. For p≥5, the assertion D_3=γ_3 is false for the Zassenhaus filtration. In general
+D_3 = γ_3 · γ_2^p · G^p
+(and further factors according to the chosen Zassenhaus convention); in particular G^p⊂D_3. Thus the displayed filtration comparison used in the negative theorem is invalid.
+
+2. With u=[r,s]∈γ_2, the leading commutator correction [[r,s],y] lies in γ_3, not γ_4. The statement c=[[r,s],y]∈γ_4 is a degree error. Therefore the proposed witness does not establish a nonzero γ_4/γ_5 ambiguity at degree p, nor does it by itself prove that the class has a nonzero image outside D_p.
+
+Consequently the claimed final dichotomy “p=3 PASS, p≥5 FAIL/NEGATIVE THEOREM” must NOT be promoted. The earlier observation remains valid: the naive argument only gives a D_3 ambiguity, and there is no canonical map D_3→D_p/D_{p+1}. But absence of a canonical projection is not itself a proof that no alternative canonical construction exists, nor is it a proof that the proposed representative cannot be canonically corrected inside W_n.
+
+The p=3 case also requires a fresh group-filtration calculation: D_3=D_p is true for p=3, but it is not enough by itself to conclude [xu,yv]≡[x,y] mod D_4. The asserted inclusions [x,D_2]⊂D_4 and [D_2,y]⊂D_4 need direct verification; they cannot be inferred from the incorrect γ_4 claim above.
+
+Therefore Step 2 remains **OPEN / LOAD-BEARING**. The authorized next task is an exact Zassenhaus calculation of the lift-change map
+D_2×D_2 → D_3/D_{p+1},
+(u,v)↦[xu,yv][x,y]^{-1},
+followed by testing whether the relation constraint [x,y]=x^{[p]}−z^{[p]} forces its degree-p component to vanish. Only after that calculation may a p=3 closure or p≥5 negative theorem be recorded.
