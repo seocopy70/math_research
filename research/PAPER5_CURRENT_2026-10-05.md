@@ -79,3 +79,20 @@ The immediate execution order is therefore:
 5. only then falsification computations at new parameters and \(n=p+2\).
 
 A separate audit was recorded in `research/PAPER5_NEXT_STEP_AUDIT_2026-10-05.md`.
+
+
+## 2026-10-05 — Step 2 theta audit: power-part lemma passes, theta invariance does not yet close
+
+**Result classification: OPEN / LOAD-BEARING.**
+
+The proposed Hall–Petrescu sublemma is valid in the required filtration range: for odd p, if u∈D_2(G), then (xu)^p≡x^p mod D_{p+1}(G). The p-power component is therefore unchanged by a D_2-change of a single lift.
+
+However, this does **not** prove that θ:J_2→D_p/D_{p+1}, [x,y]↦[z^{[p]}−x^{[p]}], is well-defined under simultaneous lift changes x'=xu, y'=yv with u,v∈D_2. The commutator part changes by terms in D_3. There is no canonical map D_3→D_p/D_{p+1}, and D_3 is not contained in D_{p+1}. Thus “[x',y']≡[x,y] mod D_3” is insufficient for degree-p invariance. The Hall–Petrescu calculation closes only the p-power component, not the full relation-jet.
+
+Therefore:
+- (xu)^p≡x^p mod D_{p+1}, u∈D_2: **PASS / GENERAL** (odd p);
+- commutator lift-independence at degree p: **OPEN / LOAD-BEARING**;
+- θ as currently defined: **OPEN / not yet canonical**;
+- Step 2: **OPEN / LOAD-BEARING**.
+
+No equality theorem or p^2(p−1) automorphism-order ratio may be promoted. Next authorized task: determine whether a canonical normalization/projection kills the D_3 ambiguity, or construct a counterexample to the naive θ.
