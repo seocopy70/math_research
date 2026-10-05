@@ -1,4 +1,4 @@
-Read("aut_common.g");
+Read("research/external/paper5_aut/aut_common.g");
 run:=function(s,a)
   local o,K,comp,R,W,gens,Q,AQ,A,els,nQ,perms,beta,XS,kid,key,nk,t,orb,p,k0,reps,i,j,gensA,pi,imgs,newt,kidnew,parent,find,union,orbits,cnt,sizes,al,W2,stab,r,tm,perm,ind;
   tm:=Runtime(); R:=winW(mkG(s,a),4,4); W:=R[1]; gens:=R[2]; Q:=winW(mkD(a),4,8)[1]; els:=AsSortedList(Q); nQ:=Length(els);
