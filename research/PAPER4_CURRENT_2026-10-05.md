@@ -118,3 +118,41 @@ Accordingly:
 - Authorized novelty target: intrinsic (arepsilon_s), exact (a=s) versus (a=\infty) separation, and the sharp threshold (n_{\rm sep}(s)=p^s+1).
 
 The source audit does **not** reopen or weaken the Paper-4 theorem. It narrows the claim about where the contribution is new.
+
+
+## 2026-10-05 — SC novelty audit closed; research moves downstream
+
+The SC literature audit is now **CLOSED**. The correct publication-level wording is deliberately narrower and stronger than either “SC is classical” or “SC is wholly new”:
+
+- The existing Zassenhaus/Magnus/weighted-Schreier literature supplies the ingredients: uniform-weight realization of Zassenhaus degree, restriction of weights to subgroups, index-p Schreier coordinates, and the no-cancellation/weight-function principle.
+- The exact subgroup-depth comparison used by Paper 4,
+\[
+D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K),
+\]
+was not located as a directly stated prior theorem in the audited sources.
+- Paper 4's **new logical step is the assembly/deduction of this comparison in exactly the form needed to control the finite-window truncation**, with the downstream consequence (TF_s) and the intrinsic transfer obstruction.
+- The independent Magnus prefix-code proof is retained as a self-contained verification/alternative derivation, not as a claim of new foundational Magnus theory.
+
+Accordingly the SC gate is **PASS / CLOSED** and the novelty audit is **CLOSED**. No further generic Zassenhaus/Schreier literature search is authorized unless a downstream proof forces it.
+
+### Next load-bearing question: how far SC strengthens Paper 4
+
+The next task is no longer to justify SC. It is to maximize the theorem that follows from it.
+
+Authorized targets, in descending priority:
+
+1. **Promote the transfer statement to a clean general lemma:** for every index-p kernel of a finitely generated free pro-p group and every n,
+\[
+\operatorname{im}(D_n(F)\cap K\to K^{ab})
+\subseteq
+p^{\lceil n/p\rceil?}K^{ab}
+\]
+only after the exponent is re-derived carefully from the Jennings product; do not guess the exponent. The already certified critical specialization remains
+\[
+\operatorname{im}(D_{p^s+1}(F)\cap K\to K^{ab})\subseteq p^sK^{ab}.
+\]
+2. **Separate marked from intrinsic statements:** first formulate the strongest SC+TF finite-window theorem for an arbitrary index-p character/marked kernel K; then specialize to the intrinsic nondegenerate quadratic stress family where the radical line makes K canonical.
+3. **Test scope enlargement of the stress theorem:** determine whether the exact \(p^s+1\) separation can be stated for a broader class of quadratic initial relations than the currently declared nondegenerate alternating scope, without silently inserting a presentation-dependent orientation.
+4. **Check sharpness:** use the explicit z^{p^s} witness and the SC bound to state exactly which part is universal (filtration compression) and which part is family-specific (nonzero intrinsic transfer defect).
+
+The governing principle is: **SC is now infrastructure; \(\varepsilon_s\), exact unmarked separation, and the sharp threshold are the theorem.**
