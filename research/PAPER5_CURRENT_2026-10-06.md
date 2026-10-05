@@ -73,3 +73,28 @@ The proposed reverse map \(\pi:D_p\to V\) and the resulting \(3\to2\) IA-kernel 
 There is a stronger obstruction to the proposed second factor \(p\): every IA modification by \(f:V\to D_p\) is invisible to the established intrinsic jet data. If \(d\in D_p\), then \((gd)^p=g^p\) and \([gd,h]=[g,h]\), because \(D_p\le Z(W_p)\) and \(D_p^p=1\). Hence preserving \(\pi_0\), \(b\), \(L\), and the relation cannot cut \(\operatorname{Hom}(V,D_p)\) from dimension 9 to dimension 8.
 
 Therefore \(K_b/K_{\mathcal J}\cong\mathbf F_p\) and the resulting \(p^2\) decomposition are **FAIL / CLOSED for this proposed mechanism**. The exact \(p^2\) automorphism-order theorem remains **OPEN / LOAD-BEARING**. No new CLOSED comparison window has been identified.
+
+## 2026-10-06 — Addendum 4: model-identity correction
+
+A decisive consistency audit found that the current closed W_p calculation and the earlier observed p^2 GAP computation are **not calculations on the same finite group**.
+
+The closed boundary model used in the Step-3 calculation is presented by
+\[
+[x,z]=[y,z]=1,\qquad [x,y]=x^p z^{-p},
+\]
+so z is central. In contrast, the authoritative GAP artifact aut_common.g defines, for the actual (s,a)=(1,1),
+\[
+G=\langle z,x,y\mid z^3=x^3[x,y]\rangle
+\]
+(and then takes its Zassenhaus window W=G/D_5); there are no defining relations [z,x]=[z,y]=1. Thus the two groups must not be identified merely because their displayed power-commutator relation can be algebraically rearranged.
+
+This resolves the apparent conflict with the certified p=3,n=4 Frattini-image computation, where the actual non-split image has order 6, while the central-model candidate S'_{11}(3) has order 36. The former concerns the actual GAP model; the latter concerns the separately defined central boundary model.
+
+### Classification
+- Centralized boundary model W_p: its internal Step-3 results remain valid within that declared presentation scope, subject to their own audits.
+- Identification of that model with the actual GAP W producing the observed p^2 gap: **FAIL / CLOSED / SUPERSEDED AS AN ASSUMPTION**.
+- Using the central-model J_p no-go to locate the observed p^2 gap: **INVALID / SUPERSEDED**.
+- Actual observed p^2 gap mechanism: **OPEN / LOAD-BEARING**.
+
+### Correct next gate
+Return to the actual GAP presentation G=<z,x,y | z^3=x^3[x,y]> (and its general p,s,a analogue), reconstruct its finite-window intrinsic relation jet, and identify the embedded Frattini stabilizer that changes from order 108 to 6 in the certified p=3,n=4 split/non-split comparison. The previously proposed central-model IA no-go does not settle this actual problem.
