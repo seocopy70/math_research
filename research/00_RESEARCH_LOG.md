@@ -2202,3 +2202,8 @@ Evidence: `research/PAPER5_NEXT_STEP_AUDIT_2026-10-05.md`.
 ## 2026-10-05 — Paper 5 Step 2 audit correction
 
 The Hall–Petrescu p-power sublemma for odd p passes: for u∈D_2, (xu)^p≡x^p mod D_{p+1}. But this controls only the p-power component. Under x'=xu, y'=yv, the commutator [x,y] changes by D_3, and there is no canonical projection D_3→D_p/D_{p+1}. Therefore the proposed θ:J_2→D_p/D_{p+1} is not yet shown well-defined. Step 2 remains **OPEN / LOAD-BEARING**; no equality or uniform p^2(p−1) theorem is promoted.
+
+
+## 2026-10-05 — Step 2 D_3-ambiguity correction
+
+The proposed final split “p=3 PASS / p≥5 FAIL” is **not established**. Two errors were found: (i) D_3 is not equal to γ_3 for p≥5; it contains p-power factors such as G^p and γ_2^p, and (ii) for u=[r,s]∈γ_2 the leading correction [[r,s],y] is in γ_3, not γ_4. Hence the proposed negative witness is invalid. The p=3 claim also needs a direct Zassenhaus calculation of [x,D_2] and [D_2,y] modulo D_4. Current status: **OPEN / LOAD-BEARING**. Next gate is the exact lift-change map D_2×D_2→D_3/D_{p+1} and its interaction with the relation constraint.
