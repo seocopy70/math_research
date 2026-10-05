@@ -43,16 +43,18 @@ E_m=
 J^{\max(0,\lceil(m-r)/p\rceil)}t^r.
 \tag{E_m}
 \]
+For (m\le r) we use the convention (J^0=A); equivalently, the exponent in (E_m) is always interpreted as (max(0,\lceil(m-r)/p\rceil)). Thus (E_m) is well-defined for all (m\ge1).
+
 The normal-form multiplication rules imply
 \[
 E_mE_\ell\subseteq E_{m+\ell}.
 \tag{*}
 \]
-More explicitly, define the weight of a normal-form monomial (c,t^r), (c\in J^q), (0\le r<p), to be (pq+r). If \(\sigma(c)=aca^{-1}\), then
+More explicitly, define the weight of a normal-form monomial (c t^r), with (c\in J^q) and (0\le r<p), to be (pq+r). If \(\sigma(c)=aca^{-1}\), then
 \[
 tc=\sigma(c)t+(\sigma(c)-c),
 \]
-and, because \(\sigma(J^q)=J^q\), both coefficients on the right lie in (J^q). Iterating gives (t^rJ^q\subseteq\sum_{j=0}^rJ^qt^j). On multiplying by a further (t^s), every resulting (t^{j+s}) is written as
+and, because \(\sigma(J^q)=J^q\), both coefficients on the right lie in (J^q). Iterating gives (t^rJ^q\subseteqsum_{j=0}^rJ^qt^j). On multiplying by a further (t^s), every resulting (t^{j+s}) is written as
 \[
 t^{j+s}=(t^p)^u t^v,
 \qquad j+s=up+v,quad0\le v<p,
@@ -90,7 +92,12 @@ This proof explicitly handles the previously missed terms t^rBt: they are normal
 
 ## Index-p^s extension
 
-For [G:K]=p^s choose a subnormal chain
+Since (G/K) is a finite (p)-group, it admits a composition series with successive quotients of order (p). Pulling this series back to (G) gives a subnormal chain
+\[
+G=K_0>K_1>\cdots>K_s=K,
+\qquad [K_{i-1}:K_i]=p.
+\]
+For [G:K]=p^s choose this chain
 \[
 G=K_0>K_1>\cdots>K_s=K,
 \qquad [K_{i-1}:K_i]=p.
@@ -106,7 +113,7 @@ because
 =
 \left\lceil\frac m{p^2}\right\rceil
 \]
-and hence the ceiling operation composes exactly.
+and hence the ceiling operation composes exactly. The elementary identity follows by writing (m=pq+r), (0\le r<p), and checking the two cases (r=0) and (r>0).
 
 ## Consequences
 
@@ -135,3 +142,27 @@ which supplies the subgroup-depth bound used in the transfer truncation argument
 Do not claim a new foundational theorem about augmentation ideals. The defensible statement is:
 
 > We prove the precise index-p Zassenhaus subgroup-depth comparison needed for the finite-window argument for arbitrary pro-p groups, by a weighted normal-form filtration of the completed group algebra; iterating along an index-p^s chain yields the corresponding p^s comparison. The result is used as filtration infrastructure for the intrinsic transfer obstruction and sharp finite-window separation.
+
+
+## Sharpness scope (explicit)
+
+The statement proved here is **uniform optimality of the factor (p^s) in the free-pro-(p) class**, not pointwise optimality for every (n) and not optimality for every arbitrary pro-(p) group.
+
+For the one-step case, (F=\langle a,b\rangle) and the standard index-(p) kernel give witnesses (g_m=a^{p^m}) with
+[
+\nu_F(g_m)=p^m,qquad \nu_K(g_m)=p^{m-1}
+=left\lceil\frac{p^m}{p}\right\rceil.
+]
+For index (p^s), take the corresponding kernel (K_s) and
+[
+g_{m,s}=a^{p^{m+s-1}},
+]
+so
+[
+\nu_F(g_{m,s})=p^{m+s-1},qquad
+\nu_{K_s}(g_{m,s})=p^{m-1}
+=left\lceil\frac{p^{m+s-1}}{p^s}\right\rceil.
+]
+Letting (m) vary gives arbitrarily large witness degrees and proves that the factor (p^s) cannot be uniformly improved in the free-pro-(p) class.
+
+No claim is made that equality occurs for every integer (n), and no claim is made that the bound is sharp for every arbitrary pro-(p) group. Such pointwise or groupwise sharpness is outside the Paper-4 theorem and is not a gate for closure.
