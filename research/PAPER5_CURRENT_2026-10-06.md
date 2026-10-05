@@ -134,3 +134,12 @@ This does not prove that the z-line in V is intrinsically Aut(W)-invariant. Pres
 The p=3 absorption argument is not a general odd-p theorem: for p>3 the relevant degree bookkeeping differs.
 
 Classification: p=3 Jacobson absorption = PASS / LOCAL; exact intrinsic stabilizer = OPEN / LOAD-BEARING; p^2 structural theorem = OPEN / LOAD-BEARING; Paper 5 END = NOT AUTHORIZED.
+
+
+## 2026-10-06 — Final actual-model Gate execution correction
+
+The authoritative p=3 stabilizer gate was audited against CI run 37199037517. The run installed GAP/AutPGrp successfully but the stabilizer calculation aborted before computing the six matrices because Image(alpha,basis[j]) used incompatible GAP source families. The gate has now been corrected to recover Frattini basis elements through PreImagesRepresentative(frnat,v) before applying the automorphism.
+
+The corrected gate also tests the intrinsic line candidate Z(W)D_2/D_2 directly and compares the actual embedded image against both the repository candidate and the user's proposed (z,x,y) subgroup after basis conversion.
+
+Current status: the correction is committed, but post-correction runtime output has not yet been independently recovered. Therefore the exact embedded subgroup and intrinsic z-line remain OPEN / LOAD-BEARING. No Paper 5 END classification is authorized.
