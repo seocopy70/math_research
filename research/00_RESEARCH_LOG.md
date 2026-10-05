@@ -2132,3 +2132,28 @@ Commit:
 No new generic literature search is required: the SC novelty audit was
 already closed on 2026-10-05. Remaining work is manuscript/source/PDF
 artifact audit, not a reopening of the mathematical gates.
+
+
+## 2026-10-05 — Paper 4 publication pass: manuscript proof integration
+
+The Paper 4 manuscript on `paper4-tex-2026-10-04` was promoted from theorem-summary form to the audited publication form.
+
+Integrated:
+- arbitrary-pro-p SC/SC_s theorem via weighted normal forms;
+- every-n free-pro-p sharpness with explicit Schreier-generator commutators;
+- corrected intrinsic transfer invariant (S_s(W)=\operatorname{im}(W^{ab}[p^s]\to W^{ab}/pW^{ab}));
+- explicit (a=s) versus (a=\infty) critical transfer calculation;
+- exact (n_{sep}(s)=p^s+1);
+- degree-only arbitrary-(r) boundary (r=z^p).
+
+Also removed stale manuscript language that still called the (a=s) versus (a=\infty) boundary open.
+
+The dedicated `paper4-tex-build` workflow was updated so its PDF audit checks the final every-(n) sharpness and intrinsic-separation statements rather than the obsolete boundary wording.
+
+Latest manuscript commit:
+`b384441a02f0a01c448bf16feaa1fbcd709a3cba`.
+
+Latest workflow-audit commit:
+`639b0c9f84307570970bec884b5eb7290ecad5c9`.
+
+CI artifact verification is still pending/not directly exposed by the available workflow-run connector (which only returns pull-request-triggered runs). Therefore no new PDF SHA is declared yet. The prior Paper 4 PDF build remains historical; final status awaits the current source's CI PDF artifact audit.
