@@ -52,7 +52,7 @@ autGens:=Concatenation(A.glAutos,A.agAutos);
 Mats:=List(autGens,alpha->ImageMatrix(alpha,frnat,basis));
 
 Print("=== p=5 n=6 (s,a)=(0,1) MATRIX DIAGNOSTIC ===\n");
-Print("W order=",Size(W)," Aut order=",Size(A)," Frattini quotient order=",Size(Image(frnat)),"\n");
+Print("Aut order=",Size(A)," Frattini quotient order=",Size(Image(frnat)),"\n");
 Print("basis order (x,y,z) via gens[2],gens[3],gens[1]\n");
 Print("number of aut generators=",Length(Mats),"\n");
 
