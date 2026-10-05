@@ -2899,3 +2899,29 @@ The repository's existing corrected n=p closure provides the valid intrinsic rou
 - p=5,n=6 local permutation check remains PASS / LOCAL and is consistent with W_6=W_5, but is not itself the general proof.
 
 Detailed audit addendum: research/PAPER5_STEP3_INTRINSIC_UPPER_BOUND_REAUDIT_2026-10-06.md.
+
+
+## 2026-10-06 — Paper 5 corrected boundary theorem closed at n=p,p+1
+
+The corrected intrinsic n=p calculation is now **PASS / CLOSED / GENERAL** for odd p in the declared presentation scope.
+
+At n=p, D_p(W_p)=<X,Y,Z> ≅ F_p^3 with D_p central of exponent p and [x,y]=XZ^{-1}. For g in Aut(W_p), comparison modulo D_2 in the independent X,Y,Z basis gives u=0, v=1, c=a-m. Hence Im(Aut(W_p)->GL(V))=S'_11(p), of order p^2(p-1)^2. Explicit substitutions realize every element. Independently IA(W_p)≅Hom(F_p^3,F_p^3)≅F_p^9, giving |Aut(W_p)|=p^11(p-1)^2.
+
+The prior D_p ≅ F_p^2, S_11, and IA ≅ F_p^6 packages are **HISTORICAL / SUPERSEDED**.
+
+Since W_{p+1}=W_p, the same theorem holds at n=p+1: **PASS / CLOSED / GENERAL**.
+
+Run 37381098677 at p=5,n=6=p+1,(s,a)=(0,1) returned candidate 2000, actual 2000, equal=true. This is **PASS / LOCAL** confirmation only.
+
+The previous arbitrary-n B,theta proof is **FAIL / CLOSED as submitted**. The error is not the existence of a free lift for a given automorphism; the issue is that B(gbar x,gbar y)=gbar_U B(x,y) does not by itself force the required flag or P=lambda_s I+N because the U_n-action moves simultaneously. The remaining arbitrary-n gate is therefore uniform intrinsic control of the U_n-action and its consequences for B,theta.
+
+Classification:
+- n=p intrinsic image = S'_11(p): **PASS / CLOSED / GENERAL**;
+- n=p exact automorphism order: **PASS / CLOSED / GENERAL**;
+- n=p+1 via W_{p+1}=W_p: **PASS / CLOSED / GENERAL**;
+- Run 37381098677: **PASS / LOCAL**;
+- arbitrary-n B,theta proof as submitted: **FAIL / CLOSED**;
+- arbitrary-n uniform U_n-action control: **OPEN / LOAD-BEARING**;
+- Paper 5 arbitrary-n END: **OPEN**.
+
+Authorized next action: no blind numerical sweep. Define the U_n-action intrinsically, derive the exact B,theta transformation law, and prove or refute the invariant flag/normal-form consequence. Record the result immediately.
