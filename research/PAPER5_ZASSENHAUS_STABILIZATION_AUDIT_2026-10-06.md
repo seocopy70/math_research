@@ -333,3 +333,76 @@ this gives \(RD_{p+1}=RD_{p+2}\), hence \(W_{p+1}=W_p\).
 This does **not** prove \(W_n=W_p\) for every \(n\ge p\). Therefore the all-n stabilization gate remains **OPEN / LOAD-BEARING**.
 
 Classification: explicit \(R\) **PASS/CLOSED**; \(W_{p+1}=W_p\) **PASS/CLOSED/GENERAL**; \(F^p\subseteq R\) shortcut **REJECTED**; bracket-only Zassenhaus propagation **FAIL/CLOSED**; all-n stabilization **OPEN/LOAD-BEARING**. Next step: direct explicit-R restricted-Lie/Jennings proof of \(D_{p+1}\subseteq D_{k+1}R\), or a strict-shrinkage witness.
+
+
+## 2026-10-06 — Explicit-R Lie-induction proposal rejected
+
+The new proposal starts from the genuine explicit presentation
+[
+R=langle[x,z],[y,z],[x,y]^{-1}x^pz^{-p}angle^F
+]
+and correctly identifies
+[
+operatorname{gr}_2(R)=operatorname{gr}_2(F).
+]
+However, the proposed induction
+[
+operatorname{gr}_k(R)=operatorname{gr}_k(F)Longrightarrow
+operatorname{gr}_{k+1}(R)=operatorname{gr}_{k+1}(F)
+]
+is valid only for the **ordinary Lie-bracket part**. It is not valid for the full Zassenhaus graded object.
+
+The decisive point is that
+[
+operatorname{gr}(F)=igoplus D_k(F)/D_{k+1}(F)
+]
+is a **free restricted Lie algebra**, not an ordinary free Lie algebra. In general
+[
+operatorname{gr}_{k+1}(F)
+]
+is not generated solely by
+[
+[operatorname{gr}_k(F),operatorname{gr}_1(F)];
+]
+there are independent restricted (p)-power contributions whenever (k+1) is a (p)-multiple (and iterated such contributions at higher (p)-power degrees).
+
+Thus the bracket induction proves at most equality of the ordinary-Lie subpart generated from the degree-2 layer. It does not prove the full equality
+[
+operatorname{gr}_k(R)=operatorname{gr}_k(F)qquad(kge2).
+]
+
+The subsequent (D_{p+1}) calculation does not repair this. It handles the first (p+1) layer by the explicit decomposition
+[
+D_{p+1}=gamma_{p+1}gamma_2^pF^{p^2},
+]
+but gives no control of the new restricted (p)-power layers at arbitrary later degrees. In particular, proving the (p)-power contribution for (D_{p+1}) is not equivalent to proving all later restricted layers are absorbed by (R).
+
+Therefore the chain
+[
+operatorname{gr}_2(R)=operatorname{gr}_2(F)
+Rightarrow
+operatorname{gr}_k(R)=operatorname{gr}_k(F) orall kge2
+Rightarrow
+W_n=W_p orall nge p
+]
+is not established.
+
+The explicit (R) result remains valuable and the one-step boundary remains closed:
+[
+W_{p+1}=W_p.
+]
+But all-(n) stabilization remains
+[
+oxed{	ext{OPEN / LOAD-BEARING}.}
+]
+
+### Classification
+
+- explicit (R) and (operatorname{gr}_2(R)=operatorname{gr}_2(F)): **PASS / CLOSED**;
+- bracket-only propagation in the Zassenhaus graded object: **FAIL / CLOSED**;
+- full (operatorname{gr}_k(R)=operatorname{gr}_k(F)) for all (kge2): **OPEN / LOAD-BEARING**;
+- (D_{p+1}) explicit decomposition argument: **PASS / LOCAL** for the already-closed one-step boundary;
+- (W_{p+1}=W_p): **PASS / CLOSED / GENERAL**;
+- (W_n=W_p) for all (nge p): **OPEN / LOAD-BEARING**.
+
+No arbitrary-(n) promotion is authorized from this proposal.
