@@ -3022,3 +3022,37 @@ This closes the load-bearing stabilization gate. No blind numerical sweep is req
 The repaired proof fixed the first error but contains a new decisive gap at the equality step. It establishes D_{k+1} <= M_{p+1}, hence M_{k+1}=D_{k+1}R <= M_{p+1}=M_k. But descending filtration monotonicity gives exactly this same direction; it does not give M_k <= M_{k+1}. Therefore the claimed equality M_{k+1}=M_k is not proved.
 
 A separate argument is required to show M_{p+1} <= D_{k+1}R, equivalently that no new strict shrinkage occurs after p+1. The two repaired lemmas do not establish this. Consequently arbitrary-n stabilization remains OPEN / LOAD-BEARING. The prior PASS/CLOSED entry for the repaired proof is superseded by this audit.
+
+
+## 2026-10-06 — Second audit: proposed Lemma C/D technical fix rejected
+
+A further proposed repair of the Zassenhaus stabilization proof was audited. The candidate lemma
+\[
+J_aI\subseteq J_{a+1}R+J_aI^2
+\]
+is FAIL / CLOSED as a general statement.
+
+The decisive counterexample is \(G=C_p^2\), \(R=\mathbf F_p[G]\), \(I=\operatorname{Aug}(R)\). Since \(G\) is elementary abelian of exponent \(p\), \(D_2(G)=1\), hence \(J_1=I\) and \(J_2=0\). At \(a=1\), the lemma would imply
+\[
+I^2\subseteq I^3,
+\]
+contradicting the nonzero degree-2 Jennings layer.
+
+The proposed group-algebra expansion also does not establish the claim. With \(xg=gx[x,g]\),
+\[
+(x-1)(g-1)=g(x-1)-(g-1)+gx([x,g]-1).
+\]
+The commutator term is in \(J_{a+1}\), but \(g(x-1)\) is only in \(J_a\), not in \(J_aI^2\) in general. Thus the proof silently replaces \(J_a\)-membership by a stronger augmentation-order statement.
+
+The proposed Lemma D is also circular: its induction uses an inclusion of the form \(J_{p+2+t}\subseteq J_{p+2}I^t\) that has not been established and is essentially the missing \(J\)-versus-\(I\) comparison.
+
+### Classification
+
+- strong \(J_aI^t\subseteq J_{a+t}R\): FAIL / CLOSED in general;
+- Lemma C \(J_aI\subseteq J_{a+1}+J_aI^2\): FAIL / CLOSED as a general lemma;
+- special \(a=p+2\) approximation \(J_{p+2}I^t\subseteq J_{p+2+t}R+J_{p+2}I^{t+1}\): OPEN / LOAD-BEARING;
+- \(M_{p+1}\subseteq M_{k+1}\): OPEN / LOAD-BEARING;
+- \(W_n=W_p\) for all \(n\ge p\): OPEN / LOAD-BEARING;
+- \(n=p,p+1\) boundary theorem: PASS / CLOSED / GENERAL.
+
+The same-session proposal to label stabilization CLOSED is superseded by this audit. No arbitrary-n theorem is to be promoted until the reverse inclusion is independently proved.
