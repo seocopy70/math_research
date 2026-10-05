@@ -2788,3 +2788,26 @@ Classification:
 - Step-3 equality Im(Aut(W_n)->GL(V))=S_11(p) remains OPEN/LOAD-BEARING.
 
 Detailed audit: research/PAPER5_WP1_STABILIZATION_AUDIT_2026-10-06.md. The earlier 2026-10-06 stabilization FAIL audit is superseded.
+
+
+## 2026-10-06 — p^2 comparison-window Addendum 2 audit
+
+The proposed final closure
+\[
+U_p=W_p/L,\qquad |\operatorname{Aut}(W_p)|/|\operatorname{Aut}(U_p)|=p^2
+\]
+was audited and rejected **as submitted**.
+
+First, \(L=Z(W_p)D_2/D_2\) is a line in \(V=W_p/D_2\), not a subgroup of \(W_p\); hence \(W_p/L\) is undefined until a canonical subgroup lift is specified. If \(C=\langle z\rangle\) is chosen instead, the quotient has a 2-dimensional Frattini quotient and its automorphism image/kernel must be recomputed independently; neither the same \(S'_{11}\) image nor a \(p^7\) kernel follows formally.
+
+Second, the proposed relation condition \(b(\pi(x),y)\) is type-invalid for the already-defined \(b:\wedge^2V\to D_p\), since \(\pi(x)\in D_p\), not \(V\). A new action/pairing or derivation-level construction is required before a \(3\to2\) dimension cut can be proved.
+
+Therefore:
+- \(W_{p+1}=W_p\): PASS/CLOSED/GENERAL.
+- intrinsic \(W_p\) relation-jet stabilizer \(S'_{11}\): PASS/CLOSED/GENERAL.
+- \(\operatorname{Im}(\operatorname{Aut}(W_p)\to GL(V))=S'_{11}\): PASS/CLOSED/GENERAL.
+- raw \(GL_3/S'_{11}\) p-primary index: \(p\).
+- proposed \(U_p\) quotient comparison and \(Z^1_{\mathcal J_p}(V,L)\cong\mathbf F_p^2\): OPEN/LOAD-BEARING.
+- exact \(p^2\) automorphism-order theorem: OPEN/LOAD-BEARING.
+
+Detailed audit: research/PAPER5_P2_GAP_COMPARISON_WINDOW_AUDIT_2026-10-06.md.
