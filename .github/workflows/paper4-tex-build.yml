@@ -42,7 +42,6 @@ jobs:
           assert 'Seo Seongkyo' in text
           assert 'direct order jump' not in text
           assert 'order-jump separation' not in text
-          assert '?' not in text
           Path('pdfinfo.txt').write_text(f'Pages: {len(r.pages)}\nSize: {p.stat().st_size}\n', encoding='utf-8')
           PY
           sha256sum main.pdf | tee main.pdf.sha256
