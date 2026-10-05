@@ -113,3 +113,78 @@ The repaired argument correctly proves D_c^p <= M_{p+1} and gamma_k <= M_{p+1} f
 To conclude M_{k+1}=M_{p+1}, one must separately prove M_{p+1} <= D_{k+1}R, i.e. that the persistent relation quotient does not shrink after p+1. Neither Lemma A nor Lemma B supplies this. Thus the repaired proof is NOT closed.
 
 Classification: repaired stabilization proof FAIL / CLOSED as submitted; W_{p+1}=W_p => W_n=W_p remains OPEN / LOAD-BEARING. The n<p and n=p,p+1 results remain unchanged.
+
+
+## 2026-10-06 — Second audit of the proposed Lemma C/D repair: rejected
+
+The proposed replacement
+\[
+J_a I \subseteq J_{a+1}R+J_a I^2 \tag{*}
+\]
+is not established, and in the stated generality it is false.
+
+### 1. Decisive counterexample to Lemma C as stated
+
+Take \(G=C_p^2\), \(R=\mathbf F_p[G]\), \(I=\operatorname{Aug}(R)\). Since \(G\) is elementary abelian of exponent \(p\),
+\[
+D_1(G)=G,\qquad D_2(G)=1,
+\]
+so \(J_1=I\) and \(J_2=0\). Lemma C with \(a=1\) would give
+\[
+I^2=J_1I\subseteq J_2+J_1I^2=I^3,
+\]
+which is false (degree-2 Jennings monomials survive modulo \(I^3\)).
+
+Thus the proposed weight-raising lemma cannot be used as a general theorem.
+
+### 2. The displayed group-algebra identity does not prove (*)
+
+With the convention \(xg=gx[x,g]\),
+\[
+(x-1)(g-1)=g(x-1)-(g-1)+gx([x,g]-1).
+\]
+The commutator term is in \(J_{a+1}\) when \(x\in D_a\), but the term \(g(x-1)\) is only in \(J_a\), not in \(J_aI^2\) in general. Normality of \(D_a\) shows \(g(x-1)\in J_a\), but does not raise its augmentation order.
+
+### 3. Lemma D is circular at the induction step
+
+The proposed induction uses an inclusion of the form
+\[
+J_{p+2+t}\subseteq J_{p+2}I^t
+\]
+(or an equivalent assertion that the \(J\)-component has already been absorbed into the iterated \(J_{p+2}I^t\)). That is not a consequence of \(D_{p+2}\subseteq D_{p+1}\) or of the already established iteration
+\[
+D_{p+1}\subseteq J_{p+2}R^t.
+\]
+It is precisely the missing \(J\)-versus-\(I\) comparison. Using it to prove that comparison is circular.
+
+### 4. What survives
+
+- \(D_{p+1}\subseteq J_{p+2}R\): PASS, from \(M_{p+2}=M_{p+1}\).
+- \(D_{p+1}\subseteq J_{p+2}R^t\): PASS, by iteration.
+- The previously independently proved \(D_{k+1}\subseteq M_{p+1}\) absorption statement: PASS within its stated hypotheses.
+- \(J_aI^t\subseteq J_{a+t}R\): FAIL / CLOSED in general.
+- Lemma C (*): FAIL / CLOSED as a general statement.
+- The special approximation
+\[
+J_{p+2}I^t\subseteq J_{p+2+t}R+J_{p+2}I^{t+1}
+\]
+is OPEN / LOAD-BEARING.
+- \(M_{p+1}\subseteq M_{k+1}\), hence full stabilization, remains OPEN / LOAD-BEARING.
+
+### 5. Audit consequence
+
+The attempted technical fix does not close the second audit. In particular, the labels
+\[
+n>p+1:\mathrm{PASS/CLOSED/GENERAL},\qquad
+W_n=W_p\ \forall n\ge p
+\]
+must not be promoted.
+
+The current boundary is
+\[
+n<p:\mathrm{PASS/CLOSED},\qquad
+n=p,p+1:\mathrm{PASS/CLOSED/GENERAL},\qquad
+n>p+1:\mathrm{OPEN/LOAD\!-\!BEARING}.
+\]
+
+Next authorized mathematical task: prove or disprove the special \(a=p+2\) approximation above, or find a different non-circular stabilization theorem. No blind numerical sweep is authorized as a substitute.
