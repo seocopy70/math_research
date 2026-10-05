@@ -1512,3 +1512,50 @@ Gauge: changing the representative inside an Aut(W)-orbit changes the action by 
 The gate records image and kernel orders; no claim of orientation recovery is attached.
 
 Status: **OPEN / ACTIVE** pending the CI runtime certificate.
+
+
+## 2026-10-05 — Paper 5 corrected p=5,n=6 stabilizer and exact Aut-order audit
+
+The p=5 cross-prime candidate has now been repaired rather than rejected. The earlier “(1,1) failure” came from using independent diagonal generators <D_1(2),E_{12},D_3(2)> instead of the **coupled** generator 
+\(
+\operatorname{diag}(2,1,2)
+\).
+The corrected p=5 matrix gate is CI-certified in run **37251784928** (commit `1051e61b373d0a1eb023a0256cf8279384da9c36`):
+- (0,1): actual entrywise matrix subgroup = candidate, order 2000;
+- (1,1): actual entrywise matrix subgroup = candidate, order 20;
+- (0,2): actual entrywise matrix subgroup = candidate, order 48000;
+- (1,2): actual entrywise matrix subgroup = candidate, order 480.
+The a=2 gate uses the exact W_6 construction with `PQuotient(...,6,2000)`.
+
+The resulting tested stabilizer patterns are:
+- S_{0,1}=\{ upper triangular matrices with middle diagonal entry 1, first/third diagonal entries arbitrary nonzero \}, order 2000;
+- S_{1,1}=\{\begin{psmallmatrix}a&b&0\\0&1&0\\0&0&a\end{psmallmatrix}:a\in\mathbf F_5^*,b\in\mathbf F_5\}, order 20;
+- S_{0,2}=\{\begin{psmallmatrix}A&v\\0&e\end{psmallmatrix}:A\in GL_2(5),v\in\mathbf F_5^2,e\in\mathbf F_5^*\}, order 48000;
+- S_{1,2}=\{\operatorname{diag}(A,\det A):A\in GL_2(5)\}, order 480.
+These are the p=5 analogues of the already closed p=3 stabilizer formulas. Current status is **PASS / LOCAL** for cross-prime structural replication: the committed entrywise matrix certificate is positive, but a fully independent quotient-action certificate is still desirable before theorem-level promotion.
+
+A separate exact reproduction of the historical p=5 Aut(W_6) order artifact was executed in CI run **37252036371**. The GAP command reproduced the external log exactly (up to line wrapping):
+- s=0,a=1: 2^4 * 5^109;
+- s=1,a=1: 2^2 * 5^107;
+- s=2,a=1: 2^4 * 5^109;
+- s=1,a=2: 2^5 * 3 * 5^107;
+- s=0,a=2: 2^7 * 3 * 5^109.
+The workflow failed only because the final shell grep hit the wrapped last line; the GAP calculation itself completed and printed all five exact values. Thus the **mathematical reproduction is PASS / LOCAL**, while the shell certificate is **FAIL / CLOSED as a validation wrapper**.
+
+For the fixed-a comparisons, the p-primary p^2 gap is now transparent at the order level:
+- a=1: GL image orders 2000 vs 20, while both IA orders are 5^106; hence the 5^2 gap is entirely on the GL/Frattini side.
+- a=2: GL image orders 48000 vs 480, while both IA orders are 5^106; hence again the 5^2 gap is entirely on the GL/Frattini side.
+This is the first strong cross-prime evidence that the observed p^2 gap is a linear stabilizer phenomenon, not an IA-order phenomenon. It remains **PASS / LOCAL**, not a uniform theorem.
+
+## 2026-10-05 — Paper 5 p=3,s=2,a=1,n=10 exact orbit reproduction
+
+The recovered AutPGrp orbit runner was isolated and executed in CI. GAP produced:
+- 81 admissible kernels;
+- exactly one Aut(W_10)-orbit, size 81;
+- |Aut(W_10)| = 823564528378596 = 4 * 3^30;
+- orbit stabilizer = 10167463313316 = 4 * 3^26;
+- representative kernel |K|=3^9, nonabelian;
+- complement classes per kernel = 59049 = 3^10.
+The old external note reporting |Aut(W_10)|=2*3^30 is therefore **SUPERSEDED** by the current executable reproduction. The first CI run failed only because the shell grep used an invalid regex; the GAP computation itself completed. The corrected wrapper was committed and the same GAP output re-executed; the remaining workflow failure was shell-quoting only, not mathematical output.
+
+Classification: p=3,s=2,a=1,n=10 orbit structure = **PASS / LOCAL**; exact Aut-order reproduction = **PASS / LOCAL**; old 2*3^30 value = **HISTORICAL / SUPERSEDED**. The one-orbit result still does not by itself explain the p^2 gap or prove a fixed-quotient factorization.
