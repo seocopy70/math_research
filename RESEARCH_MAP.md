@@ -40,6 +40,7 @@ Current load-bearing boundary:
 | What happened and when? | research/00_RESEARCH_LOG.md |
 | Why did a route fail/change? | dated audit in archive + log |
 | What are calculation conventions? | research/03_CONVENTIONS_AND_IMPLEMENTATION.md |
+| Where are explanation/learning/evaluation records collected? | research/90_RESEARCH_GUIDE/README.md |
 | What is old AI/session context? | research/archive/ |
 | What is only a plan? | plans/ |
 
