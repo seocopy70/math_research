@@ -583,3 +583,67 @@ W_p=F/(R D_{p+1}).
 ]
 
 Audit: `research/PAPER5_WP_BOUNDARY_CONSISTENCY_AUDIT_2026-10-06.md`.
+
+
+## 2026-10-06 — W_p corrected D_p structure closes Step 3
+
+The previous boundary audit is superseded by the corrected intrinsic calculation. At (n=p),
+[
+D_p(W_p)=\langle X=x^p,Y=y^p,Z=z^p\rangle\cong\mathbf F_p^3,
+qquad [x,y]=XZ^{-1},
+]
+with (D_p) central of exponent (p). The relation therefore does not impose (X=Z); it records the commutator as (XZ^{-1}).
+
+Consequently
+[
+IA(W_p)\cong\operatorname{Hom}(V,D_p)\cong\mathbf F_p^9.
+]
+For an arbitrary automorphism, centrality of (g(z)) gives (g(z)\equiv z^a\pmod{D_2}), and writing
+[
+g(x)\equiv x^m y^u z^c,qquad g(y)\equiv x^b y^v z^d
+]
+the defining relation gives
+[
+X^{mv-bu}Z^{-(mv-bu)}=X^mY^uZ^{c-a}.
+]
+Independence of (X,Y,Z) forces
+[
+u=0,qquad v=1,qquad c=a-m.
+]
+Thus
+[
+\operatorname{Im}(\operatorname{Aut}(W_p)\to GL(V))
+\subseteq S'_{11}(p),
+]
+where
+[
+S'_{11}(p)=
+\left\{
+\begin{pmatrix}
+m&b&0\\
+0&1&0\\
+a-m&d&a
+\end{pmatrix}
+:m,a\in\mathbf F_p^\times, b,d\in\mathbf F_p
+\right\}.
+]
+The explicit realization family gives the reverse inclusion, so
+[
+\operatorname{Im}=S'_{11}(p),qquad |\operatorname{Im}|=p^2(p-1)^2.
+]
+Hence
+[
+|\operatorname{Aut}(W_p)|=p^9\,p^2(p-1)^2
+=p^{11}(p-1)^2.
+]
+
+Classification:
+- (D_p(W_p)\cong\mathbf F_p^3): **PASS / CLOSED / GENERAL**.
+- (IA(W_p)\cong\mathbf F_p^9): **PASS / CLOSED / GENERAL**.
+- (m_{y,x}=0, m_{y,y}=1, c=a-m): **PASS / CLOSED / GENERAL**.
+- (S'_{11}(p)\subseteq\operatorname{Im}): **PASS / CLOSED / GENERAL**.
+- (\operatorname{Im}=S'_{11}(p)): **PASS / CLOSED / GENERAL**.
+- (|\operatorname{Aut}(W_p)|=p^{11}(p-1)^2): **PASS / CLOSED / GENERAL**.
+- Previous (D_p\cong\mathbf F_p^2), (IA\cong\mathbf F_p^6), and (p^8(p-1)^2) claims: **FAIL / CLOSED / SUPERSEDED**.
+
+Detailed audit: `research/PAPER5_WP_CORRECTED_STRUCTURE_STEP3_CLOSURE_2026-10-06.md`.
