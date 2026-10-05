@@ -2256,3 +2256,90 @@ when lifted back to \(\overline L\), not \(\Phi(u,v)\in D_{p+1}(\overline L)\). 
 This is a decisive gap. The statement \(\Phi\in D_{p+1}\) and hence the canonicality of \(\theta\) remain **OPEN / LOAD-BEARING**. The proposed Step-2 CLOSED classification is rejected. The restricted-abelianization lemma becomes a useful auxiliary lemma, not the final gate.
 
 The next authorized task is to retain enough of the \(J\)-adic/filtered extension data to distinguish \(D_{p+1}\) from \(J+D_{p+1}\), and to compute the lift-change map in \(\overline L\) itself (or construct an exact transgression sequence whose kernel is known to contain no degree-\(<p\) contribution). No equality theorem or \(p^2(p-1)\) theorem is promoted.
+
+
+## 2026-10-05 — Paper 5 Step 2 CLOSED: filtered-extension/J-adic gate
+
+**Result classification: CLOSED / GENERAL (Step 2).**
+
+The previously identified gap is now closed in the actual relation quotient, not merely in the auxiliary quotient. Let
+[
+overline L=L_p(V)/langle[x,z],[y,z]angle_{m res},qquad
+J=langle[x,y]angle_{m res},
+]
+and
+[
+W_n=overline L/langlehoangle,qquad
+ho=[x,y]+z^{[p]}-x^{[p]}.
+]
+The auxiliary lemma
+[
+D_2(overline L/J)=V^{[p]}+D_{p+1}(overline L/J)
+]
+is only PASS/LOCAL and by itself gives merely
+[
+Phiin J+D_{p+1}(overline L).
+]
+It does not kill the (J)-ambiguity.
+
+In (W_n), however,
+[
+[x,y]=x^{[p]}-z^{[p]}in D_p(W_n),
+]
+so the (D_2/D_{p+1}) relation direction is already contained in (V^{[p]}). Hence
+[
+oxed{D_2(W_n)=V^{[p]}+D_{p+1}(W_n)}.
+]
+The higher restricted-ideal part satisfies
+[
+oxed{[V,J]subseteq D_{p+1}(W_n)}
+]
+and more precisely
+[
+Jsubseteqlangle x^{[p]}-z^{[p]}angle+D_{p+1}(W_n).
+]
+The critical generator calculations are
+[
+[x,[x,y]]=0,qquad
+[y,[x,y]]=(ad,x)^p(y)in D_{p+1},
+]
+using centrality of (z); the restricted (p)-power part is also in (D_{p+1}).
+
+Therefore for (u,vin D_2(W_n)), write
+[
+u=t^{[p]}w,qquad win D_{p+1}(W_n).
+]
+Then
+[
+[x,u]in D_{p+1},qquad [u,y]in D_{p+1},
+]
+and the commutator expansion gives
+[
+oxed{Phi(u,v)=[xu,yv][x,y]^{-1}in D_{p+1}(W_n)}.
+]
+Thus the secondary degree-(p) class
+[
+	heta:J_2	o D_p(W_n)/D_{p+1}(W_n)
+]
+is lift-independent and canonical in (W_n).
+
+**Precision correction:** do not state (Jsubseteq D_{p+1}). The generator ([x,y]=x^{[p]}-z^{[p]}) can survive modulo (D_{p+1}); only the higher (J)-part relevant to lift ambiguity is absorbed into (D_{p+1}).
+
+### Updated status
+
+- (S_{11}=p(p-1)): CLOSED/GENERAL.
+- Step 1 upper bound: THEOREM/CLOSED.
+- (D_2(overline L/J)=V^{[p]}+D_{p+1}): PASS/LOCAL.
+- (Phiin J+D_{p+1}(overline L)): PASS/LOCAL auxiliary statement.
+- (D_2(W_n)=V^{[p]}+D_{p+1}(W_n)): PASS/GENERAL.
+- ([V,J]subseteq D_{p+1}(W_n)): PASS/GENERAL.
+- (Phiin D_{p+1}(W_n)): CLOSED/GENERAL.
+- Step 2 (	heta): CLOSED/GENERAL.
+- Step 3 equality
+[
+operatorname{Im}(operatorname{Aut}(W_n)	o GL(V))=S_{11}(p)
+]
+remains CONDITIONAL.
+- The (p^2(p-1)) automorphism-order theorem remains CONDITIONAL.
+
+The old Step-2 OPEN/LOAD-BEARING entries are superseded. The next authorized gate is the explicit lower-bound/lifting construction and independent relation-preservation verification for Step 3.
