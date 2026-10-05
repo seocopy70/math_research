@@ -957,3 +957,16 @@ Classification:
 Artifact: `paper4-r1-gap-certificate`, artifact ID 11319182263. No Paper 5 computation is used as evidence.
 
 Immediate active branch remains Paper 5; next gate is p=5,n=6,(s,a)=(1,1) with the audited GAP-native faithful Frattini-action pipeline.
+
+
+## 2026-10-05 — Paper 5 p=5,n=6 direct faithful-action gate correction
+
+Run **37246954086** (commit `e6e64350300ed4a000391a5e6ac634bce2be4fd2`) did **not** certify the p=5 stabilizer gate. The direct MatPerm implementation reports order 2000 for both actual and candidate at (s,a)=(0,1), but equality=false, so the implementation itself must be audited before any mathematical conclusion. Because the failure occurs already at (0,1), this is evidence of a representation/coordinate issue rather than a newly discovered (1,1) counterexample.
+
+Current status:
+- (0,1): **OPEN / LOAD-BEARING** — coordinate/embedding audit required;
+- (1,1): **OPEN / LOAD-BEARING** — no FAIL promotion;
+- a=2: **OPEN / EXECUTION BLOCKED**;
+- p=5 uniform stabilizer theorem: **OPEN**.
+
+Next authorized computation: a small diagnostic that prints/compares the actual Frattini matrices and candidate generators under the fixed (x,y,z) basis and tests transpose/inverse/action conventions and basis conjugacy. Only after this closes may the a=2 W_6 collector/order-bound gate begin.
