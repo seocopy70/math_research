@@ -2343,3 +2343,43 @@ remains CONDITIONAL.
 - The (p^2(p-1)) automorphism-order theorem remains CONDITIONAL.
 
 The old Step-2 OPEN/LOAD-BEARING entries are superseded. The next authorized gate is the explicit lower-bound/lifting construction and independent relation-preservation verification for Step 3.
+
+
+## 2026-10-05 — Step 3 equality audit: first-order relation congruence passes, kernel-invariance induction fails
+
+The proposed final Step 3 closure was independently rechecked against the current Paper 5 state.
+
+The calculation
+[
+\tilde g_{a,b}(\rho)\equiv \rho^a
+\pmod{R D_{p+1}(F)}
+]
+is accepted as a useful first-order congruence, assuming consistent commutator convention and the already established estimate
+[
+\gamma_3(F)\subseteq [F,R]D_{p+1}(F).
+]
+Hall–Petrescu supplies the required (p)-power congruences, and the (R_0)-quotient makes (z) central.
+
+However, the submitted proof contains a definite relation-order/sign mismatch: from
+[
+\rho=[x,y]^{-1}x^pz^{-p}
+]
+the quotient relation is ([x,y]=x^pz^{-p}), not the displayed exact replacement ([x,y]=\rho z^px^{-p}). The latter is inverse/order-reversed and must not be used as an exact identity.
+
+More importantly, the decisive implication
+[
+\tilde g(R)\subseteq R D_{p+1}(F)
+\Longrightarrow
+\tilde g(R)\subseteq R
+]
+was asserted via an unspecified “standard pro-(p) induction”. This is not proved. From (\tilde g(R)\subseteq RD_m) one still needs an explicit mechanism forcing (\tilde g(R)\subseteq RD_{m+1}) (or an equivalent exact relation-module/kernel argument). Closedness of (R) and ([F,R]\subseteq R) do not supply that step automatically.
+
+Therefore the submitted Step 3 equality closure is **FAIL / CLOSED as a proof attempt**, while the underlying equality remains **OPEN / LOAD-BEARING**:
+[
+\operatorname{Im}(\operatorname{Aut}(W_n)\to GL(V))=S_{11}(p)
+]
+is not promoted. The (p^2(p-1)) automorphism-order theorem remains **CONDITIONAL**.
+
+Detailed evidence: `research/PAPER5_STEP3_EQUALITY_AUDIT_2026-10-05.md`.
+
+Next authorized gate: prove a genuine Zassenhaus-layer lifting lemma for kernel invariance, or replace the induction with an exact presentation/relation-module argument. Do not promote the equality or the (p^2(p-1)) theorem before that gate closes.
