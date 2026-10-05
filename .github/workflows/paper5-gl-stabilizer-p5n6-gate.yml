@@ -1,4 +1,5 @@
 name: Paper 5 p=5 n=6 GL stabilizer cross-prime gate
+# 2026-10-05: trigger audited p=5,n=6,(s,a)=(1,1) gate after faithful-action pipeline repair
 on:
   workflow_dispatch:
   push:
