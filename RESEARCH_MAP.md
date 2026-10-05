@@ -143,3 +143,8 @@ The former compression/trichotomy work remains historical boundary material: it 
 Current candidate contribution: identify the structural source of the observed p^2 automorphism-order gap between split and non-split windows. User-reported computations show the same p^2 gap at p=3,n=4 and p=5,n=6. This is PASS / LOCAL only until the IA/GL decomposition is independently reproduced.
 
 Next gate: p=3,n=4 IA kernel and GL-image decomposition; then fixed-quotient Aut(W)->Aut(Q) image/kernel; then cross-prime p=5,n=6 replication. Orientation-recovery dichotomy is deferred until this concrete theorem is obtained.
+
+
+## 2026-10-05 — Paper 5 relation-jet boundary refined
+
+The two-level relation-jet stabilizer mechanism is now split cleanly into two layers: the abstract projective stabilizer formulas for odd p are PASS / CLOSED, while realization of the actual finite-window Frattini image as that stabilizer remains OPEN / LOAD-BEARING. The p=3 and p=5 computations are local equality certificates, not the general theorem. The p^2 gap therefore has a closed abstract linear-stabilizer explanation candidate, but no p-uniform automorphism-order theorem yet.
