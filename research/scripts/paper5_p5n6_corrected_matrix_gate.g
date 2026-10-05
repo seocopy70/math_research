@@ -50,8 +50,41 @@ CandidateGroups:=function()
   return [G01,G11];
 end;
 
+
+MulM:=function(A,B) local C,i,j,k,t;
+  C:=List([1..3],i->List([1..3],j->0*One(Fld)));
+  for i in [1..3] do for j in [1..3] do
+    t:=0*One(Fld);
+    for k in [1..3] do t:=t+A[i][k]*B[k][j]; od;
+    C[i][j]:=t;
+  od; od;
+  return C;
+end;
+
+KeyM:=function(A)
+  return JoinStringsWithSeparator(List(Flat(A),x->String(Int(x))),",");
+end;
+
+ClosureKeys:=function(gens)
+  local one,seen,queue,A,B,C,key,q;
+  one:=IdentityMat(3,Fld);
+  seen:=rec();
+  key:=KeyM(one); seen.(ReplacedString(key,",","_")):=true;
+  queue:=[one]; q:=1;
+  while q<=Length(queue) do
+    A:=queue[q]; q:=q+1;
+    for B in gens do
+      C:=MulM(A,B); key:=KeyM(C); key:=ReplacedString(key,",","_");
+      if not IsBound(seen.(key)) then
+        seen.(key):=true; Add(queue,C);
+      fi;
+    od;
+  od;
+  return Set(RecNames(seen));
+end;
+
 run:=function(s,a)
-  local R,W,gens,A,frnat,basis,autGens,Mats,Cands,expected,i,m,ok;
+  local R,W,gens,A,frnat,basis,autGens,Mats,Cands,expected,i,m,ok,actualKeys,candKeys;
   R:=winW(mkG(s,a)); W:=R[1]; gens:=R[2];
   A:=AutomorphismGroupPGroup(W);
   frnat:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
