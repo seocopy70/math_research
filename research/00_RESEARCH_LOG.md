@@ -1966,3 +1966,28 @@ The next task is to derive the strongest clean theorem that SC supports, in this
 
 No theorem is to be broadened by analogy; each scope enlargement requires an independent proof.
 
+
+
+## 2026-10-05 — SC strengthening and complete critical-a classification
+
+**Result classification: PASS / CLOSED.**
+
+The SC result was strengthened from the critical specialization to a general transfer-depth law. For an index-p kernel K≤F,
+D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K).
+With m=\lceil n/p\rceil and e(n)=\lceil\log_p m\rceil, Jennings–Lazard gives
+\operatorname{im}(D_n(F)\cap K\to K^{ab})\subseteq p^{e(n)}K^{ab}.
+At n=p^s+1, e(n)=s, recovering TF_s.
+
+A second strengthening completely classifies the stress-family critical windows W_{s,a}=W_{p^s+1}(G_{s,a}). For 1\le a<s,
+W_{s,a}^{ab}\cong\mathbf Z_p/p^a\oplus(\mathbf Z_p/p^{s+1})^d,
+so distinct a<s are pairwise distinguished by abelianization. For a>s, p^a\ge p^{s+1}>p^s+1, so the x_1^{p^a} term vanishes in the critical truncation and W_{s,a}=W_{s,\infty}. At a=s, abelianization agrees with a=\infty, but the already certified intrinsic transfer witness satisfies
+\varepsilon_s(W_{s,s})\ne0,\qquad \varepsilon_s(W_{s,\infty})=0,
+hence W_{s,s}\not\cong W_{s,\infty}.
+
+Therefore the map a\mapsto W_{p^s+1}(G_{s,a}) has exactly one nontrivial critical boundary at a=s, while a>s is saturated with a=\infty.
+
+Scope remains: odd p, s\ge2, even d, nondegenerate alternating r_2. The nondegenerate hypothesis is retained because it is needed for the current canonical one-dimensional cup-radical construction of the intrinsic kernel. The s=1 case and degenerate quadratic forms remain unpromoted.
+
+Interpretation: SC is now infrastructure/engine. The theorem-level contribution is the finite-window transfer obstruction and the complete critical-window classification of the hidden power parameter. The arbitrary-r degree-only theorem remains FAIL / CLOSED.
+
+Evidence anchors: research/PAPER4_CURRENT_2026-10-05.md, research/PAPER4_MAGNUS_PREFIX_CODE_AUDIT_2026-10-05.md, and the SC literature audit in research/PAPER4_WEIGHTED_SCHREIER_DERIVATION_AUDIT_2026-10-05.md.
