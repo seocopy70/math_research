@@ -241,3 +241,26 @@ The submitted Step 3 proof has useful first-order congruences but does not close
 \tilde g(R)\subseteq R D_{p+1}(F)\Longrightarrow \tilde g(R)\subseteq R
 \]
 via an unspecified “standard pro-p induction” is not valid as stated: no mechanism is given to improve (RD_m) to (RD_{m+1}). The displayed identity replacing ([x,y]) by ρ z^p x^{-p} also has the inverse/order reversed relative to \(\rho=[x,y]^{-1}x^pz^{-p}\). Therefore the Step 3 lower bound remains **OPEN / LOAD-BEARING**, and the equality \(\operatorname{Im}=S_{11}(p)\) and (p^2(p-1)) theorem remain **CONDITIONAL**. Detailed audit: `research/PAPER5_STEP3_EQUALITY_AUDIT_2026-10-05.md`.
+
+
+## 2026-10-05 — Step 3 re-audit: (D_{p+1}\subseteq R) is false
+
+The proposed closure using
+\[
+D_{p+1}(F)\subseteq R
+\]
+is rejected. The graded induction fails at the first exceptional multiple (n=p^2): from (y\in gr_k(R)\Rightarrow y^{[p]}\in gr_{kp}(R)) one cannot infer (gr_{kp}(F)=gr_{kp}(R)) when (k=p), because (gr_p(F)\ne gr_p(R)). In particular (x^{[p^2]}) need not lie in (gr_{p^2}(R)).
+
+There is also a direct group-level counterexample. In the abelian quotient
+\[
+A=\mathbf Z_p^3/\langle p(e_x-e_z)\rangle,
+\]
+the defining normal subgroup (R) maps to zero, while (x^{p^2}) maps to (p^2e_x\ne0). Hence (x^{p^2}\notin R). Since (x^{p^2}\in D_{p^2}(F)\subseteq D_{p+1}(F)),
+\[
+\boxed{D_{p+1}(F)\not\subseteq R.}
+\]
+
+Therefore the claimed implication (\tilde g(R)\subseteq RD_{p+1}=R) is invalid. The earlier first-order congruence (\tilde g(R)\subseteq RD_{p+1}) remains a potentially useful local/general ingredient, but kernel preservation \(\tilde g(R)\subseteq R\) is again **OPEN / LOAD-BEARING**. Consequently
+\(​operatorname{Im}(\operatorname{Aut}(W_n)\to GL(V))=S_{11}(p)\) remains OPEN/LOAD-BEARING and the uniform (p^2(p-1)) theorem remains CONDITIONAL.
+
+Detailed audit: `research/PAPER5_STEP3_Dp1_SUBSET_R_AUDIT_2026-10-05.md`.
