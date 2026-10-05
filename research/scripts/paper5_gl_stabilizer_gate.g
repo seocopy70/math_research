@@ -59,7 +59,7 @@ CandidateGroups:=function()
 end;
 
 run:=function(s,a)
-  local R,W,gens,A,frnat,basis,autGens,Mats,actual,Cands,expected,i,eq;
+  local R,W,gens,A,frnat,basis,autGens,Mats,actual,Cands,expected,i,eq,Huser,Z,centerV;
   R:=winW(mkG(s,a),4,4); W:=R[1]; gens:=R[2];
   A:=AutomorphismGroupPGroup(W);
   frnat:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
@@ -68,6 +68,13 @@ run:=function(s,a)
   autGens:=Concatenation(A.glAutos,A.agAutos);
   Mats:=List(autGens,alpha->ImageMatrix(alpha,frnat,basis));
 
+  Z:=Centre(W);
+  centerV:=Group(List(GeneratorsOfGroup(Z),z->Image(frnat,z)));
+  Print("CENTER_IMAGE_ORDER=",Size(centerV),"\\n");
+  if Size(centerV)<>3 then Error("center image is not a unique line"); fi;
+  if centerV<>Group([Image(frnat,gens[1])]) then
+    Error("center image line is not the z-line");
+  fi;
   if ForAny(Mats,m->DeterminantMat(m)=0) then
     Error("non-invertible Frattini action matrix");
   fi;
@@ -101,3 +108,5 @@ Print("STABILIZER_CERTIFICATE=PASS\n");
 QUIT;
 
 # CI retrigger after source-family correction: 2026-10-06.
+
+# CI retrigger after actual embedded-line diagnostics: 2026-10-06.
