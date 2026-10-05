@@ -47,9 +47,35 @@ Run 37381098677:
 
 Classification: PASS / LOCAL only. This confirms the already-closed boundary theorem because W_6=W_5; it is not a general proof.
 
+## 2026-10-06 stabilization-lemma audit: proposed closure rejected
+
+A proposed proof of the Zassenhaus stabilization lemma
+[
+W_{p+1}=W_p Longrightarrow W_n=W_pquad(nge p)
+]
+was independently audited and is **FAIL / CLOSED as submitted**.
+
+The decisive error is the induction claim, for
+(c=lceil(k+1)/pceilge p),
+[
+D_csubseteq D_psubseteq M_{p+1}.
+]
+But
+[
+D_p(W_p)=M_p/M_{p+1}congmathbf F_p^3
+]
+is nonzero, so (D_p
+otsubseteq M_{p+1}). The surviving (x^p,y^p,z^p) classes are exactly the reason this inclusion cannot hold. Hence the claimed containment of the (p)-power term (D_c^p) in (M_{p+1}) is not proved.
+
+The additional restricted-ideal argument is also insufficient: putting the degree-(p) Lie component into the initial restricted ideal does not automatically kill later independent restricted layers such as (p)-powers arising from lower-degree components. Equality (M_{p+2}=M_{p+1}) therefore does not propagate by the displayed induction.
+
+Standard Jennings/Lazard facts establish the restricted-filtration identities, but do not imply one-step stabilization from (M_{p+2}=M_{p+1}).
+
+Detailed audit: `research/PAPER5_ZASSENHAUS_STABILIZATION_AUDIT_2026-10-06.md`.
+
 ## What remains open
 
-The arbitrary-n extension is OPEN / LOAD-BEARING:
+The arbitrary-n extension is OPEN / LOAD-BEARING. The proposed stabilization shortcut is now explicitly rejected; a genuine stabilization theorem or counterexample is required.
 Im(Aut(W_n)->GL(V)) ?= S'_11(p), or the correct n-dependent intrinsic replacement.
 
 The previous B,theta attempt to force a uniform flag and P=lambda_s I+N from
@@ -73,6 +99,8 @@ Therefore the remaining proof problem is specifically the uniform U_n-action con
 | n=p+1 automorphism theorem | PASS / CLOSED / GENERAL |
 | Run 37381098677 | PASS / LOCAL |
 | arbitrary-n B,theta proof as submitted | FAIL / CLOSED |
+| proposed Zassenhaus stabilization proof | FAIL / CLOSED |
+| implication W_{p+1}=W_p => W_n=W_p for all n>=p | OPEN / LOAD-BEARING |
 | arbitrary-n uniform U_n-action control | OPEN / LOAD-BEARING |
 | arbitrary-n Frattini-image theorem | OPEN / LOAD-BEARING |
 | Paper 5 full arbitrary-n END | NOT YET |
@@ -81,8 +109,9 @@ Therefore the remaining proof problem is specifically the uniform U_n-action con
 
 Do not run another blind prime/numerical sweep.
 
-The next mathematical gate is:
-pre-check -> define the U_n-action intrinsically -> derive the exact transformation law for B,theta -> prove or refute the required invariant flag/normal form -> independently verify -> classify -> record.
+The next mathematical gate is the stabilization boundary itself:
+pre-check -> define the exact filtration object M_k -> prove or refute one-step-to-all-k stabilization -> independently verify -> classify -> record.
+The B,theta route is not authorized as a substitute while this pre-Gate remains unresolved.
 
 If uniform U_n-control fails, classify that route FAIL / CLOSED rather than weakening the statement silently. If it succeeds, it becomes the load-bearing arbitrary-n theorem route.
 
