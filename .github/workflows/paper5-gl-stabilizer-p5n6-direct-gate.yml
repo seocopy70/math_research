@@ -21,6 +21,6 @@ jobs:
           set -euo pipefail
           gap -q research/scripts/paper5_p5n6_corrected_matrix_gate.g > paper5_p5n6_corrected_runtime.log 2>&1
           cat paper5_p5n6_corrected_runtime.log
-          grep -q 'CORRECTED_STABILIZER s=0 a=1 PASS' paper5_gl_stabilizer_p5n6_direct_runtime.log
-          grep -q 'CORRECTED_STABILIZER s=1 a=1 PASS' paper5_gl_stabilizer_p5n6_direct_runtime.log
-          grep -q 'STABILIZER_P5_CORRECTED_CERTIFICATE=PASS' paper5_gl_stabilizer_p5n6_direct_runtime.log
+          grep -q 'CORRECTED_STABILIZER s=0 a=1 PASS' paper5_p5n6_corrected_runtime.log
+          grep -q 'CORRECTED_STABILIZER s=1 a=1 PASS' paper5_p5n6_corrected_runtime.log
+          grep -q 'STABILIZER_P5_CORRECTED_CERTIFICATE=PASS' paper5_p5n6_corrected_runtime.log
