@@ -2758,3 +2758,663 @@ The first test must be the smallest separated two-sink and the chordal-tree cont
 \]
 
 The result is a **definition-level advance**, not yet an orientation theorem. The next legitimate gate is D2, but only through relations among the full signatures, not through a q-visible locus or a pairwise obstruction.
+
+
+---
+
+# SOURCE: research/PAPER4_D2_CRITICAL_REAUDIT_2026-10-02.md
+
+<!-- blob-sha: 8d4f5f6e704a1cbd7694fcf261cd71895f01c824 -->
+
+# PAPER 4 D2 CRITICAL RE-AUDIT — 2026-10-02
+
+## Purpose
+This audit corrects the scope of the D2 no-go after a critical review. It does not reopen the already closed D1 depth-signature scalar obstruction. It prevents two stronger statements from being used without proof.
+
+## 1. Surviving D2 theorem
+For the rank-two special-edge model
+\[
+G=\langle v,w\mid wvw^{-1}=v^{1+q}\rangle,
+\]
+nonzero scalar multiples satisfy
+\[
+S_E(\lambda\bar w)=S_E(\bar w),
+\qquad \omega_q(\lambda\bar w)=\lambda.
+\]
+Hence the D1 global lower-filtration depth signature does not determine the normalized orientation coefficient. Any quotient whose information is exhausted by the D1 signature cannot recover this normalization.
+
+**Classification: FAIL / CLOSED.**
+
+## 2. First coefficient-valued incidence quotient
+In the audited chordal tree, the coefficient-valued incidence package gives a relation
+\[
+u-s-t\in\ker\Phi,
+\qquad \omega_q(u-s-t)=-1\ne0.
+\]
+This proves that this **particular first-coefficient incidence quotient** is not an orientation carrier.
+
+What it does not prove is failure of the entire restricted finite extension. The coefficient map is a projection of the extension information; higher extension structure may distinguish directions identified by the first coefficient quotient.
+
+**Classification: FAIL / CLOSED for the first-coefficient incidence quotient; full extension = OPEN.**
+
+## 3. Isolated ordinary-direction argument: correction
+The mixed model with an ordinary isolated direction \(z\) yields a family of linear functionals
+\[
+\omega_c(\alpha s+\beta z)=\alpha+c\beta
+\]
+that agree on the normalized filtered-profile locus. This establishes that the profile alone does not constrain arbitrary linear extensions on all of \(U\).
+
+It does **not** establish that the canonical orientation itself is non-unique, because no proof was given that the alternative \(\omega_c\) satisfies the canonical orientation's defining torsion-free/Kummerian conditions. Therefore the earlier conclusion “filtered q-profile alone cannot determine canonical orientation” is withdrawn in this unrestricted form.
+
+**Classification: OVERCLAIM — HISTORICAL / SUPERSEDED.**
+
+## 4. Consequence for D3
+D3 is not authorized as an unconstrained search for another carrier. The surviving question is narrower:
+\[
+\text{Can a minimal intrinsic nonlinear extension invariant retain exactly the information}
+\]
+\[
+\text{lost by D1 and by the first coefficient quotient, and then determine the canonical orientation?}
+\]
+The candidate must be defined from the finite extension itself, not by inserting \(q\), a presentation, a basis, a section, or \(\omega_q\).
+
+Before computation the full continuity pre-check is mandatory: Object, Input, Functoriality, Gauge, Orientation bridge, q-blindness, Separation, Novelty, Stop.
+
+## 5. Current boundary
+- D1 depth signature → normalized orientation: **FAIL / CLOSED**.
+- D1-relation quotient → normalized orientation: **FAIL / CLOSED**.
+- First coefficient-valued incidence quotient → orientation: **FAIL / CLOSED**.
+- Full restricted finite extension / genuinely nonlinear invariant: **OPEN / LOAD-BEARING**.
+- Same-window class-level non-identifiability for the unrestricted un-oriented input remains a separate negative boundary; it is not replaced by the overclaimed isolated-ordinary functional argument.
+
+## 6. Research discipline
+Do not use the withdrawn \(\omega_c\) family as a canonical-orientation counterexample. Do not claim that the full extension has failed merely because its first coefficient projection has failed. Do not restart carrier hunting. The next authorized step is target-first definition of the smallest nonlinear extension invariant, followed by independent model verification and immediate classification.
+
+
+---
+
+# SOURCE: research/PAPER4_D2_SIGNATURE_RELATION_QUOTIENT_NO_GO_AUDIT_2026-10-02.md
+
+<!-- blob-sha: 75220c5418214d440b7fb8ae6679c1536b280d31 -->
+
+# PAPER 4 — GATE D2: SIGNATURE-RELATION QUOTIENT NO-GO — 2026-10-02
+
+## Decision
+
+The authorized D2 route — extracting a canonical linear quotient from **relations among the full D1 depth signatures**
+\[
+\mathcal L_E(u)=\bigl(\mathscr R_m(u)\bigr)_{m=2}^{n+1}
+\]
+— is **FAIL / CLOSED for orientation normalization**.
+
+The obstruction is earlier and sharper than the previously known chordal-tree kernel obstruction:
+
+> The D1 signature records **attainable filtration depth**, but not the nonzero scalar coefficient of the first surviving defect.
+
+Already in the rank-two special-edge model, every nonzero scalar multiple of the special direction has exactly the same D1 signature, while the canonical orientation functional takes different values on those multiples.
+
+Thus no quotient, relation space, or factorization constructed solely from the D1 signature can carry the normalized orientation functional.
+
+## 1. D2 object under test
+
+Let
+\[
+E:1\to A=D_n/D_{n+1}\to Y\to X=W_n\to1,
+\qquad U=L_1=X/\Phi(X).
+\]
+
+D1 supplies
+\[
+S_E:U\longrightarrow\mathscr S_E,
+\qquad
+S_E(u)=\mathcal L_E(u)
+=(\mathscr R_m(u))_m,
+\]
+where
+\[
+\mathscr R_m(u)=
+\{x\in U:\exists\text{ lifts }\tilde u,\tilde x
+\text{ with }[\tilde u,\tilde x]\in D_m(Y)\}.
+\]
+
+The authorized D2 question is whether the relations among the values of $S_E$ can canonically define
+\[
+U\twoheadrightarrow U/N_E
+\]
+and then a normalized orientation functional on $U/N_E$.
+
+The crucial point is that any such construction **from the signature values alone** is constant on the fibers of $S_E$.
+
+## 2. Decisive rank-two special-edge calculation
+
+Take
+\[
+G=\langle v,w\mid wvw^{-1}=v^{1+q}\rangle,
+\qquad q=p^f,
+\]
+with $p$ odd.
+
+In degree one, write $\bar v,\bar w\in U$.
+
+For the special direction $\bar w$, the first nontrivial commutator with $\bar v$ occurs at depth $q$:
+\[
+[w,v]=v^q
+\quad\text{mod higher filtration}.
+\]
+
+Now replace $w$ by any nonzero scalar multiple $\lambda w$ in $U$, $\lambda\in\mathbf F_p^\times$.
+
+At the depth level, the commutator changes by a nonzero scalar:
+\[
+[\lambda w,v]
+\equiv \lambda\,[w,v]
+\pmod{D_{q+1}},
+\]
+so its **depth remains exactly $q$**.
+
+The same observation holds against every degree-one direction $x$: multiplying the first argument by a nonzero scalar cannot turn a nonzero leading filtered commutator into zero or create a lower filtration term. Consequently
+\[
+\boxed{S_E(\lambda\bar w)=S_E(\bar w)
+\qquad(\lambda\in\mathbf F_p^\times).}
+\]
+
+But the canonical orientation satisfies
+\[
+\omega_q(\bar w)=1,
+\qquad
+\omega_q(\lambda\bar w)=\lambda.
+\]
+
+Choose $\lambda\neq1$. Then
+\[
+S_E(\lambda\bar w)=S_E(\bar w)
+\quad\text{but}\quad
+\omega_q(\lambda\bar w)\neq\omega_q(\bar w).
+\]
+
+This is a direct factorization obstruction:
+\[
+\boxed{\omega_q\text{ does not factor through }S_E.}
+\]
+
+No calculation of a larger model is needed to establish this D2 no-go.
+
+## 3. Why “relations among signatures” cannot rescue the loss
+
+Suppose one forms any formal linearization of the signature values, for example a vector space generated by symbols $[S_E(u)]$ and imposes all intrinsic relations among those symbols.
+
+Because
+\[
+S_E(\lambda\bar w)=S_E(\bar w),
+\]
+the relation
+\[
+[S_E(\lambda\bar w)]-[S_E(\bar w)]=0
+\]
+is forced.
+
+Any linear map induced from the signature therefore identifies $\lambda\bar w$ with $\bar w$ at the level of available information.
+
+But the desired orientation difference is
+\[
+\omega_q(\lambda\bar w-\bar w)
+=(\lambda-1)\neq0.
+\]
+
+Hence the orientation cannot be recovered from any quotient whose defining information is exhausted by D1 signature relations.
+
+This also rules out the tempting “universal linear factor” construction:
+\[
+N_E=\bigcap\{\ker\ell:
+\ell\text{ is linear and factors through }S_E\}.
+\]
+In the rank-two model, the equality of signatures for $\bar w$ and $\lambda\bar w$ forces every such $\ell$ to vanish on $\bar w$ when $\lambda\neq1$. Therefore the resulting factor loses the very direction on which normalization is required.
+
+## 4. Independent control: separated two-sink model
+
+Consider
+\[
+G=
+\langle a,b,s,t\mid
+sas^{-1}=a^{1+q},\;
+tbt^{-1}=b^{1+q}\rangle.
+\]
+
+For $\lambda\neq0$,
+\[
+S_E(\lambda\bar s)=S_E(\bar s),
+\qquad
+S_E(\lambda\bar t)=S_E(\bar t),
+\]
+while
+\[
+\omega_q(\lambda\bar s)=\lambda,
+\qquad
+\omega_q(\lambda\bar t)=\lambda.
+\]
+
+Thus the obstruction is not an artifact of the two-generator model.
+
+Moreover, the earlier D1 observation
+\[
+S_E(\bar s+\bar t)
+\]
+can retain q-depth information from both sink sectors without determining their coefficients. The depth signature therefore detects **support/visibility**, not the normalized coefficient sum required by $\omega_q$.
+
+This explains why the earlier scale-fixing construction had to use a coefficient-valued object such as the restricted-power target and a normalized extension defect. Pure depth data cannot perform that scale fixing.
+
+## 5. Independent control: chordal tree
+
+For the audited chordal tree
+\[
+s-a-u-b-t
+\]
+with special edges $a\to s$, $b\to t$, $a\to u$, $b\to u$, the q-defect coefficient package satisfies
+\[
+\Phi(s)=P_a,\qquad
+\Phi(t)=P_b,\qquad
+\Phi(u)=P_a+P_b.
+\]
+
+The relation
+\[
+u-s-t\in\ker\Phi
+\]
+has
+\[
+\omega_q(u-s-t)=-1\neq0.
+\]
+
+Therefore even after one enriches the depth signature enough to retain its first surviving coefficient through the particular pairing package, the resulting incidence relation itself is not an orientation quotient: its kernel contains nonzero orientation mass.
+
+This is a second, logically independent obstruction:
+- D1 depth-only signature loses **scalar normalization**;
+- coefficient-valued incidence relations can retain coefficients but may introduce **orientation-nonzero kernel directions**.
+
+Thus the two obvious linearizations fail for opposite reasons.
+
+## 6. Exact boundary
+
+The D2 result does **not** say that no finite-window orientation recovery is possible in every enriched input.
+
+It says precisely:
+
+\[
+\boxed{
+\text{D1 global depth signature alone}
+\not\Longrightarrow
+\text{normalized }\omega_q.
+}
+\]
+
+To restore normalization, the input must retain some coefficient-valued, nonabelian extension datum beyond the D1 depth sets.
+
+The most economical surviving direction is not a new carrier search. It is the already identified restricted-origin finite extension:
+\[
+E|_{H(O_q)}
+\]
+together with its intrinsic first nonzero extension coefficient relative to the intrinsic restricted-power target.
+
+That object must pass a **fresh** Object/Input/Functoriality/Gauge/q-blindness/Separation/Novelty/Stop audit before any D3 claim.
+
+## 7. Classification
+
+- D1 global lower-filtration depth signature: **PASS / LOCAL**.
+- D2 quotient from relations among D1 signatures: **FAIL / CLOSED**.
+- D2 orientation factorization through depth signature: **FAIL / CLOSED**.
+- Scalar-normalization information in D1: **FAIL / CLOSED**.
+- Coefficient-valued incidence quotient as an orientation carrier: **FAIL / CLOSED** by the chordal-tree relation $u-s-t$.
+- Restricted-origin coefficient-valued extension datum: **OPEN / LOAD-BEARING**.
+- Unrestricted Gate D: **FAIL / CLOSED** remains controlling.
+- Paper 4: **OPEN**, but only for a newly specified enriched input/restricted admissible class.
+
+## 8. Next authorized action
+
+Do not continue manipulating $\mathcal L_E$ or search for another quotient of its depth relations.
+
+The only authorized continuation is:
+
+1. define the **smallest coefficient-valued intrinsic extension object** that augments D1 exactly enough to restore scalar normalization;
+2. run the full pre-check;
+3. test it first on the rank-two special edge, separated two-sink, long ordinary-chain, and chordal-tree controls;
+4. independently test whether its orientation kernel is contained in $\ker\omega_q$;
+5. if that fails, record a stronger impossibility boundary and stop the branch.
+
+This is a target-preserving refinement, not a return to unconstrained carrier hunting.
+
+## Final status
+
+\[
+\boxed{\text{D2 = FAIL / CLOSED for the D1 depth-signature route.}}
+\]
+
+The failure is structural: **depth remembers when a defect first appears, but not how much of the normalized orientation direction produced it.**
+
+
+## CORRECTION — 2026-10-02
+
+A convention-sensitive sentence in §4 is superseded. In the separated two-sink model, absence of an edge does **not** mean commutation. Therefore one must not claim that the full D1 signature of \(s+t\) equals that of \(s\).
+
+The D2 no-go does **not** depend on that claim. It is already decisive in the rank-two special-edge model, where nonzero scalar multiples \(\lambda\bar w\) have the same depth signature but different orientation values. In the separated model, mixed directions such as \(s+t\) instead carry lower-filtration contamination against the wrong origin; this is consistent with the corrected nonabelian filtered-profile analysis.
+
+The separated model remains an independent control for support/lower-obstruction detection, not a second proof of scalar-fiber equality.
+
+
+## CORRECTION — 2026-10-02
+
+A convention-sensitive sentence in §4 is superseded. In the separated two-sink model, absence of an edge does **not** mean commutation. Therefore one must not claim that the full D1 signature of (s+t) equals that of (s).
+
+The D2 no-go does **not** depend on that claim. It is already decisive in the rank-two special-edge model, where nonzero scalar multiples (lambdaar w) have the same depth signature but different orientation values. In the separated model, mixed directions such as (s+t) instead carry lower-filtration contamination against the wrong origin; this is consistent with the corrected nonabelian filtered-profile analysis.
+
+The separated model remains an independent control for support/lower-obstruction detection, not a second proof of scalar-fiber equality.
+
+
+---
+
+# SOURCE: research/PAPER4_D3_MINIMAL_NONLINEAR_EXTENSION_AUDIT_2026-10-02.md
+
+<!-- blob-sha: 45c92d13e0918d3cd9929a451d1032ed146b418c -->
+
+# PAPER 4 D3 — MINIMAL NONLINEAR EXTENSION AUDIT — 2026-10-02
+
+## Decision
+
+The first genuinely nonlinear candidate is the **intrinsic finite conjugation-action extension** of the adjacent window, not the first coefficient projection.
+
+For
+[
+E_n:1	o A_n=D_n/D_{n+1}	o Y=W_{n+1}	o X=W_n	o1,
+]
+with the intrinsic origin sector (O_nsubset L_1=X/Phi(X)), retain the full group extension together with the filtration and the induced conjugation action of (Y) on the canonical subgroup generated by the origin lift-fibres. The candidate observable is the resulting nonlinear action/defect, rather than its linearized first coefficient.
+
+The key reason this is the correct next object is that a special edge is defined by a multiplicative conjugation law
+[
+wvw^{-1}=v^{1+q},
+]
+and the q-dependent information is therefore an automorphism/action in the finite extension. The first coefficient quotient (Phi) discards precisely part of this multiplicative structure.
+
+## 1. Object
+
+Let (widehat O_nle Y) be the subgroup generated by the full lift-fibres of the intrinsic origin sector (O_n). Do not choose a basis or section. The candidate datum is
+[
+mathcal C_n(O_n):=
+igl(Y,widehat O_n, A_n, X, mathrm{conj}_Y(widehat O_n)igr)
+]
+up to filtered extension isomorphism.
+
+Equivalently, retain the conjugation action as a group-valued object rather than applying a first-order coefficient map.
+
+This is strictly richer than D1 and strictly richer than the first coefficient-valued incidence quotient.
+
+## 2. Pre-check
+
+### Object — PASS / LOCAL
+The object is a finite filtered extension with a canonically generated origin-lift subgroup and its conjugation action. No presentation, basis, or chosen section is required in the definition.
+
+### Input — PASS / LOCAL
+The input is the adjacent finite window together with the already intrinsic origin sector (O_n). No q, orientation, or displayed graph is inserted.
+
+### Functoriality — PASS / LOCAL
+A filtered isomorphism of adjacent windows transports the extension, the origin sector, its lift-generated subgroup, and conjugation action.
+
+### Gauge — PASS / LOCAL
+Changing lifts changes representatives inside the same generated subgroup and conjugation action. No chosen splitting is retained.
+
+### Orientation bridge — OPEN / LOAD-BEARING
+The intended bridge is the special-edge action
+[
+wvw^{-1}=v^{1+q},
+]
+which should allow recovery of the multiplicative factor (1+q) from the finite extension. A global reconstruction theorem for arbitrary degree-one elements is not yet proved.
+
+### q-blindness — PASS / LOCAL
+The object is defined from the finite filtered groups and their group law only. q is not named.
+
+### Separation — PASS / LOCAL
+In the rank-two special-edge model, the extension distinguishes the first survival of the conjugation correction at the q-layer. In the undirected/ordinary case the corresponding action is trivial at that layer. Thus the object is capable of retaining information discarded by D1.
+
+### Novelty — CONDITIONAL
+The underlying conjugation relation is classical and the canonical orientation theorem of Blumer–Quadrelli–Weigel already identifies the canonical orientation on the full oriented RAAG. The potentially new statement would be a **finite-window, q-blind factorization through the minimal nonlinear extension action**. No novelty claim is made until this finite factorization is proved and compared against the literature.
+
+### Stop — PASS
+The definition-level gates are sufficient to justify the four-control audit below. No computation beyond those controls is authorized.
+
+## 3. Four-control audit
+
+### A. Rank-two special edge — PASS / LOCAL
+
+For
+[
+G=langle v,wmid wvw^{-1}=v^{1+q}angle
+]
+the D1 signature identifies all nonzero scalar multiples of (ar w), but the full conjugation law does not discard the multiplicative action. The q-correction survives in the adjacent extension and is exactly the type of information required to distinguish the normalized action from a scalar-blind depth profile.
+
+This closes the scalar-obstruction only for the **new object**, not yet for the global orientation theorem.
+
+### B. Separated two-sink — PASS / LOCAL
+
+For
+[
+sas^{-1}=a^{1+q},qquad tbt^{-1}=b^{1+q},
+]
+the nonlinear action is origin-specific. Lower-filtration contamination prevents the erroneous identification of (s+t) with a pure sink, while the full action retains the separate conjugation data. Thus the convention correction is respected.
+
+### C. Long ordinary-chain — PASS / LOCAL
+
+The long ordinary chain produces lower-degree commutator contamination before the q-layer. Hence the nonlinear extension action must be conditioned on the absence of lower obstruction; it cannot be replaced by a q-layer projection alone.
+
+This confirms that the full extension carries strictly more information than the filtered q-profile.
+
+### D. Chordal-tree — OPEN / LOAD-BEARING
+
+The earlier relation
+[
+u-s-tinkerPhi,qquadomega_q(u-s-t)
+e0
+]
+does not by itself kill the full action object, because (Phi) is only a projection. The required test is whether the full conjugation-action object still identifies (u) with (s+t) or separates them.
+
+No valid argument currently proves a kernel of the full object with nonzero orientation mass. Therefore the previous coefficient-quotient no-go cannot be promoted to the full extension.
+
+## 4. What can already be proved conceptually
+
+The literature independently confirms the structural bridge: for a specially oriented graph, the canonical orientation is characterized by Kummerianity, and the canonical orientation assigns (1+q) to special/sinkhole vertices and (1) to ordinary vertices. Moreover, in the local two-generator arguments the canonical orientation is determined by the structure of the locally uniform two-generator subgroup. citeturn0search0turn3search1turn3search0
+
+Therefore the finite-extension candidate is not inventing a new orientation law: it isolates the multiplicative conjugation mechanism from which the known local orientation law arises.
+
+What is **not** proved is the crucial compression statement:
+[
+mathcal C_q(O_q)
+Longrightarrow
+omega_qpmod {p^k}
+]
+for every admissible graph and every degree-one element.
+
+## 5. The actual remaining theorem
+
+The research question has now reduced to a precise statement:
+
+> **Finite nonlinear orientation-factorization theorem (candidate).**
+> On an explicitly orientation-rigid admissible class, the canonical orientation modulo (p^k) factors naturally through the adjacent finite extension-action object (mathcal C_q(O_q)).
+
+The necessary admissible-class restriction cannot be omitted. The same-window counterexample with an isolated special vertex proves that an un-oriented finite window cannot determine the canonical orientation on the unrestricted specially oriented class.
+
+A natural restricted class is:
+[
+(mathrm{OR})qquad
+	ext{every special vertex is the terminus of at least one special edge}.
+]
+This is a genuine restriction and is consistent with the literature's description of specially oriented graphs; it is **not** yet a sufficiency theorem for finite-window orientation recovery. citeturn3search0turn3search1
+
+## 6. Minimality boundary
+
+The candidate is minimal only in a **relative** sense:
+
+- D1 depth data is too coarse because it identifies nonzero scalar multiples.
+- The first coefficient incidence quotient is too coarse because its kernel can carry nonzero orientation mass.
+- The full multiplicative conjugation action is the first surviving object that retains the group law responsible for the q-correction.
+
+Absolute minimality among all possible finite invariants is **not established and is not claimed**.
+
+## 7. Final classification
+
+- nonlinear extension-action object: **PASS / LOCAL**;
+- definition-level pre-check: **PASS / LOCAL**;
+- scalar information lost by D1: **restored locally**;
+- first coefficient quotient no-go: **unchanged, FAIL / CLOSED**;
+- full extension no-go: **not proved**;
+- unrestricted orientation recovery from bare finite window: **FAIL / CLOSED**;
+- orientation-rigid restricted class: **OPEN / LOAD-BEARING**;
+- finite nonlinear orientation factorization: **OPEN / LOAD-BEARING**;
+- absolute minimality: **OPEN / NOT AUTHORIZED**.
+
+## 8. Next authorized action
+
+Do not search for another carrier.
+
+The next and only authorized proof attack is to formalize the orientation bridge for (mathcal C_q(O_q)): characterize, intrinsically from the finite conjugation action, the degree-one elements whose local action has the special factor (1+q), then prove that these local values glue to a single linear character modulo (p^k).
+
+The proof must explicitly handle:
+1. mixed degree-one elements;
+2. overlapping special sinks;
+3. separated sinks;
+4. lower-filtration contamination;
+5. the chordal-tree model;
+6. the orientation-rigid restriction (OR).
+
+If the full-action kernel contains nonzero orientation mass, classify **FAIL / CLOSED** and stop this branch. If the local factors glue uniquely, classify **PASS / LOCAL** first; a theorem-level PASS requires a separate literature/non-reencoding audit.
+
+
+## 2026-10-02 — D3 DEFINITIONAL CORRECTION: RAW ORIGIN-LIFT SUBGROUP IS NOT NORMAL
+
+A definition-level audit of the proposed D3 object found a genuine flaw that must control the branch before any orientation-bridge computation.
+
+The previous object used the subgroup generated by the complete lift-fibres of the intrinsic origin sector and then asserted a conjugation action of the whole extension group (Y) on that subgroup. In general that subgroup is **not normal in (Y)**, so a global conjugation action (Y\curvearrowright\widehat O) is not defined.
+
+Decisive control: the chordal-tree model with ordinary origins (a,b) and special vertices (s,t,u), with special edges (a\to s, b\to t, a\to u, b\to u). Let (H=\langle a,b\rangle\le Y). There is no defining relation between (t) and (a). Quotienting by the normal closure of (b,s,u) gives the free pro-(p) group on (a,t). Hence (tat^{-1}\notin\langle a\rangle), and therefore (tat^{-1}\notin H). Thus (H) is not normal in (Y).
+
+Consequently the statement “the full conjugation action of (Y) on the origin-lift subgroup” is **not a valid object as written**. The prior D3 object-level PASS is superseded.
+
+The minimal canonical repair is to replace the raw origin-lift subgroup by its **normal closure** in (Y), or equivalently to formulate the datum as the conjugation action on the normal closure of the origin sector. This repaired object is materially richer and may risk re-encoding more of the finite window; it therefore requires a fresh full pre-check before any computation.
+
+Classification:
+- raw origin-lift subgroup with (Y)-conjugation action: **FAIL / CLOSED**;
+- previous D3 object-level PASS: **HISTORICAL / SUPERSEDED**;
+- normal-closure conjugation object: **OPEN / LOAD-BEARING**;
+- orientation bridge: **NOT YET AUTHORIZED** until the repaired object passes Object/Input/Functoriality/Gauge/Orientation-bridge/q-blindness/Separation/Novelty/Stop.
+
+This is a definition correction, not a carrier hunt. The next authorized step is the fresh pre-check of the normal-closure repair, followed only if it passes by the mixed/chordal orientation-bridge test.
+
+
+## 2026-10-02 — D3 REPAIRED-OBJECT PRE-CHECK: NORMAL CLOSURE PASSES OBJECT-LEVEL TEST, BUT ORIENTATION BRIDGE IS NOT FINITE/INTRINSICALLY SPECIFIED
+
+The canonical repair was audited before any new computation.
+
+Define (N_O) as the normal closure in (Y) of the preimage of the intrinsic origin sector (O_q). Then (N_O\triangleleft Y), so the conjugation action (Y\to\operatorname{Aut}(N_O)) is well-defined. The repaired package
+[
+\mathcal C_q^{\mathrm{nc}}=(Y,X,A_q,O_q,N_O,\operatorname{conj}_Y|_{N_O})
+]
+is intrinsic, functorial, lift/section-independent, and q-blind at the definition level.
+
+However, the required orientation bridge still fails the mandatory pre-check in its present form: no canonical finite quotient of the action (Y\to\operatorname{Aut}(N_O)) has been exhibited whose scalar character is (omega_q\bmod p^k). Taking the action on (N_O) itself is not a bridge; it merely retains a large nonabelian object. Taking its obvious q-layer linearization collapses back to the already closed coefficient/incidence package. Using the literature's Kummerian criterion would be circular/re-encoding for the present finite-window program, because the criterion quantifies over all (n\ge1) and supplies the orientation as part of the oriented pair rather than extracting it from one finite window.
+
+Independent literature control: Blumer–Quadrelli–Weigel prove that for an oriented pro-(p) RAAG there is a torsion-free Kummerian orientation exactly in the specially oriented case, and that this orientation is unique; their local locally-uniform argument likewise determines the canonical orientation from the full 2-generator group structure. This validates the *global mechanism* but does not furnish the required finite-window factorization. citeturn7search1turn4search0
+
+Therefore no orientation-bridge computation is logically authorized from the repaired object yet. A further computation would be another carrier hunt unless a specific finite scalar quotient/action character is first derived non-tautologically from the repaired package.
+
+Classification:
+- raw origin-lift conjugation object: **FAIL / CLOSED**;
+- normal-closure conjugation package: **PASS / LOCAL** at Object/Input/Functoriality/Gauge/q-blindness;
+- finite orientation bridge from the repaired package: **OPEN / LOAD-BEARING**;
+- finite-window factorization theorem: **OPEN**;
+- absolute minimality: **OPEN / NOT AUTHORIZED**;
+- unrestricted class: **FAIL / CLOSED** by the isolated-special same-window obstruction.
+
+**Stop condition reached:** do not perform another blind computation. The next legitimate move is target-first derivation of a *specific finite scalar character* of the normal-closure action, with a full pre-check. If no such character can be defined without reintroducing the orientation or q, D3 closes as a finite-carrier realization failure while the negative Gate-D theorem remains a principal result.
+
+
+---
+
+# SOURCE: research/PAPER4_E1_KZ_RELATION_DEFECT_AUDIT_2026-10-02.md
+
+<!-- blob-sha: b43ca3e0487677626d059f97fea93c2f26b57fbd -->
+
+# PAPER 4 — GATE E1: K–Z RELATION DEFECT AUDIT — 2026-10-02
+
+For G_s=<x,y,z | z^(p^s)=[x,y]>, N_s=cl(<z>) and D=G_s/N_s ~= Z_p^2, Palaisti's relation defect is the coinvariant class of the lifted D-relator in W_s=N_s/Phi(N_s).
+
+The lifted relator is w=[x,y]=z^(p^s). Since Phi(N_s)=N_s^p[N_s,N_s] and z^(p^s) is a p-power in N_s for s>=1, w belongs to Phi(N_s). Therefore
+
+delta_{G_s}=0 in (W_s)_D.
+
+This is gauge-robust: the allowed scalar normalization of the transgression cannot change zero to nonzero.
+
+Classification:
+- E1 computation delta_{G_s}=0: PASS / CLOSED.
+- delta_G as carrier of the K–Z deep-tail parameter s: FAIL / CLOSED.
+- bridge deep correction <-> Palaisti delta_G: FAIL / CLOSED.
+- filtered/p-adic/higher relation-module successor: OPEN / LOAD-BEARING.
+- matched cd=3 control: OPEN, but not authorized yet.
+
+The key boundary is that the K–Z correction survives in the ambient group but is annihilated at the first Frattini quotient. Literature confirms that Zassenhaus-filtered relation modules and initial-form methods are legitimate objects for pro-p presentations, but this does not yet establish finite-window factorization.
+
+Next authorized task: fresh pre-check of the smallest filtered relation object retaining the p-power tail without simply re-encoding the presentation; only if it survives intrinsicity, gauge, finite-window and non-reencoding tests may the cd=3 matched-control search resume.
+
+---
+
+# SOURCE: research/PAPER4_E2_FILTERED_RELATION_MODULE_PRECHECK_2026-10-02.md
+
+<!-- blob-sha: cfe30ee0b257935cc3a335a031e59f239905d269 -->
+
+# PAPER 4 — GATE E2: FILTERED RELATION-MODULE PRE-CHECK — 2026-10-02
+
+Candidate: replace the mod-p defect W_D by a p-adic/Zassenhaus-filtered relation object before attempting a matched cd=3 control.
+
+For D ~= Z_p^2 with free presentation F(x,y) -> D and relator r=[x,y], the K-Z lift sends r to z^(p^s). At the presentation level, Fox differentiation of z^(p^s)[x,y]^{-1}, followed by evaluation in D, contains the coefficient p^s in the z-column. Thus the filtered/p-adic relation data can in principle retain the depth parameter that W=N/Phi(N) destroys.
+
+Literature confirms that pro-p relation modules admit Zassenhaus filtrations and that initial forms/Fox data are standard. This is only a legitimacy check, not a finite-window theorem.
+
+Pre-check:
+- Object: filtered relation module / p-adic transgression datum — PASS / LOCAL as a legitimate candidate.
+- Input: full extension plus quotient presentation — currently too much input for the finite-window problem; OPEN.
+- Functoriality: relation-module constructions are natural under suitable presentation morphisms, but the exact extension class here needs a dedicated gauge proof — OPEN.
+- Gauge: relator inversion/unit scaling preserves p-adic valuation, but lift changes are not yet controlled — OPEN / LOAD-BEARING.
+- Orientation bridge: not specified — OPEN.
+- q-blindness: candidate definition need not insert q — PASS / LOCAL.
+- Separation: presentation-level p^s signal exists — PASS / LOCAL; intrinsic finite-window separation not established.
+- Novelty: filtered relation modules are prior methodology; only a new finite-window factorization would be novel — CONDITIONAL.
+- Stop: because gauge and finite-window factorization are unresolved, no carrier computation or matched cd=3 search is authorized.
+
+Conclusion: E2 remains OPEN / LOAD-BEARING, not PASS. The project should not claim that the p-adic coefficient p^s is already an intrinsic finite-window invariant. The next decisive test is lift-independence of the p-adic extension class, followed by whether any finite Zassenhaus window can recover its first nonzero p-adic valuation without re-encoding the presentation.
+
+
+---
+
+# SOURCE: research/PAPER4_E2_P_ADIC_EXTENSION_CLASS_AUDIT_2026-10-02.md
+
+<!-- blob-sha: 2d9f856a90dc49c60141e566cd77b073f1f0bcde -->
+
+# PAPER 4 — GATE E2: P-ADIC EXTENSION CLASS ON K–Z — 2026-10-02
+
+The filtered candidate can be sharpened before any finite-window computation.
+
+Let M=(N_s^ab)_D. The extension induces an abelianized extension and a p-adic transgression class epsilon_s in the D-coinvariant relation data. Unlike delta_G in W_s=N_s/Phi(N_s), this object is not killed merely because the lifted relator is a p-power.
+
+For K–Z, N_s is normally generated by z, so M is cyclic as a Z_p-module. The five-term homology sequence gives 0 -> H_2(G_s,Z_p) -> H_2(D,Z_p) -> M -> H_1(G_s,Z_p) -> H_1(D,Z_p) -> 0.
+
+Using the K–Z amalgam decomposition G_s = <z> *_{<t>} F(x,y), the map from the amalgamating Z_p into H_1(<z>) is multiplication by p^s, hence injective. Mayer–Vietoris therefore gives H_2(G_s,Z_p)=0.
+
+Also G_s^ab ~= Z_p^2 direct sum Z/p^s, while D^ab ~= Z_p^2. Hence the kernel of H_1(G_s,Z_p) -> H_1(D,Z_p) is Z/p^s.
+
+Consequently 0 -> Z_p -> M -> Z/p^s -> 0. Because M is cyclic and contains an injected copy of Z_p, M ~= Z_p. The image epsilon_s of a generator of H_2(D,Z_p) therefore has exact p-adic valuation s, up to multiplication by a p-adic unit.
+
+This is a genuine structural improvement over E1: the first-Frattini defect is zero, but the p-adic extension class retains the K–Z tail depth exactly at the full-extension level.
+
+Classification:
+- p-adic extension class as full-extension object: PASS / LOCAL.
+- exact K–Z valuation v_p(epsilon_s)=s: PASS / LOCAL.
+- finite Zassenhaus-window factorization of epsilon_s: OPEN / LOAD-BEARING.
+- presentation-independent finite-window detector: OPEN.
+- matched cd=3 search: NOT YET AUTHORIZED.
+
+The remaining bottleneck is sharply isolated: prove or refute that epsilon_s modulo p^m, or an equivalent finite truncation, factors through a finite Zassenhaus window of G_s. The current result is not such a factorization theorem.
