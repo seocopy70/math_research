@@ -2961,3 +2961,57 @@ Classification:
 The final arbitrary-(n) table is therefore not promoted. No (B,	heta) shortcut is used to bypass this missing stabilization theorem. The next authorized task is a genuine stabilization proof or a counterexample/witness, followed by independent verification and immediate recording.
 
 Detailed audit: `research/PAPER5_ZASSENHAUS_STABILIZATION_AUDIT_2026-10-06.md`.
+
+
+## 2026-10-06 — Repaired Zassenhaus stabilization theorem CLOSED
+
+The first stabilization proof was correctly rejected because it used the false inclusion (D_p\subset M_{p+1}). A repaired proof was then independently audited.
+
+The repair uses the standard Zassenhaus property
+[
+D_c^p\subset D_{pc},
+]
+so (c\ge2) implies (D_c^p\subset D_{p+1}\subset M_{p+1}).
+
+Separately, Lazard's product formula gives
+[
+D_p/D_{p+1}
+]
+as the product of the weight-(p) lower-central part and the (F^p) part, with all other factors already in (D_{p+1}). Since the already-closed boundary theorem gives
+[
+D_p(W_p)=M_p/M_{p+1}=\langle x^p,y^p,z^p\rangle\cong\mathbf F_p^3
+]
+with these three p-power classes independent, the weight-(p) Lie part has zero image. Hence
+[
+\gamma_p\subset M_{p+1}.
+]
+Because
+[
+[M_{p+1},F]\subset M_{p+1},
+]
+induction gives
+[
+\gamma_k\subset M_{p+1}qquad(k\ge p).
+]
+
+For (k\ge p+1), use Lazard's product formula for (D_{k+1}). If (i\ge p), the factor (\gamma_i^{p^j}) is absorbed by the lower-central lemma. If (i<p), then (j\ge1) and (ip^j\ge k+1\ge p+2), so the factor lies in (D_{p+2}\subset M_{p+1}). Therefore
+[
+D_{k+1}\subset M_{p+1},
+]
+and with (M_{p+2}=M_{p+1}) as the induction base,
+[
+M_k=M_{p+1}qquad\forall k\ge p+1.
+]
+Thus
+[
+\boxed{W_n=W_p\quad\forall n\ge p}.
+]
+
+Classification:
+- original stabilization proof: **FAIL / CLOSED**;
+- repaired stabilization theorem: **PASS / CLOSED / GENERAL** within the declared odd-p presentation scope;
+- arbitrary-n Frattini-image theorem: **PASS / CLOSED / GENERAL**;
+- (n<p): **PASS / CLOSED**, (W_n\cong\mathbf F_p^3), (Aut(W_n)=GL_3(\mathbf F_p));
+- (n\ge p): **PASS / CLOSED / GENERAL**, (W_n=W_p), (Im_n=S'_{11}(p)), (|Aut(W_n)|=p^{11}(p-1)^2).
+
+This closes the load-bearing stabilization gate. No blind numerical sweep is required. Next work is independent verification/manuscript integration.
