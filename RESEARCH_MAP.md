@@ -48,7 +48,7 @@ One concept, one live home. Cross-link; do not duplicate.
 
 ## 2026-10-04 correction — critical same-window boundary
 
-The previous claim that W_(p^s+1)(G_s) and W_(p^s+1)(G_t) are separated by an order jump is superseded. The normal closures defining the two quotients are not nested, so the proposed canonical epimorphism and p-factor order jump are false. The exact critical boundary threshold n_sep(s)=p^s+1 is OPEN. Only n_sep(s)>=p^s+1 is certified. Group-level non-isomorphism G_{s,a} \\not\\cong G_{t,a} is also OPEN.
+The previous claim that W_(p^s+1)(G_s) and W_(p^s+1)(G_t) are separated by an order jump is superseded. The normal closures defining the two quotients are not nested, so the proposed canonical epimorphism and p-factor order jump are false. The exact critical boundary threshold n_sep(s)=p^s+1 was OPEN at this 2026-10-04 checkpoint; this statement is now HISTORICAL/SUPERSEDED by the 2026-10-05 Magnus proof closure below. Group-level non-isomorphism G_{s,a} \\not\\cong G_{t,a} is also OPEN.
 
 
 ## 2026-10-04 — active post-core generalization challenge
