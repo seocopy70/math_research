@@ -2435,3 +2435,22 @@ and the induction to (\widetilde g(R)\subseteq R) remain **OPEN / LOAD-BEARING**
 **Status:** Step 3 equality (\operatorname{Im}=S_{11}(p)) remains OPEN / LOAD-BEARING; (p^2(p-1)) automorphism-order theorem remains CONDITIONAL. Step 2's independently audited filtered-extension result is not reopened by this correction.
 
 Detailed audit: `research/PAPER5_STEP3_SECOND_ORDER_LIFTING_AUDIT_2026-10-05.md`.
+
+
+## 2026-10-05 — Step 3 second-jet re-audit
+
+The formal (J_k^2(r)=[r]\in D_k/D_{k+2}) construction for (k\ge2) is accepted as a valid repair of the previous type error. A fixed Magnus embedding can also provide the degree-(k) and degree-((k+1)) homogeneous coefficients.
+
+However, the crucial assertion
+[
+sec_{k+1}(\widetilde g(r))\in gr_{k+1}(R)
+]
+is not yet proved. The nonlinear Magnus substitution (X\mapsto aX+\binom a2X^2+\cdots) acts by degree-raising insertion/substitution operators. The claim that the resulting correction is exactly
+[
+C_k(R_k)=[V,R_k]
+]
+is not automatic and has not been derived. Restricted-ideal closure under brackets/restricted powers does not imply closure under an arbitrary such insertion operator.
+
+Therefore the second-jet itself **PASS / GENERAL**, but its preservation of the relation ideal is **OPEN / LOAD-BEARING**. The strengthened (L_k), kernel preservation, and (operatorname{Im}=S_{11}(p)) equality remain OPEN / LOAD-BEARING; the (p^2(p-1)) theorem remains CONDITIONAL.
+
+Detailed audit: research/PAPER5_STEP3_SECOND_JET_REAUDIT_2026-10-05.md.
