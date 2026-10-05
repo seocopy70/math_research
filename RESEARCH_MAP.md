@@ -192,3 +192,8 @@ The proposed final split “p=3 PASS / p≥5 FAIL” is **not established**. Two
 The proposed second-order lifting/BCH closure is **FAIL / CLOSED as submitted proof**. The equality of degree-(k) initial forms gives only a residual in (D_{k+1}); the asserted (D_{k+2}) upgrade used an undefined (in_{k+1}) for elements still in (D_k\setminus D_{k+1}) and an unjustified exponential/BCH splitting. Hence the strengthened (L_m), kernel preservation, and general (\operatorname{Im}=S_{11}(p)) equality remain **OPEN / LOAD-BEARING**. The (p^2(p-1)) theorem remains **CONDITIONAL**.
 
 Authoritative audit: `research/PAPER5_STEP3_SECOND_ORDER_LIFTING_AUDIT_2026-10-05.md`.
+
+
+## 2026-10-06 — Paper 5 Step 3 corrected second-jet closure
+
+The substitution-order correction is closed in the declared mod-(p) Magnus layer: (C_{a,b,k}=T_{a,b,k}\circ L), with the degree-2 witness giving (ab) rather than (b) on (XYX). Raw derivation/ideal preservation plus the explicit (p)-power exceptional-layer calculation give (C(gr_kR)\subseteq gr_{k+1}R). The finite-stage residual factorization then yields (widetilde g(R)\subseteq R) without any strong Zassenhaus-layer product equality. This closes the corrected Step-3 kernel-preservation subgate, but the global equality (operatorname{Im}(Aut(W_n)\to GL(V))=S_{11}(p)) remains OPEN / LOAD-BEARING.
