@@ -182,3 +182,28 @@ The correct novelty statement is consequently stronger than “the SC proof rese
 - The novelty audit must move downstream to the intrinsic transfer obstruction (arepsilon_s), the (a=s) versus (a=\infty) finite-window separation, and the exact threshold (p^s+1).
 
 This is a literature-method transfer result, not a negative result about Paper 4's mathematics.
+
+
+## 2026-10-05 — SC literature audit CLOSED by decision
+
+The project now treats the SC audit as closed. The distinction is:
+
+**Prior literature:** supplies the weighted-Schreier/Zassenhaus ingredients.
+
+**Paper-4 deduction:** assembles those ingredients into the exact depth-comparison
+\[
+D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K),
+\]
+in the form required for the finite-window transfer argument.
+
+No audited source was found stating this exact subgroup-depth comparison as the Paper-4 lemma, although the weighted-Schreier machinery is sufficient to derive it. Therefore the safe novelty language is **new logical deduction/assembly**, not “new underlying Zassenhaus/Schreier theory.”
+
+Classification:
+- SC mathematical validity: **PASS / CLOSED**.
+- SC literature audit: **PASS / CLOSED**.
+- SC as independent foundational theorem: **not claimed**.
+- SC as a new Paper-4 logical step in the proof chain: **YES — claimable**.
+- Further generic SC literature search: **STOPPED**.
+- Novelty audit moves downstream to \(\varepsilon_s\), intrinsic finite-window separation, and the exact threshold \(p^s+1\).
+
+The Magnus prefix-code proof remains as an independent self-contained verification and should be presented as such.
