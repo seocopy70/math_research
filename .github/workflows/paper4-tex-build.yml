@@ -34,7 +34,10 @@ jobs:
           assert len(r.pages) > 0
           assert 'Delayed Finite-Window Visibility' in text
           assert 'Zassenhaus order alone is insufficient' in text
-          assert 'remaining critical boundary' in text
+          assert 'Intrinsic critical-window separation' in text
+          assert 'Every-$n$ sharpness in the free pro-$p$ class' in text
+          assert 'best possible in the free-pro-$p$ class' in text
+          assert 'n_{\\mathrm{sep}}(s)=p^s+1' in text
           Path('pdfinfo.txt').write_text(f'Pages: {len(r.pages)}\nSize: {p.stat().st_size}\n', encoding='utf-8')
           PY
           sha256sum main.pdf | tee main.pdf.sha256
