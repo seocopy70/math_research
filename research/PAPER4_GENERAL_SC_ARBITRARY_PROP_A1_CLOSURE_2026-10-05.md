@@ -48,12 +48,16 @@ The normal-form multiplication rules imply
 E_mE_\ell\subseteq E_{m+\ell}.
 \tag{*}
 \]
-Indeed, moving an element of A past t uses
+More explicitly, define the weight of a normal-form monomial (c,t^r), (c\in J^q), (0\le r<p), to be (pq+r). If \(\sigma(c)=aca^{-1}\), then
 \[
-ta=\sigma(a)t+(\sigma(a)-a),
-\qquad \sigma(a)=aaa^{-1},
+tc=\sigma(c)t+(\sigma(c)-c),
 \]
-and for a in J^q both coefficients on the right lie in J^q. Thus commuting t past A never decreases J-adic degree. Whenever a block t^u reaches u>=p, the identity t^p=a^p-1 in J replaces p units of t-degree by one J-factor, preserving the weighted degree in which J has weight p and t has weight 1. Therefore the product of terms of weighted degrees at least m and ell has weighted degree at least m+ell, proving (*).
+and, because \(\sigma(J^q)=J^q\), both coefficients on the right lie in (J^q). Iterating gives (t^rJ^q\subseteq\sum_{j=0}^rJ^qt^j). On multiplying by a further (t^s), every resulting (t^{j+s}) is written as
+\[
+t^{j+s}=(t^p)^u t^v,
+\qquad j+s=up+v,quad0\le v<p,
+\]
+and (t^p=a^p-1\in J). Thus the weight (pq+r) is not decreased by multiplication. Hence products of terms of weights at least (m) and \(\ell\) have weight at least (m+\ell), proving (*).
 
 Since
 \[
