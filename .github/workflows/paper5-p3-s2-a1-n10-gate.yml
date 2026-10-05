@@ -1,0 +1,27 @@
+name: Paper 5 p=3 s=2 a=1 n=10 orbit gate
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/scripts/paper5_p3_s2_a1_n10_gate.g'
+      - 'research/external/paper5_aut/aut_common.g'
+      - '.github/workflows/paper5-p3-s2-a1-n10-gate.yml'
+jobs:
+  orbit-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and AutPGrp
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y gap gap-autpgrp
+      - name: Run p=3 s=2 a=1 n=10 gate
+        run: |
+          set -euo pipefail
+          gap -q research/scripts/paper5_p3_s2_a1_n10_gate.g > paper5_p3_s2_a1_n10_runtime.log 2>&1
+          cat paper5_p3_s2_a1_n10_runtime.log
+          grep -q 's=2 a=1 kernels=81' paper5_p3_s2_a1_n10_runtime.log
+          grep -q 'Aut(W)-orbits on admissible kernels: sizes \\[' paper5_p3_s2_a1_n10_runtime.log
+          grep -q '|Aut W|=' paper5_p3_s2_a1_n10_runtime.log
