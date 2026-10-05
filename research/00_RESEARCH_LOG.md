@@ -3100,3 +3100,8 @@ W_p=F/(R D_{p+1}),
 exponent (p) yields only (F^psubseteq R D_{p+1}), and class (p) yields only (gamma_{p+1}subseteq R D_{p+1}). Neither implication upgrades to containment in (R). The literature audit does not contain the claimed stronger definition. Hence the proposed proof of (D_{p+1}subseteq D_{k+1}R), and therefore the reverse inclusion (M_{p+1}subseteq M_{k+1}), does not close. Stabilization (W_n=W_p) for all (nge p) remains **OPEN / LOAD-BEARING**.
 
 Detailed audit: `research/PAPER5_ZASSENHAUS_STABILIZATION_AUDIT_2026-10-06.md`.
+
+
+## 2026-10-06 — Explicit-R audit correction
+
+The relation subgroup is explicitly \(R=\langle[x,z],[y,z],[x,y]^{-1}x^pz^{-p}\rangle^F\). Its full degree-two initial layer yields the already-closed one-step boundary \(W_{p+1}=W_p\). The proposed \(F^p\subseteq R\) shortcut for all-n stabilization is rejected; bracket-only propagation is invalid in the restricted Zassenhaus graded Lie algebra. All-n stabilization remains **OPEN / LOAD-BEARING**. Next authorized task: direct explicit-R proof or counterexample for \(D_{p+1}\subseteq D_{k+1}R\).
