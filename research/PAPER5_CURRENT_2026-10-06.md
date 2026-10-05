@@ -51,3 +51,16 @@ Therefore the raw (GL_3)-index does **not** itself give a (p^2) deficit; its p-p
 Identify the exact comparison family/windows whose automorphism orders differ by (p^2), and prove that the intrinsic relation-jet restriction above accounts for that ratio.
 
 Evidence: research/PAPER5_WP_INTRINSIC_RELATION_JET_AUDIT_2026-10-06.md.
+
+
+## 2026-10-06 — Addendum 2: proposed p^2 comparison window rejected as submitted
+
+The proposed identification \(U_p=W_p/L\) and the conclusion
+\[
+|\operatorname{Aut}(W_p)|/|\operatorname{Aut}(U_p)|=p^2
+\]
+were audited and are **NOT CLOSED**. The intrinsic line \(L=Z(W_p)D_2/D_2\) is a subspace of \(V=W_p/D_2\), not itself a subgroup of \(W_p\), so \(W_p/L\) requires a separately specified subgroup lift. If one uses \(\langle z\rangle\), the quotient has a 2-dimensional Frattini quotient and therefore cannot simply inherit the same \(S'_{11}\) image or a \(p^7\) IA kernel.
+
+A second type error occurs in the proposed relation condition \(b(\pi(x),y)\): the established \(b\) has type \(b:\wedge^2V\to D_p\), while \(\pi(x)\in D_p\), so this expression is undefined without introducing a new action/pairing. Consequently the claimed \(3\to2\) dimension cut and \(Z^1_{\mathcal J_p}(V,L)\cong\mathbf F_p^2\) remain **OPEN / LOAD-BEARING**.
+
+The CLOSED \(W_p\) intrinsic stabilizer result is unchanged. Detailed audit: research/PAPER5_P2_GAP_COMPARISON_WINDOW_AUDIT_2026-10-06.md.
