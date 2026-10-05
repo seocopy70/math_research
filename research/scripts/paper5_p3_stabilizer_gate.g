@@ -105,3 +105,5 @@ run:=function()
 end;
 run();
 QUIT;
+
+# CI retrigger after workflow registration: 2026-10-06.
