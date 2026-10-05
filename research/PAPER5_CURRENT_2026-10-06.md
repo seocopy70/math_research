@@ -123,3 +123,14 @@ The additional assertion that the presentation occurrence of z intrinsically for
 ### Authorized next gate
 
 Reconstruct the actual induced action on V=W/Phi(W) from the certified GAP automorphism generators, express the defining relation as the correct restricted-Lie/Jacobson degree-p relation jet, and only then identify the embedded subgroup of GL_3(3). No 108→6 theorem or Paper 5 END classification is authorized yet.
+
+
+## 2026-10-06 — Addendum 6: p=3 Jacobson absorption is partial, intrinsic line remains open
+
+For p=3, R=z^[3]-x^[3]-[x,y] is filtered-inhomogeneous in W=G_{1,1}/D_4. Bracketing R with x and y kills the p-power bracket terms in D_4 and forces the surviving degree-3 terms [[x,y],x] and [[x,y],y] to vanish. Thus the Jacobson polarization terms in the p=3 cube expansion are absorbed in the relation quotient. This repairs the specific p=3 restricted-power linearization defect, subject to checking the exact Jacobson convention and signs.
+
+This does not prove that the z-line in V is intrinsically Aut(W)-invariant. Presentation support alone is insufficient. The b=c=0 restriction and exact nonsplit embedded stabilizer therefore remain OPEN until either an intrinsic characterization is proved or the actual six GAP Frattini matrices are extracted and matched directly.
+
+The p=3 absorption argument is not a general odd-p theorem: for p>3 the relevant degree bookkeeping differs.
+
+Classification: p=3 Jacobson absorption = PASS / LOCAL; exact intrinsic stabilizer = OPEN / LOAD-BEARING; p^2 structural theorem = OPEN / LOAD-BEARING; Paper 5 END = NOT AUTHORIZED.
