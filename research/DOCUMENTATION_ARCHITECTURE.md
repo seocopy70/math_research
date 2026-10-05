@@ -1,5 +1,5 @@
 # Documentation Architecture — source-of-truth policy
-Last reviewed: 2026-10-04
+Last reviewed: 2026-10-05
 
 ## Purpose
 Keep the complete research record without forcing current research to carry the weight of its entire history.
@@ -14,6 +14,7 @@ Keep the complete research record without forcing current research to carry the 
 | research/DOCUMENTATION_ARCHITECTURE.md | Where does a new record go? | LIVE META-RULE |
 | research/archive/ | What was important but is not current? | ARCHIVE |
 | plans/ | What is proposed but not established? | PLANNING |
+| research/90_RESEARCH_GUIDE/ | How can the research be understood, explained, or evaluated? | EXPLANATION/ORIENTATION |
 
 ## Frozen-paper history rule
 Papers 1–3 are frozen. Their historical chronology is no longer part of the active `research/00_RESEARCH_LOG.md` ledger. Use `research/archive/PAPERS1-3_RESEARCH_HISTORY.md` as the navigation index and preserve the dated Paper-specific proof/audit records as the underlying provenance. Do not fabricate a reconstructed chronology merely to create a separate log file.
@@ -29,6 +30,10 @@ HISTORICAL = provenance only.
 
 Evidence quality is separate: PASS, LOCAL, NONE.
 LOAD-BEARING is a priority flag, not a research state.
+
+## Explanation/guide rule
+
+`research/90_RESEARCH_GUIDE/README.md` is the common navigation layer for explanatory, conceptual, reflective, midterm-summary, and contribution-assessment records. It does not become a second source of truth. Existing explanatory records are preserved at their original paths unless there is an explicit, recorded reason to move them. The guide may point to them without copying their full contents.
 
 ## Anti-duplication
 Put the authoritative statement in CURRENT_STATE or the relevant evidence record; dependencies in RESEARCH_MAP; evidence pointers in EVIDENCE_INDEX; historical evolution in LOG/archive. Do not duplicate live claims across overview files.
