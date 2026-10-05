@@ -2886,3 +2886,16 @@ Therefore the current load-bearing boundary is unchanged:
 - generic equality and uniform automorphism-order theorem: OPEN / CONDITIONAL.
 
 Detailed audit: research/PAPER5_STEP3_INTRINSIC_UPPER_BOUND_REAUDIT_2026-10-06.md.
+## 2026-10-06 — Step 3 re-audit: lift objection corrected; valid n=p intrinsic proof isolated
+
+A correction was made to the prior audit. For an actual g in Aut(W_n), a lift tilde-g:F_n->F_n is indeed obtained by choosing word lifts of the images of free generators and extending by freeness; automatically tilde-g(R_n) is contained in R_n. Thus the previous claim that the actual-automorphism lifting bridge was unavailable was too strong and is withdrawn.
+
+The new proposed B/theta argument nevertheless does not close the generic upper bound. Equivariance of the commutator pairing B does not by itself force the displayed flag or P=lambda_s I+N, and lambda^p=lambda over F_p is automatic. The required complete radical/flag and theta matrix calculation is missing.
+
+The repository's existing corrected n=p closure provides the valid intrinsic route: D_p(W_p)=F_p^3 with independent X=x^p,Y=y^p,Z=z^p; comparing [g(x),g(y)] with g(x)^p g(z)^(-p) forces u=0,v=1,c=a-m, giving Im=S'_11(p), with explicit realization of the reverse inclusion. Therefore:
+- n=p Step-3 image equality: PASS / CLOSED / GENERAL within declared odd-p,n=p scope;
+- |Aut(W_p)|=p^11(p-1)^2: PASS / CLOSED / GENERAL within that scope;
+- arbitrary-n extension via the proposed B/theta argument: OPEN / LOAD-BEARING;
+- p=5,n=6 local permutation check remains PASS / LOCAL and is consistent with W_6=W_5, but is not itself the general proof.
+
+Detailed audit addendum: research/PAPER5_STEP3_INTRINSIC_UPPER_BOUND_REAUDIT_2026-10-06.md.
