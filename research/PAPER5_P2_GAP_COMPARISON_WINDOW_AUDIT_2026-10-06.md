@@ -149,3 +149,12 @@ The statement “z occurs alone on the left, hence <z-bar> is distinguished and 
 ### Next authorized execution
 
 Use the certified GAP automorphism generators to extract their actual 3x3 Frattini matrices for (0,1) and (1,1), then reconstruct the degree-p relation jet using the restricted-Lie/Jacobson formula. Compare the resulting embedded subgroups directly, rather than counting a presentation-level candidate subgroup.
+
+
+## Addendum 6 — 2026-10-06: p=3 Jacobson absorption is partial
+
+For p=3, the filtered relation R=z^[3]-x^[3]-[x,y] in W=G_{1,1}/D_4 gives, after bracketing with x and y, the vanishing of the degree-3 polarization terms [[x,y],x] and [[x,y],y]. Hence the p=3 Jacobson terms are absorbed in the relation quotient, repairing the specific linearization defect.
+
+This does not prove intrinsic invariance of the z-line. The claimed b=c=0 restriction and exact embedded stabilizer remain OPEN until direct GAP matrix equality or an intrinsic group-theoretic characterization is supplied. No general odd-p conclusion follows.
+
+Classification: p=3 absorption = PASS / LOCAL; exact stabilizer = OPEN / LOAD-BEARING; Paper 5 END = NOT AUTHORIZED.
