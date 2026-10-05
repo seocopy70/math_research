@@ -1052,3 +1052,14 @@ The p=3,s=2,a=1,n=10 orbit computation has also been independently executed: 81 
 1. Replace the p=5 entrywise matrix certificate with a fully independent Frattini-quotient action certificate, resolving the remaining basis/action-convention mismatch.
 2. Use the exact p=5 Aut orders + certified GL orders to formalize the IA/GL factorization and prove the p^2 gap localization for a=1,2 at p=5.
 3. Then attack the p=3,s=2,a=1,n=10 fixed-quotient action/kernel factorization. Do not interpret the 81-orbit result as the source of the gap until that factorization is computed.
+
+## 2026-10-05 — Paper 5 quotient-action gate execution boundary
+
+The first fixed-quotient `Aut(W) -> Aut(Q)` gate (run 37251989683) did not return within the observed execution window. An optimized v2 gate was therefore added using direct point-stabilizer computation on the exact admissible-kernel action rather than an explicit preimage of a permutation stabilizer.
+
+The v2 run **37252335078** is still in progress after several minutes in the GAP computation. No mathematical output has been exposed yet. Therefore:
+- quotient-action image/kernel: **OPEN / EXECUTION BLOCKED**;
+- no image or kernel order is promoted;
+- no conclusion about the QA layer or its relation to the p^2 gap is permitted.
+
+This is a runtime boundary, not a mathematical FAIL. The already closed IA/GL and stabilizer results remain unchanged.
