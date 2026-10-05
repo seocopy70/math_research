@@ -1679,3 +1679,14 @@ This preserves the valid strategic conclusion while removing the circular lift a
 ### Immediate next action
 
 Define the intrinsic filtered relation module/secondary jet and prove its functoriality under (Aut(W_n)). Only then prove the factorization. No new GAP scan is authorized before this proof gate is resolved.
+
+
+## 2026-10-05 — Paper 5 factorization definition audit: raw mixed jet rejected
+
+The proposed factorization proof was audited before any new computation. The raw definition J=(pi_2(r),pi_p(r)) is invalid for the mixed relation case r in D_2\D_3, since pi_p is not defined on D_2\D_p. A BCH claim that the degree-2 component cannot pollute degree p does not repair this: the missing datum is a choice of lift/splitting of the degree-2 relation class.
+
+The corrected intrinsic object is the truncated filtered relation module M_n=R_n/[F,R_n], with M_n^(k)=((R_n cap D_k)[F,R_n])/[F,R_n], through degree p, with the distinguished degree-2 relation line. The secondary information is the associated filtered extension modulo splitting/gauge, not a chosen L_p-vector. This object is acted on functorially by Aut(W_n), avoiding the unproved claim that every automorphism of W_n lifts to Aut(F).
+
+The statement [R_n,F] subset D_3 is retained only conditionally when R_n subset D_2, and is PASS / LOCAL. The Hopficity-to-lift shortcut is FAIL / CLOSED as a proof shortcut. The intrinsic filtered-jet construction and its identification with the four projective marked stabilizers are OPEN / LOAD-BEARING. No new GAP scan is authorized until this definition/factorization gate is settled.
+
+Classification: OPEN / LOAD-BEARING for the general odd-p finite-window factorization; raw mixed jet definition FAIL / CLOSED.
