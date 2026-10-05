@@ -156,3 +156,44 @@ only after the exponent is re-derived carefully from the Jennings product; do no
 4. **Check sharpness:** use the explicit z^{p^s} witness and the SC bound to state exactly which part is universal (filtration compression) and which part is family-specific (nonzero intrinsic transfer defect).
 
 The governing principle is: **SC is now infrastructure; \(\varepsilon_s\), exact unmarked separation, and the sharp threshold are the theorem.**
+
+
+## 2026-10-05 — SC theorem strengthening: general transfer-depth law and complete critical-a classification
+
+The SC closure is now promoted from a critical-window tool to a general transfer-depth principle.
+
+For every index-p kernel K of a finitely generated free pro-p group F,
+D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K).
+Put
+m=\lceil n/p\rceil,  e(n)=\lceil\log_p m\rceil.
+By the Jennings–Lazard description of the Zassenhaus filtration and abelianization,
+\operatorname{im}(D_n(F)\cap K\to K^{ab})\subseteq p^{e(n)}K^{ab}.
+At n=p^s+1, e(n)=s, recovering TF_s.
+
+This general transfer-depth statement is PASS / CLOSED.
+
+### Complete classification of the critical window by a
+
+For the declared stress family W_{s,a}=W_{p^s+1}(G_{s,a}), the parameter a is now completely classified at the critical window.
+
+- If 1\le a<s, the defining relation has abelianized form p^s z-p^a x_1=0, and Smith normal form gives
+  W_{s,a}^{ab}\cong \mathbf Z_p/p^a\oplus(\mathbf Z_p/p^{s+1})^d.
+  Hence 1\le a<b<s are pairwise separated already by abelianization.
+
+- If a>s, then p^a\ge p^{s+1}>p^s+1, so x_1^{p^a}\in D_{p^s+1}(F). The power term disappears in the critical truncation and W_{s,a}=W_{s,\infty}. Thus the entire range a>s is saturated with the a=\infty window.
+
+- If a=s, then abelianization agrees with a=\infty:
+  W_{s,s}^{ab}\cong W_{s,\infty}^{ab}\cong \mathbf Z_p/p^s\oplus(\mathbf Z_p/p^{s+1})^d.
+  The already certified intrinsic transfer witness \varepsilon_s is nonzero for a=s and zero for a=\infty, hence W_{s,s}\not\cong W_{s,\infty}.
+
+Therefore a\mapsto W_{p^s+1}(G_{s,a}) has exactly one nontrivial boundary layer at a=s; all a>s are saturated with a=\infty, while all a<s are separated by abelianization.
+
+Classification: PASS / CLOSED for odd p, s\ge2, even d, and nondegenerate alternating r_2 in the declared intrinsic stress-family scope.
+
+This strengthens the Paper-4 theorem: the critical window does not merely separate a=s from a=\infty; it completely describes how much of the exponent parameter a survives at the critical truncation.
+
+### Scope boundary
+
+The nondegenerate quadratic hypothesis remains an intrinsicity condition, not a cosmetic computational assumption: it supplies the canonical one-dimensional cup-radical needed to define K. Degenerate quadratic forms have larger radical and do not currently yield a canonical single character. The s=1 case remains intentionally unpromoted.
+
+The failed arbitrary-r degree-only theorem remains FAIL / CLOSED and is not reopened.
