@@ -354,3 +354,16 @@ Current gate:
 - (~tilde g(R)\subseteq R): **OPEN / LOAD-BEARING**;
 - (\operatorname{Im}(Aut(W_n)\to GL(V))=S_{11}(p)): **OPEN / LOAD-BEARING**;
 - (p^2(p-1)) theorem: **CONDITIONAL**.
+
+
+## 2026-10-06 — Step 3 second-jet substitution-order repair closed
+
+The corrected actual second-order operator is (C_{a,b,k}=T_{a,b,k}\circ L), not (T_{a,b,k}) acting directly on (R_k). The degree-2 witness gives coefficient (ab) on (XYX), confirming the repair.
+
+In the declared mod-(p) Magnus layer, (L) preserves the commutator ideal and the associative derivations entering (T) preserve it, hence (C(I_k)\subseteq I_{k+1}). The (p)-power exceptional layer is handled by the associative Leibniz sum, with degree (p^2+1), while (X^{p^2}-Z^{p^2}) is killed only in characteristic (p).
+
+Therefore (C_{a,b,k}(gr_k(R))\subseteq gr_{k+1}(R)), the corrected secondary term lies in (gr_{k+1}(R)), and the finite-stage residual factorization works without the stronger product equality previously used. It follows that (widetilde g(R)\subseteq R).
+
+**Classification:** corrected (C_{a,b,k}), the secondary relation term, finite-stage residual factorization, and kernel preservation are **CLOSED / GENERAL within the declared mod-(p) Magnus layer**. Step 3 equality (operatorname{Im}(Aut(W_n)\to GL(V))=S_{11}(p)) remains **OPEN / LOAD-BEARING**, and the (p^2(p-1)) theorem remains **CONDITIONAL**.
+
+This supersedes the immediately preceding 2026-10-06 audit classification that left the corrected (C) operator OPEN. Detailed proof is in research/PAPER5_STEP3_SECOND_JET_AUDIT_ADDENDUM_2026-10-06.md.
