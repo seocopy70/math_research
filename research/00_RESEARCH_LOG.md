@@ -2465,3 +2465,14 @@ A load-bearing error remains in the second-order substitution formula. For (x\ma
 The finite-stage residual factorization does not need the claimed equality (D_j=(R\cap D_j)(R\cap D_{j+1})D_{j+2}). From (r^{(j)}\in R\cap D_j), its initial class is automatically in (gr_j(R)); choose a representative in (R\cap D_j) and the residual lies in (R\cap D_{j+1}). Thus this part can survive, including at exceptional (j=p,p^2).
 
 Classification: raw (T(I_k)\subseteq I_{k+1}) PASS/GENERAL; corrected actual second-order operator (C_{a,b}) OPEN/LOAD-BEARING; strengthened (L_k), kernel preservation, and (operatorname{Im}(Aut(W_n)\to GL(V))=S_{11}(p)) remain OPEN/LOAD-BEARING; (p^2(p-1)) remains CONDITIONAL. Detailed audit: `research/PAPER5_STEP3_SECOND_JET_AUDIT_ADDENDUM_2026-10-06.md`.
+
+
+## 2026-10-06 — Paper 5 Step 3 corrected second-jet closure
+
+The substitution-order error is repaired by (C_{a,b,k}=T_{a,b,k}\circ L). For (x\mapsto x^a, y\mapsto yx^b, z\mapsto z^a), the linear Magnus part is (L(X)=aX, L(Y)=Y+bX, L(Z)=aZ). For (R_2=[X,Y]), the corrected (XYX)-coefficient is (ab), not (b).
+
+The associative derivations preserve the two-sided commutator ideal, (L) preserves it as well, and hence (C(I_k)\subseteq I_{k+1}). The (p)-power exceptional layer is handled in the explicit mod-(p) Magnus layer by (D(u^p)=\sum_{i=0}^{p-1}u^iD(u)u^{p-1-i}), with degree (p^2+1), while (D(X^{p^2}-Z^{p^2})=0) only in characteristic (p).
+
+Thus (C_{a,b,k}(gr_kR)\subseteq gr_{k+1}R), the corrected secondary term lies in (gr_{k+1}R), and the finite-stage residual factorization yields (widetilde g(R)\subseteq R) without the stronger Zassenhaus-layer product equality.
+
+**Classification:** corrected (C_{a,b,k}), secondary relation term, finite-stage factorization, and kernel preservation are **CLOSED / GENERAL within the declared mod-(p) Magnus layer**. Step 3 equality (operatorname{Im}(Aut(W_n)\to GL(V))=S_{11}(p)) remains **OPEN / LOAD-BEARING**, and the (p^2(p-1)) theorem remains **CONDITIONAL**. Evidence: research/PAPER5_STEP3_SECOND_JET_AUDIT_ADDENDUM_2026-10-06.md.
