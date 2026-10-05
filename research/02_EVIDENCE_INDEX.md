@@ -97,3 +97,11 @@ ot\cong W_{p^s+1}(G_t)) remains OPEN unless an explicit same-window invariant is
 | Exact stress-family threshold (n_{sep}(s)=p^s+1) | PASS / CLOSED in declared stress-family scope | lower-window blindness + critical separation | same audit |
 
 The 2026-10-04 rows declaring (SC_s), (TF_s), and the a=s/a=infinity boundary OPEN are **SUPERSEDED** by this 2026-10-05 proof audit. The historical order-jump route remains FAIL/CLOSED and is not restored.
+
+## 2026-10-06 — Paper 5 Step 3 local evidence / proof boundary
+
+| Claim | State | Evidence | Where to verify |
+|---|---|---|---|
+| p=5,n=6,(s,a)=(0,1) direct permutation image equality, order 2000 | PASS / LOCAL | GitHub Actions Run 37381098677 | evidence/local/p5_n6_sa01_direct_perm.txt |
+| Generic intrinsic upper bound Im(Aut(W_n)->GL(V)) subseteq S'_11(p) from the submitted proof | FAIL / CLOSED as submitted | research/PAPER5_STEP3_INTRINSIC_UPPER_BOUND_REAUDIT_2026-10-06.md | unresolved lifting/intrinsicity and unsupported general order count |
+| Generic equality Im=S'_11(p) | OPEN / LOAD-BEARING | none | Paper 5 Step 3 |
