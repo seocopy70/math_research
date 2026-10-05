@@ -14,17 +14,24 @@ This file is a navigation summary. The dated audits and `00_RESEARCH_LOG.md` rem
 - The stress family has (s)-independent abelianization and, in the declared mild scope, (H^*(-,\mathbf F_p)) and the associated graded shadow are also (s)-independent.
 - Ordinary mod-(p) cohomology and bare graded data are therefore closed as blind routes for the declared stress family.
 
-## Explicit open boundary
+## Resolved former boundary
 
-The exact unmarked statement
-[
-W_{p^s+1}(G_s)\not\cong W_{p^s+1}(G_t)
-]
-and the exact threshold (n_{\rm sep}(s)=p^s+1) are **OPEN**.
+The former all-s transfer-defect boundary is now closed by the Magnus prefix-code proof.
 
-The proposed order-jump/quotient argument is **FAIL / CLOSED** because the defining normal subgroups are not nested.
+- The index-p subgroup comparison (SC) is **PASS / CLOSED**.
+- (TF_s) is **PASS / CLOSED** as an immediate abelianized consequence.
+- The corrected intrinsic transfer invariant is **PASS / CLOSED** in the declared stress-family scope.
+- Therefore
+\[
+W_{p^s+1}(G_{s,s})\not\cong W_{p^s+1}(G_{s,\infty})
+\]
+for every odd p and s>=2 in the declared scope.
+- Combined with lower-window blindness, the exact critical-boundary threshold is
+\[
+n_{\rm sep}(s)=p^s+1.
+\]
 
-The all-(s) transfer-defect route is **OPEN / LOAD-BEARING** through ((SC_s)) / ((TF_s)). The (p=3,s=2) and (p=3,s=3) calculations are **PASS / LOCAL** only.
+The old order-jump argument remains **FAIL / CLOSED / SUPERSEDED** and is not used.
 
 ## Historical/superseded routes
 
