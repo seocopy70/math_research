@@ -1637,3 +1637,45 @@ Classification: PASS / CLOSED for the abstract projective relation-jet stabilize
 The detailed proof audit is recorded in research/PAPER5_RELATION_JET_AUDIT.md.
 
 Immediate next gate: prove the finite-window Frattini action factors through the degree-(2,p) relation jet, then seek equality for general odd p or a genuinely new-prime independent certificate. If factorization fails, record the counterexample; do not repair the jet ad hoc.
+
+
+## 2026-10-05 — Paper 5 Factorization Lemma Step-B critical audit
+
+The current Paper 5 bottleneck was reviewed against the authoritative relation-jet audit. The strategic conclusion is **accepted with mathematical corrections**: the next task is proof of the finite-window factorization, not another GAP calculation, but the proposed B-1/B-2/B-3 skeleton cannot be used verbatim.
+
+### Independent logical audit
+
+**B-1 lift.** The statement that every (Aut(W_n)) element lifts to (Aut(F)) stabilizing (R_n) does not follow from (W_n) being a finite/Hopfian p-group. The lifting problem (Stab_{Aut(F)}(R)	o Aut(F/R)) is a separate issue in one-relator settings. Thus “Hopfian + free presentation” is not a proof. Classification: **FAIL / CLOSED as a proof shortcut; underlying lifting question OPEN**.
+
+**B-2a.** Conditional on an actual correction (cin[R_n,F]), one has
+([R_n,F]subseteq[D_2,D_1]subseteq D_3), so the degree-2 correction vanishes. Classification: **PASS / LOCAL conditional lemma**.
+
+**B-2b.** The mixed relation (rin D_2setminus D_3) does not admit the raw pair
+((pi_2(r),pi_p(r))), because (pi_p) is defined on (D_p), not on a general (D_2) element. The secondary degree-(p) component requires a canonical filtered relation-module/extension construction and a proof that its ambiguity is controlled. The slogan “(2+p>p+1)” is not sufficient. Classification: **OPEN / LOAD-BEARING**.
+
+**B-3.** Preservation of a one-dimensional relation module naturally gives line preservation and an arbitrary scalar (lambdainmathbf F_p^	imes), not merely (pm1). Therefore the correct abstract target is projective/line stabilization unless an additional theorem reduces the scalar. The existing p=3/p=5 formulas are already formulated projectively.
+
+### Corrected theorem target
+
+The immediate theorem to attack is:
+
+[
+operatorname{Im}ho_nsubseteq
+operatorname{Stab}_{GL(V)}(mathcal J_{s,a}),
+]
+
+where (mathcal J_{s,a}) is an intrinsically defined filtered relation-jet object, not the presentation-dependent raw pair ((pi_2(r),pi_p(r))).
+
+This preserves the valid strategic conclusion while removing the circular lift assumption and the undefined mixed-degree projection.
+
+### Classification
+
+- abstract marked/projective relation-jet stabilizers: **PASS / CLOSED**;
+- actual p=3/p=5 finite image = candidate stabilizer: **PASS / LOCAL**;
+- general odd-(p) factorization: **OPEN / LOAD-BEARING**;
+- uniform (p^2) automorphism-order theorem: **OPEN**;
+- quotient-action `37252335078`: separate **OPEN / EXECUTION BLOCKED** auxiliary gate.
+
+### Immediate next action
+
+Define the intrinsic filtered relation module/secondary jet and prove its functoriality under (Aut(W_n)). Only then prove the factorization. No new GAP scan is authorized before this proof gate is resolved.
