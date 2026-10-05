@@ -1,0 +1,40 @@
+Paper 5 local evidence — p=5, n=6, (s,a)=(0,1)
+Run: 37381098677
+Workflow: Paper5 p5n6 matrix convention diagnostic
+Commit: 3dd43900b4df49e10b4968ee18eddda0de6b64ed
+Date: 2026-10-05
+
+Scope
+-----
+Single audited case only. This is NOT the six-case batch and is NOT a general theorem.
+
+Runtime
+-------
+- Aut generator count: 113
+- Candidate permutation-action order: 2000
+- Direct MatrixGroup comparison: actual=infinity, equal=false
+- Transpose/inverse variants: also infinity/false
+- Direct permutation comparison: actual=2000, candidate=2000, equal=true
+
+Arithmetic
+----------
+2000 = 5^3 * 4^2.
+The observed ratio 2000/20 = 100 = 5^2 is consistent with the previously observed p^2 localization pattern.
+
+Interpretation
+--------------
+PASS / LOCAL.
+
+Certified statement:
+The permutation representation extracted from the 113 computed automorphism generators has image order 2000 and agrees in order with the candidate subgroup of order 2000 for this specific case.
+
+Non-certified:
+- no general upper bound Im <= S'11(p);
+- no equality theorem for arbitrary odd p or arbitrary n;
+- no completion of the Paper 5 Step 3 load-bearing gate.
+
+The failed direct MatrixGroup comparison is a representation/convention diagnostic; the permutation comparison is the trusted equality check used by this runtime.
+
+Authority
+---------
+This file records evidence only. It does not promote the local computation to a theorem.
