@@ -28,20 +28,19 @@ Use this order in a new session:
 | Paper 1 | FROZEN / COMPLETE | Paper 1 records |
 | Paper 2 | FROZEN / COMPLETE | Paper 2 records |
 | Paper 3 | FROZEN / COMPLETE | Paper 3 records |
-| **Paper 4** | **PASS / CLOSED — certified core; OPEN / LOAD-BEARING boundary** | [Paper 4 Current](research/PAPER4_CURRENT_2026-10-05.md) |
+| **Paper 4** | **PASS / CLOSED — certified core and exact stress-family threshold** | [Paper 4 Current](research/PAPER4_CURRENT_2026-10-05.md) |
 | **Paper 5** | **OPEN / LOAD-BEARING** | [Paper 5 Current](research/PAPER5_CURRENT_2026-10-05.md) |
 
 The active research programme is **Paper 5**.
 
-Paper 4 remains a completed certified core with explicitly recorded open extensions; it must not be silently presented as FINAL beyond its certified scope.
+Paper 4's declared stress-family all-s boundary is now closed. Broader arbitrary-r/generalization questions remain outside the certified theorem scope.
 
 ---
 
 # 2. Paper 4 — control summary
 
 **Classification:**  
-**PASS / CLOSED — certified core**  
-**OPEN / LOAD-BEARING — exact unmarked same-window/all-s boundary**
+**PASS / CLOSED — certified core and exact all-s stress-family boundary**
 
 ### Certified
 
@@ -198,3 +197,8 @@ A result becomes part of the current state only after:
 No local computation is promoted to a uniform theorem without an explicit general proof or a clearly stated counterexample boundary.
 
 The dedicated Paper current files are the **single live homes for Paper-specific status**. This file only points to them and summarizes the programme-level state; it should not again become a second detailed Paper 4/5 log.
+
+
+## 2026-10-05 — Paper 4 exact stress-family boundary closed
+
+The Magnus prefix-code audit (research/PAPER4_MAGNUS_PREFIX_CODE_AUDIT_2026-10-05.md) closes the former all-s load-bearing boundary. The programme-level status is now PASS / CLOSED for Paper 4's declared stress-family theorem, with broader generalization explicitly out of scope.
