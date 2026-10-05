@@ -668,3 +668,15 @@ Classification:
 - Stabilization-based p^2-gap explanation: OPEN / LOAD-BEARING.
 
 Authorized next gate: analyze the actual gamma_{p+1} gamma_2^p F^{p^2} image modulo RD_{p+2}, separately controlling the gamma_2^p and F^{p^2} components. Detailed audit: research/PAPER5_WP1_STABILIZATION_AUDIT_2026-10-06.md.
+
+## 2026-10-06 — W_{p+1}=W_p stabilization gate CLOSED
+
+The corrected Jennings–Lazard audit establishes, for the declared odd-p presentation,
+D_{p+1}(F)=gamma_{p+1}(F) gamma_2(F)^p F^{p^2},
+with all three components contained in R D_{p+2}(F). The key point is that the full relation package gives gr_2(R)=gr_2(F), because the relators [x,z], [y,z], [x,y]^{-1}x^p z^{-p} supply the entire degree-two layer. The ordinary Lie component in degree p+1 is therefore contained in gr_{p+1}(R), giving gamma_{p+1}(F) subset R D_{p+2}(F). The exceptional gamma_2^p and F^{p^2} factors already lie in D_{p+2}. Hence R D_{p+1}=R D_{p+2} and W_{p+1} is isomorphic to W_p.
+
+Classification: PASS / CLOSED / GENERAL.
+
+Precision boundary: this does not imply D_{p+1} subset R; the earlier x^{p^2} not-in-R counterexample remains valid. It also does not close Step 3 equality Im(Aut(W_n)->GL(V))=S_11(p), which remains OPEN / LOAD-BEARING.
+
+Detailed audit: research/PAPER5_WP1_STABILIZATION_AUDIT_2026-10-06.md.
