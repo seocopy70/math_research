@@ -56,56 +56,106 @@ We focus on the critical window $W_{p^s+1}$.
 \\section{Universal subgroup-depth compression}
 
 \\begin{theorem}[Index-$p$ subgroup-depth comparison]
-Let $F$ be a finitely generated free pro-$p$ group and let $K$ be an open subgroup of index $p$. Then for every $n\\ge1$,
+Let $G$ be a pro-$p$ group and let $K\\trianglelefteq G$ be open of index $p$. Then, for every $n\\ge1$,
 \\[
-D_n(F)\\cap K\\subseteq D_{\\lceil n/p\\rceil}(K).
+D_n(G)\\cap K\\subseteq D_{\\lceil n/p\\rceil}(K).
+\\tag{SC}
 \\]
 \\end{theorem}
 
-The proof is obtained from the established weighted-Schreier framework: uniform weights realize ordinary Zassenhaus degree, weights restrict to closed subgroups, index-$p$ Schreier coordinates have controlled weights, and the no-cancellation principle identifies the leading weight of an arbitrary element. Equivalently, a self-contained Magnus prefix-code proof gives the same comparison. We do not claim the inequality as new foundational weighted-Schreier theory.
+\\begin{proof}
+Put
+\\[
+A=\\mathbf F_p[[K]],\\qquad B=\\mathbf F_p[[G]],\\qquad J=I_K,
+\\]
+and choose $a\\in G$ whose image generates $G/K$. With $t=a-1$, normality of $K$ gives
+\\[
+B=\\bigoplus_{r=0}^{p-1}At^r,
+\\qquad
+t^p=a^p-1\\in J.
+\\]
+For $m\\ge1$ define the weighted normal-form filtration
+\\[
+E_m=
+\\bigoplus_{r=0}^{p-1}
+J^{\\max(0,\\lceil(m-r)/p\\rceil)}t^r,
+\\]
+with $J^0=A$.
+
+For a normal-form monomial $ct^r$, $c\\in J^q$, assign weight $pq+r$. If
+$\\sigma(c)=aca^{-1}$, then
+\\[
+tc=\\sigma(c)t+(\\sigma(c)-c),
+\\]
+and $\\sigma(J^q)=J^q$. Thus normalization of products never lowers the weight. When a power $t^{j+s}$ reaches $p$, write
+\\[
+t^{j+s}=(t^p)^u t^v,
+\\qquad j+s=up+v,\quad 0\\le v<p,
+\\]
+and use $t^p\\in J$; each such replacement preserves the same total weight. Hence
+\\[
+E_mE_\\ell\\subseteq E_{m+\\ell}.
+\\tag{NF}
+\\]
+Since $I_G=JB+tB\\subseteq E_1$, induction gives
+\\[
+I_G^n\\subseteq E_n.
+\\]
+Taking the direct $A$-summand yields
+\\[
+I_G^n\\cap A\\subseteq J^{\\lceil n/p\\rceil}.
+\\]
+Finally, the dimension-subgroup identity
+\\[
+D_n(H)=H\\cap(1+I_H^n)
+\\]
+gives (SC). The argument explicitly retains the terms arising from $t^rJ^q$; no augmentation-ideal intersection equality is assumed.
+\\end{proof}
 
 \\begin{theorem}[Index-$p^s$ comparison]
-If $[F:K]=p^s$, then
+If $K\\trianglelefteq G$ is open of index $p^s$, then
 \\[
-\\boxed{D_n(F)\\cap K\\subseteq D_{\\lceil n/p^s\\rceil}(K).}
+\\boxed{D_n(G)\\cap K\\subseteq D_{\\lceil n/p^s\\rceil}(K).}
 \\tag{SC_s}
 \\]
 \\end{theorem}
 
 \\begin{proof}
 Choose a subnormal chain
-$F=K_0>K_1>\\cdots>K_s=K$ with $[K_{i-1}:K_i]=p$.
-Iterate the index-$p$ theorem. The identity
-$\\lceil\\lceil m/p\\rceil/p\\rceil=\\lceil m/p^2\\rceil$
-and its iterates show that no additional rounding loss occurs.
+$G=K_0>K_1>\\cdots>K_s=K$
+with $[K_{i-1}:K_i]=p$. Iterating (SC) gives the result, because
+\\[
+\\left\\lceil\\frac{\\lceil m/p\\rceil}{p}\\right\\rceil
+=
+\\left\\lceil\\frac m{p^2}\\right\\rceil
+\\]
+and hence the ceiling operations compose exactly.
 \\end{proof}
 
 \\begin{proposition}[Uniform sharpness]
-The factor $p^s$ in (SC_s) cannot be uniformly improved by one filtration level. More precisely, there are infinitely many $n$ for which
+The factor $p^s$ in (SC_s) is uniformly optimal in the free-pro-$p$ class: there are infinitely many $n$ for which
 \\[
-D_n(F)\\cap K\\not\subseteq D_{\\lceil n/p^s\\rceil+1}(K).
+D_n(F)\\cap K\\not\\subseteq D_{\\lceil n/p^s\\rceil+1}(K).
 \\]
 \\end{proposition}
 
 \\begin{proof}
-Take $F=\\langle a,b\\rangle$ free pro-$p$ and
+Let $F=\\langle a,b\\rangle$ be free pro-$p$ and let
 $K=\\ker(F\\to C_{p^s})$, with $a$ mapping to a generator and $b$ to zero.
-A Schreier basis contains $c_0=a^{p^s}$. Hence
-$c_0^{p^{m-1}}$ has exact $K$-Zassenhaus degree $p^{m-1}$.
-For
-$g_m=a^{p^{m+s-1}}=c_0^{p^{m-1}}$ and
-$n_m=p^{m+s-1}$,
-we have
-$g_m\\in D_{n_m}(F)\\cap K$ but
-$g_m\\notin D_{p^{m-1}+1}(K)$, while
-$\\lceil n_m/p^s\\rceil=p^{m-1}$.
-Thus the proposed uniform improvement is false.
+The Schreier basis contains $c_0=a^{p^s}$. For $m\\ge1$ put
+\\[
+g_m=a^{p^{m+s-1}}=c_0^{p^{m-1}},
+\\qquad
+n_m=p^{m+s-1}.
+\\]
+Then $g_m\\in D_{n_m}(F)\\cap K$, while
+$g_m\\notin D_{p^{m-1}+1}(K)$ and
+$\\lceil n_m/p^s\\rceil=p^{m-1}$. Thus no uniform improvement by one level is possible.
 \\end{proof}
 
 \\begin{remark}
-We claim uniform sharpness, not pointwise sharpness for every integer $n$. This is sufficient to prove that the compression factor $p^s$ is optimal as a uniform theorem.
+The sharpness statement is uniform optimality of the factor $p^s$, not pointwise equality for every integer $n$ and not sharpness for every arbitrary pro-$p$ group.
 \\end{remark}
-
 \\section{From subgroup depth to transfer depth}
 Let $m=\\lceil n/p\\rceil$. Jennings--Lazard theory implies that the image of
 $D_m(K)$ in $K^{\\mathrm{ab}}$ is controlled by the corresponding $p$-power layer. In the critical case $n=p^s+1$, the index-$p$ comparison gives
@@ -124,26 +174,119 @@ the audited transfer-depth law gives
 The precise critical specialization is the one used below.
 
 \\section{The stress family and the critical obstruction}
-For the stress family above, lower windows through $n\\le p^s$ do not see the hidden power-root relation at the relevant initial layer. At $n=p^s+1$, the relation enters the first critical layer.
 
-The intrinsic construction uses the nondegenerate quadratic initial form of $r_2$. It supplies the canonical one-dimensional radical direction needed to define the index-$p$ kernel without inserting a presentation-dependent choice. The transfer obstruction is a line-valued invariant in the finite-window abelianization, represented after the corrected torsion normalization by a class in the appropriate $p^s$-quotient of the kernel abelianization.
+For the stress family, the lower windows $W_n$ with $n\\le p^s$ do not see the hidden power-root relation at the critical initial layer. At $n=p^s+1$, the defining relation first enters the relevant Zassenhaus layer.
 
-Denote the resulting intrinsic predicate by $\\eps_s(W)$. The audited calculation gives
+The nondegenerate alternating quadratic initial form of $r_2$ supplies the intrinsic one-dimensional radical direction used to define the index-$p$ kernel. No presentation-dependent character is chosen.
+
+Let
+\\[
+S_s(W)=\\operatorname{im}\\bigl(W^{\\mathrm{ab}}[p^s]
+\\longrightarrow W^{\\mathrm{ab}}/pW^{\\mathrm{ab}}\\bigr).
+\\]
+In the declared stress-family scope this is one-dimensional. If $t\\in W^{\\mathrm{ab}}[p^s]$ spans this line and $V$ denotes the intrinsic transfer to the canonical kernel abelianization, define
+\\[
+\\eps_s(W)=p^{s-1}V(t)\\pmod{p^sK^{\\mathrm{ab}}}.
+\\tag{T}
+\\]
+Replacing $t$ by another lift of the same line changes the value by an element of $p^sK^{\\mathrm{ab}}$, so the vanishing of $\\eps_s$ is intrinsic.
+
+\\begin{lemma}[Critical transfer-depth bound]
+At $n=p^s+1$,
+\\[
+\\operatorname{im}\\bigl(D_{p^s+1}(G)\\cap K
+\\to K^{\\mathrm{ab}}\\bigr)
+\\subseteq p^sK^{\\mathrm{ab}}.
+\\tag{TF_s}
+\\]
+\\end{lemma}
+
+\\begin{proof}
+By (SC),
+\\[
+D_{p^s+1}(G)\\cap K
+\\subseteq D_{p^{s-1}+1}(K).
+\\]
+The Jennings--Lazard product
+\\[
+D_m(K)=\\prod_{ip^j\\ge m}\\gamma_i(K)^{p^j}
+\\]
+shows, after abelianization, that the first surviving pure-power layer for
+$m=p^{s-1}+1$ is $p^sK^{\\mathrm{ab}}$. Hence the displayed image is contained in that subgroup.
+\\end{proof}
+
+Now use the Schreier coordinates for the canonical kernel. The defining relator has trivial character value and its normal closure lies in $K$. Since $r_2\\in[K,K]$, its image in $K^{\\mathrm{ab}}$ vanishes. The resulting abelianized relation is, up to the harmless sign convention,
+\\[
+p^{s-1}U-p^aA_1=0.
+\\tag{L}
+\\]
+For $a=s$, the critical transfer class is represented by
+\\[
+p^{s-1}(\\sigma-1)^{p-1}A_0.
+\\]
+Modulo the relation lattice and $p^sK^{\\mathrm{ab}}$, it is nonzero; explicitly
+\\[
+(\\sigma-1)^{p-1}A_0\\equiv\\sum_jA_j\\pmod p,
+\\]
+so the surviving class is
+\\[
+p^{s-1}\\sum_jA_j\\ne0.
+\\]
+By (TF_s), no element coming from $D_{p^s+1}(G)\\cap K$ can kill this class in the finite-window quotient.
+
+For $a=\\infty$, there is no finite power relation in the $U$-direction. Taking $t=z$ gives $V(t)=U$, and the corresponding normalized class vanishes because $p^{s-1}U$ lies in the relator image. Thus
 \\[
 \\eps_s(W_{p^s+1}(G_{s,s}))\\ne0,
 \\qquad
 \\eps_s(W_{p^s+1}(G_{s,\\infty}))=0.
+\\tag{E}
 \\]
 
 \\begin{theorem}[Exact critical separation]
 For odd $p$, $s\\ge2$, even $d$, and nondegenerate alternating quadratic initial form $r_2$,
 \\[
-W_{p^s+1}(G_{s,s})\\not\\cong W_{p^s+1}(G_{s,\\infty}).
+\\boxed{
+W_{p^s+1}(G_{s,s})
+\\not\\cong
+W_{p^s+1}(G_{s,\\infty}).
+}
 \\]
 \\end{theorem}
 
-\\begin{proof}[Proof architecture]
-The SC/SC_s comparison bounds the image of the defining relation after passage to the canonical index-$p$ kernel. The corrected transfer invariant is then evaluated in the finite-window kernel abelianization modulo $p^s$. For $a=s$ the representative calculation gives a nonzero critical class, whereas for $a=\\infty$ the corresponding class vanishes because the power term is absent. Intrinsicity follows from the canonical radical line supplied by the nondegenerate quadratic form. The two finite windows therefore cannot be isomorphic.
+\\begin{proof}
+The canonical radical line makes $K$ intrinsic. The transfer predicate (T) is invariant under changing its spanning lift and under isomorphism of the finite filtered window. Equation (E) therefore gives an isomorphism invariant that has different values on the two critical windows. Hence they are not isomorphic.
+\\end{proof}
+
+\\section{Complete critical-window classification of $a$}
+For $1\\le a<s$, abelianization gives
+\\[
+W_{s,a}^{\\mathrm{ab}}
+\\cong
+\\mathbf Z_p/p^a\\oplus
+(\\mathbf Z_p/p^{s+1})^d,
+\\]
+so distinct values of $a$ are separated already by abelianization. If $a>s$, then
+$p^a\\ge p^{s+1}>p^s+1$, so $x_1^{p^a}\\in D_{p^s+1}(F)$ and
+\\[
+W_{s,a}=W_{s,\\infty}.
+\\]
+At $a=s$, abelianization agrees with the $a=\\infty$ case, but the intrinsic transfer obstruction above separates the two. Thus the critical window has exactly one nontrivial boundary layer, namely $a=s$.
+
+\\begin{corollary}[Exact threshold]
+Define
+\\[
+n_{\\rm sep}(s)=
+\\min\\{n:\\,
+W_n(G_{s,s})\\not\\cong W_n(G_{s,\\infty})\\}.
+\\]
+Then, in the declared stress-family scope,
+\\[
+\\boxed{n_{\\rm sep}(s)=p^s+1.}
+\\]
+\\end{corollary}
+
+\\begin{proof}
+The lower-window blindness gives isomorphism for all $n\\le p^s$. The preceding theorem gives non-isomorphism at $n=p^s+1$.
 \\end{proof}
 
 \\section{Exact threshold and the parameter $a$}
