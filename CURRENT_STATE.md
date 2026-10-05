@@ -51,17 +51,15 @@ Paper 4's declared stress-family all-s boundary is now closed. Broader arbitrary
 - The marked affine \(E_\psi\) mechanism for nonzero quadratic initial relations has passed its theorem-level proof gate.
 - Corrected GAP runtime certification for the marked affine rank-2/3/4 witnesses is closed.
 
-### Still open
+### Resolved former boundary
 
-- Exact abstract unmarked separation
-  \[
-  W_{p^s+1}(G_s)\not\cong W_{p^s+1}(G_t)
-  \]
-  remains **OPEN**.
-- The exact threshold \(n_{\rm sep}(s)=p^s+1\) remains **OPEN**; only the lower bound \(n_{\rm sep}(s)\ge p^s+1\) is certified.
-- The all-\(s\) transfer-defect route \((SC_s)/(TF_s)\) remains **OPEN / LOAD-BEARING**.
-- The existing \(p=3,s=2,3\) transfer/Schreier calculations are **PASS / LOCAL**, not an all-\(s\) theorem.
-- The intrinsic unmarked orientation/character bridge remains unresolved.
+- Exact critical separation (W_{p^s+1}(G_{s,s})\not\cong W_{p^s+1}(G_{s,\infty})) is **PASS / CLOSED** in the declared stress-family scope.
+- The exact critical-boundary threshold (n_{\rm sep}(s)=p^s+1) is **PASS / CLOSED** for the declared (a=s) versus (a=\infty) boundary.
+- The all-s transfer comparison (SC_s) is **PASS / CLOSED** by the Magnus prefix-code proof.
+- The transfer-defect bound (TF_s) is **PASS / CLOSED**.
+- The corrected intrinsic transfer invariant is **PASS / CLOSED** in the declared stress-family scope.
+
+Broader arbitrary-r degree-only generalization remains FAIL/CLOSED; it is not reopened by this result.
 
 ### Important closed failures
 
