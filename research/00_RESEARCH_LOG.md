@@ -1810,3 +1810,28 @@ for every odd p and s>=2 in the declared stress-family scope. Together with the 
 \]
 
 Classification: Magnus coordinate lemma **PASS / CLOSED**; (SC) and (SC_s) **PASS / CLOSED**; (TF_s) **PASS / CLOSED**; corrected intrinsic transfer invariant **PASS / CLOSED in scope**; a=s versus a=infinity **PASS / CLOSED**; exact stress-family threshold **PASS / CLOSED**. Detailed proof/evidence: `research/PAPER4_MAGNUS_PREFIX_CODE_AUDIT_2026-10-05.md`.
+
+
+## 2026-10-05 — Independent §9–§11 review corrections to Magnus transfer closure
+
+The independent review rechecked the Magnus prefix-code proof and the a=s versus a=∞ separation. The core proof was confirmed, but the first closure write-up contained several scope/wording defects.
+
+1. **§9 correction:** the untruncated class having order p^s does not itself imply nonvanishing modulo p^s. The correct argument is the model-lattice calculation
+\[
+p^{s-1}U=0,qquad
+(\sigma-1)^{p-1}A_0\equiv\sum_{j=0}^{p-1}A_j\pmod p,
+\]
+so the critical class is
+\(p^{s-1}\sum_jA_j\ne0\) modulo p^s. TF_s puts the actual truncation image inside p^sK^ab, so it cannot kill this class.
+
+2. **§11 direct representatives:** a=s uses t=z-x_1, giving
+\(\varepsilon_s=-p^{s-1}\sum_jA_j\ne0\); a=∞ uses t=z, giving
+\(\varepsilon_s=0\) directly because p^{s-1}U is in the relator image.
+
+3. **Intrinsic scope:** K is intrinsic only when d is even and the alternating quadratic form defined by r_2 is nondegenerate; d=2 and r_2=[x_1,x_2] is the basic example. Since the power relation is in D_3, the degree-2 cup product on W_n (n\ge3) is unchanged, so the radical line \(\langle z^*\rangle\) is intrinsic in the declared scope.
+
+4. **Schreier range:** corrected to 0\le j\le p-1.
+
+5. **s=1:** the exact separation statement remains intentionally scoped to s\ge2 and is not promoted here.
+
+Classification: **PASS / CLOSED** for odd p, s\ge2, d even, r_2 nondegenerate. Novelty remains a separate literature audit.
