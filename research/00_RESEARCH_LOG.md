@@ -2528,3 +2528,64 @@ S_{11}(p)\subseteq\operatorname{Im}(\operatorname{Aut}(W_n)\to GL(V))
 is **CLOSED / GENERAL**, assuming the already-closed (\widetilde g(R)\subseteq R) gate. Equality is not established.
 
 This supersedes the immediately preceding 2026-10-06 claim that the (S_{11}(p)) upper bound and equality were CLOSED/GENERAL.
+
+
+## 2026-10-06 — S11 scalar-equality counterexample: m=a is not forced
+
+**FAIL / CLOSED as submitted; exact image remains OPEN.**
+
+The boundary correction
+\[
+n<p:\quad W_n\cong(\mathbf F_p)^3,\quad IA(W_n)=1,
+\]
+and
+\[
+n=p:\quad IA(W_p)\cong\operatorname{Hom}(\mathbf F_p^3,\mathbf F_p^2)\cong\mathbf F_p^6
+\]
+is accepted.
+
+However, the proposed (n=p) upper-bound argument forcing the same scalar on the (x)- and (z)-directions contains a decisive algebraic error. For arbitrary (m,a\in\mathbf F_p^\times),
+\[
+x\mapsto x^m z^{a-m},\qquad y\mapsto y,\qquad z\mapsto z^a
+\]
+preserves the defining relations directly in (W_p):
+\[
+[x^m z^{a-m},y]=[x,y]^m=x^{pm}z^{-pm}
+\]
+and
+\[
+(x^m z^{a-m})^p(z^a)^{-p}=x^{pm}z^{-pm}.
+\]
+The induced map on (V=W_p/D_2(W_p)) is invertible, so this is an actual automorphism.
+
+Thus (m) and (a) are independent. The torsion subgroup
+\[
+T(W_p^{ab})=\langle e_x-e_z\rangle
+\]
+only gives (c=a-m) for (g(x)=x^m z^c, g(z)=z^a); it does **not** give (m=a).
+
+Therefore the previous
+\[
+\operatorname{Im}=S_{11}(p),\qquad |\operatorname{Im}|=p^2(p-1),\qquad |\operatorname{Aut}(W_p)|=p^8(p-1)
+\]
+claim is **FAIL / CLOSED**.
+
+A corrected candidate lower-bound subgroup is
+\[
+S'_{{11}}(p)=
+\left\{
+\begin{pmatrix}
+m&b&0\\
+0&1&0\\
+a-m&d&a
+\end{pmatrix}
+: m,a\in\mathbf F_p^\times, b,d\in\mathbf F_p
+\right\},
+\]
+with order (p^2(p-1)^2). This is only a lower bound; equality with (S'_{11}(p)) is **OPEN**. Consequently
+\[
+|\operatorname{Aut}(W_p)|\ge p^8(p-1)^2,
+\]
+while the exact order remains **OPEN**.
+
+Detailed audit: `research/PAPER5_STEP3_S11_UPPER_BOUND_COUNTEREXAMPLE_AUDIT_2026-10-06.md`.
