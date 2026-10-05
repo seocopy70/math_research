@@ -185,3 +185,10 @@ The Hall–Petrescu p-power sublemma for odd p passes: for u∈D_2, (xu)^p≡x^p
 ## 2026-10-05 — Step 2 D_3-ambiguity correction
 
 The proposed final split “p=3 PASS / p≥5 FAIL” is **not established**. Two errors were found: (i) D_3 is not equal to γ_3 for p≥5; it contains p-power factors such as G^p and γ_2^p, and (ii) for u=[r,s]∈γ_2 the leading correction [[r,s],y] is in γ_3, not γ_4. Hence the proposed negative witness is invalid. The p=3 claim also needs a direct Zassenhaus calculation of [x,D_2] and [D_2,y] modulo D_4. Current status: **OPEN / LOAD-BEARING**. Next gate is the exact lift-change map D_2×D_2→D_3/D_{p+1} and its interaction with the relation constraint.
+
+
+## 2026-10-05 — Step 3 second-order closure superseded
+
+The proposed second-order lifting/BCH closure is **FAIL / CLOSED as submitted proof**. The equality of degree-(k) initial forms gives only a residual in (D_{k+1}); the asserted (D_{k+2}) upgrade used an undefined (in_{k+1}) for elements still in (D_k\setminus D_{k+1}) and an unjustified exponential/BCH splitting. Hence the strengthened (L_m), kernel preservation, and general (\operatorname{Im}=S_{11}(p)) equality remain **OPEN / LOAD-BEARING**. The (p^2(p-1)) theorem remains **CONDITIONAL**.
+
+Authoritative audit: `research/PAPER5_STEP3_SECOND_ORDER_LIFTING_AUDIT_2026-10-05.md`.
