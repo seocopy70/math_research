@@ -232,3 +232,12 @@ Thus the secondary degree-\(p\) class \(\theta\) is independent of the chosen \(
 **Precision boundary:** the statement is not \(J\subseteq D_{p+1}\). The degree-(p\) generator \([x,y]=x^{[p]}-z^{[p]}\) may survive modulo \(D_{p+1}\); only the higher \(J\)-part relevant to lift ambiguity is absorbed into \(D_{p+1}\).
 
 **Downstream status:** Step 3 equality and the \(p^2(p-1)\) theorem remain **CONDITIONAL**. The next authorized gate is the explicit lower-bound/lifting construction proving the corrected \(S_{11}(p)\) image, with independent relation-preservation verification.
+
+
+## 2026-10-05 — Step 3 equality audit: proposed closure rejected
+
+The submitted Step 3 proof has useful first-order congruences but does not close kernel preservation. In particular, the inference
+\[
+\tilde g(R)\subseteq R D_{p+1}(F)\Longrightarrow \tilde g(R)\subseteq R
+\]
+via an unspecified “standard pro-p induction” is not valid as stated: no mechanism is given to improve (RD_m) to (RD_{m+1}). The displayed identity replacing ([x,y]) by ρ z^p x^{-p} also has the inverse/order reversed relative to \(\rho=[x,y]^{-1}x^pz^{-p}\). Therefore the Step 3 lower bound remains **OPEN / LOAD-BEARING**, and the equality \(\operatorname{Im}=S_{11}(p)\) and (p^2(p-1)) theorem remain **CONDITIONAL**. Detailed audit: `research/PAPER5_STEP3_EQUALITY_AUDIT_2026-10-05.md`.
