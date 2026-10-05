@@ -48,7 +48,7 @@ One concept, one live home. Cross-link; do not duplicate.
 
 ## 2026-10-04 correction — critical same-window boundary
 
-The previous claim that W_(p^s+1)(G_s) and W_(p^s+1)(G_t) are separated by an order jump is superseded. The normal closures defining the two quotients are not nested, so the proposed canonical epimorphism and p-factor order jump are false. The exact threshold n_sep(s)=p^s+1 is OPEN. Only n_sep(s)>=p^s+1 is certified. Group-level non-isomorphism G_{s,a} \\not\\cong G_{t,a} is also OPEN.
+The previous claim that W_(p^s+1)(G_s) and W_(p^s+1)(G_t) are separated by an order jump is superseded. The normal closures defining the two quotients are not nested, so the proposed canonical epimorphism and p-factor order jump are false. The exact critical boundary threshold n_sep(s)=p^s+1 is OPEN. Only n_sep(s)>=p^s+1 is certified. Group-level non-isomorphism G_{s,a} \\not\\cong G_{t,a} is also OPEN.
 
 
 ## 2026-10-04 — active post-core generalization challenge
@@ -167,6 +167,6 @@ The new Magnus prefix-code audit proves the index-p subgroup comparison
 \[
 D_n(F)\cap K\subseteq D_{\lceil n/p\rceil}(K)
 \]
-for free F and index-p kernel K. Therefore (SC_s) and the abelianized transfer bound (TF_s) are PASS / CLOSED. The corrected intrinsic transfer invariant, defined using the canonical line im(W^{ab}[p^s] -> W^{ab}/pW^{ab}) and evaluated in K^{ab}/p^sK^{ab}, closes the a=s versus a=infinity boundary in the declared stress-family scope. Hence the exact threshold is now PASS / CLOSED: n_sep(s)=p^s+1.
+for free F and index-p kernel K. Therefore (SC_s) and the abelianized transfer bound (TF_s) are PASS / CLOSED. The corrected intrinsic transfer invariant, defined using the canonical line im(W^{ab}[p^s] -> W^{ab}/pW^{ab}) and evaluated in K^{ab}/p^sK^{ab}, closes the a=s versus a=infinity boundary in the declared stress-family scope. Hence the exact critical-boundary threshold is now PASS / CLOSED: n_sep(s)=p^s+1.
 
 Evidence: research/PAPER4_MAGNUS_PREFIX_CODE_AUDIT_2026-10-05.md. The old order-jump proof remains FAIL/CLOSED/SUPERSEDED and is not revived.
