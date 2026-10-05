@@ -19,7 +19,7 @@ D:=function(i,a)
   local m;
   m:=IdentityMat(3,Fld); m[i][i]:=a*One(Fld); return m;
 end;
-E:=function(i,j,a)
+EM:=function(i,j,a)
   local m;
   m:=IdentityMat(3,Fld); m[i][j]:=a*One(Fld); return m;
 end;
@@ -52,7 +52,7 @@ run:=function(s,a)
   Phi:=FrattiniSubgroup(W); basis:=[gens[2],gens[3],gens[1]];
   autGens:=Concatenation(A.glAutos,A.agAutos);
   actual:=Group(List(autGens,alpha->CosetPerm(alpha,W,Phi,basis)));
-  Cand:=Group(D(1,2),E(1,2,1),E(1,3,1),E(2,3,1),D(3,2));
+  Cand:=Group(D(1,2),EM(1,2,1),EM(1,3,1),EM(2,3,1),D(3,2));
   pmats:=List(GeneratorsOfGroup(Cand),MatPerm);
   Cand:=Group(pmats);
   eq:=actual=Cand;
