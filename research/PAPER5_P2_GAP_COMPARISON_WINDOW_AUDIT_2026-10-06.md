@@ -121,3 +121,31 @@ The central Step-3 model is [x,z]=[y,z]=1, [x,y]=x^p z^{-p}, whereas the actual 
 Classification: model identification = **FAIL / CLOSED / SUPERSEDED**; actual p=3,n=4 p^2 gap mechanism = **OPEN / LOAD-BEARING**; actual gap remains locally a Frattini/GL-image defect, not an IA defect, by certified runtime.
 
 Next gate: audit the actual mkG(s,a) window, beginning with (s,a)=(1,1), and derive its intrinsic embedded stabilizer in GL_3(3).
+
+
+## Addendum 5 — 2026-10-06: actual-model stabilizer calculation does not close
+
+The proposed derivation of the actual (s,a)=(1,1) stabilizer from R=d_z-d_x-c_xy and the ordinary-linear substitutions M(d_z)=a d_z+b d_x+c d_y, M(d_x)=d d_z+e d_x+f d_y is FAIL / CLOSED as a proof.
+
+### Defect A — split model
+
+The authoritative GAP source research/external/paper5_aut/aut_common.g has s=0 defined by x^(p^a)[x,y]=1. Thus the certified split comparison (s,a)=(0,1) is G_{0,1}=<z,x,y | x^p[x,y]=1>, not the relation-free group used in the proposed count.
+
+### Defect B — restricted p-power nonlinearity
+
+The degree-p power symbols d_v=v^p cannot be transformed by the ordinary linear rule d_{Mv}=M d_v. For a lift whose degree-one initial form is v=az+bx+cy, the restricted p-power v^[p] is governed by the Jacobson formula and generally contains mixed/polarization terms. Thus the displayed equations obtained by coefficient comparison in M(R) are not yet the induced automorphism equations for the finite Zassenhaus window.
+
+### Defect C — presentation versus intrinsicity
+
+The statement “z occurs alone on the left, hence <z-bar> is distinguished and b=c=0” is presentation-dependent until an intrinsic characterization of that line is proved inside W. The project’s continuity protocol requires that bridge before promoting the matrix subgroup to an intrinsic stabilizer.
+
+### Classification
+
+- GAP order data 108→6 and constant IA order 3^27: PASS / LOCAL.
+- The proposed actual-model matrix equations as a derivation of the image: FAIL / CLOSED.
+- Exact intrinsic embedded stabilizer: OPEN / LOAD-BEARING.
+- Paper 5 END: NOT AUTHORIZED.
+
+### Next authorized execution
+
+Use the certified GAP automorphism generators to extract their actual 3x3 Frattini matrices for (0,1) and (1,1), then reconstruct the degree-p relation jet using the restricted-Lie/Jacobson formula. Compare the resulting embedded subgroups directly, rather than counting a presentation-level candidate subgroup.
