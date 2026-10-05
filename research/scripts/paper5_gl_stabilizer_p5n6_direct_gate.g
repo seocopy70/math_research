@@ -56,6 +56,21 @@ MatPerm:=function(m)
   return PermList(List(Vecs,v->Position(Vecs,v*m)));
 end;
 
+MatVariants:=function(m)
+  local out;
+  out:=[
+    m,
+    TransposedMat(m),
+    InverseMat(m),
+    TransposedMat(InverseMat(m))
+  ];
+  return out;
+end;
+
+GroupFromVariant:=function(Mats,which)
+  return Group(List(Mats,m->MatPerm(MatVariants(m)[which])));
+end;
+
 run:=function(s,a)
   local R,W,gens,A,frnat,basis,autGens,Mats,actual,Cands,expected,i,eq,matEq;
   R:=winW(mkG(s,a)); W:=R[1]; gens:=R[2];
@@ -67,17 +82,17 @@ run:=function(s,a)
   if ForAny(Mats,m->DeterminantMat(m)=0) then
     Error("non-invertible Frattini action matrix");
   fi;
-  actual:=Group(List(Mats,MatPerm));
   Cands:=CandidateGroups();
   expected:=[[0,1],[1,1]];
   i:=Position(expected,[s,a]);
-  matEq:=actual=Cands[i];
-  eq:=actual=Cands[i];
-  Print("=== Paper5 p=5,n=6 DIRECT MatPerm gate s=",s," a=",a," ===\n");
-  Print("actual faithful permutation order = ",Size(actual)," candidate order = ",Size(Cands[i]),"\n");
-  Print("faithful permutation equality = ",eq,"\n");
-  if not eq then Error("STABILIZER equality failure"); fi;
-  Print("STABILIZER_DIRECT p=5 s=",s," a=",a," PASS\n");
+  Print("=== Paper5 p=5,n=6 convention diagnostic s=",s," a=",a," ===\n");
+  Print("candidate order = ",Size(Cands[i]),"\n");
+  for j in [1..4] do
+    actual:=GroupFromVariant(Mats,j);
+    Print("variant ",j," order = ",Size(actual)," equality = ",actual=Cands[i],"\n");
+  od;
+  Print("raw Frattini matrices:\n");
+  for j in [1..Length(Mats)] do Print(Mats[j],"\n"); od;
 end;
 
 for t in [[0,1],[1,1]] do run(t[1],t[2]); od;
