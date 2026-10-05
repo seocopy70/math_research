@@ -1,0 +1,26 @@
+name: Paper 5 p=5 n=6 direct stabilizer gate
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/scripts/paper5_gl_stabilizer_p5n6_direct_gate.g'
+      - '.github/workflows/paper5-gl-stabilizer-p5n6-direct-gate.yml'
+jobs:
+  direct-stabilizer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and AutPGrp
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y gap gap-autpgrp
+      - name: Run direct MatPerm gate
+        run: |
+          set -euo pipefail
+          gap -q research/scripts/paper5_gl_stabilizer_p5n6_direct_gate.g > paper5_gl_stabilizer_p5n6_direct_runtime.log 2>&1
+          cat paper5_gl_stabilizer_p5n6_direct_runtime.log
+          grep -q 'STABILIZER_DIRECT p=5 s=0 a=1 PASS' paper5_gl_stabilizer_p5n6_direct_runtime.log
+          grep -q 'STABILIZER_DIRECT p=5 s=1 a=1 PASS' paper5_gl_stabilizer_p5n6_direct_runtime.log
+          grep -q 'STABILIZER_P5_DIRECT_CERTIFICATE=PASS' paper5_gl_stabilizer_p5n6_direct_runtime.log
