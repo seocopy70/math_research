@@ -1,3 +1,21 @@
+## 2026-10-04 — Paper 4 TeX reconciliation / build gate
+
+The manuscript branch now incorporates the final 2026-10-04 boundary correction: for the declared stress family (1\\le a<s<t), direct same-window order separation is CLOSED and gives the exact unmarked threshold (p^s+1). The remaining critical (a=s) versus (a=\\infty) boundary is OPEN for (s\\ge2), with ((p,s)=(3,1)) CLOSED. Ordinary mod-(p) cohomology blindness remains CLOSED. The degree-only arbitrary-relation upgrade remains FAIL/CLOSED as a target.
+
+A draft PR #11 is open for the TeX consolidation. A dedicated `paper4-tex-build` workflow compiles the manuscript, audits PDF metadata, computes SHA-256, and uploads the artifact. FINAL remains blocked until a successful build and PDF/hash inspection are obtained. The repository-wide citation-hygiene workflow is currently failing on pre-existing private-use Unicode characters in historical research files; this is not a Paper 4 TeX failure and is tracked separately.
+
+## 2026-10-04 — Paper 4 TeX consolidation started
+
+A dedicated branch `paper4-tex-2026-10-04` has been created to convert the certified Paper 4 mathematics into a manuscript. The first `paper4/main.tex` consolidates only claims supported by the current authoritative state:
+
+- universal delayed-window lemma for (n\\le p^s);
+- exact marked/relative critical threshold (p^s+1) for the declared stress family;
+- stress-family coarse non-rigidity (abelianization, quadratic initial relation, ordinary mod-(p) cohomology);
+- explicit failure of the arbitrary-(r), degree-only visibility upgrade;
+- explicit separation of the marked relative theorem from the still-open unmarked same-window reconstruction problem.
+
+The manuscript deliberately does **not** promote the superseded same-window order-jump claim, the unresolved (a=s) versus (a=\\infty) boundary for (s\\ge2), or the universal (E_\\psi) programme. This TeX pass is an organization/manuscript step, not a FINAL/PDF certification. Next audit: theorem-by-theorem source reconciliation, bibliography/literature check, then CI/PDF/hash audit.
+
 undefined
 
 ## 2026-10-04 — TF_s literature review and subgroup-comparison correction
