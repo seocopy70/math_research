@@ -15,6 +15,9 @@ Keep the complete research record without forcing current research to carry the 
 | research/archive/ | What was important but is not current? | ARCHIVE |
 | plans/ | What is proposed but not established? | PLANNING |
 
+## Frozen-paper history rule
+Papers 1–3 are frozen. Their historical chronology is no longer part of the active `research/00_RESEARCH_LOG.md` ledger. Use `research/archive/PAPERS1-3_RESEARCH_HISTORY.md` as the navigation index and preserve the dated Paper-specific proof/audit records as the underlying provenance. Do not fabricate a reconstructed chronology merely to create a separate log file.
+
 ## Archive rule
 Archive means preserve, not delete. A superseded document remains searchable with its original content. The archive index records what it contains, why it was preserved, whether it was superseded, and which current document replaced its role. The archive is not an alternate source of truth.
 
