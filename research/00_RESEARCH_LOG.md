@@ -2406,3 +2406,32 @@ Therefore the claimed implication (\tilde g(R)\subseteq RD_{p+1}=R) is invalid. 
 \(​operatorname{Im}(\operatorname{Aut}(W_n)\to GL(V))=S_{11}(p)\) remains OPEN/LOAD-BEARING and the uniform (p^2(p-1)) theorem remains CONDITIONAL.
 
 Detailed audit: `research/PAPER5_STEP3_Dp1_SUBSET_R_AUDIT_2026-10-05.md`.
+
+
+## 2026-10-05 — Step 3 second-order lifting claim rejected
+
+The proposed closure
+[
+\text{equal }in_k\ +\ \text{zero }in_{k+1}\Longrightarrow D_{k+2}
+]
+was re-audited and is **FAIL / CLOSED as submitted proof**.
+
+The first-order residual (r_k^{-1}\widetilde g(r)\in D_{k+1}) is accepted only as a local consequence of matching degree-(k) initial forms. The claimed second-order BCH argument is not a valid general Zassenhaus lemma: (in_{k+1}(r_k)) is undefined when (r_k\in D_k\setminus D_{k+1}), and no canonical splitting of
+[
+0\to D_{k+1}/D_{k+2}\to D_k/D_{k+2}\to D_k/D_{k+1}\to0
+]
+is provided.
+
+Likewise, (a=\exp(X+A+\cdots)) with (X\in gr_k), (A\in gr_{k+1}) is not an intrinsic representation of arbitrary free pro-(p) group elements in the Zassenhaus filtration. A BCH calculation therefore cannot replace the missing filtered second-jet construction.
+
+The fact ([D_k,D_k]\subseteq D_{2k}\subseteq D_{k+2}) for (k\ge2) only says (D_k/D_{k+2}) is abelian; it does not canonically split its two graded layers.
+
+Therefore the strengthened
+[
+\widetilde g(R\cap D_m)\subseteq(R\cap D_m)D_{m+2}
+]
+and the induction to (\widetilde g(R)\subseteq R) remain **OPEN / LOAD-BEARING**. The (p) and (p^2) exceptional-layer calculations cannot repair the missing initial second-order lift.
+
+**Status:** Step 3 equality (\operatorname{Im}=S_{11}(p)) remains OPEN / LOAD-BEARING; (p^2(p-1)) automorphism-order theorem remains CONDITIONAL. Step 2's independently audited filtered-extension result is not reopened by this correction.
+
+Detailed audit: `research/PAPER5_STEP3_SECOND_ORDER_LIFTING_AUDIT_2026-10-05.md`.
