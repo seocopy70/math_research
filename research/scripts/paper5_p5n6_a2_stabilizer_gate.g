@@ -46,7 +46,7 @@ CandidateGroups:=function()
   local G,G02,G12;
   G:=GL(3,P);
   G02:=Group(EMat(1,2,1),EMat(2,1,1),D(1,2),EMat(1,3,1),EMat(2,3,1),D(3,2));
-  G12:=Group(EMat(1,2,1),EMat(2,1,1),D(1,2),D(3,2));
+  G12:=Group(EMat(1,2,1),EMat(2,1,1),[[2*One(Fld),0*One(Fld),0*One(Fld)],[0*One(Fld),One(Fld),0*One(Fld)],[0*One(Fld),0*One(Fld),2*One(Fld)]]);
   return [G02,G12];
 end;
 
