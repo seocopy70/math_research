@@ -65,7 +65,7 @@ run:=function(s,a)
   Print("P5_COSET_STABILIZER s=",s," a=",a," PASS\n");
 end;
 
-run(0,1);
+run(0,1); run(1,1);
 Print("P5_COSET_STABILIZER_CERTIFICATE=PASS\n");
 QUIT;
 
