@@ -1037,3 +1037,18 @@ A new executable gate `research/scripts/paper5_quotient_action_gate.g` and CI wo
 - (s,a)=(2,1): one orbit.
 
 Classification: **OPEN / ACTIVE** until the executable image/kernel computation is certified. No quotient-action theorem is promoted yet.
+
+
+## 2026-10-05 — Paper 5 stabilizer boundary advanced
+
+The p=5,n=6 stabilizer candidate is **not** failed. The earlier mismatch was caused by an incorrectly decoupled diagonal candidate. The corrected coupled formulas now pass the committed entrywise matrix subgroup gate for all four tested cases (0,1), (1,1), (0,2), (1,2), using exact W_6 construction `PQuotient(...,6,2000)`. Status: **PASS / LOCAL** for cross-prime replication; independent quotient-action equality remains the next verification layer.
+
+Exact p=5 Aut(W_6) order reproduction also confirms the recovered external values: s=0,a=1: 2^4*5^109; s=1,a=1: 2^2*5^107; s=2,a=1: 2^4*5^109; s=1,a=2: 2^5*3*5^107; s=0,a=2: 2^7*3*5^109. For both fixed-a comparisons, the IA p-primary order is 5^106 on both sides, so the p^2 gap is entirely in the GL/Frattini image at the tested p=5 level.
+
+The p=3,s=2,a=1,n=10 orbit computation has also been independently executed: 81 admissible kernels form one Aut(W_10)-orbit; |Aut(W_10)|=4*3^30; |K|=3^9; complement classes=3^10. This is **PASS / LOCAL** and supersedes the old 2*3^30 report. It does not yet identify the fixed-quotient action factorization.
+
+### Immediate load-bearing next gate
+
+1. Replace the p=5 entrywise matrix certificate with a fully independent Frattini-quotient action certificate, resolving the remaining basis/action-convention mismatch.
+2. Use the exact p=5 Aut orders + certified GL orders to formalize the IA/GL factorization and prove the p^2 gap localization for a=1,2 at p=5.
+3. Then attack the p=3,s=2,a=1,n=10 fixed-quotient action/kernel factorization. Do not interpret the 81-orbit result as the source of the gap until that factorization is computed.
