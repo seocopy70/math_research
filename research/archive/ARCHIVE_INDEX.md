@@ -23,6 +23,8 @@ Contains the former target-class intrinsic characterization, realization groupoi
 Search: PAPER1, PAPER2, PAPER3, A3, B1, O2, RAAG, ORIENTATION.
 Contains frozen paper results, representation/module calculations, historical O2 transport work, RAAG/orientation explorations, and computational/CI audits.
 
+Dedicated Papers 1–3 history index: `research/archive/PAPERS1-3_RESEARCH_HISTORY.md`. This index is the navigation layer; the dated proof/audit records remain the mathematical provenance.
+
 ## Recovery procedure
 1. Start here.
 2. Find the transition in 00_RESEARCH_LOG.md.
