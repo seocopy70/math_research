@@ -1584,3 +1584,45 @@ Combining this with the exact Aut(W_6) order reproduction (run 37252036371), the
 Therefore, for the tested p=5 cases, the observed p^2 automorphism-order gap is **PASS / CLOSED as a localization statement**: it is entirely on the GL/Frattini-image side, not the IA kernel.
 
 The remaining theorem question is no longer computational localization at p=5; it is whether these stabilizer formulas admit a clean odd-p intrinsic derivation and/or a p-uniform theorem. Current status for that generalization: **OPEN / LOAD-BEARING**.
+
+
+## 2026-10-05 — Structural explanation of the four stabilizers: two-level relation jet
+
+The p=3/p=5 data now suggest a single mechanism. For the marked presentation
+\[
+G_{s,a}=\langle z,x,y\mid z^{p^s}=x^{p^a}[x,y]\rangle,
+\]
+the critical window n=p+1 retains the degree-2 commutator component and, when a relevant p-power occurs before the cutoff, the degree-p restricted-power component. The corresponding two-level relation jets are, up to the fixed commutator sign convention,
+\[
+\begin{array}{c|c}
+(s,a)&\rho_{s,a}\\ \hline
+(0,1)&[x,y]+x^{[p]}\\
+(1,1)&[x,y]+z^{[p]}-x^{[p]}\\
+(0,2)&[x,y]\\
+(1,2)&[x,y]+z^{[p]}.
+\end{array}
+\]
+The observed stabilizers are exactly the linear stabilizers of these jets in the tested p=3 and p=5 cases:
+\[
+S_{01}(p)=\left\{\begin{pmatrix}a&b&c\\0&1&d\\0&0&e\end{pmatrix}:a,e\ne0\right\},
+\]
+\[
+S_{11}(p)=\left\{\begin{pmatrix}a&b&0\\0&1&0\\0&0&a\end{pmatrix}:a\ne0\right\},
+\]
+\[
+S_{02}(p)=\left\{\begin{pmatrix}A&v\\0&e\end{pmatrix}:A\in GL_2(\mathbf F_p),\ v\in\mathbf F_p^2,\ e\ne0\right\},
+\]
+\[
+S_{12}(p)=\{\operatorname{diag}(A,\det A):A\in GL_2(\mathbf F_p)\}.
+\]
+Their orders are respectively
+\[
+p^3(p-1)^2,\quad p(p-1),\quad |GL_2(p)|p^2(p-1),\quad |GL_2(p)|,
+\]
+so in both fixed-a pairs the p-primary ratio is exactly p^2:
+\[
+|S_{01}|/|S_{11}|=|S_{02}|/|S_{12}|=p^2(p-1).
+\]
+The mechanism is visible directly from the two-level jet: the same scalar must multiply the degree-2 and degree-p components. For (0,1), preservation of x^[p] forces the x-line and then det(x,y)=a, forcing the y-diagonal coefficient to be 1. For (1,1), the p-power difference forces the x/z scalars to coincide. For (1,2), the bracket scales by det(A) while z^[p] scales by the z scalar, forcing z-scaling = det(A). For (0,2), only the quadratic line remains, giving the full parabolic stabilizer.
+
+This is a **structural derivation candidate**, not yet a theorem: the remaining proof obligations are to formalize the exact relation-jet functor, prove that no additional degree-p components enter under arbitrary GL substitution, and prove that the finite-window automorphism image equals the jet stabilizer for general odd p. Status: **OPEN / LOAD-BEARING**, but the mechanism is now substantially constrained and explains the four certified finite computations.
