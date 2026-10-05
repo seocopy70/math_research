@@ -314,3 +314,22 @@ The (C_p^2) negative control remains valid, but the contrast (C_p^2) versus (W_p
 - (W_n=W_p) for all (nge p): **OPEN / LOAD-BEARING**.
 
 The previous third-audit status is therefore unchanged. A genuine stabilization proof must either establish (F^p,gamma_{p+1}subseteq R) as additional hypotheses actually satisfied by the concrete presentation, or prove the required reverse inclusion directly from (R D_{n+1}) without replacing (R D_{n+1}) by (R).
+
+
+## 2026-10-06 — Explicit-R audit: reject the F^p shortcut
+
+The actual relation subgroup is explicit:
+\[
+R=\langle[x,z],[y,z],[x,y]^{-1}x^pz^{-p}\rangle^F.
+\]
+The proposed reduction of all-n stabilization to \(F^p\subseteq R\) is not accepted. In particular, \(L_{k+1}=[L_k,L_1]\) is not a general identity for the Zassenhaus graded restricted Lie algebra because higher degrees also receive restricted p-power contributions. Thus \(L_{p+1}=0\) does not by itself propagate to all higher degrees.
+
+The explicit generators do, however, close the one-step boundary: their initial degree-two forms span \(gr_2(F)\), so \(gr_2(R)=gr_2(F)\); since \(p+1\) is not divisible by \(p\), the degree \(p+1\) component is the ordinary Lie component, giving \(\gamma_{p+1}(F)\subseteq R D_{p+2}(F)\). Together with
+\[
+D_{p+1}=\gamma_{p+1}\gamma_2^pF^{p^2},\qquad \gamma_2^p,F^{p^2}\subseteq D_{p+2},
+\]
+this gives \(RD_{p+1}=RD_{p+2}\), hence \(W_{p+1}=W_p\).
+
+This does **not** prove \(W_n=W_p\) for every \(n\ge p\). Therefore the all-n stabilization gate remains **OPEN / LOAD-BEARING**.
+
+Classification: explicit \(R\) **PASS/CLOSED**; \(W_{p+1}=W_p\) **PASS/CLOSED/GENERAL**; \(F^p\subseteq R\) shortcut **REJECTED**; bracket-only Zassenhaus propagation **FAIL/CLOSED**; all-n stabilization **OPEN/LOAD-BEARING**. Next step: direct explicit-R restricted-Lie/Jennings proof of \(D_{p+1}\subseteq D_{k+1}R\), or a strict-shrinkage witness.
