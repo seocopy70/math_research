@@ -1885,3 +1885,32 @@ Classification:
 The detailed source comparison is recorded in \`research/PAPER4_WEIGHTED_SCHREIER_DERIVATION_AUDIT_2026-10-05.md\`.
 
 Governance consequence: do not reopen the Paper-4 mathematics. Move the novelty audit downstream to epsilon_s, the finite-window torsion obstruction, the a=s versus a=infinity family, and the exact threshold p^s+1.
+
+
+## 2026-10-05 — weighted-Schreier source audit: SC novelty boundary confirmed
+
+The uploaded `arXiv-1007.1489v3.gz` was decompressed and directly inspected. SHA-256:
+`9f8c1e6ec8d7bff45e275b4774edf49bd95050d4ef59227d2b58aee768c14710`.
+
+The source is *Groups of positive weighted deficiency and their applications*. The relevant chain is explicit:
+
+- Proposition `uniform2`: a uniform weight on free pro-(p) (F) is (W_F(g)=\beta^{d_F(g)}).
+- Corollary `weight_preserve`: restriction of a weight function to a closed subgroup remains a weight function.
+- Lemma `index_p0`: standard index-(p) Schreier generators (y,[y,z],ldots,[y,z^{p-1}],z^p) are (W)-optimal in the free case.
+- Proof of Lemma `indexp`: their weights are exactly (\beta,ldots,\beta^p).
+- Proposition `cor1`: for every (f), its power-commutator factorization has no cancellation at the top weight; (W(f)) is the maximum weight of a nonzero factor.
+
+Therefore the Paper-4 comparison
+[
+D_n(F)cap Ksubseteq D_{\lceil n/p\rceil}(K)
+]
+is already a consequence of the prior weighted-Schreier framework: (d_F(f)le p,d_K(f)), hence the displayed subgroup inclusion. The earlier review question about whether `cor1` applies only to special elements is resolved negatively: it applies to arbitrary (f).
+
+Classification:
+- SC derivation from prior literature: **PASS / CLOSED**.
+- SC standalone novelty: **CONDITIONAL / likely not novel**.
+- Magnus prefix-code proof: **PASS / CLOSED as independent self-contained verification/reproof; no standalone novelty claim**.
+- Paper-4 mathematics in the declared scope: **PASS / CLOSED**.
+- Overall publication novelty: **CONDITIONAL / OPEN**.
+
+The novelty center of gravity is moved downstream to the intrinsic transfer obstruction (arepsilon_s), the unmarked (a=s) versus (a=\infty) separation at the critical window, and the exact threshold (p^s+1). No Paper-4 mathematical result is reopened or downgraded by this audit.
