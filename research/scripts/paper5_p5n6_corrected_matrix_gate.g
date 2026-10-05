@@ -87,6 +87,7 @@ run:=function(s,a)
   local R,W,gens,A,frnat,basis,autGens,Mats,Cands,expected,i,m,ok,actualKeys,candKeys;
   R:=winW(mkG(s,a)); W:=R[1]; gens:=R[2];
   A:=AutomorphismGroupPGroup(W);
+  Print("|W|=",Size(W)," |Aut(W)|=",A.size," glOrder=",A.glOrder,"\\n");
   frnat:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
   basis:=[gens[2],gens[3],gens[1]];
   autGens:=Concatenation(A.glAutos,A.agAutos);
