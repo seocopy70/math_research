@@ -1,5 +1,5 @@
 # RESEARCH MAP — compact canonical map
-Last reviewed: 2026-10-05
+Last reviewed: 2026-10-06
 
 > This is a map, not a diary. It records dependency structure and evidence locations. Historical detail stays in research/00_RESEARCH_LOG.md and research/archive/.
 
@@ -21,16 +21,17 @@ ord_Z(r)>=2 alone -> insufficient for an unconditional general theorem.
 ## 3. Paper 5 dependency
 Aut(W_n) -> GL(W_n/Phi(W_n)), with IA(W_n) as kernel -> intrinsic relation-jet factorization target.
 
-Established locally:
+Established / corrected:
 - p=3,n=4 actual IA order is constant 3^27 across the audited split/non-split cases;
 - the observed p^2 order gap is localized to the Frattini/GL image in the audited p=3 and p=5 cases;
-- the four candidate stabilizer formulas are reproduced in the audited p=3,p=5 cases, but the general abstract S11 derivation is now OPEN/LOAD-BEARING pending the Jacobson restricted-power correction;
-- p=3,n=10 orbit data are PASS/LOCAL only.
+- the corrected n=p theorem is PASS/CLOSED/GENERAL with D_p(W_p) ≅ F_p^3, IA ≅ F_p^9, Im=S'_11(p), and |Aut(W_p)|=p^11(p-1)^2;
+- W_{p+1}=W_p gives the same boundary theorem at n=p+1;
+- Run 37381098677 is PASS/LOCAL confirmation only.
 
 Current load-bearing boundary:
-- an intrinsic Aut(W_n)-equivariant filtered relation object (FRM-0) is still OPEN;
-- general factorization of the actual Frattini image through the relation-jet stabilizer is OPEN;
-- no uniform p^2 automorphism-order theorem is promoted.
+- arbitrary-n uniform control of the U_n-action in the B,theta equations is OPEN;
+- the submitted arbitrary-n B,theta proof is FAIL/CLOSED;
+- no uniform arbitrary-n Frattini-image or p^2 automorphism-order theorem is promoted.
 
 ## 4. Source-of-truth table
 | Question | Canonical home |
