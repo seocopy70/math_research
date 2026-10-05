@@ -264,3 +264,53 @@ for arbitrary \(k\) merely because \(I\) is nilpotent. The statement “the rema
 - \(W_n=W_p\) for all \(n\ge p\): **OPEN / LOAD-BEARING**.
 
 The \(W_p\)-specialization is the correct next target, but it has not yet been proved. No CLOSED promotion is authorized from this argument.
+
+
+## 2026-10-06 — Fourth audit: (Rsupseteq F^p,gamma_{p+1}) does not follow from the Paper 5 definition
+
+The latest proposed stabilization closure is rejected at its first premise.
+
+Paper 5 defines
+[
+W_n=F/(R D_{n+1}(F)),qquad M_k=D_k(F)R.
+]
+Therefore
+[
+W_p=F/(R D_{p+1})
+]
+having exponent (p) implies only
+[
+F^psubseteq R D_{p+1}=M_{p+1},
+]
+not (F^psubseteq R.
+]
+Likewise, class (p) implies only
+[
+gamma_{p+1}(F)subseteq R D_{p+1},
+]
+and this is automatic from (gamma_{p+1}subseteq D_{p+1}); it does **not** imply (gamma_{p+1}subseteq R).
+
+The literature audit `PAPER5_LITERATURE_AUDIT_2026-10-06.md` does **not** state (F^psubseteq R) or (gamma_{p+1}subseteq R) as a defining hypothesis. It defines the finite window using (R D_{n+1}) and records standard Zassenhaus/Labute background, but supplies no such strengthening.
+
+Consequently the proposed chain
+[
+D_{p+1}(F)subseteq D_{k+1}(F)R
+]
+via “all (p)-powers lie in (R)” is not established. In particular, the step
+[
+y^{p^i}in R
+]
+for arbitrary (yin D_{lceil(p+1)/p^iceil}) is unsupported.
+
+The (C_p^2) negative control remains valid, but the contrast (C_p^2) versus (W_p) does not repair this missing premise: (W_p)-speciality has not been shown to upgrade containment in (R D_{p+1}) to containment in (R).
+
+### Classification
+
+- (Rsupseteq F^p) from “(W_p) exponent (p)”: **FAIL / CLOSED**.
+- (Rsupseteqgamma_{p+1}) from “(W_p) class (p)”: **FAIL / CLOSED**.
+- “(PAPER5_LITERATURE_AUDIT) already defines these containments”: **FAIL / CLOSED**.
+- (D_{p+1}subseteq D_{k+1}R): **OPEN / LOAD-BEARING**.
+- (M_{p+1}subseteq M_{k+1}): **OPEN / LOAD-BEARING**.
+- (W_n=W_p) for all (nge p): **OPEN / LOAD-BEARING**.
+
+The previous third-audit status is therefore unchanged. A genuine stabilization proof must either establish (F^p,gamma_{p+1}subseteq R) as additional hypotheses actually satisfied by the concrete presentation, or prove the required reverse inclusion directly from (R D_{n+1}) without replacing (R D_{n+1}) by (R).
