@@ -2818,3 +2818,9 @@ Detailed audit: research/PAPER5_P2_GAP_COMPARISON_WINDOW_AUDIT_2026-10-06.md.
 The proposed reverse map \(\pi:D_p\to V\) and the resulting \(3\to2\) IA-kernel cut were audited and rejected. The authoritative intrinsic package has the p-power map \(\pi_0:V\to D_p\); no canonical reverse map is induced by the p-power operation. Since \(D_p^p=1\) and \(D_p\le Z(W_p)\), IA modifications by \(f:V\to D_p\) leave both p-powers and commutators unchanged. Hence the established \(\mathcal J_p\) cannot impose a codimension-one condition on \(\operatorname{Hom}(V,D_p)\).
 
 Classification: reverse \(\pi:D_p\to V\) as p-power-derived structure = **FAIL / CLOSED**; \(K_b/K_{\mathcal J}\cong\mathbf F_p\) = **FAIL / CLOSED for this mechanism**; exact \(p^2\) automorphism-order theorem = **OPEN / LOAD-BEARING**.
+
+## 2026-10-06 — model-identity correction
+
+The actual p=3,n=4 GAP artifact and the current closed central boundary model are different groups. The GAP source defines mkG(1,1)=<z,x,y | z^3=x^3[x,y]>, with no relations [z,x]=[z,y]=1. The current W_p Step-3 model instead imposes [x,z]=[y,z]=1 and [x,y]=x^p z^{-p}. Therefore the central-model stabilizer S'_{11}(p) and its IA-blindness cannot be used as a theorem about the observed p=3,n=4 p^2 gap.
+
+The certified runtime fact remains: the actual non-split image has order 6 versus split image order 108 (and 48 versus 864 in the a=2 pair), while actual IA order is constant. Hence the actual p^2 localization is **PASS / LOCAL to the Frattini image**, and its intrinsic structural explanation remains **OPEN / LOAD-BEARING**.
