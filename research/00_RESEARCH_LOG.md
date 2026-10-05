@@ -1701,3 +1701,19 @@ This matches the standard distinction between presentation-associated relation m
 New load-bearing gate: **FRM-0 — intrinsic replacement/factorization carrier**. Candidate sources include characteristic Zassenhaus quotients, H_2/H^2/transgression data, or a canonical extension object. Until FRM-0 is closed, the four abstract projective stabilizer formulas cannot be promoted to a finite-window factorization theorem.
 
 Classification: **OPEN / LOAD-BEARING**. No new GAP scan authorized.
+
+
+## 2026-10-05 — FRM-0 W3 audit correction: OPEN retained, three load-bearing gaps isolated
+
+The proposed W3/FRM-0 closure was audited and is **not promoted**. The audit confirms that the W3 direction is mathematically relevant, but the previous argument contained three load-bearing gaps.
+
+1. **W3 arithmetic/presentation correction.** For p=3,d=2,
+   D3=gamma3(F) gamma2(F)^3 F^3 and D4=gamma4(F) gamma2(F)^3 F^9, so dim(D1/D2,D2/D3,D3/D4)=(2,1,4) and |W3|=3^7=2187. However W3 is not exponent 3 in general: x^3,y^3 can survive in D3/D4, so generators may have order 9. The degree-3 central layer contains the restricted-power and Lie-degree contributions. Classification: dimension/order calculation **PASS / CLOSED**; exponent-3 claim **FAIL / CLOSED** and must not be reused.
+
+2. **Canonical inclusion versus canonical splitting.** The Frobenius-power subspace V^(1)=<x^[3],y^[3]> subset L3 is canonical, but a GL(V)-equivariant splitting L3=L3^Lie ⊕ V^(1), or a canonical projection L3 -> V^(1), has not been proved. Therefore the projected functional e_3^(p)=pr_{V^(1)}(e_3) is **OPEN**. The intrinsic data currently established are the canonical extension class e_3 together with the canonical subspace V^(1), not a canonical projection.
+
+3. **Transgression/Bockstein identification.** The proposed d2 restriction to (V^(1))* matching the standard Bockstein is a promising FRM-0.2 target, but it requires an explicit identification of the relevant dual space, proof of GL2(F3)-equivariance, and equality of the pushed-out extension cocycle with the standard Bockstein class. This is **OPEN / LOAD-BEARING** and is the next authorized W3 calculation/proof gate.
+
+4. **Universal/free-window versus realization-specific relation jet.** Even if (e_2,e_3^(p)) were intrinsic to W3, it is universal free-window data. The realization-specific jet J_{s,a}=(q_{s,a},ell_{s,a}^p) still requires an intrinsic finite-window realization map/factorization. Thus the implication from W_p to the stabilizer of the actual relation jet remains **OPEN / LOAD-BEARING**. Abstract stabilizer formulas do not close finite-window realization.
+
+Current FRM-0 classification remains **OPEN / LOAD-BEARING**. General odd-p factorization remains **OPEN**. The authorized immediate subgate is **FRM-0.2: explicit W3 central-extension/transgression computation, with Bockstein comparison and independent verification**. Do not promote FRM-0, do not declare a canonical V^(1)-projection, and do not start a new GAP scan for the general factorization before this proof gate is settled.
