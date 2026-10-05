@@ -26,11 +26,11 @@ jobs:
           python - <<'PY'
           from pypdf import PdfReader
           from pathlib import Path
-          p=Path('paper4/main.pdf')
+          p=Path('main.pdf')
           r=PdfReader(str(p))
           print(f'Pages: {len(r.pages)}')
           text='\n'.join((page.extract_text() or '') for page in r.pages)
-          Path('paper4/main.txt').write_text(text, encoding='utf-8')
+          Path('main.txt').write_text(text, encoding='utf-8')
           assert len(r.pages) > 0
           assert 'Delayed Finite-Window Visibility' in text
           assert 'Zassenhaus order alone is insufficient' in text
@@ -40,16 +40,16 @@ jobs:
           assert 'n' in text and 'sep' in text and 'p' in text
           assert 'References' in text
           assert '?' not in text
-          Path('paper4/pdfinfo.txt').write_text(f'Pages: {len(r.pages)}\nSize: {p.stat().st_size}\n', encoding='utf-8')
+          Path('pdfinfo.txt').write_text(f'Pages: {len(r.pages)}\nSize: {p.stat().st_size}\n', encoding='utf-8')
           PY
-          sha256sum paper4/main.pdf | tee paper4/main.pdf.sha256
-          test -s paper4/main.pdf
-          test -s paper4/main.txt
+          sha256sum main.pdf | tee main.pdf.sha256
+          test -s main.pdf
+          test -s main.txt
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: paper4-pdf
           path: |
-            paper4/main.pdf
-            paper4/main.pdf.sha256
-            paper4/pdfinfo.txt
+            main.pdf
+            main.pdf.sha256
+            pdfinfo.txt
