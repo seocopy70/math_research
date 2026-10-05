@@ -33,7 +33,7 @@ The proof uses the completed Magnus algebras over F_p.
 
 Use the standard index-p Schreier basis
 \[
-u=z^p,\qquad y_{j,i}=z^j x_i z^{-j}\quad(0\le j<p-1),
+u=z^p,\qquad y_{j,i}=z^j x_i z^{-j}\quad(0\le j\le p-1),
 \]
 and write
 \[
@@ -249,10 +249,22 @@ Thus nonvanishing of epsilon_s(W) is independent of the marked lift and isomorph
 
 ## 11. Final separation gate
 
-The stress-family cup-radical line is one-dimensional, so K is intrinsic. The corrected epsilon_s is therefore an intrinsic finite-window invariant.
+The stress-family cup-radical line is one-dimensional **only in the declared nondegenerate quadratic scope**: d is even and the alternating form defined by r_2 on the x-space is nondegenerate (for example, d=2 and r_2=[x_1,x_2]). In that scope the radical is exactly \(\langle z^*\rangle\), so K is intrinsic.
 
-- a=s: epsilon_s(W) is nonzero because the surviving critical class is nonzero modulo p^sK^{ab}.
-- a=∞: epsilon_s(W)=0 after the canonical normalization, since z^{p^s}=r_2 with r_2\in[K,K].
+For W_n with n\ge3, the defining power relation lies in D_3(F), so it does not alter the degree-2 relation class. Hence the same nondegenerate quadratic cup form is visible intrinsically in H^1(W_n,\mathbf F_p) and H^2(W_n,\mathbf F_p), with radical line \(\langle z^*\rangle\).
+
+The corrected \(\varepsilon_s\) is therefore an intrinsic finite-window invariant in this scope.
+
+- a=s: take t=z-x_1. Then V(t)=U-\sum_jA_j, while \(p^{s-1}U=0\) modulo the a=s relation lattice and p^s. Hence
+\[
+\varepsilon_s(W_{s,s})=-p^{s-1}\sum_jA_j\ne0.
+\]
+- a=∞: take t=z. Then V(t)=U and \(p^{s-1}U\in\operatorname{im}R\), so
+\[
+\varepsilon_s(W_{s,\infty})=0.
+\]
+
+The separation statement is certified here for **s\ge2**; the s=1 case is intentionally not promoted by this audit.
 
 Hence, for every odd p and s>=2 in the declared stress-family scope,
 \[
