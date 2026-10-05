@@ -132,3 +132,24 @@ is invalid for the full Zassenhaus graded object: (operatorname{gr}(F)) is a fre
 The separate (D_{p+1}) calculation does not supply arbitrary-degree restricted (p)-power control. Hence the all-(n) stabilization implication remains **OPEN / LOAD-BEARING**.
 
 This supersedes the session-level proposal to promote (W_n=W_p) from the explicit-R argument.
+
+
+## 2026-10-06 — Decisive restricted-(p)-power obstruction
+
+The proposed necessary repair
+[
+(*)qquad F^psubseteq R,D_{p+1}(F)
+]
+fails for the explicit relation subgroup
+[
+R=langle[x,z],[y,z],[x,y]^{-1}x^pz^{-p}angle^F.
+]
+Use the quotient (phi:F	omathbb Z_p) with (x,zmapsto t) and (ymapsto1). All three generators of (R) map to (1), while (x^pmapsto t^p
+otin D_{p+1}(mathbb Z_p)=mathbb Z_p^{p^2}). Hence
+[
+x^p
+otin R D_{p+1}(F).
+]
+Thus the degree-(p) restricted (p)-power layer is genuinely not absorbed by (R).
+
+This closes the proposed ((*))-repair route. It does **not yet** prove strict shrinkage (W_{p^2}subsetneq W_p); that requires an explicit witness in the relevant quotient. The arbitrary-(n) stabilization theorem therefore remains **OPEN**, but its current Lie-induction route is now **FAIL / CLOSED**.
