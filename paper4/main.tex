@@ -506,42 +506,133 @@ parameters.
 
 \section{Intrinsic critical-window separation}
 
-The universal comparison above is the filtration input for the transfer
-argument in the quadratic stress family.  Let $d$ be even and assume
-that the alternating quadratic form defined by $r_D$ is nondegenerate.
-At the critical depth
+The universal comparison is now combined with an intrinsic transfer
+construction.  Let
 \[
-n_s=p^s+1,
+W=W_{p^s+1}(G)
 \]
-the truncation image satisfies the required $p^s$-divisibility in
-$K^{\mathrm{ab}}$.  The corrected intrinsic transfer predicate is
-therefore represented by a line in
+in the declared quadratic stress-family scope.  The nondegenerate
+alternating quadratic initial form determines a canonical one-dimensional
+radical direction in $H^1(W,\Fp)$ and hence a canonical index-$p$
+kernel
 \[
-W^{\mathrm{ab}}[p^s]/pW^{\mathrm{ab}}
+K=\ker(\chi).
 \]
-and evaluated in
+Thus no presentation-dependent choice of $z$ is used in defining the
+following predicate.
+
+Let
 \[
-K^{\mathrm{ab}}/p^sK^{\mathrm{ab}}.
+S_s(W):=
+\operatorname{im}\bigl(
+W^{\mathrm{ab}}[p^s]\longrightarrow
+W^{\mathrm{ab}}/pW^{\mathrm{ab}}
+\bigr).
 \]
-For the boundary $a=s$, an explicit Schreier calculation gives a
-nonzero critical class, whereas for $a=\infty$ the corresponding class
-vanishes.  Hence
+In the declared stress-family scope this is one-dimensional over
+$\Fp$.  Choose any
+$t\in W^{\mathrm{ab}}[p^s]$ whose image spans $S_s(W)$, and let
+\[
+V:W^{\mathrm{ab}}\longrightarrow K^{\mathrm{ab}}
+\]
+be the canonical transfer.  Define
 \[
 \boxed{
-W_{p^s+1}(G_{s,s})\not\cong
-W_{p^s+1}(G_{s,\infty})
+\varepsilon_s(W):=
+p^{s-1}V(t)
+\pmod{p^sK^{\mathrm{ab}}}
+\in K^{\mathrm{ab}}/p^sK^{\mathrm{ab}}.
+}
+\tag{$\varepsilon_s$}
+\]
+This is independent of the chosen generator of the line up to a unit,
+and changing the lift within the same line changes the displayed class
+by an element of $p^sK^{\mathrm{ab}}$.  Hence its zero/nonzero value is
+an intrinsic invariant of the finite group $W$.
+
+The filtration comparison gives the required truncation control.  At
+the critical depth,
+\[
+D_{p^s+1}(F)\cap K
+\subseteq
+D_{p^{s-1}+1}(K),
+\]
+and the defining Zassenhaus product shows
+\[
+\operatorname{im}
+\bigl(D_{p^{s-1}+1}(K)\to K^{\mathrm{ab}}\bigr)
+\subseteq p^sK^{\mathrm{ab}},
+\]
+because all commutator factors disappear after abelianization and the
+first surviving pure-power exponent is $p^s$.  Thus
+\[
+\boxed{
+\operatorname{im}
+\bigl(D_{p^s+1}(F)\cap K\to K^{\mathrm{ab}}\bigr)
+\subseteq p^sK^{\mathrm{ab}}.
+}
+\tag{TF_s}
+\]
+
+For the boundary $a=s$, let $A_i$ be the conjugate Schreier generators
+for $x_1$ and let $U=z^p$ in the index-$p$ kernel, with
+$\sigma(A_i)=A_{i+1}$.  The abelianized Schreier relation induced by
+\[
+z^{p^s}=x_1^{p^s}r_D
+\]
+is
+\[
+p^{s-1}U-p^sA_i=0.
+\]
+Since $r_D\in[K,K]$, it contributes nothing in $K^{\mathrm{ab}}$.
+The critical transfer term is represented by
+\[
+p^{s-1}(\sigma-1)^{p-1}A_0.
+\]
+Modulo the relation lattice and modulo $p^s$, the relation
+$p^{s-1}U=0$ leaves
+\[
+(\sigma-1)^{p-1}A_0
+=
+\sum_{j=0}^{p-1}
+(-1)^{p-1-j}\binom{p-1}{j}A_j,
+\]
+whose first and last coefficients are units modulo $p$.  Therefore
+\[
+\boxed{
+\varepsilon_s(W_{p^s+1}(G_{s,s}))\ne0.
 }
 \]
-for every odd $p$ and $s\ge2$ in the declared scope.
 
-Together with the lower-window blindness, this yields the exact
-unmarked critical threshold
+For $a=\infty$, the power term $x_1^{p^a}$ is absent.  Taking the
+normalized torsion-line representative $t=z$ gives
 \[
-\boxed{n_{\mathrm{sep}}(s)=p^s+1.}
+p^{s-1}V(t)=0
+\pmod{p^sK^{\mathrm{ab}}},
+\]
+so
+\[
+\boxed{
+\varepsilon_s(W_{p^s+1}(G_{s,\infty}))=0.
+}
+\]
+Consequently
+\[
+\boxed{
+W_{p^s+1}(G_{s,s})
+\not\cong
+W_{p^s+1}(G_{s,\infty}).
+}
 \]
 
-The old order-jump proof is not used; it is retained only as a
-superseded proof route in the research record.
+Together with the lower-window blindness, this yields
+\[
+\boxed{
+n_{\mathrm{sep}}(s)=p^s+1
+}
+\]
+for the declared odd-$p$, even-rank, nondegenerate quadratic stress
+family.  The old order-jump route is not used in this conclusion.
 
 \section{The critical relative theorem}
 
@@ -794,33 +885,6 @@ structured finite-window isomorphism problem.
 
 This explains why the successful marked theorem cannot simply be
 relabelled as an unmarked reconstruction theorem.
-
-\subsection{Intrinsic boundary at $a=s$}
-
-For the nonboundary range $1\le a<s<t$, the previously established
-same-window order separation gives the corresponding abstract
-finite-window distinction.  The genuinely critical boundary is
-\[
-G_{s,s}
-\quad\text{versus}\quad
-G_{s,\infty}.
-\]
-At this boundary, abelianization and ordinary mod-$p$ cohomology do not
-detect the difference.  The intrinsic transfer predicate constructed at
-the critical window does: its value is nonzero for $a=s$ and vanishes
-for $a=\infty$.  Hence
-\[
-\boxed{
-\W_{p^s+1}(G_{s,s})
-\not\cong
-\W_{p^s+1}(G_{s,\infty})
-}
-\]
-in the declared odd-$p$, nondegenerate quadratic stress-family scope.
-
-Thus the critical finite window is sufficient not only for the marked
-relative extension problem but also for this previously unresolved
-same-window boundary.
 
 \subsection{Relative versus unmarked information}
 
