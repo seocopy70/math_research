@@ -13,7 +13,8 @@ end;
 
 AffInv := function(a)
   local ai;
-  ai := InverseMod(a[2],M);
+  # All units used here are 1 mod P, hence u^-1 = 2-u mod M.
+  ai := (2 - a[2]) mod M;
   return [ (-ai*a[1]) mod M, ai mod M ];
 end;
 
