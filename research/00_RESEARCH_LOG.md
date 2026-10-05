@@ -2845,3 +2845,12 @@ Therefore the final proposed classification is corrected as follows:
 - Paper 5 END: REJECTED / NOT YET AUTHORIZED.
 
 The next gate is explicitly the embedded GL_3(3) stabilizer extracted from the actual GAP automorphisms, followed by a correct restricted-Lie relation-jet derivation.
+
+
+## 2026-10-06 — Addendum 6: p=3 Jacobson absorption partially closes the linearization issue
+
+For p=3, R=z^[3]-x^[3]-[x,y] is a filtered-inhomogeneous relation in W=G_{1,1}/D_4. Bracketing R with x and y kills the p-power bracket terms in D_4 and forces [[x,y],x] and [[x,y],y] to vanish. Therefore the p=3 Jacobson polarization terms are absorbed by the relation quotient. This is PASS / LOCAL for the restricted-power linearization repair.
+
+The intrinsic z-line is still not proved. Presentation support alone does not imply Aut(W)-invariance. The b=c=0 restriction and exact embedded stabilizer remain OPEN / LOAD-BEARING pending an intrinsic characterization or direct extraction and equality check of the actual six GAP Frattini matrices. The p=3 argument is not promoted to general odd p.
+
+Paper 5 END remains NOT AUTHORIZED.
