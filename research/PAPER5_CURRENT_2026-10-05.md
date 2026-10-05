@@ -680,3 +680,13 @@ Classification: PASS / CLOSED / GENERAL.
 Precision boundary: this does not imply D_{p+1} subset R; the earlier x^{p^2} not-in-R counterexample remains valid. It also does not close Step 3 equality Im(Aut(W_n)->GL(V))=S_11(p), which remains OPEN / LOAD-BEARING.
 
 Detailed audit: research/PAPER5_WP1_STABILIZATION_AUDIT_2026-10-06.md.
+
+## 2026-10-06 — Step 3 intrinsic upper-bound re-audit
+
+The p=5,n=6 Run 37381098677 is recorded as PASS / LOCAL only. Its permutation equality is a one-case validation and is not an upper-bound proof.
+
+The newly submitted generic proof of Im(Aut(W_n)->GL(V)) subseteq S'_11(p) is FAIL / CLOSED as submitted. The argument assumes an intrinsic free-presentation lift and relation preservation for arbitrary finite-window automorphisms, while that lifting/factorization bridge is itself part of the load-bearing problem. The proposed general S'_11 order count is also unsupported by the displayed matrix parameters, and the restricted-power/Jacobson correction prevents the claimed automatic linearization.
+
+Accordingly the general Step-3 equality gate remains OPEN / LOAD-BEARING. The special corrected n=p closure and the p=5,n=6 local diagnostic are separate results and must not be conflated.
+
+Detailed audit: research/PAPER5_STEP3_INTRINSIC_UPPER_BOUND_REAUDIT_2026-10-06.md.
