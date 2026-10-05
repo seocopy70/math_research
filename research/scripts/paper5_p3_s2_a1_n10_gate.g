@@ -15,4 +15,4 @@ run:=function(s,a)
   else
     Error("P5_N10_ORBIT_CERTIFICATE_FAILURE");
   fi;
-end; run(2,1); QUIT;
+end; run(2,1); Print("P5_N10_ORBIT_CERTIFICATE=PASS\n"); QUIT;
