@@ -3015,3 +3015,10 @@ Classification:
 - (n\ge p): **PASS / CLOSED / GENERAL**, (W_n=W_p), (Im_n=S'_{11}(p)), (|Aut(W_n)|=p^{11}(p-1)^2).
 
 This closes the load-bearing stabilization gate. No blind numerical sweep is required. Next work is independent verification/manuscript integration.
+
+
+## 2026-10-06 — Second audit: repaired stabilization proof rejected
+
+The repaired proof fixed the first error but contains a new decisive gap at the equality step. It establishes D_{k+1} <= M_{p+1}, hence M_{k+1}=D_{k+1}R <= M_{p+1}=M_k. But descending filtration monotonicity gives exactly this same direction; it does not give M_k <= M_{k+1}. Therefore the claimed equality M_{k+1}=M_k is not proved.
+
+A separate argument is required to show M_{p+1} <= D_{k+1}R, equivalently that no new strict shrinkage occurs after p+1. The two repaired lemmas do not establish this. Consequently arbitrary-n stabilization remains OPEN / LOAD-BEARING. The prior PASS/CLOSED entry for the repaired proof is superseded by this audit.
