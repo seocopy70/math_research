@@ -2476,3 +2476,55 @@ The associative derivations preserve the two-sided commutator ideal, (L) preserv
 Thus (C_{a,b,k}(gr_kR)\subseteq gr_{k+1}R), the corrected secondary term lies in (gr_{k+1}R), and the finite-stage residual factorization yields (widetilde g(R)\subseteq R) without the stronger Zassenhaus-layer product equality.
 
 **Classification:** corrected (C_{a,b,k}), secondary relation term, finite-stage factorization, and kernel preservation are **CLOSED / GENERAL within the declared mod-(p) Magnus layer**. Step 3 equality (operatorname{Im}(Aut(W_n)\to GL(V))=S_{11}(p)) remains **OPEN / LOAD-BEARING**, and the (p^2(p-1)) theorem remains **CONDITIONAL**. Evidence: research/PAPER5_STEP3_SECOND_JET_AUDIT_ADDENDUM_2026-10-06.md.
+
+## 2026-10-06 — S11 equality re-audit: proposed upper bound rejected
+
+The proposed proof of
+\[
+\operatorname{Im}(\operatorname{Aut}(W_n)\to GL(V))\subseteq S_{11}(p)
+\]
+does **not** close the load-bearing gate.
+
+The decisive defect is the passage from an arbitrary
+\[
+g\in\operatorname{Aut}(W_n),\qquad W_n=F/RD_{n+1},
+\]
+to statements in the full quotient (F/R), such as “(z) is central in (F/R)” and
+\[
+[g(x),g(y)]=[x,y]^{\det_{xy}},\qquad
+[g(x),g(z)]=[g(y),g(z)]=1
+]
+as identities in (F/R). An automorphism of the finite window (W_n) does not automatically lift to an automorphism of (F/R); that is precisely part of the unresolved finite-window identification/lifting problem. Thus these (F/R)-identities cannot be used as an upper-bound argument without an independent lifting theorem.
+
+A second independent gap is the assertion that (m_{z,x}=0) is a “representative choice.” The coefficient (m_{z,x}) is part of the actual linear map on
+\[
+V=F/D_2,
+\]
+and the relation (p(e_x-e_z)=0) in the abelianized relation subgroup does not permit changing an arbitrary (\mathbf F_p)-coefficient in (V) by a representative choice. No prior result currently establishes (m_{z,x}=0).
+
+Therefore the proposed upper bound
+\[
+\operatorname{Im}\subseteq S_{11}(p)
+\]
+is **OPEN / LOAD-BEARING**, and consequently the equality
+\[
+\operatorname{Im}(\operatorname{Aut}(W_n)\to GL(V))=S_{11}(p)
+\]
+and the (p^2(p-1)) theorem remain **OPEN / CONDITIONAL**, respectively.
+
+The lower-bound construction is different: the already-closed kernel-preservation result
+\[
+\widetilde g_{a,b}(R)\subseteq R
+\]
+does give genuine induced automorphisms of (F/R) and (W_n), with matrices
+\[
+M_{a,b}=\begin{pmatrix}a&b&0\\0&1&0\\0&0&a\end{pmatrix},
+\qquad a\in\mathbf F_p^\times, b\in\mathbf F_p.
+\]
+Hence
+\[
+S_{11}(p)\subseteq\operatorname{Im}(\operatorname{Aut}(W_n)\to GL(V))
+\]
+is **CLOSED / GENERAL**, assuming the already-closed (\widetilde g(R)\subseteq R) gate. Equality is not established.
+
+This supersedes the immediately preceding 2026-10-06 claim that the (S_{11}(p)) upper bound and equality were CLOSED/GENERAL.
