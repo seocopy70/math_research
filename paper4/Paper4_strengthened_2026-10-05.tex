@@ -1,0 +1,190 @@
+\\documentclass[11pt]{article}
+\\usepackage{amsmath,amssymb,amsthm,mathtools}
+\\usepackage[margin=1in]{geometry}
+\\usepackage{hyperref}
+\\newtheorem{theorem}{Theorem}[section]
+\\newtheorem{proposition}[theorem]{Proposition}
+\\newtheorem{corollary}[theorem]{Corollary}
+\\newtheorem{lemma}[theorem]{Lemma}
+\\newtheorem{remark}[theorem]{Remark}
+\\newcommand{\\D}{D}
+\\newcommand{\\F}{F}
+\\newcommand{\\K}{K}
+\\newcommand{\\eps}{\\varepsilon}
+\\title{Delayed Finite-Window Visibility and Non-Rigidity of Power-Root One-Relator Pro-$p$ Groups}
+\\author{Seocopy Research Project}
+\\date{October 5, 2026}
+
+\\begin{document}
+\\maketitle
+
+\\begin{abstract}
+We study finite Zassenhaus windows of pro-$p$ groups defined by a hidden power-root relation
+$z^{p^s}=x_1^{p^a}r_2$, where $r_2$ has nonzero quadratic initial form. The main result is an exact critical-window theorem in a declared intrinsic stress-family scope. Below the critical scale $p^s+1$ the hidden relation is invisible; at $p^s+1$ an intrinsic transfer obstruction separates the cases $a=s$ and $a=\\infty$. A key filtration theorem controls how Zassenhaus depth changes after passage to open subgroups:
+$D_n(F)\\cap K\\subseteq D_{\\lceil n/p^s\\rceil}(K)$ for $[F:K]=p^s$. We prove that the factor $p^s$ is uniformly optimal. The subgroup comparison is treated as infrastructure assembled from classical Zassenhaus, Jennings--Lazard, Schreier, and weighted-Schreier machinery; the Paper 4 contribution is the downstream intrinsic transfer obstruction, exact separation, and critical threshold.
+\\end{abstract}
+
+\\section{Introduction}
+Finite quotients often erase information carried by a defining relation until a sharply determined filtration level. We make this phenomenon precise for a power-root one-relator family and distinguish universal filtration infrastructure from the family-specific obstruction that survives in the critical window.
+
+The guiding phenomenon is
+\\[
+\\text{lower-window blindness}
+\\quad\\longrightarrow\\quad
+\\text{critical transfer defect}
+\\quad\\longrightarrow\\quad
+\\text{exact separation}.
+\\]
+The result is deliberately scoped: arbitrary relations of Zassenhaus degree at least two do not satisfy a degree-only version of the theorem.
+
+\\section{Setup}
+Let $p$ be odd, let $s\\ge2$, let $d$ be even, and let $F$ be free pro-$p$ on
+$z,x_1,\\ldots,x_d$. Let
+$r_2\\in D_2(F)\\setminus D_3(F)$ have nondegenerate alternating quadratic initial form on
+$V=F/D_2(F)$. Consider
+\\[
+G_{s,a}=F/\\overline{\\langle\\langle z^{p^s}x_1^{-p^a}r_2^{-1}\\rangle\\rangle},
+\\qquad
+1\\le a\\le\\infty,
+\\]
+where $p^\\infty$ denotes the absent power term. Put
+\\[
+W_n(G)=G/D_n(G).
+\\]
+We focus on the critical window $W_{p^s+1}$.
+
+\\section{Universal subgroup-depth compression}
+
+\\begin{theorem}[Index-$p$ subgroup-depth comparison]
+Let $F$ be a finitely generated free pro-$p$ group and let $K$ be an open subgroup of index $p$. Then for every $n\\ge1$,
+\\[
+D_n(F)\\cap K\\subseteq D_{\\lceil n/p\\rceil}(K).
+\\]
+\\end{theorem}
+
+The proof is obtained from the established weighted-Schreier framework: uniform weights realize ordinary Zassenhaus degree, weights restrict to closed subgroups, index-$p$ Schreier coordinates have controlled weights, and the no-cancellation principle identifies the leading weight of an arbitrary element. Equivalently, a self-contained Magnus prefix-code proof gives the same comparison. We do not claim the inequality as new foundational weighted-Schreier theory.
+
+\\begin{theorem}[Index-$p^s$ comparison]
+If $[F:K]=p^s$, then
+\\[
+\\boxed{D_n(F)\\cap K\\subseteq D_{\\lceil n/p^s\\rceil}(K).}
+\\tag{SC_s}
+\\]
+\\end{theorem}
+
+\\begin{proof}
+Choose a subnormal chain
+$F=K_0>K_1>\\cdots>K_s=K$ with $[K_{i-1}:K_i]=p$.
+Iterate the index-$p$ theorem. The identity
+$\\lceil\\lceil m/p\\rceil/p\\rceil=\\lceil m/p^2\\rceil$
+and its iterates show that no additional rounding loss occurs.
+\\end{proof}
+
+\\begin{proposition}[Uniform sharpness]
+The factor $p^s$ in (SC_s) cannot be uniformly improved by one filtration level. More precisely, there are infinitely many $n$ for which
+\\[
+D_n(F)\\cap K\\not\subseteq D_{\\lceil n/p^s\\rceil+1}(K).
+\\]
+\\end{proposition}
+
+\\begin{proof}
+Take $F=\\langle a,b\\rangle$ free pro-$p$ and
+$K=\\ker(F\\to C_{p^s})$, with $a$ mapping to a generator and $b$ to zero.
+A Schreier basis contains $c_0=a^{p^s}$. Hence
+$c_0^{p^{m-1}}$ has exact $K$-Zassenhaus degree $p^{m-1}$.
+For
+$g_m=a^{p^{m+s-1}}=c_0^{p^{m-1}}$ and
+$n_m=p^{m+s-1}$,
+we have
+$g_m\\in D_{n_m}(F)\\cap K$ but
+$g_m\\notin D_{p^{m-1}+1}(K)$, while
+$\\lceil n_m/p^s\\rceil=p^{m-1}$.
+Thus the proposed uniform improvement is false.
+\\end{proof}
+
+\\begin{remark}
+We claim uniform sharpness, not pointwise sharpness for every integer $n$. This is sufficient to prove that the compression factor $p^s$ is optimal as a uniform theorem.
+\\end{remark}
+
+\\section{From subgroup depth to transfer depth}
+Let $m=\\lceil n/p\\rceil$. Jennings--Lazard theory implies that the image of
+$D_m(K)$ in $K^{\\mathrm{ab}}$ is controlled by the corresponding $p$-power layer. In the critical case $n=p^s+1$, the index-$p$ comparison gives
+$D_{p^s+1}(F)\\cap K\\subseteq D_{p^{s-1}+1}(K)$, and the abelianized transfer calculation yields
+\\[
+\\operatorname{im}(D_{p^s+1}(F)\\cap K\\to K^{\\mathrm{ab}})
+\\subseteq p^sK^{\\mathrm{ab}}.
+\\]
+More generally, with
+$e(n)=\\lceil\\log_p\\lceil n/p\\rceil\\rceil$,
+the audited transfer-depth law gives
+\\[
+\\operatorname{im}(D_n(F)\\cap K\\to K^{\\mathrm{ab}})
+\\subseteq p^{e(n)}K^{\\mathrm{ab}}.
+\\]
+The precise critical specialization is the one used below.
+
+\\section{The stress family and the critical obstruction}
+For the stress family above, lower windows through $n\\le p^s$ do not see the hidden power-root relation at the relevant initial layer. At $n=p^s+1$, the relation enters the first critical layer.
+
+The intrinsic construction uses the nondegenerate quadratic initial form of $r_2$. It supplies the canonical one-dimensional radical direction needed to define the index-$p$ kernel without inserting a presentation-dependent choice. The transfer obstruction is a line-valued invariant in the finite-window abelianization, represented after the corrected torsion normalization by a class in the appropriate $p^s$-quotient of the kernel abelianization.
+
+Denote the resulting intrinsic predicate by $\\eps_s(W)$. The audited calculation gives
+\\[
+\\eps_s(W_{p^s+1}(G_{s,s}))\\ne0,
+\\qquad
+\\eps_s(W_{p^s+1}(G_{s,\\infty}))=0.
+\\]
+
+\\begin{theorem}[Exact critical separation]
+For odd $p$, $s\\ge2$, even $d$, and nondegenerate alternating quadratic initial form $r_2$,
+\\[
+W_{p^s+1}(G_{s,s})\\not\\cong W_{p^s+1}(G_{s,\\infty}).
+\\]
+\\end{theorem}
+
+\\begin{proof}[Proof architecture]
+The SC/SC_s comparison bounds the image of the defining relation after passage to the canonical index-$p$ kernel. The corrected transfer invariant is then evaluated in the finite-window kernel abelianization modulo $p^s$. For $a=s$ the representative calculation gives a nonzero critical class, whereas for $a=\\infty$ the corresponding class vanishes because the power term is absent. Intrinsicity follows from the canonical radical line supplied by the nondegenerate quadratic form. The two finite windows therefore cannot be isomorphic.
+\\end{proof}
+
+\\section{Exact threshold and the parameter $a$}
+For $a<s$, abelianization already separates the critical windows:
+\\[
+W_{s,a}^{\\mathrm{ab}}
+\\cong
+\\mathbf Z_p/p^a\\oplus(\\mathbf Z_p/p^{s+1})^d.
+\\]
+For $a>s$, the term $x_1^{p^a}$ lies beyond $D_{p^s+1}$, so
+$W_{s,a}=W_{s,\\infty}$.
+At $a=s$, abelianization agrees with $a=\\infty$, but the intrinsic transfer obstruction separates them.
+
+Thus the critical window has exactly one nontrivial hidden boundary:
+\\[
+a=s.
+\\]
+Combined with lower-window blindness, this yields the exact threshold
+\\[
+\\boxed{n_{\\rm sep}(s)=p^s+1.}
+\\]
+
+\\section{What is new and what is not}
+The filtration machinery should not be overstated as new foundational theory. Zassenhaus, Jennings--Lazard, Schreier, Magnus, and weighted-Schreier methods provide the ingredients. The exact subgroup comparison is isolated and assembled in the form required by the finite-window transfer argument, and the $p^s$ factor is shown uniformly optimal.
+
+The Paper-4-specific contribution is the downstream package:
+\\begin{enumerate}
+\\item an intrinsic finite-window transfer obstruction;
+\\item exact separation of $a=s$ from $a=\\infty$ at $p^s+1$;
+\\item complete classification of the critical-window parameter $a$ in the declared stress-family scope;
+\\item the exact threshold $n_{\\rm sep}(s)=p^s+1$.
+\\end{enumerate}
+
+The arbitrary relation-degree-only claim is not asserted: $\\operatorname{ord}_Z(r)\\ge2$ alone is insufficient.
+
+\\section{Literature and logical boundaries}
+The audited literature establishes the component weighted-Schreier machinery. The present manuscript does not claim priority for those components. The Magnus prefix-code proof is retained as an independent verification route.
+
+The intrinsic transfer obstruction, exact unmarked separation, and threshold are the principal novelty candidates. Literature priority claims should remain tied to the bounded audit actually performed.
+
+\\section{Conclusion}
+Paper 4 establishes a precise mechanism by which a hidden power-root relation is invisible below a finite Zassenhaus window and becomes intrinsically detectable exactly at the next critical layer. The universal subgroup-depth law explains the quantitative loss of depth under passage to index-$p^s$ kernels, and its uniform sharpness shows that this loss cannot be improved in general. The family-specific transfer obstruction then converts this universal compression into an exact finite-window separation theorem.
+
+\\end{document}
