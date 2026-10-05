@@ -2824,3 +2824,24 @@ Classification: reverse \(\pi:D_p\to V\) as p-power-derived structure = **FAIL /
 The actual p=3,n=4 GAP artifact and the current closed central boundary model are different groups. The GAP source defines mkG(1,1)=<z,x,y | z^3=x^3[x,y]>, with no relations [z,x]=[z,y]=1. The current W_p Step-3 model instead imposes [x,z]=[y,z]=1 and [x,y]=x^p z^{-p}. Therefore the central-model stabilizer S'_{11}(p) and its IA-blindness cannot be used as a theorem about the observed p=3,n=4 p^2 gap.
 
 The certified runtime fact remains: the actual non-split image has order 6 versus split image order 108 (and 48 versus 864 in the a=2 pair), while actual IA order is constant. Hence the actual p^2 localization is **PASS / LOCAL to the Frattini image**, and its intrinsic structural explanation remains **OPEN / LOAD-BEARING**.
+
+
+## 2026-10-06 — Addendum 5: proposed final 108→6 closure rejected after independent source check
+
+The proposed final closure of Paper 5 via an actual G_{1,1} matrix stabilizer was independently checked against the authoritative GAP source and the restricted-power structure. It is not valid as submitted.
+
+First, research/external/paper5_aut/aut_common.g shows that the certified split case is (s,a)=(0,1) with relation x^p[x,y]=1. A relation-free G_{0,0} is not the split comparison used by the certified 108-order computation.
+
+Second, the proposed calculation treats d_z=z^p, d_x=x^p, d_y=y^p as though an arbitrary M in GL(V) acts linearly on these symbols. This is not justified: the restricted p-power operation is governed by the Jacobson/polarization formula, so the p-power of a lift of az+bx+cy contains mixed terms in general. Consequently the displayed conditions c=f, fg=di, dh=eg, etc. have not been derived from the actual finite-window automorphism action.
+
+Third, the claim that the chosen presentation makes the z-line intrinsically distinguished, hence forces b=c=0, is not yet an intrinsic statement about W=G_{1,1}/D_5. That line must be characterized from the finite group/window itself.
+
+Therefore the final proposed classification is corrected as follows:
+
+- actual (0,1) versus (1,1) Frattini-image orders 108→6: PASS / LOCAL;
+- IA order 3^27 on both sides: PASS / LOCAL;
+- p^2 deficit is a Frattini/GL-image phenomenon: PASS / LOCAL;
+- exact intrinsic stabilizer mechanism: OPEN / LOAD-BEARING;
+- Paper 5 END: REJECTED / NOT YET AUTHORIZED.
+
+The next gate is explicitly the embedded GL_3(3) stabilizer extracted from the actual GAP automorphisms, followed by a correct restricted-Lie relation-jet derivation.
