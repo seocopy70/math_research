@@ -100,3 +100,14 @@ Until these are done,
 is **OPEN**, not CLOSED.
 
 The previous proposed CLOSED claim is therefore rejected as submitted; it does not supersede the existing OPEN/load-bearing status of the exact p^2 comparison theorem.
+
+
+## Addendum 3 — reverse-π proposal rejected; IA kernel cannot supply the second p
+
+The proposed replacement \(\pi:D_p\to V\), with \(\pi(d_{z1})=v_z\), is **FAIL / CLOSED as a construction from the W_p p-power structure**.
+
+The intrinsic p-power map already fixed in the W_p audit has type \(\pi_0:V\to D_p\), \(\pi_0(\bar g)=g^p\). There is no canonical reverse map \(D_p\to V\) induced by Hall–Petrescu, Witt, or the p-power operation. Since \(D_p(W_p)^p\subseteq D_{p^2}(W_p)=1\), the p-power operation on \(D_p\) cannot produce a nonzero class in \(V\). The assignment \(d_{z1}\mapsto v_z\) is therefore additional structure, not a consequence of the presentation.
+
+More decisively, the proposed kernel cut cannot work even if an arbitrary reverse map were artificially supplied. For \(f\in\operatorname{Hom}(V,D_p)\), the corresponding IA modification changes a lift \(g\) to \(g f(\bar g)\). Since \(D_p\le Z(W_p)\) and \(D_p^p=1\), \((gd)^p=g^p\) and commutators with \(D_p\) are unchanged. Hence IA acts trivially on the established intrinsic data \(\pi_0:V\to D_p\), \(b:\wedge^2V\to D_p\), and the relation package. Thus preservation of \(\mathcal J_p\) does not impose \(f(v_z)\in\ker(\text{reverse-}\pi)\), and no \(3\to2\) cut of \(\operatorname{Hom}(L,D_p)\) follows.
+
+Consequently \(|K_b:K_{\mathcal J}|=p\) is **FAIL / CLOSED for this mechanism**. The proposed \(p^2=p\cdot p\) comparison via \(\operatorname{Aut}_b/\operatorname{Aut}_{\mathcal J}\) is rejected. The exact observed \(p^2\) automorphism-order gap remains **OPEN / LOAD-BEARING** and must be sought in a different comparison object or a higher filtered/extension-level action genuinely visible to IA.
