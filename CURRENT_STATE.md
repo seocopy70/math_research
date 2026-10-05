@@ -1143,3 +1143,10 @@ Classification:
 - general odd-p finite-window factorization: **OPEN / LOAD-BEARING**.
 
 No new GAP scan is authorized before FRM-0 is settled.
+
+
+## 2026-10-05 — FRM-0 W3 status correction
+
+The W3-based intrinsic-carrier attempt was audited and remains **OPEN / LOAD-BEARING**. The arithmetic is sound in the p=3,d=2 test (dim layers 2,1,4; |W3|=3^7), but W3 is **not exponent 3** in general because x^3,y^3 may survive in D3/D4. The canonical object currently available is the Frobenius-power inclusion V^(1) subset L3 plus the central extension class e3; a GL-equivariant splitting/projection L3 -> V^(1) is not established, so e3^(p) is OPEN. The proposed transgression identity d2|(V^(1))* = beta is **OPEN / LOAD-BEARING** pending explicit cocycle comparison and equivariance. Finally, even a successful intrinsic W3 carrier would still need a functorial bridge from universal free-window data to the realization-specific relation jet J_{s,a}; that factorization remains OPEN.
+
+**Immediate next gate: FRM-0.2** — compute the W3 central extension/transgression explicitly and independently verify the Bockstein comparison. No FRM-0 closure, canonical V^(1)-projection claim, or general odd-p factorization promotion is authorized until this gate is settled.
