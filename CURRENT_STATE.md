@@ -210,3 +210,8 @@ The Hall–Petrescu sublemma for the p-power component passes in the odd-p range
 ## 2026-10-05 — Step 2 D_3-ambiguity correction
 
 The proposed final split “p=3 PASS / p≥5 FAIL” is **not established**. Two errors were found: (i) D_3 is not equal to γ_3 for p≥5; it contains p-power factors such as G^p and γ_2^p, and (ii) for u=[r,s]∈γ_2 the leading correction [[r,s],y] is in γ_3, not γ_4. Hence the proposed negative witness is invalid. The p=3 claim also needs a direct Zassenhaus calculation of [x,D_2] and [D_2,y] modulo D_4. Current status: **OPEN / LOAD-BEARING**. Next gate is the exact lift-change map D_2×D_2→D_3/D_{p+1} and its interaction with the relation constraint.
+
+
+## 2026-10-06 — Paper 5 arbitrary-n stabilization CLOSED
+
+The repaired Zassenhaus stabilization theorem is PASS / CLOSED / GENERAL in the declared odd-p presentation scope. From W_{p+1}=W_p and the established D_p(W_p)=<x^p,y^p,z^p>, the repaired proof gives W_n=W_p for every n >= p. Therefore the arbitrary-n image theorem is closed: n < p has W_n = F_p^3 and Aut = GL_3(F_p); n >= p has Im_n = S'_11(p) and |Aut(W_n)| = p^11(p-1)^2. The original B,theta route remains FAIL / CLOSED and is no longer load-bearing. Next work is independent proof verification and manuscript/source/PDF/CI audit.
