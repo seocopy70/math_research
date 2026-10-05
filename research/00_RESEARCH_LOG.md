@@ -2076,3 +2076,59 @@ The old false equality route, Heisenberg witness, and Lemma-2/Lemma-3 route rema
 Paper 4 is therefore strengthened by A1 as universal filtration infrastructure. The theorem-specific contribution remains the intrinsic transfer obstruction, exact unmarked separation (W_{p^s+1}(G_{s,s})\not\cong W_{p^s+1}(G_{s,\infty})), and the sharp threshold (n_{\rm sep}(s)=p^s+1) in the declared stress-family scope.
 
 Evidence: `research/PAPER4_GENERAL_SC_ARBITRARY_PROP_A1_CLOSURE_2026-10-05.md`.
+
+
+## 2026-10-05 — Paper 4 Every-(n) sharpness closed and manuscript promotion started
+
+The Every-(n) sharpness argument is now certified. For
+[
+F=langle a,bangle,qquad
+K=ker(F	omathbf Z/p^s),
+]
+the Schreier generators
+[
+c_0=a^{p^s},qquad c_i=a^iba^{-i}
+]
+give explicit group-commutator witnesses for every
+(n=p^sq+r). For (r>0), repeated commutation of (c_{r-1}) by (c_0)
+gives
+[
+
+u_F(g_{q,r})=n,qquad
+
+u_K(g_{q,r})=q+1.
+]
+For (r=0), the second (F)-degree-(p^s) Schreier generator
+(c_{p^s-1}) is essential; the commutators
+(h_2=[c_0,c_{p^s-1}],,h_{k+1}=[h_k,c_0]) give
+[
+
+u_F(h_q)=qp^s,qquad 
+u_K(h_q)=q.
+]
+The free-associative leading-word argument certifies the required
+nonvanishing. The previous abstract (gr_D(K)	o gr_D(F)) lift/Lazard
+shortcut is explicitly not used.
+
+Final sharpness statement:
+[
+oxed{orall nge1,quad
+lceil n/p^sceil	ext{ is best possible in the free-pro-}p	ext{ class}.}
+]
+Scope remains: arbitrary pro-(p) validity; free-pro-(p) uniform
+every-(n) optimality.
+
+The Paper 4 manuscript on branch
+`paper4-tex-2026-10-04` has now been promoted to incorporate:
+1. arbitrary-pro-(p) SC/SC_s theorem via weighted normal forms;
+2. explicit every-(n) free-pro-(p) sharpness witnesses;
+3. corrected intrinsic transfer separation and exact
+(n_{m sep}(s)=p^s+1);
+4. the degree-only arbitrary-(r) counterexample boundary.
+
+Commit:
+`499337be2114b74549969aea65b08442d2cd8fa7`.
+
+No new generic literature search is required: the SC novelty audit was
+already closed on 2026-10-05. Remaining work is manuscript/source/PDF
+artifact audit, not a reopening of the mathematical gates.
