@@ -3179,3 +3179,56 @@ Classification:
 - strict shrinkage witness at (2p) or (p^2): **OPEN**.
 
 This is a decisive failure of the current Lie-induction repair, but not yet a proof that (W_n) strictly shrinks.
+
+
+## 2026-10-06 — Strict denominator-shrinkage witness closes all-n stabilization failure
+
+The explicit-R obstruction is upgraded to a genuine strictness witness. Keep
+\[
+R=\langle[x,z],[y,z],[x,y]^{-1}x^pz^{-p}\rangle^F,
+\qquad
+W_n=F/(RD_{n+1}).
+\]
+
+The previously closed map
+\[
+\phi:F\to\mathbf Z_p=\langle t\rangle,
+\qquad
+x\mapsto t, z\mapsto t, y\mapsto1
+\]
+satisfies \(\phi(R)=1\). Hence
+\[
+\phi(RD_{p^2+1})=D_{p^2+1}(\mathbf Z_p)=\mathbf Z_p^{p^3},
+\]
+while \(\phi(x^{p^2})=t^{p^2}\notin\mathbf Z_p^{p^3}\). Therefore
+\[
+x^{p^2}\notin RD_{p^2+1}.
+\]
+On the other hand \(p^2\ge p+1\), so \(x^{p^2}\in F^{p^2}\subseteq D_{p+1}\subseteq RD_{p+1}\). Thus
+\[
+\boxed{RD_{p^2+1}\subsetneq RD_{p+1}}.
+\]
+
+This is the decisive strict-denominator-shrinkage witness. Consequently the all-\(n\) stabilization statement is
+\[
+\boxed{W_n=W_p\ \forall n\ge p\quad\text{FALSE}.}
+\]
+More precisely, because the defining denominators decrease,
+\[
+RD_{p^2+1}\subsetneq RD_{p+1},
+\]
+there is a canonical strict epimorphism
+\[
+\boxed{W_{p^2}=F/(RD_{p^2+1})\twoheadrightarrow F/(RD_{p+1})=W_p=W_{p+1}},
+\]
+not an inclusion \(W_{p^2}\subsetneq W_p\). Thus “strict shrinkage” refers to the relation denominator/normal subgroup, while the finite quotient itself strictly enlarges at \(p^2\).
+
+Classification:
+- \((*)\ F^p\subseteq RD_{p+1}\): **FAIL / CLOSED**;
+- explicit restricted-\(p\)-power obstruction: **PASS / CLOSED**;
+- strict denominator shrinkage \(RD_{p^2+1}\subsetneq RD_{p+1}\): **PASS / CLOSED / GENERAL**;
+- all-\(n\) stabilization \(W_n=W_p\): **FAIL / CLOSED**;
+- witness \(x^{p^2}\): **PASS / CLOSED**;
+- quotient relation: \(W_{p^2}\twoheadrightarrow W_p\) strict, with kernel nontrivial.
+
+This supersedes the immediately preceding OPEN status of the all-\(n\) stabilization question. It does not reopen the rejected Lie-induction route.
