@@ -206,3 +206,27 @@ The following upgrades are **not closed**:
 Classification: strict denominator chain = PASS/CLOSED/GENERAL; W_n non-stabilization = PASS/CLOSED/GENERAL in the witnessed sense; constant Frattini quotient = PASS/CLOSED under the stated hypothesis; constant Frattini-image = OPEN/LOAD-BEARING; exact +3 kernel-growth law = OPEN/LOAD-BEARING; Hom identification = FAIL/CLOSED; Schur-Zassenhaus split = FAIL/CLOSED.
 
 Research consequence: stabilization is finished negatively. The next authorized problem is the independent arbitrary-n Frattini-image/IA-layer structure, without promoting G_n=G_p or K_{p^k}/K_{p^{k-1}} ~= F_p^3.
+
+## 2026-10-06 — Gate 1 power-kernel proposal rejected
+
+The proposed domino starting from
+\[
+K_k=RD_{p^{k-1}+1}/RD_{p^k+1}=W_{p^k}^{p^k}
+\]
+is **FAIL / CLOSED as submitted**.
+
+The decisive checks are:
+
+1. At (k=1), the first kernel already spans the surviving (p)-power layer \(\langle x^p,y^p,z^p\rangle\cong\mathbf F_p^3\) in the closed (W_p) boundary theorem, so the blanket claim (A_k\cong\mathbf F_p) is false if (k=1) is included.
+2. (D_{p^k+1}(W_{p^k})=1) does **not** imply that (D_{p^{k-1}+1}(W_{p^k})) is central. Its commutators only move to (D_{p^{k-1}+2}), which is generally still nontrivial modulo (D_{p^k+1}).
+3. The quotient (D_{p^{k-1}+1}/D_{p^k+1}) spans many Zassenhaus degrees and includes restricted (p)-power layers. The assertion that (R) kills every non-(F^{p^k}) contribution is precisely an unproved (R)-versus-Zassenhaus-layer comparison.
+
+Therefore the following are **not promoted**: characteristicity of (K_k), the induced Aut descent, (G_{p^k}=G_p), the +3 exact sequence, the (p^{3k+C}) formula, and the semidirect-product formula.
+
+The strict denominator chain remains **PASS / CLOSED / GENERAL**. The correct next gate is the actual graded/commutator structure of
+\[
+RD_{p^{k-1}+1}/RD_{p^k+1},
+\]
+with the possibility that a characteristic **top (p^k)-power sublayer**, rather than the whole kernel, is the right object.
+
+Detailed audit: research/PAPER5_GATE1_POWER_KERNEL_AUDIT_2026-10-06.md.
