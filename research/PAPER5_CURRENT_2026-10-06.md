@@ -192,3 +192,14 @@ The Jacobson projection to multidegrees (1,0,p-1) and (0,1,p-1) gives ad(z)^(p-1
 The proposed Hilbert lower bound from cd(G)=2 and H2=1 is FAIL / CLOSED as a proof route. The p=3 values 3,2,8,10 are PASS / LOCAL checks only and are not the coefficients of (1-3t+t^2)^(-1), whose coefficients begin 1,3,8,21,55. The correct route is strongly-free [x,y] -> Labute mildness -> graded presentation, followed by Jennings-Lazard/Jacobson translation.
 
 No A2 CLOSED or p^2 theorem promotion is authorized until the residual-jet projection lemma is rigorously completed.
+
+
+## 2026-10-07 — A2 hand proof closes the finite-window upper bound
+
+A direct Magnus-algebra proof closes the A2 upper-bound gate, without invoking mildness. Set T=F_p<<xi,eta,zeta>> and I=(r-1), with r=z^p x^(-p)[x,y]^(-1). Every monomial of r-1 either contains eta or has at least p occurrences in the xi/zeta alphabet. Hence I has zero components in multidegrees (1,0,p-1) and (0,1,p-1).
+
+For an automorphism of W_p, choose a free-pro-p lift g~. Since g~(r) lies in R D_(p+1), its Magnus expansion satisfies g~(r)-1 in I+T_(>=p+1). A1 supplies the strong invariant g(<x,y>)=<x,y>, so g~(x),g~(y) have no zeta terms; consequently the commutator factor contributes no zeta multidegrees. The degree-p projections therefore come only from zeta'^p. Writing zeta'=chi zeta+(a-chi)xi+c eta+O(2), the (1,0,p-1) and (0,1,p-1) coefficients are chi^(p-1)(a-chi) and chi^(p-1)c, so a=chi and c=0. With chi=det(g|P)=ad, d=1.
+
+The pure (p,0,0) and (0,0,p) components are not zero in I; they identify the scalar multiple of the degree-p generator and reproduce the beta-compatible coefficient relations. Thus the earlier apparent coefficient ambiguity is resolved.
+
+Classification: **A2 finite-window upper bound = PASS / CLOSED**, assuming the already-closed A1 invariant and standard completed-group-algebra lift/Magnus facts. Gate B diagonal realization remains **OPEN / LOAD-BEARING**; the full Paper 5 p^2 theorem remains **OPEN / LOAD-BEARING**.
