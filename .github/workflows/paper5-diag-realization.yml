@@ -1,0 +1,10 @@
+name: Paper 5 diagonal realization p3
+on:
+  workflow_dispatch:
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y gap gap-autpgrp
+      - run: gap -q research/scripts/paper5_diag_realization_p3.g
