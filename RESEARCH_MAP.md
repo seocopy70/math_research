@@ -269,3 +269,49 @@ RD_{p^2+1}\subsetneq RD_{p+1}.
 Therefore \(W_{p^2}\to W_p=W_{p+1}\) is a strict canonical epimorphism, and the claim \(W_n=W_p\) for all \(n\ge p\) is **FAIL / CLOSED**. The term “strict shrinkage” refers to the defining denominator, not to a quotient inclusion.
 
 The restricted-\(p\)-power obstruction and the rejected Lie-induction route remain closed historical boundaries. The active Paper 5 load-bearing questions now concern the intrinsic automorphism/Frattini-image structure for general \(n\), not an all-\(n\) stabilization theorem.
+
+
+## 2026-10-06 — Paper 5 stabilization route superseded by persistence/global-image route
+
+The explicit (p^k) denominator chain is strictly descending, and the audited unipotent (b:xmapsto xy) satisfies
+[
+bin G_psetminus G_{p^2}.
+]
+Therefore the former stabilization target (G_n=G_p) is **FAIL / CLOSED** and is no longer an active theorem route.
+
+The new active conceptual target is the persistence spectrum of finite-window automorphism images:
+[
+H_n=operatorname{Aut}(W_n),qquad
+P_n=operatorname{Im}(H_n	o GL(H^1(W_n,mathbf F_p))),
+]
+with the stable image identified, under the cofinal inverse-limit hypotheses, with
+[
+G_infty=operatorname{Im}(operatorname{Aut}(G)	o GL(H^1(G,mathbf F_p))).
+]
+The inverse-limit/Mittag-Leffler identification is **PASS / CLOSED** as an auxiliary lemma.
+
+A critical model distinction is now authoritative: the corrected central-boundary (W_p) theorem with
+[
+|S'_{11}(p)|=p^2(p-1)^2
+]
+is not to be silently identified with the audited ((s,a)) family gates. The ((s,a)=(1,1)) values (6) for (p=3) and (20) for (p=5) arise from a different recorded presentation/model unless an explicit correspondence is proved. The model/index correspondence is **OPEN**.
+
+The intrinsic cohomological candidate for the global ((1,1)) image is
+[
+omega=x^*wedge y^*,qquad
+eta(lambda)=(lambda(x)-lambda(z))eta,
+]
+with (operatorname{rad}(omega)=langle zangle) and
+[
+|operatorname{Stab}(omega,eta)|=p(p-1).
+]
+The proposed theorem is an upper bound
+[
+operatorname{Im}(operatorname{Aut}(G)	o GL(H^1(G,mathbf F_p)))
+subseteqoperatorname{Stab}(omega,eta),
+]
+not equality yet. This gate is **OPEN / LOAD-BEARING**.
+
+Because (W_{p+1}=W_p), the first genuinely new window is (p+2). Future persistence tests must respect this indexing.
+
+Next authorized gates: **P5-MODEL-1** (presentation/index correspondence table), then **P5-COH-1** (intrinsic stabilizer upper bound and independent calculation). No blind prime/window sweep.
