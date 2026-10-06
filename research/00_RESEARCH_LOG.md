@@ -3510,3 +3510,14 @@ The global upper bound does not imply the finite-window upper bound because a fi
 If both gates close, monotonicity gives the all-window theorem without further n-by-n scanning.
 
 Detailed audit: research/PAPER5_P5_COH1_MODEL_INDEX_AUDIT_2026-10-07.md.
+
+
+## 2026-10-07 — P5-COH-2 stabilizer correction and G-category confirmation
+
+The scalar stabilizer of the actual cohomological pair (omega,beta) was independently recomputed from the Frattini relation jet. For P=<x,y> and V_*=<x,y,z>, the relation data are represented by (z-x,[x,y]). If g(P)=P and both components are allowed to scale by the same chi=det(g|_P), then g|_P is arbitrary in GL_2(F_p), and g(z-x)=chi(z-x). Hence S_coh^(1) ~= GL_2(F_p), |S_coh^(1)|=p(p-1)^2(p+1). Thus the values are 48 for p=3 and 480 for p=5. The chi=1 subgroup is SL_2(F_p), of order p(p^2-1). The previously used p(p-1) subgroup is proper and is NOT forced by (omega,beta) alone. The earlier p(p-1) cohomological upper-bound claim is FAIL / CLOSED / SUPERSEDED; the correct global cohomological upper bound is GL_2-level.
+
+The additional restriction to the observed p(p-1) image must come from a higher finite-window jet (A2). Gate A is therefore split into A1 (finite-window intrinsic GL_2-level upper bound) and A2 (intrinsic higher-jet cut to p(p-1)).
+
+Category check: the authoritative Paper 4/5 notation treats the groups as finitely generated pro-p one-relator groups, with Zassenhaus quotients computed from the pro-p presentation. In particular G_{1,1}=<z,x,y | z^p=x^p[x,y]> is in the pro-p setting. The discrete-group determinant +/-1 obstruction is therefore not applicable. Gate B remains OPEN: realizing all a in F_p^* is a pro-p lifting problem. Any Hensel/Labute-style argument must still be proved for this rank-3 one-relator pro-p group; no PD_2/Demushkin lifting theorem may be imported without checking hypotheses.
+
+Classification: scalar cohomological stabilizer = PASS / CLOSED / GENERAL; p(p-1) cohomological stabilizer = FAIL / CLOSED / SUPERSEDED; pro-p category identification = PASS / CLOSED; discrete determinant obstruction = NOT APPLICABLE; A2 = OPEN / LOAD-BEARING; Gate B = OPEN / LOAD-BEARING.
