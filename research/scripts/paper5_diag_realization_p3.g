@@ -27,7 +27,7 @@ while qidx<=Length(queue) and found=fail do
     fi;
   od;
 od;
-if found=fail then Error("diag target not reached"); fi;
+if found=fail then Print("DIAG_IMAGE_MATRICES=",qmat,"\\n"); Error("diag target not reached"); fi;
 Print("DIAG_TARGET=",target,"\\n");
 Print("DIAG_X=",Image(found,gens[2]),"\\n");
 Print("DIAG_Y=",Image(found,gens[3]),"\\n");
