@@ -181,3 +181,14 @@ The global upper bound does not imply the finite-window upper bound because a fi
 If both gates close, monotonicity gives the all-window theorem without further n-by-n scanning.
 
 Detailed audit: research/PAPER5_P5_COH1_MODEL_INDEX_AUDIT_2026-10-07.md.
+
+
+## 2026-10-07 — A2 residual-jet correction
+
+A2 remains OPEN / LOAD-BEARING. The original relator has initial Zassenhaus form r2=[x,y] in degree 2; the degree-p residual jet is therefore defined only after quotienting by J=(r2)_res. The old notation rp in Dp/Dp+1 for the original relator is superseded.
+
+The Jacobson projection to multidegrees (1,0,p-1) and (0,1,p-1) gives ad(z)^(p-1)(u_x) and ad(z)^(p-1)(u_y), respectively. This is consistent with p=3 but still requires a formal residual-jet/no-cancellation proof.
+
+The proposed Hilbert lower bound from cd(G)=2 and H2=1 is FAIL / CLOSED as a proof route. The p=3 values 3,2,8,10 are PASS / LOCAL checks only and are not the coefficients of (1-3t+t^2)^(-1), whose coefficients begin 1,3,8,21,55. The correct route is strongly-free [x,y] -> Labute mildness -> graded presentation, followed by Jennings-Lazard/Jacobson translation.
+
+No A2 CLOSED or p^2 theorem promotion is authorized until the residual-jet projection lemma is rigorously completed.
