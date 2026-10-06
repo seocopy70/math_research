@@ -3584,3 +3584,16 @@ The Zassenhaus restricted operation gives \([g^p]=[g]^{[p]}\), so the degree-p p
 - Paper 5 p^2 theorem: **OPEN / LOAD-BEARING**.
 
 This entry supersedes any session-level attempt to close A2 via a Hilbert-series lower bound. No A2 CLOSED or p^2 theorem promotion is authorized from that argument.
+
+
+## 2026-10-07 — P5-A2 residual-jet audit
+
+A2 remains OPEN / LOAD-BEARING. The relator has initial Zassenhaus form r2=[x,y] in degree 2, so the degree-p residual jet must be defined only after quotienting by the restricted relation ideal J=(r2)_res. The notation rp in Dp/Dp+1 for the original relator is superseded.
+
+The Jacobson multidegree projection is supported: with g(z)=chi z+u_x x+u_y y, the (1,0,p-1) and (0,1,p-1) projections are ad(z)^(p-1)(u_x) and ad(z)^(p-1)(u_y). This agrees with the p=3 finite-window image, but the residual-jet/no-cancellation lemma is not yet CLOSED.
+
+The proposed Hilbert lower-bound argument from cd(G)=2, H2=1, and Euler characteristic is FAIL / CLOSED as a proof route. These cohomological data do not determine the homogeneous dimensions of the Zassenhaus graded algebra. Also (1-3t+t^2)^(-1)=1+3t+8t^2+21t^3+55t^4+... is an enveloping/associative Hilbert series, not the restricted-Lie layer sequence 3,2,8,10. The p=3 Jennings values are PASS / LOCAL consistency data only.
+
+Correct route: the initial relation [x,y] is strongly free under the chosen monomial ordering, so the Labute mildness theorem gives the required graded presentation. The Zassenhaus/Jennings-Lazard identity [g^p]=[g]^[p] and the Jacobson formula give the group-to-Lie translation. Exact references and convention/sign checks remain to be inserted.
+
+Classification: residual-jet redefinition PASS / CLOSED; Hilbert fallback FAIL / CLOSED; strongly-free/Labute route PASS / LOCAL pending exact hypothesis/citation check; p=3 data PASS / LOCAL; A2 final higher-jet cut OPEN / LOAD-BEARING; Paper 5 p^2 theorem OPEN / LOAD-BEARING.
