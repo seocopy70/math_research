@@ -7,14 +7,21 @@ gens:=List(GeneratorsOfGroup(G),g->Image(ep,g));
 A:=AutomorphismGroupPGroup(W);
 phi:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
 V:=Image(phi); pc:=Pcgs(V);
-vec:=v->ExponentsOfPcElement(pc,v);
+vcoords:=function(v)
+  return List(ExponentsOfPcElement(pc,v),e->
+    [0*Z(3),Z(3)^0,Z(3)^2][e+1]);
+end;
+gensV:=List(gens,g->Image(phi,g));
+B:=TransposedMat(List(gensV,v->vcoords(v)));
+B:=B;
 matof:=function(alpha)
-  local imgs;
+  local imgs,C;
   imgs:=List(gens,g->Image(phi,Image(alpha,g)));
-  return TransposedMat(List(imgs,vec));
+  C:=TransposedMat(List(imgs,v->vcoords(v)));
+  return InverseMat(B)*C;
 end;
 Ag:=Concatenation(A.glAutos,A.agAutos);
-target:=ImmutableMatrix(GF(3),[[2,0,0],[0,1,0],[0,0,2]]);
+target:=ImmutableMatrix(GF(3),[[2,0,0],[0,2,0],[0,0,1]]);
 id:=IdentityMapping(W);
 queue:=[id]; qmat:=[matof(id)]; qidx:=1; found:=fail;
 while qidx<=Length(queue) and found=fail do
@@ -22,13 +29,14 @@ while qidx<=Length(queue) and found=fail do
   if cm=target then found:=cur; break; fi;
   for gg in Ag do
     nxt:=cur*gg; nm:=matof(nxt);
-    if not nm in qmat then
-      Add(queue,nxt); Add(qmat,nm);
-    fi;
+    if ForAll(qmat,m->m<>nm) then Add(queue,nxt); Add(qmat,nm); fi;
   od;
 od;
-if found=fail then Print("DIAG_IMAGE_MATRICES=",qmat,"\\n"); Error("diag target not reached"); fi;
-Print("DIAG_TARGET=",target,"\\n");
+if found=fail then
+  Print("DIAG_IMAGE_MATRICES=",qmat,"\\n");
+  Error("diag target not reached");
+fi;
+Print("DIAG_TARGET_ZXY=",target,"\\n");
 Print("DIAG_X=",Image(found,gens[2]),"\\n");
 Print("DIAG_Y=",Image(found,gens[3]),"\\n");
 Print("DIAG_Z=",Image(found,gens[1]),"\\n");
