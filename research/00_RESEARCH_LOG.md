@@ -3354,3 +3354,111 @@ Classification:
 - (G_\infty=G_p): **FAIL / CLOSED**;
 - exact (G_\infty) identification: **OPEN / LOAD-BEARING**;
 - exact (K_{p^k,p^{k-1}}) / crossed-derivation dimension: **OPEN / LOAD-BEARING**.
+
+
+## 2026-10-06 — Paper 5 post-stabilization route: global image and model/index correction
+
+The stabilization programme is now treated as **finished negatively**. The explicit (p^k) denominator chain is strictly descending, and the (b:xmapsto xy) obstruction gives
+[
+G_{p^2}subsetneq G_p.
+]
+The research target therefore shifts from proving stabilization to identifying which finite-level automorphisms persist.
+
+### Global inverse-limit image
+
+Under the standard cofinal-window hypotheses for the pro-(p) quotient (G=arprojlim W_n),
+[
+operatorname{Aut}(G)congarprojlim_noperatorname{Aut}(W_n),
+]
+and the induced finite linear images form a descending chain inside a finite group, hence stabilize. The stable image is the global image
+[
+G_infty=operatorname{Im}igl(operatorname{Aut}(G)	o GL(H^1(G,mathbf F_p))igr).
+]
+
+Classification: **PASS / CLOSED** as an auxiliary inverse-limit/Mittag-Leffler lemma, with its cofinality/compatibility hypotheses stated explicitly. This is not the principal load-bearing theorem.
+
+### Model/index mismatch must be resolved before numerical comparison
+
+The corrected central-boundary theorem
+[
+operatorname{Im}(operatorname{Aut}(W_p)	o GL(V))=S'_{11}(p),
+qquad |S'_{11}(p)|=p^2(p-1)^2,
+]
+belongs to the central presentation
+[
+[x,z]=[y,z]=1,qquad [x,y]=x^p z^{-p}.
+]
+
+The audited ((s,a)) GAP family is not automatically this same model. For example, the recorded ((s,a)=(1,1)), (p=3,n=4) presentation is
+[
+langle z,x,ymid z^3=x^3[x,y]angle,
+]
+with no prior identification of (z) as central in that ambient presentation. The actual gate values are
+[
+p=3:quad (0,1)=108, (1,1)=6, (0,2)=864, (1,2)=48,
+]
+and
+[
+p=5:quad (1,1)=20.
+]
+
+Thus the apparent mismatch is **OPEN model/index correspondence**, not an established computational error. A one-line correspondence table is now a required pre-gate.
+
+### Cohomological candidate
+
+For the global ((1,1))-type relation, the independently obtained mod-(p) data are
+[
+omega=x^*wedge y^*,qquad
+eta(lambda)=(lambda(x)-lambda(z))eta.
+]
+Hence
+[
+operatorname{rad}(omega)=langle zangle,
+]
+giving an intrinsic (z)-line. The stabilizer of ((omega,eta)) has order
+[
+p(p-1),
+]
+with affine-group structure
+[
+mathbf F_ptimesmathbf F_p^	imes.
+]
+
+The correct candidate statement is the upper bound
+[
+operatorname{Im}(operatorname{Aut}(G)	o GL(H^1(G,mathbf F_p)))
+subseteq operatorname{Stab}(omega,eta),
+]
+not equality with (S'_{11}(p)). The numerical values (6) for (p=3) and (20) for (p=5) match the audited ((1,1)) gates, but this is evidence only.
+
+Classification:
+- stabilizer calculation: **PASS / LOCAL** pending theorem-level writeup/independent check;
+- global-image upper bound: **OPEN / LOAD-BEARING**;
+- equality with the stabilizer: **OPEN**.
+
+### Indexing correction
+
+Since
+[
+W_{p+1}=W_p,
+]
+the first genuinely new window is (n=p+2). Therefore future persistence experiments must not treat (p+1) as a new window.
+
+### Research discipline
+
+Do not:
+- quotient (G_k/G_{k+1}) without proving normality;
+- infer finite-level non-liftability from one chosen free lift;
+- assume higher Bockstein/ordinary cohomology classifies deeper filtered windows without a bridge;
+- promote the amalgam/root-extension picture to a theorem without proving its canonical universal construction;
+- run a blind (p,n) sweep before fixing the model/index table and cohomological gate.
+
+### Next authorized gates
+
+1. **P5-MODEL-1:** explicit model/index correspondence table.
+2. **P5-COH-1:** prove the intrinsic upper bound and independently verify
+[
+operatorname{Stab}(omega,eta)congmathbf F_ptimesmathbf F_p^	imes.
+]
+3. Only then, if justified, run a targeted (p=3), (n=5,ldots,8) persistence test.
+
