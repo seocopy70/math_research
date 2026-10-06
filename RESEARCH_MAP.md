@@ -250,3 +250,22 @@ S_{11}(p)\subseteq\operatorname{Im}(\operatorname{Aut}(W_n)\to GL(V))
 is **CLOSED / GENERAL**, assuming the already-closed (\widetilde g(R)\subseteq R) gate. Equality is not established.
 
 This supersedes the immediately preceding 2026-10-06 claim that the (S_{11}(p)) upper bound and equality were CLOSED/GENERAL.
+
+
+## 2026-10-06 — Paper 5 stabilization boundary corrected
+
+The previous open all-\(n\) stabilization boundary is now closed negatively. For
+\[
+R=\langle[x,z],[y,z],[x,y]^{-1}x^pz^{-p}\rangle^F,
+\]
+the explicit map \(\phi:F\to\mathbf Z_p\), \(x,z\mapsto t\), \(y\mapsto1\), gives
+\[
+x^{p^2}\in RD_{p+1}\setminus RD_{p^2+1},
+\]
+hence
+\[
+RD_{p^2+1}\subsetneq RD_{p+1}.
+\]
+Therefore \(W_{p^2}\to W_p=W_{p+1}\) is a strict canonical epimorphism, and the claim \(W_n=W_p\) for all \(n\ge p\) is **FAIL / CLOSED**. The term “strict shrinkage” refers to the defining denominator, not to a quotient inclusion.
+
+The restricted-\(p\)-power obstruction and the rejected Lie-induction route remain closed historical boundaries. The active Paper 5 load-bearing questions now concern the intrinsic automorphism/Frattini-image structure for general \(n\), not an all-\(n\) stabilization theorem.
