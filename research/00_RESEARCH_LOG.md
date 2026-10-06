@@ -3528,3 +3528,59 @@ Classification: scalar cohomological stabilizer = PASS / CLOSED / GENERAL; p(p-1
 A direct p=3 computation at W_3=G/D_4 reports image order 6, while G/D_3 reports image order 864 and contains all 48 elements of the GL_2-level candidate. The six surviving maps have generator form g(x)=a x, g(y)=b x+y, g(z)=a z, a nonzero and b arbitrary; this is the row/image-convention form of the proposed p(p-1) subgroup. The 864 -> 6 transition therefore occurs exactly at the degree-p window, supporting the higher-jet A2 mechanism.
 
 Status: PASS / LOCAL for p=3. General A2 remains OPEN / LOAD-BEARING. Remaining proof gaps are intrinsic characterization of the degree-p relation jet in W_p and proof that its Jacobson cross-term cannot be canceled by lower-degree correction freedoms. Next authorized diagnostic is targeted p=5 at G/D_5 -> G/D_6=W_5, testing 480 -> 20 with the same subgroup form.
+
+
+## 2026-10-07 — P5-A2 residual-jet audit: Hilbert fallback rejected; mildness route adopted
+
+The A2 non-closure was reviewed after correcting the definition of the degree-p residual relation jet. The relator
+\[
+r=z^p x^{-p}[x,y]^{-1}
+\]
+has Zassenhaus initial form \(r_2=[x,y]\in L_2(F)\), so the degree-p object must be defined only after quotienting by the restricted relation ideal \(J=(r_2)_{\rm res}\). The notation \(r_p\in D_p/D_{p+1}\) for the original relator is therefore rejected and remains superseded.
+
+### A2-NC projection result
+
+For the actual pro-p one-relator model, A1 gives \(g(P)=P\). Writing
+\[
+g(z)=\chi z+u,\qquad u=u_xx+u_yy,
+\]
+the degree-p Jacobson expansion, projected to multidegrees \((1,0,p-1)\) and \((0,1,p-1)\), gives
+\[
+\pi_{x,z}=\operatorname{ad}(z)^{p-1}(u_x),\qquad
+\pi_{y,z}=\operatorname{ad}(z)^{p-1}(u_y).
+\]
+The two free-Lie multidegree components are one-dimensional, and \(\chi^{p-1}=1\). Thus the intended conclusion \(u_x=u_y=0\) is strongly supported and agrees with the p=3 finite-window image, but the residual-jet construction and its cancellation-free projection must still be written as a formal lemma.
+
+### Proposed Hilbert-series proof rejected
+
+The attempted lower-bound argument using \(cd(G)=2\), \(H_2(G,\mathbf F_p)=\mathbf F_p\), and Euler characteristic to force the Zassenhaus graded Hilbert series is **FAIL / CLOSED as a proof route**. Cohomological dimension and \(H_2\) do not by themselves determine the homogeneous dimensions of the associated graded algebra.
+
+Also, the series
+\[
+(1-3t+t^2)^{-1}=1+3t+8t^2+21t^3+55t^4+\cdots
+\]
+is the Hilbert series of the enveloping/associative graded algebra, not the sequence \(3,2,8,10\) of restricted-Lie layer dimensions. The p=3 Jennings values are therefore **PASS / LOCAL consistency data only**, not a Hilbert-series proof.
+
+### Correct route for (i)
+
+Use the initial relation \(r_2=[x,y]\) directly. With a Lyndon/monomial ordering for which the leading associative monomial is \(xy\), the word \(xy\) has no self-overlap. Hence the single relation is strongly free in the Anick sense; the corresponding Labute mildness theorem gives the graded presentation
+\[
+\operatorname{gr}\mathbf F_p[[G]]\cong T(x,y,z)/( [x,y] ).
+\]
+Equivalently, in restricted-Lie language, the associated graded Lie object is controlled by \(J=(r_2)_{\rm res}\). This is the appropriate route to justify the residual quotient; no Euler-characteristic lower bound is required.
+
+### (ii) group-to-Lie translation
+
+The Zassenhaus restricted operation gives \([g^p]=[g]^{[p]}\), so the degree-p power part is read as \(z^{[p]}-x^{[p]}\). The Jacobson formula then supplies the degree-p cross terms used in the projection argument. This is standard Jennings-Lazard machinery; the precise citation and convention/sign statement remain to be inserted in the manuscript.
+
+### Classification
+
+- A2 residual-jet redefinition: **PASS / CLOSED**.
+- Proposed \(cd/H_2\) Hilbert lower-bound proof: **FAIL / CLOSED as a proof route**.
+- Strongly-free \([x,y]\) / Labute-mildness route: **PASS / LOCAL-to-CLOSED pending exact citation/hypothesis check**.
+- p=3 Jennings dimensions \(3,2,8,10\): **PASS / LOCAL**.
+- group-to-Lie Zassenhaus/Jacobson translation: **PASS / LOCAL pending citation/convention check**.
+- A2 final higher-jet cut \(u_x=u_y=0\): **OPEN / LOAD-BEARING**.
+- Paper 5 p^2 theorem: **OPEN / LOAD-BEARING**.
+
+This entry supersedes any session-level attempt to close A2 via a Hilbert-series lower bound. No A2 CLOSED or p^2 theorem promotion is authorized from that argument.
