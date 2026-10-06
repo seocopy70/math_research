@@ -3311,3 +3311,46 @@ RD_{p^{k-1}+1}/RD_{p^k+1}
 modulo (R): graded dimensions, commutators, and restricted (p)-power map. Only then search for a characteristic sublayer. A plausible replacement target is the top (p^k)-power layer (D_{p^k}(W_{p^k})), not the entire kernel.
 
 Detailed audit: research/PAPER5_GATE1_POWER_KERNEL_AUDIT_2026-10-06.md.
+
+
+## 2026-10-06 — Gate 1 b-unipotent lift obstruction CLOSED
+
+The proposed next test (b:x\mapsto xy, y\mapsto y, z\mapsto z) at (W_{p^2}) has a direct abelianization obstruction for every odd (p).
+
+Let
+\[
+R=\langle[x,z],[y,z],[x,y]^{-1}x^pz^{-p}\rangle^F,
+\qquad W_{p^2}=F/(RD_{p^2+1}).
+\]
+The map (F\to\mathbf Z_p=\langle t\rangle) defined by
+\[
+x\mapsto1,\quad z\mapsto1,\quad y\mapsto t
+\]
+kills (R). Hence (y^p\notin RD_{p^2+1}), because its image is (t^p\notin D_{p^2+1}(\mathbf Z_p)=\mathbf Z_p^{p^3}).
+
+Now apply the proposed substitution to the defining relation. In the abelianization of (W_{p^2}), the relation gives (x^p=z^p). Its image under (x\mapsto xy) is
+\[
+(xy)^p z^{-p}=x^py^pz^{-p}=y^p,
+\]
+which is nonzero. Therefore (b) does not preserve the defining relation and cannot induce an automorphism of (W_{p^2}).
+
+Thus the specific (b)-unipotent element present in (G_p) is absent from (G_{p^2}):
+\[
+\boxed{b\in G_p\setminus G_{p^2}}.
+\]
+Consequently
+\[
+\boxed{G_{p^2}\subsetneq G_p},
+\]
+so the hypothesis (G_\infty=G_p) is **FAIL / CLOSED**. Eventual stabilization remains **PASS / CLOSED**, but its stable subgroup is strictly smaller than (G_p).
+
+What is *not* proved: the exact identity of (G_\infty) (e.g. a diagonal torus), the fate of the other unipotent (d), and the exact (G_{p^2}) or (G_\infty) subgroup. Those remain OPEN.
+
+A separate notation correction is required: reserve (C_k) for the characteristic descent kernel (D_{p^{k-1}+1}(W_{p^k})) only; call the top central layer (T_k:=D_{p^k}(W_{p^k})). Also, the right map \(\operatorname{Aut}(W_{p^k})\to\operatorname{Aut}(W_{p^{k-1}})\) is not asserted surjective; the displayed sequence is exact only through the kernel unless surjectivity is proved. Finally, because (C_k) is generally nonabelian, its kernel description is a nonabelian crossed-homomorphism/derivation problem; the formula \(3\dim C_k^{W}+\dim Z^1\) is not currently justified and must not be promoted.
+
+Classification:
+- (b:x\mapsto xy) lift to (W_{p^2}): **FAIL / CLOSED / GENERAL**;
+- (G_{p^2}\subsetneq G_p): **PASS / CLOSED / GENERAL**;
+- (G_\infty=G_p): **FAIL / CLOSED**;
+- exact (G_\infty) identification: **OPEN / LOAD-BEARING**;
+- exact (K_{p^k,p^{k-1}}) / crossed-derivation dimension: **OPEN / LOAD-BEARING**.
