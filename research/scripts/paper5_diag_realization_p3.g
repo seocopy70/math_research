@@ -3,7 +3,7 @@ p:=3;
 F:=FreeGroup("z","x","y"); z:=F.1; x:=F.2; y:=F.3;
 G:=F/[z^p*(x^p*Comm(x,y))^-1];
 qs:=PQuotient(G,p,p); ep:=EpimorphismQuotientSystem(qs); W:=Image(ep);
-gens:=List([z,x,y],g->Image(ep,g));
+gens:=List(GeneratorsOfGroup(G),g->Image(ep,g));
 A:=AutomorphismGroupPGroup(W);
 phi:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
 V:=Image(phi); pc:=Pcgs(V);
