@@ -3254,3 +3254,60 @@ The following upgrades are **not closed**:
 Classification: strict denominator chain = PASS/CLOSED/GENERAL; W_n non-stabilization = PASS/CLOSED/GENERAL in the witnessed sense; constant Frattini quotient = PASS/CLOSED under the stated hypothesis; constant Frattini-image = OPEN/LOAD-BEARING; exact +3 kernel-growth law = OPEN/LOAD-BEARING; Hom identification = FAIL/CLOSED; Schur-Zassenhaus split = FAIL/CLOSED.
 
 Research consequence: stabilization is finished negatively. The next authorized problem is the independent arbitrary-n Frattini-image/IA-layer structure, without promoting G_n=G_p or K_{p^k}/K_{p^{k-1}} ~= F_p^3.
+
+## 2026-10-06 — Gate 1 (p^k)-power/kernel domino rejected
+
+The proposed Paper 5 continuation from strict denominator shrinkage to a characteristic kernel was adversarially audited.
+
+### Proposed claim
+\[
+K_k:=RD_{p^{k-1}+1}/RD_{p^k+1}=W_{p^k}^{p^k},
+\qquad K_k\cong\mathbf F_p,
+\]
+followed by characteristicity, Aut descent, fixed (G_p), and a layerwise (+3) IA-growth law.
+
+### Audit result: FAIL / CLOSED as submitted
+
+1. **(k=1) obstruction.** The closed (n=p) theorem has
+\[
+D_p(W_p)=\langle x^p,y^p,z^p\rangle\cong\mathbf F_p^3.
+\]
+Thus the first kernel in the chain to (W_1=F/D_2) is not one-dimensional; the blanket assertion (A_k\cong\mathbf F_p) cannot hold with (k=1) included.
+
+2. **Centrality error.** From (D_{p^k+1}(W_{p^k})=1) one cannot conclude that the kernel at depth (p^{k-1}+1) is central. In general
+\[
+[D_{p^{k-1}+1},W_{p^k}]\subseteq D_{p^{k-1}+2},
+\]
+and (D_{p^{k-1}+2}) need not vanish modulo (D_{p^k+1}).
+
+3. **Missing graded-layer comparison.** The interval
+\[
+p^{k-1}+1\le n\le p^k
+\]
+contains multiple Zassenhaus layers, including independent restricted (p)-power contributions. The statement that the explicit (R) kills all non-(F^{p^k}) contributions is not a Jennings-basis count; it is the missing theorem itself. Jennings–Lazard identifies the Zassenhaus graded object as a restricted Lie algebra with both bracket and (p)-power operations. This is consistent with the earlier project-wide rejection of bracket-only stabilization arguments.
+
+4. **Downstream consequences blocked.** Therefore no promotion of characteristicity of (K_k), Aut descent, (G_{p^k}=G_p), the exact sequence
+\[
+0\to\operatorname{Hom}(V,\mathbf F_p)\to K_{p^k}\to K_{p^{k-1}}\to1,
+\]
+(p^{3k+C}) growth, or \(\operatorname{Aut}(W_{p^k})=K_{p^k}\rtimes G_p\).
+
+### What remains closed
+The strict denominator chain
+\[
+RD_{p^k+1}\subsetneq RD_{p^{k-1}+1}
+\]
+and strict canonical epimorphisms
+\[
+W_{p^k}\twoheadrightarrow W_{p^{k-1}}
+\]
+remain **PASS / CLOSED / GENERAL** by the established phi-witness.
+
+### Authorized next gate
+Do not continue the proposed domino. First determine the actual structure of
+\[
+RD_{p^{k-1}+1}/RD_{p^k+1}
+\]
+modulo (R): graded dimensions, commutators, and restricted (p)-power map. Only then search for a characteristic sublayer. A plausible replacement target is the top (p^k)-power layer (D_{p^k}(W_{p^k})), not the entire kernel.
+
+Detailed audit: research/PAPER5_GATE1_POWER_KERNEL_AUDIT_2026-10-06.md.
