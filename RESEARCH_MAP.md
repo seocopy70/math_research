@@ -315,3 +315,10 @@ not equality yet. This gate is **OPEN / LOAD-BEARING**.
 Because (W_{p+1}=W_p), the first genuinely new window is (p+2). Future persistence tests must respect this indexing.
 
 Next authorized gates: **P5-MODEL-1** (presentation/index correspondence table), then **P5-COH-1** (intrinsic stabilizer upper bound and independent calculation). No blind prime/window sweep.
+
+
+## 2026-10-06 — Paper 5 persistence correction
+
+The denominator strictness theorem and the automorphism-image chain are distinct. A direct Gate 0/1 certificate shows that the central model's b-unipotent is x -> x, y -> xy, z -> z and survives the tested p=3 windows n=4 and n=10, both with image order 36. The historical central-model G_{p^2} subsetneq G_p claim via b is therefore superseded.
+
+For the actual G_{1,1} family, exact scans give p=3: 864 -> 6 -> 6 at n=3,4,5, and p=5: 48000 -> 20 at n=5,6. The active question is now whether the p(p-1) cohomological stabilizer is the uniform image for all n >= p+1, not whether the central model exhibits image shrinkage. See research/PAPER5_GATE0_GATE3_PERSISTENCE_AUDIT_2026-10-06.md.

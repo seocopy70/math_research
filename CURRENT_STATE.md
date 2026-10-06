@@ -280,3 +280,12 @@ omega=x^*wedge y^*,qquad
 whose stabilizer has order (p(p-1)), as an upper bound for the global automorphism image. Equality remains **OPEN / LOAD-BEARING**.
 
 Since (W_{p+1}=W_p), the first genuinely new finite window is (p+2). No blind (p,n) sweep is authorized before the two gates above are settled.
+
+
+## 2026-10-06 — Latest Paper 5 Gate 0/1/3 correction
+
+The historical central-model b-obstruction is superseded by a direct certificate. In the central model, the b=1 map is x -> x, y -> xy, z -> z and survives the tested n=4 and n=10 windows at p=3. Therefore the earlier statement G_{p^2} subsetneq G_p for the central model via b is FAIL / CLOSED / SUPERSEDED. The denominator strictness RD_{p^2+1} subsetneq RD_{p+1} remains a separate PASS / CLOSED / GENERAL statement.
+
+For the actual G_{1,1} family, new exact scans give p=3 image orders 864,6,6 at n=3,4,5 and p=5 image orders 48000,20 at n=5,6. Thus the first observed image transition is n=p+1, followed by persistence through the next tested window. The candidate cohomological stabilizer has order p(p-1) and matches the tested actual images. Uniform equality remains OPEN / LOAD-BEARING.
+
+Detailed certificate: research/PAPER5_GATE0_GATE3_PERSISTENCE_AUDIT_2026-10-06.md.

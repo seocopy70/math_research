@@ -3462,3 +3462,32 @@ operatorname{Stab}(omega,eta)congmathbf F_ptimesmathbf F_p^	imes.
 ]
 3. Only then, if justified, run a targeted (p=3), (n=5,ldots,8) persistence test.
 
+
+
+## 2026-10-06 — Gate 0/1/3 persistence correction: central b-obstruction superseded
+
+The new independent certificate audit resolves the generator-direction ambiguity and separates the central model from the actual (s,a)=(1,1) family.
+
+### Gate 0
+In the central presentation basis (x,y,z), the explicit b-unipotent with parameter b=1 is
+x -> x, y -> xy, z -> z.
+The map is directly realized as a bijective automorphism on the tested central windows. Therefore the historical statement “b:x -> xy” must not be used as the central-model obstruction.
+
+### Gate 1
+For p=3, all 36 explicit S'_11(3) maps were verified as automorphisms at n=4 and n=10. Thus the central model has image order 36 at both tested windows. This is consistent with the analytic decomposition and directly refutes the historical central image-drop narrative.
+
+### Gate 3
+For the actual G_{1,1}=<z,x,y | z^p=x^p[x,y]>, the certified scans give |L_3|=864, |L_4|=6, |L_5|=6 for p=3, and |L_5|=48000, |L_6|=20 for p=5. Hence the first observed transition is at n=p+1, followed by persistence through the next tested window. The values 6,20 equal p(p-1).
+
+### Cohomological candidate
+For the actual (1,1)-family, the candidate data omega=x* wedge y*, beta(lambda)=(lambda(x)-lambda(z)) eta have stabilizer { [[a,b,0],[0,1,0],[0,0,a]] : a in F_p^*, b in F_p }, with order p(p-1). This agrees with the tested actual image orders, but direct relator/Fox derivation and uniform realization remain to be proved.
+
+### Classification
+- central b-direction certificate: PASS / LOCAL;
+- central image equality at p=3,n=4,10: PASS / LOCAL;
+- historical central G_{p^2} subsetneq G_p via b: FAIL / CLOSED / SUPERSEDED;
+- actual G_{1,1} transition/persistence through tested windows: PASS / LOCAL;
+- actual all-n equality L_n=Stab(omega,beta): OPEN / LOAD-BEARING;
+- p=5,n=7: OPEN / COMPUTATIONAL LIMIT (GAP collector stops at class 6).
+
+The separate denominator theorem RD_{p^2+1} subsetneq RD_{p+1} remains PASS/CLOSED/GENERAL and is not an automorphism-image theorem.

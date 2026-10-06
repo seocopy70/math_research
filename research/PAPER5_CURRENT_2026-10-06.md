@@ -148,3 +148,17 @@ Current status: the correction is committed, but post-correction runtime output 
 ## 2026-10-06 — Explicit-R audit correction
 
 The concrete relation subgroup is explicit, and its full degree-two initial layer closes the one-step boundary \(W_{p+1}=W_p\). The proposed reduction of all-n stabilization to \(F^p\subseteq R\) is rejected because the Zassenhaus graded object has restricted p-power contributions; \(L_{k+1}=[L_k,L_1]\) is not a general identity. All-n stabilization remains **OPEN / LOAD-BEARING**.
+
+
+## Addendum 7 — Gate 0/1/3 persistence certificate
+
+The central-model b-direction and actual (1,1)-family persistence were independently rechecked.
+
+- Central model, p=3: all 36 explicit S'_11(3) automorphisms survive at n=4 and n=10. In particular the b=1 element is x -> x, y -> xy, z -> z.
+- Therefore the historical central-model claim G_{p^2} subsetneq G_p via b:x -> xy is FAIL / CLOSED / SUPERSEDED. The denominator strictness RD_{p^2+1} subsetneq RD_{p+1} remains valid and is logically separate.
+- Actual G_{1,1}: p=3 gives GL-image orders 864,6,6 at n=3,4,5; p=5 gives 48000,20 at n=5,6.
+- The first observed transition is n=p+1, and the next tested window remains at p(p-1).
+- The candidate cohomological stabilizer Stab(omega,beta) has order p(p-1), matching these actual values. Uniform equality remains OPEN / LOAD-BEARING until the relator-derived (omega,beta) theorem and reverse realization are closed.
+- p=5,n=7 is not yet computed: GAP's p-quotient collector stops at class 6. This is a computational limitation, not a mathematical failure.
+
+Detailed certificate: research/PAPER5_GATE0_GATE3_PERSISTENCE_AUDIT_2026-10-06.md.
