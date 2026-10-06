@@ -221,3 +221,40 @@ The repaired Zassenhaus stabilization theorem is PASS / CLOSED / GENERAL in the 
 A second audit found a decisive gap in the repaired stabilization proof. The repaired lemmas do establish D_{k+1} <= M_{p+1}, but this yields only M_{k+1} <= M_k. The claimed reverse inclusion was incorrectly attributed to filtration monotonicity. Equality requires a separate proof that M_{p+1} <= D_{k+1}R for every k >= p+1.
 
 Therefore the repaired stabilization theorem is reverted to OPEN / LOAD-BEARING. The n<p and n=p,p+1 boundary theorems remain closed. The B,theta route remains non-load-bearing while this stabilization question is unresolved.
+
+
+## 2026-10-06 — All-n stabilization closed negatively by explicit p^2 witness
+
+The explicit relation subgroup
+\[
+R=\langle[x,z],[y,z],[x,y]^{-1}x^pz^{-p}\rangle^F
+\]
+has
+\[
+x^{p^2}\in RD_{p+1}\quad\text{but}\quad x^{p^2}\notin RD_{p^2+1}.
+\]
+The first inclusion is immediate from \(F^{p^2}\subseteq D_{p+1}\). For the second, use
+\[
+\phi:F\to\mathbf Z_p,quad x,z\mapsto t, y\mapsto1,
+\]
+for which \(\phi(R)=1\) and
+\[
+\phi(x^{p^2})=t^{p^2}\notin D_{p^2+1}(\mathbf Z_p)=\mathbf Z_p^{p^3}.
+\]
+Therefore
+\[
+\boxed{RD_{p^2+1}\subsetneq RD_{p+1}}.
+\]
+
+Classification:
+- strict denominator shrinkage at \(p^2\): **PASS / CLOSED / GENERAL**;
+- all-\(n\) stabilization \(W_n=W_p\) for all \(n\ge p\): **FAIL / CLOSED**;
+- explicit witness \(x^{p^2}\): **PASS / CLOSED**.
+
+Direction correction: the quotient is ordered oppositely. There is a canonical strict epimorphism
+\[
+\boxed{W_{p^2}\twoheadrightarrow W_p=W_{p+1}},
+\]
+not an inclusion \(W_{p^2}\subsetneq W_p\). “Strict shrinkage” means shrinkage of the defining normal subgroup \(RD_{n+1}\).
+
+This supersedes the immediately preceding OPEN/LOAD-BEARING all-\(n stabilization status. The failed Lie-induction route remains FAIL/CLOSED and is not revived.
