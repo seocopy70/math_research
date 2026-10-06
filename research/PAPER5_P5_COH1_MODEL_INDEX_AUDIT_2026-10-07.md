@@ -340,7 +340,7 @@ solved recursively in the Zassenhaus filtration.
 
 This is the legitimate Hensel/Newton formulation. The existence of the correction sequence has not yet been proved.
 
-A p=3 finite-window extraction certificate for the diagonal matrix is being used as a local guide, but it is not a substitute for the pro-p construction.
+A direct p=3 extraction attempt was audited against the exact Zassenhaus window, but the final generator-coordinate extraction is not yet closed; it is therefore not used as evidence for the general realization. The previously certified image-order result remains PASS / LOCAL.
 
 Classification:
 [
