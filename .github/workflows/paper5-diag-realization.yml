@@ -1,5 +1,7 @@
 name: Paper 5 diagonal realization p3
 on:
+  push:
+    branches: [paper5-gate0-gate3-20261006]
   workflow_dispatch:
 jobs:
   diag:
