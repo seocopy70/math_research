@@ -18,7 +18,7 @@ matof:=function(alpha)
   local imgs,C;
   imgs:=List(gens,g->Image(phi,Image(alpha,g)));
   C:=TransposedMat(List(imgs,v->vcoords(v)));
-  return InverseMat(B)*C;
+  return B^-1*C;
 end;
 Ag:=Concatenation(A.glAutos,A.agAutos);
 target:=ImmutableMatrix(GF(3),[[2,0,0],[0,2,0],[0,0,1]]);
