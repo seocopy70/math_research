@@ -230,3 +230,14 @@ RD_{p^{k-1}+1}/RD_{p^k+1},
 with the possibility that a characteristic **top (p^k)-power sublayer**, rather than the whole kernel, is the right object.
 
 Detailed audit: research/PAPER5_GATE1_POWER_KERNEL_AUDIT_2026-10-06.md.
+
+
+## 2026-10-06 — Top central layer audit
+
+Correction: characteristicity of K_k and existence of the induced Aut map are CLOSED by functoriality of the Zassenhaus filtration. The top layer C_k=D_{p^k}(W_{p^k}) is also characteristic and central.
+
+The proposed identification C_k = <x^(p^k), y^(p^k), z^(p^k)> = F_p^3 is NOT CLOSED. The phi witness x,z -> t, y -> 1 detects only the x/z diagonal direction; a second abelian witness detects y, so independence of three directions is not proved. The proposed containment R >= gamma_2(F)^p gamma_p(F) is not available, and the non-homogeneous relation carries higher filtered information.
+
+The +9 IA law is NOT CLOSED either: centrality gives an ambient Hom(V,C_k), but extension-class preservation can make the actual kernel smaller and lifting to the lower IA group is not automatic.
+
+Detailed audit: research/PAPER5_GATE1_TOP_LAYER_AUDIT_2026-10-06.md.
