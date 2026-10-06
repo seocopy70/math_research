@@ -31,7 +31,12 @@ end;
 
 runCentral:=function(n,c)
   local p,G,R,W,gens,count,m,a,b,d;
-  p:=3; G:=mkCentral(p); R:=winW(G,p,n,c); W:=R[1]; gens:=R[2]; count:=0;\n  if centralCandidate(W,gens,p,1,1,1,0) then\n    Print("GATE0_b_certificate: x->x, y->xy, z->z PASS\\n");\n  else Error("GATE0_b_certificate failed"); fi;
+  p:=3; G:=mkCentral(p); R:=winW(G,p,n,c); W:=R[1]; gens:=R[2]; count:=0;
+  if centralCandidate(W,gens,p,1,1,1,0) then
+    Print("GATE0_b_certificate: x->x, y->xy, z->z PASS\\n");
+  else
+    Error("GATE0_b_certificate failed");
+  fi;
   for m in [1,2] do for a in [1,2] do for b in [0,1,2] do for d in [0,1,2] do
     if not centralCandidate(W,gens,p,m,a,b,d) then
       Error(Concatenation("central candidate failed: ",String([m,a,b,d])));
