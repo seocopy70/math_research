@@ -3521,3 +3521,10 @@ The additional restriction to the observed p(p-1) image must come from a higher 
 Category check: the authoritative Paper 4/5 notation treats the groups as finitely generated pro-p one-relator groups, with Zassenhaus quotients computed from the pro-p presentation. In particular G_{1,1}=<z,x,y | z^p=x^p[x,y]> is in the pro-p setting. The discrete-group determinant +/-1 obstruction is therefore not applicable. Gate B remains OPEN: realizing all a in F_p^* is a pro-p lifting problem. Any Hensel/Labute-style argument must still be proved for this rank-3 one-relator pro-p group; no PD_2/Demushkin lifting theorem may be imported without checking hypotheses.
 
 Classification: scalar cohomological stabilizer = PASS / CLOSED / GENERAL; p(p-1) cohomological stabilizer = FAIL / CLOSED / SUPERSEDED; pro-p category identification = PASS / CLOSED; discrete determinant obstruction = NOT APPLICABLE; A2 = OPEN / LOAD-BEARING; Gate B = OPEN / LOAD-BEARING.
+
+
+## 2026-10-07 — P5-A2 p=3 direct diagnostic
+
+A direct p=3 computation at W_3=G/D_4 reports image order 6, while G/D_3 reports image order 864 and contains all 48 elements of the GL_2-level candidate. The six surviving maps have generator form g(x)=a x, g(y)=b x+y, g(z)=a z, a nonzero and b arbitrary; this is the row/image-convention form of the proposed p(p-1) subgroup. The 864 -> 6 transition therefore occurs exactly at the degree-p window, supporting the higher-jet A2 mechanism.
+
+Status: PASS / LOCAL for p=3. General A2 remains OPEN / LOAD-BEARING. Remaining proof gaps are intrinsic characterization of the degree-p relation jet in W_p and proof that its Jacobson cross-term cannot be canceled by lower-degree correction freedoms. Next authorized diagnostic is targeted p=5 at G/D_5 -> G/D_6=W_5, testing 480 -> 20 with the same subgroup form.
