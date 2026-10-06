@@ -289,3 +289,8 @@ The historical central-model b-obstruction is superseded by a direct certificate
 For the actual G_{1,1} family, new exact scans give p=3 image orders 864,6,6 at n=3,4,5 and p=5 image orders 48000,20 at n=5,6. Thus the first observed image transition is n=p+1, followed by persistence through the next tested window. The candidate cohomological stabilizer has order p(p-1) and matches the tested actual images. Uniform equality remains OPEN / LOAD-BEARING.
 
 Detailed certificate: research/PAPER5_GATE0_GATE3_PERSISTENCE_AUDIT_2026-10-06.md.
+
+
+## 2026-10-07 — Paper 5 P5-COH-1 closure and indexing correction
+
+GAP n means G/D_n; free-presentation W_m=F/(RD_{m+1}) equals G/D_{m+1}. The relator r=z^p x^{-p}[x,y]^{-1} directly gives omega=x* wedge y* and beta(lambda)=(lambda(x)-lambda(z))eta for odd p, hence Im Aut(G) is contained in S_coh(p)={[[a,b,0],[0,1,0],[0,0,a]]}, order p(p-1): PASS/CLOSED/GENERAL. The remaining load-bearing gates are the intrinsic upper bound at W_p and diagonal realization; no further blind n-scan is needed once those close.
