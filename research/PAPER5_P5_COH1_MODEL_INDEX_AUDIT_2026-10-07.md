@@ -97,7 +97,7 @@ Hence
 
 This is not merely a numerical fit. It is forced by the quadratic initial form of the actual relator.
 
-For standard background, the minimal-presentation formula relating commutator coefficients to cup products is recorded in Quadrelli's exposition of the one-relator pro-p cohomology calculation. citeturn0search12citeturn1search15
+For standard background, see Quadrelli, *Pro-p groups with few relations*, Proposition 3.2, and the minimal-presentation cup-product formula (NSW, Prop. 3.9.13).
 
 ---
 
@@ -128,7 +128,7 @@ Therefore
 
 A simultaneous replacement (etamapsto-eta) changes both displayed signs and has no effect on the stabilizer.
 
-The identification of p-power coefficients with Bockstein classes is the standard companion to the cup-product relation formula. citeturn1search7citeturn1search14
+The identification of p-power coefficients with Bockstein classes is the standard companion to the cup-product relation formula (NSW, Prop. 3.9.14; Labute's corresponding presentation formula).
 
 Thus the former status “candidate (omega,eta)” can now be upgraded to a theorem-level derivation for the global group, subject only to the declared basis/sign convention.
 
