@@ -21,7 +21,7 @@ matof:=function(alpha)
   return B^-1*C;
 end;
 Ag:=Concatenation(A.glAutos,A.agAutos);
-target:=ImmutableMatrix(GF(3),[[2,0,0],[0,2,0],[0,0,1]]);
+Print("AG_MATRICES=",List(Ag,a->matof(a)),"\\n");\ntarget:=ImmutableMatrix(GF(3),[[2,0,0],[0,2,0],[0,0,1]]);
 id:=IdentityMapping(W);
 queue:=[id]; qmat:=[matof(id)]; qidx:=1; found:=fail;
 while qidx<=Length(queue) and found=fail do
