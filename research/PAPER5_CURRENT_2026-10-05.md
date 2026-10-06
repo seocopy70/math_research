@@ -153,3 +153,34 @@ otin R D_{p+1}(F).
 Thus the degree-(p) restricted (p)-power layer is genuinely not absorbed by (R).
 
 This closes the proposed ((*))-repair route. It does **not yet** prove strict shrinkage (W_{p^2}subsetneq W_p); that requires an explicit witness in the relevant quotient. The arbitrary-(n) stabilization theorem therefore remains **OPEN**, but its current Lie-induction route is now **FAIL / CLOSED**.
+
+
+## 2026-10-06 — All-n stabilization definitively refuted by p^2 witness
+
+The explicit relation subgroup
+\[
+R=\langle[x,z],[y,z],[x,y]^{-1}x^pz^{-p}\rangle^F
+\]
+admits a strict denominator witness:
+\[
+x^{p^2}\in RD_{p+1}\setminus RD_{p^2+1}.
+\]
+Indeed \(x^{p^2}\in F^{p^2}\subseteq D_{p+1}\), while the homomorphism
+\[
+\phi:F\to\mathbf Z_p,qquad x,z\mapsto t, y\mapsto1
+\]
+kills \(R\) and sends \(x^{p^2}\) to \(t^{p^2}\notin D_{p^2+1}(\mathbf Z_p)=\mathbf Z_p^{p^3}\).
+
+Hence
+\[
+RD_{p^2+1}\subsetneq RD_{p+1}.
+\]
+The all-\(n\) stabilization claim is therefore **FAIL / CLOSED**, and the arbitrary-\(n\) theorem is no longer an open stabilization problem.
+
+Important quotient-direction correction: since the denominator shrinks, the quotient grows. There is a canonical strict epimorphism
+\[
+W_{p^2}=F/(RD_{p^2+1})\twoheadrightarrow W_p=F/(RD_{p+1})=W_{p+1},
+\]
+rather than an inclusion \(W_{p^2}\subsetneq W_p\). “Strict shrinkage” is the shrinkage of the defining normal subgroup.
+
+The earlier OPEN status and the rejected Lie-induction routes are superseded by this explicit counterexample.
