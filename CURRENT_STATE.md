@@ -258,3 +258,25 @@ Direction correction: the quotient is ordered oppositely. There is a canonical s
 not an inclusion \(W_{p^2}\subsetneq W_p\). “Strict shrinkage” means shrinkage of the defining normal subgroup \(RD_{n+1}\).
 
 This supersedes the immediately preceding OPEN/LOAD-BEARING all-\(n stabilization status. The failed Lie-induction route remains FAIL/CLOSED and is not revived.
+
+
+## 2026-10-06 — Paper 5 programme-level direction correction
+
+Paper 5 remains **OPEN / LOAD-BEARING**, but the former all-(n) stabilization target is now **FAIL / CLOSED**: the explicit (p^k) denominator chain is strict and (G_{p^2}subsetneq G_p) is certified by the (b:xmapsto xy) obstruction.
+
+The active programme-level target is now finite-window **automorphism persistence/global image identification**, not stabilization. Under the stated cofinal inverse-limit hypotheses,
+[
+G_infty=operatorname{Im}(operatorname{Aut}(G)	o GL(H^1(G,mathbf F_p)))
+]
+is the stable finite-level image; this is a **PASS / CLOSED auxiliary lemma**.
+
+The immediate control-tower gates are:
+1. **P5-MODEL-1:** reconcile the corrected central (W_p) model ((|S'_{11}(p)|=p^2(p-1)^2)) with the separately audited ((s,a)) family gate data ((p=3:(1,1)=6), (p=5:(1,1)=20)); this correspondence is currently **OPEN**.
+2. **P5-COH-1:** test the intrinsic cohomological candidate
+[
+omega=x^*wedge y^*,qquad
+eta(lambda)=(lambda(x)-lambda(z))eta,
+]
+whose stabilizer has order (p(p-1)), as an upper bound for the global automorphism image. Equality remains **OPEN / LOAD-BEARING**.
+
+Since (W_{p+1}=W_p), the first genuinely new finite window is (p+2). No blind (p,n) sweep is authorized before the two gates above are settled.
