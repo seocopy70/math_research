@@ -3491,3 +3491,22 @@ For the actual (1,1)-family, the candidate data omega=x* wedge y*, beta(lambda)=
 - p=5,n=7: OPEN / COMPUTATIONAL LIMIT (GAP collector stops at class 6).
 
 The separate denominator theorem RD_{p^2+1} subsetneq RD_{p+1} remains PASS/CLOSED/GENERAL and is not an automorphism-image theorem.
+
+
+## 2026-10-07 — P5-MODEL-1 / P5-COH-1 correction
+
+### Indexing fixed
+The GAP window is G/D_n. The free-presentation notation W_m=F/(RD_{m+1}) therefore satisfies W_m=G/D_{m+1}. Thus the relation-jet window called W_p is the GAP window n=p+1. The observed 864->6->6 (p=3) and 48000->20 (p=5) contains the transition G/D_p -> G/D_{p+1}=W_p; it is not evidence for a sequence of distinct post-W_p windows.
+
+### Cohomological gate closed
+For r=z^p x^{-p}[x,y]^{-1}, the minimal-presentation relation formula gives, for odd p, omega=x* wedge y* and beta(lambda)=(lambda(x)-lambda(z)) eta, up to the simultaneous sign choice of eta in H^2(G,F_p). Hence the intrinsic stabilizer is S_coh(p)={ [[a,b,0],[0,1,0],[0,0,a]] : a in F_p^*, b in F_p }, with order p(p-1). Naturality of cup product and Bockstein gives Im(Aut(G)->GL(H^1(G,F_p))) subseteq S_coh(p). Classification: PASS / CLOSED / GENERAL for the global upper bound.
+
+### n=p maximal-parabolic interpretation
+The local values satisfy |GL_3(F_3)|/864=13=3^2+3+1 and |GL_3(F_5)|/48000=31=5^2+5+1. Thus the observed n=p images have order p^3(p-1)^3(p+1), the stabilizer order of a point/line in P^2(F_p). This remains PASS / LOCAL; an embedded-equality certificate with the canonical <x,y> plane is still a separate subgate.
+
+### Remaining load-bearing gates
+The global upper bound does not imply the finite-window upper bound because a finite-window automorphism need not lift to G. The remaining targets are: (1) finite W_p intrinsic upper bound, proved directly from the degree-2 and degree-p relation jet; (2) diagonal realization of every diag(a,1,a) in Aut(G). The b-unipotent realization is already closed. A finite p=3 extraction attempt is not promoted because of coordinate/AutPGrp representation issues.
+
+If both gates close, monotonicity gives the all-window theorem without further n-by-n scanning.
+
+Detailed audit: research/PAPER5_P5_COH1_MODEL_INDEX_AUDIT_2026-10-07.md.
