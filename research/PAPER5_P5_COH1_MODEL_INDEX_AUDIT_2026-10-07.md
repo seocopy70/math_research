@@ -280,7 +280,7 @@ qquad
 
 Thus the (n=p) GAP images are the expected maximal parabolic order
 [
-p^2(p-1)^2(p+1)
+p^3(p-1)^3(p+1)
 ]
 and have index
 [
