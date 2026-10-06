@@ -66,5 +66,8 @@ runCentral(10,10);
 runActual(3,3,4);
 runActual(3,4,4);
 runActual(3,5,5);
+runActual(5,5,5);
+runActual(5,6,6);
+runActual(5,7,7);
 Print("PAPER5_GATE0_GATE1_GATE3=PASS_LOCAL\n");
 QUIT;
