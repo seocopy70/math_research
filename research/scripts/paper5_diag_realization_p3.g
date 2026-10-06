@@ -1,0 +1,26 @@
+LoadPackage("autpgrp");
+p:=3;
+F:=FreeGroup("z","x","y"); z:=F.1; x:=F.2; y:=F.3;
+G:=F/[z^p*(x^p*Comm(x,y))^-1];
+qs:=PQuotient(G,p,p); ep:=EpimorphismQuotientSystem(qs); W:=Image(ep);
+gens:=List([z,x,y],g->Image(ep,g));
+A:=AutomorphismGroupPGroup(W);
+phi:=NaturalHomomorphismByNormalSubgroup(W,FrattiniSubgroup(W));
+V:=Image(phi); pc:=Pcgs(V);
+vec:=v->ExponentsOfPcElement(pc,v);
+matof:=function(alpha)
+  local imgs;
+  imgs:=List(gens,g->Image(phi,Image(alpha,g)));
+  return TransposedMat(List(imgs,vec));
+end;
+Ag:=GeneratorsOfGroup(A); Ms:=List(Ag,a->matof(a)); GL:=Group(Ms);
+target:=ImmutableMatrix(GF(3),[[2,0,0],[0,1,0],[0,0,2]]);
+if not target in GL then Error("diag target absent"); fi;
+hm:=GroupHomomorphismByImages(A,GL,Ag,Ms);
+aa:=PreImagesRepresentative(hm,target);
+Print("DIAG_TARGET=",target,"\n");
+Print("DIAG_X=",Image(aa,gens[2]),"\n");
+Print("DIAG_Y=",Image(aa,gens[3]),"\n");
+Print("DIAG_Z=",Image(aa,gens[1]),"\n");
+Print("DIAG_CERT=PASS_LOCAL\n");
+QUIT;
