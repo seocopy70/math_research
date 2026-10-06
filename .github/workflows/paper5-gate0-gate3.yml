@@ -1,0 +1,29 @@
+name: Paper 5 Gate 0/1/3 certificate
+on:
+  push:
+    branches: [paper5-gate0-gate3-20261006]
+    paths:
+      - 'research/scripts/paper5_gate0_gate1_gate3.g'
+      - '.github/workflows/paper5-gate0-gate3.yml'
+  workflow_dispatch:
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP and AutPGrp
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y gap gap-autpgrp
+      - name: Run Paper 5 Gate 0/1/3
+        run: |
+          set -euo pipefail
+          gap -q research/scripts/paper5_gate0_gate1_gate3.g > paper5_gate0_gate1_gate3.log 2>&1
+          cat paper5_gate0_gate1_gate3.log
+          grep -Fq 'CENTRAL n=4' paper5_gate0_gate1_gate3.log
+          grep -Fq 'CENTRAL n=10' paper5_gate0_gate1_gate3.log
+          grep -Fq 'ACTUAL p=3 n=3' paper5_gate0_gate1_gate3.log
+          grep -Fq 'ACTUAL p=3 n=4' paper5_gate0_gate1_gate3.log
+          grep -Fq 'ACTUAL p=3 n=5' paper5_gate0_gate1_gate3.log
+          grep -Fq 'PAPER5_GATE0_GATE1_GATE3=PASS_LOCAL' paper5_gate0_gate1_gate3.log
