@@ -284,3 +284,112 @@ Classification:
 - (G_\infty=G_p): **FAIL / CLOSED**;
 - exact (G_\infty) identification: **OPEN / LOAD-BEARING**;
 - exact (K_{p^k,p^{k-1}}) / crossed-derivation dimension: **OPEN / LOAD-BEARING**.
+
+
+## 2026-10-06 — Post-stabilization direction correction: persistence/global-image route
+
+The negative stabilization result is now treated as final for the explicit relation model: the denominator chain is strictly descending along (p^k), and (G_{p^2}subsetneq G_p) via the closed (b:xmapsto xy) obstruction. Therefore the former objective “prove (G_n=G_p)” is abandoned rather than repaired.
+
+### Global image lemma
+
+Let (G=arprojlim_n W_n) be the corresponding pro-(p) quotient, with the finite windows cofinal in the defining filtration. The inverse-limit restriction map identifies
+[
+operatorname{Aut}(G)congarprojlim_n operatorname{Aut}(W_n)
+]
+under the standard compatible-window hypotheses. Since the relevant linear image at the first window is finite, the descending sequence of finite-level images stabilizes; the stabilized image is the image induced by (operatorname{Aut}(G)). Equivalently, with
+[
+G_infty:=operatorname{Im}igl(operatorname{Aut}(G)	o GL(H^1(G,mathbf F_p))igr),
+]
+the stable finite-level image is (G_infty).
+
+Classification: **PASS / CLOSED** as a short inverse-limit/Mittag-Leffler auxiliary lemma under the stated cofinal-window hypotheses. This is not the load-bearing theorem of Paper 5.
+
+### Central-boundary model versus the audited ((s,a)) family
+
+A numerical mismatch previously noticed between
+[
+|S'_{11}(p)|=p^2(p-1)^2
+]
+for the corrected central-boundary model (W_p), and the audited ((s,a)) gate values, is **not to be called an arithmetic contradiction**.
+
+They refer to different presentation/model data unless an explicit identification is supplied. In particular, the corrected (W_p) theorem uses the central boundary relations
+[
+[x,z]=[y,z]=1,qquad [x,y]=x^p z^{-p},
+]
+whereas the audited ((s,a)=(1,1)) family uses a different presentation (for example, at (p=3,n=4),
+[
+G_{1,1}=langle z,x,ymid z^3=x^3[x,y]angle
+]
+in the recorded computation), with no prior theorem identifying (z) as central in the ambient presentation.
+
+Therefore a dedicated **model/index correspondence table** is required before comparing gate orders.
+
+Known audited values that must remain distinct:
+- central (W_p) boundary image: (p^2(p-1)^2);
+- actual ((s,a)=(1,1)) gate: (6) at (p=3), (20) at (p=5);
+- p=3 additional audited gates: ((0,1)=108), ((0,2)=864), ((1,2)=48).
+
+Classification: **OPEN** model/index correspondence. No value is to be reinterpreted by silently identifying the two models.
+
+### Cohomological upper-bound candidate
+
+For the global ((1,1))-type relation, the independently computed mod-(p) data are
+[
+omega=x^*wedge y^*,qquad
+eta(lambda)=(lambda(x)-lambda(z)),eta.
+]
+The radical is
+[
+operatorname{rad}(omega)=langle zangle,
+]
+so the (z)-line is intrinsically characterized by the cup product. The stabilizer of the pair ((omega,eta)) has order
+[
+p(p-1),
+]
+and is isomorphic to the affine group ( mathbf F_ptimesmathbf F_p^	imes).
+
+The correct proposed implication is therefore
+[
+operatorname{Im}igl(operatorname{Aut}(G)	o GL(H^1(G,mathbf F_p))igr)
+subseteq
+operatorname{Stab}(omega,eta),
+]
+not an equality with the central-boundary group (S'_{11}(p)).
+
+The numerical match
+[
+p=3: 6,qquad p=5: 20
+]
+with the actual ((1,1)) gates is strong evidence but is **not itself a proof of equality**.
+
+Classification:
+- (operatorname{Im}(operatorname{Aut}(G)	o GL(H^1))subseteqoperatorname{Stab}(omega,eta)): **OPEN / LOAD-BEARING candidate** until the naturality/derivation argument is written and independently checked.
+- (|operatorname{Stab}(omega,eta)|=p(p-1)): **PASS / LOCAL** until the full algebraic calculation is entered as a theorem-level proof.
+- Equality with the stabilizer: **OPEN**.
+
+### Window indexing correction
+
+Because
+[
+W_{p+1}=W_p,
+]
+the first genuinely new window after the closed boundary is (n=p+2), not (p+1). Any persistence experiment must therefore distinguish (p), (p+1), and (p+2) explicitly.
+
+### Methodological prohibitions carried forward
+
+- Do not form (G_k/G_{k+1}) without proving normality.
+- Do not use failure of one chosen free lift as a finite-level image obstruction; use the lift-independent/coset-wide relation obstruction.
+- Do not assume ordinary or higher Bockstein data classify all deeper windows without an explicit bridge theorem.
+- The amalgam/root-extension interpretation suggested by (z^p=[x,y]^{-1}x^p) remains **OPEN**; canonicality of such a decomposition is not established.
+- No blind (p,n) sweep is authorized before the model/index table and the cohomological stabilizer gate are fixed.
+
+### Authorized next gate
+
+**P5-MODEL-1:** build the explicit model/index correspondence table (presentation, (s,a), (n), window, relator, gate order).
+
+Then **P5-COH-1:** prove and independently verify the intrinsic cohomological upper bound and compute
+[
+operatorname{Stab}(omega,eta)congmathbf F_ptimesmathbf F_p^	imes.
+]
+
+Only after these gates pass should a targeted (p=3, n=5,ldots,8) persistence experiment be considered.
