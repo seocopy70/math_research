@@ -13,10 +13,10 @@ matof:=function(alpha)
   imgs:=List(gens,g->Image(phi,Image(alpha,g)));
   return TransposedMat(List(imgs,vec));
 end;
-Ag:=GeneratorsOfGroup(A); Ms:=List(Ag,a->matof(a)); GL:=Group(Ms);
+Ag:=Concatenation(A.glAutos,A.agAutos); Ms:=List(Ag,a->matof(a)); GL:=Group(Ms);\nAG:=Group(Ag);
 target:=ImmutableMatrix(GF(3),[[2,0,0],[0,1,0],[0,0,2]]);
 if not target in GL then Error("diag target absent"); fi;
-hm:=GroupHomomorphismByImages(A,GL,Ag,Ms);
+hm:=GroupHomomorphismByImages(AG,GL,Ag,Ms);
 aa:=PreImagesRepresentative(hm,target);
 Print("DIAG_TARGET=",target,"\n");
 Print("DIAG_X=",Image(aa,gens[2]),"\n");
