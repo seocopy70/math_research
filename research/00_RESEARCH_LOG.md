@@ -3232,3 +3232,25 @@ Classification:
 - quotient relation: \(W_{p^2}\twoheadrightarrow W_p\) strict, with kernel nontrivial.
 
 This supersedes the immediately preceding OPEN status of the all-\(n\) stabilization question. It does not reopen the rejected Lie-induction route.
+
+
+## 2026-10-06 — General-n strict-shrinkage / Aut audit
+
+The generalization of the explicit witness is closed, but the proposed complete Aut(W_n) formula is not.
+
+**PASS / CLOSED / GENERAL (explicit R):** for every k>=1, with R=<[x,z],[y,z],[x,y]^{-1}x^p z^{-p}>^F and phi(x)=phi(z)=t, phi(y)=1,
+ x^{p^k} in F^{p^k} subseteq D_{p^{k-1}+1} subseteq R D_{p^{k-1}+1},
+while phi(x^{p^k})=t^{p^k} is not in D_{p^k+1}(Z_p)=Z_p^{p^{k+1}}. Hence RD_{p^k+1} is a proper subgroup of RD_{p^{k-1}+1}, giving strict canonical epimorphisms W_{p^k} ->> W_{p^{k-1}}. This is the correct general strict-shrinkage theorem.
+
+The following upgrades are **not closed**:
+- W_n/Phi(W_n) ~= F_p^3 under R subseteq Phi(F) is closed, but this does not imply constant Im(Aut(W_n)->GL(V)).
+- D_{k+1}(W_n) is a Zassenhaus/Jennings term, not a standard Frattini-series term.
+- The witness line <x^{p^k}> does not prove Phi(W_{p^k}) is a direct product extension of Phi(W_{p^{k-1}}), nor that the quotient kernel has order exactly p.
+- G_n=G_p for all n>=p remains **OPEN / LOAD-BEARING**: higher relation/extension constraints can change which V-linear maps lift.
+- IA(W_n) ~= Hom(V,Phi(W_n)) is **FAIL / CLOSED as a general identification**; only suitable central elementary-abelian layers admit such Hom/derivation descriptions.
+- The proposed exact sequence K_{p^k} -> K_{p^{k-1}} is not established; an automorphism of W_{p^k} need not descend unless the quotient kernel is characteristic/preserved.
+- Schur-Zassenhaus does not yield Aut(W_n)=K_n semidirect G_p because G_p may contain p-torsion (the current S'_11(p) does).
+
+Classification: strict denominator chain = PASS/CLOSED/GENERAL; W_n non-stabilization = PASS/CLOSED/GENERAL in the witnessed sense; constant Frattini quotient = PASS/CLOSED under the stated hypothesis; constant Frattini-image = OPEN/LOAD-BEARING; exact +3 kernel-growth law = OPEN/LOAD-BEARING; Hom identification = FAIL/CLOSED; Schur-Zassenhaus split = FAIL/CLOSED.
+
+Research consequence: stabilization is finished negatively. The next authorized problem is the independent arbitrary-n Frattini-image/IA-layer structure, without promoting G_n=G_p or K_{p^k}/K_{p^{k-1}} ~= F_p^3.
