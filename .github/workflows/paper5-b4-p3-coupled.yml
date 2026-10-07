@@ -1,0 +1,17 @@
+name: Paper5 B4 p3 coupled Magnus lifting
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/PAPER5_B4_P3_COUPLED_MAGNUS_2026-10-07.py'
+      - '.github/workflows/paper5-b4-p3-coupled.yml'
+jobs:
+  b4:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run coupled degree 4-6 solver
+        run: python research/PAPER5_B4_P3_COUPLED_MAGNUS_2026-10-07.py
