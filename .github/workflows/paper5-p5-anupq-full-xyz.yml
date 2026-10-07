@@ -7,6 +7,7 @@ on:
     paths:
       - 'research/scripts/paper5_p5_full_xyz_lift_solver.g'
       - 'research/scripts/paper5_p5_anupq_capability.g'
+      - 'research/scripts/install_gap_anupq.sh'
       - '.github/workflows/paper5-p5-anupq-full-xyz.yml'
 
 jobs:
@@ -19,8 +20,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          sudo apt-get update
-          sudo apt-get install -y gap gap-anupq gap-autpgrp
+          bash research/scripts/install_gap_anupq.sh
 
       - name: Verify GAP/ANUPQ discovery
         shell: bash
