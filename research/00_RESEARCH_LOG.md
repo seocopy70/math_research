@@ -3666,3 +3666,23 @@ Classification:
 Detailed audit: research/PAPER5_GATE_B_B1_D4_MAGNUS_AUDIT_2026-10-07.md.
 
 Next authorized action: compute the first nonzero residual class of E_a, starting at D_5/D_6 for p>=5, and derive the correction map at the correct degree. Do not assume a D4 obstruction or a D3 correction seed.
+
+
+## 2026-10-07 — Gate B B4 p=3 Hensel pre-check correction
+
+A proposed p=3 continuation was audited before launching the suggested 3^9 search for (U\in I^2/I^3). The proposal is not yet computation-ready as a theorem-closing gate.
+
+The decisive consistency issue is that the supplied calculation says the degree-4 target is already solved with (U=0), while a proposed (U=XX) has nonzero degree-4 contribution through (Z^2U+ZUZ+UZ^2). Thus (U=XX) cannot be used solely to cancel the degree-6 remainder unless the lower-degree equations are simultaneously re-solved with additional correction layers. The correct lifting problem is coupled: write (W=Z+U_2+U_3+\cdots) and solve degree 4, then 5, then 6 in the same quotient.
+
+A second correction affects the p>=5 conclusion. The degree-4 vanishing and the observation that ([x^a,y]-a[X,Y]) lies in the relation ideal do not by themselves prove (E_a=1) in the pro-p group. The first p-power layer is load-bearing; the phrase “cancelled by (R^p)” requires an explicit restricted-Lie/Magnus calculation. Therefore the new p>=5 claim is not promoted to PASS/CLOSED. Existing D4 remains PASS/LOCAL only.
+
+Classification:
+- Gate-B D4 vanishing: **PASS / LOCAL**.
+- p>=5 pro-p diagonal realization: **OPEN / LOAD-BEARING**.
+- p=3 Hensel correction existence: **OPEN / LOAD-BEARING**.
+- “(U=XX) solves the p=3 degree-6 remainder”: **CONDITIONAL / UNVERIFIED**.
+- No Gate-B failure is established.
+
+Detailed audit: `research/PAPER5_GATE_B_B4_P3_HENSEL_AUDIT_2026-10-07.md`.
+
+Next authorized action: construct the coupled p=3 truncated-Magnus equations through degree 6 and solve them in order, rather than a standalone (U^3=R_6) search. A local solution remains PASS/LOCAL until compatible pro-p lifting is proved.
