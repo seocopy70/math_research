@@ -3612,3 +3612,20 @@ The pure degree-p components (p,0,0) and (0,0,p) must NOT be treated as zero com
 The lift step is standard for a free pro-p presentation: choose lifts of the images of free generators. The induced endomorphism of F represents an automorphism of W_p, hence tilde g(r) lies in R D_(p+1); under the Magnus filtration this gives tilde g(r)-1 in I+T_(>=p+1). The remaining caveat is to state this precisely for the completed group algebra and to fix commutator/sign conventions.
 
 Classification: A2 upper bound is **PASS / CLOSED**, conditional only on the already-established A1 invariant P=<x,y> and the standard lift/Magnus facts. A2 residual-jet/no-cancellation is therefore no longer load-bearing. Gate B (realization of diag(a,1,a) in Aut(G)) remains **OPEN / LOAD-BEARING**. Paper 5 p^2 theorem remains **OPEN / LOAD-BEARING**.
+
+
+## 2026-10-07 — A2 CLOSED; Gate B is the sole load-bearing branch
+
+The audited Magnus-algebra hand proof closes the finite-window A2 higher-jet upper bound. Using the strong A1 invariant g(<x,y>)=<x,y>, the degree-p projections in multidegrees (1,0,p-1) and (0,1,p-1) isolate the zeta-image p-power and force a=chi and c=0; chi=ad then forces d=1. The pure degree-p components are retained as the relation-generator scalar terms and are beta-compatible. This is classified **PASS / CLOSED** under the stated pro-p lift and completed-Magnus hypotheses. Earlier same-day A2-OPEN entries are **HISTORICAL / SUPERSEDED**.
+
+The successful conceptual move is dual/functional in character: instead of computing the whole relation image, project to critical linear functionals (specific Magnus multidegrees). This validates the user's duality intuition as a methodology already realized inside A2, but it does not justify opening a new generic C_n^* branch.
+
+The active load-bearing problem is now Gate B: construct, for every a in F_p^*, a pro-p automorphism with linear image diag(a,1,a). The naive x->x^a, z->z^a, y->y substitution is only a seed; higher corrections must be solved so the relator is preserved. A finite-window correction is PASS / LOCAL unless compatible pro-p lifting is proved. The b-unipotent realization is already closed.
+
+Classification:
+- A2 finite-window higher-jet upper bound: **PASS / CLOSED**.
+- dual/functional A2 viewpoint as an independent new branch: **HISTORICAL / SUPERSEDED as a separate branch**; retained as successful methodology.
+- diagonal pro-p realization: **OPEN / LOAD-BEARING**.
+- full Paper 5 p^2 theorem: **OPEN / LOAD-BEARING**.
+
+Next authorized action: Gate-B pre-check and the cheapest deterministic realization test; no blind prime/window sweep and no new generic dual-space construction.
