@@ -238,3 +238,14 @@ The first explicit Magnus test for E_a=x^{ap}[x^a,y]z^{-ap} is now recorded. For
 Classification: B1 D4 vanishing = PASS / LOCAL. The tentative B3 degree-4 obstruction and the map L_2 -> L_3 are therefore not the relevant next gate. The next authorized layer is the first nonzero residual class, beginning at D_5/D_6 for p>=5. Gate B remains OPEN / LOAD-BEARING.
 
 Detailed audit: research/PAPER5_GATE_B_B1_D4_MAGNUS_AUDIT_2026-10-07.md.
+
+
+## 2026-10-07 — Gate B B4 p=3 Hensel pre-check correction
+
+The proposed p=3 (U\in I^2/I^3) Hensel search was audited before execution. The suggested standalone degree-6 equation is not yet sufficient: if the degree-4 target is solved by (U=0), then a nonzero (U_2) changes degree 4 through (Z^2U_2+ZU_2Z+U_2Z^2). Hence the claim (U=XX) cancels the degree-6 remainder cannot be accepted without solving the coupled degree-4/5/6 equations. The correct object is (W=Z+U_2+U_3+\cdots), solved layer-by-layer in the same truncated Magnus quotient.
+
+The p>=5 “all higher layers cancel by (R^p)” argument is also not yet a proof: D4 vanishing is established, but the first restricted p-power layer remains load-bearing. Therefore no PASS/CLOSED promotion is made from the new hand argument.
+
+Classification: p=3 Hensel correction = **OPEN / LOAD-BEARING**; (U=XX) claim = **CONDITIONAL / UNVERIFIED**; p>=5 full pro-p diagonal realization = **OPEN / LOAD-BEARING**. Existing D4 result remains **PASS / LOCAL**.
+
+Detailed audit: `research/PAPER5_GATE_B_B4_P3_HENSEL_AUDIT_2026-10-07.md`.
