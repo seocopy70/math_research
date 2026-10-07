@@ -127,3 +127,99 @@ If that alternative script is to be reconciled, compare its exact definitions of
 5. whether it checks each degree cumulatively modulo I+Delta^{T+1}.
 
 Only after that comparison should any further numerical correction be considered.
+
+
+## 2026-10-07 — Superseding correction: full non-homogeneous ideal check
+
+The preceding audit in this file is **HISTORICAL / SUPERSEDED**. A supplied independent script was executed verbatim and its membership semantics were inspected.
+
+The script tests the actual two-sided ideal
+\[
+I=\langle r-1\rangle
+\]
+in the truncated associative Magnus algebra, using the full non-homogeneous element \(r-1\), not its homogeneous components independently.
+
+For p=3, a=2, W=z^2, X_2=x^6[x^2,y], the reproduced results are:
+
+| T | xc | cx |
+|---|---|---|
+| 2 | True | True |
+| 3 | True | True |
+| 4 | **False** | **False** |
+| 5 | False | False |
+| 6 | False | False |
+| 7 | False | False |
+
+The sanity path a=1, ORDER=cx is True for every tested T=2,...,7.
+
+### Why the previous D4 argument was wrong
+
+The previous audit conflated two different membership problems.
+
+The existing D9 script independently checks
+\[
+(q_N)\in J_N,
+\qquad
+J=\langle (r-1)_2,(r-1)_3,\ldots\rangle,
+\]
+degree by degree.
+
+The supplied full-ideal script checks
+\[
+q\in I+\Delta^{T+1},
+\qquad
+I=\langle r-1\rangle.
+\]
+
+Although \(J\) contains \(I\), the degree components of an element of I are **coupled**: the same left/right context coefficients multiply the entire non-homogeneous element \(r-1\), hence simultaneously constrain its degree-2, degree-3, degree-4, ... contributions.
+
+Membership of each \(q_N\) separately in \(J_N\) does not imply existence of one common linear combination of the full generators \(u(r-1)v\) whose total truncated expansion equals q.
+
+This is exactly why the old D4 rank-32 calculation can pass while the full T=4 calculation fails.
+
+### Correct finite-window consequence
+
+For a=2 the strongest currently established local statement is the homogeneous/J certificate
+\[
+(q_N)\in J_N,\quad 3\le N\le9,
+\]
+not
+\[
+q\in I+\Delta^{10}.
+\]
+
+The previously recorded claim
+\[
+E_2\in ND_{10}
+\]
+is therefore **not established** by D3-D9 and must be withdrawn.
+
+The full non-homogeneous test gives instead
+\[
+E_2\notin ND_5
+\]
+under the stated conventions, because T=4 already fails. This is a genuine finite-window obstruction to the zero-correction seed W=z^2, not a proof that no higher correction W=z^2+U_2+\cdots can exist.
+
+### Classification
+
+- Existing homogeneous D3-D9 J-membership: **PASS / LOCAL**, but weaker than filtered-ideal membership.
+- Full non-homogeneous ideal membership for a=2, T=2,3: **PASS / LOCAL**.
+- Full non-homogeneous ideal membership for a=2, T=4: **FAIL / LOCAL**.
+- Zero-correction seed W=z^2 satisfying the relation through D4: **FAIL / CLOSED for the seed**.
+- Claim E_2 in ND_10 from the previous D3-D9 record: **FAIL / CLOSED / SUPERSEDED**.
+- Existence of a corrected pro-3 lift W=z^2+U_2+...: **OPEN / LOAD-BEARING**.
+- Gate B: **OPEN / LOAD-BEARING**.
+
+### Authorized next action
+
+Do not run D10 on the zero-correction seed as if the D4 obstruction were absent.
+
+The correct next question is the coupled correction problem:
+\[
+W=z^2+U_2+U_3+\cdots
+\]
+with
+\[
+W^3-X_2\in I+\Delta^{T+1}
+\]
+tested using the **full non-homogeneous ideal** I. Solve the coupled equations beginning at the first failed degree T=4. A finite corrected solution remains PASS / LOCAL until compatible all-degree pro-3 lifting is proved.
