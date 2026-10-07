@@ -1,0 +1,17 @@
+name: Paper5 B4 p3 a2 D9 Magnus
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/PAPER5_B4_P3_A2_D9_MAGNUS_2026-10-07.py'
+      - '.github/workflows/paper5-b4-p3-a2-d9.yml'
+jobs:
+  d9:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run p3 a2 D4-D9 full ideal membership
+        run: python research/PAPER5_B4_P3_A2_D9_MAGNUS_2026-10-07.py
