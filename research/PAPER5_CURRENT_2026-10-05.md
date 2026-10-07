@@ -451,3 +451,29 @@ Evidence: research/PAPER5_GATE_B_P3_A2_GROUP_LEVEL_D6_AUDIT_2026-10-07.md.
 The Labute/Kochloukova–Zalesskii literature check did not identify a direct prescribed-diagonal automorphism theorem. Labute's relator-equivalence theorem is relevant methodology but does not by itself close the present Gate B; the amalgam/root-extension reduction remains OPEN.
 
 Authorized next action: compare the five D6 solutions' weight-2/weight-3 parameters before any D7/D8 expansion.
+
+
+## 2026-10-08 — Gate B D6 five-survivor structure correction
+
+The earlier interpretation of the five D6 representatives as structural signals is **superseded**.
+
+The exact D5 enumeration gives an affine set (S_5\subset\mathbf F_3^9) of size (27=3^3), and the weight-1 conjugation/gauge action has a 3-dimensional translation space equal to the direction space of (S_5). Hence (S_5) is a **single gauge orbit**. The preceding D6 count (27\to5) is only the result of fixing the D6 (e_3) particular slice; it is not a selection among five inequivalent (e_2)-classes.
+
+For the D6 solver representatives:
+- (s=(0,0,0)) is **not** established as forced; it is a particular representative choice.
+- sparsity/equality patterns in (e_3,e_4,e_5) are **not gauge-invariant evidence**.
+- in particular the common representative (e_3) coordinate for indices 5,8,14 is not promoted as a structural coincidence.
+- the five surviving indices (3,4,5,8,14) are not five competing mathematical classes.
+
+The robust D5 structural data are the affine/gauge-orbit statements above. The D4 nonhomogeneous obstruction is also recorded: (e_2=0) fails because the D4 system contains the constant-1 equation
+(y.[y,x]+z.[z,x]=1), with representative (y\mapsto y[y,x]=x^{-1}yx) at weight 2.
+
+**Classification**
+- D5 affine structure ( |S_3|=729, |S_4|=81, |S_5|=27), dimensions (6,4,3): **PASS / LOCAL**.
+- (S_5) is one gauge orbit under the verified weight-1 conjugation action: **PASS / LOCAL**.
+- D6 (27\to5) as a structural class count: **FAIL / CLOSED**.
+- D6 representative sparsity as structural evidence: **FAIL / CLOSED**.
+- uniqueness/normal form for the full D6 (e_3)-lift modulo gauge: **OPEN**.
+- D7/D8 computation: **DEFERRED** pending the (e_3) gauge-normalization/object definition.
+
+**Authorized next action:** define the exact induced gauge action on the D6 (e_3) data, quotient/normalize it, and test whether any invariant remains. Do not run D7/D8 merely from the five representative outputs.
