@@ -3936,3 +3936,24 @@ A repository-level audit was performed first. The authoritative D6 audit records
 This is classified as **OPEN / LOAD-BEARING data-extraction boundary**, not as a mathematical failure. The required comparison is fixed: common basis/order normalization -> extract U2,U3 -> remove only proven gauge redundancy -> pairwise differences -> affine/kernel/coset test -> identify the D6-selected parameter -> derive targeted D7/D8 equations only if a stable correction law emerges.
 
 No blind D7/D8 calculation is authorized before the five D6 branches are structurally compared. Existing finite realization remains **PASS / LOCAL**; Gate B remains **OPEN / LOAD-BEARING**.
+
+
+## 2026-10-08 — Gate B D6 structure correction: five survivors are not five classes
+
+A correction was made to the interpretation of the D6 solver output. The D5 solution set (S_5\subset\mathbf F_3^9) has exactly 27 elements and is an affine 3-space. The verified weight-1 conjugation/gauge translation space is also 3-dimensional and equals the direction space of (S_5). Therefore (S_5) is a single gauge orbit.
+
+Consequently, the D6 result “27 candidates -> 5 survivors (indices 3,4,5,8,14)” is a **slice artifact**, because the computation fixes the D6 (e_3) particular slice. It does not identify five inequivalent (e_2) classes and does not select a distinguished solution.
+
+The previous reading of common (s=(0,0,0)), sparse (e_3/e_4/e_5), and the equality of one (e_3) coordinate for indices 5,8,14 as structural signals is **FAIL / CLOSED / superseded**: these are solver representatives in affine solution spaces, not established gauge invariants.
+
+The robust local structure is:
+- (S_3,S_4,S_5) have sizes (729,81,27), hence affine dimensions (6,4,3);
+- the D5 nonhomogeneous system contains a constant-1 equation, so the zero seed is excluded at D4;
+- the D5 set is one verified gauge orbit.
+
+The next authorized gate is the exact induced gauge action on the D6 (e_3)-lift, followed by a quotient/normal-form computation. D7/D8 remain deferred.
+
+Classification:
+- D5 affine/gauge structure: **PASS / LOCAL**.
+- D6 five-way structural selection: **FAIL / CLOSED**.
+- D6 full lift modulo gauge: **OPEN**.
