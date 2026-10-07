@@ -3629,3 +3629,20 @@ Classification:
 - full Paper 5 p^2 theorem: **OPEN / LOAD-BEARING**.
 
 Next authorized action: Gate-B pre-check and the cheapest deterministic realization test; no blind prime/window sweep and no new generic dual-space construction.
+
+
+## 2026-10-07 — O2-6 basepoint-independence rerun recorded and closed locally
+
+Run **37559497256** (`O2-6 Basepoint Independence`) completed successfully on commit `3166ae8cfaaa0ed9008766f213515c7ef066a8e0`.
+
+The rerun verifies the frozen B1 admissible affine family tau_b = tau o (I+bN), b in F_3, by comparing the three actual finite-difference maps. It reports rank Delta_01 = rank Delta_12 = rank Delta_20 = 10, and Delta_01 = Delta_12 = Delta_20. Thus the **actual variation map**, not merely its image, is independent of the chosen basepoint within the complete verified B1 family.
+
+Classification:
+- O2-6 rerun: **PASS / LOCAL**.
+- Basepoint-independence within the verified B1 family: **PASS / LOCAL**.
+- Transport-dependent absolute obstruction remains distinct from this variation statement.
+- Load-bearing status for current Paper 5: **NON-LOAD-BEARING**.
+- A2 is already **PASS / CLOSED**; the active load-bearing branch is **pro-p diagonal realization**.
+- No further O2 transport/dual-space expansion is authorized merely from this result.
+
+Evidence: GitHub Actions run 37559497256 and the existing O2-6 record research/O2-6_RESULT_2026-09-18.md. The new run is recorded separately because the older record refers to run 35284130822.
