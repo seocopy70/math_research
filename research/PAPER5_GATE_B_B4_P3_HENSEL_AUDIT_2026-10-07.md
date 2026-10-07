@@ -64,3 +64,41 @@ The final implementation at commit `d6673a4ade78cba4be39bb72491d5f7083bda331` us
 
 ### Verification boundary
 The computation proves only the finite-degree associative-algebra statement encoded by the script. It does not prove compatible lifts at all higher degrees, nor the required pro-p automorphism. The next calculation must target the first p-power/restricted layer rather than repeat D4-D6 searches.
+
+
+## 2026-10-07 — Parameter-consistency correction and nontrivial a=2 D9 execution
+
+### Pre-check correction
+The earlier coupled script used a=1, although Gate B requires realization of every a in F_p^*. For p=3, a=1 is the identity scalar and W=Z is tautologically compatible with the defining relation. Therefore the earlier D4-D6 PASS/LOCAL result is valid only as an identity-case truncated calculation and is not load-bearing evidence for diagonal realization.
+
+The relevant nontrivial test is a=2, with
+W=z^2+U_2+U_3+... , X_2=x^6[x^2,y].
+Before searching corrections, the zero-correction seed W=z^2 was tested against the complete two-sided Magnus relation ideal.
+
+### Execution
+Actions run 37568611185 completed successfully. Exact F_3 Gaussian elimination was performed degree-by-degree through D9. A second pivot convention was run independently inside the same script and matched every result.
+
+Results:
+
+| degree | ideal rank | generators | W^3-X_2 terms | membership |
+|---|---:|---:|---:|---|
+| 4 | 32 | 34 | 8 | TRUE |
+| 5 | 124 | 142 | 10 | TRUE |
+| 6 | 441 | 547 | 14 | TRUE |
+| 7 | 1491 | 2005 | 16 | TRUE |
+| 8 | 4880 | 7108 | 16 | TRUE |
+| 9 | 15624 | 24604 | 16 | TRUE |
+
+Hence the nontrivial a=2 seed W=z^2 passes full two-sided ideal membership through D9. The earlier observation that a restricted ZZZ-elimination alone leaves a remainder is not a contradiction: the full ideal contains additional XY/YX-type consequences that remove it.
+
+### Classification
+- a=1 coupled D4-D6: PASS / LOCAL, identity-case only.
+- a=2 full ideal membership D4-D9: PASS / LOCAL.
+- p=3 pro-p Hensel lifting / diagonal realization: OPEN / LOAD-BEARING.
+- Gate B: OPEN / LOAD-BEARING.
+
+### Notation boundary
+The D9 check is the degree-9 homogeneous component of W^3-X_2. It is not a literal ninth-power equation W^9=X_2^(9). The first restricted 3^2-power contribution is encountered at Magnus degree 9 inside the cubic relation-preservation equation.
+
+### Next authorized calculation
+Do not repeat the identity a=1 branch or introduce a new dual-space construction. Continue from the nontrivial a=2 path beyond D9 and identify the first degree where W=z^2 ceases to preserve the relator modulo the full two-sided ideal, or prove a compatible all-degree lifting mechanism. A finite D9 PASS remains PASS / LOCAL, not pro-p closure.
