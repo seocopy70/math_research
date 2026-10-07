@@ -294,3 +294,7 @@ Detailed certificate: research/PAPER5_GATE0_GATE3_PERSISTENCE_AUDIT_2026-10-06.m
 ## 2026-10-07 — Paper 5 P5-COH-1 closure and indexing correction
 
 GAP n means G/D_n; free-presentation W_m=F/(RD_{m+1}) equals G/D_{m+1}. The relator r=z^p x^{-p}[x,y]^{-1} directly gives omega=x* wedge y* and beta(lambda)=(lambda(x)-lambda(z))eta for odd p, hence Im Aut(G) is contained in S_coh(p)={[[a,b,0],[0,1,0],[0,0,a]]}, order p(p-1): PASS/CLOSED/GENERAL. The remaining load-bearing gates are the intrinsic upper bound at W_p and diagonal realization; no further blind n-scan is needed once those close.
+
+## 2026-10-07 — Paper 5 Gate handoff after A2 closure
+
+Paper 5 remains **OPEN / LOAD-BEARING**, but the active gate has moved from A2 to **Gate B: pro-p diagonal realization**. The A2 finite-window higher-jet upper bound is PASS/CLOSED in the Paper 5 current record. Do not reopen generic dual-space exploration or repeat blind (p,n) scans. The immediate load-bearing question is whether every diag(a,1,a), a in F_p^*, is realized by an automorphism of the pro-p group; a finite-level lift alone is only PASS/LOCAL. See research/PAPER5_CURRENT_2026-10-06.md for the detailed gate and audit provenance.
