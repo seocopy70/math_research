@@ -249,3 +249,14 @@ The p>=5 “all higher layers cancel by (R^p)” argument is also not yet a proo
 Classification: p=3 Hensel correction = **OPEN / LOAD-BEARING**; (U=XX) claim = **CONDITIONAL / UNVERIFIED**; p>=5 full pro-p diagonal realization = **OPEN / LOAD-BEARING**. Existing D4 result remains **PASS / LOCAL**.
 
 Detailed audit: `research/PAPER5_GATE_B_B4_P3_HENSEL_AUDIT_2026-10-07.md`.
+
+
+## 2026-10-07 — Gate B B4 p=3 coupled Magnus result through D6
+
+Two solver implementation errors were found and corrected before classification. Run 37565779239 was superseded because its D4 equation used W^4 rather than W^3. Run 37565922146 was superseded because its D5/D6 perturbation columns used W^5/W^6 rather than the actual W^3 equation.
+
+Final commit `d6673a4ade78cba4be39bb72491d5f7083bda331`, Actions run 37566134673: D4-compatible U2 = 81; D5-compatible pairs = 81; D6-compatible coupled lifts = 27. The first lift has U2=U3=0, and an independent implementation gives U4=0 as well. Thus the exact truncated associative Magnus quotient used here admits the uncorrected path W=Z through degree 6.
+
+Independent verification by a separately implemented F3 algebra/rank calculation reproduces all three counts and the zero path.
+
+Classification: **PASS / LOCAL through D6**. This is not pro-p closure and does not close Gate B. The remaining load-bearing issue is extension beyond the finite D6 calculation, in particular the first restricted p-power layer / all-higher-layer compatibility.
