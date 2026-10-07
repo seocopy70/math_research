@@ -3686,3 +3686,25 @@ Classification:
 Detailed audit: `research/PAPER5_GATE_B_B4_P3_HENSEL_AUDIT_2026-10-07.md`.
 
 Next authorized action: construct the coupled p=3 truncated-Magnus equations through degree 6 and solve them in order, rather than a standalone (U^3=R_6) search. A local solution remains PASS/LOCAL until compatible pro-p lifting is proved.
+
+
+## 2026-10-07 — Gate B B4 p=3 coupled Magnus execution and solver-audit correction
+
+The first execution run, 37565779239 (commit 98fb35961bb5f65e39820370a7f228065659c3ce), returned `FAIL_CLOSED_AT_D6`, but this result is **HISTORICAL / SUPERSEDED**: the degree-4 equation was implemented with `W^4) instead of the required `W^3`.
+
+A corrected run, 37565922146 (commit 3e7bbf0ddf68c0785301944b0de750c46289a879), correctly used `W^3` at D4, but audit of the D5/D6 linearization found a second implementation error: the perturbation columns were formed from `W^5` and `W^6` rather than from the actual target equation `W^3`. That run is therefore also **HISTORICAL / SUPERSEDED**.
+
+Final corrected implementation commit: `d6673a4ade78cba4be39bb72491d5f7083bda331`. Actions run 37566134673 completed successfully with:
+- D4-compatible U2: 81/81;
+- D5-compatible (U2,U3) pairs: 81/81;
+- D6-compatible coupled lifts: 27;
+- first reported path: U2=0, U3=0, and independent reconstruction gives U4=0.
+
+Independent verification was performed with a separately written F3 associative-algebra implementation and independent modular Gaussian elimination. It reproduced D4=81, D5=81, D6=27, including the zero path through degree 6.
+
+Classification:
+- B4 p=3 coupled truncated Magnus lifting through D6: **PASS / LOCAL**.
+- p=3 pro-p Hensel lifting / diagonal realization: **OPEN / LOAD-BEARING**. The finite D6 result is not a pro-p proof.
+- The earlier standalone “U=XX solves degree-6” claim remains **HISTORICAL / SUPERSEDED** as a guiding calculation; the correct coupled computation finds a zero correction through D6 in this quotient.
+
+This result does not establish Gate-B closure. The next load-bearing question is whether the D6-compatible zero/other local lifts extend through the first genuinely p-power/restricted layer and then to all higher layers. Preserve both superseded solver runs and their audit trail; do not delete them.
