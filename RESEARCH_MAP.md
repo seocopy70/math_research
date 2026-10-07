@@ -327,3 +327,7 @@ For the actual G_{1,1} family, exact scans give p=3: 864 -> 6 -> 6 at n=3,4,5, a
 ## 2026-10-07 — Paper 5 P5-COH-1 closure and indexing correction
 
 GAP n means G/D_n; free-presentation W_m=F/(RD_{m+1}) equals G/D_{m+1}. The relator r=z^p x^{-p}[x,y]^{-1} directly gives omega=x* wedge y* and beta(lambda)=(lambda(x)-lambda(z))eta for odd p, hence Im Aut(G) is contained in S_coh(p)={[[a,b,0],[0,1,0],[0,0,a]]}, order p(p-1): PASS/CLOSED/GENERAL. The remaining load-bearing gates are the intrinsic upper bound at W_p and diagonal realization; no further blind n-scan is needed once those close.
+
+## 2026-10-07 — Paper 5 active-gate correction
+
+The A2 higher-jet finite-window upper bound is now **PASS / CLOSED** by the audited Magnus proof. The active Paper 5 load-bearing gate is therefore no longer detector discovery or generic dualization; it is **pro-p diagonal realization** of every diag(a,1,a). The dual/functional viewpoint is retained as the successful A2 methodology, not as a new independent research branch.
