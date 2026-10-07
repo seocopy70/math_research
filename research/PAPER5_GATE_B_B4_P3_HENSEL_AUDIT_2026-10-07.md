@@ -48,3 +48,19 @@ W=Z+U_2+U_3+U_4+cdots,
 and solve degree 4 first, then degree 5, then degree 6. Only after the lower-degree equations are simultaneously satisfied is a finite search over (U_2) meaningful.
 
 A successful local solution is only **PASS / LOCAL** until compatible pro-p lifting is proved.
+
+
+## 2026-10-07 — Coupled Magnus execution: final corrected result
+
+The coupled solver required two implementation corrections before its output became admissible. Run 37565779239 used W^4 in the D4 equation and is **HISTORICAL / SUPERSEDED**. Run 37565922146 corrected D4 but still used W^5/W^6 in the D5/D6 perturbation columns; it is likewise **HISTORICAL / SUPERSEDED**.
+
+The final implementation at commit `d6673a4ade78cba4be39bb72491d5f7083bda331` uses W^3 consistently. Actions run 37566134673 gives D4=81, D5=81, D6=27. An independent implementation using separately coded associative multiplication and modular Gaussian elimination reproduces the same counts. The first compatible path is U2=U3=U4=0, so W=Z itself satisfies the target through degree 6 in this truncated quotient.
+
+### Classification
+- Coupled p=3 truncated Magnus lifting through D6: **PASS / LOCAL**.
+- p=3 pro-p Hensel lifting / diagonal realization: **OPEN / LOAD-BEARING**.
+- Earlier U=XX degree-6 proposal: **HISTORICAL / SUPERSEDED** as the operative path; the corrected coupled computation does not require that correction through D6.
+- Gate B: **OPEN / LOAD-BEARING**; no closure follows from D6.
+
+### Verification boundary
+The computation proves only the finite-degree associative-algebra statement encoded by the script. It does not prove compatible lifts at all higher degrees, nor the required pro-p automorphism. The next calculation must target the first p-power/restricted layer rather than repeat D4-D6 searches.
