@@ -111,7 +111,7 @@ for cs in product(range(3),repeat=9):
  u={}
  for c,b in zip(cs,U2):
   if c:u=add(u,sc(b,c))
- q=add(hom(pw(add(Z,u),4),4),sc(R[4],-1))
+ q=add(hom(pw(add(Z,u),3),4),sc(R[4],-1))
  if span(q,I[4],W(4)):S4.append(u)
 print("D4-compatible U2:",len(S4))
 S5=[]
