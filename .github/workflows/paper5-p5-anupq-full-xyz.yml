@@ -15,19 +15,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install GAP and build ANUPQ
+      - name: Install GAP and ANUPQ
         shell: bash
         run: |
           set -euo pipefail
           sudo apt-get update
-          sudo apt-get install -y gap gap-autpgrp git build-essential
-          mkdir -p "$HOME/gap-pkg"
-          git clone --depth 1 https://github.com/gap-packages/anupq.git "$HOME/gap-pkg/anupq"
-          cd "$HOME/gap-pkg/anupq"
-          if [ -f Makefile ]; then make; fi
-          echo "GAP_ROOT_PATHS=$HOME/gap-pkg" >> "$GITHUB_ENV"
-          echo "GAP_ROOT=$HOME/gap-pkg" >> "$GITHUB_ENV"
-          echo "GAP_PACKAGE_PATH=$HOME/gap-pkg" >> "$GITHUB_ENV"
+          sudo apt-get install -y gap gap-anupq gap-autpgrp
+
+      - name: Verify GAP/ANUPQ discovery
+        shell: bash
+        run: |
+          set -euo pipefail
+          gap -q <<'GAP'
+          Print("GAP_VERSION=", GAPInfo.Version, "\n");
+          Print("ANUPQ_LOAD=", LoadPackage("anupq"), "\n");
+          if not IsPackageLoaded("anupq") then
+            Error("ANUPQ package could not be loaded");
+          fi;
+          QUIT;
+          GAP
 
       - name: ANUPQ capability gate
         shell: bash
