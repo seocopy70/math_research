@@ -3925,3 +3925,14 @@ Literature classification: **PASS / LOCAL as methodology; no direct Gate-B closu
 
 ### Authorized next action
 Compare the five D6 solutions' weight-2 and weight-3 parameters first. The goal is to detect a stable correction law, not merely accumulate another finite-degree PASS. If a pattern emerges, target D7/D8 from that law; otherwise formulate the obstruction/lifting recurrence. Gate B remains **OPEN / LOAD-BEARING**.
+
+
+## 2026-10-07 — D6 five-solution structural comparison pre-check
+
+The corrected p=3,a=2 group-level D6 result leaves five explicit D6 solution branches (indices 3,4,5,8,14). The authorized next step is to compare their weight-2 and weight-3 correction parameters before any D7/D8 search.
+
+A repository-level audit was performed first. The authoritative D6 audit records the five indices and the counts 729 -> 81 -> 27 -> 5, but does not record the actual coefficient tuples or explicit Phi(x),Phi(y),Phi(z) for those five branches. No committed solver containing those five parameter values was found in the repository tree. Therefore an actual coefficient comparison cannot be honestly executed from repository evidence alone.
+
+This is classified as **OPEN / LOAD-BEARING data-extraction boundary**, not as a mathematical failure. The required comparison is fixed: common basis/order normalization -> extract U2,U3 -> remove only proven gauge redundancy -> pairwise differences -> affine/kernel/coset test -> identify the D6-selected parameter -> derive targeted D7/D8 equations only if a stable correction law emerges.
+
+No blind D7/D8 calculation is authorized before the five D6 branches are structurally compared. Existing finite realization remains **PASS / LOCAL**; Gate B remains **OPEN / LOAD-BEARING**.
