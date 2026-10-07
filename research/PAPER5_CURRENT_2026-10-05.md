@@ -436,3 +436,18 @@ is therefore promoted only as the **next exact algebraic target**, not as an est
 
 ### Authorized next action
 Do **not** spend the next step on (D_{10}) alone. Construct an exact finite product of conjugates of the defining relator (or an exact normal-closure identity) proving (E_2\in N), or derive a rigorous obstruction to such a factorization. Preserve the (D3\text{–}D9) computation as local evidence and do not promote it to a pro-(3) lifting theorem.
+
+
+## 2026-10-07 — Corrected p=3,a=2 group-level D6 realization
+
+The fixed seed W=z^2 full non-homogeneous ideal obstruction at T=4 remains valid. A new corrected construction instead parameterizes Phi(x),Phi(y),Phi(z) by actual group elements (products of basic commutators), with linear part diag(2,1,2). This automatically enforces the group-like condition and solves the coupled relation-preservation equations at the group level.
+
+Reported finite result: D3 weight-2 candidates = 729; D4 survivors = 81; D5 survivors = 27; D6 admits explicit solutions from D5 candidates 3,4,5,8,14. An independent slower dictionary-algebra check of candidate 3 reproduces zero residual through D6.
+
+Classification: **PASS / LOCAL** for the p=3,a=2 finite group-level realization through D6. **Gate B remains OPEN / LOAD-BEARING** because no all-degree compatible pro-3 lift has been proved. The intermediate 4,782,969-solution enumeration is excluded from evidence.
+
+Evidence: research/PAPER5_GATE_B_P3_A2_GROUP_LEVEL_D6_AUDIT_2026-10-07.md.
+
+The Labute/Kochloukova–Zalesskii literature check did not identify a direct prescribed-diagonal automorphism theorem. Labute's relator-equivalence theorem is relevant methodology but does not by itself close the present Gate B; the amalgam/root-extension reduction remains OPEN.
+
+Authorized next action: compare the five D6 solutions' weight-2/weight-3 parameters before any D7/D8 expansion.
