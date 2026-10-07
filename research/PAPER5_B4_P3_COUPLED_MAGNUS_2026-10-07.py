@@ -119,7 +119,7 @@ for u2 in S4:
  base=add(Z,u2); q=add(hom(pw(base,3),5),sc(R[5],-1))
  cols=[]
  for b in U3:
-  cols.append(add(hom(pw(add(base,b),5),5),sc(hom(pw(base,3),5),-1)))
+  cols.append(add(hom(pw(add(base,b),3),5),sc(hom(pw(base,3),5),-1)))
  sol=lin_solve(cols,q,I[5],W(5))
  if sol is not None:
   u3={}
@@ -132,7 +132,7 @@ for u2,u3 in S5:
  base=add(add(Z,u2),u3); q=add(hom(pw(base,3),6),sc(R[6],-1))
  cols=[]
  for b in U4:
-  cols.append(add(hom(pw(add(base,b),6),6),sc(hom(pw(base,3),6),-1)))
+  cols.append(add(hom(pw(add(base,b),3),6),sc(hom(pw(base,3),6),-1)))
  sol=lin_solve(cols,q,I[6],W(6))
  if sol is not None:S6.append((u2,u3,sol))
 print("D6-compatible coupled lifts:",len(S6))
