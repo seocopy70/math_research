@@ -3735,3 +3735,39 @@ Classification:
 Notation correction: the D9 test is the degree-9 homogeneous component of W^3-X_a, not a literal equation W^9=X_a^(9). The restricted 3^2-power layer appears in the degree-9 Magnus component of the cubic relation-preservation equation.
 
 The authorized next step is not to repeat D4-D9 for a=1, nor to create a new dual-space C_n^*. It is to determine whether the nontrivial a=2 zero-correction path extends beyond D9 and, ultimately, whether a compatible all-degree pro-3 lift exists.
+
+
+## 2026-10-07 — Gate B B4 p=3, a=2: D3 omission corrected; exact-factorization gate
+
+The earlier (p=3,a=2,W=z^2) Magnus audit had explicitly tested (D4\text{–}D9) but not (D3). A separate exact (\mathbf F_3) Gaussian-elimination check now gives
+\[
+\operatorname{rank}(I_3)=7,
+\qquad
+\operatorname{rank}(I_3+(W^3-X_2)_3)=7,
+\]
+so ( (W^3-X_2)_3\in I_3). Combined with the existing two-sided ideal computations at (D4\text{–}D9), the corrected local certificate is
+\[
+(W^3-X_2)_N\in I_N\quad(3\le N\le9).
+\]
+
+This yields the finite-truncation consequence
+\[
+E_2=z^6x^{-6}[x^2,y]^{-1}-1\in ND_{10},
+\]
+but **not** (E_2\in N). The latter requires an exact normal-closure argument (or an independently valid all-degree proof), and finite membership through (D9) cannot be promoted by itself.
+
+A proposed reduction through
+\[
+[[X,Y],X]\in N\,G^3
+\]
+is retained only as the next algebraic target. The record explicitly rejects the invalid shortcut ([x^3,c]=1\Rightarrow[x,c]=1). Hall–Petresco may provide a filtered congruence, but an exact normal-closure identity must still be established.
+
+### Classification
+- (p=3,a=2,W=z^2), (D3\text{–}D9) full ideal membership: **PASS / LOCAL**.
+- (E_2\in ND_{10}): **PASS / LOCAL**.
+- (E_2\in N): **OPEN / LOAD-BEARING**.
+- Exact factorization of (E_2) by conjugates of the defining relator: **OPEN / LOAD-BEARING**.
+- Gate B: **OPEN / LOAD-BEARING**.
+
+### Authorized next action
+No isolated (D10) computation. Attempt an exact normal-closure factorization (E_2=\prod_i (r^{w_i}-1)) (or the corresponding group identity) and independently verify it. If no exact factorization can be obtained, record the obstruction rather than promoting the finite Magnus evidence.
