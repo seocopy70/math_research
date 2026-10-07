@@ -203,3 +203,30 @@ For an automorphism of W_p, choose a free-pro-p lift g~. Since g~(r) lies in R D
 The pure (p,0,0) and (0,0,p) components are not zero in I; they identify the scalar multiple of the degree-p generator and reproduce the beta-compatible coefficient relations. Thus the earlier apparent coefficient ambiguity is resolved.
 
 Classification: **A2 finite-window upper bound = PASS / CLOSED**, assuming the already-closed A1 invariant and standard completed-group-algebra lift/Magnus facts. Gate B diagonal realization remains **OPEN / LOAD-BEARING**; the full Paper 5 p^2 theorem remains **OPEN / LOAD-BEARING**.
+
+
+## 2026-10-07 — authoritative A2 closure / Gate B handoff
+
+The latest audited hand proof supersedes the earlier same-day A2-OPEN entries in this current file. The finite-window higher-jet upper bound is now **PASS / CLOSED** under the already-closed A1 invariant and standard completed-group-algebra/Magnus lift facts.
+
+Precisely, for an automorphism of the relation-jet window, the strong A1 invariant g(<x,y>)=<x,y> removes all zeta-containing Magnus terms from the x,y images. In the degree-p Magnus projection of the lifted relation, the critical multidegrees (1,0,p-1) and (0,1,p-1) therefore receive contribution only from the p-power of the zeta image. Their coefficients force a=chi and c=0, and the determinant identity chi=ad gives d=1. The pure degree-p components are not zero; they determine the scalar multiple of the relation generator and are compatible with the same beta constraint.
+
+The proof is not being promoted beyond the stated hypotheses; the remaining standard Magnus/completed-group-algebra conventions are to be cited explicitly in the manuscript. This is nevertheless sufficient to close the finite-window A2 upper-bound gate.
+
+### Active Gate B
+
+The only load-bearing research gate is now the **pro-p diagonal realization**: for every a in F_p^*, diag(a,1,a) must lie in the image of Aut(G) on H^1. The b-unipotent direction is already realized. The generic C_n^* / new-dual-space branch is not authorized because A2 already supplies the successful functional/detector layer.
+
+The first Gate-B test must not assume the naive substitution x->x^a, z->z^a, y->y preserves the relator. Treat it only as a seed and solve the relation-preservation equation with higher pro-p corrections. The exact requirement is that a free-pro-p lift Phi_a with linear part diag(a,1,a) satisfy Phi_a(r) in the normal closure of r. A single finite-level lift is PASS / LOCAL, not Gate-B closure; compatible lifting to the pro-p group is required.
+
+### Current classification
+
+| Item | Classification |
+|---|---|
+| P5-COH-1 global cohomological scalar stabilizer | PASS / CLOSED / GENERAL |
+| A2 finite-window higher-jet upper bound | **PASS / CLOSED** |
+| A2 residual-jet/no-cancellation | **PASS / CLOSED** as part of the audited Magnus proof |
+| diagonal diag(a,1,a) realization in pro-p G | **OPEN / LOAD-BEARING** |
+| full p^2 automorphism theorem | **OPEN / LOAD-BEARING** |
+
+Historical same-day entries claiming A2 remained OPEN are retained above for traceability but are HISTORICAL / SUPERSEDED by this closure entry.
