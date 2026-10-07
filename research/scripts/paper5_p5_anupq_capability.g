@@ -1,5 +1,4 @@
-LoadPackage("anupq");
-if not IsPackageMarkedForLoading("anupq") and not IsPackageLoaded("anupq") then
+if LoadPackage("anupq") <> true then
   Error("ANUPQ package not loaded");
 fi;
 Print("ANUPQ_CAPABILITY=PASS\n");
