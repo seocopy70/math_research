@@ -230,3 +230,11 @@ The first Gate-B test must not assume the naive substitution x->x^a, z->z^a, y->
 | full p^2 automorphism theorem | **OPEN / LOAD-BEARING** |
 
 Historical same-day entries claiming A2 remained OPEN are retained above for traceability but are HISTORICAL / SUPERSEDED by this closure entry.
+
+## 2026-10-07 — Gate B B1 D4 obstruction vanishes
+
+The first explicit Magnus test for E_a=x^{ap}[x^a,y]z^{-ap} is now recorded. For p>=5, the degree-4 class vanishes in the associated graded quotient by the relation ideal: the p-power factors contribute nothing in degree 4 mod p, and the remaining [x^a,y] component is killed by the degree-2 initial relation ideal. A direct p=5 word-space membership check confirms this.
+
+Classification: B1 D4 vanishing = PASS / LOCAL. The tentative B3 degree-4 obstruction and the map L_2 -> L_3 are therefore not the relevant next gate. The next authorized layer is the first nonzero residual class, beginning at D_5/D_6 for p>=5. Gate B remains OPEN / LOAD-BEARING.
+
+Detailed audit: research/PAPER5_GATE_B_B1_D4_MAGNUS_AUDIT_2026-10-07.md.
