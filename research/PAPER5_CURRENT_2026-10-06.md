@@ -441,3 +441,29 @@ with
 W^3-X_2\in I+\Delta^{T+1}
 \]
 tested using the **full non-homogeneous ideal** I. Solve the coupled equations beginning at the first failed degree T=4. A finite corrected solution remains PASS / LOCAL until compatible all-degree pro-3 lifting is proved.
+
+
+## 2026-10-07 — D6 five-solution structure gate: data-extraction boundary
+
+The next authorized mathematical step is the structural comparison of the five nontrivial p=3, a=2 D6 lifts (indices 3,4,5,8,14), before any D7/D8 expansion.
+
+The authoritative D6 audit records only the candidate indices and the finite counts (729 -> 81 -> 27 -> 5); it does **not** record the actual weight-2/weight-3 coefficient tuples or the explicit corrected images Phi(x), Phi(y), Phi(z) for those five solutions. The repository therefore does not yet contain enough data to perform the requested five-way structural comparison without inventing coefficients.
+
+This is a **data-extraction blocker, not a mathematical failure**. The comparison target is fixed:
+1. normalize each of the five lifts in the same commutator basis and order;
+2. extract the complete weight-2 correction U_2 and weight-3 correction U_3;
+3. quotient by any explicitly proven gauge/conjugation redundancy before comparing;
+4. compute pairwise differences U_2(i)-U_2(j) and U_3(i)-U_3(j);
+5. test whether the five solutions lie on an affine family, a common kernel/coset, or satisfy a low-degree polynomial relation;
+6. compare the D6 residual/Jacobian constraints to identify which parameter is genuinely selected at D6;
+7. only if a stable law is visible, derive the D7/D8 equations from that law rather than rerunning a blind search.
+
+No D7/D8 calculation is authorized until this comparison is completed.
+
+Classification:
+- D3-D6 finite group-level realization: **PASS / LOCAL** (unchanged).
+- Five-solution structural law: **OPEN / LOAD-BEARING**.
+- D7/D8 continuation: **CONDITIONAL / NOT YET AUTHORIZED**.
+- Gate B: **OPEN / LOAD-BEARING**.
+
+Evidence: research/PAPER5_GATE_B_P3_A2_GROUP_LEVEL_D6_AUDIT_2026-10-07.md.
