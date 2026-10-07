@@ -293,3 +293,16 @@ At D9 the relevant equation is the degree-9 homogeneous component of the cubic r
 not a literal ninth-power equation W^9=X_a^(9). The restricted p^2-power layer is reflected in the degree-9 Magnus component of W^3. The next calculation must therefore continue the nontrivial a=2 path toward higher restricted layers / compatible pro-3 lifting, rather than reinterpret the D9 test as a literal ninth-power identity.
 
 Detailed script: research/PAPER5_B4_P3_A2_D9_MAGNUS_2026-10-07.py.
+
+
+## 2026-10-07 — Exact-identity candidate audit: centralization does not imply the required conjugation identity
+
+The proposed structural shortcut from the D4-D9 result was audited before any D10 computation. Let c=[x,y]. From r=z^p x^{-p}c^{-1}=1 one indeed gets c=z^p x^{-p}, hence x^{-p}cx^p=c and therefore [c,x^p]=1. However, for the nontrivial p=3,a=2 case, [x^2,y]=c^x c, so the desired equality [x^2,y]=c^2 requires c^x=c. The established identity [c,x^3]=1 does not imply this: conjugation by x may have order 3 on c.
+
+The Hall–Petresco/Magnus observations in the proposal likewise give filtered/power-level information (for example [[x,y],x] lying in a p-power layer), not the exact equality [[x,y],x]=1. Thus the proposed deduction z^{ap}=x^{ap}[x^a,y] is **not established**. An exact normal-closure factorization of E_2=z^6x^{-6}[x^2,y]^{-1} remains **OPEN / LOAD-BEARING**.
+
+This does not alter the strongest local evidence: the nontrivial p=3,a=2 seed W=z^2 passed full two-sided Magnus ideal membership through D9 in Actions run 37568611185. That result remains **PASS / LOCAL**. The exact-identity shortcut is **FAIL / CLOSED as a logical implication**, while the existence of some independent exact factorization remains **OPEN / LOAD-BEARING**.
+
+Detailed audit: research/PAPER5_GATE_B_EXACT_IDENTITY_AUDIT_2026-10-07.md (commit 17c59dc63bf3a9ce64122f4d4c9b35582d114569).
+
+Strategic consequence: do not run D10 merely because this shortcut failed. The next authorized route is a direct exact-factorization/normal-closure construction or an all-degree restricted-power lifting lemma. Gate B remains **OPEN / LOAD-BEARING**.
