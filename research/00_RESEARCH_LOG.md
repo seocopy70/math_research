@@ -3906,3 +3906,22 @@ with
 W^3-X_2\in I+\Delta^{T+1}
 \]
 tested using the **full non-homogeneous ideal** I. Solve the coupled equations beginning at the first failed degree T=4. A finite corrected solution remains PASS / LOCAL until compatible all-degree pro-3 lifting is proved.
+
+
+## 2026-10-07 — Gate B p=3,a=2 corrected group-level D6 result and literature audit
+
+A corrected **group-level** finite-window construction was supplied after the earlier full/non-homogeneous Magnus-ideal audit. The target order is **cx**. The images of x,y,z are parameterized by actual group elements (products of basic commutators), so the group-like condition is automatic; this is not the earlier loose algebra-homomorphism ansatz.
+
+For p=3,a=2 and linear part diag(2,1,2), the corrected construction has no obstruction through D3,D4,D5. The reported finite counts are: D3 weight-2 candidates 729, D4 survivors 81, D5 survivors 27. At D6, explicit solutions were constructed from five D5 candidates (indices 3,4,5,8,14). One representative (idx 3) was independently re-evaluated with a separate slower dictionary-algebra implementation and has zero residual at N=3,4,5,6.
+
+This result is **PASS / LOCAL**. It is stronger than the fixed seed W=z^2 test because it allows the required higher corrections. It does **not** prove a compatible pro-3 lift or close Gate B. The 4,782,969-solution intermediate quadratic enumeration is excluded from evidence because it conflicts with direct verification and was not trusted.
+
+The earlier fixed seed W=z^2 full non-homogeneous ideal failure at T=4 remains valid and is not contradicted: the present result changes the lift ansatz, not the seed classification. See research/PAPER5_GATE_B_P3_A2_GROUP_LEVEL_D6_AUDIT_2026-10-07.md.
+
+### Literature check
+Labute (1967) was checked directly in the full paper. Theorem 2 gives free-pro-p automorphism equivalence of suitable Demushkin relators with the same invariants, but does not directly supply the prescribed diag(a,1,a) realization for the present fixed relator. Kochloukova–Zalesskii, Free-by-Demushkin pro-p groups (2005), concerns free-by-Demushkin extensions and does not, from the checked material, provide the required prescribed automorphism theorem. The proposed amalgam/root-extension reduction remains an internal OPEN conjectural reduction.
+
+Literature classification: **PASS / LOCAL as methodology; no direct Gate-B closure.** See research/PAPER5_GATE_B_LITERATURE_AUDIT_LABUTE_KZ_2026-10-07.md.
+
+### Authorized next action
+Compare the five D6 solutions' weight-2 and weight-3 parameters first. The goal is to detect a stable correction law, not merely accumulate another finite-degree PASS. If a pattern emerges, target D7/D8 from that law; otherwise formulate the obstruction/lifting recurrence. Gate B remains **OPEN / LOAD-BEARING**.
