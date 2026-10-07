@@ -393,3 +393,46 @@ operatorname{Stab}(omega,eta)congmathbf F_ptimesmathbf F_p^	imes.
 ]
 
 Only after these gates pass should a targeted (p=3, n=5,ldots,8) persistence experiment be considered.
+
+
+## 2026-10-07 — Gate B B4 p=3, a=2: D3–D9 full ideal audit and exact-factorization pivot
+
+A follow-up audit corrected the previously omitted degree-3 check for the nontrivial scalar case (p=3,a=2), with (W=z^2). The degree-3 component satisfies
+\[
+(W^3-X_2)_3\in I_3,
+\]
+with Gaussian-elimination ranks
+\[
+\operatorname{rank}(I_3)=7,
+\qquad
+\operatorname{rank}(I_3+(W^3-X_2)_3)=7.
+\]
+The structural degree-3 cancellation is consistent with the relation component: although the isolated commutator direction is not itself in the relevant truncated ideal, the combination with the quadratic relation component is. In particular, no standalone implication such as ([z^3,x]=1\Rightarrow[z,x]=1) is used or claimed.
+
+Together with the existing exact two-sided ideal calculations for (N=4,5,6,7,8,9), this gives the corrected finite-window statement
+\[
+\boxed{(W^3-X_2)_N\in I_N\quad(3\le N\le9)}.
+\]
+Hence the Magnus evidence yields
+\[
+E_2=z^6x^{-6}[x^2,y]^{-1}-1\in N D_{10}
+\]
+for the tested truncation. This is **PASS / LOCAL**, not an exact normal-closure proof.
+
+The tempting implication
+\[
+E_2\in N
+\iff
+[[X,Y],X]\in N\,G^3
+\]
+is therefore promoted only as the **next exact algebraic target**, not as an established equivalence. Any use of Hall–Petresco must keep the distinction between a commutator lying in (G^3N) and the exact identity ( [[x,y],x]\in N); centralizing (x^3) does not by itself centralize (x).
+
+### Classification
+- (p=3,a=2,W=z^2), full two-sided ideal membership (D3\text{–}D9): **PASS / LOCAL**.
+- (E_2\in N D_{10}): **PASS / LOCAL** (finite truncation consequence).
+- (E_2\in N): **OPEN / LOAD-BEARING**.
+- Exact normal-closure factorization of (E_2) through the defining relators (r^{w_i}): **OPEN / LOAD-BEARING**.
+- Gate B: **OPEN / LOAD-BEARING**.
+
+### Authorized next action
+Do **not** spend the next step on (D_{10}) alone. Construct an exact finite product of conjugates of the defining relator (or an exact normal-closure identity) proving (E_2\in N), or derive a rigorous obstruction to such a factorization. Preserve the (D3\text{–}D9) computation as local evidence and do not promote it to a pro-(3) lifting theorem.
