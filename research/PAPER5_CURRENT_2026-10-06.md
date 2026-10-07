@@ -260,3 +260,36 @@ Final commit `d6673a4ade78cba4be39bb72491d5f7083bda331`, Actions run 37566134673
 Independent verification by a separately implemented F3 algebra/rank calculation reproduces all three counts and the zero path.
 
 Classification: **PASS / LOCAL through D6**. This is not pro-p closure and does not close Gate B. The remaining load-bearing issue is extension beyond the finite D6 calculation, in particular the first restricted p-power layer / all-higher-layer compatibility.
+
+
+## 2026-10-07 — Gate B B4 correction: the load-bearing p=3 test is a=2, not a=1
+
+A parameter-consistency audit found that the earlier coupled script tested a=1, where W=Z is the identity path and the defining relation itself gives the target. That computation is retained as PASS / LOCAL through D6, but it is not the nontrivial realization test for diag(a,1,a).
+
+For p=3, the nontrivial scalar is a=2. The correct seed is W=z^2, with target X_2=x^6[x^2,y]. A new exact full two-sided ideal membership calculation was therefore run for the zero-correction path W=z^2, degree by degree D4 through D9. The computation used exact associative Magnus algebra over F_3, all left/right contexts of every homogeneous component of r-1, and Gaussian elimination encoded by packed ternary rows. A second pivot convention independently reproduced every result.
+
+Actions run 37568611185 (commit e6c866093810fb8f0407d942488e60b29a4f02ad) gives:
+
+| degree | ideal rank | generators | target terms | membership |
+|---|---:|---:|---:|---|
+| D4 | 32 | 34 | 8 | TRUE |
+| D5 | 124 | 142 | 10 | TRUE |
+| D6 | 441 | 547 | 14 | TRUE |
+| D7 | 1491 | 2005 | 16 | TRUE |
+| D8 | 4880 | 7108 | 16 | TRUE |
+| D9 | 15624 | 24604 | 16 | TRUE |
+
+Thus the nontrivial p=3 scalar a=2 has the uncorrected seed W=z^2 passing the full two-sided ideal membership test through D9. This supersedes the proposed a=1 D9 target as the relevant Gate-B diagnostic, not as historical provenance.
+
+### Classification
+- p=3, a=1, coupled D4-D6: PASS / LOCAL, but non-load-bearing identity case.
+- p=3, a=2, W=z^2 full ideal membership D4-D9: PASS / LOCAL.
+- p=3 pro-p diagonal realization: OPEN / LOAD-BEARING.
+- Gate B: OPEN / LOAD-BEARING.
+
+### Important notation correction
+At D9 the relevant equation is the degree-9 homogeneous component of the cubic relation-preservation equation
+(W^3-X_a)_9 ≡ 0 mod I_9,
+not a literal ninth-power equation W^9=X_a^(9). The restricted p^2-power layer is reflected in the degree-9 Magnus component of W^3. The next calculation must therefore continue the nontrivial a=2 path toward higher restricted layers / compatible pro-3 lifting, rather than reinterpret the D9 test as a literal ninth-power identity.
+
+Detailed script: research/PAPER5_B4_P3_A2_D9_MAGNUS_2026-10-07.py.
