@@ -298,3 +298,7 @@ GAP n means G/D_n; free-presentation W_m=F/(RD_{m+1}) equals G/D_{m+1}. The rela
 ## 2026-10-07 — Paper 5 Gate handoff after A2 closure
 
 Paper 5 remains **OPEN / LOAD-BEARING**, but the active gate has moved from A2 to **Gate B: pro-p diagonal realization**. The A2 finite-window higher-jet upper bound is PASS/CLOSED in the Paper 5 current record. Do not reopen generic dual-space exploration or repeat blind (p,n) scans. The immediate load-bearing question is whether every diag(a,1,a), a in F_p^*, is realized by an automorphism of the pro-p group; a finite-level lift alone is only PASS/LOCAL. See research/PAPER5_CURRENT_2026-10-06.md for the detailed gate and audit provenance.
+
+## 2026-10-07 — Gate B D4 subgate closed locally
+
+The Gate-B B1 D4 Magnus test is PASS / LOCAL: for p>=5 the D4 class of E_a vanishes after quotienting by the relation ideal. Therefore the tentative D4 obstruction is removed, and the next authorized Paper-5 calculation is the first nonzero residual layer, starting at D5/D6 for p>=5. Gate B itself remains OPEN / LOAD-BEARING. No dual-space branch is reopened.
