@@ -25,6 +25,7 @@ jobs:
           git clone --depth 1 https://github.com/gap-packages/anupq.git "$HOME/gap-pkg/anupq"
           cd "$HOME/gap-pkg/anupq"
           if [ -f Makefile ]; then make; fi
+          echo "GAP_ROOT_PATHS=$HOME/gap-pkg" >> "$GITHUB_ENV"
           echo "GAP_ROOT=$HOME/gap-pkg" >> "$GITHUB_ENV"
           echo "GAP_PACKAGE_PATH=$HOME/gap-pkg" >> "$GITHUB_ENV"
 
