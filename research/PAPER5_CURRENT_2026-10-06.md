@@ -559,3 +559,22 @@ Classification:
 - Full Gate B: **OPEN / LOAD-BEARING**.
 
 This supersedes the immediately preceding internal claim that Labute Theorem 2 had closed the general torus lift.
+
+
+## 2026-10-09 — First restricted-layer lemma audit
+
+The Gate-B hand-proof repair closes the first restricted-layer **lemma**, but not the lift problem. The corrected degree separation is accepted, and
+\[
+L_p/[L_{p-1},L_1]\cong\mathbf F_pX^{[p]}\oplus\mathbf F_pY^{[p]}
+\]
+is recorded as **PASS / LOCAL**. Under the conditional filtered equality \(\psi(w_0)\equiv w_0^{\tilde\alpha}\pmod{D_{p+1}}\), the residual projection is
+\[
+\pi_{\rm res}(E_p)=(a^p-\tilde\alpha)X^{[p]}+c^pY^{[p]},
+\]
+forcing \(a^p=\tilde\alpha,c=0\); with Teichmuller normalization this gives \(a=\tilde\alpha,d=1\).
+
+This does **not** establish exact-power/conjugate-of-power realization, all-degree pro-p lifting, or Gate-B closure. The group-to-restricted-Lie passage and filtered degree-p projection should be formalized before manuscript promotion.
+
+Classification: first restricted-layer quotient/residual = **PASS / LOCAL**; exact lift = **OPEN / LOAD-BEARING**; Gate B = **OPEN / LOAD-BEARING**.
+
+Evidence: `research/PAPER5_GATE_B_FIRST_RESTRICTED_LAYER_AUDIT_2026-10-09.md`.
