@@ -4136,3 +4136,85 @@ Classification:
 - Gate B: **OPEN / LOAD-BEARING**.
 
 Authorized next action: prove the universal restricted-quotient power lemma. No blind \(D_5/D_6/D_{p^k}\) continuation is authorized as a substitute.
+
+
+## 2026-10-09 — Gate B Q-layer / p-adic refinement correction
+
+The Gate B repair was independently re-audited. The ordinary/restricted separation is sound, but the mod-p restricted quotients cannot carry the required Teichmuller precision.
+
+### Closed/local lemmas
+
+For (A=\\mathbf F_p\\langle X,Y\\rangle), (C=[A,A]), and arbitrary (a,b\\in A),
+[
+(ab)^p-(ba)^p=[a,(ba)^{p-1}b]\\in C,
+]
+and for odd (p), the cyclic-word expansion gives
+[
+(a+b)^p\\equiv a^p+b^p\\pmod C.
+]
+Hence
+[
+\\boxed{[a,b]^p\\in C\\quad\\forall a,b\\in A.}
+]
+Together with the linear independence of the distinct cyclic words (X^{p^k},Y^{p^k}), this gives
+[
+C\\cap L=[L,L],
+qquad [L,L]_{\\rm res}=[L,L],
+]
+under the declared embedding (L=L_{\\rm res}(X,Y)\\hookrightarrow A). The Hall-word step to (I_n=[L_{n-1},L_1]=J_n) remains PASS/LOCAL pending explicit degree bookkeeping in the manuscript.
+
+The Hall–Petresco calculation
+[
+(x^{\\tilde\\alpha}\\delta)^p\\equiv(x^{\\tilde\\alpha})^p\\pmod{D_{p+1}},
+qquad \\delta\\in D_2,
+]
+also remains PASS/LOCAL.
+
+### Decisive failure of the previous refinement route
+
+For
+[
+Q_{p^k}=L_{p^k}/[L_{p^k-1},L_1]
+\\cong \\mathbf F_pX^{[p^k]}\\oplus\\mathbf F_pY^{[p^k]},
+]
+all coefficients are reduced modulo (p). Therefore
+[
+\\overline{\\tilde\\alpha^{p^k}}=\\overline{\\tilde\\alpha}
+]
+and the coefficient ((\\tilde\\alpha^{p^k}-\\tilde\\alpha)) vanishes automatically in (Q_{p^k}). Thus
+[
+Q_{p^k}	ext{ cannot detect Teichmuller }p\\text{-adic precision},
+]
+and the implication “graded obstruction (=0) (\\Rightarrow D_{p^k+1})-membership” is unavailable.
+
+Accordingly the earlier exact-lift route based on (\\tilde\\alpha^{p^k}-\\tilde\\alpha) in (Q_{p^k}) is **FAIL / CLOSED as stated**. The previous BCH route remains superseded/closed.
+
+### Further correction
+
+A proposed Witt-coordinate expression such as
+[
+(x^{\\tilde\\alpha})^p=x^{p[a_0]^p}x^{p^2[a_1]^p}\\cdots
+]
+cannot be used as a group identity without an independent noncommutative collection calculation. Also, a map of the form
+[
+D_{p^k}\\cap p^rA\\to L_{p^k+r}
+]
+is not yet well-typed when (A) is the mod-(p) free associative algebra: an integral completed Magnus/group-algebra (or equivalent) filtration must first be defined.
+
+### Current classification
+
+- BCH route: **FAIL / CLOSED**.
+- Hall–Petresco (D_2)-perturbation: **PASS / LOCAL**.
+- cyclic-word reduction and general ( [a,b]^p\\in C): **PASS / LOCAL**.
+- (C\\cap L=[L,L]): **PASS / LOCAL**.
+- (I=[L,L]_{\\rm res}=[L,L]): **PASS / LOCAL**.
+- (I_n=J_n): **PASS / LOCAL**, subject to explicit degree bookkeeping.
+- (Q_{p^k})-based Teichmuller/exact-lift implication: **FAIL / CLOSED**.
+- all-(k) restricted-power formula: **OPEN / LOAD-BEARING**.
+- integral (p)-adic filtered lifting lemma: **OPEN / LOAD-BEARING**.
+- exact pro-(p) lift: **OPEN / LOAD-BEARING**.
+- **Gate B: OPEN / LOAD-BEARING.**
+
+Evidence-bearing detail: `research/PAPER5_GATE_B_Q_REFINEMENT_AUDIT_2026-10-09.md`.
+
+Authorized next action: formulate the smallest correctly typed integral filtered comparison that retains one (p)-adic coefficient beyond (Q_{p^k}); no blind (D_5/D_6/D_{p^k}) computation as a substitute.
