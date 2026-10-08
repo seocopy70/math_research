@@ -4097,3 +4097,42 @@ Classification:
 - Gate B: **OPEN / LOAD-BEARING**.
 
 Evidence-bearing detail: `research/PAPER5_GATE_B_FIRST_RESTRICTED_LAYER_AUDIT_2026-10-09.md`.
+
+
+## 2026-10-09 — Gate B all-degree Hensel proposal audited
+
+The proposed Lemma A/B/C route was audited as the candidate replacement for degree-by-degree \(D_{p^k}\) computation.
+
+The strategic reduction is accepted: pro-p completeness can replace infinitely many finite computations if a universal restricted-power obstruction lemma is proved. The ordinary correction map
+\[
+d\Phi_m(u,v)=[u,Y]+[X,v]
+\]
+controls the ordinary bracket part, while the only possible new indecomposable obstruction at \(n=p^k\) is expected in
+\[
+Q_{p^k}=L_{p^k}/[L_{p^k-1},L_1]
+\cong \mathbf F_pX^{[p^k]}\oplus\mathbf F_pY^{[p^k]}.
+\]
+
+The proposed all-k Lemma C is **not yet proved**. The implications
+\(\psi([x,y])\in\gamma_2\Rightarrow\pi_{\rm res}^{(k)}=0\)
+and
+\[
+\pi_{\rm res}^{(k)}(w_0^{\tilde\alpha})=\tilde\alpha X^{[p^k]}
+\]
+do not follow without a precise filtered calculation. Since
+\(w_0=x^p[x,y]\) has lower-degree and degree-\(p\) components, the lower-degree cancellation and the subsequent \(D_{p^k}\)-membership of the residual must be established before projecting to \(L_{p^k}\). Generic Hall–Petresco/Jacobson wording is insufficient.
+
+The required load-bearing statement is a universal restricted-power lemma: for every \(k\), all cross-terms in the relation-preservation residual must land in \([L_{p^k-1},L_1]\), leaving
+\[
+(a^{p^k}-\tilde\alpha)X^{[p^k]}+c^{p^k}Y^{[p^k]}.
+\]
+If established, the fixed Teichmuller normalization \(a=\tilde\alpha,c=0\) gives simultaneous vanishing because \(\tilde\alpha^{p^k}=\tilde\alpha\), after which pro-p completeness supplies the exact lift.
+
+Classification:
+- ordinary/restricted separation: **PASS / LOCAL**;
+- first restricted quotient/residual: **PASS / LOCAL**;
+- all-k restricted-power formula (Lemma C): **OPEN / LOAD-BEARING**;
+- exact-power/conjugate-of-power realization: **OPEN / LOAD-BEARING**;
+- Gate B: **OPEN / LOAD-BEARING**.
+
+Authorized next action: prove the universal restricted-quotient power lemma. No blind \(D_5/D_6/D_{p^k}\) continuation is authorized as a substitute.
