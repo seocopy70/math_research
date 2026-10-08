@@ -4012,3 +4012,30 @@ The free-group check is associated with PAPER5_GATE_B_EXACT_IDENTITY_FREE_GROUP_
 Gate B requires only Phi(r) to belong to the relator normal closure. A conjugate-of-a-power form is only a sufficient route. The earlier “weight-(p+2) error versus weight-(p+1) correction” statement is **CONJECTURE / UNVERIFIED**.
 
 Next authorized action: smallest finite filtered correction, gauge quotient, structural pattern, then—only if justified—an all-degree factorization or compatible pro-p lift. No blind D7/D8 continuation.
+
+
+## 2026-10-08 — Gate B p=5,a=2 validation harness pre-check
+
+Gate B의 다음 검증 설계를 확정했다. 목표는 p=5,a=2의 D3/D4 선형-rank와 실제 gauge action을 독립적으로 검증하고, p=3,a=2의 기존 regression을 함께 고정하는 것이다.
+
+### Authorized validation scope
+
+1. **p=3 regression:** 기존 parameterization/solver를 재사용하여 D3/D4/D5 생존자 수 729→81→27을 재현한다. 기존 27→5 및 “5개 구조적 해” 해석은 HISTORICAL/SUPERSEDED로 코드에 포함하지 않는다. D6은 corrected finite realization test로만 별도 취급한다.
+2. **p=5 D3/D4 rank audit:** 단순 해집합 cardinality가 아니라 변수 수, 식 수, F5-rank, nullity를 출력하고 5^nullity를 계산하여 D3/D4 해수 5^5 여부를 판정한다.
+3. **gauge-action audit:** 실제 gauge group을 생성하여 group order, action closure, orbit-stabilizer consistency, orbit-size histogram, orbit 수를 직접 계산한다. |G|=125, 25 orbits, orbit size 125는 선행 가정하지 않는다.
+
+### Scope boundary
+
+이 harness에서는 p=5 D5/D6/D7 계산을 하지 않는다. D5/D6/D7은 위 rank/action audit가 통과한 뒤 별도 gate에서만 진행한다. 특히 현재 repository evidence로는 p=5 3125/3125 및 D5/D6 표본 계산을 structural evidence로 승격하지 않는다.
+
+### Source-reuse pre-check
+
+독립 검증을 유지하기 위해 기존 p=3 solver의 parameterization/coordinate system을 재구현하지 않고 호출하는 것이 원칙이다. Repository search를 수행했으나 현재 committed tree에는 gateB_stage.py, gateB_fast.py 또는 동등한 p=3 group-level solver implementation이 확인되지 않았다. 현재 authoritative records도 D6 solver의 coefficient data가 repository tree에 없음을 명시한다.
+
+따라서 **아직 새 validation script를 생성하지 않는다.** 먼저 실제 기존 solver artifact를 정확한 경로/파일로 회수하여 repository-visible source로 고정해야 한다. solver가 회수되면 그 핵심 함수/좌표계를 그대로 호출하는 research/scripts/paper5_gateB_p5_a2_validation.py를 생성한다.
+
+Classification:
+- validation design: **PASS / CLOSED**;
+- existing solver source recovery: **OPEN**;
+- p=5 Gate B D3/D4/rank/action validation: **OPEN / LOAD-BEARING**;
+- D5/D6/D7 continuation: **CONDITIONAL / NOT AUTHORIZED**.
