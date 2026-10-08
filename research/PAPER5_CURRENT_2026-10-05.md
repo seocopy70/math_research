@@ -477,3 +477,34 @@ The robust D5 structural data are the affine/gauge-orbit statements above. The D
 - D7/D8 computation: **DEFERRED** pending the (e_3) gauge-normalization/object definition.
 
 **Authorized next action:** define the exact induced gauge action on the D6 (e_3) data, quotient/normalize it, and test whether any invariant remains. Do not run D7/D8 merely from the five representative outputs.
+
+
+## 2026-10-09 — Gate B restricted-layer / p-adic refinement boundary
+
+A new Gate B audit sharpens the remaining load-bearing gap. The ordinary/restricted decomposition is now locally controlled, but the mod-(p) quotients
+[
+Q_{p^k}=L_{p^k}/[L_{p^k-1},L_1]
+]
+lose exactly the (p)-adic coefficient information needed to distinguish a general (\\mathbf Z_p)-lift from its Teichmuller representative.
+
+Closed/local components:
+- for arbitrary (a,b\\in A=\\mathbf F_p\\langle X,Y\\rangle), ( [a,b]^p\\in[A,A]);
+- (C\\cap L=[L,L]) and hence ( [L,L]_{\\rm res}=[L,L]), under the declared free restricted-Lie embedding;
+- the Hall-word identification (I_n=J_n) is retained as PASS/LOCAL subject to explicit degree bookkeeping;
+- the Hall–Petresco (D_2)-perturbation lemma remains PASS/LOCAL.
+
+Closed negative boundary:
+[
+Q_{p^k}	ext{ cannot detect Teichmuller }p	ext{-adic precision}.
+]
+Thus the earlier implication from vanishing in (Q_{p^k}) to (D_{p^k+1})-membership is **FAIL / CLOSED as stated**.
+
+The remaining theorem is an **integral filtered lifting lemma**. It must be formulated on a correctly typed integral completed Magnus/group-algebra (or equivalent) object; a proposed map (D_{p^k}\\cap p^rA\\to L_{p^k+r}) is not yet meaningful with (A) the mod-(p) free associative algebra.
+
+Classification:
+- all-(k) restricted-power formula: **OPEN / LOAD-BEARING**;
+- integral (p)-adic filtered lifting lemma: **OPEN / LOAD-BEARING**;
+- exact pro-(p) lift: **OPEN / LOAD-BEARING**;
+- Gate B: **OPEN / LOAD-BEARING**.
+
+Evidence: `research/PAPER5_GATE_B_Q_REFINEMENT_AUDIT_2026-10-09.md`.
