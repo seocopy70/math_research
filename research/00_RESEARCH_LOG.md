@@ -4065,3 +4065,35 @@ Classification:
 - Full Gate B: **OPEN / LOAD-BEARING**.
 
 This supersedes the immediately preceding internal claim that Labute Theorem 2 had closed the general torus lift.
+
+
+## 2026-10-09 — Gate B first restricted-layer correction
+
+The proposed repair of the hand proof was independently audited. The degree-2/degree-p separation is correct: (w_0=x^p[x,y]) has ([X,Y]) in (D_2/D_3) and (X^{[p]}) in (D_p/D_{p+1}); it must not be written as one homogeneous graded element.
+
+The first restricted quotient is correctly identified as
+[
+L_p/[L_{p-1},L_1]cong \mathbf F_pX^{[p]}\oplus\mathbf F_pY^{[p]}.
+]
+The ordinary commutator/variation contribution projects to zero after the degree-2 cancellation, while for (psi(x)equiv x^ay^cpmod{D_2}) the p-power contribution projects to (a^pX^{[p]}+c^pY^{[p]}). Hence, under the conditional filtered equality
+[
+psi(w_0)equiv w_0^{\tilde\alpha}pmod{D_{p+1}},
+]
+the residual projection is
+[
+\boxed{(a^p-\tilde\alpha)X^{[p]}+c^pY^{[p]}}.
+]
+Therefore (a^p=\tilde\alpha) and (c=0); with the declared Teichmuller normalization (a=\tilde\alpha), the determinant condition gives (d=1).
+
+This is a genuine closure of the **first restricted-layer quotient lemma**, not a closure of the relator-lifting problem. The phrase “\(\psi([x,y])\in D_p\)” must not be used literally: the degree-p statement is made only after the lower-degree determinant cancellation, and its residual component is ordinary-bracket-valued. The group-to-restricted-Lie identification and the precise filtered-to-graded passage should be formalized in the manuscript.
+
+Classification:
+- degree-2 separation: **PASS / CLOSED**;
+- restricted quotient lemma: **PASS / LOCAL**;
+- residual projection formula and forced (a^p=\tilde\alpha,c=0): **PASS / LOCAL** under the conditional filtered equality;
+- Teichmuller (a=\tilde\alpha,d=1): **CONDITIONAL**;
+- exact-power/conjugate-of-power realization: **OPEN / LOAD-BEARING**;
+- all-degree pro-p lift: **OPEN / LOAD-BEARING**;
+- Gate B: **OPEN / LOAD-BEARING**.
+
+Evidence-bearing detail: `research/PAPER5_GATE_B_FIRST_RESTRICTED_LAYER_AUDIT_2026-10-09.md`.
