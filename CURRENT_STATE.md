@@ -318,3 +318,21 @@ The corrected p=3,a=2 D6 finite computation remains **PASS / LOCAL** and is reta
 The old J-membership test, old xc-order route, and “E_2 in ND_10 PASS” are **HISTORICAL / SUPERSEDED** as Gate-B evidence; the D6 finite realization itself is not withdrawn.
 
 The next authorized branch is p=5,a=2: solve the smallest finite filtered correction and quotient its gauge freedom before any blind D7/D8 continuation. The previously suggested weight-(p+2)/(p+1) cancellation mechanism is only **CONJECTURE / UNVERIFIED**.
+
+
+## 2026-10-09 — Gate B all-degree Hensel boundary
+
+The first restricted-layer repair remains **PASS / LOCAL**, but the proposed all-degree Lemma C is not yet a proof. The infinite computation problem has been correctly reframed as a single universal restricted-power lemma: establish
+\[
+Q_n=L_n/[L_{n-1},L_1]=0\ (n\ne p^k),\qquad
+Q_{p^k}\cong\mathbf F_pX^{[p^k]}\oplus\mathbf F_pY^{[p^k]},
+\]
+and prove that the full relation-preservation residual has restricted projection
+\[
+(a^{p^k}-\tilde\alpha)X^{[p^k]}+c^{p^k}Y^{[p^k]}
+\]
+after all lower-degree cancellation. The cross-term containment in \([L_{p^k-1},L_1]\) is the load-bearing point.
+
+Classification: ordinary/restricted separation and first restricted quotient = **PASS / LOCAL**; all-k restricted-power formula = **OPEN / LOAD-BEARING**; exact-power/conjugate-of-power lift = **OPEN / LOAD-BEARING**; Gate B = **OPEN / LOAD-BEARING**.
+
+Next authorized action: prove the universal restricted-power lemma; no blind higher-degree computation as a substitute.
