@@ -514,3 +514,22 @@ The free-group check is associated with the local script name PAPER5_GATE_B_EXAC
 For p=5,a=2, Gate B requires only Phi(r) to lie in the relator normal closure. A conjugate-of-a-power representation is merely a sufficient route. The earlier claim that a weight-(p+2) error must be cancelled by a weight-(p+1) correction is **CONJECTURE / UNVERIFIED**.
 
 Proceed first with the smallest finite filtered correction and its gauge quotient; only a structural pattern should trigger an all-degree factorization/lifting attempt. Blind D7/D8 continuation is not authorized.
+
+
+## 2026-10-08 — Gate B p=5,a=2 validation design / source-recovery gate
+
+The next authorized Gate-B computation is a narrowly scoped validation harness for p=5,a=2:
+
+- p=3 regression: reproduce D3/D4/D5 = 729→81→27 using the existing solver parameterization; do not encode the superseded 27→5 interpretation. D6 remains a separate corrected finite-realization check.
+- p=5 D3/D4: independently expose variable count, equation count, F5 rank, nullity, and 5^nullity rather than accepting 3125 by cardinality alone.
+- gauge action: compute the actual gauge-group order, action closure, orbit-stabilizer consistency, orbit-size histogram, and orbit count; do not assume |G|=125, 25 orbits, or orbit size 125.
+
+The harness deliberately excludes p=5 D5/D6/D7. Those stages remain unauthorized until the rank/action audit passes.
+
+**Source-reuse gate:** repository search did not locate a committed copy of the earlier p=3 solver (`gateB_stage.py`, `gateB_fast.py`, or an equivalent group-level implementation). The authoritative D6 audit also records that the solver coefficient data are not repository-visible. Therefore no new validation script is created yet: first recover the exact solver artifact and fix its parameterization/coordinate system as a repository-visible source; then create `research/scripts/paper5_gateB_p5_a2_validation.py` as a caller/auditor, not a reimplementation.
+
+Classification:
+- validation design: **PASS / CLOSED**;
+- solver-source recovery: **OPEN**;
+- p=5 D3/D4 rank + gauge-action audit: **OPEN / LOAD-BEARING**;
+- p=5 D5/D6/D7 continuation: **CONDITIONAL / NOT AUTHORIZED**.
