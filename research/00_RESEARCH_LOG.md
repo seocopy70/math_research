@@ -4255,3 +4255,43 @@ cannot be the theorem as written, since (A=mathbf F_plangle X,Yangle) has chara
 ### Authorized next action
 
 Do not return to BCH and do not resume blind (D_{p^k}) computation. First define the integral filtered object and prove the smallest comparison map that retains one (p)-adic coefficient beyond the mod-(p) Zassenhaus quotient. Only then attempt the all-(k) restricted-power lemma.
+
+
+## 2026-10-09 — Integral-object audit: proposed (p)-adic filtration is defined, but load-bearing lemma fails preliminary checks
+
+The proposed integral object (mathcal A=mathbf Z_plangle!langle X,Yangle!angle) (equivalently, an explicitly specified completed (mathbf Z_p)-Magnus/group-algebra object) fixes the earlier type error at the level of ambient coefficients. However, the proposed filtration
+[
+I_n=overline{sum_{ip^jge n}p^jJ^i}
+]
+must **not yet be identified with a proven integral realization of the Zassenhaus filtration**. The standard pro-(p) Zassenhaus filtration is canonically defined by the complete mod-(p) augmentation filtration (G(n)={g:g-1inwidehat I^n}), equivalently (G(n)=prod_{ip^jge n}gamma_i(G)^{p^j}). The integral weighted ideal requires a separate comparison theorem; it is not established merely by its formal definition.
+
+A decisive countercheck also invalidates the proposed claim that
+[
+delta_p(	ildealpha)=(	ildealpha^p-	ildealpha)/p
+]
+appears as the (L_{p+1})-obstruction of
+[
+(x^{	ildealpha})^p x^{-p	ildealpha}.
+]
+For a single generator (x), the group is procyclic and the two powers are **exactly equal**:
+[
+(x^{	ildealpha})^p=x^{p	ildealpha},
+]
+so the residual is (1) identically, for every (	ildealphainmathbf Z_p). Any claimed nonzero (delta_p)-class in a bracket direction such as ([X,X^{[p]}]) is therefore zero in this one-generator test. Thus (delta_p) cannot be detected from the pure-power residual alone; any surviving (p)-adic obstruction must arise from interaction with a genuinely noncommuting perturbation/relation, and the exact integral coefficient must be derived there.
+
+A second preliminary error is the asserted valuation identity
+[
+v_pinom{	ildealpha}{p}=v_p(	ildealpha^p-	ildealpha)-1
+]
+for arbitrary (	ildealphainmathbf Z_p). It is not valid in this generality (e.g. (p=5,	ildealpha=7): (v_5inom75=0), while (v_5(7^5-7)-1=1)). At most a congruence modulo an appropriate power of (p) can be used, and the exact congruence/valuation must be stated and proved before it enters the lifting argument.
+
+The correct status is therefore:
+- integral ambient object (mathcal A): **DEFINED / candidate**;
+- (I_n=sum_{ip^jge n}p^jJ^i) as an integral Zassenhaus realization: **OPEN / UNVERIFIED**;
+- (delta_p) detected by the pure (x)-power residual: **FAIL / CLOSED**;
+- valuation formula for (inom{	ildealpha}{p}): **FAIL / CLOSED**;
+- noncommutative relation-level (p)-adic obstruction: **OPEN / LOAD-BEARING**;
+- exact pro-(p) lift: **OPEN / LOAD-BEARING**;
+- Gate B: **OPEN / LOAD-BEARING**.
+
+The next authorized step is a two-variable relation-level calculation in the correctly defined integral Magnus object, beginning with the smallest noncommuting residual. Do not promote the weighted ideal to a theorem and do not use the pure-power (x^{	ildealpha}) residual as a (p)-adic detector.
