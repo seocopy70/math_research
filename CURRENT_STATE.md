@@ -302,3 +302,19 @@ Paper 5 remains **OPEN / LOAD-BEARING**, but the active gate has moved from A2 t
 ## 2026-10-07 — Gate B D4 subgate closed locally
 
 The Gate-B B1 D4 Magnus test is PASS / LOCAL: for p>=5 the D4 class of E_a vanishes after quotienting by the relation ideal. Therefore the tentative D4 obstruction is removed, and the next authorized Paper-5 calculation is the first nonzero residual layer, starting at D5/D6 for p>=5. Gate B itself remains OPEN / LOAD-BEARING. No dual-space branch is reopened.
+
+
+## 2026-10-08 — Paper 5 Gate B exact-identity update
+
+The active Paper 5 Gate B boundary has changed.
+
+- odd p, a=-1 diagonal realization: **PROVED** by the exact free-group identity recorded in research/PAPER5_GATE_B_EXACT_IDENTITY_D6_CORRECTION_AUDIT_2026-10-08.md;
+- p=3 diag(a,1,a)-type diagonal torus: **PROVED**;
+- general diag(a,1,a) realization with ord(a)>2: **OPEN / LOAD-BEARING**;
+- full Paper 5 p^2 automorphism-order theorem: **OPEN / LOAD-BEARING**.
+
+The corrected p=3,a=2 D6 finite computation remains **PASS / LOCAL** and is retained as discovery evidence. The old five-way D6 structural-selection interpretation is **HISTORICAL / SUPERSEDED (artifact)**.
+
+The old J-membership test, old xc-order route, and “E_2 in ND_10 PASS” are **HISTORICAL / SUPERSEDED** as Gate-B evidence; the D6 finite realization itself is not withdrawn.
+
+The next authorized branch is p=5,a=2: solve the smallest finite filtered correction and quotient its gauge freedom before any blind D7/D8 continuation. The previously suggested weight-(p+2)/(p+1) cancellation mechanism is only **CONJECTURE / UNVERIFIED**.
