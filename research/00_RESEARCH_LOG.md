@@ -4218,3 +4218,40 @@ is not yet well-typed when (A) is the mod-(p) free associative algebra: an integ
 Evidence-bearing detail: `research/PAPER5_GATE_B_Q_REFINEMENT_AUDIT_2026-10-09.md`.
 
 Authorized next action: formulate the smallest correctly typed integral filtered comparison that retains one (p)-adic coefficient beyond (Q_{p^k}); no blind (D_5/D_6/D_{p^k}) computation as a substitute.
+
+
+## 2026-10-09 — Gate B Q-refinement independent review: typing boundary fixed
+
+The supplied Q-layer correction was independently reviewed against the current Gate-B audit. The mathematical split is accepted: the cyclic-word argument closes the uniform associative lemma
+[
+(ab)^p-(ba)^p=[a,(ba)^{p-1}b]in C,
+]
+and hence ([a,b]^pin C); the injection (L/[L,L]hookrightarrow A/C) then gives (Ccap L=[L,L]), and the restricted closure of ([L,L]) follows. These remain **PASS / LOCAL** under the repository's conservative manuscript-formalization standard.
+
+One terminology correction is required for the manuscript: the congruence
+[
+(a+b)^pequiv a^p+b^ppmod C
+]
+is most cleanly proved by the cyclic-word orbit argument in (A/C); it should not be described as an ordinary binomial-coefficient/Hall–Petresco identity because (C=[A,A]) is only an additive commutator subspace, not a two-sided ideal, and (A/C) is being used only as a vector space.
+
+The decisive obstruction is confirmed: every (Q_{p^k}) is an (mathbf F_p)-space, so it has already forgotten the (p)-adic precision of (	ildealpha). Therefore the implication from vanishing of the (Q_{p^k})-residual to (D_{p^k+1})-membership is **FAIL / CLOSED** without an additional integral filtered comparison.
+
+A further type check is mandatory for the replacement lemma. A notation such as
+[
+D_{p^k}cap p^rA	o L_{p^k+r}
+]
+cannot be the theorem as written, since (A=mathbf F_plangle X,Yangle) has characteristic (p) and no nontrivial (p)-adic scalar filtration. The next object must first be an explicitly defined integral completed Magnus/group-algebra (or equivalent) object, with a proved map to the mod-(p) Zassenhaus graded pieces. Only after this definition is fixed can a Witt-coordinate/p-adic lifting lemma be stated.
+
+### Classification
+- cyclic-word / general ([a,b]^pin C): **PASS / LOCAL**;
+- (Ccap L=[L,L]): **PASS / LOCAL**;
+- ([L,L]_{m res}=[L,L]): **PASS / LOCAL**;
+- (I_n=J_n): **PASS / LOCAL**, pending explicit degree bookkeeping;
+- (Q_{p^k})-based Teichmuller precision: **FAIL / CLOSED**;
+- integral filtered lifting object/lemma: **OPEN / LOAD-BEARING**;
+- exact pro-(p) lift: **OPEN / LOAD-BEARING**;
+- Gate B: **OPEN / LOAD-BEARING**.
+
+### Authorized next action
+
+Do not return to BCH and do not resume blind (D_{p^k}) computation. First define the integral filtered object and prove the smallest comparison map that retains one (p)-adic coefficient beyond the mod-(p) Zassenhaus quotient. Only then attempt the all-(k) restricted-power lemma.
