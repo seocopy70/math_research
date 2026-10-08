@@ -533,3 +533,29 @@ Classification:
 - solver-source recovery: **OPEN**;
 - p=5 D3/D4 rank + gauge-action audit: **OPEN / LOAD-BEARING**;
 - p=5 D5/D6/D7 continuation: **CONDITIONAL / NOT AUTHORIZED**.
+
+
+## 2026-10-09 — Gate B Labute exact-equality claim corrected
+
+A proposed closure via Labute Theorem 2 was rechecked against the original 1967 paper. The earlier statement that Theorem 2 directly gives
+\[
+\exists\psi\in\operatorname{Aut}(F),\qquad \psi(r)=r'
+\]
+is **incorrect**.
+
+The original paper states the weaker conclusion: if the closed normal subgroups satisfy \((r)=(r')\) and \(F/(r)\) is Demushkin, then there is an automorphism of \(F\) **sending \(r\) into \(r'\)**. The wording is explicitly “sending \(r\) into \(r'\)”, not equality or conjugate-of-power equality. See Labute, *Classification of Demushkin Groups*, p.108, Corollary immediately following Theorem 2.
+
+Therefore the proposed substitution \(r=w_0=x^p[x,y],\ r'=r^\alpha\) does establish \((r)=(r')\), but Labute alone does **not** establish \(\psi(w_0)=w_0^\alpha\) or even \(\psi(w_0)=g w_0^\alpha g^{-1}\).
+
+This is load-bearing because the root-extension lift requires an exact relation-level equality (or a separately proved sufficient conjugate-of-power form). Mere membership in the normal closure is insufficient for the stated construction.
+
+The earlier proposed “prescribed Frattini shape follows from exact equality” argument is consequently **NOT a proof**. Its initial restricted-layer coefficient calculation remains a useful conditional calculation: if an exact equality \(\psi(w_0)=w_0^\alpha\) is independently obtained, comparison of the \(x^{[p]},y^{[p]},[x,y]\) components gives the expected constraints \(c=0,a=\alpha,d=1\). It does not produce the missing exact equality.
+
+Classification:
+- Labute as relevant relator-equivalence methodology: **PASS / LOCAL**.
+- Labute direct exact-power realization: **FAIL / CLOSED as the proposed route**.
+- Exact-power/conjugate-of-power realization for ord(\alpha)>2: **OPEN / LOAD-BEARING**.
+- Hensel/Magnus p=5, \alpha=2 test: **REOPENED as an authorized fallback**; no D5/D6/D7 computation before the existing validation/source-recovery gate is satisfied.
+- Full Gate B: **OPEN / LOAD-BEARING**.
+
+This supersedes the immediately preceding internal claim that Labute Theorem 2 had closed the general torus lift.
