@@ -578,3 +578,49 @@ This does **not** establish exact-power/conjugate-of-power realization, all-degr
 Classification: first restricted-layer quotient/residual = **PASS / LOCAL**; exact lift = **OPEN / LOAD-BEARING**; Gate B = **OPEN / LOAD-BEARING**.
 
 Evidence: `research/PAPER5_GATE_B_FIRST_RESTRICTED_LAYER_AUDIT_2026-10-09.md`.
+
+
+## 2026-10-09 — Gate B all-degree Hensel proposal: corrected load-bearing boundary
+
+The proposed Lemma A/B/C route was audited as a candidate replacement for degree-by-degree D_{p^k} computation.
+
+The strategic reduction is accepted: the goal is **not** to brute-force infinitely many Zassenhaus layers, but to prove a universal restricted-power obstruction lemma and then use pro-p completeness. The ordinary correction map
+\[
+d\Phi_m(u,v)=[u,Y]+[X,v]
+\]
+targets the ordinary bracket part, while the restricted quotient at \(n=p^k\) is the only possible new obstruction.
+
+However, the submitted all-k Lemma C is **not yet proved**. In particular, the statements that \(\psi([x,y])\) contributes trivially to the restricted projection and that
+\[
+\pi_{\rm res}^{(k)}(w_0^{\tilde\alpha})=\tilde\alpha X^{[p^k]}
+\]
+cannot be inferred merely from \(\psi([x,y])\in\gamma_2\) or from a generic Hall–Petresco slogan. The lower-degree components of
+\(w_0=x^p[x,y]\)
+are coupled, and the residual must first be known to lie in \(D_{p^k}\) before its \(L_{p^k}\)-class is projected.
+
+The required universal lemma is therefore:
+
+\[
+Q_n:=L_n/[L_{n-1},L_1],\qquad
+Q_n=0\ (n\ne p^k),\qquad
+Q_{p^k}\cong\mathbf F_pX^{[p^k]}\oplus\mathbf F_pY^{[p^k]},
+\]
+together with a rigorous filtered-power formula showing that every cross-term in the relation-preservation residual lies in \([L_{p^k-1},L_1]\), so that the restricted projection is genuinely
+\[
+(a^{p^k}-\tilde\alpha)X^{[p^k]}+c^{p^k}Y^{[p^k]}.
+\]
+
+If this universal formula is proved, the Teichmuller normalization
+\(a=\tilde\alpha,\ c=0\)
+would kill all restricted obstructions simultaneously because
+\(\tilde\alpha^{p^k}=\tilde\alpha\).
+Only then would pro-p completeness yield the exact lift.
+
+Classification:
+- ordinary/restricted separation: **PASS / LOCAL**;
+- first restricted quotient and first-layer residual: **PASS / LOCAL**;
+- all-k restricted-power formula (Lemma C): **OPEN / LOAD-BEARING**;
+- exact-power/conjugate-of-power lift: **OPEN / LOAD-BEARING**;
+- Gate B: **OPEN / LOAD-BEARING**.
+
+Authorized next action: prove the universal restricted-quotient power lemma. Do **not** replace this by blind D_5/D_6/D_{p^k} computation. Finite computations may be used only as independent diagnostics after the structural lemma is formulated.
