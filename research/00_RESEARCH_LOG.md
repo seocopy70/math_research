@@ -3957,3 +3957,58 @@ Classification:
 - D5 affine/gauge structure: **PASS / LOCAL**.
 - D6 five-way structural selection: **FAIL / CLOSED**.
 - D6 full lift modulo gauge: **OPEN**.
+
+
+## 2026-10-08 — Gate B exact identity and D6 chronology correction
+
+A free-group identity closes the a=-1 diagonal-realization branch. With
+\[
+[u,v]=u^{-1}v^{-1}uv,qquad r=z^p x^{-p}[x,y]^{-1},
+\]
+define
+\[
+\Phi(x)=x^{-1},quad
+\Phi(y)=x^{-(p+1)}yx^{p+1},quad
+\Phi(z)=z^{-1}.
+\]
+For c=[x,y],
+\[
+\Phi(c)^{-1}=x^{-p}cx^p,qquad
+\Phi(r)=z^{-p}r^{-1}z^p.
+\]
+Thus the relator normal closure is preserved. The induced map on the Frattini quotient has linear part diag(-1,1,-1), hence is surjective; Hopf for finitely generated pro-p groups makes it an automorphism.
+
+Classification:
+- odd p, a=-1: **PROVED**;
+- p=3 diag(a,1,a)-type diagonal torus: **PROVED**;
+- ord(a)>2: **OPEN / LOAD-BEARING**;
+- full Paper 5 p^2 theorem: **OPEN / LOAD-BEARING**.
+
+### D6 discovery-path correction
+
+The earlier statement “Phi_0 passes through T<=9” is corrected. The actual path was
+\[
+\text{gauge structure}\to\Phi_0\to\text{correction pattern}\to x^{-4}yx^4\to\text{exact identity}.
+\]
+For p=3,a=2, k=1 passes through D5 but fails at D6; a weight-4 correction repairs D6 and a further weight-5 correction closes D7. The coefficients agree with binom(4,j) mod 3 = (1,0,1,1), identifying k=4=p+1. Thus the T<=9 Magnus evidence belongs to k=4, not Phi_0.
+
+The corrected group-level D6 finite realization remains **PASS / LOCAL**. The observed affine/gauge counts 729->81->27 and 27->3->1 remain discovery evidence. The earlier five-way D6 structural-selection interpretation is **HISTORICAL / SUPERSEDED (artifact)**.
+
+### Withdrawals / continuity
+
+The following are explicitly withdrawn from the live Gate-B evidence base:
+- old J-membership test: **HISTORICAL / SUPERSEDED**;
+- old xc-order route: **HISTORICAL / SUPERSEDED**;
+- “E_2 in ND_10 PASS”: **HISTORICAL / SUPERSEDED**.
+
+The D6 computation itself is not withdrawn.
+
+### Reproduction note
+
+The free-group check is associated with PAPER5_GATE_B_EXACT_IDENTITY_FREE_GROUP_CHECK.py. The named script is not currently present in the GitHub repository, so it is not claimed as a repository artifact. The reported exact-word checks cover p=3,5,7,11,13. Magnus evidence is k=4 through T<=9 with k=1 failing at D6.
+
+### p=5,a=2 next gate
+
+Gate B requires only Phi(r) to belong to the relator normal closure. A conjugate-of-a-power form is only a sufficient route. The earlier “weight-(p+2) error versus weight-(p+1) correction” statement is **CONJECTURE / UNVERIFIED**.
+
+Next authorized action: smallest finite filtered correction, gauge quotient, structural pattern, then—only if justified—an all-degree factorization or compatible pro-p lift. No blind D7/D8 continuation.
