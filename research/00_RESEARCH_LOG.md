@@ -4295,3 +4295,43 @@ The correct status is therefore:
 - Gate B: **OPEN / LOAD-BEARING**.
 
 The next authorized step is a two-variable relation-level calculation in the correctly defined integral Magnus object, beginning with the smallest noncommuting residual. Do not promote the weighted ideal to a theorem and do not use the pure-power (x^{	ildealpha}) residual as a (p)-adic detector.
+
+
+## 2026-10-09 — Gate B integral Magnus proposal: relation-level obstruction boundary
+
+The latest integral-Magnus proposal was audited and recorded without promoting Gate B.
+
+### Accepted corrections
+
+- The ambient object \(\mathcal A=\mathbf Z_p\langle\!\langle X,Y\rangle\!\rangle\) and formal weighted-filtration candidate
+  \[
+  I_n^{\mathrm{int}}=\overline{\sum_{ip^j\ge n}p^jJ^i}
+  \]
+  remove the earlier coefficient-type error. This is only a **candidate integral weighted Magnus filtration**; identifying it with the canonical mod-\(p\) Zassenhaus filtration requires a separate comparison theorem.
+- The mod-\(p\) quotient \(Q_{p^k}\) cannot retain Teichmüller \(p\)-adic precision: its coefficients lie in \(\mathbf F_p\), so \(\overline{\tilde\alpha^{p^k}}=\overline{\tilde\alpha}\).
+- The pure-power residual is exactly trivial:
+  \[
+  (x^{\tilde\alpha})^p x^{-p\tilde\alpha}=1.
+  \]
+  It cannot detect nonzero \(\delta_p(\tilde\alpha)=(\tilde\alpha^p-\tilde\alpha)/p\) at any filtration degree.
+- The proposed general identity \(v_p\binom{\tilde\alpha}{p}=v_p(\tilde\alpha^p-\tilde\alpha)-1\), and the congruence derived from it, are invalid in general. For \(p=5,\tilde\alpha=7\), \(\binom75\equiv1\pmod5\), while \((7^5-7)/5\equiv0\pmod5\). This coefficient route is **FAIL / CLOSED** as stated.
+
+### Current classification
+
+- Integral ambient object and formal weighted-filtration candidate: **PASS / LOCAL** (definition only).
+- Identification of \(I_n^{\mathrm{int}}\) with Zassenhaus filtration: **OPEN / LOAD-BEARING**.
+- \(Q_{p^k}\)-based Teichmüller detection: **FAIL / CLOSED**.
+- Pure-power \(\delta_p\)-detection: **FAIL / CLOSED**.
+- Proposed binomial valuation/congruence route: **FAIL / CLOSED**.
+- Noncommutative relation-level \(p\)-adic obstruction: **OPEN / LOAD-BEARING**.
+- Exact pro-\(p\) lift: **OPEN / LOAD-BEARING**.
+- **Gate B: OPEN / LOAD-BEARING**.
+
+### Next authorized action
+
+Analyze the smallest genuinely noncommutative relation residual, beginning with \(w_0=x^p[x,y]\), in the candidate integral weighted Magnus object:
+\[
+\mu\!\left(\psi(w_0)w_0^{-\tilde\alpha}\right)-1
+\pmod {I_{p+2}^{\mathrm{int}}},
+\]
+after explicitly imposing lower-degree (degree-2 and degree-\(p\)) cancellations. Determine whether a well-defined coefficient involving \(\delta_p(\tilde\alpha)\bmod p\) survives. First prove the comparison with the canonical Zassenhaus filtration; do not label the candidate filtration a Zassenhaus realization before that proof. No blind higher-degree computation is authorized as a substitute.
