@@ -4375,3 +4375,27 @@ Current classifications:
 - exact pro-(p) lift / Gate B: **OPEN / LOAD-BEARING**.
 
 The next action remains definitional, not computational: fix the exact noncommutative residual, target quotient/coefficient functional, invariance statement, and pre-registered falsification criterion before any expansion.
+
+
+## 2026-10-09 — Gate B-2 relation-residual detector definition audit
+
+A pre-computation audit of the proposed Gate B-2 definition is recorded in `research/PAPER5_GATE_B2_RELATION_RESIDUAL_DETECTOR_DRAFT_AUDIT_2026-10-09.md`. No residual expansion or solver run was performed.
+
+Repository cross-check:
+- (w_0=x^p[x,y]) is explicitly used in the first restricted-layer auxiliary problem, conditional on (psi(w_0)equiv w_0^{\tilde\alpha}\pmod{D_{p+1}}). It must not be conflated with the full three-generator relator (r=z^p x^{-p}[x,y]^{-1}).
+- The Teichmüller normalization is present, but the notation must distinguish (alphain\mathbf F_p^\times) from its lift ([alpha]in\mathbf Z_p^\times).
+- The full correction family (Psi) is not specified in the authoritative record and remains **OPEN / LOAD-BEARING**.
+
+For the proposed integral filtration, (pi_N:I_N/I_{N+1}\to J^N/J^{N+1}) is the mod-(p) reduction map. Its kernel is structurally supported only by exact weighted levels (ip^j=N) with (j\ge1); hence (K_N=0) when (p\nmid N). This is a filtration-level description, not evidence that the relation residual has a nonzero class.
+
+The draft's (B_N) is not yet well-typed as an invariant quotient: allowed coordinate/lift/relator transformations must be defined as maps preserving admissibility and the filtration, and it must be proved they induce transformations on (K_N). The current “coordinate change” and relator-representative descriptions are not yet precise enough to do this. K1 also must not treat one selected lift with zero class as falsifying an existential detector; the quantifier of the candidate claim must be fixed first.
+
+Classification:
+- auxiliary (w_0): **PASS / LOCAL** (scope-specific);
+- Teichmüller exponent notation: **CONDITIONAL** pending normalization;
+- full (Psi) family: **OPEN / LOAD-BEARING**;
+- structural (K_N) description: **PASS / LOCAL** under the stated filtration conventions;
+- (B_N), coordinate/lift invariance and (K_N/B_N): **OPEN / LOAD-BEARING**;
+- relation-level detector and Gate B: **OPEN / LOAD-BEARING**.
+
+Authorized next step: repair the exact definitions and invariance types. No computation is authorized yet.
