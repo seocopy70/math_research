@@ -515,3 +515,16 @@ Evidence: `research/PAPER5_GATE_B_Q_REFINEMENT_AUDIT_2026-10-09.md`.
 The integral weighted Magnus membership comparison is recorded in `research/PAPER5_GATE_B_INTEGRAL_ACCURACY_COUNTERCHECK_2026-10-09.md`. For group elements, it is equivalent to the mod-(p) Magnus membership test and therefore contributes no additional (p)-adic precision through membership alone. Any precision information must be extracted by a separately defined coefficient functional on a noncommutative relation residual.
 
 The **FAIL / CLOSED** label applies narrowly to the candidate additive weight rule (i+r) for a degree-(i) term with coefficient (p^r); it does not refute a distinct relation-level coefficient detector. The latter remains **OPEN / LOAD-BEARING**, as does the exact pro-(p) lift and Gate B. No higher-degree computation is authorized until the residual, target quotient, coordinate/lift invariance, and falsification criterion are specified.
+
+
+## 2026-10-09 — Gate B-2 detector-definition audit
+
+The pre-computation review is recorded in `research/PAPER5_GATE_B2_RELATION_RESIDUAL_DETECTOR_DRAFT_AUDIT_2026-10-09.md`.
+
+The auxiliary word (w_0=x^p[x,y]) is confirmed in the first restricted-layer subproblem only; it is not the full three-generator relator (r=z^p x^{-p}[x,y]^{-1}). The Teichmüller convention needs explicit notation (alpha\in\mathbf F_p^\times), ([alpha]\in\mathbf Z_p^\times). The full correction family (Psi) remains unspecified in the authoritative record.
+
+For the proposed weighted filtration, the reduction map (pi_N:I_N/I_{N+1}\to J^N/J^{N+1}) has kernel supported at exact weighted levels (ip^j=N) with (j\ge1); in particular (K_N=0) if (p\nmid N). This is structural information only and does not establish a nonzero residual class.
+
+The proposed (B_N) quotient is **not yet well-defined**: permitted coordinate, lift, and relator-representative changes must be specified as filtration-preserving transformations of the admissible data, and their induced action on (K_N) must be proved. K1 must state its quantifier; one chosen lift with zero class does not refute an existential detector.
+
+Classification: (w_0) **PASS / LOCAL** (scope-specific); exponent notation **CONDITIONAL**; full (Psi), (B_N), (K_N/B_N), relation-level detector and Gate B **OPEN / LOAD-BEARING**. No coefficient computation is authorized until these definitions and invariance types are repaired.
