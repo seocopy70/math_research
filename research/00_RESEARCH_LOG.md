@@ -4335,3 +4335,20 @@ Analyze the smallest genuinely noncommutative relation residual, beginning with 
 \pmod {I_{p+2}^{\mathrm{int}}},
 \]
 after explicitly imposing lower-degree (degree-2 and degree-\(p\)) cancellations. Determine whether a well-defined coefficient involving \(\delta_p(\tilde\alpha)\bmod p\) survives. First prove the comparison with the canonical Zassenhaus filtration; do not label the candidate filtration a Zassenhaus realization before that proof. No blind higher-degree computation is authorized as a substitute.
+
+
+## 2026-10-09 — Gate B B-1 integral comparison and precision countercheck
+
+The audit is recorded in \`research/PAPER5_GATE_B_INTEGRAL_ACCURACY_COUNTERCHECK_2026-10-09.md\`.
+
+The integral weighted Magnus membership comparison is classified **PASS / CLOSED**, conditional on the standard Magnus characterization of the Zassenhaus filtration and the standard product formula. The proof uses reduction modulo p for one direction and the valuation bound \(v_p\binom{p^j}{k}\ge j-v_p(k)\), for \(k<p^j\), for the reverse direction.
+
+This closes only filtration membership comparison, not p-adic coefficient extraction. The monomial \(p^rX\) has weighted level \(p^r\), not \(1+r\), so the additive precision-shift rule is **FAIL / CLOSED**. The coordinate-independent relation-level detector for \(\delta_p(\tilde\alpha)\bmod p\) remains **OPEN / LOAD-BEARING** because its target quotient and invariance have not yet been defined. The pure-power residual remains identically 1 and cannot be reused.
+
+Classification:
+- integral weighted Magnus membership comparison: **PASS / CLOSED** (conditional on standard formulas);
+- additive precision-shift rule \(i+r\): **FAIL / CLOSED**;
+- relation-level coefficient detector: **OPEN / LOAD-BEARING**;
+- exact pro-p lift / Gate B: **OPEN / LOAD-BEARING**.
+
+Next authorized action: state the exact noncommutative residual, target quotient, coordinate/lift invariance, and pre-registered falsification criterion before any higher-degree calculation. No blind D5/D6/D_(p^k) sweep.
