@@ -113,3 +113,14 @@ Do not run a higher-degree expansion until the next lemma states all four items:
 - Exact pro-p lift / Gate B: **OPEN / LOAD-BEARING**.
 
 This audit does not promote Gate B. The next authorized action is to define the relation-level coefficient functional before computing it; no blind D_5/D_6/D_{p^k} sweep.
+
+
+## 6. Reviewer clarification — scope of the accuracy counterexample (2026-10-09)
+
+The user-side proof review confirms the membership comparison in Section 2: for group elements, integral membership is equivalent to the ordinary mod-p Magnus membership test. Thus the comparison theorem adds no p-adic precision to the *membership predicate* itself. Any additional information must come from a separately defined coefficient functional on a noncommutative relation residual, with a specified target quotient and lift/coordinate invariance. That functional remains undefined and **OPEN / LOAD-BEARING**.
+
+The counterexample in Section 3 is intentionally narrow. The exact rejected candidate was the additive rule
+`“a degree-i term with coefficient p^r has filtration degree i+r”`.
+The monomial `p^r X` refutes that rule because its level under the defined weighted filtration is `p^r`. This does **not** refute a distinct relation-level coefficient-extraction theorem, nor any candidate formulation not asserting the additive `i+r` rule. Keep **FAIL / CLOSED** only for this explicitly stated additive rule; do not generalize it to “the accuracy theorem fails.”
+
+No relation-residual computation is authorized until its exact residual word, target quotient/coefficient functional, invariance under allowed coordinate and lift changes, and pre-registered falsification criterion are specified.
