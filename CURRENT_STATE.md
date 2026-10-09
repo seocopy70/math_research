@@ -341,3 +341,8 @@ Next authorized action: prove the universal restricted-power lemma; no blind hig
 ## 2026-10-09 — Paper 5 Gate B integral-precision clarification
 
 The integral weighted Magnus membership comparison and its corrected interpretation are recorded in [the dated Gate B audit](research/PAPER5_GATE_B_INTEGRAL_ACCURACY_COUNTERCHECK_2026-10-09.md) and [the research log](research/00_RESEARCH_LOG.md). On free pro-(p) group elements, integral membership is equivalent to mod-(p) Magnus membership and supplies no additional (p)-adic precision by itself. The additive (i+r) weight rule is **FAIL / CLOSED** only in that narrow form. Relation-level coefficient extraction, its target quotient and coordinate/lift invariance, and the exact pro-(p) lift remain **OPEN / LOAD-BEARING**. No higher-degree sweep is authorized before the residual and falsification criterion are fixed.
+
+
+## 2026-10-09 — Paper 5 Gate B-2 definition gate
+
+The Gate B-2 pre-computation audit is recorded in `research/PAPER5_GATE_B2_RELATION_RESIDUAL_DETECTOR_DRAFT_AUDIT_2026-10-09.md`. The auxiliary word (w_0=x^p[x,y]) is confirmed only in the first restricted-layer subproblem and must not be confused with the full three-generator relator. The residue (alpha\in\mathbf F_p^\times) and Teichmüller lift ([alpha]\in\mathbf Z_p^\times) must be notationally separated. The full correction family (Psi), the variation space (B_N), and the quotient (K_N/B_N) remain undefined or unproved. Structural (K_N) support occurs only at exact weights (ip^j=N), (j\ge1), so (K_N=0) if (p\nmid N). Classification: (Psi), (B_N), invariant detector, exact pro-(p) lift and Gate B = **OPEN / LOAD-BEARING**. No coefficient computation authorized before definition/type repair.
