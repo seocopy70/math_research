@@ -4352,3 +4352,26 @@ Classification:
 - exact pro-p lift / Gate B: **OPEN / LOAD-BEARING**.
 
 Next authorized action: state the exact noncommutative residual, target quotient, coordinate/lift invariance, and pre-registered falsification criterion before any higher-degree calculation. No blind D5/D6/D_(p^k) sweep.
+
+
+## 2026-10-09 — Reviewer clarification: integral membership carries no extra precision
+
+A follow-up proof review confirms the integral weighted Magnus membership comparison, but sharpens its interpretation:
+[
+mu(g)-1in I_n^{\mathrm{int}}
+\iff g\in D_n(F)
+\iff \bar\mu(g)-1\in J^n
+\qquad(g\in F).
+]
+Thus, on free pro-(p) group elements, the integral filtration's **membership predicate** contains no information beyond the mod-(p) Magnus membership test. This theorem validates the filtration comparison; it does not extract Teichmüller or other (p)-adic coefficient precision.
+
+The previously recorded **FAIL / CLOSED** claim is specifically the additive rule “a degree-(i) term with coefficient (p^r) has filtration level (i+r).” The witness (p^rX), whose weighted level is (p^r), disproves that rule only. It does not disprove an as-yet-unspecified relation-level coefficient detector. To avoid overstatement, do not label the whole precision-extraction problem FAIL/CLOSED.
+
+Current classifications:
+- integral weighted Magnus membership comparison: **PASS / CLOSED**, conditional on the standard Magnus characterization and Zassenhaus product formula;
+- no extra (p)-adic precision from the membership predicate: **PASS / CLOSED** as a consequence of that comparison;
+- additive (i+r) rule: **FAIL / CLOSED** (narrow scope);
+- relation-residual coefficient functional and lift/coordinate invariance: **OPEN / LOAD-BEARING**;
+- exact pro-(p) lift / Gate B: **OPEN / LOAD-BEARING**.
+
+The next action remains definitional, not computational: fix the exact noncommutative residual, target quotient/coefficient functional, invariance statement, and pre-registered falsification criterion before any expansion.
