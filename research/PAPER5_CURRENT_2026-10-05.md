@@ -508,3 +508,10 @@ Classification:
 - Gate B: **OPEN / LOAD-BEARING**.
 
 Evidence: `research/PAPER5_GATE_B_Q_REFINEMENT_AUDIT_2026-10-09.md`.
+
+
+## 2026-10-09 — Gate B integral-membership interpretation correction
+
+The integral weighted Magnus membership comparison is recorded in `research/PAPER5_GATE_B_INTEGRAL_ACCURACY_COUNTERCHECK_2026-10-09.md`. For group elements, it is equivalent to the mod-(p) Magnus membership test and therefore contributes no additional (p)-adic precision through membership alone. Any precision information must be extracted by a separately defined coefficient functional on a noncommutative relation residual.
+
+The **FAIL / CLOSED** label applies narrowly to the candidate additive weight rule (i+r) for a degree-(i) term with coefficient (p^r); it does not refute a distinct relation-level coefficient detector. The latter remains **OPEN / LOAD-BEARING**, as does the exact pro-(p) lift and Gate B. No higher-degree computation is authorized until the residual, target quotient, coordinate/lift invariance, and falsification criterion are specified.
