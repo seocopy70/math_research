@@ -1,6 +1,6 @@
 # CURRENT STATE — Research Control Tower
 
-Last reviewed: **2026-10-05**
+Last reviewed: **2026-10-09**
 
 > This file is the **whole-program current-state index**, not the detailed research log.
 > Detailed Paper 4/5 state lives in the dedicated current files below.
@@ -336,3 +336,8 @@ after all lower-degree cancellation. The cross-term containment in \([L_{p^k-1},
 Classification: ordinary/restricted separation and first restricted quotient = **PASS / LOCAL**; all-k restricted-power formula = **OPEN / LOAD-BEARING**; exact-power/conjugate-of-power lift = **OPEN / LOAD-BEARING**; Gate B = **OPEN / LOAD-BEARING**.
 
 Next authorized action: prove the universal restricted-power lemma; no blind higher-degree computation as a substitute.
+
+
+## 2026-10-09 — Paper 5 Gate B integral-precision clarification
+
+The integral weighted Magnus membership comparison and its corrected interpretation are recorded in [the dated Gate B audit](research/PAPER5_GATE_B_INTEGRAL_ACCURACY_COUNTERCHECK_2026-10-09.md) and [the research log](research/00_RESEARCH_LOG.md). On free pro-(p) group elements, integral membership is equivalent to mod-(p) Magnus membership and supplies no additional (p)-adic precision by itself. The additive (i+r) weight rule is **FAIL / CLOSED** only in that narrow form. Relation-level coefficient extraction, its target quotient and coordinate/lift invariance, and the exact pro-(p) lift remain **OPEN / LOAD-BEARING**. No higher-degree sweep is authorized before the residual and falsification criterion are fixed.
