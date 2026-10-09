@@ -80,3 +80,35 @@ The “do not raise \(N\) after a failed test” rule is accepted, with the qual
 - Gate B and the exact pro-\(p\) lift: **OPEN / LOAD-BEARING**.
 
 **Authorized next step:** repair the definitions and invariance types in Sections 1–4; do not compute a residual coefficient yet.
+
+
+## 6. Critical follow-up — group-element residual collapses by B-1 (2026-10-09)
+
+A direct logical incompatibility was found in the revised definition, before any computation.
+
+The proposed residual is
+\[
+z=\psi_{u,v}(w_0)w_0^{-\tilde\alpha}\in F,
+\qquad R=\mu(z)-1.
+\]
+Thus it is the Magnus residual of an actual free pro-\(p\) group element. Gate B-1 has already established, for group elements,
+\[
+\mu(g)-1\in I_n^{\mathrm{int}}
+\iff g\in D_n(F)
+\iff \bar\mu(g)-1\in J^n.
+\]
+But the definition of \(\Psi_N\) requires both (i) \(R\in I_N\) and (ii) \(\bar R\in J^{N+1}\). Applying B-1 at level \(N+1\) to \(z\) gives \(z\in D_{N+1}(F)\), hence \(R\in I_{N+1}\). Therefore \([R]=0\) in \(I_N/I_{N+1}\), and in particular its class in \(K_N\) is zero.
+
+Consequently, under the stated B-1 theorem and the current definition of \(R\),
+\[
+\Psi_N\ne\varnothing\quad\Longrightarrow\quad
+\{[R(\psi)]:\psi\in\Psi_N\}=\{0\}.
+\]
+If \(\Psi_N=\varnothing\), there is no witness either. This is a definitional no-go, not a computational result.
+
+**Classification:**
+- This exact group-element residual detector with the two §4.1 conditions: **FAIL / CLOSED**.
+- The broader question of a genuinely new relation-level \(p\)-adic coefficient functional not reducible to group-element filtration membership: **OPEN / LOAD-BEARING**.
+- Gate B and the exact compatible pro-\(p\) lift: **OPEN / LOAD-BEARING**.
+
+No coefficient expansion or solver run was performed. Do not retry this exact definition at a higher \(N\). Any replacement must change the target object: it cannot simultaneously remain \(R=\mu(g)-1\) for a group element and use vanishing of \(\bar R\) in degree \(N\) to claim a nonzero class in \(I_N/I_{N+1}\).
